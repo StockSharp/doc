@@ -1,6 +1,6 @@
 # Tempo de trabalho
 
-![Designer Working time 00](../../../../../../images/designer_working_time_00.png)
+![Designer tempo de trabalho 00](../../../../../../images/designer_working_time_00.png)
 
 Este bloco é utilizado para determinar o tempo de trabalho da estratégia. Por exemplo, para definir quando ocorre negociação para um instrumento específico ou quando a estratégia tem permissão para negociar.
 #### Sockets de entrada
@@ -16,7 +16,7 @@ Este bloco é utilizado para determinar o tempo de trabalho da estratégia. Por 
 
 O bloco pode ser utilizado para determinar quando a negociação é realizada para vários instrumentos de diferentes plataformas de negociação.
 
-![Designer Working time 01](../../../../../../images/designer_working_time_01.png)
+![Designer tempo de trabalho 01](../../../../../../images/designer_working_time_01.png)
 
 ## Ver também
 

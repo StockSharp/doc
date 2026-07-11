@@ -6,7 +6,7 @@
 
 可以在新闻面板中为所选事件配置通知，详见[通知设置](../../notifications.md)。
 
-![Terminal news 00](../../../../images/terminal_news_00.png)
+![Terminal 新闻 00](../../../../images/terminal_news_00.png)
 
 ## 推荐内容
 

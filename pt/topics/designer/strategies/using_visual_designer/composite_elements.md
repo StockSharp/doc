@@ -12,13 +12,13 @@ Vamos considerar a utilização de elementos compostos no exemplo da estratégia
 
 Como o cruzamento de médias móveis difere apenas na sua possível direção (a curta cruza de cima para baixo ou de baixo para cima), a parte do esquema que determina o momento do cruzamento pode ser extraída para um elemento composto separado. Quando adiciona este elemento ao esquema, especifica as propriedades que definem o algoritmo de cruzamento das médias móveis. O esquema do elemento composto pelo qual o cruzamento é determinado é apresentado na figura abaixo:
 
-![Designer Crossing 01](../../../../images/designer_crossing_01.png)
+![Designer cruzamento 01](../../../../images/designer_crossing_01.png)
 
 O diagrama do elemento composto é constituído por elementos simples e baseia-se na memorização dos valores atuais (Prev In 1 e Prev In 2) e na comparação entre pares de valores atuais (CurrComparison) e anteriores (PrevComparison). Como cada um dos valores de entrada é usado em dois elementos do diagrama, os elementos de [Combinação](elements/common/combination.md) (In 1, In 2) são colocados na entrada do elemento composto, permitindo dividir uma entrada em dois elementos e passar o valor de entrada para os elementos [Comparação](elements/common/comparison.md) e [Valor anterior](elements/common/prev_value.md). Quando chega um novo valor à entrada, os valores atuais são comparados e um novo valor é passado para o elemento [Valor anterior](elements/common/prev_value.md), a partir do qual é passado o valor anterior da entrada atual; em seguida, os valores anteriores são comparados. Se ambas as condições forem cumpridas, o que é verificado usando a [Condição lógica](elements/common/logical_condition.md) And, então o valor da flag levantada é passado para a saída do elemento composto, podendo ser usado como disparador de uma ação posterior.
 
 Para os cubos CurrComparison e PrevComparison, a flag **Parâmetros** do grupo de propriedades **Geral** está definida. Por isso, as propriedades destes cubos foram incluídas nas propriedades do elemento composto [Cruzamento](elements/common/crossing.md), que serão posteriormente especificadas ao usar um elemento composto no esquema da estratégia.
 
-![Designer Crossing 00](../../../../images/designer_crossing_00.png)
+![Designer cruzamento 00](../../../../images/designer_crossing_00.png)
 
 ## Conteúdo recomendado
 

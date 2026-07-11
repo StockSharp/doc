@@ -14,6 +14,6 @@
 - **日志** — 将消息发送到[日志](user_interface/logs.md)。
 - **禁用** — 不显示通知。
 
-要设置通知，请单击 ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) 按钮（位于[通知面板](notifications/notification_panel.md)中），或者直接在支持通知的面板中单击 ![Designer Alert Bell](../../images/designer_alert_bell.png) 按钮。
+要设置通知，请单击 ![Designer 添加按钮 00](../../images/designer_creation_tool_00.png) 按钮（位于[通知面板](notifications/notification_panel.md)中），或者直接在支持通知的面板中单击 ![Designer 提醒铃](../../images/designer_alert_bell.png) 按钮。
 
 有关通知配置方法，请参阅[通知设置](notifications/notifications_setup.md)。

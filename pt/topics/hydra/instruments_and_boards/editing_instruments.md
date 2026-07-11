@@ -1,21 +1,21 @@
 # Editar instrumentos
 
-Para editar um instrumento (por exemplo, se tiver sido criado sem todos os dados necessários), faça duplo clique no instrumento ou clique no botão ![hydra edit](../../../images/hydra_edit.png) para abrir a janela onde pode fazer as alterações necessárias:
+Para editar um instrumento (por exemplo, se tiver sido criado sem todos os dados necessários), faça duplo clique no instrumento ou clique no botão ![Hydra edição](../../../images/hydra_edit.png) para abrir a janela onde pode fazer as alterações necessárias:
 
 Vá para a janela **Instrumentos**.
 
-![hydra security edit 00](../../../images/hydra_security_edit_00.png)
+![Hydra editar instrumento 00](../../../images/hydra_security_edit_00.png)
 
 A janela de edição será aberta.
 
-![hydra security edit](../../../images/hydra_security_edit.png)
+![Hydra editar instrumento](../../../images/hydra_security_edit.png)
 
-Se necessário, pode editar o grupo de instrumentos. Selecione um grupo de instrumentos e clique no botão ![hydra edit](../../../images/hydra_edit.png).
+Se necessário, pode editar o grupo de instrumentos. Selecione um grupo de instrumentos e clique no botão ![Hydra edição](../../../images/hydra_edit.png).
 
-![hydra securities edit 00](../../../images/hydra_securities_edit_00.png)
+![Hydra editar instrumentos 00](../../../images/hydra_securities_edit_00.png)
 
 Depois edite o grupo conforme necessário.
 
-![hydra securities edit](../../../images/hydra_securities_edit.png)
+![Hydra editar instrumentos](../../../images/hydra_securities_edit.png)
 
 Se todos os instrumentos selecionados tiverem o mesmo valor num campo, esse valor será apresentado. Se os valores forem diferentes, o campo ficará vazio. Por exemplo, se dois instrumentos tiverem um passo de preço de 1, mas um tiver um tamanho de lote de 10 e o outro de 100, o campo Passo de preço mostrará 1 e o campo Passo de volume ficará vazio.

@@ -1,6 +1,6 @@
 # Atraso de valor
 
-![Designer Delay 00](../../../../../../images/designer_delay_00.png)
+![Designer atraso 00](../../../../../../images/designer_delay_00.png)
 
 Este componente é usado para atrasar a transmissão de um valor durante um número especificado de iterações.
 
@@ -17,7 +17,7 @@ Este componente é usado para atrasar a transmissão de um valor durante um núm
 
 - **Duração** - Especifica a duração do atraso em iterações.
 
-![Designer Delay 01](../../../../../../images/designer_delay_01.png)
+![Designer atraso 01](../../../../../../images/designer_delay_01.png)
 
 ## Ver também
 

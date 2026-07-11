@@ -1,6 +1,6 @@
 # Panel de opciones
 
-En la ventana que aparece, seleccione el rango de tiempo deseado, elija el activo subyacente, añada opciones para él y haga clic en el botón ![hydra find](../../../../images/hydra_find.png):
+En la ventana que aparece, seleccione el rango de tiempo deseado, elija el activo subyacente, añada opciones para él y haga clic en el botón ![Hydra botón Buscar](../../../../images/hydra_find.png):
 
 Si no hay historial, pero hay datos sobre el spread, puede calcular las principales griegas (Delta, Gamma, Vega, Theta, Rho, Volatility (implied)); para ello debe seleccionarlas en el campo **Calcular griegas**.
 

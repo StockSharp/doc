@@ -1,6 +1,6 @@
 # 稼働時間
 
-![Designer Working time 00](../../../../../../images/designer_working_time_00.png)
+![Designer 稼働時間 00](../../../../../../images/designer_working_time_00.png)
 
 このブロックは、ストラテジーの稼働時間を判定するために使用します。たとえば、特定のインストゥルメントで取引が行われる時間や、ストラテジーに取引が許可される時間を定義します。
 #### 入力ソケット
@@ -16,7 +16,7 @@
 
 このブロックは、異なる取引プラットフォーム上の複数のインストゥルメントについて、いつ取引が行われるかを判定するために使用できます。
 
-![Designer Working time 01](../../../../../../images/designer_working_time_01.png)
+![Designer 稼働時間 01](../../../../../../images/designer_working_time_01.png)
 
 ## 関連項目
 

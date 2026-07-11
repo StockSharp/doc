@@ -2,7 +2,7 @@
 
 Beim Handeln kann es erforderlich sein, den Prozess vollständig zu kontrollieren. Für umfassende Kontrolle und Analyse stellt **Terminal** grafische Komponenten bereit, die Sie hinzufügen können, indem Sie sie in der Gruppe **Komponenten** des **Menübands** auswählen:
 
-![Designer Components](../../../images/designer_components.png)
+![Designer Komponenten](../../../images/designer_components.png)
 
 - [Instrumente](components/instruments.md) - ist eine Tabelle mit Instrumenten, die Informationen zu allen ausgewählten Instrumenten anzeigt.
 - [Level 1](components/level_1.md) - ist eine Tabelle mit der Änderungshistorie von Level 1 für die ausgewählten Instrumente.

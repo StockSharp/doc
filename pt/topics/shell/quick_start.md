@@ -24,7 +24,7 @@ Depois de ligar, no separador [Comum](user_interface/common.md), pode ver as car
 
 ![Shell Início rápido 02](../../images/shell_quick_start_02.png)
 
-Aceda ao separador Tempo real e clique no botão **Adicionar** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) para adicionar uma estratégia para negociação.
+Aceda ao separador Tempo real e clique no botão **Adicionar** ![Designer botão Adicionar 00](../../images/designer_creation_tool_00.png) para adicionar uma estratégia para negociação.
 
 ![Shell Início rápido 03](../../images/shell_quick_start_03.png)
 

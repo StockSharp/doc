@@ -1,6 +1,6 @@
 # Zufallswert
 
-![Designer Random 00](../../../../../../images/designer_random_00.png)
+![Designer Zufall 00](../../../../../../images/designer_random_00.png)
 
 Dieser Block wird verwendet, um einen Zufallswert zu generieren.
 
@@ -17,7 +17,7 @@ Dieser Block wird verwendet, um einen Zufallswert zu generieren.
 - **Min** - die minimal zulässige Wertgrenze.
 - **Max** - die maximal zulässige Wertgrenze.
 
-![Designer Random 01](../../../../../../images/designer_random_01.png)
+![Designer Zufall 01](../../../../../../images/designer_random_01.png)
 
 ## Siehe auch
 

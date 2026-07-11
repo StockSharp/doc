@@ -1,6 +1,6 @@
 # Valor aleatorio
 
-![Designer Random 00](../../../../../../images/designer_random_00.png)
+![Designer aleatorio 00](../../../../../../images/designer_random_00.png)
 
 Este bloque se usa para generar un valor aleatorio.
 
@@ -17,7 +17,7 @@ Este bloque se usa para generar un valor aleatorio.
 - **Mín** - límite mínimo permisible del valor.
 - **Máx** - límite máximo permisible del valor.
 
-![Designer Random 01](../../../../../../images/designer_random_01.png)
+![Designer aleatorio 01](../../../../../../images/designer_random_01.png)
 
 ## Véase también
 

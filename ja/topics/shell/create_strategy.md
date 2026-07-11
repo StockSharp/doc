@@ -2,7 +2,7 @@
 
 独自のストラテジーを作成するには、Strategies フォルダー内にストラテジー用のフォルダーを作成します。
 
-![Shell custom strategy 00](../../images/shell_custom_strategy_00.png)
+![Shell カスタム戦略 00](../../images/shell_custom_strategy_00.png)
 
 SmaStrategy を例として、ストラテジー本体を作成します。
 
@@ -38,7 +38,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 > [!TIP]
 > 既定のストラテジーで使用されるテスト用パネルまたは監視用パネルが、そのストラテジーに対して十分である場合は、IHaveTestControl インターフェイスおよび IHaveMonitoringControl インターフェイスを実装する必要はありません。Shell は既定のテスト用パネルまたは監視用パネルを自動的に実行します。 
 
-![Shell custom strategy 01](../../images/shell_custom_strategy_01.png)
+![Shell カスタム戦略 01](../../images/shell_custom_strategy_01.png)
 
 作成したストラテジーをストラテジー選択ウィンドウで利用できるようにするには、メインウィンドウの **DictionaryStrategies** ディクショナリに追加する必要があります。 
 

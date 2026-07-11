@@ -2,11 +2,11 @@
 
 要将数据导出为 MetaStock 格式文件，请从下拉列表中选择 Txt 格式：
 
-![hydra export](../../../../images/hydra_export.png)
+![Hydra 导出](../../../../images/hydra_export.png)
 
 导出为文本格式（Txt）文件时，会出现以下窗口：
 
-![hydra export Meta Stock 2](../../../../images/hydra_export_tslab_metastock_2.png)
+![Hydra 导出 Meta Stock 2](../../../../images/hydra_export_tslab_metastock_2.png)
 
 在该窗口中指定导出模板。花括号用于表示要导出的属性及其顺序：
 

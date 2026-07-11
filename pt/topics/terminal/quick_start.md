@@ -14,15 +14,15 @@ Vamos às definições de ligação e selecionamos a ligação necessária. A fo
 
 O passo seguinte é estabelecer ligação clicando no botão **Ligar** ![Designer Barra de ferramentas de acesso rápido 00](../../images/designer_quick_access_toolbar_00.png).
 
-Ao clicar no botão **Adicionar** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) no painel do gráfico, adicionamos uma nova área de gráfico. Ao clicar com o botão direito do rato na área do gráfico, adicionamos velas para o instrumento que nos interessa. Podemos adicionar indicadores, negócios próprios e ordens ao gráfico. Também existe a possibilidade de registar ordens a partir do gráfico. Para obter mais informações sobre como trabalhar com o gráfico, consulte a secção [Gráfico](user_interface/components/chart.md).
+Ao clicar no botão **Adicionar** ![Designer botão Adicionar 00](../../images/designer_creation_tool_00.png) no painel do gráfico, adicionamos uma nova área de gráfico. Ao clicar com o botão direito do rato na área do gráfico, adicionamos velas para o instrumento que nos interessa. Podemos adicionar indicadores, negócios próprios e ordens ao gráfico. Também existe a possibilidade de registar ordens a partir do gráfico. Para obter mais informações sobre como trabalhar com o gráfico, consulte a secção [Gráfico](user_interface/components/chart.md).
 
 ![Terminal Início rápido 01](../../images/terminal_quick_start_01.png)
 
-Ao clicar no botão **Adicionar** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) no painel Instrumentos, adiciona os instrumentos que pretende acompanhar. Os dados do melhor preço serão apresentados aqui. Para obter mais informações sobre como trabalhar com o painel Instrumentos, consulte a secção [Instrumentos](user_interface/components/instruments.md).
+Ao clicar no botão **Adicionar** ![Designer botão Adicionar 00](../../images/designer_creation_tool_00.png) no painel Instrumentos, adiciona os instrumentos que pretende acompanhar. Os dados do melhor preço serão apresentados aqui. Para obter mais informações sobre como trabalhar com o painel Instrumentos, consulte a secção [Instrumentos](user_interface/components/instruments.md).
 
 ![Terminal Início rápido 02](../../images/terminal_quick_start_02.png)
 
-No livro de ofertas, depois de clicar no botão **Definições** ![Designer Schedule 01](../../images/designer_schedule_01.png), aparece um painel onde pode especificar o **Instrumento** e a **Carteira** para os negócios. Aqui também pode ajustar a profundidade do livro de ofertas. Para obter mais informações sobre como trabalhar com um livro de ofertas, consulte a secção [Livro de ofertas](user_interface/components/order_book.md).
+No livro de ofertas, depois de clicar no botão **Definições** ![Designer elemento gráfico 01](../../images/designer_schedule_01.png), aparece um painel onde pode especificar o **Instrumento** e a **Carteira** para os negócios. Aqui também pode ajustar a profundidade do livro de ofertas. Para obter mais informações sobre como trabalhar com um livro de ofertas, consulte a secção [Livro de ofertas](user_interface/components/order_book.md).
 
 ![Terminal Início rápido 03](../../images/terminal_quick_start_03.png)
 

@@ -2,7 +2,7 @@
 
 Durante a negociação, pode precisar de controlar totalmente o processo. Para controlo e análise completos, o **Terminal** disponibiliza componentes gráficos que pode adicionar selecionando-os no grupo **Componentes** do **friso**:
 
-![Designer Components](../../../images/designer_components.png)
+![Designer componentes](../../../images/designer_components.png)
 
 - [Instrumentos](components/instruments.md) - é uma tabela com instrumentos que apresenta informações sobre todos os instrumentos selecionados.
 - [Level 1](components/level_1.md) - é uma tabela com o histórico de alterações de Level 1 para os instrumentos selecionados.

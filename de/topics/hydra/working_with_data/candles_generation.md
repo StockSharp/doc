@@ -22,7 +22,7 @@ Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische
      - Für [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - **P&F-Parameter** angeben.
    - Wählen Sie das Instrument aus, für das Kerzen erzeugt werden sollen.
    - Geben Sie bei Bedarf einen Zeitbereich an.
-   - Klicken Sie auf die Schaltfläche ![hydra find](../../../images/hydra_find.png), um die Erzeugung zu starten.
+   - Klicken Sie auf die Schaltfläche ![Hydra Suchschaltfläche](../../../images/hydra_find.png), um die Erzeugung zu starten.
 
 ### Beispiel für die Zeitrahmen-Kerzenerzeugung
 
@@ -91,7 +91,7 @@ Technische Indikatoren können zum Kerzenchart hinzugefügt werden:
 1. Öffnen Sie das Kontextmenü durch Rechtsklick auf das Chartpanel.
 2. Wählen Sie den Eintrag **Indikator** und den gewünschten Indikator aus der Liste aus.
 3. Um den Indikator in einem separaten Panel anzuzeigen:
-   - Fügen Sie über die Schaltfläche ![hydra add](../../../images/hydra_add.png) ein neues Panel hinzu.
+   - Fügen Sie über die Schaltfläche ![Hydra Schaltfläche Hinzufügen](../../../images/hydra_add.png) ein neues Panel hinzu.
    - Wählen Sie den gewünschten Indikator im Kontextmenü aus.
 
 Beispiel für ein Chart mit hinzugefügten Indikatoren:

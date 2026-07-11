@@ -2,7 +2,7 @@
 
 La primera vez que se ejecuta, aparece la siguiente ventana para seleccionar fuentes de datos. También puede abrir esta ventana en la pestaña **Común**, seleccionando **Añadir \=\> Fuentes**.
 
-![hydra source add](../../images/hydra_source_add.png)
+![Hydra añadir fuente](../../images/hydra_source_add.png)
 
 En la ventana, marque las fuentes necesarias. Puede usar filtros por región, mercado, tipo de datos, pago y disponibilidad en tiempo real. Cuando termine la selección, haga clic en **OK**. Después, el programa ofrecerá habilitar las utilidades. Para obtener más detalles sobre el trabajo con utilidades, consulte la sección [Utilidades](tasks.md). Haga clic en **OK**.
 
@@ -29,7 +29,7 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
 
    En el primer inicio, el programa ofrecerá descargar todos los instrumentos de una vez para la fuente seleccionada. Más adelante, el usuario descargará los instrumentos por su cuenta. Inicialmente, la base de instrumentos de [Hydra](../hydra.md) está vacía; solo existe el instrumento auxiliar **ALL@ALL**. Al seleccionar este instrumento, se descargarán datos de todos los instrumentos disponibles para esta fuente.
 
-   Para añadir un instrumento, haga clic en el botón **Añadir** ![hydra add](../../images/hydra_add.png). Después se abrirá una ventana para descargar el instrumento. ![hydra securities](../../images/hydra_securities.png)
+   Para añadir un instrumento, haga clic en el botón **Añadir** ![Hydra botón Añadir](../../images/hydra_add.png). Después se abrirá una ventana para descargar el instrumento. ![hydra securities](../../images/hydra_securities.png)
 
    Para descargar los instrumentos, debe hacer clic en el botón correspondiente **Descargar instrumentos**.
 
@@ -37,13 +37,13 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
 
    O bien, para varias fuentes, [configurar](prepare_for_download/instruments_list.md) los instrumentos que necesita descargar.
 
-   Cuando se reciban los instrumentos, la ventana tendrá este aspecto.![hydra security full list](../../images/hydra_security_full_list.png)
+   Cuando se reciban los instrumentos, la ventana tendrá este aspecto.![Hydra lista completa de instrumentos](../../images/hydra_security_full_list.png)
 
    En ella se enumerarán todos los instrumentos disponibles para añadir. Para una búsqueda rápida, puede introducir el nombre en el campo correspondiente.
 
-   Para seleccionar un instrumento, haga doble clic en él y se moverá al lado derecho de la lista.![hydra security full list 00](../../images/hydra_security_full_list_00.png)
+   Para seleccionar un instrumento, haga doble clic en él y se moverá al lado derecho de la lista.![Hydra lista completa de instrumentos 00](../../images/hydra_security_full_list_00.png)
 
-   Después se moverá al lado derecho de la tabla.![hydra security full list 01](../../images/hydra_security_full_list_01.png)
+   Después se moverá al lado derecho de la tabla.![Hydra lista completa de instrumentos 01](../../images/hydra_security_full_list_01.png)
 
    Los instrumentos seleccionados se mostrarán en la tabla **Instrumentos**, que tiene estructura de árbol. Su elemento principal es el instrumento; el elemento adicional son los tipos de datos de mercado que se recibirán para ese instrumento.
 2. Para cada instrumento seleccionado, debe elegir los tipos de datos de mercado necesarios para la descarga.

@@ -1,8 +1,8 @@
 # Positionsschutz
 
-![Designer Protect positions 00](../../../../../../images/designer_protect_positions_00.png)
+![Designer Positionen schützen 00](../../../../../../images/designer_protect_positions_00.png)
 
-![Designer Protect positions 01](../../../../../../images/designer_protect_positions_01.png)
+![Designer Positionen schützen 01](../../../../../../images/designer_protect_positions_01.png)
 
 Dieser Block wird verwendet, um offene Trades automatisch mit Stop-Loss und Take-Profit zu schützen.
 
@@ -30,7 +30,7 @@ Take- und Stop-Parameter
 - **Timeout** - der Timeout-Wert, nach dem der Schutz zwangsweise zum Marktpreis ausgelöst wird.
 - **Market-Orders** - Market-Orders (ohne Preis) zum schnellen Schließen der Position verwenden.
 
-![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
+![Designer Positionen schützen 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
 > Eingehende Transaktionen DÜRFEN KEINE Transaktionen der gesamten Strategie sein (der Block [Trades nach Strategie](../common/trades_by_strategy.md)), da dies zu einer fehlerhaften Berechnung der aktuellen Position führt: Die Schutztransaktionen würden ebenfalls zu Strategietransaktionen. Der Block **Positionsschutz** sollte Transaktionen aus dem Ausgabe-Socket **Transaktion** der Würfel [Orderregistrierung](../orders/register.md) und [Position ändern](modify.md) oder ähnlicher Komponenten erhalten, die die Position direkt ändern.

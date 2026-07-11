@@ -1,6 +1,6 @@
 # 期权持仓图表
 
-![Designer Graph options positions 00](../../../../../../images/designer_graph_options_positions_00.png)
+![Designer 持仓图表选项 00](../../../../../../images/designer_graph_options_positions_00.png)
 
 该模块用于显示 **期权持仓图表**。
 
@@ -13,9 +13,9 @@
 - **模型** – 计算模型（例如 Black-Scholes）。
 - **标的资产价格** \- 标的资产的价格。
 
-![Designer Graph options positions 01](../../../../../../images/designer_graph_options_positions_01.png)
+![Designer 持仓图表选项 01](../../../../../../images/designer_graph_options_positions_01.png)
 
-![Designer Graph options positions 02](../../../../../../images/designer_graph_options_positions_02.png)
+![Designer 持仓图表选项 02](../../../../../../images/designer_graph_options_positions_02.png)
 
 ## 推荐内容
 

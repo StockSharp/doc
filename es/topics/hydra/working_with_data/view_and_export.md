@@ -10,7 +10,7 @@ O haga clic derecho en el tipo de datos requerido, como se muestra en la figura,
 
 Cada panel contiene una interfaz general de configuración como la siguiente:
 
-![hydra export 00](../../../images/hydra_export_00.png)
+![Hydra exportación 00](../../../images/hydra_export_00.png)
 
 - La línea superior indica el almacenamiento de datos de mercado y su formato (BIN o CSV).
 - La línea inferior establece el período para el que se solicitarán los datos. Al hacer clic en el botón **Seleccionar instrumento**, aparecerá la ventana de selección de instrumentos, donde puede seleccionar uno o varios instrumentos. Si se seleccionan varios instrumentos, durante la exportación posterior a Excel o CSV el programa ordenará automáticamente los datos de distintos instrumentos en archivos diferentes.
@@ -19,8 +19,8 @@ Cada panel contiene una interfaz general de configuración como la siguiente:
   debe aumentar el límite de datos descargados.
 - Si los datos se recibieron de fuentes cuya zona horaria no coincide con la zona horaria actual, puede ajustar la zona horaria. Después de construir, los datos se mostrarán en la zona seleccionada por el usuario. ![hydra TZ](../../../images/hydra_tz.png)
 - Como varias fuentes no ofrecen la posibilidad de descargar algunos datos, el programa proporciona el campo [Construir a partir de](any_market_data_types.md). Con este campo, el usuario puede construir datos de mercado a partir de otro tipo de datos de mercado. La misma función puede usarse para construir datos de mercado sin descarga adicional, usando como base datos ya existentes.
-- Después de seleccionar los parámetros anteriores, debe hacer clic en el botón ![hydra find](../../../images/hydra_find.png).![hydra velas tf](../../../images/hydra_candles_tf.png)
+- Después de seleccionar los parámetros anteriores, debe hacer clic en el botón ![Hydra botón Buscar](../../../images/hydra_find.png).![hydra velas tf](../../../images/hydra_candles_tf.png)
 
 Con el menú contextual, puede configurar distintos parámetros de la tabla de valores de datos de mercado: agrupación de filas, columnas disponibles, formato de visualización, etc.
 
-![hydra export context](../../../images/hydra_export_context.png)
+![Hydra contexto de exportación](../../../images/hydra_export_context.png)

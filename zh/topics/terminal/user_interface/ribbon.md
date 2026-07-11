@@ -4,7 +4,7 @@
 
 程序启动后默认打开 **常规** 选项卡，其中包含开始工作时可能需要的功能。在 **常规** 选项卡中，可以添加[工作区](../../designer/user_interface/workspace.md)，打开[日志](../../designer/user_interface/logs.md)、[投资组合](../../designer/user_interface/portfolios.md)或[交易板](../../designer/user_interface/boards.md)，也可以添加[组件](../../designer/user_interface/components.md)。此外，还可以在 **常规** 选项卡中选择 [Terminal](../../terminal.md) 的界面主题。
 
-![Terminal Tape 00](../../../images/terminal_tape_00.png)
+![Terminal 功能区 00](../../../images/terminal_tape_00.png)
 
 ## 推荐内容
 

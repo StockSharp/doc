@@ -1,8 +1,8 @@
 # 持仓保护
 
-![Designer Protect positions 00](../../../../../../images/designer_protect_positions_00.png)
+![Designer 持仓保护 00](../../../../../../images/designer_protect_positions_00.png)
 
-![Designer Protect positions 01](../../../../../../images/designer_protect_positions_01.png)
+![Designer 持仓保护 01](../../../../../../images/designer_protect_positions_01.png)
 
 该模块使用止损和止盈自动保护已开仓的成交。
 
@@ -30,7 +30,7 @@
 - **超时** - 超时时长，超过该时间后将按市价强制触发保护。
 - **市价单** – 使用不指定价格的市价订单快速平仓。
 
-![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
+![Designer 持仓保护 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
 > 传入成交不能是整个策略的成交（即[策略成交](../common/trades_by_strategy.md)模块的输出），否则会导致当前持仓计算错误：保护订单产生的成交也会成为策略成交。**持仓保护** 模块应接收 [注册订单](../orders/register.md) 和 [修改持仓](modify.md) 模块的 **交易事务** 输出端口所产生的成交，或接收来自其他直接改变持仓的类似组件的成交。

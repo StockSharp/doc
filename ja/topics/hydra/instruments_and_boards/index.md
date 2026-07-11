@@ -32,9 +32,9 @@
    - **tan(a)** - 指定した角度の正接を返します。
    - **truncate(a)** - 指定した数値の整数部を計算します。
 4. インデックスの計算に使用する数学演算を入力します。![hydra 銘柄インデックス 01](../../../images/hydra_index_sec_01.png)
-5. 次に、**共通** タブで [ローソク足](../working_with_data/view_and_export/candles.md) をクリックし、作成した **インデックス** 銘柄とデータ期間を選択し、**作成元:** フィールドで **複合要素** を設定してから、![hydra find](../../../images/hydra_find.png) をクリックします。![hydra ローソク足インデックス](../../../images/hydra_index_candle.png)
+5. 次に、**共通** タブで [ローソク足](../working_with_data/view_and_export/candles.md) をクリックし、作成した **インデックス** 銘柄とデータ期間を選択し、**作成元:** フィールドで **複合要素** を設定してから、![Hydra 検索ボタン](../../../images/hydra_find.png) をクリックします。![hydra ローソク足インデックス](../../../images/hydra_index_candle.png)
 
 生成されたデータは Excel、XML、または TXT 形式にエクスポートできます。エクスポートはドロップダウンリストを使用して行います。
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra エクスポート](../../../images/hydra_export.png)
 

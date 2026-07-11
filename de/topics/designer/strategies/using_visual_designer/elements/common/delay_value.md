@@ -1,6 +1,6 @@
 # Wertverzögerung
 
-![Designer Delay 00](../../../../../../images/designer_delay_00.png)
+![Designer Verzögerung 00](../../../../../../images/designer_delay_00.png)
 
 Diese Komponente wird verwendet, um die Übertragung eines Werts um eine angegebene Anzahl von Iterationen zu verzögern.
 
@@ -17,7 +17,7 @@ Diese Komponente wird verwendet, um die Übertragung eines Werts um eine angegeb
 
 - **Dauer** - gibt die Verzögerungsdauer in Iterationen an.
 
-![Designer Delay 01](../../../../../../images/designer_delay_01.png)
+![Designer Verzögerung 01](../../../../../../images/designer_delay_01.png)
 
 ## Siehe auch
 

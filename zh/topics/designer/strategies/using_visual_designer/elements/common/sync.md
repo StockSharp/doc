@@ -1,6 +1,6 @@
 ## 同步
 
-![Designer Sync 00](../../../../../../images/designer_sync_00.png)
+![Designer 同步 00](../../../../../../images/designer_sync_00.png)
 
 Synchronization 模块用于汇集并同步来自不同数据源的数据（例如不同交易品种的K线、不同时间周期的数据，或K线与成交的组合），并在收集到一定数量后将其输出。该模块适合用于创建自定义指数或套利策略。
 
@@ -18,4 +18,4 @@ Synchronization 模块用于汇集并同步来自不同数据源的数据（例�
 1. 为多只股票创建自定义指数，需要处理来自不同数据源的不同时间序列。
 2. 使用同步后的时间数据在不同市场之间进行套利，以识别不同时点的价格差异。
 
-![Designer Sync 01](../../../../../../images/designer_sync_01.png)
+![Designer 同步 01](../../../../../../images/designer_sync_01.png)

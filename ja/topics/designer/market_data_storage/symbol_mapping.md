@@ -4,11 +4,11 @@
 
 証券と接続を対応付けるには、**全銘柄** パネルの **銘柄と接続** ボタンをクリックします。
 
-![Designer Security mapping 00](../../../images/designer_security_mapping_00.png)
+![Designer 銘柄マッピング 00](../../../images/designer_security_mapping_00.png)
 
-開いたウィンドウで、![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) ボタンをクリックして新しい行を追加します。
+開いたウィンドウで、![Designer 追加ボタン 00](../../../images/designer_creation_tool_00.png) ボタンをクリックして新しい行を追加します。
 
 **接続** 列で、ドロップダウンリストから接続を選択します。**銘柄コード** 列と **ボードコード** 列には、**Designer** で指定されている証券コードとボードコードを指定します。**アダプターコード** 列と **アダプターボード** 列には、外部取引システムで指定されている証券コードとボードコードを指定します。
 
-![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+![Designer 銘柄マッピング 01](../../../images/designer_security_mapping_01.png)
 

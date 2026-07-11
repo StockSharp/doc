@@ -32,7 +32,7 @@ Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben
 **Allgemein**
 
 - **Kopfzeile** - Converter.
-- **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![Hydra Aufgaben Sicherung](../../../images/hydra_tasks_backup_desk.png)
 - **Betriebsintervall** - das Ausführungsintervall.
 - **Datenverzeichnis** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
 - **Format** - Format der konvertierten Daten: BIN\/CSV.

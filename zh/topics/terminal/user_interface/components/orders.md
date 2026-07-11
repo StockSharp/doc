@@ -6,11 +6,11 @@
 
 单击 **订单登记** 按钮后会出现一个窗口。要登记新订单，请填写该窗口并单击 **发送** 按钮。
 
-![Terminal OrderPanel 01](../../../../images/terminal_orderpanel_01.png)
+![Terminal 订单面板 01](../../../../images/terminal_orderpanel_01.png)
 
 单击 **修改订单** 按钮后会出现一个窗口。要修改订单，请完成所需更改并单击 **发送** 按钮。
 
-![Terminal OrderPanel 02](../../../../images/terminal_orderpanel_02.png)
+![Terminal 订单面板 02](../../../../images/terminal_orderpanel_02.png)
 
 ## 推荐内容
 

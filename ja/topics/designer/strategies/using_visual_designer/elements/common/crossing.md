@@ -1,6 +1,6 @@
 # クロス
 
-![Designer Crossing 00](../../../../../../images/designer_crossing_00.png)
+![Designer クロッシング 00](../../../../../../images/designer_crossing_00.png)
 
 この要素は、2 つの値の相対的な位置を追跡するために使用します。たとえば、2 本の線が交差する瞬間を判定するために使用します。
 
@@ -15,7 +15,7 @@
 
 - **フラグ** - **上** が **下** より大きい場合は true、それ以外の場合は false。
 
-![Designer Crossing 01](../../../../../../images/designer_crossing_01.png)
+![Designer クロッシング 01](../../../../../../images/designer_crossing_01.png)
 
 2 つの [SMA インジケーター](../../../../../api/indicators/list_of_indicators/sma.md)の交差を追跡するために Crossing ブロックを使用する例です。2 つの Crossing ブロックが使用され、それぞれ長期 SMA が短期 SMA より大きい場合と小さい場合に応じて、個別に true を出力します。
 

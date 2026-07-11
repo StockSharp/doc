@@ -4,10 +4,10 @@ O mesmo instrumento em diferentes sistemas de negociação pode ter nomes difere
 
 Para associar títulos e ligações, clique no botão **Instrumentos e ligações** no painel **Todos os instrumentos**.
 
-![Designer Security mapping 00](../../../images/designer_security_mapping_00.png)
+![Designer mapeamento de instrumentos 00](../../../images/designer_security_mapping_00.png)
 
-Na janela aberta, clique no botão ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) para adicionar uma nova linha.
+Na janela aberta, clique no botão ![Designer botão Adicionar 00](../../../images/designer_creation_tool_00.png) para adicionar uma nova linha.
 
 Na coluna **Ligação**, selecione uma ligação na lista pendente. Nas colunas **Código do instrumento** e **Código do mercado**, especifique os códigos do título e da board tal como estão especificados no **Designer**. Nas colunas **Código do adaptador** e **Mercado do adaptador**, especifique os códigos do título e da board tal como estão especificados no sistema de negociação externo.
 
-![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+![Designer mapeamento de instrumentos 01](../../../images/designer_security_mapping_01.png)

@@ -22,7 +22,7 @@ Es ist auch möglich, vorhandene Patterns zu bearbeiten und eigene benutzerdefin
 
 ![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
 
-Um ein eigenes Pattern zu erstellen, klicken Sie oben im Fenster auf die Schaltfläche ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png). Ein Klick auf die Schaltfläche ![DesignerDeleteButton](../../images/designer_delete_button.png) löscht das Pattern.
+Um ein eigenes Pattern zu erstellen, klicken Sie oben im Fenster auf die Schaltfläche ![Designer Plus-Schaltfläche](../../images/designer_panel_circuits_01_button.png). Ein Klick auf die Schaltfläche ![Designer Löschschaltfläche](../../images/designer_delete_button.png) löscht das Pattern.
 
 ### Im Terminal
 
@@ -89,7 +89,7 @@ Bei Verwendung von [ExpressionCandlePattern](xref:StockSharp.Algo.Candles.Patter
 
 ## Standard-Patterns
 
-Für die schnelle Erstellung von Patterns auf Basis vorhandener Patterns können Sie den Bereich am unteren Rand des Pattern-Editor-Fensters verwenden. Ein Klick auf die Schaltfläche ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) am unteren Fensterrand fügt die Logik des in der gegenüberliegenden Dropdown-Liste ausgewählten Patterns in das Bearbeitungsfenster ein. Die Schaltfläche ![DesignerDeleteButton](../../images/designer_delete_button.png) am unteren Fensterrand löscht die ausgewählte Zeile im Bearbeitungsfenster.
+Für die schnelle Erstellung von Patterns auf Basis vorhandener Patterns können Sie den Bereich am unteren Rand des Pattern-Editor-Fensters verwenden. Ein Klick auf die Schaltfläche ![Designer Plus-Schaltfläche](../../images/designer_panel_circuits_01_button.png) am unteren Fensterrand fügt die Logik des in der gegenüberliegenden Dropdown-Liste ausgewählten Patterns in das Bearbeitungsfenster ein. Die Schaltfläche ![Designer Löschschaltfläche](../../images/designer_delete_button.png) am unteren Fensterrand löscht die ausgewählte Zeile im Bearbeitungsfenster.
 
 ## Erweiterte Funktionen
 

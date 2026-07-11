@@ -6,7 +6,7 @@
 
 此外，还可以按期权的确切到期日进行筛选，并设置最低\/最高执行价筛选条件。
 
-![Terminal option desk 00](../../../../images/terminal_option_desk_00.png)
+![Terminal 期权面板 00](../../../../images/terminal_option_desk_00.png)
 
 ## 推荐内容
 

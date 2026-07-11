@@ -10,7 +10,7 @@ Para añadir una nueva fuente de datos de mercado, debe:
 
 Después aparecerá una lista de fuentes. El usuario puede seleccionar varias fuentes a la vez.
 
-![hydra source add](../../../images/hydra_source_add.png)
+![Hydra añadir fuente](../../../images/hydra_source_add.png)
 
 También puede crear varias instancias de la misma fuente. Por ejemplo, varias instancias de **Interactive Brokers** que guardarán los datos descargados en carpetas diferentes.
 

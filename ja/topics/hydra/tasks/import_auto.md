@@ -32,7 +32,7 @@
 **全般**
 
 - **ヘッダー** - Converter。
-- **稼働時間** - ボード稼働スケジュールの設定。 ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **稼働時間** - ボード稼働スケジュールの設定。 ![Hydra バックアップタスク](../../../images/hydra_tasks_backup_desk.png)
 - **動作間隔** - 動作間隔。
 - **データディレクトリ** - 変換用のデータを受け取るデータディレクトリ。
 - **形式** - 変換後のデータ形式: BIN\/CSV。

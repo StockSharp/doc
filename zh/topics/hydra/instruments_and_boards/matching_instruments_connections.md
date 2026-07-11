@@ -8,18 +8,18 @@
 
 要匹配交易品种与连接，请执行以下操作：
 
-1. 进入 **交易品种** 选项卡，然后单击 **交易品种和连接** 按钮。![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
-2. 在连接列表中选择所需的连接。![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+1. 进入 **交易品种** 选项卡，然后单击 **交易品种和连接** 按钮。![Designer 交易品种映射 01 00](../../../images/designer_security_mapping_01_00.png)
+2. 在连接列表中选择所需的连接。![Designer 交易品种映射 01](../../../images/designer_security_mapping_01.png)
 3. 填写所有列。
 
    例如：
 
    以 APPLE 股票为例。
-   - 连接选择 **Interactive Brokers**。单击 ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) 按钮，随后将添加一行。
-   - 在 **交易品种代码** 和 **交易板块代码** 列中指定交易品种代码和交易板块代码。在 **适配器中的交易品种代码** 和 **适配器中的交易板块代码** 列中，按照外部交易系统中的定义填写交易品种代码和交易板块代码。单击 **确定**。![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
+   - 连接选择 **Interactive Brokers**。单击 ![Designer 添加按钮 00](../../../images/designer_creation_tool_00.png) 按钮，随后将添加一行。
+   - 在 **交易品种代码** 和 **交易板块代码** 列中指定交易品种代码和交易板块代码。在 **适配器中的交易品种代码** 和 **适配器中的交易板块代码** 列中，按照外部交易系统中的定义填写交易品种代码和交易板块代码。单击 **确定**。![Designer 交易品种映射 01 01](../../../images/designer_security_mapping_01_01.png)
    - 以相同方式为 **Interactive Brokers** 和 **CQG Continuum** 连接重复上述步骤。
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |
    | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-   | ![Designer Security mapping 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer Security mapping 01 03](../../../images/designer_security_mapping_01_03.png) |
+   | ![Designer 交易品种映射 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer 交易品种映射 01 03](../../../images/designer_security_mapping_01_03.png) |
 4. 现在，所有下载的数据（本例中为 APPLE 股票的数据）都会保存到同一位置。

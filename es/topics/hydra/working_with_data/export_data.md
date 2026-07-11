@@ -6,7 +6,7 @@ Para exportar datos, se usan archivos en formatos [Excel](https://en.wikipedia.o
 
 Para exportar, debe seleccionar el formato de archivo requerido en la lista desplegable:
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra exportación](../../../images/hydra_export.png)
 
 Después debe seleccionar una carpeta y cambiar el nombre del archivo si es necesario.
 
@@ -18,13 +18,13 @@ Aquí, entre llaves, se indican las propiedades que se exportarán y su orden, s
 
 Al hacer clic en el botón **Vista previa**, puede ver qué datos se guardarán en el archivo.
 
-![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
+![Hydra exportación TSLab MetaStock 1](../../../images/hydra_export_tslab_metastock_1.png)
 
 El usuario puede añadir propiedades adicionales, como el código del instrumento mediante la propiedad **{SecurityId.SecurityCode}**, o especificar un valor de marco temporal.
 
 Puede añadir un encabezado que indique el nombre de las propiedades. En este caso, el registro tendrá este aspecto.
 
-![hydra export TSLab Meta Stock 2](../../../images/hydra_export_tslab_metastock_2.png)
+![Hydra exportación TSLab MetaStock 2](../../../images/hydra_export_tslab_metastock_2.png)
 
 Si necesita exportar en un formato que usa dos puntos, debe especificar la palabra clave default como en el ejemplo anterior **{OpenTime:default:HH:mm:ss}**.
 

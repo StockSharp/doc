@@ -1,6 +1,6 @@
 # 值延迟
 
-![Designer Delay 00](../../../../../../images/designer_delay_00.png)
+![Designer 延迟 00](../../../../../../images/designer_delay_00.png)
 
 该组件用于将值的传递延迟指定的迭代次数。
 
@@ -17,7 +17,7 @@
 
 - **持续时间** - 以迭代次数指定延迟时长。
 
-![Designer Delay 01](../../../../../../images/designer_delay_01.png)
+![Designer 延迟 01](../../../../../../images/designer_delay_01.png)
 
 ## 另请参阅
 

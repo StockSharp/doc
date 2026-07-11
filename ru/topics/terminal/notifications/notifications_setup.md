@@ -1,6 +1,6 @@
 # Настройки уведомлений
 
-Для задания уведомления необходимо на панели уведомлений ([Панель уведомлений](notification_panel.md)) нажать на кнопку ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) или нажать на кнопку ![Designer Alert Bell](../../../images/designer_alert_bell.png) непосредственно на панелях, поддерживающих уведомления ([Портфели](../../designer/user_interface/portfolios.md), [Лента сделок](../../designer/user_interface/components/tick_trades.md), [Новости](../user_interface/components/news.md), [Level 1](../user_interface/components/level_1.md) ).
+Для задания уведомления необходимо на панели уведомлений ([Панель уведомлений](notification_panel.md)) нажать на кнопку ![Designer кнопка добавления 00](../../../images/designer_creation_tool_00.png) или нажать на кнопку ![Designer колокол уведомлений](../../../images/designer_alert_bell.png) непосредственно на панелях, поддерживающих уведомления ([Портфели](../../designer/user_interface/portfolios.md), [Лента сделок](../../designer/user_interface/components/tick_trades.md), [Новости](../user_interface/components/news.md), [Level 1](../user_interface/components/level_1.md) ).
 
 ![Designer настройка уведомлений](../../../images/designer_notifications_setting.png)
 

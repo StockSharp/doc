@@ -6,7 +6,7 @@
 
 Для экспорта необходимо выбрать нужный формат файла из раскрывающегося списка:
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra экспорт](../../../images/hydra_export.png)
 
 После чего будет предложен выбор дирекории и возможность изменить наименования файла.
 
@@ -18,13 +18,13 @@
 
 Нажав на кнопку **Предпросмотр**, можно просмотреть какие данные будут сохранены в файле.
 
-![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
+![Hydra экспорт TSLab MetaStock 1](../../../images/hydra_export_tslab_metastock_1.png)
 
 Пользователь может добавить дополнительные свойства, например код инструмента через свойство **{SecurityId.SecurityCode}**, или указать значение Тайм Фрейма.
 
 Можно добавить заголовок с указанием наименования свойств. В таком случае запись будет выглядеть следующим образом.
 
-![hydra export TSLab Meta Stock 2](../../../images/hydra_export_tslab_metastock_2.png)
+![Hydra экспорт TSLab MetaStock 2](../../../images/hydra_export_tslab_metastock_2.png)
 
 Если необходимо экспортировать в формате с использованием двоеточий, то необходимо указать ключевое слово **default** как в примере выше **{OpenTime:default:HH:mm:ss}**.
 

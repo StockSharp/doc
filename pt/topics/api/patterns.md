@@ -22,7 +22,7 @@ Também é possível editar os padrões existentes e adicionar os seus próprios
 
 ![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
 
-Para criar o seu próprio padrão, clique no botão ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) na parte superior da janela. Clicar no botão ![DesignerDeleteButton](../../images/designer_delete_button.png) elimina o padrão.
+Para criar o seu próprio padrão, clique no botão ![Designer botão Mais](../../images/designer_panel_circuits_01_button.png) na parte superior da janela. Clicar no botão ![Designer botão Eliminar](../../images/designer_delete_button.png) elimina o padrão.
 
 ### No Terminal
 
@@ -89,7 +89,7 @@ Ao utilizar [ExpressionCandlePattern](xref:StockSharp.Algo.Candles.Patterns.Expr
 
 ## Padrões Standard
 
-Para criar rapidamente padrões com base nos existentes, pode utilizar a secção na parte inferior da janela do editor de padrões. Clicar no botão ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) na parte inferior da janela adiciona à janela de edição a lógica do padrão selecionado na lista pendente oposta. O botão ![DesignerDeleteButton](../../images/designer_delete_button.png) na parte inferior da janela elimina a linha selecionada na janela de edição.
+Para criar rapidamente padrões com base nos existentes, pode utilizar a secção na parte inferior da janela do editor de padrões. Clicar no botão ![Designer botão Mais](../../images/designer_panel_circuits_01_button.png) na parte inferior da janela adiciona à janela de edição a lógica do padrão selecionado na lista pendente oposta. O botão ![Designer botão Eliminar](../../images/designer_delete_button.png) na parte inferior da janela elimina a linha selecionada na janela de edição.
 
 ## Funcionalidades Avançadas
 

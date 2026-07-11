@@ -6,7 +6,7 @@ Für den Export werden Dateien in den Formaten [Excel](https://en.wikipedia.org/
 
 Für den Export sollten Sie das erforderliche Dateiformat aus der Dropdown-Liste auswählen:
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra Datenexport](../../../images/hydra_export.png)
 
 Danach müssen Sie einen Ordner auswählen und bei Bedarf den Dateinamen ändern.
 
@@ -18,13 +18,13 @@ Hier werden in geschweiften Klammern die zu exportierenden Eigenschaften und der
 
 Durch Klicken auf die Schaltfläche **Vorschau** können Sie sehen, welche Daten in der Datei gespeichert werden.
 
-![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
+![Hydra TSLab-MetaStock-Export 1](../../../images/hydra_export_tslab_metastock_1.png)
 
 Der Benutzer kann zusätzliche Eigenschaften wie den Instrumentcode über die Eigenschaft **{SecurityId.SecurityCode}** hinzufügen oder einen Zeitrahmenwert angeben.
 
 Sie können eine Kopfzeile mit den Eigenschaftsnamen hinzufügen. In diesem Fall sieht der Datensatz wie folgt aus.
 
-![hydra export TSLab Meta Stock 2](../../../images/hydra_export_tslab_metastock_2.png)
+![Hydra TSLab-MetaStock-Export 2](../../../images/hydra_export_tslab_metastock_2.png)
 
 Wenn Sie in ein Format exportieren müssen, das Doppelpunkte verwendet, sollten Sie das Schlüsselwort default wie im obigen Beispiel angeben: **{OpenTime:default:HH:mm:ss}**.
 

@@ -1,6 +1,6 @@
 ## Sincronização
 
-![Designer Sync 00](../../../../../../images/designer_sync_00.png)
+![Designer sincronização 00](../../../../../../images/designer_sync_00.png)
 
 O bloco Sincronização foi concebido para acumular e sincronizar dados de várias fontes (por exemplo, velas de diferentes instrumentos, diferentes períodos, combinações de velas e transações) e, posteriormente, emiti-los quando uma determinada quantidade for acumulada. Este bloco é útil para criar índices personalizados ou arbitragem.
 
@@ -18,4 +18,4 @@ O bloco Sincronização foi concebido para acumular e sincronizar dados de vári
 1. Criar um índice personalizado para várias ações, quando é necessário considerar diferentes séries temporais de várias fontes de dados.
 2. Arbitragem entre diferentes mercados usando dados temporais sincronizados para identificar diferenças temporais de preços.
 
-![Designer Sync 01](../../../../../../images/designer_sync_01.png)
+![Designer sincronização 01](../../../../../../images/designer_sync_01.png)

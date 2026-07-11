@@ -4,10 +4,10 @@
 
 要匹配交易品种与连接，请在 **全部交易品种** 面板中单击 **交易品种和连接** 按钮。
 
-![Designer Security mapping 00](../../../images/designer_security_mapping_00.png)
+![Designer 交易品种映射 00](../../../images/designer_security_mapping_00.png)
 
-在打开的窗口中，单击 ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) 按钮添加一行。
+在打开的窗口中，单击 ![Designer 添加按钮 00](../../../images/designer_creation_tool_00.png) 按钮添加一行。
 
 在 **连接** 列的下拉列表中选择连接。在 **交易品种代码** 和 **交易板代码** 列中，按照 **Designer** 中的定义填写交易品种代码和交易板块代码。在 **适配器代码** 和 **适配器交易板** 列中，按照外部交易系统中的定义填写交易品种代码和交易板块代码。
 
-![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+![Designer 交易品种映射 01](../../../images/designer_security_mapping_01.png)

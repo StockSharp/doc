@@ -14,15 +14,15 @@
 
 次のステップは、**接続** ![Designer クイックアクセスツールバー 00](../../images/designer_quick_access_toolbar_00.png) ボタンをクリックして接続することです。
 
-チャートパネルの **追加** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) ボタンをクリックすると、新しいチャート領域を追加します。チャート領域でマウスを右クリックすると、関心のある銘柄のローソク足をそこに追加できます。チャートには、インジケーター、自分の約定、注文を追加できます。また、チャートから注文を登録することもできます。チャートの操作方法の詳細については、[チャート](user_interface/components/chart.md)セクションを参照してください。
+チャートパネルの **追加** ![Designer 追加ボタン 00](../../images/designer_creation_tool_00.png) ボタンをクリックすると、新しいチャート領域を追加します。チャート領域でマウスを右クリックすると、関心のある銘柄のローソク足をそこに追加できます。チャートには、インジケーター、自分の約定、注文を追加できます。また、チャートから注文を登録することもできます。チャートの操作方法の詳細については、[チャート](user_interface/components/chart.md)セクションを参照してください。
 
 ![Terminal クイックスタート 01](../../images/terminal_quick_start_01.png)
 
-銘柄パネルの **追加** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) ボタンをクリックすると、監視したい銘柄を追加できます。ここには最良価格データが表示されます。銘柄パネルの操作方法の詳細については、[銘柄](user_interface/components/instruments.md)セクションを参照してください。
+銘柄パネルの **追加** ![Designer 追加ボタン 00](../../images/designer_creation_tool_00.png) ボタンをクリックすると、監視したい銘柄を追加できます。ここには最良価格データが表示されます。銘柄パネルの操作方法の詳細については、[銘柄](user_interface/components/instruments.md)セクションを参照してください。
 
 ![Terminal クイックスタート 02](../../images/terminal_quick_start_02.png)
 
-板情報で **設定** ![Designer Schedule 01](../../images/designer_schedule_01.png) ボタンをクリックすると、取引用の **銘柄** と **ポートフォリオ** を指定できるパネルが表示されます。ここでは板の深さも調整できます。板情報の操作方法の詳細については、[板情報](user_interface/components/order_book.md)セクションを参照してください。
+板情報で **設定** ![Designer グラフィック要素 01](../../images/designer_schedule_01.png) ボタンをクリックすると、取引用の **銘柄** と **ポートフォリオ** を指定できるパネルが表示されます。ここでは板の深さも調整できます。板情報の操作方法の詳細については、[板情報](user_interface/components/order_book.md)セクションを参照してください。
 
 ![Terminal クイックスタート 03](../../images/terminal_quick_start_03.png)
 

@@ -24,7 +24,7 @@ Nach dem Verbindungsaufbau sehen Sie auf der Registerkarte [Allgemein](user_inte
 
 ![Shell Schnellstart 02](../../images/shell_quick_start_02.png)
 
-Wechseln Sie zur Registerkarte Echtzeit und klicken Sie auf die Schaltfläche **Hinzufügen** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png), um eine Strategie für den Handel hinzuzufügen.
+Wechseln Sie zur Registerkarte Echtzeit und klicken Sie auf die Schaltfläche **Hinzufügen** ![Designer Schaltfläche Hinzufügen 00](../../images/designer_creation_tool_00.png), um eine Strategie für den Handel hinzuzufügen.
 
 ![Shell Schnellstart 03](../../images/shell_quick_start_03.png)
 

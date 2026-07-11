@@ -22,7 +22,7 @@ Isto permite utilizar os dados gerados em quaisquer programas de análise técni
      - Para [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - especifique **Parâmetros P&F**
    - Selecione o instrumento para o qual as candles serão geradas
    - Especifique um intervalo temporal (se necessário)
-   - Clique no botão ![hydra find](../../../images/hydra_find.png) para iniciar a geração
+   - Clique no botão ![Hydra botão Procurar](../../../images/hydra_find.png) para iniciar a geração
 
 ### Exemplo de geração de velas por período
 
@@ -91,7 +91,7 @@ Podem ser adicionados indicadores técnicos ao gráfico de candles:
 1. Abra o menu de contexto clicando com o botão direito do rato no painel do gráfico
 2. Selecione o item **Indicador** e o indicador pretendido na lista
 3. Para apresentar o indicador num painel separado:
-   - Adicione um novo painel usando o botão ![hydra add](../../../images/hydra_add.png)
+   - Adicione um novo painel usando o botão ![Hydra botão Adicionar](../../../images/hydra_add.png)
    - Selecione o indicador pretendido no menu de contexto
 
 Exemplo de um gráfico com indicadores adicionados:

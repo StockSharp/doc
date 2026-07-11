@@ -2,7 +2,7 @@
 
 [ConnectorWindow](xref:StockSharp.Xaml.ConnectorWindow) は、コネクターを接続するためのアダプターを設定する特殊なウィンドウです。
 
-![API GUI ConnectorWindow](../../../images/api_gui_connectorwindow.png)
+![API GUI 接続ウィンドウ](../../../images/api_gui_connectorwindow.png)
 
 これは接続設定ウィンドウです。ドロップダウンリスト（'+' ボタンで開きます）から必要なアダプターを選択し、右側にあるプロパティウィンドウでそれらのプロパティを設定する必要があります。
 

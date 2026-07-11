@@ -2,7 +2,7 @@
 
 Durante el trading, puede necesitar controlar completamente el proceso. Para control y análisis completos, **Terminal** proporciona componentes gráficos que puede añadir seleccionándolos en el grupo **Componentes** de la **Cinta**:
 
-![Designer Components](../../../images/designer_components.png)
+![Designer componentes](../../../images/designer_components.png)
 
 - [Instrumentos](components/instruments.md) - tabla con instrumentos que muestra información sobre todos los instrumentos seleccionados.
 - [Level 1](components/level_1.md) - tabla con el historial de cambios de Level 1 para los instrumentos seleccionados.

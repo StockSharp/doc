@@ -34,8 +34,8 @@
 - **truncate(a)** \- 计算指定数字的整数部分。
 
 4. 输入用于计算指数的数学运算。![hydra 证券索引 01](../../../images/hydra_index_sec_01.png)
-5. 接下来，在 **常规** 选项卡中单击 [K线](../working_with_data/view_and_export/candles.md) 按钮，选择已创建的 **指数** 交易品种和数据时间段，在 **创建来源:** 字段中选择 **复合元素**，然后单击 ![hydra find](../../../images/hydra_find.png)。![hydra K线索引](../../../images/hydra_index_candle.png)
+5. 接下来，在 **常规** 选项卡中单击 [K线](../working_with_data/view_and_export/candles.md) 按钮，选择已创建的 **指数** 交易品种和数据时间段，在 **创建来源:** 字段中选择 **复合元素**，然后单击 ![Hydra 查找按钮](../../../images/hydra_find.png)。![hydra K线索引](../../../images/hydra_index_candle.png)
 
 生成的数据可以导出为 Excel、XML 或 TXT 格式。通过下拉列表选择导出格式。
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra 导出](../../../images/hydra_export.png)

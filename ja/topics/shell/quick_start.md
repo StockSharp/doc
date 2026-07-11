@@ -24,7 +24,7 @@
 
 ![Shell クイックスタート 02](../../images/shell_quick_start_02.png)
 
-リアルタイムタブに移動し、**追加** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) ボタンをクリックして、取引用のストラテジーを追加します。
+リアルタイムタブに移動し、**追加** ![Designer 追加ボタン 00](../../images/designer_creation_tool_00.png) ボタンをクリックして、取引用のストラテジーを追加します。
 
 ![Shell クイックスタート 03](../../images/shell_quick_start_03.png)
 

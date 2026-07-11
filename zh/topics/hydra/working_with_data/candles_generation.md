@@ -22,7 +22,7 @@
      - 对于 [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage)，指定 **P&F 参数**。
    - 选择要为其生成K线的交易品种。
    - 根据需要指定时间范围。
-   - 单击 ![hydra find](../../../images/hydra_find.png) 按钮开始生成。
+   - 单击 ![Hydra 查找按钮](../../../images/hydra_find.png) 按钮开始生成。
 
 ### 生成时间周期K线的示例
 
@@ -91,7 +91,7 @@
 1. 右键单击图表面板，打开上下文菜单。
 2. 选择 **指标**，然后从列表中选择所需指标。
 3. 要在单独的面板中显示指标：
-   - 使用 ![hydra add](../../../images/hydra_add.png) 按钮添加新面板。
+   - 使用 ![Hydra 添加按钮](../../../images/hydra_add.png) 按钮添加新面板。
    - 从上下文菜单中选择所需指标。
 
 添加指标后的图表示例：

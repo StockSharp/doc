@@ -1,8 +1,8 @@
 # Protecção de posição
 
-![Designer Protect positions 00](../../../../../../images/designer_protect_positions_00.png)
+![Designer proteção de posições 00](../../../../../../images/designer_protect_positions_00.png)
 
-![Designer Protect positions 01](../../../../../../images/designer_protect_positions_01.png)
+![Designer proteção de posições 01](../../../../../../images/designer_protect_positions_01.png)
 
 Este bloco é utilizado para proteger automaticamente negociações abertas com stop-loss e take-profit.
 
@@ -30,7 +30,7 @@ Parâmetros de Take e Stop
 - **Tempo limite** - o valor do tempo limite após o qual a protecção é accionada à força ao preço de mercado.
 - **Ordens de mercado** - utilizar ordens de mercado (sem preço) para fechar rapidamente a posição.
 
-![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
+![Designer proteção de posições 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
 > As transacções de entrada NÃO PODEM ser transacções de toda a estratégia (o bloco [Negócios por estratégia](../common/trades_by_strategy.md)), pois isso levará ao cálculo incorrecto da posição actual: as transacções de protecção também se tornarão transacções da estratégia. O bloco **Proteção de posição** deve receber transacções do socket de saída **Transação** dos cubos [Registo de ordem](../orders/register.md) e [Modificar posição](modify.md), ou de componentes semelhantes que alterem directamente a posição.

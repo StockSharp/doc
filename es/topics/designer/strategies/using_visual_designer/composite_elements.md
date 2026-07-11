@@ -12,13 +12,13 @@ Consideraremos el uso de elementos compuestos con el ejemplo de la estrategia de
 
 Como el cruce de medias móviles difiere solo por su posible dirección (la corta cruza de arriba abajo o de abajo arriba), la parte del esquema que determina el momento del cruce puede extraerse a un elemento compuesto separado. Al añadir este elemento al esquema, se especifican las propiedades que definen el algoritmo de cruce de medias móviles. El esquema del elemento compuesto por el que se determina el cruce se muestra en la siguiente figura:
 
-![Designer Crossing 01](../../../../images/designer_crossing_01.png)
+![Designer cruce 01](../../../../images/designer_crossing_01.png)
 
 El diagrama del elemento compuesto consta de elementos simples y se basa en memorizar los valores actuales (Prev In 1 y Prev In 2) y comparar entre sí los pares de valores actuales (CurrComparison) y anteriores (PrevComparison). Como cada uno de los valores de entrada se usa en dos elementos del diagrama, los elementos [Combinación](elements/common/combination.md) (In 1, In 2) se colocan en la entrada del elemento compuesto; permiten dividir una entrada en dos elementos y pasar el valor de entrada a los elementos [Comparación](elements/common/comparison.md) y [Valor anterior](elements/common/prev_value.md). Cuando llega un nuevo valor a la entrada, se comparan los valores actuales y se pasa un nuevo valor al elemento [Valor anterior](elements/common/prev_value.md), desde el cual se pasa el valor anterior para la entrada actual; luego se comparan los valores anteriores. Si se cumplen ambas condiciones, lo que se comprueba mediante la condición And [Condición lógica](elements/common/logical_condition.md), entonces el valor de la bandera activada se pasa a la salida del elemento compuesto, que puede usarse como disparador para una acción posterior.
 
 Para los cubos CurrComparison y PrevComparison, se establece la bandera **Parámetros** del grupo de propiedades **Común**. Por lo tanto, las propiedades de estos cubos se tomaron en las propiedades del elemento compuesto [Cruce](elements/common/crossing.md), que se especificarán posteriormente al usar un elemento compuesto en el esquema de la estrategia.
 
-![Designer Crossing 00](../../../../images/designer_crossing_00.png)
+![Designer cruce 00](../../../../images/designer_crossing_00.png)
 
 ## Contenido recomendado
 

@@ -6,7 +6,7 @@ Jeder Würfel im [Designer](../../../designer.md), der einen Ausgabeparameter ha
 
 Zum Beispiel erzeugt der Würfel [Orderbuch](elements/market_depths/order_book.md) ein Ereignis zur Änderung des Orderbuchs. Im Voraus ist nicht bekannt, wann eine Änderung eintritt. Wenn Sie eine Verbindungslinie zwischen dem Würfel [Orderbuch](elements/market_depths/order_book.md) und dem Würfel [Konverter](elements/converters/converter.md) erstellen, wird eine Subscription auf die Orderbuchänderung eingerichtet, damit diese anschließend mit dem Würfel [Konverter](elements/converters/converter.md) weiterverarbeitet werden kann usw.:
 
-![Designer Event model 00](../../../../images/designer_event_model_00.png)
+![Designer Ereignismodell 00](../../../../images/designer_event_model_00.png)
 
 ## Empfohlene Inhalte
 

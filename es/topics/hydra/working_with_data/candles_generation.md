@@ -22,7 +22,7 @@ Esto permite usar los datos generados en cualquier programa de análisis técnic
      - Para [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage) - especifique **Parámetros P&F**
    - Seleccione el instrumento para el que se generarán las velas.
    - Especifique un rango de tiempo (si es necesario).
-   - Haga clic en el botón ![hydra find](../../../images/hydra_find.png) para iniciar la generación.
+   - Haga clic en el botón ![Hydra botón Buscar](../../../images/hydra_find.png) para iniciar la generación.
 
 ### Ejemplo de generación de velas por marco temporal
 
@@ -91,7 +91,7 @@ Se pueden añadir indicadores técnicos al gráfico de velas:
 1. Abra el menú contextual haciendo clic derecho en el panel del gráfico.
 2. Seleccione el elemento **Indicador** y el indicador deseado de la lista.
 3. Para mostrar el indicador en un panel separado:
-   - Añada un nuevo panel usando el botón ![hydra add](../../../images/hydra_add.png).
+   - Añada un nuevo panel usando el botón ![Hydra botón Añadir](../../../images/hydra_add.png).
    - Seleccione el indicador deseado en el menú contextual.
 
 Ejemplo de gráfico con indicadores añadidos:

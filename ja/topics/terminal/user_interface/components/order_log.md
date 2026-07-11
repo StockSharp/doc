@@ -4,7 +4,7 @@
 
 **注文ログ** には、必要な銘柄を選択するためのフィルターがあります。選択した銘柄のイベントに対する通知を設定することもできます - [通知設定](../../notifications.md)。
 
-![Terminal orderlog 00](../../../../images/terminal_orderlog_00.png)
+![Terminal 注文ログ 00](../../../../images/terminal_orderlog_00.png)
 
 ## 推奨コンテンツ
 

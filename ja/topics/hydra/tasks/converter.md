@@ -2,7 +2,7 @@
 
 このタスクは取引所データを変換します。たとえば、注文ログからティックへ、またはティックからローソク足へ変換する、などです。
 
-![hydra tasks converter](../../../images/hydra_tasks_converter.png)
+![Hydra 変換タスク](../../../images/hydra_tasks_converter.png)
 
 **コンバーター**
 
@@ -26,7 +26,7 @@
 **全般**
 
 - **ヘッダー** - コンバーター。
-- **稼働時間** - ボード稼働スケジュールの設定。 ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **稼働時間** - ボード稼働スケジュールの設定。 ![Hydra バックアップタスク](../../../images/hydra_tasks_backup_desk.png)
 - **動作間隔** - 動作間隔。
 - **データディレクトリ** - 変換用のデータを受け取るデータディレクトリ。
 - **形式** - 変換後のデータ形式: BIN\/CSV。
@@ -40,17 +40,17 @@
 
 データ変換の例を見てみましょう。
 
-1. **コンバーター** タスクに移動します。 ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
+1. **コンバーター** タスクに移動します。 ![Hydra 変換タスク 00](../../../images/hydra_tasks_converter_00.png)
 2. 銘柄を選択し、表示されるウィンドウで、変換中に受け取るべきデータ型と、変換元となるデータ型を設定します。たとえば、ティックを時間枠 15 分のローソク足に変換する必要があるとします。
 
    > [!TIP]
 > 重要\! 要求するデータ期間は、変換可能な期間と一致している必要があります。一致していない場合、データは変換されません。設定では、変換対象データの形式と一致するように、正しいソースデータ形式を指定してください。
 3. 必要なディレクトリを指定します。時間オフセット。動作間隔。
-4. 変換を開始します。![hydra tasks converter 01](../../../images/hydra_tasks_converter_01.png)
+4. 変換を開始します。![Hydra 変換タスク 01](../../../images/hydra_tasks_converter_01.png)
 
 データが変換されたことがわかります。生成されたデータを[確認してみましょう](../working_with_data/view_and_export.md)。
 
-![hydra tasks converter 02](../../../images/hydra_tasks_converter_02.png)
+![Hydra 変換タスク 02](../../../images/hydra_tasks_converter_02.png)
 
 この機能は、別のデータ型から[必要なマーケットデータを取得する](../working_with_data/any_market_data_types.md)機能に似ています。
 

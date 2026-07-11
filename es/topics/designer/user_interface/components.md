@@ -2,7 +2,7 @@
 
 Durante las pruebas o el trading surge la necesidad de controlar completamente el proceso. Para control y análisis completos, [Designer](../../designer.md) incluye componentes gráficos que pueden añadirse seleccionándolos en la **Cinta**, en el grupo **Componentes**:
 
-![Designer Components](../../../images/designer_components.png)
+![Designer componentes](../../../images/designer_components.png)
 
 - [Gráfico](components/chart.md) - representa un gráfico de velas y/o indicadores. Contiene todos los cubos [Gráfico](../strategies/using_visual_designer/elements/common/chart.md) presentes en la estrategia.
 - [P/L](components/pnl_equity.md) - representa un gráfico de Profit/Loss (no realizado), Profit/Loss (realizado) y comisiones.

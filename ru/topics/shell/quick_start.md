@@ -24,7 +24,7 @@
 
 ![Shell быстрый старт 02](../../images/shell_quick_start_02.png)
 
-Перейдя на вкладку Реал\-тайм, нажав на кнопку **Добавить** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) добавим стратегию для запуска в торговлю.
+Перейдя на вкладку Реал\-тайм, нажав на кнопку **Добавить** ![Designer кнопка добавления 00](../../images/designer_creation_tool_00.png) добавим стратегию для запуска в торговлю.
 
 ![Shell быстрый старт 03](../../images/shell_quick_start_03.png)
 

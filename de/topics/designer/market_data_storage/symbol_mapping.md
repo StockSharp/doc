@@ -4,11 +4,11 @@ Dasselbe Instrument kann in verschiedenen Handelssystemen unterschiedlich heiße
 
 Um Instrumente und Verbindungen einander zuzuordnen, klicken Sie im Panel **Alle Instrumente** auf die Schaltfläche **Instrumente und Verbindungen**.
 
-![Designer Security mapping 00](../../../images/designer_security_mapping_00.png)
+![Designer Instrumentzuordnung 00](../../../images/designer_security_mapping_00.png)
 
-Klicken Sie im geöffneten Fenster auf die Schaltfläche ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), um eine neue Zeile hinzuzufügen.
+Klicken Sie im geöffneten Fenster auf die Schaltfläche ![Designer Schaltfläche Hinzufügen 00](../../../images/designer_creation_tool_00.png), um eine neue Zeile hinzuzufügen.
 
 Wählen Sie in der Spalte **Verbindung** eine Verbindung aus der Dropdown-Liste. Geben Sie in den Spalten **Instrumentcode** und **Board-Code** die Instrument- und Board-Codes so an, wie sie in **Designer** angegeben sind. Geben Sie in den Spalten **Adaptercode** und **Adapter-Board** die Instrument- und Board-Codes so an, wie sie im externen Handelssystem angegeben sind.
 
-![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+![Designer Instrumentzuordnung 01](../../../images/designer_security_mapping_01.png)
 

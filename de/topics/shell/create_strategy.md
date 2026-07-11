@@ -2,7 +2,7 @@
 
 Um eine eigene Strategie zu erstellen, legen Sie im Ordner Strategies einen Ordner für Ihre Strategie an.
 
-![Shell custom strategy 00](../../images/shell_custom_strategy_00.png)
+![Shell benutzerdefinierte Strategie 00](../../images/shell_custom_strategy_00.png)
 
 Erstellen Sie die Strategie selbst, zum Beispiel anhand von SmaStrategy.
 
@@ -38,7 +38,7 @@ Außerdem müssen die Panels selbst erstellt werden. Wie Sie ein eigenes Test- o
 > [!TIP]
 > Wenn für die Strategie die Test- oder Überwachungspanels ausreichen, die für Standardstrategien verwendet werden, müssen Sie die Schnittstellen IHaveTestControl und IHaveMonitoringControl nicht implementieren. Shell startet die Standard-Test- oder Überwachungspanels selbst.
 
-![Shell custom strategy 01](../../images/shell_custom_strategy_01.png)
+![Shell benutzerdefinierte Strategie 01](../../images/shell_custom_strategy_01.png)
 
 Damit die erstellte Strategie im Strategieauswahlfenster verfügbar ist, muss sie dem Wörterbuch **DictionaryStrategies** des Hauptfensters hinzugefügt werden.
 

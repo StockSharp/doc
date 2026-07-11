@@ -22,7 +22,7 @@ También es posible editar patrones existentes y agregar sus propios patrones pe
 
 ![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
 
-Para crear su propio patrón, haga clic en el botón ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) en la parte superior de la ventana. Al hacer clic en el botón ![DesignerDeleteButton](../../images/designer_delete_button.png), se elimina el patrón.
+Para crear su propio patrón, haga clic en el botón ![Designer botón Más](../../images/designer_panel_circuits_01_button.png) en la parte superior de la ventana. Al hacer clic en el botón ![Designer botón Eliminar](../../images/designer_delete_button.png), se elimina el patrón.
 
 ### En Terminal
 
@@ -89,7 +89,7 @@ Al usar [ExpressionCandlePattern](xref:StockSharp.Algo.Candles.Patterns.Expressi
 
 ## Patrones estándar
 
-Para crear rápidamente patrones basados en los existentes, puede usar la sección en la parte inferior de la ventana del editor de patrones. Al hacer clic en el botón ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) en la parte inferior de la ventana, se agrega a la ventana de edición la lógica del patrón seleccionado en la lista desplegable opuesta. El botón ![DesignerDeleteButton](../../images/designer_delete_button.png) en la parte inferior de la ventana elimina la línea seleccionada en la ventana de edición.
+Para crear rápidamente patrones basados en los existentes, puede usar la sección en la parte inferior de la ventana del editor de patrones. Al hacer clic en el botón ![Designer botón Más](../../images/designer_panel_circuits_01_button.png) en la parte inferior de la ventana, se agrega a la ventana de edición la lógica del patrón seleccionado en la lista desplegable opuesta. El botón ![Designer botón Eliminar](../../images/designer_delete_button.png) en la parte inferior de la ventana elimina la línea seleccionada en la ventana de edición.
 
 ## Funciones avanzadas
 

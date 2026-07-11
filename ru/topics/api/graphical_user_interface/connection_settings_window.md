@@ -2,7 +2,7 @@
 
 [ConnectorWindow](xref:StockSharp.Xaml.ConnectorWindow) \- Специальное окно для настройки адаптеров подключения коннектора. 
 
-![API GUI ConnectorWindow](../../../images/api_gui_connectorwindow.png)
+![Окно подключения API GUI](../../../images/api_gui_connectorwindow.png)
 
 Здесь представлено окно настройки подключений. Из раскрывающегося списка (открывается кнопкой '+') необходимо выбрать нужные адаптеры и настроить их свойства в окне свойств, расположенном справа. 
 

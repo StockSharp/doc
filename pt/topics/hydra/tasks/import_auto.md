@@ -32,7 +32,7 @@ Para cada instrumento, pode especificar as seguintes propriedades de importaçã
 **Geral**
 
 - **Cabeçalho** - Converter.
-- **Horário de trabalho** - configuração do horário de funcionamento da board. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Horário de trabalho** - configuração do horário de funcionamento da board. ![Hydra tarefas de cópia de segurança](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operação** - o intervalo de funcionamento.
 - **Diretório de dados** - diretório de dados, de onde serão recebidos os dados para conversão.
 - **Formato** - o formato dos dados convertidos: BIN\/CSV.

@@ -14,13 +14,13 @@
 2. 連続先物を作成するには、名前を指定して限月を追加する必要があります。
 
    限月を追加する方法は 2 つあります。
-   - ![hydra add](../../../images/hydra_add.png) ボタンをクリックして手動で追加します。![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
+   - ![Hydra 追加ボタン](../../../images/hydra_add.png) ボタンをクリックして手動で追加します。![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
    - たとえば RI のように、限月の先頭 2 文字を名前として設定して **自動** ボタンをクリックすると、データベース内で見つかったすべての銘柄が追加されます。![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. 必要な限月を選択し、その移行日を設定します。 ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
 4. 次に、銘柄識別子 **ES\_continuous@CME** を割り当て、**OK** ボタンをクリックします。その後、新しい銘柄が作成されます。
-5. 次に、**共通** タブの [ローソク足](../working_with_data/view_and_export/candles.md) ボタンをクリックし、作成された銘柄とデータ期間を選択し、**作成元** フィールドで **複合要素** の値を設定してから、![hydra find](../../../images/hydra_find.png) ボタンをクリックします。 ![HydraGluingTrades](../../../images/hydragluingtrades.png)
+5. 次に、**共通** タブの [ローソク足](../working_with_data/view_and_export/candles.md) ボタンをクリックし、作成された銘柄とデータ期間を選択し、**作成元** フィールドで **複合要素** の値を設定してから、![Hydra 検索ボタン](../../../images/hydra_find.png) ボタンをクリックします。 ![HydraGluingTrades](../../../images/hydragluingtrades.png)
 
 生成されたデータは、Excel、XML、JSON、または TXT 形式にエクスポートできます。エクスポートはドロップダウン リストを使用して実行されます。
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra エクスポート](../../../images/hydra_export.png)
 

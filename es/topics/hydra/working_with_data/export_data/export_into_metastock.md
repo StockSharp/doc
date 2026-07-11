@@ -2,11 +2,11 @@
 
 Para exportar datos a archivos de formato MetaStock, seleccione el formato Txt en la lista desplegable:
 
-![hydra export](../../../../images/hydra_export.png)
+![Hydra exportación](../../../../images/hydra_export.png)
 
 Al exportar a archivos de formato de texto (Txt), aparece una ventana:
 
-![hydra export Meta Stock 2](../../../../images/hydra_export_tslab_metastock_2.png)
+![Hydra exportación Meta Stock 2](../../../../images/hydra_export_tslab_metastock_2.png)
 
 En esta ventana, especifique la plantilla de exportación, donde las llaves indican las propiedades que se exportarán y su orden:
 

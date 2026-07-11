@@ -6,7 +6,7 @@ Um den Empfang von Nachrichten zu starten, klicken Sie auf die Schaltfläche **N
 
 Im Nachrichten-Panel können Sie Benachrichtigungen für ausgewählte Ereignisse konfigurieren - siehe [Benachrichtigungseinstellungen](../../notifications.md).
 
-![Terminal news 00](../../../../images/terminal_news_00.png)
+![Terminal Nachrichten 00](../../../../images/terminal_news_00.png)
 
 ## Empfohlene Inhalte
 

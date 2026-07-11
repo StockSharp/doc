@@ -1,6 +1,6 @@
 # Orderbücher
 
-Wählen Sie im erscheinenden Fenster die Instrumente und das erforderliche Zeitintervall aus und klicken Sie auf die Schaltfläche ![hydra find](../../../../images/hydra_find.png):
+Wählen Sie im erscheinenden Fenster die Instrumente und das erforderliche Zeitintervall aus und klicken Sie auf die Schaltfläche ![Hydra Suchschaltfläche](../../../../images/hydra_find.png):
 
 ![hydra Markttiefe exportieren](../../../../images/hydra_export_depth.png)
 

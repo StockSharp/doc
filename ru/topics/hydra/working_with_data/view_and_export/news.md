@@ -1,7 +1,7 @@
 # Новости
 
-В появившемся окне выбрать нужный диапазон времени и нажать кнопку ![hydra find](../../../../images/hydra_find.png):
+В появившемся окне выбрать нужный диапазон времени и нажать кнопку ![Hydra кнопка поиска](../../../../images/hydra_find.png):
 
-![hydra export news](../../../../images/hydra_export_news.png)
+![Hydra экспорт news](../../../../images/hydra_export_news.png)
 
 Полученные значения можно [экспортировать в нужный формат](../export_data.md).

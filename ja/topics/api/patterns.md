@@ -22,7 +22,7 @@
 
 ![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
 
-独自のパターンを作成するには、ウィンドウ上部の ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) ボタンをクリックします。![DesignerDeleteButton](../../images/designer_delete_button.png) ボタンをクリックすると、パターンが削除されます。
+独自のパターンを作成するには、ウィンドウ上部の ![Designer プラスボタン](../../images/designer_panel_circuits_01_button.png) ボタンをクリックします。![Designer 削除ボタン](../../images/designer_delete_button.png) ボタンをクリックすると、パターンが削除されます。
 
 ### Terminal で
 
@@ -89,7 +89,7 @@ if (result.GetValue<bool>())
 
 ## 標準パターン
 
-既存のパターンに基づいてパターンをすばやく作成するには、パターン エディター ウィンドウの下部にあるセクションを使用できます。ウィンドウ下部の ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) ボタンをクリックすると、反対側のドロップダウン リストで選択したパターンのロジックが編集ウィンドウに追加されます。ウィンドウ下部の ![DesignerDeleteButton](../../images/designer_delete_button.png) ボタンは、編集ウィンドウ内の選択された行を削除します。
+既存のパターンに基づいてパターンをすばやく作成するには、パターン エディター ウィンドウの下部にあるセクションを使用できます。ウィンドウ下部の ![Designer プラスボタン](../../images/designer_panel_circuits_01_button.png) ボタンをクリックすると、反対側のドロップダウン リストで選択したパターンのロジックが編集ウィンドウに追加されます。ウィンドウ下部の ![Designer 削除ボタン](../../images/designer_delete_button.png) ボタンは、編集ウィンドウ内の選択された行を削除します。
 
 ## 高度な機能
 

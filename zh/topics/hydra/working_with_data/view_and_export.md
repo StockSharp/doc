@@ -10,7 +10,7 @@
 
 每个面板都包含以下通用设置界面：
 
-![hydra export 00](../../../images/hydra_export_00.png)
+![Hydra 导出 00](../../../images/hydra_export_00.png)
 
 - 顶部一行显示市场数据存储及其格式（BIN 或 CSV）。
 - 底部一行用于设置请求数据的时间范围。单击 **选择交易品种** 按钮后，会出现交易品种选择窗口，可以选择一个或多个交易品种。如果选择多个交易品种，之后导出到 Excel 或 CSV 时，程序会自动将不同交易品种的数据分别保存到不同文件。
@@ -19,8 +19,8 @@
   此时需要提高下载数据量限制。
 - 如果数据来自时区与当前时区不同的数据源，可以调整时区。构建完成后，数据会按用户选择的时区显示。![hydra TZ](../../../images/hydra_tz.png)
 - 部分数据源无法提供某些数据，因此程序提供了[构建来源](any_market_data_types.md)字段。借助该字段，用户可以使用另一种市场数据来构建所需市场数据。也可以在不额外下载数据的情况下，以现有数据为基础构建市场数据。
-- 设置上述参数后，单击 ![hydra find](../../../images/hydra_find.png) 按钮。![hydra K线 tf](../../../images/hydra_candles_tf.png)
+- 设置上述参数后，单击 ![Hydra 查找按钮](../../../images/hydra_find.png) 按钮。![hydra K线 tf](../../../images/hydra_candles_tf.png)
 
 通过上下文菜单，可以配置市场数据值表格的各种参数，例如行分组、可用列和显示格式等。
 
-![hydra export context](../../../images/hydra_export_context.png)
+![Hydra 导出上下文](../../../images/hydra_export_context.png)

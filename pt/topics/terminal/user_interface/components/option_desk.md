@@ -6,7 +6,7 @@ Para apresentar o painel de opções, tem de selecionar o ativo subjacente e as 
 
 Além disso, pode especificar um filtro para a data de expiração exata das opções e filtros para strikes mínimos\/máximos.
 
-![Terminal option desk 00](../../../../images/terminal_option_desk_00.png)
+![Terminal painel de opções 00](../../../../images/terminal_option_desk_00.png)
 
 ## Conteúdo recomendado
 

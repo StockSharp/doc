@@ -8,18 +8,18 @@ Isto também é útil ao negociar o mesmo instrumento em diferentes boards de ne
 
 Para corresponder instrumentos e ligações, deve:
 
-1. Vá para o separador **Instrumentos** e clicar no botão **Instrumentos e ligações**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
-2. Na lista de ligações, selecione a ligação necessária.![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+1. Vá para o separador **Instrumentos** e clicar no botão **Instrumentos e ligações**.![Designer mapeamento de instrumentos 01 00](../../../images/designer_security_mapping_01_00.png)
+2. Na lista de ligações, selecione a ligação necessária.![Designer mapeamento de instrumentos 01](../../../images/designer_security_mapping_01.png)
 3. Preencha todas as colunas.
 
    Por exemplo:
 
    Instrumento de ações APPLE.
-   - Ligação - **Interactive Brokers**. Clique no botão ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), após o que será adicionada uma nova linha.
-   - Nas colunas **Código do instrumento** e **Código do mercado**, especifique o código do instrumento e o código da board. Nas colunas **Código do instrumento no adaptador** e **Código do mercado no adaptador**, especifique o código do instrumento e o código da board tal como estão especificados no sistema de negociação externo. Clique em **OK** ![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
+   - Ligação - **Interactive Brokers**. Clique no botão ![Designer botão Adicionar 00](../../../images/designer_creation_tool_00.png), após o que será adicionada uma nova linha.
+   - Nas colunas **Código do instrumento** e **Código do mercado**, especifique o código do instrumento e o código da board. Nas colunas **Código do instrumento no adaptador** e **Código do mercado no adaptador**, especifique o código do instrumento e o código da board tal como estão especificados no sistema de negociação externo. Clique em **OK** ![Designer mapeamento de instrumentos 01 01](../../../images/designer_security_mapping_01_01.png)
    - Repetimos os passos para as ligações **Interactive Brokers** e **CQG Continuum** da mesma forma.
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |
    | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-   | ![Designer Security mapping 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer Security mapping 01 03](../../../images/designer_security_mapping_01_03.png) |
+   | ![Designer mapeamento de instrumentos 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer mapeamento de instrumentos 01 03](../../../images/designer_security_mapping_01_03.png) |
 4. Agora, todos os dados descarregados, no nosso caso para ações APPLE, serão guardados num único local.

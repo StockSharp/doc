@@ -14,6 +14,6 @@
 - **ログ** - メッセージが[ログ](user_interface/logs.md)に送信されます。
 - **無効** - 通知は表示されません。
 
-通知を設定するには、通知パネル（[通知パネル](notifications/notification_panel.md)）の ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) ボタンをクリックするか、通知をサポートするパネル内の ![Designer Alert Bell](../../images/designer_alert_bell.png) ボタンを直接クリックする必要があります。
+通知を設定するには、通知パネル（[通知パネル](notifications/notification_panel.md)）の ![Designer 追加ボタン 00](../../images/designer_creation_tool_00.png) ボタンをクリックするか、通知をサポートするパネル内の ![Designer アラートベル](../../images/designer_alert_bell.png) ボタンを直接クリックする必要があります。
 
 通知の設定方法については、[通知設定](notifications/notifications_setup.md)セクションを参照してください。

@@ -1,6 +1,6 @@
 # Benachrichtigungen einrichten
 
-Um eine Benachrichtigung einzurichten, klicken Sie im Benachrichtigungspanel ([Benachrichtigungspanel](notification_panel.md)) auf die Schaltfläche ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) oder direkt in den Panels, die Benachrichtigungen unterstützen ([Portfolios](../user_interface/portfolios.md), [Trade-Feed](../user_interface/components/trades_feed.md), [Nachrichten](../user_interface/components/news.md), [Level 1](../user_interface/components/level_1.md)), auf die Schaltfläche ![Designer Alert Bell](../../../images/designer_alert_bell.png).
+Um eine Benachrichtigung einzurichten, klicken Sie im Benachrichtigungspanel ([Benachrichtigungspanel](notification_panel.md)) auf die Schaltfläche ![Designer Schaltfläche Hinzufügen 00](../../../images/designer_creation_tool_00.png) oder direkt in den Panels, die Benachrichtigungen unterstützen ([Portfolios](../user_interface/portfolios.md), [Trade-Feed](../user_interface/components/trades_feed.md), [Nachrichten](../user_interface/components/news.md), [Level 1](../user_interface/components/level_1.md)), auf die Schaltfläche ![Designer Benachrichtigungsglocke](../../../images/designer_alert_bell.png).
 
 ![Designer Benachrichtigungseinstellung](../../../images/designer_notifications_setting.png)
 

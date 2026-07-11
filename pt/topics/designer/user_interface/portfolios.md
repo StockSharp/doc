@@ -8,7 +8,7 @@ O painel **Carteiras** é uma tabela que mostra os dados básicos do portefólio
 
 ![Designer Painel A de carteiras 01](../../../images/designer_panel_portfolios_01.png)
 
-Quando clica no botão ![Designer Alert Bell](../../../images/designer_alert_bell.png), abre-se a janela [Definições de notificação](../../terminal/notifications.md).
+Quando clica no botão ![Designer sino de alerta](../../../images/designer_alert_bell.png), abre-se a janela [Definições de notificação](../../terminal/notifications.md).
 
 ## Conteúdo recomendado
 

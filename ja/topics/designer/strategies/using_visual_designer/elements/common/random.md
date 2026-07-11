@@ -1,6 +1,6 @@
 # ランダム値
 
-![Designer Random 00](../../../../../../images/designer_random_00.png)
+![Designer ランダム 00](../../../../../../images/designer_random_00.png)
 
 このブロックは、ランダム値を生成するために使用されます。
 
@@ -17,7 +17,7 @@
 - **最小** - 許容される最小値の境界。
 - **最大** - 許容される最大値の境界。
 
-![Designer Random 01](../../../../../../images/designer_random_01.png)
+![Designer ランダム 01](../../../../../../images/designer_random_01.png)
 
 ## 関連項目
 

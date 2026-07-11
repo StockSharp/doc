@@ -2,7 +2,7 @@
 
 [ConnectorWindow](xref:StockSharp.Xaml.ConnectorWindow) - una ventana especial para configurar adaptadores para conectar un conector. 
 
-![API GUI ConnectorWindow](../../../images/api_gui_connectorwindow.png)
+![Ventana de conexión de API GUI](../../../images/api_gui_connectorwindow.png)
 
 Esta es la ventana de configuración de conexión. En la lista desplegable (se abre con el botón '+'), debe seleccionar los adaptadores necesarios y configurar sus propiedades en la ventana de propiedades situada a la derecha. 
 

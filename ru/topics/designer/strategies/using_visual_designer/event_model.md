@@ -6,7 +6,7 @@
 
 Например, кубик [Стакан](elements/market_depths/order_book.md) генерирует событие изменения стакана. При этом заранее не известно, когда произойдет изменение. Создав линию соединения между кубиком [Стакан](elements/market_depths/order_book.md) и кубиком [Конвертер](elements/converters/converter.md), происходит подписание на изменение стакана для дальнейшей обработки кубиком [Конвертер](elements/converters/converter.md) и т.д..:
 
-![Designer Event model 00](../../../../images/designer_event_model_00.png)
+![Designer событийная модель 00](../../../../images/designer_event_model_00.png)
 
 ## См. также
 

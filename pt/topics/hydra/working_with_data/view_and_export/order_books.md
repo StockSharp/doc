@@ -1,6 +1,6 @@
 # Livros de ordens
 
-Na janela que aparece, selecione os instrumentos, o intervalo temporal necessário e clique no botão ![hydra find](../../../../images/hydra_find.png):
+Na janela que aparece, selecione os instrumentos, o intervalo temporal necessário e clique no botão ![Hydra botão Procurar](../../../../images/hydra_find.png):
 
 ![hydra exportar profundidade](../../../../images/hydra_export_depth.png)
 

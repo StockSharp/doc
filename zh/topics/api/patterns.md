@@ -22,7 +22,7 @@
 
 ![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
 
-要创建您自己的图案，请点击窗口顶部的 ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) 按钮。点击 ![DesignerDeleteButton](../../images/designer_delete_button.png) 按钮可以删除图案。
+要创建您自己的图案，请点击窗口顶部的 ![Designer 加号按钮](../../images/designer_panel_circuits_01_button.png) 按钮。点击 ![Designer 删除按钮](../../images/designer_delete_button.png) 按钮可以删除图案。
 
 ### 在 Terminal
 
@@ -89,7 +89,7 @@ if (result.GetValue<bool>())
 
 ## 标准模式
 
-为了快速基于现有模式创建新模式，您可以使用模式编辑器窗口底部的部分。点击窗口底部的 ![DesignerPlusButton](../../images/designer_panel_circuits_01_button.png) 按钮，会在编辑窗口对面的下拉列表中选择的模式逻辑添加到编辑窗口中。窗口底部的 ![DesignerDeleteButton](../../images/designer_delete_button.png) 按钮会删除编辑窗口中选定的行。
+为了快速基于现有模式创建新模式，您可以使用模式编辑器窗口底部的部分。点击窗口底部的 ![Designer 加号按钮](../../images/designer_panel_circuits_01_button.png) 按钮，会在编辑窗口对面的下拉列表中选择的模式逻辑添加到编辑窗口中。窗口底部的 ![Designer 删除按钮](../../images/designer_delete_button.png) 按钮会删除编辑窗口中选定的行。
 
 ## 高级功能
 

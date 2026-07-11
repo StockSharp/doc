@@ -10,7 +10,7 @@ Um eine neue Marktdatenquelle hinzuzufügen, gehen Sie wie folgt vor:
 
 Danach erscheint eine Liste der Quellen. Der Benutzer kann mehrere Quellen gleichzeitig auswählen.
 
-![hydra source add](../../../images/hydra_source_add.png)
+![Hydra Quelle hinzufügen](../../../images/hydra_source_add.png)
 
 Sie können auch mehrere Instanzen derselben Quelle erstellen. Zum Beispiel mehrere Instanzen von **Interactive Brokers**, die heruntergeladene Daten in unterschiedlichen Ordnern speichern.
 

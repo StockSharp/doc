@@ -4,7 +4,7 @@ Die Komponente **Order-Log** ist eine Tabelle mit Orders, die vollständige Info
 
 **Order-Log** verfügt über einen Filter zur Auswahl der benötigten Instrumente. Außerdem können Benachrichtigungen für Ereignisse der ausgewählten Instrumente konfiguriert werden - [Benachrichtigungseinstellungen](../../notifications.md).
 
-![Terminal orderlog 00](../../../../images/terminal_orderlog_00.png)
+![Terminal Auftragsprotokoll 00](../../../../images/terminal_orderlog_00.png)
 
 ## Empfohlene Inhalte
 

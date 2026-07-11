@@ -2,7 +2,7 @@
 
 Na primeira execução, aparece a seguinte janela para selecionar fontes de dados. Também pode abrir esta janela no separador **Comum**, selecionando **Adicionar \=\> Fontes**.
 
-![hydra source add](../../images/hydra_source_add.png)
+![Hydra adicionar fonte](../../images/hydra_source_add.png)
 
 Na janela, assinale as fontes necessárias. Pode utilizar filtros por região, board, tipo de dados, pagamento, em tempo real ou não. Quando a seleção estiver concluída, clique em **OK**. Em seguida, o programa irá propor a ativação dos utilitários. Para obter mais detalhes sobre o trabalho com utilitários, consulte a secção [Utilitários](tasks.md). Clique em **OK**.
 
@@ -29,7 +29,7 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
 
    No primeiro arranque, o programa irá propor transferir todos os instrumentos de uma só vez para a fonte selecionada. Posteriormente, o próprio utilizador transferirá os instrumentos. Inicialmente, a base de dados de instrumentos em [Hydra](../hydra.md) está vazia; existe apenas um instrumento auxiliar **ALL@ALL**. Quando este instrumento é selecionado, os dados serão transferidos para todos os instrumentos disponíveis para esta fonte.
 
-   Para adicionar um instrumento, clique no botão **Adicionar** ![hydra add](../../images/hydra_add.png). Em seguida, será aberta uma janela para transferir o instrumento. ![hydra securities](../../images/hydra_securities.png)
+   Para adicionar um instrumento, clique no botão **Adicionar** ![Hydra botão Adicionar](../../images/hydra_add.png). Em seguida, será aberta uma janela para transferir o instrumento. ![hydra securities](../../images/hydra_securities.png)
 
    Para transferir os instrumentos, é necessário clicar no botão **Transferir instrumentos** correspondente.
 
@@ -37,13 +37,13 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
 
    Ou, para algumas fontes, [configurar](prepare_for_download/instruments_list.md) os instrumentos que pretende transferir.
 
-   Depois de os instrumentos serem recebidos, a janela terá o seguinte aspeto.![hydra security full list](../../images/hydra_security_full_list.png)
+   Depois de os instrumentos serem recebidos, a janela terá o seguinte aspeto.![Hydra lista completa de instrumentos](../../images/hydra_security_full_list.png)
 
    Serão listados todos os instrumentos disponíveis para adicionar. Para uma pesquisa rápida, pode introduzir o respetivo nome no campo apropriado.
 
-   Para selecionar um instrumento, faça duplo clique nele e este será movido para o lado direito da lista.![hydra security full list 00](../../images/hydra_security_full_list_00.png)
+   Para selecionar um instrumento, faça duplo clique nele e este será movido para o lado direito da lista.![Hydra lista completa de instrumentos 00](../../images/hydra_security_full_list_00.png)
 
-   Em seguida, será movido para o lado direito da tabela.![hydra security full list 01](../../images/hydra_security_full_list_01.png)
+   Em seguida, será movido para o lado direito da tabela.![Hydra lista completa de instrumentos 01](../../images/hydra_security_full_list_01.png)
 
    Os instrumentos selecionados serão apresentados na tabela **Instrumentos**, que é uma tabela com estrutura em árvore. O elemento principal é o instrumento; o elemento adicional são os tipos de dados de mercado que serão recebidos para esse instrumento.
 2. Para cada instrumento selecionado, deve selecionar os tipos de dados de mercado necessários para transferência.

@@ -4,7 +4,7 @@
 
 **订单日志** 提供筛选器，可用于选择所需交易品种。还可以为所选交易品种的事件配置通知，详见[通知设置](../../notifications.md)。
 
-![Terminal orderlog 00](../../../../images/terminal_orderlog_00.png)
+![Terminal 订单日志 00](../../../../images/terminal_orderlog_00.png)
 
 ## 推荐内容
 

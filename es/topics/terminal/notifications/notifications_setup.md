@@ -1,6 +1,6 @@
 # Configuración de notificaciones
 
-Para establecer una notificación, debe hacer clic en el botón ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) en el panel de notificaciones ([Panel de notificaciones](notification_panel.md)) o hacer clic en el botón ![Designer Alert Bell](../../../images/designer_alert_bell.png) directamente en los paneles que admiten notificaciones ([Carteras](../user_interface/portfolios.md), [Feed de operaciones](../user_interface/components/trades_feed.md), [Noticias](../user_interface/components/news.md), [Level 1](../user_interface/components/level_1.md)).
+Para establecer una notificación, debe hacer clic en el botón ![Designer botón Añadir 00](../../../images/designer_creation_tool_00.png) en el panel de notificaciones ([Panel de notificaciones](notification_panel.md)) o hacer clic en el botón ![Designer campana de alerta](../../../images/designer_alert_bell.png) directamente en los paneles que admiten notificaciones ([Carteras](../user_interface/portfolios.md), [Feed de operaciones](../user_interface/components/trades_feed.md), [Noticias](../user_interface/components/news.md), [Level 1](../user_interface/components/level_1.md)).
 
 ![Designer Configuración de notificaciones](../../../images/designer_notifications_setting.png)
 

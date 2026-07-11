@@ -6,11 +6,11 @@ O componente **Ordens** é uma tabela com ordens, que apresenta informações co
 
 Ao clicar no botão **Registo de ordem**, aparece uma janela. Para registar uma nova ordem, preencha-a e clique em **Enviar**.
 
-![Terminal OrderPanel 01](../../../../images/terminal_orderpanel_01.png)
+![Terminal painel de ordens 01](../../../../images/terminal_orderpanel_01.png)
 
 Ao clicar no botão **Alterar ordem**, aparece uma janela. Para alterar a ordem, faça as alterações necessárias e clique em **Enviar**.
 
-![Terminal OrderPanel 02](../../../../images/terminal_orderpanel_02.png)
+![Terminal painel de ordens 02](../../../../images/terminal_orderpanel_02.png)
 
 ## Conteúdo recomendado
 

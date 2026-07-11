@@ -6,7 +6,7 @@
 
 例如，[市场深度](elements/market_depths/order_book.md) 模块会生成市场深度变化事件，无法预先知道该变化将在何时发生。在 [市场深度](elements/market_depths/order_book.md) 模块与 [转换器](elements/converters/converter.md) 模块之间创建连接线后，就订阅了市场深度变化事件，以便由 [转换器](elements/converters/converter.md) 模块进行后续处理，依此类推：
 
-![Designer Event model 00](../../../../images/designer_event_model_00.png)
+![Designer 事件模型 00](../../../../images/designer_event_model_00.png)
 
 ## 推荐内容
 

@@ -14,6 +14,6 @@ Las notificaciones pueden tener las siguientes formas:
 - **Registro** - el mensaje se enviará a [Registros](user_interface/logs.md).
 - **Desactivado** - la notificación no se mostrará.
 
-Para establecer una notificación, debe hacer clic en el botón ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) en el panel de notificaciones ([Panel de notificaciones](notifications/notification_panel.md)) o hacer clic en el botón ![Designer Alert Bell](../../images/designer_alert_bell.png) directamente en los paneles que admiten notificaciones.
+Para establecer una notificación, debe hacer clic en el botón ![Designer botón Añadir 00](../../images/designer_creation_tool_00.png) en el panel de notificaciones ([Panel de notificaciones](notifications/notification_panel.md)) o hacer clic en el botón ![Designer campana de alerta](../../images/designer_alert_bell.png) directamente en los paneles que admiten notificaciones.
 
 Para obtener información sobre cómo configurar notificaciones, consulte la sección [Configuración de notificaciones](notifications/notifications_setup.md).

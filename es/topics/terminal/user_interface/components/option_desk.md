@@ -6,7 +6,7 @@ Para mostrar la mesa de opciones, debe seleccionar el activo subyacente y las op
 
 Además, puede especificar un filtro para la fecha exacta de vencimiento de las opciones y filtros para strikes mínimos\/máximos.
 
-![Terminal option desk 00](../../../../images/terminal_option_desk_00.png)
+![Terminal panel de opciones 00](../../../../images/terminal_option_desk_00.png)
 
 ## Contenido recomendado
 

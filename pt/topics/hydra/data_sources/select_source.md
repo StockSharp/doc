@@ -10,7 +10,7 @@ Para adicionar uma nova fonte de dados de mercado, é necessário:
 
 Em seguida, será apresentada uma lista de fontes. O utilizador pode selecionar várias fontes de uma só vez.
 
-![hydra source add](../../../images/hydra_source_add.png)
+![Hydra adicionar fonte](../../../images/hydra_source_add.png)
 
 Também pode criar várias instâncias da mesma fonte. Por exemplo, várias instâncias de **Interactive Brokers** que guardarão os dados transferidos em pastas diferentes.
 

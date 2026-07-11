@@ -1,6 +1,6 @@
 # 値の遅延
 
-![Designer Delay 00](../../../../../../images/designer_delay_00.png)
+![Designer 遅延 00](../../../../../../images/designer_delay_00.png)
 
 このコンポーネントは、指定した反復回数だけ値の送信を遅延させるために使用します。
 
@@ -17,7 +17,7 @@
 
 - **期間** - 反復回数で遅延期間を指定します。
 
-![Designer Delay 01](../../../../../../images/designer_delay_01.png)
+![Designer 遅延 01](../../../../../../images/designer_delay_01.png)
 
 ## 関連項目
 

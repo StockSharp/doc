@@ -6,7 +6,7 @@
 
 要导出数据，请从下拉列表中选择所需的文件格式：
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra 导出](../../../images/hydra_export.png)
 
 然后选择目标文件夹，并根据需要修改文件名。
 
@@ -18,13 +18,13 @@
 
 单击 **预览** 按钮，可以预览将写入文件的数据。
 
-![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
+![Hydra 导出 TSLab MetaStock 1](../../../images/hydra_export_tslab_metastock_1.png)
 
 用户可以通过 **{SecurityId.SecurityCode}** 属性添加交易品种代码等其他属性，也可以指定时间周期值。
 
 还可以添加包含属性名称的标题行。此时记录将如下所示。
 
-![hydra export TSLab Meta Stock 2](../../../images/hydra_export_tslab_metastock_2.png)
+![Hydra 导出 TSLab MetaStock 2](../../../images/hydra_export_tslab_metastock_2.png)
 
 如果需要导出包含冒号的格式，应像上面的示例 **{OpenTime:default:HH:mm:ss}** 一样指定 `default` 关键字。
 

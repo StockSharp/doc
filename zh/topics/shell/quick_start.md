@@ -24,7 +24,7 @@
 
 ![Shell 快速入门 02](../../images/shell_quick_start_02.png)
 
-打开实盘选项卡，单击 **添加** 按钮 ![Designer Creation tool 00](../../images/designer_creation_tool_00.png)，添加用于交易的策略。
+打开实盘选项卡，单击 **添加** 按钮 ![Designer 添加按钮 00](../../images/designer_creation_tool_00.png)，添加用于交易的策略。
 
 ![Shell 快速入门 03](../../images/shell_quick_start_03.png)
 

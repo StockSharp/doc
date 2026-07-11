@@ -2,7 +2,7 @@
 
 [ConnectorWindow](xref:StockSharp.Xaml.ConnectorWindow) - 一个用于配置连接器适配器的特殊窗口。
 
-![API GUI ConnectorWindow](../../../images/api_gui_connectorwindow.png)
+![API GUI 连接窗口](../../../images/api_gui_connectorwindow.png)
 
 这是连接设置窗口。从下拉列表（通过 '+' 按钮打开）中，您需要选择所需的适配器，并在右侧的属性窗口中配置它们的属性。
 

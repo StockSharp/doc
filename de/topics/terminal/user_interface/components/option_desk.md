@@ -6,7 +6,7 @@ Um den Optionsdesk anzuzeigen, müssen Sie den Basiswert und die benötigten Opt
 
 Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen sowie Filter für minimale/maximale Strikes angeben.
 
-![Terminal option desk 00](../../../../images/terminal_option_desk_00.png)
+![Terminal Optionsboard 00](../../../../images/terminal_option_desk_00.png)
 
 ## Empfohlene Inhalte
 

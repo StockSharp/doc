@@ -1,6 +1,6 @@
 # Indikatoren
 
-Wählen Sie im erscheinenden Panel das Instrument und den gewünschten Zeitbereich aus, geben Sie den Datentyp an, aus dem der Indikator erstellt werden soll, setzen Sie den [indicator](../../../api/indicators/list_of_indicators.md) und seine Parameter, und klicken Sie dann auf die Schaltfläche ![hydra find](../../../../images/hydra_find.png): :
+Wählen Sie im erscheinenden Panel das Instrument und den gewünschten Zeitbereich aus, geben Sie den Datentyp an, aus dem der Indikator erstellt werden soll, setzen Sie den [indicator](../../../api/indicators/list_of_indicators.md) und seine Parameter, und klicken Sie dann auf die Schaltfläche ![Hydra Suchschaltfläche](../../../../images/hydra_find.png): :
 
 ![hydra Indikator exportieren](../../../../images/hydra_export_indicator.png)
 

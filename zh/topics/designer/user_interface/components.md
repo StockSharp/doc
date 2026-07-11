@@ -2,7 +2,7 @@
 
 在测试或交易过程中，需要对整个过程进行全面控制。为了实现完整的控制和分析，[Designer](../../designer.md) 提供了多种图形组件，可以在 **功能区** 的 **组件** 组中选择并添加：
 
-![Designer Components](../../../images/designer_components.png)
+![Designer 组件](../../../images/designer_components.png)
 
 - [图表](components/chart.md) - 显示K线和／或指标。包含策略中的所有[图表面板](../strategies/using_visual_designer/elements/common/chart.md)模块。
 - [P/L](components/pnl_equity.md) - 显示未实现盈亏、已实现盈亏和佣金图表。

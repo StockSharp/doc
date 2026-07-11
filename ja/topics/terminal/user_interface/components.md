@@ -2,7 +2,7 @@
 
 取引中は、プロセスを完全に制御する必要がある場合があります。完全な制御と分析のために、**Terminal** では、**リボン** の **コンポーネント** グループで選択して追加できるグラフィカルコンポーネントが用意されています。
 
-![Designer Components](../../../images/designer_components.png)
+![Designer コンポーネント](../../../images/designer_components.png)
 
 - [銘柄](components/instruments.md) - 選択したすべての銘柄に関する情報を表示する銘柄テーブルです。
 - [Level 1](components/level_1.md) - 選択した銘柄の Level 1 の変更履歴を表示するテーブルです。

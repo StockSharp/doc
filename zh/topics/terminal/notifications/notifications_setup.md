@@ -1,6 +1,6 @@
 # 通知设置
 
-要设置通知，请单击 ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) 按钮（位于[通知面板](notification_panel.md)中），或者直接单击支持通知的面板中的 ![Designer Alert Bell](../../../images/designer_alert_bell.png) 按钮（这些面板包括[投资组合](../user_interface/portfolios.md)、[成交流](../user_interface/components/trades_feed.md)、[新闻](../user_interface/components/news.md)和 [Level 1](../user_interface/components/level_1.md)）。
+要设置通知，请单击 ![Designer 添加按钮 00](../../../images/designer_creation_tool_00.png) 按钮（位于[通知面板](notification_panel.md)中），或者直接单击支持通知的面板中的 ![Designer 提醒铃](../../../images/designer_alert_bell.png) 按钮（这些面板包括[投资组合](../user_interface/portfolios.md)、[成交流](../user_interface/components/trades_feed.md)、[新闻](../user_interface/components/news.md)和 [Level 1](../user_interface/components/level_1.md)）。
 
 ![Designer 通知设置](../../../images/designer_notifications_setting.png)
 

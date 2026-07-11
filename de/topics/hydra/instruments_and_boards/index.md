@@ -32,8 +32,8 @@ Als Beispiel betrachten wir den Instrumentenverhältnis-Index AAPL@NYSE\/GOOG@NY
    - **tan(a)** - Gibt den Tangens des angegebenen Winkels zurück.
    - **truncate(a)** - Berechnet den ganzzahligen Anteil der angegebenen Zahl.
 4. Geben Sie die mathematische Operation ein, mit der der Index berechnet werden soll. ![hydra Wertpapierindex 01](../../../images/hydra_index_sec_01.png)
-5. Klicken Sie danach auf der Registerkarte **Allgemein** auf [Kerzen](../working_with_data/view_and_export/candles.md), wählen Sie das erstellte **Index**-Instrument und den Datenzeitraum aus, setzen Sie im Feld **Erstellen aus:** den Wert **Zusammengesetztes Element** und klicken Sie dann auf ![hydra find](../../../images/hydra_find.png). ![hydra Kerzenindex](../../../images/hydra_index_candle.png)
+5. Klicken Sie danach auf der Registerkarte **Allgemein** auf [Kerzen](../working_with_data/view_and_export/candles.md), wählen Sie das erstellte **Index**-Instrument und den Datenzeitraum aus, setzen Sie im Feld **Erstellen aus:** den Wert **Zusammengesetztes Element** und klicken Sie dann auf ![Hydra Suchschaltfläche](../../../images/hydra_find.png). ![hydra Kerzenindex](../../../images/hydra_index_candle.png)
 
 Die erzeugten Daten können in die Formate Excel, XML oder TXT exportiert werden. Der Export erfolgt über die Dropdown-Liste.
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra Datenexport](../../../images/hydra_export.png)

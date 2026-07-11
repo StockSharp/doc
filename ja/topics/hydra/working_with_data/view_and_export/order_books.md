@@ -1,6 +1,6 @@
 # 板情報
 
-表示されるウィンドウで、銘柄と必要な時間間隔を選択し、![hydra find](../../../../images/hydra_find.png) ボタンをクリックします。
+表示されるウィンドウで、銘柄と必要な時間間隔を選択し、![Hydra 検索ボタン](../../../../images/hydra_find.png) ボタンをクリックします。
 
 ![hydra 板情報をエクスポート](../../../../images/hydra_export_depth.png)
 

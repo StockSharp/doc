@@ -1,6 +1,6 @@
 # 随机值
 
-![Designer Random 00](../../../../../../images/designer_random_00.png)
+![Designer 随机 00](../../../../../../images/designer_random_00.png)
 
 该模块用于生成随机值。
 
@@ -17,7 +17,7 @@
 - **最小值** - 允许的最小值边界。
 - **最大值** - 允许的最大值边界。
 
-![Designer Random 01](../../../../../../images/designer_random_01.png)
+![Designer 随机 01](../../../../../../images/designer_random_01.png)
 
 ## 另请参阅
 

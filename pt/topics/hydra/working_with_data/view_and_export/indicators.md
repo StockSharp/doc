@@ -1,6 +1,6 @@
 # Indicadores
 
-No painel que aparece, selecione o instrumento, o intervalo temporal de interesse, especifique o tipo de dados a partir do qual o indicador será construído, defina o [indicador](../../../api/indicators/list_of_indicators.md) e os respetivos parâmetros, e depois clique no botão ![hydra find](../../../../images/hydra_find.png): :
+No painel que aparece, selecione o instrumento, o intervalo temporal de interesse, especifique o tipo de dados a partir do qual o indicador será construído, defina o [indicador](../../../api/indicators/list_of_indicators.md) e os respetivos parâmetros, e depois clique no botão ![Hydra botão Procurar](../../../../images/hydra_find.png): :
 
 ![hydra exportar indicador](../../../../images/hydra_export_indicator.png)
 

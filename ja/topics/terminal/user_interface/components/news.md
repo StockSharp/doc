@@ -6,7 +6,7 @@
 
 ニュース パネルでは、選択したイベントの通知を設定できます - [通知設定](../../notifications.md)を参照してください。
 
-![Terminal news 00](../../../../images/terminal_news_00.png)
+![Terminal ニュース 00](../../../../images/terminal_news_00.png)
 
 ## 推奨コンテンツ
 

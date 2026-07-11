@@ -8,18 +8,18 @@ Esto también es útil al negociar el mismo instrumento en distintos mercados o 
 
 Para asociar instrumentos y conexiones, debe:
 
-1. Vaya a la pestaña **Instrumentos** y hacer clic en el botón **Instrumentos y conexiones**.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
-2. En la lista de conexiones, seleccionar la conexión necesaria.![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+1. Vaya a la pestaña **Instrumentos** y hacer clic en el botón **Instrumentos y conexiones**.![Designer asignación de instrumentos 01 00](../../../images/designer_security_mapping_01_00.png)
+2. En la lista de conexiones, seleccionar la conexión necesaria.![Designer asignación de instrumentos 01](../../../images/designer_security_mapping_01.png)
 3. Rellenar todas las columnas.
 
    Por ejemplo:
 
    Instrumento de acciones APPLE.
-   - Conexión - **Interactive Brokers**. Haga clic en el botón ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png), después de lo cual se añadirá una nueva línea.
-   - En las columnas **Código de instrumento** y **Código de mercado**, especifique el código del instrumento y el código del mercado. En las columnas **Código de instrumento en el adaptador** y **Código de mercado en el adaptador**, especifique el código del instrumento y el código del mercado tal como están especificados en el sistema de negociación externo. Haga clic en **Aceptar** ![Designer Security mapping 01 01](../../../images/designer_security_mapping_01_01.png)
+   - Conexión - **Interactive Brokers**. Haga clic en el botón ![Designer botón Añadir 00](../../../images/designer_creation_tool_00.png), después de lo cual se añadirá una nueva línea.
+   - En las columnas **Código de instrumento** y **Código de mercado**, especifique el código del instrumento y el código del mercado. En las columnas **Código de instrumento en el adaptador** y **Código de mercado en el adaptador**, especifique el código del instrumento y el código del mercado tal como están especificados en el sistema de negociación externo. Haga clic en **Aceptar** ![Designer asignación de instrumentos 01 01](../../../images/designer_security_mapping_01_01.png)
    - Repita los pasos para las conexiones **Interactive Brokers** y **CQG Continuum** de la misma forma.
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |
    | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-   | ![Designer Security mapping 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer Security mapping 01 03](../../../images/designer_security_mapping_01_03.png) |
+   | ![Designer asignación de instrumentos 01 02](../../../images/designer_security_mapping_01_02.png) | ![Designer asignación de instrumentos 01 03](../../../images/designer_security_mapping_01_03.png) |
 4. Ahora todos los datos descargados, en nuestro caso para las acciones APPLE, se guardarán en un solo lugar.

@@ -2,11 +2,11 @@
 
 MetaStock 形式のファイルへデータをエクスポートするには、ドロップダウンリストから Txt 形式を選択します。
 
-![hydra export](../../../../images/hydra_export.png)
+![Hydra エクスポート](../../../../images/hydra_export.png)
 
 テキスト形式 (Txt) ファイルへエクスポートすると、ウィンドウが表示されます。 
 
-![hydra export Meta Stock 2](../../../../images/hydra_export_tslab_metastock_2.png)
+![Hydra エクスポート Meta Stock 2](../../../../images/hydra_export_tslab_metastock_2.png)
 
 このウィンドウでエクスポートテンプレートを指定します。中括弧は、エクスポートするプロパティとその順序を示します。
 

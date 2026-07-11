@@ -2,7 +2,7 @@
 
 该任务用于将交易所数据导出为 Excel、xml、sql、bin、Json 或 txt 等格式。
 
-![hydra tasks export](../../../images/hydra_tasks_export.png)
+![Hydra 导出任务](../../../images/hydra_tasks_export.png)
 
 **数据库**
 
@@ -31,7 +31,7 @@
 **常规**
 
 - **标题** — Converter。
-- **工作时间** — 配置交易板的工作时间表。![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **工作时间** — 配置交易板的工作时间表。![Hydra 备份任务](../../../images/hydra_tasks_backup_desk.png)
 - **操作间隔** — 任务的运行间隔。
 - **数据目录** — 用于接收待转换数据的数据目录。
 - **格式** — 转换后的数据格式：BIN\/CSV。
@@ -61,13 +61,13 @@
 下面以自动导出为例说明操作过程：
 
 1. 选择交易品种。
-2. 配置需要导出的市场数据。![hydra tasks export 00](../../../images/hydra_tasks_export_00.png)
-3. 设置导出时间范围。如果已经配置实时下载市场数据，可以不指定结束日期。在这种情况下，数据会按照运行间隔（数据更新间隔）实时导出。![hydra tasks export 01](../../../images/hydra_tasks_export_01.png)
+2. 配置需要导出的市场数据。![Hydra 导出任务 00](../../../images/hydra_tasks_export_00.png)
+3. 设置导出时间范围。如果已经配置实时下载市场数据，可以不指定结束日期。在这种情况下，数据会按照运行间隔（数据更新间隔）实时导出。![Hydra 导出任务 01](../../../images/hydra_tasks_export_01.png)
 4. 配置目录、运行间隔、数据类型和数据格式。
-5. 启动导出。![hydra tasks export 02](../../../images/hydra_tasks_export_02.png)
+5. 启动导出。![Hydra 导出任务 02](../../../images/hydra_tasks_export_02.png)
 
 查看导出的数据：
 
-![hydra tasks export 03](../../../images/hydra_tasks_export_03.png)
+![Hydra 导出任务 03](../../../images/hydra_tasks_export_03.png)
 
 **观看[视频教程](../videos/export_task.md)**

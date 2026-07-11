@@ -8,7 +8,7 @@
 
 ![Designer ポートフォリオパネル A 01](../../../images/designer_panel_portfolios_01.png)
 
-![Designer Alert Bell](../../../images/designer_alert_bell.png) ボタンをクリックすると、[通知設定](../../terminal/notifications.md) ウィンドウが開きます。
+![Designer アラートベル](../../../images/designer_alert_bell.png) ボタンをクリックすると、[通知設定](../../terminal/notifications.md) ウィンドウが開きます。
 
 ## 推奨コンテンツ
 

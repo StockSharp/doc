@@ -6,7 +6,7 @@
 
 さらに、オプションの正確な満期日のフィルター、および最小\/最大ストライクのフィルターを指定できます。
 
-![Terminal Graph options positions 00](../../../../images/terminal_graph_options_positions_00.png)
+![Terminal ポジショングラフオプション 00](../../../../images/terminal_graph_options_positions_00.png)
 
 ## 推奨コンテンツ
 

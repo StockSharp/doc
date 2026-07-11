@@ -6,7 +6,7 @@ Cada cubo do [Designer](../../../designer.md) que tenha um parâmetro de saída 
 
 Por exemplo, o cubo [Livro de ofertas](elements/market_depths/order_book.md) gera um evento de alteração do livro de ordens. Não se sabe antecipadamente quando ocorrerá uma alteração. Ao criar uma linha de ligação entre o cubo [Livro de ofertas](elements/market_depths/order_book.md) e o cubo [Conversor](elements/converters/converter.md), é efectuada uma subscrição da alteração do livro de ordens para posterior processamento com o cubo [Conversor](elements/converters/converter.md), etc.:
 
-![Designer Event model 00](../../../../images/designer_event_model_00.png)
+![Designer modelo de eventos 00](../../../../images/designer_event_model_00.png)
 
 ## Conteúdo recomendado
 

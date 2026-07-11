@@ -2,7 +2,7 @@
 
 要创建自己的策略，请在 Strategies 文件夹中为该策略新建一个文件夹。
 
-![Shell custom strategy 00](../../images/shell_custom_strategy_00.png)
+![Shell 自定义策略 00](../../images/shell_custom_strategy_00.png)
 
 下面以 SmaStrategy 为例创建策略本身。
 
@@ -38,7 +38,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 > [!TIP]
 > 如果默认策略使用的测试面板或监控面板已经能够满足该策略的需要，则无需实现 IHaveTestControl 和 IHaveMonitoringControl 接口。Shell 会自行加载默认测试面板或监控面板。
 
-![Shell custom strategy 01](../../images/shell_custom_strategy_01.png)
+![Shell 自定义策略 01](../../images/shell_custom_strategy_01.png)
 
 要让新建的策略出现在策略选择窗口中，必须将其添加到主窗口的 **DictionaryStrategies** 字典。
 

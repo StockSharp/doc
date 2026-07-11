@@ -2,7 +2,7 @@
 
 Beim ersten Start erscheint das folgende Fenster zur Auswahl von Datenquellen. Sie können dieses Fenster auch auf der Registerkarte **Allgemein** öffnen, indem Sie **Hinzufügen \=\> Quellen** auswählen.
 
-![hydra source add](../../images/hydra_source_add.png)
+![Hydra Quelle hinzufügen](../../images/hydra_source_add.png)
 
 Markieren Sie im Fenster die erforderlichen Quellen. Sie können Filter nach Region, Board, Datentyp, Zahlungsart, Echtzeit oder nicht verwenden. Wenn die Auswahl abgeschlossen ist, klicken Sie auf **OK**. Danach bietet das Programm an, die Hilfsprogramme zu aktivieren. Weitere Details zur Arbeit mit Hilfsprogrammen finden Sie im Abschnitt [Utilities](tasks.md). Klicken Sie auf **OK**.
 
@@ -29,7 +29,7 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstützten Daten
 
    Beim ersten Start bietet das Programm an, alle Instrumente für die ausgewählte Quelle auf einmal herunterzuladen. Danach lädt der Benutzer die Instrumente selbst herunter. Anfänglich ist die Instrumentendatenbank in [Hydra](../hydra.md) leer; es gibt nur das Hilfsinstrument **ALL@ALL**. Wenn dieses Instrument ausgewählt ist, werden Daten für alle für diese Quelle verfügbaren Instrumente heruntergeladen.
 
-   Um ein Instrument hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** ![hydra add](../../images/hydra_add.png). Danach öffnet sich ein Fenster zum Herunterladen des Instruments. ![hydra securities](../../images/hydra_securities.png)
+   Um ein Instrument hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** ![Hydra Schaltfläche Hinzufügen](../../images/hydra_add.png). Danach öffnet sich ein Fenster zum Herunterladen des Instruments. ![hydra securities](../../images/hydra_securities.png)
 
    Um die Instrumente herunterzuladen, klicken Sie auf die entsprechende Schaltfläche **Instrumente herunterladen**.
 
@@ -37,13 +37,13 @@ Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstützten Daten
 
    Oder Sie können für eine Reihe von Quellen die Instrumente [konfigurieren](prepare_for_download/instruments_list.md), die heruntergeladen werden sollen.
 
-   Nachdem die Instrumente empfangen wurden, sieht das Fenster wie folgt aus.![hydra security full list](../../images/hydra_security_full_list.png)
+   Nachdem die Instrumente empfangen wurden, sieht das Fenster wie folgt aus.![Hydra vollständige Instrumentenliste](../../images/hydra_security_full_list.png)
 
    Es listet alle Instrumente auf, die zum Hinzufügen verfügbar sind. Für eine schnelle Suche können Sie den Namen in das entsprechende Feld eingeben.
 
-   Um ein Instrument auszuwählen, doppelklicken Sie darauf, und es wird auf die rechte Seite der Liste verschoben.![hydra security full list 00](../../images/hydra_security_full_list_00.png)
+   Um ein Instrument auszuwählen, doppelklicken Sie darauf, und es wird auf die rechte Seite der Liste verschoben.![Hydra vollständige Instrumentenliste 00](../../images/hydra_security_full_list_00.png)
 
-   Anschliessend wird es auf die rechte Seite der Tabelle verschoben.![hydra security full list 01](../../images/hydra_security_full_list_01.png)
+   Anschliessend wird es auf die rechte Seite der Tabelle verschoben.![Hydra vollständige Instrumentenliste 01](../../images/hydra_security_full_list_01.png)
 
    Die ausgewählten Instrumente werden in der Tabelle **Instrumente** angezeigt, die baumartig strukturiert ist. Das Hauptelement ist das Instrument, die zusätzlichen Elemente sind die Marktdatentypen, die für dieses Instrument empfangen werden.
 2. Für jedes ausgewählte Instrument sollten Sie die Marktdatentypen auswählen, die für den Download erforderlich sind.

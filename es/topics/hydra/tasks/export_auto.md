@@ -2,7 +2,7 @@
 
 La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json o txt.
 
-![hydra tasks export](../../../images/hydra_tasks_export.png)
+![Hydra tareas de exportación](../../../images/hydra_tasks_export.png)
 
 **Base de datos**
 
@@ -31,7 +31,7 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 **General**
 
 - **Encabezado** - Converter.
-- **Horario de trabajo** - configuración del horario de trabajo del mercado. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Horario de trabajo** - configuración del horario de trabajo del mercado. ![Hydra tareas de copia de seguridad](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operación** - intervalo de operación.
 - **Directorio de datos** - directorio de datos desde el que se recibirán los datos para la conversión.
 - **Formato** - formato de los datos convertidos: BIN\/CSV.
@@ -61,13 +61,13 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 Consideremos un ejemplo de exportación automática:
 
 1. Seleccione el instrumento.
-2. Configure los datos de mercado que deben exportarse.![hydra tasks export 00](../../../images/hydra_tasks_export_00.png)
-3. Establezca el período de exportación. Si está configurada la descarga de datos de mercado en tiempo real, puede omitir la fecha final del período. En este caso, los datos se exportarán en tiempo real, de acuerdo con el intervalo de trabajo (actualización de datos). ![hydra tasks export 01](../../../images/hydra_tasks_export_01.png)
+2. Configure los datos de mercado que deben exportarse.![Hydra tareas de exportación 00](../../../images/hydra_tasks_export_00.png)
+3. Establezca el período de exportación. Si está configurada la descarga de datos de mercado en tiempo real, puede omitir la fecha final del período. En este caso, los datos se exportarán en tiempo real, de acuerdo con el intervalo de trabajo (actualización de datos). ![Hydra tareas de exportación 01](../../../images/hydra_tasks_export_01.png)
 4. Configure directorios. Intervalo de operación. Tipo de datos. Formato de datos.
-5. Inicie la exportación.![hydra tasks export 02](../../../images/hydra_tasks_export_02.png)
+5. Inicie la exportación.![Hydra tareas de exportación 02](../../../images/hydra_tasks_export_02.png)
 
 Veamos los datos exportados.
 
-![hydra tasks export 03](../../../images/hydra_tasks_export_03.png)
+![Hydra tareas de exportación 03](../../../images/hydra_tasks_export_03.png)
 
 **Ver [tutorial en video](../videos/export_task.md)**

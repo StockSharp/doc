@@ -32,7 +32,7 @@
 **常规**
 
 - **标题** — Converter。
-- **工作时间** — 配置交易板的工作时间表。![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **工作时间** — 配置交易板的工作时间表。![Hydra 备份任务](../../../images/hydra_tasks_backup_desk.png)
 - **操作间隔** — 任务的运行间隔。
 - **数据目录** — 用于接收待转换数据的数据目录。
 - **格式** — 转换后的数据格式：BIN\/CSV。

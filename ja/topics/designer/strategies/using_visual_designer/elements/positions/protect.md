@@ -1,8 +1,8 @@
 # ポジション保護
 
-![Designer Protect positions 00](../../../../../../images/designer_protect_positions_00.png)
+![Designer ポジション保護 00](../../../../../../images/designer_protect_positions_00.png)
 
-![Designer Protect positions 01](../../../../../../images/designer_protect_positions_01.png)
+![Designer ポジション保護 01](../../../../../../images/designer_protect_positions_01.png)
 
 このブロックは、オープン済みの取引をストップロスとテイクプロフィットで自動的に保護するために使用します。
 
@@ -30,7 +30,7 @@ Take と Stop のパラメーター
 - **タイムアウト** - 保護が市場価格で強制的にトリガーされるまでのタイムアウト値。
 - **成行注文** - ポジションを迅速にクローズするために、（価格なしの）成行注文を使用します。
 
-![Designer Protect positions 02](../../../../../../images/designer_protect_positions_02.png)
+![Designer ポジション保護 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
 > 入力取引は、ストラテジー全体の取引（[ストラテジー別約定](../common/trades_by_strategy.md) ブロック）であってはなりません。これは現在ポジションの計算が不正確になるためです。保護取引もストラテジー取引になってしまいます。**ポジション保護** ブロックは、[注文登録](../orders/register.md) および [ポジション変更](modify.md) キューブの **トランザクション** 出力ソケット、またはポジションを直接変更する同様のコンポーネントから取引を受け取る必要があります。

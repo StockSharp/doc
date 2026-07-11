@@ -2,7 +2,7 @@
 
 在交易过程中，您可能需要全面控制整个流程。为了实现完整的控制和分析，**Terminal** 提供了多种图形组件。可以在**功能区**的 **组件** 组中选择并添加这些组件：
 
-![Designer Components](../../../images/designer_components.png)
+![Designer 组件](../../../images/designer_components.png)
 
 - [交易品种](components/instruments.md) — 显示所有已选交易品种信息的表格。
 - [Level 1](components/level_1.md) — 显示所选交易品种 Level 1 数据变更历史的表格。

@@ -4,7 +4,7 @@ El elemento principal de la interfaz de usuario de [Terminal](../../terminal.md)
 
 La pestaña **Común**, que se abre de forma predeterminada después del inicio, contiene los elementos que puede necesitar al comienzo del trabajo. En la pestaña **Común**, puede añadir [Espacio de trabajo](../../designer/user_interface/workspace.md) o abrir [Registros](../../designer/user_interface/logs.md), [Carteras](../../designer/user_interface/portfolios.md), [Mercados de negociación](../../designer/user_interface/boards.md), o añadir [Componentes](../../designer/user_interface/components.md). También en la pestaña **Común** puede seleccionar el tema de [Terminal](../../terminal.md).
 
-![Terminal Tape 00](../../../images/terminal_tape_00.png)
+![Terminal cinta 00](../../../images/terminal_tape_00.png)
 
 ## Contenido recomendado
 

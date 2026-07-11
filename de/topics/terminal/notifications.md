@@ -14,6 +14,6 @@ Benachrichtigungen können folgende Formen haben:
 - **Protokoll** - die Nachricht wird an die [Protokolle](user_interface/logs.md) gesendet.
 - **Deaktiviert** - die Benachrichtigung wird nicht angezeigt.
 
-Um eine Benachrichtigung einzurichten, klicken Sie im Benachrichtigungspanel ([Benachrichtigungspanel](notifications/notification_panel.md)) auf die Schaltfläche ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) oder direkt in den Panels, die Benachrichtigungen unterstützen, auf die Schaltfläche ![Designer Alert Bell](../../images/designer_alert_bell.png).
+Um eine Benachrichtigung einzurichten, klicken Sie im Benachrichtigungspanel ([Benachrichtigungspanel](notifications/notification_panel.md)) auf die Schaltfläche ![Designer Schaltfläche Hinzufügen 00](../../images/designer_creation_tool_00.png) oder direkt in den Panels, die Benachrichtigungen unterstützen, auf die Schaltfläche ![Designer Benachrichtigungsglocke](../../images/designer_alert_bell.png).
 
 Informationen zur Konfiguration von Benachrichtigungen finden Sie im Abschnitt [Benachrichtigungen einrichten](notifications/notifications_setup.md).

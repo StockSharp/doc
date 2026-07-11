@@ -2,7 +2,7 @@
 
 Beim Testen oder Handeln besteht die Notwendigkeit, den Prozess vollständig zu kontrollieren. Für eine umfassende Kontrolle und Analyse enthält [Designer](../../designer.md) grafische Komponenten, die hinzugefügt werden können, indem sie im **Menüband** in der Gruppe **Komponenten** ausgewählt werden:
 
-![Designer Components](../../../images/designer_components.png)
+![Designer Komponenten](../../../images/designer_components.png)
 
 - [Chart](components/chart.md) - stellt einen Candlestick-Chart und/oder Indikatoren dar. Enthält alle [Chart](../strategies/using_visual_designer/elements/common/chart.md)-Würfel, die in der Strategie vorhanden sind.
 - [P/L](components/pnl_equity.md) - stellt einen Chart für Profit/Loss (unrealized), Profit/Loss (realized) und Kommissionen dar.

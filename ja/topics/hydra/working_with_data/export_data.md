@@ -6,7 +6,7 @@
 
 エクスポートするには、ドロップダウンリストから必要なファイル形式を選択します。
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra エクスポート](../../../images/hydra_export.png)
 
 次に、フォルダーを選択し、必要に応じてファイル名を変更します。
 
@@ -18,13 +18,13 @@
 
 **プレビュー** ボタンをクリックすると、ファイルに保存されるデータを確認できます。
 
-![hydra export TSLab Meta Stock 1](../../../images/hydra_export_tslab_metastock_1.png)
+![Hydra TSLab MetaStock エクスポート 1](../../../images/hydra_export_tslab_metastock_1.png)
 
 ユーザーは、**{SecurityId.SecurityCode}** プロパティを使用して銘柄コードなどの追加プロパティを追加したり、時間枠の値を指定したりできます。
 
 プロパティ名を示すヘッダーを追加できます。この場合、レコードは次のようになります。
 
-![hydra export TSLab Meta Stock 2](../../../images/hydra_export_tslab_metastock_2.png)
+![Hydra TSLab MetaStock エクスポート 2](../../../images/hydra_export_tslab_metastock_2.png)
 
 コロンを使用する形式でエクスポートする必要がある場合は、上記の例 **{OpenTime:default:HH:mm:ss}** のように default キーワードを指定する必要があります。
 

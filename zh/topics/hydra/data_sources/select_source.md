@@ -10,7 +10,7 @@
 
 随后会显示数据源列表。用户可以一次选择多个数据源。
 
-![hydra source add](../../../images/hydra_source_add.png)
+![Hydra 添加数据源](../../../images/hydra_source_add.png)
 
 还可以创建同一数据源的多个实例。例如，可以创建多个 **Interactive Brokers** 实例，并将下载的数据保存到不同文件夹。
 

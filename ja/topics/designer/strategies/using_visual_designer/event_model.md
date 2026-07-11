@@ -6,7 +6,7 @@
 
 たとえば、[板情報](elements/market_depths/order_book.md) キューブはオーダーブック変更イベントを生成します。変更がいつ発生するかは事前には分かりません。[板情報](elements/market_depths/order_book.md) キューブと [コンバーター](elements/converters/converter.md) キューブの間に接続線を作成すると、[コンバーター](elements/converters/converter.md) キューブなどでさらに処理するために、オーダーブック変更に対する購読が行われます:
 
-![Designer Event model 00](../../../../images/designer_event_model_00.png)
+![Designer イベントモデル 00](../../../../images/designer_event_model_00.png)
 
 ## 推奨コンテンツ
 

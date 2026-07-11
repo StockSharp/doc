@@ -14,15 +14,15 @@
 
 下一步，单击 **连接** 按钮 ![Designer 快速访问工具栏 00](../../images/designer_quick_access_toolbar_00.png) 建立连接。
 
-单击图表面板上的 **添加** 按钮 ![Designer Creation tool 00](../../images/designer_creation_tool_00.png)，添加新的图表区域。右键单击图表区域，可以为所需交易品种添加K线。还可以向图表添加指标、自有成交和订单，并直接从图表登记订单。有关图表操作的详细信息，请参阅[图表](user_interface/components/chart.md)。
+单击图表面板上的 **添加** 按钮 ![Designer 添加按钮 00](../../images/designer_creation_tool_00.png)，添加新的图表区域。右键单击图表区域，可以为所需交易品种添加K线。还可以向图表添加指标、自有成交和订单，并直接从图表登记订单。有关图表操作的详细信息，请参阅[图表](user_interface/components/chart.md)。
 
 ![Terminal 快速入门 01](../../images/terminal_quick_start_01.png)
 
-单击交易品种面板上的 **添加** 按钮 ![Designer Creation tool 00](../../images/designer_creation_tool_00.png)，添加希望监控的交易品种。该面板会显示最优价格数据。有关交易品种面板的详细信息，请参阅[交易品种](user_interface/components/instruments.md)。
+单击交易品种面板上的 **添加** 按钮 ![Designer 添加按钮 00](../../images/designer_creation_tool_00.png)，添加希望监控的交易品种。该面板会显示最优价格数据。有关交易品种面板的详细信息，请参阅[交易品种](user_interface/components/instruments.md)。
 
 ![Terminal 快速入门 02](../../images/terminal_quick_start_02.png)
 
-在订单簿中单击 **设置** 按钮 ![Designer Schedule 01](../../images/designer_schedule_01.png)，会出现一个设置面板，可以在其中指定用于交易的 **交易品种** 和 **投资组合**，也可以调整订单簿深度。有关订单簿操作的详细信息，请参阅[订单簿](user_interface/components/order_book.md)。
+在订单簿中单击 **设置** 按钮 ![Designer 图形元素 01](../../images/designer_schedule_01.png)，会出现一个设置面板，可以在其中指定用于交易的 **交易品种** 和 **投资组合**，也可以调整订单簿深度。有关订单簿操作的详细信息，请参阅[订单簿](user_interface/components/order_book.md)。
 
 ![Terminal 快速入门 03](../../images/terminal_quick_start_03.png)
 

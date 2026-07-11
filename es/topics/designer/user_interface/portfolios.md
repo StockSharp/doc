@@ -8,7 +8,7 @@ El panel **Carteras** es una tabla que muestra los datos básicos de la cartera 
 
 ![Designer Panel A de carteras 01](../../../images/designer_panel_portfolios_01.png)
 
-Al hacer clic en el botón ![Designer Alert Bell](../../../images/designer_alert_bell.png), se abre la ventana [Configuración de notificaciones](../../terminal/notifications.md).
+Al hacer clic en el botón ![Designer campana de alerta](../../../images/designer_alert_bell.png), se abre la ventana [Configuración de notificaciones](../../terminal/notifications.md).
 
 ## Contenido recomendado
 

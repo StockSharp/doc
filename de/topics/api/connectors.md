@@ -38,7 +38,7 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 
 ```
 
-![API GUI ConnectorWindow](../../images/api_gui_connectorwindow.png)
+![API-GUI-Verbindungsfenster](../../images/api_gui_connectorwindow.png)
 
 Ebenso können Sie Verbindungen direkt aus dem Code (ohne grafische Fenster) hinzufügen, indem Sie die Erweiterungsmethode [TraderHelper.AddAdapter\<TAdapter\>](xref:StockSharp.Algo.TraderHelper.AddAdapter``1(StockSharp.Algo.Connector,System.Action{``0}))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) connector, [System.Action\<TAdapter\>](xref:System.Action`1) init **)** verwenden:
 

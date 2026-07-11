@@ -4,7 +4,7 @@ O elemento principal da interface de utilizador do [Terminal](../../terminal.md)
 
 O separador **Comum**, que é aberto por predefinição após o arranque, contém os elementos de que pode precisar no início do trabalho. No separador **Comum**, pode adicionar uma [Área de trabalho](../../designer/user_interface/workspace.md) ou abrir [Registos](../../designer/user_interface/logs.md), [Portefólios](../../designer/user_interface/portfolios.md), [Mercados](../../designer/user_interface/boards.md), ou adicionar [Componentes](../../designer/user_interface/components.md). Também no separador **Comum**, pode selecionar o tema do [Terminal](../../terminal.md).
 
-![Terminal Tape 00](../../../images/terminal_tape_00.png)
+![Terminal faixa 00](../../../images/terminal_tape_00.png)
 
 ## Conteúdo recomendado
 

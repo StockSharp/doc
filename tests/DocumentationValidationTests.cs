@@ -2012,7 +2012,58 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
 	{
 		var errors = new List<string>();
-		var pattern = new Regex(@"^(?:hydra choose securitiy|hydra source choose|hydra securities choose all|hydra choose ITCH Plaza|Designer Options Board)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var prefixes = new[]
+		{
+			"API GUI ConnectorWindow",
+			"Designer Alert Bell",
+			"Designer Components",
+			"Designer Creation tool",
+			"Designer Crossing",
+			"Designer Debug",
+			"Designer Delay",
+			"Designer Event model",
+			"Designer Graph options positions",
+			"Designer Options Board",
+			"Designer Protect positions",
+			"Designer Random",
+			"Designer Schedule",
+			"Designer Schedule PU",
+			"Designer Security mapping",
+			"Designer Stopping point",
+			"Designer Sync",
+			"Designer Tape",
+			"Designer Working time",
+			"DesignerDeleteButton",
+			"DesignerPlusButton",
+			"Shell Common",
+			"Shell RemoteManager",
+			"Shell custom strategy",
+			"Shell run Designer strategy",
+			"Terminal Graph options positions",
+			"Terminal OrderPanel",
+			"Terminal Tape",
+			"Terminal news",
+			"Terminal option desk",
+			"Terminal orderlog",
+			"Terminal securities",
+			"hydra add",
+			"hydra choose ITCH Plaza",
+			"hydra choose securitiy",
+			"hydra edit",
+			"hydra export",
+			"hydra export TSLab Meta Stock",
+			"hydra find",
+			"hydra securities choose all",
+			"hydra securities edit",
+			"hydra security edit",
+			"hydra security full list",
+			"hydra source add",
+			"hydra source choose",
+			"hydra tasks backup desk",
+			"hydra tasks converter",
+			"hydra tasks export",
+		};
+		var pattern = new Regex($"^(?:{string.Join("|", prefixes.OrderByDescending(prefix => prefix.Length).Select(Regex.Escape))})\\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{

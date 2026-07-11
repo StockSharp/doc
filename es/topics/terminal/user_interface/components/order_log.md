@@ -4,7 +4,7 @@ El componente **Registro de órdenes** es una tabla con órdenes que muestra inf
 
 **Registro de órdenes** tiene un filtro para seleccionar los instrumentos necesarios. También es posible configurar notificaciones para eventos de los instrumentos seleccionados: [Configuración de notificaciones](../../notifications.md).
 
-![Terminal orderlog 00](../../../../images/terminal_orderlog_00.png)
+![Terminal registro de órdenes 00](../../../../images/terminal_orderlog_00.png)
 
 ## Contenido recomendado
 

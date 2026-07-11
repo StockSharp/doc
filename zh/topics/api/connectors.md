@@ -38,7 +38,7 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 
 ```
 
-![API GUI ConnectorWindow](../../images/api_gui_connectorwindow.png)
+![API GUI 连接窗口](../../images/api_gui_connectorwindow.png)
 
 同样，你也可以直接从代码中添加连接（不使用图形窗口），方法是使用扩展方法 [TraderHelper.AddAdapter\<TAdapter\>](xref:StockSharp.Algo.TraderHelper.AddAdapter``1(StockSharp.Algo.Connector,System.Action{``0}))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) connector, [System.Action\<TAdapter\>](xref:System.Action`1) init **)**：
 

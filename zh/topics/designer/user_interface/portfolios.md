@@ -8,7 +8,7 @@
 
 ![Designer 投资组合面板 A 01](../../../images/designer_panel_portfolios_01.png)
 
-单击 ![Designer Alert Bell](../../../images/designer_alert_bell.png) 按钮后，会打开[通知设置](../../terminal/notifications.md)窗口。
+单击 ![Designer 提醒铃](../../../images/designer_alert_bell.png) 按钮后，会打开[通知设置](../../terminal/notifications.md)窗口。
 
 ## 推荐内容
 

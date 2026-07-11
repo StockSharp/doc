@@ -16,12 +16,12 @@
 2. Для создания непрерывного фьючерса необходимо задать имя и добавить контракты.
 
    Добавить контракты можно двумя способами.
-   - Вручную, нажимая кнопку ![hydra add](../../../images/hydra_add.png).![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
+   - Вручную, нажимая кнопку ![Hydra кнопка добавления](../../../images/hydra_add.png).![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
    - Если в качестве имени задать первые две буквы контракта, например, RI, и нажать кнопку **Авто**, то будут добавлены все найденные в БД инструменты.![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. Выбираем нужные контракты и устанавливаем даты перехода. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
 4. Далее назначаем идентификатор инструмента **RI\_long9@FORTS** и нажать кнопку **ОК**, после чего создастся новый инструмент
-5. Далее необходимо нажать кнопку [Свечи](../working_with_data/view_and_export/candles.md) на вкладке **Общее**, выбрать полученный инструмент, период данных, в поле **Построить из:** установить значение **Составной элемент**. После чего нажать кнопку![hydra find](../../../images/hydra_find.png).![HydraGluingTrades](../../../images/hydragluingtrades.png)
+5. Далее необходимо нажать кнопку [Свечи](../working_with_data/view_and_export/candles.md) на вкладке **Общее**, выбрать полученный инструмент, период данных, в поле **Построить из:** установить значение **Составной элемент**. После чего нажать кнопку![Hydra кнопка поиска](../../../images/hydra_find.png).![HydraGluingTrades](../../../images/hydragluingtrades.png)
 
 Сгенерированные данные можно экспортировать в форматы Excel, xml, Json или txt. Экспорт выполняется при помощи раскрывающегося списка:
 
-![hydra export](../../../images/hydra_export.png)
+![Hydra экспорт](../../../images/hydra_export.png)

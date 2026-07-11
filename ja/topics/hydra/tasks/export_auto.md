@@ -2,7 +2,7 @@
 
 このタスクは、取引所データを Excel、xml、sql、bin、Json、txt などのさまざまな形式にエクスポートします。
 
-![hydra tasks export](../../../images/hydra_tasks_export.png)
+![Hydra エクスポートタスク](../../../images/hydra_tasks_export.png)
 
 **データベース**
 
@@ -31,7 +31,7 @@
 **全般**
 
 - **ヘッダー** - Converter。
-- **稼働時間** - ボード稼働スケジュールの設定。 ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **稼働時間** - ボード稼働スケジュールの設定。 ![Hydra バックアップタスク](../../../images/hydra_tasks_backup_desk.png)
 - **動作間隔** - 動作間隔。
 - **データディレクトリ** - 変換用のデータを受け取るデータディレクトリ。
 - **形式** - 変換後のデータ形式: BIN\/CSV。
@@ -61,13 +61,13 @@
 自動エクスポートの例を見てみましょう:
 
 1. 証券を選択します。
-2. エクスポートする必要があるマーケットデータを設定します。![hydra tasks export 00](../../../images/hydra_tasks_export_00.png)
-3. エクスポート期間を設定します。マーケットデータのリアルタイムダウンロードが設定されている場合、期間の終了日を省略できます。この場合、データは作業間隔 (データ更新) に従ってリアルタイムでエクスポートされます。 ![hydra tasks export 01](../../../images/hydra_tasks_export_01.png)
+2. エクスポートする必要があるマーケットデータを設定します。![Hydra エクスポートタスク 00](../../../images/hydra_tasks_export_00.png)
+3. エクスポート期間を設定します。マーケットデータのリアルタイムダウンロードが設定されている場合、期間の終了日を省略できます。この場合、データは作業間隔 (データ更新) に従ってリアルタイムでエクスポートされます。 ![Hydra エクスポートタスク 01](../../../images/hydra_tasks_export_01.png)
 4. ディレクトリ、動作間隔、データ型、データ形式を設定します。
-5. エクスポートを開始します。![hydra tasks export 02](../../../images/hydra_tasks_export_02.png)
+5. エクスポートを開始します。![Hydra エクスポートタスク 02](../../../images/hydra_tasks_export_02.png)
 
 エクスポートされたデータを表示してみましょう
 
-![hydra tasks export 03](../../../images/hydra_tasks_export_03.png)
+![Hydra エクスポートタスク 03](../../../images/hydra_tasks_export_03.png)
 
 **[ビデオチュートリアルを見る](../videos/export_task.md)**

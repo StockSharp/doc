@@ -2,7 +2,7 @@
 
 首次运行程序时，会出现以下数据源选择窗口。也可以在 **常规** 选项卡中选择 **添加 \=\> 数据源** 打开此窗口。
 
-![hydra source add](../../images/hydra_source_add.png)
+![Hydra 添加数据源](../../images/hydra_source_add.png)
 
 在窗口中勾选所需的数据源。可以按地区、交易板、数据类型、付费方式以及是否提供实时数据进行筛选。选择完成后，单击 **确定**。随后程序会询问是否启用实用工具。有关实用工具的详细信息，请参阅[实用工具](tasks.md)。单击 **确定**。
 
@@ -29,7 +29,7 @@
 
    首次启动时，程序会询问是否立即下载所选数据源的全部交易品种。之后需要由用户自行下载交易品种。最初，[Hydra](../hydra.md) 的交易品种数据库为空，仅包含辅助交易品种 **ALL@ALL**。选择该交易品种后，程序会下载当前数据源中所有可用交易品种的数据。
 
-   要添加交易品种，请单击 **添加** 按钮 ![hydra add](../../images/hydra_add.png)。随后会打开交易品种下载窗口。![hydra securities](../../images/hydra_securities.png)
+   要添加交易品种，请单击 **添加** 按钮 ![Hydra 添加按钮](../../images/hydra_add.png)。随后会打开交易品种下载窗口。![hydra securities](../../images/hydra_securities.png)
 
    要下载交易品种，请单击相应的 **下载交易品种** 按钮。
 
@@ -37,13 +37,13 @@
 
    对于部分数据源，也可以[配置](prepare_for_download/instruments_list.md)需要下载的交易品种。
 
-   接收到交易品种后，窗口将显示如下内容。![hydra security full list](../../images/hydra_security_full_list.png)
+   接收到交易品种后，窗口将显示如下内容。![Hydra 完整交易品种列表](../../images/hydra_security_full_list.png)
 
    窗口中会列出所有可添加的交易品种。要快速查找某个品种，可以在相应字段中输入其名称。
 
-   要选择交易品种，请双击该品种，它会移动到列表右侧。![hydra security full list 00](../../images/hydra_security_full_list_00.png)
+   要选择交易品种，请双击该品种，它会移动到列表右侧。![Hydra 完整交易品种列表 00](../../images/hydra_security_full_list_00.png)
 
-   随后，该品种会移动到表格右侧。![hydra security full list 01](../../images/hydra_security_full_list_01.png)
+   随后，该品种会移动到表格右侧。![Hydra 完整交易品种列表 01](../../images/hydra_security_full_list_01.png)
 
    所选交易品种会显示在树形结构的 **交易品种** 表格中。树的主元素是交易品种，子元素是要为该交易品种接收的市场数据类型。
 2. 为每个所选交易品种选择需要下载的市场数据类型。

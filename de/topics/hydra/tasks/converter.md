@@ -2,7 +2,7 @@
 
 Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order-Logs in Ticks oder von Ticks in Kerzen usw.
 
-![hydra tasks converter](../../../images/hydra_tasks_converter.png)
+![Hydra Aufgaben Konverter](../../../images/hydra_tasks_converter.png)
 
 **Konverter**
 
@@ -26,7 +26,7 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order-Logs in Ticks oder 
 **Allgemein**
 
 - **Kopfzeile** - Konverter.
-- **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![Hydra Aufgaben Sicherung](../../../images/hydra_tasks_backup_desk.png)
 - **Betriebsintervall** - das Ausführungsintervall.
 - **Datenverzeichnis** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
 - **Format** - Format der konvertierten Daten: BIN\/CSV.
@@ -40,17 +40,17 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order-Logs in Ticks oder 
 
 Betrachten wir ein Beispiel für eine Datenkonvertierung.
 
-1. Wechseln Sie zur Aufgabe **Konverter**. ![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
+1. Wechseln Sie zur Aufgabe **Konverter**. ![Hydra Aufgaben Konverter 00](../../../images/hydra_tasks_converter_00.png)
 2. Wählen Sie das Instrument aus und legen Sie im erscheinenden Fenster den Datentyp fest, der bei der Konvertierung entstehen soll, sowie den Datentyp, aus dem konvertiert werden soll. Zum Beispiel müssen Ticks in Kerzen mit einem Zeitrahmen von 15 Minuten konvertiert werden.
 
    > [!TIP]
 > WICHTIG\! Der angeforderte Datenzeitraum muss dem für die Konvertierung verfügbaren Zeitraum entsprechen, andernfalls werden die Daten nicht konvertiert. Geben Sie in den Einstellungen das korrekte Quelldatenformat an, damit es dem Format der zu konvertierenden Daten entspricht.
 3. Geben Sie die erforderlichen Verzeichnisse, den Zeitoffset und das Ausführungsintervall an.
-4. Starten Sie die Konvertierung.![hydra tasks converter 01](../../../images/hydra_tasks_converter_01.png)
+4. Starten Sie die Konvertierung.![Hydra Aufgaben Konverter 01](../../../images/hydra_tasks_converter_01.png)
 
 Es ist zu sehen, dass die Daten konvertiert wurden. [Sehen wir uns](../working_with_data/view_and_export.md) die resultierenden Daten an.
 
-![hydra tasks converter 02](../../../images/hydra_tasks_converter_02.png)
+![Hydra Aufgaben Konverter 02](../../../images/hydra_tasks_converter_02.png)
 
 Diese Funktion ist vergleichbar mit dem [Abrufen der erforderlichen Marktdaten](../working_with_data/any_market_data_types.md) aus einem anderen Datentyp.
 

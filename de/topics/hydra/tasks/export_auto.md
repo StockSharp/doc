@@ -2,7 +2,7 @@
 
 Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bin, Json oder txt.
 
-![hydra tasks export](../../../images/hydra_tasks_export.png)
+![Hydra Aufgaben Export](../../../images/hydra_tasks_export.png)
 
 **Datenbank**
 
@@ -31,7 +31,7 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 **Allgemein**
 
 - **Kopfzeile** - Converter.
-- **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![Hydra Aufgaben Sicherung](../../../images/hydra_tasks_backup_desk.png)
 - **Betriebsintervall** - das Ausführungsintervall.
 - **Datenverzeichnis** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
 - **Format** - Format der konvertierten Daten: BIN\/CSV.
@@ -61,13 +61,13 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 Betrachten wir ein Beispiel für den automatischen Export:
 
 1. Wählen Sie ein Instrument aus.
-2. Richten Sie die Marktdaten ein, die exportiert werden müssen.![hydra tasks export 00](../../../images/hydra_tasks_export_00.png)
-3. Legen Sie den Exportzeitraum fest. Wenn der Download von Marktdaten in Echtzeit konfiguriert ist, können Sie das Enddatum des Zeitraums weglassen. In diesem Fall werden die Daten gemäß dem Arbeitsintervall (Datenaktualisierung) in Echtzeit exportiert. ![hydra tasks export 01](../../../images/hydra_tasks_export_01.png)
+2. Richten Sie die Marktdaten ein, die exportiert werden müssen.![Hydra Aufgaben Export 00](../../../images/hydra_tasks_export_00.png)
+3. Legen Sie den Exportzeitraum fest. Wenn der Download von Marktdaten in Echtzeit konfiguriert ist, können Sie das Enddatum des Zeitraums weglassen. In diesem Fall werden die Daten gemäß dem Arbeitsintervall (Datenaktualisierung) in Echtzeit exportiert. ![Hydra Aufgaben Export 01](../../../images/hydra_tasks_export_01.png)
 4. Richten Sie Verzeichnisse, Ausführungsintervall, Datentyp und Datenformat ein.
-5. Starten Sie den Export.![hydra tasks export 02](../../../images/hydra_tasks_export_02.png)
+5. Starten Sie den Export.![Hydra Aufgaben Export 02](../../../images/hydra_tasks_export_02.png)
 
 Sehen wir uns die exportierten Daten an.
 
-![hydra tasks export 03](../../../images/hydra_tasks_export_03.png)
+![Hydra Aufgaben Export 03](../../../images/hydra_tasks_export_03.png)
 
 **Sehen Sie sich das [Video-Tutorial](../videos/export_task.md) an**

@@ -1,6 +1,6 @@
 # Horario de trabajo
 
-![Designer Working time 00](../../../../../../images/designer_working_time_00.png)
+![Designer tiempo de trabajo 00](../../../../../../images/designer_working_time_00.png)
 
 Este bloque se usa para determinar el horario de trabajo de la estrategia. Por ejemplo, para definir cuándo se negocia un instrumento específico o cuándo la estrategia tiene permitido operar.
 #### Sockets de entrada
@@ -16,7 +16,7 @@ Este bloque se usa para determinar el horario de trabajo de la estrategia. Por e
 
 El bloque puede usarse para determinar cuándo se realiza trading para varios instrumentos de distintas plataformas de trading.
 
-![Designer Working time 01](../../../../../../images/designer_working_time_01.png)
+![Designer tiempo de trabajo 01](../../../../../../images/designer_working_time_01.png)
 
 ## Véase también
 

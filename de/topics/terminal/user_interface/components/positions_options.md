@@ -6,7 +6,7 @@ Um die Optionsposition anzuzeigen, müssen Sie den Basiswert und die Optionen au
 
 Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen sowie Filter für minimale/maximale Strikes angeben.
 
-![Terminal Graph options positions 00](../../../../images/terminal_graph_options_positions_00.png)
+![Terminal Positionsgrafikoptionen 00](../../../../images/terminal_graph_options_positions_00.png)
 
 ## Empfohlene Inhalte
 

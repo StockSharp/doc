@@ -2,7 +2,7 @@
 
 Para crear su propia estrategia, cree una carpeta para ella en la carpeta Strategies.
 
-![Shell custom strategy 00](../../images/shell_custom_strategy_00.png)
+![Shell estrategia personalizada 00](../../images/shell_custom_strategy_00.png)
 
 Usando SmaStrategy como ejemplo, cree la estrategia en sí.
 
@@ -38,7 +38,7 @@ También debe crear los paneles en sí. Cómo construir su propio panel de prueb
 > [!TIP]
 > Si son suficientes los paneles de prueba o monitorización para la estrategia que se usan en estrategias predeterminadas, no necesita implementar las interfaces IHaveTestControl e IHaveMonitoringControl. Shell ejecutará por sí mismo los paneles predeterminados de prueba o monitorización.
 
-![Shell custom strategy 01](../../images/shell_custom_strategy_01.png)
+![Shell estrategia personalizada 01](../../images/shell_custom_strategy_01.png)
 
 Para que la estrategia creada esté disponible en la ventana de selección de estrategias, debe añadirse al diccionario **DictionaryStrategies** de la ventana principal.
 

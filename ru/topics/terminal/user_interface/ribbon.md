@@ -4,7 +4,7 @@
 
 1. Вкладка **Общие**, которая открывается по умолчанию после запуска, содержит элементы, которые могут понадобиться на начальном этапе работы. С вкладки **Общие** может быть добавлена [Рабочая область](../../designer/user_interface/workspace.md) или открыта [Панель Логи](../../designer/user_interface/logs.md), [Портфели](../../designer/user_interface/portfolios.md), [Редактор площадок](../../designer/user_interface/boards.md), или добавлены [Компоненты](../../designer/user_interface/components.md) . А также на вкладке **Общие** можно выбрать тему внешнего оформления [Terminal](../../terminal.md).
 
-![Terminal Tape 00](../../../images/terminal_tape_00.png)
+![Terminal лента 00](../../../images/terminal_tape_00.png)
 
 ## См. также
 

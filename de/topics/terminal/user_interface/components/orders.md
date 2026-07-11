@@ -6,11 +6,11 @@ Die Komponente **Aufträge** ist eine Tabelle mit Aufträgen, die vollständige 
 
 Wenn Sie auf die Schaltfläche **Orderregistrierung** klicken, erscheint ein Fenster. Um eine neue Order zu registrieren, füllen Sie es aus und klicken Sie auf **Senden**.
 
-![Terminal OrderPanel 01](../../../../images/terminal_orderpanel_01.png)
+![Terminal Auftragsfenster 01](../../../../images/terminal_orderpanel_01.png)
 
 Wenn Sie auf die Schaltfläche **Order ändern** klicken, erscheint ein Fenster. Um die Order zu ändern, nehmen Sie die erforderlichen Änderungen vor und klicken Sie auf **Senden**.
 
-![Terminal OrderPanel 02](../../../../images/terminal_orderpanel_02.png)
+![Terminal Auftragsfenster 02](../../../../images/terminal_orderpanel_02.png)
 
 ## Empfohlene Inhalte
 

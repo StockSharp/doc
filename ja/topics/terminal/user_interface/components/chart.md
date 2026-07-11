@@ -4,15 +4,15 @@
 
 ![Terminal グラフィックパネル 00](../../../../images/terminal_panel_graphics_00.png)
 
-新しい領域を追加するには、![Designer Creation tool 00](../../../../images/designer_creation_tool_00.png) ボタンをクリックします。
+新しい領域を追加するには、![Designer 追加ボタン 00](../../../../images/designer_creation_tool_00.png) ボタンをクリックします。
 
 チャートに新しい要素を追加するには、チャート領域内の任意の場所を右クリックし、必要な要素を選択します。利用可能なオプションには、ローソク足、インジケーター、注文、自己約定が含まれます。
 
-各チャートの左上隅には、チャートに追加されたすべてのグラフィカル要素が表示されます。グラフィカル要素のチェックボックス ![Designer Schedule 00](../../../../images/designer_schedule_00.png) をオフにすると、その要素もチャートから削除されます。
+各チャートの左上隅には、チャートに追加されたすべてのグラフィカル要素が表示されます。グラフィカル要素のチェックボックス ![Designer グラフィック要素 00](../../../../images/designer_schedule_00.png) をオフにすると、その要素もチャートから削除されます。
 
-![Designer Schedule 01](../../../../images/designer_schedule_01.png) をクリックすると、グラフィック要素の設定が開きます。
+![Designer グラフィック要素 01](../../../../images/designer_schedule_01.png) をクリックすると、グラフィック要素の設定が開きます。
 
-![Designer Schedule 02](../../../../images/designer_schedule_02.png)
+![Designer グラフィック要素 02](../../../../images/designer_schedule_02.png)
 
 チャートから注文を登録できます。これを行うには、まず注文を登録する対象の **銘柄** と **ポートフォリオ** を指定します。
 
@@ -24,15 +24,15 @@
 
 グラフィカル要素の設定では、必要なチャートスタイルを設定できます。日本式ローソク足、バー、ボックスチャート、クラスタープロファイルなどです。
 
-![Designer Schedule 04](../../../../images/designer_schedule_04.png)
+![Designer グラフィック要素 04](../../../../images/designer_schedule_04.png)
 
 ボックスチャートでは、ローソク足をグループ化することもできます。グループ化の順序は、2 番目のタイムフレームの乗数と 3 番目のタイムフレームの乗数のフィールドで設定します。
 
-![Designer Schedule 05](../../../../images/designer_schedule_05.png)
+![Designer グラフィック要素 05](../../../../images/designer_schedule_05.png)
 
 チャートの上にはツールバーがあり、自動スクロール、自動ズーム、凡例モード、その他の一般的なチャート設定を選択できます。また、チャート上に描画する要素として、線、レベル、ポインター、四角形、テキストを選択することもできます。
 
-![Designer Schedule 03](../../../../images/designer_schedule_03.png)
+![Designer グラフィック要素 03](../../../../images/designer_schedule_03.png)
 
 ## 関連項目
 

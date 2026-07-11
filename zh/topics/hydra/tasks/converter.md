@@ -2,7 +2,7 @@
 
 该任务用于转换交易所数据，例如将订单日志转换为逐笔成交，或将逐笔成交转换为K线等。
 
-![hydra tasks converter](../../../images/hydra_tasks_converter.png)
+![Hydra 转换任务](../../../images/hydra_tasks_converter.png)
 
 **转换器**
 
@@ -26,7 +26,7 @@
 **常规**
 
 - **标题** — 转换器。
-- **工作时间** — 配置交易板的工作时间表。![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
+- **工作时间** — 配置交易板的工作时间表。![Hydra 备份任务](../../../images/hydra_tasks_backup_desk.png)
 - **操作间隔** — 任务的运行间隔。
 - **数据目录** — 用于接收待转换数据的数据目录。
 - **格式** — 转换后的数据格式：BIN\/CSV。
@@ -40,17 +40,17 @@
 
 下面以一个数据转换示例说明操作过程。
 
-1. 打开 **转换器** 任务。![hydra tasks converter 00](../../../images/hydra_tasks_converter_00.png)
+1. 打开 **转换器** 任务。![Hydra 转换任务 00](../../../images/hydra_tasks_converter_00.png)
 2. 选择交易品种，然后在打开的窗口中设置转换后需要得到的数据类型，以及用于转换的源数据类型。例如，将逐笔成交转换为 15 分钟时间周期的K线。
 
    > [!TIP]
    > **重要！**要生成的数据时间范围必须与可供转换的数据时间范围相对应，否则数据无法转换。还必须在设置中正确指定源数据格式，使其与实际待转换数据的格式一致。
 3. 指定所需目录、时间偏移和运行间隔。
-4. 启动转换。![hydra tasks converter 01](../../../images/hydra_tasks_converter_01.png)
+4. 启动转换。![Hydra 转换任务 01](../../../images/hydra_tasks_converter_01.png)
 
 转换完成后，可以[查看](../working_with_data/view_and_export.md)生成的数据。
 
-![hydra tasks converter 02](../../../images/hydra_tasks_converter_02.png)
+![Hydra 转换任务 02](../../../images/hydra_tasks_converter_02.png)
 
 此功能与通过其他数据类型[生成所需市场数据](../working_with_data/any_market_data_types.md)类似。
 

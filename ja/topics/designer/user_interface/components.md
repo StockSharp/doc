@@ -2,7 +2,7 @@
 
 テスト中または取引中には、プロセスを完全に制御する必要が生じます。完全な制御と分析のために、[Designer](../../designer.md) には、**リボン** の **コンポーネント** グループで選択して追加できるグラフィカルコンポーネントが含まれています。
 
-![Designer Components](../../../images/designer_components.png)
+![Designer コンポーネント](../../../images/designer_components.png)
 
 - [チャート](components/chart.md) - ローソク足チャートまたはインジケーター、あるいはその両方を表します。ストラテジー内に存在するすべての[チャートパネル](../strategies/using_visual_designer/elements/common/chart.md)キューブを含みます。
 - [P/L](components/pnl_equity.md) - 損益（未実現）、損益（実現）、手数料のチャートを表します。

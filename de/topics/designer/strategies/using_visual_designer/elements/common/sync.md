@@ -1,6 +1,6 @@
 ## Synchronisierung
 
-![Designer Sync 00](../../../../../../images/designer_sync_00.png)
+![Designer Synchronisierung 00](../../../../../../images/designer_sync_00.png)
 
 Der Block Synchronisierung dient dazu, Daten aus verschiedenen Quellen (zum Beispiel Kerzen verschiedener Instrumente, unterschiedliche Zeitrahmen, Kombinationen aus Kerzen und Transaktionen) zu sammeln und zu synchronisieren und sie anschließend auszugeben, wenn eine bestimmte Menge angesammelt wurde. Dieser Block ist nützlich zum Erstellen eigener Indizes oder für Arbitrage.
 
@@ -18,4 +18,4 @@ Der Block Synchronisierung dient dazu, Daten aus verschiedenen Quellen (zum Beis
 1. Erstellen eines eigenen Index für mehrere Aktien, bei dem unterschiedliche Zeitreihen aus verschiedenen Datenquellen berücksichtigt werden müssen.
 2. Arbitrage zwischen verschiedenen Märkten mithilfe synchronisierter Zeitdaten, um zeitliche Preisunterschiede zu erkennen.
 
-![Designer Sync 01](../../../../../../images/designer_sync_01.png)
+![Designer Synchronisierung 01](../../../../../../images/designer_sync_01.png)

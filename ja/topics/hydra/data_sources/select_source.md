@@ -10,7 +10,7 @@
 
 すると、ソースの一覧が表示されます。ユーザーは複数のソースを同時に選択できます。
 
-![hydra source add](../../../images/hydra_source_add.png)
+![Hydra ソース追加](../../../images/hydra_source_add.png)
 
 同じソースのインスタンスを複数作成することもできます。たとえば、ダウンロードしたデータを別々のフォルダーに保存する **Interactive Brokers** のインスタンスを複数作成できます。
 

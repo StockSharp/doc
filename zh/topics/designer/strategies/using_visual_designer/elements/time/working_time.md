@@ -1,6 +1,6 @@
 # 工作时间
 
-![Designer Working time 00](../../../../../../images/designer_working_time_00.png)
+![Designer 工作时间 00](../../../../../../images/designer_working_time_00.png)
 
 该模块用于确定策略的工作时间。例如，可以用它指定某个交易品种的交易时段，或策略允许进行交易的时间。
 #### 输入端口
@@ -16,7 +16,7 @@
 
 该模块可用于确定来自不同交易平台的多个交易品种分别在哪些时间进行交易。
 
-![Designer Working time 01](../../../../../../images/designer_working_time_01.png)
+![Designer 工作时间 01](../../../../../../images/designer_working_time_01.png)
 
 ## 另请参阅
 
