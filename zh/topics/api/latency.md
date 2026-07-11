@@ -73,12 +73,12 @@ manager.ProcessMessage(orderRegisterMsg);
 TimeSpan? latency = manager.ProcessMessage(executionMsg);
 if (latency != null)
 {
-    Console.WriteLine($"Latency: {latency.Value.TotalMilliseconds} ms");
+    Console.WriteLine($"延迟: {latency.Value.TotalMilliseconds} ms");
 }
 
 // 总延迟
-Console.WriteLine($"Registration latency: {manager.LatencyRegistration.TotalMilliseconds} ms");
-Console.WriteLine($"Cancellation latency: {manager.LatencyCancellation.TotalMilliseconds} ms");
+Console.WriteLine($"注册延迟: {manager.LatencyRegistration.TotalMilliseconds} ms");
+Console.WriteLine($"取消延迟: {manager.LatencyCancellation.TotalMilliseconds} ms");
 ```
 
 ## 重置状态

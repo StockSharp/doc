@@ -82,7 +82,7 @@ if (slippage != null)
 }
 
 // Slippage acumulado total
-Console.WriteLine($"Total slippage: {manager.Slippage}");
+Console.WriteLine($"Slippage total: {manager.Slippage}");
 ```
 
 ## Reiniciar o Estado

@@ -78,11 +78,11 @@ manager.ProcessMessage(orderRegisterMsg);
 decimal? slippage = manager.ProcessMessage(executionMsg);
 if (slippage != null)
 {
-    Console.WriteLine($"Slippage: {slippage.Value}");
+    Console.WriteLine($"スリッページ: {slippage.Value}");
 }
 
 // 累積スリッページ合計
-Console.WriteLine($"Total slippage: {manager.Slippage}");
+Console.WriteLine($"合計スリッページ: {manager.Slippage}");
 ```
 
 ## 状態のリセット

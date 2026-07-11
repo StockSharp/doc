@@ -412,6 +412,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		("PnL summary output", @"\bRealized PnL:|\bUnrealized PnL:|\bTotal PnL:"),
 		("optimization result output", @"\bIteration complete:|\bBest result:"),
 		("statistics output", @"\bNet Profit:|\bNet profit:|\bTotal iterations:"),
+		("latency output", @"\bLatency:|\bRegistration latency:|\bCancellation latency:"),
+		("slippage summary output", @"\bTotal slippage:"),
 		("ShrinkPrice output", @"\bOrder price:|\bOriginal price:|\bAfter ShrinkPrice:"),
 		("tick price output", @"\bTick:.*\bPrice:"),
 		("order book output", @"\bOrder Book:|\bBest Bid\b|\bBest Ask\b|\bMiddle of Spread\b|\bBid Price:|\bAsk Price:"),
