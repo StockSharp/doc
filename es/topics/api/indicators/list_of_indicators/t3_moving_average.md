@@ -1,12 +1,12 @@
 # T3MA
 
-**T3 Moving Average (T3MA)** es un tipo avanzado de media móvil desarrollado por Tim Tillson. T3 representa una media móvil exponencial tres veces suavizada (EMA) con un factor de volumen, lo que la hace más suave y menos propensa a señales falsas en comparación con las medias móviles tradicionales.
+**Media móvil T3 (T3MA)** es un tipo avanzado de media móvil desarrollado por Tim Tillson. T3 representa una media móvil exponencial tres veces suavizada (EMA) con un factor de volumen, lo que la hace más suave y menos propensa a señales falsas en comparación con las medias móviles tradicionales.
 
 Para utilizar el indicador, debe utilizar la clase [T3MovingAverage](xref:StockSharp.Algo.Indicators.T3MovingAverage).
 
 ## Descripción
 
-T3 Moving Average fue desarrollado para eliminar los inconvenientes de los promedios móviles tradicionales, como el retraso y las señales falsas. Mediante un suavizado múltiple y un factor de volumen ajustable, T3MA proporciona una curva más suave que sigue con mayor precisión la tendencia del precio.
+La media móvil T3 fue desarrollada para eliminar los inconvenientes de los promedios móviles tradicionales, como el retraso y las señales falsas. Mediante un suavizado múltiple y un factor de volumen ajustable, T3MA proporciona una curva más suave que sigue con mayor precisión la tendencia del precio.
 
 Principales ventajas de T3MA:
 - Menos retraso en comparación con las medias móviles ordinarias
@@ -25,7 +25,7 @@ T3MA se puede utilizar para:
 
 ## Cálculo
 
-El cálculo de T3 Moving Average se realiza en varios pasos:
+El cálculo de la media móvil T3 se realiza en varios pasos:
 
 1. Calcule seis medias móviles exponenciales consecutivas con el mismo período:
    ```

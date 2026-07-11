@@ -1,16 +1,16 @@
 # MAC
 
-**Moving Average Crossover (MAC)** ist ein technischer Indikator, der Überschneidungen zwischen kurzen und langen gleitenden Durchschnitten verfolgt, um potenzielle Markteintritts- und -austrittspunkte zu identifizieren.
+**Kreuzung gleitender Durchschnitte (MAC)** ist ein technischer Indikator, der Überschneidungen zwischen kurzen und langen gleitenden Durchschnitten verfolgt, um potenzielle Markteintritts- und -austrittspunkte zu identifizieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [MovingAverageCrossover](xref:StockSharp.Algo.Indicators.MovingAverageCrossover) verwenden.
 
 ## Beschreibung
 
-Der Moving Average Crossover (MAC)-Indikator ist einer der am häufigsten verwendeten und am einfachsten zu verstehenden Indikatoren in der technischen Analyse. Es basiert auf dem Konzept, dass, wenn ein kurzfristiger gleitender Durchschnitt einen langfristigen gleitenden Durchschnitt kreuzt, dies eine Trendänderung oder eine erhebliche Preisbewegung signalisieren kann.
+Der Indikator zur Kreuzung gleitender Durchschnitte (MAC) ist einer der am häufigsten verwendeten und am einfachsten zu verstehenden Indikatoren in der technischen Analyse. Er basiert auf dem Konzept, dass, wenn ein kurzfristiger gleitender Durchschnitt einen langfristigen gleitenden Durchschnitt kreuzt, dies eine Trendänderung oder eine erhebliche Preisbewegung signalisieren kann.
 
 MAC verwendet zwei gleitende Durchschnitte mit unterschiedlichen Perioden:
-1. Short Moving Average (FastMA) – spiegelt die jüngste Preisbewegung wider
-2. Long Moving Average (SlowMA) – spiegelt längerfristige Preisbewegungen wider
+1. Kurzer gleitender Durchschnitt (FastMA) – spiegelt die jüngste Preisbewegung wider
+2. Langer gleitender Durchschnitt (SlowMA) – spiegelt längerfristige Preisbewegungen wider
 
 Der Indikator wird typischerweise als Differenz zwischen den kurzen und langen gleitenden Durchschnitten dargestellt, was eine einfache Identifizierung des Übergangszeitpunkts (wenn der Indikatorwert die Nulllinie kreuzt) ermöglicht.
 
@@ -24,7 +24,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Berechnung des Moving Average Crossover-Indikators umfasst die folgenden Schritte:
+Die Berechnung des Indikators zur Kreuzung gleitender Durchschnitte umfasst die folgenden Schritte:
 
 1. Berechnen Sie den kurzen gleitenden Durchschnitt:
    ```
@@ -51,7 +51,7 @@ Hinweis: Anstelle von SMA können auch andere Arten von gleitenden Durchschnitte
 
 ## Interpretation
 
-Der Moving Average Crossover-Indikator kann wie folgt interpretiert werden:
+Der Indikator zur Kreuzung gleitender Durchschnitte kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Das Überqueren der MAC-Nulllinie von unten nach oben (FastMA kreuzt SlowMA von unten nach oben) erzeugt ein zinsbullisches Signal, das auf einen möglichen Beginn eines Aufwärtstrends hinweist

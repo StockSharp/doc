@@ -1,12 +1,12 @@
 # MAR
 
-**Moving Average Ribbon (MAR)** es un indicador técnico que muestra múltiples promedios móviles con períodos que aumentan progresivamente para visualizar la fuerza y dirección de la tendencia.
+**Cinta de medias móviles (MAR)** es un indicador técnico que muestra múltiples promedios móviles con períodos que aumentan progresivamente para visualizar la fuerza y dirección de la tendencia.
 
 Para utilizar el indicador, debe utilizar la clase [MovingAverageRibbon](xref:StockSharp.Algo.Indicators.MovingAverageRibbon).
 
 ## Descripción
 
-El Moving Average Ribbon (MAR) es un conjunto de múltiples promedios móviles que se muestran en un gráfico en forma de "cinta" o "abanico". Este indicador ayuda a los operadores a visualizar el estado de la tendencia actual y su fuerza de manera más intuitiva que usar uno o dos promedios móviles.
+La cinta de medias móviles (MAR) es un conjunto de múltiples promedios móviles que se muestran en un gráfico en forma de "cinta" o "abanico". Este indicador ayuda a los operadores a visualizar el estado de la tendencia actual y su fuerza de manera más intuitiva que usar uno o dos promedios móviles.
 
 MAR incluye varias medias móviles (normalmente de 5 a 10) con períodos progresivamente crecientes. El intervalo entre periodos puede ser uniforme (por ejemplo, 10, 20, 30, 40...) o exponencial (por ejemplo, 5, 10, 20, 40...).
 
@@ -21,7 +21,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Moving Average Ribbon implica los siguientes pasos:
+El cálculo de la cinta de medias móviles implica los siguientes pasos:
 
 1. Determine la secuencia de períodos para las medias móviles:
    ```
@@ -45,7 +45,7 @@ Nota: Se pueden utilizar otros tipos de medias móviles como EMA (media móvil e
 
 ## Interpretación
 
-El Moving Average Ribbon se puede interpretar de la siguiente manera:
+La cinta de medias móviles se puede interpretar de la siguiente manera:
 
 1. **Posicionamiento mutuo de medias móviles**:
    - Cuando todas las líneas están dispuestas en orden ascendente de períodos (la más corta arriba, la más larga abajo), esto indica una fuerte tendencia alcista.

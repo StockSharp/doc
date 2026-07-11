@@ -1,12 +1,12 @@
 # MOMA
 
-**Momentum of Moving Average (MOMA)** é um indicador técnico que mede a taxa de variação do preço da média móvel, combinando os conceitos de momentum e médias móveis.
+**Momentum da média móvel (MOMA)** é um indicador técnico que mede a taxa de variação do preço da média móvel, combinando os conceitos de momentum e médias móveis.
 
 Para usar o indicador, é necessário usar a classe [MomentumOfMovingAverage](xref:StockSharp.Algo.Indicators.MomentumOfMovingAverage).
 
 ## Descrição
 
-Momentum of Moving Average (MOMA) é uma combinação de dois indicadores - um indicador de momentum e uma média móvel. Primeiro, é calculada uma média móvel da série de preços e, em seguida, é medido o momentum (taxa de variação) dessa média móvel.
+O momentum da média móvel (MOMA) é uma combinação de dois indicadores - um indicador de momentum e uma média móvel. Primeiro, é calculada uma média móvel da série de preços e, em seguida, é medido o momentum (taxa de variação) dessa média móvel.
 
 A ideia principal do MOMA é primeiro suavizar a série de preços usando uma média móvel, removendo assim o ruído de mercado, e depois analisar a velocidade e a direção da alteração desta curva suavizada. Isto permite obter um sinal mais limpo sobre a alteração do momentum da tendência do que calcular o momentum diretamente a partir do preço.
 
@@ -20,7 +20,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Momentum of Moving Average envolve os seguintes passos:
+O cálculo do momentum da média móvel envolve os seguintes passos:
 
 1. Calcular a média móvel para a série de preços:
    ```
@@ -42,7 +42,7 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 
 ## Interpretação
 
-O Momentum of Moving Average pode ser interpretado da seguinte forma:
+O momentum da média móvel pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
    - O cruzamento do MOMA da linha zero de baixo para cima pode ser visto como um sinal altista, indicando o início ou reforço de uma tendência ascendente

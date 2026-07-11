@@ -1,12 +1,12 @@
 # MAC
 
-**Moving Average Crossover (MAC)** es un indicador técnico que rastrea los cruces entre promedios móviles cortos y largos para identificar posibles puntos de entrada y salida del mercado.
+**Cruce de medias móviles (MAC)** es un indicador técnico que rastrea los cruces entre promedios móviles cortos y largos para identificar posibles puntos de entrada y salida del mercado.
 
 Para utilizar el indicador, debe utilizar la clase [MovingAverageCrossover](xref:StockSharp.Algo.Indicators.MovingAverageCrossover).
 
 ## Descripción
 
-El indicador Moving Average Crossover (MAC) es uno de los indicadores más utilizados y fáciles de entender en el análisis técnico. Se basa en el concepto de que cuando una media móvil de corto plazo cruza una media móvil de largo plazo, puede indicar un cambio de tendencia o un movimiento significativo de precios.
+El indicador de cruce de medias móviles (MAC) es uno de los indicadores más utilizados y fáciles de entender en el análisis técnico. Se basa en el concepto de que cuando una media móvil de corto plazo cruza una media móvil de largo plazo, puede indicar un cambio de tendencia o un movimiento significativo de precios.
 
 MAC utiliza dos medias móviles con períodos diferentes:
 1. Media móvil corta (FastMA): refleja el movimiento reciente de precios
@@ -24,7 +24,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo del indicador Moving Average Crossover implica los siguientes pasos:
+El cálculo del indicador de cruce de medias móviles implica los siguientes pasos:
 
 1. Calcule la media móvil corta:
    ```
@@ -51,7 +51,7 @@ Nota: También se pueden utilizar otros tipos de medias móviles como EMA (media
 
 ## Interpretación
 
-El indicador Moving Average Crossover se puede interpretar de la siguiente manera:
+El indicador de cruce de medias móviles se puede interpretar de la siguiente manera:
 
 1. **Cruces de línea cero**:
    - Cruzar la línea cero MAC de abajo hacia arriba (FastMA cruza SlowMA de abajo hacia arriba) genera una señal alcista, lo que indica un posible inicio de tendencia alcista.

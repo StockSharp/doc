@@ -1,12 +1,12 @@
 # OMA
 
-**Oscillator of Moving Average (OMA)** ist ein technischer Indikator, der die Differenz zwischen zwei gleitenden Durchschnitten mit unterschiedlichen Perioden misst, um die Dynamik und mögliche Umkehrpunkte zu bestimmen.
+**Oszillator des gleitenden Durchschnitts (OMA)** ist ein technischer Indikator, der die Differenz zwischen zwei gleitenden Durchschnitten mit unterschiedlichen Perioden misst, um die Dynamik und mögliche Umkehrpunkte zu bestimmen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [OscillatorOfMovingAverage](xref:StockSharp.Algo.Indicators.OscillatorOfMovingAverage) verwenden.
 
 ## Beschreibung
 
-Der Oscillator of Moving Average (OMA) stellt die Differenz zwischen einem kurzen und einem langen gleitenden Durchschnitt dar. Dieser Indikator hilft bei der Bestimmung der Trendstärke und ihrer möglichen Änderungen, indem er die Beziehung zwischen gleitenden Durchschnitten verschiedener Zeiträume analysiert.
+Der Oszillator des gleitenden Durchschnitts (OMA) stellt die Differenz zwischen einem kurzen und einem langen gleitenden Durchschnitt dar. Dieser Indikator hilft bei der Bestimmung der Trendstärke und ihrer möglichen Änderungen, indem er die Beziehung zwischen gleitenden Durchschnitten verschiedener Zeiträume analysiert.
 
 OMA funktioniert nach einem ähnlichen Prinzip wie MACD (Konvergenz/Divergenz gleitender Durchschnitte), jedoch in einer einfacheren Form, da es keine Signalleitung enthält. Der Indikator schwingt um die Nulllinie, wobei positive Werte darauf hinweisen, dass der kurze gleitende Durchschnitt über dem langen gleitenden Durchschnitt liegt (bullischer Zustand), und negative Werte anzeigen, dass der kurze gleitende Durchschnitt unter dem langen gleitenden Durchschnitt liegt (bärischer Zustand).
 
@@ -20,7 +20,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Oscillator of Moving Average-Berechnung umfasst die folgenden Schritte:
+Die Berechnung des Oszillators des gleitenden Durchschnitts umfasst die folgenden Schritte:
 
 1. Berechnen Sie den kurzen gleitenden Durchschnitt:
    ```
@@ -47,7 +47,7 @@ Hinweis: Anstelle von SMA können auch andere Arten von gleitenden Durchschnitte
 
 ## Interpretation
 
-Der Oscillator of Moving Average kann wie folgt interpretiert werden:
+Der Oszillator des gleitenden Durchschnitts kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - OMA, das die Nulllinie von unten nach oben kreuzt (Short-MA kreuzt Long-MA von unten nach oben), kann als bullisches Signal angesehen werden

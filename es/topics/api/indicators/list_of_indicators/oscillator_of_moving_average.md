@@ -1,12 +1,12 @@
 # OMA
 
-**Oscillator of Moving Average (OMA)** es un indicador técnico que mide la diferencia entre dos promedios móviles con diferentes períodos para determinar el impulso y los posibles puntos de reversión.
+**Oscilador de la media móvil (OMA)** es un indicador técnico que mide la diferencia entre dos promedios móviles con diferentes períodos para determinar el impulso y los posibles puntos de reversión.
 
 Para utilizar el indicador, debe utilizar la clase [OscillatorOfMovingAverage](xref:StockSharp.Algo.Indicators.OscillatorOfMovingAverage).
 
 ## Descripción
 
-El Oscillator of Moving Average (OMA) representa la diferencia entre una media móvil corta y larga. Este indicador ayuda a determinar la fuerza de la tendencia y sus posibles cambios al analizar la relación entre los promedios móviles de diferentes períodos.
+El oscilador de la media móvil (OMA) representa la diferencia entre una media móvil corta y larga. Este indicador ayuda a determinar la fuerza de la tendencia y sus posibles cambios al analizar la relación entre los promedios móviles de diferentes períodos.
 
 OMA funciona según un principio similar a MACD (convergencia/divergencia de medias móviles), pero de una forma más sencilla, ya que no incluye una línea de señal. El indicador oscila alrededor de la línea cero, donde los valores positivos indican que la media móvil corta está por encima de la media móvil larga (estado alcista), y los valores negativos indican que la media móvil corta está por debajo de la media móvil larga (estado bajista).
 
@@ -20,7 +20,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Oscillator of Moving Average implica los siguientes pasos:
+El cálculo del oscilador de la media móvil implica los siguientes pasos:
 
 1. Calcule la media móvil corta:
    ```
@@ -47,7 +47,7 @@ Nota: Se pueden utilizar otros tipos de medias móviles como EMA (media móvil e
 
 ## Interpretación
 
-El Oscillator of Moving Average se puede interpretar de la siguiente manera:
+El oscilador de la media móvil se puede interpretar de la siguiente manera:
 
 1. **Cruces de línea cero**:
    - OMA cruza la línea cero de abajo hacia arriba (MA corta cruza MA larga de abajo hacia arriba) puede verse como una señal alcista

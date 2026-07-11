@@ -1,12 +1,12 @@
 # MAR
 
-**Moving Average Ribbon (MAR)** ist ein technischer Indikator, der mehrere gleitende Durchschnitte mit progressiv zunehmenden Perioden anzeigt, um die Stärke und Richtung des Trends zu visualisieren.
+**Band gleitender Durchschnitte (MAR)** ist ein technischer Indikator, der mehrere gleitende Durchschnitte mit progressiv zunehmenden Perioden anzeigt, um die Stärke und Richtung des Trends zu visualisieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [MovingAverageRibbon](xref:StockSharp.Algo.Indicators.MovingAverageRibbon) verwenden.
 
 ## Beschreibung
 
-Der Moving Average Ribbon (MAR) ist eine Reihe mehrerer gleitender Durchschnitte, die in einer „Band“- oder „Fächer“-Formation auf einem Diagramm angezeigt werden. Dieser Indikator hilft Händlern, den aktuellen Trendzustand und seine Stärke intuitiver zu visualisieren als die Verwendung von ein oder zwei gleitenden Durchschnitten.
+Das Band gleitender Durchschnitte (MAR) ist eine Reihe mehrerer gleitender Durchschnitte, die in einer „Band“- oder „Fächer“-Formation auf einem Diagramm angezeigt werden. Dieser Indikator hilft Händlern, den aktuellen Trendzustand und seine Stärke intuitiver zu visualisieren als die Verwendung von ein oder zwei gleitenden Durchschnitten.
 
 MAR umfasst mehrere gleitende Durchschnitte (normalerweise 5 bis 10) mit progressiv zunehmenden Perioden. Das Intervall zwischen den Perioden kann gleichmäßig (z. B. 10, 20, 30, 40 ...) oder exponentiell (z. B. 5, 10, 20, 40 ...) sein.
 
@@ -21,7 +21,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Moving Average Ribbon-Berechnung umfasst die folgenden Schritte:
+Die Berechnung des Bands gleitender Durchschnitte umfasst die folgenden Schritte:
 
 1. Bestimmen Sie die Periodenfolge für gleitende Durchschnitte:
    ```
@@ -45,7 +45,7 @@ Hinweis: Anstelle von SMA können auch andere Arten von gleitenden Durchschnitte
 
 ## Interpretation
 
-Der Moving Average Ribbon kann wie folgt interpretiert werden:
+Das Band gleitender Durchschnitte kann wie folgt interpretiert werden:
 
 1. **Gegenseitige Positionierung der gleitenden Durchschnitte**:
    - Wenn alle Linien in aufsteigender Reihenfolge der Perioden angeordnet sind (kürzeste oben, längste unten), deutet dies auf einen starken Aufwärtstrend hin

@@ -2380,6 +2380,42 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedCoreMovingAverageIndicatorDocsDoNotKeepEnglishNames()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/api/indicators/list_of_indicators/t3_moving_average.md",
+			"topics/api/indicators/list_of_indicators/moving_average_crossover.md",
+			"topics/api/indicators/list_of_indicators/moving_average_ribbon.md",
+			"topics/api/indicators/list_of_indicators/momentum_of_moving_average.md",
+			"topics/api/indicators/list_of_indicators/oscillator_of_moving_average.md",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(langRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!ContainsStandaloneText(text, "Moving Average"))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized moving-average indicator page keeps English name text. Localize the repeated indicator name in headings, prose, and formula descriptions.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

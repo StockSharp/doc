@@ -1,12 +1,12 @@
 # MAR
 
-**Moving Average Ribbon (MAR)** é um indicador técnico que apresenta várias médias móveis com períodos progressivamente crescentes para visualizar a força e a direção da tendência.
+**Faixa de médias móveis (MAR)** é um indicador técnico que apresenta várias médias móveis com períodos progressivamente crescentes para visualizar a força e a direção da tendência.
 
 Para usar o indicador, é necessário usar a classe [MovingAverageRibbon](xref:StockSharp.Algo.Indicators.MovingAverageRibbon).
 
 ## Descrição
 
-O Moving Average Ribbon (MAR) é um conjunto de várias médias móveis apresentadas num gráfico numa formação de "fita" ou "leque". Este indicador ajuda os traders a visualizar o estado atual da tendência e a sua força de forma mais intuitiva do que usando uma ou duas médias móveis.
+A faixa de médias móveis (MAR) é um conjunto de várias médias móveis apresentadas num gráfico numa formação de "fita" ou "leque". Este indicador ajuda os traders a visualizar o estado atual da tendência e a sua força de forma mais intuitiva do que usando uma ou duas médias móveis.
 
 O MAR inclui várias médias móveis (normalmente 5 a 10) com períodos progressivamente crescentes. O intervalo entre períodos pode ser uniforme (por exemplo, 10, 20, 30, 40...) ou exponencial (por exemplo, 5, 10, 20, 40...).
 
@@ -21,7 +21,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Moving Average Ribbon envolve os seguintes passos:
+O cálculo da faixa de médias móveis envolve os seguintes passos:
 
 1. Determinar a sequência de períodos para as médias móveis:
    ```
@@ -45,7 +45,7 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 
 ## Interpretação
 
-O Moving Average Ribbon pode ser interpretado da seguinte forma:
+A faixa de médias móveis pode ser interpretada da seguinte forma:
 
 1. **Posicionamento mútuo das médias móveis**:
    - Quando todas as linhas estão dispostas por ordem ascendente de períodos (a mais curta no topo, a mais longa em baixo), isto indica uma forte tendência ascendente
@@ -84,4 +84,3 @@ O Moving Average Ribbon pode ser interpretado da seguinte forma:
 [EMA](ema.md)
 [MovingAverageCrossover](moving_average_crossover.md)
 [GuppyMultipleMovingAverage](guppy_multiple_moving_average.md)
-

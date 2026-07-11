@@ -1,12 +1,12 @@
 # T3MA
 
-**T3 Moving Average (T3MA)** ist ein fortgeschrittener gleitender Durchschnitt, der von Tim Tillson entwickelt wurde. T3 stellt einen dreifach geglätteten exponentiellen gleitenden Durchschnitt (EMA) mit einem Volumenfaktor dar, wodurch er im Vergleich zu herkömmlichen gleitenden Durchschnitten glatter und weniger anfällig für falsche Signale ist.
+**Gleitender T3-Durchschnitt (T3MA)** ist ein fortgeschrittener gleitender Durchschnitt, der von Tim Tillson entwickelt wurde. T3 stellt einen dreifach geglätteten exponentiellen gleitenden Durchschnitt (EMA) mit einem Volumenfaktor dar, wodurch er im Vergleich zu herkömmlichen gleitenden Durchschnitten glatter und weniger anfällig für falsche Signale ist.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [T3MovingAverage](xref:StockSharp.Algo.Indicators.T3MovingAverage) verwenden.
 
 ## Beschreibung
 
-T3 Moving Average wurde entwickelt, um die Nachteile traditioneller gleitender Durchschnitte wie Verzögerungen und falsche Signale zu beseitigen. Durch mehrfache Glättung und einen einstellbaren Volumenfaktor sorgt T3MA für eine glattere Kurve, die der Preisentwicklung genauer folgt.
+Der gleitende T3-Durchschnitt wurde entwickelt, um die Nachteile traditioneller gleitender Durchschnitte wie Verzögerungen und falsche Signale zu beseitigen. Durch mehrfache Glättung und einen einstellbaren Volumenfaktor sorgt T3MA für eine glattere Kurve, die der Preisentwicklung genauer folgt.
 
 Hauptvorteile von T3MA:
 - Weniger Verzögerung im Vergleich zu gewöhnlichen gleitenden Durchschnitten
@@ -25,7 +25,7 @@ T3MA kann verwendet werden für:
 
 ## Berechnung
 
-Die T3 Moving Average-Berechnung erfolgt in mehreren Schritten:
+Die Berechnung des gleitenden T3-Durchschnitts erfolgt in mehreren Schritten:
 
 1. Berechnen Sie sechs aufeinanderfolgende exponentielle gleitende Durchschnitte mit derselben Periode:
    ```

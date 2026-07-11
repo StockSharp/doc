@@ -1,12 +1,12 @@
 # MOMA
 
-**Momentum of Moving Average (MOMA)** es un indicador técnico que mide la tasa de cambio del precio promedio móvil, combinando los conceptos de impulso y promedios móviles.
+**Impulso de la media móvil (MOMA)** es un indicador técnico que mide la tasa de cambio del precio promedio móvil, combinando los conceptos de impulso y promedios móviles.
 
 Para utilizar el indicador, debe utilizar la clase [MomentumOfMovingAverage](xref:StockSharp.Algo.Indicators.MomentumOfMovingAverage).
 
 ## Descripción
 
-Momentum of Moving Average (MOMA) es una combinación de dos indicadores: un indicador de impulso y una media móvil. Primero, se calcula una media móvil de la serie de precios y luego se mide el impulso (tasa de cambio) de esta media móvil.
+El impulso de la media móvil (MOMA) es una combinación de dos indicadores: un indicador de impulso y una media móvil. Primero, se calcula una media móvil de la serie de precios y luego se mide el impulso (tasa de cambio) de esta media móvil.
 
 La idea principal de MOMA es primero suavizar la serie de precios utilizando una media móvil, eliminando así el ruido del mercado, y luego analizar la velocidad y dirección del cambio en esta curva suavizada. Esto permite obtener una señal más clara sobre el cambio de impulso de la tendencia que calcular el impulso directamente a partir del precio.
 
@@ -20,7 +20,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Momentum of Moving Average implica los siguientes pasos:
+El cálculo del impulso de la media móvil implica los siguientes pasos:
 
 1. Calcule el promedio móvil de la serie de precios:
    ```
@@ -42,7 +42,7 @@ Nota: También se pueden utilizar otros tipos de medias móviles como EMA (media
 
 ## Interpretación
 
-Momentum of Moving Average se puede interpretar de la siguiente manera:
+El impulso de la media móvil se puede interpretar de la siguiente manera:
 
 1. **Cruces de línea cero**:
    - MOMA cruzar la línea cero de abajo hacia arriba puede verse como una señal alcista, lo que indica el inicio o el fortalecimiento de una tendencia alcista.

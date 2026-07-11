@@ -1,12 +1,12 @@
 # MOMA
 
-**Momentum of Moving Average (MOMA)** ist ein technischer Indikator, der die Änderungsrate des gleitenden Durchschnittspreises misst und die Konzepte von Momentum und gleitenden Durchschnitten kombiniert.
+**Momentum des gleitenden Durchschnitts (MOMA)** ist ein technischer Indikator, der die Änderungsrate des gleitenden Durchschnittspreises misst und die Konzepte von Momentum und gleitenden Durchschnitten kombiniert.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [MomentumOfMovingAverage](xref:StockSharp.Algo.Indicators.MomentumOfMovingAverage) verwenden.
 
 ## Beschreibung
 
-Momentum of Moving Average (MOMA) ist eine Kombination aus zwei Indikatoren – einem Momentum-Indikator und einem gleitenden Durchschnitt. Zunächst wird ein gleitender Durchschnitt der Preisreihe berechnet und anschließend das Momentum (Änderungsrate) dieses gleitenden Durchschnitts gemessen.
+Das Momentum des gleitenden Durchschnitts (MOMA) ist eine Kombination aus zwei Indikatoren – einem Momentum-Indikator und einem gleitenden Durchschnitt. Zunächst wird ein gleitender Durchschnitt der Preisreihe berechnet und anschließend das Momentum (Änderungsrate) dieses gleitenden Durchschnitts gemessen.
 
 Die Hauptidee von MOMA besteht darin, zunächst die Preisreihe mithilfe eines gleitenden Durchschnitts zu glätten und dadurch Marktrauschen zu beseitigen, und dann die Geschwindigkeit und Richtung der Änderung in dieser geglätteten Kurve zu analysieren. Dies ermöglicht es, ein klareres Signal über die Änderung des Trendmomentums zu erhalten, als das Momentum direkt anhand des Preises zu berechnen.
 
@@ -20,7 +20,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Momentum of Moving Average-Berechnung umfasst die folgenden Schritte:
+Die Berechnung des Momentums des gleitenden Durchschnitts umfasst die folgenden Schritte:
 
 1. Berechnen Sie den gleitenden Durchschnitt für die Preisreihe:
    ```
@@ -42,7 +42,7 @@ Hinweis: Anstelle von SMA können auch andere Arten von gleitenden Durchschnitte
 
 ## Interpretation
 
-Momentum of Moving Average kann wie folgt interpretiert werden:
+Das Momentum des gleitenden Durchschnitts kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Das Überqueren der Nulllinie von MOMA von unten nach oben kann als bullisches Signal gewertet werden, das den Beginn oder die Verstärkung eines Aufwärtstrends anzeigt

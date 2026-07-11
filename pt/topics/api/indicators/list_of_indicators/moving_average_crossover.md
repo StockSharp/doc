@@ -1,12 +1,12 @@
 # MAC
 
-**Moving Average Crossover (MAC)** é um indicador técnico que acompanha cruzamentos entre médias móveis curta e longa para identificar potenciais pontos de entrada e saída do mercado.
+**Cruzamento de médias móveis (MAC)** é um indicador técnico que acompanha cruzamentos entre médias móveis curta e longa para identificar potenciais pontos de entrada e saída do mercado.
 
 Para usar o indicador, é necessário usar a classe [MovingAverageCrossover](xref:StockSharp.Algo.Indicators.MovingAverageCrossover).
 
 ## Descrição
 
-O indicador Moving Average Crossover (MAC) é um dos indicadores mais usados e fáceis de compreender na análise técnica. Baseia-se no conceito de que, quando uma média móvel de curto prazo cruza uma média móvel de longo prazo, isso pode sinalizar uma alteração de tendência ou um movimento significativo do preço.
+O indicador de cruzamento de médias móveis (MAC) é um dos indicadores mais usados e fáceis de compreender na análise técnica. Baseia-se no conceito de que, quando uma média móvel de curto prazo cruza uma média móvel de longo prazo, isso pode sinalizar uma alteração de tendência ou um movimento significativo do preço.
 
 O MAC usa duas médias móveis com períodos diferentes:
 1. Média móvel curta (FastMA) - reflete o movimento recente do preço
@@ -24,7 +24,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do indicador Moving Average Crossover envolve os seguintes passos:
+O cálculo do indicador de cruzamento de médias móveis envolve os seguintes passos:
 
 1. Calcular a média móvel curta:
    ```
@@ -51,7 +51,7 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 
 ## Interpretação
 
-O indicador Moving Average Crossover pode ser interpretado da seguinte forma:
+O indicador de cruzamento de médias móveis pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da linha zero**:
    - O cruzamento da linha zero do MAC de baixo para cima (FastMA cruza a SlowMA de baixo para cima) gera um sinal altista, indicando um potencial início de tendência ascendente
