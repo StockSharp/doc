@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [StochasticOscilla
 
 ## Empfohlene Inhalte
 
-[Sum N](sum_n.md)
+[Summe N](sum_n.md)

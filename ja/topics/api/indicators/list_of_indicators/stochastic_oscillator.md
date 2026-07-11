@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Sum N](sum_n.md)
+[合計 N](sum_n.md)

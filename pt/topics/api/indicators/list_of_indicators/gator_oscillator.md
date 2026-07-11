@@ -8,5 +8,5 @@ Para utilizar o indicador, deve usar a classe [GatorOscillator](xref:StockSharp.
 
 ## Conteúdo recomendado
 
-[Highest](highest.md)
+[Valor máximo](highest.md)
 

@@ -1,6 +1,6 @@
-# Trough
+# 谷
 
-**Trough** インジケーターは、期間内の最小値を表示します。
+**谷** インジケーターは、期間内の最小値を表示します。
 
 このインジケーターを使用するには、[Trough](xref:StockSharp.Algo.Indicators.Trough) クラスを使用する必要があります。
 

@@ -24,5 +24,4 @@ O fator assume um valor mínimo igual a um passo no ponto de reversão e, assim 
 
 ## Ver também
 
-[Peak](peak.md)
-
+[Pico](peak.md)

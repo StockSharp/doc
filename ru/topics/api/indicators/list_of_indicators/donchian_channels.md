@@ -73,5 +73,5 @@
 
 [BollingerBands](bollinger_bands.md)
 [KeltnerChannels](keltner_channels.md)
-[Highest](highest.md)
-[Lowest](lowest.md)
+[Максимум](highest.md)
+[Минимум](lowest.md)

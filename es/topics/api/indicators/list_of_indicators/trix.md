@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [Trix](xref:StockSharp.Algo.I
 
 ## Contenido recomendado
 
-[Trough](trough.md)
+[Valle](trough.md)

@@ -1,4 +1,4 @@
-# Highest
+# Valor máximo
 
 El indicador indica **Valor máximo del período**. 
 

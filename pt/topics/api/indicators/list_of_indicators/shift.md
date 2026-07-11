@@ -1,6 +1,6 @@
-# Shift
+# Deslocamento
 
-**Shift** é um indicador auxiliar que desloca o fluxo de valores de entrada por um número especificado de períodos. Não transforma os
+**Deslocamento** é um indicador auxiliar que desloca o fluxo de valores de entrada por um número especificado de períodos. Não transforma os
 dados; apenas os atrasa ou alinha para utilização em cálculos compostos.
 
 Use a classe [Shift](xref:StockSharp.Algo.Indicators.Shift) para aceder ao indicador.

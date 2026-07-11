@@ -63,7 +63,7 @@
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - индикатор GAPO, измеряет вариативность движения цены
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - индикатор GMMA, использует несколько скользящих средних для определения трендов
 - [HO](list_of_indicators/harmonic_oscillator.md) - индикатор HO, определяет гармонические модели в ценовых данных
-- [Highest](list_of_indicators/highest.md) - индикатор Highest, определяет максимальную цену за заданный период
+- [Максимум](list_of_indicators/highest.md) - индикатор максимум, определяет максимальную цену за заданный период
 - [HLI](list_of_indicators/high_low_index.md) - индикатор HLI, измеряет количество новых максимумов и минимумов
 - [HVR](list_of_indicators/historical_volatility_ratio.md) - индикатор HVR, сравнивает текущую волатильность с историческими уровнями
 - [H](list_of_indicators/hurst_exponent.md) - индикатор H, измеряет долгосрочную память временного ряда
@@ -84,7 +84,7 @@
 - [LRF](list_of_indicators/linear_regression_forecast.md) - индикатор LRF, строит прогноз цены
 - [R-squared](list_of_indicators/linear_reg_rsquared.md) - индикатор R-squared, измеряет силу линейной зависимости
 - [LRS](list_of_indicators/lrs.md) - индикатор LRS, указывает наклон линии регрессии
-- [Lowest](list_of_indicators/lowest.md) - индикатор Lowest, определяет минимальную цену за заданный период
+- [Минимум](list_of_indicators/lowest.md) - индикатор минимум, определяет минимальную цену за заданный период
 - [LP](list_of_indicators/lunar_phase.md) - индикатор LP, коррелирует движения рынка с лунными циклами
 - [MFI](list_of_indicators/market_facilitation_index.md) - индикатор MFI, измеряет эффективность движения цены
 - [MMI](list_of_indicators/market_meanness_index.md) - индикатор MMI, определяет поведение возврата к среднему
@@ -112,7 +112,7 @@
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - индикатор OMA, измеряет разницу между скользящей средней и ценой
 - [параболический SAR](list_of_indicators/parabolic_sar.md) - индикатор параболический SAR, определяет потенциальные точки разворота
 - [Stub](list_of_indicators/pass_through.md) - Индикатор без логики. Используется для отрисовки линий, заглушка для пользовательских индикаторов
-- [Peak](list_of_indicators/peak.md) - индикатор Peak, определяет локальные максимумы в ценовых данных
+- [Пик](list_of_indicators/peak.md) - индикатор пик, определяет локальные максимумы в ценовых данных
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - индикатор PPO, измеряет процентную разницу между двумя скользящими средними
 - [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - индикатор PPOS, сглаживает PPO с помощью EMA
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - индикатор PPOH, показывает разницу между PPO и сигнальной линией
@@ -133,20 +133,20 @@
 - [STC](list_of_indicators/schaff_trend_cycle.md) - индикатор STC, определяет циклические тренды
 - [SuperTrend](list_of_indicators/supertrend.md) - индикатор SuperTrend, отображает направление тренда на основе ATR
 - [SMA](list_of_indicators/sma.md) - индикатор SMA, вычисляет среднюю цену за период
-- [Shift](list_of_indicators/shift.md) - индикатор Shift, сдвигает поток данных на заданное количество периодов
+- [Сдвиг](list_of_indicators/shift.md) - индикатор сдвиг, сдвигает поток данных на заданное количество периодов
 - [SW](list_of_indicators/sine_wave.md) - индикатор SW, определяет циклические модели в ценовых данных
 - [SMMA](list_of_indicators/smoothed_ma.md) - индикатор SMMA, скользящая средняя с большим весом последних цен
 - [стандартное отклонение](list_of_indicators/standard_deviation.md) - индикатор стандартное отклонение, измеряет разброс ценовых данных
 - [стандартная ошибка](list_of_indicators/standard_error.md) - индикатор стандартная ошибка, измеряет точность прогнозов
 - [Стохастик %K](list_of_indicators/stochastic_oscillator_k.md) - Стохастик %K, измеряет импульс на основе положения цены в диапазоне
 - [стохастический осциллятор](list_of_indicators/stochastic_oscillator.md) - индикатор стохастический осциллятор, определяет состояния перекупленности и перепроданности
-- [Sum](list_of_indicators/sum_n.md) - индикатор Sum, вычисляет сумму последних N цен
+- [Сумма N](list_of_indicators/sum_n.md) - индикатор сумма N, вычисляет сумму последних N цен
 - [T3MA](list_of_indicators/t3_moving_average.md) - индикатор T3MA, плавная и отзывчивая скользящая средняя
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - индикатор TWAP, вычисляет среднюю цену с учётом времени
 - [TP](list_of_indicators/typical_price.md) - индикатор TP, среднее значение High, Low и Close
 - [TEMA](list_of_indicators/tema.md) - индикатор TEMA, уменьшает лаг в расчётах скользящей средней
 - [TRIX](list_of_indicators/trix.md) - индикатор TRIX, определяет изменения в тренде
-- [Trough](list_of_indicators/trough.md) - индикатор Trough, определяет локальные минимумы в ценовых данных
+- [Впадина](list_of_indicators/trough.md) - индикатор впадина, определяет локальные минимумы в ценовых данных
 - [TR](list_of_indicators/true_range.md) - индикатор TR, измеряет фактический диапазон движения цены
 - [TSI](list_of_indicators/true_strength_index.md) - индикатор TSI, двойное сглаживание импульса цены закрытия
 - [TMF](list_of_indicators/twiggs_money_flow.md) - индикатор TMF, измеряет давление покупок и продаж
@@ -154,7 +154,7 @@
 - [VHF](list_of_indicators/vhf.md) - индикатор VHF, различает трендовые и диапазонные рынки
 - [VIDIA](list_of_indicators/vidya.md) - индикатор VIDIA, адаптируется к волатильности рынка
 - [VMA](list_of_indicators/variable_moving_average.md) - индикатор VMA, адаптирует период сглаживания
-- [Volume](list_of_indicators/volume.md) - индикатор Volume, измеряет объём торгов за свечу
+- [Объем](list_of_indicators/volume.md) - индикатор объем, измеряет объём торгов за свечу
 - [Профиль объема](list_of_indicators/volume_profile.md) - индикатор Профиль объема, показывает торговую активность на разных уровнях цены
 - [VMA](list_of_indicators/volume_weighted_ma.md) - индикатор VMA, придаёт больший вес ценам с большим объёмом
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - индикатор VWAP, средняя цена с учётом объёма

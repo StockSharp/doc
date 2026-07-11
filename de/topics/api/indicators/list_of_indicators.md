@@ -61,7 +61,7 @@
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - Indikator GAPO, misst die Variabilität von Preisbewegungen
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - Indikator GMMA, nutzt mehrere gleitende Durchschnitte zur Trendidentifikation
 - [HO](list_of_indicators/harmonic_oscillator.md) - Indikator HO, erkennt harmonische Muster in Preisdaten
-- [Highest](list_of_indicators/highest.md) - Indikator Highest, bestimmt den höchsten Preis über einen angegebenen Zeitraum
+- [Höchstwert](list_of_indicators/highest.md) - Indikator Höchstwert, bestimmt den höchsten Preis über einen angegebenen Zeitraum
 - [HLI](list_of_indicators/high_low_index.md) - Indikator HLI, misst die Anzahl neuer Hochs und Tiefs
 - [HVR](list_of_indicators/historical_volatility_ratio.md) - Indikator HVR, vergleicht aktuelle Volatilität mit historischen Niveaus
 - [H](list_of_indicators/hurst_exponent.md) - Indikator H, misst das Langzeitgedächtnis einer Zeitreihe
@@ -82,7 +82,7 @@
 - [LRF](list_of_indicators/linear_regression_forecast.md) - Indikator LRF, prognostiziert künftige Preise
 - [R-Quadrat](list_of_indicators/linear_reg_rsquared.md) - Indikator R-Quadrat, misst die Stärke eines linearen Zusammenhangs
 - [LRS](list_of_indicators/lrs.md) - Indikator LRS, zeigt die Neigung der Regressionslinie
-- [Lowest](list_of_indicators/lowest.md) - Indikator Lowest, bestimmt den niedrigsten Preis über einen angegebenen Zeitraum
+- [Tiefstwert](list_of_indicators/lowest.md) - Indikator Tiefstwert, bestimmt den niedrigsten Preis über einen angegebenen Zeitraum
 - [LP](list_of_indicators/lunar_phase.md) - Indikator LP, korreliert Marktbewegungen mit Mondzyklen
 - [MFI](list_of_indicators/market_facilitation_index.md) - Indikator MFI, misst die Effizienz der Preisbewegung
 - [MMI](list_of_indicators/market_meanness_index.md) - Indikator MMI, bestimmt mean-reverting Verhalten
@@ -110,7 +110,7 @@
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - Indikator OMA, misst die Differenz zwischen gleitendem Durchschnitt und Preis
 - [parabolischer SAR](list_of_indicators/parabolic_sar.md) - Indikator parabolischer SAR, identifiziert mögliche Wendepunkte
 - [Stub](list_of_indicators/pass_through.md) - Ein Indikator ohne Logik. Wird zum Zeichnen von Linien oder als Platzhalter für benutzerdefinierte Indikatoren verwendet
-- [Peak](list_of_indicators/peak.md) - Indikator Peak, identifiziert lokale Hochs in Preisdaten
+- [Spitzenwert](list_of_indicators/peak.md) - Indikator Spitzenwert, identifiziert lokale Hochs in Preisdaten
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Indikator PPO, misst die prozentuale Differenz zwischen zwei gleitenden Durchschnitten
 - [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - Indikator PPOS, glättet PPO mit einem EMA
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - Indikator PPOH, zeichnet die Differenz zwischen PPO und seiner Signallinie
@@ -131,20 +131,20 @@
 - [STC](list_of_indicators/schaff_trend_cycle.md) - Indikator STC, erkennt Trendzyklen
 - [SuperTrend](list_of_indicators/supertrend.md) - SuperTrend-Indikator auf Basis von ATR
 - [SMA](list_of_indicators/sma.md) - Indikator SMA, berechnet den Durchschnittspreis über eine Periode
-- [Shift](list_of_indicators/shift.md) - Indikator Shift, verschiebt den Datenstrom um eine gewählte Anzahl von Perioden
+- [Verschiebung](list_of_indicators/shift.md) - Indikator Verschiebung, verschiebt den Datenstrom um eine gewählte Anzahl von Perioden
 - [SW](list_of_indicators/sine_wave.md) - Indikator SW, identifiziert zyklische Muster in Preisdaten
 - [SMMA](list_of_indicators/smoothed_ma.md) - Indikator SMMA, ein gleitender Durchschnitt mit höherer Gewichtung jüngerer Preise
 - [Standardabweichung](list_of_indicators/standard_deviation.md) - Indikator Standardabweichung, misst die Streuung von Preisdaten
 - [Standardfehler](list_of_indicators/standard_error.md) - Indikator Standardfehler, misst die Prognosegenauigkeit
 - [Stochastik %K](list_of_indicators/stochastic_oscillator_k.md) - Indikator Stochastik %K, misst Momentum anhand der Preisposition innerhalb einer Spanne
 - [Stochastischer Oszillator](list_of_indicators/stochastic_oscillator.md) - Indikator Stochastischer Oszillator, erkennt überkaufte und überverkaufte Bedingungen
-- [Sum](list_of_indicators/sum_n.md) - Indikator Sum, berechnet die Summe der letzten N Preise
+- [Summe N](list_of_indicators/sum_n.md) - Indikator Summe N, berechnet die Summe der letzten N Preise
 - [T3MA](list_of_indicators/t3_moving_average.md) - Indikator T3MA, ein glatter und reaktionsfähiger gleitender Durchschnitt
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - Indikator TWAP, berechnet den zeitgewichteten Durchschnittspreis
 - [TP](list_of_indicators/typical_price.md) - Indikator TP, Durchschnitt aus High, Low und Close
 - [TEMA](list_of_indicators/tema.md) - Indikator TEMA, reduziert Verzögerung bei gleitenden Durchschnitten
 - [TRIX](list_of_indicators/trix.md) - Indikator TRIX, erkennt Trendwechsel
-- [Trough](list_of_indicators/trough.md) - Indikator Trough, identifiziert lokale Tiefs in Preisdaten
+- [Tiefpunkt](list_of_indicators/trough.md) - Indikator Tiefpunkt, identifiziert lokale Tiefs in Preisdaten
 - [TR](list_of_indicators/true_range.md) - Indikator TR, misst die tatsächliche Spanne der Preisbewegung
 - [TSI](list_of_indicators/true_strength_index.md) - Indikator TSI, verwendet doppelt geglättete Momentum-Analyse
 - [TMF](list_of_indicators/twiggs_money_flow.md) - Indikator TMF, misst Kauf- und Verkaufsdruck
@@ -152,7 +152,7 @@
 - [VHF](list_of_indicators/vhf.md) - Indikator VHF, unterscheidet Trendmärkte von Seitwärtsmärkten
 - [VIDIA](list_of_indicators/vidya.md) - Indikator VIDIA, passt sich der Marktvolatilität an
 - [VMA](list_of_indicators/variable_moving_average.md) - Indikator VMA, passt sich der Volatilität an
-- [Volume](list_of_indicators/volume.md) - Indikator Volume, misst das Handelsvolumen pro Candle
+- [Volumen](list_of_indicators/volume.md) - Indikator Volumen, misst das Handelsvolumen pro Kerze
 - [Volumenprofil](list_of_indicators/volume_profile.md) - Indikator Volumenprofil, zeigt Handelsaktivität auf verschiedenen Preisniveaus
 - [VMA](list_of_indicators/volume_weighted_ma.md) - Indikator VMA, gewichtet Preise mit höherem Volumen stärker
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - Indikator VWAP, durchschnittlicher nach gehandeltem Volumen gewichteter Preis

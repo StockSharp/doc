@@ -1,6 +1,6 @@
-# Shift
+# Verschiebung
 
-**Shift** ist ein Hilfsindikator, der den eingehenden Wertstrom um eine angegebene Anzahl von Perioden versetzt. Er verändert die
+**Verschiebung** ist ein Hilfsindikator, der den eingehenden Wertstrom um eine angegebene Anzahl von Perioden versetzt. Er verändert die
 Daten nicht, sondern verzögert sie nur oder richtet sie für zusammengesetzte Berechnungen aus.
 
 Verwenden Sie die Klasse [Shift](xref:StockSharp.Algo.Indicators.Shift), um auf den Indikator zuzugreifen.

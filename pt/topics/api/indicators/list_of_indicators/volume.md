@@ -1,4 +1,4 @@
-# Volume
+# Volume da vela
 
 O indicador **Volume da vela** mostra o volume da vela.
 

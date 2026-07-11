@@ -8,5 +8,4 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [Trix](xref:StockSharp.Algo
 
 ## Empfohlene Inhalte
 
-[Trough](trough.md)
-
+[Tiefpunkt](trough.md)

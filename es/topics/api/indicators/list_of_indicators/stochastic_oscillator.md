@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [StochasticOscillator](xref:S
 
 ## Contenido recomendado
 
-[Sum N](sum_n.md)
+[Suma N](sum_n.md)

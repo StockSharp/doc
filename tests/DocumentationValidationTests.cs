@@ -3320,6 +3320,45 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedGenericIndicatorPagesDoNotKeepEnglishTitles()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/api/indicators/list_of_indicators/volume.md",
+			"topics/api/indicators/list_of_indicators/peak.md",
+			"topics/api/indicators/list_of_indicators/trough.md",
+			"topics/api/indicators/list_of_indicators/shift.md",
+			"topics/api/indicators/list_of_indicators/sum_n.md",
+			"topics/api/indicators/list_of_indicators/highest.md",
+			"topics/api/indicators/list_of_indicators/lowest.md",
+		};
+
+		var headingPattern = new Regex(@"^#\s*(?:Volume|Peak|Trough|Shift|Sum N|Highest|Lowest)\s*$", RegexOptions.CultureInvariant);
+		var boldPattern = new Regex(@"\*\*(?:Peak|Trough|Shift|Sum N)\*\*|（Shift）", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!headingPattern.IsMatch(text) && !boldPattern.IsMatch(text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized generic indicator page keeps English title text '{text}'. Localize visible page titles and bold indicator names.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepEnglishMovingAverageLocalLinkLabels()
 	{
 		var errors = new List<string>();

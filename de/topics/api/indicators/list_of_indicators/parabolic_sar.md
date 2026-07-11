@@ -24,4 +24,4 @@ Am Umkehrpunkt nimmt der Faktor einen Mindestwert von einer Stufe an, und sobald
 
 ## Siehe auch
 
-[Peak](peak.md)
+[Spitzenwert](peak.md)

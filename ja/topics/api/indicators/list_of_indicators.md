@@ -61,7 +61,7 @@
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - インジケーター GAPO、価格変動の変動性を測定します
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - インジケーター GMMA、複数の移動平均を使用してトレンドを特定します
 - [HO](list_of_indicators/harmonic_oscillator.md) - インジケーター HO、価格データ内のハーモニックパターンを検出します
-- [Highest](list_of_indicators/highest.md) - インジケーター Highest、指定期間における最高価格を判定します
+- [最大値](list_of_indicators/highest.md) - インジケーター 最大値、指定期間における最高価格を判定します
 - [HLI](list_of_indicators/high_low_index.md) - インジケーター HLI、新高値と新安値の数を測定します
 - [HVR](list_of_indicators/historical_volatility_ratio.md) - インジケーター HVR、現在のボラティリティを過去の水準と比較します
 - [H](list_of_indicators/hurst_exponent.md) - インジケーター H、系列の長期記憶を測定します
@@ -82,7 +82,7 @@
 - [LRF](list_of_indicators/linear_regression_forecast.md) - インジケーター LRF、将来価格を予測します
 - [R二乗](list_of_indicators/linear_reg_rsquared.md) - インジケーター R二乗、線形関係の強さを測定します
 - [LRS](list_of_indicators/lrs.md) - インジケーター LRS、回帰直線の傾きを示します
-- [Lowest](list_of_indicators/lowest.md) - インジケーター Lowest、指定期間における最低価格を判定します
+- [最小値](list_of_indicators/lowest.md) - インジケーター 最小値、指定期間における最低価格を判定します
 - [LP](list_of_indicators/lunar_phase.md) - インジケーター LP、市場変動と月相サイクルを関連付けます
 - [MFI](list_of_indicators/market_facilitation_index.md) - インジケーター MFI、価格変動の効率性を測定します
 - [MMI](list_of_indicators/market_meanness_index.md) - インジケーター MMI、平均回帰的な挙動を判定します
@@ -110,7 +110,7 @@
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - インジケーター OMA、移動平均と価格との差を測定します
 - [パラボリック SAR](list_of_indicators/parabolic_sar.md) - パラボリック SAR トレンドインジケーターの実装。潜在的な反転ポイントを特定します
 - [Stub](list_of_indicators/pass_through.md) - ロジックを持たないインジケーターです。線の描画やカスタムインジケーターのプレースホルダーとして使用されます
-- [Peak](list_of_indicators/peak.md) - インジケーター Peak、価格データ内の局所的な高値を特定します
+- [ピーク](list_of_indicators/peak.md) - インジケーター ピーク、価格データ内の局所的な高値を特定します
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - インジケーター PPO、2 本の移動平均間のパーセント差を測定します
 - [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - シグナルライン付きパーセンテージ価格オシレーター。PPO を EMA で平滑化します
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - インジケーター PPOH、PPO とそのシグナルラインとの差をプロットします
@@ -131,20 +131,20 @@
 - [STC](list_of_indicators/schaff_trend_cycle.md) - インジケーター STC、トレンドサイクルを特定します
 - [SuperTrend](list_of_indicators/supertrend.md) - ATR に基づく SuperTrend インジケーターです
 - [SMA](list_of_indicators/sma.md) - インジケーター SMA、一定期間の平均価格を計算します
-- [Shift](list_of_indicators/shift.md) - インジケーター Shift、データストリームを選択した期間数だけオフセットします
+- [シフト](list_of_indicators/shift.md) - インジケーター シフト、データストリームを選択した期間数だけオフセットします
 - [SW](list_of_indicators/sine_wave.md) - インジケーター SW、価格データ内の周期的パターンを特定します
 - [SMMA](list_of_indicators/smoothed_ma.md) - インジケーター SMMA、直近の価格により大きな重みを与える移動平均です
 - [標準偏差](list_of_indicators/standard_deviation.md) - インジケーター 標準偏差、価格データのばらつきを測定します
 - [標準誤差](list_of_indicators/standard_error.md) - インジケーター 標準誤差、予測精度を測定します
 - [ストキャスティクス %K](list_of_indicators/stochastic_oscillator_k.md) - インジケーター ストキャスティクス %K、レンジ内の価格位置に基づいてモメンタムを測定します
 - [ストキャスティクスオシレーター](list_of_indicators/stochastic_oscillator.md) - インジケーター ストキャスティクスオシレーター、買われ過ぎと売られ過ぎの状態を特定します
-- [Sum](list_of_indicators/sum_n.md) - インジケーター Sum、直近 N 個の価格の合計を計算します
+- [合計 N](list_of_indicators/sum_n.md) - インジケーター 合計 N、直近 N 個の価格の合計を計算します
 - [T3MA](list_of_indicators/t3_moving_average.md) - インジケーター T3MA、滑らかで応答性の高い移動平均です
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - インジケーター TWAP、時間で加重された平均価格を計算します
 - [TP](list_of_indicators/typical_price.md) - インジケーター TP、High、Low、Close の平均です
 - [TEMA](list_of_indicators/tema.md) - インジケーター TEMA、移動平均計算の遅延を低減します
 - [TRIX](list_of_indicators/trix.md) - インジケーター TRIX、トレンド変化を特定します
-- [Trough](list_of_indicators/trough.md) - インジケーター Trough、価格データ内の局所的な安値を特定します
+- [谷](list_of_indicators/trough.md) - インジケーター 谷、価格データ内の局所的な安値を特定します
 - [TR](list_of_indicators/true_range.md) - インジケーター TR、価格変動の実際のレンジを測定します
 - [TSI](list_of_indicators/true_strength_index.md) - インジケーター TSI、二重平滑化モメンタム分析を適用します
 - [TMF](list_of_indicators/twiggs_money_flow.md) - インジケーター TMF、買い圧力と売り圧力を測定します
@@ -152,7 +152,7 @@
 - [VHF](list_of_indicators/vhf.md) - インジケーター VHF、トレンド市場とレンジ市場を区別します
 - [VIDIA](list_of_indicators/vidya.md) - インジケーター VIDIA、市場ボラティリティに適応します
 - [VMA](list_of_indicators/variable_moving_average.md) - インジケーター VMA、ボラティリティに合わせて調整します
-- [Volume](list_of_indicators/volume.md) - インジケーター Volume、ローソク足ごとの取引出来高を測定します
+- [出来高](list_of_indicators/volume.md) - インジケーター 出来高、ローソク足ごとの取引出来高を測定します
 - [出来高プロファイル](list_of_indicators/volume_profile.md) - インジケーター 出来高プロファイル、異なる価格水準での取引活動を示します
 - [VMA](list_of_indicators/volume_weighted_ma.md) - インジケーター VMA、出来高の多い価格により大きな重みを与えます
 - [VWAP](list_of_indicators/volume_weighted_average_price.md) - インジケーター VWAP、取引出来高で加重された平均価格です

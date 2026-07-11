@@ -1,7 +1,7 @@
-# Shift
+# Desplazamiento
 
-**Shift** es un indicador auxiliar que compensa el flujo de valor entrante en un número específico de períodos. No transforma el
-datos; solo lo retrasa o alinea para su uso en cálculos compuestos.
+**Desplazamiento** es un indicador auxiliar que desplaza el flujo de valores entrante en un número específico de períodos. No transforma los
+datos; solo los retrasa o alinea para su uso en cálculos compuestos.
 
 Utilice la clase [Shift](xref:StockSharp.Algo.Indicators.Shift) para acceder al indicador.
 

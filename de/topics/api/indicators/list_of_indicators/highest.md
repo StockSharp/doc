@@ -1,4 +1,4 @@
-# Highest
+# Höchstwert
 
 Der Indikator zeigt den **Maximalwert für den Zeitraum** an.
 

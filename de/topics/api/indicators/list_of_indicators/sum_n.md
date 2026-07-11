@@ -1,6 +1,6 @@
-# Sum N
+# Summe N
 
-**Sum N** Der Letzte-Werte-Indikator zeigt die Summe von N letzten Werten für den Zeitraum an.
+Der Indikator **Summe N** zeigt die Summe der letzten N Werte für den Zeitraum an.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [Sum](xref:StockSharp.Algo.Indicators.Sum) verwenden.
 

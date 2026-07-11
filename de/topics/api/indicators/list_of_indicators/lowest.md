@@ -1,4 +1,4 @@
-# Lowest
+# Tiefstwert
 
 Der Indikator zeigt den **Minimalwert für den Zeitraum** an.
 

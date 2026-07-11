@@ -1,6 +1,6 @@
-# Peak
+# Pico
 
-El indicador **Peak** muestra el valor máximo para el período. 
+El indicador **pico** muestra el valor máximo para el período.
 
 Para utilizar el indicador, debe utilizar la clase [Peak](xref:StockSharp.Algo.Indicators.Peak). 
 

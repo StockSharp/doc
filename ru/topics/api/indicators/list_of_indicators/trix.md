@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Trough](trough.md)
+[Впадина](trough.md)

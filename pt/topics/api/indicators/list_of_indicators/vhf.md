@@ -8,4 +8,4 @@ Para usar o indicador, deve usar a classe [VerticalHorizontalFilter](xref:StockS
 
 ## Conteúdo recomendado
 
-[Volume](volume.md)
+[Volume da vela](volume.md)

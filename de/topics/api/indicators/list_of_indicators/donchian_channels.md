@@ -73,5 +73,5 @@ Donchian-Kanäle kann auf verschiedene Arten verwendet werden:
 
 [BollingerBands](bollinger_bands.md)
 [KeltnerChannels](keltner_channels.md)
-[Highest](highest.md)
-[Lowest](lowest.md)
+[Höchstwert](highest.md)
+[Tiefstwert](lowest.md)

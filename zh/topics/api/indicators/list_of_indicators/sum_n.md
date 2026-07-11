@@ -1,6 +1,6 @@
 # 求和 N
 
-**Sum N** 最近值求和指标显示该周期内最近 N 个值的总和。
+**求和 N** 最近值求和指标显示该周期内最近 N 个值的总和。
 
 要使用该指标，您必须使用 [Sum](xref:StockSharp.Algo.Indicators.Sum) 类。
 

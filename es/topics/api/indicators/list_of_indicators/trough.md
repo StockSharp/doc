@@ -1,6 +1,6 @@
-# Trough
+# Valle
 
-El indicador **Trough** muestra el valor mínimo para el período. 
+El indicador **valle** muestra el valor mínimo para el período.
 
 Para utilizar el indicador, debe utilizar la clase [Trough](xref:StockSharp.Algo.Indicators.Trough). 
 

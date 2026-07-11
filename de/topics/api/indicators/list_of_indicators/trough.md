@@ -1,6 +1,6 @@
-# Trough
+# Tiefpunkt
 
-Der Indikator **Trough** zeigt den Minimalwert für die Periode.
+Der Indikator **Tiefpunkt** zeigt den Minimalwert für die Periode.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [Trough](xref:StockSharp.Algo.Indicators.Trough).
 

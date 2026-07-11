@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Trough](trough.md)
+[谷](trough.md)

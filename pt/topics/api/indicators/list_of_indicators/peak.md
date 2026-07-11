@@ -1,6 +1,6 @@
-# Peak
+# Pico
 
-O indicador **Peak** mostra o valor de pico para o período. 
+O indicador **pico** mostra o valor de pico para o período.
 
 Para usar o indicador, deve usar a classe [Peak](xref:StockSharp.Algo.Indicators.Peak). 
 
@@ -9,4 +9,3 @@ Para usar o indicador, deve usar a classe [Peak](xref:StockSharp.Algo.Indicators
 ## Conteúdo recomendado
 
 [QStick](qstick.md)
-

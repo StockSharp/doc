@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [VerticalHorizontalFilter](xr
 
 ## Contenido recomendado
 
-[Volume](volume.md)
+[Volumen](volume.md)

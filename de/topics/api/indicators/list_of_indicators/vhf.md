@@ -8,5 +8,4 @@ Um den Indikator zu verwenden, nutzen Sie die Klasse [VerticalHorizontalFilter](
 
 ## Empfohlene Inhalte
 
-[Volume](volume.md)
-
+[Volumen](volume.md)

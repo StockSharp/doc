@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [GatorOscillator](
 
 ## Empfohlene Inhalte
 
-[Highest](highest.md)
+[Höchstwert](highest.md)

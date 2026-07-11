@@ -1,6 +1,6 @@
-# Sum N
+# Soma N
 
-O indicador **Sum N** dos últimos valores mostra a soma dos últimos N valores do período. 
+O indicador **Soma N** dos últimos valores mostra a soma dos últimos N valores do período.
 
 Para utilizar o indicador, deve usar a classe [Sum](xref:StockSharp.Algo.Indicators.Sum). 
 
