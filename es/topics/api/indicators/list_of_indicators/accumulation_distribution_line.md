@@ -23,7 +23,7 @@ CLV = ((Close - Low) - (High - Close)) / (High - Low)
 
 **2. Cálculo de ADL:**
 ```
-ADL = Previous ADL Value + CLV * Volume
+ADL = valor ADL anterior + CLV * Volume
 ```
 
 donde:

@@ -27,12 +27,12 @@ El cálculo de Oscilador de pronóstico implica los siguientes pasos:
 
 1. Calcule la línea de pronóstico mediante regresión lineal durante el período especificado:
    ```
-   Forecast = línea de regresión lineal(Close, Length)
+   Pronóstico = línea de regresión lineal(Close, Length)
    ```
 
 2. Calcule el oscilador como una relación porcentual entre el precio actual y el valor previsto:
    ```
-   FOSC = ((Close - Forecast) / Forecast) * 100
+   FOSC = ((Close - Pronóstico) / Pronóstico) * 100
    ```
 
 donde:

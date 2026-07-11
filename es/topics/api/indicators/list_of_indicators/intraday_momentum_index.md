@@ -48,7 +48,7 @@ Nota: Si (Ganancias Sum + Pérdidas Sum) es igual a cero, IMI se establece en 50
 
 El índice de impulso intradía se interpreta de manera similar a RSI:
 
-1. **Value Range**:
+1. **Rango de valores**:
    - IMI oscila entre 0 y 100
    - Valores superiores a 50 indican predominio de un impulso intradiario positivo
    - Valores por debajo de 50 indican predominio del impulso intradiario negativo

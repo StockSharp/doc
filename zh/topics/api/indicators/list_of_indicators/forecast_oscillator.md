@@ -27,12 +27,12 @@
 
 1. 使用线性回归在指定期间计算预测线：
    ```
-   Forecast = 线性回归线(Close, Length)
+   预测值 = 线性回归线(Close, Length)
    ```
 
 2. 将振荡器计算为当前价格与预测值之间的百分比比率：
    ```
-   FOSC = ((Close - Forecast) / Forecast) * 100
+   FOSC = ((Close - 预测值) / 预测值) * 100
    ```
 
 其中：

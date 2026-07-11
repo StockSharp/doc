@@ -27,16 +27,16 @@ O cálculo do transformação de Fisher de Ehlers envolve vários passos:
 
 1. Transformar dados de preço em valores entre -1 e +1 (normalmente usando ranking de preço normalizado ou outro oscilador):
    ```
-   Value = (2 * ((Price - Min) / (Max - Min))) - 1
+   Valor = (2 * ((Price - Min) / (Max - Min))) - 1
    ```
    onde Min e Max são os preços mínimo e máximo ao longo do período Length.
 
 2. Aplicar a transformação de Fisher:
    ```
-   Se Value >= 0.999, então Value = 0.999
-   Se Value <= -0.999, então Value = -0.999
+   Se Valor >= 0.999, então Valor = 0.999
+   Se Valor <= -0.999, então Valor = -0.999
 
-   Fisher = 0.5 * ln((1 + Value) / (1 - Value))
+   Fisher = 0.5 * ln((1 + Valor) / (1 - Valor))
    ```
    onde ln é o logaritmo natural.
 

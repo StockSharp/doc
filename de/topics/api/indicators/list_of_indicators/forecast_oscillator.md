@@ -27,12 +27,12 @@ Die Prognose-Oszillator-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Prognoselinie mithilfe der linearen Regression über den angegebenen Zeitraum:
    ```
-   Forecast = lineare Regressionslinie(Close, Length)
+   Prognose = lineare Regressionslinie(Close, Length)
    ```
 
 2. Berechnen Sie den Oszillator als prozentuales Verhältnis zwischen aktuellem Preis und Prognosewert:
    ```
-   FOSC = ((Close - Forecast) / Forecast) * 100
+   FOSC = ((Close - Prognose) / Prognose) * 100
    ```
 
 Dabei gilt:

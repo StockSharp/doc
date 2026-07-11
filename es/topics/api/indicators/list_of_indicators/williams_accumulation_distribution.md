@@ -43,7 +43,7 @@ El indicador acumulación/distribución de Williams se calcula utilizando la sig
 
 3. Calcule el valor WAD acumulando valores AD:
    ```
-   WAD = Previous WAD value + AD
+   WAD = valor WAD anterior + AD
    ```
 
 El indicador acumula valores positivos y negativos, formando una línea acumulativa que puede usarse para comparar con el movimiento de precios.

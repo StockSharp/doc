@@ -27,17 +27,17 @@ O cálculo do Oscilador de previsão envolve os seguintes passos:
 
 1. Calcular a linha de previsão usando regressão linear ao longo do período especificado:
    ```
-   Forecast = linha de regressão linear(Close, Length)
+   Previsão = linha de regressão linear(Close, Length)
    ```
 
 2. Calcular o oscilador como rácio percentual entre o preço atual e o valor previsto:
    ```
-   FOSC = ((Close - Forecast) / Forecast) * 100
+   FOSC = ((Close - Previsão) / Previsão) * 100
    ```
 
 Onde:
 - Close - preço de fecho atual
-- Forecast - valor previsto obtido por regressão linear
+- Previsão - valor previsto obtido por regressão linear
 - Length - período para o cálculo da regressão linear
 
 ## Interpretação
@@ -74,4 +74,3 @@ O Oscilador de previsão é interpretado da seguinte forma:
 [LinearRegression](lrc.md)
 [StandardError](standard_error.md)
 [DisparityIndex](disparity_index.md)
-

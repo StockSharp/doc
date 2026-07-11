@@ -27,17 +27,17 @@
 
 1. 指定された期間にわたる線形回帰を使用して予測ラインを計算します:
    ```
-   Forecast = 線形回帰線(Close, Length)
+   予測 = 線形回帰線(Close, Length)
    ```
 
 2. 現在価格と予測値の間のパーセンテージ比率としてオシレーターを計算します:
    ```
-   FOSC = ((Close - Forecast) / Forecast) * 100
+   FOSC = ((Close - 予測) / 予測) * 100
    ```
 
 ここで:
 - Close - 現在の終値
-- Forecast - 線形回帰によって得られた予測値
+- 予測 - 線形回帰によって得られた予測値
 - Length - 線形回帰計算の期間
 
 ## 解釈
@@ -74,4 +74,3 @@
 [LinearRegression](lrc.md)
 [StandardError](standard_error.md)
 [DisparityIndex](disparity_index.md)
-

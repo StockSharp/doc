@@ -43,7 +43,7 @@ Der Williams-Akkumulation/-Distribution-Indikator wird nach folgender Logik bere
 
 3. WAD-Wert durch Akkumulation der AD-Werte berechnen:
    ```
-   WAD = Previous WAD value + AD
+   WAD = vorheriger WAD-Wert + AD
    ```
 
 Der Indikator akkumuliert positive und negative Werte und bildet eine kumulative Linie, die mit der Preisbewegung verglichen werden kann.

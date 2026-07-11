@@ -27,16 +27,16 @@ Die Ehlers-Fisher-Transformation-Berechnung umfasst mehrere Schritte:
 
 1. Preisdaten in Werte zwischen -1 und +1 umwandeln (normalerweise unter Verwendung eines normalisierten Preisrangs oder eines anderen Oszillators):
    ```
-   Value = (2 * ((Price - Min) / (Max - Min))) - 1
+   Wert = (2 * ((Price - Min) / (Max - Min))) - 1
    ```
    Dabei sind Min und Max die Mindest- und Höchstpreise im Length-Zeitraum.
 
 2. Wenden Sie die Fisher-Transformation an:
    ```
-   Wenn Value >= 0.999, dann Value = 0.999
-   Wenn Value <= -0.999, dann Value = -0.999
+   Wenn Wert >= 0.999, dann Wert = 0.999
+   Wenn Wert <= -0.999, dann Wert = -0.999
 
-   Fisher = 0.5 * ln((1 + Value) / (1 - Value))
+   Fisher = 0.5 * ln((1 + Wert) / (1 - Wert))
    ```
    wobei ln der natürliche Logarithmus ist.
 

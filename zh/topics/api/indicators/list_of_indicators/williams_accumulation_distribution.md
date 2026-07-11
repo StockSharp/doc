@@ -43,7 +43,7 @@ WAD 的主要特征：
 
 3. 通过累加 AD 值来计算 WAD 值：
    ```
-   WAD = Previous WAD value + AD
+   WAD = 前一 WAD 值 + AD
    ```
 
 该指标累积正值和负值，形成一条累积线，可用于与价格运动进行比较。

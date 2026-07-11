@@ -46,7 +46,7 @@ Nota: Si (Nuevos máximos + Nuevos mínimos) es igual a cero, HLI se establece e
 
 El índice máximo-mínimo se interpreta de la siguiente manera:
 
-1. **Value Range**:
+1. **Rango de valores**:
    - HLI oscila entre -100 y +100
    - Los valores positivos indican que más valores alcanzan nuevos máximos que nuevos mínimos.
    - Los valores negativos indican que más valores alcanzan nuevos mínimos que nuevos máximos.
