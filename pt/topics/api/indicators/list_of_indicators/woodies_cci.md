@@ -1,21 +1,21 @@
 # WCCI
 
-**Woodies CCI (WCCI)** é uma modificação do índice de canal de commodities (CCI) padrão, desenvolvida pelo trader Ken Wood (conhecido como "Woodies"). Esta variação do CCI inclui suavização adicional e é usada como parte de um sistema de negociação Woodies CCI abrangente.
+**CCI de Woodies (WCCI)** é uma modificação do índice de canal de commodities (CCI) padrão, desenvolvida pelo trader Ken Wood (conhecido como "Woodies"). Esta variação do CCI inclui suavização adicional e é usada como parte de um sistema de negociação CCI de Woodies abrangente.
 
 Para usar o indicador, é necessário usar a classe [WoodiesCCI](xref:StockSharp.Algo.Indicators.WoodiesCCI).
 
 ## Descrição
 
-Woodies CCI é uma versão modificada do indicador CCI clássico que inclui duas linhas:
+CCI de Woodies é uma versão modificada do indicador CCI clássico que inclui duas linhas:
 - A linha CCI principal com um período selecionado (tipicamente 14)
 - Uma linha CCI suavizada, que é uma média móvel simples da linha CCI principal
 
-O sistema Woodies CCI usa estas duas linhas, juntamente com vários níveis-chave, para gerar sinais de negociação. Os níveis principais incluem:
+O sistema CCI de Woodies usa estas duas linhas, juntamente com vários níveis-chave, para gerar sinais de negociação. Os níveis principais incluem:
 - +100 e -100 (níveis tradicionais de sobrecompra e sobrevenda)
 - +200 e -200 (condições fortes de sobrecompra e sobrevenda)
 - Linha zero (importante para determinar a tendência)
 
-Sinais principais no sistema Woodies CCI:
+Sinais principais no sistema CCI de Woodies:
 - "Zero-line Reject" - quando o CCI se aproxima da linha zero e depois ressalta dela, continuando na direção anterior
 - "rompimento de linha de tendência" - quando o CCI rompe uma linha de tendência significativa
 - "divergência inversa" - um tipo específico de divergência entre preço e CCI
@@ -27,7 +27,7 @@ Sinais principais no sistema Woodies CCI:
 
 ## Cálculo
 
-O cálculo do Woodies CCI é efetuado em vários passos:
+O cálculo do CCI de Woodies é efetuado em vários passos:
 
 1. Primeiro, calcular o CCI padrão:
    ```
@@ -42,7 +42,7 @@ O cálculo do Woodies CCI é efetuado em vários passos:
    Smooth CCI = SMA(CCI, SMALength)
    ```
 
-Woodies CCI usa uma combinação destas duas linhas para criar sinais de negociação. No sistema Woodies clássico, o cruzamento destas linhas, a sua interação com níveis-chave e vários padrões formam a base das decisões de negociação.
+CCI de Woodies usa uma combinação destas duas linhas para criar sinais de negociação. No sistema Woodies clássico, o cruzamento destas linhas, a sua interação com níveis-chave e vários padrões formam a base das decisões de negociação.
 
 ![IndicatorWoodiesCCI](../../../../images/indicator_woodies_cci.png)
 

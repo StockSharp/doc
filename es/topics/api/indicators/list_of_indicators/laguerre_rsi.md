@@ -1,12 +1,12 @@
 # LRSI
 
-**Laguerre RSI (LRSI)** es un indicador técnico basado en los principios matemáticos del filtro de Laguerre, desarrollado por John Ehlers como una versión avanzada del tradicional índice de fuerza relativa (RSI).
+**RSI de Laguerre (LRSI)** es un indicador técnico basado en los principios matemáticos del filtro de Laguerre, desarrollado por John Ehlers como una versión avanzada del tradicional índice de fuerza relativa (RSI).
 
 Para utilizar el indicador, debe utilizar la clase [LaguerreRSI](xref:StockSharp.Algo.Indicators.LaguerreRSI).
 
 ## Descripción
 
-Laguerre RSI (LRSI) es un oscilador innovador que utiliza matemáticas de filtro Laguerre para crear un indicador más sensible y menos retrasado en comparación con el RSI tradicional. John Ehlers desarrolló este indicador para abordar el problema de retraso de la señal inherente a muchos indicadores técnicos.
+RSI de Laguerre (LRSI) es un oscilador innovador que utiliza matemáticas de filtro Laguerre para crear un indicador más sensible y menos retrasado en comparación con el RSI tradicional. John Ehlers desarrolló este indicador para abordar el problema de retraso de la señal inherente a muchos indicadores técnicos.
 
 LRSI combina los principios polinomiales de Laguerre con el concepto índice de fuerza relativa. Esto permite que el indicador responda más rápidamente a los cambios de tendencia y genere señales de trading más claras. Al igual que el RSI tradicional, el LRSI oscila entre 0 y 1 (o de 0 a 100 cuando se multiplica por 100), pero tiene una estructura menos ruidosa y giros más distintos.
 
@@ -21,7 +21,7 @@ El parámetro Gamma determina el grado de filtrado y afecta la sensibilidad del 
 
 ## Cálculo
 
-El cálculo de Laguerre RSI implica varios pasos:
+El cálculo de RSI de Laguerre implica varios pasos:
 
 1. Inicialice cuatro valores de filtro Laguerre (L0, L1, L2, L3) en la primera ejecución:
    ```
@@ -65,7 +65,7 @@ donde:
 
 ## Interpretación
 
-Laguerre RSI se interpreta de manera similar al RSI tradicional, pero con mayor sensibilidad:
+RSI de Laguerre se interpreta de manera similar al RSI tradicional, pero con mayor sensibilidad:
 
 1. **Niveles de sobrecompra y sobreventa**:
    - Los valores superiores a 0,8 (u 80) normalmente se consideran sobrecomprados.

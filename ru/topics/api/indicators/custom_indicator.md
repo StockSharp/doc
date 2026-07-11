@@ -112,7 +112,7 @@ public override void Load(SettingsStorage storage)
 
 ```cs
 /// <summary>
-/// Chaikin volatility.
+/// волатильность Чайкина.
 /// </summary>
 /// <remarks>
 /// https://doc.stocksharp.com/topics/api/indicators/list_of_indicators/chv.html
@@ -231,7 +231,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator<IAverageDirectionalI
 	/// <summary>
 	/// Инициализирует новый экземпляр <see cref="AverageDirectionalIndex"/>.
 	/// </summary>
-	/// <param name="dx">Welles Wilder Directional Movement Index.</param>
+	/// <param name="dx">Welles Wilder индекс направленного движения.</param>
 	/// <param name="movingAverage">Скользящая средняя.</param>
 	public AverageDirectionalIndex(DirectionalIndex dx, DecimalLengthIndicator movingAverage)
 		: base(dx, movingAverage)
@@ -245,7 +245,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator<IAverageDirectionalI
 	public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
 
 	/// <summary>
-	/// Welles Wilder Directional Movement Index.
+	/// Welles Wilder индекс направленного движения.
 	/// </summary>
 	[Browsable(false)]
 	public DirectionalIndex Dx { get; }

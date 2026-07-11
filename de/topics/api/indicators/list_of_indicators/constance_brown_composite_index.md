@@ -1,12 +1,12 @@
 # CBCI
 
-**Constance Brown Composite Index (CBCI)** ist ein von Constance Brown entwickelter Indikator, der Elemente verschiedener technischer Indikatoren zu einem umfassenden Marktanalysetool kombiniert.
+**Constance-Brown-Composite-Index (CBCI)** ist ein von Constance Brown entwickelter Indikator, der Elemente verschiedener technischer Indikatoren zu einem umfassenden Marktanalysetool kombiniert.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ConstanceBrownCompositeIndex](xref:StockSharp.Algo.Indicators.ConstanceBrownCompositeIndex) verwenden.
 
 ## Beschreibung
 
-Der Constance Brown Composite Index (CBCI) wurde entwickelt, um die Stärken mehrerer Indikatoren in einem umfassenden Tool zusammenzuführen. Es enthält Elemente des stochastischen Oszillators RSI und anderer Oszillatoren, um genauere Signale über potenzielle Marktumkehrungen und Trendbewegungen zu liefern.
+Der Constance-Brown-Composite-Index (CBCI) wurde entwickelt, um die Stärken mehrerer Indikatoren in einem umfassenden Tool zusammenzuführen. Es enthält Elemente des stochastischen Oszillators RSI und anderer Oszillatoren, um genauere Signale über potenzielle Marktumkehrungen und Trendbewegungen zu liefern.
 
 CBCI ist konzipiert für:
 - Identifizierung potenzieller Trendumkehrpunkte

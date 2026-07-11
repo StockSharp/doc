@@ -73,7 +73,7 @@
 - [KPO](list_of_indicators/kase_peak_oscillator.md) - インジケーター KPO、潜在的な反転ポイントを特定します
 - [KER](list_of_indicators/kaufman_efficiency_ratio.md) - インジケーター KER、価格変動の効率性を測定します
 - [KAMA](list_of_indicators/kama.md) - インジケーター KAMA、市場ボラティリティに適応します
-- [Kalman Filter](list_of_indicators/kalman_filter.md) - ノイズの多いデータでトレンドを追跡するための適応フィルターです
+- [カルマンフィルター](list_of_indicators/kalman_filter.md) - ノイズの多いデータでトレンドを追跡するための適応フィルターです
 - [KC](list_of_indicators/keltner_channels.md) - インジケーター KC、ボラティリティに基づいて取引レンジを定義します
 - [KVO](list_of_indicators/klinger_volume_oscillator.md) - インジケーター KVO、出来高トレンドを測定します
 - [KST](list_of_indicators/kst.md) - インジケーター KST、モメンタムオシレーターです
@@ -98,7 +98,7 @@
 - [MFI](list_of_indicators/money_flow_index.md) - インジケーター MFI、価格と出来高に基づいて買い圧力と売り圧力を測定します
 - [MACD](list_of_indicators/macd.md) - 移動平均の収束/発散。トレンド変化を特定します
 - [MACD ヒストグラム](list_of_indicators/macd_histogram.md) - 移動平均の収束/発散ヒストグラム。MACD とシグナルラインの差を可視化します
-- [MACD Signal](list_of_indicators/macd_with_signal_line.md) - シグナルライン付きの移動平均の収束/発散。買いシグナルと売りシグナルを提供します
+- [MACD シグナル](list_of_indicators/macd_with_signal_line.md) - シグナルライン付きの移動平均の収束/発散。買いシグナルと売りシグナルを提供します
 - [MAC](list_of_indicators/moving_average_crossover.md) - インジケーター MAC、2 本の移動平均を使用してトレンド反転を特定します
 - [MAR](list_of_indicators/moving_average_ribbon.md) - インジケーター MAR、複数の移動平均を使用してトレンドを可視化します
 - [NVI](list_of_indicators/negative_volume_index.md) - インジケーター NVI、出来高が減少した日の価格変動を追跡します
@@ -165,7 +165,7 @@
 - [%R](list_of_indicators/williams_r.md) - インジケーター %R、買われ過ぎと売られ過ぎの状態を特定します
 - [WCCI](list_of_indicators/woodies_cci.md) - インジケーター WCCI、トレンド識別のための CCI の変種です
 - [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - インジケーター ZLEMA、EMA 計算の遅延を低減します
-- [Zig Zag](list_of_indicators/zigzag.md) - インジケーター Zig Zag、小さな価格変動を除外して重要なトレンドを表示します
+- [ジグザグ](list_of_indicators/zigzag.md) - インジケーター ジグザグ、小さな価格変動を除外して重要なトレンドを表示します
 
 ## 注記
 

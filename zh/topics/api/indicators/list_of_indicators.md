@@ -163,9 +163,9 @@
 - [Wilder MA](list_of_indicators/wilder_ma.md) - 韦尔斯·怀尔德移动平均线，一种平滑的移动平均线
 - [WAD](list_of_indicators/williams_accumulation_distribution.md) - 威廉姆斯累积/派发指标，衡量买卖压力
 - [%R](list_of_indicators/williams_r.md) - 威廉指标百分比范围，用于识别超买和超卖状态
-- [WCCI](list_of_indicators/woodies_cci.md) - Woodies CCI 指标，一种用于趋势识别的CCI变体
+- [WCCI](list_of_indicators/woodies_cci.md) - 伍迪 CCI 指标，一种用于趋势识别的CCI变体
 - [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - 零滞后指数移动平均线，可减少EMA计算中的滞后
-- [Zig Zag](list_of_indicators/zigzag.md) - Zig Zag 指标，过滤掉小的价格波动以显示重要趋势
+- [之字转向](list_of_indicators/zigzag.md) - 之字转向 指标，过滤掉小的价格波动以显示重要趋势
 
 ## 笔记
 

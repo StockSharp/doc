@@ -75,7 +75,7 @@
 - [KPO](list_of_indicators/kase_peak_oscillator.md) - индикатор KPO, определяет потенциальные точки разворота
 - [KER](list_of_indicators/kaufman_efficiency_ratio.md) - индикатор KER, измеряет эффективность движения цены
 - [KAMA](list_of_indicators/kama.md) - индикатор KAMA, адаптируется к волатильности рынка
-- [Kalman Filter](list_of_indicators/kalman_filter.md) - Адаптивный фильтр для отслеживания трендов в зашумленных данных
+- [фильтр Калмана](list_of_indicators/kalman_filter.md) - Адаптивный фильтр для отслеживания трендов в зашумленных данных
 - [KC](list_of_indicators/keltner_channels.md) - индикатор KC, определяет торговые диапазоны на основе волатильности
 - [KVO](list_of_indicators/klinger_volume_oscillator.md) - индикатор KVO, измеряет тренды объёма
 - [KST](list_of_indicators/kst.md) - индикатор KST, осциллятор импульса
@@ -100,7 +100,7 @@
 - [MFI](list_of_indicators/money_flow_index.md) - индикатор MFI, измеряет давление покупок и продаж на основе цены и объёма
 - [MACD](list_of_indicators/macd.md) - индикатор MACD, определяет изменения в тренде
 - [MACD гистограмма](list_of_indicators/macd_histogram.md) - индикатор MACD гистограмма, визуализирует разницу между MACD и сигнальной линией
-- [MACD Signal](list_of_indicators/macd_with_signal_line.md) - индикатор MACD Signal, предоставляет сигналы на покупку и продажу
+- [сигнал MACD](list_of_indicators/macd_with_signal_line.md) - индикатор сигнал MACD, предоставляет сигналы на покупку и продажу
 - [MAC](list_of_indicators/moving_average_crossover.md) - индикатор MAC, определяет развороты тренда с использованием двух скользящих средних
 - [MAR](list_of_indicators/moving_average_ribbon.md) - индикатор MAR, использует несколько скользящих средних для визуализации трендов
 - [NVI](list_of_indicators/negative_volume_index.md) - индикатор NVI, отслеживает движение цены в дни с уменьшающимся объёмом
@@ -168,7 +168,7 @@
 - [%R](list_of_indicators/williams_r.md) - индикатор %R, определяет состояния перекупленности и перепроданности
 - [WCCI](list_of_indicators/woodies_cci.md) - индикатор WCCI, вариация CCI для определения трендов
 - [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - индикатор ZLEMA, уменьшает лаг в расчётах EMA
-- [Zig Zag](list_of_indicators/zigzag.md) - индикатор Zig Zag, отфильтровывает мелкие движения цены для отображения значимых трендов
+- [зигзаг](list_of_indicators/zigzag.md) - индикатор зигзаг, отфильтровывает мелкие движения цены для отображения значимых трендов
 
 ## Примечания
 

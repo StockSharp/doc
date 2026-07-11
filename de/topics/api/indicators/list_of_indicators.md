@@ -73,7 +73,7 @@
 - [KPO](list_of_indicators/kase_peak_oscillator.md) - Indikator KPO, identifiziert mögliche Wendepunkte
 - [KER](list_of_indicators/kaufman_efficiency_ratio.md) - Indikator KER, misst die Effizienz der Preisbewegung
 - [KAMA](list_of_indicators/kama.md) - Indikator KAMA, passt sich der Marktvolatilität an
-- [Kalman Filter](list_of_indicators/kalman_filter.md) - Adaptiver Filter zur Verfolgung von Trends in verrauschten Daten
+- [Kalman-Filter](list_of_indicators/kalman_filter.md) - Adaptiver Filter zur Verfolgung von Trends in verrauschten Daten
 - [KC](list_of_indicators/keltner_channels.md) - Indikator KC, definiert Handelsspannen anhand der Volatilität
 - [KVO](list_of_indicators/klinger_volume_oscillator.md) - Indikator KVO, misst Volumentrends
 - [KST](list_of_indicators/kst.md) - Indikator KST, ein Momentum-Oszillator
@@ -98,7 +98,7 @@
 - [MFI](list_of_indicators/money_flow_index.md) - Indikator MFI, misst Kauf- und Verkaufsdruck anhand von Preis und Volumen
 - [MACD](list_of_indicators/macd.md) - Indikator MACD, erkennt Trendwechsel
 - [MACD-Histogramm](list_of_indicators/macd_histogram.md) - Indikator MACD-Histogramm, visualisiert die Differenz zwischen MACD und Signallinie
-- [MACD Signal](list_of_indicators/macd_with_signal_line.md) - Indikator MACD Signal, liefert Kauf- und Verkaufssignale
+- [MACD-Signal](list_of_indicators/macd_with_signal_line.md) - Indikator MACD-Signal, liefert Kauf- und Verkaufssignale
 - [MAC](list_of_indicators/moving_average_crossover.md) - Indikator MAC, erkennt Trendumkehrungen mithilfe zweier gleitender Durchschnitte
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Indikator MAR, nutzt mehrere gleitende Durchschnitte zur Trendvisualisierung
 - [NVI](list_of_indicators/negative_volume_index.md) - Indikator NVI, verfolgt Preisbewegungen an Tagen mit sinkendem Volumen
@@ -165,7 +165,7 @@
 - [%R](list_of_indicators/williams_r.md) - Indikator %R, erkennt überkaufte und überverkaufte Bedingungen
 - [WCCI](list_of_indicators/woodies_cci.md) - Indikator WCCI, eine CCI-Variante zur Trendidentifikation
 - [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - Indikator ZLEMA, reduziert Verzögerung bei EMA-Berechnungen
-- [Zig Zag](list_of_indicators/zigzag.md) - Indikator Zig Zag, filtert kleinere Preisbewegungen heraus, um signifikante Trends darzustellen
+- [Zig-Zag](list_of_indicators/zigzag.md) - Indikator Zig-Zag, filtert kleinere Preisbewegungen heraus, um signifikante Trends darzustellen
 
 ## Hinweise
 

@@ -1,12 +1,12 @@
 # MP
 
-**Momentum Pinball (MP)** é um indicador técnico que analisa o momentum do preço e as suas alterações para identificar potenciais pontos de reversão e a força da tendência no mercado.
+**pinball de momentum (MP)** é um indicador técnico que analisa o momentum do preço e as suas alterações para identificar potenciais pontos de reversão e a força da tendência no mercado.
 
 Para usar o indicador, é necessário usar a classe [MomentumPinball](xref:StockSharp.Algo.Indicators.MomentumPinball).
 
 ## Descrição
 
-O indicador Momentum Pinball (MP) é um oscilador especializado concebido para acompanhar o momentum do preço e identificar potenciais pontos de reversão. O nome "pinball" reflete a capacidade do indicador para identificar momentos em que o preço, como uma bola numa máquina de pinball, ressalta de posições extremas.
+O indicador pinball de momentum (MP) é um oscilador especializado concebido para acompanhar o momentum do preço e identificar potenciais pontos de reversão. O nome "pinball" reflete a capacidade do indicador para identificar momentos em que o preço, como uma bola numa máquina de pinball, ressalta de posições extremas.
 
 O MP analisa a relação entre o momentum atual e os seus extremos históricos, determinando quando o mercado atinge condições de sobrecompra ou sobrevenda. O indicador também ajuda a identificar momentos em que o momentum começa a enfraquecer, o que pode anteceder uma reversão de tendência.
 
@@ -19,7 +19,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do indicador Momentum Pinball envolve os seguintes passos:
+O cálculo do indicador pinball de momentum envolve os seguintes passos:
 
 1. Calcular o momentum base como a diferença entre o preço atual e o preço de há N períodos:
    ```
@@ -56,7 +56,7 @@ Onde:
 
 ## Interpretação
 
-O indicador Momentum Pinball pode ser interpretado da seguinte forma:
+O indicador pinball de momentum pode ser interpretado da seguinte forma:
 
 1. **Níveis extremos**:
    - Valores acima de 0,8 indicam condições de sobrecompra no mercado

@@ -1,12 +1,12 @@
 # FVE
 
-**Finite Volume Element (FVE)** es un indicador técnico desarrollado para analizar la relación entre precio y volumen, ayudando a evaluar la presión del comprador y del vendedor en el mercado.
+**elemento de volumen finito (FVE)** es un indicador técnico desarrollado para analizar la relación entre precio y volumen, ayudando a evaluar la presión del comprador y del vendedor en el mercado.
 
 Para utilizar el indicador, debe utilizar la clase [FiniteVolumeElement](xref:StockSharp.Algo.Indicators.FiniteVolumeElement).
 
 ## Descripción
 
-El Finite Volume Element (FVE) analiza la relación entre los cambios de precios y los volúmenes de negociación para determinar la fuerza potencial del movimiento de precios. Se basa en el supuesto de que los cambios de precios son más significativos cuando son confirmados por los volúmenes correspondientes.
+El elemento de volumen finito (FVE) analiza la relación entre los cambios de precios y los volúmenes de negociación para determinar la fuerza potencial del movimiento de precios. Se basa en el supuesto de que los cambios de precios son más significativos cuando son confirmados por los volúmenes correspondientes.
 
 El indicador FVE convierte el cambio de precio, ponderado por volumen, en un oscilador que ayuda a determinar el equilibrio relativo entre compradores y vendedores en el mercado. Los valores positivos de FVE indican predominio del comprador, mientras que los valores negativos indican predominio del vendedor.
 

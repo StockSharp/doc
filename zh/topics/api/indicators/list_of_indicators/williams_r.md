@@ -1,6 +1,6 @@
 # %R
 
-**Williams %R（%R，Williams—百分比范围）** 是一种动量指标，波动范围在 0 到 -100 之间，并显示超买和超卖水平。
+**威廉 %R（%R，Williams—百分比范围）** 是一种动量指标，波动范围在 0 到 -100 之间，并显示超买和超卖水平。
 
 要使用该指标，应使用 [WilliamsR](xref:StockSharp.Algo.Indicators.WilliamsR) 类。
 ##### 计算

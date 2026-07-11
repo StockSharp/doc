@@ -1,6 +1,6 @@
 # %R
 
-**Williams %R (%R, Williams Percent Range)** は、0 から -100 の間で変動し、買われ過ぎおよび売られ過ぎの水準を表示するモメンタムインジケーターです。
+**ウィリアムズ %R (%R, Williams Percent Range)** は、0 から -100 の間で変動し、買われ過ぎおよび売られ過ぎの水準を表示するモメンタムインジケーターです。
 
 このインジケーターを使用するには、[WilliamsR](xref:StockSharp.Algo.Indicators.WilliamsR) クラスを使用する必要があります。
 ##### 計算

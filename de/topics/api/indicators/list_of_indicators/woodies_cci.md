@@ -1,12 +1,12 @@
 # WCCI
 
-**Woodies CCI (WCCI)** ist eine Modifikation des Standard-Commodity-Channel-Index (CCI), entwickelt vom Trader Ken Wood (bekannt als "Woodies"). Diese CCI-Variante enthält zusätzliche Glättung und wird als Teil eines umfassenden Woodies-CCI-Handelssystems verwendet.
+**Woodies-CCI (WCCI)** ist eine Modifikation des Standard-Commodity-Channel-Index (CCI), entwickelt vom Trader Ken Wood (bekannt als "Woodies"). Diese CCI-Variante enthält zusätzliche Glättung und wird als Teil eines umfassenden Woodies-CCI-Handelssystems verwendet.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [WoodiesCCI](xref:StockSharp.Algo.Indicators.WoodiesCCI).
 
 ## Beschreibung
 
-Woodies CCI ist eine modifizierte Version des klassischen CCI-Indikators und enthält zwei Linien:
+Woodies-CCI ist eine modifizierte Version des klassischen CCI-Indikators und enthält zwei Linien:
 - Die Haupt-CCI-Linie mit einer gewählten Periode (typischerweise 14)
 - Eine geglättete CCI-Linie, die ein einfacher gleitender Durchschnitt der Haupt-CCI-Linie ist
 
@@ -27,7 +27,7 @@ Wichtige Signale im Woodies-CCI-System:
 
 ## Berechnung
 
-Woodies CCI wird in mehreren Schritten berechnet:
+Woodies-CCI wird in mehreren Schritten berechnet:
 
 1. Zuerst wird der Standard-CCI berechnet:
    ```
@@ -42,7 +42,7 @@ Woodies CCI wird in mehreren Schritten berechnet:
    Smooth CCI = SMA(CCI, SMALength)
    ```
 
-Woodies CCI verwendet die Kombination dieser beiden Linien, um Handelssignale zu erzeugen. Im klassischen Woodies-System bilden das Kreuzen dieser Linien, ihre Interaktion mit Schlüsselniveaus und verschiedene Muster die Grundlage für Handelsentscheidungen.
+Woodies-CCI verwendet die Kombination dieser beiden Linien, um Handelssignale zu erzeugen. Im klassischen Woodies-System bilden das Kreuzen dieser Linien, ihre Interaktion mit Schlüsselniveaus und verschiedene Muster die Grundlage für Handelsentscheidungen.
 
 ![IndicatorWoodiesCCI](../../../../images/indicator_woodies_cci.png)
 

@@ -1,6 +1,6 @@
 # %R
 
-**Williams %R (%R, Williams— Percent Range)** é um indicador de momentum que oscila entre 0 e -100 e apresenta níveis de sobrecompra e sobrevenda.
+**%R de Williams (%R, Williams— Percent Range)** é um indicador de momentum que oscila entre 0 e -100 e apresenta níveis de sobrecompra e sobrevenda.
 
 Para usar o indicador, deve ser usada a classe [WilliamsR](xref:StockSharp.Algo.Indicators.WilliamsR).
 ##### Cálculo

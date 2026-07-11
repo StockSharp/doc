@@ -1,12 +1,12 @@
 # LRSI
 
-**Laguerre RSI (LRSI)** ist ein technischer Indikator, der auf den mathematischen Prinzipien des Laguerre-Filters basiert und von John Ehlers als erweiterte Version des traditionellen Relative-Stärke-Index (RSI) entwickelt wurde.
+**Laguerre-RSI (LRSI)** ist ein technischer Indikator, der auf den mathematischen Prinzipien des Laguerre-Filters basiert und von John Ehlers als erweiterte Version des traditionellen Relative-Stärke-Index (RSI) entwickelt wurde.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [LaguerreRSI](xref:StockSharp.Algo.Indicators.LaguerreRSI) verwenden.
 
 ## Beschreibung
 
-Laguerre RSI (LRSI) ist ein innovativer Oszillator, der die Laguerre-Filter-Mathematik nutzt, um im Vergleich zum herkömmlichen RSI einen empfindlicheren und weniger nacheilenden Indikator zu erzeugen. John Ehlers hat diesen Indikator entwickelt, um das Signalverzögerungsproblem zu lösen, das vielen technischen Indikatoren innewohnt.
+Laguerre-RSI (LRSI) ist ein innovativer Oszillator, der die Laguerre-Filter-Mathematik nutzt, um im Vergleich zum herkömmlichen RSI einen empfindlicheren und weniger nacheilenden Indikator zu erzeugen. John Ehlers hat diesen Indikator entwickelt, um das Signalverzögerungsproblem zu lösen, das vielen technischen Indikatoren innewohnt.
 
 LRSI kombiniert Laguerre-Polynomprinzipien mit dem Relative-Stärke-Index-Konzept. Dadurch kann der Indikator schneller auf Trendänderungen reagieren und klarere Handelssignale bilden. Wie der herkömmliche RSI oszilliert der LRSI zwischen 0 und 1 (oder 0 bis 100 bei Multiplikation mit 100), weist jedoch eine weniger laute Struktur und deutlichere Kurven auf.
 
@@ -21,7 +21,7 @@ Der Parameter Gamma bestimmt den Grad der Filterung und beeinflusst die Empfindl
 
 ## Berechnung
 
-Die Laguerre RSI-Berechnung umfasst mehrere Schritte:
+Die Laguerre-RSI-Berechnung umfasst mehrere Schritte:
 
 1. Initialisieren Sie beim ersten Durchlauf vier Laguerre-Filterwerte (L0, L1, L2, L3):
    ```
@@ -65,7 +65,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Laguerre RSI wird ähnlich wie herkömmliches RSI interpretiert, jedoch mit erhöhter Empfindlichkeit:
+Laguerre-RSI wird ähnlich wie herkömmliches RSI interpretiert, jedoch mit erhöhter Empfindlichkeit:
 
 1. **Überkaufte und überverkaufte Niveaus**:
    - Werte über 0,8 (oder 80) gelten typischerweise als überkauft

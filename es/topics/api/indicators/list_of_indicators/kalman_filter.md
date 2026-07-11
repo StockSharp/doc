@@ -1,12 +1,12 @@
 # KalmanFilter
 
-**Kalman Filter** es un algoritmo recursivo que estima el estado subyacente de un sistema a partir de observaciones ruidosas.
+**filtro de Kalman** es un algoritmo recursivo que estima el estado subyacente de un sistema a partir de observaciones ruidosas.
 
 Para utilizar el indicador, debe utilizar la clase [KalmanFilter](xref:StockSharp.Algo.Indicators.KalmanFilter).
 
 ## Descripción
 
-El Kalman Filter aplica un ciclo de predicción-corrección para suavizar los datos de precios y reducir el ruido del mercado. Se adapta dinámicamente a medida que hay nueva información disponible, lo que lo hace útil para rastrear tendencias en mercados volátiles.
+El filtro de Kalman aplica un ciclo de predicción-corrección para suavizar los datos de precios y reducir el ruido del mercado. Se adapta dinámicamente a medida que hay nueva información disponible, lo que lo hace útil para rastrear tendencias en mercados volátiles.
 
 ## Parámetros
 

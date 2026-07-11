@@ -1,12 +1,12 @@
 # MP
 
-**Momentum Pinball (MP)** ist ein technischer Indikator, der die Preisdynamik und ihre Änderungen analysiert, um potenzielle Umkehrpunkte und Trendstärken auf dem Markt zu identifizieren.
+**Momentum-Pinball (MP)** ist ein technischer Indikator, der die Preisdynamik und ihre Änderungen analysiert, um potenzielle Umkehrpunkte und Trendstärken auf dem Markt zu identifizieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [MomentumPinball](xref:StockSharp.Algo.Indicators.MomentumPinball) verwenden.
 
 ## Beschreibung
 
-Der Momentum Pinball (MP)-Indikator ist ein spezieller Oszillator, der die Preisdynamik verfolgt und potenzielle Umkehrpunkte identifiziert. Der Name „Flipper“ spiegelt die Fähigkeit des Indikators wider, Momente zu erkennen, in denen der Preis, wie eine Kugel in einem Flipperautomaten, von extremen Positionen abprallt.
+Der Momentum-Pinball (MP)-Indikator ist ein spezieller Oszillator, der die Preisdynamik verfolgt und potenzielle Umkehrpunkte identifiziert. Der Name „Flipper“ spiegelt die Fähigkeit des Indikators wider, Momente zu erkennen, in denen der Preis, wie eine Kugel in einem Flipperautomaten, von extremen Positionen abprallt.
 
 MP analysiert die Beziehung zwischen der aktuellen Dynamik und ihren historischen Extremwerten und bestimmt, wann der Markt überkaufte oder überverkaufte Bedingungen erreicht. Der Indikator hilft auch dabei, Momente zu erkennen, in denen die Dynamik nachzulassen beginnt, was einer Trendumkehr vorausgehen kann.
 
@@ -19,7 +19,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Berechnung des Momentum Pinball-Indikators umfasst die folgenden Schritte:
+Die Berechnung des Momentum-Pinball-Indikators umfasst die folgenden Schritte:
 
 1. Berechnen Sie das Basismomentum als Differenz zwischen dem aktuellen Preis und dem Preis vor N Perioden:
    ```
@@ -56,7 +56,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Momentum Pinball-Indikator kann wie folgt interpretiert werden:
+Der Momentum-Pinball-Indikator kann wie folgt interpretiert werden:
 
 1. **Extremwerte**:
    - Werte über 0,8 weisen auf überkaufte Marktbedingungen hin

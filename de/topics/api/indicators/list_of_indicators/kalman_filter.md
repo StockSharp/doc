@@ -1,12 +1,12 @@
 # KalmanFilter
 
-**Kalman Filter** ist ein rekursiver Algorithmus, der den zugrunde liegenden Zustand eines Systems anhand verrauschter Beobachtungen schätzt.
+**Kalman-Filter** ist ein rekursiver Algorithmus, der den zugrunde liegenden Zustand eines Systems anhand verrauschter Beobachtungen schätzt.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [KalmanFilter](xref:StockSharp.Algo.Indicators.KalmanFilter) verwenden.
 
 ## Beschreibung
 
-Der Kalman Filter wendet einen Vorhersage-Korrektur-Zyklus an, um Preisdaten zu glätten und Marktstörungen zu reduzieren. Es passt sich dynamisch an, wenn neue Informationen verfügbar werden, was es nützlich macht, Trends in volatilen Märkten zu verfolgen.
+Der Kalman-Filter wendet einen Vorhersage-Korrektur-Zyklus an, um Preisdaten zu glätten und Marktstörungen zu reduzieren. Es passt sich dynamisch an, wenn neue Informationen verfügbar werden, was es nützlich macht, Trends in volatilen Märkten zu verfolgen.
 
 ## Parameter
 

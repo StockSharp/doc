@@ -1,6 +1,6 @@
 # %R
 
-**Williams %R (%R, Williams— Percent Range)** es un indicador de impulso que fluctúa entre 0 y -100 y muestra niveles de sobrecompra y sobreventa.
+**%R de Williams (%R, Williams— Percent Range)** es un indicador de impulso que fluctúa entre 0 y -100 y muestra niveles de sobrecompra y sobreventa.
 
 Para utilizar el indicador, se debe utilizar la clase [WilliamsR](xref:StockSharp.Algo.Indicators.WilliamsR).
 ##### Cálculo

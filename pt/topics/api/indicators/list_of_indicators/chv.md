@@ -1,11 +1,11 @@
 # CHV
 
-**Chaikin Volatility (CHV)** indica a diferença entre o máximo das compras e o mínimo das vendas durante um período de tempo. O indicador permite uma análise qualitativa das alterações de preço e da largura do intervalo entre o máximo e o mínimo do preço. O CHV não considera gaps de preço no seu cálculo, o que pode ser considerado uma desvantagem em certa medida.
+**volatilidade de Chaikin (CHV)** indica a diferença entre o máximo das compras e o mínimo das vendas durante um período de tempo. O indicador permite uma análise qualitativa das alterações de preço e da largura do intervalo entre o máximo e o mínimo do preço. O CHV não considera gaps de preço no seu cálculo, o que pode ser considerado uma desvantagem em certa medida.
 
 Para usar o indicador, deve ser usada a classe [ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility).
 ##### Cálculo
 
-O cálculo do indicador Chaikin Volatility começa com a determinação do spread - a diferença entre o máximo e o mínimo da barra atual. O resultado obtido é suavizado com uma média móvel exponencial ao longo do período correspondente. A volatilidade é calculada pela fórmula:
+O cálculo do indicador volatilidade de Chaikin começa com a determinação do spread - a diferença entre o máximo e o mínimo da barra atual. O resultado obtido é suavizado com uma média móvel exponencial ao longo do período correspondente. A volatilidade é calculada pela fórmula:
 
 CHV = (EMA(H-L(i), n) - EMA(H-L(i-n), n)) / EMA(H-L(i-n), n) x 100.
 

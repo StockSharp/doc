@@ -195,7 +195,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	/// <summary>
 	/// <see cref="AverageDirectionalIndex"/> erstellen.
 	/// </summary>
-	/// <param name="dx">Welles Wilders Directional Movement Index.</param>
+	/// <param name="dx">Welles Wilders Richtungsbewegungsindex.</param>
 	/// <param name="movingAverage">Gleitender Durchschnitt.</param>
 	public AverageDirectionalIndex(DirectionalIndex dx, LengthIndicator<decimal> movingAverage)
 	{
@@ -210,7 +210,7 @@ public class AverageDirectionalIndex : BaseComplexIndicator
 	}
 
 	/// <summary>
-	/// Welles Wilders Directional Movement Index.
+	/// Welles Wilders Richtungsbewegungsindex.
 	/// </summary>
 	[Browsable(false)]
 	public DirectionalIndex Dx { get; private set; }

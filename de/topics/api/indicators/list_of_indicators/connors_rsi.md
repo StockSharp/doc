@@ -1,14 +1,14 @@
 # CRSI
 
-**Connors RSI (CRSI)** ist ein umfassender technischer Indikator, der von Larry Connors entwickelt wurde und drei Komponenten kombiniert, um überkaufte und überverkaufte Marktbedingungen zu messen.
+**Connors-RSI (CRSI)** ist ein umfassender technischer Indikator, der von Larry Connors entwickelt wurde und drei Komponenten kombiniert, um überkaufte und überverkaufte Marktbedingungen zu messen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ConnorsRSI](xref:StockSharp.Algo.Indicators.ConnorsRSI) verwenden.
 
 ## Beschreibung
 
-Connors RSI ist eine erweiterte Version des traditionellen Relative-Stärke-Index (RSI), der zwei zusätzliche Komponenten hinzufügt, um genauere überkaufte und überverkaufte Signale zu liefern.
+Connors-RSI ist eine erweiterte Version des traditionellen Relative-Stärke-Index (RSI), der zwei zusätzliche Komponenten hinzufügt, um genauere überkaufte und überverkaufte Signale zu liefern.
 
-Im Gegensatz zum Standard-RSI, das nur Preisänderungen berücksichtigt, berücksichtigt Connors RSI auch den Streak (Reihe aufeinanderfolgender Preisbewegungen in eine Richtung) und die Änderungsrate (ROC), wodurch es empfindlicher auf kurzfristige Änderungen reagiert und extreme Marktbedingungen zuverlässiger erkennt.
+Im Gegensatz zum Standard-RSI, das nur Preisänderungen berücksichtigt, berücksichtigt Connors-RSI auch den Streak (Reihe aufeinanderfolgender Preisbewegungen in eine Richtung) und die Änderungsrate (ROC), wodurch es empfindlicher auf kurzfristige Änderungen reagiert und extreme Marktbedingungen zuverlässiger erkennt.
 
 CRSI ist besonders nützlich für:
 - Identifizierung kurzfristiger Ein- und Ausstiegsmöglichkeiten
@@ -25,7 +25,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Connors RSI-Berechnung umfasst drei Komponenten, die dann gemittelt werden, um den Endwert zu erhalten:
+Die Connors-RSI-Berechnung umfasst drei Komponenten, die dann gemittelt werden, um den Endwert zu erhalten:
 
 1. **Price RSI-Komponente** – Standard-RSI, berechnet über einen kurzen Zeitraum (normalerweise 3 Tage):
    ```
@@ -41,14 +41,14 @@ Die Connors RSI-Berechnung umfasst drei Komponenten, die dann gemittelt werden, 
    - Berechnen Sie den Perzentilrang des aktuellen ROC gegenüber dem ROCRSIPeriod
    - Skalieren Sie den Perzentilrang von 0 bis 100
 
-4. **Endgültiger Connors RSI-Wert**:
+4. **Endgültiger Connors-RSI-Wert**:
    ```
    CRSI = (RSI + StreakRSI + ROCRSI) / 3
    ```
 
 ## Interpretation
 
-Connors RSI oszilliert zwischen 0 und 100, ähnlich dem Standard-RSI:
+Connors-RSI oszilliert zwischen 0 und 100, ähnlich dem Standard-RSI:
 
 - **Extrem hohe Werte (über 90)** weisen auf stark überkaufte Bedingungen hin. Dies kann ein Signal zum Verkauf oder zum Eingehen einer Short-Position sein.
 
@@ -63,7 +63,7 @@ Connors RSI oszilliert zwischen 0 und 100, ähnlich dem Standard-RSI:
   - Bullische Divergenz: Der Preis bildet ein neues Tief, während CRSI ein höheres Tief bildet
   - Bärische Divergenz: Der Preis bildet ein neues Hoch, während CRSI ein niedrigeres Hoch bildet
 
-Connors RSI funktioniert am besten auf Charts mit Zeitrahmen von täglich bis wöchentlich und in Handelsstrategien, die sich an der Mean-Reversion orientieren.
+Connors-RSI funktioniert am besten auf Charts mit Zeitrahmen von täglich bis wöchentlich und in Handelsstrategien, die sich an der Mean-Reversion orientieren.
 
 ![indicator_connors_rsi](../../../../images/indicator_connors_rsi.png)
 

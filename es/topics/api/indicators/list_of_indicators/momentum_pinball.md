@@ -1,12 +1,12 @@
 # MP
 
-**Momentum Pinball (MP)** es un indicador técnico que analiza el impulso del precio y sus cambios para identificar posibles puntos de reversión y la fuerza de la tendencia en el mercado.
+**pinball de impulso (MP)** es un indicador técnico que analiza el impulso del precio y sus cambios para identificar posibles puntos de reversión y la fuerza de la tendencia en el mercado.
 
 Para utilizar el indicador, debe utilizar la clase [MomentumPinball](xref:StockSharp.Algo.Indicators.MomentumPinball).
 
 ## Descripción
 
-El indicador Momentum Pinball (MP) es un oscilador especializado diseñado para rastrear el impulso del precio e identificar posibles puntos de reversión. El nombre "pinball" refleja la capacidad del indicador para identificar momentos en los que el precio, como una bola en una máquina de pinball, rebota en posiciones extremas.
+El indicador pinball de impulso (MP) es un oscilador especializado diseñado para rastrear el impulso del precio e identificar posibles puntos de reversión. El nombre "pinball" refleja la capacidad del indicador para identificar momentos en los que el precio, como una bola en una máquina de pinball, rebota en posiciones extremas.
 
 MP analiza la relación entre el impulso actual y sus extremos históricos, determinando cuándo el mercado alcanza condiciones de sobrecompra o sobreventa. El indicador también ayuda a identificar momentos en los que el impulso comienza a debilitarse, lo que puede preceder a un cambio de tendencia.
 
@@ -56,7 +56,7 @@ donde:
 
 ## Interpretación
 
-El indicador Momentum Pinball se puede interpretar de la siguiente manera:
+El indicador pinball de impulso se puede interpretar de la siguiente manera:
 
 1. **Niveles extremos**:
    - Los valores superiores a 0,8 indican condiciones de sobrecompra en el mercado.

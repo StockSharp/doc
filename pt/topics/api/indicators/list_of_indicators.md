@@ -75,7 +75,7 @@
 - [KPO](list_of_indicators/kase_peak_oscillator.md) - indicador KPO, identifica potenciais pontos de reversão
 - [KER](list_of_indicators/kaufman_efficiency_ratio.md) - indicador KER, mede a eficiência do movimento do preço
 - [KAMA](list_of_indicators/kama.md) - indicador KAMA, adapta-se à volatilidade do mercado
-- [Kalman Filter](list_of_indicators/kalman_filter.md) - filtro adaptativo para acompanhar tendências em dados ruidosos
+- [filtro de Kalman](list_of_indicators/kalman_filter.md) - filtro adaptativo para acompanhar tendências em dados ruidosos
 - [KC](list_of_indicators/keltner_channels.md) - indicador KC, define intervalos de negociação com base na volatilidade
 - [KVO](list_of_indicators/klinger_volume_oscillator.md) - indicador KVO, mede tendências de volume
 - [KST](list_of_indicators/kst.md) - indicador KST, um oscilador de momentum
@@ -100,7 +100,7 @@
 - [MFI](list_of_indicators/money_flow_index.md) - indicador MFI, mede a pressão de compra e venda com base no preço e no volume
 - [MACD](list_of_indicators/macd.md) - indicador MACD, identifica alterações de tendência
 - [Histograma MACD](list_of_indicators/macd_histogram.md) - indicador Histograma MACD, visualiza a diferença entre MACD e linha de sinal
-- [MACD Signal](list_of_indicators/macd_with_signal_line.md) - indicador MACD Signal, fornece sinais de compra e venda
+- [sinal MACD](list_of_indicators/macd_with_signal_line.md) - indicador sinal MACD, fornece sinais de compra e venda
 - [MAC](list_of_indicators/moving_average_crossover.md) - indicador MAC, identifica reversões de tendência usando duas médias móveis
 - [MAR](list_of_indicators/moving_average_ribbon.md) - indicador MAR, usa várias médias móveis para visualizar tendências
 - [NVI](list_of_indicators/negative_volume_index.md) - indicador NVI, acompanha movimentos de preço em dias com volume decrescente
@@ -167,7 +167,7 @@
 - [%R](list_of_indicators/williams_r.md) - indicador %R, identifica condições de sobrecompra e sobrevenda
 - [WCCI](list_of_indicators/woodies_cci.md) - indicador WCCI, uma variação do CCI para identificação de tendências
 - [ZLEMA](list_of_indicators/zero_lag_exponential_moving_average.md) - indicador ZLEMA, reduz o atraso nos cálculos de EMA
-- [Zig Zag](list_of_indicators/zigzag.md) - indicador Zig Zag, filtra pequenos movimentos de preço para mostrar tendências significativas
+- [zigue-zague](list_of_indicators/zigzag.md) - indicador zigue-zague, filtra pequenos movimentos de preço para mostrar tendências significativas
 
 ## Notas
 

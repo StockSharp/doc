@@ -1,3 +1,3 @@
-# Pass-Through
+# transferencia directa
 
-El indicador **Pass-Through** no tiene lógica y se utiliza únicamente para pasar datos al gráfico, por ejemplo, para dibujar líneas.
+El indicador **transferencia directa** no tiene lógica y se utiliza únicamente para pasar datos al gráfico, por ejemplo, para dibujar líneas.
