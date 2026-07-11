@@ -1983,6 +1983,38 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedConnectorDocsDoNotKeepEnglishApiGuiSettingsLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"!\[API GUI Settings\b|^# .*?\b(?:Market data|Transactions)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var connectorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "connectors");
+
+			if (!Directory.Exists(connectorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(connectorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: connector documentation keeps English API GUI settings label '{match.Value}'. Localize image alt text and visible headings.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownLinkLabelsAreTranslatedFromDefaultLanguage()
 	{
 		var errors = new List<string>();

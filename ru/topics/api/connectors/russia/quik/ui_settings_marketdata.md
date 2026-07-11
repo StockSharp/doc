@@ -1,8 +1,8 @@
-# Графическое конфигурирование Quik LUA  Market data
+# Графическое конфигурирование Quik LUA: рыночные данные
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Quik LUA  Market data](../../../../../images/api_gui_settings_quik_lua_marketdata.png)
+![Настройки API GUI Quik LUA: рыночные данные](../../../../../images/api_gui_settings_quik_lua_marketdata.png)
 
 - **Адрес** \- Адрес.
 - **Диалект** \- Диалект FIX протокола.

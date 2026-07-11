@@ -2,7 +2,7 @@
 
 Для всех продуктов StockSharp графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Alor](../../../../../images/api_gui_settings_alor.png)
+![Настройки API GUI Alor](../../../../../images/api_gui_settings_alor.png)
 
 - **Токен** - Refresh токен.
 - **Демо** - Демо торги.

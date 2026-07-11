@@ -1,8 +1,8 @@
-# Графическое конфигурирование Quik LUA Transactions
+# Графическое конфигурирование Quik LUA: транзакции
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings Quik LUA Transactions](../../../../../images/api_gui_settings_quik_lua_transactions.png)
+![Настройки API GUI Quik LUA: транзакции](../../../../../images/api_gui_settings_quik_lua_transactions.png)
 
 - **Адрес** \- Адрес.
 - **Диалект** \- Диалект FIX протокола.

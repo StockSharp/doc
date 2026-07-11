@@ -2,7 +2,7 @@
 
 Для всех продуктов [S\#](../../../../api.md) графическая настройка подключения выполняется в экранной форме [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md):
 
-![API GUI Settings SPB Exchange](../../../../../images/api_gui_settings_spb_exchange.png)
+![Настройки API GUI SPB Exchange](../../../../../images/api_gui_settings_spb_exchange.png)
 
 - **Конфигурация** \- Конфигурация сервера.
 - **Логин** \- Логин.
