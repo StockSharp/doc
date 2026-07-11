@@ -30,8 +30,8 @@
    - 对于 {LastTradeTime} 字段，在 **S# 字段** 窗口中选择 **最新成交时间**，并将其序号设为 8。
    - 对于 {LastTradePrice} 字段，在 **S# 字段** 窗口中选择 **最新成交价**，并将其序号设为 9。
    - 对于 {LastTradeVolume} 字段，在 **S# 字段** 窗口中选择 **最新成交量**，并将其序号设为 10。
-   - 字段设置窗口将如下所示：![hydra import 一级 属性](../../../images/hydra_import_prop_level1.png)
+   - 字段设置窗口将如下所示：![Hydra 导入 一级 属性](../../../images/hydra_import_prop_level1.png)
 
    用户可以为导入的数据配置大量属性。需要根据导入文件模板指定属性，并为其分配对应的排列序号。
-3. 要预览数据，请单击 **预览** 按钮。![hydra import 一级 预览](../../../images/hydra_import_preview_level1.png)
+3. 要预览数据，请单击 **预览** 按钮。![Hydra 导入 一级 预览](../../../images/hydra_import_preview_level1.png)
 4. 单击 **导入** 按钮。

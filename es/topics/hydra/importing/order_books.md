@@ -26,8 +26,8 @@ Para importar libros de órdenes, seleccione **Importar \=\> Libros de órdenes*
    - Para el campo {Quote.Price}, seleccione el campo **Precio** en la ventana **campo S#**: precio de la cotización. Asígnele el valor 4.
    - Para el campo {Quote.Volume}, seleccione el campo **Volumen** en la ventana **campo S#**: volumen de la cotización. Asígnele el valor 5.
    - Para el campo {Side}, seleccione el campo **Dirección** en la ventana **campo S#**: dirección de la operación (compra o venta). Asígnele el valor 6.
-   - La ventana de configuración de campos tendrá este aspecto:![hydra import propiedades de profundidad](../../../images/hydra_import_prop_depth.png)
+   - La ventana de configuración de campos tendrá este aspecto:![Hydra propiedades de importación de profundidad](../../../images/hydra_import_prop_depth.png)
 
    El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.
-3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![hydra import vista previa de profundidad](../../../images/hydra_import_preview_depth.png)
+3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![Hydra vista previa de importación de profundidad](../../../images/hydra_import_preview_depth.png)
 4. Haga clic en el botón **Importar**.

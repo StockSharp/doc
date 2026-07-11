@@ -27,8 +27,8 @@
    - 对于 {TradePrice} 字段，在 **S# 字段** 窗口中选择表示成交价格的 **价格**，并将其序号设为 5。
    - 对于 {TradeVolume} 字段，在 **S# 字段** 窗口中选择表示成交量的 **数量**，并将其序号设为 6。
    - 对于 {OriginSide} 字段，在 **S# 字段** 窗口中选择表示成交发起方（卖方或买方）的 **发起方**，并将其序号设为 7。
-   - 字段设置窗口将如下所示：![hydra import 成交属性](../../../images/hydra_import_prop_trade.png)
+   - 字段设置窗口将如下所示：![Hydra 导入 成交属性](../../../images/hydra_import_prop_trade.png)
 
    用户可以为导入的数据配置大量属性。需要根据导入文件模板指定属性，并为其分配对应的排列序号。
-3. 要预览数据，请单击 **预览** 按钮。![hydra import 成交预览](../../../images/hydra_import_preview_trade.png)
+3. 要预览数据，请单击 **预览** 按钮。![Hydra 导入 成交预览](../../../images/hydra_import_preview_trade.png)
 4. 单击 **导入** 按钮。

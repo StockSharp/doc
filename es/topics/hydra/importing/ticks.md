@@ -2,7 +2,7 @@
 
 Para importar operaciones, seleccione la pestaña **Importar \=\> Ticks**.
 
-![hydra importar operaciones](../../../images/hydra_import_trades.png)
+![Hydra importación de operaciones](../../../images/hydra_import_trades.png)
 
 ## Proceso de importación.
 
@@ -27,8 +27,8 @@ Para importar operaciones, seleccione la pestaña **Importar \=\> Ticks**.
    - Para el campo {TradePrice}, seleccione el campo **Precio** en la ventana **campo S#**: precio de la operación. Asígnele el valor 5.
    - Para el campo {TradeVolume}, seleccione el campo **Volumen** en la ventana **campo S#**: volumen de la operación. Asígnele el valor 6.
    - Para el campo {OriginSide}, seleccione el campo **Iniciador** en la ventana **campo S#**: iniciador de la operación (vendedor o comprador). Asígnele el valor 7.
-   - La ventana de configuración de campos tendrá este aspecto:![hydra import propiedades de operación](../../../images/hydra_import_prop_trade.png)
+   - La ventana de configuración de campos tendrá este aspecto:![Hydra propiedades de importación de operaciones](../../../images/hydra_import_prop_trade.png)
 
    El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.
-3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![hydra import vista previa de operación](../../../images/hydra_import_preview_trade.png)
+3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![Hydra vista previa de importación de operaciones](../../../images/hydra_import_preview_trade.png)
 4. Haga clic en el botón **Importar**.
