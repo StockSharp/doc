@@ -17,7 +17,7 @@ Der Hauptvorteil von LRSI ist seine Fähigkeit, Trendänderungen schnell zu erke
 Der Indikator hat die folgenden Parameter:
 - **Gamma** – Filterkoeffizient (Standardwert: 0,4, Bereich von 0,1 bis 0,9)
 
-Der Parameter Gamma bestimmt den Grad der Filterung und beeinflusst die Empfindlichkeit des Indikators. Lower Gamma-Werte führen zu einem glatteren und weniger empfindlichen Indikator, während höhere Werte den Indikator empfindlicher gegenüber Preisänderungen, aber möglicherweise auch lauter machen.
+Der Parameter Gamma bestimmt den Grad der Filterung und beeinflusst die Empfindlichkeit des Indikators. Niedrigere Gamma-Werte führen zu einem glatteren und weniger empfindlichen Indikator, während höhere Werte den Indikator empfindlicher gegenüber Preisänderungen, aber möglicherweise auch lauter machen.
 
 ## Berechnung
 

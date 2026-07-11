@@ -27,7 +27,7 @@ Der Indikator hat die folgenden Parameter:
 Die Berechnung von Bollinger-Prozent B basiert auf der Formel:
 
 ```
-BBP = (Price - Lower Bollinger-Band) / (Upper Bollinger-Band - Lower Bollinger-Band)
+BBP = (Price - unteres Bollinger-Band) / (oberes Bollinger-Band - unteres Bollinger-Band)
 ```
 
 Wobei:

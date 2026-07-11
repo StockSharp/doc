@@ -76,9 +76,9 @@ Os canais de Keltner podem ser interpretados da seguinte forma:
    - A expansão do canal indica aumento da volatilidade
 
 6. **Estratégias de Negociação**:
-   - Estratégia "Edge to Middle": abrir uma posição quando o preço toca a banda superior ou inferior, tendo como alvo a linha média
+   - Estratégia "Da borda ao centro": abrir uma posição quando o preço toca a banda superior ou inferior, tendo como alvo a linha média
    - Estratégia de rompimento: abrir uma posição quando o preço rompe a banda superior ou inferior, esperando continuação do movimento na mesma direcção
-   - Estratégia "Middle to Edge": abrir uma posição quando o preço ressalta da linha média, tendo como alvo a banda superior ou inferior
+   - Estratégia "Do centro à borda": abrir uma posição quando o preço ressalta da linha média, tendo como alvo a banda superior ou inferior
 
 ![indicator_keltner_channels](../../../../images/indicator_keltner_channels.png)
 

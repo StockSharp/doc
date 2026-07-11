@@ -31,13 +31,13 @@ Die APZ-Berechnung basiert auf dem exponentiellen gleitenden Durchschnitt (EMA) 
 
 2. Danach wird die Volatilität mit ATR berechnet:
    ```
-   Volatility = exponentieller gleitender Durchschnitt des ATR über Period
+   Volatilität = exponentieller gleitender Durchschnitt des ATR über Period
    ```
 
 3. Die oberen und unteren APZ-Linien werden wie folgt berechnet:
    ```
-   Upper Line = EMA + (Volatility * BandPercentage)
-   Lower Line = EMA - (Volatility * BandPercentage)
+   obere Linie = EMA + (Volatilität * BandPercentage)
+   untere Linie = EMA - (Volatilität * BandPercentage)
    ```
 
 Wenn der Preis über der oberen APZ-Linie liegt, kann dies als Aufwärtstrend betrachtet werden. Wenn der Preis unter der unteren APZ-Linie liegt, kann dies auf einen Abwärtstrend hindeuten. Wenn sich der Preis innerhalb der APZ-Zone bewegt, kann sich der Markt in einer Konsolidierungs- oder Seitwärtsphase befinden.

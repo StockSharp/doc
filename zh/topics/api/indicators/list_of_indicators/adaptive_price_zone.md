@@ -31,13 +31,13 @@ APZ 计算基于指数移动平均线（EMA）和平均真实波幅（ATR）：
 
 2. 然后使用 ATR 计算波动性：
    ```
-   Volatility = Period 内 ATR 的指数移动平均
+   波动率 = Period 内 ATR 的指数移动平均
    ```
 
 3. 上下 APZ 线的计算如下：
    ```
-   Upper Line = EMA + (Volatility * BandPercentage)
-   Lower Line = EMA - (Volatility * BandPercentage)
+   上轨 = EMA + (波动率 * BandPercentage)
+   下轨 = EMA - (波动率 * BandPercentage)
    ```
 
 当价格位于上方APZ线之上时，这可以被视为上升趋势。当价格位于下方APZ线之下时，这可能表示下降趋势。当价格在APZ区域内波动时，市场可能处于盘整或横向运动阶段。

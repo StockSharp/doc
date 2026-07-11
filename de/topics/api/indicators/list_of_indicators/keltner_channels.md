@@ -8,8 +8,8 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [KeltnerChannels](
 
 Keltner-Kanäle besteht aus drei Zeilen:
 1. **Mittellinie**: typischerweise dargestellt durch einen 20-Perioden-EMA
-2. **Upper-Band**: Mittellinie plus ein Multiplikator von ATR
-3. **Lower-Band**: Mittellinie minus dem gleichen ATR-Multiplikator
+2. **Oberes Band**: Mittellinie plus ein Multiplikator von ATR
+3. **Unteres Band**: Mittellinie minus dem gleichen ATR-Multiplikator
 
 Der Indikator wurde in den 1960er Jahren von Chester Keltner entwickelt und später von Linda Raschke modifiziert, die den einfachen gleitenden Durchschnitt (SMA) durch einen exponentiellen gleitenden Durchschnitt (EMA) ersetzte und begann, ATR anstelle des Bereichs Hoch-Tief zur Berechnung der Kanalbreite zu verwenden.
 
@@ -62,7 +62,7 @@ Keltner-Kanäle kann wie folgt interpretiert werden:
    - Wenn Price unter das untere Band fällt, kann dies auf eine starke Abwärtsdynamik hinweisen
    - Ausbrüche werden häufig als Einstiegssignale in Richtung des Ausbruchs verwendet
 
-3. **Rückkehr zur Middle-Zeile**:
+3. **Rückkehr zur Mittellinie**:
    - Nach dem Durchbrechen des oberen oder unteren Bandes kehrt der Preis häufig zur Mittellinie zurück
    - Die Mittellinie kann als Unterstützungs- oder Widerstandsniveau dienen
 
@@ -76,9 +76,9 @@ Keltner-Kanäle kann wie folgt interpretiert werden:
    - Die Kanalausweitung weist auf eine erhöhte Volatilität hin
 
 6. **Handelsstrategien**:
-   - „Edge to Middle“-Strategie: Eröffnen einer Position, wenn der Preis das obere oder untere Band berührt, wobei die Mittellinie angestrebt wird
+   - „Vom Rand zur Mitte“-Strategie: Eröffnen einer Position, wenn der Preis das obere oder untere Band berührt, wobei die Mittellinie angestrebt wird
    - Ausbruchsstrategie: Eröffnen einer Position, wenn der Preis das obere oder untere Band durchbricht, in Erwartung einer weiteren Bewegung in die gleiche Richtung
-   - „Middle to Edge“-Strategie: Eröffnen einer Position, wenn der Preis von der Mittellinie abprallt, wobei das obere oder untere Band angestrebt wird
+   - „Von der Mitte zum Rand“-Strategie: Eröffnen einer Position, wenn der Preis von der Mittellinie abprallt, wobei das obere oder untere Band angestrebt wird
 
 ![indicator_keltner_channels](../../../../images/indicator_keltner_channels.png)
 

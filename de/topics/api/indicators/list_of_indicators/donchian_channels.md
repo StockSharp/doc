@@ -6,10 +6,10 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [DonchianChannels]
 
 ## Beschreibung
 
-Donchian-Kanäle ist ein einfacher, aber effektiver Volatilitäts- und Trendindikator. Der Indikator besteht aus drei Zeilen:
-- Upper-Linie: höchstes Hoch im ausgewählten Zeitraum
-- Lower-Linie: niedrigstes Tief im ausgewählten Zeitraum
-- Middle-Linie: Durchschnittswert zwischen der oberen und unteren Linie
+Donchian-Kanäle ist ein einfacher, aber effektiver Volatilitäts- und Trendindikator. Der Indikator besteht aus drei Linien:
+- obere Linie: höchstes Hoch im ausgewählten Zeitraum
+- untere Linie: niedrigstes Tief im ausgewählten Zeitraum
+- mittlere Linie: Durchschnittswert zwischen der oberen und unteren Linie
 
 Dieser Indikator wurde erstmals von Richard Donchian in seiner 4-Wochen-Kanalregel verwendet, wonach ein Kaufsignal auftritt, wenn der Preis das höchste Hoch von 4 Wochen überschreitet, und ein Verkaufssignal, wenn der Preis unter das niedrigste Tief von 4 Wochen fällt.
 
@@ -28,19 +28,19 @@ Der Indikator hat die folgenden Parameter:
 
 Die Donchian-Kanäle-Berechnung ist ganz einfach:
 
-1. Upper-Kanalleitung:
+1. Obere Kanallinie:
    ```
-   Upper = höchstes Hoch über Length-Periode
-   ```
-
-2. Lower-Kanalleitung:
-   ```
-   Lower = tiefstes Tief über Length-Periode
+   obere Linie = höchstes Hoch über Length-Periode
    ```
 
-3. Middle-Kanalleitung:
+2. Untere Kanallinie:
    ```
-   Middle = (Upper + Lower) / 2
+   untere Linie = tiefstes Tief über Length-Periode
+   ```
+
+3. Mittlere Kanallinie:
+   ```
+   mittlere Linie = (obere Linie + untere Linie) / 2
    ```
 
 ## Interpretation

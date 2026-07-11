@@ -27,7 +27,7 @@ El indicador tiene los siguientes parámetros:
 El cálculo del porcentaje B Bollinger se basa en la fórmula:
 
 ```
-BBP = (Price - Lower banda de Bollinger) / (Upper banda de Bollinger - Lower banda de Bollinger)
+BBP = (Price - banda inferior de Bollinger) / (banda superior de Bollinger - banda inferior de Bollinger)
 ```
 
 donde:

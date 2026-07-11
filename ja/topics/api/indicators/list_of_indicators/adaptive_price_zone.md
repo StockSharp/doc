@@ -31,13 +31,13 @@ APZ の計算は指数移動平均 (EMA) と平均真の値幅 (ATR) に基づ�
 
 2. 次に、ATR を使用してボラティリティを計算します。
    ```
-   Volatility = Period における ATR の指数移動平均
+   ボラティリティ = Period における ATR の指数移動平均
    ```
 
 3. 上側および下側の APZ ラインは次のように計算されます。
    ```
-   Upper Line = EMA + (Volatility * BandPercentage)
-   Lower Line = EMA - (Volatility * BandPercentage)
+   上側ライン = EMA + (ボラティリティ * BandPercentage)
+   下側ライン = EMA - (ボラティリティ * BandPercentage)
    ```
 
 価格が上側 APZ ラインを上回っている場合、これは上昇トレンドと見なせます。価格が下側 APZ ラインを下回っている場合、下降トレンドを示している可能性があります。価格が APZ ゾーン内で推移している場合、市場は保ち合いまたは横ばいの局面にある可能性があります。

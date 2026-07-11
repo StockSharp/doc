@@ -33,13 +33,13 @@ O cálculo do APZ baseia-se na média móvel exponencial (EMA) e no intervalo ve
 
 2. Depois calcule a volatilidade usando ATR:
    ```
-   Volatility = média móvel exponencial do ATR durante Period
+   Volatilidade = média móvel exponencial do ATR durante Period
    ```
 
 3. As linhas superior e inferior do APZ são calculadas da seguinte forma:
    ```
-   Upper Line = EMA + (Volatility * BandPercentage)
-   Lower Line = EMA - (Volatility * BandPercentage)
+   linha superior = EMA + (Volatilidade * BandPercentage)
+   linha inferior = EMA - (Volatilidade * BandPercentage)
    ```
 
 Quando o preço está acima da linha superior do APZ, isto pode ser considerado uma tendência ascendente. Quando o preço está abaixo da linha inferior do APZ, isto pode indicar uma tendência descendente. Quando o preço se move dentro da zona APZ, o mercado pode estar numa fase de consolidação ou movimento lateral.
