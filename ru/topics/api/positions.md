@@ -97,7 +97,7 @@ var tracker = new PositionLifecycleTracker();
 
 tracker.RoundTripClosed += report =>
 {
-    Console.WriteLine($"Round-trip завершён:");
+    Console.WriteLine($"Раунд-трип завершён:");
     Console.WriteLine($"  Открытие: {report.OpenTime}");
     Console.WriteLine($"  Закрытие: {report.CloseTime}");
 };

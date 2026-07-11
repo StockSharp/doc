@@ -78,7 +78,7 @@ state.Clear();
 
 ### 主な特徴
 
-- **History**: `History` プロパティ（`IReadOnlyList<ReportPosition>`）には、完了したすべての往復ポジションが含まれます。
+- **履歴**: `History` プロパティ（`IReadOnlyList<ReportPosition>`）には、完了したすべての往復ポジションが含まれます。
 - **`RoundTripClosed` イベント**: ポジションがクローズされた（値がゼロに達した）場合、または反転した（ポジションの符号が変化した）場合に発生します。
 - **`ProcessPosition` メソッド**: [Position](xref:StockSharp.BusinessEntities.Position) オブジェクトを受け取り、内部状態を更新します。
 

@@ -78,7 +78,7 @@ Die Klasse [PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLif
 
 ### Hauptmerkmale
 
-- **History**: Die Eigenschaft `History` (`IReadOnlyList<ReportPosition>`) enthält alle abgeschlossenen Round-Trip-Positionen.
+- **Historie**: Die Eigenschaft `History` (`IReadOnlyList<ReportPosition>`) enthält alle abgeschlossenen Round-Trip-Positionen.
 - **Ereignis `RoundTripClosed`**: Wird ausgelöst, wenn eine Position geschlossen wird (Wert erreicht null) oder umgekehrt wird (Positionsvorzeichen ändert sich).
 - **Methode `ProcessPosition`**: Akzeptiert ein Objekt [Position](xref:StockSharp.BusinessEntities.Position) und aktualisiert den internen Zustand.
 
