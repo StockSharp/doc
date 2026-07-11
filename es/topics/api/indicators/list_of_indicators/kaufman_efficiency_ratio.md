@@ -25,17 +25,17 @@ El cálculo de ratio de eficiencia de Kaufman implica los siguientes pasos:
 
 1. Calcule el movimiento direccional (cambio neto) durante el período:
    ```
-   Direction = |Price[current] - Price[current - Length]|
+   Dirección = |Price[current] - Price[current - Length]|
    ```
 
 2. Calcule el movimiento total (suma de todos los cambios) durante el período:
    ```
-   Volatility = Sum(|Price[i] - Price[i-1]|) para i desde (current - Length + 1) hasta current
+   Volatilidad = Sum(|Price[i] - Price[i-1]|) para i desde (current - Length + 1) hasta current
    ```
 
 3. Calcular el ratio de eficiencia:
    ```
-   KER = Direction / Volatility
+   KER = Dirección / Volatilidad
    ```
 
 donde:

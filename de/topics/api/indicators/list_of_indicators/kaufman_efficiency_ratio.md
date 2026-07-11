@@ -25,17 +25,17 @@ Die Kaufman-Effizienzverhältnis-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Richtungsbewegung (Nettoveränderung) über den Zeitraum:
    ```
-   Direction = |Price[current] - Price[current - Length]|
+   Richtung = |Price[current] - Price[current - Length]|
    ```
 
 2. Berechnen Sie die Gesamtbewegung (Summe aller Änderungen) über den Zeitraum:
    ```
-   Volatility = Sum(|Price[i] - Price[i-1]|) für i von (current - Length + 1) bis current
+   Volatilität = Sum(|Price[i] - Price[i-1]|) für i von (current - Length + 1) bis current
    ```
 
 3. Wirkungsgradverhältnis berechnen:
    ```
-   KER = Direction / Volatility
+   KER = Richtung / Volatilität
    ```
 
 Dabei gilt:

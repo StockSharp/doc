@@ -25,17 +25,17 @@ KER 值在 0 和 1 之间波动：
 
 1. 计算期间的方向性移动（净变化）:
    ```
-   Direction = |Price[current] - Price[current - Length]|
+   方向 = |Price[current] - Price[current - Length]|
    ```
 
 2. 计算期间的总移动量（所有变化的总和）：
    ```
-   Volatility = Sum(|Price[i] - Price[i-1]|) i 从 (current - Length + 1) 到 current
+   波动率 = Sum(|Price[i] - Price[i-1]|) i 从 (current - Length + 1) 到 current
    ```
 
 3. 计算效率比率：
    ```
-   KER = Direction / Volatility
+   KER = 方向 / 波动率
    ```
 
 其中：

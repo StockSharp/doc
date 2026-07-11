@@ -48,7 +48,7 @@ La interpretación del indicador Fase lunar puede variar, ya que es una herramie
    - Existe la teoría de que las fases lunares pueden influir en la psicología de masas y, en consecuencia, en el sentimiento del mercado.
    - Algunos estudios sugieren que el período de luna llena puede conducir a un comportamiento comercial más emocional e irracional.
 
-3. **Volatility Correlation**:
+3. **Correlación con la volatilidad**:
    - Algunos estudios muestran que la volatilidad puede ser mayor durante los períodos de luna llena y luna nueva
    - Esto se puede utilizar al ajustar los parámetros de otros indicadores y estrategias.
 

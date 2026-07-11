@@ -2443,6 +2443,36 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishDirectionVolatilityLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(
+			@"\b(?:Direction|Volatility)\s*=|/\s*Volatility\b|\bVolatility\b(?=[^\r\n]*(?:zero|нул|ゼロ))|\bVolatility\s+(?:Changes|Measurement|Correlation)\b",
+			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English direction or volatility label '{match.Value}'. Localize visible formula labels and section headings.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepKnownEnglishLongIndicatorNames()
 	{
 		var errors = new List<string>();

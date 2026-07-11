@@ -79,7 +79,7 @@ ll Índice de masa se interpreta de la siguiente manera:
    - ll índice de masa funciona mejor cuando se combina con indicadores de dirección de tendencia
    - Las combinaciones populares incluyen lMA, MACD o RSI para determinar la posible dirección de inversión.
 
-6. **Volatility Changes**:
+6. **Cambios de volatilidad**:
    - Un fuerte aumento del índice de masa indica una expansión significativa del rango de precios, que puede preceder a un fuerte movimiento
    - La caída gradual del índice sugiere un estrechamiento del rango y una posible consolidación
 

@@ -34,13 +34,13 @@ El cálculo de oscilador Kase Peak implica varios pasos:
 
 3. Calcule la volatilidad actual:
    ```
-   Volatility = ATR(ShortPeriod)
+   Volatilidad = ATR(ShortPeriod)
    ```
 
 4. Normalizar el impulso en relación con la volatilidad:
    ```
-   momentum corto normalizado = momentum corto / Volatility
-   momentum largo normalizado = momentum largo / Volatility
+   momentum corto normalizado = momentum corto / Volatilidad
+   momentum largo normalizado = momentum largo / Volatilidad
    ```
 
 5. Cálculo final de KPO:

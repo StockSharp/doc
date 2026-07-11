@@ -25,17 +25,17 @@ O cálculo do rácio de eficiência de Kaufman envolve os seguintes passos:
 
 1. Calcular o movimento direccional (variação líquida) durante o período:
    ```
-   Direction = |Price[current] - Price[current - Length]|
+   Direção = |Price[current] - Price[current - Length]|
    ```
 
 2. Calcular o movimento total (soma de todas as variações) durante o período:
    ```
-   Volatility = Sum(|Price[i] - Price[i-1]|) para i de (current - Length + 1) até current
+   Volatilidade = Sum(|Price[i] - Price[i-1]|) para i de (current - Length + 1) até current
    ```
 
 3. Calcular o rácio de eficiência:
    ```
-   KER = Direction / Volatility
+   KER = Direção / Volatilidade
    ```
 
 Onde:
@@ -43,7 +43,7 @@ Onde:
 - Length - período de cálculo
 - | | - denota valor absoluto
 
-Se Volatility for zero (o que é improvável), o KER é definido como zero para evitar divisão por zero.
+Se Volatilidade for zero (o que é improvável), o KER é definido como zero para evitar divisão por zero.
 
 ## Interpretação
 

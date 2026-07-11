@@ -34,13 +34,13 @@ KPO は、価格変動のモメンタムが尽き始めると市場のピーク�
 
 3. 現在のボラティリティを計算します。
    ```
-   Volatility = ATR(ShortPeriod)
+   ボラティリティ = ATR(ShortPeriod)
    ```
 
 4. ボラティリティに対してモメンタムを正規化します。
    ```
-   正規化短期モメンタム = 短期モメンタム / Volatility
-   正規化長期モメンタム = 長期モメンタム / Volatility
+   正規化短期モメンタム = 短期モメンタム / ボラティリティ
+   正規化長期モメンタム = 長期モメンタム / ボラティリティ
    ```
 
 5. 最終的な KPO を計算します。
@@ -91,4 +91,3 @@ KPO は、価格変動のモメンタムが尽き始めると市場のピーク�
 [MACD](macd.md)
 [PrettyGoodOscillator](pretty_good_oscillator.md)
 [ATR](atr.md)
-

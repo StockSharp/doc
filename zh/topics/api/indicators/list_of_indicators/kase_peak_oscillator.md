@@ -34,13 +34,13 @@ Kase 峰值振荡器的计算涉及几个步骤：
 
 3. 计算当前波动率：
    ```
-   Volatility = ATR(ShortPeriod)
+   波动率 = ATR(ShortPeriod)
    ```
 
 4. 将动量标准化相对于波动性：
    ```
-   归一化短期动量 = 短期动量 / Volatility
-   归一化长期动量 = 长期动量 / Volatility
+   归一化短期动量 = 短期动量 / 波动率
+   归一化长期动量 = 长期动量 / 波动率
    ```
 
 5. 最终KPO计算：

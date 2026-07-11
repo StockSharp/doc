@@ -34,13 +34,13 @@ Die Kase-Peak-Oszillator-Berechnung umfasst mehrere Schritte:
 
 3. Berechnen Sie die aktuelle Volatilität:
    ```
-   Volatility = ATR(ShortPeriod)
+   Volatilität = ATR(ShortPeriod)
    ```
 
 4. Normalisieren Sie das Momentum im Verhältnis zur Volatilität:
    ```
-   normalisiertes kurzfristiges Momentum = kurzfristiges Momentum / Volatility
-   normalisiertes langfristiges Momentum = langfristiges Momentum / Volatility
+   normalisiertes kurzfristiges Momentum = kurzfristiges Momentum / Volatilität
+   normalisiertes langfristiges Momentum = langfristiges Momentum / Volatilität
    ```
 
 5. Endgültige KPO-Berechnung:

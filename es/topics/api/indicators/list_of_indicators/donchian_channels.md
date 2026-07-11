@@ -59,7 +59,7 @@ canales de Donchian se puede utilizar de varias maneras:
    - La línea superior del canal puede servir como nivel de resistencia.
    - La línea del canal inferior puede servir como nivel de soporte.
 
-4. **Volatility Measurement**:
+4. **Medición de volatilidad**:
    - El ancho del canal (diferencia entre las líneas superior e inferior) indica la volatilidad del mercado.
    - La expansión del canal indica una mayor volatilidad
    - La contracción del canal indica una menor volatilidad

@@ -25,17 +25,17 @@ KER の値は 0 から 1 の間で振動します。
 
 1. 期間内の方向性変動（正味変化）を計算します。
    ```
-   Direction = |Price[current] - Price[current - Length]|
+   方向 = |Price[current] - Price[current - Length]|
    ```
 
 2. 期間内の総変動（すべての変化の合計）を計算します。
    ```
-   Volatility = Sum(|Price[i] - Price[i-1]|) i = (current - Length + 1) から current まで
+   ボラティリティ = Sum(|Price[i] - Price[i-1]|) i = (current - Length + 1) から current まで
    ```
 
 3. 効率比を計算します。
    ```
-   KER = Direction / Volatility
+   KER = 方向 / ボラティリティ
    ```
 
 ここで:
@@ -43,7 +43,7 @@ KER の値は 0 から 1 の間で振動します。
 - Length - 計算期間
 - | | - 絶対値を表します
 
-Volatility がゼロの場合（これはまれです）、ゼロ除算を避けるために KER はゼロに設定されます。
+ボラティリティがゼロの場合（これはまれです）、ゼロ除算を避けるために KER はゼロに設定されます。
 
 ## 解釈
 
