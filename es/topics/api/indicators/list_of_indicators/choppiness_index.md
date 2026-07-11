@@ -50,7 +50,7 @@ donde:
 
 ## Interpretación
 
-- **Valores High CHOP (por encima de 60-70)** indican que el mercado se encuentra en un movimiento lateral (consolidación). Durante este período, es mejor evitar las estrategias de tendencia y considerar estrategias de negociación de rango.
+- **Valores CHOP altos (por encima de 60-70)** indican que el mercado se encuentra en un movimiento lateral (consolidación). Durante este período, es mejor evitar las estrategias de tendencia y considerar estrategias de negociación de rango.
 
 - **Valores bajos de CHOP (por debajo de 30-40)** indica una fuerte tendencia direccional. Este es un buen momento para utilizar estrategias de tendencia y seguir el movimiento de precios.
 

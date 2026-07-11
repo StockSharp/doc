@@ -76,7 +76,7 @@ El indicador FVE se puede interpretar de la siguiente manera:
    - Los valores FVE consistentemente positivos confirman la fuerza de una tendencia alcista
    - Los valores FVE consistentemente negativos confirman la fuerza de una tendencia a la baja
 
-5. **FVE Change Rate**:
+5. **Tasa de cambio de FVE**:
    - El rápido aumento o disminución de los valores de FVE puede indicar un fuerte impulso de movimiento de precios
    - La desaceleración de los cambios de valor de FVE puede indicar una posible desaceleración del impulso
 

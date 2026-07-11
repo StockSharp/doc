@@ -48,7 +48,7 @@ donde:
 
 puntos pivote se puede interpretar de la siguiente manera:
 
-1. **Main Pivot Point (PP)**:
+1. **Punto pivote principal (PP)**:
    - PP sirve como referencia principal para determinar el sentimiento general del mercado.
    - Si el precio está por encima de PP, indica un sentimiento alcista.
    - Si el precio está por debajo de PP, indica un sentimiento bajista.

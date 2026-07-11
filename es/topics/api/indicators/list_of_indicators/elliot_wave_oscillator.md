@@ -56,7 +56,7 @@ El oscilador de ondas de Elliott se puede interpretar de la siguiente manera:
    - La divergencia alcista (el precio forma un nuevo mínimo, mientras que EWO forma un mínimo más alto) puede indicar un posible final de una onda de impulso descendente
    - La divergencia bajista (el precio forma un nuevo máximo, mientras que EWO forma un máximo más bajo) puede indicar un posible final de una onda de impulso ascendente
 
-5. **Wave Structure**:
+5. **Estructura de ondas**:
    - En las ondas de impulso (ondas 1, 3, 5), EWO normalmente muestra valores fuertes en la dirección de la tendencia.
    - En las ondas correctivas (ondas 2, 4, A, B, C), EWO generalmente muestra valores más débiles o se mueve en una dirección opuesta a la tendencia principal.
 

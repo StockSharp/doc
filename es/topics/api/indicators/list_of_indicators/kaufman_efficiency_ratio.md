@@ -71,7 +71,7 @@ El ratio de eficiencia de Kaufman se puede interpretar de la siguiente manera:
    - KER permite adaptar las estrategias de trading a las condiciones cambiantes del mercado
    - Los operadores pueden ajustar dinámicamente los parámetros de otros indicadores basados en los valores KER
 
-6. **Change Precursor**:
+6. **Precursor de cambio**:
    - Los cambios bruscos de KER a menudo preceden a nuevos movimientos de precios
    - La caída de KER después de un período de valores altos puede advertir de un posible cambio de tendencia
 

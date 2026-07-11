@@ -66,7 +66,7 @@ El índice de volumen negativo se puede interpretar de la siguiente manera:
    - NVI funciona mejor cuando se combina con otros indicadores técnicos y métodos de análisis
    - Las señales NVI se vuelven más confiables cuando son confirmadas por otros indicadores
 
-7. **Setting Thresholds**:
+7. **Ajuste de umbrales**:
    - Algunos operadores establecen niveles de umbral para NVI (por ejemplo, 5% por encima o por debajo de la media móvil)
    - Cruzar estos umbrales puede considerarse una señal más fuerte que los simples cruces.
 

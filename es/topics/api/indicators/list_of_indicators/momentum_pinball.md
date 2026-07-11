@@ -81,7 +81,7 @@ El indicador pinball de impulso se puede interpretar de la siguiente manera:
    - Los valores sostenidos de MP por debajo de 0,5 confirman una tendencia a la baja
    - Las oscilaciones MP alrededor del nivel 0,5 indican una tendencia lateral o incertidumbre
 
-6. **Momentum Fuerza**:
+6. **Fuerza del momentum**:
    - La pendiente pronunciada MP indica un fuerte impulso
    - La pendiente poco profunda de MP indica un impulso débil
    - La desaceleración en la subida o bajada de MP puede preceder a un cambio de tendencia

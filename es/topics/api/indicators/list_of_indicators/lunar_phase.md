@@ -52,7 +52,7 @@ La interpretación del indicador Fase lunar puede variar, ya que es una herramie
    - Algunos estudios muestran que la volatilidad puede ser mayor durante los períodos de luna llena y luna nueva
    - Esto se puede utilizar al ajustar los parámetros de otros indicadores y estrategias.
 
-4. **Seasonal Patterns**:
+4. **Patrones estacionales**:
    - LP se puede utilizar en combinación con el análisis de patrones estacionales para identificar posibles periodicidades del mercado.
 
 5. **Filtrado de señal**:

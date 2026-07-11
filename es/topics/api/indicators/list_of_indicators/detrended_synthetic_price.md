@@ -65,7 +65,7 @@ El indicador DSP oscila alrededor de la línea cero y se puede interpretar de la
    - Divergencia alcista: el precio forma un nuevo mínimo, mientras que DSP forma un mínimo más alto
    - Divergencia bajista: el precio forma un nuevo máximo, mientras que DSP forma un máximo más bajo
 
-5. **Pattern Formation**:
+5. **Formación de patrones**:
    - Se pueden formar patrones técnicos (cabeza y hombros, doble fondo, etc.) en el gráfico DSP, lo que podría proporcionar señales de trading adicionales.
 
 ![indicator_detrended_synthetic_price](../../../../images/indicator_detrended_synthetic_price.png)
