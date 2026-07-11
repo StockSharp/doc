@@ -2247,6 +2247,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var errors = new List<string>();
 		var phrases = new[]
 		{
+			"Centerline",
 			"Fast MA",
 			"for each Period",
 			"Long EMA",
@@ -2405,6 +2406,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					continue;
 
 				errors.Add($"{RelativeToRepo(file)}:{line}: Portuguese indicator documentation keeps English phrase 'rate of change'. Use 'taxa de variacao' or another localized wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishRateOfChangePhrase()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!ContainsStandaloneText(text, "Rate of Change"))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English phrase 'Rate of Change'. Localize it and keep only the RoC abbreviation where useful.");
+				}
 			}
 		}
 

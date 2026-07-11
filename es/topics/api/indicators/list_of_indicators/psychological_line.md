@@ -41,7 +41,7 @@ El Psychological Line se puede interpretar de la siguiente manera:
    - Los valores por debajo de 20-30 indican condiciones de sobreventa del mercado (demasiados períodos estaban cayendo)
    - Valores extremos suele preceder a cambios de tendencia
 
-2. **Centerline (50)**:
+2. **Línea central (50)**:
    - Cruzar el nivel 50 de abajo hacia arriba puede verse como una señal alcista.
    - Cruzar el nivel 50 de arriba a abajo puede verse como una señal bajista.
    - El movimiento sostenido por encima de 50 indica dominio alcista
