@@ -125,7 +125,7 @@ public void SetupSubscriptionTracking()
     _connector.SubscriptionStarted += subscription =>
     {
         Console.WriteLine($"Abonnement gestartet: {subscription.DataType}, " +
-            $"Instrument: {subscription.SecurityId}");
+            $"Wertpapier: {subscription.SecurityId}");
     };
 
     _connector.SubscriptionOnline += subscription =>

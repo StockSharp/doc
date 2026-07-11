@@ -38,7 +38,7 @@ private void OnNewsReceived(Subscription subscription, News news)
 
 	// Si la noticia está relacionada con instrumentos específicos
 	if (news.SecurityId != null)
-		Console.WriteLine($"Instrument: {news.SecurityId}");
+		Console.WriteLine($"Instrumento: {news.SecurityId}");
 }
 ```
 

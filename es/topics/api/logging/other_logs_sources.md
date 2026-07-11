@@ -53,7 +53,7 @@ En los temas anteriores, los objetos integrados en las clases de [S#](../../api.
    		_testSource.AddWarningLog("Warning (source)!!!");
    		break;
    	case LogLevels.Error:
-   		_testSource.AddErrorLog("Error (source)!!!");
+		_testSource.AddErrorLog("Error (fuente)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();

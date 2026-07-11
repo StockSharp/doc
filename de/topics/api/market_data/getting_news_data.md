@@ -38,7 +38,7 @@ private void OnNewsReceived(Subscription subscription, News news)
 
 	// Wenn die Nachricht bestimmten Instrumenten zugeordnet ist
 	if (news.SecurityId != null)
-		Console.WriteLine($"Instrument: {news.SecurityId}");
+		Console.WriteLine($"Wertpapier: {news.SecurityId}");
 }
 ```
 

@@ -27,7 +27,7 @@ var bestAsk = orderBook.GetBestAsk();
 
 if (bestBid != null)
 {
-	Console.WriteLine($"Mejor precio de compra: {bestBid.Price}, volume: {bestBid.Volume}");
+	Console.WriteLine($"Mejor precio de compra: {bestBid.Price}, volumen: {bestBid.Volume}");
 }
 else
 {
@@ -36,7 +36,7 @@ else
 
 if (bestAsk != null)
 {
-	Console.WriteLine($"Mejor precio de venta: {bestAsk.Price}, volume: {bestAsk.Volume}");
+	Console.WriteLine($"Mejor precio de venta: {bestAsk.Price}, volumen: {bestAsk.Volume}");
 }
 else
 {

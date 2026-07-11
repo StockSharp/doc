@@ -53,7 +53,7 @@
    		_testSource.AddWarningLog("Warning (source)!!!");
    		break;
    	case LogLevels.Error:
-   		_testSource.AddErrorLog("Error (source)!!!");
+		_testSource.AddErrorLog("错误 (源)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();

@@ -97,7 +97,7 @@ _connector.OrderBookReceived += (subscription, depth) =>
 // Evento de candle recebido
 _connector.CandleReceived += (subscription, candle) =>
 {
-	Console.WriteLine($"Candle recebido: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"Vela recebida: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 };
 
 // Evento de erro de ligação
@@ -109,7 +109,7 @@ _connector.ConnectionError += error =>
 // Evento de erro geral
 _connector.Error += error =>
 {
-	Console.WriteLine($"Error: {error.Message}");
+	Console.WriteLine($"Erro: {error.Message}");
 };
 
 // Evento de erro na subscrição de dados de mercado
@@ -155,7 +155,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 		
-	Console.WriteLine($"Candle histórico: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
+	Console.WriteLine($"Vela histórica: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 	
 	// Processar os candles recebidos, por exemplo, guardar no armazenamento local
 	// ou utilizar para análise/visualização

@@ -153,7 +153,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	LogInfo("Strategie {0} gestartet um {1}. Instrument: {2}, Portfolio: {3}",
+	LogInfo("Strategie {0} gestartet um {1}. Wertpapier: {2}, Portfolio: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
 
 	// ...

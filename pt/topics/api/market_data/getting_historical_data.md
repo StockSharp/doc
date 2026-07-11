@@ -60,7 +60,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 		return;
 
 	// Processar a vela recebida
-	Console.WriteLine($"Candle recebido: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
+	Console.WriteLine($"Vela recebida: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
 
 	// Para apresentação no gráfico, pode utilizar:
 	// Chart.Draw(_candleElement, candle);

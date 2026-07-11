@@ -38,7 +38,7 @@ private void OnNewsReceived(Subscription subscription, News news)
 
 	// ニュースが特定の銘柄に関連している場合
 	if (news.SecurityId != null)
-		Console.WriteLine($"Instrument: {news.SecurityId}");
+		Console.WriteLine($"銘柄: {news.SecurityId}");
 }
 ```
 
