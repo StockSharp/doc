@@ -1,6 +1,6 @@
-# Linear Regression Forecast
+# Pronóstico de regresión lineal
 
-**Linear Regression Forecast (LRF)** predice valores de precios futuros basándose en una regresión lineal durante un período seleccionado.
+**Pronóstico de regresión lineal (LRF)** predice valores de precios futuros basándose en una regresión lineal durante un período seleccionado.
 
 Para utilizar el indicador, debe utilizar la clase [LinearRegressionForecast](xref:StockSharp.Algo.Indicators.LinearRegressionForecast).
 

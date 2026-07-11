@@ -1,6 +1,6 @@
 # HurstExponent
 
-**Hurst Exponent** は、時系列がトレンドを形成する傾向、または平均へ回帰する傾向を評価するために使用される統計的尺度です。
+**ハースト指数** は、時系列がトレンドを形成する傾向、または平均へ回帰する傾向を評価するために使用される統計的尺度です。
 
 この指標を使用するには、[HurstExponent](xref:StockSharp.Algo.Indicators.HurstExponent) クラスを使用する必要があります。
 

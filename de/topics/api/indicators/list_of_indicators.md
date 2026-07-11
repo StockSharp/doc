@@ -136,8 +136,8 @@
 - [SMMA](list_of_indicators/smoothed_ma.md) - Indikator SMMA, ein gleitender Durchschnitt mit höherer Gewichtung jüngerer Preise
 - [Std Dev](list_of_indicators/standard_deviation.md) - Indikator Std Dev, misst die Streuung von Preisdaten
 - [Standard Error](list_of_indicators/standard_error.md) - Indikator Standard Error, misst die Prognosegenauigkeit
-- [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - Indikator Stochastic %K, misst Momentum anhand der Preisposition innerhalb einer Spanne
-- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - Indikator Stochastic Oscillator, erkennt überkaufte und überverkaufte Bedingungen
+- [Stochastik %K](list_of_indicators/stochastic_oscillator_k.md) - Indikator Stochastik %K, misst Momentum anhand der Preisposition innerhalb einer Spanne
+- [Stochastischer Oszillator](list_of_indicators/stochastic_oscillator.md) - Indikator Stochastischer Oszillator, erkennt überkaufte und überverkaufte Bedingungen
 - [Sum](list_of_indicators/sum_n.md) - Indikator Sum, berechnet die Summe der letzten N Preise
 - [T3MA](list_of_indicators/t3_moving_average.md) - Indikator T3MA, ein glatter und reaktionsfähiger gleitender Durchschnitt
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - Indikator TWAP, berechnet den zeitgewichteten Durchschnittspreis

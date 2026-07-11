@@ -1,12 +1,12 @@
 # KVO
 
-**Klinger Volume Oscillator (KVO)** es un indicador técnico desarrollado por Stephen Klinger que utiliza el volumen y el precio para identificar tendencias a largo plazo y reversiones a corto plazo en el mercado.
+**Oscilador de volumen de Klinger (KVO)** es un indicador técnico desarrollado por Stephen Klinger que utiliza el volumen y el precio para identificar tendencias a largo plazo y reversiones a corto plazo en el mercado.
 
 Para utilizar el indicador, debe utilizar la clase [KlingerVolumeOscillator](xref:StockSharp.Algo.Indicators.KlingerVolumeOscillator).
 
 ## Descripción
 
-El Klinger Volume Oscillator (KVO) fue creado por Stephen Klinger para medir la divergencia entre volumen y precio. El indicador se basa en el concepto de que el movimiento del precio se confirma por el volumen. KVO busca determinar no sólo la dirección de la tendencia sino también su fuerza y ​​posibles puntos de reversión.
+El Oscilador de volumen de Klinger (KVO) fue creado por Stephen Klinger para medir la divergencia entre volumen y precio. El indicador se basa en el concepto de que el movimiento del precio se confirma por el volumen. KVO busca determinar no sólo la dirección de la tendencia sino también su fuerza y ​​posibles puntos de reversión.
 
 KVO combina información de precios con volumen utilizando un indicador de fuerza de volumen que considera tanto la dirección como la magnitud del movimiento de precios, así como el volumen de operaciones. Luego aplica medias móviles exponenciales (EMA) con dos períodos diferentes a este flujo de dinero y calcula la diferencia entre ellos.
 
@@ -20,19 +20,19 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Klinger Volume Oscillator implica varios pasos:
+El cálculo de Oscilador de volumen de Klinger implica varios pasos:
 
 1. Determinar la tendencia para cada período:
    ```
-   Trend = +1, if (High + Low + Close) > (High[previous] + Low[previous] + Close[previous])
-   Trend = -1, otherwise
+   Trend = +1, si (High + Low + Close) > (High[previous] + Low[previous] + Close[previous])
+   Trend = -1, en caso contrario
    ```
 
 2. Calcular el indicador de fuerza de volumen:
    ```
-   Volume Force = Volume * Trend * abs(2 * ((Close - Low) - (High - Close)) / (High - Low))
+   fuerza de volumen = Volume * Trend * abs(2 * ((Close - Low) - (High - Close)) / (High - Low))
    ```
-   Si (High - Low) es cero, Volume Force se establece en volumen multiplicado por tendencia.
+   Si (High - Low) es cero, fuerza de volumen se establece en volumen multiplicado por tendencia.
 
 3. Calcule EMA para dos períodos:
    ```
@@ -59,7 +59,7 @@ donde:
 
 ## Interpretación
 
-El Klinger Volume Oscillator se puede interpretar de la siguiente manera:
+El Oscilador de volumen de Klinger se puede interpretar de la siguiente manera:
 
 1. **Cruces de línea cero**:
    - KVO cruzar la línea cero de abajo hacia arriba puede verse como una señal alcista

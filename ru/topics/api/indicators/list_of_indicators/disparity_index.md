@@ -66,5 +66,5 @@ DPI = ((Price / MA) - 1) * 100
 
 [SMA](sma.md)
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[Стохастический осциллятор](stochastic_oscillator.md)
 [BollingerBands](bollinger_bands.md)

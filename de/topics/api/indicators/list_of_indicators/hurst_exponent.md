@@ -1,6 +1,6 @@
 # HurstExponent
 
-**Hurst Exponent** ist ein statistisches Maß, das zur Bewertung der Tendenz einer Zeitreihe verwendet wird, entweder einen Trend zu entwickeln oder zum Mittelwert zurückzukehren.
+**Hurst-Exponent** ist ein statistisches Maß, das zur Bewertung der Tendenz einer Zeitreihe verwendet wird, entweder einen Trend zu entwickeln oder zum Mittelwert zurückzukehren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [HurstExponent](xref:StockSharp.Algo.Indicators.HurstExponent) verwenden.
 

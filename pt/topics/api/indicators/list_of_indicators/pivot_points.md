@@ -73,7 +73,7 @@ Pivot Points podem ser interpretados da seguinte forma:
 
 5. **Combinação com outros indicadores**:
    - Pivot Points são frequentemente usados em conjunto com outros indicadores técnicos para confirmar sinais
-   - São particularmente eficazes quando combinados com indicadores de momentum (RSI, Stochastic) e indicadores de tendência (MA, MACD)
+   - São particularmente eficazes quando combinados com indicadores de momentum (RSI, Estocástico) e indicadores de tendência (MA, MACD)
 
 6. **Períodos**:
    - Pivot Points diários são calculados com base no dia de negociação anterior

@@ -64,7 +64,7 @@ O Índice de adversidade do mercado pode ser interpretado da seguinte forma:
 5. **Filtragem de Sinais**:
    - O MMI é frequentemente usado como filtro para outros indicadores:
      - Sinais de indicadores de tendência (MA, MACD) são mais fiáveis com MMI baixo
-     - Sinais de osciladores (RSI, Stochastic) são mais fiáveis com MMI alto
+     - Sinais de osciladores (RSI, Estocástico) são mais fiáveis com MMI alto
 
 6. **Combinação com Outros Indicadores**:
    - O MMI funciona bem em combinação com ADX (Average Directional Index)

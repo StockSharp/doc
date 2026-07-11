@@ -66,5 +66,5 @@ El Disparity Index se puede interpretar de la siguiente manera:
 
 [SMA](sma.md)
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[Oscilador estocástico](stochastic_oscillator.md)
 [BollingerBands](bollinger_bands.md)

@@ -72,6 +72,6 @@ Psychological Line は次のように解釈できます。
 ## 関連項目
 
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[ストキャスティクスオシレーター](stochastic_oscillator.md)
 [UltimateOscillator](uo.md)
 [MomentumOscillator](momentum.md)

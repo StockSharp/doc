@@ -139,7 +139,7 @@
 - [Std Dev](list_of_indicators/standard_deviation.md) - индикатор Std Dev, измеряет разброс ценовых данных
 - [Standard Error](list_of_indicators/standard_error.md) - индикатор Standard Error, измеряет точность прогнозов
 - [Стохастик %K](list_of_indicators/stochastic_oscillator_k.md) - Стохастик %K, измеряет импульс на основе положения цены в диапазоне
-- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - индикатор Stochastic Oscillator, определяет состояния перекупленности и перепроданности
+- [стохастический осциллятор](list_of_indicators/stochastic_oscillator.md) - индикатор стохастический осциллятор, определяет состояния перекупленности и перепроданности
 - [Sum](list_of_indicators/sum_n.md) - индикатор Sum, вычисляет сумму последних N цен
 - [T3MA](list_of_indicators/t3_moving_average.md) - индикатор T3MA, плавная и отзывчивая скользящая средняя
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - индикатор TWAP, вычисляет среднюю цену с учётом времени

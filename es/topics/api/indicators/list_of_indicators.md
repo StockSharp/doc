@@ -136,8 +136,8 @@
 - [SMMA](list_of_indicators/smoothed_ma.md) - indicador SMMA, una media móvil que da más peso a los precios recientes
 - [Std Dev](list_of_indicators/standard_deviation.md) - indicador Std Dev, mide la dispersión de los datos de precios
 - [Standard Error](list_of_indicators/standard_error.md) - indicador Standard Error, mide la precisión del pronóstico
-- [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - indicador Stochastic %K, mide el impulso según la posición del precio dentro de un rango
-- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - indicador Stochastic Oscillator, identifica condiciones de sobrecompra y sobreventa
+- [Estocástico %K](list_of_indicators/stochastic_oscillator_k.md) - indicador Estocástico %K, mide el impulso según la posición del precio dentro de un rango
+- [Oscilador estocástico](list_of_indicators/stochastic_oscillator.md) - indicador Oscilador estocástico, identifica condiciones de sobrecompra y sobreventa
 - [Sum](list_of_indicators/sum_n.md) - indicador Sum, calcula la suma de los últimos N precios
 - [T3MA](list_of_indicators/t3_moving_average.md) - indicador T3MA, una media móvil fluida y responsiva
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - indicador TWAP, calcula el precio medio ponderado por el tiempo

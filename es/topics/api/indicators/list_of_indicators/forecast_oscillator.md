@@ -1,16 +1,16 @@
 # FOSC
 
-**Forecast Oscillator (FOSC)** es un indicador técnico que mide la desviación del precio de su valor previsto obtenido mediante regresión lineal, representando esta desviación como un porcentaje.
+**Oscilador de pronóstico (FOSC)** es un indicador técnico que mide la desviación del precio de su valor previsto obtenido mediante regresión lineal, representando esta desviación como un porcentaje.
 
 Para utilizar el indicador, debe utilizar la clase [ForecastOscillator](xref:StockSharp.Algo.Indicators.ForecastOscillator).
 
 ## Descripción
 
-El Forecast Oscillator (FOSC) se basa en regresión lineal y está diseñado para medir el grado de desviación del precio actual con respecto a su valor previsto. Ayuda a los operadores a evaluar en qué medida el precio actual corresponde a la tendencia esperada o se desvía de ella.
+El Oscilador de pronóstico (FOSC) se basa en regresión lineal y está diseñado para medir el grado de desviación del precio actual con respecto a su valor previsto. Ayuda a los operadores a evaluar en qué medida el precio actual corresponde a la tendencia esperada o se desvía de ella.
 
 El indicador calcula una línea de tendencia mediante regresión lineal durante un período específico y luego compara el precio de cierre real con el valor previsto en esta línea. La diferencia se expresa como porcentaje, lo que convierte a FOSC en un oscilador que fluctúa alrededor de la línea cero.
 
-El Forecast Oscillator es particularmente útil para:
+El Oscilador de pronóstico es particularmente útil para:
 - Determinar el grado de alineación de precios con la tendencia esperada.
 - Identificar posibles puntos de reversión
 - Detectar desviaciones extremas de precios respecto de la tendencia
@@ -23,7 +23,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Forecast Oscillator implica los siguientes pasos:
+El cálculo de Oscilador de pronóstico implica los siguientes pasos:
 
 1. Calcule la línea de pronóstico mediante regresión lineal durante el período especificado:
    ```
@@ -42,7 +42,7 @@ donde:
 
 ## Interpretación
 
-El Forecast Oscillator se interpreta de la siguiente manera:
+El Oscilador de pronóstico se interpreta de la siguiente manera:
 
 1. **Desviación de cero**:
    - Los valores positivos (FOSC > 0) indican que el precio actual está por encima del valor previsto, lo que puede sugerir un movimiento alcista más fuerte de lo esperado.

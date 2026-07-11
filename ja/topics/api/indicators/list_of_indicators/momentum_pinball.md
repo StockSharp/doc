@@ -96,5 +96,5 @@ Momentum Pinball インジケーターは次のように解釈できます:
 
 [Momentum](momentum.md)
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[ストキャスティクスオシレーター](stochastic_oscillator.md)
 [PrettyGoodOscillator](pretty_good_oscillator.md)

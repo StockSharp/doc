@@ -40,6 +40,6 @@ FDI принимает значения от 1 до 2 и отражает хар
 
 ## См. также
 
-[Hurst Exponent](hurst_exponent.md)
+[экспонента Херста](hurst_exponent.md)
 
 [Фрактальная адаптивная скользящая средняя](fractal_adaptive_moving_average.md)

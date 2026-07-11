@@ -70,7 +70,7 @@ Der Indikator zur Kreuzung gleitender Durchschnitte kann wie folgt interpretiert
    - Zusätzliche Indikatoren oder Regeln werden häufig verwendet, um falsche Signale zu filtern (z. B. die Anforderung, dass der Preis über/unter beiden gleitenden Durchschnitten liegen muss)
 
 5. **Kombination mit anderen Indikatoren**:
-   - MAC wird häufig in Kombination mit Momentumindikatoren (RSI, Stochastic) zur Bestätigung von Signalen verwendet
+   - MAC wird häufig in Kombination mit Momentumindikatoren (RSI, Stochastik) zur Bestätigung von Signalen verwendet
    - Es kann auch mit Trend- und Volatilitätsindikatoren kombiniert werden, um umfassendere Handelssysteme zu schaffen
 
 6. **Parameterauswahl**:

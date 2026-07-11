@@ -83,6 +83,6 @@ Der Pretty Good Oscillator kann wie folgt interpretiert werden:
 ## Siehe auch
 
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[Stochastischer Oszillator](stochastic_oscillator.md)
 [CCI](cci.md)
 [StandardDeviation](standard_deviation.md)

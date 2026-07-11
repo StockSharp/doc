@@ -136,8 +136,8 @@
 - [SMMA](list_of_indicators/smoothed_ma.md) - インジケーター SMMA、直近の価格により大きな重みを与える移動平均です
 - [Std Dev](list_of_indicators/standard_deviation.md) - インジケーター Std Dev、価格データのばらつきを測定します
 - [Standard Error](list_of_indicators/standard_error.md) - インジケーター Standard Error、予測精度を測定します
-- [Stochastic %K](list_of_indicators/stochastic_oscillator_k.md) - インジケーター Stochastic %K、レンジ内の価格位置に基づいてモメンタムを測定します
-- [Stochastic Oscillator](list_of_indicators/stochastic_oscillator.md) - インジケーター Stochastic Oscillator、買われ過ぎと売られ過ぎの状態を特定します
+- [ストキャスティクス %K](list_of_indicators/stochastic_oscillator_k.md) - インジケーター ストキャスティクス %K、レンジ内の価格位置に基づいてモメンタムを測定します
+- [ストキャスティクスオシレーター](list_of_indicators/stochastic_oscillator.md) - インジケーター ストキャスティクスオシレーター、買われ過ぎと売られ過ぎの状態を特定します
 - [Sum](list_of_indicators/sum_n.md) - インジケーター Sum、直近 N 個の価格の合計を計算します
 - [T3MA](list_of_indicators/t3_moving_average.md) - インジケーター T3MA、滑らかで応答性の高い移動平均です
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - インジケーター TWAP、時間で加重された平均価格を計算します

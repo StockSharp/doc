@@ -4,16 +4,16 @@
 
 Para usar o indicador, deve ser usada a classe [WilliamsR](xref:StockSharp.Algo.Indicators.WilliamsR).
 ##### Cálculo
-  
-A fórmula para calcular o indicador Williams— Percent Range é semelhante à usada para calcular o Stochastic Oscillator:
 
-%R = - (MAX(HIGH(i - n)) - CLOSE(i)) / (MAX(HIGH(i - n)) - MIN(LOW(i - n))) * 100  
-  
+A fórmula para calcular o indicador Williams— Percent Range é semelhante à usada para calcular o Oscilador estocástico:
+
+%R = - (MAX(HIGH(i - n)) - CLOSE(i)) / (MAX(HIGH(i - n)) - MIN(LOW(i - n))) * 100
+
 onde:
-  
-CLOSE(i) - preço de fecho de hoje;  
-MAX(HIGH(i - n)) - o máximo mais alto dos últimos n períodos;  
-MIN(LOW(i - n)) - o mínimo mais baixo dos últimos n períodos.  
+
+CLOSE(i) - preço de fecho de hoje;
+MAX(HIGH(i - n)) - o máximo mais alto dos últimos n períodos;
+MIN(LOW(i - n)) - o mínimo mais baixo dos últimos n períodos.
 
 O valor de n é definido como parâmetro do indicador.
 

@@ -5,7 +5,7 @@
 Um den Indikator zu verwenden, nutzen Sie die Klasse [WilliamsR](xref:StockSharp.Algo.Indicators.WilliamsR).
 ##### Berechnung
 
-Die Formel zur Berechnung des Williams Percent Range-Indikators ähnelt der Formel des Stochastic Oscillator:
+Die Formel zur Berechnung des Williams Percent Range-Indikators ähnelt der Formel des Stochastischer Oszillator:
 
 %R = - (MAX(HIGH(i - n)) - CLOSE(i)) / (MAX(HIGH(i - n)) - MIN(LOW(i - n))) * 100
 

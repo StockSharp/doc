@@ -1,12 +1,12 @@
 # STC
 
-**Schaff Trend Cycle (STC)** は、Doug Schaff によって開発されたモメンタム指標です。STC は、市場サイクルが真のトレンドよりも、買われ過ぎと売られ過ぎの状態の間をより頻繁に移動するという前提に基づいています。
+**シャフ・トレンドサイクル (STC)** は、Doug Schaff によって開発されたモメンタム指標です。STC は、市場サイクルが真のトレンドよりも、買われ過ぎと売られ過ぎの状態の間をより頻繁に移動するという前提に基づいています。
 
 この指標を使用するには、[SchaffTrendCycle](xref:StockSharp.Algo.Indicators.SchaffTrendCycle) クラスを使用する必要があります。
 
 ## 説明
 
-Schaff Trend Cycle は、Stochastic Oscillator、MACD、サイクル分析の利点を組み合わせたものです。この指標は、MACD や Stochastic などの従来の指標よりもトレンド変化に素早く反応できます。
+シャフ・トレンドサイクル は、ストキャスティクスオシレーター、MACD、サイクル分析の利点を組み合わせたものです。この指標は、MACD や ストキャスティクス などの従来の指標よりもトレンド変化に素早く反応できます。
 
 STC は 0 から 100 の間で振動します。
 - 75 を上回る値は通常、買われ過ぎの状態を示します
@@ -32,7 +32,7 @@ STC の計算は複数のステップで実行されます。
    ```
    ここで Fast、Slow、Signal は通常、それぞれ 23、50、10 です。
 
-2. MACD に基づいて Stochastic Oscillator を計算します。
+2. MACD に基づいて ストキャスティクスオシレーター を計算します。
    ```
    Stoch_K = 100 * ((MACD - Lowest(MACD, Length)) / (Highest(MACD, Length) - Lowest(MACD, Length)))
    Stoch_D = EMA(Stoch_K, 3)
@@ -43,11 +43,11 @@ STC の計算は複数のステップで実行されます。
    STC = 100 * ((Stoch_D - Lowest(Stoch_D, Length)) / (Highest(Stoch_D, Length) - Lowest(Stoch_D, Length)))
    ```
 
-その結果、古典的な Stochastic よりも滑らかで、MACD よりもトレンド変化に素早く反応するオシレーターになります。
+その結果、古典的な ストキャスティクス よりも滑らかで、MACD よりもトレンド変化に素早く反応するオシレーターになります。
 
 ![IndicatorSchaffTrendCycle](../../../../images/indicator_schaff_trend_cycle.png)
 
 ## 関連項目
 
 [MACD](macd.md)
-[Stochastic](stochastic_oscillator.md)
+[ストキャスティクス](stochastic_oscillator.md)

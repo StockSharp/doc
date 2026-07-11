@@ -48,4 +48,4 @@ Der Indikator kann zusätzliche Komponenten wie eine Trendlinie oder einen Filte
 
 ## Siehe auch
 
-[Schaff Trend Cycle](schaff_trend_cycle.md)
+[Schaff-Trendzyklus](schaff_trend_cycle.md)

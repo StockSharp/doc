@@ -1,12 +1,12 @@
 # WTO
 
-**Wave Trend Oscillator (WTO)** ist ein technischer Indikator zur Erkennung überkaufter und überverkaufter Marktniveaus sowie zyklischer Preisschwankungen. WTO kombiniert Elemente von Kanälen und Oszillatoren und ist dadurch ein wirksames Werkzeug zur Identifikation von Markt-Momentum und möglichen Wendepunkten.
+**Wellentrend-Oszillator (WTO)** ist ein technischer Indikator zur Erkennung überkaufter und überverkaufter Marktniveaus sowie zyklischer Preisschwankungen. WTO kombiniert Elemente von Kanälen und Oszillatoren und ist dadurch ein wirksames Werkzeug zur Identifikation von Markt-Momentum und möglichen Wendepunkten.
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [WaveTrendOscillator](xref:StockSharp.Algo.Indicators.WaveTrendOscillator).
 
 ## Beschreibung
 
-Der Wave Trend Oscillator ist darauf ausgelegt, Marktrauschen zu filtern und primäre Preisbewegungen hervorzuheben. Der Indikator oszilliert um die Nulllinie und erzeugt Wellenmuster, die mit zyklischen Preisbewegungen korrelieren.
+Der Wellentrend-Oszillator ist darauf ausgelegt, Marktrauschen zu filtern und primäre Preisbewegungen hervorzuheben. Der Indikator oszilliert um die Nulllinie und erzeugt Wellenmuster, die mit zyklischen Preisbewegungen korrelieren.
 
 Wichtige Eigenschaften von WTO:
 - Oszillationen um die Nulllinie, wobei positive Werte einen Aufwärtstrend und negative Werte einen Abwärtstrend anzeigen
@@ -27,7 +27,7 @@ Wichtige Indikatorsignale:
 
 ## Berechnung
 
-Die Berechnung des Wave Trend Oscillator umfasst mehrere Schritte:
+Die Berechnung des Wellentrend-Oszillator umfasst mehrere Schritte:
 
 1. Typischen Preis berechnen:
    ```
@@ -57,5 +57,5 @@ Typische Werte für die Indikatorparameter sind: EsaPeriod = 10, DPeriod = 21, A
 ## Siehe auch
 
 [MACD](macd.md)
-[Stochastic Oscillator](stochastic_oscillator.md)
+[Stochastischer Oszillator](stochastic_oscillator.md)
 

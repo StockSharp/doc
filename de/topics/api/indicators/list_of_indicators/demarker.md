@@ -33,5 +33,5 @@ DeMarker kann für Einstiege in den Gegentrend sowie zur Bestätigung von Signal
 ## Siehe auch
 
 [RSI](rsi.md)
-[Stochastic Oscillator](stochastic_oscillator.md)
+[Stochastischer Oszillator](stochastic_oscillator.md)
 [Momentum](momentum.md)

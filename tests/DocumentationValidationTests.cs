@@ -2308,10 +2308,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Sum of TR",
 			"Upper Band",
 			"Volume Component",
+			"Volume Force",
 			"Dynamic Overbought Level",
 			"Dynamic Oversold Level",
 			"1-Period EMV",
 			"1-Period Force Index",
+			"Trend = +1, if",
+			"Trend = -1, otherwise",
 			"signal period",
 			"where RS",
 		};
@@ -2358,6 +2361,10 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Elder's Force Index",
 			"Ease of Movement",
 			"Force Index",
+			"Forecast Oscillator",
+			"Hurst Exponent",
+			"Klinger Volume Oscillator",
+			"Linear Regression Forecast",
 			"Linear Regression R-Squared",
 			"Lunar Phase",
 			"Market Facilitation Index",
@@ -2370,9 +2377,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Money Flow Index",
 			"Moving Median",
 			"Optimal Tracking Filter",
+			"Price Volume Trend",
 			"R-Squared in Linear Regression",
+			"Schaff Trend Cycle",
+			"Stochastic %K",
+			"Stochastic Oscillator",
 			"Twiggs Money Flow",
 			"Typical Price",
+			"Vertical Horizontal Filter",
+			"Wave Trend Oscillator",
 			"Weighted Close Price",
 			"Williams Accumulation/Distribution",
 		};
@@ -2428,6 +2441,39 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						continue;
 
 					errors.Add($"{RelativeToRepo(file)}:{label.Line}: indicator documentation keeps English Pivot Points strategy label '{label.Text}'. Localize the trading label.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishStochasticSeeAlsoLabels()
+	{
+		var errors = new List<string>();
+		var labels = new[]
+		{
+			"[StochasticOscillator](stochastic_oscillator.md)",
+			"[StochasticK](stochastic_oscillator_k.md)",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var content = ReadAllText(file);
+
+				foreach (var label in labels)
+				{
+					if (!content.Contains(label, StringComparison.Ordinal))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}: localized indicator documentation keeps API-style see-also link label '{label}'. Localize the visible link label while preserving the target file.");
 				}
 			}
 		}

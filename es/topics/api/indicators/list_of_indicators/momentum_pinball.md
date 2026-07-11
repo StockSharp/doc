@@ -96,5 +96,5 @@ El indicador Momentum Pinball se puede interpretar de la siguiente manera:
 
 [Momentum](momentum.md)
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[Oscilador estocástico](stochastic_oscillator.md)
 [PrettyGoodOscillator](pretty_good_oscillator.md)

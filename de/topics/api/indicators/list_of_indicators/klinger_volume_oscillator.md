@@ -1,14 +1,14 @@
 # KVO
 
-**Klinger Volume Oscillator (KVO)** ist ein von Stephen Klinger entwickelter technischer Indikator, der Volumen und Preis nutzt, um langfristige Trends und kurzfristige Umkehrungen im Markt zu erkennen.
+**Klinger-Volumenoszillator (KVO)** ist ein von Stephen Klinger entwickelter technischer Indikator, der Volumen und Preis nutzt, um langfristige Trends und kurzfristige Umkehrungen im Markt zu erkennen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [KlingerVolumeOscillator](xref:StockSharp.Algo.Indicators.KlingerVolumeOscillator) verwenden.
 
 ## Beschreibung
 
-Der Klinger Volume Oscillator (KVO) wurde von Stephen Klinger entwickelt, um die Divergenz zwischen Volumen und Preis zu messen. Der Indikator basiert auf dem Konzept, dass Preisbewegungen durch das Volumen bestätigt werden. KVO versucht nicht nur die Trendrichtung, sondern auch seine Stärke und mögliche Umkehrpunkte zu bestimmen.
+Der Klinger-Volumenoszillator (KVO) wurde von Stephen Klinger entwickelt, um die Divergenz zwischen Volumen und Preis zu messen. Der Indikator basiert auf dem Konzept, dass Preisbewegungen durch das Volumen bestätigt werden. KVO versucht nicht nur die Trendrichtung, sondern auch seine Stärke und mögliche Umkehrpunkte zu bestimmen.
 
-KVO kombiniert Preisinformationen mit Volumen mithilfe eines Volume Force-Indikators, der sowohl die Richtung und das Ausmaß der Preisbewegung als auch das Handelsvolumen berücksichtigt. Anschließend wendet es exponentielle gleitende Durchschnitte (EMA) mit zwei unterschiedlichen Perioden auf diesen Geldfluss an und berechnet die Differenz zwischen ihnen.
+KVO kombiniert Preisinformationen mit Volumen mithilfe eines Volumenkraft-Indikators, der sowohl die Richtung und das Ausmaß der Preisbewegung als auch das Handelsvolumen berücksichtigt. Anschließend wendet es exponentielle gleitende Durchschnitte (EMA) mit zwei unterschiedlichen Perioden auf diesen Geldfluss an und berechnet die Differenz zwischen ihnen.
 
 Der Indikator ist ein Oszillator, der oberhalb und unterhalb der Nulllinie schwankt. Positive KVO-Werte zeigen an, dass Käufer den Markt kontrollieren, während negative Werte darauf hinweisen, dass Verkäufer einen Vorteil haben.
 
@@ -20,19 +20,19 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Klinger Volume Oscillator-Berechnung umfasst mehrere Schritte:
+Die Klinger-Volumenoszillator-Berechnung umfasst mehrere Schritte:
 
 1. Bestimmen Sie den Trend für jeden Zeitraum:
    ```
-   Trend = +1, if (High + Low + Close) > (High[previous] + Low[previous] + Close[previous])
-   Trend = -1, otherwise
+   Trend = +1, wenn (High + Low + Close) > (High[previous] + Low[previous] + Close[previous])
+   Trend = -1, andernfalls
    ```
 
-2. Berechnen Sie den Volume Force-Indikator:
+2. Berechnen Sie den Volumenkraft-Indikator:
    ```
-   Volume Force = Volume * Trend * abs(2 * ((Close - Low) - (High - Close)) / (High - Low))
+   Volumenkraft = Volume * Trend * abs(2 * ((Close - Low) - (High - Close)) / (High - Low))
    ```
-   Wenn (High - Low) Null ist, wird Volume Force auf Volumen multipliziert mit Trend gesetzt.
+   Wenn (High - Low) Null ist, wird Volumenkraft auf Volumen multipliziert mit Trend gesetzt.
 
 3. Berechnen Sie EMA für zwei Zeiträume:
    ```
@@ -59,7 +59,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Klinger Volume Oscillator kann wie folgt interpretiert werden:
+Der Klinger-Volumenoszillator kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Das Überqueren der Nulllinie von KVO von unten nach oben kann als bullisches Signal angesehen werden

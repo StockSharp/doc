@@ -83,6 +83,6 @@ PGO особенно полезен для выявления состояний
 ## См. также
 
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[Стохастический осциллятор](stochastic_oscillator.md)
 [CCI](cci.md)
 [StandardDeviation](standard_deviation.md)

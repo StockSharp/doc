@@ -72,6 +72,6 @@ El Psychological Line se puede interpretar de la siguiente manera:
 ## Véase también
 
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[Oscilador estocástico](stochastic_oscillator.md)
 [UltimateOscillator](uo.md)
 [MomentumOscillator](momentum.md)

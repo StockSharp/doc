@@ -65,7 +65,7 @@ McGinley-Dynamik kann ähnlich wie andere gleitende Durchschnitte interpretiert 
    - Wenn der Preis erheblich von MGD abweicht, kann dies auf eine mögliche Umkehr oder Korrektur hinweisen
 
 6. **Kombination mit anderen Indikatoren**:
-   - MGD funktioniert gut mit Oszillatoren (RSI, Stochastic)
+   - MGD funktioniert gut mit Oszillatoren (RSI, Stochastik)
    - Kann als Trendfilter für andere Handelssysteme verwendet werden
 
 7. **Length Parameterauswahl**:

@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [StandardDeviation
 
 ## Empfohlene Inhalte
 
-[Stochastic Oscillator](stochastic_oscillator.md)
+[Stochastischer Oszillator](stochastic_oscillator.md)

@@ -72,6 +72,6 @@ PSY = (Количество растущих периодов за Length пер
 ## См. также
 
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
+[Стохастический осциллятор](stochastic_oscillator.md)
 [UltimateOscillator](uo.md)
 [MomentumOscillator](momentum.md)

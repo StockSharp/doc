@@ -1,12 +1,12 @@
 # STC
 
-**Schaff Trend Cycle (STC)** es un indicador de impulso desarrollado por Doug Schaff. STC se basa en el supuesto de que los ciclos del mercado se mueven con mayor frecuencia entre condiciones de sobrecompra y sobreventa que en una tendencia verdadera.
+**Ciclo de tendencia de Schaff (STC)** es un indicador de impulso desarrollado por Doug Schaff. STC se basa en el supuesto de que los ciclos del mercado se mueven con mayor frecuencia entre condiciones de sobrecompra y sobreventa que en una tendencia verdadera.
 
 Para utilizar el indicador, debe utilizar la clase [SchaffTrendCycle](xref:StockSharp.Algo.Indicators.SchaffTrendCycle).
 
 ## Descripción
 
-El Schaff Trend Cycle combina las ventajas del Stochastic Oscillator, MACD y el análisis cíclico. Este indicador puede reaccionar a los cambios de tendencia más rápido que los indicadores tradicionales como MACD o Estocástico.
+El Ciclo de tendencia de Schaff combina las ventajas del Oscilador estocástico, MACD y el análisis cíclico. Este indicador puede reaccionar a los cambios de tendencia más rápido que los indicadores tradicionales como MACD o Estocástico.
 
 STC oscila entre 0 y 100:
 - Los valores superiores a 75 suelen indicar condiciones de sobrecompra.
@@ -32,7 +32,7 @@ El cálculo de STC se realiza en varios pasos:
    ```
    donde Rápido, Lento y Signal suelen ser 23, 50 y 10 respectivamente.
 
-2. Calcule Stochastic Oscillator basado en MACD:
+2. Calcule Oscilador estocástico basado en MACD:
    ```
    Stoch_K = 100 * ((MACD - Lowest(MACD, Length)) / (Highest(MACD, Length) - Lowest(MACD, Length)))
    Stoch_D = EMA(Stoch_K, 3)
@@ -50,4 +50,4 @@ El resultado es un oscilador más suave que el estocástico clásico y reacciona
 ## Véase también
 
 [MACD](macd.md)
-[Stochastic](stochastic_oscillator.md)
+[Estocástico](stochastic_oscillator.md)

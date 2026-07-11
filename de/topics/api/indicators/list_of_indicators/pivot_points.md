@@ -73,7 +73,7 @@ Pivot Points kann wie folgt interpretiert werden:
 
 5. **Kombination mit anderen Indikatoren**:
    - Pivot Points werden häufig in Kombination mit anderen technischen Indikatoren zur Bestätigung von Signalen verwendet
-   - Besonders effektiv in Kombination mit Momentum-Indikatoren (RSI, Stochastic) und Trendindikatoren (MA, MACD)
+   - Besonders effektiv in Kombination mit Momentum-Indikatoren (RSI, Stochastik) und Trendindikatoren (MA, MACD)
 
 6. **Zeitrahmen**:
    - Tägliche Pivot Points werden basierend auf dem vorherigen Handelstag berechnet

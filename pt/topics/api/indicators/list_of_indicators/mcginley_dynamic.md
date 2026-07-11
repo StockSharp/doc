@@ -65,7 +65,7 @@ O Dinâmica de McGinley pode ser interpretado de forma semelhante a outras médi
    - Quando o preço se desvia significativamente do MGD, pode sinalizar uma potencial inversão ou correcção
 
 6. **Combinação com Outros Indicadores**:
-   - O MGD funciona bem com osciladores (RSI, Stochastic)
+   - O MGD funciona bem com osciladores (RSI, Estocástico)
    - Pode ser usado como filtro de tendência para outros sistemas de negociação
 
 7. **Selecção do Parâmetro Length**:

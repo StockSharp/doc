@@ -48,4 +48,4 @@ Sine Wave 指標の計算は、サイン関数の使用と、価格変動にお�
 
 ## 関連項目
 
-[Schaff Trend Cycle](schaff_trend_cycle.md)
+[シャフ・トレンドサイクル](schaff_trend_cycle.md)

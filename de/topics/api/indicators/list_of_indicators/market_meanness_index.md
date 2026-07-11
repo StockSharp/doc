@@ -64,7 +64,7 @@ Der Marktgemeinheitsindex kann wie folgt interpretiert werden:
 5. **Signalfilterung**:
    - MMI wird oft als Filter für andere Indikatoren verwendet:
      - Trendindikatorsignale (MA, MACD) sind bei niedrigem MMI zuverlässiger
-     - Oszillatorsignale (RSI, Stochastic) sind bei hohem MMI zuverlässiger
+     - Oszillatorsignale (RSI, Stochastik) sind bei hohem MMI zuverlässiger
 
 6. **Kombination mit anderen Indikatoren**:
    - MMI funktioniert gut in Kombination mit ADX (Average Directional Index)

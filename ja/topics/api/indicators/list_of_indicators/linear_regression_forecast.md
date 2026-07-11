@@ -1,6 +1,6 @@
-# Linear Regression Forecast
+# 線形回帰予測
 
-**Linear Regression Forecast (LRF)** は、選択した期間にわたる線形回帰に基づいて、将来の価格値を予測します。
+**線形回帰予測 (LRF)** は、選択した期間にわたる線形回帰に基づいて、将来の価格値を予測します。
 
 インジケーターを使用するには、[LinearRegressionForecast](xref:StockSharp.Algo.Indicators.LinearRegressionForecast) クラスを使用する必要があります。
 

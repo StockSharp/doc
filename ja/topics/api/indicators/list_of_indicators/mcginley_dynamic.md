@@ -65,7 +65,7 @@ MGD = MGD[previous] + (Price - MGD[previous]) / (Length * ((Price / MGD[previous
    - 価格が MGD から大きく乖離している場合、潜在的な反転または調整を示す可能性があります
 
 6. **他の指標との組み合わせ**:
-   - MGD はオシレーター (RSI, Stochastic) と相性が良いです
+   - MGD はオシレーター (RSI, ストキャスティクス) と相性が良いです
    - 他の取引システムのトレンドフィルターとして使用できます
 
 7. **Length パラメーターの選択**:

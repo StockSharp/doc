@@ -1,12 +1,12 @@
 # Stochastischer Oszillator %K
 
-**Stochastic Oscillator %K** ist eine Komponente des stochastischen Oszillators, die die aktuelle Schlusspreisposition im Verhältnis zur Preisspanne über den ausgewählten Zeitraum anzeigt. Der Indikator wurde Ende der 1950er Jahre von George Lane entwickelt.
+**Stochastischer Oszillator %K** ist eine Komponente des stochastischen Oszillators, die die aktuelle Schlusspreisposition im Verhältnis zur Preisspanne über den ausgewählten Zeitraum anzeigt. Der Indikator wurde Ende der 1950er Jahre von George Lane entwickelt.
 
 Um den Indikator zu verwenden, verwenden Sie die Klasse [StochasticK](xref:StockSharp.Algo.Indicators.StochasticK).
 
 ## Beschreibung
 
-Stochastic Oscillator %K basiert auf der Beobachtung, dass sich die Schlusskurse bei Aufwärtstrends normalerweise näher an der oberen Grenze der Preisspanne konzentrieren, während sie sich bei Abwärtstrends eher an der unteren Grenze konzentrieren.
+Stochastischer Oszillator %K basiert auf der Beobachtung, dass sich die Schlusskurse bei Aufwärtstrends normalerweise näher an der oberen Grenze der Preisspanne konzentrieren, während sie sich bei Abwärtstrends eher an der unteren Grenze konzentrieren.
 
 %K ist die „schnelle“ Linie des stochastischen Oszillators und die Hauptkomponente zur Berechnung der %D-Linie, die ein gleitender Durchschnitt von %K ist.
 
@@ -44,4 +44,4 @@ Im vollstochastischen Oszillator wird die %D-Linie als einfacher gleitender Durc
 
 ## Siehe auch
 
-[Stochastic Oscillator](stochastic_oscillator.md)
+[Stochastischer Oszillator](stochastic_oscillator.md)

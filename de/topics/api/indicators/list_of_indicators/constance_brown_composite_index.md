@@ -69,6 +69,6 @@ Dieser kombinierte Index kann dann geglättet werden, um das Rauschen zu reduzie
 ## Siehe auch
 
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
-[StochasticK](stochastic_oscillator_k.md)
+[Stochastischer Oszillator](stochastic_oscillator.md)
+[Stochastischer Oszillator %K](stochastic_oscillator_k.md)
 [CCI](cci.md)

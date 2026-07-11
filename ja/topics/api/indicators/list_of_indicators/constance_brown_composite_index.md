@@ -48,7 +48,7 @@ CBCI の計算には、次の手順が含まれます。
 
 ## 解釈
 
-- **買われ過ぎおよび売られ過ぎ水準**: 
+- **買われ過ぎおよび売られ過ぎ水準**:
   - 80 を超える値は、市場が買われ過ぎの状態にあることを示す場合があります
   - 20 未満の値は、市場が売られ過ぎの状態にあることを示す場合があります
 
@@ -69,6 +69,6 @@ CBCI の計算には、次の手順が含まれます。
 ## 関連項目
 
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
-[StochasticK](stochastic_oscillator_k.md)
+[ストキャスティクスオシレーター](stochastic_oscillator.md)
+[ストキャスティクスオシレーター %K](stochastic_oscillator_k.md)
 [CCI](cci.md)

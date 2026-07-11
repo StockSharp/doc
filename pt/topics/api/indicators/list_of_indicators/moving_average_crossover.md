@@ -70,7 +70,7 @@ O indicador de cruzamento de médias móveis pode ser interpretado da seguinte f
    - Indicadores ou regras adicionais são frequentemente usados para filtrar sinais falsos (por exemplo, exigir que o preço esteja acima/abaixo de ambas as médias móveis)
 
 5. **Combinação com outros indicadores**:
-   - O MAC é frequentemente usado em conjunto com indicadores de momentum (RSI, Stochastic) para confirmar sinais
+   - O MAC é frequentemente usado em conjunto com indicadores de momentum (RSI, Estocástico) para confirmar sinais
    - Também pode ser combinado com indicadores de tendência e volatilidade para criar sistemas de trading mais abrangentes
 
 6. **Seleção de parâmetros**:

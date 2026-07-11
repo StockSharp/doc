@@ -2,10 +2,10 @@
 
 **Стандартное отклонение** \- индикатор который показывает диапазон цен инструмента, характеризуя его волатильность. Обычно значение индикатора выражается в единицах цены анализируемого актива. Стандартное отклонение является функцией стандартного отклонения цены, которая активно применяется в математической статистике.
 
-Для использования индикатора необходимо использовать класс [StandardDeviation](xref:StockSharp.Algo.Indicators.StandardDeviation). 
+Для использования индикатора необходимо использовать класс [StandardDeviation](xref:StockSharp.Algo.Indicators.StandardDeviation).
 
 ![IndicatorStandardDeviation](../../../../images/indicatorstandarddeviation.png)
 
 ## См. также
 
-[Stochastic Oscillator](stochastic_oscillator.md)
+[стохастический осциллятор](stochastic_oscillator.md)

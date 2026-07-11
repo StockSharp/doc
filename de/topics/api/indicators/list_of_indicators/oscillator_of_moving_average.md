@@ -78,7 +78,7 @@ Der Oszillator des gleitenden Durchschnitts kann wie folgt interpretiert werden:
 
 7. **Kombination mit anderen Indikatoren**:
    - OMA wird häufig in Kombination mit anderen Indikatoren zur Bestätigung von Signalen verwendet
-   - Besonders effektiv in Kombination mit überkauften/überverkauften Indikatoren wie RSI oder Stochastic
+   - Besonders effektiv in Kombination mit überkauften/überverkauften Indikatoren wie RSI oder Stochastik
 
 ![indicator_oscillator_of_moving_average](../../../../images/indicator_oscillator_of_moving_average.png)
 

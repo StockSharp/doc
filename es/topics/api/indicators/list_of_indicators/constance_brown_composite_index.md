@@ -48,7 +48,7 @@ Este índice combinado puede luego suavizarse para reducir el ruido.
 
 ## Interpretación
 
-- **Niveles de sobrecompra y sobreventa**: 
+- **Niveles de sobrecompra y sobreventa**:
   - Los valores superiores a 80 pueden indicar condiciones de sobrecompra en el mercado
   - Los valores por debajo de 20 pueden indicar condiciones de sobreventa del mercado.
 
@@ -69,6 +69,6 @@ Este índice combinado puede luego suavizarse para reducir el ruido.
 ## Véase también
 
 [RSI](rsi.md)
-[StochasticOscillator](stochastic_oscillator.md)
-[StochasticK](stochastic_oscillator_k.md)
+[Oscilador estocástico](stochastic_oscillator.md)
+[Oscilador estocástico %K](stochastic_oscillator_k.md)
 [CCI](cci.md)

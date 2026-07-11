@@ -1,6 +1,6 @@
 # HurstExponent
 
-**Hurst Exponent** é uma medida estatística usada para avaliar a tendência de uma série temporal para seguir uma tendência ou regressar à média.
+**Expoente de Hurst** é uma medida estatística usada para avaliar a tendência de uma série temporal para seguir uma tendência ou regressar à média.
 
 Para utilizar o indicador, é necessário usar a classe [HurstExponent](xref:StockSharp.Algo.Indicators.HurstExponent).
 

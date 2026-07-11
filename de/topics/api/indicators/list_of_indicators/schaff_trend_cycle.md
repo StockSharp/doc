@@ -1,12 +1,12 @@
 # STC
 
-**Schaff Trend Cycle (STC)** ist ein von Doug Schaff entwickelter Momentum-Indikator. STC basiert auf der Annahme, dass sich Marktzyklen häufiger zwischen überkauften und überverkauften Bedingungen bewegen als in einem echten Trend.
+**Schaff-Trendzyklus (STC)** ist ein von Doug Schaff entwickelter Momentum-Indikator. STC basiert auf der Annahme, dass sich Marktzyklen häufiger zwischen überkauften und überverkauften Bedingungen bewegen als in einem echten Trend.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [SchaffTrendCycle](xref:StockSharp.Algo.Indicators.SchaffTrendCycle) verwenden.
 
 ## Beschreibung
 
-Der Schaff Trend Cycle vereint die Vorteile des Stochastic-Oszillators, des MACD und der zyklischen Analyse. Dieser Indikator kann schneller auf Trendänderungen reagieren als herkömmliche Indikatoren wie MACD oder Stochastic.
+Der Schaff-Trendzyklus vereint die Vorteile des Stochastik-Oszillators, des MACD und der zyklischen Analyse. Dieser Indikator kann schneller auf Trendänderungen reagieren als herkömmliche Indikatoren wie MACD oder Stochastik.
 
 STC schwankt zwischen 0 und 100:
 - Werte über 75 weisen normalerweise auf überkaufte Bedingungen hin
@@ -32,7 +32,7 @@ Die STC-Berechnung erfolgt in mehreren Schritten:
    ```
    wobei „Schnell“, „Langsam“ und „Signal“ typischerweise 23, 50 bzw. 10 sind.
 
-2. Berechnen Sie den Stochastic-Oszillator basierend auf MACD:
+2. Berechnen Sie den Stochastik-Oszillator basierend auf MACD:
    ```
    Stoch_K = 100 * ((MACD - Lowest(MACD, Length)) / (Highest(MACD, Length) - Lowest(MACD, Length)))
    Stoch_D = EMA(Stoch_K, 3)
@@ -43,11 +43,11 @@ Die STC-Berechnung erfolgt in mehreren Schritten:
    STC = 100 * ((Stoch_D - Lowest(Stoch_D, Length)) / (Highest(Stoch_D, Length) - Lowest(Stoch_D, Length)))
    ```
 
-Das Ergebnis ist ein Oszillator, der glatter ist als der klassische Stochastic und schneller auf Trendänderungen reagiert als der MACD.
+Das Ergebnis ist ein Oszillator, der glatter ist als der klassische Stochastik und schneller auf Trendänderungen reagiert als der MACD.
 
 ![IndicatorSchaffTrendCycle](../../../../images/indicator_schaff_trend_cycle.png)
 
 ## Siehe auch
 
 [MACD](macd.md)
-[Stochastic](stochastic_oscillator.md)
+[Stochastik](stochastic_oscillator.md)

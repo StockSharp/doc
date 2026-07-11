@@ -1,16 +1,16 @@
 # FOSC
 
-**Forecast Oscillator (FOSC)** ist ein technischer Indikator, der die Abweichung des Preises von seinem durch lineare Regression ermittelten vorhergesagten Wert misst und diese Abweichung als Prozentsatz darstellt.
+**Prognose-Oszillator (FOSC)** ist ein technischer Indikator, der die Abweichung des Preises von seinem durch lineare Regression ermittelten vorhergesagten Wert misst und diese Abweichung als Prozentsatz darstellt.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ForecastOscillator](xref:StockSharp.Algo.Indicators.ForecastOscillator) verwenden.
 
 ## Beschreibung
 
-Der Forecast Oscillator (FOSC) basiert auf einer linearen Regression und soll den Grad der Abweichung des aktuellen Preises von seinem vorhergesagten Wert messen. Es hilft Händlern einzuschätzen, wie genau der aktuelle Preis dem erwarteten Trend entspricht oder davon abweicht.
+Der Prognose-Oszillator (FOSC) basiert auf einer linearen Regression und soll den Grad der Abweichung des aktuellen Preises von seinem vorhergesagten Wert messen. Es hilft Händlern einzuschätzen, wie genau der aktuelle Preis dem erwarteten Trend entspricht oder davon abweicht.
 
 Der Indikator berechnet eine Trendlinie mithilfe einer linearen Regression über einen bestimmten Zeitraum und vergleicht dann den tatsächlichen Schlusskurs mit dem vorhergesagten Wert auf dieser Linie. Die Differenz wird in Prozent ausgedrückt, was FOSC zu einem Oszillator macht, der um die Nulllinie schwankt.
 
-Der Forecast Oscillator ist besonders nützlich für:
+Der Prognose-Oszillator ist besonders nützlich für:
 - Bestimmung des Grades der Preisanpassung an den erwarteten Trend
 - Identifizieren potenzieller Umkehrpunkte
 - Erkennen extremer Preisabweichungen vom Trend
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Forecast Oscillator-Berechnung umfasst die folgenden Schritte:
+Die Prognose-Oszillator-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Prognoselinie mithilfe der linearen Regression über den angegebenen Zeitraum:
    ```
@@ -42,7 +42,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Forecast Oscillator wird wie folgt interpretiert:
+Der Prognose-Oszillator wird wie folgt interpretiert:
 
 1. **Abweichung vom Nullpunkt**:
    - Positive Werte (FOSC > 0) zeigen an, dass der aktuelle Preis über dem vorhergesagten Wert liegt, was auf eine stärkere Aufwärtsbewegung als erwartet hinweisen kann

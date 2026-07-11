@@ -4,16 +4,16 @@
 
 このインジケーターを使用するには、[WilliamsR](xref:StockSharp.Algo.Indicators.WilliamsR) クラスを使用する必要があります。
 ##### 計算
-  
-Williams Percent Range インジケーターの計算式は、Stochastic Oscillator の計算に使用されるものと似ています。
 
-%R = - (MAX(HIGH(i - n)) - CLOSE(i)) / (MAX(HIGH(i - n)) - MIN(LOW(i - n))) * 100  
-  
+Williams Percent Range インジケーターの計算式は、ストキャスティクスオシレーター の計算に使用されるものと似ています。
+
+%R = - (MAX(HIGH(i - n)) - CLOSE(i)) / (MAX(HIGH(i - n)) - MIN(LOW(i - n))) * 100
+
 ここで:
-  
-CLOSE(i) - 今日の終値。  
-MAX(HIGH(i - n)) - 過去 n 期間の最高値の最大値。  
-MIN(LOW(i - n)) - 過去 n 期間の最安値の最小値。  
+
+CLOSE(i) - 今日の終値。
+MAX(HIGH(i - n)) - 過去 n 期間の最高値の最大値。
+MIN(LOW(i - n)) - 過去 n 期間の最安値の最小値。
 
 n の値はインジケーターのパラメーターとして設定されます。
 

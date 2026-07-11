@@ -1,14 +1,14 @@
 # KVO
 
-**Klinger Volume Oscillator (KVO)** は、市場の長期トレンドと短期反転を特定するために出来高と価格を使用する、Stephen Klinger によって開発されたテクニカルインジケーターです。
+**クリンガー出来高オシレーター (KVO)** は、市場の長期トレンドと短期反転を特定するために出来高と価格を使用する、Stephen Klinger によって開発されたテクニカルインジケーターです。
 
 インジケーターを使用するには、[KlingerVolumeOscillator](xref:StockSharp.Algo.Indicators.KlingerVolumeOscillator) クラスを使用する必要があります。
 
 ## 説明
 
-Klinger Volume Oscillator (KVO) は、出来高と価格の間のダイバージェンスを測定するために Stephen Klinger によって作成されました。このインジケーターは、価格変動は出来高によって確認されるという概念に基づいています。KVO は、トレンド方向だけでなく、その強さと潜在的な反転ポイントも判断しようとします。
+クリンガー出来高オシレーター (KVO) は、出来高と価格の間のダイバージェンスを測定するために Stephen Klinger によって作成されました。このインジケーターは、価格変動は出来高によって確認されるという概念に基づいています。KVO は、トレンド方向だけでなく、その強さと潜在的な反転ポイントも判断しようとします。
 
-KVO は、価格変動の方向と大きさ、および取引量の両方を考慮する Volume Force インジケーターを使用して、価格情報と出来高を組み合わせます。その後、このマネーフローに 2 つの異なる期間の指数移動平均（EMA）を適用し、それらの差を計算します。
+KVO は、価格変動の方向と大きさ、および取引量の両方を考慮する 出来高力 インジケーターを使用して、価格情報と出来高を組み合わせます。その後、このマネーフローに 2 つの異なる期間の指数移動平均（EMA）を適用し、それらの差を計算します。
 
 このインジケーターは、ゼロラインの上下で変動するオシレーターです。正の KVO 値は買い手が市場を支配していることを示し、負の値は売り手が優位であることを示します。
 
@@ -20,19 +20,19 @@ KVO は、価格変動の方向と大きさ、および取引量の両方を考�
 
 ## 計算
 
-Klinger Volume Oscillator の計算には、いくつかの手順があります。
+クリンガー出来高オシレーター の計算には、いくつかの手順があります。
 
 1. 各期間のトレンドを決定します。
    ```
-   Trend = +1, if (High + Low + Close) > (High[previous] + Low[previous] + Close[previous])
-   Trend = -1, otherwise
+   Trend = +1, 条件: (High + Low + Close) > (High[previous] + Low[previous] + Close[previous])
+   Trend = -1, それ以外の場合
    ```
 
-2. Volume Force インジケーターを計算します。
+2. 出来高力 インジケーターを計算します。
    ```
-   Volume Force = Volume * Trend * abs(2 * ((Close - Low) - (High - Close)) / (High - Low))
+   出来高力 = Volume * Trend * abs(2 * ((Close - Low) - (High - Close)) / (High - Low))
    ```
-   (High - Low) がゼロの場合、Volume Force は出来高にトレンドを掛けた値に設定されます。
+   (High - Low) がゼロの場合、出来高力 は出来高にトレンドを掛けた値に設定されます。
 
 3. 2 つの期間について EMA を計算します。
    ```
@@ -59,7 +59,7 @@ Klinger Volume Oscillator の計算には、いくつかの手順があります
 
 ## 解釈
 
-Klinger Volume Oscillator は、次のように解釈できます。
+クリンガー出来高オシレーター は、次のように解釈できます。
 
 1. **ゼロラインのクロスオーバー**:
    - KVO がゼロラインを下から上へクロスする場合、強気シグナルと見なすことができます

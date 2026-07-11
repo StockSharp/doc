@@ -7,11 +7,11 @@ Utilice la clase [DeMarker](xref:StockSharp.Algo.Indicators.DeMarker) para traba
 
 ## Cálculo
 
-1. Para cada barra, calcule valores intermedios:  
-   `DeMax = max(High − PreviousHigh, 0)`  
+1. Para cada barra, calcule valores intermedios:
+   `DeMax = max(High − PreviousHigh, 0)`
    `DeMin = max(PreviousLow − Low, 0)`
 2. Suaviza `DeMax` y `DeMin` con una media móvil de longitud **Length**.
-3. Calcular el valor final:  
+3. Calcular el valor final:
    `DeMarker = SMA(DeMax, Length) / (SMA(DeMax, Length) + SMA(DeMin, Length))`.
 
 La salida se normaliza entre 0 y 1.
@@ -33,5 +33,5 @@ DeMarker se puede utilizar para entradas de contratendencia, así como para conf
 ## Véase también
 
 [RSI](rsi.md)
-[Stochastic Oscillator](stochastic_oscillator.md)
+[Oscilador estocástico](stochastic_oscillator.md)
 [Momentum](momentum.md)

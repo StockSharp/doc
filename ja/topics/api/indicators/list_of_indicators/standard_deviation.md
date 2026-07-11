@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Stochastic Oscillator](stochastic_oscillator.md)
+[ストキャスティクスオシレーター](stochastic_oscillator.md)

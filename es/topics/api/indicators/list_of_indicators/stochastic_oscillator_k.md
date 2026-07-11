@@ -1,12 +1,12 @@
 # Oscilador estocástico %K
 
-**Stochastic Oscillator %K** es un componente del oscilador estocástico que muestra la posición actual del precio de cierre en relación con el rango de precios durante el período seleccionado. El indicador fue desarrollado por George Lane a finales de los años cincuenta.
+**Oscilador estocástico %K** es un componente del oscilador estocástico que muestra la posición actual del precio de cierre en relación con el rango de precios durante el período seleccionado. El indicador fue desarrollado por George Lane a finales de los años cincuenta.
 
 Para utilizar el indicador, utilice la clase [StochasticK](xref:StockSharp.Algo.Indicators.StochasticK).
 
 ## Descripción
 
-Stochastic Oscillator %K se basa en la observación de que durante las tendencias alcistas, los precios de cierre generalmente se concentran más cerca del límite superior del rango de precios, mientras que durante las tendencias bajistas tienden a concentrarse más cerca del límite inferior.
+Oscilador estocástico %K se basa en la observación de que durante las tendencias alcistas, los precios de cierre generalmente se concentran más cerca del límite superior del rango de precios, mientras que durante las tendencias bajistas tienden a concentrarse más cerca del límite inferior.
 
 %K es la línea "rápida" del oscilador estocástico y es el componente principal utilizado para calcular la línea %D, que es una media móvil de %K.
 
@@ -44,4 +44,4 @@ En el oscilador estocástico completo, la línea %D se calcula como un promedio 
 
 ## Véase también
 
-[Stochastic Oscillator](stochastic_oscillator.md)
+[Oscilador estocástico](stochastic_oscillator.md)

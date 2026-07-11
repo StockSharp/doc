@@ -48,4 +48,4 @@ O indicador pode incluir componentes adicionais, como uma linha de tendência ou
 
 ## Ver também
 
-[Schaff Trend Cycle](schaff_trend_cycle.md)
+[Ciclo de tendência de Schaff](schaff_trend_cycle.md)

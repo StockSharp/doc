@@ -24,13 +24,13 @@ KVO 将价格信息与成交量结合，使用一个考虑价格变动方向和�
 
 1. 确定每个时期的趋势：
    ```
-   Trend = +1, if (High + Low + Close) > (High[previous] + Low[previous] + Close[previous])
-   Trend = -1, otherwise
+   Trend = +1, 如果 (High + Low + Close) > (High[previous] + Low[previous] + Close[previous])
+   Trend = -1, 否则
    ```
 
 2. 计算成交量指标：
    ```
-   Volume Force = Volume * Trend * abs(2 * ((Close - Low) - (High - Close)) / (High - Low))
+   成交量力度 = Volume * Trend * abs(2 * ((Close - Low) - (High - Close)) / (High - Low))
    ```
 如果（最高价 - 最低价）为零，成交量力将设为成交量乘以趋势。
 

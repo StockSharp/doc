@@ -1,12 +1,12 @@
 # WTO
 
-**Wave Trend Oscillator (WTO)** es un indicador técnico desarrollado para identificar niveles de mercado de sobrecompra y sobreventa, así como para detectar fluctuaciones cíclicas de precios. WTO combina elementos de canales y osciladores, lo que lo convierte en una herramienta eficaz para identificar el impulso del mercado y posibles puntos de reversión.
+**Oscilador de tendencia de onda (WTO)** es un indicador técnico desarrollado para identificar niveles de mercado de sobrecompra y sobreventa, así como para detectar fluctuaciones cíclicas de precios. WTO combina elementos de canales y osciladores, lo que lo convierte en una herramienta eficaz para identificar el impulso del mercado y posibles puntos de reversión.
 
 Para utilizar el indicador, debe utilizar la clase [WaveTrendOscillator](xref:StockSharp.Algo.Indicators.WaveTrendOscillator).
 
 ## Descripción
 
-Wave Trend Oscillator está diseñado para filtrar el ruido del mercado y resaltar los movimientos de precios primarios. El indicador oscila alrededor de la línea cero, creando patrones de ondas que se correlacionan con movimientos cíclicos de precios.
+Oscilador de tendencia de onda está diseñado para filtrar el ruido del mercado y resaltar los movimientos de precios primarios. El indicador oscila alrededor de la línea cero, creando patrones de ondas que se correlacionan con movimientos cíclicos de precios.
 
 Características clave de WTO:
 - Oscilaciones alrededor de la línea cero, donde los valores positivos indican una tendencia al alza y los valores negativos indican una tendencia a la baja
@@ -27,7 +27,7 @@ Señales indicadoras clave:
 
 ## Cálculo
 
-El cálculo de Wave Trend Oscillator implica varios pasos:
+El cálculo de Oscilador de tendencia de onda implica varios pasos:
 
 1. Calcular precio típico:
    ```
@@ -57,4 +57,4 @@ Los valores típicos de los parámetros del indicador son: EsaPeriod = 10, DPeri
 ## Véase también
 
 [MACD](macd.md)
-[Stochastic Oscillator](stochastic_oscillator.md)
+[Oscilador estocástico](stochastic_oscillator.md)

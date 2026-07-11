@@ -7,11 +7,11 @@
 
 ## 計算
 
-1. 各バーについて中間値を計算します。  
-   `DeMax = max(High − PreviousHigh, 0)`  
+1. 各バーについて中間値を計算します。
+   `DeMax = max(High − PreviousHigh, 0)`
    `DeMin = max(PreviousLow − Low, 0)`
 2. `DeMax` と `DeMin` を、長さ **Length** の移動平均で平滑化します。
-3. 最終値を計算します。  
+3. 最終値を計算します。
    `DeMarker = SMA(DeMax, Length) / (SMA(DeMax, Length) + SMA(DeMin, Length))`.
 
 出力は 0 から 1 の間に正規化されます。
@@ -33,6 +33,6 @@ DeMarker は、逆張りエントリーだけでなく、モメンタムオシ�
 ## 関連項目
 
 [RSI](rsi.md)
-[Stochastic Oscillator](stochastic_oscillator.md)
+[ストキャスティクスオシレーター](stochastic_oscillator.md)
 [Momentum](momentum.md)
 
