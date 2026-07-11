@@ -2,7 +2,7 @@
 
 Para simplificar la monitorización, puede usar el componente especial [Monitor](xref:StockSharp.Xaml.Monitor). Véase también [Componentes visuales de logging](../graphical_user_interface/logging.md).
 
-![GUI LogControl](../../../images/gui_logcontrol.png)
+![panel de registro GUI](../../../images/gui_logcontrol.png)
 
 Esta ventana permite mostrar mensajes de todos los [ILogSource](xref:Ecng.Logging.ILogSource): 
 

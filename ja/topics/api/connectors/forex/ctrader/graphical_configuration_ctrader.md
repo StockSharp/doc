@@ -14,7 +14,7 @@ OAuth 認証プロセス:
 
 1. "Check" ボタンをクリックすると、ウィンドウが開きます。
 
-   ![OAuth Start](../../../../../images/oauth_start.png)
+   ![OAuth 開始](../../../../../images/oauth_start.png)
 
 2. "Start" をクリックすると、ユーザーはログインのために cTrader Web サイトへリダイレクトされます。cTrader Web サイトでは、StockSharp アプリケーションに取引操作へのアクセスを許可する必要があります。
 

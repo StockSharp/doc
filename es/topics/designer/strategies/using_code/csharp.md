@@ -10,7 +10,7 @@ Puede añadir una nueva estrategia pulsando el botón **Añadir** ![Designer Pan
 
 Después de pulsar el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá una ventana con la elección del tipo de contenido para crear la estrategia:
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_creation_of_element_containing_source_code_00.png)
+![Designer creación de elemento con código fuente 00](../../../../images/designer_creation_of_element_containing_source_code_00.png)
 
 Para crear una estrategia desde código C#, debe seleccionar la segunda pestaña. También puede elegir una plantilla que se usará como código inicial.
 
@@ -18,7 +18,7 @@ Después de pulsar **Aceptar**, aparecerá una nueva estrategia en la carpeta **
 
 Pero en lugar de un diagrama, se mostrará un editor de código C#:
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_creation_of_element_containing_source_code_01.png)
+![Designer creación de elemento con código fuente 01](../../../../images/designer_creation_of_element_containing_source_code_01.png)
 
 La pestaña del editor de código consta de los paneles **Código fuente** y **Lista de errores**. El panel **Código fuente** contiene el propio editor de código C#. En la parte superior hay una barra de herramientas donde puede activar o desactivar el resaltado de elementos como **Línea actual**, **Número de línea**, etc. Para aumentar el tamaño de fuente, puede usar la combinación CTRL+MouseWheel.
 

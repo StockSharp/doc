@@ -10,7 +10,7 @@
 
 单击 **添加** 按钮 ![Designer 线路面板 01](../../../../images/designer_panel_circuits_01_button.png) 后，会显示用于选择策略内容类型的窗口：
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_python_create_strategy_00.png)
+![Designer 创建源代码元素 00](../../../../images/designer_python_create_strategy_00.png)
 
 要通过 Python 代码创建策略，请选择第二个选项卡。还可以选择一个模板作为初始代码。
 
@@ -18,7 +18,7 @@
 
 但此时显示的不是策略图，而是 Python 代码编辑器：
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_python_create_strategy_01.png)
+![Designer 创建源代码元素 01](../../../../images/designer_python_create_strategy_01.png)
 
 代码编辑器选项卡由 **源代码** 和 **错误列表** 面板组成。**源代码** 面板包含 Python 代码编辑器。顶部工具栏可用于启用或禁用 **当前行**、**行号** 等显示选项。可以使用 CTRL+鼠标滚轮放大或缩小字体。
 

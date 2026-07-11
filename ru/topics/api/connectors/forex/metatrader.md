@@ -10,19 +10,19 @@
 
 1. Выбрать в [Installer](../../../installer.md) MT коннектор и начать его установку
 
-   ![MT Install 1](../../../../images/mt_install_1.png)
+   ![установка MetaTrader 1](../../../../images/mt_install_1.png)
 
 2. [Installer](../../../installer.md) спросит, в какую папку установить коннектор (должно быть установлено в папку Experts).
 
-   ![MT Install 2](../../../../images/mt_install_2.png)
+   ![установка MetaTrader 2](../../../../images/mt_install_2.png)
 
 3. В случае установленных несколько терминалов, необходимо выбрать тот, куда требуется установить коннектор.
 
-   ![MT Install 3](../../../../images/mt_install_3.png)
+   ![установка MetaTrader 3](../../../../images/mt_install_3.png)
 
 4. После выбора нужного терминала будет показан путь до папки Experts.
 
-   ![MT Install 4](../../../../images/mt_install_4.png)
+   ![установка MetaTrader 4](../../../../images/mt_install_4.png)
 
    > [!TIP]
    > - Если путь невозможно определить автоматически, то путь необходимо выбрать самостоятельно через поиск директории *C:\\Users\\%ваш\_ник\_юзера%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%много\_букв\_и\_цифр%\\MQL4\\Experts\\* (в случае MT5 путь будет содержать MQL5).

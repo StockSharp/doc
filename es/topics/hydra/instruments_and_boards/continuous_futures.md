@@ -4,7 +4,7 @@ El programa [Hydra](../../hydra.md) permite al usuario combinar distintos tipos 
 
 Para ello, en la pestaña **Común** seleccione **Instrumentos** para que aparezca la pestaña **Todos los instrumentos**. Antes de combinar los datos, compruebe qué datos de mercado están disponibles. Seleccione la ruta donde se encuentran los datos y revise los instrumentos que planea combinar. Si hay huecos, descargue los datos de mercado faltantes (por ejemplo, desde una fuente de datos compatible).
 
-![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
+![Hydra comprobación de datos de futuros continuos](../../../images/hydragluingcheckdata.png)
 
 Como ejemplo, consideremos la combinación de futuros E-mini S&P 500.
 
@@ -14,11 +14,11 @@ Como ejemplo, consideremos la combinación de futuros E-mini S&P 500.
 2. Para crear un futuro continuo, debe especificar un nombre y añadir contratos.
 
    Hay dos formas de añadir contratos.
-   - Manualmente, haciendo clic en el botón ![Hydra botón Añadir](../../../images/hydra_add.png).![HydraGluingCSCustom](../../../images/hydragluingcscustom.png)
+   - Manualmente, haciendo clic en el botón ![Hydra botón Añadir](../../../images/hydra_add.png).![Hydra futuro continuo personalizado](../../../images/hydragluingcscustom.png)
    - Si establece como nombre las dos primeras letras del contrato, por ejemplo RI, y hace clic en el botón **Auto**, se añadirán todos los instrumentos encontrados en la base de datos.![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
 3. Seleccione los contratos necesarios y establezca sus fechas de transición. ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
 4. Después, asigne el identificador de instrumento **ES\_continuous@CME** y haga clic en el botón **Aceptar**; se creará un nuevo instrumento.
-5. Luego haga clic en el botón [Velas](../working_with_data/view_and_export/candles.md) en la pestaña **Común**, seleccione el instrumento resultante y el período de datos, establezca el valor **Elemento compuesto** en el campo **Construir desde** y haga clic en el botón ![Hydra botón Buscar](../../../images/hydra_find.png). ![HydraGluingTrades](../../../images/hydragluingtrades.png)
+5. Luego haga clic en el botón [Velas](../working_with_data/view_and_export/candles.md) en la pestaña **Común**, seleccione el instrumento resultante y el período de datos, establezca el valor **Elemento compuesto** en el campo **Construir desde** y haga clic en el botón ![Hydra botón Buscar](../../../images/hydra_find.png). ![Hydra operaciones de futuros continuos](../../../images/hydragluingtrades.png)
 
 Los datos generados se pueden exportar a formatos Excel, XML, JSON o TXT. La exportación se realiza mediante la lista desplegable.
 

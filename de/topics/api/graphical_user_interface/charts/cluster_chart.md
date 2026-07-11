@@ -2,7 +2,7 @@
 
 ClusterChart ist ein spezieller Diagrammtyp zur Anzeige von Volumina als Cluster mit Balkendiagrammen. Um diesen Diagrammtyp zu verwenden, müssen Sie den speziellen Stil [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.ClusterProfile](xref:StockSharp.Charting.ChartCandleDrawStyles.ClusterProfile) setzen. Dieses Diagramm verwendet die Informationen aus der Eigenschaft [PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) als Quelldaten.
 
-![Gui ClasterChart](../../../../images/gui_clasterchart.png)
+![GUI Clusterdiagramm](../../../../images/gui_clasterchart.png)
 
 **Haupteigenschaften**
 

@@ -9,7 +9,7 @@
 
 **Hydra Server** 与 [Hydra](hydra.md) 使用相同的设置。因此，首次配置时需要先运行 [Hydra](hydra.md)，完成设置后再由 **Hydra Server** 使用这些设置。
 
-![Hydra server](../images/hydraserver_console.png)
+![Hydra 服务器](../images/hydraserver_console.png)
 
 程序包含配置文件 `appsettings.json`：
 

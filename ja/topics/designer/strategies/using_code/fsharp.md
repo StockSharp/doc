@@ -10,7 +10,7 @@
 
 **追加** ![Designer 回路パネル 01](../../../../images/designer_panel_circuits_01_button.png) ボタンを押すと、ストラテジーを作成するコンテンツタイプを選択するウィンドウが表示されます。
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_fsharp_create_strategy_00.png)
+![Designer ソースコード要素の作成 00](../../../../images/designer_fsharp_create_strategy_00.png)
 
 F# コードからストラテジーを作成するには、2 番目のタブを選択する必要があります。初期コードとして使用するテンプレートを選択することもできます。
 
@@ -18,7 +18,7 @@ F# コードからストラテジーを作成するには、2 番目のタブを
 
 ただし、ダイアグラムの代わりに F# コードエディターが表示されます。
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_fsharp_create_strategy_01.png)
+![Designer ソースコード要素の作成 01](../../../../images/designer_fsharp_create_strategy_01.png)
 
 コードエディターのタブは、**ソースコード** パネルと **エラー一覧** パネルで構成されています。**ソースコード** パネルには F# コードエディター本体があります。上部にはツールバーがあり、**現在行**、**行番号** などの強調表示をオンまたはオフにできます。フォントサイズを大きくするには、CTRL+MouseWheel の組み合わせを使用できます。
 

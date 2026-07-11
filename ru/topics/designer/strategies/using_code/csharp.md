@@ -10,7 +10,7 @@
 
 После нажатия кнопки **Добавить** ![Designer панель схем 01](../../../../images/designer_panel_circuits_01_button.png) появится окно с выбором типа контента, на котором нужно создать стратегию:
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_creation_of_element_containing_source_code_00.png)
+![Designer создание элемента с исходным кодом 00](../../../../images/designer_creation_of_element_containing_source_code_00.png)
 
 Для создания стратегии из C# кода, необходимо выбрать вторую закладку. Можно также выбрать шаблон, который будет использован в качестве первоначального кода.
 
@@ -18,7 +18,7 @@
 
 Но вместо схемы будет показан C#‑редактор кода:
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_creation_of_element_containing_source_code_01.png)
+![Designer создание элемента с исходным кодом 01](../../../../images/designer_creation_of_element_containing_source_code_01.png)
 
 Вкладка редактора кода состоит из панелей **Исходный код** и **Список ошибок**. Панель **Исходный код** содержит сам редактор C# кода. Вверху находится тулбар, где включается или выключается подсветка таких вещей как **Текущая линия**, **Номер строки** и т.д. Для увеличения шрифта можно использовать комбинацию CTRL+КолесоМыши.
 

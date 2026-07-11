@@ -6,7 +6,7 @@ Wählen Sie auf der Registerkarte **Allgemein** den Punkt **Instrumente**, sodas
 
 Prüfen Sie vor dem Erstellen des **Index**, welche Marktdaten verfügbar sind. Wählen Sie den Pfad aus, in dem die Daten gespeichert sind, und betrachten Sie nacheinander die Instrumente, die in die Berechnung des Index eingehen sollen. Wenn Lücken vorhanden sind, laden Sie die erforderlichen Marktdaten aus einer unterstützten Datenquelle herunter.
 
-![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
+![Hydra Prüfung der Continuous-Futures-Daten](../../../images/hydragluingcheckdata.png)
 
 Als Beispiel betrachten wir den Instrumentenverhältnis-Index AAPL@NYSE\/GOOG@NYSE.
 

@@ -8,11 +8,11 @@
 
 要启用 [Hydra](../../hydra.md) 服务器模式，请在程序顶部菜单中选择 **服务器模式** 选项卡。
 
-![hydra server menu](../../../images/hydra_server_menu.png)
+![Hydra 服务器 menu](../../../images/hydra_server_menu.png)
 
 然后单击 **设置** 按钮，打开服务器模式设置窗口。
 
-![hydra server](../../../images/hydra_server.png)
+![Hydra 服务器](../../../images/hydra_server.png)
 
 **Hydra 服务器**
 

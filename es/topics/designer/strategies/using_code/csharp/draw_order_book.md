@@ -38,8 +38,8 @@ En el manejador Do se llama al método [DrawOrderBook](xref:StockSharp.Algo.Stra
 
 4. Añada el panel [Libro de órdenes](../../../user_interface/components/order_book.md) y seleccione la fuente creada en el código:
 
-  ![Designer_Source_Code_OrderBook_00](../../../../../images/designer_source_code_orderbook_00.png)
+  ![Designer libro de órdenes con código fuente 00](../../../../../images/designer_source_code_orderbook_00.png)
 
 5. Después de iniciar la estrategia para pruebas, el libro de órdenes se llenará con datos:
 
-  ![Designer_Source_Code_OrderBook_01](../../../../../images/designer_source_code_orderbook_01.png)
+  ![Designer libro de órdenes con código fuente 01](../../../../../images/designer_source_code_orderbook_01.png)

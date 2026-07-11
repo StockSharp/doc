@@ -1,6 +1,6 @@
 # 篮子
 
-![Designer Black Basket 00](../../../../../../images/designer_black_basket_00.png)
+![Designer Black-Scholes 组合 00](../../../../../../images/designer_black_basket_00.png)
 
 该模块用于创建期权定价模型。
 
@@ -22,7 +22,7 @@
 
 - **Black 模型** – 指定是否创建 Black-Scholes 模型的标志。
 
-![Designer Black Basket 01](../../../../../../images/designer_black_basket_01.png)
+![Designer Black-Scholes 组合 01](../../../../../../images/designer_black_basket_01.png)
 
 ## 另请参阅
 

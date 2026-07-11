@@ -10,19 +10,19 @@ Beide Connectoren werden auf die gleiche Weise verwendet. Daher wird im Folgende
 
 1. Wählen Sie den MT-Connector im [Installer](../../../installer.md) aus und starten Sie den Installationsprozess.
 
-   ![MT Install 1](../../../../images/mt_install_1.png)
+   ![MetaTrader-Installation 1](../../../../images/mt_install_1.png)
 
 2. Der [Installer](../../../installer.md) fragt, in welchem Ordner der Connector installiert werden soll. Er muss im Ordner Experts installiert werden.
 
-   ![MT Install 2](../../../../images/mt_install_2.png)
+   ![MetaTrader-Installation 2](../../../../images/mt_install_2.png)
 
 3. Wenn mehrere Terminals installiert sind, müssen Sie das Terminal auswählen, in dem der Connector installiert werden soll.
 
-   ![MT Install 3](../../../../images/mt_install_3.png)
+   ![MetaTrader-Installation 3](../../../../images/mt_install_3.png)
 
 4. Nach Auswahl des gewünschten Terminals wird der Pfad zum Ordner Experts angezeigt.
 
-   ![MT Install 4](../../../../images/mt_install_4.png)
+   ![MetaTrader-Installation 4](../../../../images/mt_install_4.png)
 
    > [!TIP]
    > - Wenn der Pfad nicht automatisch ermittelt werden kann, müssen Sie ihn manuell über die Ordnersuche auswählen: *C:\\Users\\%ihr_benutzername%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%viele_buchstaben_und_zahlen%\\MQL4\\Experts\\* (für MT5 enthält der Pfad MQL5).

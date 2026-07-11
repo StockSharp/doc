@@ -14,7 +14,7 @@ Ablauf der OAuth-Autorisierung:
 
 1. Wenn Sie auf die Schaltfläche "Check" klicken, öffnet sich ein Fenster:
 
-   ![OAuth Start](../../../../../images/oauth_start.png)
+   ![OAuth-Start](../../../../../images/oauth_start.png)
 
 2. Nach einem Klick auf "Start" wird der Benutzer zur cTrader-Website weitergeleitet, um sich anzumelden. Auf der cTrader-Website müssen Sie der StockSharp-Anwendung Zugriff auf Handelsoperationen erlauben:
 

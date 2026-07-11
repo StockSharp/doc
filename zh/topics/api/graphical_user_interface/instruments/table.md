@@ -2,7 +2,7 @@
 
 [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) 组件用于以表格形式显示与金融工具相关的财务信息（一级字段）及其变动。该组件允许您选择一个或多个工具。
 
-![GUI SecurityPicker2](../../../../images/gui_securitypicker2.png)
+![GUI 交易品种选择器](../../../../images/gui_securitypicker2.png)
 
 **主要属性**
 

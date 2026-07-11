@@ -38,8 +38,8 @@ Subscribe(bookSubscription);
 
 4. 添加[订单簿](../../../user_interface/components/order_book.md)面板，并选择在代码中创建的数据源：
 
-  ![Designer_Source_Code_OrderBook_00](../../../../../images/designer_source_code_orderbook_00.png)
+  ![Designer 源代码订单簿 00](../../../../../images/designer_source_code_orderbook_00.png)
 
 5. 启动策略测试后，订单簿中会显示数据：
 
-  ![Designer_Source_Code_OrderBook_01](../../../../../images/designer_source_code_orderbook_01.png)
+  ![Designer 源代码订单簿 01](../../../../../images/designer_source_code_orderbook_01.png)

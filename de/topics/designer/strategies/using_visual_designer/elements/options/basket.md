@@ -1,6 +1,6 @@
 # Basket
 
-![Designer Black Basket 00](../../../../../../images/designer_black_basket_00.png)
+![Designer Black-Scholes-Korb 00](../../../../../../images/designer_black_basket_00.png)
 
 Dieser Block wird verwendet, um ein Optionspreismodell zu erstellen.
 
@@ -22,7 +22,7 @@ Parameter
 
 - **Black-Modell** - ein Flag, das angibt, ob ein Black-Scholes-Modell erstellt werden soll.
 
-![Designer Black Basket 01](../../../../../../images/designer_black_basket_01.png)
+![Designer Black-Scholes-Korb 01](../../../../../../images/designer_black_basket_01.png)
 
 ## Siehe auch
 

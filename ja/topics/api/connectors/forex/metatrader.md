@@ -10,19 +10,19 @@
 
 1. [インストーラー](../../../installer.md) で MT コネクタを選択し、インストールプロセスを開始します。
 
-   ![MT Install 1](../../../../images/mt_install_1.png)
+   ![MetaTrader インストール 1](../../../../images/mt_install_1.png)
 
 2. [インストーラー](../../../installer.md) は、コネクタをどのフォルダーにインストールするかを尋ねます（Experts フォルダーにインストールする必要があります）。
 
-   ![MT Install 2](../../../../images/mt_install_2.png)
+   ![MetaTrader インストール 2](../../../../images/mt_install_2.png)
 
 3. 複数のターミナルがインストールされている場合は、コネクタをインストールする対象を選択する必要があります。
 
-   ![MT Install 3](../../../../images/mt_install_3.png)
+   ![MetaTrader インストール 3](../../../../images/mt_install_3.png)
 
 4. 目的のターミナルを選択すると、Experts フォルダーへのパスが表示されます。
 
-   ![MT Install 4](../../../../images/mt_install_4.png)
+   ![MetaTrader インストール 4](../../../../images/mt_install_4.png)
 
    > [!TIP]
    > - パスを自動的に判定できない場合は、ディレクトリ検索で *C:\\Users\\%ユーザー名%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%多数の文字と数字%\\MQL4\\Experts\\* を手動で選択する必要があります（MT5 の場合、パスには MQL5 が含まれます）。

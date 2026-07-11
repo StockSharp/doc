@@ -10,7 +10,7 @@ Pode adicionar uma nova estratégia clicando no botão **Adicionar** ![Designer 
 
 Depois de clicar no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá uma janela com a escolha do tipo de conteúdo sobre o qual criar a estratégia:
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_python_create_strategy_00.png)
+![Designer criação de elemento com código-fonte 00](../../../../images/designer_python_create_strategy_00.png)
 
 Para criar uma estratégia a partir de código Python, selecione o segundo separador. Também pode escolher um modelo que será usado como código inicial.
 
@@ -18,7 +18,7 @@ Depois de clicar em **Confirmar**, uma nova estratégia aparecerá na pasta **Es
 
 Mas, em vez de um esquema, será apresentado um editor de código Python:
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_python_create_strategy_01.png)
+![Designer criação de elemento com código-fonte 01](../../../../images/designer_python_create_strategy_01.png)
 
 O separador do editor de código é composto pelos painéis **Código-fonte** e **Lista de erros**. O painel **Código-fonte** contém o próprio editor de código Python. Na parte superior, existe uma barra de ferramentas onde pode ativar ou desativar o destaque de elementos como **Linha atual**, **Número da linha**, etc. Para aumentar o tamanho da letra, pode usar a combinação CTRL+MouseWheel.
 

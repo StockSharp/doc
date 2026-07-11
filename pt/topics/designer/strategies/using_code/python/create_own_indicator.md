@@ -4,7 +4,7 @@ A criação de um indicador personalizado na [API](../../../../api.md) é descri
 
 Para criar um indicador, é necessário selecionar a pasta **Indicadores** no painel **Esquemas**, clicar com o botão direito e selecionar **Adicionar** no menu de contexto:
 
-![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
+![Designer indicador de código-fonte 00](../../../../../images/designer_source_code_indicator_00.png)
 
 O código do indicador terá o seguinte aspeto:
 
@@ -108,7 +108,7 @@ A descrição dos métodos do indicador está disponível na secção [Indicador
 
 Para adicionar o indicador criado ao esquema, é necessário usar o cubo [Indicador](../../using_visual_designer/elements/common/indicator.md) e, em seguida, definir nele o indicador pretendido:
 
-![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
+![Designer indicador de código-fonte 01](../../../../../images/designer_source_code_indicator_01.png)
 
 O parâmetro **Alteração**, previamente definido no código do indicador, é apresentado no painel de propriedades.
 

@@ -10,7 +10,7 @@
 
 **追加** ボタン ![Designer パネル Circuits 01](../../../../images/designer_panel_circuits_01_button.png) をクリックすると、ストラテジーを作成するコンテンツタイプを選択するウィンドウが表示されます。
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_python_create_strategy_00.png)
+![Designer ソースコード要素の作成 00](../../../../images/designer_python_create_strategy_00.png)
 
 Python コードからストラテジーを作成するには、2 番目のタブを選択します。初期コードとして使用するテンプレートを選択することもできます。
 
@@ -18,7 +18,7 @@ Python コードからストラテジーを作成するには、2 番目のタ�
 
 ただし、スキームの代わりに Python コードエディターが表示されます。
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_python_create_strategy_01.png)
+![Designer ソースコード要素の作成 01](../../../../images/designer_python_create_strategy_01.png)
 
 コードエディタータブは、**ソースコード** パネルと **エラー一覧** パネルで構成されます。**ソースコード** パネルには Python コードエディター本体があります。上部にはツールバーがあり、**現在行**、**行番号** などのハイライト表示を有効または無効にできます。フォントサイズを大きくするには、CTRL+MouseWheel の組み合わせを使用できます。
 

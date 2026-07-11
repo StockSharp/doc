@@ -58,7 +58,7 @@ stocksharp.studio.runner setup
 
 Для авторизации по токену введите токен из [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
 
-![Profile](../../images/profile.png)
+![Профиль](../../images/profile.png)
 
 В случае успеха программа выведет на экран доступные варианты работы с Телеграм:
 

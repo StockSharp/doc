@@ -35,12 +35,12 @@
 
 1. 从 DLL 添加策略的过程与通过[代码](using_code.md)创建策略类似，但在选择内容类型时需要选择 **DLL**：
 
-![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
+![Designer 创建 DLL 策略 00](../../../images/designer_creation_strategy_dll_00.png)
 
 2. 在窗口中指定程序集路径（程序集必须兼容 .NET 6.0），然后选择类型。之所以需要选择类型，是因为一个 DLL 中可以包含多个策略，也可以包含[模块和指标](using_dll/create_element_and_indicator.md)。单击 **确定** 后，策略会添加到 **策略图** 面板并可立即使用：
 
-![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
+![Designer 创建 DLL 策略 01](../../../images/designer_creation_strategy_dll_01.png)
 
 3. 策略的[回测](../backtesting/user_interface.md)、[实盘运行](../live_execution/getting_started.md)及其他操作，与使用策略图或代码创建的策略相同：
 
-![Designer_Creation_Strategy_Dll_02](../../../images/designer_creation_strategy_dll_02.png)
+![Designer 创建 DLL 策略 02](../../../images/designer_creation_strategy_dll_02.png)

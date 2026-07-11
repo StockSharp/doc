@@ -2,7 +2,7 @@
 
 ClusterChart - é um tipo especial de gráfico para apresentar volumes na forma de clusters com gráficos de barras. Para utilizar este tipo de gráfico, é necessário definir o estilo especial [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.ClusterProfile](xref:StockSharp.Charting.ChartCandleDrawStyles.ClusterProfile). Este gráfico utiliza a informação da propriedade [PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) como dados de origem.
 
-![Gui ClasterChart](../../../../images/gui_clasterchart.png)
+![GUI gráfico de cluster](../../../../images/gui_clasterchart.png)
 
 **Propriedades principais**
 

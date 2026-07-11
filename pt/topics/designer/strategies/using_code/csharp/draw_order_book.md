@@ -38,8 +38,8 @@ No manipulador Do, é feita uma chamada ao método [DrawOrderBook](xref:StockSha
 
 4. Adicione o painel [Livro de ordens](../../../user_interface/components/order_book.md) e selecione a fonte criada no código:
 
-  ![Designer_Source_Code_OrderBook_00](../../../../../images/designer_source_code_orderbook_00.png)
+  ![Designer livro de ofertas com código-fonte 00](../../../../../images/designer_source_code_orderbook_00.png)
 
 5. Depois de lançar a estratégia para teste, o livro de ordens será preenchido com dados:
 
-  ![Designer_Source_Code_OrderBook_01](../../../../../images/designer_source_code_orderbook_01.png)
+  ![Designer livro de ofertas com código-fonte 01](../../../../../images/designer_source_code_orderbook_01.png)

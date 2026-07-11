@@ -2,7 +2,7 @@
 
 El componente [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) está diseñado para buscar y seleccionar instrumentos. Admite selección única y múltiple. El componente permite filtrar la lista de instrumentos por su tipo. Este componente también se puede usar para mostrar información financiera (campos level1), como se muestra en la sección [SecurityGrid](table.md). 
 
-![GUI SecurityPicker2](../../../../images/gui_securitypicker2.png)
+![GUI selector de instrumentos](../../../../images/gui_securitypicker2.png)
 
 [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) consta de: 
 

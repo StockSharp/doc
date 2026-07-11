@@ -1,10 +1,10 @@
-﻿# 创建指标
+# 创建指标
 
 有关在 [API](../../../../api.md) 中创建自定义指标的方法，请参阅[自定义指标](../../../../api/indicators/custom_indicator.md)。此类指标与 **Designer** 完全兼容。
 
 要创建指标，请在 **策略图** 面板中选择 **指标** 文件夹，右键单击该文件夹，然后在上下文菜单中选择 **添加**：
 
-![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
+![Designer 源代码指标 00](../../../../../images/designer_source_code_indicator_00.png)
 
 指标代码如下：
 
@@ -108,7 +108,7 @@ class empty_indicator(BaseIndicator):
 
 要将创建的指标添加到策略图，请使用 [指标](../../using_visual_designer/elements/common/indicator.md) 模块，并在其中选择所需指标：
 
-![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
+![Designer 源代码指标 01](../../../../../images/designer_source_code_indicator_01.png)
 
 属性面板会显示此前在指标代码中定义的 **变化** 参数。
 

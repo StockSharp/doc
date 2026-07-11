@@ -4,7 +4,7 @@ Visual Studio bietet einen Mechanismus, um sich mit dem Visual-Studio-Debugger a
 
 1. Um sich an einen Prozess anzuhängen und das Debugging einer DLL-Strategie zu starten, muss diese in den Speicher geladen werden. Die DLL wird nach dem [Hinzufügen der Strategie](../using_dll.md) in den Speicher geladen. Sobald die DLL im Speicher geladen ist, können Sie sich an den Prozess anhängen.
 
-![Designer_Creation_Strategy_Dll_01](../../../../images/designer_creation_strategy_dll_01.png)
+![Designer DLL-Strategie erstellen 01](../../../../images/designer_creation_strategy_dll_01.png)
 
 2. Wählen Sie in Visual Studio **Debug -> Attach to Process** aus.
 

@@ -4,7 +4,7 @@ Visual Studio 支持使用调试器附加到正在运行的进程。有关该功
 
 1. 要附加到进程并开始调试 DLL 策略，必须先将该 DLL 加载到内存中。[添加策略](../using_dll.md)后，DLL 会被加载到内存，此时即可附加到进程。
 
-![Designer_Creation_Strategy_Dll_01](../../../../images/designer_creation_strategy_dll_01.png)
+![Designer 创建 DLL 策略 01](../../../../images/designer_creation_strategy_dll_01.png)
 
 2. 在 Visual Studio 中选择 **Debug -> Attach to Process**。
 

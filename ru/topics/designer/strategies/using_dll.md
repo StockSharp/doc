@@ -35,12 +35,12 @@
 
 1. Добавление стратегии из DLL происходит аналогично созданию стратегии из [кода](using_code.md). Но на этапе определения типа контента необходимо выбрать **DLL**:
 
-![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
+![Designer создание DLL-стратегии 00](../../../images/designer_creation_strategy_dll_00.png)
 
 2. В окне необходимо указать путь к сборке (должна быть совместима с .NET 6.0), и выбрать тип. Последнее необходимо, так как в одной DLL может быть сразу несколько стратегий (или [кубиков с индикаторами](using_dll/create_element_and_indicator.md)). После нажатия на **OK** стратегия будет добавлена на панель **Схемы** и готова к работе:
 
-![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
+![Designer создание DLL-стратегии 01](../../../images/designer_creation_strategy_dll_01.png)
 
 3. Запуск стратегии на [бэктест](../backtesting/user_interface.md), на [live](../live_execution/getting_started.md) и другие операции - аналогично работе стратегии из схемы и кода:
 
-![Designer_Creation_Strategy_Dll_02](../../../images/designer_creation_strategy_dll_02.png)
+![Designer создание DLL-стратегии 02](../../../images/designer_creation_strategy_dll_02.png)

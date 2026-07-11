@@ -2,7 +2,7 @@
 
 ClusterChart は、棒グラフ付きのクラスター形式で出来高を表示するための特殊な種類のチャートです。この種類のチャートを使用するには、特殊なスタイル [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.ClusterProfile](xref:StockSharp.Charting.ChartCandleDrawStyles.ClusterProfile) を設定する必要があります。このチャートは、ソースデータとして [PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) プロパティの情報を使用します。
 
-![Gui ClasterChart](../../../../images/gui_clasterchart.png)
+![GUI クラスターチャート](../../../../images/gui_clasterchart.png)
 
 **主なプロパティ**
 

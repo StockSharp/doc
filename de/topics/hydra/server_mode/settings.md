@@ -8,11 +8,11 @@ Tatsächlich erfolgt die Verbindung zur Quelle über [Hydra](../../hydra.md), mi
 
 Um den Servermodus von [Hydra](../../hydra.md) zu aktivieren, wählen Sie im oberen Menü des Programms die Registerkarte **Servermodus**.
 
-![hydra server menu](../../../images/hydra_server_menu.png)
+![Hydra-Server menu](../../../images/hydra_server_menu.png)
 
 Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsfenster für den Servermodus zu öffnen.
 
-![hydra server](../../../images/hydra_server.png)
+![Hydra-Server](../../../images/hydra_server.png)
 
 **Hydra-Server**
 

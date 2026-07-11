@@ -4,7 +4,7 @@
 
 インジケーターを作成するには、**スキーム** パネルで **インジケーター** フォルダーを選択し、右クリックしてコンテキストメニューから **追加** を選択する必要があります。
 
-![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
+![Designer ソースコードインジケーター 00](../../../../../images/designer_source_code_indicator_00.png)
 
 インジケーターのコードは次のようになります。
 
@@ -105,7 +105,7 @@ type EmptyIndicator() as this =
 
 作成したインジケーターをダイアグラムに追加するには、[インジケーター](../../using_visual_designer/elements/common/indicator.md) キューブを使用し、その中で必要なインジケーターを指定する必要があります。
 
-![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
+![Designer ソースコードインジケーター 01](../../../../../images/designer_source_code_indicator_01.png)
 
 インジケーターコードで以前に設定した **変更** パラメーターは、プロパティパネルに表示されます。
 

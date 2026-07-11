@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[VolumeProfileIndicator](xref:StockSharp.Algo.Indicators.VolumeProfileIndicator) クラスを使用する必要があります。
 
-![Gui ClasterChart](../../../../images/gui_clasterchart.png)
+![GUI クラスターチャート](../../../../images/gui_clasterchart.png)
 
 ## 推奨コンテンツ
 

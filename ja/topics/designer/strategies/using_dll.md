@@ -35,12 +35,12 @@
 
 1. DLL からストラテジーを追加する操作は、[コード](using_code.md)からストラテジーを作成する操作と似ています。ただし、コンテンツタイプの定義段階で **DLL** を選択する必要があります。
 
-![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
+![Designer DLL 戦略の作成 00](../../../images/designer_creation_strategy_dll_00.png)
 
 2. ウィンドウで、アセンブリへのパス（.NET 6.0 と互換性がある必要があります）を指定し、型を選択する必要があります。後者が必要なのは、1 つの DLL に複数のストラテジー（または[インジケーター付きキューブ](using_dll/create_element_and_indicator.md)）を含められるためです。**確定** をクリックすると、ストラテジーが **スキーマ** パネルに追加され、使用できる状態になります。
 
-![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
+![Designer DLL 戦略の作成 01](../../../images/designer_creation_strategy_dll_01.png)
 
 3. [バックテスト](../backtesting/user_interface.md)、[ライブ](../live_execution/getting_started.md)でのストラテジー起動、およびその他の操作は、ダイアグラムやコードから作成したストラテジーと同様に動作します。
 
-![Designer_Creation_Strategy_Dll_02](../../../images/designer_creation_strategy_dll_02.png)
+![Designer DLL 戦略の作成 02](../../../images/designer_creation_strategy_dll_02.png)

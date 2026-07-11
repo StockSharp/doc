@@ -1,10 +1,10 @@
-﻿# Eigenen Würfel erstellen
+# Eigenen Würfel erstellen
 
 Ähnlich wie beim Erstellen eines [Würfels aus einem Schema](../../using_visual_designer/composite_elements.md) können Sie einen eigenen Würfel auf Basis von Python-Code erstellen. Ein solcher Würfel ist funktionaler als ein aus einem Schema erstellter Würfel.
 
 Um einen Würfel aus Code zu erstellen, müssen Sie ihn im Ordner **Benutzerdefinierte Blöcke** erstellen:
 
-![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
+![Designer Quellcode-Element 00](../../../../../images/designer_source_code_elem_00.png)
 
 Im folgenden Beispiel erbt der Würfel von der Klasse [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) und sieht so aus:
 
@@ -209,7 +209,7 @@ Wenn Sie die Auskommentierung der Eigenschaft entfernen, wird die Methode **Proz
 
 Um den resultierenden Würfel zum Schema hinzuzufügen, wählen Sie den erstellten Würfel in der Palette im Abschnitt **Benutzerdefinierte Blöcke** aus:
 
-![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
+![Designer Quellcode-Element 01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING]
 > Würfel aus Python-Code können nicht in Strategien verwendet werden, die in Python-Code erstellt wurden. Sie können nur in Strategien verwendet werden, die [aus Würfeln](../../using_visual_designer.md) erstellt wurden.

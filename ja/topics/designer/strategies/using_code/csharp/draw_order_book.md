@@ -38,8 +38,8 @@ Do ハンドラー内では、板情報を描画用に送信する [DrawOrderBoo
 
 4. [板情報](../../../user_interface/components/order_book.md) パネルを追加し、コードで作成したソースを選択します。
 
-  ![Designer_Source_Code_OrderBook_00](../../../../../images/designer_source_code_orderbook_00.png)
+  ![Designer ソースコード板情報 00](../../../../../images/designer_source_code_orderbook_00.png)
 
 5. テスト用にストラテジーを起動すると、板情報にデータが入力されます。
 
-  ![Designer_Source_Code_OrderBook_01](../../../../../images/designer_source_code_orderbook_01.png)
+  ![Designer ソースコード板情報 01](../../../../../images/designer_source_code_orderbook_01.png)

@@ -1,10 +1,10 @@
-﻿# 创建自定义模块
+# 创建自定义模块
 
 与[通过策略图创建模块](../../using_visual_designer/composite_elements.md)类似，也可以使用 Python 代码创建自定义模块。代码模块的功能比策略图模块更灵活。
 
 要通过代码创建模块，请在 **自定义模块** 文件夹中创建该模块：
 
-![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
+![Designer 源代码元素 00](../../../../../images/designer_source_code_elem_00.png)
 
 下面的示例模块继承自 [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) 类，代码如下：
 
@@ -209,7 +209,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 要将创建的模块添加到策略图，请在组件面板的 **自定义模块** 部分选择该模块：
 
-![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
+![Designer 源代码元素 01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING]
 > 使用 Python 代码创建的模块不能用于同样使用 Python 代码创建的策略，只能用于通过[模块](../../using_visual_designer.md)创建的策略。

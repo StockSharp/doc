@@ -1,10 +1,10 @@
-﻿# Indikator erstellen
+# Indikator erstellen
 
 Das Erstellen eines eigenen Indikators in der [API](../../../../api.md) wird im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md) beschrieben. Solche Indikatoren sind vollständig mit **Designer** kompatibel.
 
 Um einen Indikator zu erstellen, wählen Sie im Panel **Schemata** den Ordner **Indikatoren** aus, klicken mit der rechten Maustaste und wählen im Kontextmenü **Hinzufügen**:
 
-![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
+![Designer Quellcode-Indikator 00](../../../../../images/designer_source_code_indicator_00.png)
 
 Der Indikatorcode sieht folgendermaßen aus:
 
@@ -108,7 +108,7 @@ Die Beschreibung der Indikatormethoden finden Sie im Abschnitt [Benutzerdefinier
 
 Um den erstellten Indikator zum Schema hinzuzufügen, verwenden Sie den Würfel [Indikator](../../using_visual_designer/elements/common/indicator.md) und legen darin den gewünschten Indikator fest:
 
-![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
+![Designer Quellcode-Indikator 01](../../../../../images/designer_source_code_indicator_01.png)
 
 Der Parameter **Änderung**, der zuvor im Indikatorcode festgelegt wurde, wird im Eigenschaftenpanel angezeigt.
 

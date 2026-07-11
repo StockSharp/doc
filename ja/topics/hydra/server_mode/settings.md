@@ -8,11 +8,11 @@
 
 [Hydra](../../hydra.md) サーバーモードを有効にするには、プログラムの上部メニューで **サーバーモード** タブを選択します。
 
-![hydra server menu](../../../images/hydra_server_menu.png)
+![Hydra サーバー menu](../../../images/hydra_server_menu.png)
 
 その後、**設定** ボタンをクリックして、サーバーモード設定ウィンドウを開きます。
 
-![hydra server](../../../images/hydra_server.png)
+![Hydra サーバー](../../../images/hydra_server.png)
 
 **Hydra サーバー**
 

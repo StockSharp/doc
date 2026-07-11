@@ -1,6 +1,6 @@
 # Cesta
 
-![Designer Black Basket 00](../../../../../../images/designer_black_basket_00.png)
+![Designer cesto Black-Scholes 00](../../../../../../images/designer_black_basket_00.png)
 
 Este bloco é usado para criar um modelo de precificação de opções.
 
@@ -22,7 +22,7 @@ Parâmetros
 
 - **Modelo Black** - uma flag que indica se deve ser criado um modelo Black-Scholes.
 
-![Designer Black Basket 01](../../../../../../images/designer_black_basket_01.png)
+![Designer cesto Black-Scholes 01](../../../../../../images/designer_black_basket_01.png)
 
 ## Ver também
 

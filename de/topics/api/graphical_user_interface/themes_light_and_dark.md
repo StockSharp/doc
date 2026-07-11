@@ -2,9 +2,9 @@
 
 Für alle grafischen S#-Elemente gibt es mehrere unterschiedliche Themes. Unten sind die zwei beliebtesten Themes dargestellt.
 
-![API GUI Thems 01](../../../images/api_gui_thems_01.png)
+![API GUI Themen 01](../../../images/api_gui_thems_01.png)
 
-![API GUI Thems 02](../../../images/api_gui_thems_02.png)
+![API GUI Themen 02](../../../images/api_gui_thems_02.png)
 
 Um das Anwendungstheme zu installieren, reicht eine Zeile. Um beispielsweise das dunkle Theme VisualStudio 2017 festzulegen, müssen Sie die folgende Zeile angeben:
 

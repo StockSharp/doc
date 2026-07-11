@@ -4,7 +4,7 @@
 
 コードからキューブを作成するには、**独自要素** フォルダー内に作成する必要があります。
 
-![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
+![Designer ソースコード要素 00](../../../../../images/designer_source_code_elem_00.png)
 
 以下の例では、キューブは [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) クラスを継承し、次のようになります。
 
@@ -117,7 +117,7 @@ _minValue = AddParam("MinValue", 10)
 
 作成されたキューブをダイアグラムに追加するには、パレットの **独自要素** セクションで作成したキューブを選択する必要があります。
 
-![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
+![Designer ソースコード要素 01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING]
 > C# コードのキューブは、C# コードで作成されたストラテジーでは使用できません。[キューブから](../../using_visual_designer.md)作成されたストラテジーでのみ使用できます。

@@ -58,7 +58,7 @@ stocksharp.studio.runner setup
 
 使用令牌进行身份验证时，请输入从 [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) 获取的令牌：
 
-![Profile](../../images/profile.png)
+![个人资料](../../images/profile.png)
 
 验证成功后，程序将显示可用的 Telegram 操作选项：
 

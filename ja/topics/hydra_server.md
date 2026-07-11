@@ -9,7 +9,7 @@
 
 **Hydra Server** は [Hydra](hydra.md) と同じ設定を使用します。初期設定では、まず [Hydra](hydra.md) を実行し、その後 Hydra Server によって作成された設定を使用します。
 
-![Hydra server](../images/hydraserver_console.png)
+![Hydra サーバー](../images/hydraserver_console.png)
 
 プログラムには設定ファイル `appsettings.json` があります。
 

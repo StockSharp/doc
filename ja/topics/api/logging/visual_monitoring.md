@@ -2,7 +2,7 @@
 
 監視を簡略化するために、専用の [Monitor](xref:StockSharp.Xaml.Monitor) コンポーネントを使用できます。[ビジュアルログコンポーネント](../graphical_user_interface/logging.md) も参照してください。
 
-![GUI LogControl](../../../images/gui_logcontrol.png)
+![GUI ログパネル](../../../images/gui_logcontrol.png)
 
 このウィンドウでは、すべての [ILogSource](xref:Ecng.Logging.ILogSource) からのメッセージを表示できます。
 

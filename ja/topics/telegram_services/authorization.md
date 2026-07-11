@@ -6,7 +6,7 @@
 
 ボットは、[https://stocksharp.com/profile/](https://stocksharp.com/profile/) のプロフィールにアクセスし、そこからトークンをコピーするよう求めます。
 
-![Profile](../../images/profile.png)
+![プロファイル](../../images/profile.png)
 
 次に、それをチャットで **token: %your_token%** 形式でボットに送り返します。成功すると、ボットは StockSharp Web サイトに登録したときに使用した名前であなたに呼びかけます。
 

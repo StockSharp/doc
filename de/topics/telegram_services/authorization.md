@@ -6,7 +6,7 @@ Um [StockSharpBot](https://t.me/StockSharpBot) zu aktivieren, müssen Sie ihn st
 
 Der Bot fordert Sie auf, Ihr Profil unter [https://stocksharp.com/profile/](https://stocksharp.com/profile/) zu öffnen und das Token dort zu kopieren.
 
-![Profile](../../images/profile.png)
+![Profil](../../images/profile.png)
 
 Senden Sie es anschließend im Chat im Format **token: %your_token%** zurück an den Bot. Bei Erfolg spricht der Bot Sie mit dem Namen an, mit dem Sie sich auf der StockSharp-Website registriert haben.
 

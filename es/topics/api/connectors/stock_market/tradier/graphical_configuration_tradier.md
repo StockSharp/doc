@@ -16,7 +16,7 @@ Proceso de autorización OAuth:
 
 1. Al hacer clic en el botón "Check", se abrirá una ventana:
 
-   ![OAuth Start](../../../../../images/oauth_start.png)
+   ![inicio de OAuth](../../../../../images/oauth_start.png)
 
 2. Después de hacer clic en "Start", el usuario será redirigido al sitio web de Tradier para iniciar sesión:
 

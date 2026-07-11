@@ -59,7 +59,7 @@ Und authentifizieren Sie sich mit einer geeigneten Methode:
 
 Für die Authentifizierung per Token geben Sie das Token von [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) ein:
 
-![Profile](../../images/profile.png)
+![Profil](../../images/profile.png)
 
 Bei Erfolg zeigt das Programm die verfügbaren Telegram-Optionen an:
 

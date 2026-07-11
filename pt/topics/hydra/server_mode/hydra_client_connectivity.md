@@ -4,11 +4,11 @@ No modo de servidor, é possível ligar outro programa Hydra, que atuará como c
 
 É utilizada uma fonte especial para a ligação:
 
-![hydra tasks server](../../../images/hydratasksserver_1.png)
+![Hydra tarefa do servidor](../../../images/hydratasksserver_1.png)
 
 **Definições**
 
-![hydra tasks server](../../../images/hydratasksserver_2.png)
+![Hydra tarefa do servidor](../../../images/hydratasksserver_2.png)
 
 - **Endereço** - o endereço do servidor Hydra.
 - **Início de sessão** - login (necessário se o servidor exigir autorização).

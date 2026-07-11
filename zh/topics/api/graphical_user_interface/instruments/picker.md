@@ -2,7 +2,7 @@
 
 [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) 组件用于查找和选择工具。它支持单选和多选。该组件允许您按工具类型过滤工具列表。此组件还可以用于显示财务信息（一级字段），如[表格](table.md)部分所示。
 
-![GUI SecurityPicker2](../../../../images/gui_securitypicker2.png)
+![GUI 交易品种选择器](../../../../images/gui_securitypicker2.png)
 
 [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) 由以下部分组成：
 

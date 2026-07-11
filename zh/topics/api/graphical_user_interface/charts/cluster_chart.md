@@ -2,7 +2,7 @@
 
 ClusterChart - 是一种特殊类型的图表，用于以柱状图的形式显示集群中的成交量。要使用这种类型的图表，需要设置特殊样式 [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle) = [ChartCandleDrawStyles.ClusterProfile](xref:StockSharp.Charting.ChartCandleDrawStyles.ClusterProfile)。此图表使用 [PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) 属性中的信息作为源数据。
 
-![Gui ClasterChart](../../../../images/gui_clasterchart.png)
+![GUI 集群图表](../../../../images/gui_clasterchart.png)
 
 **主要属性**
 

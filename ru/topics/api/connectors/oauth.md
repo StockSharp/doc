@@ -25,7 +25,7 @@ ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 
 2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - передача токена напрямую из кода. Наличие файла с секретами не требуется на машине. Токен получается из [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
 
-   ![Profile](../../../images/profile.png)
+   ![Профиль](../../../images/profile.png)
 
 Для [IOAuthProvider](xref:Ecng.Net.IOAuthProvider) существует два варианта реализации:
 
@@ -33,4 +33,4 @@ ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 
 2. [OAuthProvider](xref:StockSharp.Studio.Controls.OAuthProvider) - для WPF-приложений, где необходимо показать окно авторизации:
 
-   ![OAuth Start](../../../images/oauth_start.png)
+   ![запуск OAuth](../../../images/oauth_start.png)

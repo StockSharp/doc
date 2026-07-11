@@ -6,7 +6,7 @@ No separador **Comum**, selecione **Instrumentos** para que apareça o separador
 
 Antes de criar o **Índice**, verifique que dados de mercado estão disponíveis. Selecione o caminho onde os dados estão armazenados e veja sequencialmente os instrumentos que devem participar no cálculo do índice. Se existirem lacunas, descarregue os dados de mercado necessários a partir de uma fonte de dados suportada.
 
-![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
+![Hydra verificação de dados de futuros contínuos](../../../images/hydragluingcheckdata.png)
 
 Como exemplo, considere o índice de rácio de instrumentos AAPL@NYSE\/GOOG@NYSE.
 

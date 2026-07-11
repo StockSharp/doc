@@ -4,7 +4,7 @@ O Visual Studio fornece um mecanismo para anexar a processos em execução usand
 
 1. Para anexar a um processo e iniciar a depuração de uma estratégia DLL, esta tem de ser carregada em memória. A DLL é carregada em memória depois de [adicionar a estratégia](../using_dll.md). Assim que a DLL estiver carregada em memória, pode anexar ao processo.
 
-![Designer_Creation_Strategy_Dll_01](../../../../images/designer_creation_strategy_dll_01.png)
+![Designer criação de estratégia DLL 01](../../../../images/designer_creation_strategy_dll_01.png)
 
 2. No Visual Studio, selecione **Debug -> Attach to Process**.
 

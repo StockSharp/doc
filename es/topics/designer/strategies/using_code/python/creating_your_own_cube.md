@@ -4,7 +4,7 @@ De forma similar a la creación de un [cubo a partir de un esquema](../../using_
 
 Para crear un cubo desde código, debe crearlo en la carpeta **Bloques personalizados**:
 
-![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
+![Designer elemento de código fuente 00](../../../../../images/designer_source_code_elem_00.png)
 
 En el ejemplo siguiente, el cubo hereda de la clase [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) y tiene este aspecto:
 
@@ -209,7 +209,7 @@ Si descomenta la propiedad, el método **Proceso** se llamará siempre que llegu
 
 Para añadir el cubo resultante al esquema, debe seleccionar el cubo creado en la paleta, en la sección **Bloques personalizados**:
 
-![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
+![Designer elemento de código fuente 01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING]
 > Los cubos creados con código Python no pueden usarse en estrategias creadas con código Python. Solo pueden usarse en estrategias creadas [a partir de cubos](../../using_visual_designer.md).

@@ -16,7 +16,7 @@ OAuth-Autorisierungsprozess:
 
 1. Wenn Sie auf die Schaltfläche "Check" klicken, wird ein Fenster geöffnet:
 
-   ![OAuth Start](../../../../../images/oauth_start.png)
+   ![OAuth-Start](../../../../../images/oauth_start.png)
 
 2. Nach dem Klick auf "Start" wird der Benutzer zur Tradier-Website weitergeleitet, um sich anzumelden:
 

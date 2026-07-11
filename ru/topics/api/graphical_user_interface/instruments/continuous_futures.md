@@ -2,7 +2,7 @@
 
 [ContinuousSecurityWindow](xref:StockSharp.Xaml.ContinuousSecurityWindow) \- визуальный редактор для создания *непрерывных* ([ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)) инструментов. См. [Непрерывный фьючерс](../../instruments/continuous_futures.md). 
 
-![HydraGluingCSCustom](../../../../images/hydragluingcscustom.png)
+![Hydra пользовательский непрерывный фьючерс](../../../../images/hydragluingcscustom.png)
 
 Этот компонент включает: 
 

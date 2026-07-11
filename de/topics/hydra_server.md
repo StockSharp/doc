@@ -9,7 +9,7 @@ Anders als der [Servermodus](hydra/server_mode/settings.md) ist **Hydra Server**
 
 **Hydra Server** verwendet dieselben Einstellungen wie [Hydra](hydra.md). Führen Sie für die Ersteinrichtung zuerst [Hydra](hydra.md) aus und verwenden Sie anschließend die von Hydra Server erstellten Einstellungen.
 
-![Hydra server](../images/hydraserver_console.png)
+![Hydra-Server](../images/hydraserver_console.png)
 
 Das Programm besitzt die Konfigurationsdatei `appsettings.json`:
 

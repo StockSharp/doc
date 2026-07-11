@@ -25,7 +25,7 @@ ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 
 2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - コードからトークンを直接渡します。マシン上にシークレットファイルは不要です。トークンは [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) から取得します。
 
-   ![Profile](../../../images/profile.png)
+   ![プロファイル](../../../images/profile.png)
 
 [IOAuthProvider](xref:Ecng.Net.IOAuthProvider) には 2 つの実装オプションがあります。
 
@@ -33,4 +33,4 @@ ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 
 2. [OAuthProvider](xref:StockSharp.Studio.Controls.OAuthProvider) - 認可ウィンドウを表示する必要がある WPF アプリケーション向けです。
 
-   ![OAuth Start](../../../images/oauth_start.png)
+   ![OAuth 開始](../../../images/oauth_start.png)

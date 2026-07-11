@@ -6,7 +6,7 @@
 
 机器人会要求您打开个人资料页面 [https://stocksharp.com/profile/](https://stocksharp.com/profile/)，并复制其中的令牌。
 
-![Profile](../../images/profile.png)
+![个人资料](../../images/profile.png)
 
 然后在聊天中按 **token: %your_token%** 格式将令牌发送给机器人。授权成功后，机器人会使用您在 StockSharp 网站注册时填写的姓名与您交流。
 

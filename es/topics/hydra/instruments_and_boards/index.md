@@ -6,7 +6,7 @@ En la pestaña **Común**, seleccione **Instrumentos** para que aparezca la pest
 
 Antes de crear el **Índice**, compruebe qué datos de mercado están disponibles. Seleccione la ruta donde se almacenan los datos y revise secuencialmente los instrumentos que deben participar en el cálculo del índice. Si hay huecos, descargue los datos de mercado necesarios desde una fuente de datos compatible.
 
-![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
+![Hydra comprobación de datos de futuros continuos](../../../images/hydragluingcheckdata.png)
 
 Como ejemplo, consideremos el índice de relación de instrumentos AAPL@NYSE\/GOOG@NYSE.
 

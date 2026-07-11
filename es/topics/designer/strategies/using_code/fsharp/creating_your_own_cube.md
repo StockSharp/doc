@@ -4,7 +4,7 @@ De forma similar a la creación de un [cubo a partir de un diagrama](../../using
 
 Para crear un cubo desde código, debe crearse en la carpeta **Elementos propios**:
 
-![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
+![Designer elemento de código fuente 00](../../../../../images/designer_source_code_elem_00.png)
 
 En el ejemplo que se muestra a continuación, el cubo hereda de la clase [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) y tiene este aspecto:
 
@@ -118,7 +118,7 @@ Si se descomenta, el método **Proceso** se llamará siempre en cuanto llegue al
 
 Para añadir el cubo resultante al diagrama, debe seleccionar el cubo creado en la paleta, en la sección **Elementos propios**:
 
-![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
+![Designer elemento de código fuente 01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING]
 > Los cubos creados con código F# no pueden usarse en estrategias creadas con código F#. Solo pueden usarse en estrategias creadas [a partir de cubos](../../using_visual_designer.md).

@@ -10,19 +10,19 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
 
 1. Seleccione el conector MT en [Installer](../../../installer.md) e inicie el proceso de instalación.
 
-   ![MT Install 1](../../../../images/mt_install_1.png)
+   ![instalación de MetaTrader 1](../../../../images/mt_install_1.png)
 
 2. [Installer](../../../installer.md) preguntará en qué carpeta instalar el conector (debe instalarse en la carpeta Experts).
 
-   ![MT Install 2](../../../../images/mt_install_2.png)
+   ![instalación de MetaTrader 2](../../../../images/mt_install_2.png)
 
 3. Si hay varios terminales instalados, debe elegir aquel en el que desea instalar el conector.
 
-   ![MT Install 3](../../../../images/mt_install_3.png)
+   ![instalación de MetaTrader 3](../../../../images/mt_install_3.png)
 
 4. Después de seleccionar el terminal deseado, se mostrará la ruta a la carpeta Experts.
 
-   ![MT Install 4](../../../../images/mt_install_4.png)
+   ![instalación de MetaTrader 4](../../../../images/mt_install_4.png)
 
    > [!TIP]
    > - Si la ruta no puede determinarse automáticamente, debe seleccionarla manualmente mediante búsqueda de directorios *C:\\Users\\%su_usuario%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%muchas_letras_y_numeros%\\MQL4\\Experts\\* (para MT5, la ruta incluirá MQL5).

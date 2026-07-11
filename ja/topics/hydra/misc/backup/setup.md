@@ -9,9 +9,9 @@
 
    通話に応答し、コンピューター画面に表示されるコードを電話で入力する必要があります。
 5. 次に、サポートプランを選択するよう求められます。アカウントの作成が完了したら、管理コンソールに移動する必要があります。![Aws3 console](../../../../images/aws3_console.png)
-6. アカウント設定の最初の手順は、Bucket の作成です。![Aws3 CreateBucket](../../../../images/aws3_createbucket.png)
+6. アカウント設定の最初の手順は、Bucket の作成です。![AWS S3 バケット作成](../../../../images/aws3_createbucket.png)
 
-   Bucket は、クラウド内でオブジェクトを保存するためのコンテナーです。Bucket には一意の名前を設定し、データが物理的に保存される地域データセンター（Region）も選択する必要があります。バックアップタスクを設定する際は、以降で次の点に注意してください。1) **ストレージ** フィールドにはバケット名を入力する必要があります。2) **アドレス** フィールドには名前ではなく、地域データセンターのアドレスを使用する必要があります。このアドレスは [こちら](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) で確認できます。その後、設定を続行します。![Aws3 CreateBucket](../../../../images/aws3_createbucket.png)![Aws 3 Create Bucket Name](../../../../images/aws3_createbucketname.png)![Aws 3 Create Bucket Name property](../../../../images/aws3_createbucketname_propert.png)
+   Bucket は、クラウド内でオブジェクトを保存するためのコンテナーです。Bucket には一意の名前を設定し、データが物理的に保存される地域データセンター（Region）も選択する必要があります。バックアップタスクを設定する際は、以降で次の点に注意してください。1) **ストレージ** フィールドにはバケット名を入力する必要があります。2) **アドレス** フィールドには名前ではなく、地域データセンターのアドレスを使用する必要があります。このアドレスは [こちら](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region) で確認できます。その後、設定を続行します。![AWS S3 バケット作成](../../../../images/aws3_createbucket.png)![AWS S3 バケット名](../../../../images/aws3_createbucketname.png)![AWS S3 バケット名プロパティ](../../../../images/aws3_createbucketname_propert.png)
 7. 次に、AWS サービスへプログラムからアクセスするためのキーを設定する必要があります。これを行うには、AWS コンソールの **Security Credentials** リンクに移動します。![Aws3 SecurityCredentials](../../../../images/aws3_securitycredentials.png)
 8. **Access Keys (Access Key ID and Secret Access Key)** ヘッダーを展開し、![Aws3 CreateNewAccessKey](../../../../images/aws3_createnewaccesskey.png) ボタンを使用してアクセスキーを作成します。![Aws3 SecurityCredentialsCreate](../../../../images/aws3_securitycredentialscreate.png)
 

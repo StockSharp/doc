@@ -6,7 +6,7 @@
 
 **インデックス** を作成する前に、利用可能なマーケットデータを確認してください。データが保存されているパスを選択し、インデックスの計算に参加させる銘柄を順番に確認します。欠落がある場合は、サポートされているデータソースから必要なマーケットデータをダウンロードします。
 
-![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
+![Hydra 連続先物データ確認](../../../images/hydragluingcheckdata.png)
 
 例として、銘柄比率インデックス AAPL@NYSE\/GOOG@NYSE を考えます。
 

@@ -25,7 +25,7 @@ Existem duas opções de implementação para [ICredentialsProvider](xref:StockS
 
 2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - passa o token diretamente a partir do código. Não é necessário nenhum ficheiro secreto na máquina. O token é obtido em [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
 
-   ![Profile](../../../images/profile.png)
+   ![Perfil](../../../images/profile.png)
 
 Existem duas opções de implementação para [IOAuthProvider](xref:Ecng.Net.IOAuthProvider):
 
@@ -33,4 +33,4 @@ Existem duas opções de implementação para [IOAuthProvider](xref:Ecng.Net.IOA
 
 2. [OAuthProvider](xref:StockSharp.Studio.Controls.OAuthProvider) - para aplicações WPF onde é necessário apresentar uma janela de autorização:
 
-   ![OAuth Start](../../../images/oauth_start.png)
+   ![início do OAuth](../../../images/oauth_start.png)

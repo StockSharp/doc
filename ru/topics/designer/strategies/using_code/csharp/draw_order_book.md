@@ -38,8 +38,8 @@ Subscribe(bookSubscription);
 
 4. Добавить панель [Стакана](../../../user_interface/components/order_book.md) и выбрать созданный в коде источник:
 
-  ![Designer_Source_Code_OrderBook_00](../../../../../images/designer_source_code_orderbook_00.png)
+  ![Designer стакан с исходным кодом 00](../../../../../images/designer_source_code_orderbook_00.png)
 
 5. После запуска стратегии на тестирование стакан будет заполняться данными:
 
-  ![Designer_Source_Code_OrderBook_01](../../../../../images/designer_source_code_orderbook_01.png)
+  ![Designer стакан с исходным кодом 01](../../../../../images/designer_source_code_orderbook_01.png)

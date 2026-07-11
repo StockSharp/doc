@@ -2,7 +2,7 @@
 
 [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) コンポーネントは、銘柄に関する金融情報（level1 フィールド）とその変化を表形式で表示するために設計されています。このコンポーネントでは、1 つまたは複数の銘柄を選択できます。
 
-![GUI SecurityPicker2](../../../../images/gui_securitypicker2.png)
+![GUI 銘柄セレクター](../../../../images/gui_securitypicker2.png)
 
 **主なプロパティ**
 

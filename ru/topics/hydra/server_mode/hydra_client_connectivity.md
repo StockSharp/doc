@@ -4,11 +4,11 @@
 
 Для подключения используется специальный источник:
 
-![hydra tasks server](../../../images/hydratasksserver_1.png)
+![Hydra задача сервера](../../../images/hydratasksserver_1.png)
 
 **Настройки**
 
-![hydra tasks server](../../../images/hydratasksserver_2.png)
+![Hydra задача сервера](../../../images/hydratasksserver_2.png)
 
 - **Адрес** \- адрес Hydra-сервера. 
 - **Логин** \- логин (требуется, если сервер требует авторизации).

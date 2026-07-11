@@ -1,6 +1,6 @@
 # バスケット
 
-![Designer Black Basket 00](../../../../../../images/designer_black_basket_00.png)
+![Designer ブラックショールズバスケット 00](../../../../../../images/designer_black_basket_00.png)
 
 このブロックは、オプション価格モデルを作成するために使用します。
 
@@ -22,7 +22,7 @@
 
 - **Blackモデル** - Black-Scholes モデルを作成するかどうかを示すフラグ。
 
-![Designer Black Basket 01](../../../../../../images/designer_black_basket_01.png)
+![Designer ブラックショールズバスケット 01](../../../../../../images/designer_black_basket_01.png)
 
 ## 関連項目
 

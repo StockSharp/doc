@@ -8,11 +8,11 @@ Na prática, a ligação à fonte ocorre através do [Hydra](../../hydra.md), ao
 
 Para ativar o modo de servidor do [Hydra](../../hydra.md), selecione o separador **Modo de servidor** no menu superior do programa.
 
-![hydra server menu](../../../images/hydra_server_menu.png)
+![servidor Hydra menu](../../../images/hydra_server_menu.png)
 
 Depois disso, clique no botão **Definições** para abrir a janela de definições do modo de servidor.
 
-![hydra server](../../../images/hydra_server.png)
+![servidor Hydra](../../../images/hydra_server.png)
 
 **Servidor Hydra**
 

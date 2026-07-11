@@ -59,7 +59,7 @@ Data フォルダーに **connector.json** ファイルが作成され（まだ�
 
 トークンで認証する場合は、[https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) のトークンを入力します。
 
-![Profile](../../images/profile.png)
+![プロファイル](../../images/profile.png)
 
 成功した場合、プログラムは利用可能な Telegram 操作オプションを表示します。
 

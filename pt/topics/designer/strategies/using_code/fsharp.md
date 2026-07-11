@@ -10,7 +10,7 @@ Pode adicionar uma nova estratégia premindo o botão **Adicionar** ![Designer P
 
 Depois de premir o botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá uma janela com a escolha do tipo de conteúdo para criar a estratégia:
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_fsharp_create_strategy_00.png)
+![Designer criação de elemento com código-fonte 00](../../../../images/designer_fsharp_create_strategy_00.png)
 
 Para criar uma estratégia a partir de código F#, é necessário selecionar o segundo separador. Também pode escolher um modelo que será usado como código inicial.
 
@@ -18,7 +18,7 @@ Depois de premir **Confirmar**, uma nova estratégia aparecerá na pasta **Estra
 
 Mas, em vez de um diagrama, será apresentado um editor de código F#:
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_fsharp_create_strategy_01.png)
+![Designer criação de elemento com código-fonte 01](../../../../images/designer_fsharp_create_strategy_01.png)
 
 O separador do editor de código é composto pelos painéis **Código-fonte** e **Lista de erros**. O painel **Código-fonte** contém o próprio editor de código F#. Na parte superior, existe uma barra de ferramentas onde é possível ativar ou desativar o destaque de elementos como **Linha atual**, **Número da linha**, etc. Para aumentar o tamanho da letra, pode usar a combinação CTRL+MouseWheel.
 

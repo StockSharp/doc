@@ -1,6 +1,6 @@
 # Корзина
 
-![Designer Black Basket 00](../../../../../../images/designer_black_basket_00.png)
+![Designer корзина Блэка 00](../../../../../../images/designer_black_basket_00.png)
 
 Кубик используется для создания модели расчета опционов.
 
@@ -22,7 +22,7 @@
 
 - **Модель Блэка** – флаг, указывает создавать ли модель Блэка — Шоулза.
 
-![Designer Black Basket 01](../../../../../../images/designer_black_basket_01.png)
+![Designer корзина Блэка 01](../../../../../../images/designer_black_basket_01.png)
 
 ## См. также
 

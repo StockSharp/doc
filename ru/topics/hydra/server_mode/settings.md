@@ -8,11 +8,11 @@
 
 Для включения серверного режима [Hydra](../../hydra.md) необходимо в верхнем меню программы выбрать вкладку **Серверный режим**.
 
-![hydra server menu](../../../images/hydra_server_menu.png)
+![сервер Hydra menu](../../../images/hydra_server_menu.png)
 
 После этого нажимаем кнопку **Настройки**, откроется окно настройки серверного режима.
 
-![hydra server](../../../images/hydra_server.png)
+![сервер Hydra](../../../images/hydra_server.png)
 
 **Hydra-сервер**
 

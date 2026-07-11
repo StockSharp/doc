@@ -4,7 +4,7 @@
 
 コードからキューブを作成するには、**カスタムブロック** フォルダー内に作成する必要があります。
 
-![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
+![Designer ソースコード要素 00](../../../../../images/designer_source_code_elem_00.png)
 
 次の例では、キューブは [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) クラスを継承し、次のようになります。
 
@@ -209,7 +209,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 作成したキューブをスキームに追加するには、パレットの **カスタムブロック** セクションで作成済みのキューブを選択する必要があります。
 
-![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
+![Designer ソースコード要素 01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING]
 > Python コードのキューブは、Python コードで作成されたストラテジーでは使用できません。[キューブから](../../using_visual_designer.md)作成されたストラテジーでのみ使用できます。

@@ -2,7 +2,7 @@
 
 Компонент [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) предназначен для отображения финансовой информации (поля level1) и ее изменения, относящейся к инструментам, в табличном виде. Компонент позволяет выбирать один или несколько инструментов. 
 
-![GUI SecurityPicker2](../../../../images/gui_securitypicker2.png)
+![GUI выбор инструмента](../../../../images/gui_securitypicker2.png)
 
 **Основные свойства**
 

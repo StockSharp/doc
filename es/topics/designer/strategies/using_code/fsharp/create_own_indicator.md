@@ -4,7 +4,7 @@ La creación de un indicador propio en la [API](../../../../api.md) se describe 
 
 Para crear un indicador, en el panel **Esquema** debe seleccionar la carpeta **Indicadores**, hacer clic con el botón derecho y seleccionar **Añadir** en el menú contextual:
 
-![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
+![Designer indicador de código fuente 00](../../../../../images/designer_source_code_indicator_00.png)
 
 El código del indicador tendrá este aspecto:
 
@@ -105,7 +105,7 @@ La descripción de los métodos del indicador está disponible en la sección [I
 
 Para añadir el indicador creado al diagrama, debe usar el cubo [Indicador](../../using_visual_designer/elements/common/indicator.md) y especificar en él el indicador necesario:
 
-![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
+![Designer indicador de código fuente 01](../../../../../images/designer_source_code_indicator_01.png)
 
 El parámetro **Cambio**, establecido previamente en el código del indicador, se muestra en el panel de propiedades.
 

@@ -4,7 +4,7 @@
 
 Для создания кубика из кода, необходимо создать его в папке **Собственные кубики**:
 
-![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
+![Designer элемент с исходным кодом 00](../../../../../images/designer_source_code_elem_00.png)
 
 В приведённом ниже примере кубик наследуется от класса [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) и выглядит следующим образом:
 
@@ -116,7 +116,7 @@ _minValue = AddParam("MinValue", 10)
 
 Чтобы добавить получившийся кубик на схему, необходимо в палитре в разделе **Собственные кубики** выбрать созданный кубик:
 
-![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
+![Designer элемент с исходным кодом 01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING] 
 > Кубики из C# кода невозможно использовать в стратегиях, созданных на C# коде. Их возможно использовать только в стратегиях, созданных [из кубиков](../../using_visual_designer.md).

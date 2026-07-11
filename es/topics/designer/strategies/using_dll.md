@@ -35,12 +35,12 @@ Si la estrategia usa interfaces de gráficos, incluya el paquete NuGet [StockSha
 
 1. Añadir una estrategia desde una DLL es similar a crear una estrategia desde [código](using_code.md). Pero en la etapa de definición del tipo de contenido debe elegir **DLL**:
 
-![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
+![Designer creación de estrategia DLL 00](../../../images/designer_creation_strategy_dll_00.png)
 
 2. En la ventana debe especificar la ruta al ensamblado (debe ser compatible con .NET 6.0) y elegir el tipo. Esto último es necesario porque una DLL puede contener varias estrategias (o [cubos con indicadores](using_dll/create_element_and_indicator.md)). Después de hacer clic en **Aceptar**, la estrategia se añadirá al panel **Esquema** y estará lista para usarse:
 
-![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
+![Designer creación de estrategia DLL 01](../../../images/designer_creation_strategy_dll_01.png)
 
 3. La ejecución de la estrategia en [backtest](../backtesting/user_interface.md), en [live](../live_execution/getting_started.md) y otras operaciones funciona de forma similar a una estrategia creada desde diagramas y código:
 
-![Designer_Creation_Strategy_Dll_02](../../../images/designer_creation_strategy_dll_02.png)
+![Designer creación de estrategia DLL 02](../../../images/designer_creation_strategy_dll_02.png)

@@ -2,7 +2,7 @@
 
 为了简化监控，您可以使用特殊的 [Monitor](xref:StockSharp.Xaml.Monitor) 组件。另请参见 [可视化日志组件](../graphical_user_interface/logging.md)。
 
-![GUI LogControl](../../../images/gui_logcontrol.png)
+![GUI 日志面板](../../../images/gui_logcontrol.png)
 
 此窗口允许您显示来自所有 [ILogSource](xref:Ecng.Logging.ILogSource) 的消息：
 

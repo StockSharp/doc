@@ -4,7 +4,7 @@
 
 Um einen Würfel aus Code zu erstellen, muss er im Ordner **Eigene Elemente** erstellt werden:
 
-![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
+![Designer Quellcode-Element 00](../../../../../images/designer_source_code_elem_00.png)
 
 Im folgenden Beispiel erbt der Würfel von der Klasse [DiagramExternalElement](xref:StockSharp.Diagram.DiagramExternalElement) und sieht so aus:
 
@@ -118,7 +118,7 @@ Wenn die Auskommentierung entfernt wird, wird die Methode **Prozess** immer aufg
 
 Um den resultierenden Würfel zum Diagramm hinzuzufügen, wählen Sie den erstellten Würfel in der Palette im Abschnitt **Eigene Elemente** aus:
 
-![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
+![Designer Quellcode-Element 01](../../../../../images/designer_source_code_elem_01.png)
 
 > [!WARNING]
 > Würfel aus C#-Code können nicht in Strategien verwendet werden, die in C#-Code erstellt wurden. Sie können nur in Strategien verwendet werden, die [aus Würfeln](../../using_visual_designer.md) erstellt wurden.

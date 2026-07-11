@@ -38,9 +38,9 @@ Im Do-Handler wird die Methode [DrawOrderBook](xref:StockSharp.Algo.Strategies.S
 
 4. Fügen Sie das Panel [Orderbuch](../../../user_interface/components/order_book.md) hinzu und wählen Sie die im Code erstellte Quelle aus:
 
-  ![Designer_Source_Code_OrderBook_00](../../../../../images/designer_source_code_orderbook_00.png)
+  ![Designer Quellcode-Orderbuch 00](../../../../../images/designer_source_code_orderbook_00.png)
 
 5. Nach dem Start der Strategie zum Testing wird das Orderbuch mit Daten gefüllt:
 
-  ![Designer_Source_Code_OrderBook_01](../../../../../images/designer_source_code_orderbook_01.png)
+  ![Designer Quellcode-Orderbuch 01](../../../../../images/designer_source_code_orderbook_01.png)
 

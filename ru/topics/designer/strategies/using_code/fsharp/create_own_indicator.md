@@ -4,7 +4,7 @@
 
 Чтобы создать индикатор, на панели **Схемы** необходимо выбрать папку **Индикаторы**, нажать правую кнопку мыши и в контекстном меню выбрать **Добавить**:
 
-![Designer_Source_Code_Indicator_00](../../../../../images/designer_source_code_indicator_00.png)
+![Designer индикатор с исходным кодом 00](../../../../../images/designer_source_code_indicator_00.png)
 
 Код индикатора будет выглядеть так:
 
@@ -104,7 +104,7 @@ type EmptyIndicator() as this =
 
 Чтобы добавить созданный индикатор на схему, необходимо использовать кубик [Индикатор](../../using_visual_designer/elements/common/indicator.md), и уже в нем задать необходимый индикатор:
 
-![Designer_Source_Code_Indicator_01](../../../../../images/designer_source_code_indicator_01.png)
+![Designer индикатор с исходным кодом 01](../../../../../images/designer_source_code_indicator_01.png)
 
 Параметр **Change**, ранее заданный в коде индикатора, показан в панели свойств.
 

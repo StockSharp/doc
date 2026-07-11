@@ -14,7 +14,7 @@ Processo de autorização OAuth:
 
 1. Ao clicar no botão "Check", será aberta uma janela:
 
-   ![OAuth Start](../../../../../images/oauth_start.png)
+   ![início do OAuth](../../../../../images/oauth_start.png)
 
 2. Depois de clicar em "Start", o utilizador será redirecionado para o site do cTrader para iniciar sessão. No site do cTrader, é necessário permitir que a aplicação StockSharp aceda às operações de negociação:
 

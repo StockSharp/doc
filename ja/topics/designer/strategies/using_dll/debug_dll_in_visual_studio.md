@@ -4,7 +4,7 @@ Visual Studio には、Visual Studio デバッガーを使用して実行中の�
 
 1. プロセスにアタッチして DLL ストラテジーのデバッグを開始するには、DLL がメモリに読み込まれている必要があります。DLL は[ストラテジーを追加](../using_dll.md)した後にメモリへ読み込まれます。DLL がメモリに読み込まれたら、プロセスにアタッチできます。
 
-![Designer_Creation_Strategy_Dll_01](../../../../images/designer_creation_strategy_dll_01.png)
+![Designer DLL 戦略の作成 01](../../../../images/designer_creation_strategy_dll_01.png)
 
 2. Visual Studio で **Debug -> Attach to Process** を選択します。
 

@@ -6,7 +6,7 @@
 
 创建**指数**前，请先检查可用的市场数据。选择数据的存储路径，然后依次查看应参与指数计算的交易品种。如果数据存在缺口，请从支持的数据源下载所需的市场数据。
 
-![HydraGluingCheckData](../../../images/hydragluingcheckdata.png)
+![Hydra 连续期货数据检查](../../../images/hydragluingcheckdata.png)
 
 下面以交易品种比值指数 AAPL@NYSE\/GOOG@NYSE 为例。
 

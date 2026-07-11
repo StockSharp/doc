@@ -4,11 +4,11 @@ Im Servermodus kann ein weiteres Hydra-Programm verbunden werden, das als Client
 
 Für die Verbindung wird eine spezielle Quelle verwendet:
 
-![hydra tasks server](../../../images/hydratasksserver_1.png)
+![Hydra Serveraufgabe](../../../images/hydratasksserver_1.png)
 
 **Einstellungen**
 
-![hydra tasks server](../../../images/hydratasksserver_2.png)
+![Hydra Serveraufgabe](../../../images/hydratasksserver_2.png)
 
 - **Adresse** - die Adresse des Hydra-Servers.
 - **Anmeldung** - Login (erforderlich, wenn der Server Autorisierung verlangt).

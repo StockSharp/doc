@@ -4,7 +4,7 @@
 
 ## LogControl
 
-![GUI LogControl](../../../../images/gui_logcontrol.png)
+![painel de registo GUI](../../../../images/gui_logcontrol.png)
 
 Código de exemplo
 

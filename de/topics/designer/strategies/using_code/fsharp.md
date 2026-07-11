@@ -10,7 +10,7 @@ Sie können eine neue Strategie hinzufügen, indem Sie im Tab **Allgemein** auf 
 
 Nach dem Klicken auf die Schaltfläche **Hinzufügen** ![Designer Schaltungs-Panel 01](../../../../images/designer_panel_circuits_01_button.png) erscheint ein Fenster, in dem der Inhaltstyp ausgewählt wird, auf dessen Grundlage die Strategie erstellt werden soll:
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_fsharp_create_strategy_00.png)
+![Designer Erstellung eines Quellcode-Elements 00](../../../../images/designer_fsharp_create_strategy_00.png)
 
 Um eine Strategie aus F#-Code zu erstellen, müssen Sie den zweiten Tab auswählen. Sie können außerdem eine Vorlage auswählen, die als Anfangscode verwendet wird.
 
@@ -18,7 +18,7 @@ Nach dem Klicken auf **OK** erscheint eine neue Strategie im Ordner **Strategien
 
 Anstelle eines Diagramms wird jedoch ein F#-Code-Editor angezeigt:
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_fsharp_create_strategy_01.png)
+![Designer Erstellung eines Quellcode-Elements 01](../../../../images/designer_fsharp_create_strategy_01.png)
 
 Der Code-Editor-Tab besteht aus den Panels **Quellcode** und **Fehlerliste**. Das Panel **Quellcode** enthält den eigentlichen F#-Code-Editor. Oben befindet sich eine Symbolleiste, in der Hervorhebungen wie **Aktuelle Zeile**, **Zeilennummer** usw. ein- oder ausgeschaltet werden können. Um die Schriftgröße zu erhöhen, können Sie die Kombination CTRL+MouseWheel verwenden.
 

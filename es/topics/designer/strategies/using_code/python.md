@@ -10,7 +10,7 @@ Puede añadir una nueva estrategia haciendo clic en el botón **Añadir** ![Desi
 
 Después de hacer clic en el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png), aparecerá una ventana con la elección del tipo de contenido sobre el que crear la estrategia:
 
-![Designer_Creation_of_element_containing_source_code_00](../../../../images/designer_python_create_strategy_00.png)
+![Designer creación de elemento con código fuente 00](../../../../images/designer_python_create_strategy_00.png)
 
 Para crear una estrategia desde código Python, seleccione la segunda pestaña. También puede elegir una plantilla que se usará como código inicial.
 
@@ -18,7 +18,7 @@ Después de hacer clic en **Aceptar**, aparecerá una nueva estrategia en la car
 
 Pero en lugar de un esquema, se mostrará un editor de código Python:
 
-![Designer_Creation_of_element_containing_source_code_01](../../../../images/designer_python_create_strategy_01.png)
+![Designer creación de elemento con código fuente 01](../../../../images/designer_python_create_strategy_01.png)
 
 La pestaña del editor de código consta de los paneles **Código fuente** y **Lista de errores**. El panel **Código fuente** contiene el propio editor de código Python. En la parte superior hay una barra de herramientas donde puede activar o desactivar el resaltado de elementos como **Línea actual**, **Número de línea**, etc. Para aumentar el tamaño de fuente, puede usar la combinación CTRL+MouseWheel.
 
