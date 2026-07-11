@@ -2351,6 +2351,35 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishMovingAverageLocalLinkLabels()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var label in EnumerateMarkdownLinkLabels(ReadAllText(file)))
+				{
+					if (!label.Url.EndsWith(".md", StringComparison.OrdinalIgnoreCase))
+						continue;
+
+					if (!ContainsStandaloneText(label.Text, "Moving Average"))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{label.Line}: localized indicator documentation keeps English moving-average local link label '{label.Text}'. Localize the link label.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

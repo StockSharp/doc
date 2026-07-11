@@ -25,5 +25,5 @@ Dadurch entsteht eine optimierte Schätzung, die schnell auf Preisänderungen re
 
 ## Siehe auch
 
-[Kaufman Adaptive Moving Average](kama.md)
+[Kaufmans adaptiver gleitender Durchschnitt](kama.md)
 [Adaptive Laguerre Filter](adaptive_laguerre_filter.md)

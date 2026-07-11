@@ -42,4 +42,4 @@ FDI wird durch Vergleich der gesamten Preispfadlänge mit der gesamten Hoch-Tief
 
 [Hurst Exponent](hurst_exponent.md)
 
-[Fractal Adaptive Moving Average](fractal_adaptive_moving_average.md)
+[Fraktaler adaptiver gleitender Durchschnitt](fractal_adaptive_moving_average.md)

@@ -32,5 +32,5 @@ Valores mais elevados do expoente sugerem comportamento tendencial mais forte, e
 
 ## Ver Também
 
-[Fractal Adaptive Moving Average](fractal_adaptive_moving_average.md)
+[Média móvel adaptativa fractal](fractal_adaptive_moving_average.md)
 [MMI](market_meanness_index.md)

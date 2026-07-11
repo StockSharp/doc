@@ -25,5 +25,5 @@
 
 ## См. также
 
-[Kaufman Adaptive Moving Average](kama.md)
+[Адаптивная скользящая средняя Кауфмана](kama.md)
 [Adaptive Laguerre Filter](adaptive_laguerre_filter.md)

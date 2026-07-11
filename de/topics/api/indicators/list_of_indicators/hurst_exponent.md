@@ -32,5 +32,5 @@ Höhere Werte des Exponenten deuten auf ein stärkeres Trendverhalten hin, währ
 
 ## Siehe auch
 
-[Fractal Adaptive Moving Average](fractal_adaptive_moving_average.md)
+[Fraktaler adaptiver gleitender Durchschnitt](fractal_adaptive_moving_average.md)
 [MMI](market_meanness_index.md)

@@ -42,4 +42,4 @@ FDI se calcula comparando la longitud total de la trayectoria del precio con el 
 
 [Hurst Exponent](hurst_exponent.md)
 
-[Fractal Adaptive Moving Average](fractal_adaptive_moving_average.md)
+[Media móvil adaptativa fractal](fractal_adaptive_moving_average.md)

@@ -32,5 +32,5 @@
 
 ## 関連項目
 
-[Fractal Adaptive Moving Average](fractal_adaptive_moving_average.md)
+[フラクタル適応移動平均](fractal_adaptive_moving_average.md)
 [MMI](market_meanness_index.md)

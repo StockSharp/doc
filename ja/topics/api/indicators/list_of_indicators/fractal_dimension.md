@@ -42,5 +42,4 @@ FDI は、価格経路の総長と全体の高値-安値範囲を比較するこ
 
 [Hurst Exponent](hurst_exponent.md)
 
-[Fractal Adaptive Moving Average](fractal_adaptive_moving_average.md)
-
+[フラクタル適応移動平均](fractal_adaptive_moving_average.md)
