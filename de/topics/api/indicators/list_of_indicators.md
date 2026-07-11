@@ -24,7 +24,7 @@
 - [Pattern](../patterns.md) - Indikator Pattern, erkennt bestimmte Kursmuster in Charts
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Indikator CGO, identifiziert mögliche Wendepunkte
 - [CMF](list_of_indicators/chaikin_money_flow.md) - Indikator CMF, misst Kauf- und Verkaufsdruck anhand des Volumens
-- [Chaikin's Volatility](list_of_indicators/chv.md) - Indikator Chaikin's Volatility, misst die Änderungsrate der Handelsspanne
+- [Chaikin-Volatilität](list_of_indicators/chv.md) - Indikator Chaikin-Volatilität, misst die Änderungsrate der Handelsspanne
 - [CKS](list_of_indicators/chande_kroll_stop.md) - Indikator CKS, liefert volatilitätsbasierte Stop-Loss-Niveaus
 - [CMO](list_of_indicators/cmo.md) - Indikator CMO, misst das Momentum von Preisänderungen
 - [CHOP](list_of_indicators/choppiness_index.md) - Indikator CHOP, bestimmt, ob sich der Markt in einem Trend oder in einer Seitwärtsphase befindet

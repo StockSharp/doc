@@ -3264,6 +3264,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishSignalAndReferenceLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:Chaikin's Volatility|Zero-line Reject|Granville's New Key to Stock Market Profits|Elder-ray|Reverse divergencia)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English signal or reference label '{match.Value}'. Localize visible indicator prose.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepEnglishMovingAverageLocalLinkLabels()
 	{
 		var errors = new List<string>();

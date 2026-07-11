@@ -16,7 +16,7 @@ O sistema CCI de Woodies usa estas duas linhas, juntamente com vários níveis-c
 - Linha zero (importante para determinar a tendência)
 
 Sinais principais no sistema CCI de Woodies:
-- "Zero-line Reject" - quando o CCI se aproxima da linha zero e depois ressalta dela, continuando na direção anterior
+- "Rejeição da linha zero" - quando o CCI se aproxima da linha zero e depois ressalta dela, continuando na direção anterior
 - "rompimento de linha de tendência" - quando o CCI rompe uma linha de tendência significativa
 - "divergência inversa" - um tipo específico de divergência entre preço e CCI
 

@@ -10,7 +10,7 @@ volume em balanço (OBV) é um indicador cumulativo que adiciona volume quando o
 
 O OBV procura detetar momentos em que o "smart money" (grandes investidores institucionais) está a acumular ou distribuir posições, o que pode antecipar movimentos futuros do preço. O indicador é particularmente útil para identificar divergências entre preço e volume que podem sinalizar potenciais reversões de mercado.
 
-O indicador OBV foi apresentado pela primeira vez por Joseph Granville em 1963 no seu livro "Granville's New Key to Stock Market Profits" e, desde então, tornou-se um dos indicadores de volume mais usados.
+O indicador OBV foi apresentado pela primeira vez por Joseph Granville em 1963 no seu livro "A nova chave de Granville para os lucros no mercado de ações" e, desde então, tornou-se um dos indicadores de volume mais usados.
 
 ## Cálculo
 

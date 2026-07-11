@@ -18,7 +18,7 @@ El sistema CCI de Woodies utiliza estas dos líneas, junto con varios niveles cl
 Señales clave en el sistema CCI de Woodies:
 - "Rechazo de línea cero": cuando CCI se acerca a la línea cero y luego rebota en ella, continuando en la dirección anterior
 - "Rotura de línea de tendencia": cuando CCI rompe una línea de tendencia significativa
-- "Reverse divergencia": un tipo específico de divergencia entre el precio y CCI
+- "Divergencia inversa": un tipo específico de divergencia entre el precio y CCI
 
 ## Parámetros
 

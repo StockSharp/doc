@@ -1,8 +1,7 @@
 # fuerza bajista
 
-**fuerza bajista** es parte del sistema Elder-ray de Alexander Elder y muestra cuán fuertes son los vendedores en comparación con un exponencial
-media móvil (EMA). Mide hasta qué punto los mínimos intradiarios caen por debajo del precio promedio y destaca los momentos en los que los bajistas pierden.
-controlar.
+**fuerza bajista** es parte del sistema de rayos de Elder de Alexander Elder y muestra la fuerza de los vendedores en comparación con una media móvil
+exponencial (EMA). Mide hasta qué punto los mínimos intradiarios caen por debajo del precio promedio y destaca los momentos en los que los bajistas pierden el control.
 
 Utilice la clase [BearPower](xref:StockSharp.Algo.Indicators.BearPower) para acceder al indicador.
 

@@ -24,7 +24,7 @@
 - [Паттерны](../patterns.md) - распознают специфические ценовые модели на графиках
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - индикатор CGO, определяет потенциальные точки разворота
 - [CMF](list_of_indicators/chaikin_money_flow.md) - индикатор CMF, измеряет давление покупок и продаж на основе объёма
-- [Chaikin's Volatility](list_of_indicators/chv.md) - индикатор Chaikin's Volatility, измеряет скорость изменения торгового диапазона
+- [Волатильность Чайкина](list_of_indicators/chv.md) - индикатор волатильность Чайкина, измеряет скорость изменения торгового диапазона
 - [CKS](list_of_indicators/chande_kroll_stop.md) - индикатор CKS, предоставляет уровни стоп-лосса на основе волатильности
 - [CMO](list_of_indicators/cmo.md) - индикатор CMO, измеряет импульс изменения цены
 - [CHOP](list_of_indicators/choppiness_index.md) - индикатор CHOP, определяет, находится ли рынок в тренде или в диапазоне

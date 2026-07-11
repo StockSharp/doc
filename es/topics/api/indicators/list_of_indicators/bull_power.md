@@ -1,6 +1,6 @@
 # fuerza alcista
 
-**fuerza alcista** es la contraparte alcista dentro del sistema Elder-ray. Mide con qué fuerza los compradores empujan los precios por encima de un
+**fuerza alcista** es la contraparte alcista dentro del sistema de rayos de Elder. Mide con qué fuerza los compradores empujan los precios por encima de una
 media móvil exponencial (EMA) comparando el máximo de la barra con el precio medio.
 
 Utilice la clase [BullPower](xref:StockSharp.Algo.Indicators.BullPower) para trabajar con este indicador.
@@ -26,7 +26,7 @@ fuerza alcista hereda sus parámetros de [ExponentialMovingAverage](xref:StockSh
 
 - El aumento de fuerza alcista junto con un aumento de EMA confirma la fuerza de la tendencia.
 - El precio alcanza nuevos máximos sin lecturas más altas de fuerza alcista forma una divergencia bajista.
-- Combine Bull y fuerza bajista con el precio EMA para evaluar la estructura completa de [rayos de Elder](elder_ray.md).
+- Combine fuerza alcista y fuerza bajista con el precio EMA para evaluar la estructura completa de [rayos de Elder](elder_ray.md).
 
 ![indicator_bull_power](../../../../images/indicator_bull_power.png)
 

@@ -1,8 +1,6 @@
 # força compradora
 
-﻿# força compradora
-
-**força compradora** é a contraparte altista dentro do sistema Elder-ray. Mede a força com que os compradores empurram os preços acima de uma média móvel exponencial (EMA), comparando o máximo da barra com o preço médio.
+**força compradora** é a contraparte altista dentro do sistema de raios de Elder. Mede a força com que os compradores empurram os preços acima de uma média móvel exponencial (EMA), comparando o máximo da barra com o preço médio.
 
 Use a classe [BullPower](xref:StockSharp.Algo.Indicators.BullPower) para trabalhar com este indicador.
 
@@ -27,7 +25,7 @@ força compradora herda os seus parâmetros de [ExponentialMovingAverage](xref:S
 
 - força compradora a subir em conjunto com uma EMA a subir confirma a força da tendência.
 - O preço a fazer novos máximos sem leituras mais altas de força compradora forma divergência baixista.
-- Combine Bull e força vendedora com a EMA do preço para avaliar a estrutura completa do [raios de Elder](elder_ray.md).
+- Combine força compradora e força vendedora com a EMA do preço para avaliar a estrutura completa de [raios de Elder](elder_ray.md).
 
 ![indicator_bull_power](../../../../images/indicator_bull_power.png)
 

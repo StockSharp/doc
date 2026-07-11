@@ -24,7 +24,7 @@
 - [パターン](../patterns.md) - チャート上の特定の価格パターンを認識します
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - インジケーター CGO、潜在的な反転ポイントを特定します
 - [CMF](list_of_indicators/chaikin_money_flow.md) - インジケーター CMF、出来高に基づいて買い圧力と売り圧力を測定します
-- [Chaikin's Volatility](list_of_indicators/chv.md) - インジケーター Chaikin's Volatility、取引レンジの変化率を測定します
+- [チャイキンボラティリティ](list_of_indicators/chv.md) - インジケーター チャイキンボラティリティ、取引レンジの変化率を測定します
 - [CKS](list_of_indicators/chande_kroll_stop.md) - インジケーター CKS、ボラティリティに基づくストップロス水準を提供します
 - [CMO](list_of_indicators/cmo.md) - インジケーター CMO、価格変化のモメンタムを測定します
 - [CHOP](list_of_indicators/choppiness_index.md) - インジケーター CHOP、市場がトレンド状態かレンジ状態かを判定します

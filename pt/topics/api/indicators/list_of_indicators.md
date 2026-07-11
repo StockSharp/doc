@@ -26,7 +26,7 @@
 - [Pattern](../patterns.md) - indicador Pattern, reconhece padrões de preço específicos em gráficos
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - indicador CGO, identifica potenciais pontos de reversão
 - [CMF](list_of_indicators/chaikin_money_flow.md) - indicador CMF, mede a pressão de compra e venda com base no volume
-- [Chaikin's Volatility](list_of_indicators/chv.md) - indicador Chaikin's Volatility, mede a taxa de variação do intervalo de negociação
+- [volatilidade de Chaikin](list_of_indicators/chv.md) - indicador volatilidade de Chaikin, mede a taxa de variação do intervalo de negociação
 - [CKS](list_of_indicators/chande_kroll_stop.md) - indicador CKS, fornece níveis de stop-loss com base na volatilidade
 - [CMO](list_of_indicators/cmo.md) - indicador CMO, mede o momentum das alterações de preço
 - [CHOP](list_of_indicators/choppiness_index.md) - indicador CHOP, determina se o mercado está em tendência ou lateralizado

@@ -1,8 +1,6 @@
 # força vendedora
 
-﻿# força vendedora
-
-**força vendedora** faz parte do sistema Elder-ray de Alexander Elder e mostra a força dos vendedores em comparação com uma média móvel exponencial (EMA). Mede até que ponto os mínimos intradiários caem abaixo do preço médio e destaca momentos em que os vendedores perdem controlo.
+**força vendedora** faz parte do sistema de raios de Elder de Alexander Elder e mostra a força dos vendedores em comparação com uma média móvel exponencial (EMA). Mede até que ponto os mínimos intradiários caem abaixo do preço médio e destaca momentos em que os vendedores perdem controlo.
 
 Use a classe [BearPower](xref:StockSharp.Algo.Indicators.BearPower) para aceder ao indicador.
 

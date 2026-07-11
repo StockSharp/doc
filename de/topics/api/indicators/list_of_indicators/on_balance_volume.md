@@ -10,7 +10,7 @@ On-Balance-Volumen (OBV) ist ein kumulativer Indikator, der das Volumen erhöht,
 
 OBV zielt darauf ab, Momente zu erkennen, in denen „Smart Money“ (große institutionelle Anleger) Positionen akkumulieren oder verteilen, was zukünftige Preisbewegungen vorhersagen kann. Der Indikator ist besonders nützlich, um Divergenzen zwischen Preis und Volumen zu identifizieren, die auf mögliche Marktumkehrungen hinweisen können.
 
-Der OBV-Indikator wurde erstmals 1963 von Joseph Granville in seinem Buch „Granville's New Key to Stock Market Profits“ vorgestellt und hat sich seitdem zu einem der am häufigsten verwendeten Volumenindikatoren entwickelt.
+Der OBV-Indikator wurde erstmals 1963 von Joseph Granville in seinem Buch „Granvilles neuer Schlüssel zu Börsengewinnen“ vorgestellt und hat sich seitdem zu einem der am häufigsten verwendeten Volumenindikatoren entwickelt.
 
 ## Berechnung
 
