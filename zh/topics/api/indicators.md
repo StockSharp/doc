@@ -27,7 +27,7 @@
        // 将结果用于交易决策
        if (shortValue.GetValue<decimal>() > longValue.GetValue<decimal>())
        {
-           // Buy signal
+           // 买入信号
            BuyAtMarket();
        }
    }

@@ -119,16 +119,16 @@ public class AlertStrategy : Strategy
         // 价格自下向上穿越水平
         if (candle.OpenPrice < PriceLevel && candle.ClosePrice >= PriceLevel)
         {
-            AlertPopup("价格穿越水平 " + PriceLevel + " upward!");
-            AlertSound("Level breakout!");
+            AlertPopup("价格向上突破水平 " + PriceLevel + "!");
+            AlertSound("水平突破!");
             BuyMarket();
         }
 
         // 价格自上向下穿越水平
         if (candle.OpenPrice > PriceLevel && candle.ClosePrice <= PriceLevel)
         {
-            Alert(AlertNotifications.Telegram, "Trading signal",
-                "价格突破水平 " + PriceLevel + " downward");
+            Alert(AlertNotifications.Telegram, "交易信号",
+                "价格向下跌破水平 " + PriceLevel);
             SellMarket();
         }
     }

@@ -35,13 +35,13 @@
    ```
    Range = |High - Low|
    
-   Level 0% = High (for upward trend) or Low (for downward trend)
+   水平 0% = High（上升趋势）或 Low（下降趋势）
    Level 23.6% = High - (Range * 0.236) or Low + (Range * 0.236)
    Level 38.2% = High - (Range * 0.382) or Low + (Range * 0.382)
    Level 50.0% = High - (Range * 0.5) or Low + (Range * 0.5)
    Level 61.8% = High - (Range * 0.618) or Low + (Range * 0.618)
    Level 78.6% = High - (Range * 0.786) or Low + (Range * 0.786)
-   Level 100% = Low (for upward trend) or High (for downward trend)
+   水平 100% = Low（上升趋势）或 High（下降趋势）
    ```
 
 ## 解释

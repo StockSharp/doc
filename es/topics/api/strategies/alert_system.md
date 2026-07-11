@@ -119,16 +119,16 @@ public class AlertStrategy : Strategy
         // El precio cruzó el nivel desde abajo hacia arriba
         if (candle.OpenPrice < PriceLevel && candle.ClosePrice >= PriceLevel)
         {
-            AlertPopup("El precio cruzó el nivel " + PriceLevel + " upward!");
-            AlertSound("Level breakout!");
+            AlertPopup("El precio cruzó el nivel " + PriceLevel + " hacia arriba!");
+            AlertSound("Ruptura de nivel!");
             BuyMarket();
         }
 
         // El precio cruzó el nivel desde arriba hacia abajo
         if (candle.OpenPrice > PriceLevel && candle.ClosePrice <= PriceLevel)
         {
-            Alert(AlertNotifications.Telegram, "Trading signal",
-                "El precio rompió el nivel " + PriceLevel + " downward");
+            Alert(AlertNotifications.Telegram, "Señal de negociación",
+                "El precio rompió el nivel " + PriceLevel + " hacia abajo");
             SellMarket();
         }
     }

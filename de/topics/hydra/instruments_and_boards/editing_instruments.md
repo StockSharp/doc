@@ -18,4 +18,4 @@ Bearbeiten Sie danach die Gruppe nach Bedarf.
 
 ![hydra securities edit](../../../images/hydra_securities_edit.png)
 
-Wenn alle ausgewählten Instrumente in einem Feld denselben Wert haben, wird dieser Wert angezeigt. Wenn sich die Werte unterscheiden, bleibt das Feld leer. Wenn zum Beispiel zwei Instrumente einen Price Step von 1 haben, aber eines eine Lot-Größe von 10 und das andere von 100, zeigt das Feld Price Step den Wert 1 an, während das Feld Volume Step leer bleibt.
+Wenn alle ausgewählten Instrumente in einem Feld denselben Wert haben, wird dieser Wert angezeigt. Wenn sich die Werte unterscheiden, bleibt das Feld leer. Wenn zum Beispiel zwei Instrumente einen Preisschritt von 1 haben, aber eines eine Lot-Größe von 10 und das andere von 100, zeigt das Feld Preisschritt den Wert 1 an, während das Feld Volumenschritt leer bleibt.

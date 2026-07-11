@@ -27,7 +27,7 @@
        // Usar resultados para decisões de negociação
        if (shortValue.GetValue<decimal>() > longValue.GetValue<decimal>())
        {
-           // Buy signal
+           // Sinal de compra
            BuyAtMarket();
        }
    }

@@ -147,6 +147,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Point (positions)",
 		"Point (transactions)",
 		"Private websocket stream",
+		"Price Step",
 		"Manage NuGet Packages",
 		"More info",
 		"Open debug launch profiles UI",
@@ -171,6 +172,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"User name (hist)",
 		"Validate remote",
 		"Verification code",
+		"Volume Step",
 		"Websocket API docs",
 		"Websocket channels",
 		"Websocket introduction",
@@ -1797,6 +1799,65 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedAlertSystemSampleStringsDoNotKeepEnglishSignals()
+	{
+		var errors = new List<string>();
+		var relativePath = "topics/api/strategies/alert_system.md";
+		var patterns = new[]
+		{
+			new Regex(@"\bLevel breakout\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"\bTrading signal\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"\bupward!?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"\bdownward\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				foreach (var pattern in patterns)
+				{
+					if (!pattern.IsMatch(literal.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: alert-system code sample keeps English alert text '{literal.Text}'. Localize user-visible alert strings.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCodeCommentsDoNotKeepKnownEnglishSignalLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:Buy|Sell) signal\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+				{
+					if (!pattern.IsMatch(comment.Text))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: code comment keeps English signal label '{comment.Text}'. Localize the comment.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownImageAltTextsAreTranslatedFromDefaultLanguage()
 	{
 		var errors = new List<string>();
@@ -2142,6 +2203,37 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English market direction word '{phrase}'. Localize it for the target language.");
 					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishTrendDirectionPhrases()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:upward|downward) trend\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: indicator documentation keeps English trend direction phrase '{match.Value}'. Localize prose inside formula notes too.");
 				}
 			}
 		}

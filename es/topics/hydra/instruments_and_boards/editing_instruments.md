@@ -18,4 +18,4 @@ Después edite el grupo según sea necesario.
 
 ![hydra securities edit](../../../images/hydra_securities_edit.png)
 
-Si todos los instrumentos seleccionados tienen el mismo valor en un campo, se mostrará ese valor. Si los valores difieren, el campo estará vacío. Por ejemplo, si dos instrumentos tienen un Price Step de 1, pero uno tiene un tamaño de lote de 10 y el otro de 100, el campo Price Step mostrará 1 y el campo Volume Step estará vacío.
+Si todos los instrumentos seleccionados tienen el mismo valor en un campo, se mostrará ese valor. Si los valores difieren, el campo estará vacío. Por ejemplo, si dos instrumentos tienen un paso de precio de 1, pero uno tiene un tamaño de lote de 10 y el otro de 100, el campo Paso de precio mostrará 1 y el campo Paso de volumen estará vacío.
