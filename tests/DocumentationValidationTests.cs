@@ -1621,6 +1621,36 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedHydraCustomCandleInstructionsDoNotKeepEnglishStartButtonText()
+	{
+		var errors = new List<string>();
+		var languages = new[] { "es", "pt", "ja", "zh" };
+		var relative = Path.Combine("topics", "hydra", "prepare_for_download", "custom_candles.md");
+		var badPattern = new Regex(@"\bStart\b|\bstart\s+を", RegexOptions.CultureInvariant);
+
+		foreach (var lang in languages)
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!badPattern.IsMatch(text))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Hydra custom candle instruction keeps English Start button text. Localize the visible action text.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownCodeBlockListLabelsDoNotKeepKnownEnglishLabels()
 	{
 		var errors = new List<string>();
