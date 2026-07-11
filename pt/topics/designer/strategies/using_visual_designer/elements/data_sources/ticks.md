@@ -1,6 +1,6 @@
 # Ticks
 
-![Designer Ticks](../../../../../../images/designer_ticks_00.png)
+![Designer fonte de ticks](../../../../../../images/designer_ticks_00.png)
 
 Este bloco é usado para receber dados **Tique** de um instrumento.
 

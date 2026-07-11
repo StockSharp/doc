@@ -16,9 +16,9 @@ Os padrões são convencionalmente divididos em:
 
 O [Designer](../designer.md) tem padrões de velas predefinidos integrados que podem ser utilizados na sua estratégia de negociação. Os padrões são chamados através do cubo [indicador](../designer/strategies/using_visual_designer/elements/common/indicator.md), com a seleção subsequente do valor correspondente. O próprio padrão é selecionado na lista pendente na janela à direita.
 
-![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
+![Padrões comuns](../../images/indicatorpatterncommon00.png)
 
-Também é possível editar os padrões existentes e adicionar os seus próprios padrões personalizados. Para isso, tem de clicar no botão ![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png), após o que será apresentada a janela de edição de padrões.
+Também é possível editar os padrões existentes e adicionar os seus próprios padrões personalizados. Para isso, tem de clicar no botão ![Designer botão Editar](../../images/designer_creating_repository_of_historical_data_01.png), após o que será apresentada a janela de edição de padrões.
 
 ![Captura de tela de Padrões](../../images/indicatorpatterncommon01.png)
 

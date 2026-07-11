@@ -1,6 +1,6 @@
 # Тики
 
-![Designer Ticks](../../../../../../images/designer_ticks_00.png)
+![Designer тиковые данные](../../../../../../images/designer_ticks_00.png)
 
 Кубик используется для получения **Тиковых** данных по инструменту. 
 

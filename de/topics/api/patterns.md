@@ -16,9 +16,9 @@ Patterns werden üblicherweise unterteilt in:
 
 [Designer](../designer.md) enthält integrierte vordefinierte Candlestick-Muster, die in Ihrer Handelsstrategie verwendet werden können. Patterns werden über den [Indikator](../designer/strategies/using_visual_designer/elements/common/indicator.md)-Würfel aufgerufen, anschließend wird der entsprechende Wert ausgewählt. Das Pattern selbst wird aus der Dropdown-Liste im rechten Fenster ausgewählt.
 
-![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
+![Musterübersicht](../../images/indicatorpatterncommon00.png)
 
-Es ist auch möglich, vorhandene Patterns zu bearbeiten und eigene benutzerdefinierte Patterns hinzuzufügen. Klicken Sie dazu auf die Schaltfläche ![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png); danach wird das Fenster zur Pattern-Bearbeitung angezeigt.
+Es ist auch möglich, vorhandene Patterns zu bearbeiten und eigene benutzerdefinierte Patterns hinzuzufügen. Klicken Sie dazu auf die Schaltfläche ![Designer Schaltfläche Bearbeiten](../../images/designer_creating_repository_of_historical_data_01.png); danach wird das Fenster zur Pattern-Bearbeitung angezeigt.
 
 ![Muster Bildschirmfoto](../../images/indicatorpatterncommon01.png)
 

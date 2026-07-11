@@ -1,6 +1,6 @@
 # Sinalizador
 
-![Designer Flag](../../../../../../images/designer_flag_00.png)
+![Designer sinalizador](../../../../../../images/designer_flag_00.png)
 
 O componente "Flag" é usado para gerir uma flag binária, que pode ser definida ou reposta com base nos sinais recebidos.
 

@@ -1,6 +1,6 @@
 # 标志
 
-![Designer Flag](../../../../../../images/designer_flag_00.png)
+![Designer 标志](../../../../../../images/designer_flag_00.png)
 
 “Flag”组件用于管理二进制标志。该标志可以根据传入信号进行设置或重置。
 

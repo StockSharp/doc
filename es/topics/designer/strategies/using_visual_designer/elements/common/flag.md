@@ -1,6 +1,6 @@
 # Bandera
 
-![Designer Flag](../../../../../../images/designer_flag_00.png)
+![Designer bandera](../../../../../../images/designer_flag_00.png)
 
 El componente "Flag" se usa para gestionar una bandera binaria, que puede establecerse o restablecerse según señales entrantes.
 

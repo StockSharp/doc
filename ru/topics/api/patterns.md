@@ -16,9 +16,9 @@
 
 В [Designer](../designer.md) встроены предустановленные свечные паттерны, которые можно использовать в вашей торговой стратегии. Паттерны вызываются через кубик [Индикатор](../designer/strategies/using_visual_designer/elements/common/indicator.md) с последующим выбором соответствующего значения. Сам паттерн выбирается из выпадающего списка в окне справа. 
 
-![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
+![Общие паттерны](../../images/indicatorpatterncommon00.png)
 
-Также возможно редактирование существующих и добавление собственных пользовательских паттернов. Для этого, нужно нажать на кнопку ![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png) после чего будет показано окно редактирования паттернов.
+Также возможно редактирование существующих и добавление собственных пользовательских паттернов. Для этого, нужно нажать на кнопку ![Designer кнопка редактирования](../../images/designer_creating_repository_of_historical_data_01.png) после чего будет показано окно редактирования паттернов.
 
 ![Снимок экрана: Паттерны](../../images/indicatorpatterncommon01.png)
 

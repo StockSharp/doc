@@ -1,6 +1,6 @@
 # フラグ
 
-![Designer Flag](../../../../../../images/designer_flag_00.png)
+![Designer フラグ](../../../../../../images/designer_flag_00.png)
 
 "Flag" コンポーネントは、入力シグナルに基づいて設定またはリセットできるバイナリフラグを管理するために使用します。
 

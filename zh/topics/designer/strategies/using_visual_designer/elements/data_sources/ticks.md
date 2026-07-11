@@ -1,6 +1,6 @@
 # 逐笔成交
 
-![Designer Ticks](../../../../../../images/designer_ticks_00.png)
+![Designer 逐笔成交数据](../../../../../../images/designer_ticks_00.png)
 
 该模块用于接收交易品种的 **逐笔** 数据。
 

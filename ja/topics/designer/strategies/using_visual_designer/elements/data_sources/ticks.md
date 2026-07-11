@@ -1,6 +1,6 @@
 # ティック
 
-![Designer Ticks](../../../../../../images/designer_ticks_00.png)
+![Designer ティックデータ](../../../../../../images/designer_ticks_00.png)
 
 このブロックは、銘柄の **ティック** データを受信するために使用されます。
 

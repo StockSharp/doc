@@ -1,6 +1,6 @@
 # Ticks
 
-![Designer Ticks](../../../../../../images/designer_ticks_00.png)
+![Designer Ticks-Datenquelle](../../../../../../images/designer_ticks_00.png)
 
 Dieser Block wird verwendet, um **Tick**-Daten für ein Instrument zu empfangen.
 

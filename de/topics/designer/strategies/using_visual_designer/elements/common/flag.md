@@ -1,6 +1,6 @@
 # Flag
 
-![Designer Flag](../../../../../../images/designer_flag_00.png)
+![Designer Flagge](../../../../../../images/designer_flag_00.png)
 
 Die Komponente "Flag" wird verwendet, um ein binäres Flag zu verwalten, das auf Grundlage eingehender Signale gesetzt oder zurückgesetzt werden kann.
 

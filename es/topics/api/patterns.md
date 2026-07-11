@@ -16,9 +16,9 @@ Los patrones se dividen convencionalmente en:
 
 [Designer](../designer.md) tiene patrones de velas predefinidos integrados que se pueden usar en su estrategia de trading. Los patrones se llaman mediante el cubo [Indicador](../designer/strategies/using_visual_designer/elements/common/indicator.md), con la selección posterior del valor correspondiente. El propio patrón se selecciona de la lista desplegable en la ventana de la derecha.
 
-![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
+![Patrones comunes](../../images/indicatorpatterncommon00.png)
 
-También es posible editar patrones existentes y agregar sus propios patrones personalizados. Para hacerlo, debe hacer clic en el botón ![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png), después de lo cual se mostrará la ventana de edición de patrones.
+También es posible editar patrones existentes y agregar sus propios patrones personalizados. Para hacerlo, debe hacer clic en el botón ![Designer botón Editar](../../images/designer_creating_repository_of_historical_data_01.png), después de lo cual se mostrará la ventana de edición de patrones.
 
 ![Captura de Patrones](../../images/indicatorpatterncommon01.png)
 

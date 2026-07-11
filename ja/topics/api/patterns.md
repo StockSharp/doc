@@ -16,9 +16,9 @@
 
 [Designer](../designer.md) には、取引戦略で使用できる組み込みのプリセット ローソク足パターンがあります。パターンは [インジケーター](../designer/strategies/using_visual_designer/elements/common/indicator.md) キューブから呼び出し、その後、対応する値を選択します。パターン自体は、右側のウィンドウにあるドロップダウン リストから選択します。
 
-![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
+![共通パターン](../../images/indicatorpatterncommon00.png)
 
-既存のパターンを編集したり、独自のカスタム パターンを追加したりすることもできます。これを行うには、![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png) ボタンをクリックします。すると、パターン編集ウィンドウが表示されます。
+既存のパターンを編集したり、独自のカスタム パターンを追加したりすることもできます。これを行うには、![Designer 編集ボタン](../../images/designer_creating_repository_of_historical_data_01.png) ボタンをクリックします。すると、パターン編集ウィンドウが表示されます。
 
 ![パターン のスクリーンショット](../../images/indicatorpatterncommon01.png)
 

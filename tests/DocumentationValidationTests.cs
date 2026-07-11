@@ -2171,6 +2171,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Designer Crossing",
 			"Designer Debug",
 			"Designer Delay",
+			"Designer edit button",
 			"Designer Edit Tool",
 			"Designer Event model",
 			"Designer Graph options positions",
@@ -5781,10 +5782,19 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	private static bool AreMarkdownImageAltTextAndFileStemEquivalent(string altText, string fileStem)
-		=> NormalizeMarkdownImageAltTextForFileNameComparison(altText).Equals(NormalizeMarkdownImageAltTextForFileNameComparison(fileStem), StringComparison.OrdinalIgnoreCase);
+	{
+		var normalizedAltText = NormalizeMarkdownImageAltTextForFileNameComparison(altText);
+		var normalizedFileStem = NormalizeMarkdownImageAltTextForFileNameComparison(fileStem);
+
+		return normalizedAltText.Equals(normalizedFileStem, StringComparison.OrdinalIgnoreCase)
+			|| normalizedAltText.Equals(TrimTrailingDigits(normalizedFileStem), StringComparison.OrdinalIgnoreCase);
+	}
 
 	private static string NormalizeMarkdownImageAltTextForFileNameComparison(string text)
 		=> Regex.Replace(NormalizeMarkdownImageAltTextForTranslationCheck(text), @"[^\p{L}\p{Nd}]+", "", RegexOptions.CultureInvariant);
+
+	private static string TrimTrailingDigits(string text)
+		=> Regex.Replace(text, @"\d+$", string.Empty, RegexOptions.CultureInvariant);
 
 	private static string GetLocalizedIndicatorChartDescriptionWord(string lang)
 		=> lang switch

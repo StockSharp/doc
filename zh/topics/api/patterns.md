@@ -16,7 +16,7 @@
 
 [Designer](../designer.md) 内置了可用于交易策略的预设K线图形。可以通过 [指标](../designer/strategies/using_visual_designer/elements/common/indicator.md) 立方体调用这些图形，然后选择相应的值。图形本身可以在右侧窗口的下拉列表中选择。
 
-![IndicatorPatternCommon](../../images/indicatorpatterncommon00.png)
+![通用模式](../../images/indicatorpatterncommon00.png)
 
 也可以编辑已有图形并添加自定义图形。为此，需要点击 ![Designer 编辑按钮](../../images/designer_creating_repository_of_historical_data_01.png)，之后将显示图形编辑窗口。
 
