@@ -121,12 +121,12 @@ public class TargetPositionStrategy : Strategy
 
         if (candle.OpenPrice < candle.ClosePrice)
         {
-            // Candle bullish -- definir posição-alvo para compra
+            // Vela de alta -- definir posição-alvo para compra
             SetTargetPosition(Volume);
         }
         else if (candle.OpenPrice > candle.ClosePrice)
         {
-            // Candle bearish -- definir posição-alvo para venda
+            // Vela de baixa -- definir posição-alvo para venda
             SetTargetPosition(-Volume);
         }
     }

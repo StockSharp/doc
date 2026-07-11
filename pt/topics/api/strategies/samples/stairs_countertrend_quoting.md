@@ -73,14 +73,14 @@ private void ProcessCandle(ICandleMessage candle)
 		_bullLength++;
 		_bearLength = 0;
 
-		this.AddInfoLog($"Candle de alta detetada. Sequência: {_bullLength}");
+		this.AddInfoLog($"Vela de alta detetada. Sequência: {_bullLength}");
 	}
 	else if (candle.OpenPrice > candle.ClosePrice)
 	{
 		_bullLength = 0;
 		_bearLength++;
 
-		this.AddInfoLog($"Candle de baixa detetada. Sequência: {_bearLength}");
+		this.AddInfoLog($"Vela de baixa detetada. Sequência: {_bearLength}");
 	}
 
 	// Parar processador existente quando for necessária mudança de direção

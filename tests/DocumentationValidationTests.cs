@@ -417,7 +417,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		("field/value output", @"\bField:|\bValue:|\bBids:|\bAsks:"),
 		("event rule output", @"\bCandle closed or time expired\b|\bLast trade price is in the range from\b"),
 		("test source error output", @"\bError \(source\)!!!"),
-		("Portuguese candle output", @"\bCandle (?:recebido|histórico):"),
+		("Portuguese candle output", @"\bCandle (?:recebido|histórico|fechada|de)\b"),
 		("stairs countertrend candle output", @"\b(?:Bullish|Bearish) candle detected\. Streak:"),
 	];
 

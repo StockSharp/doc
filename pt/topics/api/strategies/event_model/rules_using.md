@@ -113,7 +113,7 @@
   Connector
       .WhenIntervalElapsed(timeInterval)
       .Or(this.WhenCandlesStarted(subscription))
-      .Do(() => this.AddInfoLog("Candle fechada ou tempo expirado"))
+      .Do(() => this.AddInfoLog("Vela fechada ou tempo expirado"))
       .Once()
       .Apply(this);
       
@@ -133,7 +133,7 @@
           Connector.WhenIntervalElapsed(timeInterval), 
           this.WhenCandlesStarted(subscription)
       })
-      .Do(() => this.AddInfoLog("Candle fechada ou tempo expirado"))
+      .Do(() => this.AddInfoLog("Vela fechada ou tempo expirado"))
       .Once()
       .Apply(this);
       
