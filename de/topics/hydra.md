@@ -1,6 +1,6 @@
 # Hydra
 
-![hydra Hauptansicht](../images/hydra_main.png)
+![Hydra Hauptansicht](../images/hydra_main.png)
 
 **Hydra** lädt Marktdaten automatisch aus verschiedenen Quellen herunter und speichert sie lokal. Unterstützt werden Instrumente, Kerzen, Tick-Trades, Orderbücher und weitere Datentypen. Daten können im speziellen binären **Hydra**-Format (BIN), das eine hohe Komprimierung bietet, oder im CSV-Format zur Analyse in anderen Programmen gespeichert werden.
 

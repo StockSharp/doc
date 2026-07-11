@@ -10,7 +10,7 @@ Na janela, assinale as fontes necessárias. Pode utilizar filtros por região, b
 
 Depois disso, as fontes serão adicionadas ao painel esquerdo da janela principal da aplicação.
 
-![hydra Início rápido 01](../../images/hydra_quick_start_01.png)
+![Hydra Início rápido 01](../../images/hydra_quick_start_01.png)
 
 ## Transferir uma ferramenta para carregar dados de mercado:
 
@@ -20,7 +20,7 @@ Depois de adicionar fontes de dados de mercado, os painéis das fontes adicionad
 
 Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados suportada.
 
-![hydra escolher dados de mercado](../../images/hydra_choose_market_data.png)
+![Hydra escolher dados de mercado](../../images/hydra_choose_market_data.png)
 
 > [!TIP]
 > IMPORTANTE\! Os dados são transferidos apenas para os instrumentos adicionados à lista de instrumentos
@@ -48,30 +48,30 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
    Os instrumentos selecionados serão apresentados na tabela **Instrumentos**, que é uma tabela com estrutura em árvore. O elemento principal é o instrumento; o elemento adicional são os tipos de dados de mercado que serão recebidos para esse instrumento.
 2. Para cada instrumento selecionado, deve selecionar os tipos de dados de mercado necessários para transferência.
 
-   Se nem todos os parâmetros necessários do instrumento estiverem definidos, o ícone ![Captura de tela de Primeiro arranque 3](../../images/hydra_zero.png) aparecerá na coluna esquerda da linha do instrumento. ![hydra escolher tipo de dados de mercado](../../images/hydra_type_market_data_choose.png)
+   Se nem todos os parâmetros necessários do instrumento estiverem definidos, o ícone ![Captura de tela de Primeiro arranque 3](../../images/hydra_zero.png) aparecerá na coluna esquerda da linha do instrumento. ![Hydra escolher tipo de dados de mercado](../../images/hydra_type_market_data_choose.png)
 
    Vamos selecionar a transferência de **Ticks** e **Velas período 5**.
 
-   Na parte inferior da janela da fonte existe um painel com botões para configurar os dados e instrumentos a receber. ![hydra Início rápido 02 00](../../images/hydra_quick_start_02_00.png)
+   Na parte inferior da janela da fonte existe um painel com botões para configurar os dados e instrumentos a receber. ![Hydra Início rápido 02 00](../../images/hydra_quick_start_02_00.png)
 
    Neste painel podem ser executadas as seguintes operações:
    - Configurar a quantidade de informação recebida através dos botões: **Negócios, Livros de ofertas, Velas, Registo de ordens, Level 1, Transações próprias**. As listas de tipos de dados de mercado disponíveis variam consoante a fonte.
-   - Especificar o período necessário para as velas carregadas. O período das velas recebidas é diferente para fontes diferentes.![hydra Início rápido 02](../../images/hydra_quick_start_02.png)
+   - Especificar o período necessário para as velas carregadas. O período das velas recebidas é diferente para fontes diferentes.![Hydra Início rápido 02](../../images/hydra_quick_start_02.png)
    - Definir o período necessário para a transferência dos dados de mercado. O período também pode ser configurado diretamente na janela de dados de mercado. Para isso, deve selecionar o início e o fim do período.
 
      Se o utilizador não especificar a data de fim do período, o programa transfere todos os dados disponíveis até à data atual. Se a fonte suportar a transmissão de dados de mercado em tempo real, então, se não existir data de fim para o período, os dados de mercado serão transferidos em tempo real.
 
-     Vamos definir o período para o qual é necessário transferir os dados de mercado.![hydra Início rápido 02 01](../../images/hydra_quick_start_02_01.png)
+     Vamos definir o período para o qual é necessário transferir os dados de mercado.![Hydra Início rápido 02 01](../../images/hydra_quick_start_02_01.png)
    - Especificar a partir de que dados serão construídos os dados de mercado. Se este parâmetro não for especificado, serão recebidas as velas disponíveis na fonte. Se o utilizador especificar o tipo de dados de mercado, as velas serão construídas a partir do tipo de dados de mercado especificado. Por exemplo, as velas podem ser construídas a partir do preço da última transação, do spread do livro de ordens (normalmente para o mercado Forex), da volatilidade ou do melhor preço.
 
-     Esta função é conveniente se a fonte não permitir receber dados para construir velas. Neste caso, as velas são construídas com base nos valores médios dos dados.![hydra tipo de construção de candle](../../images/hydra_candle_build_type.png)
+     Esta função é conveniente se a fonte não permitir receber dados para construir velas. Neste caso, as velas são construídas com base nos valores médios dos dados.![Hydra tipo de construção de candle](../../images/hydra_candle_build_type.png)
 
      O utilizador também tem a possibilidade de selecionar um [tipo personalizado](prepare_for_download/custom_candles.md) de velas para personalizar os dados recebidos.
    - Depois de selecionar um instrumento, o tipo de dados de mercado e definir o período, deve clicar no botão **Iniciar**. Depois disso, a transferência dos dados de mercado será iniciada.
 
    O processo de trabalho pode ser observado no separador especial **Registos**, fixado na parte inferior do programa. Além disso, os logs são guardados em ficheiros na pasta local.
 
-![hydra principal start](../../images/hydra_main_start.png)
+![Hydra principal start](../../images/hydra_main_start.png)
 
 Além disso, o utilizador pode adicionar [fontes adicionais](data_sources/select_source.md).
 

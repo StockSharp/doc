@@ -10,11 +10,11 @@
 
 構築するには、次の手順を実行します。
 
-1. マーケットデータを取得する期間と銘柄を選択します。![hydra レベル 1 板情報データ作成](../../../images/hydra_level1_build_depth_data.png)
-2. **構築元** フィールドを選択し、必要なデータ型を選択します。![hydra データ作成タイプ](../../../images/hydra_type_build_data.png)
+1. マーケットデータを取得する期間と銘柄を選択します。![Hydra レベル 1 板情報データ作成](../../../images/hydra_level1_build_depth_data.png)
+2. **構築元** フィールドを選択し、必要なデータ型を選択します。![Hydra データ作成タイプ](../../../images/hydra_type_build_data.png)
 
-   重要\! ローソク足を構築するためのソースとして **板情報、注文ログ、Level 1** を選択すると、追加パラメーターの選択項目が表示されます。![hydra データ作成の拡張プロパティ](../../../images/hydra_ext_proper_build_data.png)
-3. パラメーターを設定した後、![hydra ローソク足](../../../images/hydra_candles.png) ボタンをクリックします。![hydra レベル 1 板情報データ結果](../../../images/hydra_level1_build_depth_data_result.png)
+   重要\! ローソク足を構築するためのソースとして **板情報、注文ログ、Level 1** を選択すると、追加パラメーターの選択項目が表示されます。![Hydra データ作成の拡張プロパティ](../../../images/hydra_ext_proper_build_data.png)
+3. パラメーターを設定した後、![Hydra ローソク足](../../../images/hydra_candles.png) ボタンをクリックします。![Hydra レベル 1 板情報データ結果](../../../images/hydra_level1_build_depth_data_result.png)
 
 **ローソク足** を構築する場合は、より小さい時間枠のローソク足から、より大きい時間枠のローソク足を構築するオプションも利用できます。
 

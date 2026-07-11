@@ -8,7 +8,7 @@ Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische
 
 1. Klicken Sie auf der Registerkarte **Allgemein** auf die Schaltfläche **Kerzen**. Das folgende Fenster wird geöffnet:
 
-   ![hydra Kerzen Hauptansicht](../../../images/hydra_candles_main.png)
+   ![Hydra Kerzen Hauptansicht](../../../images/hydra_candles_main.png)
 
 2. Im geöffneten Fenster müssen Sie die Parameter für die Kerzenerzeugung konfigurieren:
 
@@ -35,7 +35,7 @@ Um 5-Minuten-Kerzen für das Instrument AAPL@NASDAQ zu erzeugen:
 
 Nach der Datenerzeugung sehen Sie das Ergebnis:
 
-![hydra Kerzen tf](../../../images/hydra_candles_tf.png)
+![Hydra Kerzen tf](../../../images/hydra_candles_tf.png)
 
 ### Beispiel für die Volumen-Kerzenerzeugung
 
@@ -49,7 +49,7 @@ Um Volumenkerzen zu erzeugen:
 
 Ergebnis der Erzeugung:
 
-![hydra Kerzen volume](../../../images/hydra_candles_volume.png)
+![Hydra Kerzen volume](../../../images/hydra_candles_volume.png)
 
 ## Datenquellen für die Kerzenerstellung
 
@@ -64,11 +64,11 @@ Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, können Si
 
 - 10-Minuten-Kerzen aus Ticks:
 
-  ![hydra Kerzen tf 10](../../../images/hydra_candles_tf_10.png)
+  ![Hydra Kerzen tf 10](../../../images/hydra_candles_tf_10.png)
 
 - 30-Minuten-Kerzen aus 5-Minuten-Kerzen:
 
-  ![hydra Kerzen tf 01](../../../images/hydra_candles_tf_01.png)
+  ![Hydra Kerzen tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
 > Wenn Sie im Feld **Erstellen aus** den Wert **nicht erstellen** auswählen, werden nur fertige Kerzen gesucht, die direkt über die Datenquelle heruntergeladen wurden.
@@ -77,12 +77,12 @@ Wenn Marktdaten nicht direkt aus der Quelle abgerufen werden konnten, können Si
 
 Zur grafischen Anzeige erzeugter Kerzen:
 
-1. Klicken Sie auf die Schaltfläche ![hydra Kerzen](../../../images/hydra_candles.png).
+1. Klicken Sie auf die Schaltfläche ![Hydra Kerzen](../../../images/hydra_candles.png).
 2. Ein Chart mit den erstellten Kerzen wird geöffnet:
 
-   ![hydra Kerzen-Zeitrahmen-Chart](../../../images/hydra_candles_tf_chart.png)
+   ![Hydra Kerzen-Zeitrahmen-Chart](../../../images/hydra_candles_tf_chart.png)
 
-   ![hydra Kerzen-Volumendiagramm](../../../images/hydra_candles_volume_chart.png)
+   ![Hydra Kerzen-Volumendiagramm](../../../images/hydra_candles_volume_chart.png)
 
 ## Indikatoren zum Chart hinzufügen
 
@@ -96,7 +96,7 @@ Technische Indikatoren können zum Kerzenchart hinzugefügt werden:
 
 Beispiel für ein Chart mit hinzugefügten Indikatoren:
 
-![hydra Kerzen-Indikatordiagramm](../../../images/hydra_candles_ind_chart.png)
+![Hydra Kerzen-Indikatordiagramm](../../../images/hydra_candles_ind_chart.png)
 
 ## Datenexport
 

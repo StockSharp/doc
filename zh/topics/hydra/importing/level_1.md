@@ -2,7 +2,7 @@
 
 要导入 Level 1 数据，请在应用程序主菜单中选择 **导入 \=\> Level 1**。
 
-![hydra 导入 级别1 视图](../../../images/hydra_import_level1.png)
+![Hydra 导入 级别1 视图](../../../images/hydra_import_level1.png)
 
 ## 导入过程
 

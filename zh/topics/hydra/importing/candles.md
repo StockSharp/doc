@@ -2,7 +2,7 @@
 
 要导入K线，请在应用程序主菜单中选择 **导入 \=\> K线**。
 
-![hydra 导入K线](../../../images/hydra_import_candles.png)
+![Hydra 导入K线](../../../images/hydra_import_candles.png)
 
 ## K线导入过程
 

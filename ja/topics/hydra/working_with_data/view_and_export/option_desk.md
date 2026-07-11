@@ -8,6 +8,6 @@
 
 **ボラティリティ・スマイル** を表示するには、**ボラティリティ・スマイル** タブに移動する必要があります。
 
-![hydra オプションのボラティリティスマイル](../../../../images/hydra_option_smile_of_volatility.png)
+![Hydra オプションのボラティリティスマイル](../../../../images/hydra_option_smile_of_volatility.png)
 
 計算された値は、[必要な形式にエクスポート](../export_data.md)できます。

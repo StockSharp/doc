@@ -2,7 +2,7 @@
 
 Для импорта данных Level 1 нужно выбрать пункт **Импорт \=\> Level 1** из главного меню приложения.
 
-![hydra импорт Level1](../../../images/hydra_import_level1.png)
+![Hydra импорт Level1](../../../images/hydra_import_level1.png)
 
 ## Процесс импорта данных Level 1
 

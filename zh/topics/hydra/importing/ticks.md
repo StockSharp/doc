@@ -2,7 +2,7 @@
 
 要导入成交数据，请打开 **导入 \=\> 逐笔成交** 选项卡。
 
-![hydra 导入成交](../../../images/hydra_import_trades.png)
+![Hydra 导入成交](../../../images/hydra_import_trades.png)
 
 ## 导入过程
 

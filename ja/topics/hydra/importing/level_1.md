@@ -2,7 +2,7 @@
 
 Level 1 データをインポートするには、アプリケーションのメイン メニューから **インポート \=\> Level 1** を選択します。
 
-![hydra レベル1 表示 をインポート](../../../images/hydra_import_level1.png)
+![Hydra レベル1 表示 をインポート](../../../images/hydra_import_level1.png)
 
 ## インポート プロセス。
 

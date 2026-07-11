@@ -2203,6 +2203,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownImageAltTextsUseCanonicalProductCasing()
+	{
+		var errors = new List<string>();
+		var rawPrefixes = new[] { "hydra", "multiconnection", "ib", "etrade" };
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					var rawPrefix = rawPrefixes.FirstOrDefault(prefix => altText.Text.StartsWith($"{prefix} ", StringComparison.Ordinal));
+					if (rawPrefix is null)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text '{altText.Text}' starts with raw product prefix '{rawPrefix}'. Use canonical product casing and a localized description.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
 	{
 		var errors = new List<string>();

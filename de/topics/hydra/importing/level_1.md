@@ -2,7 +2,7 @@
 
 Um Level-1-Daten zu importieren, wählen Sie im Hauptmenü der Anwendung **Importieren \=\> Level 1**
 
-![hydra Level1-Ansicht importieren](../../../images/hydra_import_level1.png)
+![Hydra Level1-Ansicht importieren](../../../images/hydra_import_level1.png)
 
 ## Importprozess.
 

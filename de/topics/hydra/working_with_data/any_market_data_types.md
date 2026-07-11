@@ -10,11 +10,11 @@ Beachten Sie, dass **Level 1**-Werte aus jeder Quelle heruntergeladen werden kö
 
 Für die Erstellung gehen Sie wie folgt vor:
 
-1. Wählen Sie den Zeitraum und das Instrument aus, für die Sie Marktdaten erhalten möchten.![hydra Level-1-Markttiefendaten erstellen](../../../images/hydra_level1_build_depth_data.png)
-2. Wählen Sie das Feld **Erstellen aus** aus und wählen Sie den erforderlichen Datentyp.![hydra Datenerstellungstyp](../../../images/hydra_type_build_data.png)
+1. Wählen Sie den Zeitraum und das Instrument aus, für die Sie Marktdaten erhalten möchten.![Hydra Level-1-Markttiefendaten erstellen](../../../images/hydra_level1_build_depth_data.png)
+2. Wählen Sie das Feld **Erstellen aus** aus und wählen Sie den erforderlichen Datentyp.![Hydra Datenerstellungstyp](../../../images/hydra_type_build_data.png)
 
-   WICHTIG\! Wenn **Orderbuch, Order-Log, Level 1** als Quelle für die Kerzenerstellung ausgewählt sind, erscheint eine Auswahl zusätzlicher Parameter.![hydra erweiterte Eigenschaften für Datenerstellung](../../../images/hydra_ext_proper_build_data.png)
-3. Nachdem Sie die Parameter festgelegt haben, klicken Sie auf die Schaltfläche ![hydra Kerzen](../../../images/hydra_candles.png).![hydra Level-1-Markttiefendaten-Ergebnis](../../../images/hydra_level1_build_depth_data_result.png)
+   WICHTIG\! Wenn **Orderbuch, Order-Log, Level 1** als Quelle für die Kerzenerstellung ausgewählt sind, erscheint eine Auswahl zusätzlicher Parameter.![Hydra erweiterte Eigenschaften für Datenerstellung](../../../images/hydra_ext_proper_build_data.png)
+3. Nachdem Sie die Parameter festgelegt haben, klicken Sie auf die Schaltfläche ![Hydra Kerzen](../../../images/hydra_candles.png).![Hydra Level-1-Markttiefendaten-Ergebnis](../../../images/hydra_level1_build_depth_data_result.png)
 
 Zum Erstellen von **Kerzen** ist auch die Option verfügbar, Kerzen mit größerem Zeitrahmen aus Kerzen mit kleinerem Zeitrahmen zu erstellen.
 

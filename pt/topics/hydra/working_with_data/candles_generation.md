@@ -8,7 +8,7 @@ Isto permite utilizar os dados gerados em quaisquer programas de análise técni
 
 1. No separador **Geral**, clique no botão **Velas**; será aberta a seguinte janela:
 
-   ![hydra candles principal](../../../images/hydra_candles_main.png)
+   ![Hydra candles principal](../../../images/hydra_candles_main.png)
 
 2. Na janela aberta, é necessário configurar os parâmetros de geração de candles:
 
@@ -80,9 +80,9 @@ Para apresentação gráfica das candles geradas:
 1. Clique no botão ![Captura de tela de Geração de velas](../../../images/hydra_candles.png)
 2. Será aberto um gráfico com as candles construídas:
 
-   ![hydra gráfico de candles por tempo gráfico](../../../images/hydra_candles_tf_chart.png)
+   ![Hydra gráfico de candles por tempo gráfico](../../../images/hydra_candles_tf_chart.png)
 
-   ![hydra gráfico de volume de candles](../../../images/hydra_candles_volume_chart.png)
+   ![Hydra gráfico de volume de candles](../../../images/hydra_candles_volume_chart.png)
 
 ## Adicionar Indicadores ao Gráfico
 
@@ -96,7 +96,7 @@ Podem ser adicionados indicadores técnicos ao gráfico de candles:
 
 Exemplo de um gráfico com indicadores adicionados:
 
-![hydra gráfico de indicadores de candles](../../../images/hydra_candles_ind_chart.png)
+![Hydra gráfico de indicadores de candles](../../../images/hydra_candles_ind_chart.png)
 
 ## Exportação de Dados
 

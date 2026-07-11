@@ -2,7 +2,7 @@
 
 以下连接属性适用于所有数据源。
 
-![hydra 连接参数设置](../../../images/hydra_settings_connectionparams.png)
+![Hydra 连接参数设置](../../../images/hydra_settings_connectionparams.png)
 
 **连接**
 

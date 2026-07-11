@@ -2,7 +2,7 @@
 
 Na janela que aparece, selecione os instrumentos, o intervalo temporal necessário e clique no botão ![Hydra botão Procurar](../../../../images/hydra_find.png):
 
-![hydra exportar Visualização nível1](../../../../images/hydra_export_level1.png)
+![Hydra exportar Visualização nível1](../../../../images/hydra_export_level1.png)
 
 Também pode escolher que tipos de alterações devem ser exportados. Isto é feito usando a lista pendente mostrada abaixo: 
 

@@ -2,7 +2,7 @@
 
 Um Kerzen zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Importieren \=\> Kerzen**.
 
-![hydra Kerzen importieren](../../../images/hydra_import_candles.png)
+![Hydra Kerzen importieren](../../../images/hydra_import_candles.png)
 
 ## Kerzenimportprozess
 

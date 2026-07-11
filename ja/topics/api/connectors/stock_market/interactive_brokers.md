@@ -8,7 +8,7 @@
 
 1. 他のプログラム ([S#](../../../api.md) 上の取引アルゴリズムなど) からの接続を許可する必要があります。これを行うには、設定メニュー "File -\> Global configuration..." を開きます。新しいウィンドウで "Configuration -\> API -\> Settings" を選択します。
 
-   ![ib 設定](../../../../images/ib_settings.png)
+   ![Interactive Brokers 設定](../../../../images/ib_settings.png)
 2. "Enable ActiveX and Socket Clients" モードを有効にします。
 3. アルゴリズムを実行するコンピューターのアドレス (ローカルアドレス: 127.0.0.1) も追加します。これにより、アルゴリズムを起動するたびにターミナル接続の許可を確認する必要がなくなります。
 

@@ -8,7 +8,7 @@
 
 1. **全般** タブで **ローソク足** ボタンをクリックすると、次のウィンドウが開きます。
 
-   ![hydra ローソク足 メイン](../../../images/hydra_candles_main.png)
+   ![Hydra ローソク足 メイン](../../../images/hydra_candles_main.png)
 
 2. 開いたウィンドウで、ローソク足生成パラメーターを設定する必要があります。
 
@@ -35,7 +35,7 @@ AAPL@NASDAQ 銘柄の 5 分足を生成するには、次の手順を実行し�
 
 データ生成後、結果が表示されます。
 
-![hydra ローソク足 tf](../../../images/hydra_candles_tf.png)
+![Hydra ローソク足 tf](../../../images/hydra_candles_tf.png)
 
 ### ボリュームローソク足生成の例
 
@@ -49,7 +49,7 @@ AAPL@NASDAQ 銘柄の 5 分足を生成するには、次の手順を実行し�
 
 生成結果:
 
-![hydra ローソク足 volume](../../../images/hydra_candles_volume.png)
+![Hydra ローソク足 volume](../../../images/hydra_candles_volume.png)
 
 ## ローソク足構築用のデータソース
 
@@ -64,11 +64,11 @@ AAPL@NASDAQ 銘柄の 5 分足を生成するには、次の手順を実行し�
 
 - ティックから 10 分足を構築:
 
-  ![hydra ローソク足 tf 10](../../../images/hydra_candles_tf_10.png)
+  ![Hydra ローソク足 tf 10](../../../images/hydra_candles_tf_10.png)
 
 - 5 分足から 30 分足を構築:
 
-  ![hydra ローソク足 tf 01](../../../images/hydra_candles_tf_01.png)
+  ![Hydra ローソク足 tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
 > **構築元** フィールドで **構築しない** を選択すると、データソースを通じて直接ダウンロードされた既製のローソク足のみが検索されます。
@@ -77,12 +77,12 @@ AAPL@NASDAQ 銘柄の 5 分足を生成するには、次の手順を実行し�
 
 生成されたローソク足をグラフィカルに表示するには、次の手順を実行します。
 
-1. ![hydra ローソク足](../../../images/hydra_candles.png) ボタンをクリックします
+1. ![Hydra ローソク足](../../../images/hydra_candles.png) ボタンをクリックします
 2. 構築されたローソク足のチャートが開きます。
 
-   ![hydra ローソク足時間枠チャート](../../../images/hydra_candles_tf_chart.png)
+   ![Hydra ローソク足時間枠チャート](../../../images/hydra_candles_tf_chart.png)
 
-   ![hydra ローソク足出来高チャート](../../../images/hydra_candles_volume_chart.png)
+   ![Hydra ローソク足出来高チャート](../../../images/hydra_candles_volume_chart.png)
 
 ## チャートへのインジケーターの追加
 
@@ -96,7 +96,7 @@ AAPL@NASDAQ 銘柄の 5 分足を生成するには、次の手順を実行し�
 
 インジケーターを追加したチャートの例:
 
-![hydra ローソク足インジケーターチャート](../../../images/hydra_candles_ind_chart.png)
+![Hydra ローソク足インジケーターチャート](../../../images/hydra_candles_ind_chart.png)
 
 ## データのエクスポート
 

@@ -4,7 +4,7 @@
 
 ![Hydra экспорт индикатор](../../../../images/hydra_export_indicator.png)
 
-Для просмотра графика значений достаточно нажать на кнопку ![hydra свечи](../../../../images/hydra_candles.png).
+Для просмотра графика значений достаточно нажать на кнопку ![Hydra свечи](../../../../images/hydra_candles.png).
 
 ![Hydra экспорт индикатор view](../../../../images/hydra_export_indicator_view.png)
 

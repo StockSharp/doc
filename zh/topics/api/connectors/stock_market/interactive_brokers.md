@@ -8,7 +8,7 @@
 
 1. 必须允许其他程序连接（例如 [S#](../../../api.md) 上的交易算法）。为此，请打开设置菜单 "File -> Global configuration..."。在新窗口中选择 "Configuration -> API -> Settings"：
 
-   ![ib 设置](../../../../images/ib_settings.png)
+   ![Interactive Brokers 设置](../../../../images/ib_settings.png)
 2. 打开“启用 ActiveX 和 Socket 客户端”模式。
 3. 还建议添加将运行算法的计算机的地址（本地地址-127.0.0.1）。这样可以消除每次启动算法时确认终端连接权限的需要。
 

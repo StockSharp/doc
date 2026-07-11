@@ -10,7 +10,7 @@
 
 之后，所选数据源会添加到应用程序主窗口的左侧面板。
 
-![hydra 快速入门 01](../../images/hydra_quick_start_01.png)
+![Hydra 快速入门 01](../../images/hydra_quick_start_01.png)
 
 ## 配置市场数据下载
 
@@ -20,7 +20,7 @@
 
 例如，从支持的数据源下载 AAPL@NASDAQ 交易品种。
 
-![hydra 选择市场数据](../../images/hydra_choose_market_data.png)
+![Hydra 选择市场数据](../../images/hydra_choose_market_data.png)
 
 > [!TIP]
 > **重要！**程序只会下载已添加到交易品种列表中的品种数据。
@@ -48,30 +48,30 @@
    所选交易品种会显示在树形结构的 **交易品种** 表格中。树的主元素是交易品种，子元素是要为该交易品种接收的市场数据类型。
 2. 为每个所选交易品种选择需要下载的市场数据类型。
 
-   如果尚未设置全部必要的交易品种参数，交易品种行左侧会显示图标 ![首次启动 截图 3](../../images/hydra_zero.png)。![hydra 选择市场数据类型](../../images/hydra_type_market_data_choose.png)
+   如果尚未设置全部必要的交易品种参数，交易品种行左侧会显示图标 ![首次启动 截图 3](../../images/hydra_zero.png)。![Hydra 选择市场数据类型](../../images/hydra_type_market_data_choose.png)
 
    下面选择下载 **逐笔成交** 和 **5 分钟K线**。
 
-   数据源窗口底部有一个按钮面板，用于配置要接收的数据和交易品种。![hydra 快速入门 02 00](../../images/hydra_quick_start_02_00.png)
+   数据源窗口底部有一个按钮面板，用于配置要接收的数据和交易品种。![Hydra 快速入门 02 00](../../images/hydra_quick_start_02_00.png)
 
    可以在该面板中执行以下操作：
    - 使用 **成交、订单簿、K线、订单日志、Level 1、自有交易** 按钮配置要接收的信息类型。不同数据源支持的市场数据类型列表可能不同。
-   - 指定要加载的K线时间周期。不同数据源提供的K线时间周期也可能不同。![hydra 快速入门 02](../../images/hydra_quick_start_02.png)
+   - 指定要加载的K线时间周期。不同数据源提供的K线时间周期也可能不同。![Hydra 快速入门 02](../../images/hydra_quick_start_02.png)
    - 设置市场数据的下载时间范围。也可以直接在市场数据窗口中配置该范围，为此需要选择开始和结束时间。
 
      如果用户未指定结束日期，程序会下载截至当前日期的全部可用数据。如果数据源支持实时传输市场数据，并且未指定结束日期，程序还会继续实时下载市场数据。
 
-     设置需要下载市场数据的时间范围。![hydra 快速入门 02 01](../../images/hydra_quick_start_02_01.png)
+     设置需要下载市场数据的时间范围。![Hydra 快速入门 02 01](../../images/hydra_quick_start_02_01.png)
    - 指定用于构建K线的市场数据。如果未设置此参数，程序将接收数据源中直接提供的K线。如果用户指定了市场数据类型，则会使用该类型的数据构建K线。例如，可以根据最新成交价、订单簿价差（通常用于外汇市场）、波动率或最优价格构建K线。
 
-     如果数据源无法直接提供绘制K线所需的数据，此功能会非常有用。在这种情况下，程序会根据平均数据值绘制K线。![hydra K线构建类型](../../images/hydra_candle_build_type.png)
+     如果数据源无法直接提供绘制K线所需的数据，此功能会非常有用。在这种情况下，程序会根据平均数据值绘制K线。![Hydra K线构建类型](../../images/hydra_candle_build_type.png)
 
      用户还可以选择K线的[自定义类型](prepare_for_download/custom_candles.md)，以调整接收的数据。
    - 选择交易品种和市场数据类型并设置时间范围后，单击 **开始** 按钮。随后程序会开始下载市场数据。
 
    可以在程序底部固定的 **日志** 选项卡中观察运行过程。此外，日志也会保存到本地文件夹中的文件内。
 
-![hydra 主界面 start](../../images/hydra_main_start.png)
+![Hydra 主界面 start](../../images/hydra_main_start.png)
 
 用户还可以添加[其他数据源](data_sources/select_source.md)。
 

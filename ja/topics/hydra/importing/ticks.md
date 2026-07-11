@@ -2,7 +2,7 @@
 
 取引をインポートするには、**インポート \=\> Ticks** タブを選択します。
 
-![hydra 取引をインポート](../../../images/hydra_import_trades.png)
+![Hydra 取引をインポート](../../../images/hydra_import_trades.png)
 
 ## インポート プロセス。
 

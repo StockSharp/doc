@@ -8,7 +8,7 @@
 
 1. 在 **常规** 选项卡中单击 **K线** 按钮，打开以下窗口：
 
-   ![hydra K线 主界面](../../../images/hydra_candles_main.png)
+   ![Hydra K线 主界面](../../../images/hydra_candles_main.png)
 
 2. 在打开的窗口中配置K线生成参数：
 
@@ -35,7 +35,7 @@
 
 数据生成后会显示以下结果：
 
-![hydra K线 tf](../../../images/hydra_candles_tf.png)
+![Hydra K线 tf](../../../images/hydra_candles_tf.png)
 
 ### 生成成交量K线的示例
 
@@ -49,7 +49,7 @@
 
 生成结果：
 
-![hydra K线 volume](../../../images/hydra_candles_volume.png)
+![Hydra K线 volume](../../../images/hydra_candles_volume.png)
 
 ## 用于构建K线的数据源
 
@@ -64,11 +64,11 @@
 
 - 使用逐笔成交构建 10 分钟K线：
 
-  ![hydra K线 tf 10](../../../images/hydra_candles_tf_10.png)
+  ![Hydra K线 tf 10](../../../images/hydra_candles_tf_10.png)
 
 - 使用 5 分钟K线构建 30 分钟K线：
 
-  ![hydra K线 tf 01](../../../images/hydra_candles_tf_01.png)
+  ![Hydra K线 tf 01](../../../images/hydra_candles_tf_01.png)
 
 > [!TIP]
 > 如果在 **构建来源** 字段中选择 **不构建**，程序只会搜索直接通过数据源下载的现成K线。
@@ -77,12 +77,12 @@
 
 要以图形方式显示生成的K线：
 
-1. 单击 ![hydra K线](../../../images/hydra_candles.png) 按钮。
+1. 单击 ![Hydra K线](../../../images/hydra_candles.png) 按钮。
 2. 程序会打开包含已构建K线的图表：
 
-   ![hydra K线周期图表](../../../images/hydra_candles_tf_chart.png)
+   ![Hydra K线周期图表](../../../images/hydra_candles_tf_chart.png)
 
-   ![hydra K线成交量图表](../../../images/hydra_candles_volume_chart.png)
+   ![Hydra K线成交量图表](../../../images/hydra_candles_volume_chart.png)
 
 ## 向图表添加指标
 
@@ -96,7 +96,7 @@
 
 添加指标后的图表示例：
 
-![hydra K线指标图表](../../../images/hydra_candles_ind_chart.png)
+![Hydra K线指标图表](../../../images/hydra_candles_ind_chart.png)
 
 ## 导出数据
 

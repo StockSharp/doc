@@ -2,6 +2,6 @@
 
 **共通** タブ、**データ削除...** ボタン。
 
-![hydra データ削除](../../../images/hydra_data_delete.png)
+![Hydra データ削除](../../../images/hydra_data_delete.png)
 
 これにより、すべての銘柄または特定の銘柄について、指定した日付のデータを削除できます。

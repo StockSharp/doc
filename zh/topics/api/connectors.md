@@ -4,7 +4,7 @@
 
 让我们看看如何使用 [Connector](xref:StockSharp.Algo.Connector)。示例的源代码位于 Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments 项目中。
 
-![multiconnection 主界面](../../images/multiconnection_main.png)
+![MultiConnection 主界面](../../images/multiconnection_main.png)
 
 创建 [Connector](xref:StockSharp.Algo.Connector) 类的实例：
 

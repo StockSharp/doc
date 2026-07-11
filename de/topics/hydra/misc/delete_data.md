@@ -2,6 +2,6 @@
 
 Registerkarte **Allgemein**, Schaltfläche **Daten löschen...**.
 
-![hydra Daten löschen](../../../images/hydra_data_delete.png)
+![Hydra Daten löschen](../../../images/hydra_data_delete.png)
 
 Damit können Sie Daten für alle oder bestimmte Instrumente an bestimmten Daten löschen.
