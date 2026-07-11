@@ -41,8 +41,8 @@ Los valores positivos de DPI indican que el precio está por encima de su media 
 El Disparity Index se puede interpretar de la siguiente manera:
 
 1. **Niveles extremos**:
-   - Los valores positivos de High (por ejemplo, por encima de +10%) pueden indicar condiciones de sobrecompra en el mercado
-   - Los valores negativos de High (por ejemplo, por debajo de -10%) pueden indicar condiciones de sobreventa del mercado
+   - Los valores positivos altos (por ejemplo, por encima de +10%) pueden indicar condiciones de sobrecompra en el mercado
+   - Los valores negativos extremos (por ejemplo, por debajo de -10%) pueden indicar condiciones de sobreventa del mercado
 
 2. **Cruces de línea cero**:
    - Cruzar de abajo hacia arriba (de valores negativos a positivos) indica que el precio ha cruzado su promedio móvil de abajo hacia arriba, lo que puede verse como una señal alcista.

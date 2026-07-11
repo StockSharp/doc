@@ -49,8 +49,8 @@ El impulso de la media móvil se puede interpretar de la siguiente manera:
    - MOMA cruzar la línea cero de arriba a abajo puede verse como una señal bajista, lo que indica el inicio o el fortalecimiento de una tendencia a la baja.
 
 2. **Valores absolutos**:
-   - Los valores positivos de High MOMA indican un fuerte impulso de promedio móvil ascendente
-   - Los valores negativos de High MOMA indican un fuerte impulso promedio móvil descendente
+   - Los valores positivos altos de MOMA indican un fuerte impulso de promedio móvil ascendente
+   - Los valores negativos extremos de MOMA indican un fuerte impulso promedio móvil descendente
    - Los valores cercanos a cero indican que no hay un impulso pronunciado o una tendencia lateral
 
 3. **Divergencias**:

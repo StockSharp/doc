@@ -49,7 +49,7 @@ Die Nachfrageindex-Berechnung ist recht komplex und umfasst mehrere Schritte:
 
 Der Nachfrageindex kann auf verschiedene Arten interpretiert werden:
 
-1. **Extreme Level**:
+1. **Extremwerte**:
    - Hohe positive Werte deuten auf eine starke Nachfrage hin (Käuferdruck)
    - Hohe negative Werte weisen auf eine schwache Nachfrage hin (Verkäuferdruck)
 

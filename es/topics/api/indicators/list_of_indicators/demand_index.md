@@ -50,8 +50,8 @@ ll cálculo de Índice de demanda es bastante complejo y consta de varias etapas
 ll Índice de demanda se puede interpretar de varias maneras:
 
 1. **Niveles extremos**:
-   - Los valores positivos de High indican una fuerte demanda (presión del comprador)
-   - Los valores negativos de High indican una demanda débil (presión del vendedor)
+   - Los valores positivos altos indican una fuerte demanda (presión del comprador)
+   - Los valores negativos extremos indican una demanda débil (presión del vendedor)
 
 2. **Cruces de línea cero**:
    - Cruzar de abajo hacia arriba puede verse como una señal alcista

@@ -65,8 +65,8 @@ El indicador FVE se puede interpretar de la siguiente manera:
    - La transición de valores positivos a negativos indica una mayor presión del vendedor y puede verse como una señal bajista.
 
 2. **Valores extremos**:
-   - Los valores positivos de High (por encima de +3) pueden indicar condiciones de sobrecompra del mercado
-   - Los valores negativos de High (por debajo de -3) pueden indicar condiciones de sobreventa del mercado
+   - Los valores positivos altos (por encima de +3) pueden indicar condiciones de sobrecompra del mercado
+   - Los valores negativos extremos (por debajo de -3) pueden indicar condiciones de sobreventa del mercado
 
 3. **Divergencias**:
    - La divergencia alcista (el precio forma un nuevo mínimo, mientras que FVE forma un mínimo más alto) puede indicar una posible reversión alcista

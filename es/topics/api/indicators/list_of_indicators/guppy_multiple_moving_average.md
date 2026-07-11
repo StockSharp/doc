@@ -7,8 +7,8 @@ Para utilizar el indicador, debe utilizar la clase [GuppyMultipleMovingAverage](
 ## Descripción
 
 La media móvil múltiple de Guppy (GMMA) consta de dos grupos de medias móviles exponenciales (EMA):
-1. **Short-term group** (normalmente 3, 5, 8, 10, 12 y 15 períodos): representa la actividad de los operadores a corto plazo
-2. **Long-term group** (normalmente 30, 35, 40, 45, 50 y 60 períodos): representa la actividad de los inversores a largo plazo.
+1. **grupo de corto plazo** (normalmente 3, 5, 8, 10, 12 y 15 períodos): representa la actividad de los operadores a corto plazo
+2. **grupo de largo plazo** (normalmente 30, 35, 40, 45, 50 y 60 períodos): representa la actividad de los inversores a largo plazo.
 
 GMMA permite visualizar la interacción entre estos dos grupos de participantes del mercado y determina si el mercado se encuentra en un estado de tendencia o de consolidación. El indicador también ayuda a identificar momentos en los que los operadores a corto plazo comienzan a seguir la misma dirección que los inversores a largo plazo, lo que a menudo indica la formación o el fortalecimiento de una tendencia.
 
@@ -63,12 +63,12 @@ La interpretación de GMMA implica analizar tanto los grupos individuales como s
    - La expansión (divergencia) de las líneas dentro de un grupo indica un fortalecimiento de la tendencia
 
 4. **Cruces**:
-   - Short-term group cruza el grupo a largo plazo de abajo hacia arriba - fuerte señal alcista
-   - Short-term group cruza el grupo de largo plazo de arriba a abajo - fuerte señal bajista
+   - grupo de corto plazo cruza el grupo a largo plazo de abajo hacia arriba - fuerte señal alcista
+   - grupo de corto plazo cruza el grupo de largo plazo de arriba a abajo - fuerte señal bajista
 
 5. **Cambios de dirección**:
    - Cuando el grupo de largo plazo comienza a cambiar de dirección, indica un cambio significativo en el sentimiento de los inversores a largo plazo.
-   - La reversión Short-term group sin cambios en el grupo a largo plazo a menudo indica una corrección temporal
+   - La reversión grupo de corto plazo sin cambios en el grupo a largo plazo a menudo indica una corrección temporal
 
 6. **Optimal Entry Points**:
    - Después de una fuerte expansión, puede ocurrir compresión, lo que indica una corrección dentro de la tendencia.

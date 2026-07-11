@@ -58,7 +58,7 @@ Dabei gilt:
 
 Der Momentum Pinball-Indikator kann wie folgt interpretiert werden:
 
-1. **Extreme Level**:
+1. **Extremwerte**:
    - Werte über 0,8 weisen auf überkaufte Marktbedingungen hin
    - Werte unter 0,2 weisen auf überverkaufte Marktbedingungen hin
    - Wenn MP diese Niveaus erreicht, steigt die Wahrscheinlichkeit einer Umkehr oder Korrektur

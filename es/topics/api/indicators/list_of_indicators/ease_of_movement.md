@@ -61,8 +61,8 @@ El indicador EMV se puede interpretar de la siguiente manera:
    - Cruzar de arriba a abajo (de valores positivos a negativos) puede verse como una señal bajista, lo que indica que el precio está comenzando a bajar con facilidad.
 
 2. **Valores extremos**:
-   - Los valores positivos de High indican que el precio sube muy fácilmente (con poco volumen)
-   - Los valores negativos de High indican que el precio está bajando muy fácilmente (con poco volumen)
+   - Los valores positivos altos indican que el precio sube muy fácilmente (con poco volumen)
+   - Los valores negativos extremos indican que el precio está bajando muy fácilmente (con poco volumen)
 
 3. **Divergencias**:
    - Divergencia alcista: el precio forma un nuevo mínimo, mientras que EMV forma un mínimo más alto (puede indicar una posible reversión alcista)

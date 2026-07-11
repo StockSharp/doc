@@ -50,8 +50,8 @@ El Índice de fuerza se puede interpretar de varias maneras:
    - La transición de valores positivos a negativos indica una mayor presión bajista y puede verse como una señal de venta.
 
 2. **Valores extremos**:
-   - Los valores positivos de High indican una fuerte presión alcista que puede conducir a condiciones de sobrecompra en el mercado.
-   - Los valores negativos de High indican una fuerte presión bajista que puede llevar a condiciones de sobreventa en el mercado.
+   - Los valores positivos altos indican una fuerte presión alcista que puede conducir a condiciones de sobrecompra en el mercado.
+   - Los valores negativos extremos indican una fuerte presión bajista que puede llevar a condiciones de sobreventa en el mercado.
 
 3. **Divergencias**:
    - La divergencia alcista (el precio forma un nuevo mínimo, mientras que el Índice de fuerza forma un mínimo más alto) puede indicar una posible reversión alcista

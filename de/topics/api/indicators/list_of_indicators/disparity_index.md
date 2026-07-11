@@ -40,7 +40,7 @@ Positive DPI-Werte zeigen an, dass der Preis über seinem gleitenden Durchschnit
 
 Der Disparity Index kann wie folgt interpretiert werden:
 
-1. **Extreme Level**:
+1. **Extremwerte**:
    - Hohe positive Werte (z. B. über +10 %) können auf überkaufte Marktbedingungen hinweisen
    - Hohe negative Werte (z. B. unter -10 %) können auf überverkaufte Marktbedingungen hinweisen
 

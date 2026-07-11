@@ -64,8 +64,8 @@ El Kase Peak Oscillator se puede interpretar de la siguiente manera:
    - Cruzar de arriba a abajo puede verse como una señal bajista
 
 2. **Valores extremos**:
-   - Los valores positivos de High pueden indicar condiciones de sobrecompra en el mercado y una posible reversión a la baja.
-   - Los valores negativos de High pueden indicar condiciones de sobreventa del mercado y una posible reversión al alza.
+   - Los valores positivos altos pueden indicar condiciones de sobrecompra en el mercado y una posible reversión a la baja.
+   - Los valores negativos extremos pueden indicar condiciones de sobreventa del mercado y una posible reversión al alza.
 
 3. **Divergencias**:
    - La divergencia alcista (el precio forma un nuevo mínimo, mientras que KPO forma un mínimo más alto) puede indicar una próxima reversión alcista

@@ -64,7 +64,7 @@ CMF oszilliert um die Nulllinie und liegt typischerweise im Bereich von -1 bis +
   - Bullische Divergenz: Preis sinkt, während CMF steigt (potenzielle Aufwärtsumkehr)
   - Bärische Divergenz: Preis steigt, während CMF fällt (potenzielle Abwärtsumkehr)
 
-- **Extreme Level**:
+- **Extremwerte**:
   - Werte über +0,25 können auf eine starke Akkumulation hinweisen
   - Werte unter -0,25 können auf eine starke Verteilung hinweisen
 

@@ -52,8 +52,8 @@ El Intraday Intensity Index se puede interpretar de la siguiente manera:
    - La transición de valores positivos a negativos puede verse como una señal bajista, lo que indica una mayor presión de venta.
 
 2. **Valores extremos**:
-   - Los valores positivos de High indican una fuerte presión de compra
-   - Los valores negativos de High indican una fuerte presión de venta
+   - Los valores positivos altos indican una fuerte presión de compra
+   - Los valores negativos extremos indican una fuerte presión de venta
    - Valores extremos puede indicar condiciones de sobrecompra o sobreventa del mercado
 
 3. **Divergencias**:
