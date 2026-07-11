@@ -100,9 +100,9 @@ var realizedPnL = pnlManager.RealizedPnL;
 var unrealizedPnL = pnlManager.UnrealizedPnL;
 var totalPnL = realizedPnL + unrealizedPnL;
 
-Console.WriteLine($"Realized PnL: {realizedPnL}");
-Console.WriteLine($"Unrealized PnL: {unrealizedPnL}");
-Console.WriteLine($"Total PnL: {totalPnL}");
+Console.WriteLine($"実現PnL: {realizedPnL}");
+Console.WriteLine($"未実現PnL: {unrealizedPnL}");
+Console.WriteLine($"合計PnL: {totalPnL}");
 ```
 
 ## 状態のリセット

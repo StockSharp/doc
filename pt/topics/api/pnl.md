@@ -100,9 +100,9 @@ var realizedPnL = pnlManager.RealizedPnL;
 var unrealizedPnL = pnlManager.UnrealizedPnL;
 var totalPnL = realizedPnL + unrealizedPnL;
 
-Console.WriteLine($"Realized PnL: {realizedPnL}");
-Console.WriteLine($"Unrealized PnL: {unrealizedPnL}");
-Console.WriteLine($"Total PnL: {totalPnL}");
+Console.WriteLine($"PnL realizado: {realizedPnL}");
+Console.WriteLine($"PnL não realizado: {unrealizedPnL}");
+Console.WriteLine($"PnL total: {totalPnL}");
 ```
 
 ## Reiniciar o Estado

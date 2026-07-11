@@ -409,6 +409,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		("market data output", @"\bLast price\b|\bDrive created:"),
 		("round-trip output", @"\bPosition closed:|\bMax volume:"),
 		("round-trip details output", @"\bRound-trip completed:|\bOpened:|\bClosed:"),
+		("PnL summary output", @"\bRealized PnL:|\bUnrealized PnL:|\bTotal PnL:"),
 		("ShrinkPrice output", @"\bOrder price:|\bOriginal price:|\bAfter ShrinkPrice:"),
 		("tick price output", @"\bTick:.*\bPrice:"),
 		("order book output", @"\bOrder Book:|\bBest Bid\b|\bBest Ask\b|\bMiddle of Spread\b|\bBid Price:|\bAsk Price:"),
