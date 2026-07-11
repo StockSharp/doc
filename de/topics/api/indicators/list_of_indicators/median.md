@@ -1,6 +1,6 @@
-# Moving Median
+# Gleitender Median
 
-Der Indikator **Moving Median** berechnet den Median der aktuellsten N-Werte. Im Vergleich zu gleitenden Durchschnitten ist er geringer
+Der Indikator **Gleitender Median** berechnet den Median der aktuellsten N-Werte. Im Vergleich zu gleitenden Durchschnitten ist er geringer
 reagiert empfindlich auf Ausreißer und bewahrt abrupte Preisänderungen, was es in lauten Umgebungen nützlich macht.
 
 Verwenden Sie die Klasse [Median](xref:StockSharp.Algo.Indicators.Median), um auf den Indikator zuzugreifen.
@@ -19,7 +19,7 @@ Ein Medianfilter sortiert die Preise innerhalb des beweglichen Fensters und wäh
 
 ## Nutzung
 
-- Wenden Sie Moving Median als Alternative zu gleitenden Durchschnitten an, wenn Preisdaten erhebliches Rauschen enthalten.
+- Wenden Sie Gleitender Median als Alternative zu gleitenden Durchschnitten an, wenn Preisdaten erhebliches Rauschen enthalten.
 - Kreuzungen zwischen Preis und Median können als Trendwechselsignale behandelt werden.
 - Kombinieren Sie den Median mit anderen Filtern, um Trends zu extrahieren und gleichzeitig wichtige Preissprünge beizubehalten.
 

@@ -25,13 +25,13 @@ BMP 计算分两个阶段进行：
 
 1. 计算每根K线的BMP：
    ```
-   Raw BMP = ((Close Price - Open Price) / (High - Low)) * Volume
+   原始 BMP = ((收盘价 - 开盘价) / (High - Low)) * Volume
    ```
 如果（高 - 低）为零，则原始 BMP 设置为零。
 
 2. 使用简单移动平均（SMA）平滑BMP：
    ```
-   BMP = SMA(Raw BMP, Length)
+   BMP = SMA(原始 BMP, Length)
    ```
 
 其中：

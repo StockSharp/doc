@@ -90,7 +90,7 @@
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - Indikator MCO, misst die Marktbreite
 - [MGD](list_of_indicators/mcginley_dynamic.md) - Indikator MGD, ein reaktionsfähiger gleitender Durchschnitt
 - [MeanDev](list_of_indicators/mean_deviation.md) - Indikator MeanDev, misst die mittlere Abweichung vom Mittelwert
-- [Moving Median](list_of_indicators/median.md) - Indikator Moving Median, glättet Daten mit dem Median des Fensters
+- [Gleitender Median](list_of_indicators/median.md) - Indikator Gleitender Median, glättet Daten mit dem Median des Fensters
 - [MedPr](list_of_indicators/median_price.md) - Indikator MedPr, berechnet die Mitte der Handelsspanne
 - [Momentum](list_of_indicators/momentum.md) - Indikator Momentum, misst die Geschwindigkeit der Preisänderung
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - Indikator MOMA, misst das Momentum eines gleitenden Durchschnitts

@@ -1,12 +1,12 @@
 # MGD
 
-**McGinley Dynamic (MGD)** é um indicador técnico desenvolvido por John R. McGinley que representa uma forma avançada de média móvel, ajustando automaticamente a sua velocidade com base em alterações da velocidade do mercado.
+**Dinâmica de McGinley (MGD)** é um indicador técnico desenvolvido por John R. McGinley que representa uma forma avançada de média móvel, ajustando automaticamente a sua velocidade com base em alterações da velocidade do mercado.
 
 Para utilizar o indicador, é necessário usar a classe [McGinleyDynamic](xref:StockSharp.Algo.Indicators.McGinleyDynamic).
 
 ## Descrição
 
-O McGinley Dynamic (MGD) foi criado por John McGinley para superar algumas desvantagens das médias móveis tradicionais, como o atraso e a incapacidade de se adaptar a alterações da velocidade do mercado. O indicador ajusta automaticamente o seu período de reacção consoante a velocidade do movimento do preço, tornando-o mais sensível a alterações rápidas e menos propenso a sinais falsos.
+O Dinâmica de McGinley (MGD) foi criado por John McGinley para superar algumas desvantagens das médias móveis tradicionais, como o atraso e a incapacidade de se adaptar a alterações da velocidade do mercado. O indicador ajusta automaticamente o seu período de reacção consoante a velocidade do movimento do preço, tornando-o mais sensível a alterações rápidas e menos propenso a sinais falsos.
 
 Ao contrário das médias móveis simples e exponenciais, o MGD incorpora uma constante de ajuste e o rácio entre o preço e o valor anterior do indicador. Isto permite que o MGD responda mais rapidamente a alterações significativas de preço, mantendo estabilidade durante movimentos mais lentos.
 
@@ -19,7 +19,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do McGinley Dynamic é efectuado recursivamente usando a seguinte fórmula:
+O cálculo do Dinâmica de McGinley é efectuado recursivamente usando a seguinte fórmula:
 
 ```
 MGD = MGD[previous] + (Price - MGD[previous]) / (Length * ((Price / MGD[previous])^4))
@@ -38,7 +38,7 @@ Primeiro cálculo: MGD = SMA(Price, Length)
 
 ## Interpretação
 
-O McGinley Dynamic pode ser interpretado de forma semelhante a outras médias móveis, mas com as suas características melhoradas:
+O Dinâmica de McGinley pode ser interpretado de forma semelhante a outras médias móveis, mas com as suas características melhoradas:
 
 1. **Determinação da Tendência**:
    - Quando o preço está acima do MGD, indica uma tendência ascendente

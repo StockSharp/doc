@@ -1,16 +1,16 @@
 # MCO
 
-**McClellan Oscillator (MCO)** ist ein von Sherman und Marian McClellan entwickelter technischer Indikator, der die Marktbreite misst, indem er die Differenz zwischen den gleitenden Durchschnitten steigender und fallender Aktien analysiert.
+**McClellan-Oszillator (MCO)** ist ein von Sherman und Marian McClellan entwickelter technischer Indikator, der die Marktbreite misst, indem er die Differenz zwischen den gleitenden Durchschnitten steigender und fallender Aktien analysiert.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [McClellanOscillator](xref:StockSharp.Algo.Indicators.McClellanOscillator) verwenden.
 
 ## Beschreibung
 
-Der McClellan Oscillator (MCO) ist einer der bekanntesten Marktbreitenindikatoren, der dabei hilft, die allgemeine Marktlage zu beurteilen und potenzielle Umkehrpunkte zu identifizieren. Es wurde 1969 entwickelt und ist seitdem für viele technische Analysten zu einem wichtigen Werkzeug geworden.
+Der McClellan-Oszillator (MCO) ist einer der bekanntesten Marktbreitenindikatoren, der dabei hilft, die allgemeine Marktlage zu beurteilen und potenzielle Umkehrpunkte zu identifizieren. Es wurde 1969 entwickelt und ist seitdem für viele technische Analysten zu einem wichtigen Werkzeug geworden.
 
 MCO basiert auf der Analyse des Verhältnisses zwischen der Anzahl steigender und fallender Aktien auf dem Markt. Der Indikator berechnet die Differenz zwischen den exponentiellen gleitenden Durchschnitten der Nettozuwächse über 19 und 39 Perioden (Differenz zwischen der Anzahl der steigenden und fallenden Aktien).
 
-Der McClellan Oscillator ist besonders nützlich für:
+Der McClellan-Oszillator ist besonders nützlich für:
 - Bestimmung der Gesamtmarktrichtung
 - Identifizieren von überkauften und überverkauften Bedingungen
 - Identifizieren potenzieller Umkehrpunkte
@@ -18,7 +18,7 @@ Der McClellan Oscillator ist besonders nützlich für:
 
 ## Berechnung
 
-Die McClellan Oscillator-Berechnung umfasst die folgenden Schritte:
+Die McClellan-Oszillator-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Nettovorschüsse für jeden Handelstag:
    ```
@@ -36,14 +36,14 @@ Die McClellan Oscillator-Berechnung umfasst die folgenden Schritte:
    EMA39 = EMA(Net Advances, 39)
    ```
 
-4. Berechnen Sie McClellan Oscillator als Differenz zwischen diesen beiden EMAs:
+4. Berechnen Sie McClellan-Oszillator als Differenz zwischen diesen beiden EMAs:
    ```
    MCO = EMA19 - EMA39
    ```
 
 ## Interpretation
 
-Der McClellan Oscillator kann wie folgt interpretiert werden:
+Der McClellan-Oszillator kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Das Überqueren der Nulllinie von unten nach oben durch MCO kann als zinsbullisches Signal gewertet werden, das auf einen möglichen Beginn eines Aufwärtstrends hinweist

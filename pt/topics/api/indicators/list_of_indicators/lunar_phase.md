@@ -1,12 +1,12 @@
 # LP
 
-**Lunar Phase (LP)** é um indicador técnico não convencional baseado em dados astronómicos sobre fases da lua para analisar a potencial influência dos ciclos lunares nos mercados financeiros.
+**Fase lunar (LP)** é um indicador técnico não convencional baseado em dados astronómicos sobre fases da lua para analisar a potencial influência dos ciclos lunares nos mercados financeiros.
 
 Para utilizar o indicador, é necessário usar a classe [LunarPhase](xref:StockSharp.Algo.Indicators.LunarPhase).
 
 ## Descrição
 
-O indicador Lunar Phase (LP) é uma ferramenta invulgar de análise técnica que usa informação sobre a fase actual da lua para potencialmente prever tendências de mercado. O indicador baseia-se na teoria de que os ciclos lunares podem influenciar o comportamento dos participantes no mercado e, consequentemente, os movimentos de preço dos instrumentos financeiros.
+O indicador Fase lunar (LP) é uma ferramenta invulgar de análise técnica que usa informação sobre a fase actual da lua para potencialmente prever tendências de mercado. O indicador baseia-se na teoria de que os ciclos lunares podem influenciar o comportamento dos participantes no mercado e, consequentemente, os movimentos de preço dos instrumentos financeiros.
 
 O ciclo lunar dura aproximadamente 29,53 dias e é tradicionalmente dividido em quatro fases principais:
 1. Lua Nova
@@ -22,7 +22,7 @@ O indicador acompanha a fase actual da lua e representa esta informação como u
 
 ## Cálculo
 
-O cálculo do indicador Lunar Phase baseia-se em algoritmos astronómicos para determinar a fase actual da lua:
+O cálculo do indicador Fase lunar baseia-se em algoritmos astronómicos para determinar a fase actual da lua:
 
 1. Determinar o número de dias decorridos desde o início do ciclo lunar (lua nova):
    ```
@@ -34,11 +34,11 @@ O cálculo do indicador Lunar Phase baseia-se em algoritmos astronómicos para d
    Moon_Phase = Current_Cycle_Position / 29.53
    ```
 
-O valor resultante é o indicador Lunar Phase (LP).
+O valor resultante é o indicador Fase lunar (LP).
 
 ## Interpretação
 
-A interpretação do indicador Lunar Phase pode variar, pois é uma ferramenta de análise técnica não convencional. No entanto, existem algumas abordagens comummente aceites:
+A interpretação do indicador Fase lunar pode variar, pois é uma ferramenta de análise técnica não convencional. No entanto, existem algumas abordagens comummente aceites:
 
 1. **Potenciais Pontos de Inversão**:
    - Alguns traders acreditam que luas novas e luas cheias podem coincidir com pontos de inversão do mercado

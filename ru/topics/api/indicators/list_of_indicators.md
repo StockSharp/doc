@@ -92,7 +92,7 @@
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - индикатор MCO, измеряет широту рынка
 - [MGD](list_of_indicators/mcginley_dynamic.md) - индикатор MGD, отзывчивая скользящая средняя
 - [MeanDev](list_of_indicators/mean_deviation.md) - индикатор MeanDev, измеряет среднее отклонение от среднего
-- [Moving Median](list_of_indicators/median.md) - индикатор Moving Median, сглаживает данные с помощью медианы окна
+- [Скользящая медиана](list_of_indicators/median.md) - индикатор Скользящая медиана, сглаживает данные с помощью медианы окна
 - [MedPr](list_of_indicators/median_price.md) - индикатор MedPr, вычисляет середину торгового диапазона
 - [Momentum](list_of_indicators/momentum.md) - индикатор Momentum, измеряет скорость изменения цены
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - индикатор MOMA, измеряет импульс скользящей средней

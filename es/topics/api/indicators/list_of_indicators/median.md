@@ -1,6 +1,6 @@
-# Moving Median
+# Mediana móvil
 
-El indicador **Moving Median** calcula la mediana de los N valores más recientes. En comparación con las medias móviles, es menos
+El indicador **Mediana móvil** calcula la mediana de los N valores más recientes. En comparación con las medias móviles, es menos
 sensible a valores atípicos y preserva cambios abruptos de precios, lo que lo hace útil en entornos ruidosos.
 
 Utilice la clase [Median](xref:StockSharp.Algo.Indicators.Median) para acceder al indicador.
@@ -19,7 +19,7 @@ Un filtro mediano ordena los precios dentro de la ventana móvil y selecciona el
 
 ## Uso
 
-- Aplique el Moving Median como alternativa a las medias móviles cuando los datos de precios contengan ruido significativo.
+- Aplique el Mediana móvil como alternativa a las medias móviles cuando los datos de precios contengan ruido significativo.
 - Crossovers entre el precio y la mediana pueden tratarse como señales de cambio de tendencia.
 - Combine la mediana con otros filtros para extraer tendencias manteniendo importantes saltos de precios.
 

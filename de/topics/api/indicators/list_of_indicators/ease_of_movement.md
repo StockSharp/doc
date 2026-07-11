@@ -1,12 +1,12 @@
 # EMV
 
-**Ease of Movement (EMV)** ist ein von Richard Arms entwickelter technischer Indikator, der Preisänderungen mit dem Volumen korreliert, um zu beurteilen, wie leicht sich der Preis nach oben oder unten bewegt.
+**Bewegungsleichtigkeit (EMV)** ist ein von Richard Arms entwickelter technischer Indikator, der Preisänderungen mit dem Volumen korreliert, um zu beurteilen, wie leicht sich der Preis nach oben oder unten bewegt.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [EaseOfMovement](xref:StockSharp.Algo.Indicators.EaseOfMovement) verwenden.
 
 ## Beschreibung
 
-Der Ease of Movement (EMV)-Indikator wurde entwickelt, um die Beziehung zwischen Preisbewegung und Volumen zu messen. Das Hauptkonzept des Indikators besteht darin, dass sich der Preis in einem Aufwärtstrend bei geringem Volumen leicht nach oben bewegen sollte, während er in einem Abwärtstrend auch bei geringem Volumen leicht nach unten gehen sollte.
+Der Bewegungsleichtigkeit (EMV)-Indikator wurde entwickelt, um die Beziehung zwischen Preisbewegung und Volumen zu messen. Das Hauptkonzept des Indikators besteht darin, dass sich der Preis in einem Aufwärtstrend bei geringem Volumen leicht nach oben bewegen sollte, während er in einem Abwärtstrend auch bei geringem Volumen leicht nach unten gehen sollte.
 
 EMV kombiniert Informationen über Preisspanne, Preisänderung und Volumen, um ein Maß für die „Leichtigkeit“ der Preisbewegung zu erstellen. Positive EMV-Werte zeigen an, dass der Preis relativ leicht steigt, während negative Werte darauf hinweisen, dass der Preis relativ leicht fällt.
 
@@ -23,27 +23,27 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Berechnung des Ease of Movement-Indikators umfasst die folgenden Schritte:
+Die Berechnung des Bewegungsleichtigkeit-Indikators umfasst die folgenden Schritte:
 
 1. Mittelpunktbewegung berechnen:
    ```
-   Midpoint = (High + Low) / 2
-   Midpoint Move = Midpoint[current] - Midpoint[previous]
+   Mittelpunkt = (High + Low) / 2
+   Mittelpunktsbewegung = Mittelpunkt[current] - Mittelpunkt[previous]
    ```
 
 2. Berechnen Sie das Box-Verhältnis (Volumen-Abstand-Koeffizient):
    ```
-   Box Ratio = Volume / (High - Low)
+   Volumen-Distanz-Verhältnis = Volume / (High - Low)
    ```
 
 3. Berechnen Sie EMV für eine Periode:
    ```
-   1-Period EMV = Midpoint Move / Box Ratio
+   Einperioden-EMV = Mittelpunktsbewegung / Volumen-Distanz-Verhältnis
    ```
 
 4. Glätten Sie, um das endgültige EMV zu erhalten:
    ```
-   EMV = SMA(1-Period EMV, Length)
+   EMV = SMA(Einperioden-EMV, Length)
    ```
 
 Dabei gilt:

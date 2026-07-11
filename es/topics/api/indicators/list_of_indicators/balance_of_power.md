@@ -1,12 +1,12 @@
 # BOP
 
-**Balance of Power (BOP)** es un indicador diseñado para medir la fuerza de los alcistas (compradores) en relación con los bajistas (vendedores) mediante la evaluación de la capacidad de los alcistas para elevar el precio desde el mínimo hasta el máximo.
+**Balance de poder (BOP)** es un indicador diseñado para medir la fuerza de los alcistas (compradores) en relación con los bajistas (vendedores) mediante la evaluación de la capacidad de los alcistas para elevar el precio desde el mínimo hasta el máximo.
 
 Para utilizar el indicador, debe utilizar la clase [BalanceOfPower](xref:StockSharp.Algo.Indicators.BalanceOfPower).
 
 ## Descripción
 
-El indicador Balance of Power (BOP) muestra el equilibrio de fuerzas entre compradores y vendedores en el mercado. Se basa en el supuesto de que en una tendencia, los compradores (alcistas) o vendedores (bajistas) pueden controlar el precio durante toda la sesión. Al comparar la diferencia entre los precios de cierre y apertura con el rango de precios completo (alto-mínimo), el indicador permite evaluar quién domina actualmente el mercado.
+El indicador Balance de poder (BOP) muestra el equilibrio de fuerzas entre compradores y vendedores en el mercado. Se basa en el supuesto de que en una tendencia, los compradores (alcistas) o vendedores (bajistas) pueden controlar el precio durante toda la sesión. Al comparar la diferencia entre los precios de cierre y apertura con el rango de precios completo (alto-mínimo), el indicador permite evaluar quién domina actualmente el mercado.
 
 BOP ayuda a los operadores:
 - Determinar la dirección y la fuerza de la tendencia actual.
@@ -16,7 +16,7 @@ BOP ayuda a los operadores:
 
 ## Cálculo
 
-La fórmula para calcular el indicador Balance of Power (BOP) es bastante simple:
+La fórmula para calcular el indicador Balance de poder (BOP) es bastante simple:
 
 ```
 BOP = (Close - Open) / (High - Low)

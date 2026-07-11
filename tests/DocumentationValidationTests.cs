@@ -2248,16 +2248,21 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var phrases = new[]
 		{
 			"Adjustment Based on Historical Data",
+			"Average Value",
 			"Average Negative Change",
 			"Average Positive Change",
 			"Base Overbought Level",
 			"Base Oversold Level",
+			"Box Ratio",
 			"Candle volume",
 			"Centerline",
+			"Close Price",
 			"Fast MA",
 			"For each i from",
 			"for each Period",
 			"for all i from",
+			"Midpoint",
+			"Midpoint Move",
 			"Level 0%",
 			"Level 23.6%",
 			"Level 38.2%",
@@ -2269,9 +2274,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Lower Band",
 			"MACD Histogram",
 			"MACD Line",
+			"Mean Deviation",
 			"Middle Line",
+			"Open Price",
 			"PPO Line",
 			"PVO Line",
+			"Raw BMP",
 			"Short EMA",
 			"Signal Line",
 			"Slow MA",
@@ -2279,6 +2287,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Upper Band",
 			"Dynamic Overbought Level",
 			"Dynamic Oversold Level",
+			"1-Period EMV",
 			"signal period",
 			"where RS",
 		};
@@ -2302,6 +2311,54 @@ public sealed class DocumentationValidationTests : BaseTestClass
 							continue;
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: indicator formula or label keeps English text '{phrase}'. Localize formula labels and explanatory parameter names.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepKnownEnglishLongIndicatorNames()
+	{
+		var errors = new List<string>();
+		var phrases = new[]
+		{
+			"Balance of Market Power",
+			"Balance of Power",
+			"Center of Gravity Oscillator",
+			"Ease of Movement",
+			"Linear Regression R-Squared",
+			"Lunar Phase",
+			"Market Facilitation Index",
+			"Market Meanness Index",
+			"Mass Index",
+			"McClellan Oscillator",
+			"McGinley Dynamic",
+			"Mean Deviation",
+			"Moving Median",
+			"Optimal Tracking Filter",
+			"R-Squared in Linear Regression",
+			"Weighted Close Price",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English indicator name '{phrase}'. Localize long indicator names in headings, prose, and link labels while preserving abbreviations where useful.");
 					}
 				}
 			}

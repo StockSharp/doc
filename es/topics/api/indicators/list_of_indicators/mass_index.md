@@ -1,12 +1,12 @@
 # MI
 
-**Mass Index (MI)** es un indicador técnico desarrollado por Donald Dorsey que identifica posibles cambios de tendencia mediante el análisis de la expansión y contracción del rango de precios.
+**Índice de masa (MI)** es un indicador técnico desarrollado por Donald Dorsey que identifica posibles cambios de tendencia mediante el análisis de la expansión y contracción del rango de precios.
 
 Para utilizar el indicador, debe utilizar la clase [MassIndex](xref:StockSharp.Algo.Indicators.MassIndex).
 
 ## Descripción
 
-El Mass Index (MI) es una herramienta de análisis técnico que ayuda a detectar posibles cambios de tendencia mediante el seguimiento de cambios en el rango de precios (diferencia entre precios máximos y mínimos). El indicador fue desarrollado por Donald Dorsey basándose en el supuesto de que los cambios de tendencia suelen ir precedidos de una expansión y posterior contracción del rango de precios.
+El Índice de masa (MI) es una herramienta de análisis técnico que ayuda a detectar posibles cambios de tendencia mediante el seguimiento de cambios en el rango de precios (diferencia entre precios máximos y mínimos). El indicador fue desarrollado por Donald Dorsey basándose en el supuesto de que los cambios de tendencia suelen ir precedidos de una expansión y posterior contracción del rango de precios.
 
 MI mide la volatilidad utilizando promedios móviles exponenciales (EMA) del rango de precios. No predice la dirección de inversión, sólo su probabilidad. Es por eso que MI se usa a menudo junto con otros indicadores direccionales.
 
@@ -20,7 +20,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Mass Index implica los siguientes pasos:
+El cálculo de Índice de masa implica los siguientes pasos:
 
 1. Calcule el rango High-Low para cada período:
    ```
@@ -56,7 +56,7 @@ donde:
 
 ## Interpretación
 
-El Mass Index se interpreta de la siguiente manera:
+El Índice de masa se interpreta de la siguiente manera:
 
 1. **"Reversión Hump"**:
    - La clásica señal de "joroba de inversión" se forma cuando el índice de masa sube por encima de 27 y luego cae por debajo de 26,5.

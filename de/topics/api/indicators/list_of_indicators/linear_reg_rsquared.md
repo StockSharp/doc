@@ -1,12 +1,12 @@
 # R-Quadrat
 
-**R-Squared in Linear Regression (Linear Regression R-Squared)** ist ein technischer Indikator, der misst, wie gut die lineare Regression Preisdaten annähert und die Stärke des Markttrends bestimmt.
+**R-Quadrat der linearen Regression (R-Quadrat der linearen Regression)** ist ein technischer Indikator, der misst, wie gut die lineare Regression Preisdaten annähert und die Stärke des Markttrends bestimmt.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [LinearRegRSquared](xref:StockSharp.Algo.Indicators.LinearRegRSquared) verwenden.
 
 ## Beschreibung
 
-R-Squared in Linear Regression (R²) ist ein statistisches Maß, mit dem der Grad der Übereinstimmung zwischen Preisdaten und einer durch diese Daten gezogenen linearen Regressionslinie bewertet wird. Im Rahmen der technischen Analyse zeigt R² an, wie gut die aktuelle Preisbewegung einem linearen Trend entspricht.
+R-Quadrat der linearen Regression (R²) ist ein statistisches Maß, mit dem der Grad der Übereinstimmung zwischen Preisdaten und einer durch diese Daten gezogenen linearen Regressionslinie bewertet wird. Im Rahmen der technischen Analyse zeigt R² an, wie gut die aktuelle Preisbewegung einem linearen Trend entspricht.
 
 R²-Werte reichen von 0 bis 1 (oder 0 % bis 100 %):
 - Ein Wert nahe 1 (100 %) zeigt an, dass die Preise sehr gut entlang der Trendlinie ausgerichtet sind, was auf einen starken Trend hinweist
@@ -21,7 +21,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die R-Squared in Linear Regression-Berechnung umfasst die folgenden Schritte:
+Die R-Quadrat der linearen Regression-Berechnung umfasst die folgenden Schritte:
 
 1. Erstellen einer linearen Regressionslinie für Preisdaten über den Length-Zeitraum:
    ```
@@ -54,7 +54,7 @@ Die R-Squared in Linear Regression-Berechnung umfasst die folgenden Schritte:
 
 ## Interpretation
 
-R-Squared in Linear Regression kann wie folgt interpretiert werden:
+R-Quadrat der linearen Regression kann wie folgt interpretiert werden:
 
 1. **Bewertung der Trendstärke**:
    - Werte über 0,7 (70 %) weisen auf einen starken Trend hin

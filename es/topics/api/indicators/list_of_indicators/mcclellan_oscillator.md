@@ -1,6 +1,6 @@
 # MCO
 
-**McClellan Oscillator (MCO)** es un indicador técnico desarrollado por Sherman y Marian McClellan que mide la amplitud del mercado analizando la diferencia entre los promedios móviles de las acciones que suben y bajan.
+**Oscilador de McClellan (MCO)** es un indicador técnico desarrollado por Sherman y Marian McClellan que mide la amplitud del mercado analizando la diferencia entre los promedios móviles de las acciones que suben y bajan.
 
 aara utilizar el indicador, debe utilizar la clase [McClellanOscillator](xref:StockSharp.Algo.Indicators.McClellanOscillator).
 

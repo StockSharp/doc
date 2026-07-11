@@ -2,13 +2,13 @@
 
 ﻿# BMP
 
-**Balance of Market Power (BMP)** é um indicador que mede a força dos compradores em relação aos vendedores, com base numa análise dos movimentos de preço e dos volumes de negociação.
+**Equilíbrio de poder do mercado (BMP)** é um indicador que mede a força dos compradores em relação aos vendedores, com base numa análise dos movimentos de preço e dos volumes de negociação.
 
 Para usar o indicador, é necessário usar a classe [BalanceOfMarketPower](xref:StockSharp.Algo.Indicators.BalanceOfMarketPower).
 
 ## Descrição
 
-O indicador Balance of Market Power foi concebido para avaliar a distribuição atual de forças entre compradores e vendedores no mercado. Analisa quanto o preço de fecho se desvia do seu intervalo (high-low) e correlaciona isto com o volume de negociação.
+O indicador Equilíbrio de poder do mercado foi concebido para avaliar a distribuição atual de forças entre compradores e vendedores no mercado. Analisa quanto o preço de fecho se desvia do seu intervalo (high-low) e correlaciona isto com o volume de negociação.
 
 O BMP ajuda os traders a:
 - Determinar o lado dominante do mercado (compradores ou vendedores)
@@ -27,18 +27,18 @@ O cálculo do BMP ocorre em duas etapas:
 
 1. Calcular o BMP para cada vela individual:
    ```
-   Raw BMP = ((Close Price - Open Price) / (High - Low)) * Volume
+   BMP bruto = ((Preço de fecho - Preço de abertura) / (High - Low)) * Volume
    ```
    Se (High - Low) for zero, o BMP bruto é definido como zero.
 
 2. Suavizar o BMP usando uma média móvel simples (SMA):
    ```
-   BMP = SMA(Raw BMP, Length)
+   BMP = SMA(BMP bruto, Length)
    ```
 
 Onde:
-- Close Price - preço de fecho da vela atual
-- Open Price - preço de abertura da vela atual
+- Preço de fecho - preço de fecho da vela atual
+- Preço de abertura - preço de abertura da vela atual
 - High - preço mais alto da vela atual
 - Low - preço mais baixo da vela atual
 - Volume - volume de negociação para o período da vela atual

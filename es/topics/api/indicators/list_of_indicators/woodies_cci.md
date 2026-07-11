@@ -32,8 +32,8 @@ El cálculo de Woodies CCI se realiza en varios pasos:
 1. Primero, calcule el CCI estándar:
    ```
    Precio típico (TP) = (High + Low + Close) / 3
-   Average Value (SMA) = SMA(TP, Length)
-   Mean Deviation (MD) = Sum(|TP - SMA|) / Length
+   Valor promedio (SMA) = SMA(TP, Length)
+   Desviación media (MD) = Sum(|TP - SMA|) / Length
    CCI = (TP - SMA) / (0.015 * MD)
    ```
 

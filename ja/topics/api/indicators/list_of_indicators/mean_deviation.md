@@ -1,6 +1,6 @@
-# Mean Deviation
+# 平均偏差
 
-**Mean Deviation** 指標は、一定期間にわたる価格の単純移動平均 (SMA) からの平均偏差を示します。
+**平均偏差** 指標は、一定期間にわたる価格の単純移動平均 (SMA) からの平均偏差を示します。
 
 この指標を使用するには、[MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation) クラスを使用する必要があります。
 

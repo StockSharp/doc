@@ -1,12 +1,12 @@
 # MGD
 
-**McGinley Dynamic (MGD)** es un indicador técnico desarrollado por John R. McGinley que representa una forma avanzada de media móvil, ajustando automáticamente su velocidad en función de los cambios de velocidad del mercado.
+**Dinámica de McGinley (MGD)** es un indicador técnico desarrollado por John R. McGinley que representa una forma avanzada de media móvil, ajustando automáticamente su velocidad en función de los cambios de velocidad del mercado.
 
 Para utilizar el indicador, debe utilizar la clase [McGinleyDynamic](xref:StockSharp.Algo.Indicators.McGinleyDynamic).
 
 ## Descripción
 
-McGinley Dynamic (MGD) fue creado por John McGinley para superar algunos inconvenientes de las medias móviles tradicionales, como el retraso y la incapacidad de adaptarse a los cambios de velocidad del mercado. El indicador ajusta automáticamente su período de reacción dependiendo de la velocidad del movimiento del precio, lo que lo hace más sensible a cambios rápidos y menos propenso a señales falsas.
+Dinámica de McGinley (MGD) fue creado por John McGinley para superar algunos inconvenientes de las medias móviles tradicionales, como el retraso y la incapacidad de adaptarse a los cambios de velocidad del mercado. El indicador ajusta automáticamente su período de reacción dependiendo de la velocidad del movimiento del precio, lo que lo hace más sensible a cambios rápidos y menos propenso a señales falsas.
 
 A diferencia de las medias móviles simples y exponenciales, MGD incorpora una constante de ajuste y la relación entre el precio y el valor del indicador anterior. Esto permite que MGD responda más rápidamente a cambios de precios significativos mientras mantiene la estabilidad durante movimientos más lentos.
 
@@ -38,7 +38,7 @@ Primer cálculo: MGD = SMA(Price, Length)
 
 ## Interpretación
 
-McGinley Dynamic se puede interpretar de manera similar a otras medias móviles, pero con sus características mejoradas:
+Dinámica de McGinley se puede interpretar de manera similar a otras medias móviles, pero con sus características mejoradas:
 
 1. **Determinación de tendencias**:
    - Cuando el precio está por encima de MGD, indica una tendencia alcista.

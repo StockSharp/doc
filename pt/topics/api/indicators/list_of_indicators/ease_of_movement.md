@@ -1,12 +1,12 @@
 # EMV
 
-**Ease of Movement (EMV)** é um indicador técnico desenvolvido por Richard Arms que correlaciona a variação do preço com o volume para avaliar a facilidade com que o preço sobe ou desce.
+**Facilidade de movimento (EMV)** é um indicador técnico desenvolvido por Richard Arms que correlaciona a variação do preço com o volume para avaliar a facilidade com que o preço sobe ou desce.
 
 Para usar o indicador, deve ser usada a classe [EaseOfMovement](xref:StockSharp.Algo.Indicators.EaseOfMovement).
 
 ## Descrição
 
-O indicador Ease of Movement (EMV) foi criado para medir a relação entre movimento do preço e volume. O conceito principal do indicador é que, numa tendência ascendente, o preço deve subir facilmente com pouco volume, enquanto numa tendência descendente o preço também deve descer facilmente com pouco volume.
+O indicador Facilidade de movimento (EMV) foi criado para medir a relação entre movimento do preço e volume. O conceito principal do indicador é que, numa tendência ascendente, o preço deve subir facilmente com pouco volume, enquanto numa tendência descendente o preço também deve descer facilmente com pouco volume.
 
 EMV combina informação sobre intervalo de preços, variação do preço e volume para criar uma medida da "facilidade" do movimento do preço. Valores positivos de EMV indicam que o preço está a subir com relativa facilidade, enquanto valores negativos indicam que o preço está a cair com relativa facilidade.
 
@@ -23,27 +23,27 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do indicador Ease of Movement envolve os seguintes passos:
+O cálculo do indicador Facilidade de movimento envolve os seguintes passos:
 
-1. Calcular Midpoint Move:
+1. Calcular Movimento do ponto médio:
    ```
-   Midpoint = (High + Low) / 2
-   Midpoint Move = Midpoint[current] - Midpoint[previous]
+   Ponto médio = (High + Low) / 2
+   Movimento do ponto médio = Ponto médio[current] - Ponto médio[previous]
    ```
 
-2. Calcular Box Ratio (coeficiente volume-distância):
+2. Calcular Razão volume-distância (coeficiente volume-distância):
    ```
-   Box Ratio = Volume / (High - Low)
+   Razão volume-distância = Volume / (High - Low)
    ```
 
 3. Calcular EMV de um único período:
    ```
-   1-Period EMV = Midpoint Move / Box Ratio
+   EMV de 1 período = Movimento do ponto médio / Razão volume-distância
    ```
 
 4. Suavizar para obter o EMV final:
    ```
-   EMV = SMA(1-Period EMV, Length)
+   EMV = SMA(EMV de 1 período, Length)
    ```
 
 Onde:

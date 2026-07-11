@@ -90,7 +90,7 @@
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - インジケーター MCO、市場の広がりを測定します
 - [MGD](list_of_indicators/mcginley_dynamic.md) - インジケーター MGD、応答性の高い移動平均です
 - [MeanDev](list_of_indicators/mean_deviation.md) - インジケーター MeanDev、平均からの平均偏差を測定します
-- [Moving Median](list_of_indicators/median.md) - インジケーター Moving Median、ウィンドウの中央値を使用してデータを平滑化します
+- [移動中央値](list_of_indicators/median.md) - インジケーター 移動中央値、ウィンドウの中央値を使用してデータを平滑化します
 - [MedPr](list_of_indicators/median_price.md) - インジケーター MedPr、取引レンジの中間点を計算します
 - [Momentum](list_of_indicators/momentum.md) - インジケーター Momentum、価格変化の速度を測定します
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - インジケーター MOMA、移動平均のモメンタムを測定します
@@ -106,7 +106,7 @@
 - [NRTR](list_of_indicators/nrtr.md) - インジケーター NRTR、トレーリングストップインジケーターです
 - [OBV](list_of_indicators/on_balance_volume.md) - インジケーター OBV、出来高を価格変化に結び付けます
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - インジケーター OBVM、OBV の平滑化版です
-- [OptimalTracking](list_of_indicators/optimal_tracking.md) - John Ehlers によって公開された Optimal Tracking Filter。価格データをフィルタリングしてノイズを低減します
+- [OptimalTracking](list_of_indicators/optimal_tracking.md) - John Ehlers によって公開された 最適追跡フィルター。価格データをフィルタリングしてノイズを低減します
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - インジケーター OMA、移動平均と価格との差を測定します
 - [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Parabolic SAR トレンドインジケーターの実装。潜在的な反転ポイントを特定します
 - [Stub](list_of_indicators/pass_through.md) - ロジックを持たないインジケーターです。線の描画やカスタムインジケーターのプレースホルダーとして使用されます

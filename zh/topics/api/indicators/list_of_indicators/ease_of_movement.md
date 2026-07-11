@@ -27,23 +27,23 @@ EMV 将价格区间、价格变化和成交量的信息结合起来，创建一�
 
 1. 计算中点移动：
    ```
-   Midpoint = (High + Low) / 2
-   Midpoint Move = Midpoint[current] - Midpoint[previous]
+   中点 = (High + Low) / 2
+   中点移动 = 中点[current] - 中点[previous]
    ```
 
 2. 计算箱体比（体积-距离系数）：
    ```
-   Box Ratio = Volume / (High - Low)
+   箱体比率 = Volume / (High - Low)
    ```
 
 3. 计算单期期望货币价值（EMV）:
    ```
-   1-Period EMV = Midpoint Move / Box Ratio
+   单周期 EMV = 中点移动 / 箱体比率
    ```
 
 4. 平滑以获得最终 EMV：
    ```
-   EMV = SMA(1-Period EMV, Length)
+   EMV = SMA(单周期 EMV, Length)
    ```
 
 其中：

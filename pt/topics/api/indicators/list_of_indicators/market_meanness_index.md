@@ -1,12 +1,12 @@
 # MMI
 
-**Market Meanness Index (MMI)** é um indicador técnico desenvolvido para determinar se o mercado está num estado tendencial ou lateral (caótico).
+**Índice de adversidade do mercado (MMI)** é um indicador técnico desenvolvido para determinar se o mercado está num estado tendencial ou lateral (caótico).
 
 Para utilizar o indicador, é necessário usar a classe [MarketMeannessIndex](xref:StockSharp.Algo.Indicators.MarketMeannessIndex).
 
 ## Descrição
 
-O Market Meanness Index (MMI) é uma ferramenta que ajuda os traders a determinar a natureza do mercado actual - se está tendencial ou lateral. O nome "Meanness" reflecte a ideia de que o mercado por vezes se comporta de forma "má" ou imprevisível para os traders, especialmente quando está em movimento lateral.
+O Índice de adversidade do mercado (MMI) é uma ferramenta que ajuda os traders a determinar a natureza do mercado actual - se está tendencial ou lateral. O nome "Meanness" reflecte a ideia de que o mercado por vezes se comporta de forma "má" ou imprevisível para os traders, especialmente quando está em movimento lateral.
 
 O MMI baseia-se na contagem do número de pares de valores de preço (normalmente preços de fecho) que não seguem um padrão linear simples, e no seu rácio relativamente ao número total de pares analisados. O indicador mede o "caos" ou a "aleatoriedade" do movimento do preço durante um período específico.
 
@@ -21,7 +21,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Market Meanness Index envolve os seguintes passos:
+O cálculo do Índice de adversidade do mercado envolve os seguintes passos:
 
 1. Criar um conjunto de pares consecutivos de preços de fecho (Close) dentro do período Length indicado.
 
@@ -41,7 +41,7 @@ Formalmente, isto pode ser representado como:
 
 ## Interpretação
 
-O Market Meanness Index pode ser interpretado da seguinte forma:
+O Índice de adversidade do mercado pode ser interpretado da seguinte forma:
 
 1. **Níveis do Indicador**:
    - MMI > 50: o mercado está num estado lateral ou caótico

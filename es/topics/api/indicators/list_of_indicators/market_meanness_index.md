@@ -1,6 +1,6 @@
 # MMI
 
-**Índice de “maldad” del mercado (Market Meanness Index, MMI)** es un indicador técnico desarrollado para determinar si el mercado se encuentra en un estado de tendencia o lateral (caótico).
+**Índice de comportamiento adverso del mercado (MMI)** es un indicador técnico desarrollado para determinar si el mercado se encuentra en un estado de tendencia o lateral (caótico).
 
 Para utilizar el indicador, debe utilizar la clase [MarketMeannessIndex](xref:StockSharp.Algo.Indicators.MarketMeannessIndex).
 

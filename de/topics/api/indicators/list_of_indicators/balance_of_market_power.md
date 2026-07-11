@@ -1,6 +1,6 @@
 # BMP
 
-**Balance of Market Power (BMP)** ist ein Indikator, der die Stärke der Käufer im Verhältnis zu den Verkäufern misst, basierend auf einer Analyse von Preisbewegungen und Handelsvolumen.
+**Marktmacht-Balance (BMP)** ist ein Indikator, der die Stärke der Käufer im Verhältnis zu den Verkäufern misst, basierend auf einer Analyse von Preisbewegungen und Handelsvolumen.
 
 Zur Verwendung des Indikators müssen Sie die Klasse [BalanceOfMarketPower](xref:StockSharp.Algo.Indicators.BalanceOfMarketPower) verwenden.
 
@@ -25,18 +25,18 @@ Die BMP-Berechnung erfolgt in zwei Schritten:
 
 1. Berechnung von BMP für jede einzelne Kerze:
    ```
-   Raw BMP = ((Close Price - Open Price) / (High - Low)) * Volume
+   Roh-BMP = ((Schlusskurs - Eröffnungskurs) / (High - Low)) * Volume
    ```
    Wenn (High - Low) null ist, wird der rohe BMP auf null gesetzt.
 
 2. Glättung von BMP mit einem einfachen gleitenden Durchschnitt (SMA):
    ```
-   BMP = SMA(Raw BMP, Length)
+   BMP = SMA(Roh-BMP, Length)
    ```
 
 Wobei:
-- Close Price - Schlusskurs der aktuellen Kerze
-- Open Price - Eröffnungskurs der aktuellen Kerze
+- Schlusskurs - Schlusskurs der aktuellen Kerze
+- Eröffnungskurs - Eröffnungskurs der aktuellen Kerze
 - High - höchster Preis der aktuellen Kerze
 - Low - niedrigster Preis der aktuellen Kerze
 - Volume - Handelsvolumen für die aktuelle Kerzenperiode

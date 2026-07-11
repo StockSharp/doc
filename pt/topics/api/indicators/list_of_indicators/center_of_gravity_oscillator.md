@@ -1,12 +1,12 @@
 # CGO
 
-**Center of Gravity Oscillator (CGO)** é um indicador técnico desenvolvido por John Ehlers, baseado no conceito de centro de gravidade da física e aplicado à análise do movimento dos preços no mercado.
+**Oscilador do centro de gravidade (CGO)** é um indicador técnico desenvolvido por John Ehlers, baseado no conceito de centro de gravidade da física e aplicado à análise do movimento dos preços no mercado.
 
 Para usar o indicador, deve ser usada a classe [CenterOfGravityOscillator](xref:StockSharp.Algo.Indicators.CenterOfGravityOscillator).
 
 ## Descrição
 
-O Center of Gravity Oscillator (CGO) é um indicador avançado que tenta identificar pontos de reversão do mercado tratando a série de preços como um sistema físico e determinando o seu "centro de gravidade". O indicador calcula onde está o "equilíbrio" nos movimentos atuais dos preços e usa esta informação para prever futuras alterações na direção da tendência.
+O Oscilador do centro de gravidade (CGO) é um indicador avançado que tenta identificar pontos de reversão do mercado tratando a série de preços como um sistema físico e determinando o seu "centro de gravidade". O indicador calcula onde está o "equilíbrio" nos movimentos atuais dos preços e usa esta informação para prever futuras alterações na direção da tendência.
 
 CGO é particularmente útil para:
 - Identificar potenciais pontos de reversão antes de aparecerem no gráfico de preços
@@ -21,7 +21,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Center of Gravity Oscillator (CGO) baseia-se na fórmula:
+O cálculo do Oscilador do centro de gravidade (CGO) baseia-se na fórmula:
 
 ```
 CGO = - Sum(Price(i) * (i + 1)) / Sum(Price(i))

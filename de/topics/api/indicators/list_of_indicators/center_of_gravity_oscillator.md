@@ -1,12 +1,12 @@
 # CGO
 
-**Center of Gravity Oscillator (CGO)** ist ein von John Ehlers entwickelter technischer Indikator, der auf dem Konzept des Schwerpunkts in der Physik basiert und auf die Analyse von Preisbewegungen auf dem Markt angewendet wird.
+**Schwerpunkt-Oszillator (CGO)** ist ein von John Ehlers entwickelter technischer Indikator, der auf dem Konzept des Schwerpunkts in der Physik basiert und auf die Analyse von Preisbewegungen auf dem Markt angewendet wird.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [CenterOfGravityOscillator](xref:StockSharp.Algo.Indicators.CenterOfGravityOscillator) verwenden.
 
 ## Beschreibung
 
-Der Center of Gravity Oscillator (CGO) ist ein Frühindikator, der versucht, Marktumkehrpunkte zu identifizieren, indem er die Preisreihe als physikalisches System behandelt und seinen „Schwerpunkt“ bestimmt. Der Indikator berechnet, wo sich das „Gleichgewicht“ der aktuellen Preisbewegungen befindet, und nutzt diese Informationen, um zukünftige Trendrichtungsänderungen vorherzusagen.
+Der Schwerpunkt-Oszillator (CGO) ist ein Frühindikator, der versucht, Marktumkehrpunkte zu identifizieren, indem er die Preisreihe als physikalisches System behandelt und seinen „Schwerpunkt“ bestimmt. Der Indikator berechnet, wo sich das „Gleichgewicht“ der aktuellen Preisbewegungen befindet, und nutzt diese Informationen, um zukünftige Trendrichtungsänderungen vorherzusagen.
 
 CGO ist besonders nützlich für:
 - Identifizieren potenzieller Umkehrpunkte, bevor sie auf dem Preisdiagramm erscheinen
@@ -21,7 +21,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Center of Gravity Oscillator (CGO)-Berechnung basiert auf der Formel:
+Die Schwerpunkt-Oszillator (CGO)-Berechnung basiert auf der Formel:
 
 ```
 CGO = - Sum(Price(i) * (i + 1)) / Sum(Price(i))

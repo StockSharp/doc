@@ -1,12 +1,12 @@
 # R-quadrado
 
-**R-Squared in Linear Regression (Linear Regression R-Squared)** é um indicador técnico que mede quão bem a regressão linear aproxima os dados de preço e determina a força da tendência do mercado.
+**R-quadrado na regressão linear (R-quadrado da regressão linear)** é um indicador técnico que mede quão bem a regressão linear aproxima os dados de preço e determina a força da tendência do mercado.
 
 Para utilizar o indicador, é necessário usar a classe [LinearRegRSquared](xref:StockSharp.Algo.Indicators.LinearRegRSquared).
 
 ## Descrição
 
-R-Squared in Linear Regression (R²) é uma medida estatística usada para avaliar o grau de correspondência entre os dados de preço e uma linha de regressão linear traçada através desses dados. No contexto da análise técnica, R² mostra quão bem o movimento actual do preço corresponde a uma tendência linear.
+R-quadrado na regressão linear (R²) é uma medida estatística usada para avaliar o grau de correspondência entre os dados de preço e uma linha de regressão linear traçada através desses dados. No contexto da análise técnica, R² mostra quão bem o movimento actual do preço corresponde a uma tendência linear.
 
 Os valores de R² variam de 0 a 1 (ou de 0% a 100%):
 - Um valor próximo de 1 (100%) indica que os preços se alinham muito bem ao longo da linha de tendência, significando uma tendência forte
@@ -21,7 +21,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo de R-Squared in Linear Regression envolve os seguintes passos:
+O cálculo de R-quadrado na regressão linear envolve os seguintes passos:
 
 1. Construir uma linha de regressão linear para os dados de preço durante o período Length:
    ```
@@ -54,7 +54,7 @@ O cálculo de R-Squared in Linear Regression envolve os seguintes passos:
 
 ## Interpretação
 
-R-Squared in Linear Regression pode ser interpretado da seguinte forma:
+R-quadrado na regressão linear pode ser interpretado da seguinte forma:
 
 1. **Avaliação da Força da Tendência**:
    - Valores acima de 0,7 (70%) indicam uma tendência forte

@@ -92,7 +92,7 @@
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - indicador MCO, mede a amplitude do mercado
 - [MGD](list_of_indicators/mcginley_dynamic.md) - indicador MGD, uma média móvel responsiva
 - [MeanDev](list_of_indicators/mean_deviation.md) - indicador MeanDev, mede o desvio médio em relação à média
-- [Moving Median](list_of_indicators/median.md) - indicador Moving Median, suaviza dados usando a mediana da janela
+- [Mediana móvel](list_of_indicators/median.md) - indicador Mediana móvel, suaviza dados usando a mediana da janela
 - [MedPr](list_of_indicators/median_price.md) - indicador MedPr, calcula o ponto médio do intervalo de negociação
 - [Momentum](list_of_indicators/momentum.md) - indicador Momentum, mede a velocidade da alteração do preço
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - indicador MOMA, mede o momentum de uma média móvel

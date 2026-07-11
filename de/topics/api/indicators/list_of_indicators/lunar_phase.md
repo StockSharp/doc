@@ -1,12 +1,12 @@
-﻿# LP
+# LP
 
-**Lunar Phase (LP)** ist ein unkonventioneller technischer Indikator, der auf astronomischen Daten über Mondphasen basiert, um den möglichen Einfluss von Mondzyklen auf die Finanzmärkte zu analysieren.
+**Mondphase (LP)** ist ein unkonventioneller technischer Indikator, der auf astronomischen Daten über Mondphasen basiert, um den möglichen Einfluss von Mondzyklen auf die Finanzmärkte zu analysieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [LunarPhase](xref:StockSharp.Algo.Indicators.LunarPhase) verwenden.
 
 ## Beschreibung
 
-Der Lunar Phase (LP)-Indikator ist ein ungewöhnliches technisches Analysetool, das Informationen über die aktuelle Mondphase nutzt, um potenzielle Markttrends vorherzusagen. Der Indikator basiert auf der Theorie, dass Mondzyklen das Verhalten der Marktteilnehmer und damit die Preisbewegungen von Finanzinstrumenten beeinflussen können.
+Der Mondphase (LP)-Indikator ist ein ungewöhnliches technisches Analysetool, das Informationen über die aktuelle Mondphase nutzt, um potenzielle Markttrends vorherzusagen. Der Indikator basiert auf der Theorie, dass Mondzyklen das Verhalten der Marktteilnehmer und damit die Preisbewegungen von Finanzinstrumenten beeinflussen können.
 
 Der Mondzyklus dauert etwa 29,53 Tage und ist traditionell in vier Hauptphasen unterteilt:
 1. Neumond
@@ -22,7 +22,7 @@ Der Indikator verfolgt die aktuelle Mondphase und stellt diese Informationen als
 
 ## Berechnung
 
-Die Berechnung des Lunar Phase-Indikators basiert auf astronomischen Algorithmen zur Bestimmung der aktuellen Mondphase:
+Die Berechnung des Mondphase-Indikators basiert auf astronomischen Algorithmen zur Bestimmung der aktuellen Mondphase:
 
 1. Bestimmen Sie die Anzahl der Tage, die seit Beginn des Mondzyklus (Neumond) vergangen sind:
    ```
@@ -34,11 +34,11 @@ Die Berechnung des Lunar Phase-Indikators basiert auf astronomischen Algorithmen
    Moon_Phase = Current_Cycle_Position / 29.53
    ```
 
-Der resultierende Wert ist der Lunar Phase (LP)-Indikator.
+Der resultierende Wert ist der Mondphase (LP)-Indikator.
 
 ## Interpretation
 
-Die Interpretation des Lunar Phase-Indikators kann variieren, da es sich um ein unkonventionelles technisches Analysetool handelt. Es gibt jedoch einige allgemein akzeptierte Ansätze:
+Die Interpretation des Mondphase-Indikators kann variieren, da es sich um ein unkonventionelles technisches Analysetool handelt. Es gibt jedoch einige allgemein akzeptierte Ansätze:
 
 1. **Potenzielle Umkehrpunkte**:
    - Einige Händler glauben, dass Neu- und Vollmonde mit Marktumkehrpunkten zusammenfallen könnten

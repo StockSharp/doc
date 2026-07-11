@@ -1,12 +1,12 @@
 # MGD
 
-**McGinley Dynamic (MGD)** ist ein von John R. McGinley entwickelter technischer Indikator, der eine fortschrittliche Form des gleitenden Durchschnitts darstellt und seine Geschwindigkeit automatisch an Änderungen der Marktgeschwindigkeit anpasst.
+**McGinley-Dynamik (MGD)** ist ein von John R. McGinley entwickelter technischer Indikator, der eine fortschrittliche Form des gleitenden Durchschnitts darstellt und seine Geschwindigkeit automatisch an Änderungen der Marktgeschwindigkeit anpasst.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [McGinleyDynamic](xref:StockSharp.Algo.Indicators.McGinleyDynamic) verwenden.
 
 ## Beschreibung
 
-McGinley Dynamic (MGD) wurde von John McGinley entwickelt, um einige Nachteile traditioneller gleitender Durchschnitte zu überwinden, wie z. B. Verzögerungen und die Unfähigkeit, sich an Änderungen der Marktgeschwindigkeit anzupassen. Der Indikator passt seine Reaktionszeit automatisch an die Geschwindigkeit der Preisbewegung an, wodurch er empfindlicher auf schnelle Änderungen reagiert und weniger anfällig für falsche Signale ist.
+McGinley-Dynamik (MGD) wurde von John McGinley entwickelt, um einige Nachteile traditioneller gleitender Durchschnitte zu überwinden, wie z. B. Verzögerungen und die Unfähigkeit, sich an Änderungen der Marktgeschwindigkeit anzupassen. Der Indikator passt seine Reaktionszeit automatisch an die Geschwindigkeit der Preisbewegung an, wodurch er empfindlicher auf schnelle Änderungen reagiert und weniger anfällig für falsche Signale ist.
 
 Im Gegensatz zu einfachen und exponentiellen gleitenden Durchschnitten beinhaltet MGD eine Abstimmungskonstante und das Verhältnis des Preises zum vorherigen Indikatorwert. Dadurch kann MGD schneller auf erhebliche Preisänderungen reagieren und gleichzeitig die Stabilität bei langsameren Bewegungen gewährleisten.
 
@@ -19,7 +19,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die McGinley Dynamic-Berechnung wird rekursiv mit der folgenden Formel durchgeführt:
+Die McGinley-Dynamik-Berechnung wird rekursiv mit der folgenden Formel durchgeführt:
 
 ```
 MGD = MGD[previous] + (Price - MGD[previous]) / (Length * ((Price / MGD[previous])^4))
@@ -38,7 +38,7 @@ Erste Berechnung: MGD = SMA(Price, Length)
 
 ## Interpretation
 
-McGinley Dynamic kann ähnlich wie andere gleitende Durchschnitte interpretiert werden, weist jedoch verbesserte Eigenschaften auf:
+McGinley-Dynamik kann ähnlich wie andere gleitende Durchschnitte interpretiert werden, weist jedoch verbesserte Eigenschaften auf:
 
 1. **Trendbestimmung**:
    - Wenn der Preis über MGD liegt, deutet dies auf einen Aufwärtstrend hin

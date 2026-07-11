@@ -1,12 +1,12 @@
 # MMI
 
-**Market Meanness Index (MMI)** ist ein technischer Indikator, der entwickelt wurde, um festzustellen, ob sich der Markt in einem Trend- oder Seitwärtszustand (chaotisch) befindet.
+**Marktgemeinheitsindex (MMI)** ist ein technischer Indikator, der entwickelt wurde, um festzustellen, ob sich der Markt in einem Trend- oder Seitwärtszustand (chaotisch) befindet.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [MarketMeannessIndex](xref:StockSharp.Algo.Indicators.MarketMeannessIndex) verwenden.
 
 ## Beschreibung
 
-Der Market Meanness Index (MMI) ist ein Tool, das Händlern hilft, die Natur des aktuellen Marktes zu bestimmen – ob er tendenziell oder seitwärts verläuft. Der Name „Meanness“ spiegelt die Idee wider, dass sich der Markt manchmal „gemein“ oder unvorhersehbar gegenüber Händlern verhält, insbesondere wenn er sich in einer Seitwärtsbewegung befindet.
+Der Marktgemeinheitsindex (MMI) ist ein Tool, das Händlern hilft, die Natur des aktuellen Marktes zu bestimmen – ob er tendenziell oder seitwärts verläuft. Der Name „Meanness“ spiegelt die Idee wider, dass sich der Markt manchmal „gemein“ oder unvorhersehbar gegenüber Händlern verhält, insbesondere wenn er sich in einer Seitwärtsbewegung befindet.
 
 MMI basiert auf der Zählung der Anzahl der Preis-Wert-Paare (normalerweise Schlusskurse), die keinem einfachen linearen Muster folgen, und deren Verhältnis zur Gesamtzahl der analysierten Paare. Der Indikator misst das „Chaos“ oder die „Zufälligkeit“ der Preisbewegung über einen bestimmten Zeitraum.
 
@@ -21,7 +21,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Market Meanness Index-Berechnung umfasst die folgenden Schritte:
+Die Marktgemeinheitsindex-Berechnung umfasst die folgenden Schritte:
 
 1. Erstellen Sie einen Satz aufeinanderfolgender Schlusskurspaare (Close) innerhalb des angegebenen Length-Zeitraums.
 
@@ -41,7 +41,7 @@ Formal lässt sich dies wie folgt darstellen:
 
 ## Interpretation
 
-Der Market Meanness Index kann wie folgt interpretiert werden:
+Der Marktgemeinheitsindex kann wie folgt interpretiert werden:
 
 1. **Indikatorstufen**:
    - MMI > 50: Der Markt befindet sich in einem Seitwärts- oder Chaoszustand

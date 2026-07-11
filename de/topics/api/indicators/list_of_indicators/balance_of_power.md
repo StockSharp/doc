@@ -1,6 +1,6 @@
 # BOP
 
-**Balance of Power (BOP)** ist ein Indikator, der die Stärke der Bullen (Käufer) im Verhältnis zu den Bären (Verkäufern) misst, indem er bewertet, wie gut die Bullen den Preis vom Tief zum Hoch anheben können.
+**Machtbalance (BOP)** ist ein Indikator, der die Stärke der Bullen (Käufer) im Verhältnis zu den Bären (Verkäufern) misst, indem er bewertet, wie gut die Bullen den Preis vom Tief zum Hoch anheben können.
 
 Zur Verwendung des Indikators müssen Sie die Klasse [BalanceOfPower](xref:StockSharp.Algo.Indicators.BalanceOfPower) verwenden.
 

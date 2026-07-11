@@ -1,12 +1,12 @@
 # MI
 
-**Mass Index (MI)** ist ein von Donald Dorsey entwickelter technischer Indikator, der potenzielle Trendumkehrungen durch die Analyse von Preisspannenausweitungen und -schrumpfungen identifiziert.
+**Massenindex (MI)** ist ein von Donald Dorsey entwickelter technischer Indikator, der potenzielle Trendumkehrungen durch die Analyse von Preisspannenausweitungen und -schrumpfungen identifiziert.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [MassIndex](xref:StockSharp.Algo.Indicators.MassIndex) verwenden.
 
 ## Beschreibung
 
-Der Mass Index (MI) ist ein technisches Analysetool, das dabei hilft, potenzielle Trendumkehrungen zu erkennen, indem es Änderungen in der Preisspanne (Differenz zwischen Höchst- und Mindestpreisen) verfolgt. Der Indikator wurde von Donald Dorsey auf der Grundlage der Annahme entwickelt, dass Trendumkehrungen typischerweise eine Ausweitung und anschließende Verengung der Preisspanne vorausgehen.
+Der Massenindex (MI) ist ein technisches Analysetool, das dabei hilft, potenzielle Trendumkehrungen zu erkennen, indem es Änderungen in der Preisspanne (Differenz zwischen Höchst- und Mindestpreisen) verfolgt. Der Indikator wurde von Donald Dorsey auf der Grundlage der Annahme entwickelt, dass Trendumkehrungen typischerweise eine Ausweitung und anschließende Verengung der Preisspanne vorausgehen.
 
 MI misst die Volatilität anhand exponentieller gleitender Durchschnitte (EMA) der Preisspanne. Es sagt nicht die Umkehrrichtung voraus, sondern nur deren Wahrscheinlichkeit. Aus diesem Grund wird MI häufig in Verbindung mit anderen Richtungsanzeigern verwendet.
 
@@ -20,7 +20,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Mass Index-Berechnung umfasst die folgenden Schritte:
+Die Massenindex-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie den High-Low-Bereich für jeden Zeitraum:
    ```
@@ -56,7 +56,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Mass Index wird wie folgt interpretiert:
+Der Massenindex wird wie folgt interpretiert:
 
 1. **„Umkehrbuckel“**:
    - Das klassische „Umkehrbuckel“-Signal entsteht, wenn der Massenindex über 27 steigt und dann unter 26,5 fällt

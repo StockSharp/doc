@@ -1,6 +1,6 @@
 # MGD
 
-**McGinley Dynamic（MGD）** 是由 John R. McGinley 开发的一种技术指标，代表了移动平均线的一种高级形式，会根据市场速度的变化自动调整其速度。
+**麦金利动态指标（MGD）** 是由 John R. McGinley 开发的一种技术指标，代表了移动平均线的一种高级形式，会根据市场速度的变化自动调整其速度。
 
 使用该指标，你需要使用 [McGinleyDynamic](xref:StockSharp.Algo.Indicators.McGinleyDynamic) 类。
 
