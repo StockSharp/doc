@@ -70,7 +70,7 @@ El Índice de fuerza se puede interpretar de varias maneras:
    - En una tendencia alcista, los días con Índice de fuerza negativo pueden indicar correcciones temporales
    - En una tendencia a la baja, los días con Índice de fuerza positivo pueden indicar rebotes temporales
 
-![FI](../../../../images/indicator_force_index.png)
+![Gráfico del indicador FI](../../../../images/indicator_force_index.png)
 
 ## Véase también
 

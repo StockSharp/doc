@@ -85,7 +85,7 @@ Der PPO kann wie folgt interpretiert werden:
    - Signalleitungs-Crossover-Signale sind zuverlässiger, wenn PPO mit dem Haupttrend übereinstimmt
    - Beispielsweise sind bullische Signale zuverlässiger, wenn PPO positiv ist, und bärische Signale sind zuverlässiger, wenn PPO negativ ist
 
-![PPO](../../../../images/indicator_percentage_price_oscillator.png)
+![PPO Diagramm](../../../../images/indicator_percentage_price_oscillator.png)
 
 ## Siehe auch
 

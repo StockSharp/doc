@@ -10,4 +10,4 @@
 - 慢速移动平均线 - 慢速平滑常数；
 - 周期 - 考夫曼移动平均的周期。
 
-![凯夫曼自适应移动平均线指示器](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
+![考夫曼自适应移动平均线 (KAMA) 指标图表](../../../../images/indicatorkaufmanadaptivemovingaverage.png)

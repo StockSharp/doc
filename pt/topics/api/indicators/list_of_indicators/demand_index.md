@@ -70,7 +70,7 @@ O Índice de procura pode ser interpretado de várias formas:
 
 Usar o Índice de procura é mais eficaz quando combinado com outros indicadores e métodos de análise para filtrar sinais falsos.
 
-![DI](../../../../images/indicator_demand_index.png)
+![Gráfico do indicador DI](../../../../images/indicator_demand_index.png)
 
 ## Ver também
 

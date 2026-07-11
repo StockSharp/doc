@@ -87,7 +87,7 @@ ll Índice de masa se interpreta de la siguiente manera:
    - Los parámetros estándar (9 para lMA, 25 para suma) funcionan bien en la mayoría de los períodos de tiempo
    - La reducción de los períodos puede crear señales más rápidas, pero puede aumentar las señales falsas.
 
-![MI](../../../../images/indicator_mass_index.png)
+![Gráfico del indicador MI](../../../../images/indicator_mass_index.png)
 
 ## Véase también
 

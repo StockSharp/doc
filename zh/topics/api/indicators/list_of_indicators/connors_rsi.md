@@ -65,7 +65,7 @@ CRSI 尤其适用于：
 
 康纳斯 RSI 在日线到周线的时间周期图表上以及以均值回归为导向的交易策略中效果最佳。
 
-![CRSI](../../../../images/indicator_connors_rsi.png)
+![CRSI 指标图表](../../../../images/indicator_connors_rsi.png)
 
 ## 另请参阅
 

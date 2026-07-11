@@ -28,7 +28,7 @@
 
 该指标有助于短期趋势评估和发现转折点，尤其是与动量工具结合使用时。
 
-![等级相关指数](../../../../images/indicator_rank_correlation_index.png)
+![等级相关指数 指标图表](../../../../images/indicator_rank_correlation_index.png)
 
 ## 另请参阅
 

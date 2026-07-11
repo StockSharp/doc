@@ -67,7 +67,7 @@ PSY = (Length 期間における上昇期間数 / Length) * 100
    - PSY はシグナルを確認するために、他の指標と組み合わせて使用されることがよくあります
    - トレンド指標やボリューム指標と組み合わせると特に有用です
 
-![PSY](../../../../images/indicator_psychological_line.png)
+![PSY のチャート](../../../../images/indicator_psychological_line.png)
 
 ## 関連項目
 

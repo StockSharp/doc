@@ -34,7 +34,7 @@ Signal = EMA(PPO, SignalPeriod)
 - **Trendbestätigung.** Das Halten über der Signallinie bestätigt einen Aufwärtstrend, während das Bleiben unter der Signallinie einen Abwärtstrend unterstützt.
 - **Divergenzen.** Divergenzen zwischen der Preisbewegung und der PPO-Linie während der Interaktion mit der Signallinie können Umkehrungen vorwegnehmen.
 
-![PPO-Signal](../../../../images/indicator_percentage_price_oscillator_signal.png)
+![PPO-Signal Diagramm](../../../../images/indicator_percentage_price_oscillator_signal.png)
 
 ## Siehe auch
 

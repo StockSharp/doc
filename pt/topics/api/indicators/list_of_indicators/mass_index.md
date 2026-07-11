@@ -87,7 +87,7 @@ O Índice de massa é interpretado da seguinte forma:
    - Parâmetros padrão (9 para EMA, 25 para soma) funcionam bem na maioria dos períodos
    - Reduzir períodos pode criar sinais mais rápidos, mas pode aumentar sinais falsos
 
-![MI](../../../../images/indicator_mass_index.png)
+![Gráfico do indicador MI](../../../../images/indicator_mass_index.png)
 
 ## Ver Também
 

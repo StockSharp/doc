@@ -75,7 +75,7 @@ KER 值在 0 和 1 之间波动：
    - 锋利的 KER 变化通常预示着新的价格波动
    - 在高值期后 KER 的下降可能预示着潜在的趋势反转
 
-![凯夫曼效率比指标](../../../../images/indicator_kaufman_efficiency_ratio.png)
+![KER 指标图表](../../../../images/indicator_kaufman_efficiency_ratio.png)
 
 ## 另请参阅
 

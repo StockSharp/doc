@@ -73,7 +73,7 @@ El índice de impulso intradía se interpreta de manera similar a RSI:
    - Los valores sostenidos de IMI por encima de 50 confirman una tendencia al alza
    - Los valores sostenidos de IMI por debajo de 50 confirman una tendencia a la baja
 
-![IMI](../../../../images/indicator_intraday_momentum_index.png)
+![Gráfico del indicador IMI](../../../../images/indicator_intraday_momentum_index.png)
 
 ## Véase también
 

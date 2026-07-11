@@ -74,7 +74,7 @@ McClellan 振荡器的计算涉及以下步骤：
    - “看涨尾巴”——MCO快速下跌后迅速反弹，通常表示潜在的市场底部
    - “看跌尾巴”——快速的MCO上涨后紧随快速下跌，通常表示潜在的市场顶部
 
-![麦克莱兰振荡器指示器](../../../../images/indicator_mcclellan_oscillator.png)
+![MCO 指标图表](../../../../images/indicator_mcclellan_oscillator.png)
 
 ## 另请参阅
 

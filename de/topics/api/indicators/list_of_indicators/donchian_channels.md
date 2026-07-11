@@ -67,7 +67,7 @@ Donchian-Kanäle kann auf verschiedene Arten verwendet werden:
 5. **Gegentrend-Strategien**:
    - Einige Händler verwenden entgegengesetzte Signale und erwarten, dass der Preis nach Erreichen der Kanalränder zur Mittellinie zurückkehrt
 
-![DC](../../../../images/indicator_donchian_channels.png)
+![DC Diagramm](../../../../images/indicator_donchian_channels.png)
 
 ## Siehe auch
 

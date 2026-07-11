@@ -85,7 +85,7 @@ R² の値は 0 から 1（または 0% から 100%）の範囲です。
    - R² は、異なる時間枠では異なる結果をもたらす場合があります
    - 時間枠間で R² を比較すると、市場構造に関する追加情報が得られる場合があります
 
-![R二乗](../../../../images/indicator_linear_reg_rsquared.png)
+![R二乗 のチャート](../../../../images/indicator_linear_reg_rsquared.png)
 
 ## 関連項目
 

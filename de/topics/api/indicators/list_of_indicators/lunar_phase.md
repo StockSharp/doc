@@ -65,7 +65,7 @@ Die Interpretation des Mondphase-Indikators kann variieren, da es sich um ein un
 
 Beachten Sie, dass es keine ausreichenden wissenschaftlichen Beweise für den direkten Einfluss der Mondphase auf die Finanzmärkte gibt und viele professionelle Händler solchen Instrumenten skeptisch gegenüberstehen. Einige Marktteilnehmer finden es jedoch sinnvoll, LP in ihr Analysearsenal aufzunehmen.
 
-![LP](../../../../images/indicator_lunar_phase.png)
+![LP Diagramm](../../../../images/indicator_lunar_phase.png)
 
 ## Siehe auch
 

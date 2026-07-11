@@ -67,7 +67,7 @@ Der Endpunkt-Gleitende Durchschnitt wird ähnlich wie andere gleitende Durchschn
    - Aufgrund seiner erhöhten Empfindlichkeit kann EPMA in Seitwärtskonsolidierungsperioden mehr falsche Signale erzeugen
    - Es wird empfohlen, zusätzliche Filter oder Bestätigungen anderer Indikatoren zu verwenden, um die Signalzuverlässigkeit zu verbessern
 
-![EPMA](../../../../images/indicator_endpoint_moving_average.png)
+![EPMA Diagramm](../../../../images/indicator_endpoint_moving_average.png)
 
 ## Siehe auch
 

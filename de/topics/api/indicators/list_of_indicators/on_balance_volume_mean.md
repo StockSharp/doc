@@ -81,7 +81,7 @@ Der On-Balance-Volumen-Durchschnitt kann wie folgt interpretiert werden:
    - Längere Zeiträume (z. B. 30–50) ermöglichen eine bessere Identifizierung langfristiger Trends
    - Der optimale Zeitraum hängt vom Handelszeithorizont und den spezifischen Instrumenteigenschaften ab
 
-![OBVM](../../../../images/indicator_on_balance_volume_mean.png)
+![OBVM Diagramm](../../../../images/indicator_on_balance_volume_mean.png)
 
 ## Siehe auch
 

@@ -64,7 +64,7 @@ El índice de rango de Gopalakrishnan se puede interpretar de la siguiente maner
    - Durante períodos de alta volatilidad, las señales de los indicadores de tendencia pueden ser más confiables
    - Durante períodos de baja volatilidad, las señales del oscilador pueden ser más efectivas
 
-![GAPO](../../../../images/indicator_gopalakrishnan_range_index.png)
+![Gráfico del indicador GAPO](../../../../images/indicator_gopalakrishnan_range_index.png)
 
 ## Véase también
 

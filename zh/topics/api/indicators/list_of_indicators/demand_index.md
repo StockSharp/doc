@@ -70,7 +70,7 @@ DI旨在识别以下市场情况：
 
 在使用需求指数时，结合其他指标和分析方法最为有效，以筛选出错误信号。
 
-![DI](../../../../images/indicator_demand_index.png)
+![DI 指标图表](../../../../images/indicator_demand_index.png)
 
 ## 另请参阅
 

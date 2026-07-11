@@ -73,7 +73,7 @@ IMI评估在给定周期内收盘价超过开盘价（正动量）或低于开�
    - 持续的 IMI 值高于 50 确认了上升趋势
    - 持续的 IMI 值低于 50 确认了下行趋势
 
-![日内动量指标](../../../../images/indicator_intraday_momentum_index.png)
+![IMI 指标图表](../../../../images/indicator_intraday_momentum_index.png)
 
 ## 另请参阅
 

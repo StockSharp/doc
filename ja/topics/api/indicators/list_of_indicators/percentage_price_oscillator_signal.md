@@ -34,7 +34,7 @@ Signal = EMA(PPO, SignalPeriod)
 - **トレンド確認。** シグナルラインを上回って推移することは上昇トレンドを確認し、下回って推移することは下降トレンドを支持します。
 - **ダイバージェンス。** PPO ラインがシグナルラインと相互作用している間の、価格動向と PPO ラインのダイバージェンスは、反転を予測する場合があります。
 
-![PPO シグナル](../../../../images/indicator_percentage_price_oscillator_signal.png)
+![PPO シグナル のチャート](../../../../images/indicator_percentage_price_oscillator_signal.png)
 
 ## 関連項目
 

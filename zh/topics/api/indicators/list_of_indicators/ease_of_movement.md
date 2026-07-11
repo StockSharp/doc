@@ -78,7 +78,7 @@ EMV指标可以解释如下：
    - 如果价格在负的EMV下下跌，这确认了下行趋势的强度
    - 如果价格在负的期望货币价值（EMV）下上涨，或在正的期望货币价值（EMV）下下跌，这可能表明当前走势的不稳定性
 
-![价格动量指标](../../../../images/indicator_ease_of_movement.png)
+![EMV 指标图表](../../../../images/indicator_ease_of_movement.png)
 
 ## 另请参阅
 

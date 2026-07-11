@@ -30,7 +30,7 @@
 由于双重平滑和归一化，该指标能够滤除噪声，同时与简单的
 动量计算相比仍保持响应性。
 
-![真实强度指数](../../../../images/indicator_true_strength_index.png)
+![真实强度指数 指标图表](../../../../images/indicator_true_strength_index.png)
 
 ## 另请参阅
 

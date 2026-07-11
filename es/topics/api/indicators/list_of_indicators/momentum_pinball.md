@@ -90,7 +90,7 @@ El indicador pinball de impulso se puede interpretar de la siguiente manera:
    - MP se utiliza a menudo en combinación con indicadores de tendencia
    - Por ejemplo, los promedios móviles se pueden usar para determinar la dirección de la tendencia, mientras que MP se puede usar para los puntos de entrada y salida.
 
-![MP](../../../../images/indicator_momentum_pinball.png)
+![Gráfico del indicador MP](../../../../images/indicator_momentum_pinball.png)
 
 ## Véase también
 

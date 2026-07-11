@@ -70,7 +70,7 @@ OBV指标最早由约瑟夫·格兰维尔在1963年他的著作《格兰维尔�
 
 需要注意的是，OBV 是一个累积指标，因此其绝对值并不是很重要。OBV 运动的方向及其与价格运动的关系才是关键。
 
-![OBV](../../../../images/indicator_on_balance_volume.png)
+![OBV 指标图表](../../../../images/indicator_on_balance_volume.png)
 
 ## 另请参阅
 

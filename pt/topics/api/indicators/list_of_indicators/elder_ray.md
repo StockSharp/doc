@@ -30,7 +30,7 @@ Raios de Elder herda as definições de [ExponentialMovingAverage](xref:StockSha
 As decisões de trading são tomadas analisando a EMA e ambos os osciladores simultaneamente. Por exemplo, aparece uma oportunidade de compra quando
 a EMA está a subir, o força vendedora recupera de um novo mínimo e o força compradora rompe acima de zero.
 
-![Raios de Elder](../../../../images/indicator_elder_ray.png)
+![Gráfico do indicador Raios de Elder](../../../../images/indicator_elder_ray.png)
 
 ## Ver também
 

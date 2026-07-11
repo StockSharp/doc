@@ -76,7 +76,7 @@ MMI 基于计算不遵循简单线性模式的价格值对（通常是收盘价�
    - 长期 MMI 有助于确定市场的主要状态
    - 短期 MMI 有助于为当前情况选择合适的策略
 
-![市场“刻薄”指数指标](../../../../images/indicator_market_meanness_index.png)
+![MMI 指标图表](../../../../images/indicator_market_meanness_index.png)
 
 ## 另请参阅
 

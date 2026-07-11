@@ -77,7 +77,7 @@ MAC 广泛用于独立交易策略以及作为更复杂系统的一部分，例�
    - 较短的周期（例如， 5 和 20）更敏感，适合短期交易
    - 更长的周期（例如， 50 和 200）对市场变化不那么敏感，适合长期交易
 
-![移动平均线交叉指标](../../../../images/indicator_moving_average_crossover.png)
+![MAC 指标图表](../../../../images/indicator_moving_average_crossover.png)
 
 ## 另请参阅
 

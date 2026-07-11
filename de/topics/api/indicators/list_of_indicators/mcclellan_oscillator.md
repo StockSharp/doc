@@ -74,7 +74,7 @@ Der McClellan-Oszillator kann wie folgt interpretiert werden:
    - „Bullischer Ausläufer“ – schneller MCO-Rückgang, gefolgt von einer schnellen Erholung, was oft auf einen möglichen Markttiefpunkt hindeutet
    - „Bärischer Ausläufer“ – schneller MCO-Anstieg, gefolgt von einem schnellen Rückgang, was oft auf ein potenzielles Markthoch hindeutet
 
-![MCO](../../../../images/indicator_mcclellan_oscillator.png)
+![MCO Diagramm](../../../../images/indicator_mcclellan_oscillator.png)
 
 ## Siehe auch
 

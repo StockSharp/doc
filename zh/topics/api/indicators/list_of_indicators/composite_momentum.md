@@ -55,7 +55,7 @@ CM 对以下方面有效：
 - **动量损失**：
   - 沿趋势方向的CM绝对值下降可能预示动能减弱和潜在的反转
 
-![复合动量指标](../../../../images/indicator_composite_momentum.png)
+![CM 指标图表](../../../../images/indicator_composite_momentum.png)
 
 ## 另请参阅
 

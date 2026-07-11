@@ -28,7 +28,7 @@ Eine gängige Methode basiert auf dem R/S-Ansatz (Rescaled Range):
 
 Höhere Werte des Exponenten deuten auf ein stärkeres Trendverhalten hin, während niedrigere Werte auf eine stärkere Mittelwertumkehr hinweisen.
 
-![HurstExponent](../../../../images/indicator_hurst_exponent.png)
+![HurstExponent Diagramm](../../../../images/indicator_hurst_exponent.png)
 
 ## Siehe auch
 

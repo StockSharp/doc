@@ -60,7 +60,7 @@ DPI = ((Price / MA) - 1) * 100
 5. **平均回帰戦略**:
    - 極端な DPI 値は、平均への回帰を期待して現在の価格変動に逆らうポジションを開くために使用できます
 
-![DPI](../../../../images/indicator_disparity_index.png)
+![DPI のチャート](../../../../images/indicator_disparity_index.png)
 
 ## 関連項目
 

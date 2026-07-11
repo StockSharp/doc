@@ -83,7 +83,7 @@ KPO は、価格変動のモメンタムが尽き始めると市場のピーク�
    - KPO は、シグナルを確認するために他のテクニカルインジケーターと併用されることがよくあります
    - トレンドインジケーターおよびサポート/レジスタンスレベルと組み合わせると特に効果的です
 
-![KPO](../../../../images/indicator_kase_peak_oscillator.png)
+![KPO のチャート](../../../../images/indicator_kase_peak_oscillator.png)
 
 ## 関連項目
 

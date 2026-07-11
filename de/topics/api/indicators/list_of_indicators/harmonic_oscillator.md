@@ -79,7 +79,7 @@ Der Harmonischer Oszillator kann wie folgt interpretiert werden:
    - HO funktioniert am besten in Kombination mit Trendindikatoren
    - In Trendmärkten können HO-Signale verwendet werden, um Einstiegspunkte in die Trendrichtung zu bestimmen
 
-![HO](../../../../images/indicator_harmonic_oscillator.png)
+![HO Diagramm](../../../../images/indicator_harmonic_oscillator.png)
 
 ## Siehe auch
 

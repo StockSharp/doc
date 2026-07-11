@@ -76,7 +76,7 @@ El índice de “maldad” del mercado se puede interpretar de la siguiente mane
    - MMI a largo plazo ayuda a determinar el estado primario del mercado
    - MMI a corto plazo ayuda a elegir una estrategia adecuada para las condiciones actuales
 
-![MMI](../../../../images/indicator_market_meanness_index.png)
+![Gráfico del indicador MMI](../../../../images/indicator_market_meanness_index.png)
 
 ## Véase también
 

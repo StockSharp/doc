@@ -81,7 +81,7 @@
    - 月度枢轴点是基于上个月计算的
    - 时间框架的选择取决于交易风格和时间周期
 
-![PP](../../../../images/indicator_pivot_points.png)
+![PP 指标图表](../../../../images/indicator_pivot_points.png)
 
 ## 另请参阅
 

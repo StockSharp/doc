@@ -63,7 +63,7 @@ DZRSI 的解释类似于传统 RSI，但考虑了动态区域：
    - 从下向上穿越可以被视为看涨信号
    - 从上到下的穿越可以被视为看跌信号
 
-![动态区域RSI指标](../../../../images/indicator_dynamic_zones_rsi.png)
+![DZRSI 指标图表](../../../../images/indicator_dynamic_zones_rsi.png)
 
 ## 另请参阅
 

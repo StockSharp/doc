@@ -91,7 +91,7 @@ LRSI的主要优势在于能够快速识别趋势变化，同时保持信号稳�
    - 为了更快的信号 - 增大 Gamma（接近 0.9）
    - 为了信号更平滑 - 减小伽马（更接近0.1）
 
-![拉格尔RSI指标](../../../../images/indicator_laguerre_rsi.png)
+![LRSI 指标图表](../../../../images/indicator_laguerre_rsi.png)
 
 ## 另请参阅
 

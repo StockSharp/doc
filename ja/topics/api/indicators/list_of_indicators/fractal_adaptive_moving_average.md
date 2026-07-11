@@ -78,7 +78,7 @@ FRAMA は他の移動平均と同様に解釈できますが、その適応的�
    - FRAMA は上昇トレンドにおいて動的なサポート水準として機能することがあります
    - FRAMA は下降トレンドにおいて動的なレジスタンス水準として機能することがあります
 
-![FRAMA](../../../../images/indicator_fractal_adaptive_moving_average.png)
+![FRAMA のチャート](../../../../images/indicator_fractal_adaptive_moving_average.png)
 
 ## 関連項目
 

@@ -30,7 +30,7 @@ Rayos de Elder hereda la configuración de [ExponentialMovingAverage](xref:Stock
 Las decisiones de trading se toman analizando el EMA y ambos osciladores simultáneamente. Por ejemplo, una oportunidad de compra aparece cuando
 el EMA está subiendo, el fuerza bajista se recupera de un nuevo mínimo y el fuerza alcista supera el cero.
 
-![Rayos de Elder](../../../../images/indicator_elder_ray.png)
+![Gráfico del indicador Rayos de Elder](../../../../images/indicator_elder_ray.png)
 
 ## Véase también
 

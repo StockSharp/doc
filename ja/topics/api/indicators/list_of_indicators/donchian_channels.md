@@ -67,7 +67,7 @@
 5. **逆張り戦略**:
    - 一部のトレーダーは、価格がチャネル端に到達した後に中央ラインへ戻ることを期待して、反対シグナルを使用します
 
-![DC](../../../../images/indicator_donchian_channels.png)
+![DC のチャート](../../../../images/indicator_donchian_channels.png)
 
 ## 関連項目
 

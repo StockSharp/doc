@@ -90,7 +90,7 @@ Der Momentum-Pinball-Indikator kann wie folgt interpretiert werden:
    - MP wird häufig in Kombination mit Trendindikatoren verwendet
    - Beispielsweise können gleitende Durchschnitte zur Bestimmung der Trendrichtung verwendet werden, während MP für Ein- und Ausstiegspunkte verwendet werden kann
 
-![MP](../../../../images/indicator_momentum_pinball.png)
+![MP Diagramm](../../../../images/indicator_momentum_pinball.png)
 
 ## Siehe auch
 

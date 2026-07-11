@@ -55,7 +55,7 @@ Der endgültige CM-Wert ist ein Oszillator, der sowohl im positiven als auch im 
 - **Momentumverlust**:
   - Ein Rückgang des absoluten Werts von CM in Trendrichtung kann auf einen Momentumverlust und eine mögliche Umkehr hinweisen
 
-![CM](../../../../images/indicator_composite_momentum.png)
+![CM Diagramm](../../../../images/indicator_composite_momentum.png)
 
 ## Siehe auch
 

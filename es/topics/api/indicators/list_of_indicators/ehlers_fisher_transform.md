@@ -71,7 +71,7 @@ El transformación Fisher de Ehlers se puede interpretar de la siguiente manera:
 
 El transformación Fisher de Ehlers se diferencia de muchos otros osciladores en que puede alcanzar valores extremos y permanecer allí durante algún tiempo sin necesariamente revertirse inmediatamente. Esto lo hace útil para identificar fuertes movimientos de tendencia.
 
-![EFT](../../../../images/indicator_ehlers_fisher_transform.png)
+![Gráfico del indicador EFT](../../../../images/indicator_ehlers_fisher_transform.png)
 
 ## Véase también
 

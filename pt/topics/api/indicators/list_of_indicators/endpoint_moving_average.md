@@ -67,7 +67,7 @@ A média móvel de ponto final é interpretada de forma semelhante a outras méd
    - Devido à sua maior sensibilidade, a EPMA pode gerar mais sinais falsos durante períodos de consolidação lateral
    - Recomenda-se usar filtros adicionais ou confirmações de outros indicadores para melhorar a fiabilidade dos sinais
 
-![EPMA](../../../../images/indicator_endpoint_moving_average.png)
+![Gráfico do indicador EPMA](../../../../images/indicator_endpoint_moving_average.png)
 
 ## Ver Também
 

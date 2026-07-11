@@ -71,7 +71,7 @@ Der Hoch-Tief-Index wird wie folgt interpretiert:
    - Wenn der Marktindex steigt und auch HLI steigt, bestätigt dies die Stärke eines Aufwärtstrends
    - Wenn der Marktindex fällt und auch HLI fällt, bestätigt dies die Stärke eines Abwärtstrends
 
-![HLI](../../../../images/indicator_high_low_index.png)
+![HLI Diagramm](../../../../images/indicator_high_low_index.png)
 
 ## Siehe auch
 

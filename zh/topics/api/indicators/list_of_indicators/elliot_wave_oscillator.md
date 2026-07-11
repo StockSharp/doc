@@ -63,7 +63,7 @@ EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
 6. **波浪3识别**：
    - 浪3，通常是艾略特波浪理论中最强的推动波，通常以最高的EWO值为特征
 
-![艾略特波振荡器指标](../../../../images/indicator_elliot_wave_oscillator.png)
+![EWO 指标图表](../../../../images/indicator_elliot_wave_oscillator.png)
 
 ## 另请参阅
 

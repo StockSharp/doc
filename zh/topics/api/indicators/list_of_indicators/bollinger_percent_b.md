@@ -56,7 +56,7 @@ BBP = (Price - 布林带下轨) / (布林带上轨 - 布林带下轨)
 4. **寻找隐藏的支撑和阻力位**:
    - 0.8 和 0.2 水平通常被用作额外的支撑和阻力水平
 
-![BBP](../../../../images/indicator_bollinger_percent_b.png)
+![BBP 指标图表](../../../../images/indicator_bollinger_percent_b.png)
 
 ## 另请参阅
 

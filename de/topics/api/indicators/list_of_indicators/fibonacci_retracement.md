@@ -71,7 +71,7 @@ Fibonacci-Retracement-Stufen werden wie folgt interpretiert:
 5. **Aufstellung verschiedener Zeitrahmen**:
    - Fibonacci-Niveaus, die in verschiedenen Zeitrahmen aufgetragen werden, können Häufungszonen erzeugen, in denen die Wahrscheinlichkeit einer Umkehr zunimmt
 
-![FR](../../../../images/indicator_fibonacci_retracement.png)
+![FR Diagramm](../../../../images/indicator_fibonacci_retracement.png)
 
 ## Siehe auch
 

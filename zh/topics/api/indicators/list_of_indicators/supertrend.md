@@ -24,7 +24,7 @@ SuperTrend 是使用平均价格和 ATR 值构建的。当趋势发生变化时�
 3. SuperTrend 最初等于其中一条带，具体取决于当前趋势。
 4. 如果收盘价突破 SuperTrend 线，趋势方向会改变，且该线会移到相反的一侧。
 
-![超级趋势指标](../../../../images/indicator_supertrend.png)
+![超级趋势 指标图表](../../../../images/indicator_supertrend.png)
 
 ## 另请参阅
 

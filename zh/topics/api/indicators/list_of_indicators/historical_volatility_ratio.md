@@ -77,7 +77,7 @@ HVR 的计算方法是短期历史波动率与长期历史波动率的比值。�
    - 极端的HVR值通常预示着显著的价格波动
    - 在低波动期之后，HVR的急剧上升可能预示着新趋势的开始
 
-![历史波动率比率指标](../../../../images/indicator_historical_volatility_ratio.png)
+![HVR 指标图表](../../../../images/indicator_historical_volatility_ratio.png)
 
 ## 另请参阅
 

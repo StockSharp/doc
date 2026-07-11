@@ -81,7 +81,7 @@ pontos pivô podem ser interpretados da seguinte forma:
    - pontos pivô mensais são calculados com base no mês anterior
    - A seleção do período depende do estilo de trading e do horizonte temporal
 
-![PP](../../../../images/indicator_pivot_points.png)
+![Gráfico do indicador PP](../../../../images/indicator_pivot_points.png)
 
 ## Ver também
 

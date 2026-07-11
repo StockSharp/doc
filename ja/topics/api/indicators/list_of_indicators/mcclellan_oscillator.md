@@ -74,7 +74,7 @@ MCO は、市場における上昇銘柄数と下落銘柄数の比率の分析�
    - "強気のテール" - MCO が急落した後すばやく回復するパターンで、市場の底の可能性を示すことがよくあります
    - "弱気のテール" - MCO が急上昇した後すばやく下落するパターンで、市場の天井の可能性を示すことがよくあります
 
-![MCO](../../../../images/indicator_mcclellan_oscillator.png)
+![MCO のチャート](../../../../images/indicator_mcclellan_oscillator.png)
 
 ## 関連項目
 

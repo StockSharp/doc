@@ -89,7 +89,7 @@ KVO は、価格変動の方向と大きさ、および取引量の両方を考�
    - KVO により、価格と出来高の動きの整合性を評価できます
    - トレンド方向の強い出来高は、より極端な KVO 値につながります
 
-![KVO](../../../../images/indicator_klinger_volume_oscillator.png)
+![KVO のチャート](../../../../images/indicator_klinger_volume_oscillator.png)
 
 ## 関連項目
 

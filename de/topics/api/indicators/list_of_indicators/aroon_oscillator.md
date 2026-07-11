@@ -35,7 +35,7 @@ Je weiter sich der Wert von null entfernt, desto stärker ist die gerichtete Bew
 Der Oszillator wird häufig zusammen mit dem Basisindikator [Aroon](aroon.md) analysiert, um sowohl absolute Niveaus als auch deren
 Differenz zu beobachten.
 
-![Aroon-Oszillator](../../../../images/indicator_aroon_oscillator.png)
+![Aroon-Oszillator Diagramm](../../../../images/indicator_aroon_oscillator.png)
 
 ## Siehe auch
 

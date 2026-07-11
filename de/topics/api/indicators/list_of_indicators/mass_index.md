@@ -87,7 +87,7 @@ Der Massenindex wird wie folgt interpretiert:
    - Standardparameter (9 für EMA, 25 für Summierung) funktionieren in den meisten Zeitrahmen gut
    - Eine Verkürzung der Perioden kann zu schnelleren Signalen führen, kann aber auch zu einer Zunahme falscher Signale führen
 
-![MI](../../../../images/indicator_mass_index.png)
+![MI Diagramm](../../../../images/indicator_mass_index.png)
 
 ## Siehe auch
 

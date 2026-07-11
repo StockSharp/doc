@@ -67,7 +67,7 @@
    - 如果FOSC与价格同方向移动，这确认了当前趋势的强度
    - 如果 FOSC 的移动方向与价格相反，这可能表明当前趋势正在减弱
 
-![FOSC](../../../../images/indicator_forecast_oscillator.png)
+![FOSC 指标图表](../../../../images/indicator_forecast_oscillator.png)
 
 ## 另请参阅
 

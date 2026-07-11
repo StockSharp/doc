@@ -80,7 +80,7 @@ El indicador KST se puede interpretar de la siguiente manera:
    - Los valores positivos de KST indican predominio del sentimiento alcista
    - Los valores negativos de KST indican predominio del sentimiento bajista
 
-![KST](../../../../images/indicator_kst.png)
+![Gráfico del indicador KST](../../../../images/indicator_kst.png)
 
 ## Véase también
 

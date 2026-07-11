@@ -55,7 +55,7 @@ ALMA используется для:
 - Offset - параметр смещения (от 0 до 1)
 - Sigma - параметр сигмы (обычно от 2 до 8)
 
-![ALMA](../../../../images/indicator_arnaud_legoux_moving_average.png)
+![График индикатора ALMA](../../../../images/indicator_arnaud_legoux_moving_average.png)
 
 ## См. также
 

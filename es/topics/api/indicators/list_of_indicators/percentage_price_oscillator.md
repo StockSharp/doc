@@ -85,7 +85,7 @@ El PPO se puede interpretar de la siguiente manera:
    - Las señales de cruce de la línea de señal son más confiables cuando PPO está en línea con la tendencia principal
    - Por ejemplo, las señales alcistas son más confiables cuando PPO es positivo y las señales bajistas son más confiables cuando PPO es negativo.
 
-![PPO](../../../../images/indicator_percentage_price_oscillator.png)
+![Gráfico del indicador PPO](../../../../images/indicator_percentage_price_oscillator.png)
 
 ## Véase también
 

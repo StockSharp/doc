@@ -70,7 +70,7 @@ O Índice de força pode ser interpretado de várias formas:
    - Numa tendência de alta, dias com Índice de força negativo podem indicar correções temporárias
    - Numa tendência de baixa, dias com Índice de força positivo podem indicar recuperações temporárias
 
-![FI](../../../../images/indicator_force_index.png)
+![Gráfico do indicador FI](../../../../images/indicator_force_index.png)
 
 ## Ver Também
 

@@ -86,7 +86,7 @@ Der prozentuale Volumenoszillator kann wie folgt interpretiert werden:
    - Starke PVO-Sprünge deuten auf erhebliche Volumenänderungen hin, die oft mit wichtigen Marktereignissen einhergehen
    - Solche Spitzen können Ausbrüchen wichtiger Preisniveaus vorausgehen oder diese begleiten
 
-![PVO](../../../../images/indicator_percentage_volume_oscillator.png)
+![PVO Diagramm](../../../../images/indicator_percentage_volume_oscillator.png)
 
 ## Siehe auch
 

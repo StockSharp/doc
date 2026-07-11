@@ -78,7 +78,7 @@ GMMA的解读包括分析各个独立组别及它们的相互作用：
    - 短期均线先改变方向，然后长期均线开始出现变化
    - 组间交叉可以作为趋势反转的确认
 
-![古比多重移动平均指标](../../../../images/indicator_guppy_multiple_moving_average.png)
+![GMMA 指标图表](../../../../images/indicator_guppy_multiple_moving_average.png)
 
 ## 另请参阅
 

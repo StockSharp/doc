@@ -63,7 +63,7 @@ DZRSI は従来の RSI と同様に解釈されますが、動的ゾーンを考
    - 下から上へのクロスは強気シグナルと見なすことができます
    - 上から下へのクロスは弱気シグナルと見なすことができます
 
-![DZRSI](../../../../images/indicator_dynamic_zones_rsi.png)
+![DZRSI のチャート](../../../../images/indicator_dynamic_zones_rsi.png)
 
 ## 関連項目
 

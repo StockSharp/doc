@@ -27,7 +27,7 @@
 
 この指標は、特にモメンタム系ツールと組み合わせた場合、短期トレンド評価と転換点の発見に役立ちます。
 
-![順位相関指数](../../../../images/indicator_rank_correlation_index.png)
+![順位相関指数 のチャート](../../../../images/indicator_rank_correlation_index.png)
 
 ## 関連項目
 

@@ -74,7 +74,7 @@ Das Elder-Impulse-System wird wie folgt interpretiert:
    - Eine Reihe roter Kerzen bestätigt einen Abwärtstrend
    - Farbwechsel weisen auf einen Seitwärtstrend oder eine Unsicherheit hin
 
-![EIS](../../../../images/indicator_elder_impulse_system.png)
+![EIS Diagramm](../../../../images/indicator_elder_impulse_system.png)
 
 ## Siehe auch
 

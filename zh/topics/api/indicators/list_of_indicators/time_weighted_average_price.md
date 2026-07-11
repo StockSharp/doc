@@ -42,4 +42,4 @@ TWAP(current) = (TWAP(previous) * (n-1) + P(current)) / n
 
 其中 n 是 TWAP 窗口中的观测数。
 
-![指标时间加权平均价格](../../../../images/indicator_time_weighted_average_price.png)
+![时间加权平均价格 指标图表](../../../../images/indicator_time_weighted_average_price.png)

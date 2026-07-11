@@ -68,7 +68,7 @@ CMF 围绕零线波动，通常在 -1 到 +1 的范围内：
   - 大于 +0.25 的数值可能表示强烈的累积
   - 低于 -0.25 的数值可能表示强分布
 
-![凯钦资金流量指标](../../../../images/indicator_chaikin_money_flow.png)
+![CMF 指标图表](../../../../images/indicator_chaikin_money_flow.png)
 
 ## 另请参阅
 

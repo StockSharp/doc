@@ -78,7 +78,7 @@ FRAMA 可以类似于其他移动平均线来解释，但需要考虑其自适�
    - FRAMA 可以在上升趋势中作为一个动态支撑位
    - FRAMA 可以在下跌趋势中充当动态阻力位
 
-![FRAMA](../../../../images/indicator_fractal_adaptive_moving_average.png)
+![FRAMA 指标图表](../../../../images/indicator_fractal_adaptive_moving_average.png)
 
 ## 另请参阅
 

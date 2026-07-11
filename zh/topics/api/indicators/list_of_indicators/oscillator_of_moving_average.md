@@ -80,7 +80,7 @@ OMA 的主要优势在于能够识别趋势动量的变化，并根据零线交�
    - OMA 通常与其他指标结合使用以确认信号
    - 当与超买/超卖指标如 RSI 或随机指标结合使用时尤其有效
 
-![移动平均指标振荡器](../../../../images/indicator_oscillator_of_moving_average.png)
+![OMA 指标图表](../../../../images/indicator_oscillator_of_moving_average.png)
 
 ## 另请参阅
 

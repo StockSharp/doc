@@ -42,7 +42,7 @@ BOP 通常还会使用移动平均进行平滑，以减少波动性并提高信�
   - 如果价格在上涨而BOP在下降，这可能是上升趋势减弱的警告。
   - 如果价格下跌而BOP上升，这可能表明下跌趋势可能即将结束。
 
-![权力平衡指标](../../../../images/indicator_balance_of_power.png)
+![BOP 指标图表](../../../../images/indicator_balance_of_power.png)
 
 ## 另请参阅
 

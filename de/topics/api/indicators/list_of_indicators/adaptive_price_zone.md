@@ -42,7 +42,7 @@ Die APZ-Berechnung basiert auf dem exponentiellen gleitenden Durchschnitt (EMA) 
 
 Wenn der Preis über der oberen APZ-Linie liegt, kann dies als Aufwärtstrend betrachtet werden. Wenn der Preis unter der unteren APZ-Linie liegt, kann dies auf einen Abwärtstrend hindeuten. Wenn sich der Preis innerhalb der APZ-Zone bewegt, kann sich der Markt in einer Konsolidierungs- oder Seitwärtsphase befinden.
 
-![APZ](../../../../images/indicator_adaptive_price_zone.png)
+![APZ Diagramm](../../../../images/indicator_adaptive_price_zone.png)
 
 ## Siehe auch
 

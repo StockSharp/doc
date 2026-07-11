@@ -70,7 +70,7 @@ Der Negativer Volumenindex kann wie folgt interpretiert werden:
    - Einige Händler legen Schwellenwerte für NVI fest (z. B. 5 % über oder unter dem gleitenden Durchschnitt).
    - Das Überschreiten dieser Schwellenwerte kann als stärkeres Signal angesehen werden als einfache Überkreuzungen
 
-![NVI](../../../../images/indicator_negative_volume_index.png)
+![NVI Diagramm](../../../../images/indicator_negative_volume_index.png)
 
 ## Siehe auch
 

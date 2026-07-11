@@ -9,7 +9,7 @@
 - 相位 - 决定移动平均展开的速度；
 - 周期 - 决定移动平均线的周期。
 
-![Jurik移动平均指标](../../../../images/indicatorjurikmovingaverage.png)
+![JMA 指标图表](../../../../images/indicatorjurikmovingaverage.png)
 
 ## 另请参阅
 

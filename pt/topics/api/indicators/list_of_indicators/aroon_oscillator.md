@@ -35,7 +35,7 @@ Quanto mais o valor se afasta de zero, mais forte é o movimento direcional.
 
 O oscilador é frequentemente analisado em conjunto com o indicador base [Aroon](aroon.md) para observar tanto os níveis absolutos como a sua diferença.
 
-![oscilador Aroon](../../../../images/indicator_aroon_oscillator.png)
+![Gráfico do indicador oscilador Aroon](../../../../images/indicator_aroon_oscillator.png)
 
 ## Ver também
 

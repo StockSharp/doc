@@ -64,7 +64,7 @@ CBCI разработан для:
   - Если CBCI последовательно остается выше 50, это может указывать на силу восходящего тренда
   - Если CBCI последовательно остается ниже 50, это может указывать на силу нисходящего тренда
 
-![CBCI](../../../../images/indicator_constance_brown_composite_index.png)
+![График индикатора CBCI](../../../../images/indicator_constance_brown_composite_index.png)
 
 ## См. также
 

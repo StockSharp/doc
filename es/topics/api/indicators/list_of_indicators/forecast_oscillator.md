@@ -67,7 +67,7 @@ El Oscilador de pronóstico se interpreta de la siguiente manera:
    - Si FOSC se mueve en la misma dirección que el precio, esto confirma la fuerza de la tendencia actual.
    - Si FOSC se mueve en la dirección opuesta al precio, esto puede indicar un debilitamiento de la tendencia actual.
 
-![FOSC](../../../../images/indicator_forecast_oscillator.png)
+![Gráfico del indicador FOSC](../../../../images/indicator_forecast_oscillator.png)
 
 ## Véase también
 

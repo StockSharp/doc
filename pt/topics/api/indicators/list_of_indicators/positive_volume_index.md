@@ -70,7 +70,7 @@ O índice de volume positivo pode ser interpretado da seguinte forma:
    - Alguns traders definem níveis de limiar para o PVI (por exemplo, 5% acima ou abaixo da média móvel)
    - O cruzamento destes limiares pode ser considerado um sinal mais forte do que cruzamentos simples
 
-![PVI](../../../../images/indicator_positive_volume_index.png)
+![Gráfico do indicador PVI](../../../../images/indicator_positive_volume_index.png)
 
 ## Ver também
 

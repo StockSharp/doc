@@ -76,7 +76,7 @@ MAR 包括几条移动平均线（通常为 5 到 10 条），其周期逐步增
    - 当移动平均线开始向相反方向交叉时退出持仓
    - 使用均线带宽度来设定止损和止盈
 
-![移动平均带指标](../../../../images/indicator_moving_average_ribbon.png)
+![MAR 指标图表](../../../../images/indicator_moving_average_ribbon.png)
 
 ## 另请参阅
 

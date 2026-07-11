@@ -83,7 +83,7 @@ Der Kase-Peak-Oszillator kann wie folgt interpretiert werden:
    - KPO wird häufig zusammen mit anderen technischen Indikatoren zur Bestätigung von Signalen verwendet
    - Besonders effektiv in Kombination mit Trendindikatoren und Unterstützungs-/Widerstandsniveaus
 
-![KPO](../../../../images/indicator_kase_peak_oscillator.png)
+![KPO Diagramm](../../../../images/indicator_kase_peak_oscillator.png)
 
 ## Siehe auch
 

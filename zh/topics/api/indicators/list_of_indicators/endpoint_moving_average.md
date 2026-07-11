@@ -67,7 +67,7 @@ EPMA 特别适用于：
    - 由于其灵敏度增加，EPMA 在横向盘整期间可能会产生更多的虚假信号
    - 建议使用额外的过滤器或来自其他指标的确认来提高信号的可靠性
 
-![EPMA](../../../../images/indicator_endpoint_moving_average.png)
+![EPMA 指标图表](../../../../images/indicator_endpoint_moving_average.png)
 
 ## 另请参阅
 

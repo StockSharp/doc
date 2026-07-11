@@ -63,7 +63,7 @@ O oscilador de ondas de Elliott pode ser interpretado da seguinte forma:
 6. **Identificação da Onda 3**:
    - A onda 3, que normalmente é a onda impulsiva mais forte na Teoria das Ondas de Elliott, é frequentemente caracterizada pelos valores mais elevados do EWO
 
-![EWO](../../../../images/indicator_elliot_wave_oscillator.png)
+![Gráfico do indicador EWO](../../../../images/indicator_elliot_wave_oscillator.png)
 
 ## Ver Também
 

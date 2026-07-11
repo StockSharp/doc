@@ -44,7 +44,7 @@ O BOP é muitas vezes adicionalmente suavizado usando uma média móvel para red
   - Se o preço estiver a subir e o BOP estiver a cair, isto pode ser um aviso de enfraquecimento da tendência ascendente.
   - Se o preço estiver a cair e o BOP estiver a subir, isto pode indicar um potencial fim da tendência descendente.
 
-![BOP](../../../../images/indicator_balance_of_power.png)
+![Gráfico do indicador BOP](../../../../images/indicator_balance_of_power.png)
 
 ## Ver também
 

@@ -30,7 +30,7 @@ Period(i) = p + i * step
 - i - 行号（从 0 到 n-1）
 - 步长 - 周期增加步长（通常为1）
 
-![指标彩虹图](../../../../images/indicator_rainbow_charts.png)
+![RC 指标图表](../../../../images/indicator_rainbow_charts.png)
 
 ## 另请参阅
 

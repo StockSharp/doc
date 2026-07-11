@@ -76,7 +76,7 @@ La cinta de medias móviles se puede interpretar de la siguiente manera:
    - Salga de una posición cuando las medias móviles comiencen a cruzarse en la dirección opuesta.
    - Utilice el ancho de la cinta para establecer límites de pérdidas y toma de ganancias
 
-![MAR](../../../../images/indicator_moving_average_ribbon.png)
+![Gráfico del indicador MAR](../../../../images/indicator_moving_average_ribbon.png)
 
 ## Véase también
 

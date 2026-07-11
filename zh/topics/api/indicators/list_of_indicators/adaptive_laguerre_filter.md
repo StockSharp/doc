@@ -39,7 +39,7 @@ ALF 相比经典移动平均的主要优势在于它能够更有效地将市场�
 - price(t) - 当前价格
 - L0、L1、L2、L3 - 中间滤波器值
 
-![自适应拉盖尔滤波器指标](../../../../images/indicator_adaptive_laguerre_filter.png)
+![自适应拉盖尔滤波器 (ALF) 指标图表](../../../../images/indicator_adaptive_laguerre_filter.png)
 
 ## 另请参阅
 

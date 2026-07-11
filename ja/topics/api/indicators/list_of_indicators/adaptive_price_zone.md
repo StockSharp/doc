@@ -42,7 +42,7 @@ APZ の計算は指数移動平均 (EMA) と平均真の値幅 (ATR) に基づ�
 
 価格が上側 APZ ラインを上回っている場合、これは上昇トレンドと見なせます。価格が下側 APZ ラインを下回っている場合、下降トレンドを示している可能性があります。価格が APZ ゾーン内で推移している場合、市場は保ち合いまたは横ばいの局面にある可能性があります。
 
-![APZ](../../../../images/indicator_adaptive_price_zone.png)
+![APZ のチャート](../../../../images/indicator_adaptive_price_zone.png)
 
 ## 関連項目
 

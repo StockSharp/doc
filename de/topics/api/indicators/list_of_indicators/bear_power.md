@@ -29,7 +29,7 @@ Bärenstärke übernimmt die Konfiguration von [ExponentialMovingAverage](xref:S
 - Eine Kreuzung der Nulllinie kann eine Änderung des vorherrschenden Trends bestätigen.
 - Kombinieren Sie Bärenstärke mit [Bullenstärke](bull_power.md) und der Preis-EMA, um den vollständigen Indikator [Elder-Ray](elder_ray.md) aufzubauen.
 
-![Bärenstärke](../../../../images/indicator_bear_power.png)
+![Bärenstärke Diagramm](../../../../images/indicator_bear_power.png)
 
 ## Siehe auch
 

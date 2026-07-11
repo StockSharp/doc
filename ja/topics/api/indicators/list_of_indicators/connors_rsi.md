@@ -65,7 +65,7 @@ CRSI は特に次の用途に役立ちます。
 
 コナーズ RSI は、日足から週足までの時間枠のチャート、および平均回帰志向の取引戦略で最も効果的に機能します。
 
-![CRSI](../../../../images/indicator_connors_rsi.png)
+![CRSI のチャート](../../../../images/indicator_connors_rsi.png)
 
 ## 関連項目
 

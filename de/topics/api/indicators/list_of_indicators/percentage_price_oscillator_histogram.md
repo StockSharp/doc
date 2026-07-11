@@ -27,7 +27,7 @@ Werte über Null verdeutlichen den Aufwärtsdruck, während Werte unter Null den
 - **Momentum steigt.** Das schnelle Wachstum positiver Balken deutet auf eine Verstärkung der Aufwärtsdynamik hin; Schrumpfende Balken deuten auf eine nachlassende Stärke und eine mögliche Umkehr hin.
 - **Divergenzen.** Divergenzen zwischen der Preisbewegung und dem Histogramm können Händler auf eine mögliche Trenderschöpfung aufmerksam machen, bevor sie in den Preisdiagrammen sichtbar wird.
 
-![PPO-Histogramm](../../../../images/indicator_percentage_price_oscillator_histogram.png)
+![PPO-Histogramm Diagramm](../../../../images/indicator_percentage_price_oscillator_histogram.png)
 
 ## Siehe auch
 

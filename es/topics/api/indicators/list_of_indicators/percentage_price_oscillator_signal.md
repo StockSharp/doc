@@ -34,7 +34,7 @@ Signal = EMA(PPO, SignalPeriod)
 - **Confirmación de tendencia.** Mantenerse por encima de la línea de señal confirma una tendencia alcista, mientras que mantenerse por debajo respalda una tendencia bajista.
 - **Divergencias.** Una divergencia entre la acción del precio y la línea PPO mientras interactúa con la línea de señal puede anticipar reversiones.
 
-![Señal del PPO](../../../../images/indicator_percentage_price_oscillator_signal.png)
+![Gráfico del indicador Señal del PPO](../../../../images/indicator_percentage_price_oscillator_signal.png)
 
 ## Véase también
 

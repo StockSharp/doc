@@ -78,7 +78,7 @@ Bei der GMMA-Interpretation werden sowohl einzelne Gruppen als auch deren Intera
    - Kurzfristige Durchschnittswerte ändern zuerst die Richtung, dann beginnen sich Änderungen in den langfristigen Durchschnittswerten zu zeigen
    - Crossover zwischen Gruppen kann als Bestätigung einer Trendumkehr dienen
 
-![GMMA](../../../../images/indicator_guppy_multiple_moving_average.png)
+![GMMA Diagramm](../../../../images/indicator_guppy_multiple_moving_average.png)
 
 ## Siehe auch
 

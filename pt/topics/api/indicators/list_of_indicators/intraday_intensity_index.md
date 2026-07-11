@@ -73,7 +73,7 @@ O índice de intensidade intradiária pode ser interpretado da seguinte forma:
    - Uma alteração rápida de valores negativos para positivos pode indicar uma mudança acentuada no sentimento do mercado
    - A convergência gradual para a linha zero pode indicar enfraquecimento do momentum atual
 
-![III](../../../../images/indicator_intraday_intensity_index.png)
+![Gráfico do indicador III](../../../../images/indicator_intraday_intensity_index.png)
 
 ## Ver Também
 

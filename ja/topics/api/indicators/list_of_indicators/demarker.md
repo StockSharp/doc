@@ -28,7 +28,7 @@
 
 DeMarker は、逆張りエントリーだけでなく、モメンタムオシレーターからのシグナル確認にも使用できます。
 
-![DeMarker](../../../../images/indicator_demarker.png)
+![DeMarker のチャート](../../../../images/indicator_demarker.png)
 
 ## 関連項目
 

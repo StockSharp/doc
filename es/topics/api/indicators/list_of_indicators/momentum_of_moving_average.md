@@ -75,7 +75,7 @@ El impulso de la media móvil se puede interpretar de la siguiente manera:
    - Períodos más cortos para Length y MomentumPeriod hacen que MOMA sea más sensible, pero también más propenso a señales falsas
    - Los períodos más largos hacen que MOMA sea más suave, pero pueden generar señales retrasadas
 
-![MOMA](../../../../images/indicator_momentum_of_moving_average.png)
+![Gráfico del indicador MOMA](../../../../images/indicator_momentum_of_moving_average.png)
 
 ## Véase también
 

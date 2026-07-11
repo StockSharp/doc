@@ -76,7 +76,7 @@ Der Marktgemeinheitsindex kann wie folgt interpretiert werden:
    - Langfristiges MMI hilft bei der Bestimmung des Primärzustands des Marktes
    - Kurzfristiges MMI hilft bei der Auswahl einer geeigneten Strategie für die aktuellen Bedingungen
 
-![MMI](../../../../images/indicator_market_meanness_index.png)
+![MMI Diagramm](../../../../images/indicator_market_meanness_index.png)
 
 ## Siehe auch
 

@@ -68,7 +68,7 @@ DSP 指標はゼロラインを中心に振動し、次のように解釈でき�
 5. **パターン形成**:
    - DSP チャート上にテクニカルパターン（ヘッドアンドショルダー、ダブルボトムなど）が形成され、追加の取引シグナルを提供する可能性があります
 
-![DSP](../../../../images/indicator_detrended_synthetic_price.png)
+![DSP のチャート](../../../../images/indicator_detrended_synthetic_price.png)
 
 ## 関連項目
 

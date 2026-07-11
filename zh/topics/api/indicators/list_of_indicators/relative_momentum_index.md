@@ -51,7 +51,7 @@ RMI 计算分几个步骤进行：
    RMI = 100 - (100 / (1 + RS))
    ```
 
-![相对动量指数](../../../../images/indicator_relative_momentum_index.png)
+![RMI 指标图表](../../../../images/indicator_relative_momentum_index.png)
 
 ## 另请参阅
 

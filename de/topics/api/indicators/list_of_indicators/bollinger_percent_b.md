@@ -56,7 +56,7 @@ Bollinger-Prozent B kann auf verschiedene Weise verwendet werden:
 4. **Finden versteckter Unterstützungs- und Widerstandsniveaus**:
    - Die Niveaus 0.8 und 0.2 werden häufig als zusätzliche Unterstützungs- und Widerstandsniveaus verwendet
 
-![BBP](../../../../images/indicator_bollinger_percent_b.png)
+![BBP Diagramm](../../../../images/indicator_bollinger_percent_b.png)
 
 ## Siehe auch
 

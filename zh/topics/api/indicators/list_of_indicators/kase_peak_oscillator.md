@@ -83,7 +83,7 @@ Kase峰振荡器可以解释如下：
    - KPO 常与其他技术指标一起使用以确认信号
    - 结合趋势指标和支撑/阻力位时特别有效
 
-![凯斯峰值振荡器指标](../../../../images/indicator_kase_peak_oscillator.png)
+![KPO 指标图表](../../../../images/indicator_kase_peak_oscillator.png)
 
 ## 另请参阅
 

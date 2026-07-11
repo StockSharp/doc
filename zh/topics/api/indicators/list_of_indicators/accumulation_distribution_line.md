@@ -34,7 +34,7 @@ ADL = 前一 ADL 值 + CLV * Volume
 
 如果（高 - 低）等于零，CLV 设置为零。
 
-![指标累积分布线](../../../../images/indicator_accumulation_distribution_line.png)
+![ADL 指标图表](../../../../images/indicator_accumulation_distribution_line.png)
 
 ## 另请参阅
 

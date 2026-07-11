@@ -55,7 +55,7 @@ El valor final CM es un oscilador que puede fluctuar tanto en áreas positivas c
 - **Pérdida de momentum**:
   - La disminución del valor absoluto de CM en la dirección de la tendencia puede indicar una pérdida de impulso y una posible reversión
 
-![CM](../../../../images/indicator_composite_momentum.png)
+![Gráfico del indicador CM](../../../../images/indicator_composite_momentum.png)
 
 ## Véase también
 

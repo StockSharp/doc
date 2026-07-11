@@ -2101,6 +2101,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorMarkdownImageAltTextsUseLocalizedChartDescriptions()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			var requiredWord = GetLocalizedIndicatorChartDescriptionWord(lang);
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					if (altText.Text.IndexOf(requiredWord, StringComparison.OrdinalIgnoreCase) >= 0)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: indicator image alt text '{altText.Text}' does not describe the chart in the localized language. Include '{requiredWord}' in the description.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
 	{
 		var errors = new List<string>();
@@ -5733,6 +5761,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static string NormalizeMarkdownImageAltTextForFileNameComparison(string text)
 		=> Regex.Replace(NormalizeMarkdownImageAltTextForTranslationCheck(text), @"[^\p{L}\p{Nd}]+", "", RegexOptions.CultureInvariant);
+
+	private static string GetLocalizedIndicatorChartDescriptionWord(string lang)
+		=> lang switch
+		{
+			"de" => "Diagramm",
+			"es" => "Gráfico",
+			"ja" => "チャート",
+			"pt" => "Gráfico",
+			"ru" => "График",
+			"zh" => "图表",
+			_ => throw new InvalidOperationException($"Unexpected language '{lang}'."),
+		};
 
 	private static bool IsTranslatableEnglishMarkdownImageAltText(string text)
 	{

@@ -79,7 +79,7 @@ HO尤其适用于：
    - HO 与趋势指标结合使用效果最佳
    - 在趋势市场中，HO 信号可用于确定顺势的入场点
 
-![谐振子指标](../../../../images/indicator_harmonic_oscillator.png)
+![HO 指标图表](../../../../images/indicator_harmonic_oscillator.png)
 
 ## 另请参阅
 

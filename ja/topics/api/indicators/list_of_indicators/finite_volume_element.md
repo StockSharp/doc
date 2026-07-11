@@ -83,7 +83,7 @@ FVE インジケーターは次のように解釈できます:
 6. **サポート水準とレジスタンス水準**:
    - FVE チャート上の過去の反転ポイントは、将来の反転の目安として機能することがあります
 
-![FVE](../../../../images/indicator_finite_volume_element.png)
+![FVE のチャート](../../../../images/indicator_finite_volume_element.png)
 
 ## 関連項目
 

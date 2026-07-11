@@ -91,7 +91,7 @@ RSI de Laguerre se interpreta de manera similar al RSI tradicional, pero con may
    - Para señales más rápidas: aumente Gamma (más cerca de 0,9)
    - Para señales más suaves: disminuya Gamma (más cerca de 0,1)
 
-![LRSI](../../../../images/indicator_laguerre_rsi.png)
+![Gráfico del indicador LRSI](../../../../images/indicator_laguerre_rsi.png)
 
 ## Véase también
 

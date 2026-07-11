@@ -65,7 +65,7 @@ RSI de Connors oscila entre 0 y 100, similar al estándar RSI:
 
 RSI de Connors funciona mejor en gráficos con períodos de tiempo diarios a semanales y en estrategias de trading orientadas a la reversión media.
 
-![CRSI](../../../../images/indicator_connors_rsi.png)
+![Gráfico del indicador CRSI](../../../../images/indicator_connors_rsi.png)
 
 ## Véase también
 

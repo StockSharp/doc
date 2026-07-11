@@ -71,7 +71,7 @@ Ehlers费舍尔变换可以解释如下：
 
 Ehlers Fisher变换与许多其他振荡器不同，它可以达到极值并在一段时间内保持，而不一定立即反转。这使其在识别强趋势运动时非常有用。
 
-![EFT](../../../../images/indicator_ehlers_fisher_transform.png)
+![EFT 指标图表](../../../../images/indicator_ehlers_fisher_transform.png)
 
 ## 另请参阅
 

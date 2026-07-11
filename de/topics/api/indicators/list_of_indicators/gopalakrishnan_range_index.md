@@ -64,7 +64,7 @@ Der Gopalakrishnan-Range-Index kann wie folgt interpretiert werden:
    - In Zeiten hoher Volatilität können Trendindikatorsignale zuverlässiger sein
    - In Zeiten geringer Volatilität können Oszillatorsignale effektiver sein
 
-![GAPO](../../../../images/indicator_gopalakrishnan_range_index.png)
+![GAPO Diagramm](../../../../images/indicator_gopalakrishnan_range_index.png)
 
 ## Siehe auch
 

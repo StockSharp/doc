@@ -75,7 +75,7 @@ KER の値は 0 から 1 の間で振動します。
    - KER の急激な変化は、新たな価格変動に先行することがよくあります
    - 高い値が続いた後の KER の低下は、潜在的なトレンド反転を警告する場合があります
 
-![KER](../../../../images/indicator_kaufman_efficiency_ratio.png)
+![KER のチャート](../../../../images/indicator_kaufman_efficiency_ratio.png)
 
 ## 関連項目
 

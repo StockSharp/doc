@@ -28,7 +28,7 @@ Die Ausgabe wird zwischen 0 und 1 normalisiert.
 
 DeMarker kann für Einstiege in den Gegentrend sowie zur Bestätigung von Signalen von Momentum-Oszillatoren verwendet werden.
 
-![DeMarker](../../../../images/indicator_demarker.png)
+![DeMarker Diagramm](../../../../images/indicator_demarker.png)
 
 ## Siehe auch
 

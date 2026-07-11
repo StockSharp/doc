@@ -27,7 +27,7 @@ Histogram = PPO - 信号
 - **动能激增。** 阳柱快速增长表明看涨动能增强；柱体缩小则暗示力量减弱，可能出现反转。
 - **背离。** 价格走势与直方图之间的背离可以提醒交易者潜在的趋势衰竭，在价格图表上尚未显现之前。
 
-![百分比价格振荡器柱状图](../../../../images/indicator_percentage_price_oscillator_histogram.png)
+![百分比价格振荡器柱状图 指标图表](../../../../images/indicator_percentage_price_oscillator_histogram.png)
 
 ## 另请参阅
 

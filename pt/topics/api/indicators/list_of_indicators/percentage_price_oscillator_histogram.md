@@ -27,7 +27,7 @@ Valores acima de zero destacam pressão de alta, enquanto valores abaixo de zero
 - **Surtos de momentum.** O crescimento rápido de barras positivas sugere reforço do momentum de alta; barras em contração apontam para enfraquecimento da força e uma possível reversão.
 - **Divergências.** A divergência entre a ação do preço e o histograma pode alertar os traders para potencial esgotamento da tendência antes de este se tornar visível nos gráficos de preço.
 
-![Histograma do PPO](../../../../images/indicator_percentage_price_oscillator_histogram.png)
+![Gráfico do indicador Histograma do PPO](../../../../images/indicator_percentage_price_oscillator_histogram.png)
 
 ## Ver também
 

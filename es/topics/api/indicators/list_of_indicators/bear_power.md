@@ -28,7 +28,7 @@ fuerza bajista hereda la configuración de [ExponentialMovingAverage](xref:Stock
 - El cruce de la línea cero puede confirmar un cambio en la tendencia predominante.
 - Combine fuerza bajista con [fuerza alcista](bull_power.md) y el precio EMA para crear el indicador [rayos de Elder](elder_ray.md) completo.
 
-![fuerza bajista](../../../../images/indicator_bear_power.png)
+![Gráfico del indicador fuerza bajista](../../../../images/indicator_bear_power.png)
 
 ## Véase también
 

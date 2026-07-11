@@ -36,7 +36,7 @@ FDI se calcula comparando la longitud total de la trayectoria del precio con el 
 - **FDI around 1.5** – paseo aleatorio; La fuerza de la tendencia es neutral.
 - **FDI closer to 2** – mercado entrecortado o lateral.
 
-![FDI](../../../../images/indicator_fractal_dimension.png)
+![Gráfico del indicador FDI](../../../../images/indicator_fractal_dimension.png)
 
 ## Véase también
 

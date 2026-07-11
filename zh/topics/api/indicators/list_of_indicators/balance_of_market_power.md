@@ -50,7 +50,7 @@ BMP 计算分两个阶段进行：
 - **极端值**（高于或低于某些水平）可能表明市场超买或超卖状态
 - **BMP 与价格的偏离** 可能预示潜在的趋势反转
 
-![市场力量平衡指标](../../../../images/indicator_balance_of_market_power.png)
+![BMP 指标图表](../../../../images/indicator_balance_of_market_power.png)
 
 ## 另请参阅
 

@@ -83,7 +83,7 @@ O indicador FVE pode ser interpretado da seguinte forma:
 6. **Níveis de Suporte e Resistência**:
    - Pontos históricos de inversão no gráfico do FVE podem servir como referências para futuras inversões
 
-![FVE](../../../../images/indicator_finite_volume_element.png)
+![Gráfico do indicador FVE](../../../../images/indicator_finite_volume_element.png)
 
 ## Ver Também
 

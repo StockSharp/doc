@@ -74,7 +74,7 @@ EIS 尤其适用于：
    - 一连串红色K线确认了下跌趋势
    - 颜色交替表示横向趋势或不确定性
 
-![EIS](../../../../images/indicator_elder_impulse_system.png)
+![EIS 指标图表](../../../../images/indicator_elder_impulse_system.png)
 
 ## 另请参阅
 

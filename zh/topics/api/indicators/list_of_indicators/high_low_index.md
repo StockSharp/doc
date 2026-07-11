@@ -71,7 +71,7 @@ HLI 在以下方面特别有用：
    - 如果市场指数上涨，而HLI也上涨，这确认了上涨趋势的强劲
    - 如果市场指数下跌，HLI也下跌，这确认了下跌趋势的强度
 
-![指标高低指数](../../../../images/indicator_high_low_index.png)
+![HLI 指标图表](../../../../images/indicator_high_low_index.png)
 
 ## 另请参阅
 

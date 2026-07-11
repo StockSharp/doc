@@ -70,7 +70,7 @@ Der Nachfrageindex kann auf verschiedene Arten interpretiert werden:
 
 Der Einsatz des Nachfrageindex ist am effektivsten, wenn er mit anderen Indikatoren und Analysemethoden kombiniert wird, um falsche Signale herauszufiltern.
 
-![DI](../../../../images/indicator_demand_index.png)
+![DI Diagramm](../../../../images/indicator_demand_index.png)
 
 ## Siehe auch
 

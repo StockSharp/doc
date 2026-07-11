@@ -55,7 +55,7 @@ ALMA 计算分几个阶段进行：
 - 偏移 - 偏移参数（从0到1）
 - Sigma - sigma 参数（通常从 2 到 8）
 
-![阿尔诺·勒古移动平均线 (ALMA)](../../../../images/indicator_arnaud_legoux_moving_average.png)
+![阿尔诺·勒古移动平均线 (ALMA) 指标图表](../../../../images/indicator_arnaud_legoux_moving_average.png)
 
 ## 另请参阅
 

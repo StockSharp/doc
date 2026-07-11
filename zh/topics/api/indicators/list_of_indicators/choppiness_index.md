@@ -61,7 +61,7 @@ CHOP 对以下情况特别有用：
   - 30-60：中度“波动”（过渡状态）
   - 低于30：低“波动性”（强烈趋势）
 
-![波动指数指示器](../../../../images/indicator_choppiness_index.png)
+![CHOP 指标图表](../../../../images/indicator_choppiness_index.png)
 
 ## 另请参阅
 

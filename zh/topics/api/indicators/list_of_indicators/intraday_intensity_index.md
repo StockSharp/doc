@@ -73,7 +73,7 @@ III 对于识别日内市场情绪的变化和确定潜在反转点尤其有用�
    - 从负值迅速变化到正值可能表明市场情绪发生了急剧转变
    - 逐渐接近零线可能表明当前动量正在减弱
 
-![日内强度指标](../../../../images/indicator_intraday_intensity_index.png)
+![III 指标图表](../../../../images/indicator_intraday_intensity_index.png)
 
 ## 另请参阅
 

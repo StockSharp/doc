@@ -28,7 +28,7 @@ Cuando se multiplica por 100, el indicador oscila entre −100 y +100.
 
 El indicador es útil para evaluar tendencias a corto plazo y detectar puntos de inflexión, especialmente cuando se combina con herramientas de impulso.
 
-![índice de correlación de rangos](../../../../images/indicator_rank_correlation_index.png)
+![Gráfico del indicador índice de correlación de rangos](../../../../images/indicator_rank_correlation_index.png)
 
 ## Véase también
 

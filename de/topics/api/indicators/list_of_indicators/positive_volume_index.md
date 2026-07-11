@@ -70,7 +70,7 @@ Der Positiver Volumenindex kann wie folgt interpretiert werden:
    - Einige Händler legen Schwellenwerte für PVI fest (z. B. 5 % über oder unter dem gleitenden Durchschnitt).
    - Das Überschreiten dieser Schwellenwerte kann als stärkeres Signal angesehen werden als einfache Überkreuzungen
 
-![PVI](../../../../images/indicator_positive_volume_index.png)
+![PVI Diagramm](../../../../images/indicator_positive_volume_index.png)
 
 ## Siehe auch
 

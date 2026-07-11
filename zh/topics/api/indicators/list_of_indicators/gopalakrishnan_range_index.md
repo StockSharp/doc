@@ -64,7 +64,7 @@ GAPO = log(N) * log(最高高点 - 最低低点)
    - 在高波动期间，趋势指标信号可能更可靠
    - 在低波动性期间，振荡器信号可能更有效
 
-![GAPO](../../../../images/indicator_gopalakrishnan_range_index.png)
+![GAPO 指标图表](../../../../images/indicator_gopalakrishnan_range_index.png)
 
 ## 另请参阅
 

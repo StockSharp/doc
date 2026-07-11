@@ -71,7 +71,7 @@ O índice máximo-mínimo é interpretado da seguinte forma:
    - Se o índice de mercado sobe e o HLI também sobe, isto confirma a força de uma tendência de alta
    - Se o índice de mercado cai e o HLI também cai, isto confirma a força de uma tendência de baixa
 
-![HLI](../../../../images/indicator_high_low_index.png)
+![Gráfico do indicador HLI](../../../../images/indicator_high_low_index.png)
 
 ## Ver Também
 

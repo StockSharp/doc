@@ -23,7 +23,7 @@ Um filtro de mediana ordena os preços dentro da janela móvel e selecciona o va
 - Cruzamentos entre o preço e a mediana podem ser tratados como sinais de alteração de tendência.
 - Combine a mediana com outros filtros para extrair tendências mantendo saltos importantes do preço.
 
-![Mediana móvel](../../../../images/indicator_median.png)
+![Gráfico do indicador Mediana móvel](../../../../images/indicator_median.png)
 
 ## Ver também
 

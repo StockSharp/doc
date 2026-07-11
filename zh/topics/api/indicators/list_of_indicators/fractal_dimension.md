@@ -36,7 +36,7 @@ FDI 是通过将总价格路径长度与整体高低范围进行比较来计算�
 - **FDI 约为1.5** – 随机漫步；趋势强度为中性。
 - **FDI 接近 2** – 波动或横盘的市场。
 
-![FDI](../../../../images/indicator_fractal_dimension.png)
+![FDI 指标图表](../../../../images/indicator_fractal_dimension.png)
 
 ## 另请参阅
 

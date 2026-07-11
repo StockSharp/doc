@@ -71,7 +71,7 @@ Os níveis de retração de Fibonacci são interpretados da seguinte forma:
 5. **Traçado em diferentes períodos**:
    - Níveis de Fibonacci traçados em diferentes períodos podem criar zonas de concentração onde a probabilidade de inversão aumenta
 
-![FR](../../../../images/indicator_fibonacci_retracement.png)
+![Gráfico do indicador FR](../../../../images/indicator_fibonacci_retracement.png)
 
 ## Ver Também
 

@@ -74,7 +74,7 @@ O Oscilador de McClellan pode ser interpretado da seguinte forma:
    - "Cauda altista" - queda rápida do MCO seguida de recuperação rápida, frequentemente indicando um potencial fundo de mercado
    - "Cauda baixista" - subida rápida do MCO seguida de queda rápida, frequentemente indicando um potencial topo de mercado
 
-![MCO](../../../../images/indicator_mcclellan_oscillator.png)
+![Gráfico do indicador MCO](../../../../images/indicator_mcclellan_oscillator.png)
 
 ## Ver Também
 

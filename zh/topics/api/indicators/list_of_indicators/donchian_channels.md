@@ -67,7 +67,7 @@
 5. **逆势策略**：
    - 一些交易者使用相反的信号，期望价格在到达通道边缘后回到中线
 
-![DC](../../../../images/indicator_donchian_channels.png)
+![DC 指标图表](../../../../images/indicator_donchian_channels.png)
 
 ## 另请参阅
 

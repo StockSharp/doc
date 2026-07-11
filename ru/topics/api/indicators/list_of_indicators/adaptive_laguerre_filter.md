@@ -39,7 +39,7 @@
 - price(t) - текущая цена
 - L0, L1, L2, L3 - промежуточные значения фильтра
 
-![ALF](../../../../images/indicator_adaptive_laguerre_filter.png)
+![График индикатора ALF](../../../../images/indicator_adaptive_laguerre_filter.png)
 
 ## См. также
 

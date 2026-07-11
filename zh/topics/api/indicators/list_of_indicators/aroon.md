@@ -54,7 +54,7 @@ Aroon 指标的计算基于确定自达到指定周期内的最高价和最低�
 - **潜在的趋势反转**：Aroon上升线与Aroon下降线的交叉
 - **整合**：两条线都围绕50波动
 
-![阿隆](../../../../images/indicator_aroon.png)
+![阿隆 指标图表](../../../../images/indicator_aroon.png)
 
 ## 另请参阅
 

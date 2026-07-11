@@ -89,7 +89,7 @@ KVO 将价格信息与成交量结合，使用一个考虑价格变动方向和�
    - KVO 允许评估价格和成交量变化的一致性
    - 顺势方向的强成交量会导致更极端的KVO值
 
-![克林格成交量振荡器](../../../../images/indicator_klinger_volume_oscillator.png)
+![KVO 指标图表](../../../../images/indicator_klinger_volume_oscillator.png)
 
 ## 另请参阅
 

@@ -72,7 +72,7 @@ MGD = MGD[previous] + (Price - MGD[previous]) / (Length * ((Price / MGD[previous
    - 小さい Length 値（例: 8-12）は MGD を価格変化に対してより敏感にし、短期取引に適しています
    - 大きい Length 値（例: 20-50）は MGD をより滑らかにし、長期取引に適しています
 
-![MGD](../../../../images/indicator_mcginley_dynamic.png)
+![MGD のチャート](../../../../images/indicator_mcginley_dynamic.png)
 
 ## 関連項目
 

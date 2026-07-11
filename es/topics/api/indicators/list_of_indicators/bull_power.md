@@ -28,7 +28,7 @@ fuerza alcista hereda sus parámetros de [ExponentialMovingAverage](xref:StockSh
 - El precio alcanza nuevos máximos sin lecturas más altas de fuerza alcista forma una divergencia bajista.
 - Combine fuerza alcista y fuerza bajista con el precio EMA para evaluar la estructura completa de [rayos de Elder](elder_ray.md).
 
-![fuerza alcista](../../../../images/indicator_bull_power.png)
+![Gráfico del indicador fuerza alcista](../../../../images/indicator_bull_power.png)
 
 ## Véase también
 

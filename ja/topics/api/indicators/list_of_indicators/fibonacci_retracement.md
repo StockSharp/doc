@@ -71,7 +71,7 @@
 5. **異なるタイムフレームでの描画**:
    - 異なるタイムフレームで描画されたフィボナッチ水準は、反転の確率が高まるクラスタリングゾーンを形成することがあります
 
-![FR](../../../../images/indicator_fibonacci_retracement.png)
+![FR のチャート](../../../../images/indicator_fibonacci_retracement.png)
 
 ## 関連項目
 

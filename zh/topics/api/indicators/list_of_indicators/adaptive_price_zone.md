@@ -42,7 +42,7 @@ APZ 计算基于指数移动平均线（EMA）和平均真实波幅（ATR）：
 
 当价格位于上方APZ线之上时，这可以被视为上升趋势。当价格位于下方APZ线之下时，这可能表示下降趋势。当价格在APZ区域内波动时，市场可能处于盘整或横向运动阶段。
 
-![APZ](../../../../images/indicator_adaptive_price_zone.png)
+![APZ 指标图表](../../../../images/indicator_adaptive_price_zone.png)
 
 ## 另请参阅
 

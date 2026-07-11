@@ -67,7 +67,7 @@ El línea psicológica se puede interpretar de la siguiente manera:
    - PSY se utiliza a menudo en combinación con otros indicadores para confirmar señales
    - Particularmente útil cuando se combina con indicadores de tendencia e indicadores de volumen.
 
-![PSY](../../../../images/indicator_psychological_line.png)
+![Gráfico del indicador PSY](../../../../images/indicator_psychological_line.png)
 
 ## Véase también
 

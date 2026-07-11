@@ -81,7 +81,7 @@ OBVM 的主要优势在于相比经典 OBV，它能够生成更清晰且较少�
    - 较长周期（例如， 30-50）更好地识别长期趋势
    - 最佳期限取决于交易时间范围和特定工具的特性
 
-![平衡量均值指标](../../../../images/indicator_on_balance_volume_mean.png)
+![OBVM 指标图表](../../../../images/indicator_on_balance_volume_mean.png)
 
 ## 另请参阅
 

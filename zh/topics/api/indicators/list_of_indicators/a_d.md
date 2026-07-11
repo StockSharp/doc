@@ -21,7 +21,7 @@ AO — [超级振荡器](ao.md)指标.
 
 参数设置为SMA周期值。
 
-![指示器加速](../../../../images/indicatoracceleration.png)
+![加速/减速指标 (A/D) 指标图表](../../../../images/indicatoracceleration.png)
 
 ## 另请参阅
 

@@ -60,7 +60,7 @@ O índice de disparidade pode ser interpretado da seguinte forma:
 5. **Estratégias de reversão à média**:
    - Valores extremos de DPI podem ser usados para abrir posições contra o movimento atual do preço, esperando um regresso à média
 
-![DPI](../../../../images/indicator_disparity_index.png)
+![Gráfico do indicador DPI](../../../../images/indicator_disparity_index.png)
 
 ## Ver também
 

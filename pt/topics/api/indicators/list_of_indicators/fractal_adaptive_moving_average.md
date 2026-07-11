@@ -78,7 +78,7 @@ A FRAMA pode ser interpretada de forma semelhante a outras médias móveis, mas 
    - A FRAMA pode servir como nível de suporte dinâmico numa tendência de alta
    - A FRAMA pode servir como nível de resistência dinâmico numa tendência de baixa
 
-![FRAMA](../../../../images/indicator_fractal_adaptive_moving_average.png)
+![Gráfico do indicador FRAMA](../../../../images/indicator_fractal_adaptive_moving_average.png)
 
 ## Ver Também
 

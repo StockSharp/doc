@@ -62,7 +62,7 @@ El cálculo de stop Chande Kroll implica los siguientes pasos:
 
 - **Usar con otros indicadores**: CKS funciona mejor en combinación con otros indicadores de tendencia e impulso que ayudan a determinar la dirección de entrada al mercado.
 
-![CKS](../../../../images/indicator_chande_kroll_stop.png)
+![Gráfico del indicador CKS](../../../../images/indicator_chande_kroll_stop.png)
 
 ## Véase también
 

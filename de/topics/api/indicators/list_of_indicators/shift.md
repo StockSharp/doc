@@ -20,7 +20,7 @@ kürzer als der erforderliche Offset ist, gilt der Wert als undefiniert.
 - Erstellen Sie benutzerdefinierte Indikatoren und Strategien, die verzögerte Eingaben erfordern.
 - Erstellen Sie synthetische Reihen, um beispielsweise die Differenz zwischen aktuellen Preisen und vergangenen Werten zu berechnen.
 
-![Verschiebung](../../../../images/indicator_shift.png)
+![Verschiebung Diagramm](../../../../images/indicator_shift.png)
 
 ## Siehe auch
 

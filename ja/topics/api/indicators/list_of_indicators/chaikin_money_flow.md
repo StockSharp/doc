@@ -68,7 +68,7 @@ CMF はゼロライン付近で振動し、通常は -1 から +1 の範囲内�
   - +0.25 を上回る値は、強い蓄積を示す場合があります
   - -0.25 を下回る値は、強い分配を示す場合があります
 
-![CMF](../../../../images/indicator_chaikin_money_flow.png)
+![CMF のチャート](../../../../images/indicator_chaikin_money_flow.png)
 
 ## 関連項目
 

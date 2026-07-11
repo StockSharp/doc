@@ -78,7 +78,7 @@ GMMA の解釈では、個々のグループとそれらの相互作用の両方
    - 短期平均が先に方向を変え、その後、長期平均に変化が現れ始めます
    - グループ間のクロスオーバーは、トレンド反転の確認として機能する場合があります
 
-![GMMA](../../../../images/indicator_guppy_multiple_moving_average.png)
+![GMMA のチャート](../../../../images/indicator_guppy_multiple_moving_average.png)
 
 ## 関連項目
 

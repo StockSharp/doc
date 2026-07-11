@@ -35,7 +35,7 @@ Cuanto más se aleje el valor de cero, más fuerte será el movimiento direccion
 El oscilador se analiza frecuentemente junto con el indicador base [Aroon](aroon.md) para observar tanto los niveles absolutos como sus
 diferencia.
 
-![oscilador Aroon](../../../../images/indicator_aroon_oscillator.png)
+![Gráfico del indicador oscilador Aroon](../../../../images/indicator_aroon_oscillator.png)
 
 ## Véase también
 

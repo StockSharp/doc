@@ -71,7 +71,7 @@ HLI は特に次の用途に役立ちます。
    - 市場指数が上昇し、HLI も上昇している場合、これは上昇トレンドの強さを確認します
    - 市場指数が下落し、HLI も下落している場合、これは下降トレンドの強さを確認します
 
-![HLI](../../../../images/indicator_high_low_index.png)
+![HLI のチャート](../../../../images/indicator_high_low_index.png)
 
 ## 関連項目
 

@@ -28,7 +28,7 @@ Quando multiplicado por 100, o indicador varia entre -100 e +100.
 
 O indicador é útil para avaliar tendências de curto prazo e detetar pontos de viragem, especialmente quando combinado com ferramentas de momentum.
 
-![índice de correlação de postos](../../../../images/indicator_rank_correlation_index.png)
+![Gráfico do indicador índice de correlação de postos](../../../../images/indicator_rank_correlation_index.png)
 
 ## Ver também
 

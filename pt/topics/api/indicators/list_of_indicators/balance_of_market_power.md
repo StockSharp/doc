@@ -52,7 +52,7 @@ Onde:
 - **Valores extremos** (acima ou abaixo de certos níveis) podem indicar condições de sobrecompra ou sobrevenda no mercado
 - **Divergências** entre BMP e preço podem sinalizar uma potencial reversão de tendência
 
-![BMP](../../../../images/indicator_balance_of_market_power.png)
+![Gráfico do indicador BMP](../../../../images/indicator_balance_of_market_power.png)
 
 ## Ver também
 

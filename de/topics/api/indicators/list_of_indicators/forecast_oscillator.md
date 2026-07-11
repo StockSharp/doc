@@ -67,7 +67,7 @@ Der Prognose-Oszillator wird wie folgt interpretiert:
    - Wenn sich FOSC in die gleiche Richtung wie der Preis bewegt, bestätigt dies die Stärke des aktuellen Trends
    - Wenn sich FOSC in die entgegengesetzte Richtung zum Preis bewegt, kann dies auf eine Abschwächung des aktuellen Trends hinweisen
 
-![FOSC](../../../../images/indicator_forecast_oscillator.png)
+![FOSC Diagramm](../../../../images/indicator_forecast_oscillator.png)
 
 ## Siehe auch
 

@@ -27,7 +27,7 @@
 - 穿越零线可能确认当前趋势的变化。
 - 将熊力与[多头力量](bull_power.md)以及价格EMA结合起来，构建完整的[埃尔德射线指数](elder_ray.md)指标。
 
-![空头力量](../../../../images/indicator_bear_power.png)
+![空头力量 指标图表](../../../../images/indicator_bear_power.png)
 
 ## 另请参阅
 

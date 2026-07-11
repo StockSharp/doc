@@ -83,7 +83,7 @@ O oscilador Kase Peak pode ser interpretado da seguinte forma:
    - O KPO é frequentemente usado com outros indicadores técnicos para confirmar sinais
    - É particularmente eficaz quando combinado com indicadores de tendência e níveis de suporte/resistência
 
-![KPO](../../../../images/indicator_kase_peak_oscillator.png)
+![Gráfico do indicador KPO](../../../../images/indicator_kase_peak_oscillator.png)
 
 ## Ver Também
 

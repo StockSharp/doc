@@ -20,7 +20,7 @@ mais curto do que o deslocamento necessário, o valor é considerado indefinido.
 - Construir indicadores e estratégias personalizados que exigem entradas atrasadas.
 - Criar séries sintéticas, por exemplo, para calcular a diferença entre preços atuais e valores passados.
 
-![Deslocamento](../../../../images/indicator_shift.png)
+![Gráfico do indicador Deslocamento](../../../../images/indicator_shift.png)
 
 ## Ver também
 

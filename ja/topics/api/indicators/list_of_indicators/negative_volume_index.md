@@ -70,7 +70,7 @@ NVI は、対になる ポジティブ出来高指数 (PVI) と併用される�
    - 一部のトレーダーは、NVI にしきい値水準を設定します (例: 移動平均の上下 5%)
    - これらのしきい値をクロスすることは、単純なクロスオーバーよりも強いシグナルと見なされる場合があります
 
-![NVI](../../../../images/indicator_negative_volume_index.png)
+![NVI のチャート](../../../../images/indicator_negative_volume_index.png)
 
 ## 関連項目
 

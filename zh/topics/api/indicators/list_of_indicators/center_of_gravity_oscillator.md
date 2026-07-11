@@ -48,7 +48,7 @@ CGO = - Sum(Price(i) * (i + 1)) / Sum(Price(i))
 
 由于CGO是一个领先指标，它的信号通常出现在价格图表相应变化之前，为交易者在做出交易决策时提供了优势。
 
-![CGO](../../../../images/indicator_center_of_gravity_oscillator.png)
+![CGO 指标图表](../../../../images/indicator_center_of_gravity_oscillator.png)
 
 ## 另请参阅
 

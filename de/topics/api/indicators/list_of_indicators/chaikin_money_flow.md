@@ -68,7 +68,7 @@ CMF oszilliert um die Nulllinie und liegt typischerweise im Bereich von -1 bis +
   - Werte über +0,25 können auf eine starke Akkumulation hinweisen
   - Werte unter -0,25 können auf eine starke Verteilung hinweisen
 
-![CMF](../../../../images/indicator_chaikin_money_flow.png)
+![CMF Diagramm](../../../../images/indicator_chaikin_money_flow.png)
 
 ## Siehe auch
 

@@ -77,7 +77,7 @@ MAC は、単独の取引戦略でも、MACD (移動平均収束拡散法) な�
    - 短い期間 (例: 5 と 20) はより敏感で、短期取引に適しています
    - 長い期間 (例: 50 と 200) は感度が低く、長期取引に適しています
 
-![MAC](../../../../images/indicator_moving_average_crossover.png)
+![MAC のチャート](../../../../images/indicator_moving_average_crossover.png)
 
 ## 関連項目
 

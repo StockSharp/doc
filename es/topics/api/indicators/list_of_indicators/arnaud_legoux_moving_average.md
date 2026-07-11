@@ -55,7 +55,7 @@ donde:
 - Offset - parámetro de compensación (de 0 a 1)
 - Sigma - parámetro sigma (normalmente de 2 a 8)
 
-![ALMA](../../../../images/indicator_arnaud_legoux_moving_average.png)
+![Gráfico del indicador ALMA](../../../../images/indicator_arnaud_legoux_moving_average.png)
 
 ## Véase también
 

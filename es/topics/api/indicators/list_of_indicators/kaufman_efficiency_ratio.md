@@ -75,7 +75,7 @@ El ratio de eficiencia de Kaufman se puede interpretar de la siguiente manera:
    - Los cambios bruscos de KER a menudo preceden a nuevos movimientos de precios
    - La caída de KER después de un período de valores altos puede advertir de un posible cambio de tendencia
 
-![KER](../../../../images/indicator_kaufman_efficiency_ratio.png)
+![Gráfico del indicador KER](../../../../images/indicator_kaufman_efficiency_ratio.png)
 
 ## Véase también
 

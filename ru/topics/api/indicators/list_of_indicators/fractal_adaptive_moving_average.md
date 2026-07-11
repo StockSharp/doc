@@ -78,7 +78,7 @@ FRAMA может интерпретироваться аналогично др�
    - FRAMA может служить динамическим уровнем поддержки в восходящем тренде
    - FRAMA может служить динамическим уровнем сопротивления в нисходящем тренде
 
-![FRAMA](../../../../images/indicator_fractal_adaptive_moving_average.png)
+![График индикатора FRAMA](../../../../images/indicator_fractal_adaptive_moving_average.png)
 
 ## См. также
 

@@ -71,7 +71,7 @@
 5. **在不同时间框架上绘图**：
    - 在不同时间框架上绘制的斐波那契水平可以形成聚集区，在这些区域反转的概率增加
 
-![斐波那契回撤指标](../../../../images/indicator_fibonacci_retracement.png)
+![FR 指标图表](../../../../images/indicator_fibonacci_retracement.png)
 
 ## 另请参阅
 

@@ -80,7 +80,7 @@ Keltner-Kanäle kann wie folgt interpretiert werden:
    - Ausbruchsstrategie: Eröffnen einer Position, wenn der Preis das obere oder untere Band durchbricht, in Erwartung einer weiteren Bewegung in die gleiche Richtung
    - „Von der Mitte zum Rand“-Strategie: Eröffnen einer Position, wenn der Preis von der Mittellinie abprallt, wobei das obere oder untere Band angestrebt wird
 
-![KC](../../../../images/indicator_keltner_channels.png)
+![KC Diagramm](../../../../images/indicator_keltner_channels.png)
 
 ## Siehe auch
 

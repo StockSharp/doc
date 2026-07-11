@@ -83,7 +83,7 @@ FVE指标可以解释如下：
 6. **支撑和阻力位**：
    - FVE 图上的历史反转点可以作为未来反转的参考
 
-![有限体积元指示器](../../../../images/indicator_finite_volume_element.png)
+![FVE 指标图表](../../../../images/indicator_finite_volume_element.png)
 
 ## 另请参阅
 

@@ -41,7 +41,7 @@ Onde:
 - price(t) - preço atual
 - L0, L1, L2, L3 - valores intermédios do filtro
 
-![ALF](../../../../images/indicator_adaptive_laguerre_filter.png)
+![Gráfico do indicador ALF](../../../../images/indicator_adaptive_laguerre_filter.png)
 
 ## Ver também
 

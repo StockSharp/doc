@@ -77,7 +77,7 @@ HVR は、短期のヒストリカル・ボラティリティを長期のヒス�
    - 極端な HVR 値は、多くの場合、重要な価格変動に先行します
    - 低ボラティリティ期間後の急激な HVR 上昇は、新しいトレンドの開始を示唆する場合があります
 
-![HVR](../../../../images/indicator_historical_volatility_ratio.png)
+![HVR のチャート](../../../../images/indicator_historical_volatility_ratio.png)
 
 ## 関連項目
 

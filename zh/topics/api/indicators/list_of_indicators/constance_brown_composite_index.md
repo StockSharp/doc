@@ -64,7 +64,7 @@ CBCI 计算包括以下步骤：
   - 如果 CBCI 持续保持在 50 以上，可能表明上涨趋势的强度
   - 如果 CBCI 持续低于 50，可能表明下跌趋势的强度
 
-![CBCI](../../../../images/indicator_constance_brown_composite_index.png)
+![CBCI 指标图表](../../../../images/indicator_constance_brown_composite_index.png)
 
 ## 另请参阅
 

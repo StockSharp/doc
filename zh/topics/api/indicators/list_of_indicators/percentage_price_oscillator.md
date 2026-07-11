@@ -85,7 +85,7 @@ PPO 指标围绕零线波动，正值表示看涨的市场情绪，负值表示�
    - 当PPO与主趋势一致时，信号线交叉信号更可靠
    - 例如，当PPO为正时，看涨信号更可靠；当PPO为负时，看跌信号更可靠
 
-![PPO](../../../../images/indicator_percentage_price_oscillator.png)
+![PPO 指标图表](../../../../images/indicator_percentage_price_oscillator.png)
 
 ## 另请参阅
 

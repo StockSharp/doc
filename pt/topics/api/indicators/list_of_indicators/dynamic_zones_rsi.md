@@ -63,7 +63,7 @@ O DZRSI é interpretado de forma semelhante ao RSI tradicional, mas tendo em con
    - O cruzamento de baixo para cima pode ser visto como um sinal altista
    - O cruzamento de cima para baixo pode ser visto como um sinal baixista
 
-![DZRSI](../../../../images/indicator_dynamic_zones_rsi.png)
+![Gráfico do indicador DZRSI](../../../../images/indicator_dynamic_zones_rsi.png)
 
 ## Ver também
 

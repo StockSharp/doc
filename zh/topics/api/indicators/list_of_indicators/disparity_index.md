@@ -60,7 +60,7 @@ DPI = ((Price / MA) - 1) * 100
 5. **均值回归策略**：
    - 极端 DPI 值可以用来开立与当前价格走势相反的持仓，期望回归均值
 
-![指标差异指数](../../../../images/indicator_disparity_index.png)
+![DPI 指标图表](../../../../images/indicator_disparity_index.png)
 
 ## 另请参阅
 

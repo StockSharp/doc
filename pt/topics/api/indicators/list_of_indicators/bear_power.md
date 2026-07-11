@@ -27,7 +27,7 @@ força vendedora herda a configuração de [ExponentialMovingAverage](xref:Stock
 - O cruzamento da linha zero pode confirmar uma alteração da tendência predominante.
 - Combine força vendedora com [força compradora](bull_power.md) e a EMA do preço para construir o indicador [raios de Elder](elder_ray.md) completo.
 
-![força vendedora](../../../../images/indicator_bear_power.png)
+![Gráfico do indicador força vendedora](../../../../images/indicator_bear_power.png)
 
 ## Ver também
 

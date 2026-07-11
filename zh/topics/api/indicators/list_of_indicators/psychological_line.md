@@ -67,7 +67,7 @@ PSY = (Length 周期内上涨周期数量 / Length) * 100
    - PSY常与其他指标结合使用以确认信号
    - 在与趋势指标和成交量指标结合使用时尤其有用
 
-![心理线指标](../../../../images/indicator_psychological_line.png)
+![PSY 指标图表](../../../../images/indicator_psychological_line.png)
 
 ## 另请参阅
 

@@ -85,7 +85,7 @@ R-Squared en regresión lineal se puede interpretar de la siguiente manera:
    - R² puede producir diferentes resultados en diferentes plazos
    - Comparar R² entre períodos de tiempo puede proporcionar información adicional sobre la estructura del mercado
 
-![R cuadrado](../../../../images/indicator_linear_reg_rsquared.png)
+![Gráfico del indicador R cuadrado](../../../../images/indicator_linear_reg_rsquared.png)
 
 ## Véase también
 

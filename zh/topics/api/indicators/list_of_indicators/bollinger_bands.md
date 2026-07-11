@@ -18,7 +18,7 @@
 D - 在设置中设置的通道宽度，标准差 (StdDev) - 标准差，按照公式计算：SQRT(Sum(Close, n))^2, n)/n)，其中
 Sum - n 期间的总和, n - 计算期数, SQRT - 平方根, Close - 收盘价。
 
-![指标布林带](../../../../images/indicatorbollingerbands.png)
+![布林带 指标图表](../../../../images/indicatorbollingerbands.png)
 
 ## 另请参阅
 

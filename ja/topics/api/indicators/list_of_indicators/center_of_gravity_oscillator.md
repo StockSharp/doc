@@ -48,7 +48,7 @@ CGO = - Sum(Price(i) * (i + 1)) / Sum(Price(i))
 
 CGO は先行インジケーターであるため、そのシグナルは価格チャート上の対応する変化より前に現れることが多く、トレーダーが取引判断を行ううえで優位性をもたらします。
 
-![CGO](../../../../images/indicator_center_of_gravity_oscillator.png)
+![CGO のチャート](../../../../images/indicator_center_of_gravity_oscillator.png)
 
 ## 関連項目
 

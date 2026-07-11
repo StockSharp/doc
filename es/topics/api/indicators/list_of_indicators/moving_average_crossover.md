@@ -77,7 +77,7 @@ El indicador de cruce de medias móviles se puede interpretar de la siguiente ma
    - Los períodos más cortos (por ejemplo, 5 y 20) son más sensibles y adecuados para operaciones a corto plazo.
    - Los períodos más largos (por ejemplo, 50 y 200) son menos sensibles y adecuados para operaciones a largo plazo.
 
-![MAC](../../../../images/indicator_moving_average_crossover.png)
+![Gráfico del indicador MAC](../../../../images/indicator_moving_average_crossover.png)
 
 ## Véase también
 

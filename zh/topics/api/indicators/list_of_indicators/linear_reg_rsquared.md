@@ -85,7 +85,7 @@ R²的取值范围从0到1（或0%到100%）：
    - R² 在不同的时间框架上可能产生不同的结果
    - 比较不同时期的R²可以提供关于市场结构的额外信息
 
-![线性回归R平方指标](../../../../images/indicator_linear_reg_rsquared.png)
+![决定系数 指标图表](../../../../images/indicator_linear_reg_rsquared.png)
 
 ## 另请参阅
 

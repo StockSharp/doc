@@ -30,7 +30,7 @@ AFI soll bestimmen, in welchem Umfang das Handelsvolumen die Preisbewegung "best
 
 Positive AFI-Werte weisen auf einen starken Aufwärtstrend hin, während negative Werte auf einen Abwärtstrend hindeuten. Werte nahe null können auf das Fehlen eines ausgeprägten Trends hinweisen.
 
-![AFI](../../../../images/indicator_approval_flow_index.png)
+![AFI Diagramm](../../../../images/indicator_approval_flow_index.png)
 
 ## Siehe auch
 

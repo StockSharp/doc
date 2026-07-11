@@ -21,7 +21,7 @@
 
 これにより、短期的な変動をフィルタリングしながら価格変化に素早く反応する、最適化された推定値が得られます。
 
-![KalmanFilter](../../../../images/indicator_kalman_filter.png)
+![KalmanFilter のチャート](../../../../images/indicator_kalman_filter.png)
 
 ## 関連項目
 

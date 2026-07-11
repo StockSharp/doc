@@ -75,7 +75,7 @@ Das Momentum des gleitenden Durchschnitts kann wie folgt interpretiert werden:
    - Kürzere Zeiträume für Length und MomentumPeriod machen MOMA empfindlicher, aber auch anfälliger für Fehlsignale
    - Längere Zeiträume machen MOMA flüssiger, können aber zu verzögerten Signalen führen
 
-![MOMA](../../../../images/indicator_momentum_of_moving_average.png)
+![MOMA Diagramm](../../../../images/indicator_momentum_of_moving_average.png)
 
 ## Siehe auch
 

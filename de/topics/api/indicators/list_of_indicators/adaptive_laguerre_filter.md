@@ -39,7 +39,7 @@ Wobei:
 - price(t) - aktueller Preis
 - L0, L1, L2, L3 - Zwischenwerte des Filters
 
-![ALF](../../../../images/indicator_adaptive_laguerre_filter.png)
+![ALF Diagramm](../../../../images/indicator_adaptive_laguerre_filter.png)
 
 ## Siehe auch
 

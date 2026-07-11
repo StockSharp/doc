@@ -28,7 +28,7 @@
 
 Большие значения `H` означают более выраженные тренды, а низкие — усиленный возврат к среднему.
 
-![HurstExponent](../../../../images/indicator_hurst_exponent.png)
+![График индикатора HurstExponent](../../../../images/indicator_hurst_exponent.png)
 
 ## См. также
 

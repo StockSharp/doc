@@ -30,7 +30,7 @@ AFI 旨在确定有多少交易量“认可”价格的变化。
 
 正的 AFI 值表示强劲的上升趋势，而负值则表明下降趋势。接近零的值可能表示没有明显的趋势。
 
-![AFI](../../../../images/indicator_approval_flow_index.png)
+![AFI 指标图表](../../../../images/indicator_approval_flow_index.png)
 
 ## 另请参阅
 

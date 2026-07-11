@@ -68,7 +68,7 @@ DSP 指标在零线附近振荡，可以解释如下：
 5. **图案形成**：
    - 技术形态（头肩顶、双底等）可以在DSP图表上形成，可能提供额外的交易信号
 
-![去趋势合成价格指标](../../../../images/indicator_detrended_synthetic_price.png)
+![DSP 指标图表](../../../../images/indicator_detrended_synthetic_price.png)
 
 ## 另请参阅
 

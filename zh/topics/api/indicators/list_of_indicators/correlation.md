@@ -10,7 +10,7 @@
 3. 绝对值表示关系的强度。
 4. 始终基于数字对。
 
-![指标相关性](../../../../images/indicatorcorrelation.png)
+![相关性 指标图表](../../../../images/indicatorcorrelation.png)
 
 ## 另请参阅
 

@@ -70,7 +70,7 @@ volume em balanço pode ser interpretado da seguinte forma:
 
 É importante notar que o OBV é um indicador cumulativo, por isso o seu valor absoluto não tem grande significado. O que importa é a direção do movimento do OBV e a sua relação com o movimento do preço.
 
-![OBV](../../../../images/indicator_on_balance_volume.png)
+![Gráfico do indicador OBV](../../../../images/indicator_on_balance_volume.png)
 
 ## Ver também
 

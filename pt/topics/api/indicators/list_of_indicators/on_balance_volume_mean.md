@@ -81,7 +81,7 @@ volume em balanço Mean pode ser interpretado da seguinte forma:
    - Períodos mais longos (por exemplo, 30-50) identificam melhor tendências de longo prazo
    - O período ideal depende do horizonte temporal de trading e das características específicas do instrumento
 
-![OBVM](../../../../images/indicator_on_balance_volume_mean.png)
+![Gráfico do indicador OBVM](../../../../images/indicator_on_balance_volume_mean.png)
 
 ## Ver também
 

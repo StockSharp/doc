@@ -75,7 +75,7 @@ MOMA通过关注移动平均线动态的变化，而不是价格本身，帮助�
    - 较短的长度周期和动量周期会使MOMA更敏感，但也更容易产生虚假信号
    - 较长的周期使 MOMA 更平滑，但可能导致信号滞后
 
-![移动平均动量指标](../../../../images/indicator_momentum_of_moving_average.png)
+![MOMA 指标图表](../../../../images/indicator_momentum_of_moving_average.png)
 
 ## 另请参阅
 

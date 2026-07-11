@@ -70,7 +70,7 @@ OBV インジケーターは、Joseph Granville が 1963 年に著書『グラ�
 
 OBV は累積インジケーターであるため、その絶対値はあまり重要ではない点に注意することが重要です。重要なのは、OBV の動きの方向と価格変動との関係です。
 
-![OBV](../../../../images/indicator_on_balance_volume.png)
+![OBV のチャート](../../../../images/indicator_on_balance_volume.png)
 
 ## 関連項目
 

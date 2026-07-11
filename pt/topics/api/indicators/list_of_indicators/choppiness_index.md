@@ -61,7 +61,7 @@ Onde:
   - 30-60: "choppiness" moderado (estado de transição)
   - Abaixo de 30: baixo "choppiness" (tendência forte)
 
-![CHOP](../../../../images/indicator_choppiness_index.png)
+![Gráfico do indicador CHOP](../../../../images/indicator_choppiness_index.png)
 
 ## Ver também
 

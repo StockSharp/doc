@@ -61,7 +61,7 @@ Dabei gilt:
   - 30-60: Mäßiges „Rubbeln“ (Übergangszustand)
   - Unter 30: Low „abgehackt“ (starker Trend)
 
-![CHOP](../../../../images/indicator_choppiness_index.png)
+![CHOP Diagramm](../../../../images/indicator_choppiness_index.png)
 
 ## Siehe auch
 

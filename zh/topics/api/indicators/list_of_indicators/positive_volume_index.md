@@ -70,7 +70,7 @@ PVI通常与互补的负成交量指标（NVI）一起使用，相反，NVI仅�
    - 一些交易者为PVI（例如，高于或低于移动平均线5%）设定阈值水平
    - 穿越这些门槛可能被认为比简单的交叉更强的信号
 
-![PVI](../../../../images/indicator_positive_volume_index.png)
+![PVI 指标图表](../../../../images/indicator_positive_volume_index.png)
 
 ## 另请参阅
 

@@ -78,7 +78,7 @@ O oscilador bastante bom pode ser interpretado da seguinte forma:
    - Valores extremos do PGO podem ser usados como sinais para realizar lucros
    - Por exemplo, sair de posições longas quando o PGO excede +2, e de posições curtas quando o PGO cai abaixo de -2
 
-![PGO](../../../../images/indicator_pretty_good_oscillator.png)
+![Gráfico do indicador PGO](../../../../images/indicator_pretty_good_oscillator.png)
 
 ## Ver também
 

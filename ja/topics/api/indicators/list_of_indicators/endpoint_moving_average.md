@@ -67,7 +67,7 @@ EPMA は特に次の用途に役立ちます:
    - 感度が高いため、EPMA は横ばいの保ち合い期間中により多くの誤シグナルを生成する場合があります
    - シグナルの信頼性を高めるには、追加のフィルターや他のインジケーターからの確認を使用することを推奨します
 
-![EPMA](../../../../images/indicator_endpoint_moving_average.png)
+![EPMA のチャート](../../../../images/indicator_endpoint_moving_average.png)
 
 ## 関連項目
 

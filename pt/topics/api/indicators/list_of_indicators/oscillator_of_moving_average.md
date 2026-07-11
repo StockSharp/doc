@@ -80,7 +80,7 @@ O oscilador da média móvel pode ser interpretado da seguinte forma:
    - O OMA é frequentemente usado em conjunto com outros indicadores para confirmar sinais
    - É particularmente eficaz quando combinado com indicadores de sobrecompra/sobrevenda como RSI ou Estocástico
 
-![OMA](../../../../images/indicator_oscillator_of_moving_average.png)
+![Gráfico do indicador OMA](../../../../images/indicator_oscillator_of_moving_average.png)
 
 ## Ver também
 

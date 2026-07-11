@@ -55,7 +55,7 @@ ALMA の計算はいくつかの段階で行われます。
 - Offset - offset パラメーター（0 から 1）
 - Sigma - sigma パラメーター（通常は 2 から 8）
 
-![ALMA](../../../../images/indicator_arnaud_legoux_moving_average.png)
+![ALMA のチャート](../../../../images/indicator_arnaud_legoux_moving_average.png)
 
 ## 関連項目
 

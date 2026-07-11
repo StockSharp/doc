@@ -78,7 +78,7 @@ Der EMV-Indikator kann wie folgt interpretiert werden:
    - Wenn der Preis mit einem negativen EMV fällt, bestätigt dies die Stärke der Abwärtsbewegung
    - Wenn der Preis bei einem negativen EMV steigt oder bei einem positiven EMV fällt, kann dies auf die Instabilität der aktuellen Bewegung hinweisen
 
-![EMV](../../../../images/indicator_ease_of_movement.png)
+![EMV Diagramm](../../../../images/indicator_ease_of_movement.png)
 
 ## Siehe auch
 

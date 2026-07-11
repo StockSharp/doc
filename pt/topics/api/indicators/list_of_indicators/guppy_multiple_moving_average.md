@@ -78,7 +78,7 @@ A interpretação da GMMA envolve analisar ambos os grupos individuais e a sua i
    - As médias de curto prazo mudam primeiro de direção, depois começam a surgir alterações nas médias de longo prazo
    - O cruzamento entre grupos pode servir como confirmação de inversão da tendência
 
-![GMMA](../../../../images/indicator_guppy_multiple_moving_average.png)
+![Gráfico do indicador GMMA](../../../../images/indicator_guppy_multiple_moving_average.png)
 
 ## Ver Também
 

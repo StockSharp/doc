@@ -79,7 +79,7 @@ HO は特に次の用途に役立ちます。
    - HO はトレンド指標と組み合わせると最も効果的です
    - トレンド相場では、HO シグナルをトレンド方向のエントリーポイント判断に使用できます
 
-![HO](../../../../images/indicator_harmonic_oscillator.png)
+![HO のチャート](../../../../images/indicator_harmonic_oscillator.png)
 
 ## 関連項目
 

@@ -48,7 +48,7 @@ Nesta fórmula, cada preço é ponderado pela sua posição na série temporal e
 
 Como o CGO é um indicador avançado, os seus sinais aparecem frequentemente antes das alterações correspondentes no gráfico de preços, dando aos traders uma vantagem na tomada de decisões de trading.
 
-![CGO](../../../../images/indicator_center_of_gravity_oscillator.png)
+![Gráfico do indicador CGO](../../../../images/indicator_center_of_gravity_oscillator.png)
 
 ## Ver também
 
