@@ -7,11 +7,11 @@ Para exportar una estrategia desde [Designer](../designer.md):
 
 - Seleccione la estrategia deseada en el árbol, haga clic derecho sobre ella y elija el elemento de menú **Runner**:
 
-  ![Designer exportación a Runner](../../images/designer_runner_1.png)
+  ![Designer exportación a Runner (1)](../../images/designer_runner_1.png)
 
 - En la ventana que aparece, debe seleccionar qué tipos de conexiones deben exportarse a **Runner**, así como la configuración para gestionar la estrategia mediante [Telegram](../telegram_services.md):
 
-  ![Designer exportación a Runner](../../images/designer_runner_2.png)
+  ![Designer exportación a Runner (2)](../../images/designer_runner_2.png)
 
 Los siguientes archivos se copiarán al directorio de exportación seleccionado:
 

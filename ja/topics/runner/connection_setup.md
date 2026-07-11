@@ -9,15 +9,15 @@ stocksharp.studio.runner setup
 
 メニューが表示されます。
 
-![接続設定 1](../../images/runner_setup_1.png)
+![接続設定 1 (1)](../../images/runner_setup_1.png)
 
 Connections 項目を選択すると、プログラムはコネクター設定モードに入ります。
 
-![接続設定 2](../../images/runner_setup_2.png)
+![接続設定 2 (1)](../../images/runner_setup_2.png)
 
 ここでは、以前に保存した接続を編集するか、新しい接続を作成できます。
 
-![接続設定 3](../../images/runner_setup_3.png)
+![接続設定 3 (1)](../../images/runner_setup_3.png)
 
 必要な新規接続の種類を選択すると、プログラムはその設定の編集メニューに移動します。
 
@@ -51,11 +51,11 @@ Data フォルダーに **connector.json** ファイルが作成され（まだ�
 
 [Telegram](../telegram_services.md) との統合を設定するには、メニュー項目を選択します。
 
-![接続設定 1](../../images/runner_telegram_1.png)
+![接続設定 1 (2)](../../images/runner_telegram_1.png)
 
 そして、都合のよい方法で認証します。
 
-![接続設定 2](../../images/runner_telegram_2.png)
+![接続設定 2 (2)](../../images/runner_telegram_2.png)
 
 トークンで認証する場合は、[https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) のトークンを入力します。
 
@@ -63,4 +63,4 @@ Data フォルダーに **connector.json** ファイルが作成され（まだ�
 
 成功した場合、プログラムは利用可能な Telegram 操作オプションを表示します。
 
-![接続設定 3](../../images/runner_telegram_3.png)
+![接続設定 3 (2)](../../images/runner_telegram_3.png)

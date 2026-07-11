@@ -6,11 +6,11 @@
 
 - 在树形列表中选择所需策略，单击鼠标右键，然后选择 **Runner** 菜单项：
 
-  ![Designer 导出到 Runner](../../images/designer_runner_1.png)
+  ![Designer 导出到 Runner (1)](../../images/designer_runner_1.png)
 
 - 在打开的窗口中，选择需要导出到 **Runner** 的连接类型，并设置通过 [Telegram](../telegram_services.md) 管理策略所需的参数：
 
-  ![Designer 导出到 Runner](../../images/designer_runner_2.png)
+  ![Designer 导出到 Runner (2)](../../images/designer_runner_2.png)
 
 以下文件将复制到选定的导出目录：
 

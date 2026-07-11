@@ -8,13 +8,13 @@ Para o executar em dados históricos, é necessário descarregar os dados no for
 
 Depois de os dados serem descarregados com o [Hydra](../hydra.md), indique a pasta onde o [Hydra](../hydra.md) guardou o histórico no [Designer](../designer.md). Isto é configurado no separador **Teste histórico** -> **Armazenamento**.
 
-![Designer Início rápido 02](../../images/designer_quick_start_02.png)
+![Designer Início rápido 02 (1)](../../images/designer_quick_start_02.png)
 
 Ao clicar em ![Designer botão Editar](../../images/designer_edit_tool_00.png), é aberta a janela **Definições de armazenamento de dados**, onde pode configurar armazenamento local ou remoto. Também pode configurar o [Hydra](../hydra.md) [em modo de servidor](../hydra/server_mode/settings.md) como fonte de dados de mercado. Ao clicar no **botão do repositório**, é aberta a janela de seleção de pasta. Selecione a pasta onde guardou anteriormente o histórico descarregado pelo [Hydra](../hydra.md).
 
 Agora obtenha os instrumentos e os respetivos dados a partir do armazenamento local configurado. Aceda ao separador **Geral** e selecione o componente **Dados de mercado**.
 
-![Designer Início rápido 02](../../images/designer_quick_start_03.png)
+![Designer Início rápido 02 (2)](../../images/designer_quick_start_03.png)
 
 É aberto o separador de gestão de dados de mercado. Para obter os instrumentos disponíveis, clique em [Transferir instrumentos](market_data_storage/download_instruments.md). Para descarregar um instrumento, introduza o seu código ou selecione a opção **Todos**, escolha a fonte de dados e clique em **Confirmar**. O [Designer](../designer.md) solicita os instrumentos disponíveis à fonte de dados. Todos os instrumentos encontrados aparecem no painel **Todos os instrumentos**.
 

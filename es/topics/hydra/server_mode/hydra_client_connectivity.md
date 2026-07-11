@@ -4,11 +4,11 @@ En modo servidor, es posible conectar otro programa Hydra, que actuará como cli
 
 Para la conexión se usa una fuente especial:
 
-![Hydra tarea del servidor](../../../images/hydratasksserver_1.png)
+![Hydra tarea del servidor (1)](../../../images/hydratasksserver_1.png)
 
 **Configuración**
 
-![Hydra tarea del servidor](../../../images/hydratasksserver_2.png)
+![Hydra tarea del servidor (2)](../../../images/hydratasksserver_2.png)
 
 - **Dirección** - dirección del servidor Hydra.
 - **Inicio de sesión** - inicio de sesión (obligatorio si el servidor requiere autorización).

@@ -16,7 +16,7 @@ Das Panel **Designer** ist der Bereich, in dem der gesamte Prozess zum Erstellen
 
 Das Panel **Eigenschaften** zeigt die Parameter des auf dem Panel **Designer** ausgewählten Blocks an. Wenn ein Block im Panel **Designer** ausgewählt ist, wird sein Rahmen schwarz eingefärbt.
 
-![Designer Eigenschaften-Panel 00](../../../../images/designer_properties_panel_00.png)
+![Designer Eigenschaften-Panel 00 (1)](../../../../images/designer_properties_panel_00.png)
 
 Das Panel **Eigenschaften** kann in zwei Modi angezeigt werden: *Basiseinstellungen* und *Erweiterte Einstellungen*.
 
@@ -26,7 +26,7 @@ Im Modus *Basiseinstellungen* werden nur die wichtigsten Eigenschaften des Block
 
 Im Modus *Erweiterte Einstellungen* werden alle änderbaren und konfigurierbaren Eigenschaften des Blocks angezeigt.
 
-![Designer Eigenschaften-Panel 00](../../../../images/designer_properties_panel_01.png)
+![Designer Eigenschaften-Panel 00 (2)](../../../../images/designer_properties_panel_01.png)
 
 Alle Blöcke enthalten einen Satz vordefinierter Eigenschaften, die im Modus *Erweiterte Einstellungen* sichtbar werden:
 

@@ -9,15 +9,15 @@ stocksharp.studio.runner setup
 
 Ein Menü erscheint:
 
-![Verbindung einrichten 1](../../images/runner_setup_1.png)
+![Verbindung einrichten 1 (1)](../../images/runner_setup_1.png)
 
 Wenn Sie den Menüpunkt Connections auswählen, wechselt das Programm in den Modus zur Einrichtung des Connectors:
 
-![Verbindung einrichten 2](../../images/runner_setup_2.png)
+![Verbindung einrichten 2 (1)](../../images/runner_setup_2.png)
 
 Hier können Sie entweder eine zuvor gespeicherte Verbindung bearbeiten oder eine neue erstellen:
 
-![Verbindung einrichten 3](../../images/runner_setup_3.png)
+![Verbindung einrichten 3 (1)](../../images/runner_setup_3.png)
 
 Nach Auswahl des erforderlichen Typs der neuen Verbindung wechselt das Programm in das Bearbeitungsmenü für deren Einstellungen:
 
@@ -51,11 +51,11 @@ Im Ordner Data wird eine Datei **connector.json** erstellt (falls sie nicht bere
 
 Um die Integration mit [Telegram](../telegram_services.md) einzurichten, wählen Sie den Menüpunkt:
 
-![Verbindung einrichten 1](../../images/runner_telegram_1.png)
+![Verbindung einrichten 1 (2)](../../images/runner_telegram_1.png)
 
 Und authentifizieren Sie sich mit einer geeigneten Methode:
 
-![Verbindung einrichten 2](../../images/runner_telegram_2.png)
+![Verbindung einrichten 2 (2)](../../images/runner_telegram_2.png)
 
 Für die Authentifizierung per Token geben Sie das Token von [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) ein:
 
@@ -63,4 +63,4 @@ Für die Authentifizierung per Token geben Sie das Token von [https://stocksharp
 
 Bei Erfolg zeigt das Programm die verfügbaren Telegram-Optionen an:
 
-![Verbindung einrichten 3](../../images/runner_telegram_3.png)
+![Verbindung einrichten 3 (2)](../../images/runner_telegram_3.png)

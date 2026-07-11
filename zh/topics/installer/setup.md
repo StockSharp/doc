@@ -8,11 +8,11 @@
 3. 运行安装文件 **stocksharp_setup.exe**，然后按照安装向导的提示操作。
 4. 有时 Windows 不会立即启动安装，而是显示警告：
 
-   ![安装程序 ZIP 属性](../../images/installer_warn_1.png)
+   ![安装程序 ZIP 属性 (1)](../../images/installer_warn_1.png)
 
 5. 遇到这种情况时，请单击警告窗口中的 **更多信息** 链接，随后会出现以下窗口：
 
-    ![安装程序 ZIP 属性](../../images/installer_warn_2.png)
+    ![安装程序 ZIP 属性 (2)](../../images/installer_warn_2.png)
 
     单击 **仍要运行** 按钮即可开始安装 [安装程序](../installer.md)。
 

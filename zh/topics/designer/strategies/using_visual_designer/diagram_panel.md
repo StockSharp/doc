@@ -16,7 +16,7 @@
 
 **属性** 面板显示 **Designer** 面板中当前选中模块的参数。模块被选中时，其边框会显示为黑色。
 
-![Designer 属性面板 00](../../../../images/designer_properties_panel_00.png)
+![Designer 属性面板 00 (1)](../../../../images/designer_properties_panel_00.png)
 
 **属性** 面板支持两种显示模式：*基本设置* 和 *高级设置*。
 
@@ -26,7 +26,7 @@
 
 *高级设置* 模式会显示该模块所有可修改和配置的属性。
 
-![Designer 属性面板 00](../../../../images/designer_properties_panel_01.png)
+![Designer 属性面板 00 (2)](../../../../images/designer_properties_panel_01.png)
 
 所有模块都包含一组预定义属性，这些属性会在 *高级设置* 模式中显示：
 

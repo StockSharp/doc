@@ -8,13 +8,13 @@
 
 通过 [Hydra](../hydra.md) 下载数据后，需要指定 [Hydra](../hydra.md) 保存历史数据的目录，并在 [Designer](../designer.md) 中使用该目录。该目录在 **回测** -> **存储** 选项卡中配置。
 
-![Designer 快速入门 02](../../images/designer_quick_start_02.png)
+![Designer 快速入门 02 (1)](../../images/designer_quick_start_02.png)
 
 单击 ![Designer 编辑按钮](../../images/designer_edit_tool_00.png) 会打开 **数据存储设置** 窗口，可在其中配置本地或远程存储。也可以将 [Hydra](../hydra.md) [服务器模式](../hydra/server_mode/settings.md)配置为市场数据源。单击 **仓库按钮** 会打开文件夹选择窗口。请选择之前由 [Hydra](../hydra.md) 下载并保存历史数据的文件夹。
 
 如果没有所需的交易品种，请手动下载它们。
 
-![Designer 快速入门 02](../../images/designer_quick_start_03.png)
+![Designer 快速入门 02 (2)](../../images/designer_quick_start_03.png)
 
 市场数据管理选项卡会打开。要获取可用交易品种，请单击[下载交易品种](market_data_storage/download_instruments.md)。要下载交易品种，请输入其代码，或选择 **全部** 标志，选择数据源，然后单击 **确定**。[Designer](../designer.md) 会从数据源请求可用交易品种。所有找到的交易品种都会显示在 **所有交易品种** 面板中。
 

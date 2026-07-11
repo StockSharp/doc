@@ -8,11 +8,11 @@
 3. Starten Sie die Installationsdatei **stocksharp_setup.exe** und folgen Sie den Anweisungen des Installers.
 4. Manchmal startet Windows die Installation nicht sofort und zeigt eine Warnung an:
 
-   ![Installer-ZIP-Eigenschaften](../../images/installer_warn_1.png)
+   ![Installer-ZIP-Eigenschaften (1)](../../images/installer_warn_1.png)
 
 5. Klicken Sie in diesem Fall im Warnfenster auf den Link **Weitere Informationen**. Danach erscheint das folgende Fenster:
 
-    ![Installer-ZIP-Eigenschaften](../../images/installer_warn_2.png)
+    ![Installer-ZIP-Eigenschaften (2)](../../images/installer_warn_2.png)
 
     Durch Klicken auf **Trotzdem ausführen** wird die Installation des [Installer](../installer.md) gestartet.
 

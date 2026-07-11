@@ -8,15 +8,15 @@ stocksharp.studio.runner setup
 
 Será apresentado um menu:
 
-![Configuração da Ligação 1](../../images/runner_setup_1.png)
+![Configuração da Ligação 1 (1)](../../images/runner_setup_1.png)
 
 Ao selecionar o item Connections, o programa entrará no modo de configuração do conector:
 
-![Configuração da Ligação 2](../../images/runner_setup_2.png)
+![Configuração da Ligação 2 (1)](../../images/runner_setup_2.png)
 
 Aqui pode editar uma ligação guardada anteriormente ou criar uma nova:
 
-![Configuração da Ligação 3](../../images/runner_setup_3.png)
+![Configuração da Ligação 3 (1)](../../images/runner_setup_3.png)
 
 Depois de selecionar o tipo pretendido da nova ligação, o programa passará para o menu de edição das respetivas definições:
 
@@ -50,11 +50,11 @@ Na pasta Data, será criado um ficheiro **connector.json** (se ainda não tiver 
 
 Para configurar a integração com o [Telegram](../telegram_services.md), selecione o item de menu:
 
-![Configuração da Ligação 1](../../images/runner_telegram_1.png)
+![Configuração da Ligação 1 (2)](../../images/runner_telegram_1.png)
 
 E autentique-se por um método conveniente:
 
-![Configuração da Ligação 2](../../images/runner_telegram_2.png)
+![Configuração da Ligação 2 (2)](../../images/runner_telegram_2.png)
 
 Para autenticação por token, introduza o token de [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
 
@@ -62,4 +62,4 @@ Para autenticação por token, introduza o token de [https://stocksharp.ru/profi
 
 Em caso de sucesso, o programa apresentará as opções de operação do Telegram disponíveis:
 
-![Configuração da Ligação 3](../../images/runner_telegram_3.png)
+![Configuração da Ligação 3 (2)](../../images/runner_telegram_3.png)

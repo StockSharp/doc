@@ -6,11 +6,11 @@
 
 - Выберите нужную стратегию в дереве, нажмите правую кнопку мыши и выберите пункт меню **Runner**:
 
-  ![Designer экспорт в Runner](../../images/designer_runner_1.png)
+  ![Designer экспорт в Runner (1)](../../images/designer_runner_1.png)
 
 - В появившемся окне необходимо выбрать какие типы подключений нужно экспортировать в **Runner**, а также настройки для управления стратегией через [Telegram](../telegram_services.md):
 
-  ![Designer экспорт в Runner](../../images/designer_runner_2.png)
+  ![Designer экспорт в Runner (2)](../../images/designer_runner_2.png)
 
 В выбранную для экспорта директорию будут скопированы следующие файлы:
 

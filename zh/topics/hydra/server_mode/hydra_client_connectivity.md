@@ -4,11 +4,11 @@
 
 连接时使用专用数据源：
 
-![Hydra 服务器任务](../../../images/hydratasksserver_1.png)
+![Hydra 服务器任务 (1)](../../../images/hydratasksserver_1.png)
 
 **设置**
 
-![Hydra 服务器任务](../../../images/hydratasksserver_2.png)
+![Hydra 服务器任务 (2)](../../../images/hydratasksserver_2.png)
 
 - **地址** - Hydra 服务器地址。
 - **登录名** - 登录名（服务器要求身份验证时必填）。

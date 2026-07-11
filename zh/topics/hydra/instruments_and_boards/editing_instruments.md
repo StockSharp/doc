@@ -4,18 +4,18 @@
 
 进入 **交易品种** 窗口。
 
-![Hydra 编辑交易品种 00](../../../images/hydra_security_edit_00.png)
+![Hydra 编辑交易品种 00 (1)](../../../images/hydra_security_edit_00.png)
 
 随后将打开编辑窗口。
 
-![Hydra 编辑交易品种](../../../images/hydra_security_edit.png)
+![Hydra 编辑交易品种 (1)](../../../images/hydra_security_edit.png)
 
 如有需要，还可以批量编辑一组交易品种。选择一组交易品种，然后单击 ![Hydra 编辑](../../../images/hydra_edit.png) 按钮。
 
-![Hydra 编辑交易品种 00](../../../images/hydra_securities_edit_00.png)
+![Hydra 编辑交易品种 00 (2)](../../../images/hydra_securities_edit_00.png)
 
 根据需要编辑该组交易品种。
 
-![Hydra 编辑交易品种](../../../images/hydra_securities_edit.png)
+![Hydra 编辑交易品种 (2)](../../../images/hydra_securities_edit.png)
 
 如果所有选中交易品种的某个字段具有相同值，界面将显示该值；如果值不同，该字段将留空。例如，两个交易品种的价格步长都为 1，但其中一个的手数为 10，另一个为 100，则价格步长字段会显示 1，而数量步长字段会留空。

@@ -8,13 +8,13 @@
 
 [Hydra](../hydra.md) でデータをダウンロードした後、[Hydra](../hydra.md) が履歴を保存したディレクトリを [Designer](../designer.md) で指定します。これは **バックテスト** -> **ストレージ** タブで設定します。
 
-![Designer クイックスタート 02](../../images/designer_quick_start_02.png)
+![Designer クイックスタート 02 (1)](../../images/designer_quick_start_02.png)
 
 ![Designer 編集ボタン](../../images/designer_edit_tool_00.png) をクリックすると **データストレージ設定** ウィンドウが開き、ローカルストレージまたはリモートストレージを設定できます。また、[Hydra](../hydra.md) をマーケットデータソースとして [サーバーモード](../hydra/server_mode/settings.md) で設定することもできます。**リポジトリボタン** をクリックすると、フォルダー選択ウィンドウが開きます。以前に [Hydra](../hydra.md) でダウンロードした履歴を保存したフォルダーを選択します。
 
 次に、設定済みのローカルストレージから銘柄とそのデータを取得します。**共通** タブに移動し、**市場データ** コンポーネントを選択します。
 
-![Designer クイックスタート 02](../../images/designer_quick_start_03.png)
+![Designer クイックスタート 02 (2)](../../images/designer_quick_start_03.png)
 
 マーケットデータ管理タブが開きます。利用可能な銘柄を取得するには、[銘柄のダウンロード](market_data_storage/download_instruments.md) をクリックします。銘柄をダウンロードするには、そのコードを入力するか **すべて** フラグを選択し、データソースを選んで **確定** をクリックします。[Designer](../designer.md) は、利用可能な銘柄をデータソースに要求します。見つかったすべての銘柄が **全銘柄** パネルに表示されます。
 

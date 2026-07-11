@@ -7,11 +7,11 @@
 
 - ツリーで目的のストラテジーを選択し、右クリックして **Runner** メニュー項目を選択します。
 
-  ![Designer Runner へのエクスポート](../../images/designer_runner_1.png)
+  ![Designer Runner へのエクスポート (1)](../../images/designer_runner_1.png)
 
 - 表示されるウィンドウで、**Runner** にエクスポートする必要がある接続の種類と、[Telegram](../telegram_services.md) 経由でストラテジーを管理するための設定を選択する必要があります。
 
-  ![Designer Runner へのエクスポート](../../images/designer_runner_2.png)
+  ![Designer Runner へのエクスポート (2)](../../images/designer_runner_2.png)
 
 次のファイルが選択したエクスポートディレクトリにコピーされます。
 

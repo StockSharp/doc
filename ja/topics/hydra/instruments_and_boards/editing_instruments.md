@@ -4,18 +4,18 @@
 
 **銘柄** ウィンドウに移動します。
 
-![Hydra 銘柄編集 00](../../../images/hydra_security_edit_00.png)
+![Hydra 銘柄編集 00 (1)](../../../images/hydra_security_edit_00.png)
 
 編集ウィンドウが開きます。
 
-![Hydra 銘柄編集](../../../images/hydra_security_edit.png)
+![Hydra 銘柄編集 (1)](../../../images/hydra_security_edit.png)
 
 必要に応じて、銘柄グループを編集できます。銘柄グループを選択し、![Hydra 編集](../../../images/hydra_edit.png) ボタンをクリックします。
 
-![Hydra 銘柄編集 00](../../../images/hydra_securities_edit_00.png)
+![Hydra 銘柄編集 00 (2)](../../../images/hydra_securities_edit_00.png)
 
 その後、必要に応じてグループを編集します。
 
-![Hydra 銘柄編集](../../../images/hydra_securities_edit.png)
+![Hydra 銘柄編集 (2)](../../../images/hydra_securities_edit.png)
 
 選択したすべての銘柄があるフィールドで同じ値を持つ場合、その値が表示されます。値が異なる場合、そのフィールドは空になります。たとえば、2 つの銘柄の価格ステップが 1 で、一方のロット サイズが 10、もう一方が 100 の場合、価格ステップ フィールドには 1 が表示され、数量ステップ フィールドは空になります。

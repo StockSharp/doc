@@ -8,15 +8,15 @@ stocksharp.studio.runner setup
 
 程序将显示菜单：
 
-![连接设置 1](../../images/runner_setup_1.png)
+![连接设置 1 (1)](../../images/runner_setup_1.png)
 
 选择 Connections 后，程序将进入连接器设置模式：
 
-![连接设置 2](../../images/runner_setup_2.png)
+![连接设置 2 (1)](../../images/runner_setup_2.png)
 
 可以编辑已保存的连接，也可以创建新连接：
 
-![连接设置 3](../../images/runner_setup_3.png)
+![连接设置 3 (1)](../../images/runner_setup_3.png)
 
 选择所需的新连接类型后，程序将打开其设置编辑菜单：
 
@@ -50,11 +50,11 @@ stocksharp.studio.runner setup
 
 要设置与 [Telegram](../telegram_services.md) 的集成，请选择对应菜单项：
 
-![连接设置 1](../../images/runner_telegram_1.png)
+![连接设置 1 (2)](../../images/runner_telegram_1.png)
 
 然后选择方便的方式完成身份验证：
 
-![连接设置 2](../../images/runner_telegram_2.png)
+![连接设置 2 (2)](../../images/runner_telegram_2.png)
 
 使用令牌进行身份验证时，请输入从 [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) 获取的令牌：
 
@@ -62,4 +62,4 @@ stocksharp.studio.runner setup
 
 验证成功后，程序将显示可用的 Telegram 操作选项：
 
-![连接设置 3](../../images/runner_telegram_3.png)
+![连接设置 3 (2)](../../images/runner_telegram_3.png)

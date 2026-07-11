@@ -7,11 +7,11 @@ So exportieren Sie eine Strategie aus [Designer](../designer.md):
 
 - Wählen Sie die gewünschte Strategie in der Baumansicht aus, klicken Sie mit der rechten Maustaste darauf und wählen Sie den Menüpunkt **Runner**:
 
-  ![Designer Runner-Export](../../images/designer_runner_1.png)
+  ![Designer Runner-Export (1)](../../images/designer_runner_1.png)
 
 - Im angezeigten Fenster müssen Sie auswählen, welche Verbindungstypen nach **Runner** exportiert werden sollen, sowie die Einstellungen zur Verwaltung der Strategie über [Telegram](../telegram_services.md):
 
-  ![Designer Runner-Export](../../images/designer_runner_2.png)
+  ![Designer Runner-Export (2)](../../images/designer_runner_2.png)
 
 Die folgenden Dateien werden in das ausgewählte Exportverzeichnis kopiert:
 

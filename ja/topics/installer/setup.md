@@ -8,11 +8,11 @@
 3. インストールファイル **stocksharp_setup.exe** を実行し、インストーラーの指示に従います。
 4. Windows がすぐにインストールを開始せず、警告を表示することがあります。
 
-   ![インストーラーZIPのプロパティ](../../images/installer_warn_1.png)
+   ![インストーラーZIPのプロパティ (1)](../../images/installer_warn_1.png)
 
 5. この場合、警告ウィンドウの **詳細情報** リンクをクリックすると、次のウィンドウが表示されます。
 
-    ![インストーラーZIPのプロパティ](../../images/installer_warn_2.png)
+    ![インストーラーZIPのプロパティ (2)](../../images/installer_warn_2.png)
 
     **実行** ボタンをクリックすると、[インストーラー](../installer.md) のインストールが開始されます。
 

@@ -16,7 +16,7 @@ O painel **Designer** é onde ocorre todo o processo de criação de uma estrat�
 
 O painel **Propriedades** apresenta os parâmetros do bloco selecionado no painel **Designer**. Quando um bloco é selecionado no painel **Designer**, a sua moldura fica preta.
 
-![Designer Painel de propriedades 00](../../../../images/designer_properties_panel_00.png)
+![Designer Painel de propriedades 00 (1)](../../../../images/designer_properties_panel_00.png)
 
 O painel **Propriedades** pode ser apresentado em dois modos: *Definições básicas* e *Definições avançadas*.
 
@@ -26,7 +26,7 @@ No modo *definições básicas*, são apresentadas apenas as propriedades mais n
 
 No modo *advanced settings*, serão apresentadas todas as propriedades do bloco disponíveis para alteração e definição.
 
-![Designer Painel de propriedades 00](../../../../images/designer_properties_panel_01.png)
+![Designer Painel de propriedades 00 (2)](../../../../images/designer_properties_panel_01.png)
 
 Todos os blocos contêm um conjunto de propriedades predefinidas, que ficam visíveis no modo *advanced settings*:
 

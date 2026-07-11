@@ -2075,6 +2075,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownImageAltTextsAreUniqueWithinEachFile()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var duplicateGroups = EnumerateMarkdownImageAltTexts(ReadAllText(file))
+					.GroupBy(altText => altText.Text, StringComparer.Ordinal)
+					.Where(group => group.Select(altText => altText.Url).Distinct(StringComparer.OrdinalIgnoreCase).Count() > 1);
+
+				foreach (var group in duplicateGroups)
+				{
+					var lines = string.Join(", ", group.Select(altText => altText.Line));
+					errors.Add($"{RelativeToRepo(file)}:{group.First().Line}: image alt text '{group.Key}' is reused for different images on lines {lines}. Use distinct descriptions.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
 	{
 		var errors = new List<string>();

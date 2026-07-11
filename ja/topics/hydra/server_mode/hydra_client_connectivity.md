@@ -4,11 +4,11 @@
 
 接続には専用のソースを使用します:
 
-![Hydra サーバータスク](../../../images/hydratasksserver_1.png)
+![Hydra サーバータスク (1)](../../../images/hydratasksserver_1.png)
 
 **設定**
 
-![Hydra サーバータスク](../../../images/hydratasksserver_2.png)
+![Hydra サーバータスク (2)](../../../images/hydratasksserver_2.png)
 
 - **アドレス** - Hydra サーバーのアドレス。
 - **ログイン** - ログイン (サーバーが認証を要求する場合に必要)。

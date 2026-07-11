@@ -16,7 +16,7 @@
 
 **プロパティ** パネルには、**Designer** パネルで選択したブロックのパラメーターが表示されます。**Designer** パネルでブロックを選択すると、その枠が黒色になります。
 
-![Designer プロパティパネル 00](../../../../images/designer_properties_panel_00.png)
+![Designer プロパティパネル 00 (1)](../../../../images/designer_properties_panel_00.png)
 
 **プロパティ** パネルは、*基本設定* と *詳細設定* の 2 つのモードで表示できます。
 
@@ -26,7 +26,7 @@
 
 *詳細設定* モードでは、変更および設定が可能なブロックのすべてのプロパティが表示されます。
 
-![Designer プロパティパネル 00](../../../../images/designer_properties_panel_01.png)
+![Designer プロパティパネル 00 (2)](../../../../images/designer_properties_panel_01.png)
 
 すべてのブロックには、*詳細設定* モードで表示される定義済みプロパティのセットがあります。
 

@@ -16,7 +16,7 @@ El panel **Diseñador** es donde ocurre todo el proceso de creación de una estr
 
 El panel **Propiedades** muestra los parámetros del bloque seleccionado en el panel **Diseñador**. Cuando se selecciona un bloque en el panel **Diseñador**, su marco se colorea de negro.
 
-![Designer Panel de propiedades 00](../../../../images/designer_properties_panel_00.png)
+![Designer Panel de propiedades 00 (1)](../../../../images/designer_properties_panel_00.png)
 
 El panel **Propiedades** puede mostrarse en dos modos: *Configuración básica* y *Configuración avanzada*.
 
@@ -26,7 +26,7 @@ En el modo *configuración básica*, solo se muestran las propiedades más neces
 
 En el modo *advanced settings*, se mostrarán todas las propiedades del bloque disponibles para cambio y configuración.
 
-![Designer Panel de propiedades 00](../../../../images/designer_properties_panel_01.png)
+![Designer Panel de propiedades 00 (2)](../../../../images/designer_properties_panel_01.png)
 
 Todos los bloques contienen un conjunto de propiedades predefinidas que se hacen visibles en el modo *advanced settings*:
 
