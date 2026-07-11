@@ -25,7 +25,7 @@
    ![MT Install 4](../../../../images/mt_install_4.png)
 
    > [!TIP]
-   > - パスを自動的に判定できない場合は、ディレクトリ検索で *C:\\Users\\%your_user_name%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%many_letters_and_numbers%\\MQL4\\Experts\\* を手動で選択する必要があります（MT5 の場合、パスには MQL5 が含まれます）。
+   > - パスを自動的に判定できない場合は、ディレクトリ検索で *C:\\Users\\%ユーザー名%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%多数の文字と数字%\\MQL4\\Experts\\* を手動で選択する必要があります（MT5 の場合、パスには MQL5 が含まれます）。
 
 5. インストールを完了し、終了するまで待ちます。インストールの最後に、[インストーラー](../../../installer.md) はターミナルを設定する必要があることを警告します。これを行うには、MT ターミナルを起動して取引に接続します。
 6. ツール -> オプション メニューで **エキスパートアドバイザー** タブを選択し、外部 DLL 取引の許可（**DLL インポートを許可**）が有効になっていることを確認します。![MT 1](../../../../images/mt_1.png)

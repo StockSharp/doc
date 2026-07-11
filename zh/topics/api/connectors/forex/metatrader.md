@@ -25,7 +25,7 @@
    ![MT 安装 4](../../../../images/mt_install_4.png)
 
    > [!TIP]
-   > - 如果路径无法自动确定，您需要通过目录搜索手动选择它 *C:\Users\%your_user_name%\AppData\Roaming\MetaQuotes\Terminal\%many_letters_and_numbers%\MQL4\Experts\*（对于MT5，路径将包含MQL5）。
+   > - 如果路径无法自动确定，您需要通过目录搜索手动选择它 *C:\Users\%用户名%\AppData\Roaming\MetaQuotes\Terminal\%多字母数字%\MQL4\Experts\*（对于MT5，路径将包含MQL5）。
 
 5. 完成安装并等待安装结束。在安装结束时，[安装程序](../../../installer.md)会提示您现在需要配置终端。为此，请启动 MT 终端并连接到交易。
 6. 在工具->选项菜单中，选择 **专家顾问** 标签，并确保已启用外部 DLL 交易的权限（**允许 DLL 导入**）：![MT 1](../../../../images/mt_1.png)

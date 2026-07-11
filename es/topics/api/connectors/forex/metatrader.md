@@ -25,7 +25,7 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
    ![MT Install 4](../../../../images/mt_install_4.png)
 
    > [!TIP]
-   > - Si la ruta no puede determinarse automáticamente, debe seleccionarla manualmente mediante búsqueda de directorios *C:\\Users\\%your_user_name%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%many_letters_and_numbers%\\MQL4\\Experts\\* (para MT5, la ruta incluirá MQL5).
+   > - Si la ruta no puede determinarse automáticamente, debe seleccionarla manualmente mediante búsqueda de directorios *C:\\Users\\%su_usuario%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%muchas_letras_y_numeros%\\MQL4\\Experts\\* (para MT5, la ruta incluirá MQL5).
 
 5. Complete la instalación y espere a que finalice. Al final de la instalación, [Installer](../../../installer.md) advertirá que ahora debe configurar el terminal. Para ello, inicie el terminal MT y conéctese al trading.
 6. En el menú Herramientas -> Opciones, seleccione la pestaña **Asesores expertos** y asegúrese de que el permiso para trading con DLL externas (**Permitir importaciones de DLL**) esté habilitado:![MT 1](../../../../images/mt_1.png)
@@ -37,7 +37,7 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
 
    ![MT 3](../../../../images/mt_3.png)
 
-9. Aparecerá una ventana de configuración donde puede establecer el login-password (la autorización anónima está habilitada por defecto), así como la dirección de conexión (si se conecta a varios terminales a la vez, las direcciones deben contener puertos únicos).
+9. Aparecerá una ventana de configuración donde puede establecer el usuario y la contraseña (la autorización anónima está habilitada por defecto), así como la dirección de conexión (si se conecta a varios terminales a la vez, las direcciones deben contener puertos únicos).
 10. Debe aparecer un icono de carita en la esquina superior derecha del gráfico (el primero encontrado):
 
     ![MT 4](../../../../images/mt_4.png)

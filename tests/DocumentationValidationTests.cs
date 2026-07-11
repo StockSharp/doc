@@ -2134,7 +2134,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		var errors = new List<string>();
 		const string relativePath = "topics/api/connectors/forex/metatrader.md";
-		var pattern = new Regex(@"Tools(?:->|\\-\\>)Options|Experts Advisors|Allow DLL imports|\*\*Refresh\*\*|\*\*Attach to a chart\*\*|A также", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var pattern = new Regex(@"Tools(?:->|\\-\\>)Options|Experts Advisors|Allow DLL imports|\*\*Refresh\*\*|\*\*Attach to a chart\*\*|A также|%your_user_name%|%many_letters_and_numbers%|login-password", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{

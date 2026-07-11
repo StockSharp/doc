@@ -25,7 +25,7 @@ Beide Connectoren werden auf die gleiche Weise verwendet. Daher wird im Folgende
    ![MT Install 4](../../../../images/mt_install_4.png)
 
    > [!TIP]
-   > - Wenn der Pfad nicht automatisch ermittelt werden kann, müssen Sie ihn manuell über die Ordnersuche auswählen: *C:\\Users\\%your_user_name%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%many_letters_and_numbers%\\MQL4\\Experts\\* (für MT5 enthält der Pfad MQL5).
+   > - Wenn der Pfad nicht automatisch ermittelt werden kann, müssen Sie ihn manuell über die Ordnersuche auswählen: *C:\\Users\\%ihr_benutzername%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%viele_buchstaben_und_zahlen%\\MQL4\\Experts\\* (für MT5 enthält der Pfad MQL5).
 
 5. Schließen Sie die Installation ab und warten Sie, bis sie beendet ist. Am Ende der Installation weist der [Installer](../../../installer.md) darauf hin, dass das Terminal nun konfiguriert werden muss. Starten Sie dazu das MT-Terminal und stellen Sie eine Verbindung zum Handel her.
 6. Wählen Sie im Menü Extras -> Optionen die Registerkarte **Experten** aus und stellen Sie sicher, dass die Berechtigung für externen DLL-Handel (**DLL-Importe zulassen**) aktiviert ist:![MT 1](../../../../images/mt_1.png)
