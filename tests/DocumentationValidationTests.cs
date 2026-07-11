@@ -1526,6 +1526,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedMarkdownDoesNotKeepEnglishExampleAbbreviation()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\be\.g\.?", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized markdown keeps English example abbreviation '{match.Value}'. Localize it in prose.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownDoesNotKeepKnownEnglishSectionLabels()
 	{
 		var errors = new List<string>();
@@ -2097,6 +2123,36 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 					errors.Add($"{RelativeToRepo(file)}:{line}: CJK connector documentation keeps English message direction label '{match.Value}'. Localize visible direction labels.");
 				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedMetaTraderDocsDoNotKeepEnglishMenuLabels()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/connectors/forex/metatrader.md";
+		var pattern = new Regex(@"Tools(?:->|\\-\\>)Options|Experts Advisors|Allow DLL imports|\*\*Refresh\*\*|\*\*Attach to a chart\*\*|A также", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: MetaTrader instructions keep English menu label '{match.Value}'. Localize visible menu and action labels.");
 			}
 		}
 

@@ -222,7 +222,7 @@ rsiFast.DrawStyle = DrawStyles.Dot;            // 绘制样式：点
 bollingerElem.DrawStyle = DrawStyles.Dashdot;  // 绘制样式：点划线
 ```
 
-该方法返回一个 [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) 图表元素，该元素可以自定义。对于具有多个值的指标（e.g、[BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands)），主要颜色应用于第一个值，次要颜色应用于第二个值。
+该方法返回一个 [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) 图表元素，该元素可以自定义。对于具有多个值的指标（例如，[BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands)），主要颜色应用于第一个值，次要颜色应用于第二个值。
 
 #### DrawOwnTrades 方法
 

@@ -28,12 +28,12 @@ Ambos os conectores são utilizados da mesma forma, pelo que abaixo é descrito 
    > - Se o caminho não puder ser determinado automaticamente, é necessário selecioná-lo manualmente através da pesquisa de diretórios *C:\\Users\\%your_user_name%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%many_letters_and_numbers%\\MQL4\\Experts\\* (para MT5, o caminho incluirá MQL5).
 
 5. Conclua a instalação e aguarde que termine. No fim da instalação, o [Installer](../../../installer.md) avisará que agora é necessário configurar o terminal. Para isso, inicie o terminal MT e ligue-se à negociação.
-6. No menu Tools->Options, selecione o separador **Experts Advisors** e certifique-se de que a permissão para negociação por DLL externa (**Allow DLL imports**) está ativada:![MT 1](../../../../images/mt_1.png)
-7. Se o terminal estava em execução durante a instalação do conector (passo 2), é necessário atualizar a lista de experts clicando com o botão direito em Experts e selecionando **Refresh** no menu:
+6. No menu Ferramentas -> Opções, selecione o separador **Consultores especializados** e certifique-se de que a permissão para negociação por DLL externa (**Permitir importações de DLL**) está ativada:![MT 1](../../../../images/mt_1.png)
+7. Se o terminal estava em execução durante a instalação do conector (passo 2), é necessário atualizar a lista de especialistas clicando com o botão direito em especialistas e selecionando **Atualizar** no menu:
 
    ![MT 2](../../../../images/mt_2.png)
 
-8. Selecione o expert S#, clique com o botão direito e escolha **Attach to a chart** no menu:
+8. Selecione o especialista S#, clique com o botão direito e escolha **Anexar a um gráfico** no menu:
 
    ![MT 3](../../../../images/mt_3.png)
 
@@ -42,7 +42,7 @@ Ambos os conectores são utilizados da mesma forma, pelo que abaixo é descrito 
 
     ![MT 4](../../../../images/mt_4.png)
 
-    Além disso, na janela de log do expert deve aparecer informação sobre o arranque bem-sucedido do script e o número de instrumentos.
+    Além disso, na janela de registo do especialista deve aparecer informação sobre o arranque bem-sucedido do script e o número de instrumentos.
 11. Se a licença MT4 ou MT5 não tiver sido obtida, aparecerá no log uma linha semelhante à seguinte:
 
     ![MT 5](../../../../images/mt_5.png)
