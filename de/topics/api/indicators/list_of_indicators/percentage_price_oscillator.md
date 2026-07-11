@@ -18,20 +18,20 @@ Der PPO-Indikator schwankt um die Nulllinie, wobei positive Werte auf eine bulli
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – Zeitraum zur Berechnung des Short-EMA (Standardwert: 12)
+- **ShortPeriod** – Zeitraum zur Berechnung des kurzen EMA (Standardwert: 12)
 - **LongPeriod** – Zeitraum für die Berechnung des langen EMA (Standardwert: 26)
 
 ## Berechnung
 
 Die PPO-Berechnung umfasst die folgenden Schritte:
 
-1. Berechnen Sie kurze und länge exponentielle gleitende Durchschnitte:
+1. Berechnen Sie kurze und lange exponentielle gleitende Durchschnitte:
    ```
    Kurze EMA = EMA(Preis, ShortPeriod)
    Lange EMA = EMA(Preis, LongPeriod)
    ```
 
-2. Berechnen Sie die PPO-Linie als prozentuale Differenz zwischen Short- und Long-EMA:
+2. Berechnen Sie die PPO-Linie als prozentuale Differenz zwischen dem kurzen und dem langen EMA:
    ```
    PPO-Linie = ((kurze EMA - lange EMA) / lange EMA) * 100
    ```

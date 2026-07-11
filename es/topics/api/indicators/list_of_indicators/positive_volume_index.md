@@ -58,7 +58,7 @@ El índice de volumen positivo se puede interpretar de la siguiente manera:
    - Cuando PVI sube y NVI cae, puede indicar que la "multitud" compra mientras que el "dinero inteligente" vende (escenario potencialmente alcista).
    - Cuando PVI cae y NVI sube, puede indicar que la "multitud" vende mientras que el "dinero inteligente" compra (escenario potencialmente bajista).
 
-5. **Long-Term Changes**:
+5. **Cambios a largo plazo**:
    - PVI a menudo se considera un indicador a largo plazo
    - El cambio sostenido en la dirección PVI puede indicar un cambio significativo en el sentimiento del mercado
 

@@ -10,7 +10,7 @@ Der fraktale adaptive gleitende Durchschnitt (FRAMA) ist ein fortschrittlicher T
 
 FRAMA nutzt das Konzept der fraktalen Geometrie zur Analyse der Marktstruktur. Es bestimmt, wie „fraktal“ oder chaotisch der aktuelle Markt ist, und passt auf dieser Grundlage die Antwortrate des Indikators an:
 
-- Unter trendigen (weniger fraktalen) Marktbedingungen reagiert FRAMA schnell auf Preisänderungen, ähnlich wie ein Short-EMA
+- Unter trendigen (weniger fraktalen) Marktbedingungen reagiert FRAMA schnell auf Preisänderungen, ähnlich wie ein kurzer EMA
 - Bei seitwärts gerichteten (eher fraktalen) Marktbedingungen reagiert FRAMA langsamer, ähnlich wie ein langer EMA
 
 Dadurch kann FRAMA schneller auf erhebliche Preisbewegungen reagieren und Marktgeräusche ignorieren, was ihn im Vergleich zu herkömmlichen gleitenden Durchschnitten effektiver macht.

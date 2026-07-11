@@ -24,17 +24,17 @@ OMA 的主要优势在于能够识别趋势动量的变化，并根据零线交�
 
 1. 计算短期移动平均线：
    ```
-   Short MA = SMA(Price, ShortPeriod)
+   短期移动平均 = SMA(Price, ShortPeriod)
    ```
 
 2. 计算长期移动平均线：
    ```
-   Long MA = SMA(Price, LongPeriod)
+   长期移动平均 = SMA(Price, LongPeriod)
    ```
 
 3. 将OMA计算为短期移动平均与长期移动平均的差值：
    ```
-   OMA = Short MA - Long MA
+   OMA = 短期移动平均 - 长期移动平均
    ```
 
 其中：

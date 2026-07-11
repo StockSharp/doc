@@ -24,17 +24,17 @@ Die Berechnung des Oszillators des gleitenden Durchschnitts umfasst die folgende
 
 1. Berechnen Sie den kurzen gleitenden Durchschnitt:
    ```
-   Short MA = SMA(Price, ShortPeriod)
+   kurzer gleitender Durchschnitt = SMA(Price, ShortPeriod)
    ```
 
 2. Berechnen Sie den langen gleitenden Durchschnitt:
    ```
-   Long MA = SMA(Price, LongPeriod)
+   langer gleitender Durchschnitt = SMA(Price, LongPeriod)
    ```
 
 3. Berechnen Sie OMA als Differenz zwischen kurzen und langen gleitenden Durchschnitten:
    ```
-   OMA = Short MA - Long MA
+   OMA = kurzer gleitender Durchschnitt - langer gleitender Durchschnitt
    ```
 
 Dabei gilt:
@@ -50,8 +50,8 @@ Hinweis: Anstelle von SMA können auch andere Arten von gleitenden Durchschnitte
 Der Oszillator des gleitenden Durchschnitts kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
-   - OMA, das die Nulllinie von unten nach oben kreuzt (Short-MA kreuzt Long-MA von unten nach oben), kann als bullisches Signal angesehen werden
-   - OMA, das die Nulllinie von oben nach unten kreuzt (Short-MA kreuzt Long-MA von oben nach unten), kann als bärisches Signal angesehen werden
+   - OMA, das die Nulllinie von unten nach oben kreuzt (kurzer gleitender Durchschnitt kreuzt langer gleitender Durchschnitt von unten nach oben), kann als bullisches Signal angesehen werden
+   - OMA, das die Nulllinie von oben nach unten kreuzt (kurzer gleitender Durchschnitt kreuzt langer gleitender Durchschnitt von oben nach unten), kann als bärisches Signal angesehen werden
 
 2. **Extreme Werte**:
    - Hohe positive OMA-Werte weisen darauf hin, dass der Markt möglicherweise überkauft ist

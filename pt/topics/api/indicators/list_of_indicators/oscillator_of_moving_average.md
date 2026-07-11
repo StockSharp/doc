@@ -24,17 +24,17 @@ O cálculo do oscilador da média móvel envolve os seguintes passos:
 
 1. Calcular a média móvel curta:
    ```
-   Short MA = SMA(Price, ShortPeriod)
+   média móvel curta = SMA(Price, ShortPeriod)
    ```
 
 2. Calcular a média móvel longa:
    ```
-   Long MA = SMA(Price, LongPeriod)
+   média móvel longa = SMA(Price, LongPeriod)
    ```
 
 3. Calcular o OMA como a diferença entre as médias móveis curta e longa:
    ```
-   OMA = Short MA - Long MA
+   OMA = média móvel curta - média móvel longa
    ```
 
 Onde:

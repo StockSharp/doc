@@ -6,12 +6,12 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [ChandeKrollStop](
 
 ## Beschreibung
 
-Der Chande-Kroll-Stop-Indikator wurde als dynamisches Tool zum Festlegen von Stop-Loss-Levels entwickelt, das auf Änderungen der Marktvolatilität und des Markttrends reagiert. Es besteht aus zwei Linien: einer oberen Stopplinie (für Short-Positionen) und einer unteren Stopplinie (für Long-Positionen).
+Der Chande-Kroll-Stop-Indikator wurde als dynamisches Tool zum Festlegen von Stop-Loss-Levels entwickelt, das auf Änderungen der Marktvolatilität und des Markttrends reagiert. Es besteht aus zwei Linien: einer oberen Stopplinie (für Verkaufspositionen) und einer unteren Stopplinie (für Kaufpositionen).
 
 Der Hauptvorteil von CKS liegt in seiner Fähigkeit, sich an aktuelle Marktbedingungen anzupassen. In Zeiten hoher Volatilität werden die Stop-Linien weiter vom Preis entfernt positioniert, um eine vorzeitige Schließung von Positionen aufgrund von Marktgeräuschen zu vermeiden. In Zeiten geringer Volatilität bewegen sich die Stopplinien näher an den Preis heran und sorgen so für eine engere Trendverfolgung.
 
 CKS ist besonders nützlich für:
-- Festlegung von Stop-Loss-Levels für Long- und Short-Positionen
+- Festlegung von Stop-Loss-Levels für Kauf- und Verkaufspositionen
 - Mit adaptiver Risikokontrolle dem Trend folgen
 - Identifizierung potenzieller Trendumkehrpunkte
 - Schaffung mechanischer Handelssysteme mit klaren Ausstiegsregeln
@@ -52,9 +52,9 @@ Die Chande-Kroll-Stop-Berechnung umfasst die folgenden Schritte:
 
 ## Interpretation
 
-- **oberer Stop** wird für Short-Positionen verwendet. Übersteigt der Schlusskurs den oberen Stop, kann dies als Signal gewertet werden, eine Short-Position zu schließen oder eine Long-Position zu eröffnen.
+- **oberer Stop** wird für Verkaufspositionen verwendet. Übersteigt der Schlusskurs den oberen Stop, kann dies als Signal gewertet werden, eine Verkaufsposition zu schließen oder eine Kaufposition zu eröffnen.
 
-- **unterer Stop** wird für Long-Positionen verwendet. Fällt der Schlusskurs unter den unteren Stop, kann dies als Signal gewertet werden, eine Long-Position zu schließen oder eine Short-Position zu eröffnen.
+- **unterer Stop** wird für Kaufpositionen verwendet. Fällt der Schlusskurs unter den unteren Stop, kann dies als Signal gewertet werden, eine Kaufposition zu schließen oder eine Verkaufsposition zu eröffnen.
 
 - Das Überqueren der Stopplinien **Price** kann auf eine mögliche Trendumkehr oder den Beginn einer neuen Dynamik hinweisen.
 

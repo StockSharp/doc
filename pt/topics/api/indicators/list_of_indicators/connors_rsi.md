@@ -50,9 +50,9 @@ O cálculo do RSI de Connors envolve três componentes que são depois promediad
 
 RSI de Connors oscila entre 0 e 100, de forma semelhante ao RSI padrão:
 
-- **Valores extremamente elevados (acima de 90)** indicam fortes condições de sobrecompra. Isto pode ser um sinal para vender ou assumir uma posição short.
+- **Valores extremamente elevados (acima de 90)** indicam fortes condições de sobrecompra. Isto pode ser um sinal para vender ou assumir uma posição vendida.
 
-- **Valores extremamente baixos (abaixo de 10)** indicam fortes condições de sobrevenda. Isto pode ser um sinal para comprar ou fechar uma posição short.
+- **Valores extremamente baixos (abaixo de 10)** indicam fortes condições de sobrevenda. Isto pode ser um sinal para comprar ou fechar uma posição vendida.
 
 - **Níveis padrão**:
   - Acima de 70-80: sobrecompra

@@ -18,20 +18,20 @@ Der PVO-Indikator hilft bei der Identifizierung von Volumenanomalien, die erhebl
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – Zeitraum zur Berechnung des Short-Volumens EMA (Standardwert: 12)
-- **LongPeriod** – Zeitraum zur Berechnung des Long-Volumens EMA (Standardwert: 26)
+- **ShortPeriod** – Zeitraum zur Berechnung des kurzen Volumen-EMA (Standardwert: 12)
+- **LongPeriod** – Zeitraum zur Berechnung des langen Volumen-EMA (Standardwert: 26)
 
 ## Berechnung
 
 Die Berechnung des prozentualen Volumenoszillators umfasst die folgenden Schritte:
 
-1. Berechnen Sie kurze und länge exponentielle gleitende Durchschnitte des Volumens:
+1. Berechnen Sie kurze und lange exponentielle gleitende Durchschnitte des Volumens:
    ```
    Kurze EMA = EMA(Volumen, ShortPeriod)
    Lange EMA = EMA(Volumen, LongPeriod)
    ```
 
-2. Berechnen Sie die PVO-Linie als prozentuale Differenz zwischen Short- und Long-EMA:
+2. Berechnen Sie die PVO-Linie als prozentuale Differenz zwischen dem kurzen und dem langen Volumen-EMA:
    ```
    PVO-Linie = ((kurze EMA - lange EMA) / lange EMA) * 100
    ```

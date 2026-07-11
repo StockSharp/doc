@@ -41,8 +41,8 @@ Dabei gilt:
 Der Elliott-Wellen-Oszillator kann wie folgt interpretiert werden:
 
 1. **Positive und negative Werte**:
-   - Positive Werte (EWO über Null) zeigen an, dass der Short-EMA über dem Long-EMA liegt, was häufig einem Aufwärtstrend oder einer Aufwärtsimpulswelle entspricht
-   - Negative Werte (EWO unter Null) weisen darauf hin, dass der Short-EMA unter dem Long-EMA liegt, was häufig einem Abwärtstrend oder einer Abwärtsimpulswelle entspricht
+   - Positive Werte (EWO über Null) zeigen an, dass der kurze EMA über dem langen EMA liegt, was häufig einem Aufwärtstrend oder einer Aufwärtsimpulswelle entspricht
+   - Negative Werte (EWO unter Null) weisen darauf hin, dass der kurze EMA unter dem langen EMA liegt, was häufig einem Abwärtstrend oder einer Abwärtsimpulswelle entspricht
 
 2. **Nulllinienübergänge**:
    - Das Überschreiten der Nulllinie von unten nach oben kann den Beginn einer neuen Aufwärtsimpulswelle signalisieren

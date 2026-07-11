@@ -50,12 +50,12 @@ Das Elder-Impulse-System wird wie folgt interpretiert:
 
 1. **Grüne Kerzen (starker bullischer Impuls)**:
    - Zeigen Sie eine starke Aufwärtsdynamik an
-   - Beste Zeit zum Kaufen oder Halten von Long-Positionen
+   - Beste Zeit zum Kaufen oder Halten von Kaufpositionen
    - Eine Reihe grüner Kerzen weist auf einen starken Aufwärtstrend hin
 
 2. **Rote Kerzen (starker rückläufiger Impuls)**:
    - Zeigen Sie eine starke Abwärtsdynamik an
-   - Beste Zeit zum Verkaufen oder Halten von Short-Positionen
+   - Beste Zeit zum Verkaufen oder Halten von Verkaufspositionen
    - Eine Reihe roter Kerzen weist auf einen starken Abwärtstrend hin
 
 3. **Blaue Kerzen (kein klarer Impuls)**:
@@ -66,8 +66,8 @@ Das Elder-Impulse-System wird wie folgt interpretiert:
 4. **Handelsstrategien**:
    - Kaufen Sie, wenn Kerzen ihre Farbe von Blau nach Grün ändern
    - Verkaufen, wenn die Kerzen ihre Farbe von Blau nach Rot ändern
-   - Schließen Sie Long-Positionen, wenn Kerzen ihre Farbe von Grün in eine andere ändern
-   - Schließen Sie Short-Positionen, wenn Kerzen ihre Farbe von Rot zu einer anderen ändern
+   - Schließen Sie Kaufpositionen, wenn Kerzen ihre Farbe von Grün in eine andere ändern
+   - Schließen Sie Verkaufspositionen, wenn Kerzen ihre Farbe von Rot zu einer anderen ändern
 
 5. **Trendbestätigung**:
    - Eine Reihe grüner Kerzen bestätigt einen Aufwärtstrend

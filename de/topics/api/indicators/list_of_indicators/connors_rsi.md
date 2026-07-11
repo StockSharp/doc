@@ -50,9 +50,9 @@ Die Connors-RSI-Berechnung umfasst drei Komponenten, die dann gemittelt werden, 
 
 Connors-RSI oszilliert zwischen 0 und 100, ähnlich dem Standard-RSI:
 
-- **Extrem hohe Werte (über 90)** weisen auf stark überkaufte Bedingungen hin. Dies kann ein Signal zum Verkauf oder zum Eingehen einer Short-Position sein.
+- **Extrem hohe Werte (über 90)** weisen auf stark überkaufte Bedingungen hin. Dies kann ein Signal zum Verkauf oder zum Eingehen einer Verkaufsposition sein.
 
-- **Extrem niedrige Werte (unter 10)** weisen auf stark überverkaufte Bedingungen hin. Dies kann ein Signal zum Kauf oder zum Schließen einer Short-Position sein.
+- **Extrem niedrige Werte (unter 10)** weisen auf stark überverkaufte Bedingungen hin. Dies kann ein Signal zum Kauf oder zum Schließen einer Verkaufsposition sein.
 
 - **Standardniveaus**:
   - Über 70-80: überkauft

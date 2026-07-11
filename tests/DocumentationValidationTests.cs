@@ -2293,7 +2293,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Level 78.6%",
 			"Level 100%",
 			"Long EMA",
+			"Long MA",
 			"Long-term group",
+			"Long-Term Changes",
 			"Long-term Volatility",
 			"Lower Band",
 			"Lower Stop",
@@ -2323,6 +2325,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"Raw BMP",
 			"Raw Demand",
 			"Short EMA",
+			"Short MA",
 			"Short Momentum",
 			"Short-term group",
 			"Short-term Volatility",
@@ -2372,6 +2375,36 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: indicator formula or label keeps English text '{phrase}'. Localize formula labels and explanatory parameter names.");
 					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishShortLongTerms()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(
+			@"\b(?:Short|Long)[ -]Position(?:en|s)?\b|\b(?:Short|Long)-\s+und\b|\bund\s+(?:Short|Long)-\b|\b(?:Short|Long)-(?!(?:term|Term)\b)\p{L}+\b|\b(?:posición|posiciones|posição|posições)\s+(?:short|long)\b",
+			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized indicator documentation keeps English short/long term '{match.Value}'. Localize it in prose and formula explanations.");
 				}
 			}
 		}

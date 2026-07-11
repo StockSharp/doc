@@ -58,7 +58,7 @@ El índice de volumen negativo se puede interpretar de la siguiente manera:
    - Cuando NVI sube y PVI cae, puede indicar una compra de "dinero inteligente" mientras que la "multitud" vende (escenario potencialmente alcista).
    - Cuando NVI cae y PVI sube, puede indicar que se vende "dinero inteligente" mientras que la "multitud" compra (escenario potencialmente bajista).
 
-5. **Long-Term Changes**:
+5. **Cambios a largo plazo**:
    - NVI a menudo se considera un indicador a largo plazo
    - El cambio sostenido en la dirección NVI puede indicar un cambio significativo en el sentimiento del mercado
 

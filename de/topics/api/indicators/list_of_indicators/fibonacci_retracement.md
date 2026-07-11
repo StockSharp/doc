@@ -57,12 +57,12 @@ Fibonacci-Retracement-Stufen werden wie folgt interpretiert:
 
 2. **Im Aufwärtstrend**:
    - Fibonacci-Niveaus dienen als potenzielle Unterstützungsniveaus
-   - Das Abprallen von einem Fibonacci-Level kann ein Signal für den Einstieg in eine Long-Position sein
+   - Das Abprallen von einem Fibonacci-Level kann ein Signal für den Einstieg in eine Kaufposition sein
    - Das Durchbrechen mehrerer Fibonacci-Niveaus nach unten könnte auf eine Abschwächung des Trends hinweisen
 
 3. **Im Abwärtstrend**:
    - Fibonacci-Niveaus dienen als potenzielle Widerstandsniveaus
-   - Das Abprallen von einem Fibonacci-Level kann ein Signal für den Einstieg in eine Short-Position sein
+   - Das Abprallen von einem Fibonacci-Level kann ein Signal für den Einstieg in eine Verkaufsposition sein
    - Das Durchbrechen mehrerer Fibonacci-Niveaus nach oben könnte auf eine Abschwächung des Trends hinweisen
 
 4. **Übereinstimmung mit anderen Ebenen**:
