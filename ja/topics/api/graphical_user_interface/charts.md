@@ -9,7 +9,7 @@
 - [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) - エクイティカーブを表示するためのグラフィカルコンポーネント。
 - [ボックスチャート](charts/box_chart.md) - 出来高を数値のグリッドとして表すチャート。
 - [クラスターチャート](charts/cluster_chart.md) - 出来高をヒストグラム付きのクラスターとして表示するチャート。
-- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - 原資産に対するオプションポジションと「Greeks」を表示するグラフィカルコンポーネント。[ポジションチャート](options/position_chart.md) を参照してください。
+- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - 原資産に対するオプションポジションと「グリークス」を表示するグラフィカルコンポーネント。[ポジションチャート](options/position_chart.md) を参照してください。
 
 さらに、[S#](../../api.md) には出来高分析用の 2 種類のチャート、[ボックスチャート](charts/box_chart.md)と[クラスターチャート](charts/cluster_chart.md)が含まれています。
 

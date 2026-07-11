@@ -1,6 +1,6 @@
 # Optionsdesk
 
-Die grafische Komponente [OptionDesk](xref:StockSharp.Xaml.OptionDesk) ist eine Tabelle zur Anzeige des Optionsdesks. Sie zeigt die "Greeks", die implizite Volatilität, den theoretischen Preis sowie das beste Brief- und Geldangebot für Put- und Call-Optionen.
+Die grafische Komponente [OptionDesk](xref:StockSharp.Xaml.OptionDesk) ist eine Tabelle zur Anzeige des Optionsdesks. Sie zeigt die Optionsgriechen, die implizite Volatilität, den theoretischen Preis sowie das beste Brief- und Geldangebot für Put- und Call-Optionen.
 
 Unten folgt das Beispiel **OptionCalculator**, das diese Komponente verwendet. Der Quellcode des Beispiels befindet sich im Ordner *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 

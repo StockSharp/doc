@@ -1,6 +1,6 @@
 # Positionsdiagramm
 
-Die grafische Komponente [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) ist ein Diagramm, das die Position und die optionsbezogenen "Greeks" zum Basiswert anzeigt.
+Die grafische Komponente [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) ist ein Diagramm, das die Position und die Optionsgriechen zum Basiswert anzeigt.
 
 Nachfolgend wird das Beispiel SampleOptionQuoting gezeigt, in dem dieses Diagramm verwendet wird. Der Quellcode des Beispiels befindet sich im Ordner *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 

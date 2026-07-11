@@ -1,6 +1,6 @@
 # Gráfico de posição
 
-O componente gráfico [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) é um gráfico que mostra a posição e os "Greeks" das opções relacionados com o ativo subjacente.
+O componente gráfico [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) é um gráfico que mostra a posição e as gregas das opções relacionadas com o ativo subjacente.
 
 Segue-se o exemplo SampleOptionQuoting, no qual este gráfico é utilizado. O código-fonte do exemplo pode ser encontrado na pasta *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 

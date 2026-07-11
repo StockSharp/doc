@@ -9,7 +9,7 @@ Das zentrale Konzept der Grafikbibliothek ist das *Diagramm*. Ein *Diagramm* ist
 - [EquityCurveChart](xref:StockSharp.Xaml.Charting.EquityCurveChart) - grafische Komponente zur Anzeige von Equity-Kurven.
 - [BoxChart](charts/box_chart.md) - Diagramm, das Volumina als Zahlengitter darstellt.
 - [ClusterChart](charts/cluster_chart.md) - Diagramm, das Volumina als Cluster mit Histogrammen anzeigt.
-- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - grafische Komponente, die Optionspositionen und "Greeks" relativ zum Basiswert anzeigt. Siehe [OptionPositionChart](options/position_chart.md).
+- [OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) - grafische Komponente, die Optionspositionen und Optionsgriechen relativ zum Basiswert anzeigt. Siehe [OptionPositionChart](options/position_chart.md).
 
 Zusätzlich enthält [S#](../../api.md) zwei Diagrammtypen für die Volumenanalyse: [BoxChart](charts/box_chart.md) und [ClusterChart](charts/cluster_chart.md).
 

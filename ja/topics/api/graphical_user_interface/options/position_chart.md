@@ -1,6 +1,6 @@
 # ポジションチャート
 
-[OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) グラフィカルコンポーネントは、原資産に関連するポジションとオプションの「Greeks」を表示するチャートです。
+[OptionPositionChart](xref:StockSharp.Xaml.Charting.OptionPositionChart) グラフィカルコンポーネントは、原資産に関連するポジションとオプションの「グリークス」を表示するチャートです。
 
 以下は、このチャートを使用する SampleOptionQuoting の例です。この例のソースコードは *Samples\/06\_Strategies\/09\_LiveOptionsQuoting* フォルダーにあります。
 

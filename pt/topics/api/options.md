@@ -1,6 +1,6 @@
 # Opções
 
-Para trabalhar com opções, o [S#](../api.md) fornece métodos especiais para calcular “Greeks”, posições sintéticas, estratégias de cotação de opções para uma determinada volatilidade e cobertura delta.
+Para trabalhar com opções, o [S#](../api.md) fornece métodos especiais para calcular gregas, posições sintéticas, estratégias de cotação de opções para uma determinada volatilidade e cobertura delta.
 
 ## Conteúdo recomendado
 

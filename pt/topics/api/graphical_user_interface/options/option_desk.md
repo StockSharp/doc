@@ -1,6 +1,6 @@
 # Mesa de opções
 
-O componente gráfico [OptionDesk](xref:StockSharp.Xaml.OptionDesk) é uma tabela para apresentar a mesa de opções. Mostra os "Greeks", a volatilidade implícita, o preço teórico, a melhor oferta e a melhor procura para opções Put e Call.
+O componente gráfico [OptionDesk](xref:StockSharp.Xaml.OptionDesk) é uma tabela para apresentar a mesa de opções. Mostra as gregas, a volatilidade implícita, o preço teórico, a melhor oferta e a melhor procura para opções Put e Call.
 
 Abaixo está o exemplo **OptionCalculator**, que utiliza este componente. O código-fonte do exemplo pode ser encontrado na pasta *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 

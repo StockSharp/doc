@@ -1,6 +1,6 @@
 # オプションデスク
 
-[OptionDesk](xref:StockSharp.Xaml.OptionDesk) グラフィカルコンポーネントは、オプションデスクを表示するためのテーブルです。Put オプションと Call オプションについて、“Greeks”、インプライドボラティリティ、理論価格、最良売気配と最良買気配を表示します。 
+[OptionDesk](xref:StockSharp.Xaml.OptionDesk) グラフィカルコンポーネントは、オプションデスクを表示するためのテーブルです。Put オプションと Call オプションについて、“グリークス”、インプライドボラティリティ、理論価格、最良売気配と最良買気配を表示します。
 
 以下は、このコンポーネントを使用する **OptionCalculator** の例です。この例のソースコードは、*Samples\/06\_Strategies\/09\_LiveOptionsQuoting* フォルダーにあります。
 
