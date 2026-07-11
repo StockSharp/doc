@@ -1,6 +1,6 @@
 # DSP
 
-**Detrended Synthetic Price (DSP)** は、価格系列から全体的なトレンドを取り除き、トレーダーが短期的な価格変動に集中できるようにするテクニカル指標です。
+**トレンド除去合成価格 (DSP)** は、価格系列から全体的なトレンドを取り除き、トレーダーが短期的な価格変動に集中できるようにするテクニカル指標です。
 
 この指標を使用するには、[DetrendedSyntheticPrice](xref:StockSharp.Algo.Indicators.DetrendedSyntheticPrice) クラスを使用する必要があります。
 
@@ -23,7 +23,7 @@ DSP は次の用途に有用です。
 
 ## 計算
 
-Detrended Synthetic Price の計算には、次の手順が含まれます。
+トレンド除去合成価格 の計算には、次の手順が含まれます。
 
 1. 指定された期間における価格の移動平均を計算します。
    ```

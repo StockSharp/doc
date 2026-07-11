@@ -1,16 +1,16 @@
 # III
 
-**Intraday Intensity Index (III)** é um indicador técnico desenvolvido por David Bostian que avalia a relação entre o preço de fecho, o intervalo de preços e o volume de negociação dentro de um dia de negociação.
+**índice de intensidade intradiária (III)** é um indicador técnico desenvolvido por David Bostian que avalia a relação entre o preço de fecho, o intervalo de preços e o volume de negociação dentro de um dia de negociação.
 
 Para utilizar o indicador, é necessário usar a classe [IntradayIntensityIndex](xref:StockSharp.Algo.Indicators.IntradayIntensityIndex).
 
 ## Descrição
 
-O Intraday Intensity Index (III) combina informação sobre o movimento do preço e o volume de negociação para avaliar a intensidade da pressão compradora ou vendedora dentro de um dia de negociação. O indicador baseia-se no pressuposto de que a posição do preço de fecho em relação ao intervalo de preços do dia, combinada com o volume, pode indicar a direção e força do movimento do mercado.
+O índice de intensidade intradiária (III) combina informação sobre o movimento do preço e o volume de negociação para avaliar a intensidade da pressão compradora ou vendedora dentro de um dia de negociação. O indicador baseia-se no pressuposto de que a posição do preço de fecho em relação ao intervalo de preços do dia, combinada com o volume, pode indicar a direção e força do movimento do mercado.
 
 O III é particularmente útil para identificar alterações intradiárias no sentimento do mercado e determinar potenciais pontos de inversão. Valores positivos do indicador indicam pressão compradora (preço de fecho mais próximo do máximo do dia), enquanto valores negativos indicam pressão vendedora (preço de fecho mais próximo do mínimo do dia).
 
-O Intraday Intensity Index é especialmente eficaz para:
+O índice de intensidade intradiária é especialmente eficaz para:
 - Identificar alterações intradiárias no sentimento do mercado
 - Determinar potenciais pontos de inversão
 - Confirmar sinais de outros indicadores
@@ -23,7 +23,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Intraday Intensity Index envolve os seguintes passos:
+O cálculo do índice de intensidade intradiária envolve os seguintes passos:
 
 1. Calcular o valor III individual para cada período:
    ```
@@ -45,7 +45,7 @@ Onde:
 
 ## Interpretação
 
-O Intraday Intensity Index pode ser interpretado da seguinte forma:
+O índice de intensidade intradiária pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da Linha Zero**:
    - A transição de valores negativos para positivos pode ser vista como um sinal de alta, indicando aumento da pressão compradora

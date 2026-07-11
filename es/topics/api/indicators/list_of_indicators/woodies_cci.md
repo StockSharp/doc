@@ -1,6 +1,6 @@
 # WCCI
 
-**Woodies CCI (WCCI)** es una modificación del estándar Commodity Channel Index (CCI), desarrollado por el operador Ken Wood (conocido como "Woodies"). Esta variación CCI incluye suavizado adicional y se utiliza como parte de un sistema comercial integral Woodies CCI.
+**Woodies CCI (WCCI)** es una modificación del estándar índice de canal de materias primas (CCI), desarrollado por el operador Ken Wood (conocido como "Woodies"). Esta variación CCI incluye suavizado adicional y se utiliza como parte de un sistema comercial integral Woodies CCI.
 
 Para utilizar el indicador, debe utilizar la clase [WoodiesCCI](xref:StockSharp.Algo.Indicators.WoodiesCCI).
 

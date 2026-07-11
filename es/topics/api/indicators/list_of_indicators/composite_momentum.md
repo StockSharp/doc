@@ -1,12 +1,12 @@
 # CM
 
-**Composite Momentum (CM)** es un indicador que combina múltiples métodos de medir el impulso del precio para obtener señales más confiables sobre la fuerza y dirección de la tendencia.
+**impulso compuesto (CM)** es un indicador que combina múltiples métodos de medir el impulso del precio para obtener señales más confiables sobre la fuerza y dirección de la tendencia.
 
 Para utilizar el indicador, debe utilizar la clase [CompositeMomentum](xref:StockSharp.Algo.Indicators.CompositeMomentum).
 
 ## Descripción
 
-El indicador Composite Momentum (CM) es una herramienta integral que integra varios aspectos del movimiento de precios, incluida la tasa de cambio de precios, la fuerza relativa y otros componentes del impulso. A través de este enfoque combinado, CM proporciona una imagen más completa del impulso actual del mercado en comparación con los indicadores de impulso unidimensionales tradicionales.
+El indicador impulso compuesto (CM) es una herramienta integral que integra varios aspectos del movimiento de precios, incluida la tasa de cambio de precios, la fuerza relativa y otros componentes del impulso. A través de este enfoque combinado, CM proporciona una imagen más completa del impulso actual del mercado en comparación con los indicadores de impulso unidimensionales tradicionales.
 
 CM es eficaz para:
 - Determinando la fuerza de la tendencia actual
@@ -14,11 +14,11 @@ CM es eficaz para:
 - Detectar divergencias entre precio e impulso
 - Filtrar señales falsas de otros indicadores
 
-Composite Momentum es particularmente útil en mercados volátiles donde los indicadores de impulso tradicionales pueden generar numerosas señales falsas.
+impulso compuesto es particularmente útil en mercados volátiles donde los indicadores de impulso tradicionales pueden generar numerosas señales falsas.
 
 ## Cálculo
 
-El cálculo de Composite Momentum implica varias etapas y componentes:
+El cálculo de impulso compuesto implica varias etapas y componentes:
 
 1. Calcular los componentes del impulso:
    - El precio cambia con respecto a períodos anteriores

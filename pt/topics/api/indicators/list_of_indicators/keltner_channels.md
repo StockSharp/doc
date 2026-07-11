@@ -1,19 +1,19 @@
 # KC
 
-**Keltner Channels (KC)** é um indicador técnico composto por um conjunto de bandas de volatilidade que usa uma média móvel exponencial (EMA) como linha central e o intervalo verdadeiro médio (ATR) para determinar a largura do canal.
+**canais de Keltner (KC)** é um indicador técnico composto por um conjunto de bandas de volatilidade que usa uma média móvel exponencial (EMA) como linha central e o intervalo verdadeiro médio (ATR) para determinar a largura do canal.
 
 Para utilizar o indicador, é necessário usar a classe [KeltnerChannels](xref:StockSharp.Algo.Indicators.KeltnerChannels).
 
 ## Descrição
 
-Os Keltner Channels consistem em três linhas:
+Os canais de Keltner consistem em três linhas:
 1. **Linha Central**: normalmente representada por uma EMA de 20 períodos
 2. **Banda Superior**: linha central mais um multiplicador do ATR
 3. **Banda Inferior**: linha central menos o mesmo multiplicador do ATR
 
 O indicador foi desenvolvido por Chester Keltner nos anos 1960 e posteriormente modificado por Linda Raschke, que substituiu a média móvel simples (SMA) por uma média móvel exponencial (EMA) e começou a usar o ATR em vez do intervalo máximo-mínimo para calcular a largura do canal.
 
-Os Keltner Channels ajudam os traders a determinar a direcção da tendência e potenciais níveis de suporte e resistência. Também são usados para identificar condições de sobrecompra e sobrevenda quando o preço toca ou rompe a banda superior ou inferior, respectivamente.
+Os canais de Keltner ajudam os traders a determinar a direcção da tendência e potenciais níveis de suporte e resistência. Também são usados para identificar condições de sobrecompra e sobrevenda quando o preço toca ou rompe a banda superior ou inferior, respectivamente.
 
 ## Parâmetros
 
@@ -23,7 +23,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo dos Keltner Channels envolve os seguintes passos:
+O cálculo dos canais de Keltner envolve os seguintes passos:
 
 1. Calcular a média móvel exponencial:
    ```
@@ -50,7 +50,7 @@ Onde:
 
 ## Interpretação
 
-Os Keltner Channels podem ser interpretados da seguinte forma:
+Os canais de Keltner podem ser interpretados da seguinte forma:
 
 1. **Direcção da Tendência**:
    - Quando as três linhas apontam para cima, isto indica uma tendência ascendente

@@ -1,12 +1,12 @@
 # AFI
 
-**Approval Flow Index (AFI)** es un indicador que mide la fuerza de la tendencia en función de la relación entre el volumen y el movimiento del precio.
+**índice de flujo de aprobación (AFI)** es un indicador que mide la fuerza de la tendencia en función de la relación entre el volumen y el movimiento del precio.
 
 Para utilizar el indicador, debe utilizar la clase [ApprovalFlowIndex](xref:StockSharp.Algo.Indicators.ApprovalFlowIndex).
 
 ## Descripción
 
-El Approval Flow Index (AFI) ayuda a evaluar la intensidad del flujo de pedidos en el mercado y determinar la fuerza de la tendencia actual. Este indicador analiza la relación entre el volumen de operaciones y el movimiento de precios para identificar posibles puntos de reversión o confirmar la continuación de la tendencia.
+El índice de flujo de aprobación (AFI) ayuda a evaluar la intensidad del flujo de pedidos en el mercado y determinar la fuerza de la tendencia actual. Este indicador analiza la relación entre el volumen de operaciones y el movimiento de precios para identificar posibles puntos de reversión o confirmar la continuación de la tendencia.
 
 El indicador AFI se puede utilizar para:
 - Determinando la fuerza de la tendencia actual
@@ -20,7 +20,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Approval Flow Index se basa en el análisis de la variación de precios y el volumen durante un período específico:
+El cálculo de índice de flujo de aprobación se basa en el análisis de la variación de precios y el volumen durante un período específico:
 
 1. Primero, calcule el cambio de precio para el período.
 2. Luego relacione este cambio con el volumen de operaciones.

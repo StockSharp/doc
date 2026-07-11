@@ -2,13 +2,13 @@
 
 ﻿# ALF
 
-**Adaptive Laguerre Filter (ALF)** é um indicador desenvolvido para suavizar dados de preço com atraso mínimo, baseado nos princípios matemáticos do filtro de Laguerre.
+**filtro adaptativo de Laguerre (ALF)** é um indicador desenvolvido para suavizar dados de preço com atraso mínimo, baseado nos princípios matemáticos do filtro de Laguerre.
 
 Para usar o indicador, é necessário usar a classe [AdaptiveLaguerreFilter](xref:StockSharp.Algo.Indicators.AdaptiveLaguerreFilter).
 
 ## Descrição
 
-O Adaptive Laguerre Filter é uma ferramenta avançada de filtragem de ruído de mercado. Fornece uma representação mais suave do movimento do preço, mantendo uma resposta rápida a alterações reais de tendência. Este filtro é especialmente útil para reduzir o atraso frequentemente encontrado nos indicadores tradicionais de suavização.
+O filtro adaptativo de Laguerre é uma ferramenta avançada de filtragem de ruído de mercado. Fornece uma representação mais suave do movimento do preço, mantendo uma resposta rápida a alterações reais de tendência. Este filtro é especialmente útil para reduzir o atraso frequentemente encontrado nos indicadores tradicionais de suavização.
 
 A principal vantagem do ALF face às médias móveis clássicas está na sua capacidade de separar de forma mais eficaz o ruído de mercado dos movimentos genuínos do preço, tornando-o uma ferramenta valiosa para traders que procuram reduzir sinais falsos.
 
@@ -21,7 +21,7 @@ O parâmetro Gamma determina o grau de suavização: valores mais baixos criam u
 
 ## Cálculo
 
-O Adaptive Laguerre Filter baseia-se em polinómios de Laguerre e representa um sistema de filtragem de resposta ao impulso finita (FIR). O cálculo usa as seguintes fórmulas:
+O filtro adaptativo de Laguerre baseia-se em polinómios de Laguerre e representa um sistema de filtragem de resposta ao impulso finita (FIR). O cálculo usa as seguintes fórmulas:
 
 1. São calculados os valores intermédios L0, L1, L2 e L3:
    ```

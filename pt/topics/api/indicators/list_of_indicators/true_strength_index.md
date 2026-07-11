@@ -1,6 +1,6 @@
-# True Strength Index
+# índice de força verdadeira
 
-O **True Strength Index (TSI)** é um oscilador de momentum criado por William Blau. Aplica uma dupla suavização à diferença
+O **índice de força verdadeira (TSI)** é um oscilador de momentum criado por William Blau. Aplica uma dupla suavização à diferença
 entre preços de fecho consecutivos, ajudando a identificar tendências e pontos de inversão com menos atraso em comparação com muitos
 osciladores clássicos.
 
@@ -10,7 +10,7 @@ Use a classe [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengthInd
 
 1. Calcule a alteração de preço `m = Close − PreviousClose`.
 2. Aplique duas médias móveis exponenciais com períodos `Length1` e `Length2` tanto a `m` como a `|m|`.
-3. Calcule a razão entre o momentum com dupla suavização e o momentum absoluto com dupla suavização:  
+3. Calcule a razão entre o momentum com dupla suavização e o momentum absoluto com dupla suavização:
    `TSI = 100 × EMA(EMA(m, Length1), Length2) / EMA(EMA(|m|, Length1), Length2)`.
 4. Opcionalmente, derive uma linha de sinal usando uma EMA do TSI com o período **Signal**.
 

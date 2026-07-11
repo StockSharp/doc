@@ -1,12 +1,12 @@
 # RC
 
-**Rainbow Charts (RC)** ist ein Indikator für die technische Analyse, der aus einer Reihe gleitender Durchschnitte mit unterschiedlichen Zeiträumen besteht, die in einem einzigen Diagramm angezeigt werden. Optisch ähnelt der Indikator einem Regenbogen, daher der Name.
+**Regenbogencharts (RC)** ist ein Indikator für die technische Analyse, der aus einer Reihe gleitender Durchschnitte mit unterschiedlichen Zeiträumen besteht, die in einem einzigen Diagramm angezeigt werden. Optisch ähnelt der Indikator einem Regenbogen, daher der Name.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [RainbowCharts](xref:StockSharp.Algo.Indicators.RainbowCharts) verwenden.
 
 ## Beschreibung
 
-Rainbow Charts basieren auf der Verwendung mehrerer gleitender Durchschnitte (normalerweise einfacher SMA) mit progressiv zunehmenden Perioden. Verschiedene gleitende Durchschnittslinien sind in unterschiedlichen Farben eingefärbt, wodurch ein Regenbogeneffekt auf dem Diagramm entsteht.
+Regenbogencharts basieren auf der Verwendung mehrerer gleitender Durchschnitte (normalerweise einfacher SMA) mit progressiv zunehmenden Perioden. Verschiedene gleitende Durchschnittslinien sind in unterschiedlichen Farben eingefärbt, wodurch ein Regenbogeneffekt auf dem Diagramm entsteht.
 
 Der Indikator hilft bei der Bestimmung der Trendrichtung und -stärke:
 - Wenn die Linien divergieren, deutet dies auf eine Trendverstärkung hin
@@ -20,7 +20,7 @@ Der Indikator hilft bei der Bestimmung der Trendrichtung und -stärke:
 
 ## Berechnung
 
-Rainbow Charts bestehen aus mehreren gleitenden Durchschnitten (SMA), wobei sich die Periode jeder nachfolgenden Linie um einen bestimmten Schritt erhöht. Für n Zeilen mit einer Basisperiode p werden die Perioden wie folgt berechnet:
+Regenbogencharts bestehen aus mehreren gleitenden Durchschnitten (SMA), wobei sich die Periode jeder nachfolgenden Linie um einen bestimmten Schritt erhöht. Für n Zeilen mit einer Basisperiode p werden die Perioden wie folgt berechnet:
 
 ```
 Period(i) = p + i * step

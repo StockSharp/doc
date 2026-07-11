@@ -67,7 +67,7 @@ Der Marktgemeinheitsindex kann wie folgt interpretiert werden:
      - Oszillatorsignale (RSI, Stochastik) sind bei hohem MMI zuverlässiger
 
 6. **Kombination mit anderen Indikatoren**:
-   - MMI funktioniert gut in Kombination mit ADX (Average Directional Index)
+   - MMI funktioniert gut in Kombination mit ADX (Durchschnittlicher Richtungsindex)
    - Low MMI und der hohe ADX bestätigen einen starken Trend
    - High MMI und niedriges ADX bestätigen einen Seitwärtsmarkt
 

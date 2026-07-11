@@ -1,20 +1,20 @@
 # NVI
 
-**Negative Volume Index (NVI)** é um indicador técnico desenvolvido por Paul Dysart que se foca nas alterações de preço nos dias em que o volume de negociação diminui em comparação com o dia anterior.
+**índice de volume negativo (NVI)** é um indicador técnico desenvolvido por Paul Dysart que se foca nas alterações de preço nos dias em que o volume de negociação diminui em comparação com o dia anterior.
 
 Para usar o indicador, é necessário usar a classe [NegativeVolumeIndex](xref:StockSharp.Algo.Indicators.NegativeVolumeIndex).
 
 ## Descrição
 
-O Negative Volume Index (NVI) baseia-se na ideia de que o "smart money" está ativo em dias de baixo volume, enquanto a "multidão" (traders não profissionais) está mais ativa em dias de volume elevado. O NVI só se altera nos dias em que o volume atual é inferior ao volume do dia anterior.
+O índice de volume negativo (NVI) baseia-se na ideia de que o "smart money" está ativo em dias de baixo volume, enquanto a "multidão" (traders não profissionais) está mais ativa em dias de volume elevado. O NVI só se altera nos dias em que o volume atual é inferior ao volume do dia anterior.
 
 O conceito do indicador sugere que os movimentos de preço com volume reduzido são mais significativos e refletem frequentemente as ações de investidores informados. O NVI procura acompanhar estes movimentos, ignorando alterações de preço em dias com volume aumentado.
 
-O NVI é frequentemente usado em conjunto com o Positive Volume Index (PVI) complementar, que, pelo contrário, considera apenas os dias em que o volume aumenta.
+O NVI é frequentemente usado em conjunto com o índice de volume positivo (PVI) complementar, que, pelo contrário, considera apenas os dias em que o volume aumenta.
 
 ## Cálculo
 
-O cálculo do Negative Volume Index envolve os seguintes passos:
+O cálculo do índice de volume negativo envolve os seguintes passos:
 
 1. Definir o valor inicial do NVI (normalmente 1000):
    ```
@@ -37,7 +37,7 @@ Por outras palavras, o NVI só muda nos dias em que o volume de negociação dim
 
 ## Interpretação
 
-O Negative Volume Index pode ser interpretado da seguinte forma:
+O índice de volume negativo pode ser interpretado da seguinte forma:
 
 1. **Análise da tendência**:
    - NVI em subida indica que o "smart money" está a comprar, o que pode antecipar uma futura subida do preço

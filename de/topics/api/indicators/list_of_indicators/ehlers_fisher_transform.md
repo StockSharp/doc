@@ -1,12 +1,12 @@
 # EFT
 
-**Ehlers Fisher Transform (EFT)** ist ein von John Ehlers entwickelter technischer Indikator, der die statistische Fisher-Transformation nutzt, um Preisdaten in eine normalverteilte Form umzuwandeln.
+**Ehlers-Fisher-Transformation (EFT)** ist ein von John Ehlers entwickelter technischer Indikator, der die statistische Fisher-Transformation nutzt, um Preisdaten in eine normalverteilte Form umzuwandeln.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [EhlersFisherTransform](xref:StockSharp.Algo.Indicators.EhlersFisherTransform) verwenden.
 
 ## Beschreibung
 
-Der Ehlers Fisher Transform basiert auf dem Konzept, dass Marktpreise keine Normalverteilung (Gaußverteilung) aufweisen. Stattdessen weisen sie häufig asymmetrische Verteilungen auf. Der Indikator wendet eine mathematische Fisher-Transformationsformel an, um diese asymmetrischen Verteilungen in normalverteilte Werte umzuwandeln.
+Der Ehlers-Fisher-Transformation basiert auf dem Konzept, dass Marktpreise keine Normalverteilung (Gaußverteilung) aufweisen. Stattdessen weisen sie häufig asymmetrische Verteilungen auf. Der Indikator wendet eine mathematische Fisher-Transformationsformel an, um diese asymmetrischen Verteilungen in normalverteilte Werte umzuwandeln.
 
 Diese Transformation macht extreme Preisbewegungen deutlicher wahrnehmbar und hilft, Marktumkehrpunkte klarer zu erkennen. Wenn die Fisher-Transformation angewendet wird, steigen die Spitzenwerte stark an, wodurch Extreme im Marktverhalten deutlicher werden.
 
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Ehlers Fisher Transform-Berechnung umfasst mehrere Schritte:
+Die Ehlers-Fisher-Transformation-Berechnung umfasst mehrere Schritte:
 
 1. Preisdaten in Werte zwischen -1 und +1 umwandeln (normalerweise unter Verwendung eines normalisierten Preisrangs oder eines anderen Oszillators):
    ```
@@ -48,7 +48,7 @@ Die Ehlers Fisher Transform-Berechnung umfasst mehrere Schritte:
 
 ## Interpretation
 
-Der Ehlers Fisher Transform kann wie folgt interpretiert werden:
+Der Ehlers-Fisher-Transformation kann wie folgt interpretiert werden:
 
 1. **Extreme Werte**:
    - Werte über +2 weisen häufig auf überkaufte Marktbedingungen hin
@@ -69,7 +69,7 @@ Der Ehlers Fisher Transform kann wie folgt interpretiert werden:
    - Ein steiler Anstieg weist auf eine starke Aufwärtsdynamik hin
    - Ein steiler Abwärtstrend weist auf eine starke Abwärtsdynamik hin
 
-Der Ehlers Fisher Transform unterscheidet sich von vielen anderen Oszillatoren dadurch, dass er extreme Werte erreichen und dort einige Zeit verharren kann, ohne unbedingt sofort umzukehren. Dies macht es nützlich, um starke Trendbewegungen zu identifizieren.
+Der Ehlers-Fisher-Transformation unterscheidet sich von vielen anderen Oszillatoren dadurch, dass er extreme Werte erreichen und dort einige Zeit verharren kann, ohne unbedingt sofort umzukehren. Dies macht es nützlich, um starke Trendbewegungen zu identifizieren.
 
 ![indicator_ehlers_fisher_transform](../../../../images/indicator_ehlers_fisher_transform.png)
 

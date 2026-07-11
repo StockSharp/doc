@@ -1,12 +1,12 @@
 # IMI
 
-**Intraday Momentum Index (IMI)** es un indicador técnico desarrollado por Tushar Chande que combina principios de fijación de precios intradía y el concepto RSI para medir el impulso intradiario.
+**índice de impulso intradía (IMI)** es un indicador técnico desarrollado por Tushar Chande que combina principios de fijación de precios intradía y el concepto RSI para medir el impulso intradiario.
 
 Para utilizar el indicador, debe utilizar la clase [IntradayMomentumIndex](xref:StockSharp.Algo.Indicators.IntradayMomentumIndex).
 
 ## Descripción
 
-El Intraday Momentum Index (IMI) fue creado como una modificación del clásico índice de fuerza relativa (RSI), adaptado específicamente para analizar la dinámica del mercado intradiario. En lugar de utilizar precios de cierre secuenciales, como en el RSI tradicional, IMI compara el precio de cierre con el precio de apertura de cada período.
+El índice de impulso intradía (IMI) fue creado como una modificación del clásico índice de fuerza relativa (RSI), adaptado específicamente para analizar la dinámica del mercado intradiario. En lugar de utilizar precios de cierre secuenciales, como en el RSI tradicional, IMI compara el precio de cierre con el precio de apertura de cada período.
 
 IMI evalúa con qué frecuencia y con qué fuerza el precio de cierre supera el precio de apertura (impulso positivo) o cae por debajo del precio de apertura (impulso negativo) durante un período determinado. Esto permite identificar la dirección predominante y la fuerza del movimiento intradiario.
 
@@ -23,7 +23,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Intraday Momentum Index implica los siguientes pasos:
+El cálculo de índice de impulso intradía implica los siguientes pasos:
 
 1. Determinar el movimiento del precio intradía:
    ```
@@ -46,7 +46,7 @@ Nota: Si (Ganancias Sum + Pérdidas Sum) es igual a cero, IMI se establece en 50
 
 ## Interpretación
 
-El Intraday Momentum Index se interpreta de manera similar a RSI:
+El índice de impulso intradía se interpreta de manera similar a RSI:
 
 1. **Value Range**:
    - IMI oscila entre 0 y 100

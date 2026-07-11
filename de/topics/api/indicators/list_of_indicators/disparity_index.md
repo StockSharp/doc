@@ -1,16 +1,16 @@
 # DPI
 
-**Disparity Index (DPI)** ist ein technischer Indikator, der die relative Abweichung des aktuellen Preises von einem gleitenden Durchschnitt über einen bestimmten Zeitraum misst, ausgedrückt als Prozentsatz.
+**Disparitätsindex (DPI)** ist ein technischer Indikator, der die relative Abweichung des aktuellen Preises von einem gleitenden Durchschnitt über einen bestimmten Zeitraum misst, ausgedrückt als Prozentsatz.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [DisparityIndex](xref:StockSharp.Algo.Indicators.DisparityIndex) verwenden.
 
 ## Beschreibung
 
-Der Disparity Index (DPI) misst den Grad der Preisabweichung von seinem gleitenden Durchschnitt. Dieser Indikator hilft zu bestimmen, wie weit der Preis im Verhältnis zu seinem Durchschnittswert „gestreckt“ ist, und kann zur Identifizierung potenzieller überkaufter oder überverkaufter Bedingungen verwendet werden.
+Der Disparitätsindex (DPI) misst den Grad der Preisabweichung von seinem gleitenden Durchschnitt. Dieser Indikator hilft zu bestimmen, wie weit der Preis im Verhältnis zu seinem Durchschnittswert „gestreckt“ ist, und kann zur Identifizierung potenzieller überkaufter oder überverkaufter Bedingungen verwendet werden.
 
 DPI basiert auf der Annahme, dass der Preis nach einer erheblichen Abweichung tendenziell zu seinem Mittelwert zurückkehrt. Je größer die Abweichung, desto höher ist die Wahrscheinlichkeit, dass sich der Preis anschließend in die entgegengesetzte Richtung bewegt und sich dem Durchschnitt annähert.
 
-Der Disparity Index ist nützlich für:
+Der Disparitätsindex ist nützlich für:
 - Identifizierung extremer Preisabweichungen vom Mittelwert
 - Erkennen möglicher Umkehrpunkte
 - Messung der Stärke des aktuellen Trends
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Disparity Index-Berechnungsformel ist ganz einfach:
+Die Disparitätsindex-Berechnungsformel ist ganz einfach:
 
 ```
 DPI = ((Price / MA) - 1) * 100
@@ -38,7 +38,7 @@ Positive DPI-Werte zeigen an, dass der Preis über seinem gleitenden Durchschnit
 
 ## Interpretation
 
-Der Disparity Index kann wie folgt interpretiert werden:
+Der Disparitätsindex kann wie folgt interpretiert werden:
 
 1. **Extremwerte**:
    - Hohe positive Werte (z. B. über +10 %) können auf überkaufte Marktbedingungen hinweisen

@@ -1,12 +1,12 @@
 # NVI
 
-**Negative Volume Index (NVI)** ist ein von Paul Dysart entwickelter technischer Indikator, der sich auf Preisänderungen an Tagen konzentriert, an denen das Handelsvolumen im Vergleich zum Vortag abnimmt.
+**Negativer Volumenindex (NVI)** ist ein von Paul Dysart entwickelter technischer Indikator, der sich auf Preisänderungen an Tagen konzentriert, an denen das Handelsvolumen im Vergleich zum Vortag abnimmt.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [NegativeVolumeIndex](xref:StockSharp.Algo.Indicators.NegativeVolumeIndex) verwenden.
 
 ## Beschreibung
 
-Der Negative Volume Index (NVI) basiert auf der Idee, dass „Smart Money“ an Tagen mit geringem Handelsvolumen aktiv ist, während die „Crowd“ (nicht professionelle Händler) an Tagen mit hohem Handelsvolumen aktiver ist. NVI ändert sich nur an Tagen, an denen das aktuelle Volumen niedriger ist als das Volumen des Vortages.
+Der Negativer Volumenindex (NVI) basiert auf der Idee, dass „Smart Money“ an Tagen mit geringem Handelsvolumen aktiv ist, während die „Crowd“ (nicht professionelle Händler) an Tagen mit hohem Handelsvolumen aktiver ist. NVI ändert sich nur an Tagen, an denen das aktuelle Volumen niedriger ist als das Volumen des Vortages.
 
 Das Konzept des Indikators legt nahe, dass Preisbewegungen bei reduziertem Volumen bedeutender sind und häufig die Handlungen informierter Anleger widerspiegeln. NVI versucht, diese Bewegungen zu verfolgen und ignoriert Preisänderungen an Tagen mit erhöhtem Volumen.
 
@@ -14,7 +14,7 @@ NVI wird häufig zusammen mit dem komplementären positiven Volume-Index (PVI) v
 
 ## Berechnung
 
-Die Negative Volume Index-Berechnung umfasst die folgenden Schritte:
+Die Negativer Volumenindex-Berechnung umfasst die folgenden Schritte:
 
 1. Legen Sie den anfänglichen NVI-Wert fest (normalerweise 1000):
    ```
@@ -37,7 +37,7 @@ Mit anderen Worten: NVI ändert sich nur an Tagen, an denen das Handelsvolumen a
 
 ## Interpretation
 
-Der Negative Volume Index kann wie folgt interpretiert werden:
+Der Negativer Volumenindex kann wie folgt interpretiert werden:
 
 1. **Trendanalyse**:
    - Steigender NVI deutet darauf hin, dass „Smart Money“ kauft, was einen zukünftigen Preisanstieg vorhersagen könnte

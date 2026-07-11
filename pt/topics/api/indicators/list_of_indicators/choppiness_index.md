@@ -1,12 +1,12 @@
 # CHOP
 
-**Choppiness Index (CHOP)** é um indicador concebido para determinar se o mercado está em movimento lateral (dentro de um intervalo) ou num estado tendencial.
+**índice de lateralidade (CHOP)** é um indicador concebido para determinar se o mercado está em movimento lateral (dentro de um intervalo) ou num estado tendencial.
 
 Para usar o indicador, deve ser usada a classe [ChoppinessIndex](xref:StockSharp.Algo.Indicators.ChoppinessIndex).
 
 ## Descrição
 
-O Choppiness Index (CHOP) foi criado para avaliar quantitativamente a volatilidade e determinar a natureza do movimento do mercado. Ao contrário de muitos outros indicadores, o CHOP não se destina a identificar a direção da tendência nem a gerar sinais de compra ou venda. Em vez disso, ajuda os traders a determinar se o mercado está em consolidação (movimento lateral) ou numa tendência direcional.
+O índice de lateralidade (CHOP) foi criado para avaliar quantitativamente a volatilidade e determinar a natureza do movimento do mercado. Ao contrário de muitos outros indicadores, o CHOP não se destina a identificar a direção da tendência nem a gerar sinais de compra ou venda. Em vez disso, ajuda os traders a determinar se o mercado está em consolidação (movimento lateral) ou numa tendência direcional.
 
 O indicador CHOP oscila entre 0 e 100:
 - Valores mais próximos de 100 indicam forte consolidação (elevado "choppiness")
@@ -25,7 +25,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Choppiness Index envolve os seguintes passos:
+O cálculo do índice de lateralidade envolve os seguintes passos:
 
 1. Calcular a soma dos intervalos verdadeiros ao longo do período selecionado:
    ```

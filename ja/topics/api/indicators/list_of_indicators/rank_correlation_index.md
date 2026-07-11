@@ -1,6 +1,6 @@
-# Rank Correlation Index
+# 順位相関指数
 
-**Rank Correlation Index (RCI)** は、Spearman の順位相関係数に基づくオシレーターです。移動ウィンドウ内で価格の順位と時間の順位を比較し、直近の動きが完全な上昇または下降の連続にどれだけ近いかを示します。
+**順位相関指数 (RCI)** は、Spearman の順位相関係数に基づくオシレーターです。移動ウィンドウ内で価格の順位と時間の順位を比較し、直近の動きが完全な上昇または下降の連続にどれだけ近いかを示します。
 
 この指標にアクセスするには、[RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorrelationIndex) クラスを使用します。
 
@@ -9,7 +9,7 @@
 1. **Length** ウィンドウ内の各データポイントに時間順位を割り当てます（最も古い値を 1、最新の値を `Length`）。
 2. 価格を値で順位付けします（最も低い価格を 1、最も高い価格を `Length`）。
 3. 各バーについて差 `d = RankTime − RankPrice` を計算します。
-4. Spearman の公式を適用します。  
+4. Spearman の公式を適用します。
    `RCI = 1 − (6 × Σ d²) / (Length × (Length² − 1))`。
 
 100 を掛けると、指標は −100 から +100 の範囲になります。

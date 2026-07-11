@@ -1,6 +1,6 @@
 # DSP
 
-**Detrended Synthetic Price (DSP)** ist ein technischer Indikator, der den Gesamttrend aus einer Preisreihe entfernt und es Händlern ermöglicht, sich auf kurzfristige Preisschwankungen zu konzentrieren.
+**Trendbereinigter synthetischer Preis (DSP)** ist ein technischer Indikator, der den Gesamttrend aus einer Preisreihe entfernt und es Händlern ermöglicht, sich auf kurzfristige Preisschwankungen zu konzentrieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [DetrendedSyntheticPrice](xref:StockSharp.Algo.Indicators.DetrendedSyntheticPrice) verwenden.
 
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Berechnung des Detrended Synthetic Price umfasst die folgenden Schritte:
+Die Berechnung des Trendbereinigter synthetischer Preis umfasst die folgenden Schritte:
 
 1. Berechnen Sie den gleitenden Durchschnitt des Preises über den angegebenen Zeitraum:
    ```

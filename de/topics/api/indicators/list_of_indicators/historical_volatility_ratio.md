@@ -1,12 +1,12 @@
 # HVR
 
-**Historical Volatility Ratio (HVR)** ist ein technischer Indikator, der die kurzfristige historische Volatilität mit der langfristigen historischen Volatilität vergleicht, um Veränderungen in der Marktaktivität zu beurteilen.
+**Historisches Volatilitätsverhältnis (HVR)** ist ein technischer Indikator, der die kurzfristige historische Volatilität mit der langfristigen historischen Volatilität vergleicht, um Veränderungen in der Marktaktivität zu beurteilen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [HistoricalVolatilityRatio](xref:StockSharp.Algo.Indicators.HistoricalVolatilityRatio) verwenden.
 
 ## Beschreibung
 
-Der Historical Volatility Ratio (HVR) ist ein relativer Volatilitätsindikator, der die kurzfristige Volatilität mit der langfristigen Marktvolatilität vergleicht. Der Indikator hilft festzustellen, ob die aktuelle Volatilität im Vergleich zu ihrem historischen Niveau zunimmt oder abnimmt.
+Der Historisches Volatilitätsverhältnis (HVR) ist ein relativer Volatilitätsindikator, der die kurzfristige Volatilität mit der langfristigen Marktvolatilität vergleicht. Der Indikator hilft festzustellen, ob die aktuelle Volatilität im Vergleich zu ihrem historischen Niveau zunimmt oder abnimmt.
 
 HVR wird als Verhältnis der kurzfristigen historischen Volatilität zur langfristigen historischen Volatilität berechnet. Werte über 1,0 weisen darauf hin, dass die aktuelle (kurzfristige) Volatilität höher ist als die langfristige Volatilität, was auf eine erhöhte Marktaktivität oder eine mögliche Trendwende hinweisen kann.
 
@@ -24,7 +24,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Historical Volatility Ratio-Berechnung umfasst die folgenden Schritte:
+Die Historisches Volatilitätsverhältnis-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die kurzfristige historische Volatilität:
    ```
@@ -50,7 +50,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Historical Volatility Ratio kann wie folgt interpretiert werden:
+Der Historisches Volatilitätsverhältnis kann wie folgt interpretiert werden:
 
 1. **Stufe 1.0**:
    - HVR = 1,0 bedeutet, dass die kurzfristige Volatilität gleich der langfristigen Volatilität ist

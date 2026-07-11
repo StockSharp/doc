@@ -26,4 +26,4 @@
 ## См. также
 
 [Адаптивная скользящая средняя Кауфмана](kama.md)
-[Adaptive Laguerre Filter](adaptive_laguerre_filter.md)
+[адаптивный фильтр Лагерра](adaptive_laguerre_filter.md)

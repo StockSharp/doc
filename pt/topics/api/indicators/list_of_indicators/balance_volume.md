@@ -2,13 +2,13 @@
 
 ﻿# BV
 
-**Balance Volume (BV)** é um indicador técnico que acompanha a acumulação e distribuição do volume de negociação com base em alterações de preço.
+**volume de balanço (BV)** é um indicador técnico que acompanha a acumulação e distribuição do volume de negociação com base em alterações de preço.
 
 Para usar o indicador, é necessário usar a classe [BalanceVolume](xref:StockSharp.Algo.Indicators.BalanceVolume).
 
 ## Descrição
 
-O indicador Balance Volume (BV) foi concebido para analisar a relação entre a alteração de preço e o volume de negociação. Ajuda os traders a determinar como as alterações de volume correspondem ao movimento do preço, o que pode indicar a força ou fraqueza da tendência atual.
+O indicador volume de balanço (BV) foi concebido para analisar a relação entre a alteração de preço e o volume de negociação. Ajuda os traders a determinar como as alterações de volume correspondem ao movimento do preço, o que pode indicar a força ou fraqueza da tendência atual.
 
 A ideia principal do BV é que o volume deve confirmar a direção do preço. Se o preço subir com volume crescente, isto indica uma tendência ascendente forte. Pelo contrário, se o preço cair com volume crescente, isto sugere uma tendência descendente forte.
 
@@ -20,7 +20,7 @@ O indicador BV é especialmente útil para:
 
 ## Cálculo
 
-O cálculo do indicador Balance Volume baseia-se na comparação do preço de fecho com o preço de fecho anterior e na ponderação do volume de negociação:
+O cálculo do indicador volume de balanço baseia-se na comparação do preço de fecho com o preço de fecho anterior e na ponderação do volume de negociação:
 
 ```
 Se Close > fecho anterior:
@@ -35,7 +35,7 @@ Onde:
 - Close - preço de fecho atual
 - fecho anterior - preço de fecho anterior
 - Volume - volume de negociação atual
-- Previous BV - valor anterior do indicador Balance Volume
+- Previous BV - valor anterior do indicador volume de balanço
 
 ## Interpretação
 

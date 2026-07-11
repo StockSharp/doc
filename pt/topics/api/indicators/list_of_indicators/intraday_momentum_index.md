@@ -1,12 +1,12 @@
 # IMI
 
-**Intraday Momentum Index (IMI)** é um indicador técnico desenvolvido por Tushar Chande que combina princípios de preço intradiário e o conceito de RSI para medir o momentum intradiário.
+**índice de momentum intradiário (IMI)** é um indicador técnico desenvolvido por Tushar Chande que combina princípios de preço intradiário e o conceito de RSI para medir o momentum intradiário.
 
 Para utilizar o indicador, é necessário usar a classe [IntradayMomentumIndex](xref:StockSharp.Algo.Indicators.IntradayMomentumIndex).
 
 ## Descrição
 
-O Intraday Momentum Index (IMI) foi criado como uma modificação do clássico índice de força relativa (RSI), especificamente adaptada para analisar a dinâmica intradiária do mercado. Em vez de usar preços de fecho sequenciais, como no RSI tradicional, o IMI compara o preço de fecho com o preço de abertura de cada período.
+O índice de momentum intradiário (IMI) foi criado como uma modificação do clássico índice de força relativa (RSI), especificamente adaptada para analisar a dinâmica intradiária do mercado. Em vez de usar preços de fecho sequenciais, como no RSI tradicional, o IMI compara o preço de fecho com o preço de abertura de cada período.
 
 O IMI avalia com que frequência e com que intensidade o preço de fecho excede o preço de abertura (momentum positivo) ou fica abaixo do preço de abertura (momentum negativo) ao longo de um determinado período. Isto permite identificar a direção predominante e a força do movimento intradiário.
 
@@ -23,7 +23,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Intraday Momentum Index envolve os seguintes passos:
+O cálculo do índice de momentum intradiário envolve os seguintes passos:
 
 1. Determinar o movimento intradiário do preço:
    ```
@@ -46,7 +46,7 @@ Nota: Se (Sum Gains + Sum Losses) for igual a zero, o IMI é definido como 50 pa
 
 ## Interpretação
 
-O Intraday Momentum Index é interpretado de forma semelhante ao RSI:
+O índice de momentum intradiário é interpretado de forma semelhante ao RSI:
 
 1. **Intervalo de Valores**:
    - O IMI oscila entre 0 e 100

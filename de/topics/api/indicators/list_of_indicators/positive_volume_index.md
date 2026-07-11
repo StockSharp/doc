@@ -1,12 +1,12 @@
 # PVI
 
-**Positive Volume Index (PVI)** ist ein von Paul Dysart entwickelter technischer Indikator, der sich auf Preisänderungen an Tagen konzentriert, an denen das Handelsvolumen im Vergleich zum Vortag steigt.
+**Positiver Volumenindex (PVI)** ist ein von Paul Dysart entwickelter technischer Indikator, der sich auf Preisänderungen an Tagen konzentriert, an denen das Handelsvolumen im Vergleich zum Vortag steigt.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [PositiveVolumeIndex](xref:StockSharp.Algo.Indicators.PositiveVolumeIndex) verwenden.
 
 ## Beschreibung
 
-Der Positive Volume Index (PVI) basiert auf der Idee, dass die „Crowd“ (nicht professionelle Händler) an Tagen mit hohem Handelsvolumen aktiver ist, während „Smart Money“ an Tagen mit geringem Handelsvolumen agiert. PVI ändert sich nur an Tagen, an denen das aktuelle Volumen höher ist als das Volumen des Vortages.
+Der Positiver Volumenindex (PVI) basiert auf der Idee, dass die „Crowd“ (nicht professionelle Händler) an Tagen mit hohem Handelsvolumen aktiver ist, während „Smart Money“ an Tagen mit geringem Handelsvolumen agiert. PVI ändert sich nur an Tagen, an denen das aktuelle Volumen höher ist als das Volumen des Vortages.
 
 Der Indikator deutet darauf hin, dass die Preisbewegungen bei steigendem Volumen erheblich sind und häufig die Stimmung auf dem Massenmarkt widerspiegeln. PVI verfolgt diese Bewegungen und ignoriert Preisänderungen an Tagen mit geringerem Volumen.
 
@@ -14,7 +14,7 @@ PVI wird häufig zusammen mit dem komplementären negativen Volume-Index (NVI) v
 
 ## Berechnung
 
-Die Positive Volume Index-Berechnung umfasst die folgenden Schritte:
+Die Positiver Volumenindex-Berechnung umfasst die folgenden Schritte:
 
 1. Legen Sie den anfänglichen PVI-Wert fest (normalerweise 1000):
    ```
@@ -37,7 +37,7 @@ Mit anderen Worten: PVI ändert sich nur an Tagen, an denen das Handelsvolumen s
 
 ## Interpretation
 
-Der Positive Volume Index kann wie folgt interpretiert werden:
+Der Positiver Volumenindex kann wie folgt interpretiert werden:
 
 1. **Trendanalyse**:
    - Steigender PVI deutet darauf hin, dass die „Masse“ kauft, was einen zukünftigen Preisanstieg vorhersagen könnte

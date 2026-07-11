@@ -1,12 +1,12 @@
 # RC
 
-**Rainbow Charts (RC)** es un indicador de análisis técnico que consta de un conjunto de medias móviles con diferentes períodos mostrados en un único gráfico. Visualmente, el indicador se parece a un arco iris, de ahí su nombre.
+**gráficos arcoíris (RC)** es un indicador de análisis técnico que consta de un conjunto de medias móviles con diferentes períodos mostrados en un único gráfico. Visualmente, el indicador se parece a un arco iris, de ahí su nombre.
 
 Para utilizar el indicador, debe utilizar la clase [RainbowCharts](xref:StockSharp.Algo.Indicators.RainbowCharts).
 
 ## Descripción
 
-Rainbow Charts se basan en el uso de múltiples medias móviles (normalmente SMA simple) con períodos progresivamente crecientes. Las diferentes líneas de media móvil están coloreadas en diferentes colores, creando un efecto de arco iris en el gráfico.
+gráficos arcoíris se basan en el uso de múltiples medias móviles (normalmente SMA simple) con períodos progresivamente crecientes. Las diferentes líneas de media móvil están coloreadas en diferentes colores, creando un efecto de arco iris en el gráfico.
 
 El indicador ayuda a determinar la dirección y la fuerza de la tendencia:
 - Cuando las líneas divergen, esto indica un fortalecimiento de la tendencia.
@@ -20,7 +20,7 @@ El indicador ayuda a determinar la dirección y la fuerza de la tendencia:
 
 ## Cálculo
 
-Rainbow Charts consta de múltiples promedios móviles (SMA), y el período de cada línea posterior aumenta en un cierto paso. Para n líneas con un período base p, los períodos se calculan como:
+gráficos arcoíris consta de múltiples promedios móviles (SMA), y el período de cada línea posterior aumenta en un cierto paso. Para n líneas con un período base p, los períodos se calculan como:
 
 ```
 Period(i) = p + i * step

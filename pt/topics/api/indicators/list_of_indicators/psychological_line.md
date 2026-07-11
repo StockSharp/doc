@@ -1,12 +1,12 @@
 # PSY
 
-**Psychological Line (PSY)** é um indicador técnico que mede a proporção de períodos de subida (velas, barras) relativamente ao número total de períodos num intervalo de tempo especificado.
+**linha psicológica (PSY)** é um indicador técnico que mede a proporção de períodos de subida (velas, barras) relativamente ao número total de períodos num intervalo de tempo especificado.
 
 Para utilizar o indicador, é necessário usar a classe [PsychologicalLine](xref:StockSharp.Algo.Indicators.PsychologicalLine).
 
 ## Descrição
 
-A Psychological Line (PSY) é um indicador simples, mas eficaz, que reflete o sentimento do mercado ao calcular a percentagem de períodos em que o preço subiu face ao número total de períodos considerados. O indicador baseia-se no pressuposto de que a psicologia do mercado e o sentimento dos investidores desempenham um papel crucial nos movimentos dos preços.
+A linha psicológica (PSY) é um indicador simples, mas eficaz, que reflete o sentimento do mercado ao calcular a percentagem de períodos em que o preço subiu face ao número total de períodos considerados. O indicador baseia-se no pressuposto de que a psicologia do mercado e o sentimento dos investidores desempenham um papel crucial nos movimentos dos preços.
 
 O PSY é um oscilador com valores entre 0 e 100, em que:
 - Um valor de 100 significa que o preço subiu em todos os períodos considerados
@@ -22,7 +22,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo da Psychological Line é muito simples:
+O cálculo da linha psicológica é muito simples:
 
 ```
 PSY = (Número de períodos de subida ao longo de Length períodos / Length) * 100
@@ -34,7 +34,7 @@ Onde:
 
 ## Interpretação
 
-A Psychological Line pode ser interpretada da seguinte forma:
+A linha psicológica pode ser interpretada da seguinte forma:
 
 1. **Níveis de Sobrecompra e Sobrevenda**:
    - Valores acima de 70-80 indicam condições de sobrecompra no mercado (demasiados períodos foram de subida)

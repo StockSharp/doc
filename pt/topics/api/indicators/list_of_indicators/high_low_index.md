@@ -1,12 +1,12 @@
 # HLI
 
-**High Low Index (HLI)** é um indicador técnico que mede o rácio entre o número de ações que atingem novos máximos e o número de ações que atingem novos mínimos ao longo de um período específico.
+**índice máximo-mínimo (HLI)** é um indicador técnico que mede o rácio entre o número de ações que atingem novos máximos e o número de ações que atingem novos mínimos ao longo de um período específico.
 
 Para utilizar o indicador, é necessário usar a classe [HighLowIndex](xref:StockSharp.Algo.Indicators.HighLowIndex).
 
 ## Descrição
 
-O High Low Index (HLI) é um indicador de amplitude de mercado que analisa a atividade global do mercado comparando o número de instrumentos que atingem novos máximos com o número que atinge novos mínimos. Isto permite avaliar a força ou fraqueza interna do mercado.
+O índice máximo-mínimo (HLI) é um indicador de amplitude de mercado que analisa a atividade global do mercado comparando o número de instrumentos que atingem novos máximos com o número que atinge novos mínimos. Isto permite avaliar a força ou fraqueza interna do mercado.
 
 A ideia principal do indicador é que um mercado saudável é caracterizado por mais títulos a atingirem novos máximos do que novos mínimos. Pelo contrário, um mercado em enfraquecimento terá mais títulos a atingirem novos mínimos.
 
@@ -23,7 +23,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do High Low Index envolve os seguintes passos:
+O cálculo do índice máximo-mínimo envolve os seguintes passos:
 
 1. Contar o número de títulos que atingem novos máximos ao longo do período Length:
    ```
@@ -35,7 +35,7 @@ O cálculo do High Low Index envolve os seguintes passos:
    New Lows = número de instrumentos que atingem novos mínimos durante o período Length
    ```
 
-3. Calcular o High Low Index como o rácio entre a diferença de novos máximos e mínimos e a sua soma:
+3. Calcular o índice máximo-mínimo como o rácio entre a diferença de novos máximos e mínimos e a sua soma:
    ```
    HLI = ((New Highs - New Lows) / (New Highs + New Lows)) * 100
    ```
@@ -44,7 +44,7 @@ Nota: Se (New Highs + New Lows) for igual a zero, o HLI é definido como zero pa
 
 ## Interpretação
 
-O High Low Index é interpretado da seguinte forma:
+O índice máximo-mínimo é interpretado da seguinte forma:
 
 1. **Intervalo de Valores**:
    - O HLI oscila entre -100 e +100

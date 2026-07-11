@@ -1,12 +1,12 @@
 # ALF
 
-**Adaptive Laguerre Filter (ALF)** ist ein Indikator, der entwickelt wurde, um Preisdaten mit minimaler Verzögerung zu glätten. Er basiert auf den mathematischen Prinzipien des Laguerre-Filters.
+**Adaptiver Laguerre-Filter (ALF)** ist ein Indikator, der entwickelt wurde, um Preisdaten mit minimaler Verzögerung zu glätten. Er basiert auf den mathematischen Prinzipien des Laguerre-Filters.
 
 Zur Verwendung des Indikators müssen Sie die Klasse [AdaptiveLaguerreFilter](xref:StockSharp.Algo.Indicators.AdaptiveLaguerreFilter) verwenden.
 
 ## Beschreibung
 
-Der Adaptive Laguerre Filter ist ein fortgeschrittenes Werkzeug zum Filtern von Marktrauschen. Er liefert eine glattere Darstellung der Preisbewegung und behält gleichzeitig eine schnelle Reaktion auf echte Trendänderungen bei. Dieser Filter ist besonders nützlich, um die Verzögerung zu reduzieren, die bei klassischen Glättungsindikatoren häufig auftritt.
+Der Adaptiver Laguerre-Filter ist ein fortgeschrittenes Werkzeug zum Filtern von Marktrauschen. Er liefert eine glattere Darstellung der Preisbewegung und behält gleichzeitig eine schnelle Reaktion auf echte Trendänderungen bei. Dieser Filter ist besonders nützlich, um die Verzögerung zu reduzieren, die bei klassischen Glättungsindikatoren häufig auftritt.
 
 Der Hauptvorteil von ALF gegenüber klassischen gleitenden Durchschnitten liegt in seiner Fähigkeit, Marktrauschen effektiver von echten Preisbewegungen zu trennen. Dadurch ist er ein wertvolles Werkzeug für Trader, die Fehlsignale reduzieren möchten.
 
@@ -19,7 +19,7 @@ Der Parameter Gamma bestimmt den Glättungsgrad: niedrigere Werte erzeugen eine 
 
 ## Berechnung
 
-Der Adaptive Laguerre Filter basiert auf Laguerre-Polynomen und stellt ein Filterungssystem mit endlicher Impulsantwort (FIR) dar. Die Berechnung verwendet die folgenden Formeln:
+Der Adaptiver Laguerre-Filter basiert auf Laguerre-Polynomen und stellt ein Filterungssystem mit endlicher Impulsantwort (FIR) dar. Die Berechnung verwendet die folgenden Formeln:
 
 1. Zwischenwerte L0, L1, L2 und L3 werden berechnet:
    ```

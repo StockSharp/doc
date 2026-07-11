@@ -1,12 +1,12 @@
 # RMI
 
-**Relative Momentum Index (RMI)** é uma modificação do indicador RSI tradicional, proposta por Roger Altman. Ao contrário do RSI clássico, que calcula a razão entre aumentos e diminuições de preço ao longo de um determinado período, o RMI tem em conta a variação relativa do preço ao longo de um período de momentum selecionado.
+**índice de momentum relativo (RMI)** é uma modificação do indicador RSI tradicional, proposta por Roger Altman. Ao contrário do RSI clássico, que calcula a razão entre aumentos e diminuições de preço ao longo de um determinado período, o RMI tem em conta a variação relativa do preço ao longo de um período de momentum selecionado.
 
 Para utilizar o indicador, é necessário usar a classe [RelativeMomentumIndex](xref:StockSharp.Algo.Indicators.RelativeMomentumIndex).
 
 ## Descrição
 
-O Relative Momentum Index (RMI) melhora o RSI clássico ao adicionar um parâmetro de período de momentum. Isto permite aos traders ajustar a sensibilidade do indicador sem alterar o período principal de cálculo.
+O índice de momentum relativo (RMI) melhora o RSI clássico ao adicionar um parâmetro de período de momentum. Isto permite aos traders ajustar a sensibilidade do indicador sem alterar o período principal de cálculo.
 
 Tal como o RSI, o RMI oscila entre 0 e 100:
 - Valores acima de 70 indicam normalmente um mercado em sobrecompra
@@ -46,7 +46,7 @@ O cálculo do RMI é efetuado em vários passos:
    RS = AverageU / AverageD
    ```
 
-5. Converter para Relative Momentum Index:
+5. Converter para índice de momentum relativo:
    ```
    RMI = 100 - (100 / (1 + RS))
    ```

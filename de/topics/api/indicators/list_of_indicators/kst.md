@@ -1,12 +1,12 @@
 # KST
 
-**Know Sure Thing (KST)** ist ein von Martin Pring entwickelter technischer Indikator, der die Summe von vier geglätteten Änderungsraten (ROC) mit unterschiedlichen Zeiträumen darstellt, um langfristige Marktzyklen zu identifizieren.
+**Know-Sure-Thing (KST)** ist ein von Martin Pring entwickelter technischer Indikator, der die Summe von vier geglätteten Änderungsraten (ROC) mit unterschiedlichen Zeiträumen darstellt, um langfristige Marktzyklen zu identifizieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [KnowSureThing](xref:StockSharp.Algo.Indicators.KnowSureThing) verwenden.
 
 ## Beschreibung
 
-Der Know Sure Thing (KST)-Indikator ist ein von Martin Pring entwickelter Oszillator zur Identifizierung von Trends durch Messung der Preisdynamik über verschiedene Zeiträume hinweg. Der Indikator kombiniert vier Messungen der Änderungsrate (ROC) mit unterschiedlichen Zeiträumen und verleiht längeren Zeiträumen mehr Bedeutung.
+Der Know-Sure-Thing (KST)-Indikator ist ein von Martin Pring entwickelter Oszillator zur Identifizierung von Trends durch Messung der Preisdynamik über verschiedene Zeiträume hinweg. Der Indikator kombiniert vier Messungen der Änderungsrate (ROC) mit unterschiedlichen Zeiträumen und verleiht längeren Zeiträumen mehr Bedeutung.
 
 KST basiert auf der Theorie, dass Marktzyklen unterschiedlicher Dauer gemeinsam die Preisbewegung beeinflussen. Durch die Kombination von ROC aus verschiedenen Zeiträumen zielt KST darauf ab, langfristige zyklische Trends zu identifizieren und potenzielle Umkehrpunkte zu bestimmen.
 

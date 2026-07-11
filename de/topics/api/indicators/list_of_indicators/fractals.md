@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [Fractals](xref:St
 
 ## Empfohlene Inhalte
 
-[Gator Oscillator](gator_oscillator.md)
+[Gator-Oszillator](gator_oscillator.md)

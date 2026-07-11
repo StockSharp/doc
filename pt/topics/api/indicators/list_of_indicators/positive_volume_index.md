@@ -1,20 +1,20 @@
 # PVI
 
-**Positive Volume Index (PVI)** é um indicador técnico desenvolvido por Paul Dysart que se foca nas alterações de preço nos dias em que o volume de negociação aumenta em comparação com o dia anterior.
+**índice de volume positivo (PVI)** é um indicador técnico desenvolvido por Paul Dysart que se foca nas alterações de preço nos dias em que o volume de negociação aumenta em comparação com o dia anterior.
 
 Para usar o indicador, é necessário usar a classe [PositiveVolumeIndex](xref:StockSharp.Algo.Indicators.PositiveVolumeIndex).
 
 ## Descrição
 
-O Positive Volume Index (PVI) baseia-se na ideia de que a "multidão" (traders não profissionais) está mais ativa em dias de volume elevado, enquanto o "smart money" atua em dias de baixo volume. O PVI só se altera nos dias em que o volume atual é superior ao volume do dia anterior.
+O índice de volume positivo (PVI) baseia-se na ideia de que a "multidão" (traders não profissionais) está mais ativa em dias de volume elevado, enquanto o "smart money" atua em dias de baixo volume. O PVI só se altera nos dias em que o volume atual é superior ao volume do dia anterior.
 
 O indicador sugere que os movimentos de preço com volume aumentado são significativos e refletem frequentemente o sentimento do mercado em massa. O PVI acompanha estes movimentos, ignorando alterações de preço nos dias com volume mais baixo.
 
-O PVI é frequentemente usado em conjunto com o Negative Volume Index (NVI) complementar, que, pelo contrário, considera apenas os dias em que o volume diminui.
+O PVI é frequentemente usado em conjunto com o índice de volume negativo (NVI) complementar, que, pelo contrário, considera apenas os dias em que o volume diminui.
 
 ## Cálculo
 
-O cálculo do Positive Volume Index envolve os seguintes passos:
+O cálculo do índice de volume positivo envolve os seguintes passos:
 
 1. Definir o valor inicial do PVI (normalmente 1000):
    ```
@@ -37,7 +37,7 @@ Por outras palavras, o PVI só muda nos dias em que o volume de negociação aum
 
 ## Interpretação
 
-O Positive Volume Index pode ser interpretado da seguinte forma:
+O índice de volume positivo pode ser interpretado da seguinte forma:
 
 1. **Análise da tendência**:
    - PVI em subida indica que a "multidão" está a comprar, o que pode antecipar uma futura subida do preço

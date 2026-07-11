@@ -1,6 +1,6 @@
 # Собственный индикатор
 
-Для того, чтобы создать свой собственный индикатор, необходимо реализовать интерфейс [IIndicator](xref:StockSharp.Algo.Indicators.IIndicator). В качестве примера можно взять исходные коды других индикаторов, которые находятся в репозитории [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp). Вот как выглядит код реализации индикатора простой скользящей средней [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage): 
+Для того, чтобы создать свой собственный индикатор, необходимо реализовать интерфейс [IIndicator](xref:StockSharp.Algo.Indicators.IIndicator). В качестве примера можно взять исходные коды других индикаторов, которые находятся в репозитории [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp). Вот как выглядит код реализации индикатора простой скользящей средней [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage):
 
 ```cs
 /// <summary>
@@ -102,7 +102,7 @@ public override void Load(SettingsStorage storage)
 }
 ```
 
-В этих методах необходимо сохранять и загружать все настраиваемые параметры индикатора. Это обеспечивает корректное сохранение и восстановление состояния индикатора при сохранении и загрузке стратегии. 
+В этих методах необходимо сохранять и загружать все настраиваемые параметры индикатора. Это обеспечивает корректное сохранение и восстановление состояния индикатора при сохранении и загрузке стратегии.
 
 Важно вызывать базовые методы `base.Save()` и `base.Load()` для обработки общих параметров индикатора, унаследованных от базового класса.
 
@@ -206,11 +206,11 @@ public class ChaikinVolatility : BaseIndicator
 
 ## Индикаторы с несколькими линиями
 
-Последний вид индикаторов \- это те, которые не просто состоят из других индикаторов, но так же графически отображаются несколькими состояниями одновременно (несколькими линиями). Например, [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex): 
+Последний вид индикаторов \- это те, которые не просто состоят из других индикаторов, но так же графически отображаются несколькими состояниями одновременно (несколькими линиями). Например, [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex):
 
 ```cs
 /// <summary>
-/// Welles Wilder Average Directional Index.
+/// Welles Wilder средний направленный индекс.
 /// </summary>
 [Display(
 	ResourceType = typeof(LocalizedStrings),

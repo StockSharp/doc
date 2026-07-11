@@ -1,12 +1,12 @@
 # KER
 
-**Kaufman Efficiency Ratio (KER)** é um indicador técnico desenvolvido por Perry Kaufman que mede a eficiência do movimento do preço comparando o movimento direccional do preço com a volatilidade global.
+**rácio de eficiência de Kaufman (KER)** é um indicador técnico desenvolvido por Perry Kaufman que mede a eficiência do movimento do preço comparando o movimento direccional do preço com a volatilidade global.
 
 Para utilizar o indicador, é necessário usar a classe [KaufmanEfficiencyRatio](xref:StockSharp.Algo.Indicators.KaufmanEfficiencyRatio).
 
 ## Descrição
 
-O Kaufman Efficiency Ratio (KER) avalia quão "eficientemente" o preço se move numa direcção específica em comparação com o percurso total que percorre. Representa o rácio entre o movimento direccional líquido do preço e a soma de todas as variações de preço durante um período específico.
+O rácio de eficiência de Kaufman (KER) avalia quão "eficientemente" o preço se move numa direcção específica em comparação com o percurso total que percorre. Representa o rácio entre o movimento direccional líquido do preço e a soma de todas as variações de preço durante um período específico.
 
 O KER foi desenvolvido por Perry Kaufman e foi originalmente usado como componente da média móvel adaptativa de Kaufman (KAMA). No entanto, o próprio KER é uma ferramenta valiosa que ajuda a determinar se o mercado está num estado tendencial ou oscilante.
 
@@ -21,7 +21,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Kaufman Efficiency Ratio envolve os seguintes passos:
+O cálculo do rácio de eficiência de Kaufman envolve os seguintes passos:
 
 1. Calcular o movimento direccional (variação líquida) durante o período:
    ```
@@ -47,7 +47,7 @@ Se Volatility for zero (o que é improvável), o KER é definido como zero para 
 
 ## Interpretação
 
-O Kaufman Efficiency Ratio pode ser interpretado da seguinte forma:
+O rácio de eficiência de Kaufman pode ser interpretado da seguinte forma:
 
 1. **Níveis de Eficiência**:
    - Valores elevados de KER (>0,6) indicam uma tendência forte

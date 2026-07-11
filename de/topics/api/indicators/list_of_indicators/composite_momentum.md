@@ -1,12 +1,12 @@
 # CM
 
-**Composite Momentum (CM)** ist ein Indikator, der mehrere Methoden zur Messung der Preisdynamik kombiniert, um zuverlässigere Signale über Trendstärke und -richtung zu erhalten.
+**Zusammengesetztes Momentum (CM)** ist ein Indikator, der mehrere Methoden zur Messung der Preisdynamik kombiniert, um zuverlässigere Signale über Trendstärke und -richtung zu erhalten.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [CompositeMomentum](xref:StockSharp.Algo.Indicators.CompositeMomentum) verwenden.
 
 ## Beschreibung
 
-Der Composite Momentum (CM)-Indikator ist ein umfassendes Tool, das verschiedene Aspekte der Preisbewegung integriert, darunter Preisänderungsrate, relative Stärke und andere Momentumkomponenten. Durch diesen kombinierten Ansatz liefert CM im Vergleich zu herkömmlichen eindimensionalen Momentumindikatoren ein vollständigeres Bild der aktuellen Marktdynamik.
+Der Zusammengesetztes Momentum (CM)-Indikator ist ein umfassendes Tool, das verschiedene Aspekte der Preisbewegung integriert, darunter Preisänderungsrate, relative Stärke und andere Momentumkomponenten. Durch diesen kombinierten Ansatz liefert CM im Vergleich zu herkömmlichen eindimensionalen Momentumindikatoren ein vollständigeres Bild der aktuellen Marktdynamik.
 
 CM ist wirksam für:
 - Bestimmung der Stärke des aktuellen Trends
@@ -14,11 +14,11 @@ CM ist wirksam für:
 - Erkennen von Divergenzen zwischen Preis und Dynamik
 - Herausfiltern falscher Signale anderer Indikatoren
 
-Composite Momentum ist besonders nützlich in volatilen Märkten, wo traditionelle Momentum-Indikatoren zahlreiche falsche Signale erzeugen können.
+Zusammengesetztes Momentum ist besonders nützlich in volatilen Märkten, wo traditionelle Momentum-Indikatoren zahlreiche falsche Signale erzeugen können.
 
 ## Berechnung
 
-Die Composite Momentum-Berechnung umfasst mehrere Phasen und Komponenten:
+Die Zusammengesetztes Momentum-Berechnung umfasst mehrere Phasen und Komponenten:
 
 1. Berechnung der Impulskomponenten:
    - Price-Änderung im Vergleich zu früheren Perioden

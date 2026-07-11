@@ -1,12 +1,12 @@
 # PSY
 
-**Psychological Line (PSY)** ist ein technischer Indikator, der den Anteil steigender Perioden (Kerzen, Balken) im Verhältnis zur Gesamtzahl der Perioden über ein bestimmtes Zeitintervall misst.
+**Psychologische Linie (PSY)** ist ein technischer Indikator, der den Anteil steigender Perioden (Kerzen, Balken) im Verhältnis zur Gesamtzahl der Perioden über ein bestimmtes Zeitintervall misst.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [PsychologicalLine](xref:StockSharp.Algo.Indicators.PsychologicalLine) verwenden.
 
 ## Beschreibung
 
-Der Psychological Line (PSY) ist ein einfacher, aber effektiver Indikator, der die Marktstimmung widerspiegelt, indem er den Prozentsatz der Preisanstiegsperioden im Vergleich zur Gesamtzahl der betrachteten Perioden berechnet. Der Indikator basiert auf der Annahme, dass die Marktpsychologie und die Anlegerstimmung eine entscheidende Rolle bei Preisbewegungen spielen.
+Der Psychologische Linie (PSY) ist ein einfacher, aber effektiver Indikator, der die Marktstimmung widerspiegelt, indem er den Prozentsatz der Preisanstiegsperioden im Vergleich zur Gesamtzahl der betrachteten Perioden berechnet. Der Indikator basiert auf der Annahme, dass die Marktpsychologie und die Anlegerstimmung eine entscheidende Rolle bei Preisbewegungen spielen.
 
 PSY ist ein Oszillator mit Werten zwischen 0 und 100, wobei:
 - Ein Wert von 100 bedeutet, dass der Preis in allen betrachteten Zeiträumen gestiegen ist
@@ -22,7 +22,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Psychological Line-Berechnung ist sehr einfach:
+Die Psychologische Linie-Berechnung ist sehr einfach:
 
 ```
 PSY = (Anzahl steigender Perioden über Length-Perioden / Length) * 100
@@ -34,7 +34,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Psychological Line kann wie folgt interpretiert werden:
+Der Psychologische Linie kann wie folgt interpretiert werden:
 
 1. **Überkaufte und überverkaufte Niveaus**:
    - Werte über 70-80 weisen auf überkaufte Bedingungen am Markt hin (zu viele Perioden waren gestiegen)

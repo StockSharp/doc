@@ -1,6 +1,6 @@
-# Rank Correlation Index
+# índice de correlação de postos
 
-O **Rank Correlation Index (RCI)** é um oscilador baseado no coeficiente de correlação de postos de Spearman. Compara os postos dos preços
+O **índice de correlação de postos (RCI)** é um oscilador baseado no coeficiente de correlação de postos de Spearman. Compara os postos dos preços
 com os postos temporais dentro da janela móvel e mostra quão próximo o movimento recente está de uma sequência perfeitamente ascendente ou descendente.
 
 Use a classe [RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorrelationIndex) para aceder ao indicador.
@@ -10,7 +10,7 @@ Use a classe [RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorrelat
 1. Atribua a cada ponto de dados dentro da janela **Length** um posto temporal (1 para o valor mais antigo, `Length` para o mais recente).
 2. Ordene os preços por valor (1 para o preço mais baixo, `Length` para o mais alto).
 3. Calcule a diferença `d = RankTime - RankPrice` para cada barra.
-4. Aplique a fórmula de Spearman:  
+4. Aplique a fórmula de Spearman:
    `RCI = 1 - (6 × Σ d²) / (Length × (Length² - 1))`.
 
 Quando multiplicado por 100, o indicador varia entre -100 e +100.

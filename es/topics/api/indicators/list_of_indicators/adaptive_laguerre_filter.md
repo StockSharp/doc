@@ -1,12 +1,12 @@
 # ALF
 
-**Adaptive Laguerre Filter (ALF)** es un indicador desarrollado para suavizar los datos de precios con un retraso mínimo, basado en los principios matemáticos del filtro de Laguerre.
+**filtro adaptativo de Laguerre (ALF)** es un indicador desarrollado para suavizar los datos de precios con un retraso mínimo, basado en los principios matemáticos del filtro de Laguerre.
 
 Para utilizar el indicador, debe utilizar la clase [AdaptiveLaguerreFilter](xref:StockSharp.Algo.Indicators.AdaptiveLaguerreFilter).
 
 ## Descripción
 
-El Adaptive Laguerre Filter es una herramienta avanzada de filtrado de ruido del mercado. Proporciona una representación más fluida del movimiento de precios al tiempo que mantiene una respuesta rápida a los cambios de tendencia reales. Este filtro es particularmente útil para reducir el retraso que a menudo se encuentra en los indicadores de suavizado tradicionales.
+El filtro adaptativo de Laguerre es una herramienta avanzada de filtrado de ruido del mercado. Proporciona una representación más fluida del movimiento de precios al tiempo que mantiene una respuesta rápida a los cambios de tendencia reales. Este filtro es particularmente útil para reducir el retraso que a menudo se encuentra en los indicadores de suavizado tradicionales.
 
 La principal ventaja de ALF sobre las medias móviles clásicas radica en su capacidad para separar más eficazmente el ruido del mercado de los movimientos de precios genuinos, lo que lo convierte en una herramienta valiosa para los operadores que buscan reducir las señales falsas.
 
@@ -19,7 +19,7 @@ El parámetro Gamma determina el grado de suavizado: los valores más bajos crea
 
 ## Cálculo
 
-El Adaptive Laguerre Filter se basa en polinomios de Laguerre y representa un sistema de filtrado de respuesta de impulso finito (FIR). El cálculo utiliza las siguientes fórmulas:
+El filtro adaptativo de Laguerre se basa en polinomios de Laguerre y representa un sistema de filtrado de respuesta de impulso finito (FIR). El cálculo utiliza las siguientes fórmulas:
 
 1. Se calculan los valores intermedios L0, L1, L2 y L3:
    ```

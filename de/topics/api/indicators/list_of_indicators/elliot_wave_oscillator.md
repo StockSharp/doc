@@ -1,16 +1,16 @@
 # EWO
 
-**Elliot Wave Oscillator (EWO)** ist ein technischer Indikator, der auf der Elliott-Wellen-Theorie basiert und Händlern dabei hilft, die Wellenstruktur und potenzielle Marktumkehrpunkte zu bestimmen.
+**Elliott-Wellen-Oszillator (EWO)** ist ein technischer Indikator, der auf der Elliott-Wellen-Theorie basiert und Händlern dabei hilft, die Wellenstruktur und potenzielle Marktumkehrpunkte zu bestimmen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ElliotWaveOscillator](xref:StockSharp.Algo.Indicators.ElliotWaveOscillator) verwenden.
 
 ## Beschreibung
 
-Der Elliot Wave Oscillator (EWO) wurde entwickelt, um Händlern bei der Anwendung der Elliott-Wellen-Theorie in der Marktanalyse zu helfen. Die Elliott-Wellen-Theorie geht davon aus, dass sich Märkte in vorhersehbaren Zyklen bewegen, die aus fünf Wellen in Trendrichtung (Impulswellen) und drei Wellen gegen den Trend (Korrekturwellen) bestehen.
+Der Elliott-Wellen-Oszillator (EWO) wurde entwickelt, um Händlern bei der Anwendung der Elliott-Wellen-Theorie in der Marktanalyse zu helfen. Die Elliott-Wellen-Theorie geht davon aus, dass sich Märkte in vorhersehbaren Zyklen bewegen, die aus fünf Wellen in Trendrichtung (Impulswellen) und drei Wellen gegen den Trend (Korrekturwellen) bestehen.
 
 EWO basiert auf der Differenz zwischen schnellen und langsamen gleitenden Durchschnitten und ist darauf ausgelegt, Impuls- und Korrekturwellen gemäß Elliotts Theorie zu identifizieren. Es hilft festzustellen, wann sich der Markt in einer Impuls- oder Korrekturphase befindet, und schlägt mögliche Umkehrpunkte vor.
 
-Der Elliot Wave Oscillator ist besonders nützlich für:
+Der Elliott-Wellen-Oszillator ist besonders nützlich für:
 - Identifizierung der aktuellen Elliott-Wellenstruktur
 - Bestimmung möglicher Enden von Impuls- und Korrekturwellen
 - Bestätigung der manuellen Wellenanalyse
@@ -24,7 +24,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Elliot Wave Oscillator-Berechnung ist ganz einfach:
+Die Elliott-Wellen-Oszillator-Berechnung ist ganz einfach:
 
 ```
 EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
@@ -38,7 +38,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Elliot Wave Oscillator kann wie folgt interpretiert werden:
+Der Elliott-Wellen-Oszillator kann wie folgt interpretiert werden:
 
 1. **Positive und negative Werte**:
    - Positive Werte (EWO über Null) zeigen an, dass der Short-EMA über dem Long-EMA liegt, was häufig einem Aufwärtstrend oder einer Aufwärtsimpulswelle entspricht

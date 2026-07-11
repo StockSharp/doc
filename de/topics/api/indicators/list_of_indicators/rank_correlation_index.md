@@ -1,6 +1,6 @@
-# Rank Correlation Index
+# Rangkorrelationsindex
 
-Der **Rank Correlation Index (RCI)** ist ein Oszillator, der auf dem Rangkorrelationskoeffizienten nach Spearman basiert. Es vergleicht die Preisklassen
+Der **Rangkorrelationsindex (RCI)** ist ein Oszillator, der auf dem Rangkorrelationskoeffizienten nach Spearman basiert. Es vergleicht die Preisklassen
 Die Zeit rangiert innerhalb des Bewegungsfensters und zeigt an, wie nah die aktuelle Bewegung an einer perfekt steigenden oder fallenden Sequenz ist.
 
 Verwenden Sie die Klasse [RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorrelationIndex), um auf den Indikator zuzugreifen.

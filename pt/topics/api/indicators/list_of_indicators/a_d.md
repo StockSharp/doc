@@ -19,7 +19,7 @@ PREÇO MEDIANO — preço mediano;
 HIGH — o preço mais alto da barra;
 LOW — o preço mais baixo da barra;
 SMA — média móvel simples;
-AO — indicador [Awesome Oscillator](ao.md).
+AO — indicador [oscilador incrível](ao.md).
 
 Os parâmetros são definidos como valores dos períodos da SMA.
 

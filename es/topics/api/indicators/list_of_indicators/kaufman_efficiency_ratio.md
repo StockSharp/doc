@@ -1,12 +1,12 @@
 # KER
 
-**Kaufman Efficiency Ratio (KER)** es un indicador técnico desarrollado por Perry Kaufman que mide la eficiencia del movimiento de precios comparando el movimiento direccional de precios con la volatilidad general.
+**ratio de eficiencia de Kaufman (KER)** es un indicador técnico desarrollado por Perry Kaufman que mide la eficiencia del movimiento de precios comparando el movimiento direccional de precios con la volatilidad general.
 
 Para utilizar el indicador, debe utilizar la clase [KaufmanEfficiencyRatio](xref:StockSharp.Algo.Indicators.KaufmanEfficiencyRatio).
 
 ## Descripción
 
-El Kaufman Efficiency Ratio (KER) evalúa qué tan "eficientemente" se mueve el precio en una dirección específica en comparación con el camino total que recorre. Representa la relación entre el movimiento neto direccional de precios y la suma de todos los cambios de precios durante un período específico.
+El ratio de eficiencia de Kaufman (KER) evalúa qué tan "eficientemente" se mueve el precio en una dirección específica en comparación con el camino total que recorre. Representa la relación entre el movimiento neto direccional de precios y la suma de todos los cambios de precios durante un período específico.
 
 KER fue desarrollado por Perry Kaufman y originalmente se utilizó como componente de la media móvil adaptativa (KAMA). Sin embargo, KER en sí es una herramienta valiosa que ayuda a determinar si el mercado se encuentra en un estado de tendencia u oscilación.
 
@@ -21,7 +21,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Kaufman Efficiency Ratio implica los siguientes pasos:
+El cálculo de ratio de eficiencia de Kaufman implica los siguientes pasos:
 
 1. Calcule el movimiento direccional (cambio neto) durante el período:
    ```
@@ -47,7 +47,7 @@ Si la volatilidad es cero (lo cual es poco probable), KER se establece en cero p
 
 ## Interpretación
 
-El Kaufman Efficiency Ratio se puede interpretar de la siguiente manera:
+El ratio de eficiencia de Kaufman se puede interpretar de la siguiente manera:
 
 1. **Niveles de eficiencia**:
    - Los valores High KER (>0,6) indican una fuerte tendencia

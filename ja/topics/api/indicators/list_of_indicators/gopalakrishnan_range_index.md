@@ -1,12 +1,12 @@
 # GAPO
 
-**Gopalakrishnan Range Index (GAPO)** は、対数スケールを使用して市場のボラティリティを測定するために Tushar Gopalakrishnan によって開発されたテクニカルインジケーターです。
+**ゴパラクリシュナン・レンジ指数 (GAPO)** は、対数スケールを使用して市場のボラティリティを測定するために Tushar Gopalakrishnan によって開発されたテクニカルインジケーターです。
 
 このインジケーターを使用するには、[GopalakrishnanRangeIndex](xref:StockSharp.Algo.Indicators.GopalakrishnanRangeIndex) クラスを使用する必要があります。
 
 ## 説明
 
-Gopalakrishnan Range Index (GAPO) は、対数スケールを使用して特定期間にわたる全体の価格レンジを測定するボラティリティインジケーターです。これは Tushar Gopalakrishnan によって開発され、"Technical Analysis of Stocks & Commodities" 誌で発表されました。
+ゴパラクリシュナン・レンジ指数 (GAPO) は、対数スケールを使用して特定期間にわたる全体の価格レンジを測定するボラティリティインジケーターです。これは Tushar Gopalakrishnan によって開発され、"Technical Analysis of Stocks & Commodities" 誌で発表されました。
 
 GAPO は、指定された期間における最高価格と最低価格の間の対数比を測定することで、極端な市場変動を評価します。このアプローチにより、特に急激な価格変動の期間中に、インジケーターはボラティリティの増加をより正確に反映できます。
 
@@ -23,7 +23,7 @@ GAPO インジケーターは特に次の用途に役立ちます:
 
 ## 計算
 
-Gopalakrishnan Range Index の計算は非常に単純です:
+ゴパラクリシュナン・レンジ指数 の計算は非常に単純です:
 
 ```
 GAPO = log(N) * log(Highest High - Lowest Low)
@@ -37,7 +37,7 @@ GAPO = log(N) * log(Highest High - Lowest Low)
 
 ## 解釈
 
-Gopalakrishnan Range Index は次のように解釈できます:
+ゴパラクリシュナン・レンジ指数 は次のように解釈できます:
 
 1. **絶対値**:
    - 高い GAPO 値は高ボラティリティの期間を示します

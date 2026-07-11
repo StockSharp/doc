@@ -2,12 +2,12 @@
 
 ﻿# AO
 
-O **Awesome Oscillator (AO)** é um indicador técnico clássico construído subtraindo médias móveis (SMA) com períodos diferentes.
+O **oscilador incrível (AO)** é um indicador técnico clássico construído subtraindo médias móveis (SMA) com períodos diferentes.
 
 Para usar o indicador, deve ser usada a classe [AwesomeOscillator](xref:StockSharp.Algo.Indicators.AwesomeOscillator).
 ##### Cálculo
 
-O histograma do Awesome Oscillator é uma média móvel simples de 34 períodos construída sobre os valores centrais das barras (H+L) / 2, subtraída de uma média móvel simples de 5 períodos sobre os pontos centrais (H+L) / 2. Assim, a linha da média móvel lenta é subtraída da rápida para obter uma ideia da força do movimento do preço e das suas intenções futuras.
+O histograma do oscilador incrível é uma média móvel simples de 34 períodos construída sobre os valores centrais das barras (H+L) / 2, subtraída de uma média móvel simples de 5 períodos sobre os pontos centrais (H+L) / 2. Assim, a linha da média móvel lenta é subtraída da rápida para obter uma ideia da força do movimento do preço e das suas intenções futuras.
 
 PREÇO MEDIANO = (HIGH + LOW) / 2
 AO = SMA (PREÇO MEDIANO, 5) — SMA (PREÇO MEDIANO, 34), onde

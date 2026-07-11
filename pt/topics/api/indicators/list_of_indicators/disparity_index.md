@@ -1,16 +1,16 @@
 # DPI
 
-**Disparity Index (DPI)** é um indicador técnico que mede o desvio relativo do preço atual em relação a uma média móvel durante um período especificado, expresso em percentagem.
+**índice de disparidade (DPI)** é um indicador técnico que mede o desvio relativo do preço atual em relação a uma média móvel durante um período especificado, expresso em percentagem.
 
 Para usar o indicador, deve ser usada a classe [DisparityIndex](xref:StockSharp.Algo.Indicators.DisparityIndex).
 
 ## Descrição
 
-O Disparity Index (DPI) foi concebido para medir o grau de desvio do preço em relação à sua média móvel. Este indicador ajuda a determinar até que ponto o preço está "esticado" relativamente ao seu valor médio e pode ser usado para identificar potenciais condições de sobrecompra ou sobrevenda.
+O índice de disparidade (DPI) foi concebido para medir o grau de desvio do preço em relação à sua média móvel. Este indicador ajuda a determinar até que ponto o preço está "esticado" relativamente ao seu valor médio e pode ser usado para identificar potenciais condições de sobrecompra ou sobrevenda.
 
 O DPI baseia-se na suposição de que o preço tende a regressar ao seu valor médio após um desvio significativo. Quanto maior for o desvio, maior é a probabilidade de um movimento subsequente do preço na direção oposta, aproximando-o da média.
 
-O Disparity Index é útil para:
+O índice de disparidade é útil para:
 - Identificar desvios extremos do preço em relação à sua média
 - Detetar potenciais pontos de reversão
 - Medir a força da tendência atual
@@ -23,7 +23,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-A fórmula de cálculo do Disparity Index é bastante simples:
+A fórmula de cálculo do índice de disparidade é bastante simples:
 
 ```
 DPI = ((Price / MA) - 1) * 100
@@ -38,7 +38,7 @@ Valores positivos de DPI indicam que o preço está acima da sua média móvel, 
 
 ## Interpretação
 
-O Disparity Index pode ser interpretado da seguinte forma:
+O índice de disparidade pode ser interpretado da seguinte forma:
 
 1. **Níveis extremos**:
    - Valores positivos elevados (por exemplo, acima de +10%) podem indicar condições de sobrecompra no mercado

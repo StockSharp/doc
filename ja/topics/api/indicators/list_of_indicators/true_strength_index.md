@@ -1,6 +1,6 @@
-# True Strength Index
+# 真の強さ指数
 
-**True Strength Index (TSI)** は、William Blau によって作成されたモメンタム・オシレーターです。連続する終値の差分に二重平滑化を適用し、多くの古典的なオシレーターと比較して遅れを抑えながら、トレンドと転換点の特定を支援します。
+**真の強さ指数 (TSI)** は、William Blau によって作成されたモメンタム・オシレーターです。連続する終値の差分に二重平滑化を適用し、多くの古典的なオシレーターと比較して遅れを抑えながら、トレンドと転換点の特定を支援します。
 
 インジケーターにアクセスするには、[TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengthIndex) クラスを使用します。
 
@@ -8,7 +8,7 @@
 
 1. 価格変化 `m = Close − PreviousClose` を計算します。
 2. `m` と `|m|` の両方に、期間 `Length1` と `Length2` の 2 つの指数移動平均を適用します。
-3. 二重平滑化されたモメンタムと、二重平滑化された絶対モメンタムの比率を計算します:  
+3. 二重平滑化されたモメンタムと、二重平滑化された絶対モメンタムの比率を計算します:
    `TSI = 100 × EMA(EMA(m, Length1), Length2) / EMA(EMA(|m|, Length1), Length2)`。
 4. 必要に応じて、期間 **Signal** の TSI の EMA を取得してシグナルラインを導出します。
 

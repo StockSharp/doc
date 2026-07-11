@@ -178,7 +178,7 @@ Der letzte Typ von Indikatoren besteht nicht nur aus anderen Indikatoren, sonder
 
 ```cs
 /// <summary>
-/// Welles Wilders Average Directional Index.
+/// Welles Wilders Durchschnittlicher Richtungsindex.
 /// </summary>
 [DisplayName("ADX")]
 [Description("Welles Wilders durchschnittlicher Richtungsindex.")]

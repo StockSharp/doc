@@ -1,16 +1,16 @@
 # EWO
 
-**Elliot Wave Oscillator (EWO)** は、Elliott Wave Theory に基づくテクニカル指標で、トレーダーが波動構造と潜在的な市場反転ポイントを判断するのに役立ちます。
+**エリオット波動オシレーター (EWO)** は、Elliott Wave Theory に基づくテクニカル指標で、トレーダーが波動構造と潜在的な市場反転ポイントを判断するのに役立ちます。
 
 この指標を使用するには、[ElliotWaveOscillator](xref:StockSharp.Algo.Indicators.ElliotWaveOscillator) クラスを使用する必要があります。
 
 ## 説明
 
-Elliot Wave Oscillator (EWO) は、トレーダーが市場分析で Elliott Wave Theory を適用できるように開発されました。Elliott Wave Theory では、市場はトレンド方向の 5 つの波（推進波）と、トレンドに逆らう 3 つの波（修正波）で構成される予測可能なサイクルで動くと仮定します。
+エリオット波動オシレーター (EWO) は、トレーダーが市場分析で Elliott Wave Theory を適用できるように開発されました。Elliott Wave Theory では、市場はトレンド方向の 5 つの波（推進波）と、トレンドに逆らう 3 つの波（修正波）で構成される予測可能なサイクルで動くと仮定します。
 
 EWO は高速移動平均と低速移動平均の差に基づいており、Elliott の理論に従って推進波と修正波を特定するように設計されています。市場が推進局面または修正局面のどちらにあるかを判断し、潜在的な反転ポイントを示唆するのに役立ちます。
 
-Elliot Wave Oscillator は特に次の用途に有用です。
+エリオット波動オシレーター は特に次の用途に有用です。
 - 現在の Elliott 波動構造の特定
 - 推進波および修正波の潜在的な終了地点の判断
 - 手動の波動分析の確認
@@ -24,7 +24,7 @@ Elliot Wave Oscillator は特に次の用途に有用です。
 
 ## 計算
 
-Elliot Wave Oscillator の計算は非常に単純です。
+エリオット波動オシレーター の計算は非常に単純です。
 
 ```
 EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
@@ -38,7 +38,7 @@ EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
 
 ## 解釈
 
-Elliot Wave Oscillator は次のように解釈できます。
+エリオット波動オシレーター は次のように解釈できます。
 
 1. **正の値と負の値**:
    - 正の値（EWO がゼロより上）は、短期 EMA が長期 EMA を上回っていることを示し、多くの場合、強気トレンドまたは上向きの推進波に対応します

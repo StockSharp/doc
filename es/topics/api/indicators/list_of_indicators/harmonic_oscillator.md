@@ -1,12 +1,12 @@
 # HO
 
-**Harmonic Oscillator (HO)** es un indicador técnico basado en la teoría de la oscilación armónica que ayuda a identificar componentes cíclicos en el movimiento de precios.
+**oscilador armónico (HO)** es un indicador técnico basado en la teoría de la oscilación armónica que ayuda a identificar componentes cíclicos en el movimiento de precios.
 
 Para utilizar el indicador, debe utilizar la clase [HarmonicOscillator](xref:StockSharp.Algo.Indicators.HarmonicOscillator).
 
 ## Descripción
 
-El Harmonic Oscillator (HO) es un indicador desarrollado para identificar la periodicidad y la naturaleza cíclica de los movimientos de los precios del mercado. Se basa en el principio de que muchos movimientos de precios contienen componentes armónicos (periódicos) que pueden aislarse y utilizarse para pronosticar movimientos futuros de precios.
+El oscilador armónico (HO) es un indicador desarrollado para identificar la periodicidad y la naturaleza cíclica de los movimientos de los precios del mercado. Se basa en el principio de que muchos movimientos de precios contienen componentes armónicos (periódicos) que pueden aislarse y utilizarse para pronosticar movimientos futuros de precios.
 
 El indicador aplica métodos de análisis espectral para descomponer la serie de precios en componentes armónicos, destacando los ciclos dominantes. Luego muestra estos componentes cíclicos como un oscilador que ayuda a los operadores a determinar cuándo el precio puede alcanzar máximos o mínimos locales dentro de los ciclos identificados.
 
@@ -23,7 +23,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Harmonic Oscillator implica los siguientes pasos:
+El cálculo de oscilador armónico implica los siguientes pasos:
 
 1. Preprocesamiento de la serie de precios (eliminación de tendencia):
    ```
@@ -34,13 +34,13 @@ El cálculo de Harmonic Oscillator implica los siguientes pasos:
    ```
    Componentes espectrales = FFT(Precio sin tendencia)
    ```
-   
+
 3. Extracción de los componentes armónicos más significativos:
    ```
    Ciclos dominantes = extraer los N principales componentes espectrales según la amplitud
    ```
 
-4. Sintetizando el Harmonic Oscillator en base a ciclos dominantes:
+4. Sintetizando el oscilador armónico en base a ciclos dominantes:
    ```
    HO = reconstrucción de ciclos dominantes mediante FFT inversa
    ```
@@ -53,7 +53,7 @@ donde:
 
 ## Interpretación
 
-El Harmonic Oscillator se puede interpretar de la siguiente manera:
+El oscilador armónico se puede interpretar de la siguiente manera:
 
 1. **Cruces de línea cero**:
    - Cuando HO cruza la línea cero de abajo hacia arriba, puede verse como una señal alcista.

@@ -1,12 +1,12 @@
 # IMI
 
-**Intraday Momentum Index (IMI)** ist ein von Tushar Chande entwickelter technischer Indikator, der Intraday-Preisprinzipien und das RSI-Konzept kombiniert, um die Intraday-Momentum zu messen.
+**Intraday-Momentum-Index (IMI)** ist ein von Tushar Chande entwickelter technischer Indikator, der Intraday-Preisprinzipien und das RSI-Konzept kombiniert, um die Intraday-Momentum zu messen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [IntradayMomentumIndex](xref:StockSharp.Algo.Indicators.IntradayMomentumIndex) verwenden.
 
 ## Beschreibung
 
-Der Intraday Momentum Index (IMI) wurde als Modifikation des klassischen Relative-Stärke-Index (RSI) erstellt und speziell für die Analyse der Intraday-Marktdynamik angepasst. Anstatt sequenzielle Schlusskurse zu verwenden, wie beim herkömmlichen RSI, vergleicht IMI den Schlusskurs mit dem Eröffnungskurs für jede Periode.
+Der Intraday-Momentum-Index (IMI) wurde als Modifikation des klassischen Relative-Stärke-Index (RSI) erstellt und speziell für die Analyse der Intraday-Marktdynamik angepasst. Anstatt sequenzielle Schlusskurse zu verwenden, wie beim herkömmlichen RSI, vergleicht IMI den Schlusskurs mit dem Eröffnungskurs für jede Periode.
 
 IMI bewertet, wie oft und wie stark der Schlusskurs über einen bestimmten Zeitraum den Eröffnungskurs übersteigt (positives Momentum) oder unter den Eröffnungskurs fällt (negatives Momentum). Dies ermöglicht die Identifizierung der vorherrschenden Richtung und Stärke der Intraday-Bewegung.
 
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Intraday Momentum Index-Berechnung umfasst die folgenden Schritte:
+Die Intraday-Momentum-Index-Berechnung umfasst die folgenden Schritte:
 
 1. Bestimmen Sie die Intraday-Preisbewegung:
    ```
@@ -46,7 +46,7 @@ Hinweis: Wenn (Sum-Gewinne + Sum-Verluste) gleich Null sind, wird IMI auf 50 ges
 
 ## Interpretation
 
-Der Intraday Momentum Index wird ähnlich wie RSI interpretiert:
+Der Intraday-Momentum-Index wird ähnlich wie RSI interpretiert:
 
 1. **Wertebereich**:
    - IMI schwankt zwischen 0 und 100

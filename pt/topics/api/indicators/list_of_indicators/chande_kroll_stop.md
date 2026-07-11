@@ -1,12 +1,12 @@
 # CKS
 
-**Chande Kroll Stop (CKS)** é um indicador para determinar níveis de stop-loss, desenvolvido por Tushar Chande e Stanley Kroll, que se adapta à volatilidade do mercado e ajuda os traders a definir pontos de saída de posições.
+**stop Chande Kroll (CKS)** é um indicador para determinar níveis de stop-loss, desenvolvido por Tushar Chande e Stanley Kroll, que se adapta à volatilidade do mercado e ajuda os traders a definir pontos de saída de posições.
 
 Para usar o indicador, deve ser usada a classe [ChandeKrollStop](xref:StockSharp.Algo.Indicators.ChandeKrollStop).
 
 ## Descrição
 
-O indicador Chande Kroll Stop foi desenvolvido como uma ferramenta dinâmica para definir níveis de stop-loss que responde a alterações na volatilidade e na tendência do mercado. É composto por duas linhas: uma linha de stop superior (para posições short) e uma linha de stop inferior (para posições long).
+O indicador stop Chande Kroll foi desenvolvido como uma ferramenta dinâmica para definir níveis de stop-loss que responde a alterações na volatilidade e na tendência do mercado. É composto por duas linhas: uma linha de stop superior (para posições short) e uma linha de stop inferior (para posições long).
 
 A principal vantagem do CKS está na sua capacidade de se adaptar às condições atuais do mercado. Durante períodos de elevada volatilidade, as linhas de stop são posicionadas mais longe do preço, ajudando a evitar o encerramento prematuro da posição devido ao ruído do mercado. Durante períodos de baixa volatilidade, as linhas de stop aproximam-se do preço, proporcionando um seguimento de tendência mais apertado.
 
@@ -25,7 +25,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Chande Kroll Stop envolve os seguintes passos:
+O cálculo do stop Chande Kroll envolve os seguintes passos:
 
 1. Determinar os extremos máximo e mínimo ao longo do Period:
    ```

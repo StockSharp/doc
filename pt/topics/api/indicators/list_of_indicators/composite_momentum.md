@@ -1,12 +1,12 @@
 # CM
 
-**Composite Momentum (CM)** é um indicador que combina vários métodos de medição do momentum do preço para obter sinais mais fiáveis sobre a força e a direção da tendência.
+**momentum composto (CM)** é um indicador que combina vários métodos de medição do momentum do preço para obter sinais mais fiáveis sobre a força e a direção da tendência.
 
 Para usar o indicador, deve ser usada a classe [CompositeMomentum](xref:StockSharp.Algo.Indicators.CompositeMomentum).
 
 ## Descrição
 
-O indicador Composite Momentum (CM) é uma ferramenta abrangente que integra vários aspetos do movimento do preço, incluindo a taxa de variação do preço, a força relativa e outros componentes de momentum. Através desta abordagem combinada, o CM fornece uma imagem mais completa do momentum atual do mercado em comparação com indicadores tradicionais de momentum unidimensionais.
+O indicador momentum composto (CM) é uma ferramenta abrangente que integra vários aspetos do movimento do preço, incluindo a taxa de variação do preço, a força relativa e outros componentes de momentum. Através desta abordagem combinada, o CM fornece uma imagem mais completa do momentum atual do mercado em comparação com indicadores tradicionais de momentum unidimensionais.
 
 CM é eficaz para:
 - Determinar a força da tendência atual
@@ -14,11 +14,11 @@ CM é eficaz para:
 - Detetar divergências entre o preço e o momentum
 - Filtrar sinais falsos de outros indicadores
 
-Composite Momentum é particularmente útil em mercados voláteis, onde os indicadores tradicionais de momentum podem gerar numerosos sinais falsos.
+momentum composto é particularmente útil em mercados voláteis, onde os indicadores tradicionais de momentum podem gerar numerosos sinais falsos.
 
 ## Cálculo
 
-O cálculo do Composite Momentum envolve várias etapas e componentes:
+O cálculo do momentum composto envolve várias etapas e componentes:
 
 1. Calcular componentes de momentum:
    - Alteração do preço relativamente a períodos anteriores

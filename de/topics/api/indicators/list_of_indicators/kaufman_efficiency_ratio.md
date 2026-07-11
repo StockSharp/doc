@@ -1,12 +1,12 @@
 # KER
 
-**Kaufman Efficiency Ratio (KER)** ist ein von Perry Kaufman entwickelter technischer Indikator, der die Effizienz der Preisbewegung misst, indem er die gerichtete Preisbewegung mit der Gesamtvolatilität vergleicht.
+**Kaufman-Effizienzverhältnis (KER)** ist ein von Perry Kaufman entwickelter technischer Indikator, der die Effizienz der Preisbewegung misst, indem er die gerichtete Preisbewegung mit der Gesamtvolatilität vergleicht.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [KaufmanEfficiencyRatio](xref:StockSharp.Algo.Indicators.KaufmanEfficiencyRatio) verwenden.
 
 ## Beschreibung
 
-Der Kaufman Efficiency Ratio (KER) bewertet, wie „effizient“ sich der Preis im Vergleich zum gesamten zurückgelegten Weg in eine bestimmte Richtung bewegt. Es stellt das Verhältnis der Nettopreisbewegung zur Summe aller Preisänderungen über einen bestimmten Zeitraum dar.
+Der Kaufman-Effizienzverhältnis (KER) bewertet, wie „effizient“ sich der Preis im Vergleich zum gesamten zurückgelegten Weg in eine bestimmte Richtung bewegt. Es stellt das Verhältnis der Nettopreisbewegung zur Summe aller Preisänderungen über einen bestimmten Zeitraum dar.
 
 KER wurde von Perry Kaufman entwickelt und ursprünglich als Komponente des adaptiven gleitenden Durchschnitts nach Kaufman (KAMA) verwendet. KER selbst ist jedoch ein wertvolles Tool, das dabei hilft, festzustellen, ob sich der Markt in einem Trend- oder Schwankungszustand befindet.
 
@@ -21,7 +21,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Kaufman Efficiency Ratio-Berechnung umfasst die folgenden Schritte:
+Die Kaufman-Effizienzverhältnis-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Richtungsbewegung (Nettoveränderung) über den Zeitraum:
    ```
@@ -47,7 +47,7 @@ Wenn die Volatilität Null ist (was unwahrscheinlich ist), wird KER auf Null ges
 
 ## Interpretation
 
-Der Kaufman Efficiency Ratio kann wie folgt interpretiert werden:
+Der Kaufman-Effizienzverhältnis kann wie folgt interpretiert werden:
 
 1. **Effizienzstufen**:
    - High KER-Werte (>0,6) weisen auf einen starken Trend hin

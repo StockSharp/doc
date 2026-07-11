@@ -1,16 +1,16 @@
 # EWO
 
-**Elliot Wave Oscillator (EWO)** es un indicador técnico basado en la teoría de ondas de Elliott que ayuda a los operadores a determinar la estructura de las ondas y los posibles puntos de reversión del mercado.
+**oscilador de ondas de Elliott (EWO)** es un indicador técnico basado en la teoría de ondas de Elliott que ayuda a los operadores a determinar la estructura de las ondas y los posibles puntos de reversión del mercado.
 
 Para utilizar el indicador, debe utilizar la clase [ElliotWaveOscillator](xref:StockSharp.Algo.Indicators.ElliotWaveOscillator).
 
 ## Descripción
 
-El Elliot Wave Oscillator (EWO) fue desarrollado para ayudar a los operadores a aplicar la teoría de ondas de Elliott en el análisis de mercado. La teoría de ondas de Elliott supone que los mercados se mueven en ciclos predecibles que constan de cinco ondas en la dirección de la tendencia (ondas de impulso) y tres ondas en contra de la tendencia (ondas correctivas).
+El oscilador de ondas de Elliott (EWO) fue desarrollado para ayudar a los operadores a aplicar la teoría de ondas de Elliott en el análisis de mercado. La teoría de ondas de Elliott supone que los mercados se mueven en ciclos predecibles que constan de cinco ondas en la dirección de la tendencia (ondas de impulso) y tres ondas en contra de la tendencia (ondas correctivas).
 
 EWO se basa en la diferencia entre promedios móviles rápidos y lentos y está diseñado para identificar ondas impulsivas y correctivas según la teoría de Elliott. Ayuda a determinar cuándo el mercado se encuentra en una fase de impulso o correctiva y sugiere posibles puntos de reversión.
 
-El Elliot Wave Oscillator es particularmente útil para:
+El oscilador de ondas de Elliott es particularmente útil para:
 - Identificación de la estructura actual de las ondas de Elliott
 - Determinación de posibles finales de ondas impulsivas y correctivas.
 - Confirmación del análisis de onda manual
@@ -24,7 +24,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Elliot Wave Oscillator es bastante sencillo:
+El cálculo de oscilador de ondas de Elliott es bastante sencillo:
 
 ```
 EWO = EMA(Close, ShortPeriod) - EMA(Close, LongPeriod)
@@ -38,7 +38,7 @@ donde:
 
 ## Interpretación
 
-El Elliot Wave Oscillator se puede interpretar de la siguiente manera:
+El oscilador de ondas de Elliott se puede interpretar de la siguiente manera:
 
 1. **Valores positivos y negativos**:
    - Los valores positivos (EWO por encima de cero) indican que el EMA corto está por encima del EMA largo, lo que a menudo corresponde a una tendencia alcista o una onda de impulso ascendente.

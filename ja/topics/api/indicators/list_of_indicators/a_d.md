@@ -17,7 +17,7 @@ A/D = AO - SMA (AO, 5)
 HIGH - バーの最高価格。
 LOW - バーの最低価格。
 SMA - 単純移動平均。
-AO - [Awesome Oscillator](ao.md) インジケーター。
+AO - [オーサムオシレーター](ao.md) インジケーター。
 
 パラメーターは SMA 期間の値として設定されます。
 

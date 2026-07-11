@@ -1,12 +1,12 @@
 # CHOP
 
-**Choppiness Index (CHOP)** ist ein Indikator, der ermitteln soll, ob sich der Markt in einer Seitwärtsbewegung (innerhalb einer Spanne) oder in einem Trendzustand befindet.
+**Choppiness-Index (CHOP)** ist ein Indikator, der ermitteln soll, ob sich der Markt in einer Seitwärtsbewegung (innerhalb einer Spanne) oder in einem Trendzustand befindet.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ChoppinessIndex](xref:StockSharp.Algo.Indicators.ChoppinessIndex) verwenden.
 
 ## Beschreibung
 
-Der Choppiness Index (CHOP) wurde entwickelt, um die Volatilität quantitativ zu bewerten und die Art der Marktbewegung zu bestimmen. Im Gegensatz zu vielen anderen Indikatoren ist CHOP nicht dazu gedacht, eine Trendrichtung zu erkennen oder Kauf- oder Verkaufssignale zu generieren. Stattdessen hilft es Händlern zu bestimmen, ob sich der Markt in einer Konsolidierung (Seitwärtsbewegung) oder in einem Richtungstrend befindet.
+Der Choppiness-Index (CHOP) wurde entwickelt, um die Volatilität quantitativ zu bewerten und die Art der Marktbewegung zu bestimmen. Im Gegensatz zu vielen anderen Indikatoren ist CHOP nicht dazu gedacht, eine Trendrichtung zu erkennen oder Kauf- oder Verkaufssignale zu generieren. Stattdessen hilft es Händlern zu bestimmen, ob sich der Markt in einer Konsolidierung (Seitwärtsbewegung) oder in einem Richtungstrend befindet.
 
 Der CHOP-Indikator schwankt zwischen 0 und 100:
 - Werte näher an 100 deuten auf eine starke Konsolidierung hin (hohe „Abhackigkeit“).
@@ -25,7 +25,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Choppiness Index-Berechnung umfasst die folgenden Schritte:
+Die Choppiness-Index-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie die Summe der wahren Reichweiten über den ausgewählten Zeitraum:
    ```

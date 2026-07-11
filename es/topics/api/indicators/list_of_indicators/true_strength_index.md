@@ -1,6 +1,6 @@
-# True Strength Index
+# índice de fuerza verdadera
 
-El **True Strength Index (TSI)** es un oscilador de impulso creado por William Blau. Aplica doble suavizado a la diferencia.
+El **índice de fuerza verdadera (TSI)** es un oscilador de impulso creado por William Blau. Aplica doble suavizado a la diferencia.
 entre precios de cierre consecutivos, lo que ayuda a identificar tendencias y puntos de inflexión con menos retraso en comparación con muchos clásicos
 osciladores.
 
@@ -10,7 +10,7 @@ Utilice la clase [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengt
 
 1. Calcule el cambio de precio `m = Close − PreviousClose`.
 2. Aplique dos medias móviles exponenciales con períodos `Length1` y `Length2` a `m` y `|m|`.
-3. Calcule la relación entre el impulso doblemente suavizado y el impulso absoluto doblemente suavizado:  
+3. Calcule la relación entre el impulso doblemente suavizado y el impulso absoluto doblemente suavizado:
    `TSI = 100 × EMA(EMA(m, Length1), Length2) / EMA(EMA(|m|, Length1), Length2)`.
 4. Opcionalmente, obtenga una línea de señal tomando un EMA del TSI con un período **Señal**.
 

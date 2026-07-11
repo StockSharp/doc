@@ -1,12 +1,12 @@
 # SW
 
-**Sine Wave (SW)** é um indicador técnico que utiliza a função matemática seno para identificar padrões cíclicos no movimento do preço. O indicador procura identificar e antecipar oscilações periódicas do mercado.
+**onda senoidal (SW)** é um indicador técnico que utiliza a função matemática seno para identificar padrões cíclicos no movimento do preço. O indicador procura identificar e antecipar oscilações periódicas do mercado.
 
 Para utilizar o indicador, é necessário usar a classe [SineWave](xref:StockSharp.Algo.Indicators.SineWave).
 
 ## Descrição
 
-O indicador Sine Wave baseia-se na ideia de que os movimentos do mercado têm uma natureza cíclica e podem ser modelados através de funções sinusoidais. Este indicador é particularmente útil em mercados que se movem lateralmente ou que apresentam flutuações cíclicas previsíveis.
+O indicador onda senoidal baseia-se na ideia de que os movimentos do mercado têm uma natureza cíclica e podem ser modelados através de funções sinusoidais. Este indicador é particularmente útil em mercados que se movem lateralmente ou que apresentam flutuações cíclicas previsíveis.
 
 Características principais do indicador:
 - Ajuda a identificar potenciais pontos de inversão do mercado
@@ -23,7 +23,7 @@ Sinais do indicador:
 
 ## Cálculo
 
-O cálculo do indicador Sine Wave baseia-se na utilização da função seno e na determinação do ciclo dominante no movimento do preço:
+O cálculo do indicador onda senoidal baseia-se na utilização da função seno e na determinação do ciclo dominante no movimento do preço:
 
 1. Determinar o ciclo dominante através de análise espectral ou de outro método de identificação de ciclos.
 

@@ -1,6 +1,6 @@
-# Price Channels
+# Preiskanäle
 
-**Price Channels (PC)** zeigt die oberen und unteren Grenzen der Preisbewegung über einen bestimmten Zeitraum an.
+**Preiskanäle (PC)** zeigt die oberen und unteren Grenzen der Preisbewegung über einen bestimmten Zeitraum an.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [PriceChannels](xref:StockSharp.Algo.Indicators.PriceChannels) verwenden.
 

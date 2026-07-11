@@ -26,4 +26,4 @@ Isto produz uma estimativa otimizada que reage rapidamente às alterações de p
 ## Ver Também
 
 [Média móvel adaptativa de Kaufman](kama.md)
-[Adaptive Laguerre Filter](adaptive_laguerre_filter.md)
+[filtro adaptativo de Laguerre](adaptive_laguerre_filter.md)

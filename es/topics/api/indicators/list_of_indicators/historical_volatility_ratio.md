@@ -1,12 +1,12 @@
 # HVR
 
-**Historical Volatility Ratio (HVR)** es un indicador técnico que compara la volatilidad histórica a corto plazo con la volatilidad histórica a largo plazo para evaluar los cambios en la actividad del mercado.
+**ratio de volatilidad histórica (HVR)** es un indicador técnico que compara la volatilidad histórica a corto plazo con la volatilidad histórica a largo plazo para evaluar los cambios en la actividad del mercado.
 
 Para utilizar el indicador, debe utilizar la clase [HistoricalVolatilityRatio](xref:StockSharp.Algo.Indicators.HistoricalVolatilityRatio).
 
 ## Descripción
 
-El Historical Volatility Ratio (HVR) es un indicador de volatilidad relativa que compara la volatilidad a corto plazo con la volatilidad del mercado a largo plazo. El indicador ayuda a determinar si la volatilidad actual está aumentando o disminuyendo en relación con su nivel histórico.
+El ratio de volatilidad histórica (HVR) es un indicador de volatilidad relativa que compara la volatilidad a corto plazo con la volatilidad del mercado a largo plazo. El indicador ayuda a determinar si la volatilidad actual está aumentando o disminuyendo en relación con su nivel histórico.
 
 HVR se calcula como la relación entre la volatilidad histórica a corto plazo y la volatilidad histórica a largo plazo. Los valores superiores a 1,0 indican que la volatilidad actual (a corto plazo) es mayor que la volatilidad a largo plazo, lo que puede indicar una mayor actividad del mercado o un posible cambio de tendencia.
 
@@ -24,7 +24,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Historical Volatility Ratio implica los siguientes pasos:
+El cálculo de ratio de volatilidad histórica implica los siguientes pasos:
 
 1. Calcule la volatilidad histórica a corto plazo:
    ```
@@ -50,7 +50,7 @@ donde:
 
 ## Interpretación
 
-El Historical Volatility Ratio se puede interpretar de la siguiente manera:
+El ratio de volatilidad histórica se puede interpretar de la siguiente manera:
 
 1. **Level 1.0**:
    - HVR = 1,0 significa que la volatilidad a corto plazo es igual a la volatilidad a largo plazo

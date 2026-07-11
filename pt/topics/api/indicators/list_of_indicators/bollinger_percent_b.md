@@ -2,13 +2,13 @@
 
 ﻿# BBP
 
-**Bollinger Percent B (BBP)** é um indicador desenvolvido por John Bollinger como complemento do indicador bandas de Bollinger. O BBP mostra a localização do preço em relação às bandas de Bollinger superior e inferior.
+**percentual de Bollinger B (BBP)** é um indicador desenvolvido por John Bollinger como complemento do indicador bandas de Bollinger. O BBP mostra a localização do preço em relação às bandas de Bollinger superior e inferior.
 
 Para usar o indicador, é necessário usar a classe [BollingerPercentB](xref:StockSharp.Algo.Indicators.BollingerPercentB).
 
 ## Descrição
 
-O indicador Bollinger Percent B determina a posição do preço em relação às bandas de Bollinger superior e inferior como um valor percentual de 0 a 1 (ou de 0% a 100%). Isto permite uma determinação mais precisa da posição do preço no contexto das bandas de Bollinger:
+O indicador percentual de Bollinger B determina a posição do preço em relação às bandas de Bollinger superior e inferior como um valor percentual de 0 a 1 (ou de 0% a 100%). Isto permite uma determinação mais precisa da posição do preço no contexto das bandas de Bollinger:
 
 - Um valor de 1 (ou 100%) significa que o preço está na banda de Bollinger superior.
 - Um valor de 0 (ou 0%) significa que o preço está na banda de Bollinger inferior.
@@ -26,7 +26,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Bollinger Percent B baseia-se na fórmula:
+O cálculo do percentual de Bollinger B baseia-se na fórmula:
 
 ```
 BBP = (Price - Lower banda de Bollinger) / (Upper banda de Bollinger - Lower banda de Bollinger)
@@ -41,7 +41,7 @@ Onde:
 
 ## Utilização
 
-Bollinger Percent B pode ser usado de várias formas:
+percentual de Bollinger B pode ser usado de várias formas:
 
 1. **Identificar condições de sobrecompra/sobrevenda**:
    - Valores acima de 1 indicam um mercado em sobrecompra

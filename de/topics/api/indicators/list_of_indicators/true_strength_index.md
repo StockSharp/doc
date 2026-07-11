@@ -1,6 +1,6 @@
-# True Strength Index
+# Index der wahren Stärke
 
-Der **True Strength Index (TSI)** ist ein von William Blau entwickelter Momentum-Oszillator. Er glättet die Differenz zwischen aufeinanderfolgenden Schlusskursen doppelt und hilft dadurch, Trends und Wendepunkte mit weniger Verzögerung als viele klassische Oszillatoren zu erkennen.
+Der **Index der wahren Stärke (TSI)** ist ein von William Blau entwickelter Momentum-Oszillator. Er glättet die Differenz zwischen aufeinanderfolgenden Schlusskursen doppelt und hilft dadurch, Trends und Wendepunkte mit weniger Verzögerung als viele klassische Oszillatoren zu erkennen.
 
 Verwenden Sie die Klasse [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengthIndex), um auf den Indikator zuzugreifen.
 

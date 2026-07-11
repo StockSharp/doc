@@ -1,12 +1,12 @@
 # HLI
 
-**High Low Index (HLI)** ist ein technischer Indikator, der das Verhältnis der Anzahl der Aktien, die neue Höchststände erreichen, zur Anzahl der Aktien, die über einen bestimmten Zeitraum neue Tiefststände erreichen, misst.
+**Hoch-Tief-Index (HLI)** ist ein technischer Indikator, der das Verhältnis der Anzahl der Aktien, die neue Höchststände erreichen, zur Anzahl der Aktien, die über einen bestimmten Zeitraum neue Tiefststände erreichen, misst.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [HighLowIndex](xref:StockSharp.Algo.Indicators.HighLowIndex) verwenden.
 
 ## Beschreibung
 
-Der High Low Index (HLI) ist ein Marktbreitenindikator, der die gesamte Marktaktivität analysiert, indem er die Anzahl der Instrumente, die neue Höchststände erreichen, mit der Anzahl der Instrumente vergleicht, die neue Tiefststände erreichen. Dies ermöglicht die Beurteilung der internen Stärke oder Schwäche des Marktes.
+Der Hoch-Tief-Index (HLI) ist ein Marktbreitenindikator, der die gesamte Marktaktivität analysiert, indem er die Anzahl der Instrumente, die neue Höchststände erreichen, mit der Anzahl der Instrumente vergleicht, die neue Tiefststände erreichen. Dies ermöglicht die Beurteilung der internen Stärke oder Schwäche des Marktes.
 
 Die Grundidee des Indikators besteht darin, dass ein gesunder Markt dadurch gekennzeichnet ist, dass mehr Wertpapiere neue Höchststände als neue Tiefststände erreichen. Umgekehrt wird ein schwächer werdender Markt dazu führen, dass mehr Wertpapiere neue Tiefststände erreichen.
 
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die High Low Index-Berechnung umfasst die folgenden Schritte:
+Die Hoch-Tief-Index-Berechnung umfasst die folgenden Schritte:
 
 1. Zählen Sie die Anzahl der Wertpapiere, die im Length-Zeitraum neue Höchststände erreicht haben:
    ```
@@ -35,7 +35,7 @@ Die High Low Index-Berechnung umfasst die folgenden Schritte:
    New Lows = Anzahl der Instrumente mit neuen Tiefs über die Length-Periode
    ```
 
-3. Berechnen Sie High Low Index als Verhältnis der Differenz zwischen neuen Höchst- und Tiefstständen zu ihrer Summe:
+3. Berechnen Sie Hoch-Tief-Index als Verhältnis der Differenz zwischen neuen Höchst- und Tiefstständen zu ihrer Summe:
    ```
    HLI = ((New Highs - New Lows) / (New Highs + New Lows)) * 100
    ```
@@ -44,7 +44,7 @@ Hinweis: Wenn (Neue Hochs + Neue Tiefs) gleich Null ist, wird HLI auf Null geset
 
 ## Interpretation
 
-Der High Low Index wird wie folgt interpretiert:
+Der Hoch-Tief-Index wird wie folgt interpretiert:
 
 1. **Wertebereich**:
    - HLI schwankt zwischen -100 und +100

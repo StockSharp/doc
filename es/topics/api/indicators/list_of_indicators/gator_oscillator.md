@@ -1,8 +1,8 @@
-# Gator Oscillator
+# oscilador Gator
 
-**Gator Oscillator** es un oscilador desarrollado por Bill Williams. Está estrechamente relacionado con el indicador similar Alligator. Como indicador de tendencia, es más útil en mercados que demuestran un fuerte movimiento direccional. 
+**oscilador Gator** es un oscilador desarrollado por Bill Williams. Está estrechamente relacionado con el indicador similar Alligator. Como indicador de tendencia, es más útil en mercados que demuestran un fuerte movimiento direccional.
 
-Para utilizar el indicador, debe utilizar la clase [GatorOscillator](xref:StockSharp.Algo.Indicators.GatorOscillator). 
+Para utilizar el indicador, debe utilizar la clase [GatorOscillator](xref:StockSharp.Algo.Indicators.GatorOscillator).
 
 ![IndicatorGatorOscillator](../../../../images/indicatorgatoroscillator.png)
 

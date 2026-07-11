@@ -67,7 +67,7 @@ O Índice de adversidade do mercado pode ser interpretado da seguinte forma:
      - Sinais de osciladores (RSI, Estocástico) são mais fiáveis com MMI alto
 
 6. **Combinação com Outros Indicadores**:
-   - O MMI funciona bem em combinação com ADX (Average Directional Index)
+   - O MMI funciona bem em combinação com ADX (índice direcional médio)
    - MMI baixo e ADX alto confirmam uma tendência forte
    - MMI alto e ADX baixo confirmam um mercado lateral
 

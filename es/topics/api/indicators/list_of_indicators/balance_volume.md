@@ -1,12 +1,12 @@
 # BV
 
-**Balance Volume (BV)** es un indicador técnico que rastrea la acumulación y distribución del volumen de operaciones en función de los cambios de precios.
+**volumen de balance (BV)** es un indicador técnico que rastrea la acumulación y distribución del volumen de operaciones en función de los cambios de precios.
 
 Para utilizar el indicador, debe utilizar la clase [BalanceVolume](xref:StockSharp.Algo.Indicators.BalanceVolume).
 
 ## Descripción
 
-El indicador Balance Volume (BV) está diseñado para analizar la relación entre el cambio de precio y el volumen de operaciones. Ayuda a los operadores a determinar cómo los cambios de volumen se corresponden con el movimiento de precios, lo que puede indicar la fortaleza o debilidad de la tendencia actual.
+El indicador volumen de balance (BV) está diseñado para analizar la relación entre el cambio de precio y el volumen de operaciones. Ayuda a los operadores a determinar cómo los cambios de volumen se corresponden con el movimiento de precios, lo que puede indicar la fortaleza o debilidad de la tendencia actual.
 
 La idea principal de BV es que el volumen debería confirmar la dirección del precio. Si el precio aumenta al aumentar el volumen, esto indica una fuerte tendencia alcista. Por el contrario, si el precio cae al aumentar el volumen, esto sugiere una fuerte tendencia a la baja.
 
@@ -18,7 +18,7 @@ El indicador BV es particularmente útil para:
 
 ## Cálculo
 
-El cálculo del indicador Balance Volume se basa en comparar el precio de cierre con el precio de cierre anterior y ponderar el volumen de negociación:
+El cálculo del indicador volumen de balance se basa en comparar el precio de cierre con el precio de cierre anterior y ponderar el volumen de negociación:
 
 ```
 Si Close > cierre anterior:
@@ -33,7 +33,7 @@ donde:
 - Close - precio de cierre actual
 - Anterior Close - precio de cierre anterior
 - Volume - volumen de operaciones actual
-- BV anterior - valor anterior del indicador Balance Volume
+- BV anterior - valor anterior del indicador volumen de balance
 
 ## Interpretación
 

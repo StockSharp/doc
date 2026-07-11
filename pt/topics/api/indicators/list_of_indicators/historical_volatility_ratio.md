@@ -1,12 +1,12 @@
 # HVR
 
-**Historical Volatility Ratio (HVR)** é um indicador técnico que compara a volatilidade histórica de curto prazo com a volatilidade histórica de longo prazo para avaliar alterações na atividade do mercado.
+**rácio de volatilidade histórica (HVR)** é um indicador técnico que compara a volatilidade histórica de curto prazo com a volatilidade histórica de longo prazo para avaliar alterações na atividade do mercado.
 
 Para utilizar o indicador, é necessário usar a classe [HistoricalVolatilityRatio](xref:StockSharp.Algo.Indicators.HistoricalVolatilityRatio).
 
 ## Descrição
 
-O Historical Volatility Ratio (HVR) é um indicador de volatilidade relativa que compara a volatilidade de curto prazo com a volatilidade de longo prazo do mercado. O indicador ajuda a determinar se a volatilidade atual está a aumentar ou a diminuir em relação ao seu nível histórico.
+O rácio de volatilidade histórica (HVR) é um indicador de volatilidade relativa que compara a volatilidade de curto prazo com a volatilidade de longo prazo do mercado. O indicador ajuda a determinar se a volatilidade atual está a aumentar ou a diminuir em relação ao seu nível histórico.
 
 O HVR é calculado como o rácio entre a volatilidade histórica de curto prazo e a volatilidade histórica de longo prazo. Valores acima de 1,0 indicam que a volatilidade atual (de curto prazo) é superior à volatilidade de longo prazo, o que pode sinalizar aumento da atividade do mercado ou uma potencial alteração de tendência.
 
@@ -24,7 +24,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Historical Volatility Ratio envolve os seguintes passos:
+O cálculo do rácio de volatilidade histórica envolve os seguintes passos:
 
 1. Calcular a volatilidade histórica de curto prazo:
    ```
@@ -50,7 +50,7 @@ Onde:
 
 ## Interpretação
 
-O Historical Volatility Ratio pode ser interpretado da seguinte forma:
+O rácio de volatilidade histórica pode ser interpretado da seguinte forma:
 
 1. **Nível 1,0**:
    - HVR = 1,0 significa que a volatilidade de curto prazo é igual à volatilidade de longo prazo

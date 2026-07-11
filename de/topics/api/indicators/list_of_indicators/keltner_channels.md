@@ -1,19 +1,19 @@
 # KC
 
-**Keltner Channels (KC)** ist ein technischer Indikator, der aus einer Reihe von Volatilitätsbändern besteht, der einen exponentiellen gleitenden Durchschnitt (EMA) als Mittellinie und den durchschnittlichen wahren Bereich (ATR) verwendet, um die Kanalbreite zu bestimmen.
+**Keltner-Kanäle (KC)** ist ein technischer Indikator, der aus einer Reihe von Volatilitätsbändern besteht, der einen exponentiellen gleitenden Durchschnitt (EMA) als Mittellinie und den durchschnittlichen wahren Bereich (ATR) verwendet, um die Kanalbreite zu bestimmen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [KeltnerChannels](xref:StockSharp.Algo.Indicators.KeltnerChannels) verwenden.
 
 ## Beschreibung
 
-Keltner Channels besteht aus drei Zeilen:
+Keltner-Kanäle besteht aus drei Zeilen:
 1. **Mittellinie**: typischerweise dargestellt durch einen 20-Perioden-EMA
 2. **Upper-Band**: Mittellinie plus ein Multiplikator von ATR
 3. **Lower-Band**: Mittellinie minus dem gleichen ATR-Multiplikator
 
 Der Indikator wurde in den 1960er Jahren von Chester Keltner entwickelt und später von Linda Raschke modifiziert, die den einfachen gleitenden Durchschnitt (SMA) durch einen exponentiellen gleitenden Durchschnitt (EMA) ersetzte und begann, ATR anstelle des Bereichs Hoch-Tief zur Berechnung der Kanalbreite zu verwenden.
 
-Keltner Channels hilft Händlern dabei, die Trendrichtung sowie potenzielle Unterstützungs- und Widerstandsniveaus zu bestimmen. Sie werden auch verwendet, um überkaufte und überverkaufte Bedingungen zu identifizieren, wenn der Preis das obere bzw. untere Band berührt oder durchbricht.
+Keltner-Kanäle hilft Händlern dabei, die Trendrichtung sowie potenzielle Unterstützungs- und Widerstandsniveaus zu bestimmen. Sie werden auch verwendet, um überkaufte und überverkaufte Bedingungen zu identifizieren, wenn der Preis das obere bzw. untere Band berührt oder durchbricht.
 
 ## Parameter
 
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Keltner Channels-Berechnung umfasst die folgenden Schritte:
+Die Keltner-Kanäle-Berechnung umfasst die folgenden Schritte:
 
 1. Berechnen Sie den exponentiellen gleitenden Durchschnitt:
    ```
@@ -50,7 +50,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Keltner Channels kann wie folgt interpretiert werden:
+Keltner-Kanäle kann wie folgt interpretiert werden:
 
 1. **Trendrichtung**:
    - Wenn alle drei Linien nach oben zeigen, deutet dies auf einen Aufwärtstrend hin

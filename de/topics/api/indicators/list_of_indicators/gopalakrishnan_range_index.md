@@ -1,12 +1,12 @@
 # GAPO
 
-**Gopalakrishnan Range Index (GAPO)** ist ein technischer Indikator, der von Tushar Gopalakrishnan entwickelt wurde, um die Marktvolatilität mithilfe einer logarithmischen Skala zu messen.
+**Gopalakrishnan-Range-Index (GAPO)** ist ein technischer Indikator, der von Tushar Gopalakrishnan entwickelt wurde, um die Marktvolatilität mithilfe einer logarithmischen Skala zu messen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [GopalakrishnanRangeIndex](xref:StockSharp.Algo.Indicators.GopalakrishnanRangeIndex) verwenden.
 
 ## Beschreibung
 
-Der Gopalakrishnan Range Index (GAPO) ist ein Volatilitätsindikator, der eine logarithmische Skala verwendet, um die gesamte Preisspanne über einen bestimmten Zeitraum zu messen. Es wurde von Tushar Gopalakrishnan entwickelt und in der Zeitschrift „Technical Analysis of Stocks & Commodities“ vorgestellt.
+Der Gopalakrishnan-Range-Index (GAPO) ist ein Volatilitätsindikator, der eine logarithmische Skala verwendet, um die gesamte Preisspanne über einen bestimmten Zeitraum zu messen. Es wurde von Tushar Gopalakrishnan entwickelt und in der Zeitschrift „Technical Analysis of Stocks & Commodities“ vorgestellt.
 
 GAPO bewertet extreme Marktbewegungen, indem es das logarithmische Verhältnis zwischen den Höchst- und Tiefstpreisen über einen bestimmten Zeitraum misst. Durch diesen Ansatz kann der Indikator die erhöhte Volatilität genauer widerspiegeln, insbesondere in Zeiten starker Preisbewegungen.
 
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Gopalakrishnan Range Index-Berechnung ist ganz einfach:
+Die Gopalakrishnan-Range-Index-Berechnung ist ganz einfach:
 
 ```
 GAPO = log(N) * log(Highest High - Lowest Low)
@@ -37,7 +37,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Gopalakrishnan Range Index kann wie folgt interpretiert werden:
+Der Gopalakrishnan-Range-Index kann wie folgt interpretiert werden:
 
 1. **Absolute Werte**:
    - High GAPO-Werte weisen auf Perioden hoher Volatilität hin

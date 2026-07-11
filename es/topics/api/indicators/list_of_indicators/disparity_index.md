@@ -1,16 +1,16 @@
 # DPI
 
-**Disparity Index (DPI)** es un indicador técnico que mide la desviación relativa del precio actual de un promedio móvil durante un período específico, expresada como porcentaje.
+**índice de disparidad (DPI)** es un indicador técnico que mide la desviación relativa del precio actual de un promedio móvil durante un período específico, expresada como porcentaje.
 
 Para utilizar el indicador, debe utilizar la clase [DisparityIndex](xref:StockSharp.Algo.Indicators.DisparityIndex).
 
 ## Descripción
 
-El Disparity Index (DPI) está diseñado para medir el grado de desviación del precio con respecto a su media móvil. Este indicador ayuda a determinar hasta qué punto se "estira" el precio en relación con su valor promedio y puede usarse para identificar posibles condiciones de sobrecompra o sobreventa.
+El índice de disparidad (DPI) está diseñado para medir el grado de desviación del precio con respecto a su media móvil. Este indicador ayuda a determinar hasta qué punto se "estira" el precio en relación con su valor promedio y puede usarse para identificar posibles condiciones de sobrecompra o sobreventa.
 
 DPI se basa en el supuesto de que el precio tiende a volver a su valor medio después de una desviación significativa. Cuanto mayor sea la desviación, mayor será la probabilidad de que el precio se mueva posteriormente en la dirección opuesta, acercándolo al promedio.
 
-El Disparity Index es útil para:
+El índice de disparidad es útil para:
 - Identificar desviaciones extremas del precio respecto de su media
 - Detectar posibles puntos de reversión
 - Midiendo la fuerza de la tendencia actual
@@ -23,7 +23,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-La fórmula de cálculo de Disparity Index es bastante sencilla:
+La fórmula de cálculo de índice de disparidad es bastante sencilla:
 
 ```
 DPI = ((Price / MA) - 1) * 100
@@ -38,7 +38,7 @@ Los valores positivos de DPI indican que el precio está por encima de su media 
 
 ## Interpretación
 
-El Disparity Index se puede interpretar de la siguiente manera:
+El índice de disparidad se puede interpretar de la siguiente manera:
 
 1. **Niveles extremos**:
    - Los valores positivos altos (por ejemplo, por encima de +10%) pueden indicar condiciones de sobrecompra en el mercado

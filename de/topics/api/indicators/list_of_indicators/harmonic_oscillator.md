@@ -1,12 +1,12 @@
 # HO
 
-**Harmonic Oscillator (HO)** ist ein technischer Indikator, der auf der Theorie der harmonischen Schwingungen basiert und dabei hilft, zyklische Komponenten in der Preisbewegung zu identifizieren.
+**Harmonischer Oszillator (HO)** ist ein technischer Indikator, der auf der Theorie der harmonischen Schwingungen basiert und dabei hilft, zyklische Komponenten in der Preisbewegung zu identifizieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [HarmonicOscillator](xref:StockSharp.Algo.Indicators.HarmonicOscillator) verwenden.
 
 ## Beschreibung
 
-Der Harmonic Oscillator (HO) ist ein Indikator, der entwickelt wurde, um die Periodizität und zyklische Natur von Marktpreisbewegungen zu identifizieren. Es basiert auf dem Prinzip, dass viele Preisbewegungen harmonische (periodische) Komponenten enthalten, die isoliert und zur Vorhersage zukünftiger Preisbewegungen verwendet werden können.
+Der Harmonischer Oszillator (HO) ist ein Indikator, der entwickelt wurde, um die Periodizität und zyklische Natur von Marktpreisbewegungen zu identifizieren. Es basiert auf dem Prinzip, dass viele Preisbewegungen harmonische (periodische) Komponenten enthalten, die isoliert und zur Vorhersage zukünftiger Preisbewegungen verwendet werden können.
 
 Der Indikator wendet Spektralanalysemethoden an, um die Preisreihe in harmonische Komponenten zu zerlegen und dominante Zyklen hervorzuheben. Anschließend werden diese zyklischen Komponenten als Oszillator angezeigt, der Händlern dabei hilft, zu bestimmen, wann der Preis innerhalb der identifizierten Zyklen lokale Höchst- oder Tiefststände erreichen könnte.
 
@@ -23,7 +23,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Harmonic Oscillator-Berechnung umfasst die folgenden Schritte:
+Die Harmonischer Oszillator-Berechnung umfasst die folgenden Schritte:
 
 1. Vorverarbeitung der Price-Serie (Trendbeseitigung):
    ```
@@ -40,7 +40,7 @@ Die Harmonic Oscillator-Berechnung umfasst die folgenden Schritte:
    Dominante Zyklen = Top-N-Spektralkomponenten anhand der Amplitude extrahieren
    ```
 
-4. Synthese des Harmonic Oscillator basierend auf dominanten Zyklen:
+4. Synthese des Harmonischer Oszillator basierend auf dominanten Zyklen:
    ```
    HO = Rekonstruktion dominanter Zyklen durch inverse FFT
    ```
@@ -53,7 +53,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Harmonic Oscillator kann wie folgt interpretiert werden:
+Der Harmonischer Oszillator kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Wenn HO die Nulllinie von unten nach oben überschreitet, kann dies als bullisches Signal angesehen werden

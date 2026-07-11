@@ -1,12 +1,12 @@
 # KPO
 
-**Kase Peak Oscillator (KPO)** é um indicador técnico desenvolvido por Celia Kase que combina momentum e volatilidade para identificar potenciais máximos e mínimos do mercado.
+**oscilador Kase Peak (KPO)** é um indicador técnico desenvolvido por Celia Kase que combina momentum e volatilidade para identificar potenciais máximos e mínimos do mercado.
 
 Para utilizar o indicador, é necessário usar a classe [KasePeakOscillator](xref:StockSharp.Algo.Indicators.KasePeakOscillator).
 
 ## Descrição
 
-O Kase Peak Oscillator (KPO) é uma ferramenta para determinar condições de sobrecompra e sobrevenda do mercado e identificar potenciais pontos de inversão. Foi desenvolvido pela trader e engenheira Celia Kase como parte da sua metodologia de negociação.
+O oscilador Kase Peak (KPO) é uma ferramenta para determinar condições de sobrecompra e sobrevenda do mercado e identificar potenciais pontos de inversão. Foi desenvolvido pela trader e engenheira Celia Kase como parte da sua metodologia de negociação.
 
 O KPO baseia-se no conceito de que os máximos e mínimos do mercado se formam quando o momentum do movimento do preço começa a esgotar-se. O oscilador usa uma combinação de indicadores de momentum e volatilidade para identificar estes pontos de viragem principais.
 
@@ -20,7 +20,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Kase Peak Oscillator envolve vários passos:
+O cálculo do oscilador Kase Peak envolve vários passos:
 
 1. Calcular o momentum de curto prazo com base no período curto:
    ```
@@ -57,7 +57,7 @@ Onde:
 
 ## Interpretação
 
-O Kase Peak Oscillator pode ser interpretado da seguinte forma:
+O oscilador Kase Peak pode ser interpretado da seguinte forma:
 
 1. **Cruzamentos da Linha Zero**:
    - O cruzamento de baixo para cima pode ser visto como um sinal altista

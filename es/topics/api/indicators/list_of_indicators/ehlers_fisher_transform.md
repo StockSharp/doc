@@ -1,12 +1,12 @@
 # EFT
 
-**Ehlers Fisher Transform (EFT)** es un indicador técnico desarrollado por John Ehlers que utiliza la transformación estadística de Fisher para convertir datos de precios a una forma distribuida normalmente.
+**transformación Fisher de Ehlers (EFT)** es un indicador técnico desarrollado por John Ehlers que utiliza la transformación estadística de Fisher para convertir datos de precios a una forma distribuida normalmente.
 
 Para utilizar el indicador, debe utilizar la clase [EhlersFisherTransform](xref:StockSharp.Algo.Indicators.EhlersFisherTransform).
 
 ## Descripción
 
-El Ehlers Fisher Transform se basa en el concepto de que los precios de mercado no tienen una distribución normal (gaussiana). Más bien, a menudo demuestran distribuciones asimétricas. El indicador aplica una fórmula matemática de transformación de Fisher para convertir estas distribuciones asimétricas en valores distribuidos normalmente.
+El transformación Fisher de Ehlers se basa en el concepto de que los precios de mercado no tienen una distribución normal (gaussiana). Más bien, a menudo demuestran distribuciones asimétricas. El indicador aplica una fórmula matemática de transformación de Fisher para convertir estas distribuciones asimétricas en valores distribuidos normalmente.
 
 Esta transformación hace que los movimientos extremos de precios sean más notorios y ayuda a identificar más claramente los puntos de reversión del mercado. Cuando se aplica la transformación de Fisher, los valores máximos aumentan marcadamente, lo que hace que los extremos del comportamiento del mercado sean más obvios.
 
@@ -23,7 +23,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Ehlers Fisher Transform implica varios pasos:
+El cálculo de transformación Fisher de Ehlers implica varios pasos:
 
 1. Transforme los datos de precios a valores entre -1 y +1 (normalmente utilizando un rango de precios normalizado u otro oscilador):
    ```
@@ -35,7 +35,7 @@ El cálculo de Ehlers Fisher Transform implica varios pasos:
    ```
    Si Value >= 0.999, entonces Value = 0.999
    Si Value <= -0.999, entonces Value = -0.999
-   
+
    Fisher = 0.5 * ln((1 + Value) / (1 - Value))
    ```
    donde ln es el logaritmo natural.
@@ -48,7 +48,7 @@ El cálculo de Ehlers Fisher Transform implica varios pasos:
 
 ## Interpretación
 
-El Ehlers Fisher Transform se puede interpretar de la siguiente manera:
+El transformación Fisher de Ehlers se puede interpretar de la siguiente manera:
 
 1. **Valores extremos**:
    - Los valores superiores a +2 suelen indicar condiciones de sobrecompra en el mercado.
@@ -69,7 +69,7 @@ El Ehlers Fisher Transform se puede interpretar de la siguiente manera:
    - Una pendiente ascendente pronunciada indica un fuerte impulso ascendente
    - Una pendiente descendente pronunciada indica un fuerte impulso bajista
 
-El Ehlers Fisher Transform se diferencia de muchos otros osciladores en que puede alcanzar valores extremos y permanecer allí durante algún tiempo sin necesariamente revertirse inmediatamente. Esto lo hace útil para identificar fuertes movimientos de tendencia.
+El transformación Fisher de Ehlers se diferencia de muchos otros osciladores en que puede alcanzar valores extremos y permanecer allí durante algún tiempo sin necesariamente revertirse inmediatamente. Esto lo hace útil para identificar fuertes movimientos de tendencia.
 
 ![indicator_ehlers_fisher_transform](../../../../images/indicator_ehlers_fisher_transform.png)
 

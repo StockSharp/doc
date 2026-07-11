@@ -1,12 +1,12 @@
 # SW
 
-**Sine Wave (SW)** ist ein technischer Indikator, der die mathematische Sinusfunktion verwendet, um zyklische Muster in der Preisbewegung zu identifizieren. Der Indikator zielt darauf ab, periodische Marktschwankungen zu erkennen und vorherzusagen.
+**Sinuswelle (SW)** ist ein technischer Indikator, der die mathematische Sinusfunktion verwendet, um zyklische Muster in der Preisbewegung zu identifizieren. Der Indikator zielt darauf ab, periodische Marktschwankungen zu erkennen und vorherzusagen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [SineWave](xref:StockSharp.Algo.Indicators.SineWave) verwenden.
 
 ## Beschreibung
 
-Der Sine Wave-Indikator basiert auf der Idee, dass Marktbewegungen zyklischer Natur sind und mithilfe von Sinusfunktionen modelliert werden können. Dieser Indikator ist besonders nützlich in Märkten, die sich seitwärts bewegen oder vorhersehbare zyklische Schwankungen aufweisen.
+Der Sinuswelle-Indikator basiert auf der Idee, dass Marktbewegungen zyklischer Natur sind und mithilfe von Sinusfunktionen modelliert werden können. Dieser Indikator ist besonders nützlich in Märkten, die sich seitwärts bewegen oder vorhersehbare zyklische Schwankungen aufweisen.
 
 Hauptmerkmale des Indikators:
 - Hilft bei der Identifizierung potenzieller Marktumkehrpunkte
@@ -23,7 +23,7 @@ Anzeigesignale:
 
 ## Berechnung
 
-Die Berechnung des Sine Wave-Indikators basiert auf der Verwendung der Sinusfunktion und der Bestimmung des dominanten Zyklus in der Preisbewegung:
+Die Berechnung des Sinuswelle-Indikators basiert auf der Verwendung der Sinusfunktion und der Bestimmung des dominanten Zyklus in der Preisbewegung:
 
 1. Bestimmung des dominanten Zyklus mittels Spektralanalyse oder einer anderen Methode zur Zyklusidentifikation.
 

@@ -1,6 +1,6 @@
 # BV
 
-**Balance Volume (BV)** ist ein technischer Indikator, der Akkumulation und Distribution des Handelsvolumens anhand von Preisänderungen verfolgt.
+**Bilanzvolumen (BV)** ist ein technischer Indikator, der Akkumulation und Distribution des Handelsvolumens anhand von Preisänderungen verfolgt.
 
 Zur Verwendung des Indikators müssen Sie die Klasse [BalanceVolume](xref:StockSharp.Algo.Indicators.BalanceVolume) verwenden.
 

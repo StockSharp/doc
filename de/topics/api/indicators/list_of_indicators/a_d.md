@@ -17,7 +17,7 @@ MEDIANPREIS - Medianpreis;
 HIGH - höchster Preis des Balkens;
 LOW - niedrigster Preis des Balkens;
 SMA - einfacher gleitender Durchschnitt;
-AO - Indikator [Awesome Oscillator](ao.md).
+AO - Indikator [Awesome-Oszillator](ao.md).
 
 Die Parameter werden als Werte der SMA-Perioden festgelegt.
 

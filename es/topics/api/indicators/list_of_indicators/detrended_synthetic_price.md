@@ -1,6 +1,6 @@
 # DSP
 
-**Detrended Synthetic Price (DSP)** es un indicador técnico que elimina la tendencia general de una serie de precios, lo que permite a los operadores centrarse en las fluctuaciones de precios a corto plazo.
+**precio sintético sin tendencia (DSP)** es un indicador técnico que elimina la tendencia general de una serie de precios, lo que permite a los operadores centrarse en las fluctuaciones de precios a corto plazo.
 
 Para utilizar el indicador, debe utilizar la clase [DetrendedSyntheticPrice](xref:StockSharp.Algo.Indicators.DetrendedSyntheticPrice).
 
@@ -23,7 +23,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-Calcular el Detrended Synthetic Price implica los siguientes pasos:
+Calcular el precio sintético sin tendencia implica los siguientes pasos:
 
 1. Calcule el promedio móvil del precio durante el período especificado:
    ```

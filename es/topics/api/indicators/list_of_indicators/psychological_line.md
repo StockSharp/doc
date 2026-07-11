@@ -1,12 +1,12 @@
 # PSY
 
-**Psychological Line (PSY)** es un indicador técnico que mide la proporción de períodos ascendentes (velas, barras) en relación con el número total de períodos durante un intervalo de tiempo específico.
+**línea psicológica (PSY)** es un indicador técnico que mide la proporción de períodos ascendentes (velas, barras) en relación con el número total de períodos durante un intervalo de tiempo específico.
 
 Para utilizar el indicador, debe utilizar la clase [PsychologicalLine](xref:StockSharp.Algo.Indicators.PsychologicalLine).
 
 ## Descripción
 
-El Psychological Line (PSY) es un indicador sencillo pero eficaz que refleja el sentimiento del mercado calculando el porcentaje de periodos de subida de precios respecto al número total de periodos considerados. El indicador se basa en el supuesto de que la psicología del mercado y el sentimiento de los inversores desempeñan un papel crucial en los movimientos de precios.
+El línea psicológica (PSY) es un indicador sencillo pero eficaz que refleja el sentimiento del mercado calculando el porcentaje de periodos de subida de precios respecto al número total de periodos considerados. El indicador se basa en el supuesto de que la psicología del mercado y el sentimiento de los inversores desempeñan un papel crucial en los movimientos de precios.
 
 PSY es un oscilador con valores que van de 0 a 100, donde:
 - Un valor de 100 significa que el precio subió en todos los períodos considerados.
@@ -22,7 +22,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Psychological Line es muy sencillo:
+El cálculo de línea psicológica es muy sencillo:
 
 ```
 PSY = (número de periodos alcistas durante periodos Length / Length) * 100
@@ -34,7 +34,7 @@ donde:
 
 ## Interpretación
 
-El Psychological Line se puede interpretar de la siguiente manera:
+El línea psicológica se puede interpretar de la siguiente manera:
 
 1. **Niveles de sobrecompra y sobreventa**:
    - Los valores superiores a 70-80 indican condiciones de sobrecompra en el mercado (demasiados períodos estaban subiendo)
