@@ -2320,6 +2320,37 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedBollingerBandsDocsDoNotKeepEnglishFormulaLabels()
+	{
+		var errors = new List<string>();
+		var phrases = new[]
+		{
+			"Moving Average",
+			"Middle Line",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators", "bollinger_bands.md");
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (var phrase in phrases)
+				{
+					if (!ContainsStandaloneText(text, phrase))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Bollinger Bands documentation keeps English formula label '{phrase}'. Localize the parameter and formula text.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void TextFilesDoNotContainRepeatedQuestionMarks()
 	{
 		var errors = new List<string>();

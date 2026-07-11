@@ -7,11 +7,11 @@ Zur Verwendung des Indikators sollte die Klasse [BollingerBands](xref:StockSharp
 
 Zur Berechnung der Bollinger Bands werden die folgenden Parameter mit entsprechenden Einstellungen verwendet:
 - Typ der Standardabweichung - normalerweise double;
-- Periode des Moving Average - nach Ermessen des Traders.
+- Periode des gleitenden Durchschnitts - nach Ermessen des Traders.
 
 Der Indikator besteht somit aus drei Linien: mittlere, obere und untere Linie, jeweils mit eigener Formel:
 
-Middle Line (ML) = Moving Average (SMA (Close, N))
+Mittlere Linie (ML) = gleitender Durchschnitt (SMA (Close, N))
 Upper Band = ML + (D x Standardabweichung)
 Lower Band = ML - (D x Standardabweichung), wobei
 
