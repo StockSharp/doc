@@ -4,7 +4,7 @@
 
 使用该指标时，必须使用 [WeightedClosePrice](xref:StockSharp.Algo.Indicators.WeightedClosePrice) 类。
 
-![IndicatorWeightedClosePrice](../../../../images/indicatorweightedcloseprice.png)
+![加权收盘价 指标图表](../../../../images/indicatorweightedcloseprice.png)
 
 ## 推荐内容
 

@@ -4,7 +4,7 @@
 
 この指標を使用するには、[Highest](xref:StockSharp.Algo.Indicators.Highest) クラスを使用する必要があります。 
 
-![IndicatorHighest](../../../../images/indicatorhighest.png)
+![最大値 のチャート](../../../../images/indicatorhighest.png)
 
 ## 推奨コンテンツ
 

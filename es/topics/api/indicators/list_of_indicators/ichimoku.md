@@ -15,7 +15,7 @@ Gráficamente, el indicador consta de cinco líneas de colores similares a media
   
 - Chikou (lapso rezagado): representa el último precio de cierre, retrasado 26 períodos. Ayuda a confirmar las señales: si cruza el gráfico de abajo hacia arriba, es una señal de compra, y de arriba a abajo, una señal de venta. Básicamente, Chikou actúa como un filtro de tendencias.  
 
-![IndicatorIchimoku](../../../../images/indicatorichimoku.png)
+![Gráfico del indicador Ichimoku](../../../../images/indicatorichimoku.png)
 
 ## Véase también
 

@@ -44,7 +44,7 @@ Die Berechnung des Sinuswelle-Indikators basiert auf der Verwendung der Sinusfun
 
 Der Indikator kann zusätzliche Komponenten wie eine Trendlinie oder einen Filter enthalten, um die Signalgenauigkeit zu verbessern.
 
-![IndicatorSineWave](../../../../images/indicator_sine_wave.png)
+![SW Diagramm](../../../../images/indicator_sine_wave.png)
 
 ## Siehe auch
 

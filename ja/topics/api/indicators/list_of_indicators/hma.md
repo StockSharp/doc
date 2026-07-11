@@ -4,7 +4,7 @@
 
 この指標を使用するには、[HullMovingAverage](xref:StockSharp.Algo.Indicators.HullMovingAverage) クラスを使用する必要があります。 
 
-![IndicatorHullMovingAverage](../../../../images/indicatorhullmovingaverage.png)
+![HMA のチャート](../../../../images/indicatorhullmovingaverage.png)
 
 ## 推奨コンテンツ
 

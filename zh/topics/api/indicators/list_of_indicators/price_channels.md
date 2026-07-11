@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [PriceChannels](xref:StockSharp.Algo.Indicators.PriceChannels) 类。
 
-![IndicatorPriceChannels](../../../../images/indicatorpricechannels.png)
+![价格通道 指标图表](../../../../images/indicatorpricechannels.png)
 
 ## 推荐内容
 

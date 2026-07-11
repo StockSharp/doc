@@ -4,7 +4,7 @@
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [RelativeStrengthIndex](xref:StockSharp.Algo.Indicators.RelativeStrengthIndex) verwenden.
 
-![IndicatorRelativeStrengthIndex](../../../../images/indicatorrelativestrengthindex.png)
+![RSI Diagramm](../../../../images/indicatorrelativestrengthindex.png)
 
 ## Empfohlene Inhalte
 

@@ -21,7 +21,7 @@ AO — индикатор [чудесный осциллятор](ao.md).
 
 В качестве параметров задаются значения периодов SMA.
 
-![IndicatorAcceleration](../../../../images/indicatoracceleration.png)
+![График индикатора A\/D](../../../../images/indicatoracceleration.png)
 
 ## См. также
 

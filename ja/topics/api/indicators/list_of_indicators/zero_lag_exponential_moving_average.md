@@ -46,7 +46,7 @@ ZLEMA の計算は、予測によって遅延を排除することに基づい�
 
 その結果、同じ期間の通常の EMA よりも価格にはるかに近く追随しながら、平滑化効果を維持する移動平均が得られます。
 
-![IndicatorZeroLagExponentialMovingAverage](../../../../images/indicator_zero_lag_exponential_moving_average.png)
+![ZLEMA のチャート](../../../../images/indicator_zero_lag_exponential_moving_average.png)
 
 ## 関連項目
 

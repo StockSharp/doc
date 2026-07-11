@@ -5,7 +5,7 @@
 
 要使用该指标，应使用 [MoneyFlowIndex](xref:StockSharp.Algo.Indicators.MoneyFlowIndex) 类。
 
-![IndicatorMoneyFlowIndex](../../../../images/indicatormoneyflowindex.png)
+![资金流向指数 指标图表](../../../../images/indicatormoneyflowindex.png)
 
 ## 另请参阅
 

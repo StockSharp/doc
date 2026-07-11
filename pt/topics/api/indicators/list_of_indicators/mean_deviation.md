@@ -4,7 +4,7 @@ O indicador **Desvio médio** mostra o desvio médio do preço em relação à s
 
 Para utilizar o indicador, deve ser usada a classe [MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation).
 
-![IndicatorMeanDeviation](../../../../images/indicatormeandeviation.png)
+![Gráfico do indicador Desvio médio](../../../../images/indicatormeandeviation.png)
 
 ## Ver Também
 

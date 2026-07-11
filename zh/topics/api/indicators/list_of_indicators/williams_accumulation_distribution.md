@@ -48,7 +48,7 @@ WAD 的主要特征：
 
 该指标累积正值和负值，形成一条累积线，可用于与价格运动进行比较。
 
-![IndicatorWilliamsAccumulationDistribution](../../../../images/indicator_williams_accumulation_distribution.png)
+![WAD 指标图表](../../../../images/indicator_williams_accumulation_distribution.png)
 
 ## 另请参阅
 

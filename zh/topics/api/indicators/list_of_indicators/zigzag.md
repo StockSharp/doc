@@ -4,4 +4,4 @@
 
 要使用该指标，必须使用 [ZigZag](xref:StockSharp.Algo.Indicators.ZigZag) 类。
 
-![IndicatorZigZag](../../../../images/indicatorzigzag.png)
+![之字形 指标图表](../../../../images/indicatorzigzag.png)

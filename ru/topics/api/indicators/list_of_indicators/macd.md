@@ -8,7 +8,7 @@
 
 
 
-![IndicatorMovingAverageConvergenceDivergence](../../../../images/indicatormovingaverageconvergencedivergence.png)
+![График индикатора MACD](../../../../images/indicatormovingaverageconvergencedivergence.png)
 
 ## См. также
 

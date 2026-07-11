@@ -5,7 +5,7 @@
 
 この指標を使用するには、[MarketFacilitationIndex](xref:StockSharp.Algo.Indicators.MarketFacilitationIndex) クラスを使用する必要があります。
 
-![IndicatorMarketFacilitationIndex](../../../../images/indicatormarketfacilitationindex.png)
+![市場促進指数 のチャート](../../../../images/indicatormarketfacilitationindex.png)
 
 ## 関連項目
 

@@ -4,7 +4,7 @@
 
 Para utilizar o indicador, deve usar a classe [StandardDeviation](xref:StockSharp.Algo.Indicators.StandardDeviation).
 
-![IndicatorStandardDeviation](../../../../images/indicatorstandarddeviation.png)
+![Gráfico do indicador Desvio padrão](../../../../images/indicatorstandarddeviation.png)
 
 ## Conteúdo recomendado
 

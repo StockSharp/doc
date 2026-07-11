@@ -18,7 +18,7 @@
 D - 設定で指定されたチャネル幅、標準偏差 (StdDev) - 標準偏差。次の式で計算されます: SQRT(Sum(Close, n))^2, n)/n)、ここで
 Sum - n 期間の合計、n - 計算期間、SQRT - 平方根、Close - 終値。
 
-![IndicatorBollingerBands](../../../../images/indicatorbollingerbands.png)
+![ボリンジャーバンド のチャート](../../../../images/indicatorbollingerbands.png)
 
 ## 関連項目
 

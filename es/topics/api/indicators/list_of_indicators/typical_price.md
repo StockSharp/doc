@@ -4,7 +4,7 @@
 
 Para utilizar el indicador, debe utilizar la clase [TypicalPrice](xref:StockSharp.Algo.Indicators.TypicalPrice).
 
-![IndicatorTypicalPrice](../../../../images/indicatortypicalprice.png)
+![Gráfico del indicador Precio típico](../../../../images/indicatortypicalprice.png)
 
 ## Contenido recomendado
 

@@ -52,7 +52,7 @@ WTO の主な特徴:
 
 インジケーターパラメーターの一般的な値は EsaPeriod = 10、DPeriod = 21、AveragePeriod = 4 ですが、異なる時間枠や銘柄に合わせて調整できます。
 
-![IndicatorWaveTrendOscillator](../../../../images/indicator_wave_trend_oscillator.png)
+![WTO のチャート](../../../../images/indicator_wave_trend_oscillator.png)
 
 ## 関連項目
 

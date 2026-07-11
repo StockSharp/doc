@@ -4,7 +4,7 @@
 
 使用该指标，您必须使用 [VerticalHorizontalFilter](xref:StockSharp.Algo.Indicators.VerticalHorizontalFilter) 类。
 
-![IndicatorVerticalHorizontalFilter](../../../../images/indicatorverticalhorizontalfilter.png)
+![VHF 指标图表](../../../../images/indicatorverticalhorizontalfilter.png)
 
 ## 推荐内容
 

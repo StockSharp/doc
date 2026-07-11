@@ -48,7 +48,7 @@ WAD の主な特徴:
 
 このインジケーターは正の値と負の値を累積し、価格変動と比較するために使用できる累積ラインを形成します。
 
-![IndicatorWilliamsAccumulationDistribution](../../../../images/indicator_williams_accumulation_distribution.png)
+![WAD のチャート](../../../../images/indicator_williams_accumulation_distribution.png)
 
 ## 関連項目
 

@@ -20,7 +20,7 @@ Der Beschleunigungsfaktor ist ein variabler Koeffizient, der durch minimale, max
 
 Am Umkehrpunkt nimmt der Faktor einen Mindestwert von einer Stufe an, und sobald der Preis je nach Trend einen neuen Extremwert (Hoch oder Tief) erreicht, wird der Faktor um eine Stufe erhöht. Wenn der Faktor seinen Maximalwert erreicht, wird sein Wachstum angehalten.
 
-![IndicatorParabolicSar](../../../../images/indicatorparabolicsar.png)
+![parabolischer SAR Diagramm](../../../../images/indicatorparabolicsar.png)
 
 ## Siehe auch
 

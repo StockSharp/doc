@@ -6,7 +6,7 @@
 
 Индикатор осциллятор цены без тренда рассчитывается путем вычитания простого скользящего среднего (SMA) из текущего значения цены. Длина скользящего среднего определяется пользователем.
 
-![IndicatorDetrendedPriceOscillator](../../../../images/indicatordetrendedpriceoscillator.png)
+![График индикатора DPO](../../../../images/indicatordetrendedpriceoscillator.png)
 
 ## См. также
 

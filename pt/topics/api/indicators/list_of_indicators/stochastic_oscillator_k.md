@@ -40,7 +40,7 @@ No oscilador estocástico completo, a linha %D é calculada como uma média móv
 %D = SMA(%K, 3)
 ```
 
-![IndicatorStochasticK](../../../../images/indicatorstochastick.png)
+![Gráfico do indicador Oscilador Estocástico %K](../../../../images/indicatorstochastick.png)
 
 ## Ver também
 

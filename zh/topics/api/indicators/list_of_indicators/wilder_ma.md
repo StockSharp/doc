@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [WilderMovingAverage](xref:StockSharp.Algo.Indicators.WilderMovingAverage) 类。
 
-![IndicatorWilderMovingAverage](../../../../images/indicatorwildermovingaverage.png)
+![怀尔德 MA 指标图表](../../../../images/indicatorwildermovingaverage.png)
 
 ## 推荐内容
 

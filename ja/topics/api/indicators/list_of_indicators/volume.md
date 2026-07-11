@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[VolumeIndicator](xref:StockSharp.Algo.Indicators.VolumeIndicator) クラスを使用する必要があります。
 
-![IndicatorVolumeIndicator](../../../../images/indicatorvolumeindicator.png)
+![出来高 のチャート](../../../../images/indicatorvolumeindicator.png)
 
 ## 推奨コンテンツ
 

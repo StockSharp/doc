@@ -5,7 +5,7 @@ Os valores absolutos do indicador não podem fornecer sinais de negociação, ao
 
 Para utilizar o indicador, deve ser usada a classe [MarketFacilitationIndex](xref:StockSharp.Algo.Indicators.MarketFacilitationIndex).
 
-![IndicatorMarketFacilitationIndex](../../../../images/indicatormarketfacilitationindex.png)
+![Gráfico do indicador Índice de facilitação do mercado](../../../../images/indicatormarketfacilitationindex.png)
 
 ## Ver Também
 

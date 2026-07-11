@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[Sum](xref:StockSharp.Algo.Indicators.Sum) クラスを使用する必要があります。
 
-![IndicatorSum](../../../../images/indicatorsum.png)
+![合計 N のチャート](../../../../images/indicatorsum.png)
 
 ## 推奨コンテンツ
 

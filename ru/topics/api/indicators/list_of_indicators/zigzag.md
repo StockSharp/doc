@@ -4,4 +4,4 @@
 
 Для использования индикатора необходимо использовать класс [ZigZag](xref:StockSharp.Algo.Indicators.ZigZag). 
 
-![IndicatorZigZag](../../../../images/indicatorzigzag.png)
+![График индикатора ZigZag](../../../../images/indicatorzigzag.png)

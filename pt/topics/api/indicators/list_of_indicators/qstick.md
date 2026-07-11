@@ -4,7 +4,7 @@
 
 Para utilizar o indicador, deve usar a classe [QStick](xref:StockSharp.Algo.Indicators.QStick). 
 
-![IndicatorQStick](../../../../images/indicatorqstick.png)
+![Gráfico do indicador QStick](../../../../images/indicatorqstick.png)
 
 ## Conteúdo recomendado
 

@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [Vidya](xref:StockSharp.Algo.Indicators.Vidya) 类。
 
-![IndicatorVidya](../../../../images/indicatorvidya.png)
+![可变指数动态平均 (VIDYA) 指标图表](../../../../images/indicatorvidya.png)
 
 ## 推荐内容
 

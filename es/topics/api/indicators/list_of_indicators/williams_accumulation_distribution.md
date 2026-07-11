@@ -48,7 +48,7 @@ El indicador acumulación/distribución de Williams se calcula utilizando la sig
 
 El indicador acumula valores positivos y negativos, formando una línea acumulativa que puede usarse para comparar con el movimiento de precios.
 
-![IndicatorWilliamsAccumulationDistribution](../../../../images/indicator_williams_accumulation_distribution.png)
+![Gráfico del indicador WAD](../../../../images/indicator_williams_accumulation_distribution.png)
 
 ## Véase también
 

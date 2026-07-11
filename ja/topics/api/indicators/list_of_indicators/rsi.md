@@ -4,7 +4,7 @@
 
 この指標を使用するには、[RelativeStrengthIndex](xref:StockSharp.Algo.Indicators.RelativeStrengthIndex) クラスを使用する必要があります。
 
-![IndicatorRelativeStrengthIndex](../../../../images/indicatorrelativestrengthindex.png)
+![RSI のチャート](../../../../images/indicatorrelativestrengthindex.png)
 
 ## 推奨コンテンツ
 

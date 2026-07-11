@@ -45,7 +45,7 @@ STC колеблется в диапазоне от 0 до 100:
 
 В результате получается осциллятор, который более плавный, чем классический стохастик, и быстрее реагирует на изменения тренда, чем MACD.
 
-![IndicatorSchaffTrendCycle](../../../../images/indicator_schaff_trend_cycle.png)
+![График индикатора STC](../../../../images/indicator_schaff_trend_cycle.png)
 
 ## См. также
 

@@ -4,7 +4,7 @@
 
 Para utilizar el indicador, debe utilizar la clase [ElderForceIndex](xref:StockSharp.Algo.Indicators.ElderForceIndex).
 
-![IndicatorElderForceIndex](../../../../images/indicatorelderforceindex.png)
+![Gráfico del indicador Índice de fuerza de Elder](../../../../images/indicatorelderforceindex.png)
 
 ## Contenido recomendado
 

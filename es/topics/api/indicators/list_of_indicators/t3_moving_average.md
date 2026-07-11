@@ -49,7 +49,7 @@ El cálculo de la media móvil T3 se realiza en varios pasos:
 
 Cuando VolumeFactor = 0, T3 se vuelve equivalente a EMA3 (triple EMA). Cuando VolumeFactor = 1, T3 se suaviza al máximo.
 
-![IndicatorT3MovingAverage](../../../../images/indicator_t3_moving_average.png)
+![Gráfico del indicador T3MA](../../../../images/indicator_t3_moving_average.png)
 
 ## Véase también
 

@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [LinearRegressionForecast](xref:StockSharp.Algo.Indicators.LinearRegressionForecast) 类。
 
-![IndicatorLinearRegressionForecast](../../../../images/indicatorlinearregressionforecast.png)
+![线性回归预测 指标图表](../../../../images/indicatorlinearregressionforecast.png)
 
 ## 推荐内容
 

@@ -4,7 +4,7 @@
 
 この指標を使用するには、[MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation) クラスを使用する必要があります。
 
-![IndicatorMeanDeviation](../../../../images/indicatormeandeviation.png)
+![平均偏差 のチャート](../../../../images/indicatormeandeviation.png)
 
 ## 関連項目
 

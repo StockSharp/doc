@@ -15,7 +15,7 @@ El indicador consta de tres líneas de diferentes colores:
 
 Los valores se toman para el indicador clásico y en la configuración siempre es posible especificar sus propios parámetros.
 
-![IndicatorAlligator](../../../../images/indicatoralligator.png)
+![Gráfico del indicador Alligator](../../../../images/indicatoralligator.png)
 
 ## Véase también
 

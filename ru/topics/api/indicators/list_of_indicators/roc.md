@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [RateOfChange](xref:StockSharp.Algo.Indicators.RateOfChange). 
 
-![IndicatorRateOfChange](../../../../images/indicatorrateofchange.png)
+![График индикатора RoC](../../../../images/indicatorrateofchange.png)
 
 ## См. также
 

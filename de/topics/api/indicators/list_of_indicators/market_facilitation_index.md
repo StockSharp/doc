@@ -5,7 +5,7 @@ Die absoluten Werte des Indikators können im Gegensatz zu seiner Dynamik im Ver
 
 Um den Indikator zu verwenden, sollte die Klasse [MarketFacilitationIndex](xref:StockSharp.Algo.Indicators.MarketFacilitationIndex) verwendet werden.
 
-![IndicatorMarketFacilitationIndex](../../../../images/indicatormarketfacilitationindex.png)
+![Markterleichterungsindex Diagramm](../../../../images/indicatormarketfacilitationindex.png)
 
 ## Siehe auch
 

@@ -9,7 +9,7 @@ Para utilizar o indicador, deve ser usada a classe [JurikMovingAverage](xref:Sto
 - Phase - determina a velocidade a que a média móvel se irá desenvolver;
 - Period - determina o período da média móvel.
 
-![IndicatorJurikMovingAverage](../../../../images/indicatorjurikmovingaverage.png)
+![Gráfico do indicador JMA](../../../../images/indicatorjurikmovingaverage.png)
 
 ## Ver Também
 

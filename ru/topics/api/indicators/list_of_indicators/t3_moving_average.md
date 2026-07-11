@@ -49,7 +49,7 @@ T3MA можно использовать для:
 
 При VolumeFactor = 0, T3 становится эквивалентной EMA3 (тройная EMA). При VolumeFactor = 1, T3 максимально сглаживается.
 
-![IndicatorT3MovingAverage](../../../../images/indicator_t3_moving_average.png)
+![График индикатора T3MA](../../../../images/indicator_t3_moving_average.png)
 
 ## См. также
 

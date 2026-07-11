@@ -4,7 +4,7 @@
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [LinearReg](xref:StockSharp.Algo.Indicators.LinearReg) verwenden.
 
-![IndicatorLinearReg](../../../../images/indicatorlinearreg.png)
+![LRC Diagramm](../../../../images/indicatorlinearreg.png)
 
 ## Empfohlene Inhalte
 

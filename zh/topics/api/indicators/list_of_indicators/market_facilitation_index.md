@@ -5,7 +5,7 @@
 
 使用该指标时，应使用 [MarketFacilitationIndex](xref:StockSharp.Algo.Indicators.MarketFacilitationIndex) 类。
 
-![IndicatorMarketFacilitationIndex](../../../../images/indicatormarketfacilitationindex.png)
+![市场便利化指数 指标图表](../../../../images/indicatormarketfacilitationindex.png)
 
 ## 另请参阅
 

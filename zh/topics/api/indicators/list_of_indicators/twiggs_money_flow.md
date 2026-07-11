@@ -50,7 +50,7 @@ Twiggs 资金流计算分为几个步骤进行：
 
 TMF 值范围从 -1（强烈看跌信号）到 +1（强烈看涨信号）。
 
-![IndicatorTwiggsMoneyFlow](../../../../images/indicator_twiggs_money_flow.png)
+![TMF 指标图表](../../../../images/indicator_twiggs_money_flow.png)
 
 ## 另请参阅
 

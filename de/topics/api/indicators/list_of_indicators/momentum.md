@@ -14,7 +14,7 @@ CLOSE(i) – der Schlusskurs des aktuellen Balkens;
 CLOSE(i - n) – der Schlusskurs von n Balken zurück.
 
 
-![IndicatorMomentum](../../../../images/indicatormomentum.png)
+![Impuls Diagramm](../../../../images/indicatormomentum.png)
 
 ## Siehe auch
 

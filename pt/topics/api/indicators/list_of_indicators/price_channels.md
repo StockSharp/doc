@@ -4,7 +4,7 @@
 
 Para usar o indicador, deve usar a classe [PriceChannels](xref:StockSharp.Algo.Indicators.PriceChannels).
 
-![IndicatorPriceChannels](../../../../images/indicatorpricechannels.png)
+![Gráfico do indicador canais de preço](../../../../images/indicatorpricechannels.png)
 
 ## Conteúdo recomendado
 

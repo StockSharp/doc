@@ -5,7 +5,7 @@
 
 Для использования индикатора необходимо использовать класс [MoneyFlowIndex](xref:StockSharp.Algo.Indicators.MoneyFlowIndex).
 
-![IndicatorMoneyFlowIndex](../../../../images/indicatormoneyflowindex.png)
+![График индикатора MFI](../../../../images/indicatormoneyflowindex.png)
 
    См. также
 

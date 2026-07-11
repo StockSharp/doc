@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [ElderForceIndex](xref:StockSharp.Algo.Indicators.ElderForceIndex).
 
-![IndicatorElderForceIndex](../../../../images/indicatorelderforceindex.png)
+![График индикатора Индекс силы Элдера](../../../../images/indicatorelderforceindex.png)
 
 ## См. также
 

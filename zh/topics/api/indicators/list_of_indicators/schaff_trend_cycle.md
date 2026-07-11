@@ -45,7 +45,7 @@ STC 计算分为几个步骤进行：
 
 结果是一个比经典随机指标更平滑、比MACD对趋势变化反应更快的振荡器。
 
-![IndicatorSchaffTrendCycle](../../../../images/indicator_schaff_trend_cycle.png)
+![STC 指标图表](../../../../images/indicator_schaff_trend_cycle.png)
 
 ## 另请参阅
 

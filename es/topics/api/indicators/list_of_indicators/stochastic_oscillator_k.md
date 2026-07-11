@@ -40,7 +40,7 @@ En el oscilador estocástico completo, la línea %D se calcula como un promedio 
 %D = SMA(%K, 3)
 ```
 
-![IndicatorStochasticK](../../../../images/indicatorstochastick.png)
+![Gráfico del indicador Oscilador estocástico %K](../../../../images/indicatorstochastick.png)
 
 ## Véase también
 

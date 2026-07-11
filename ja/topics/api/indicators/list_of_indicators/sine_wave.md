@@ -44,7 +44,7 @@
 
 この指標には、シグナル精度を向上させるために、トレンドラインやフィルターなどの追加コンポーネントが含まれる場合があります。
 
-![IndicatorSineWave](../../../../images/indicator_sine_wave.png)
+![SW のチャート](../../../../images/indicator_sine_wave.png)
 
 ## 関連項目
 

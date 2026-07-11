@@ -4,7 +4,7 @@ O indicador **vale** mostra o valor mínimo do período.
 
 Para utilizar o indicador, deve usar a classe [Trough](xref:StockSharp.Algo.Indicators.Trough). 
 
-![IndicatorTrough](../../../../images/indicatortrough.png)
+![Gráfico do indicador Vale](../../../../images/indicatortrough.png)
 
 ## Conteúdo recomendado
 

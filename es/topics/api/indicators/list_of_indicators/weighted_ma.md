@@ -4,7 +4,7 @@
 
 Para utilizar el indicador, debe utilizar la clase [WeightedMovingAverage](xref:StockSharp.Algo.Indicators.WeightedMovingAverage). 
 
-![IndicatorWeightedMovingAverage](../../../../images/indicatorweightedmovingaverage.png)
+![Gráfico del indicador media móvil ponderada](../../../../images/indicatorweightedmovingaverage.png)
 
 ## Contenido recomendado
 

@@ -20,7 +20,7 @@ a — 加速因子。
 
 该因子在反转点取最小值，等于一步，并且当价格根据趋势达到新的极值（高点或低点）时，该因子增加一个步骤。当因子达到最大值时，其增长将暂停。
 
-![IndicatorParabolicSar](../../../../images/indicatorparabolicsar.png)
+![抛物线转向点 指标图表](../../../../images/indicatorparabolicsar.png)
 
 ## 另请参阅
 

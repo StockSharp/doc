@@ -4,7 +4,7 @@
 
 この指標を使用するには、[RateOfChange](xref:StockSharp.Algo.Indicators.RateOfChange) クラスを使用する必要があります。
 
-![IndicatorRateOfChange](../../../../images/indicatorrateofchange.png)
+![RoC のチャート](../../../../images/indicatorrateofchange.png)
 
 ## 推奨コンテンツ
 

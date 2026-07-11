@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [VariableMovingAverage](xref:StockSharp.Algo.Indicators.VariableMovingAverage) 类。
 
-![IndicatorVariableMovingAverage](../../../../images/indicatorvariablemovingaverage.png)
+![可变移动平均线 (VMA) 指标图表](../../../../images/indicatorvariablemovingaverage.png)
 
 ## 推荐内容
 

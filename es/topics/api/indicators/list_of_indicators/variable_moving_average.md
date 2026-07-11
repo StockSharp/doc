@@ -4,7 +4,7 @@
 
 Para utilizar el indicador, debe utilizar la clase [VariableMovingAverage](xref:StockSharp.Algo.Indicators.VariableMovingAverage).
 
-![IndicatorVariableMovingAverage](../../../../images/indicatorvariablemovingaverage.png)
+![Gráfico del indicador media móvil variable](../../../../images/indicatorvariablemovingaverage.png)
 
 ## Contenido recomendado
 

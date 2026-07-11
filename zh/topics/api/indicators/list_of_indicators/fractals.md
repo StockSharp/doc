@@ -4,7 +4,7 @@
 
 使用该指标时，必须使用 [分形](xref:StockSharp.Algo.Indicators.Fractals) 类。
 
-![IndicatorFractals](../../../../images/indicatorfractals.png)
+![分形 指标图表](../../../../images/indicatorfractals.png)
 
 ## 推荐内容
 

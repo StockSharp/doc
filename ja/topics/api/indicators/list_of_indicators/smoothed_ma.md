@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[SmoothedMovingAverage](xref:StockSharp.Algo.Indicators.SmoothedMovingAverage) クラスを使用する必要があります。
 
-![IndicatorSmoothedMovingAverage](../../../../images/indicatorsmoothedmovingaverage.png)
+![平滑移動平均 のチャート](../../../../images/indicatorsmoothedmovingaverage.png)
 
 ## 推奨コンテンツ
 

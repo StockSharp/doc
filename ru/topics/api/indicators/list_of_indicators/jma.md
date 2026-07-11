@@ -9,7 +9,7 @@
 - Фаза \- определяет скорость с которой будет разворачиваться скользящая средняя;
 - Период \- определяет период скользящей средней.
 
-![IndicatorJurikMovingAverage](../../../../images/indicatorjurikmovingaverage.png)
+![График индикатора JMA](../../../../images/indicatorjurikmovingaverage.png)
 
 ## См. также
 

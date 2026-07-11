@@ -4,7 +4,7 @@ O indicador **índice de movimento direcional (DMI)** é uma ferramenta técnica
 
 Para usar o indicador, deve ser usada a classe [DirectionalIndex](xref:StockSharp.Algo.Indicators.DirectionalIndex).
 
-![IndicatorDirectionalIndex](../../../../images/indicatordirectionalindex.png)
+![Gráfico do indicador DMI](../../../../images/indicatordirectionalindex.png)
 
 ## Conteúdo recomendado
 

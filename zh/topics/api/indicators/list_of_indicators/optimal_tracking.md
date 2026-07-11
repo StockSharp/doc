@@ -4,7 +4,7 @@
 
 使用该指标时，您必须使用 [OptimalTracking](xref:StockSharp.Algo.Indicators.OptimalTracking) 类。
 
-![IndicatorOptimalTracking](../../../../images/indicatoroptimaltracking.png)
+![最优跟踪 指标图表](../../../../images/indicatoroptimaltracking.png)
 
 ## 推荐内容
 

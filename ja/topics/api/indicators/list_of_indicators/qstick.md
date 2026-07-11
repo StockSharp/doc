@@ -4,7 +4,7 @@
 
 この指標を使用するには、[QStick](xref:StockSharp.Algo.Indicators.QStick) クラスを使用する必要があります。
 
-![IndicatorQStick](../../../../images/indicatorqstick.png)
+![QStick のチャート](../../../../images/indicatorqstick.png)
 
 ## 推奨コンテンツ
 

@@ -4,7 +4,7 @@
 
 Para utilizar o indicador, deve usar a classe [TripleExponentialMovingAverage](xref:StockSharp.Algo.Indicators.TripleExponentialMovingAverage). 
 
-![IndicatorTripleExponentialMovingAverage](../../../../images/indicatortripleexponentialmovingaverage.png)
+![Gráfico do indicador TEMA](../../../../images/indicatortripleexponentialmovingaverage.png)
 
 ## Conteúdo recomendado
 

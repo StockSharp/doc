@@ -17,7 +17,7 @@ SMA — простая скользящая средняя
 
 Значения взяты для классического индикатора, в настройках всегда можно указать свои собственные параметры.
 
-![IndicatorAwesomeOscillator](../../../../images/indicatorawesomeoscillator.png)
+![График индикатора AO](../../../../images/indicatorawesomeoscillator.png)
 
 ## См. также
 

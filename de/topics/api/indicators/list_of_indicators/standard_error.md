@@ -4,7 +4,7 @@ Der **Standardfehler**-Indikator ist eine Schätzung der mittleren quadratischen
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [StandardError](xref:StockSharp.Algo.Indicators.StandardError) verwenden.
 
-![IndicatorStandardError](../../../../images/indicatorstandarderror.png)
+![Standardfehler Diagramm](../../../../images/indicatorstandarderror.png)
 
 ## Empfohlene Inhalte
 

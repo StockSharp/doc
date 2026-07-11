@@ -45,7 +45,7 @@ Die STC-Berechnung erfolgt in mehreren Schritten:
 
 Das Ergebnis ist ein Oszillator, der glatter ist als der klassische Stochastik und schneller auf Trendänderungen reagiert als der MACD.
 
-![IndicatorSchaffTrendCycle](../../../../images/indicator_schaff_trend_cycle.png)
+![STC Diagramm](../../../../images/indicator_schaff_trend_cycle.png)
 
 ## Siehe auch
 

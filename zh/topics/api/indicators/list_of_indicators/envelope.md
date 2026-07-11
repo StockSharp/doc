@@ -5,7 +5,7 @@
 
 要使用该指标，应使用 [Envelope](xref:StockSharp.Algo.Indicators.Envelope) 类。
 
-![IndicatorEnvelope](../../../../images/indicatorenvelope.png)
+![包络线 指标图表](../../../../images/indicatorenvelope.png)
 
 ## 另请参阅
 

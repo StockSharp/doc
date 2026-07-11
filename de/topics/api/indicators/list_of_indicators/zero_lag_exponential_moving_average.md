@@ -46,7 +46,7 @@ Die ZLEMA-Berechnung basiert auf der Beseitigung von Verzögerung durch Prognose
 
 Das Ergebnis ist ein gleitender Durchschnitt, der dem Preis deutlich enger folgt als ein gewöhnlicher EMA mit derselben Periode und gleichzeitig den Glättungseffekt beibehält.
 
-![IndicatorZeroLagExponentialMovingAverage](../../../../images/indicator_zero_lag_exponential_moving_average.png)
+![ZLEMA Diagramm](../../../../images/indicator_zero_lag_exponential_moving_average.png)
 
 ## Siehe auch
 

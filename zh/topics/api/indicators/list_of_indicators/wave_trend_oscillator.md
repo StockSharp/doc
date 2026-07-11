@@ -52,7 +52,7 @@ WTO的主要特征：
 
 指标参数的典型值为：EsaPeriod = 10，DPeriod = 21，AveragePeriod = 4，但它们可以根据不同的时间框架和工具进行调整。
 
-![IndicatorWaveTrendOscillator](../../../../images/indicator_wave_trend_oscillator.png)
+![WTO 指标图表](../../../../images/indicator_wave_trend_oscillator.png)
 
 ## 另请参阅
 

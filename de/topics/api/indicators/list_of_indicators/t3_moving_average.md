@@ -49,7 +49,7 @@ Die Berechnung des gleitenden T3-Durchschnitts erfolgt in mehreren Schritten:
 
 Wenn VolumeFactor = 0 ist, entspricht T3 EMA3 (dreifache EMA). Wenn VolumeFactor = 1 ist, wird T3 maximal geglättet.
 
-![IndicatorT3MovingAverage](../../../../images/indicator_t3_moving_average.png)
+![T3MA Diagramm](../../../../images/indicator_t3_moving_average.png)
 
 ## Siehe auch
 

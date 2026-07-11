@@ -20,7 +20,7 @@ O fator de aceleração é um coeficiente flutuante, caracterizado por valores m
 
 O fator assume um valor mínimo igual a um passo no ponto de reversão e, assim que o preço alcança um novo valor extremo de acordo com a tendência (high ou low), o fator é aumentado por um passo. Quando o fator atinge o seu valor máximo, o seu crescimento é interrompido.
 
-![IndicatorParabolicSar](../../../../images/indicatorparabolicsar.png)
+![Gráfico do indicador SAR parabólico](../../../../images/indicatorparabolicsar.png)
 
 ## Ver também
 

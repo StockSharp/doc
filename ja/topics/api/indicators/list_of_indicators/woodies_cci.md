@@ -44,7 +44,7 @@
 
 ウッディーズ CCI は、これら2本のラインの組み合わせを使用して売買シグナルを作成します。クラシックな Woodies システムでは、これらのラインのクロス、主要水準との相互作用、およびさまざまなパターンが取引判断の基礎となります。
 
-![IndicatorWoodiesCCI](../../../../images/indicator_woodies_cci.png)
+![WCCI のチャート](../../../../images/indicator_woodies_cci.png)
 
 ## 関連項目
 

@@ -5,7 +5,7 @@ El indicador es un oscilador técnico para determinar las condiciones de sobreco
 
 Para utilizar el indicador, se debe utilizar la clase [MoneyFlowIndex](xref:StockSharp.Algo.Indicators.MoneyFlowIndex).
 
-![IndicatorMoneyFlowIndex](../../../../images/indicatormoneyflowindex.png)
+![Gráfico del indicador Índice de flujo de dinero](../../../../images/indicatormoneyflowindex.png)
 
 ## Véase también
 

@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[VolumeWeightedMovingAverage](xref:StockSharp.Algo.Indicators.VolumeWeightedMovingAverage) クラスを使用する必要があります。
 
-![IndicatorVolumeWeightedMovingAverage](../../../../images/indicatorvolumeweightedmovingaverage.png)
+![出来高加重 MA のチャート](../../../../images/indicatorvolumeweightedmovingaverage.png)
 
 ## 推奨コンテンツ
 

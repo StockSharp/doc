@@ -30,7 +30,7 @@ Period(i) = p + i * step
 - i - номер линии (от 0 до n-1)
 - step - шаг увеличения периода (обычно 1)
 
-![IndicatorRainbowCharts](../../../../images/indicator_rainbow_charts.png)
+![График индикатора RC](../../../../images/indicator_rainbow_charts.png)
 
 ## См. также
 

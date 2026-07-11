@@ -5,7 +5,7 @@
 
 Для использования индикатора необходимо использовать класс [Envelope](xref:StockSharp.Algo.Indicators.Envelope). 
 
-![IndicatorEnvelope](../../../../images/indicatorenvelope.png)
+![График индикатора Конверты](../../../../images/indicatorenvelope.png)
 
 ## См. также
 

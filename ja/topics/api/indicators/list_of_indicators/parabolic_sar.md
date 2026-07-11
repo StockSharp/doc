@@ -20,7 +20,7 @@ a — 加速係数。
 
 この係数は反転ポイントで 1 ステップに等しい最小値を取り、価格がトレンド方向の新しい極値（high または low）に達すると、係数は 1 ステップ増加します。係数が最大値に達すると、その増加は停止します。
 
-![IndicatorParabolicSar](../../../../images/indicatorparabolicsar.png)
+![パラボリック SAR のチャート](../../../../images/indicatorparabolicsar.png)
 
 ## 関連項目
 

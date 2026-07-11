@@ -16,7 +16,7 @@ Estas dos curvas resultantes representan el MACD lineal regular. Además, la lí
 
 Al construir el histograma MACD, las barras del histograma muestran la diferencia entre la línea de señal y la línea MACD, simplificando aún más la percepción del indicador.
 
-![IndicatorMovingAverageConvergenceDivergenceHistogram](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
+![Gráfico del indicador Histograma MACD](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
 
 ## Véase también
 

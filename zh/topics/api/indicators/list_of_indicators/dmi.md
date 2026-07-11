@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [DirectionalIndex](xref:StockSharp.Algo.Indicators.DirectionalIndex) 类。
 
-![IndicatorDirectionalIndex](../../../../images/indicatordirectionalindex.png)
+![DMI 指标图表](../../../../images/indicatordirectionalindex.png)
 
 ## 推荐内容
 

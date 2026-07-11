@@ -18,7 +18,7 @@ Auf Basis dieses Indikators wird ATR berechnet. Er hat nur einen Parameter - die
 
 ATR(t) = ((ATR(t-1) x (N-1)) + TR(t)) / N
 
-![IndicatorAverageTrueRange](../../../../images/indicatoraveragetruerange.png)
+![ATR Diagramm](../../../../images/indicatoraveragetruerange.png)
 
 ## Siehe auch
 

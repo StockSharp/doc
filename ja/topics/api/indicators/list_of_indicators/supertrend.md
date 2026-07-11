@@ -24,7 +24,7 @@ SuperTrend は、平均価格と ATR 値を使用して構築されます。イ�
 3. SuperTrend は、現在のトレンドに応じて、最初はいずれかのバンドと等しくなります。
 4. 終値が SuperTrend ラインを交差すると、トレンド方向が変化し、ラインは反対側へ移動します。
 
-![IndicatorSuperTrend](../../../../images/indicator_supertrend.png)
+![SuperTrend のチャート](../../../../images/indicator_supertrend.png)
 
 ## 関連項目
 

@@ -6,7 +6,7 @@
 
 トレンド除去価格オシレーター は、現在の価格値から単純移動平均（SMA）を差し引いて計算されます。移動平均の長さはユーザーが決定します。
 
-![IndicatorDetrendedPriceOscillator](../../../../images/indicatordetrendedpriceoscillator.png)
+![DPO のチャート](../../../../images/indicatordetrendedpriceoscillator.png)
 
 ## 関連項目
 

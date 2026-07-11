@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [TripleExponentialMovingAverage](xref:StockSharp.Algo.Indicators.TripleExponentialMovingAverage) 类。
 
-![IndicatorTripleExponentialMovingAverage](../../../../images/indicatortripleexponentialmovingaverage.png)
+![TEMA 指标图表](../../../../images/indicatortripleexponentialmovingaverage.png)
 
 ## 推荐内容
 

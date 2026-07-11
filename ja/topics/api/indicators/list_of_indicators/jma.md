@@ -9,7 +9,7 @@
 - Phase - 移動平均が展開する速度を決定します。
 - Period - 移動平均の期間を決定します。
 
-![IndicatorJurikMovingAverage](../../../../images/indicatorjurikmovingaverage.png)
+![JMA のチャート](../../../../images/indicatorjurikmovingaverage.png)
 
 ## 関連項目
 

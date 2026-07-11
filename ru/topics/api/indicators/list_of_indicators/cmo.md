@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [ChandeMomentumOscillator](xref:StockSharp.Algo.Indicators.ChandeMomentumOscillator).
 
-![IndicatorChandeMomentumOscillator](../../../../images/indicatorchandemomentumoscillator.png)
+![График индикатора CMO](../../../../images/indicatorchandemomentumoscillator.png)
 
 ## См. также
 

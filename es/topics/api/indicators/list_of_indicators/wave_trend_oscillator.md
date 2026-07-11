@@ -52,7 +52,7 @@ El cálculo de Oscilador de tendencia de onda implica varios pasos:
 
 Los valores típicos de los parámetros del indicador son: EsaPeriod = 10, DPeriod = 21, AveragePeriod = 4, pero se pueden adaptar a diferentes marcos temporales e instrumentos.
 
-![IndicatorWaveTrendOscillator](../../../../images/indicator_wave_trend_oscillator.png)
+![Gráfico del indicador WTO](../../../../images/indicator_wave_trend_oscillator.png)
 
 ## Véase también
 

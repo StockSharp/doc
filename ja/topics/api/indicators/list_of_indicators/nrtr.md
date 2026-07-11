@@ -4,7 +4,7 @@
 
 インジケーターを使用するには、[NickRypockTrailingReverse](xref:StockSharp.Algo.Indicators.NickRypockTrailingReverse) クラスを使用する必要があります。
 
-![IndicatorNickRypockTrailingReverse](../../../../images/indicatornickrypocktrailingreverse.png)
+![NRTR のチャート](../../../../images/indicatornickrypocktrailingreverse.png)
 
 ## 推奨コンテンツ
 

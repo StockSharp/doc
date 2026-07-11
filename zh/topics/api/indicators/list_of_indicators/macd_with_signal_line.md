@@ -6,7 +6,7 @@
 
 要使用该指标，应使用 [MovingAverageConvergenceDivergenceSignal](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceSignal) 类。
 
-![IndicatorMovingAverageConvergenceDivergenceSignal](../../../../images/indicatormovingaverageconvergencedivergencesignal.png)
+![带信号线的MACD 指标图表](../../../../images/indicatormovingaverageconvergencedivergencesignal.png)
 
 ## 另请参阅
 

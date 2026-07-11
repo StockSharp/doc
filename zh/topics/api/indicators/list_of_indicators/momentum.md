@@ -14,7 +14,7 @@ CLOSE(i) — 当前K线的收盘价；
 CLOSE(i - n) — n 根K线之前的收盘价。
 
 
-![IndicatorMomentum](../../../../images/indicatormomentum.png)
+![动量 指标图表](../../../../images/indicatormomentum.png)
 
 ## 另请参阅
 

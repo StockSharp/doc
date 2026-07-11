@@ -34,7 +34,7 @@ ADL = Предыдущее значение ADL + CLV * Volume
 
 Если (High - Low) равно нулю, CLV принимается равным нулю.
 
-![IndicatorAccumulationDistributionLine](../../../../images/indicator_accumulation_distribution_line.png)
+![График индикатора ADL](../../../../images/indicator_accumulation_distribution_line.png)
 
 ## См. также
 

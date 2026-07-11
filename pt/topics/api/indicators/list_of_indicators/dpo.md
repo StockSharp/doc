@@ -6,7 +6,7 @@ Para usar o indicador, deve ser usada a classe [DetrendedPriceOscillator](xref:S
 
 O oscilador de preço sem tendência é calculado subtraindo uma média móvel simples (SMA) ao valor atual do preço. O comprimento da média móvel é determinado pelo utilizador.
 
-![IndicatorDetrendedPriceOscillator](../../../../images/indicatordetrendedpriceoscillator.png)
+![Gráfico do indicador DPO](../../../../images/indicatordetrendedpriceoscillator.png)
 
 ## Ver também
 

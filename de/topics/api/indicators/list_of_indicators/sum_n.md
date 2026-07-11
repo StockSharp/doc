@@ -4,7 +4,7 @@ Der Indikator **Summe N** zeigt die Summe der letzten N Werte für den Zeitraum 
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [Sum](xref:StockSharp.Algo.Indicators.Sum) verwenden.
 
-![IndicatorSum](../../../../images/indicatorsum.png)
+![Summe N Diagramm](../../../../images/indicatorsum.png)
 
 ## Empfohlene Inhalte
 

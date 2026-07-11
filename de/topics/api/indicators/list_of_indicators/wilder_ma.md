@@ -4,7 +4,7 @@
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [WilderMovingAverage](xref:StockSharp.Algo.Indicators.WilderMovingAverage).
 
-![IndicatorWilderMovingAverage](../../../../images/indicatorwildermovingaverage.png)
+![Wilder-Gleitender Durchschnitt Diagramm](../../../../images/indicatorwildermovingaverage.png)
 
 ## Empfohlene Inhalte
 

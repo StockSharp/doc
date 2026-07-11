@@ -4,7 +4,7 @@
 
 使用该指标时，您必须使用 [HullMovingAverage](xref:StockSharp.Algo.Indicators.HullMovingAverage) 类。
 
-![IndicatorHullMovingAverage](../../../../images/indicatorhullmovingaverage.png)
+![HMA 指标图表](../../../../images/indicatorhullmovingaverage.png)
 
 ## 推荐内容
 

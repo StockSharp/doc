@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [GatorOscillator](xref:StockSharp.Algo.Indicators.GatorOscillator) 类。
 
-![IndicatorGatorOscillator](../../../../images/indicatorgatoroscillator.png)
+![鳄鱼振荡器 指标图表](../../../../images/indicatorgatoroscillator.png)
 
 ## 推荐内容
 

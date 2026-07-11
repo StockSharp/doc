@@ -4,7 +4,7 @@
 
 使用该指标时，必须使用 [QStick](xref:StockSharp.Algo.Indicators.QStick) 类。
 
-![IndicatorQStick](../../../../images/indicatorqstick.png)
+![Q棒 指标图表](../../../../images/indicatorqstick.png)
 
 ## 推荐内容
 

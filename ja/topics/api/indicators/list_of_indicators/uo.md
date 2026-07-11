@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[UltimateOscillator](xref:StockSharp.Algo.Indicators.UltimateOscillator) クラスを使用する必要があります。
 
-![IndicatorUltimateOscillator](../../../../images/indicatorultimateoscillator.png)
+![UO のチャート](../../../../images/indicatorultimateoscillator.png)
 
 ## 推奨コンテンツ
 

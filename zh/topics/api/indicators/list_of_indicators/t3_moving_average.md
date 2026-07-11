@@ -49,7 +49,7 @@ T3 移动平均的计算分为几个步骤进行：
 
 当 VolumeFactor = 0 时，T3 等同于 EMA3（三重 EMA）。当 VolumeFactor = 1 时，T3 达到最大平滑。
 
-![IndicatorT3MovingAverage](../../../../images/indicator_t3_moving_average.png)
+![T3MA 指标图表](../../../../images/indicator_t3_moving_average.png)
 
 ## 另请参阅
 

@@ -59,7 +59,7 @@ O cálculo do indicador Vortex é efetuado em vários passos:
 
 O cruzamento destas duas linhas gera sinais de negociação: quando VI+ sobe acima de VI-, sinaliza uma tendência altista; inversamente, quando VI- sobe acima de VI+, sinaliza uma tendência baixista.
 
-![IndicatorVortexIndicator](../../../../images/indicator_vortex_indicator.png)
+![Gráfico do indicador VI](../../../../images/indicator_vortex_indicator.png)
 
 ## Ver também
 

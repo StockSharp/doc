@@ -40,7 +40,7 @@ Im vollstochastischen Oszillator wird die %D-Linie als einfacher gleitender Durc
 %D = SMA(%K, 3)
 ```
 
-![IndicatorStochasticK](../../../../images/indicatorstochastick.png)
+![Stochastischer Oszillator %K Diagramm](../../../../images/indicatorstochastick.png)
 
 ## Siehe auch
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage). 
 
-![IndicatorSimpleMovingAverage](../../../../images/indicatorsimplemovingaverage.png)
+![График индикатора SMA](../../../../images/indicatorsimplemovingaverage.png)
 
 ## См. также
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [Trough](xref:StockSharp.Algo.Indicators.Trough). 
 
-![IndicatorTrough](../../../../images/indicatortrough.png)
+![График индикатора Впадина](../../../../images/indicatortrough.png)
 
 ## См. также
 

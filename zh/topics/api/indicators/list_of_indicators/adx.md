@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex)。
 
-![IndicatorAverageDirectionalIndex](../../../../images/indicatoraveragedirectionalindex.png)
+![ADX 指标图表](../../../../images/indicatoraveragedirectionalindex.png)
 
 ## 推荐内容
 

@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [UltimateOscillator](xref:StockSharp.Algo.Indicators.UltimateOscillator) 类。
 
-![IndicatorUltimateOscillator](../../../../images/indicatorultimateoscillator.png)
+![UO 指标图表](../../../../images/indicatorultimateoscillator.png)
 
 ## 推荐内容
 

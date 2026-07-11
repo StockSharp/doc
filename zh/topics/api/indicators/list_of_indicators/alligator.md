@@ -15,7 +15,7 @@
 
 这些数值是针对经典指标获取的，在设置中，总是可以指定您自己的参数。
 
-![IndicatorAlligator](../../../../images/indicatoralligator.png)
+![鳄鱼 指标图表](../../../../images/indicatoralligator.png)
 
 ## 另请参阅
 

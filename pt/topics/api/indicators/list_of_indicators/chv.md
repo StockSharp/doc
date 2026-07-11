@@ -16,7 +16,7 @@ Principais parâmetros do indicador:
 - **ROCPeriod** - o número do período em relação ao qual o cálculo será realizado. Inicialmente definido como 5.
 - **SmoothPeriod** - o período da média móvel. Por defeito, está definido como 32.
 
-![IndicatorChaikinVolatility](../../../../images/indicatorchaikinvolatility.png)
+![Gráfico do indicador CHV](../../../../images/indicatorchaikinvolatility.png)
 
 ## Ver também
 

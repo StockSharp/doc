@@ -4,7 +4,7 @@
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [HullMovingAverage](xref:StockSharp.Algo.Indicators.HullMovingAverage) verwenden.
 
-![IndicatorHullMovingAverage](../../../../images/indicatorhullmovingaverage.png)
+![HMA Diagramm](../../../../images/indicatorhullmovingaverage.png)
 
 ## Empfohlene Inhalte
 

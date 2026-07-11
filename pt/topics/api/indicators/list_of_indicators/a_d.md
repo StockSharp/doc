@@ -23,7 +23,7 @@ AO — indicador [oscilador incrível](ao.md).
 
 Os parâmetros são definidos como valores dos períodos da SMA.
 
-![IndicatorAcceleration](../../../../images/indicatoracceleration.png)
+![Gráfico do indicador A/D](../../../../images/indicatoracceleration.png)
 
 ## Ver também
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [DirectionalIndex](xref:StockSharp.Algo.Indicators.DirectionalIndex). 
 
-![IndicatorDirectionalIndex](../../../../images/indicatordirectionalindex.png)
+![График индикатора DMI](../../../../images/indicatordirectionalindex.png)
 
 ## См. также
 

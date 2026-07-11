@@ -21,7 +21,7 @@ AO - [オーサムオシレーター](ao.md) インジケーター。
 
 パラメーターは SMA 期間の値として設定されます。
 
-![IndicatorAcceleration](../../../../images/indicatoracceleration.png)
+![A/D のチャート](../../../../images/indicatoracceleration.png)
 
 ## 関連項目
 

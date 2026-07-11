@@ -6,7 +6,7 @@ Der Indikator wird als Differenz zwischen einem kurzen gleitenden Durchschnitt u
 
 Um den Indikator zu verwenden, sollte die Klasse [MovingAverageConvergenceDivergence](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence) verwendet werden.
 
-![IndicatorMovingAverageConvergenceDivergence](../../../../images/indicatormovingaverageconvergencedivergence.png)
+![MACD Diagramm](../../../../images/indicatormovingaverageconvergencedivergence.png)
 
 ## Siehe auch
 

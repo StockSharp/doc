@@ -5,7 +5,7 @@ Os parâmetros definidos são o período da média móvel e o tamanho do desvio.
 
 Para utilizar o indicador, deve ser usada a classe [Envelope](xref:StockSharp.Algo.Indicators.Envelope).
 
-![IndicatorEnvelope](../../../../images/indicatorenvelope.png)
+![Gráfico do indicador Envelopes](../../../../images/indicatorenvelope.png)
 
 ## Ver Também
 

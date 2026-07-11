@@ -50,7 +50,7 @@ Twiggs-Geldfluss wird in mehreren Schritten berechnet:
 
 TMF-Werte reichen von -1 (starkes bärisches Signal) bis +1 (starkes bullisches Signal).
 
-![IndicatorTwiggsMoneyFlow](../../../../images/indicator_twiggs_money_flow.png)
+![TMF Diagramm](../../../../images/indicator_twiggs_money_flow.png)
 
 ## Siehe auch
 

@@ -46,7 +46,7 @@ ZLEMA может использоваться для:
 
 Результатом является скользящее среднее, которое значительно ближе следует за ценой, чем обычное EMA с тем же периодом, но при этом сохраняет сглаживающий эффект.
 
-![IndicatorZeroLagExponentialMovingAverage](../../../../images/indicator_zero_lag_exponential_moving_average.png)
+![График индикатора ZLEMA](../../../../images/indicator_zero_lag_exponential_moving_average.png)
 
 ## См. также
 

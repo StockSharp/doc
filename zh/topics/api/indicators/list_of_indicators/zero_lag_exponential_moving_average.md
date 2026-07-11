@@ -46,7 +46,7 @@ ZLEMA 的计算基于通过预测消除滞后，包括以下步骤：
 
 结果是一个移动平均线，它比具有相同期的普通EMA更紧密地跟随价格，同时保持平滑效果。
 
-![IndicatorZeroLagExponentialMovingAverage](../../../../images/indicator_zero_lag_exponential_moving_average.png)
+![零滞后指数移动平均线 指标图表](../../../../images/indicator_zero_lag_exponential_moving_average.png)
 
 ## 另请参阅
 

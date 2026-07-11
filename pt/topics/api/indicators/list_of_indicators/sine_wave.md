@@ -44,7 +44,7 @@ O cálculo do indicador onda senoidal baseia-se na utilização da função seno
 
 O indicador pode incluir componentes adicionais, como uma linha de tendência ou um filtro, para melhorar a precisão dos sinais.
 
-![IndicatorSineWave](../../../../images/indicator_sine_wave.png)
+![Gráfico do indicador SW](../../../../images/indicator_sine_wave.png)
 
 ## Ver também
 

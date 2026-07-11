@@ -51,7 +51,7 @@ Die RMI-Berechnung erfolgt in mehreren Schritten:
    RMI = 100 - (100 / (1 + RS))
    ```
 
-![IndicatorRelativeMomentumIndex](../../../../images/indicator_relative_momentum_index.png)
+![RMI Diagramm](../../../../images/indicator_relative_momentum_index.png)
 
 ## Siehe auch
 

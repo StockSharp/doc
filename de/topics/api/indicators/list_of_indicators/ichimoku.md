@@ -15,7 +15,7 @@ Grafisch besteht der Indikator aus fünf farbigen Linien, die einfachen gleitend
 
 - Chikou (nacheilende Spanne) – stellt den letzten Schlusskurs dar, der um 26 Perioden nach hinten verschoben wurde. Es hilft, Signale zu bestätigen: Wenn es den Chart von unten nach oben kreuzt, ist es ein Kaufsignal, und von oben nach unten – ein Verkaufssignal. Chikou fungiert im Wesentlichen als Trendfilter.
 
-![IndicatorIchimoku](../../../../images/indicatorichimoku.png)
+![Ichimoku Diagramm](../../../../images/indicatorichimoku.png)
 
 ## Siehe auch
 

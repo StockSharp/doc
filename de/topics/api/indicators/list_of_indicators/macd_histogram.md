@@ -16,7 +16,7 @@ Diese beiden resultierenden Kurven stellen den regulären linearen MACD dar. Auc
 
 Beim Erstellen des MACD-Histogramms (MACD-Histogramm) zeigen die Histogrammbalken die Differenz zwischen den Signal- und MACD-Linien an, was die Wahrnehmung des Indikators weiter vereinfacht.
 
-![IndicatorMovingAverageConvergenceDivergenceHistogram](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
+![MACD-Histogramm Diagramm](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
 
 ## Siehe auch
 

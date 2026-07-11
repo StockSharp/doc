@@ -17,7 +17,7 @@ SMA - 単純移動平均
 
 値はクラシックなインジケーター用のものであり、設定では常に独自のパラメーターを指定できます。
 
-![IndicatorAwesomeOscillator](../../../../images/indicatorawesomeoscillator.png)
+![AO のチャート](../../../../images/indicatorawesomeoscillator.png)
 
 ## 関連項目
 

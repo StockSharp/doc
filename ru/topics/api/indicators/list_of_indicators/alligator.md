@@ -15,7 +15,7 @@
 
 Значения взяты для классического индикатора, в настройках всегда можно указать свои собственные параметры.
 
-![IndicatorAlligator](../../../../images/indicatoralligator.png)
+![График индикатора Alligator](../../../../images/indicatoralligator.png)
 
 ## См. также
 

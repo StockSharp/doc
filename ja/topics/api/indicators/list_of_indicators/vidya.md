@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[Vidya](xref:StockSharp.Algo.Indicators.Vidya) クラスを使用する必要があります。
 
-![IndicatorVidya](../../../../images/indicatorvidya.png)
+![VIDYA のチャート](../../../../images/indicatorvidya.png)
 
 ## 推奨コンテンツ
 

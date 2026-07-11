@@ -15,7 +15,7 @@
 
 値はクラシックなインジケーター用のものであり、設定では常に独自のパラメーターを指定できます。
 
-![IndicatorAlligator](../../../../images/indicatoralligator.png)
+![Alligator のチャート](../../../../images/indicatoralligator.png)
 
 ## 関連項目
 

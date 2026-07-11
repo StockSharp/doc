@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [TypicalPrice](xref:StockSharp.Algo.Indicators.TypicalPrice) 类。
 
-![IndicatorTypicalPrice](../../../../images/indicatortypicalprice.png)
+![典型价格 指标图表](../../../../images/indicatortypicalprice.png)
 
 ## 推荐内容
 

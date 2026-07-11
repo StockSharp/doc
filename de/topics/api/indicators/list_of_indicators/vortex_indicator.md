@@ -59,7 +59,7 @@ Die Berechnung des Vortex-Indikators erfolgt in mehreren Schritten:
 
 Das Kreuzen dieser beiden Linien erzeugt Handelssignale: Wenn VI+ über VI- steigt, signalisiert dies einen bullischen Trend; umgekehrt signalisiert ein Anstieg von VI- über VI+ einen bärischen Trend.
 
-![IndicatorVortexIndicator](../../../../images/indicator_vortex_indicator.png)
+![VI Diagramm](../../../../images/indicator_vortex_indicator.png)
 
 ## Siehe auch
 

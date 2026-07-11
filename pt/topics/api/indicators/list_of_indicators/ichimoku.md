@@ -15,7 +15,7 @@ Graficamente, o indicador consiste em cinco linhas coloridas semelhantes a médi
   
 - Chikou (linha atrasada) — representa o último preço de fecho, deslocado 26 períodos para trás. Ajuda a confirmar sinais: se cruza o gráfico de baixo para cima, é um sinal de compra, e de cima para baixo — um sinal de venda. Essencialmente, Chikou atua como um filtro de tendência.  
 
-![IndicatorIchimoku](../../../../images/indicatorichimoku.png)
+![Gráfico do indicador Ichimoku](../../../../images/indicatorichimoku.png)
 
 ## Ver Também
 

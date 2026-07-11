@@ -59,7 +59,7 @@ Vortex インジケーターの計算は、いくつかの手順で実行され�
 
 これら2本のラインのクロスによって売買シグナルが生成されます。VI+ が VI- を上回ると強気トレンドを示し、反対に VI- が VI+ を上回ると弱気トレンドを示します。
 
-![IndicatorVortexIndicator](../../../../images/indicator_vortex_indicator.png)
+![VI のチャート](../../../../images/indicator_vortex_indicator.png)
 
 ## 関連項目
 

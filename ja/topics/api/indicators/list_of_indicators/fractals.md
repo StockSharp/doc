@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[Fractals](xref:StockSharp.Algo.Indicators.Fractals) クラスを使用する必要があります。
 
-![IndicatorFractals](../../../../images/indicatorfractals.png)
+![フラクタル のチャート](../../../../images/indicatorfractals.png)
 
 ## 推奨コンテンツ
 

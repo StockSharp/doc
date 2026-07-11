@@ -18,7 +18,7 @@ Banda inferior = ML - (D x desviación estándar), donde
 D - el ancho del canal establecido en la configuración, Desviación estándar (StdDev) - desviación estándar, calculada mediante la fórmula: SQRT(Sum(Close, n))^2, n)/n), donde
 Sum - la suma de n períodos, n - período de cálculo, SQRT - raíz cuadrada, Close - precio de cierre.
 
-![IndicatorBollingerBands](../../../../images/indicatorbollingerbands.png)
+![Gráfico del indicador bandas de Bollinger](../../../../images/indicatorbollingerbands.png)
 
 ## Véase también
 

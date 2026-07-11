@@ -5,7 +5,7 @@
 
 このインジケーターを使用するには、[Envelope](xref:StockSharp.Algo.Indicators.Envelope) クラスを使用する必要があります。
 
-![IndicatorEnvelope](../../../../images/indicatorenvelope.png)
+![エンベロープ のチャート](../../../../images/indicatorenvelope.png)
 
 ## 関連項目
 

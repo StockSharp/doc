@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [Trix](xref:StockSharp.Algo.Indicators.Trix) 类。
 
-![IndicatorTrix](../../../../images/indicatortrix.png)
+![TRIX 指标 指标图表](../../../../images/indicatortrix.png)
 
 ## 推荐内容
 

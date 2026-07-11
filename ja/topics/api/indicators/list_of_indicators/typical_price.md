@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[TypicalPrice](xref:StockSharp.Algo.Indicators.TypicalPrice) クラスを使用する必要があります。
 
-![IndicatorTypicalPrice](../../../../images/indicatortypicalprice.png)
+![典型価格 のチャート](../../../../images/indicatortypicalprice.png)
 
 ## 推奨コンテンツ
 

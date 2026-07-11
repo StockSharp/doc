@@ -9,7 +9,7 @@ Um den Indikator zu verwenden, sollte die Klasse [JurikMovingAverage](xref:Stock
 - Phase – bestimmt die Geschwindigkeit, mit der sich der gleitende Durchschnitt entwickelt;
 - Period – bestimmt die Periode des gleitenden Durchschnitts.
 
-![IndicatorJurikMovingAverage](../../../../images/indicatorjurikmovingaverage.png)
+![JMA Diagramm](../../../../images/indicatorjurikmovingaverage.png)
 
 ## Siehe auch
 

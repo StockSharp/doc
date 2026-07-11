@@ -4,7 +4,7 @@
 
 使用该指标，必须使用 [StandardDeviation](xref:StockSharp.Algo.Indicators.StandardDeviation) 类。
 
-![IndicatorStandardDeviation](../../../../images/indicatorstandarddeviation.png)
+![标准差 指标图表](../../../../images/indicatorstandarddeviation.png)
 
 ## 推荐内容
 

@@ -4,7 +4,7 @@ O indicador **filtro de acompanhamento ótimo** ajusta alterações rápidas de 
 
 Para usar o indicador, deve usar a classe [OptimalTracking](xref:StockSharp.Algo.Indicators.OptimalTracking).
 
-![IndicatorOptimalTracking](../../../../images/indicatoroptimaltracking.png)
+![Gráfico do indicador acompanhamento ótimo](../../../../images/indicatoroptimaltracking.png)
 
 ## Conteúdo recomendado
 

@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 类。
 
-![IndicatorSimpleMovingAverage](../../../../images/indicatorsimplemovingaverage.png)
+![SMA 指标图表](../../../../images/indicatorsimplemovingaverage.png)
 
 ## 推荐内容
 

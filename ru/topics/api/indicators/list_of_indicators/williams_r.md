@@ -17,7 +17,7 @@ MIN (LOW (i \- n)) \- наименьший минимум за n предыду�
 
 В качестве параметра индикатора задается значение n.
 
-![IndicatorWilliamsR](../../../../images/indicatorwilliamsr.png)
+![График индикатора %R](../../../../images/indicatorwilliamsr.png)
 
 ## См. также
 

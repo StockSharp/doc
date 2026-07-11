@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [CommodityChannelIndex](xref:StockSharp.Algo.Indicators.CommodityChannelIndex) 类。
 
-![IndicatorCommodityChannelIndex](../../../../images/indicatorcommoditychannelindex.png)
+![CCI 指标图表](../../../../images/indicatorcommoditychannelindex.png)
 
 ## 推荐内容
 

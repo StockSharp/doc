@@ -10,7 +10,7 @@ Correlation-Koeffizient
 3. Der absolute Wert gibt die Stärke der Beziehung an.
 4. Immer basierend auf Zahlenpaaren.
 
-![IndicatorCorrelation](../../../../images/indicatorcorrelation.png)
+![Correlation Diagramm](../../../../images/indicatorcorrelation.png)
 
 ## Siehe auch
 

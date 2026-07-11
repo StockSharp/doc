@@ -4,7 +4,7 @@
 
 Para utilizar el indicador, debe utilizar la clase [SmoothedMovingAverage](xref:StockSharp.Algo.Indicators.SmoothedMovingAverage). 
 
-![IndicatorSmoothedMovingAverage](../../../../images/indicatorsmoothedmovingaverage.png)
+![Gráfico del indicador media móvil suavizada](../../../../images/indicatorsmoothedmovingaverage.png)
 
 ## Contenido recomendado
 

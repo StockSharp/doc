@@ -50,7 +50,7 @@
 
 Значения TMF варьируются от -1 (сильный медвежий сигнал) до +1 (сильный бычий сигнал).
 
-![IndicatorTwiggsMoneyFlow](../../../../images/indicator_twiggs_money_flow.png)
+![График индикатора TMF](../../../../images/indicator_twiggs_money_flow.png)
 
 ## См. также
 

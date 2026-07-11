@@ -44,7 +44,7 @@
 
 该指标可能包括额外的组件，例如趋势线或过滤器，以提高信号的准确性。
 
-![IndicatorSineWave](../../../../images/indicator_sine_wave.png)
+![SW 指标图表](../../../../images/indicator_sine_wave.png)
 
 ## 另请参阅
 

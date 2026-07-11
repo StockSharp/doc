@@ -17,7 +17,7 @@ MIN(LOW(i - n)) - 过去 n 个周期中的最低值。
 
 n 的值被设置为指示参数。
 
-![IndicatorWilliamsR](../../../../images/indicatorwilliamsr.png)
+![%R 指标图表](../../../../images/indicatorwilliamsr.png)
 
 ## 另请参阅
 

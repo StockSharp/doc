@@ -15,7 +15,7 @@
   
 - Chikou (遅行スパン) - 最後の終値を 26 期間後方にシフトして表します。シグナルの確認に役立ちます。下から上へチャートを横切る場合は買いシグナル、上から下へ横切る場合は売りシグナルです。本質的に、Chikou はトレンドフィルターとして機能します。  
 
-![IndicatorIchimoku](../../../../images/indicatorichimoku.png)
+![Ichimoku のチャート](../../../../images/indicatorichimoku.png)
 
 ## 関連項目
 

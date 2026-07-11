@@ -4,7 +4,7 @@
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [VariableMovingAverage](xref:StockSharp.Algo.Indicators.VariableMovingAverage).
 
-![IndicatorVariableMovingAverage](../../../../images/indicatorvariablemovingaverage.png)
+![variabler gleitender Durchschnitt Diagramm](../../../../images/indicatorvariablemovingaverage.png)
 
 ## Empfohlene Inhalte
 

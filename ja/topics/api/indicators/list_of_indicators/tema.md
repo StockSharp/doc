@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[TripleExponentialMovingAverage](xref:StockSharp.Algo.Indicators.TripleExponentialMovingAverage) クラスを使用する必要があります。
 
-![IndicatorTripleExponentialMovingAverage](../../../../images/indicatortripleexponentialmovingaverage.png)
+![TEMA のチャート](../../../../images/indicatortripleexponentialmovingaverage.png)
 
 ## 推奨コンテンツ
 

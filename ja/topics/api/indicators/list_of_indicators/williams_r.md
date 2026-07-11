@@ -17,7 +17,7 @@ MIN(LOW(i - n)) - 過去 n 期間の最安値の最小値。
 
 n の値はインジケーターのパラメーターとして設定されます。
 
-![IndicatorWilliamsR](../../../../images/indicatorwilliamsr.png)
+![%R のチャート](../../../../images/indicatorwilliamsr.png)
 
 ## 関連項目
 

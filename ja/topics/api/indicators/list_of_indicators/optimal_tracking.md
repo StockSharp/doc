@@ -4,7 +4,7 @@
 
 インジケーターを使用するには、[OptimalTracking](xref:StockSharp.Algo.Indicators.OptimalTracking) クラスを使用する必要があります。
 
-![IndicatorOptimalTracking](../../../../images/indicatoroptimaltracking.png)
+![最適追跡 のチャート](../../../../images/indicatoroptimaltracking.png)
 
 ## 推奨コンテンツ
 

@@ -44,7 +44,7 @@ El cálculo de CCI de Woodies se realiza en varios pasos:
 
 CCI de Woodies utiliza una combinación de estas dos líneas para crear señales de trading. En el sistema Woodies clásico, el cruce de estas líneas, su interacción con niveles clave y varios patrones forman la base para las decisiones de trading.
 
-![IndicatorWoodiesCCI](../../../../images/indicator_woodies_cci.png)
+![Gráfico del indicador WCCI](../../../../images/indicator_woodies_cci.png)
 
 ## Véase también
 

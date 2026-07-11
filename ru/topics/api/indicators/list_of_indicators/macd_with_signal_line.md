@@ -6,7 +6,7 @@
 
 Для использования индикатора необходимо использовать класс [MovingAverageConvergenceDivergenceSignal](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceSignal). 
 
-![IndicatorMovingAverageConvergenceDivergenceSignal](../../../../images/indicatormovingaverageconvergencedivergencesignal.png)
+![График индикатора MACD с сигнальной линией](../../../../images/indicatormovingaverageconvergencedivergencesignal.png)
 
 ## См. также
 

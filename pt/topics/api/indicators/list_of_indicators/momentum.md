@@ -14,7 +14,7 @@ CLOSE(i) — o preço de fecho da barra actual;
 CLOSE(i - n) — o preço de fecho de n barras atrás.
 
 
-![IndicatorMomentum](../../../../images/indicatormomentum.png)
+![Gráfico do indicador Impulso](../../../../images/indicatormomentum.png)
 
 ## Ver Também
 

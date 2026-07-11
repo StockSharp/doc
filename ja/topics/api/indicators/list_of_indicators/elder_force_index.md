@@ -4,7 +4,7 @@
 
 この指標を使用するには、[ElderForceIndex](xref:StockSharp.Algo.Indicators.ElderForceIndex) クラスを使用する必要があります。
 
-![IndicatorElderForceIndex](../../../../images/indicatorelderforceindex.png)
+![エルダー・フォース指数 のチャート](../../../../images/indicatorelderforceindex.png)
 
 ## 推奨コンテンツ
 

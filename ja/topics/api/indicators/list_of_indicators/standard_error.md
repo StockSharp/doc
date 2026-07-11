@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[StandardError](xref:StockSharp.Algo.Indicators.StandardError) クラスを使用する必要があります。
 
-![IndicatorStandardError](../../../../images/indicatorstandarderror.png)
+![標準誤差 のチャート](../../../../images/indicatorstandarderror.png)
 
 ## 推奨コンテンツ
 

@@ -5,7 +5,7 @@ Los parámetros establecidos son el período de la media móvil y el tamaño de 
 
 Para utilizar el indicador, se debe utilizar la clase [Envelope](xref:StockSharp.Algo.Indicators.Envelope).
 
-![IndicatorEnvelope](../../../../images/indicatorenvelope.png)
+![Gráfico del indicador Envolvente](../../../../images/indicatorenvelope.png)
 
 ## Véase también
 

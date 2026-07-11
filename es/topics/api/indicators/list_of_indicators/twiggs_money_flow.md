@@ -50,7 +50,7 @@ El cálculo de flujo de dinero de Twiggs se realiza en varios pasos:
 
 Los valores de TMF oscilan entre -1 (fuerte señal bajista) y +1 (fuerte señal alcista).
 
-![IndicatorTwiggsMoneyFlow](../../../../images/indicator_twiggs_money_flow.png)
+![Gráfico del indicador TMF](../../../../images/indicator_twiggs_money_flow.png)
 
 ## Véase también
 

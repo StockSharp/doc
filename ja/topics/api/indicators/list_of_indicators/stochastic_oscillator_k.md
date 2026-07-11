@@ -40,7 +40,7 @@
 %D = SMA(%K, 3)
 ```
 
-![IndicatorStochasticK](../../../../images/indicatorstochastick.png)
+![ストキャスティクス・オシレーター %K のチャート](../../../../images/indicatorstochastick.png)
 
 ## 関連項目
 

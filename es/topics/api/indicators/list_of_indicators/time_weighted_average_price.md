@@ -42,4 +42,4 @@ TWAP(current) = (TWAP(previous) * (n-1) + P(current)) / n
 
 donde n es el número de observaciones en la ventana TWAP.
 
-![IndicatorTimeWeightedAveragePrice](../../../../images/indicator_time_weighted_average_price.png)
+![Gráfico del indicador TWAP](../../../../images/indicator_time_weighted_average_price.png)

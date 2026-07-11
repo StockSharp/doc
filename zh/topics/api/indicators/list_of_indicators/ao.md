@@ -17,7 +17,7 @@ SMA — 简单移动平均线
 
 这些数值是经典指标使用的，在设置中，可以随时指定自己的参数。
 
-![IndicatorAwesomeOscillator](../../../../images/indicatorawesomeoscillator.png)
+![AO 指标图表](../../../../images/indicatorawesomeoscillator.png)
 
 ## 另请参阅
 

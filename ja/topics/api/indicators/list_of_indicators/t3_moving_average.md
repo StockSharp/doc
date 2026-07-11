@@ -49,7 +49,7 @@ T3移動平均の計算は、いくつかの手順で実行されます。
 
 VolumeFactor = 0 の場合、T3 は EMA3 (三重 EMA) と同等になります。VolumeFactor = 1 の場合、T3 は最大限に平滑化されます。
 
-![IndicatorT3MovingAverage](../../../../images/indicator_t3_moving_average.png)
+![T3MA のチャート](../../../../images/indicator_t3_moving_average.png)
 
 ## 関連項目
 

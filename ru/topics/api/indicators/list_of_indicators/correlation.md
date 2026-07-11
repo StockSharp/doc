@@ -10,7 +10,7 @@
 3. Абсолютная величина показывает силу связи.
 4. Всегда основан на парах чисел.
 
-![IndicatorCorrelation](../../../../images/indicatorcorrelation.png)
+![График индикатора Correlation](../../../../images/indicatorcorrelation.png)
 
 ## См. также
 

@@ -4,7 +4,7 @@
 
 使用该指标时，必须使用 [ChandeMomentumOscillator](xref:StockSharp.Algo.Indicators.ChandeMomentumOscillator) 类。
 
-![IndicatorChandeMomentumOscillator](../../../../images/indicatorchandemomentumoscillator.png)
+![CMO 指标图表](../../../../images/indicatorchandemomentumoscillator.png)
 
 ## 推荐内容
 

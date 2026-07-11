@@ -4,4 +4,4 @@ El indicador **índice de vigor relativo (RVI, índice de energía relativa)** c
 
 Para utilizar el indicador, debe utilizar la clase [RelativeVigorIndex](xref:StockSharp.Algo.Indicators.RelativeVigorIndex).
 
-![IndicatorRelativeVigorIndex](../../../../images/indicatorrelativevigorindex.png)
+![Gráfico del indicador RVI](../../../../images/indicatorrelativevigorindex.png)

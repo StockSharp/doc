@@ -4,7 +4,7 @@
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [GatorOscillator](xref:StockSharp.Algo.Indicators.GatorOscillator) verwenden.
 
-![IndicatorGatorOscillator](../../../../images/indicatorgatoroscillator.png)
+![Gator-Oszillator Diagramm](../../../../images/indicatorgatoroscillator.png)
 
 ## Empfohlene Inhalte
 

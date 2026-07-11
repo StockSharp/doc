@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [Sum](xref:StockSharp.Algo.Indicators.Sum) 类。
 
-![IndicatorSum](../../../../images/indicatorsum.png)
+![求和 N 指标图表](../../../../images/indicatorsum.png)
 
 ## 推荐内容
 

@@ -4,7 +4,7 @@
 
 この指標を使用するには、[MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice) クラスを使用する必要があります。 
 
-![IndicatorMedianPrice](../../../../images/indicatormedianprice.png)
+![中央値価格 のチャート](../../../../images/indicatormedianprice.png)
 
 ## 推奨コンテンツ
 

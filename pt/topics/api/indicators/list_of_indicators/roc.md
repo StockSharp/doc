@@ -4,7 +4,7 @@ O indicador **Taxa de variação (RoC)** mostra a diferença entre o preço atua
 
 Para utilizar o indicador, deve usar a classe [RateOfChange](xref:StockSharp.Algo.Indicators.RateOfChange).
 
-![IndicatorRateOfChange](../../../../images/indicatorrateofchange.png)
+![Gráfico do indicador RoC](../../../../images/indicatorrateofchange.png)
 
 ## Conteúdo recomendado
 

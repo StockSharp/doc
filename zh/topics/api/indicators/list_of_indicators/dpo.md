@@ -6,7 +6,7 @@
 
 去趋势价格振荡器的计算方法是用当前价格值减去简单移动平均（SMA）。移动平均的长度由用户确定。
 
-![IndicatorDetrendedPriceOscillator](../../../../images/indicatordetrendedpriceoscillator.png)
+![DPO 指标图表](../../../../images/indicatordetrendedpriceoscillator.png)
 
 ## 另请参阅
 

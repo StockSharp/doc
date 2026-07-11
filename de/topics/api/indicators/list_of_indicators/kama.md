@@ -10,4 +10,4 @@ Um den Indikator zu verwenden, sollte die Klasse [KaufmanAdaptiveMovingAverage](
 - Langsame MA – die langsame Glättungskonstante;
 - Period – die Periode des gleitenden Kaufman-Durchschnitts.
 
-![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
+![KAMA Diagramm](../../../../images/indicatorkaufmanadaptivemovingaverage.png)

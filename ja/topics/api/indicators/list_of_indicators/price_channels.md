@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[PriceChannels](xref:StockSharp.Algo.Indicators.PriceChannels) クラスを使用する必要があります。
 
-![IndicatorPriceChannels](../../../../images/indicatorpricechannels.png)
+![価格チャネル のチャート](../../../../images/indicatorpricechannels.png)
 
 ## 推奨コンテンツ
 

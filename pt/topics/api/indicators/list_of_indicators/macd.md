@@ -6,7 +6,7 @@ O indicador é calculado como a diferença entre uma média móvel curta e uma m
 
 Para utilizar o indicador, deve ser usada a classe [MovingAverageConvergenceDivergence](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence).
 
-![IndicatorMovingAverageConvergenceDivergence](../../../../images/indicatormovingaverageconvergencedivergence.png)
+![Gráfico do indicador MACD](../../../../images/indicatormovingaverageconvergencedivergence.png)
 
 ## Ver Também
 

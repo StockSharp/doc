@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[VerticalHorizontalFilter](xref:StockSharp.Algo.Indicators.VerticalHorizontalFilter) クラスを使用する必要があります。
 
-![IndicatorVerticalHorizontalFilter](../../../../images/indicatorverticalhorizontalfilter.png)
+![VHF のチャート](../../../../images/indicatorverticalhorizontalfilter.png)
 
 ## 推奨コンテンツ
 

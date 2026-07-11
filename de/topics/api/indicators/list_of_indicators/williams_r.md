@@ -17,7 +17,7 @@ MIN(LOW(i - n)) - niedrigstes Tief der vergangenen n Perioden.
 
 Der Wert von n wird als Indikatorparameter festgelegt.
 
-![IndicatorWilliamsR](../../../../images/indicatorwilliamsr.png)
+![%R Diagramm](../../../../images/indicatorwilliamsr.png)
 
 ## Siehe auch
 

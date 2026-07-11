@@ -30,7 +30,7 @@ donde:
 - i - número de línea (de 0 a n-1)
 - paso - paso de aumento del período (generalmente 1)
 
-![IndicatorRainbowCharts](../../../../images/indicator_rainbow_charts.png)
+![Gráfico del indicador RC](../../../../images/indicator_rainbow_charts.png)
 
 ## Véase también
 

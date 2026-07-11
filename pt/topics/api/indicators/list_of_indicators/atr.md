@@ -18,7 +18,7 @@ Com base neste indicador, é calculado o ATR. Tem apenas um parâmetro - o perí
   
 ATR(t) = ((ATR(t-1) x (N-1)) + TR(t)) / N  
 
-![IndicatorAverageTrueRange](../../../../images/indicatoraveragetruerange.png)
+![Gráfico do indicador ATR](../../../../images/indicatoraveragetruerange.png)
 
 ## Ver também
 

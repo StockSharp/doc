@@ -4,7 +4,7 @@ O indicador **Erro padrão** é uma estimativa do desvio quadrático médio do c
 
 Para utilizar o indicador, deve usar a classe [StandardError](xref:StockSharp.Algo.Indicators.StandardError).
 
-![IndicatorStandardError](../../../../images/indicatorstandarderror.png)
+![Gráfico do indicador Erro padrão](../../../../images/indicatorstandarderror.png)
 
 ## Conteúdo recomendado
 

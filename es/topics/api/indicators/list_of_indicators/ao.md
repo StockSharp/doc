@@ -17,7 +17,7 @@ SMA — media móvil simple
 
 Los valores se toman para el indicador clásico y en la configuración siempre es posible especificar sus propios parámetros.
 
-![IndicatorAwesomeOscillator](../../../../images/indicatorawesomeoscillator.png)
+![Gráfico del indicador AO](../../../../images/indicatorawesomeoscillator.png)
 
 ## Véase también
 

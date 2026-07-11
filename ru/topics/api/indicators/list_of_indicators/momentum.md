@@ -14,7 +14,7 @@ CLOSE (i) \— цена закрытия текущего бара;
 CLOSE (i \- n) \— цена закрытия n баров назад.
 
 
-![IndicatorMomentum](../../../../images/indicatormomentum.png)
+![График индикатора Моментум](../../../../images/indicatormomentum.png)
 
 ## См. также
 

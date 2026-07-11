@@ -10,7 +10,7 @@
 3. 絶対値は、関係の強さを示します。
 4. 常に数値のペアに基づきます。
 
-![IndicatorCorrelation](../../../../images/indicatorcorrelation.png)
+![Correlation のチャート](../../../../images/indicatorcorrelation.png)
 
 ## 関連項目
 

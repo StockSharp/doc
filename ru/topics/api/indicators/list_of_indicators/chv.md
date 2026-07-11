@@ -16,7 +16,7 @@ CHV = (EMA (H\-L (i), n) \– EMA (H\-L (i\–n), n)) / EMA (H\-L (i\–n), n) x
 - **ROCPeriod** – номер периода, относительно которого будет проводиться расчет. Изначально установлено значение 5.
 - **SmoothPeriod** – период скользящей средней. По умолчанию здесь стоит 32.
 
-![IndicatorChaikinVolatility](../../../../images/indicatorchaikinvolatility.png)
+![График индикатора CHV](../../../../images/indicatorchaikinvolatility.png)
 
 ## См. также
 

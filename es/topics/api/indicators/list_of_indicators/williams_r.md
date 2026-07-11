@@ -17,7 +17,7 @@ MIN(LOW(i - n)): el mínimo más bajo de los últimos n períodos.
 
 El valor de n se establece como parámetro del indicador.
 
-![IndicatorWilliamsR](../../../../images/indicatorwilliamsr.png)
+![Gráfico del indicador %R](../../../../images/indicatorwilliamsr.png)
 
 ## Véase también
 

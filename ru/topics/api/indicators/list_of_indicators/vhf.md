@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [VerticalHorizontalFilter](xref:StockSharp.Algo.Indicators.VerticalHorizontalFilter).
 
-![IndicatorVerticalHorizontalFilter](../../../../images/indicatorverticalhorizontalfilter.png)
+![График индикатора VHF](../../../../images/indicatorverticalhorizontalfilter.png)
 
 ## См. также
 

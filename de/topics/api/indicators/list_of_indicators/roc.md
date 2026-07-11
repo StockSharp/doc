@@ -4,7 +4,7 @@ Der Indikator **Änderungsrate (RoC)** zeigt die Differenz zwischen dem aktuelle
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [RateOfChange](xref:StockSharp.Algo.Indicators.RateOfChange) verwenden.
 
-![IndicatorRateOfChange](../../../../images/indicatorrateofchange.png)
+![RoC Diagramm](../../../../images/indicatorrateofchange.png)
 
 ## Empfohlene Inhalte
 

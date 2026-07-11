@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 类。
 
-![IndicatorExponentialMovingAverage](../../../../images/indicatorexponentialmovingaverage.png)
+![EMA 指标图表](../../../../images/indicatorexponentialmovingaverage.png)
 
 ## 推荐内容
 

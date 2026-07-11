@@ -4,7 +4,7 @@
 
 Para utilizar el indicador, debe utilizar la clase [Fractals](xref:StockSharp.Algo.Indicators.Fractals).
 
-![IndicatorFractals](../../../../images/indicatorfractals.png)
+![Gráfico del indicador Fractales](../../../../images/indicatorfractals.png)
 
 ## Contenido recomendado
 

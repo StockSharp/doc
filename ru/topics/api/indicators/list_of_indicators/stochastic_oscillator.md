@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [StochasticOscillator](xref:StockSharp.Algo.Indicators.StochasticOscillator).
 
-![IndicatorStochasticOscillator](../../../../images/indicatorstochasticoscillator.png)
+![График индикатора стохастический осциллятор](../../../../images/indicatorstochasticoscillator.png)
 
 ## См. также
 

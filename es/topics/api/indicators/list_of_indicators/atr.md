@@ -18,7 +18,7 @@ Sobre la base de este indicador, se calcula ATR. Tiene un solo parámetro: el pe
   
 ATR(t) = ((ATR(t-1) x (N-1)) + TR(t)) / N
 
-![IndicatorAverageTrueRange](../../../../images/indicatoraveragetruerange.png)
+![Gráfico del indicador ATR](../../../../images/indicatoraveragetruerange.png)
 
 ## Véase también
 

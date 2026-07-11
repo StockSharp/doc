@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [RangeActionVerificationIndex](xref:StockSharp.Algo.Indicators.RangeActionVerificationIndex).
 
-![IndicatorRangeActionVerificationIndex](../../../../images/indicatorrangeactionverificationindex.png)
+![График индикатора RAVI](../../../../images/indicatorrangeactionverificationindex.png)
 
 ## См. также
 

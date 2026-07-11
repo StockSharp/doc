@@ -4,7 +4,7 @@
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [SmoothedMovingAverage](xref:StockSharp.Algo.Indicators.SmoothedMovingAverage) verwenden.
 
-![IndicatorSmoothedMovingAverage](../../../../images/indicatorsmoothedmovingaverage.png)
+![geglätteter gleitender Durchschnitt Diagramm](../../../../images/indicatorsmoothedmovingaverage.png)
 
 ## Empfohlene Inhalte
 

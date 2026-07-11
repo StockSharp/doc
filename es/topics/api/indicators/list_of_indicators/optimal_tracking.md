@@ -4,7 +4,7 @@ El **filtro de seguimiento óptimo** ajusta los cambios rápidos de precios y es
 
 Para utilizar el indicador, debe utilizar la clase [OptimalTracking](xref:StockSharp.Algo.Indicators.OptimalTracking).
 
-![IndicatorOptimalTracking](../../../../images/indicatoroptimaltracking.png)
+![Gráfico del indicador seguimiento óptimo](../../../../images/indicatoroptimaltracking.png)
 
 ## Contenido recomendado
 

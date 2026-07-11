@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[VolumeWeightedAveragePrice](xref:StockSharp.Algo.Indicators.VolumeWeightedAveragePrice) クラスを使用する必要があります。
 
-![IndicatorVWAP](../../../../images/indicatorvwap.png)
+![VWAP のチャート](../../../../images/indicatorvwap.png)
 
 ## 推奨コンテンツ
 

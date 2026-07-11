@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [RangeActionVerificationIndex](xref:StockSharp.Algo.Indicators.RangeActionVerificationIndex) 类。
 
-![IndicatorRangeActionVerificationIndex](../../../../images/indicatorrangeactionverificationindex.png)
+![区间动作验证指数 (RAVI) 指标图表](../../../../images/indicatorrangeactionverificationindex.png)
 
 ## 推荐内容
 

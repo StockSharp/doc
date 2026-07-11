@@ -4,7 +4,7 @@
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [NickRypockTrailingReverse](xref:StockSharp.Algo.Indicators.NickRypockTrailingReverse) verwenden.
 
-![IndicatorNickRypockTrailingReverse](../../../../images/indicatornickrypocktrailingreverse.png)
+![NRTR Diagramm](../../../../images/indicatornickrypocktrailingreverse.png)
 
 ## Empfohlene Inhalte
 

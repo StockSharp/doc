@@ -45,7 +45,7 @@ STC の計算は複数のステップで実行されます。
 
 その結果、古典的な ストキャスティクス よりも滑らかで、MACD よりもトレンド変化に素早く反応するオシレーターになります。
 
-![IndicatorSchaffTrendCycle](../../../../images/indicator_schaff_trend_cycle.png)
+![STC のチャート](../../../../images/indicator_schaff_trend_cycle.png)
 
 ## 関連項目
 

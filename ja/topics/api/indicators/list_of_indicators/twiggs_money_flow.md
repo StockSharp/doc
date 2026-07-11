@@ -50,7 +50,7 @@ TMF の主な特徴:
 
 TMF 値は -1（強い弱気シグナル）から +1（強い強気シグナル）の範囲になります。
 
-![IndicatorTwiggsMoneyFlow](../../../../images/indicator_twiggs_money_flow.png)
+![TMF のチャート](../../../../images/indicator_twiggs_money_flow.png)
 
 ## 関連項目
 

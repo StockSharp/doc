@@ -16,7 +16,7 @@ Signal = EMA_a(EMA_s(P) - EMA_l(P))
 
 MACD ヒストグラムを構築する際、ヒストグラムのバーはシグナルラインと MACD ラインの差を示し、指標の把握をさらに簡単にします。
 
-![IndicatorMovingAverageConvergenceDivergenceHistogram](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
+![MACD ヒストグラム のチャート](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
 
 ## 関連項目
 

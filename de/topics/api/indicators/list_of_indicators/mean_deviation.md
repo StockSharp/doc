@@ -4,7 +4,7 @@ Der Indikator **Mittlere Abweichung** zeigt die durchschnittliche Abweichung des
 
 Um den Indikator zu verwenden, sollte die Klasse [MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation) verwendet werden.
 
-![IndicatorMeanDeviation](../../../../images/indicatormeandeviation.png)
+![Mittlere Abweichung Diagramm](../../../../images/indicatormeandeviation.png)
 
 ## Siehe auch
 

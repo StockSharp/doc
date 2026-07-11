@@ -21,7 +21,7 @@ AO — Indicador [oscilador asombroso](ao.md).
 
 Los parámetros se establecen como valores de períodos SMA.
 
-![IndicatorAcceleration](../../../../images/indicatoracceleration.png)
+![Gráfico del indicador A/D](../../../../images/indicatoracceleration.png)
 
 ## Véase también
 

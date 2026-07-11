@@ -4,7 +4,7 @@
 
 Para usar o indicador, deve usar a classe [WeightedClosePrice](xref:StockSharp.Algo.Indicators.WeightedClosePrice).
 
-![IndicatorWeightedClosePrice](../../../../images/indicatorweightedcloseprice.png)
+![Gráfico do indicador Preço de Fechamento Ponderado](../../../../images/indicatorweightedcloseprice.png)
 
 ## Conteúdo recomendado
 

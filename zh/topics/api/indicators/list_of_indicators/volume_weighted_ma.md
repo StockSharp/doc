@@ -4,7 +4,7 @@
 
 使用该指标，必须使用 [VolumeWeightedMovingAverage](xref:StockSharp.Algo.Indicators.VolumeWeightedMovingAverage) 类。
 
-![IndicatorVolumeWeightedMovingAverage](../../../../images/indicatorvolumeweightedmovingaverage.png)
+![成交量加权移动平均 指标图表](../../../../images/indicatorvolumeweightedmovingaverage.png)
 
 ## 推荐内容
 

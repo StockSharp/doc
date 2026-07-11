@@ -5,7 +5,7 @@ Die eingestellten Parameter sind die Periode des gleitenden Durchschnitts und di
 
 Um den Indikator zu verwenden, sollte die Klasse [Envelope](xref:StockSharp.Algo.Indicators.Envelope) verwendet werden.
 
-![IndicatorEnvelope](../../../../images/indicatorenvelope.png)
+![Hüllkurven Diagramm](../../../../images/indicatorenvelope.png)
 
 ## Siehe auch
 

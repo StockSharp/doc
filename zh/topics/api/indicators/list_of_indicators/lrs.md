@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [LinearRegSlope](xref:StockSharp.Algo.Indicators.LinearRegSlope) 类。
 
-![IndicatorLinearRegSlope](../../../../images/indicatorlinearregslope.png)
+![线性回归斜率 指标图表](../../../../images/indicatorlinearregslope.png)
 
 ## 推荐内容
 

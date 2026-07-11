@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [LinearReg](xref:StockSharp.Algo.Indicators.LinearReg) 类。
 
-![IndicatorLinearReg](../../../../images/indicatorlinearreg.png)
+![LRC 指标图表](../../../../images/indicatorlinearreg.png)
 
 ## 推荐内容
 

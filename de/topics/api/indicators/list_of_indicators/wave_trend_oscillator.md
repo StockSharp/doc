@@ -52,7 +52,7 @@ Die Berechnung des Wellentrend-Oszillator umfasst mehrere Schritte:
 
 Typische Werte für die Indikatorparameter sind: EsaPeriod = 10, DPeriod = 21, AveragePeriod = 4; sie können jedoch an unterschiedliche Zeitrahmen und Instrumente angepasst werden.
 
-![IndicatorWaveTrendOscillator](../../../../images/indicator_wave_trend_oscillator.png)
+![WTO Diagramm](../../../../images/indicator_wave_trend_oscillator.png)
 
 ## Siehe auch
 

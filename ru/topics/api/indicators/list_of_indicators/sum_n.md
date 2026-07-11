@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [Sum](xref:StockSharp.Algo.Indicators.Sum). 
 
-![IndicatorSum](../../../../images/indicatorsum.png)
+![График индикатора Сумма N](../../../../images/indicatorsum.png)
 
 ## См. также
 

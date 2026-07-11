@@ -16,7 +16,7 @@ Principales parámetros del indicador:
 - **ROCPeriod** — el número de período relativo al cual se realizará el cálculo. Inicialmente fijado en 5.
 - **SmoothPeriod** — el período de la media móvil. Por defecto, está configurado en 32.
 
-![IndicatorChaikinVolatility](../../../../images/indicatorchaikinvolatility.png)
+![Gráfico del indicador CHV](../../../../images/indicatorchaikinvolatility.png)
 
 ## Véase también
 

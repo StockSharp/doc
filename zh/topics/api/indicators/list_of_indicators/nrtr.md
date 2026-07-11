@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [NickRypockTrailingReverse](xref:StockSharp.Algo.Indicators.NickRypockTrailingReverse) 类。
 
-![IndicatorNickRypockTrailingReverse](../../../../images/indicatornickrypocktrailingreverse.png)
+![NRTR 指标图表](../../../../images/indicatornickrypocktrailingreverse.png)
 
 ## 推荐内容
 

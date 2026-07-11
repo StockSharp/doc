@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [SmoothedMovingAverage](xref:StockSharp.Algo.Indicators.SmoothedMovingAverage) 类。
 
-![IndicatorSmoothedMovingAverage](../../../../images/indicatorsmoothedmovingaverage.png)
+![平滑移动平均 指标图表](../../../../images/indicatorsmoothedmovingaverage.png)
 
 ## 推荐内容
 

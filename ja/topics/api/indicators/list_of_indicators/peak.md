@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[Peak](xref:StockSharp.Algo.Indicators.Peak) クラスを使用する必要があります。 
 
-![IndicatorPeak](../../../../images/indicatorpeak.png)
+![ピーク のチャート](../../../../images/indicatorpeak.png)
 
 ## 推奨コンテンツ
 

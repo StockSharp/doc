@@ -4,7 +4,7 @@
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [LinearRegressionForecast](xref:StockSharp.Algo.Indicators.LinearRegressionForecast) verwenden.
 
-![IndicatorLinearRegressionForecast](../../../../images/indicatorlinearregressionforecast.png)
+![Lineare Regressionsprognose Diagramm](../../../../images/indicatorlinearregressionforecast.png)
 
 ## Empfohlene Inhalte
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [OptimalTracking](xref:StockSharp.Algo.Indicators.OptimalTracking).
 
-![IndicatorOptimalTracking](../../../../images/indicatoroptimaltracking.png)
+![График индикатора оптимальное отслеживание](../../../../images/indicatoroptimaltracking.png)
 
 ## См. также
 

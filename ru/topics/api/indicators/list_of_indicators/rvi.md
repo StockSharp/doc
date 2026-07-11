@@ -4,4 +4,4 @@
 
 Для использования индикатора необходимо использовать класс [RelativeVigorIndex](xref:StockSharp.Algo.Indicators.RelativeVigorIndex).
 
-![IndicatorRelativeVigorIndex](../../../../images/indicatorrelativevigorindex.png)
+![График индикатора RVI](../../../../images/indicatorrelativevigorindex.png)

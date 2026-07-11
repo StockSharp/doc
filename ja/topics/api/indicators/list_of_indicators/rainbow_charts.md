@@ -30,7 +30,7 @@ Period(i) = p + i * step
 - i - 線番号（0 から n-1）
 - step - 期間増加ステップ（通常は 1）
 
-![IndicatorRainbowCharts](../../../../images/indicator_rainbow_charts.png)
+![RC のチャート](../../../../images/indicator_rainbow_charts.png)
 
 ## 関連項目
 

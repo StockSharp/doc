@@ -18,7 +18,7 @@ TRt = max(高点(t)-低点(t); 高点(t) - 前收盘(t-1); 前收盘(t-1)-低点
 
 ATR(t) = ((ATR(t-1) x (N-1)) + TR(t)) / N
 
-![IndicatorAverageTrueRange](../../../../images/indicatoraveragetruerange.png)
+![平均真实波幅 指标图表](../../../../images/indicatoraveragetruerange.png)
 
 ## 另请参阅
 

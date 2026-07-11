@@ -24,7 +24,7 @@ SuperTrend wird aus dem Durchschnittspreis und dem ATR-Wert erstellt. Die Indika
 3. SuperTrend entspricht zunächst einem der Bänder, abhängig vom aktuellen Trend.
 4. Wenn der Schlusskurs die SuperTrend-Linie kreuzt, ändert sich die Trendrichtung und die Linie bewegt sich auf die entgegengesetzte Seite.
 
-![IndicatorSuperTrend](../../../../images/indicator_supertrend.png)
+![SuperTrend Diagramm](../../../../images/indicator_supertrend.png)
 
 ## Siehe auch
 

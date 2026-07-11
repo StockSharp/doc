@@ -17,7 +17,7 @@ SMA - einfacher gleitender Durchschnitt
 
 Die Werte beziehen sich auf den klassischen Indikator; in den Einstellungen können jederzeit eigene Parameter angegeben werden.
 
-![IndicatorAwesomeOscillator](../../../../images/indicatorawesomeoscillator.png)
+![AO Diagramm](../../../../images/indicatorawesomeoscillator.png)
 
 ## Siehe auch
 

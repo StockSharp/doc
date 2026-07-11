@@ -18,7 +18,7 @@ Unteres Band = ML - (D x Standardabweichung), wobei
 D - die in den Einstellungen festgelegte Kanalbreite, Standardabweichung (StdDev) - Standardabweichung, berechnet mit der Formel: SQRT(Sum(Close, n))^2, n)/n), wobei
 Sum - Summe über n Perioden, n - Berechnungsperiode, SQRT - Quadratwurzel, Close - Schlusskurs.
 
-![IndicatorBollingerBands](../../../../images/indicatorbollingerbands.png)
+![Bollinger-Bänder Diagramm](../../../../images/indicatorbollingerbands.png)
 
 ## Siehe auch
 

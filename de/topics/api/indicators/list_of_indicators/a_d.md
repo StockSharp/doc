@@ -21,7 +21,7 @@ AO - Indikator [Awesome-Oszillator](ao.md).
 
 Die Parameter werden als Werte der SMA-Perioden festgelegt.
 
-![IndicatorAcceleration](../../../../images/indicatoracceleration.png)
+![A/D Diagramm](../../../../images/indicatoracceleration.png)
 
 ## Siehe auch
 

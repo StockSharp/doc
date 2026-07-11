@@ -51,7 +51,7 @@ RMI の計算は複数のステップで実行されます。
    RMI = 100 - (100 / (1 + RS))
    ```
 
-![IndicatorRelativeMomentumIndex](../../../../images/indicator_relative_momentum_index.png)
+![RMI のチャート](../../../../images/indicator_relative_momentum_index.png)
 
 ## 関連項目
 

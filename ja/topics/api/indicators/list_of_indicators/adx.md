@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex) を使用する必要があります。
 
-![IndicatorAverageDirectionalIndex](../../../../images/indicatoraveragedirectionalindex.png)
+![ADX のチャート](../../../../images/indicatoraveragedirectionalindex.png)
 
 ## 推奨コンテンツ
 

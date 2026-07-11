@@ -2046,6 +2046,37 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorMarkdownImageAltTextsDoNotMirrorImageFileNames()
+	{
+		var errors = new List<string>();
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					var urlPath = altText.Url.Split('#', '?')[0].Replace('/', Path.DirectorySeparatorChar);
+					var imageStem = Path.GetFileNameWithoutExtension(urlPath);
+					if (string.IsNullOrWhiteSpace(imageStem))
+						continue;
+
+					if (!AreMarkdownImageAltTextAndFileStemEquivalent(altText.Text, imageStem))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: indicator image alt text mirrors image file name '{altText.Text}'. Use a localized chart description instead.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownImageAltTextsDoNotKeepKnownEnglishProductLabels()
 	{
 		var errors = new List<string>();
@@ -5672,6 +5703,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var value = Regex.Replace(text ?? string.Empty, @"\\([\\`*_{}\[\]()#+\-.!|])", "$1", RegexOptions.CultureInvariant);
 		return Regex.Replace(value, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
 	}
+
+	private static bool AreMarkdownImageAltTextAndFileStemEquivalent(string altText, string fileStem)
+		=> NormalizeMarkdownImageAltTextForFileNameComparison(altText).Equals(NormalizeMarkdownImageAltTextForFileNameComparison(fileStem), StringComparison.OrdinalIgnoreCase);
+
+	private static string NormalizeMarkdownImageAltTextForFileNameComparison(string text)
+		=> Regex.Replace(NormalizeMarkdownImageAltTextForTranslationCheck(text), @"[^\p{L}\p{Nd}]+", "", RegexOptions.CultureInvariant);
 
 	private static bool IsTranslatableEnglishMarkdownImageAltText(string text)
 	{

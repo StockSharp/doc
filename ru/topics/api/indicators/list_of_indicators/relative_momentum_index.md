@@ -51,7 +51,7 @@ RMI особенно полезен для определения потенци
    RMI = 100 - (100 / (1 + RS))
    ```
 
-![IndicatorRelativeMomentumIndex](../../../../images/indicator_relative_momentum_index.png)
+![График индикатора RMI](../../../../images/indicator_relative_momentum_index.png)
 
 ## См. также
 

@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[CommodityChannelIndex](xref:StockSharp.Algo.Indicators.CommodityChannelIndex) クラスを使用する必要があります。
 
-![IndicatorCommodityChannelIndex](../../../../images/indicatorcommoditychannelindex.png)
+![CCI のチャート](../../../../images/indicatorcommoditychannelindex.png)
 
 ## 推奨コンテンツ
 

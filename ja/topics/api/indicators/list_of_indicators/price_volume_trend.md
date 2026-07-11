@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[PriceVolumeTrend](xref:StockSharp.Algo.Indicators.PriceVolumeTrend) クラスを使用する必要があります。
 
-![IndicatorPVT](../../../../images/indicatorpvt.png)
+![PVT のチャート](../../../../images/indicatorpvt.png)
 
 ## 推奨コンテンツ
 

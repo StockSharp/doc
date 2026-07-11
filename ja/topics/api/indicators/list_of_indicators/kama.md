@@ -10,4 +10,4 @@
 - 低速 MA - 低速平滑化定数。
 - Period - Kaufman 移動平均の期間。
 
-![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
+![KAMA のチャート](../../../../images/indicatorkaufmanadaptivemovingaverage.png)

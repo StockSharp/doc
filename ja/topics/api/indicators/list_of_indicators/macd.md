@@ -6,7 +6,7 @@
 
 この指標を使用するには、[MovingAverageConvergenceDivergence](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergence) クラスを使用する必要があります。
 
-![IndicatorMovingAverageConvergenceDivergence](../../../../images/indicatormovingaverageconvergencedivergence.png)
+![MACD のチャート](../../../../images/indicatormovingaverageconvergencedivergence.png)
 
 ## 関連項目
 

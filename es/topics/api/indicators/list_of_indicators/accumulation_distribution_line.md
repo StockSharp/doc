@@ -34,7 +34,7 @@ donde:
 
 Si (High - Low) es igual a cero, CLV se establece en cero.
 
-![IndicatorAccumulationDistributionLine](../../../../images/indicator_accumulation_distribution_line.png)
+![Gráfico del indicador ADL](../../../../images/indicator_accumulation_distribution_line.png)
 
 ## Véase también
 

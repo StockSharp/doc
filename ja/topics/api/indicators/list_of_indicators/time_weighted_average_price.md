@@ -42,4 +42,4 @@ TWAP(current) = (TWAP(previous) * (n-1) + P(current)) / n
 
 ここで n は TWAP ウィンドウ内の観測数です。
 
-![IndicatorTimeWeightedAveragePrice](../../../../images/indicator_time_weighted_average_price.png)
+![TWAP のチャート](../../../../images/indicator_time_weighted_average_price.png)

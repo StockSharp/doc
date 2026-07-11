@@ -4,7 +4,7 @@ Ein exponentieller gleitender Durchschnitt (EMA) ist eine Art gleitender Durchsc
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) verwenden.
 
-![IndicatorExponentialMovingAverage](../../../../images/indicatorexponentialmovingaverage.png)
+![EMA Diagramm](../../../../images/indicatorexponentialmovingaverage.png)
 
 ## Empfohlene Inhalte
 

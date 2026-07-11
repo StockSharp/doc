@@ -16,7 +16,7 @@ CHV = (EMA(H-L(i), n) — EMA(H-L(i-n), n)) / EMA(H-L(i-n), n) x 100.
 - **ROCPeriod** — 計算の基準となる期間数。初期値は 5 です。
 - **SmoothPeriod** — 移動平均の期間。既定では 32 に設定されています。
 
-![IndicatorChaikinVolatility](../../../../images/indicatorchaikinvolatility.png)
+![CHV のチャート](../../../../images/indicatorchaikinvolatility.png)
 
 ## 関連項目
 

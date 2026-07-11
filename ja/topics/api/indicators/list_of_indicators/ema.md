@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) クラスを使用する必要があります。 
 
-![IndicatorExponentialMovingAverage](../../../../images/indicatorexponentialmovingaverage.png)
+![EMA のチャート](../../../../images/indicatorexponentialmovingaverage.png)
 
 ## 推奨コンテンツ
 

@@ -6,7 +6,7 @@ Eine detaillierte Beschreibung der Indikatorberechnung finden Sie unter [MACD-Hi
 
 Um den Indikator zu verwenden, sollte die Klasse [MovingAverageConvergenceDivergenceSignal](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceSignal) verwendet werden.
 
-![IndicatorMovingAverageConvergenceDivergenceSignal](../../../../images/indicatormovingaverageconvergencedivergencesignal.png)
+![MACD mit Signallinie Diagramm](../../../../images/indicatormovingaverageconvergencedivergencesignal.png)
 
 ## Siehe auch
 

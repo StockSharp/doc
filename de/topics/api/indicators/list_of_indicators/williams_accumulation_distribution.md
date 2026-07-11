@@ -48,7 +48,7 @@ Der Williams-Akkumulation/-Distribution-Indikator wird nach folgender Logik bere
 
 Der Indikator akkumuliert positive und negative Werte und bildet eine kumulative Linie, die mit der Preisbewegung verglichen werden kann.
 
-![IndicatorWilliamsAccumulationDistribution](../../../../images/indicator_williams_accumulation_distribution.png)
+![WAD Diagramm](../../../../images/indicator_williams_accumulation_distribution.png)
 
 ## Siehe auch
 

@@ -4,4 +4,4 @@ O indicador **índice de vigor relativo (RVI)** compara o preço com um interval
 
 Para utilizar o indicador, deve usar a classe [RelativeVigorIndex](xref:StockSharp.Algo.Indicators.RelativeVigorIndex).
 
-![IndicatorRelativeVigorIndex](../../../../images/indicatorrelativevigorindex.png)
+![Gráfico do indicador RVI](../../../../images/indicatorrelativevigorindex.png)

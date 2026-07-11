@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [VolumeWeightedAveragePrice](xref:StockSharp.Algo.Indicators.VolumeWeightedAveragePrice).
 
-![IndicatorVWAP](../../../../images/indicatorvwap.png)
+![График индикатора VWAP](../../../../images/indicatorvwap.png)
 
 ## См. также
 

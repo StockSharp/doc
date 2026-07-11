@@ -59,7 +59,7 @@
 
 这两条线的交叉会生成交易信号：当 VI+ 上升至 VI- 之上时，表示看涨趋势；相反，当 VI- 上升至 VI+ 之上时，表示看跌趋势。
 
-![IndicatorVortexIndicator](../../../../images/indicator_vortex_indicator.png)
+![VI 指标图表](../../../../images/indicator_vortex_indicator.png)
 
 ## 另请参阅
 

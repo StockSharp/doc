@@ -4,7 +4,7 @@
 
 Zur Verwendung des Indikators müssen Sie die Klasse [CommodityChannelIndex](xref:StockSharp.Algo.Indicators.CommodityChannelIndex) verwenden.
 
-![IndicatorCommodityChannelIndex](../../../../images/indicatorcommoditychannelindex.png)
+![CCI Diagramm](../../../../images/indicatorcommoditychannelindex.png)
 
 ## Empfohlene Inhalte
 

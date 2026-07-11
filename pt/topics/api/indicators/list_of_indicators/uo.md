@@ -4,7 +4,7 @@
 
 Para usar o indicador, deve usar a classe [UltimateOscillator](xref:StockSharp.Algo.Indicators.UltimateOscillator).
 
-![IndicatorUltimateOscillator](../../../../images/indicatorultimateoscillator.png)
+![Gráfico do indicador UO](../../../../images/indicatorultimateoscillator.png)
 
 ## Conteúdo recomendado
 

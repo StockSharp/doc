@@ -4,7 +4,7 @@ El indicador **Error estándar** es una estimación de la desviación cuadrátic
 
 Para utilizar el indicador, debe utilizar la clase [StandardError](xref:StockSharp.Algo.Indicators.StandardError).
 
-![IndicatorStandardError](../../../../images/indicatorstandarderror.png)
+![Gráfico del indicador Error estándar](../../../../images/indicatorstandarderror.png)
 
 ## Contenido recomendado
 

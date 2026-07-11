@@ -19,7 +19,7 @@ SMA — média móvel simples
 
 Os valores são apresentados para o indicador clássico e, nas definições, é sempre possível especificar os seus próprios parâmetros.
 
-![IndicatorAwesomeOscillator](../../../../images/indicatorawesomeoscillator.png)
+![Gráfico do indicador AO](../../../../images/indicatorawesomeoscillator.png)
 
 ## Ver também
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [WeightedMovingAverage](xref:StockSharp.Algo.Indicators.WeightedMovingAverage). 
 
-![IndicatorWeightedMovingAverage](../../../../images/indicatorweightedmovingaverage.png)
+![График индикатора взвешенная скользящая средняя](../../../../images/indicatorweightedmovingaverage.png)
 
 ## См. также
 

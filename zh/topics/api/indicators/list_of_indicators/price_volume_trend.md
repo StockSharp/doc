@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [PriceVolumeTrend](xref:StockSharp.Algo.Indicators.PriceVolumeTrend) 类。
 
-![IndicatorPVT](../../../../images/indicatorpvt.png)
+![PVT 指标图表](../../../../images/indicatorpvt.png)
 
 ## 推荐内容
 

@@ -45,7 +45,7 @@ El cálculo de STC se realiza en varios pasos:
 
 El resultado es un oscilador más suave que el estocástico clásico y reacciona más rápido a los cambios de tendencia que MACD.
 
-![IndicatorSchaffTrendCycle](../../../../images/indicator_schaff_trend_cycle.png)
+![Gráfico del indicador STC](../../../../images/indicator_schaff_trend_cycle.png)
 
 ## Véase también
 

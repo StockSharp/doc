@@ -10,4 +10,4 @@ Para utilizar o indicador, deve ser usada a classe [KaufmanAdaptiveMovingAverage
 - MA lenta - a constante de suavização lenta;
 - Period - o período da média móvel de Kaufman.
 
-![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
+![Gráfico do indicador KAMA](../../../../images/indicatorkaufmanadaptivemovingaverage.png)

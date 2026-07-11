@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [Peak](xref:StockSharp.Algo.Indicators.Peak) 类。
 
-![IndicatorPeak](../../../../images/indicatorpeak.png)
+![峰 指标图表](../../../../images/indicatorpeak.png)
 
 ## 推荐内容
 

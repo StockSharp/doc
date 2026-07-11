@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[VariableMovingAverage](xref:StockSharp.Algo.Indicators.VariableMovingAverage) クラスを使用する必要があります。
 
-![IndicatorVariableMovingAverage](../../../../images/indicatorvariablemovingaverage.png)
+![可変移動平均 のチャート](../../../../images/indicatorvariablemovingaverage.png)
 
 ## 推奨コンテンツ
 

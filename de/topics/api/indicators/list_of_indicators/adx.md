@@ -4,7 +4,7 @@
 
 Zur Verwendung des Indikators müssen Sie [AverageDirectionalIndex](xref:StockSharp.Algo.Indicators.AverageDirectionalIndex) verwenden.
 
-![IndicatorAverageDirectionalIndex](../../../../images/indicatoraveragedirectionalindex.png)
+![ADX Diagramm](../../../../images/indicatoraveragedirectionalindex.png)
 
 ## Empfohlene Inhalte
 

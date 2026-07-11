@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [TrueRange](xref:StockSharp.Algo.Indicators.TrueRange). 
 
-![IndicatorTrueRange](../../../../images/indicatortruerange.png)
+![График индикатора Истинный диапазон](../../../../images/indicatortruerange.png)
 
 ## См. также
 

@@ -46,7 +46,7 @@ O cálculo da ZLEMA baseia-se na eliminação do atraso através de previsão e 
 
 O resultado é uma média móvel que acompanha o preço muito mais de perto do que uma EMA normal com o mesmo período, mantendo o efeito de suavização.
 
-![IndicatorZeroLagExponentialMovingAverage](../../../../images/indicator_zero_lag_exponential_moving_average.png)
+![Gráfico do indicador ZLEMA](../../../../images/indicator_zero_lag_exponential_moving_average.png)
 
 ## Ver também
 

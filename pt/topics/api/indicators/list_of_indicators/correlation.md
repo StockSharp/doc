@@ -10,7 +10,7 @@ Coeficiente de Correlação
 3. O valor absoluto indica a força da relação.
 4. Baseia-se sempre em pares de números.
 
-![IndicatorCorrelation](../../../../images/indicatorcorrelation.png)
+![Gráfico do indicador Correlation](../../../../images/indicatorcorrelation.png)
 
 ## Ver também
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage). 
 
-![IndicatorExponentialMovingAverage](../../../../images/indicatorexponentialmovingaverage.png)
+![График индикатора EMA](../../../../images/indicatorexponentialmovingaverage.png)
 
 ## См. также
 

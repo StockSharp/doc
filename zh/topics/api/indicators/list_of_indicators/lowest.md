@@ -4,4 +4,4 @@
 
 要使用该指标，您必须使用 [Lowest](xref:StockSharp.Algo.Indicators.Lowest) 类。
 
-![IndicatorLowest](../../../../images/indicatorlowest.png)
+![最低 指标图表](../../../../images/indicatorlowest.png)

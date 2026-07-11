@@ -4,7 +4,7 @@ A interpretação do indicador **inclinação da regressão linear** mostra o va
 
 Para utilizar o indicador, deve usar a classe [LinearRegSlope](xref:StockSharp.Algo.Indicators.LinearRegSlope).
 
-![IndicatorLinearRegSlope](../../../../images/indicatorlinearregslope.png)
+![Gráfico do indicador inclinação da regressão linear](../../../../images/indicatorlinearregslope.png)
 
 ## Conteúdo recomendado
 

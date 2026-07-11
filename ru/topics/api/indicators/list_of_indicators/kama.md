@@ -10,5 +10,5 @@
 - Медленная MA \- медленная сглаживающая константа;
 - Периода \- период скользящей средней Кауфмана.
 
-![IndicatorKaufmanAdaptiveMovingAverage](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
+![График индикатора KAMA](../../../../images/indicatorkaufmanadaptivemovingaverage.png)
 

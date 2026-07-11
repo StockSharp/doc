@@ -4,7 +4,7 @@ La interpretación del indicador **pendiente de regresión lineal** muestra el v
 
 Para utilizar el indicador, debe utilizar la clase [LinearRegSlope](xref:StockSharp.Algo.Indicators.LinearRegSlope).
 
-![IndicatorLinearRegSlope](../../../../images/indicatorlinearregslope.png)
+![Gráfico del indicador pendiente de regresión lineal](../../../../images/indicatorlinearregslope.png)
 
 ## Contenido recomendado
 

@@ -50,7 +50,7 @@ O cálculo do fluxo monetário de Twiggs é efetuado em vários passos:
 
 Os valores do TMF variam de -1 (sinal fortemente baixista) a +1 (sinal fortemente altista).
 
-![IndicatorTwiggsMoneyFlow](../../../../images/indicator_twiggs_money_flow.png)
+![Gráfico do indicador TMF](../../../../images/indicator_twiggs_money_flow.png)
 
 ## Ver também
 

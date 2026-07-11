@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[DoubleExponentialMovingAverage](xref:StockSharp.Algo.Indicators.DoubleExponentialMovingAverage) クラスを使用する必要があります。 
 
-![IndicatorDoubleExponentialMovingAverage](../../../../images/indicatordoubleexponentialmovingaverage.png)
+![DEMA のチャート](../../../../images/indicatordoubleexponentialmovingaverage.png)
 
 ## 推奨コンテンツ
 

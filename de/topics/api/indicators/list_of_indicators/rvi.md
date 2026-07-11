@@ -4,4 +4,4 @@ Der **relative Schwungindex (RVI, relativer Energieindex)**-Indikator vergleicht
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [RelativeVigorIndex](xref:StockSharp.Algo.Indicators.RelativeVigorIndex) verwenden.
 
-![IndicatorRelativeVigorIndex](../../../../images/indicatorrelativevigorindex.png)
+![RVI Diagramm](../../../../images/indicatorrelativevigorindex.png)

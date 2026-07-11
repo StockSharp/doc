@@ -30,7 +30,7 @@ Dabei gilt:
 - i - Zeilennummer (von 0 bis n-1)
 - Schritt – Periodenerhöhungsschritt (normalerweise 1)
 
-![IndicatorRainbowCharts](../../../../images/indicator_rainbow_charts.png)
+![RC Diagramm](../../../../images/indicator_rainbow_charts.png)
 
 ## Siehe auch
 

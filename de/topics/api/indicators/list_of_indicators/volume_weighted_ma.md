@@ -4,7 +4,7 @@
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [VolumeWeightedMovingAverage](xref:StockSharp.Algo.Indicators.VolumeWeightedMovingAverage).
 
-![IndicatorVolumeWeightedMovingAverage](../../../../images/indicatorvolumeweightedmovingaverage.png)
+![Volumengewichteter gleitender Durchschnitt Diagramm](../../../../images/indicatorvolumeweightedmovingaverage.png)
 
 ## Empfohlene Inhalte
 

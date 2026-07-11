@@ -4,5 +4,5 @@
 
 Для использования индикатора необходимо использовать класс [Lowest](xref:StockSharp.Algo.Indicators.Lowest). 
 
-![IndicatorLowest](../../../../images/indicatorlowest.png)
+![График индикатора Минимум](../../../../images/indicatorlowest.png)
 

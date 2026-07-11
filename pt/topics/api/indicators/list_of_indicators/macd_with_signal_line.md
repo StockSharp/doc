@@ -6,7 +6,7 @@ Para uma descrição detalhada do cálculo do indicador, consulte [Histograma MA
 
 Para utilizar o indicador, deve ser usada a classe [MovingAverageConvergenceDivergenceSignal](xref:StockSharp.Algo.Indicators.MovingAverageConvergenceDivergenceSignal).
 
-![IndicatorMovingAverageConvergenceDivergenceSignal](../../../../images/indicatormovingaverageconvergencedivergencesignal.png)
+![Gráfico do indicador MACD com linha de sinal](../../../../images/indicatormovingaverageconvergencedivergencesignal.png)
 
 ## Ver Também
 

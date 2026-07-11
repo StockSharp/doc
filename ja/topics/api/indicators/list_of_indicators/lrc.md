@@ -4,7 +4,7 @@
 
 インジケーターを使用するには、[LinearReg](xref:StockSharp.Algo.Indicators.LinearReg) クラスを使用する必要があります。
 
-![IndicatorLinearReg](../../../../images/indicatorlinearreg.png)
+![LRC のチャート](../../../../images/indicatorlinearreg.png)
 
 ## 推奨コンテンツ
 

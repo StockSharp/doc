@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[ChandeMomentumOscillator](xref:StockSharp.Algo.Indicators.ChandeMomentumOscillator) クラスを使用する必要があります。
 
-![IndicatorChandeMomentumOscillator](../../../../images/indicatorchandemomentumoscillator.png)
+![CMO のチャート](../../../../images/indicatorchandemomentumoscillator.png)
 
 ## 推奨コンテンツ
 

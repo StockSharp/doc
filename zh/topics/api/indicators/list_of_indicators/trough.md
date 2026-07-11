@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [Trough](xref:StockSharp.Algo.Indicators.Trough) 类。
 
-![IndicatorTrough](../../../../images/indicatortrough.png)
+![波谷 指标图表](../../../../images/indicatortrough.png)
 
 ## 推荐内容
 

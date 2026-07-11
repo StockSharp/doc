@@ -5,7 +5,7 @@
 
 Для использования индикатора необходимо использовать класс [MarketFacilitationIndex](xref:StockSharp.Algo.Indicators.MarketFacilitationIndex). 
 
-![IndicatorMarketFacilitationIndex](../../../../images/indicatormarketfacilitationindex.png)
+![График индикатора Индекс облегчения рынка](../../../../images/indicatormarketfacilitationindex.png)
 
 ## См. также
 

@@ -34,7 +34,7 @@ Wobei:
 
 Wenn (High - Low) gleich null ist, wird CLV auf null gesetzt.
 
-![IndicatorAccumulationDistributionLine](../../../../images/indicator_accumulation_distribution_line.png)
+![ADL Diagramm](../../../../images/indicator_accumulation_distribution_line.png)
 
 ## Siehe auch
 

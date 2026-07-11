@@ -4,7 +4,7 @@
 
 使用该指标需要使用 [TrueRange](xref:StockSharp.Algo.Indicators.TrueRange) 类。
 
-![IndicatorTrueRange](../../../../images/indicatortruerange.png)
+![真实波幅 指标图表](../../../../images/indicatortruerange.png)
 
 ## 推荐内容
 

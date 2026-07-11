@@ -4,7 +4,7 @@
 
 使用该指标时，必须使用 [WeightedMovingAverage](xref:StockSharp.Algo.Indicators.WeightedMovingAverage) 类。
 
-![IndicatorWeightedMovingAverage](../../../../images/indicatorweightedmovingaverage.png)
+![加权移动平均 指标图表](../../../../images/indicatorweightedmovingaverage.png)
 
 ## 推荐内容
 

@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [StochasticOscillator](xref:StockSharp.Algo.Indicators.StochasticOscillator) 类。
 
-![IndicatorStochasticOscillator](../../../../images/indicatorstochasticoscillator.png)
+![随机振荡器 指标图表](../../../../images/indicatorstochasticoscillator.png)
 
 ## 推荐内容
 

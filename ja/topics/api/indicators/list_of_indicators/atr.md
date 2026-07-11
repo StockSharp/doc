@@ -18,7 +18,7 @@ TRt = max(High(t)-Low(t); High(t) - Close(t-1); Close(t-1)-Low(t))
   
 ATR(t) = ((ATR(t-1) x (N-1)) + TR(t)) / N  
 
-![IndicatorAverageTrueRange](../../../../images/indicatoraveragetruerange.png)
+![ATR のチャート](../../../../images/indicatoraveragetruerange.png)
 
 ## 関連項目
 

@@ -38,7 +38,7 @@
 %D = SMA(%K, 3)
 ```
 
-![IndicatorStochasticK](../../../../images/indicatorstochastick.png)
+![График индикатора Стохастик %K](../../../../images/indicatorstochastick.png)
 
 ## См. также
 

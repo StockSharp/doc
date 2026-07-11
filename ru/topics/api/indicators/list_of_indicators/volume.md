@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [VolumeIndicator](xref:StockSharp.Algo.Indicators.VolumeIndicator). 
 
-![IndicatorVolumeIndicator](../../../../images/indicatorvolumeindicator.png)
+![График индикатора Объем](../../../../images/indicatorvolumeindicator.png)
 
 ## См. также
 

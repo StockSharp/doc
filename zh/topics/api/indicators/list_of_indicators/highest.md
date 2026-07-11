@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [Highest](xref:StockSharp.Algo.Indicators.Highest) 类。
 
-![IndicatorHighest](../../../../images/indicatorhighest.png)
+![最高 指标图表](../../../../images/indicatorhighest.png)
 
 ## 推荐内容
 

@@ -4,7 +4,7 @@
 
 Para utilizar o indicador, deve usar a classe [LinearReg](xref:StockSharp.Algo.Indicators.LinearReg).
 
-![IndicatorLinearReg](../../../../images/indicatorlinearreg.png)
+![Gráfico do indicador LRC](../../../../images/indicatorlinearreg.png)
 
 ## Conteúdo recomendado
 

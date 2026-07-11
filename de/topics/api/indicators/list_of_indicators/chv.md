@@ -16,7 +16,7 @@ Hauptparameter des Indikators:
 - **ROCPeriod** – die Periodennummer, relativ zu der die Berechnung durchgeführt wird. Ursprünglich auf 5 eingestellt.
 - **SmoothPeriod** – der Zeitraum des gleitenden Durchschnitts. Standardmäßig ist es auf 32 eingestellt.
 
-![IndicatorChaikinVolatility](../../../../images/indicatorchaikinvolatility.png)
+![CHV Diagramm](../../../../images/indicatorchaikinvolatility.png)
 
 ## Siehe auch
 

@@ -4,7 +4,7 @@
 
 Для использования индикатора необходимо использовать класс [Trix](xref:StockSharp.Algo.Indicators.Trix). 
 
-![IndicatorTrix](../../../../images/indicatortrix.png)
+![График индикатора TRIX](../../../../images/indicatortrix.png)
 
 ## См. также
 

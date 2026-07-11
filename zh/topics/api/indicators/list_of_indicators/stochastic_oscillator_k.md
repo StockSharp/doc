@@ -40,7 +40,7 @@
 %D = SMA(%K, 3)
 ```
 
-![IndicatorStochasticK](../../../../images/indicatorstochastick.png)
+![随机振荡器 %K 指标图表](../../../../images/indicatorstochastick.png)
 
 ## 另请参阅
 

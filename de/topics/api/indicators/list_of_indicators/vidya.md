@@ -4,7 +4,7 @@
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [Vidya](xref:StockSharp.Algo.Indicators.Vidya).
 
-![IndicatorVidya](../../../../images/indicatorvidya.png)
+![VIDYA Diagramm](../../../../images/indicatorvidya.png)
 
 ## Empfohlene Inhalte
 

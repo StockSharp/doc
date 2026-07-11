@@ -4,7 +4,7 @@ Der **optimaler Nachführfilter**-Indikator passt schnelle Preisänderungen an u
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [OptimalTracking](xref:StockSharp.Algo.Indicators.OptimalTracking) verwenden.
 
-![IndicatorOptimalTracking](../../../../images/indicatoroptimaltracking.png)
+![optimale Nachführung Diagramm](../../../../images/indicatoroptimaltracking.png)
 
 ## Empfohlene Inhalte
 

@@ -16,7 +16,7 @@ Signal = EMA_a(EMA_s(P) − EMA_l(P))
 
 在构建MACD柱状图时，柱状条显示信号线与MACD线之间的差异，进一步简化了对指标的理解。
 
-![IndicatorMovingAverageConvergenceDivergenceHistogram](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
+![MACD柱状图 指标图表](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
 
 ## 另请参阅
 

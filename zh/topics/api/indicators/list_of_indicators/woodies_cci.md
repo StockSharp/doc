@@ -44,7 +44,7 @@
 
 伍迪 CCI 使用这两条线的组合来生成交易信号。在经典的 Woodies 系统中，这些线的交叉、它们与关键水平的互动以及各种模式构成了交易决策的基础。
 
-![IndicatorWoodiesCCI](../../../../images/indicator_woodies_cci.png)
+![WCCI 指标图表](../../../../images/indicator_woodies_cci.png)
 
 ## 另请参阅
 

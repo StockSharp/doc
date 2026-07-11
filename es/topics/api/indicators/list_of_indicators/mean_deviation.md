@@ -4,7 +4,7 @@ El indicador **Desviación media** muestra la desviación promedio del precio de
 
 Para utilizar el indicador, se debe utilizar la clase [MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation).
 
-![IndicatorMeanDeviation](../../../../images/indicatormeandeviation.png)
+![Gráfico del indicador Desviación media](../../../../images/indicatormeandeviation.png)
 
 ## Véase también
 

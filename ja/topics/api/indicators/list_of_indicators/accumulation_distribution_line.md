@@ -34,7 +34,7 @@ ADL = 前の ADL 値 + CLV * Volume
 
 (High - Low) が 0 に等しい場合、CLV は 0 に設定されます。
 
-![IndicatorAccumulationDistributionLine](../../../../images/indicator_accumulation_distribution_line.png)
+![ADL のチャート](../../../../images/indicator_accumulation_distribution_line.png)
 
 ## 関連項目
 

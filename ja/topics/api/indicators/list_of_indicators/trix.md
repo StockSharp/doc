@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[Trix](xref:StockSharp.Algo.Indicators.Trix) クラスを使用する必要があります。
 
-![IndicatorTrix](../../../../images/indicatortrix.png)
+![TRIX のチャート](../../../../images/indicatortrix.png)
 
 ## 推奨コンテンツ
 

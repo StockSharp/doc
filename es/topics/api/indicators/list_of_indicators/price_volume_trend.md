@@ -4,7 +4,7 @@
 
 Para utilizar el indicador, debe utilizar la clase [PriceVolumeTrend](xref:StockSharp.Algo.Indicators.PriceVolumeTrend).
 
-![IndicatorPVT](../../../../images/indicatorpvt.png)
+![Gráfico del indicador PVT](../../../../images/indicatorpvt.png)
 
 ## Contenido recomendado
 

@@ -15,7 +15,7 @@ Der Indikator besteht aus drei unterschiedlich gefärbten Linien:
 
 Die Werte beziehen sich auf den klassischen Indikator; in den Einstellungen können jederzeit eigene Parameter angegeben werden.
 
-![IndicatorAlligator](../../../../images/indicatoralligator.png)
+![Alligator Diagramm](../../../../images/indicatoralligator.png)
 
 ## Siehe auch
 

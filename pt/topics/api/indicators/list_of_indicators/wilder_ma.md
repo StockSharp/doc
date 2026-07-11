@@ -4,7 +4,7 @@
 
 Para usar o indicador, deve usar a classe [WilderMovingAverage](xref:StockSharp.Algo.Indicators.WilderMovingAverage).
 
-![IndicatorWilderMovingAverage](../../../../images/indicatorwildermovingaverage.png)
+![Gráfico do indicador média móvel de Wilder](../../../../images/indicatorwildermovingaverage.png)
 
 ## Conteúdo recomendado
 

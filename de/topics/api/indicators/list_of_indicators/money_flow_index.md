@@ -5,7 +5,7 @@ Der Indikator ist ein technischer Oszillator zur Bestimmung überkaufter oder ü
 
 Um den Indikator zu verwenden, sollte die Klasse [MoneyFlowIndex](xref:StockSharp.Algo.Indicators.MoneyFlowIndex) verwendet werden.
 
-![IndicatorMoneyFlowIndex](../../../../images/indicatormoneyflowindex.png)
+![Geldflussindex Diagramm](../../../../images/indicatormoneyflowindex.png)
 
 ## Siehe auch
 

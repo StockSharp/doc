@@ -4,7 +4,7 @@
 
 Um den Indikator zu verwenden, nutzen Sie die Klasse [TrueRange](xref:StockSharp.Algo.Indicators.TrueRange).
 
-![IndicatorTrueRange](../../../../images/indicatortruerange.png)
+![Wahre Spanne Diagramm](../../../../images/indicatortruerange.png)
 
 ## Empfohlene Inhalte
 

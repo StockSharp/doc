@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [RateOfChange](xref:StockSharp.Algo.Indicators.RateOfChange) 类。
 
-![IndicatorRateOfChange](../../../../images/indicatorrateofchange.png)
+![变化率 (RoC) 指标图表](../../../../images/indicatorrateofchange.png)
 
 ## 推荐内容
 

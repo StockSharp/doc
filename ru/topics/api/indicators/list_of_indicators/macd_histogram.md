@@ -16,7 +16,7 @@ Signal = EМАa(ЕМАs(P) \− EMAl(P))
 
 При построении гистограммы MACD столбики гистограммы показывают разность между сигнальной линией и линией MACD, еще более упрощая восприятие индикатора.
   
-![IndicatorMovingAverageConvergenceDivergenceHistogram](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
+![График индикатора MACD гистограмма](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
 
 ## См. также
 

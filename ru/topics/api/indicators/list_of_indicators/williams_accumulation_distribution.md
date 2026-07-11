@@ -48,7 +48,7 @@
 
 Индикатор накапливает положительные и отрицательные значения, образуя кумулятивную линию, которая может использоваться для сравнения с движением цены.
 
-![IndicatorWilliamsAccumulationDistribution](../../../../images/indicator_williams_accumulation_distribution.png)
+![График индикатора WAD](../../../../images/indicator_williams_accumulation_distribution.png)
 
 ## См. также
 

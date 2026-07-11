@@ -24,7 +24,7 @@ O SuperTrend é construído com o preço médio e o valor do ATR. A linha do ind
 3. O SuperTrend inicialmente é igual a uma das bandas, dependendo da tendência atual.
 4. Se o preço de fecho cruzar a linha SuperTrend, a direção da tendência muda e a linha passa para o lado oposto.
 
-![IndicatorSuperTrend](../../../../images/indicator_supertrend.png)
+![Gráfico do indicador SuperTrend](../../../../images/indicator_supertrend.png)
 
 ## Ver também
 

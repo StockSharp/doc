@@ -18,7 +18,7 @@
 D \- задаваемая в настройках ширина канала, Стандартное отклонение (StdDev) \- стандартное отклонение, вычисляемое по формуле:  SQRT (Sum (Close, n)) ^ 2, n)\/n), где
 Sum \- сумма за n периодов, n \- период расчёта, SQRT \- квадратный корень, Close \- цена закрытия.
 
-![IndicatorBollingerBands](../../../../images/indicatorbollingerbands.png)
+![График индикатора полосы Боллинджера](../../../../images/indicatorbollingerbands.png)
 
 ## См. также
 

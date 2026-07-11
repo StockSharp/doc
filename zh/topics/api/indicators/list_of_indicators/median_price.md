@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice) 类。
 
-![IndicatorMedianPrice](../../../../images/indicatormedianprice.png)
+![中位数价格 指标图表](../../../../images/indicatormedianprice.png)
 
 ## 推荐内容
 

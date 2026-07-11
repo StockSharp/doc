@@ -52,7 +52,7 @@
 
 Типичные значения для параметров индикатора: EsaPeriod = 10, DPeriod = 21, AveragePeriod = 4, но они могут быть адаптированы под различные временные рамки и инструменты.
 
-![IndicatorWaveTrendOscillator](../../../../images/indicator_wave_trend_oscillator.png)
+![График индикатора WTO](../../../../images/indicator_wave_trend_oscillator.png)
 
 ## См. также
 

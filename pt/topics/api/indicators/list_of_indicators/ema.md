@@ -4,7 +4,7 @@ A média móvel exponencial (EMA) é um tipo de média móvel (MA) que atribui m
 
 Para utilizar o indicador, deve usar a classe [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage). 
 
-![IndicatorExponentialMovingAverage](../../../../images/indicatorexponentialmovingaverage.png)
+![Gráfico do indicador EMA](../../../../images/indicatorexponentialmovingaverage.png)
 
 ## Conteúdo recomendado
 

@@ -4,7 +4,7 @@
 
 要使用该指标，应使用[MeanDeviation](xref:StockSharp.Algo.Indicators.MeanDeviation)类。
 
-![IndicatorMeanDeviation](../../../../images/indicatormeandeviation.png)
+![平均偏差 指标图表](../../../../images/indicatormeandeviation.png)
 
 ## 另请参阅
 

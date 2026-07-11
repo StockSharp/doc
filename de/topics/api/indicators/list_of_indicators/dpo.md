@@ -6,7 +6,7 @@ Um den Indikator zu verwenden, sollte die Klasse [DetrendedPriceOscillator](xref
 
 Der Trendbereinigter Preisoszillator wird berechnet, indem ein einfacher gleitender Durchschnitt (SMA) vom aktuellen Preiswert subtrahiert wird. Die Länge des gleitenden Durchschnitts wird vom Benutzer bestimmt.
 
-![IndicatorDetrendedPriceOscillator](../../../../images/indicatordetrendedpriceoscillator.png)
+![DPO Diagramm](../../../../images/indicatordetrendedpriceoscillator.png)
 
 ## Siehe auch
 

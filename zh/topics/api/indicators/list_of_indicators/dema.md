@@ -4,7 +4,7 @@
 
 要使用该指标，您必须使用 [DoubleExponentialMovingAverage](xref:StockSharp.Algo.Indicators.DoubleExponentialMovingAverage) 类。
 
-![IndicatorDoubleExponentialMovingAverage](../../../../images/indicatordoubleexponentialmovingaverage.png)
+![双指数移动平均 指标图表](../../../../images/indicatordoubleexponentialmovingaverage.png)
 
 ## 推荐内容
 
