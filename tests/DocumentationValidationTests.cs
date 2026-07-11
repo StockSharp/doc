@@ -189,6 +189,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Broker",
 		"Candles",
 		"Clearing account",
+		"Credentials",
 		"Demo",
 		"Derivatives mode",
 		"Expires after",

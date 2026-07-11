@@ -51,7 +51,7 @@ La clase [RemoteMarketDataDrive](xref:StockSharp.Algo.Storages.RemoteMarketDataD
 ### Ajustes de conexión
 
 - **dirección** -- dirección del servidor remoto. El valor predeterminado es `127.0.0.1:5002`.
-- **Credentials** -- credenciales de autenticación (Email y Password).
+- **Credenciales** -- credenciales de autenticación (correo electrónico y contraseña).
 - **TargetCompId** -- identificador del componente de destino, por defecto `"StockSharpHydraMD"`.
 - **SecurityBatchSize** -- tamaño de lote al cargar instrumentos, por defecto 1000.
 - **Timeout** -- tiempo de espera de conexión, por defecto 2 minutos.

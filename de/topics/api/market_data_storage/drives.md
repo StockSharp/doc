@@ -51,7 +51,7 @@ Die Klasse [RemoteMarketDataDrive](xref:StockSharp.Algo.Storages.RemoteMarketDat
 ### Verbindungseinstellungen
 
 - **Adresse** - Adresse des entfernten Servers. Standard ist `127.0.0.1:5002`.
-- **Credentials** - Anmeldedaten (Email und Password).
+- **Anmeldedaten** - Anmeldedaten (E-Mail und Passwort).
 - **TargetCompId** - Ziel-Komponentenbezeichner, standardmäßig `"StockSharpHydraMD"`.
 - **SecurityBatchSize** - Batchgröße beim Laden von Instrumenten, standardmäßig 1000.
 - **Timeout** - Verbindungs-Timeout, standardmäßig 2 Minuten.
