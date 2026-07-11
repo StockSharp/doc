@@ -60,15 +60,15 @@ private void ProcessCandle(ICandleMessage candle)
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
 
-	// Estratégia de tendência: comprar em vela bullish, vender em vela bearish
+	// Estratégia de tendência: comprar em vela de alta, vender em vela de baixa
 	if (candle.OpenPrice < candle.ClosePrice && Position <= 0)
 	{
-		// Vela bullish - comprar
+		// Vela de alta - comprar
 		BuyMarket(Volume + Math.Abs(Position));
 	}
 	else if (candle.OpenPrice > candle.ClosePrice && Position >= 0)
 	{
-		// Vela bearish - vender
+		// Vela de baixa - vender
 		SellMarket(Volume + Math.Abs(Position));
 	}
 }
@@ -76,8 +76,8 @@ private void ProcessCandle(ICandleMessage candle)
 
 ## Lógica de Negociação
 
-- **Sinal de compra**: vela bullish (preço de fecho acima do preço de abertura) quando não existe posição longa
-- **Sinal de venda**: vela bearish (preço de fecho abaixo do preço de abertura) quando não existe posição curta
+- **Sinal de compra**: vela de alta (preço de fecho acima do preço de abertura) quando não existe posição longa
+- **Sinal de venda**: vela de baixa (preço de fecho abaixo do preço de abertura) quando não existe posição curta
 - O volume da posição aumenta pelo valor da posição atual a cada nova transação
 
 ## Funcionalidades

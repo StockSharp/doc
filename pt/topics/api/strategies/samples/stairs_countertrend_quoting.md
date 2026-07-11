@@ -67,7 +67,7 @@ private void ProcessCandle(ICandleMessage candle)
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Identificar vela bullish ou bearish
+	// Identificar vela de alta ou de baixa
 	if (candle.OpenPrice < candle.ClosePrice)
 	{
 		_bullLength++;
@@ -89,10 +89,10 @@ private void ProcessCandle(ICandleMessage candle)
 		// Verificar se o processador deve ser limpo (mudança de tendência ou posição)
 		var shouldClearProcessor = false;
 
-		// Necessário vender se houver tendência bullish e nenhuma posição curta
+		// Necessário vender se houver tendência de alta e nenhuma posição curta
 		if (_bullLength >= Length && Position >= 0)
 			shouldClearProcessor = true;
-		// Necessário comprar se houver tendência bearish e nenhuma posição longa
+		// Necessário comprar se houver tendência de baixa e nenhuma posição longa
 		else if (_bearLength >= Length && Position <= 0)
 			shouldClearProcessor = true;
 
@@ -108,13 +108,13 @@ private void ProcessCandle(ICandleMessage candle)
 	{
 		if (_bullLength >= Length && Position >= 0)
 		{
-			// Tendência bullish - abrir posição curta
+			// Tendência de alta - abrir posição curta
 			CreateQuotingProcessor(Sides.Sell);
 			this.AddInfoLog($"A iniciar cotação de venda após {_bullLength} candles de alta");
 		}
 		else if (_bearLength >= Length && Position <= 0)
 		{
-			// Tendência bearish - abrir posição longa
+			// Tendência de baixa - abrir posição longa
 			CreateQuotingProcessor(Sides.Buy);
 			this.AddInfoLog($"A iniciar cotação de compra após {_bearLength} candles de baixa");
 		}
@@ -181,8 +181,8 @@ private void CreateQuotingProcessor(Sides side)
 
 ## Lógica de Negociação
 
-- **Sinal de venda**: `Length` velas bullish consecutivas (preço de fecho acima do preço de abertura) quando não existe posição curta
-- **Sinal de compra**: `Length` velas bearish consecutivas (preço de fecho abaixo do preço de abertura) quando não existe posição longa
+- **Sinal de venda**: `Length` velas de alta consecutivas (preço de fecho acima do preço de abertura) quando não existe posição curta
+- **Sinal de compra**: `Length` velas de baixa consecutivas (preço de fecho abaixo do preço de abertura) quando não existe posição longa
 - O processador de quoting é usado para entrada no mercado, seguindo o preço de mercado
 
 ## Funcionalidades

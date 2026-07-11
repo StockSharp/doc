@@ -74,24 +74,24 @@ private void ProcessCandle(ICandleMessage candle)
 	// Atualizar contadores com base na direção da vela
 	if (candle.OpenPrice < candle.ClosePrice)
 	{
-		// Vela bullish
+		// Vela de alta
 		_bullLength++;
 		_bearLength = 0;
 	}
 	else if (candle.OpenPrice > candle.ClosePrice)
 	{
-		// Vela bearish
+		// Vela de baixa
 		_bullLength = 0;
 		_bearLength++;
 	}
 
 	// Estratégia de tendência: 
-	// Comprar após Length velas bullish consecutivas
+	// Comprar após Length velas de alta consecutivas
 	if (_bullLength >= Length && Position <= 0)
 	{
 		BuyMarket(Volume + Math.Abs(Position));
 	}
-	// Vender após Length velas bearish consecutivas
+	// Vender após Length velas de baixa consecutivas
 	else if (_bearLength >= Length && Position >= 0)
 	{
 		SellMarket(Volume + Math.Abs(Position));
@@ -101,8 +101,8 @@ private void ProcessCandle(ICandleMessage candle)
 
 ## Lógica de Negociação
 
-- **Sinal de compra**: `Length` velas bullish consecutivas (preço de fecho acima do preço de abertura) quando não existe posição longa
-- **Sinal de venda**: `Length` velas bearish consecutivas (preço de fecho abaixo do preço de abertura) quando não existe posição curta
+- **Sinal de compra**: `Length` velas de alta consecutivas (preço de fecho acima do preço de abertura) quando não existe posição longa
+- **Sinal de venda**: `Length` velas de baixa consecutivas (preço de fecho abaixo do preço de abertura) quando não existe posição curta
 - O volume da posição aumenta pelo valor da posição atual a cada nova transação
 
 ## Funcionalidades

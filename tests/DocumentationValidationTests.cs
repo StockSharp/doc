@@ -2953,6 +2953,48 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedStrategySampleDocsDoNotKeepEnglishBullishBearishWords()
+	{
+		var errors = new List<string>();
+		var phrases = new[] { "bullish", "bearish" };
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var samplesRoot = Path.Combine(_repoRoot, lang, "topics", "api", "strategies", "samples");
+			if (!Directory.Exists(samplesRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(samplesRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized strategy sample documentation keeps English market direction word '{phrase}'. Localize it for the target language.");
+					}
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!ContainsStandaloneText(comment.Text, phrase))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized strategy sample code comment keeps English market direction word '{phrase}'. Localize it for the target language.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedIndicatorDocsDoNotKeepEnglishTrendDirectionPhrases()
 	{
 		var errors = new List<string>();
