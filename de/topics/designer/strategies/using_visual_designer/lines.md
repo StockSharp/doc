@@ -2,7 +2,7 @@
 
 Die Strategie im Designer ist ein Schema aus einer Gruppe von Elementen und Verknüpfungen zwischen ihnen, den sogenannten Verbindungen. Jede Verbindung führt vom Ausgabeparameter eines Würfels zum Eingabeparameter eines anderen Würfels. Normalerweise sind alle Verbindungslinien grau, aber wenn Sie auf den Würfel zeigen, zu dem sie gehören, werden die Linien schwarz dargestellt.
 
-![Designer Line 00](../../../../images/designer_line_00.png)
+![Linien Screenshot](../../../../images/designer_line_00.png)
 
 Jede Verbindung kann hervorgehoben werden, indem Sie darauf zeigen und mit der linken Maustaste klicken. Die ausgewählte Verbindung wird an den Linienenden mit Kreisen markiert; wenn Sie diese greifen, können Sie die Linie umleiten. Wenn Sie bei ausgewählter Linie die Taste Del drücken, wird sie gelöscht.
 

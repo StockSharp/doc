@@ -1,6 +1,6 @@
 # A negociação é permitida
 
-![Designer TradeAllowedDiagramElement 00](../../../../../../images/designer_tradealloweddiagramelement_00.png)
+![Captura de tela de A negociação é permitida](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
 Este bloco é utilizado para verificar se a negociação é actualmente permitida. São verificadas as seguintes condições:
 

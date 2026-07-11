@@ -4,13 +4,13 @@ La tarea realiza la importación automática de datos bursátiles desde archivos
 
 Para cada tipo de datos de mercado seleccionado, la plantilla se configura en la pestaña [Importación](../importing.md).
 
-![hydra tasks import](../../../images/hydra_tasks_import.png)
+![Captura de Importación automática 1](../../../images/hydra_tasks_import.png)
 
 En la parte inferior del panel, puede seleccionar los instrumentos por los que se importarán datos, así como el tipo de datos que se importará.
 
 Para cada instrumento, puede especificar las siguientes propiedades de importación de datos:
 
-![hydra tasks proper import](../../../images/hydra_tasks_proper_import.png)
+![Captura de Importación automática 2](../../../images/hydra_tasks_proper_import.png)
 
 **Importación (automática)**
 

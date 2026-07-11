@@ -1,6 +1,6 @@
 # 行权价
 
-![Designer Derivatives 00](../../../../../../images/designer_derivatives_00.png)
+![行权价 截图](../../../../../../images/designer_derivatives_00.png)
 
 该模块用于按照指定筛选条件获取期权列表。
 

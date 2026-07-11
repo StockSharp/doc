@@ -35,7 +35,7 @@ El canal que ha creado ya está disponible para sus estrategias y robots de trad
 
   - Al usar [Designer](../designer.md), haga clic en la lista de canales en el panel superior:
 
-  ![Designer Ribbon Channels](../../images/designerribbonchannels.png)
+  ![Captura de Alertas](../../images/designerribbonchannels.png)
 
   En la ventana que aparece, verá listas de todos los canales y grupos donde ha activado el bot:
 

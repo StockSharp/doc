@@ -32,7 +32,7 @@ Die Komponente „Orderregistrierung“ wird verwendet, um Handelsorders für ei
 
 **Bedingte Order** - eine Order mit zusätzlichen Bedingungen, die abhängig von der aktuellen Marktsituation den Zeitpunkt der Platzierung im Handelssystem bestimmen.
 
-![Designer Conditional Application](../../../../../../images/designer_conditional_application.png)
+![Orderregistrierung Screenshot](../../../../../../images/designer_conditional_application.png)
 
 - **Verbindung** - die Verbindung, über die die Order platziert wird.
 - **Stop-Order-Typ** - der Typ der Stop-Order.

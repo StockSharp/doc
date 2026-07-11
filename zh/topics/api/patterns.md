@@ -20,7 +20,7 @@
 
 也可以编辑已有图形并添加自定义图形。为此，需要点击 ![Designer 编辑按钮](../../images/designer_creating_repository_of_historical_data_01.png)，之后将显示图形编辑窗口。
 
-![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
+![模式 截图](../../images/indicatorpatterncommon01.png)
 
 要创建您自己的图案，请点击窗口顶部的 ![Designer 加号按钮](../../images/designer_panel_circuits_01_button.png) 按钮。点击 ![Designer 删除按钮](../../images/designer_delete_button.png) 按钮可以删除图案。
 

@@ -28,28 +28,28 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
    > - Si la ruta no puede determinarse automáticamente, debe seleccionarla manualmente mediante búsqueda de directorios *C:\\Users\\%su_usuario%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%muchas_letras_y_numeros%\\MQL4\\Experts\\* (para MT5, la ruta incluirá MQL5).
 
 5. Complete la instalación y espere a que finalice. Al final de la instalación, [Installer](../../../installer.md) advertirá que ahora debe configurar el terminal. Para ello, inicie el terminal MT y conéctese al trading.
-6. En el menú Herramientas -> Opciones, seleccione la pestaña **Asesores expertos** y asegúrese de que el permiso para trading con DLL externas (**Permitir importaciones de DLL**) esté habilitado:![MT 1](../../../../images/mt_1.png)
+6. En el menú Herramientas -> Opciones, seleccione la pestaña **Asesores expertos** y asegúrese de que el permiso para trading con DLL externas (**Permitir importaciones de DLL**) esté habilitado:![Captura de MetaTrader 1](../../../../images/mt_1.png)
 7. Si el terminal estaba ejecutándose durante la instalación del conector (paso 2), debe actualizar la lista de expertos haciendo clic derecho en Expertos y seleccionando **Actualizar** en el menú:
 
-   ![MT 2](../../../../images/mt_2.png)
+   ![Captura de MetaTrader 2](../../../../images/mt_2.png)
 
 8. Seleccione el experto S#, haga clic derecho y elija **Adjuntar al gráfico** en el menú:
 
-   ![MT 3](../../../../images/mt_3.png)
+   ![Captura de MetaTrader 3](../../../../images/mt_3.png)
 
 9. Aparecerá una ventana de configuración donde puede establecer el usuario y la contraseña (la autorización anónima está habilitada por defecto), así como la dirección de conexión (si se conecta a varios terminales a la vez, las direcciones deben contener puertos únicos).
 10. Debe aparecer un icono de carita en la esquina superior derecha del gráfico (el primero encontrado):
 
-    ![MT 4](../../../../images/mt_4.png)
+    ![Captura de MetaTrader 4](../../../../images/mt_4.png)
 
     Además, en la ventana de registro del experto debe aparecer información sobre el inicio correcto del script y el número de instrumentos.
 11. Si no se obtiene la licencia MT4 o MT5, aparecerá en el log una línea similar a la siguiente:
 
-    ![MT 5](../../../../images/mt_5.png)
+    ![Captura de MetaTrader 5](../../../../images/mt_5.png)
 
 12. La conexión a MT se realiza mediante el protocolo FIX, usando el conector [Protocolo FIX](../common/fix_protocol.md). Para la demostración se utilizó el programa [Terminal](../../../terminal.md). A continuación se muestran los ajustes para la conexión transaccional y la conexión de datos de mercado (para MT5, el puerto predeterminado es 23001 en lugar de 23000):
 
-    ![MT 6](../../../../images/mt_6.png)![MT 7](../../../../images/mt_7.png)
+    ![Captura de MetaTrader 6](../../../../images/mt_6.png)![Captura de MetaTrader 7](../../../../images/mt_7.png)
 
     Deben hacerse ajustes similares en [Designer](../../../designer.md), [Hydra](../../../hydra.md) o cualquier programa API.
 
@@ -61,8 +61,8 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
 
     En caso de una conexión correcta, el ejemplo debe mostrar una lista de instrumentos y cuentas:
 
-    ![MT 8](../../../../images/mt_8.png)
+    ![Captura de MetaTrader 8](../../../../images/mt_8.png)
 
 13. En caso de errores, se guardan logs del conector, disponibles en la carpeta **Experts\\StockSharp\\Data\\Log**:
 
-    ![MT 9](../../../../images/mt_9.png)
+    ![Captura de MetaTrader 9](../../../../images/mt_9.png)

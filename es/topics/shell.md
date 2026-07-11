@@ -4,7 +4,7 @@
 
 No necesita crear una GUI (Graphical User Interface) desde cero. Shell incluye la funcionalidad básica necesaria para pruebas, trading, conexión a fuentes de datos y visualización de gráficos, carteras, posiciones, órdenes y operaciones.
 
-![Shell Title 00](../images/shell_title_00.png)
+![Captura de Shell](../images/shell_title_00.png)
 
 Características principales del shell para robots de trading:
 

@@ -2,7 +2,7 @@
 
 Um Orderbücher zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Importieren \=\> Orderbücher**.
 
-![hydra import depths](../../../images/hydra_import_depths.png)
+![Orderbücher Screenshot](../../../images/hydra_import_depths.png)
 
 ## Importprozess.
 

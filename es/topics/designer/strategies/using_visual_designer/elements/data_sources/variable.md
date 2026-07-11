@@ -1,6 +1,6 @@
 # Variable
 
-![Designer Variable 00](../../../../../../images/designer_variable_00.png)
+![Captura de Variable](../../../../../../images/designer_variable_00.png)
 
 El cubo se usa para almacenar valores y pasar el valor previamente almacenado más adelante por la cadena de elementos.
 

@@ -18,7 +18,7 @@
 3. 2 本目のローソク足は、小さな実体を持つ白 (上昇) のローソク足で、1 本目のローソク足の実体内で始まり、終わります。
 4. 3 本目のローソク足は白 (上昇) のローソク足で、2 本目のローソク足の終値を上回って終わります。
 
-![IndicatorPattern3IU](../../../images/indicatorpattern3iu.png)
+![3 Inside Down と 3 Inside Up パターン のスクリーンショット 1](../../../images/indicatorpattern3iu.png)
 
 ### 3 Inside Down
 
@@ -31,7 +31,7 @@
 
 これらのパターンは本質的には、確認用のローソク足が続くハラミ パターンであり、多くのトレーダーはハラミの場合にこの確認を待ちます。
 
-![IndicatorPattern3ID](../../../images/indicatorpattern3id.png)
+![3 Inside Down と 3 Inside Up パターン のスクリーンショット 2](../../../images/indicatorpattern3id.png)
 
 ## 関連項目
 

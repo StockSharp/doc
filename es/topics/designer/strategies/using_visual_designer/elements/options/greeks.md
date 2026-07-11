@@ -1,6 +1,6 @@
 # Griegas
 
-![Designer Greek 00](../../../../../../images/designer_greek_00.png)
+![Captura de Griegas](../../../../../../images/designer_greek_00.png)
 
 Este bloque se usa para calcular las principales "griegas": Delta, Gamma, Vega, Theta y Rho en el momento actual.
 

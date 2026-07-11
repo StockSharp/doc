@@ -20,7 +20,7 @@ Patterns werden üblicherweise unterteilt in:
 
 Es ist auch möglich, vorhandene Patterns zu bearbeiten und eigene benutzerdefinierte Patterns hinzuzufügen. Klicken Sie dazu auf die Schaltfläche ![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png); danach wird das Fenster zur Pattern-Bearbeitung angezeigt.
 
-![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
+![Muster Screenshot](../../images/indicatorpatterncommon01.png)
 
 Um ein eigenes Pattern zu erstellen, klicken Sie oben im Fenster auf die Schaltfläche ![Designer Plus-Schaltfläche](../../images/designer_panel_circuits_01_button.png). Ein Klick auf die Schaltfläche ![Designer Löschschaltfläche](../../images/designer_delete_button.png) löscht das Pattern.
 

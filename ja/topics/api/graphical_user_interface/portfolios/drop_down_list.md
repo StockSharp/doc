@@ -2,7 +2,7 @@
 
 [PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) は、ポートフォリオ選択用のコンボボックスです。
 
-![Gui PortfolioComboBox](../../../../images/gui_portfoliocombobox.png)
+![ドロップダウンリスト のスクリーンショット](../../../../images/gui_portfoliocombobox.png)
 
 **主なプロパティ**
 

@@ -2,8 +2,8 @@
 
 A seguir descreve-se como criar e configurar uma tarefa de cópia de segurança.
 
-1. Para criar uma tarefa, clique no botão **Adicionar tarefas...**; na janela que se abre, selecione o item **Cópia de segurança** e clique no botão **OK**.![hydra tasks backup add](../../../../images/hydra_tasks_backup_add.png)
-2. Em seguida, é necessário configurar a tarefa.![hydra tasks backup](../../../../images/hydra_tasks_backup.png)
+1. Para criar uma tarefa, clique no botão **Adicionar tarefas...**; na janela que se abre, selecione o item **Cópia de segurança** e clique no botão **OK**.![Captura de tela de Definições do Hydra 1](../../../../images/hydra_tasks_backup_add.png)
+2. Em seguida, é necessário configurar a tarefa.![Captura de tela de Definições do Hydra 2](../../../../images/hydra_tasks_backup.png)
 
    **Cópia de segurança**
    - **Serviço** - o endereço do serviço.

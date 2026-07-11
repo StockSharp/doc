@@ -1,6 +1,6 @@
 # MATLAB
 
-![matlab stocksharp](../images/matlab_stocksharp.png)
+![MATLAB 截图](../images/matlab_stocksharp.png)
 
 **MATLAB** 产品面向在 [MATLAB MathWorks](https://www.mathworks.com/) 环境中开发交易算法的交易者。
 

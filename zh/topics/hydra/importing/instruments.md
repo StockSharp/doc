@@ -2,7 +2,7 @@
 
 要导入交易品种，请打开 **导入 \=\> 交易品种** 选项卡。
 
-![hydra import securities](../../../images/hydra_import_securities.png)
+![交易品种 截图 1](../../../images/hydra_import_securities.png)
 
 ## 导入过程
 
@@ -25,8 +25,8 @@
    - 对于 {PriceStep} 字段，在 **S# 字段** 窗口中选择 **名义值**，并将其序号设为 2。
    - 对于 {SecurityType} 字段，在 **S# 字段** 窗口中选择表示交易品种类型（股票、货币、期货等）的 **类型**，并将其序号设为 3。
    - 对于 {VolumeStep} 字段，在 **S# 字段** 窗口中选择表示基础或最小交易数量的 **最小数量（基础）**，并将其序号设为 4。
-   - 字段设置窗口将如下所示：![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
+   - 字段设置窗口将如下所示：![交易品种 截图 2](../../../images/hydra_import_prop_securitiy.png)
 
    用户可以为导入的数据配置大量属性。需要根据导入文件模板指定属性，并为其分配对应的排列序号。
-3. 要预览数据，请单击 **预览** 按钮。![hydra import preview securitiy](../../../images/hydra_import_preview_securitiy.png)
+3. 要预览数据，请单击 **预览** 按钮。![交易品种 截图 3](../../../images/hydra_import_preview_securitiy.png)
 4. 单击 **导入** 按钮。

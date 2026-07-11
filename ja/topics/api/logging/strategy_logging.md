@@ -68,7 +68,7 @@
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. ストラテジー動作中のログウィンドウは次のとおりです: ![strategylogging](../../../images/strategy_logging.png)
+2. ストラテジー動作中のログウィンドウは次のとおりです: ![ストラテジーのログ記録 のスクリーンショット](../../../images/strategy_logging.png)
 
 ## 推奨コンテンツ
 

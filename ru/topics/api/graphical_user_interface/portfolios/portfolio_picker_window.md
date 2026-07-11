@@ -2,7 +2,7 @@
 
 [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow) \- окно для выбора портфеля. В окне отображается список портфелей и информация о денежных позициях портфелей.
 
-![GUI PortfolioPickerWindow](../../../../images/gui_portfoliopickerwindow.png)
+![Снимок экрана: Окно выбора портфелей](../../../../images/gui_portfoliopickerwindow.png)
 
 **Основные свойства**
 

@@ -18,7 +18,7 @@ La versión alcista del patrón es bullish, indicando que el movimiento bajista 
 3. La segunda vela es blanca (alcista) con un cuerpo pequeño, que abre y cierra dentro del cuerpo de la primera vela.
 4. La tercera vela es blanca (alcista), que cierra por encima del cierre de la segunda vela.
 
-![IndicatorPattern3IU](../../../images/indicatorpattern3iu.png)
+![Captura de Patrón 3 Inside Down y 3 Inside Up 1](../../../images/indicatorpattern3iu.png)
 
 ### 3 Inside Down
 
@@ -31,7 +31,7 @@ La versión bajista del patrón es bearish. Muestra que el movimiento alcista de
 
 Estos patrones son esencialmente patrones harami seguidos por una vela de confirmación, que muchos traders esperan en el caso de haramis.
 
-![IndicatorPattern3ID](../../../images/indicatorpattern3id.png)
+![Captura de Patrón 3 Inside Down y 3 Inside Up 2](../../../images/indicatorpattern3id.png)
 
 ## Véase también
 

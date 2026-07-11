@@ -2,7 +2,7 @@
 
 En el panel **Editor de mercados**, puede crear **Mercados** y **Bolsas**, y ver o configurar los existentes.
 
-![Designer Boards](../../../images/designer_boards.png)
+![Captura de Mercados de negociación](../../../images/designer_boards.png)
 
 En [S#](../../api.md), los instrumentos de distintas fuentes usan un identificador unificado que consta del código del instrumento y el código del board. La sintaxis es [**código del instrumento**]@[código del board]. Por ejemplo, para las acciones **AAPL** de la bolsa **NASDAQ**, el identificador es **AAPL@NASDAQ**. Cada instrumento está vinculado a un board específico en el que se negocia. Sin embargo, el instrumento puede negociarse en distintos boards. En este caso, los códigos de board serán diferentes. Para cada board puede configurar un horario de trabajo con días laborables y fines de semana.
 

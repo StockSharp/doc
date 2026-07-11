@@ -2,7 +2,7 @@
 
 BoxChart - 是一种用于以数字网格形式显示交易量的特殊图表类型。要使用这种图表类型，需要设置特殊样式 [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) = [ChartCandleDrawStyles.BoxVolume](xref:StockSharp.Charting.ChartCandleDrawStyles.BoxVolume)。此图表使用 [PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) 属性中的信息作为源数据。
 
-![Gui BoxChart](../../../../images/gui_boxchart.png)
+![箱形图 截图](../../../../images/gui_boxchart.png)
 
 **主要属性**
 

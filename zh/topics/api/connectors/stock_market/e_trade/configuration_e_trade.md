@@ -4,7 +4,7 @@
 
 交互机制如图所示：
 
-![ETrade](../../../../../images/etrade.png)
+![E\TRADE 配置 截图](../../../../../images/etrade.png)
 
 [E*TRADE](../e_trade.md) 使用OAuth 1.0a授权协议，这需要在[E*TRADE](https://etrade.com/)网站上通过浏览器登录并输入密码。完整的授权过程顺序如下面的图所示：
 

@@ -20,7 +20,7 @@
 
 Также возможно редактирование существующих и добавление собственных пользовательских паттернов. Для этого, нужно нажать на кнопку ![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png) после чего будет показано окно редактирования паттернов.
 
-![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
+![Снимок экрана: Паттерны](../../images/indicatorpatterncommon01.png)
 
 Для того, чтобы создать собственный паттерн необходимо нажать кнопку ![Designer кнопка плюс](../../images/designer_panel_circuits_01_button.png) в верхней части окна. Нажатие кнопки ![Designer кнопка удаления](../../images/designer_delete_button.png) удаляет паттерн.
 

@@ -1,6 +1,6 @@
 # 策略盈亏
 
-![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
+![策略盈亏 截图](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
 RemoteManager 英文文档
 

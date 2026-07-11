@@ -4,7 +4,7 @@
 
 以下に、このコンポーネントの使用例を示します。完全なサンプルコードは Samples\/Testing\/SampleHistoryTesting にあります。
 
-![Gui EquityCurveChart](../../../../images/gui_equitycurvechart.png)
+![エクイティカーブチャート のスクリーンショット](../../../../images/gui_equitycurvechart.png)
 
 ## EquityCurveChart の描画例
 

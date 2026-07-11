@@ -2,7 +2,7 @@
 
 [AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - Ventana especial para configurar el control de riesgos. 
 
-![API GUI RiskWindow](../../../images/api_gui_riskwindow.png)
+![Captura de Ventana de configuración de riesgo](../../../images/api_gui_riskwindow.png)
 
 A continuación se muestra un ejemplo del código para llamar a la ventana de configuración de control de riesgos para la estrategia. 
 

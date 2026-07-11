@@ -13,7 +13,7 @@ Three Black Crows は、上昇トレンドの反転を予測できる弱気の�
 - パターンのローソク足サイズとヒゲは、反転から押し戻しへ移行するリスクを示すことがあります。
 - Three Black Crows の反対パターンは Three White Soldiers で、下降トレンドの反転を示します。
 
-![IndicatorPattern3BC](../../../images/indicatorpattern3bc.png)
+![3 Black Crows と 3 White Soldiers パターン のスクリーンショット 1](../../../images/indicatorpattern3bc.png)
 
 ### 3 White Soldiers
 
@@ -25,5 +25,5 @@ Three White Soldiers は、価格チャート上の現在の下降トレンド�
 - ローソク足のサイズとヒゲの長さは、押し戻しのリスクがあるかどうかを評価するために使用されます。
 - Three White Soldiers の反対パターンは Three Black Crows で、上昇トレンドの反転を示します。
 
-![IndicatorPattern3WS](../../../images/indicatorpattern3ws.png)
+![3 Black Crows と 3 White Soldiers パターン のスクリーンショット 2](../../../images/indicatorpattern3ws.png)
 

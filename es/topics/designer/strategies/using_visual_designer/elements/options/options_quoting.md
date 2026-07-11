@@ -1,6 +1,6 @@
 # Cotización de opciones
 
-![Designer Quoting 00](../../../../../../images/designer_quoting_00.png)
+![Captura de Cotización de opciones](../../../../../../images/designer_quoting_00.png)
 
 El cubo se usa para cotizar opciones según los parámetros especificados.
 

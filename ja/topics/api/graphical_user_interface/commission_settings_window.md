@@ -2,7 +2,7 @@
 
 [CommissionWindow](xref:StockSharp.Xaml.CommissionWindow) は、手数料を課金するルールを設定するための特殊なウィンドウです。
 
-![API ComissionWindow](../../../images/api_comissionwindow.png)
+![手数料設定ウィンドウ のスクリーンショット](../../../images/api_comissionwindow.png)
 
 以下は、手数料を課金するルールを設定するウィンドウを呼び出すコード例です。
 

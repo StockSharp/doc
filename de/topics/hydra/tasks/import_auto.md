@@ -4,13 +4,13 @@ Die Aufgabe führt den automatischen Import von Börsendaten aus Dateien im ange
 
 Für jeden ausgewählten Marktdatentyp wird die Vorlage auf der Registerkarte [Import](../importing.md) konfiguriert.
 
-![hydra tasks import](../../../images/hydra_tasks_import.png)
+![Automatischer Import Screenshot 1](../../../images/hydra_tasks_import.png)
 
 Am unteren Rand des Panels können Sie die Instrumente auswählen, für die Daten importiert werden, sowie den zu importierenden Datentyp.
 
 Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben:
 
-![hydra tasks proper import](../../../images/hydra_tasks_proper_import.png)
+![Automatischer Import Screenshot 2](../../../images/hydra_tasks_proper_import.png)
 
 **Import (automatisch)**
 

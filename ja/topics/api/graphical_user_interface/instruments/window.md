@@ -4,7 +4,7 @@
 
 以下に、コンポーネントの外観と使用例のコードスニペットを示します。
 
-![Gui SecurityCreateWindow](../../../../images/gui_securitycreatewindow.png)
+![ウィンドウ のスクリーンショット](../../../../images/gui_securitycreatewindow.png)
 
 ```cs
 private void Button_Click(object sender, RoutedEventArgs e)

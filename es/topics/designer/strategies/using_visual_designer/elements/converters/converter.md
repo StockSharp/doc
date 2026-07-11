@@ -1,6 +1,6 @@
 # Convertidor
 
-![Designer Converter 00](../../../../../../images/designer_converter_00.png)
+![Captura de Convertidor](../../../../../../images/designer_converter_00.png)
 
 El cubo se usa para convertir objetos complejos en tipos de datos simples. Por ejemplo, permite obtener el valor del paso de precio de un instrumento.
 

@@ -2,7 +2,7 @@
 
 [StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) \- таблица для отображения параметров и статистики работы стратегий. 
 
-![GUI StrategiesStatisticsPanel](../../../../images/gui_strategiesstatisticspanel.png)
+![Снимок экрана: Статистика](../../../../images/gui_strategiesstatisticspanel.png)
 
 **Основные свойства и методы**
 

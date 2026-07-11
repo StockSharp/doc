@@ -2,7 +2,7 @@
 
 在服务器模式下，可以启用仿真模式。
 
-![hydra emulator start](../../../images/hydra_emulator_start.png)
+![仿真设置 截图 1](../../../images/hydra_emulator_start.png)
 
 在仿真模式下，[Hydra](../../hydra.md) 支持以下功能：
 
@@ -15,7 +15,7 @@
 
 ## 仿真参数
 
-![hydra emulator prop](../../../images/hydra_emulator_prop.png)
+![仿真设置 截图 2](../../../images/hydra_emulator_prop.png)
 
 - **触价撮合** \- 模拟撮合时，如果成交价等于订单价格，则撮合该订单。
 - **订单簿（有效期）** \- 模拟器中订单簿的最长有效时间。如果订单簿在指定时间内未更新，其值将被清除。数据存在缺口时，此参数用于删除陈旧的订单簿数据。

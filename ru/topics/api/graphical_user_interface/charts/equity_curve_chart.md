@@ -4,7 +4,7 @@
 
 Ниже приведен пример использования этого компонента. Полный код примера находится в Samples\/Testing\/SampleHistoryTesting.
 
-![Gui EquityCurveChart](../../../../images/gui_equitycurvechart.png)
+![Снимок экрана: График эквити](../../../../images/gui_equitycurvechart.png)
 
 ## Пример построения графика EquityCurveChart
 

@@ -10,11 +10,11 @@
 
 要选择所需的扩展信息，请执行以下操作：
 
-1. 在 **交易品种** 选项卡中单击 **扩展信息** 按钮。![hydra Extension Info securities](../../../images/hydra_extensioninfo_securities.png)
-2. 在随后显示的窗口中，选择所需 CSV 文件的路径。![hydra Extension Info window](../../../images/hydra_extensioninfo_window.png)
+1. 在 **交易品种** 选项卡中单击 **扩展信息** 按钮。![交易品种扩展信息 截图 1](../../../images/hydra_extensioninfo_securities.png)
+2. 在随后显示的窗口中，选择所需 CSV 文件的路径。![交易品种扩展信息 截图 2](../../../images/hydra_extensioninfo_window.png)
 
 下面展示了在不同编辑器（**MS Excel** 和 **Notepad**）中打开的扩展信息 **CSV** 文件示例。
 
-![hydra ExtensionInfo csv excel](../../../images/hydra_extensioninfo_csv_excel.png)
+![交易品种扩展信息 截图 3](../../../images/hydra_extensioninfo_csv_excel.png)
 
-![hydra ExtensionInfo csv notepad](../../../images/hydra_extensioninfo_csv_notepad.png)
+![交易品种扩展信息 截图 4](../../../images/hydra_extensioninfo_csv_notepad.png)

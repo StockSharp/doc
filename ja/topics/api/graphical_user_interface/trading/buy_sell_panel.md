@@ -2,7 +2,7 @@
 
 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - 最良価格ですばやく注文を登録できる専用パネルです。 
 
-![API GUI BuySell](../../../../images/api_gui_buysell.png)
+![売買パネル のスクリーンショット](../../../../images/api_gui_buysell.png)
 
 以下は、[BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) を追加するコード例です。 
 

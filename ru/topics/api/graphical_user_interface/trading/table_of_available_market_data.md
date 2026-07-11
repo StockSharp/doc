@@ -2,7 +2,7 @@
 
 [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) \- таблица отображения рыночных данных, в данной таблице можно просматривать доступные рыночные данные. 
 
-![API GUI MarketDataGrid](../../../../images/api_gui_marketdatagrid.png)
+![Снимок экрана: Таблица доступных рыночных данных](../../../../images/api_gui_marketdatagrid.png)
 
 Ниже приведен пример кода добавления таблицы [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) на экранную форму. 
 

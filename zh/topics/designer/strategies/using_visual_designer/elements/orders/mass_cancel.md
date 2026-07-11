@@ -1,6 +1,6 @@
 # 批量撤销订单
 
-![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
+![批量撤销订单 截图](../../../../../../images/designer_mass_cancellations_00.png)
 
 该模块用于撤销指定交易品种的全部订单。
 

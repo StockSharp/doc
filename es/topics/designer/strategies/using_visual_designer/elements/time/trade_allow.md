@@ -1,6 +1,6 @@
 # Trading permitido
 
-![Designer TradeAllowedDiagramElement 00](../../../../../../images/designer_tradealloweddiagramelement_00.png)
+![Captura de Trading permitido](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
 Este bloque se usa para comprobar si actualmente se permite operar. Se comprueban las siguientes condiciones:
 

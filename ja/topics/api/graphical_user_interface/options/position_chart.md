@@ -4,7 +4,7 @@
 
 以下は、このチャートを使用する SampleOptionQuoting の例です。この例のソースコードは *Samples\/06\_Strategies\/09\_LiveOptionsQuoting* フォルダーにあります。
 
-![option volsmile](../../../../images/option_volsmile.png)
+![ポジションチャート のスクリーンショット](../../../../images/option_volsmile.png)
 
 ## SampleOptionQuoting の例
 

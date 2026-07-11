@@ -1,6 +1,6 @@
 # 组合
 
-![Designer Association 00](../../../../../../images/designer_association_00.png)
+![组合 截图](../../../../../../images/designer_association_00.png)
 
 该模块用于将来自不同模块的同类型数据合并到一个输出参数中，以便传递给另一个元素；也可以将接收到的数据分发给多个元素。
 

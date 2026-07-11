@@ -1,6 +1,6 @@
 # Cancelación de orden
 
-![Designer Cancellations 00](../../../../../../images/designer_cancellations_00.png)
+![Captura de Cancelación de orden](../../../../../../images/designer_cancellations_00.png)
 
 Este bloque se usa para cancelar una orden de un instrumento.
 

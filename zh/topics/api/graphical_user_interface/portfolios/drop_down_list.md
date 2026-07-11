@@ -2,7 +2,7 @@
 
 [PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) 是一个用于组合投资选择的组合框。
 
-![Gui PortfolioComboBox](../../../../images/gui_portfoliocombobox.png)
+![下拉列表 截图](../../../../images/gui_portfoliocombobox.png)
 
 **主要属性**
 

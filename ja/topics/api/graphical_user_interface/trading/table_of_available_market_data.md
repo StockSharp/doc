@@ -2,7 +2,7 @@
 
 [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) - 利用可能なマーケットデータを表示するテーブルです。
 
-![API GUI MarketDataGrid](../../../../images/api_gui_marketdatagrid.png)
+![利用可能なマーケットデータのテーブル のスクリーンショット](../../../../images/api_gui_marketdatagrid.png)
 
 以下は、[MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) テーブルを画面フォームに追加するコード例です。
 

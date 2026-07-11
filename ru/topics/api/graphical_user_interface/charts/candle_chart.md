@@ -4,7 +4,7 @@
 
 Ниже приведен пример построения графика при помощи компонента [Chart](xref:StockSharp.Xaml.Charting.Chart). За основу взят пример из Samples\/02\_Candles\/01\_Realtime, в который внесены некоторые изменения.
 
-![Gui ChartSample](../../../../images/gui_chartsample.png)
+![Снимок экрана: Свечной график](../../../../images/gui_chartsample.png)
 
 ## Пример построения графика при помощи Chart
 

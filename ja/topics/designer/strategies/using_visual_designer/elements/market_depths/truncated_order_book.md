@@ -1,6 +1,6 @@
 # 深度制限付き板情報
 
-![Designer MarketDepthTruncateDiagramElement 00](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
+![深度制限付き板情報 のスクリーンショット](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
 
 このキューブは、指定された深度まで切り詰められた板情報を取得するために使用します。
 

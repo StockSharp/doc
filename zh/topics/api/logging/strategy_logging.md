@@ -68,7 +68,7 @@
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. 这是策略运行时的日志窗口： ![strategylogging](../../../images/strategy_logging.png)
+2. 这是策略运行时的日志窗口： ![策略记录 截图](../../../images/strategy_logging.png)
 
 ## 推荐内容
 

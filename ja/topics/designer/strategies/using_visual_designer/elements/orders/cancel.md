@@ -1,6 +1,6 @@
 # 注文キャンセル
 
-![Designer Cancellations 00](../../../../../../images/designer_cancellations_00.png)
+![注文キャンセル のスクリーンショット](../../../../../../images/designer_cancellations_00.png)
 
 このブロックは、銘柄の注文をキャンセルするために使用します。
 

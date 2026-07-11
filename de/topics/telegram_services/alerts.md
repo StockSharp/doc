@@ -35,7 +35,7 @@ Der von Ihnen erstellte Kanal ist nun für Ihre Strategien und Handelsroboter ve
 
   - Wenn Sie [Designer](../designer.md) verwenden, klicken Sie in der oberen Leiste auf die Kanalliste:
 
-  ![Designer Ribbon Channels](../../images/designerribbonchannels.png)
+  ![Benachrichtigungen Screenshot](../../images/designerribbonchannels.png)
 
   Im angezeigten Fenster sehen Sie Listen aller Kanäle und Gruppen, in denen Sie den Bot aktiviert haben:
 

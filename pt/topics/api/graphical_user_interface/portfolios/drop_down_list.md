@@ -2,7 +2,7 @@
 
 [PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) é uma caixa de combinação para selecionar portfólios.
 
-![Gui PortfolioComboBox](../../../../images/gui_portfoliocombobox.png)
+![Captura de tela de Lista pendente](../../../../images/gui_portfoliocombobox.png)
 
 **Propriedades principais**
 

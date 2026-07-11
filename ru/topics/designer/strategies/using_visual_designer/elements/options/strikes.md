@@ -1,6 +1,6 @@
 # Страйки
 
-![Designer Derivatives 00](../../../../../../images/designer_derivatives_00.png)
+![Снимок экрана: Страйки](../../../../../../images/designer_derivatives_00.png)
 
 Кубик используется для получения списка опционов по заданному фильтру.
 

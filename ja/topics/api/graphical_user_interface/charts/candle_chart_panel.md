@@ -4,7 +4,7 @@
 
 次の図は、コンポーネントの外観と、ツールバーボタンの機能を示しています。
 
-![Gui ChartPanel](../../../../images/gui_chartpanel.png)
+![ローソク足チャートパネル のスクリーンショット 1](../../../../images/gui_chartpanel.png)
 
 1 - 水平線;
 
@@ -20,7 +20,7 @@
 
 **ツールバー機能**
 
-![Gui ChartPanelTools](../../../../images/gui_chartpaneltools.png)
+![ローソク足チャートパネル のスクリーンショット 2](../../../../images/gui_chartpaneltools.png)
 
 1 - パネルを追加;
 

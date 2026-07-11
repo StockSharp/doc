@@ -4,4 +4,4 @@ Um mit dem Connector zu arbeiten, müssen Sie **Benutzername** und **Passwort** 
 
 Der Interaktionsmechanismus ist in dieser Abbildung dargestellt:
 
-![blackwood trader](../../../../../images/blackwood_trader.png)
+![Konfiguration Blackwood (Fusion) Screenshot](../../../../../images/blackwood_trader.png)

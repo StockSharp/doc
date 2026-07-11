@@ -1,6 +1,6 @@
 # Vergleich
 
-![Designer Comparison 00](../../../../../../images/designer_comparison_00.png)
+![Vergleich Screenshot](../../../../../../images/designer_comparison_00.png)
 
 Ein Element wird verwendet, um zwei Eingabeobjekte zu vergleichen.
 

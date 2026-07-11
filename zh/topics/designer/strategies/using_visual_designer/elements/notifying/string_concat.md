@@ -1,6 +1,6 @@
 # 字符串拼接
 
-![Designer String Concat 00](../../../../../../images/designer_string_concat_00.png)
+![字符串拼接 截图](../../../../../../images/designer_string_concat_00.png)
 
 该模块按照包含花括号占位符的模板，将多个传入值拼接成一个文本字符串。每个占位符名称都会添加一个同名输入端口。可以使用点号引用嵌套属性，并在冒号后指定格式。
 

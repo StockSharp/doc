@@ -2,7 +2,7 @@
 
 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - Um painel especial que permite registar rapidamente uma ordem aos melhores preços.
 
-![API GUI BuySell](../../../../images/api_gui_buysell.png)
+![Captura de tela de Painel Comprar/Vender](../../../../images/api_gui_buysell.png)
 
 Abaixo está um exemplo do código para adicionar o [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel).
 

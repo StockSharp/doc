@@ -1,6 +1,6 @@
 # Aktuelle Zeit
 
-![Designer time 00](../../../../../../images/designer_time_00.png)
+![Aktuelle Zeit Screenshot](../../../../../../images/designer_time_00.png)
 
 Dieser Block wird verwendet, um die aktuelle Uhrzeit zu erhalten.
 

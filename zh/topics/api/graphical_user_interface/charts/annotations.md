@@ -2,7 +2,7 @@
 
 [S#](../../../api.md) 提供了以文本、线条等形式向图表添加注释的功能。
 
-![ChartAnnotations](../../../../images/chartannotations.png)
+![注释 截图](../../../../images/chartannotations.png)
 
 添加注释与向图表添加其他信息的方式相同。首先你需要创建 [ChartAnnotation](xref:StockSharp.Xaml.Charting.ChartAnnotation) 并将其添加到图表区域：
 

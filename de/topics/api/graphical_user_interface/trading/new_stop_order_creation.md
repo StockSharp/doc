@@ -2,7 +2,7 @@
 
 [OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) - das Fenster zum Erstellen einer bedingten Order.
 
-![GUI OrderConditionalWindow](../../../../images/gui_orderconditionalwindow.png)
+![Erstellen einer neuen Stop-Order Screenshot](../../../../images/gui_orderconditionalwindow.png)
 
 **Wichtigste Eigenschaften**
 

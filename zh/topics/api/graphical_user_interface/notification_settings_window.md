@@ -2,7 +2,7 @@
 
 [AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - 配置特定事件通知的窗口
 
-![API GUI AlertWindow](../../../images/api_gui_alertwindow.png)
+![通知设置窗口 截图](../../../images/api_gui_alertwindow.png)
 
 您可以配置有关以下数据类型变更的通知：投资组合、客户代码、经纪商、托管机构、服务器时间、交易、数据类型、取消、订单ID、订单ID（字符串）、订单ID（平台）、衍生品、衍生品（字符串）、价格、成交量（订单）、成交量（交易）、可见成交量、方向、余额、订单类型、状态、备注、订单信息、系统订单、订单到期时间、执行条件、价格、交易发起者、未平仓合约、错误、条件、上升趋势、佣金、延迟、滑点、标识符（用户）、货币、盈亏、持仓、做市商。
 

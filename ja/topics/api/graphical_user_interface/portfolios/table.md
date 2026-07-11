@@ -2,7 +2,7 @@
 
 [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid) は、ポートフォリオとポジションの状態を表示するコンポーネントです。 
 
-![GUI PortfolioGrid](../../../../images/gui_portfoliogrid.png)
+![テーブル のスクリーンショット](../../../../images/gui_portfoliogrid.png)
 
 **主なプロパティ**
 

@@ -32,7 +32,7 @@
 
 **条件付き注文** - 現在の市場状況に基づいて取引システムへの発注タイミングを決定する追加条件を持つ注文。
 
-![Designer Conditional Application](../../../../../../images/designer_conditional_application.png)
+![注文登録 のスクリーンショット](../../../../../../images/designer_conditional_application.png)
 
 - **接続** - 注文が発注される接続。
 - **ストップ注文タイプ** - ストップ注文のタイプ。

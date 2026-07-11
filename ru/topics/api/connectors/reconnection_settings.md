@@ -2,7 +2,7 @@
 
 Все коннекторы предоставляют возможность настраивать переподключение на случай разрыва соединения. В графическом элементе [Окно настройки подключений](../graphical_user_interface/connection_settings_window.md) это выглядит следующим образом: 
 
-![API GUI ReconnectionSettings](../../../images/api_gui_reconnectionsettings.png)
+![Снимок экрана: Настройки переподключения 1](../../../images/api_gui_reconnectionsettings.png)
 
 **Свойства переподключения**
 
@@ -32,10 +32,10 @@
    ```
 2. Чтобы проверить, как работает механизм контроля соединения, можно выключить подключение к Интернету: 
 
-   ![transactions](../../../images/transactions.png)
+   ![Снимок экрана: Настройки переподключения 2](../../../images/transactions.png)
 3. Ниже приведен лог программы, в котором видно, что приложение изначально находится в подключенном состоянии, а после выключения интернета приложение пытается переподключиться. После восстановления интернета восстанавливается подключение приложения: 
 
-   ![API ReconnectionLog](../../../images/api_reconnectionlog.png)
+   ![Снимок экрана: Настройки переподключения 3](../../../images/api_reconnectionlog.png)
 4. Так как в [Connector](xref:StockSharp.Algo.Connector) может использоваться несколько подключений, то по умолчанию события связанные с переподключением такие как [Restored](xref:StockSharp.Algo.Connector.ConnectionRestored) не вызываются, а адаптеры подключений самостоятельно пытаются переподключиться. Для того чтобы событие начало вызываться необходимо у адаптера выставить свойство [BasketMessageAdapter.SuppressReconnectingErrors](xref:StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors) в **false**. 
 
    ```cs

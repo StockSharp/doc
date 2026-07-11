@@ -1,6 +1,6 @@
 # 数式
 
-![Designer Universal formula 00](../../../../../../images/designer_universal_formula_00.png)
+![数式 のスクリーンショット](../../../../../../images/designer_universal_formula_00.png)
 
 このキューブは、任意の数の引数を持つ数式を計算するために使用します。利用可能な一覧から数式を選択することも、独自の数式を記述することもできます。独自の数式を記述する場合、入力ソケットの数は自動的に決定されます。
 

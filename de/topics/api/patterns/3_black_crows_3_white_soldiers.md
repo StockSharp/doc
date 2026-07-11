@@ -13,7 +13,7 @@ Das Muster 3 Black Crows besteht aus drei aufeinanderfolgenden Candles, die inne
 - Candle-Größe und Schatten des Musters können das Risiko einer Umkehr in einen Pullback anzeigen.
 - Das Gegenmuster zu Three Black Crows ist Three White Soldiers, das eine Umkehr eines Abwärtstrends anzeigt.
 
-![IndicatorPattern3BC](../../../images/indicatorpattern3bc.png)
+![Drei schwarze Krähen und drei weiße Soldaten Screenshot 1](../../../images/indicatorpattern3bc.png)
 
 ### 3 White Soldiers
 
@@ -25,5 +25,5 @@ Three White Soldiers ist ein bullisches Candlestick-Muster, das zur Prognose ein
 - Die Größe der Candles und die Länge der Schatten werden verwendet, um einzuschätzen, ob ein Pullback-Risiko besteht.
 - Das Gegenmuster zu Three White Soldiers ist Three Black Crows, das eine Umkehr eines Aufwärtstrends anzeigt.
 
-![IndicatorPattern3WS](../../../images/indicatorpattern3ws.png)
+![Drei schwarze Krähen und drei weiße Soldaten Screenshot 2](../../../images/indicatorpattern3ws.png)
 

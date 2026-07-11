@@ -1,6 +1,6 @@
 # Precios de ejercicio
 
-![Designer Derivatives 00](../../../../../../images/designer_derivatives_00.png)
+![Captura de Precios de ejercicio](../../../../../../images/designer_derivatives_00.png)
 
 El cubo se usa para obtener una lista de opciones por un filtro especificado.
 

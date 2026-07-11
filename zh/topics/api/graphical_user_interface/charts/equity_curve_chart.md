@@ -4,7 +4,7 @@
 
 下面是使用该组件的示例。完整示例代码在 Samples/Testing/SampleHistoryTesting 中。
 
-![Gui EquityCurveChart](../../../../images/gui_equitycurvechart.png)
+![净值曲线图 截图](../../../../images/gui_equitycurvechart.png)
 
 ## 股权曲线图绘制示例
 

@@ -8,7 +8,7 @@
 
 Механизм взаимодействия показан на рисунке: 
 
-![IQFeed](../../../../images/iqfeed.jpg)
+![Снимок экрана: IQFeed 1](../../../../images/iqfeed.jpg)
 
 Для работы с коннектором **IQFeed** вам необходимо установить на компьютере роутер **IQ Feed Client**, который может быть установлен как на локальном компьютере, так и на удаленном. Обмен данными между клиентским приложением и **IQ Feed Client**, а также между **IQ Feed Client** и серверами производится посредством протокола TCP\/IP. 
 
@@ -18,11 +18,11 @@
 
 После установки **IQ Feed Client** необходимо запустить **IQLink Launcher**.
 
-![iQFeedIQLinkLauncher](../../../../images/iqfeediqlinklauncher.png)
+![Снимок экрана: IQFeed 2](../../../../images/iqfeediqlinklauncher.png)
 
 В открывшемся окне **IQLink Launcher** необходимо нажать **Start IQLink**. 
 
-![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
+![Снимок экрана: IQFeed 3](../../../../images/iqfeediqconnectlogin.png)
 
 В открывшемся окне **IQ Connect Login** необходимо ввести **Логин** и **Пароль** (или ПИН), полученные у сервиса **iQFeed**, в данном случае Логин и Пароль — это не Логин и Пароль от сайта **iQFeed**. После заполнения Логин и Пароль необходимо нажать **Connect** для подключения.
 

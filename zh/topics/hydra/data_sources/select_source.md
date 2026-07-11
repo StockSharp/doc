@@ -14,11 +14,11 @@
 
 还可以创建同一数据源的多个实例。例如，可以创建多个 **Interactive Brokers** 实例，并将下载的数据保存到不同文件夹。
 
-![hydra two sourse](../../../images/hydra_two_sourse.png)
+![选择数据源 截图 1](../../../images/hydra_two_sourse.png)
 
 要使数据源在单击 **开始** 按钮后开始下载数据，必须先启用该数据源。为此，请在左侧面板中选择数据源图标，并使用 ![hydra 数据源开关](../../../images/hydra_source_on_off.png) 按钮将其启用或禁用。可以在添加要下载的交易品种之前或之后执行此操作。
 
-可以使用 ![hydra delete](../../../images/hydra_delete.png) 按钮删除不需要的数据源。
+可以使用 ![选择数据源 截图 2](../../../images/hydra_delete.png) 按钮删除不需要的数据源。
 
 可以在右侧的 **属性** 面板中修改数据源设置。
 

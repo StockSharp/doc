@@ -1,6 +1,6 @@
 # 注文一括キャンセル
 
-![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
+![注文一括キャンセル のスクリーンショット](../../../../../../images/designer_mass_cancellations_00.png)
 
 このブロックは、銘柄のすべての注文をキャンセルするために使用します。
 

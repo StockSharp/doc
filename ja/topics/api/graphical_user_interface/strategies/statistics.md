@@ -2,7 +2,7 @@
 
 [StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) - ストラテジーのパラメーターと統計を表示するためのテーブルです。
 
-![GUI StrategiesStatisticsPanel](../../../../images/gui_strategiesstatisticspanel.png)
+![統計 のスクリーンショット](../../../../images/gui_strategiesstatisticspanel.png)
 
 **主なプロパティとメソッド**
 

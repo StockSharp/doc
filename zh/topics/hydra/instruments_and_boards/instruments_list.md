@@ -2,7 +2,7 @@
 
 在 General 选项卡中单击 **交易品种** 按钮后，会显示 **交易品种** 面板。该面板列出了所有可用交易品种及其市场数据。
 
-![hydra securitiesPanel 00](../../../images/hydra_securitiespanel_00.png)
+![交易品种列表 截图](../../../images/hydra_securitiespanel_00.png)
 
 **交易品种** 面板底部的按钮可用于：
 

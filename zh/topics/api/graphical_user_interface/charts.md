@@ -15,7 +15,7 @@
 
 下图显示了图形组件的主要元素。
 
-![Gui ChartElements](../../../images/gui_chartelements.png)
+![图表 截图](../../../images/gui_chartelements.png)
 
 ## 图形组件元素
 

@@ -20,7 +20,7 @@
 
 既存のパターンを編集したり、独自のカスタム パターンを追加したりすることもできます。これを行うには、![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png) ボタンをクリックします。すると、パターン編集ウィンドウが表示されます。
 
-![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
+![パターン のスクリーンショット](../../images/indicatorpatterncommon01.png)
 
 独自のパターンを作成するには、ウィンドウ上部の ![Designer プラスボタン](../../images/designer_panel_circuits_01_button.png) ボタンをクリックします。![Designer 削除ボタン](../../images/designer_delete_button.png) ボタンをクリックすると、パターンが削除されます。
 

@@ -11,7 +11,7 @@ S# は、利用可能なコネクタでサポートされている任意のブ�
 
 ### Designer
 
-![StockSharpTitle 0](images/stocksharptitle_0.png)
+![StockSharp について のスクリーンショット 1](images/stocksharptitle_0.png)
 
 [Designer](topics/designer.md) は、アルゴリズム取引戦略を作成するための汎用アプリケーションです:
 
@@ -27,7 +27,7 @@ S# は、利用可能なコネクタでサポートされている任意のブ�
 
 ### Hydra
 
-![StockSharpTitle 1](images/stocksharptitle_1.png)
+![StockSharp について のスクリーンショット 2](images/stocksharptitle_1.png)
 
 [Hydra](topics/hydra.md) は、過去およびリアルタイムのマーケットデータを自動的にダウンロードします:
 

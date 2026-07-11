@@ -2,7 +2,7 @@
 
 [OrderGrid](xref:StockSharp.Xaml.OrderGrid) 是用于显示订单和条件订单的表格。此外，该表格的上下文菜单包含用于订单操作的命令：订单注册、替换和取消。选择菜单项会分别生成事件：[OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering)、[OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) 或 [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling)。
 
-![GUI OrderGrid](../../../../images/gui_ordergrid.png)
+![订单 截图](../../../../images/gui_ordergrid.png)
 
 > [!TIP]
 > 操作本身（注册、替换、取消）不会执行。相应的代码需要在事件处理程序中手动编写。

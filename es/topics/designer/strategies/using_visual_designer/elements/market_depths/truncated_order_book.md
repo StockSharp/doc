@@ -1,6 +1,6 @@
 # Libro de órdenes truncado
 
-![Designer MarketDepthTruncateDiagramElement 00](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
+![Captura de Libro de órdenes truncado](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
 
 El cubo se usa para obtener un libro de órdenes truncado a una profundidad especificada.
 

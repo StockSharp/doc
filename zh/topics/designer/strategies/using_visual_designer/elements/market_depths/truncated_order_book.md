@@ -1,6 +1,6 @@
 # 截断市场深度
 
-![Designer MarketDepthTruncateDiagramElement 00](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
+![截断市场深度 截图](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
 
 该模块用于获取截断到指定深度的市场深度。
 

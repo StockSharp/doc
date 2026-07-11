@@ -2,7 +2,7 @@
 
 [AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - リスク管理を設定するための専用ウィンドウです。 
 
-![API GUI RiskWindow](../../../images/api_gui_riskwindow.png)
+![リスク設定ウィンドウ のスクリーンショット](../../../images/api_gui_riskwindow.png)
 
 以下は、ストラテジー用のリスク管理設定ウィンドウを呼び出すコード例です。 
 

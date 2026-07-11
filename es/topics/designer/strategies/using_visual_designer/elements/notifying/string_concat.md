@@ -1,6 +1,6 @@
 # Concatenación de cadenas
 
-![Designer String Concat 00](../../../../../../images/designer_string_concat_00.png)
+![Captura de Concatenación de cadenas](../../../../../../images/designer_string_concat_00.png)
 
 El cubo concatena varios valores entrantes en una sola cadena de texto según
 una plantilla con marcadores de posición entre llaves. Cada nombre de marcador añade un socket de entrada

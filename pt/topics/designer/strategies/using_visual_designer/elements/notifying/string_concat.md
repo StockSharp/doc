@@ -1,6 +1,6 @@
 # Concatenação de strings
 
-![Designer String Concat 00](../../../../../../images/designer_string_concat_00.png)
+![Captura de tela de Concatenação de strings](../../../../../../images/designer_string_concat_00.png)
 
 O cubo concatena vários valores recebidos numa única string de texto de acordo com
 um modelo com placeholders entre chavetas. Cada nome de placeholder adiciona um socket

@@ -20,7 +20,7 @@ Los patrones se dividen convencionalmente en:
 
 También es posible editar patrones existentes y agregar sus propios patrones personalizados. Para hacerlo, debe hacer clic en el botón ![Designer edit button](../../images/designer_creating_repository_of_historical_data_01.png), después de lo cual se mostrará la ventana de edición de patrones.
 
-![IndicatorPatternCommon01](../../images/indicatorpatterncommon01.png)
+![Captura de Patrones](../../images/indicatorpatterncommon01.png)
 
 Para crear su propio patrón, haga clic en el botón ![Designer botón Más](../../images/designer_panel_circuits_01_button.png) en la parte superior de la ventana. Al hacer clic en el botón ![Designer botón Eliminar](../../images/designer_delete_button.png), se elimina el patrón.
 

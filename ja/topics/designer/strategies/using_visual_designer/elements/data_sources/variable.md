@@ -1,6 +1,6 @@
 # 変数
 
-![Designer Variable 00](../../../../../../images/designer_variable_00.png)
+![変数 のスクリーンショット](../../../../../../images/designer_variable_00.png)
 
 このキューブは、値を保存し、以前に保存された値を要素のチェーンに沿ってさらに渡すために使用されます。
 

@@ -2,7 +2,7 @@
 
 General タブで **銘柄** ボタンをクリックすると、**銘柄** パネルが表示されます。**銘柄** パネルには、利用可能なすべての銘柄と、それらのマーケットデータが表示されます。
 
-![hydra securitiesPanel 00](../../../images/hydra_securitiespanel_00.png)
+![銘柄リスト のスクリーンショット](../../../images/hydra_securitiespanel_00.png)
 
 **銘柄** パネルの下部には、次の操作を行うためのボタンがあります。
 

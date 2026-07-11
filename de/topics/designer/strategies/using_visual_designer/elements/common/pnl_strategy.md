@@ -1,6 +1,6 @@
 # P&L-Strategie
 
-![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
+![P&L-Strategie Screenshot](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
 Das Element stellt P/L-Informationen der Strategie bereit.
 

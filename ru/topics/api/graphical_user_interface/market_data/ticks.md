@@ -1,6 +1,6 @@
 # Тиковые сделки
 
-![GUI TradeGrid](../../../../images/gui_tradegrid.png)
+![Снимок экрана: Тиковые сделки](../../../../images/gui_tradegrid.png)
 
 [TradeGrid](xref:StockSharp.Xaml.TradeGrid) - таблица сделок. 
 

@@ -2,7 +2,7 @@
 
 ニュースをインポートするには、アプリケーションのメイン メニューから **インポート \=\> ニュース** を選択します。
 
-![hydra import news](../../../images/hydra_import_news.png)
+![ニュース のスクリーンショット](../../../images/hydra_import_news.png)
 
 ## ニュースのインポート プロセス
 

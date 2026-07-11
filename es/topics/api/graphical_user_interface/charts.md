@@ -15,7 +15,7 @@ Además, [S#](../../api.md) incluye dos tipos de gráficos para el análisis de 
 
 La siguiente figura muestra los principales elementos del componente gráfico.
 
-![Gui ChartElements](../../../images/gui_chartelements.png)
+![Captura de Gráficos](../../../images/gui_chartelements.png)
 
 ## Elementos del componente gráfico
 

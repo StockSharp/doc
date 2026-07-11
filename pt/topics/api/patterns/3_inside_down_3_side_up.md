@@ -18,7 +18,7 @@ A versão ascendente do padrão é bullish, indicando que o movimento descendent
 3. A segunda vela é uma vela branca (ascendente) com um corpo pequeno, que abre e fecha dentro do corpo da primeira vela.
 4. A terceira vela é uma vela branca (ascendente), que fecha acima do fecho da segunda vela.
 
-![IndicatorPattern3IU](../../../images/indicatorpattern3iu.png)
+![Captura de tela de Padrão 3 Inside Down e 3 Inside Up 1](../../../images/indicatorpattern3iu.png)
 
 ### 3 Inside Down
 
@@ -31,7 +31,7 @@ A versão descendente do padrão é bearish. Mostra que o movimento ascendente d
 
 Estes padrões são essencialmente padrões harami seguidos por uma vela de confirmação, pela qual muitos traders aguardam no caso dos haramis.
 
-![IndicatorPattern3ID](../../../images/indicatorpattern3id.png)
+![Captura de tela de Padrão 3 Inside Down e 3 Inside Up 2](../../../images/indicatorpattern3id.png)
 
 ## Ver Também
 

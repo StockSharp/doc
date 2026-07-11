@@ -17,7 +17,7 @@ Dieses bullische Candlestick-Muster hat folgende Merkmale:
 3. Die zweite Candle ist bullisch mit langem Körper und umschließt die erste Candle vollständig.
 4. Die dritte Candle ist bullisch und schließt höher als die zweite Candle.
 
-![IndicatorPattern3OU](../../../images/indicatorpattern3ou.png)
+![3 Outside Down und 3 Outside Up Screenshot 1](../../../images/indicatorpattern3ou.png)
 
 ### 3 Outside Down
 
@@ -30,7 +30,7 @@ Diese Mustervariante ist ein bärisches Candlestick-Muster mit folgenden Merkmal
 
 Die erste Candle signalisiert den Beginn des Endes des vorherrschenden Trends, da die zweite Candle die erste umschließt. Die dritte Candle signalisiert anschließend eine Beschleunigung der Umkehr.
 
-![IndicatorPattern3oD](../../../images/indicatorpattern3od.png)
+![3 Outside Down und 3 Outside Up Screenshot 2](../../../images/indicatorpattern3od.png)
 
 ## Siehe auch
 

@@ -2,7 +2,7 @@
 
 [StrategiesStatisticsPanel](xref:StockSharp.Xaml.StrategiesStatisticsPanel) - 是一个用于显示策略参数和统计信息的表格。
 
-![GUI StrategiesStatisticsPanel](../../../../images/gui_strategiesstatisticspanel.png)
+![统计 截图](../../../../images/gui_strategiesstatisticspanel.png)
 
 **主要属性和方法**
 

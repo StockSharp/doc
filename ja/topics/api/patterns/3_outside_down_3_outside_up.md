@@ -17,7 +17,7 @@
 3. 2 本目のローソク足は、長い実体を持つ強気のローソク足で、1 本目のローソク足を完全に包み込みます。
 4. 3 本目のローソク足は強気で、2 本目のローソク足より高い終値を付けます。
 
-![IndicatorPattern3OU](../../../images/indicatorpattern3ou.png)
+![3 Outside Down と 3 Outside Up パターン のスクリーンショット 1](../../../images/indicatorpattern3ou.png)
 
 ### 3 Outside Down
 
@@ -30,7 +30,7 @@
 
 2 本目のローソク足が 1 本目を包み込むため、1 本目のローソク足は支配的なトレンドの終わりの始まりを示します。その後、3 本目のローソク足は反転の加速を示します。
 
-![IndicatorPattern3oD](../../../images/indicatorpattern3od.png)
+![3 Outside Down と 3 Outside Up パターン のスクリーンショット 2](../../../images/indicatorpattern3od.png)
 
 ## 関連項目
 

@@ -2,7 +2,7 @@
 
 [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow) é uma janela para selecionar um portfólio. A janela apresenta uma lista de portfólios e informações sobre as posições de caixa dos portfólios.
 
-![GUI PortfolioPickerWindow](../../../../images/gui_portfoliopickerwindow.png)
+![Captura de tela de Janela de seleção de portfólio](../../../../images/gui_portfoliopickerwindow.png)
 
 **Propriedades principais**
 

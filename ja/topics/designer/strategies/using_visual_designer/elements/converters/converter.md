@@ -1,6 +1,6 @@
 # コンバーター
 
-![Designer Converter 00](../../../../../../images/designer_converter_00.png)
+![コンバーター のスクリーンショット](../../../../../../images/designer_converter_00.png)
 
 このキューブは、複合オブジェクトを単純なデータ型に変換するために使用されます。たとえば、銘柄の価格ステップ値を取得できます。
 

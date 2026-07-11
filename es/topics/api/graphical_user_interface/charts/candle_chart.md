@@ -4,7 +4,7 @@
 
 A continuación se muestra un ejemplo de construcción de un gráfico usando el componente [Chart](xref:StockSharp.Xaml.Charting.Chart). El ejemplo se basa en Samples\/02\_Candles\/01\_Realtime, con algunas modificaciones.
 
-![Gui ChartSample](../../../../images/gui_chartsample.png)
+![Captura de Gráfico de velas](../../../../images/gui_chartsample.png)
 
 ## Ejemplo de construcción de un gráfico con Chart
 

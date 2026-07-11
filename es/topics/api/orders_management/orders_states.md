@@ -18,7 +18,7 @@ StockSharp API proporciona la posibilidad de recibir información sobre órdenes
 
 Durante su vida, una orden pasa por los siguientes estados:
 
-![OrderStates](../../../images/orderstates.png)
+![Captura de Estados de órdenes](../../../images/orderstates.png)
 
 - [OrderStates.None](xref:StockSharp.Messages.OrderStates.None) - la orden se ha creado en el algoritmo de trading pero aún no se ha enviado para registro.
 - [OrderStates.Pending](xref:StockSharp.Messages.OrderStates.Pending) - la orden se ha enviado para registro ([RegisterOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder(StockSharp.BusinessEntities.Order)). El sistema está esperando confirmación de su aceptación por parte del exchange. Si la aceptación es correcta, se desencadenará el evento [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived) y la orden pasará al estado [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active). También se inicializarán las propiedades [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) y [Order.ServerTime](xref:StockSharp.BusinessEntities.Order.ServerTime). Si la orden se rechaza, se desencadenará el evento [OrderRegisterFailReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderRegisterFailReceived) con una descripción del error, y la orden pasará al estado [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed).

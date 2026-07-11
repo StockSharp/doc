@@ -2,7 +2,7 @@
 
 [MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid) - 一个用于显示自己交易的表格。
 
-![GUI MytradeGrid](../../../../images/gui_mytradegrid.png)
+![自有交易 截图](../../../../images/gui_mytradegrid.png)
 
 **主要成员**
 

@@ -11,7 +11,7 @@ S# funciona con cualquier broker, bolsa o fuente de datos compatible con los con
 
 ### Designer
 
-![StockSharpTitle 0](images/stocksharptitle_0.png)
+![Captura de Acerca de StockSharp 1](images/stocksharptitle_0.png)
 
 [Designer](topics/designer.md) es una aplicación universal para crear estrategias de trading algorítmico:
 
@@ -27,7 +27,7 @@ S# funciona con cualquier broker, bolsa o fuente de datos compatible con los con
 
 ### Hydra
 
-![StockSharpTitle 1](images/stocksharptitle_1.png)
+![Captura de Acerca de StockSharp 2](images/stocksharptitle_1.png)
 
 [Hydra](topics/hydra.md) descarga automáticamente datos de mercado históricos y en tiempo real:
 

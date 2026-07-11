@@ -1,6 +1,6 @@
 # Массовая отмена заявок
 
-![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
+![Снимок экрана: Массовая отмена заявок](../../../../../../images/designer_mass_cancellations_00.png)
 
 Кубик используется для отмены всех заявок по инструменту.
 

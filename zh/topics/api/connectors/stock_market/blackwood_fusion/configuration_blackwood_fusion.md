@@ -4,4 +4,4 @@
 
 交互机制如图所示：
 
-![blackwood trader](../../../../../images/blackwood_trader.png)
+![Blackwood (Fusion) 配置 截图](../../../../../images/blackwood_trader.png)

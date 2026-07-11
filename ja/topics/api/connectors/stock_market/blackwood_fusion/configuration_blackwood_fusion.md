@@ -4,5 +4,5 @@
 
 連携メカニズムは次の図に示されています。 
 
-![blackwood trader](../../../../../images/blackwood_trader.png)
+![Blackwood (Fusion) の設定 のスクリーンショット](../../../../../images/blackwood_trader.png)
 

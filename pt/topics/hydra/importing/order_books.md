@@ -2,7 +2,7 @@
 
 Para importar livros de ordens, selecione o item **Importar \=\> Livros de ordens** no menu principal da aplicação.
 
-![hydra import depths](../../../images/hydra_import_depths.png)
+![Captura de tela de Livros de ordens](../../../images/hydra_import_depths.png)
 
 ## Processo de importação.
 

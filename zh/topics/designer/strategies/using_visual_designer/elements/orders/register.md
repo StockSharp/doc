@@ -32,7 +32,7 @@
 
 **条件单** – 带有附加条件的订单。这些条件根据当前市场状况决定何时将订单提交到交易系统。
 
-![Designer Conditional Application](../../../../../../images/designer_conditional_application.png)
+![注册订单 截图](../../../../../../images/designer_conditional_application.png)
 
 - **连接** – 用于提交订单的连接。
 - **止损订单类型** – 止损订单的类型。

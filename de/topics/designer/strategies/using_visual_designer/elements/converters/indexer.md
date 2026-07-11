@@ -1,6 +1,6 @@
 # Indexer
 
-![Designer Indexer 00](../../../../../../images/designer_indexer_00.png)
+![Indexer Screenshot](../../../../../../images/designer_indexer_00.png)
 
 Das Element wird verwendet, um ein Element aus einer Sammlung mit dem angegebenen Index abzurufen.
 

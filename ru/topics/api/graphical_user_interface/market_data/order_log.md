@@ -1,6 +1,6 @@
 # Лог заявок
 
-![GUI orderlog](../../../../images/gui_orderlog.png)
+![Снимок экрана: Лог заявок](../../../../images/gui_orderlog.png)
 
 [OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - графический компонент для отображения лога заявок ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)). 
 

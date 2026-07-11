@@ -2,7 +2,7 @@
 
 BoxChart ist ein spezieller Diagrammtyp zur Anzeige von Volumina als Zahlengitter. Um diesen Diagrammtyp zu verwenden, müssen Sie den speziellen Stil [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.BoxVolume](xref:StockSharp.Charting.ChartCandleDrawStyles.BoxVolume) setzen. Dieses Diagramm verwendet die Informationen aus der Eigenschaft [PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) als Quelldaten.
 
-![Gui BoxChart](../../../../images/gui_boxchart.png)
+![Box-Chart Screenshot](../../../../images/gui_boxchart.png)
 
 **Haupteigenschaften**
 

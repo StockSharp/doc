@@ -1,6 +1,6 @@
 # 期权做市
 
-![Designer Quoting 00](../../../../../../images/designer_quoting_00.png)
+![期权做市 截图](../../../../../../images/designer_quoting_00.png)
 
 该模块用于按照指定参数对期权进行报价。
 

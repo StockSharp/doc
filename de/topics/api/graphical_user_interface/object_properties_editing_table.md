@@ -2,7 +2,7 @@
 
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) - eine Tabelle zum Bearbeiten von Objekteigenschaften. Die Komponente enthält zusätzliche Editoren für Systemtypen und [S#](../../api.md)-Typen.
 
-![GUI PropertyDataGridEx](../../../images/gui_propertydatagridex.png)
+![Tabelle zum Bearbeiten von Objekteigenschaften Screenshot](../../../images/gui_propertydatagridex.png)
 
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) hat eigene Editoren für die folgenden Typen:
 

@@ -2,7 +2,7 @@
 
 銘柄をインポートするには、**インポート \=\> 銘柄** タブを選択します。
 
-![hydra import securities](../../../images/hydra_import_securities.png)
+![銘柄 のスクリーンショット 1](../../../images/hydra_import_securities.png)
 
 ## インポート プロセス。
 
@@ -25,8 +25,8 @@
    - {PriceStep} フィールドについては、**S# フィールド** ウィンドウから **額面** フィールドを選択し、値 2 を割り当てます。
    - {SecurityType} フィールドについては、**S# フィールド** ウィンドウから **種類** フィールド、つまり銘柄タイプ（株式、通貨、先物など）を選択します。値 3 を割り当てます。
    - {VolumeStep} フィールドについては、**S# フィールド** ウィンドウから **最小数量（ベース）** フィールド、つまり基本または最小銘柄数量を選択します。値 4 を割り当てます
-   - フィールド設定ウィンドウは次のようになります:![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
+   - フィールド設定ウィンドウは次のようになります:![銘柄 のスクリーンショット 2](../../../images/hydra_import_prop_securitiy.png)
 
    ユーザーは、ダウンロードされたデータに対して多数のプロパティを設定できます。インポートするファイル テンプレートに基づいて、プロパティを指定し、シーケンス内の必要な番号を割り当てる必要があります。
-3. データをプレビューするには、**プレビュー** ボタンをクリックします。![hydra import preview securitiy](../../../images/hydra_import_preview_securitiy.png)
+3. データをプレビューするには、**プレビュー** ボタンをクリックします。![銘柄 のスクリーンショット 3](../../../images/hydra_import_preview_securitiy.png)
 4. **インポート** ボタンをクリックします。

@@ -6,7 +6,7 @@ Para isso, no separador **Comum**, clique num dos seguintes botões: [Ticks](vie
 
 Ou clique com o botão direito do rato no tipo de dados necessário, como mostrado na figura, ou faça duplo clique no tipo de dados necessário.
 
-![hydra view export](../../../images/hydra_view_export.png)
+![Captura de tela de Visualizar e exportar 1](../../../images/hydra_view_export.png)
 
 Cada painel contém uma interface geral das definições, como se segue:
 
@@ -14,10 +14,10 @@ Cada painel contém uma interface geral das definições, como se segue:
 
 - A linha superior indica o armazenamento de dados de mercado e o respetivo formato (BIN ou CSV).
 - A linha inferior define o período para o qual os dados serão solicitados. Ao clicar no botão **Selecionar instrumento**, aparecerá a janela de seleção de instrumentos, na qual pode selecionar um ou vários instrumentos. Se forem selecionados vários instrumentos, durante a exportação posterior para Excel ou CSV o programa ordenará automaticamente os dados dos diferentes instrumentos para ficheiros diferentes.
-- Se, ao construir uma tabela com dados, a quantidade de dados descarregados exceder o limite definido, aparecerá uma janela no ecrã:![hydra tick limit](../../../images/hydra_tick_limit.png)
+- Se, ao construir uma tabela com dados, a quantidade de dados descarregados exceder o limite definido, aparecerá uma janela no ecrã:![Captura de tela de Visualizar e exportar 2](../../../images/hydra_tick_limit.png)
 
   é necessário aumentar o limite de dados descarregados.
-- Se os dados tiverem sido recebidos de origens cujo fuso horário não corresponda ao fuso horário atual, pode ajustar o fuso horário. Depois da construção, os dados serão mostrados no fuso selecionado pelo utilizador. ![hydra TZ](../../../images/hydra_tz.png)
+- Se os dados tiverem sido recebidos de origens cujo fuso horário não corresponda ao fuso horário atual, pode ajustar o fuso horário. Depois da construção, os dados serão mostrados no fuso selecionado pelo utilizador. ![Captura de tela de Visualizar e exportar 3](../../../images/hydra_tz.png)
 - Como várias origens não oferecem a possibilidade de descarregar alguns dados, o programa disponibiliza o campo [Construir a partir de](any_market_data_types.md). Usando este campo, o utilizador pode construir dados de mercado a partir de outro tipo de dados de mercado. A mesma função pode ser usada para construir dados de mercado sem descarregamento adicional, usando como base dados já existentes.
 - Depois de selecionar os parâmetros acima, deve clicar no botão ![Hydra botão Procurar](../../../images/hydra_find.png).![Hydra candles por período](../../../images/hydra_candles_tf.png)
 

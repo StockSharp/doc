@@ -2,7 +2,7 @@
 
 [OrderGrid](xref:StockSharp.Xaml.OrderGrid) は、注文および条件付き注文を表示するためのテーブルです。さらに、このテーブルのコンテキストメニューには、注文に対する操作（注文の登録、差し替え、キャンセル）のコマンドが含まれています。メニュー項目を選択すると、それぞれ [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering)、[OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering)、または [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) イベントが生成されます。
 
-![GUI OrderGrid](../../../../images/gui_ordergrid.png)
+![注文 のスクリーンショット](../../../../images/gui_ordergrid.png)
 
 > [!TIP]
 > 操作そのもの（登録、差し替え、キャンセル）は実行されません。対応するコードをイベントハンドラー内に手動で記述する必要があります。

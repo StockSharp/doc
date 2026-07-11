@@ -6,7 +6,7 @@
 
 在窗口中勾选所需的数据源。可以按地区、交易板、数据类型、付费方式以及是否提供实时数据进行筛选。选择完成后，单击 **确定**。随后程序会询问是否启用实用工具。有关实用工具的详细信息，请参阅[实用工具](tasks.md)。单击 **确定**。
 
-![hydra first started utilities 00](../../images/hydra_first_started_utilities00.png)
+![首次启动 截图 1](../../images/hydra_first_started_utilities00.png)
 
 之后，所选数据源会添加到应用程序主窗口的左侧面板。
 
@@ -29,7 +29,7 @@
 
    首次启动时，程序会询问是否立即下载所选数据源的全部交易品种。之后需要由用户自行下载交易品种。最初，[Hydra](../hydra.md) 的交易品种数据库为空，仅包含辅助交易品种 **ALL@ALL**。选择该交易品种后，程序会下载当前数据源中所有可用交易品种的数据。
 
-   要添加交易品种，请单击 **添加** 按钮 ![Hydra 添加按钮](../../images/hydra_add.png)。随后会打开交易品种下载窗口。![hydra securities](../../images/hydra_securities.png)
+   要添加交易品种，请单击 **添加** 按钮 ![Hydra 添加按钮](../../images/hydra_add.png)。随后会打开交易品种下载窗口。![首次启动 截图 2](../../images/hydra_securities.png)
 
    要下载交易品种，请单击相应的 **下载交易品种** 按钮。
 
@@ -48,7 +48,7 @@
    所选交易品种会显示在树形结构的 **交易品种** 表格中。树的主元素是交易品种，子元素是要为该交易品种接收的市场数据类型。
 2. 为每个所选交易品种选择需要下载的市场数据类型。
 
-   如果尚未设置全部必要的交易品种参数，交易品种行左侧会显示图标 ![hydra zero](../../images/hydra_zero.png)。![hydra 选择市场数据类型](../../images/hydra_type_market_data_choose.png)
+   如果尚未设置全部必要的交易品种参数，交易品种行左侧会显示图标 ![首次启动 截图 3](../../images/hydra_zero.png)。![hydra 选择市场数据类型](../../images/hydra_type_market_data_choose.png)
 
    下面选择下载 **逐笔成交** 和 **5 分钟K线**。
 

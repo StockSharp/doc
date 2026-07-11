@@ -2,7 +2,7 @@
 
 [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow) es una ventana para seleccionar un portafolio. La ventana muestra una lista de portafolios e información sobre las posiciones de efectivo de los portafolios.
 
-![GUI PortfolioPickerWindow](../../../../images/gui_portfoliopickerwindow.png)
+![Captura de Ventana de selección de portafolios](../../../../images/gui_portfoliopickerwindow.png)
 
 **Propiedades principales**
 

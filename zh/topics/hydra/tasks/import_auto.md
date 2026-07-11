@@ -4,13 +4,13 @@
 
 每种所选市场数据类型的模板都在[导入](../importing.md)选项卡中配置。
 
-![hydra tasks import](../../../images/hydra_tasks_import.png)
+![自动导入 截图 1](../../../images/hydra_tasks_import.png)
 
 在面板底部，可以选择要导入数据的交易品种以及要导入的数据类型。
 
 可以为每个交易品种指定以下数据导入属性：
 
-![hydra tasks proper import](../../../images/hydra_tasks_proper_import.png)
+![自动导入 截图 2](../../../images/hydra_tasks_proper_import.png)
 
 **导入（自动）**
 

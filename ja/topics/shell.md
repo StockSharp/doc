@@ -4,7 +4,7 @@
 
 GUI（Graphical User Interface）をゼロから構築する必要はありません。Shell には、テスト、取引、データソースへの接続、チャート、ポートフォリオ、ポジション、注文、取引の表示に必要な基本機能が含まれています。
 
-![Shell Title 00](../images/shell_title_00.png)
+![Shell のスクリーンショット](../images/shell_title_00.png)
 
 取引ロボットシェルの主な機能:
 

@@ -2,7 +2,7 @@
 
 要导入订单簿，请在应用程序主菜单中选择 **导入 \=\> 订单簿**。
 
-![hydra import depths](../../../images/hydra_import_depths.png)
+![订单簿 截图](../../../images/hydra_import_depths.png)
 
 ## 导入过程
 

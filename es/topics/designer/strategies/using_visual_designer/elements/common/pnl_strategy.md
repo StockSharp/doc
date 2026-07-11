@@ -1,6 +1,6 @@
 # Estrategia P&L
 
-![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
+![Captura de Estrategia P&L](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
 Documentación eng RemoteManager
 

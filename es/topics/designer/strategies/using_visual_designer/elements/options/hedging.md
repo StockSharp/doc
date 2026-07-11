@@ -1,6 +1,6 @@
 # Cobertura
 
-![Designer Hedging 00](../../../../../../images/designer_hedging_00.png)
+![Captura de Cobertura](../../../../../../images/designer_hedging_00.png)
 
 El cubo se usa para cubrir posiciones en opciones.
 

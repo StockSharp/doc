@@ -1,6 +1,6 @@
 # 是否允许交易
 
-![Designer TradeAllowedDiagramElement 00](../../../../../../images/designer_tradealloweddiagramelement_00.png)
+![是否允许交易 截图](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
 该模块用于检查当前是否允许交易。检查内容包括以下条件：
 

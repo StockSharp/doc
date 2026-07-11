@@ -35,7 +35,7 @@
 
   - 使用 [Designer](../designer.md) 时，单击顶部面板中的频道列表：
 
-  ![Designer Ribbon Channels](../../images/designerribbonchannels.png)
+  ![通知 截图](../../images/designerribbonchannels.png)
 
   打开的窗口会列出所有已激活机器人的频道和群组：
 

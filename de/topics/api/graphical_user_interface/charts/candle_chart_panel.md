@@ -4,7 +4,7 @@
 
 Die folgenden Abbildungen zeigen das Aussehen der Komponente sowie die Funktionen der Schaltflächen in der Symbolleiste.
 
-![Gui ChartPanel](../../../../images/gui_chartpanel.png)
+![Kerzendiagramm-Panel Screenshot 1](../../../../images/gui_chartpanel.png)
 
 1 - Horizontale Linie;
 
@@ -20,7 +20,7 @@ Die folgenden Abbildungen zeigen das Aussehen der Komponente sowie die Funktione
 
 **Funktionen der Symbolleiste**
 
-![Gui ChartPanelTools](../../../../images/gui_chartpaneltools.png)
+![Kerzendiagramm-Panel Screenshot 2](../../../../images/gui_chartpaneltools.png)
 
 1 - Panel hinzufügen;
 

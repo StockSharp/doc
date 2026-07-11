@@ -15,7 +15,7 @@
 
 **新しい接続文字列**
 
-![hydra tasks connstring](../../../images/hydra_tasks_connstring.png)
+![エクスポート（自動） のスクリーンショット](../../../images/hydra_tasks_connstring.png)
 
 - **プロバイダー** - プロバイダー設定。
 - **サーバー** - サーバーアドレスまたはデータベースへのパス。

@@ -8,7 +8,7 @@ Antes de começar a escrever robôs de negociação para esta plataforma de nego
 
 O mecanismo de interação é apresentado nesta figura:
 
-![IQFeed](../../../../images/iqfeed.jpg)
+![Captura de tela de IQFeed 1](../../../../images/iqfeed.jpg)
 
 Para trabalhar com o conector **IQFeed**, tem de instalar o router **IQ Feed Client** no computador, que pode ser instalado tanto no computador local como num computador remoto. A troca de dados entre a aplicação cliente e o **IQ Feed Client**, bem como entre o **IQ Feed Client** e os servidores, é efetuada através do protocolo TCP\/IP.
 
@@ -18,11 +18,11 @@ Depois de instalar o **IQ Feed Client**, recomenda-se reiniciar o computador.
 
 Depois de instalar o **IQ Feed Client, IQLink Launcher** tem de ser iniciado.
 
-![iQFeedIQLinkLauncher](../../../../images/iqfeediqlinklauncher.png)
+![Captura de tela de IQFeed 2](../../../../images/iqfeediqlinklauncher.png)
 
 Na janela **IQLink Launcher** que se abre, clique em **Start IQLink**.
 
-![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
+![Captura de tela de IQFeed 3](../../../../images/iqfeediqconnectlogin.png)
 
 Na janela **IQ Connect Login** aberta, introduza o **nome de utilizador** e a **palavra-passe** (ou PIN) recebidos do serviço **iQFeed**. Estas credenciais não são as mesmas que o Login e a Password do site **iQFeed**. Depois de introduzir as credenciais, clique em **Connect**.
 

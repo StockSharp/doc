@@ -2,7 +2,7 @@
 
 [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid) 是一个显示投资组合和持仓状态的组件。
 
-![GUI PortfolioGrid](../../../../images/gui_portfoliogrid.png)
+![桌子 截图](../../../../images/gui_portfoliogrid.png)
 
 **主要属性**
 

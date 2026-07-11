@@ -1,6 +1,6 @@
 # 订单日志
 
-![GUI orderlog](../../../../images/gui_orderlog.png)
+![订单日志 截图](../../../../images/gui_orderlog.png)
 
 [OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - 一个用于显示订单日志的图形组件 ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem))。
 

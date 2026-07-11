@@ -2,7 +2,7 @@
 
 BoxChart は、出来高を数値グリッドの形式で表示するための特殊な種類のチャートです。このチャートタイプを使用するには、特別なスタイル [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.BoxVolume](xref:StockSharp.Charting.ChartCandleDrawStyles.BoxVolume) を設定する必要があります。このチャートは、[PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) プロパティの情報をソースデータとして使用します。
 
-![Gui BoxChart](../../../../images/gui_boxchart.png)
+![ボックスチャート のスクリーンショット](../../../../images/gui_boxchart.png)
 
 **主なプロパティ**
 

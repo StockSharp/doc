@@ -10,13 +10,13 @@
 
 1. 連続先物契約を作成するには、**すべての銘柄** タブで **銘柄を作成 \=\> 連続銘柄** ボタンをクリックします。![Hydra 結合データチェック 00](../../../images/hydragluingcheckdata_00.png)
 
-   その後、次のウィンドウが表示されます。![HydraGluingWindow](../../../images/hydragluingwindow.png)
+   その後、次のウィンドウが表示されます。![連続先物 のスクリーンショット 1](../../../images/hydragluingwindow.png)
 2. 連続先物を作成するには、名前を指定して限月を追加する必要があります。
 
    限月を追加する方法は 2 つあります。
    - ![Hydra 追加ボタン](../../../images/hydra_add.png) ボタンをクリックして手動で追加します。![Hydra カスタム連続先物](../../../images/hydragluingcscustom.png)
-   - たとえば RI のように、限月の先頭 2 文字を名前として設定して **自動** ボタンをクリックすると、データベース内で見つかったすべての銘柄が追加されます。![HydraGluingCSAuto](../../../images/hydragluingcsauto.png)
-3. 必要な限月を選択し、その移行日を設定します。 ![Hydra GluingCSAuto 00](../../../images/hydragluingcsauto_00.png)
+   - たとえば RI のように、限月の先頭 2 文字を名前として設定して **自動** ボタンをクリックすると、データベース内で見つかったすべての銘柄が追加されます。![連続先物 のスクリーンショット 2](../../../images/hydragluingcsauto.png)
+3. 必要な限月を選択し、その移行日を設定します。 ![連続先物 のスクリーンショット 3](../../../images/hydragluingcsauto_00.png)
 4. 次に、銘柄識別子 **ES\_continuous@CME** を割り当て、**OK** ボタンをクリックします。その後、新しい銘柄が作成されます。
 5. 次に、**共通** タブの [ローソク足](../working_with_data/view_and_export/candles.md) ボタンをクリックし、作成された銘柄とデータ期間を選択し、**作成元** フィールドで **複合要素** の値を設定してから、![Hydra 検索ボタン](../../../images/hydra_find.png) ボタンをクリックします。 ![Hydra 連続先物の約定](../../../images/hydragluingtrades.png)
 

@@ -68,7 +68,7 @@ La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementa la inte
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Esta es la ventana de log cuando la estrategia está funcionando: ![strategylogging](../../../images/strategy_logging.png)
+2. Esta es la ventana de log cuando la estrategia está funcionando: ![Captura de Logging de estrategias](../../../images/strategy_logging.png)
 
 ## Contenido recomendado
 

@@ -2,7 +2,7 @@
 
 [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid) es un componente que muestra el estado de portafolios y posiciones. 
 
-![GUI PortfolioGrid](../../../../images/gui_portfoliogrid.png)
+![Captura de Tabla](../../../../images/gui_portfoliogrid.png)
 
 **Propiedades principales**
 

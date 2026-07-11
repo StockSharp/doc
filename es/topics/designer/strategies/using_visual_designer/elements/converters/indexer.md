@@ -1,6 +1,6 @@
 # Indexador
 
-![Designer Indexer 00](../../../../../../images/designer_indexer_00.png)
+![Captura de Indexador](../../../../../../images/designer_indexer_00.png)
 
 El elemento se usa para obtener un elemento de una colección con el índice especificado.
 

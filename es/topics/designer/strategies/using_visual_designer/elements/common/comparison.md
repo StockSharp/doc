@@ -1,6 +1,6 @@
 # Comparación
 
-![Designer Comparison 00](../../../../../../images/designer_comparison_00.png)
+![Captura de Comparación](../../../../../../images/designer_comparison_00.png)
 
 El elemento se usa para comparar dos objetos de entrada.
 

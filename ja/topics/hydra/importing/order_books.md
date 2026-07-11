@@ -2,7 +2,7 @@
 
 板情報をインポートするには、アプリケーションのメイン メニューから **インポート \=\> 板情報** 項目を選択します。
 
-![hydra import depths](../../../images/hydra_import_depths.png)
+![板情報 のスクリーンショット](../../../images/hydra_import_depths.png)
 
 ## インポート プロセス。
 

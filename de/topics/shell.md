@@ -4,7 +4,7 @@
 
 Sie müssen keine GUI (Graphical User Interface) von Grund auf erstellen. Shell enthält die grundlegende Funktionalität, die zum Testen, Handeln, Verbinden mit Datenquellen sowie zum Anzeigen von Charts, Portfolios, Positionen, Orders und Trades erforderlich ist.
 
-![Shell Title 00](../images/shell_title_00.png)
+![Shell Screenshot](../images/shell_title_00.png)
 
 Die Hauptfunktionen der Handelsroboter-Shell:
 

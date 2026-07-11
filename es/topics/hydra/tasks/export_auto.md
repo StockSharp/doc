@@ -15,7 +15,7 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 
 **Nueva cadena de conexión**
 
-![hydra tasks connstring](../../../images/hydra_tasks_connstring.png)
+![Captura de Exportación automática](../../../images/hydra_tasks_connstring.png)
 
 - **Proveedor** - configuración del proveedor.
 - **Servidor** - dirección del servidor o ruta a la base de datos.

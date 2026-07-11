@@ -4,7 +4,7 @@
 
 [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) - es un tipo especial de instrumento índice basado en una combinación de varios instrumentos mediante fórmulas matemáticas. Este tipo tiene la propiedad [ExpressionIndexSecurity.Expression](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression), que almacena la fórmula en forma de texto, y la lista de instrumentos subyacentes [ExpressionIndexSecurity.InnerSecurityIds](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds). 
 
-![GUI IndexSecurityWindow](../../../../images/gui_indexsecuritywindow.png)
+![Captura de Índice](../../../../images/gui_indexsecuritywindow.png)
 
 **Propiedades básicas**
 

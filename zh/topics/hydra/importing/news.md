@@ -2,7 +2,7 @@
 
 要导入新闻，请在应用程序主菜单中选择 **导入 \=\> 新闻**。
 
-![hydra import news](../../../images/hydra_import_news.png)
+![新闻 截图](../../../images/hydra_import_news.png)
 
 ## 新闻导入过程
 

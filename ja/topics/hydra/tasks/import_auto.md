@@ -4,13 +4,13 @@
 
 選択した各マーケットデータ型について、テンプレートは [インポート](../importing.md) タブで設定されます。
 
-![hydra tasks import](../../../images/hydra_tasks_import.png)
+![インポート（自動） のスクリーンショット 1](../../../images/hydra_tasks_import.png)
 
 パネルの下部では、データをインポートする対象の銘柄と、インポートするデータ型を選択できます。
 
 各銘柄について、次のデータインポートプロパティを指定できます:
 
-![hydra tasks proper import](../../../images/hydra_tasks_proper_import.png)
+![インポート（自動） のスクリーンショット 2](../../../images/hydra_tasks_proper_import.png)
 
 **インポート（自動）**
 

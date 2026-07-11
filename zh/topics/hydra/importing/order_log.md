@@ -2,7 +2,7 @@
 
 要导入订单日志，请在应用程序主菜单中选择 **导入 \=\> 订单日志**。
 
-![hydra import orderlog](../../../images/hydra_import_orderlog.png)
+![订单日志 截图 1](../../../images/hydra_import_orderlog.png)
 
 ## 导入过程
 
@@ -31,8 +31,8 @@
    - 对于 {TimeInForce} 字段，在 **S# 字段** 窗口中选择表示限价订单执行条件的 **Time in force**，并将其序号设为 9。
    - 对于 {TradeId} 字段，在 **S# 字段** 窗口中选择表示成交标识符的 **ID（成交）**，并将其序号设为 10。
    - 对于 {TradePrice} 字段，在 **S# 字段** 窗口中选择表示成交价格的 **价格（成交）**，并将其序号设为 11。
-   - 字段设置窗口将如下所示：![hydra import prop orderlog](../../../images/hydra_import_prop_orderlog.png)
+   - 字段设置窗口将如下所示：![订单日志 截图 2](../../../images/hydra_import_prop_orderlog.png)
 
    用户可以为导入的数据配置大量属性。需要根据导入文件模板指定属性，并为其分配对应的排列序号。
-3. 要预览数据，请单击 **预览** 按钮。![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
+3. 要预览数据，请单击 **预览** 按钮。![订单日志 截图 3](../../../images/hydra_import_preview_orderlog.png)
 4. 单击 **导入** 按钮。

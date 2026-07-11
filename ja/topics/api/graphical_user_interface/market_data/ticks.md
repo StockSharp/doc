@@ -1,6 +1,6 @@
 # ティック約定
 
-![GUI TradeGrid](../../../../images/gui_tradegrid.png)
+![ティック約定 のスクリーンショット](../../../../images/gui_tradegrid.png)
 
 [TradeGrid](xref:StockSharp.Xaml.TradeGrid) は、約定テーブルです。
 

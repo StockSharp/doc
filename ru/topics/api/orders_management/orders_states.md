@@ -18,7 +18,7 @@ StockSharp API предоставляет возможность получат�
 
 Заявка во время своей жизни проходит следующие состояния:
 
-![OrderStates](../../../images/orderstates.png)
+![Снимок экрана: Состояния заявок](../../../images/orderstates.png)
 
 - [OrderStates.None](xref:StockSharp.Messages.OrderStates.None) - заявка была создана в роботе и еще не была отправлена на регистрацию. 
 - [OrderStates.Pending](xref:StockSharp.Messages.OrderStates.Pending) - заявка была отправлена на регистрацию ([RegisterOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder(StockSharp.BusinessEntities.Order)). Для заявки ожидается подтверждение ее принятия от биржи. В случае успеха принятия будет вызвано событие [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived), и заявка будет переведена в состояние [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active). Также будут проинициализированы свойства [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) и [Order.ServerTime](xref:StockSharp.BusinessEntities.Order.ServerTime). В случае отвержения заявки будет вызвано событие [OrderRegisterFailReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderRegisterFailReceived) с описанием ошибки, и заявка будет переведена в состояние [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed). 

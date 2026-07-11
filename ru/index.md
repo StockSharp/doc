@@ -11,7 +11,7 @@
 
 ### Designer
 
-![StockSharpTitle 0](images/stocksharptitle_0.png)
+![Снимок экрана: О StockSharp 1](images/stocksharptitle_0.png)
 
 [Designer](topics/designer.md) \- универсальная программа для создания торговых роботов и стратегий: 
 
@@ -42,7 +42,7 @@
 
 ### Hydra
 
-![StockSharpTitle 1](images/stocksharptitle_1.png)
+![Снимок экрана: О StockSharp 2](images/stocksharptitle_1.png)
 
 [Hydra](topics/hydra.md) \- программа для автоматического скачивания исторических и реал\-тайм маркет\-данных: 
 

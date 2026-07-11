@@ -4,7 +4,7 @@
 
 以下は、このコンポーネントを使用する **OptionCalculator** の例です。この例のソースコードは、*Samples\/06\_Strategies\/09\_LiveOptionsQuoting* フォルダーにあります。
 
-![option desk](../../../../images/option_desk.png)
+![オプションデスク のスクリーンショット](../../../../images/option_desk.png)
 
 ## OptionCalculator の例
 

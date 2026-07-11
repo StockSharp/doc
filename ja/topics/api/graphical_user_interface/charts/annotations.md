@@ -2,7 +2,7 @@
 
 [S#](../../../api.md) は、テキスト、線などの形式でチャートに注釈を追加する機能を提供します。
 
-![ChartAnnotations](../../../../images/chartannotations.png)
+![注釈 のスクリーンショット](../../../../images/chartannotations.png)
 
 注釈の追加は、チャートに他の情報を追加する場合と同じです。まず [ChartAnnotation](xref:StockSharp.Xaml.Charting.ChartAnnotation) を作成し、チャート領域に追加する必要があります。
 

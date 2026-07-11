@@ -2,8 +2,8 @@
 
 下面介绍如何创建和配置备份任务。
 
-1. 要创建任务，请单击 **添加任务...** 按钮，在打开的窗口中选择 **备份**，然后单击 **确定**。![hydra tasks backup add](../../../../images/hydra_tasks_backup_add.png)
-2. 接下来配置任务。![hydra tasks backup](../../../../images/hydra_tasks_backup.png)
+1. 要创建任务，请单击 **添加任务...** 按钮，在打开的窗口中选择 **备份**，然后单击 **确定**。![Hydra 设置 截图 1](../../../../images/hydra_tasks_backup_add.png)
+2. 接下来配置任务。![Hydra 设置 截图 2](../../../../images/hydra_tasks_backup.png)
 
    **备份**
    - **服务** — 服务地址。

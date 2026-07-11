@@ -2,7 +2,7 @@
 
 [PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) \- комбинированный список для выбора портфеля.
 
-![Gui PortfolioComboBox](../../../../images/gui_portfoliocombobox.png)
+![Снимок экрана: Выпадающий список портфелей](../../../../images/gui_portfoliocombobox.png)
 
 **Основные свойства**
 

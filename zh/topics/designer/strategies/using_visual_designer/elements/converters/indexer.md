@@ -1,6 +1,6 @@
 # 索引器
 
-![Designer Indexer 00](../../../../../../images/designer_indexer_00.png)
+![索引器 截图](../../../../../../images/designer_indexer_00.png)
 
 该元素用于从集合中获取指定索引位置的元素。
 

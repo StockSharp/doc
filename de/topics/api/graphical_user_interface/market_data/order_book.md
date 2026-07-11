@@ -1,6 +1,6 @@
 # Orderbuch
 
-![GUI MarketDepthControl](../../../../images/gui_marketdepthcontrol.png)
+![Orderbuch Screenshot](../../../../images/gui_marketdepthcontrol.png)
 
 [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl) - eine grafische Komponente zur Anzeige des Orderbuchs. Die Komponente kann Quotes und eigene Orders anzeigen.
 

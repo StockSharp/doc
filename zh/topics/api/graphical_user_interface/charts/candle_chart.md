@@ -4,7 +4,7 @@
 
 下面是使用 [Chart](xref:StockSharp.Xaml.Charting.Chart) 组件构建图表的示例。该示例基于 Samples/02_Candles/01_Realtime，并进行了一些修改。
 
-![Gui ChartSample](../../../../images/gui_chartsample.png)
+![K线 截图](../../../../images/gui_chartsample.png)
 
 ## 使用 Chart 构建图表的示例
 

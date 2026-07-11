@@ -1,6 +1,6 @@
 # Zeichenkettenverkettung
 
-![Designer String Concat 00](../../../../../../images/designer_string_concat_00.png)
+![Zeichenkettenverkettung Screenshot](../../../../../../images/designer_string_concat_00.png)
 
 Der Würfel verkettet mehrere eingehende Werte anhand einer Vorlage mit Platzhaltern in geschweiften Klammern zu einer einzelnen Textzeichenfolge. Jeder Platzhaltername fügt einen Eingabe-Socket mit demselben Namen hinzu. Verschachtelte Eigenschaften können über Punkte referenziert werden; ein Format kann nach einem Doppelpunkt angegeben werden.
 

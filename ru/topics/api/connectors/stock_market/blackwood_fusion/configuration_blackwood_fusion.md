@@ -4,4 +4,4 @@
 
 Механизм взаимодействия показан на данном рисунке: 
 
-![blackwood trader](../../../../../images/blackwood_trader.png)
+![Снимок экрана: Настройки коннектора Blackwood (Fusion)](../../../../../images/blackwood_trader.png)

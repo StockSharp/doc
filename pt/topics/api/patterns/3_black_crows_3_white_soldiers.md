@@ -13,7 +13,7 @@ O padrão 3 Black Crows consiste em três velas consecutivas que abriram dentro 
 - O tamanho das velas e as sombras do padrão podem indicar o risco de reversão para pullback.
 - O padrão oposto a Three Black Crows é Three White Soldiers, que indica uma reversão de tendência descendente.
 
-![IndicatorPattern3BC](../../../images/indicatorpattern3bc.png)
+![Captura de tela de Padrão 3 Black Crows e 3 White Soldiers 1](../../../images/indicatorpattern3bc.png)
 
 ### 3 White Soldiers
 
@@ -25,4 +25,4 @@ Three White Soldiers é um padrão de velas bullish utilizado para prever a reve
 - O tamanho das velas e o comprimento das sombras são utilizados para avaliar se existe risco de pullback.
 - O padrão oposto a Three White Soldiers é Three Black Crows, que indica uma reversão de tendência ascendente.
 
-![IndicatorPattern3WS](../../../images/indicatorpattern3ws.png)
+![Captura de tela de Padrão 3 Black Crows e 3 White Soldiers 2](../../../images/indicatorpattern3ws.png)

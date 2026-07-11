@@ -2,7 +2,7 @@
 
 [MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid) - tabla para mostrar operaciones propias. 
 
-![GUI MytradeGrid](../../../../images/gui_mytradegrid.png)
+![Captura de Operaciones propias](../../../../images/gui_mytradegrid.png)
 
 **Miembros principales**
 

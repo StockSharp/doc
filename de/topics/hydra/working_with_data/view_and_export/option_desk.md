@@ -4,7 +4,7 @@ Wählen Sie im erscheinenden Fenster den gewünschten Zeitbereich aus, wählen S
 
 Wenn keine Historie vorhanden ist, aber Daten zum Spread vorliegen, können Sie die wichtigsten Griechen berechnen (Delta, Gamma, Vega, Theta, Rho, Volatility (implied)). Dazu müssen Sie diese im Feld **Griechen berechnen** auswählen.
 
-![hydra option desk](../../../../images/hydra_option_desk.png)
+![Option Desk Screenshot](../../../../images/hydra_option_desk.png)
 
 Um den **Volatilitäts-Smile** anzuzeigen, wechseln Sie zur Registerkarte **Volatilitäts-Smile**.
 

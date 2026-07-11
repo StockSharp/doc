@@ -2,7 +2,7 @@
 
 Im Panel **Börsenplatz-Editor** können Sie **Börsenplätze** und **Börsen** erstellen sowie vorhandene anzeigen oder anpassen.
 
-![Designer Boards](../../../images/designer_boards.png)
+![Börsenplätze Screenshot](../../../images/designer_boards.png)
 
 In [S#](../../api.md) verwenden Instrumente aus verschiedenen Quellen eine einheitliche Kennung, die aus dem Instrumentencode und dem Board-Code besteht. Die Syntax lautet [**Instrumentcode**]@[board code]. Für Aktien von **AAPL** an der Börse **NASDAQ** lautet die Kennung zum Beispiel **AAPL@NASDAQ**. Jedes Instrument ist einem bestimmten Board zugeordnet, auf dem es gehandelt wird. Ein Instrument kann jedoch auf verschiedenen Boards gehandelt werden. In diesem Fall unterscheiden sich die Board-Codes. Für jedes Board können Sie einen Arbeitsplan mit Arbeitstagen und Wochenenden einrichten.
 

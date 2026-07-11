@@ -15,7 +15,7 @@
 
 **新连接字符串**
 
-![hydra tasks connstring](../../../images/hydra_tasks_connstring.png)
+![自动导出 截图](../../../images/hydra_tasks_connstring.png)
 
 - **提供程序** — 数据库提供程序设置。
 - **服务器** — 服务器地址或数据库路径。

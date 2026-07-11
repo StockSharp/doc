@@ -8,7 +8,7 @@
 
 交互机制如图所示：
 
-![IQFeed](../../../../images/iqfeed.jpg)
+![IQFeed 截图 1](../../../../images/iqfeed.jpg)
 
 要使用 **IQFeed** 连接器，需要在计算机上安装 **IQ Feed Client** 路由器，它可以安装在本地计算机或远程计算机上。客户端应用程序与 **IQ Feed Client** 之间，以及 **IQ Feed Client** 与服务器之间的数据交换通过 TCP/IP 协议进行。
 
@@ -18,11 +18,11 @@
 
 安装完成后，必须启动 **IQ Feed Client, IQLink Launcher**。
 
-![iQFeedIQLinkLauncher](../../../../images/iqfeediqlinklauncher.png)
+![IQFeed 截图 2](../../../../images/iqfeediqlinklauncher.png)
 
 在打开的 **IQLink Launcher** 窗口中，点击 **启动 IQLink**。
 
-![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
+![IQFeed 截图 3](../../../../images/iqfeediqconnectlogin.png)
 
 在打开的 **IQ Connect 登录** 窗口中，输入从 **iQFeed** 服务获取的 **登录名** 和 **密码**（或 PIN）。这些凭据不同于 **iQFeed** 网站上的登录名和密码。输入凭据后，点击 **连接**。
 

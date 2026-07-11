@@ -8,11 +8,11 @@ Tatsächlich erfolgt die Verbindung zur Quelle über [Hydra](../../hydra.md), mi
 
 Um den Servermodus von [Hydra](../../hydra.md) zu aktivieren, wählen Sie im oberen Menü des Programms die Registerkarte **Servermodus**.
 
-![Hydra-Server menu](../../../images/hydra_server_menu.png)
+![Einstellungen Screenshot 1](../../../images/hydra_server_menu.png)
 
 Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsfenster für den Servermodus zu öffnen.
 
-![Hydra-Server](../../../images/hydra_server.png)
+![Einstellungen Screenshot 2](../../../images/hydra_server.png)
 
 **Hydra-Server**
 
@@ -39,6 +39,6 @@ Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsf
 
 Wenn Sie **Autorisierung** auf einen anderen Wert als **Anonym** setzen, erscheint auf der Registerkarte **Allgemein** die Schaltfläche **Benutzer**. Nach dem Klicken darauf erscheint das Fenster **Benutzer**.
 
-![hydra users](../../../images/hydra_users.png)
+![Einstellungen Screenshot 3](../../../images/hydra_users.png)
 
 Auf der linken Seite des Fensters können Sie einen neuen Benutzer hinzufügen, und rechts können Sie dessen Zugriffsrechte festlegen.

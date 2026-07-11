@@ -39,6 +39,6 @@ Depois disso, clique no botão **Definições** para abrir a janela de definiç�
 
 Se definir **Autorização** como algo diferente de **Anónimo**, o botão **Utilizadores** aparecerá no separador **Comum**. Depois de clicar nele, aparece a janela **Utilizadores**.
 
-![hydra users](../../../images/hydra_users.png)
+![Captura de tela de Definições](../../../images/hydra_users.png)
 
 No lado esquerdo da janela, pode adicionar um novo utilizador e, no lado direito, definir os respetivos direitos de acesso.

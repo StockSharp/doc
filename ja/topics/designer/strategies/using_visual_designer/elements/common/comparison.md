@@ -1,6 +1,6 @@
 # 比較
 
-![Designer Comparison 00](../../../../../../images/designer_comparison_00.png)
+![比較 のスクリーンショット](../../../../../../images/designer_comparison_00.png)
 
 この要素は、2 つの入力オブジェクトを比較するために使用します。
 

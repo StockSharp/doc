@@ -1,6 +1,6 @@
 # グリークス
 
-![Designer Greek 00](../../../../../../images/designer_greek_00.png)
+![グリークス のスクリーンショット](../../../../../../images/designer_greek_00.png)
 
 このブロックは、現在時点の主要な「グリークス」である Delta、Gamma、Vega、Theta、Rho を計算するために使用します。
 

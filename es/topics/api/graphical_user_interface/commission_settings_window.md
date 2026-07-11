@@ -2,7 +2,7 @@
 
 [CommissionWindow](xref:StockSharp.Xaml.CommissionWindow) - Ventana especial para configurar las reglas de cobro de comisiones.
 
-![API ComissionWindow](../../../images/api_comissionwindow.png)
+![Captura de Ventana de configuración de comisiones](../../../images/api_comissionwindow.png)
 
 A continuación se muestra un ejemplo del código para llamar a una ventana de configuración de reglas de cobro de comisiones.
 

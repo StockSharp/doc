@@ -4,7 +4,7 @@
 
 下图显示了组件的外观以及工具栏按钮的功能。
 
-![Gui ChartPanel](../../../../images/gui_chartpanel.png)
+![K线图面板 截图 1](../../../../images/gui_chartpanel.png)
 
 1 - 横线；
 
@@ -20,7 +20,7 @@
 
 **工具栏功能**
 
-![Gui ChartPanelTools](../../../../images/gui_chartpaneltools.png)
+![K线图面板 截图 2](../../../../images/gui_chartpaneltools.png)
 
 1 - 添加面板；
 

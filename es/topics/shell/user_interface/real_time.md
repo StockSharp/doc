@@ -2,7 +2,7 @@
 
 La pestaña **Tiempo real** permite gestionar estrategias lanzadas en trading.
 
-![Shell realtime 00](../../../images/shell_realtime_00.png)
+![Captura de Tiempo real](../../../images/shell_realtime_00.png)
 
 Al hacer clic en el botón **Añadir** ![Designer botón Añadir 00](../../../images/designer_creation_tool_00.png), puede añadir una estrategia para iniciar trading. Cada estrategia añadida se abre en una pestaña separada y se añade a la lista de estrategias en la pestaña **Estrategias**.
 

@@ -2,7 +2,7 @@
 
 [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow) 是一个用于选择投资组合的窗口。该窗口显示投资组合列表及投资组合现金持仓的信息。
 
-![GUI PortfolioPickerWindow](../../../../images/gui_portfoliopickerwindow.png)
+![投资组合选择窗口 截图](../../../../images/gui_portfoliopickerwindow.png)
 
 **主要属性**
 

@@ -4,7 +4,7 @@
 
 A continuación se muestra un ejemplo de uso de este componente. El código completo del ejemplo está en Samples\/Testing\/SampleHistoryTesting. 
 
-![Gui EquityCurveChart](../../../../images/gui_equitycurvechart.png)
+![Captura de Gráfico de curva de patrimonio](../../../../images/gui_equitycurvechart.png)
 
 ## Ejemplo de construcción de EquityCurveChart
 

@@ -1,6 +1,6 @@
 # ヘッジング
 
-![Designer Hedging 00](../../../../../../images/designer_hedging_00.png)
+![ヘッジング のスクリーンショット](../../../../../../images/designer_hedging_00.png)
 
 このキューブは、オプションのポジションをヘッジするために使用します。
 

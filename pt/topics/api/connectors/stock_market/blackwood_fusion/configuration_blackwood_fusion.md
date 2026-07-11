@@ -4,4 +4,4 @@ Para trabalhar com um conector, tem de especificar o **nome de utilizador** e a 
 
 O mecanismo de interação é apresentado nesta figura:
 
-![blackwood trader](../../../../../images/blackwood_trader.png)
+![Captura de tela de Configuração Blackwood (Fusion)](../../../../../images/blackwood_trader.png)

@@ -2,7 +2,7 @@
 
 A estratégia no designer é um esquema de um conjunto de elementos e ligações entre eles. Cada ligação vai do parâmetro de saída de um cubo para o parâmetro de entrada de outro cubo. Normalmente, todas as linhas de ligação são coloridas a cinzento, mas quando aponta para o cubo ao qual pertencem, as linhas ficam pretas.
 
-![Designer Line 00](../../../../images/designer_line_00.png)
+![Captura de tela de Linhas](../../../../images/designer_line_00.png)
 
 Cada ligação pode ser realçada apontando para ela e clicando com o botão esquerdo do rato. A ligação seleccionada será marcada com círculos nas extremidades da linha; ao agarrá-los, pode redireccionar a linha. Se premir a tecla Del na linha seleccionada, esta será eliminada.
 

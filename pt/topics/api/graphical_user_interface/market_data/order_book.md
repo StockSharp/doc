@@ -1,6 +1,6 @@
 # Livro de ofertas
 
-![GUI MarketDepthControl](../../../../images/gui_marketdepthcontrol.png)
+![Captura de tela de Livro de ofertas](../../../../images/gui_marketdepthcontrol.png)
 
 [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl) - um componente gráfico para apresentar o livro de ofertas. O componente permite apresentar cotações e ordens próprias.
 

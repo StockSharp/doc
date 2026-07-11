@@ -1,6 +1,6 @@
 # Изменение П\/У
 
-![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
+![Снимок экрана: Изменение П\/У](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
 Кубик используется для получения изменений по прибыли\/убытку и комиссии 
 

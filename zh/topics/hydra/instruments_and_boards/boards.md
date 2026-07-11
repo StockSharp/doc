@@ -4,4 +4,4 @@
 
 在此可以查看交易板块的基本信息，并设置其时区和交易时间表。
 
-![hydra boards](../../../images/hydra_boards.png)
+![交易板块 截图](../../../images/hydra_boards.png)

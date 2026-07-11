@@ -1,6 +1,6 @@
 # 希腊值
 
-![Designer Greek 00](../../../../../../images/designer_greek_00.png)
+![希腊值 截图](../../../../../../images/designer_greek_00.png)
 
 该模块用于计算当前时刻的主要希腊值：Delta、Gamma、Vega、Theta 和 Rho。
 

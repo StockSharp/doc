@@ -2,7 +2,7 @@
 
 交互机制如图所示：
 
-![OECTrader](../../../../../images/oectrader.png)
+![OpenECry 配置 截图](../../../../../images/oectrader.png)
 
 从图中可以看出，[OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) 通过 [GainFutures API](https://gainfutures.com/gainfuturesapi) 与 OEC 服务器通信。使用 [GainFutures API](https://gainfutures.com/gainfuturesapi) 不需要运行中的 OEC Trader 终端。
 

@@ -2,7 +2,7 @@
 
 Im Servermodus ermöglicht das Programm, den Emulationsmodus zu aktivieren.
 
-![hydra emulator start](../../../images/hydra_emulator_start.png)
+![Emulation einrichten Screenshot 1](../../../images/hydra_emulator_start.png)
 
 Im Emulationsmodus bietet das Programm [Hydra](../../hydra.md) die folgenden Funktionen:
 
@@ -15,7 +15,7 @@ Dieser Modus wird beim [Testen von Strategien](../../shell/user_interface/emulat
 
 ## Emulationseinstellungen.
 
-![hydra emulator prop](../../../images/hydra_emulator_prop.png)
+![Emulation einrichten Screenshot 2](../../../images/hydra_emulator_prop.png)
 
 - **Bei Berührung zusammenführen** - beim Emulieren der Trade-Zuordnung Orders zuordnen, wenn der Trade-Preis dem Orderpreis entspricht.
 - **Orderbuch (Gültigkeitsdauer)** - maximale Gültigkeitsdauer des Orderbuchs im Emulator. Wenn das Orderbuch innerhalb des angegebenen Zeitraums nicht aktualisiert wurde, wird sein Wert gelöscht. Dies wird verwendet, um alte Orderbuchdaten zu entfernen, wenn Datenlücken vorhanden sind.

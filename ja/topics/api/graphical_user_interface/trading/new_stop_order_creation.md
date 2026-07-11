@@ -2,7 +2,7 @@
 
 [OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) - 条件付き注文を作成するためのウィンドウです。
 
-![GUI OrderConditionalWindow](../../../../images/gui_orderconditionalwindow.png)
+![新規ストップ注文の作成 のスクリーンショット](../../../../images/gui_orderconditionalwindow.png)
 
 **主なプロパティ**
 

@@ -4,7 +4,7 @@ Um mit dem Connector zu arbeiten, müssen Sie **Benutzername** und **Passwort** 
 
 Der Interaktionsmechanismus ist in dieser Abbildung dargestellt:
 
-![ETrade](../../../../../images/etrade.png)
+![Konfiguration E\TRADE Screenshot](../../../../../images/etrade.png)
 
 [E\*TRADE](../e_trade.md) verwendet das OAuth-1.0a-Autorisierungsprotokoll, das eine Anmeldung mit Login und Passwort über den Browser auf der Website von [E\*TRADE](https://etrade.com/) erfordert. Die vollständige Abfolge des Autorisierungsverfahrens ist in der folgenden Abbildung dargestellt:
 

@@ -1,6 +1,6 @@
 # Formato de cadena
 
-![Designer String Format 00](../../../../../../images/designer_string_format_00.png)
+![Captura de Formato de cadena](../../../../../../images/designer_string_format_00.png)
 
 El cubo convierte un valor entrante de cualquier tipo en una cadena de texto. La
 conversión se realiza según una plantilla con marcadores de posición entre

@@ -1,6 +1,6 @@
 # MATLAB
 
-![matlab stocksharp](../images/matlab_stocksharp.png)
+![Снимок экрана: MATLAB](../images/matlab_stocksharp.png)
 
 **MATLAB** создан для трейдеров, которые пишут торговые алгоритмы внутри среды [MATLAB MathWorks](https://mathworks.com/). 
 

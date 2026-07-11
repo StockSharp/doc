@@ -18,7 +18,7 @@
 3. 第二根K线是一根白色（向上）的K线，实体很小，其开盘价和收盘价都在第一根K线的实体范围内。
 4. 第三根K线是一根白色（向上）K线，其收盘价高于第二根K线的收盘价。
 
-![IndicatorPattern3IU](../../../images/indicatorpattern3iu.png)
+![三内部下跌和三内部上涨 截图 1](../../../images/indicatorpattern3iu.png)
 
 ### 3 内侧下
 
@@ -31,7 +31,7 @@
 
 这些形态本质上是孕线形态，后面跟随一个确认烛线，许多交易者在孕线情况下会等待这一确认。
 
-![IndicatorPattern3ID](../../../images/indicatorpattern3id.png)
+![三内部下跌和三内部上涨 截图 2](../../../images/indicatorpattern3id.png)
 
 ## 另请参阅
 

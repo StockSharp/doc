@@ -1,6 +1,6 @@
 # 注文ログ
 
-![GUI orderlog](../../../../images/gui_orderlog.png)
+![注文ログ のスクリーンショット](../../../../images/gui_orderlog.png)
 
 [OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) は、注文ログ（[OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)）を表示するためのグラフィカルコンポーネントです。
 

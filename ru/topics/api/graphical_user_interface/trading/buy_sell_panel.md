@@ -2,7 +2,7 @@
 
 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) \- Специальная панель, дающая возможность быстро выставить заявку по лучшим ценам. 
 
-![API GUI BuySell](../../../../images/api_gui_buysell.png)
+![Снимок экрана: Панель Купить\/Продать](../../../../images/api_gui_buysell.png)
 
 Ниже приведен пример кода добавления панели [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel). 
 

@@ -4,7 +4,7 @@
 
 下面是组件的外观以及使用该组件的代码片段。
 
-![Gui SecurityCreateWindow](../../../../images/gui_securitycreatewindow.png)
+![窗户 截图](../../../../images/gui_securitycreatewindow.png)
 
 ```cs
 private void Button_Click(object sender, RoutedEventArgs e)

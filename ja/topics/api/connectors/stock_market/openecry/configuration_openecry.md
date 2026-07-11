@@ -2,7 +2,7 @@
 
 相互作用の仕組みを次の図に示します。
 
-![OECTrader](../../../../../images/oectrader.png)
+![OpenECry の設定 のスクリーンショット](../../../../../images/oectrader.png)
 
 図から分かるように、[OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) は [GainFutures API](https://gainfutures.com/gainfuturesapi) を通じて OEC サーバーと通信します。[GainFutures API](https://gainfutures.com/gainfuturesapi) の使用に、稼働中の OEC Trader ターミナルは必要ありません。
 

@@ -1,6 +1,6 @@
 # Отмена заявки
 
-![Designer Cancellations 00](../../../../../../images/designer_cancellations_00.png)
+![Снимок экрана: Отмена заявки](../../../../../../images/designer_cancellations_00.png)
 
 Кубик используется для отмены заявки по инструменту.
 

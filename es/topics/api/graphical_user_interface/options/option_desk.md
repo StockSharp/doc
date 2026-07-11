@@ -4,7 +4,7 @@ El componente gráfico [OptionDesk](xref:StockSharp.Xaml.OptionDesk) es una tabl
 
 A continuación se muestra el ejemplo **OptionCalculator**, que usa este componente. El código fuente del ejemplo se encuentra en la carpeta *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 
-![option desk](../../../../images/option_desk.png)
+![Captura de Tablero de opciones](../../../../images/option_desk.png)
 
 ## Ejemplo OptionCalculator
 

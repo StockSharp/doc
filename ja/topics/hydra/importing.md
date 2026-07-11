@@ -2,7 +2,7 @@
 
 [Hydra](../hydra.md) では、.csv 形式で保存された独自データをインポートできます。インポートするには、**インポート** タブを開き、インポートしたい取引所データの種類を選択します。
 
-![hydra import menu](../../images/hydra_import_menu.png)
+![インポート のスクリーンショット](../../images/hydra_import_menu.png)
 
 次の種類をインポートできます。
 

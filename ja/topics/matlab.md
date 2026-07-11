@@ -1,6 +1,6 @@
 # MATLAB
 
-![matlab stocksharp](../images/matlab_stocksharp.png)
+![MATLAB のスクリーンショット](../images/matlab_stocksharp.png)
 
 **MATLAB** は、[MATLAB MathWorks](https://www.mathworks.com/) 環境内で取引アルゴリズムを開発するトレーダー向けに設計されています。 
 

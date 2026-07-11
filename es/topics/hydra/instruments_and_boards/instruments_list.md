@@ -2,7 +2,7 @@
 
 Si hace clic en el botón **Instrumentos** de la pestaña General, aparece el panel **Instrumentos**. El panel **Instrumentos** muestra todos los instrumentos disponibles, así como sus datos de mercado.
 
-![hydra securitiesPanel 00](../../../images/hydra_securitiespanel_00.png)
+![Captura de Lista de instrumentos](../../../images/hydra_securitiespanel_00.png)
 
 En la parte inferior del panel **Instrumentos** hay botones que permiten:
 

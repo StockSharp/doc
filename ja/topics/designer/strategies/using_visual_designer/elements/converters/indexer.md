@@ -1,6 +1,6 @@
 # インデクサー
 
-![Designer Indexer 00](../../../../../../images/designer_indexer_00.png)
+![インデクサー のスクリーンショット](../../../../../../images/designer_indexer_00.png)
 
 この要素は、指定されたインデックスを持つ要素をコレクションから取得するために使用されます。
 

@@ -2,7 +2,7 @@
 
 [AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - 一个用于配置风险控制的特殊窗口。
 
-![API GUI RiskWindow](../../../images/api_gui_riskwindow.png)
+![风险设置窗口 截图](../../../images/api_gui_riskwindow.png)
 
 以下是调用策略风险控制设置窗口的代码示例。
 

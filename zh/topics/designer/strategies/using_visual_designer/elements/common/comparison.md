@@ -1,6 +1,6 @@
 # 比较
 
-![Designer Comparison 00](../../../../../../images/designer_comparison_00.png)
+![比较 截图](../../../../../../images/designer_comparison_00.png)
 
 该元素用于比较两个输入对象。
 

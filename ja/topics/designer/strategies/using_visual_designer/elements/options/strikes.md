@@ -1,6 +1,6 @@
 # 権利行使価格
 
-![Designer Derivatives 00](../../../../../../images/designer_derivatives_00.png)
+![権利行使価格 のスクリーンショット](../../../../../../images/designer_derivatives_00.png)
 
 このキューブは、指定されたフィルターに基づいてオプションの一覧を取得するために使用します。
 

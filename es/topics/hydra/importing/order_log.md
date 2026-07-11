@@ -2,7 +2,7 @@
 
 Para importar el registro de órdenes, seleccione **Importar \=\> Registro de órdenes** en el menú principal de la aplicación.
 
-![hydra import orderlog](../../../images/hydra_import_orderlog.png)
+![Captura de Registro de órdenes 1](../../../images/hydra_import_orderlog.png)
 
 ## Proceso de importación.
 
@@ -31,8 +31,8 @@ Para importar el registro de órdenes, seleccione **Importar \=\> Registro de ó
    - Para el campo {TimeInForce}, seleccione **Vigencia** en la ventana **campo S#**: una condición de ejecución de una orden limitada. Asígnele el valor 9.
    - Para el campo {TradeId}, seleccione el campo **ID (operación)** en la ventana **campo S#**: identificador de la operación. Asígnele el valor 10.
    - Para el campo {TradePrice}, seleccione el campo **Precio (operación)** en la ventana **campo S#**: precio de la operación. Asígnele el valor 11.
-   - La ventana de configuración de campos tendrá este aspecto:![hydra import prop orderlog](../../../images/hydra_import_prop_orderlog.png)
+   - La ventana de configuración de campos tendrá este aspecto:![Captura de Registro de órdenes 2](../../../images/hydra_import_prop_orderlog.png)
 
    El usuario puede configurar una gran cantidad de propiedades para los datos descargados. Basándose en la plantilla del archivo importado, debe especificar la propiedad y asignarle el número requerido en la secuencia.
-3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
+3. Para previsualizar los datos, haga clic en el botón **Vista previa**.![Captura de Registro de órdenes 3](../../../images/hydra_import_preview_orderlog.png)
 4. Haga clic en el botón **Importar**.

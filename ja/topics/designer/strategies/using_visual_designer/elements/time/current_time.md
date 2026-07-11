@@ -1,6 +1,6 @@
 # 現在時刻
 
-![Designer time 00](../../../../../../images/designer_time_00.png)
+![現在時刻 のスクリーンショット](../../../../../../images/designer_time_00.png)
 
 このブロックは、現在時刻を取得するために使用します。
 

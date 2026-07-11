@@ -23,4 +23,4 @@ Al configurar parámetros:
 - El almacenamiento desde el que obtener los datos.
 - El marco temporal de trabajo del script, si utiliza uno.
 
-Al hacer clic en el botón **Iniciar** ![hydra analytics compile](../../../images/hydra_analytics_compile.png), se abrirá una nueva pestaña que mostrará los resultados de la ejecución del script.
+Al hacer clic en el botón **Iniciar** ![Captura de Ejecución de un script](../../../images/hydra_analytics_compile.png), se abrirá una nueva pestaña que mostrará los resultados de la ejecución del script.

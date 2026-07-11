@@ -2,7 +2,7 @@
 
 在**实盘**选项卡中，可以管理已启动用于交易的策略。
 
-![Shell realtime 00](../../../images/shell_realtime_00.png)
+![实盘 截图](../../../images/shell_realtime_00.png)
 
 单击 **添加** 按钮 ![Designer 添加按钮 00](../../../images/designer_creation_tool_00.png)，可以添加策略并开始交易。每个新增策略都会在单独的选项卡中打开，同时添加到 **策略** 选项卡的策略列表中。
 

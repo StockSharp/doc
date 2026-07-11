@@ -17,7 +17,7 @@ Este patrón de velas alcista tiene las siguientes características:
 3. La segunda vela es alcista con un cuerpo largo y envuelve completamente a la primera vela.
 4. La tercera vela es alcista con un cierre más alto que el de la segunda vela.
 
-![IndicatorPattern3OU](../../../images/indicatorpattern3ou.png)
+![Captura de Patrón 3 Outside Down y 3 Outside Up 1](../../../images/indicatorpattern3ou.png)
 
 ### 3 Outside Down
 
@@ -30,7 +30,7 @@ Esta variación del patrón es un modelo de velas bajista con las siguientes car
 
 La primera vela significa el comienzo del fin de la tendencia predominante, ya que la segunda vela envuelve a la primera. La tercera vela significa entonces una aceleración de la reversión.
 
-![IndicatorPattern3oD](../../../images/indicatorpattern3od.png)
+![Captura de Patrón 3 Outside Down y 3 Outside Up 2](../../../images/indicatorpattern3od.png)
 
 ## Véase también
 

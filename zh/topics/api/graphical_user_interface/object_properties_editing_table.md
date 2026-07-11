@@ -2,7 +2,7 @@
 
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) - 用于编辑对象属性的表格。该组件包括一组用于系统类型和[S#](../../api.md)类型的附加编辑器。
 
-![GUI PropertyDataGridEx](../../../images/gui_propertydatagridex.png)
+![对象属性编辑表 截图](../../../images/gui_propertydatagridex.png)
 
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) 为以下类型提供了自己的编辑器：
 

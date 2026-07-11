@@ -23,5 +23,5 @@ Beim Festlegen der Parameter:
 - Der Speicher, aus dem Daten abgerufen werden sollen.
 - Der Arbeitszeitrahmen des Skripts, falls es einen verwendet.
 
-Durch Klicken auf die Schaltfläche **Starten** ![hydra analytics compile](../../../images/hydra_analytics_compile.png) wird eine neue Registerkarte mit den Ergebnissen der Skriptausführung geöffnet.
+Durch Klicken auf die Schaltfläche **Starten** ![Skript ausführen Screenshot](../../../images/hydra_analytics_compile.png) wird eine neue Registerkarte mit den Ergebnissen der Skriptausführung geöffnet.
 

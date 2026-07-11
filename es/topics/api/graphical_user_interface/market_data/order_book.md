@@ -1,6 +1,6 @@
 # Libro de órdenes
 
-![GUI MarketDepthControl](../../../../images/gui_marketdepthcontrol.png)
+![Captura de Libro de órdenes](../../../../images/gui_marketdepthcontrol.png)
 
 [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl) - componente gráfico para mostrar el libro de órdenes. El componente permite mostrar cotizaciones y órdenes propias.
 

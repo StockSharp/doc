@@ -11,7 +11,7 @@ S# 与任何支持我们连接方式的经纪商均兼容。
 
 ### 设计师
 
-![StockSharpTitle 0](images/stocksharptitle_0.png)
+![关于 StockSharp 截图 1](images/stocksharptitle_0.png)
 
 [Designer](topics/designer.md) 是一款通用的算法策略应用程序，可简化策略的创建：
 
@@ -27,7 +27,7 @@ S# 与任何支持我们连接方式的经纪商均兼容。
 
 ### Hydra
 
-![StockSharpTitle 1](images/stocksharptitle_1.png)
+![关于 StockSharp 截图 2](images/stocksharptitle_1.png)
 
 [Hydra](topics/hydra.md) 是一款用于自动下载历史及实时市场数据的应用程序：
 

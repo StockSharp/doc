@@ -32,7 +32,7 @@ O componente "Registo de ordem" é utilizado para colocar ordens de negociação
 
 **Ordem condicional** - Uma ordem com condições adicionais que determinam o momento de colocação no sistema de negociação com base na situação actual do mercado.
 
-![Designer Conditional Application](../../../../../../images/designer_conditional_application.png)
+![Captura de tela de Registo de ordem](../../../../../../images/designer_conditional_application.png)
 
 - **Ligação** - A ligação onde a ordem será colocada.
 - **Tipo de ordem stop** - O tipo de ordem stop.

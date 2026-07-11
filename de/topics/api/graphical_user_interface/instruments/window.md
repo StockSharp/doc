@@ -4,7 +4,7 @@ Die Komponente [SecurityCreateWindow](xref:StockSharp.Xaml.SecurityCreateWindow)
 
 Unten sehen Sie das Aussehen der Komponente und ein Codefragment zur Verwendung.
 
-![Gui SecurityCreateWindow](../../../../images/gui_securitycreatewindow.png)
+![Fenster Screenshot](../../../../images/gui_securitycreatewindow.png)
 
 ```cs
 private void Button_Click(object sender, RoutedEventArgs e)

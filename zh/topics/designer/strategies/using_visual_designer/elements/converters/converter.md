@@ -1,6 +1,6 @@
 # 转换器
 
-![Designer Converter 00](../../../../../../images/designer_converter_00.png)
+![转换器 截图](../../../../../../images/designer_converter_00.png)
 
 该模块用于将复杂对象转换为简单数据类型。例如，可以用它获取交易品种的价格步长值。
 

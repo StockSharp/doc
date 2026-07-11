@@ -1,6 +1,6 @@
 # ストラテジーの P&L
 
-![Designer StrategyPnLDiagramElement 00](../../../../../../images/designer_strategypnldiagramelement_00.png)
+![ストラテジーの P&L のスクリーンショット](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
 RemoteManager の英語ドキュメント
 

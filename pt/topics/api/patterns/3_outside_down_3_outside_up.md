@@ -17,7 +17,7 @@ Este padrão de velas bullish tem as seguintes características:
 3. A segunda vela é bullish, com um corpo longo, e engloba completamente a primeira vela.
 4. A terceira vela é bullish, com um fecho mais alto do que a segunda vela.
 
-![IndicatorPattern3OU](../../../images/indicatorpattern3ou.png)
+![Captura de tela de Padrão 3 Outside Down e 3 Outside Up 1](../../../images/indicatorpattern3ou.png)
 
 ### 3 Outside Down
 
@@ -30,7 +30,7 @@ Esta variação do padrão é um modelo de velas bearish com as seguintes caract
 
 A primeira vela assinala o início do fim da tendência predominante, à medida que a segunda vela engole a primeira. A terceira vela assinala então uma aceleração da reversão.
 
-![IndicatorPattern3oD](../../../images/indicatorpattern3od.png)
+![Captura de tela de Padrão 3 Outside Down e 3 Outside Up 2](../../../images/indicatorpattern3od.png)
 
 ## Ver Também
 

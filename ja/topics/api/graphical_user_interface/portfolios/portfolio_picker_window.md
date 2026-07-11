@@ -2,7 +2,7 @@
 
 [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow) は、ポートフォリオを選択するためのウィンドウです。このウィンドウには、ポートフォリオの一覧と、ポートフォリオの現金ポジションに関する情報が表示されます。
 
-![GUI PortfolioPickerWindow](../../../../images/gui_portfoliopickerwindow.png)
+![ポートフォリオピッカーウィンドウ のスクリーンショット](../../../../images/gui_portfoliopickerwindow.png)
 
 **主なプロパティ**
 

@@ -4,7 +4,7 @@
 
 [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) - 是一种基于使用数学公式组合多种交易品种的特殊类型的指数交易品种。此类型具有 [ExpressionIndexSecurity.Expression](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression) 属性，该属性以文本形式存储公式以及基础 [ExpressionIndexSecurity.InnerSecurityIds](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds) 交易品种的列表。
 
-![GUI IndexSecurityWindow](../../../../images/gui_indexsecuritywindow.png)
+![索引 截图](../../../../images/gui_indexsecuritywindow.png)
 
 **基本属性**
 

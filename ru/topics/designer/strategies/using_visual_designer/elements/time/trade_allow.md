@@ -1,6 +1,6 @@
 # Разрешена ли торговля
 
-![Designer TradeAllowedDiagramElement 00](../../../../../../images/designer_tradealloweddiagramelement_00.png)
+![Снимок экрана: Разрешена ли торговля](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
 Кубик используется для проверки, разрешена ли торговля в текущий момент. Проверяются следующие условия:
 

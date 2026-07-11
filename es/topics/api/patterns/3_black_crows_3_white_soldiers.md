@@ -13,7 +13,7 @@ El patrón 3 Black Crows consta de tres velas consecutivas que abrieron dentro d
 - El tamaño de las velas y sus sombras pueden indicar el riesgo de que la reversión pase a ser un retroceso.
 - El patrón opuesto a Three Black Crows es Three White Soldiers, que indica una reversión de tendencia bajista.
 
-![IndicatorPattern3BC](../../../images/indicatorpattern3bc.png)
+![Captura de Patrón 3 Black Crows y 3 White Soldiers 1](../../../images/indicatorpattern3bc.png)
 
 ### 3 White Soldiers
 
@@ -25,4 +25,4 @@ Three White Soldiers es un patrón de velas alcista usado para pronosticar la re
 - El tamaño de las velas y la longitud de las sombras se usan para evaluar si existe riesgo de retroceso.
 - El patrón opuesto a Three White Soldiers es Three Black Crows, que indica una reversión de tendencia alcista.
 
-![IndicatorPattern3WS](../../../images/indicatorpattern3ws.png)
+![Captura de Patrón 3 Black Crows y 3 White Soldiers 2](../../../images/indicatorpattern3ws.png)

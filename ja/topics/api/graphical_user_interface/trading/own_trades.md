@@ -2,7 +2,7 @@
 
 [MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid) - 自分の約定を表示するためのテーブルです。
 
-![GUI MytradeGrid](../../../../images/gui_mytradegrid.png)
+![自分の約定 のスクリーンショット](../../../../images/gui_mytradegrid.png)
 
 **主なメンバー**
 

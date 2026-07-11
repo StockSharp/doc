@@ -39,6 +39,6 @@ Después haga clic en el botón **Configuración** para abrir la ventana de conf
 
 Si establece **Autorización** en un valor distinto de **Anónimo**, aparecerá el botón **Usuarios** en la pestaña **Común**. Al hacer clic en él, aparecerá la ventana **Usuarios**.
 
-![hydra users](../../../images/hydra_users.png)
+![Captura de Configuración](../../../images/hydra_users.png)
 
 En la parte izquierda de la ventana puede añadir un nuevo usuario, y a la derecha establecer sus derechos de acceso.

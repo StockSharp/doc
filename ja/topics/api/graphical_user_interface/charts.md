@@ -15,7 +15,7 @@
 
 次の図は、グラフィカルコンポーネントの主要な要素を示しています。
 
-![Gui ChartElements](../../../images/gui_chartelements.png)
+![チャート のスクリーンショット](../../../images/gui_chartelements.png)
 
 ## グラフィカルコンポーネントの要素
 

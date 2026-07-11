@@ -2,7 +2,7 @@
 
 Todos os conectores disponibilizam a possibilidade de configurar a religação em caso de desconexão. No elemento gráfico [Janela de definições de ligação](../graphical_user_interface/connection_settings_window.md), tem o seguinte aspeto: 
 
-![API GUI ReconnectionSettings](../../../images/api_gui_reconnectionsettings.png)
+![Captura de tela de Definições de religação 1](../../../images/api_gui_reconnectionsettings.png)
 
 **Propriedades de religação**
 
@@ -32,10 +32,10 @@ O mecanismo de religação é configurado através da propriedade [ReConnectionS
    ```
 2. Para verificar como funciona o mecanismo de controlo da ligação, pode desligar a ligação à Internet: 
 
-   ![transactions](../../../images/transactions.png)
+   ![Captura de tela de Definições de religação 2](../../../images/transactions.png)
 3. Abaixo está o log do programa, que mostra que a aplicação está inicialmente num estado ligado e, depois de desligar a ligação à Internet, a aplicação tenta religar. Após restaurar a ligação à Internet, a ligação da aplicação é restaurada: 
 
-   ![API ReconnectionLog](../../../images/api_reconnectionlog.png)
+   ![Captura de tela de Definições de religação 3](../../../images/api_reconnectionlog.png)
 4. Uma vez que várias ligações podem ser utilizadas no [Connector](xref:StockSharp.Algo.Connector), por predefinição os eventos relacionados com a religação, como [ConnectionRestored](xref:StockSharp.Algo.Connector.ConnectionRestored), não são acionados, e os adaptadores de ligação tentam religar por si próprios. Para que o evento comece a ser gerado, é necessário definir o valor da propriedade [BasketMessageAdapter.SuppressReconnectingErrors](xref:StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors) do adaptador como **false**. 
 
    ```cs

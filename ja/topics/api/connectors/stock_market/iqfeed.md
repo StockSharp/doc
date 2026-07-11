@@ -8,7 +8,7 @@
 
 相互作用のメカニズムは次の図に示されています。 
 
-![IQFeed](../../../../images/iqfeed.jpg)
+![IQFeed のスクリーンショット 1](../../../../images/iqfeed.jpg)
 
 **IQFeed** コネクターを使用するには、コンピューターに **IQ Feed Client** ルーターをインストールする必要があります。これはローカルコンピューターにもリモートコンピューターにもインストールできます。クライアントアプリケーションと **IQ Feed Client** の間、および **IQ Feed Client** とサーバーの間のデータ交換は、TCP\/IP プロトコルで行われます。 
 
@@ -18,11 +18,11 @@
 
 **IQ Feed Client, IQLink Launcher** をインストールした後は、起動する必要があります。
 
-![iQFeedIQLinkLauncher](../../../../images/iqfeediqlinklauncher.png)
+![IQFeed のスクリーンショット 2](../../../../images/iqfeediqlinklauncher.png)
 
 開いた **IQLink Launcher** ウィンドウで、**Start IQLink** をクリックします。
 
-![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
+![IQFeed のスクリーンショット 3](../../../../images/iqfeediqconnectlogin.png)
 
 開いた **IQ Connect Login** ウィンドウで、**iQFeed** サービスから受け取った **ログイン** と **パスワード** (または PIN) を入力します。これらの認証情報は、**iQFeed** Web サイトの Login と Password とは同じではありません。認証情報を入力した後、**Connect** をクリックします。
 

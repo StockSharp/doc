@@ -17,7 +17,7 @@
 3. 第二根K线是看涨的，实体较长，并完全包住了第一根K线。
 4. 第三根K线是看涨的，收盘价高于第二根K线。
 
-![IndicatorPattern3OU](../../../images/indicatorpattern3ou.png)
+![三外下和三外上模式 截图 1](../../../images/indicatorpattern3ou.png)
 
 ### 3 外侧向下
 
@@ -30,7 +30,7 @@
 
 第一根K线表示当第二根K线吞没第一根K线时，现有趋势的结束开始。第三根K线则表示反转的加速。
 
-![IndicatorPattern3oD](../../../images/indicatorpattern3od.png)
+![三外下和三外上模式 截图 2](../../../images/indicatorpattern3od.png)
 
 ## 另请参阅
 

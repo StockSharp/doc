@@ -13,7 +13,7 @@
 - 该形态的K线大小和影线可以表明回调反转的风险。
 - 与三只乌鸦相反的形态是三只白兵，表示下跌趋势的反转。
 
-![IndicatorPattern3BC](../../../images/indicatorpattern3bc.png)
+![三只乌鸦和三位白兵模式 截图 1](../../../images/indicatorpattern3bc.png)
 
 ### 三白兵
 
@@ -25,4 +25,4 @@
 - K线的大小和影子的长度被用来评估是否存在回调的风险。
 - 与三白兵相反的形态是三黑乌鸦，表示上涨趋势的反转。
 
-![IndicatorPattern3WS](../../../images/indicatorpattern3ws.png)
+![三只乌鸦和三位白兵模式 截图 2](../../../images/indicatorpattern3ws.png)

@@ -4,7 +4,7 @@ En la ventana que aparece, seleccione el rango de tiempo deseado, elija el activ
 
 Si no hay historial, pero hay datos sobre el spread, puede calcular las principales griegas (Delta, Gamma, Vega, Theta, Rho, Volatility (implied)); para ello debe seleccionarlas en el campo **Calcular griegas**.
 
-![hydra option desk](../../../../images/hydra_option_desk.png)
+![Captura de Panel de opciones](../../../../images/hydra_option_desk.png)
 
 Para ver la **Sonrisa de volatilidad**, debe ir a la pestaña **Sonrisa de volatilidad**.
 

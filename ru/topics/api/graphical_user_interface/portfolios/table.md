@@ -2,7 +2,7 @@
 
 [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid) \- компонент, отображающий состояние портфелей и позиций. 
 
-![GUI PortfolioGrid](../../../../images/gui_portfoliogrid.png)
+![Снимок экрана: Таблица портфелей](../../../../images/gui_portfoliogrid.png)
 
 **Основные свойства**
 

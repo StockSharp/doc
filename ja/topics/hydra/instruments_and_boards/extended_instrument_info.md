@@ -10,12 +10,12 @@
 
 必要な拡張情報を選択するには、次の手順を実行します。
 
-1. **銘柄** タブで **拡張情報** ボタンをクリックします。![hydra Extension Info securities](../../../images/hydra_extensioninfo_securities.png)
-2. 必要な CSV ファイルへのパスを選択するウィンドウが表示されます。![hydra Extension Info window](../../../images/hydra_extensioninfo_window.png)
+1. **銘柄** タブで **拡張情報** ボタンをクリックします。![拡張銘柄情報 のスクリーンショット 1](../../../images/hydra_extensioninfo_securities.png)
+2. 必要な CSV ファイルへのパスを選択するウィンドウが表示されます。![拡張銘柄情報 のスクリーンショット 2](../../../images/hydra_extensioninfo_window.png)
 
 以下は、拡張情報の **CSV** ファイルを **MS Excel** と **Notepad** という異なるエディターで開いた例です。
 
-![hydra ExtensionInfo csv excel](../../../images/hydra_extensioninfo_csv_excel.png)
+![拡張銘柄情報 のスクリーンショット 3](../../../images/hydra_extensioninfo_csv_excel.png)
 
-![hydra ExtensionInfo csv notepad](../../../images/hydra_extensioninfo_csv_notepad.png)
+![拡張銘柄情報 のスクリーンショット 4](../../../images/hydra_extensioninfo_csv_notepad.png)
 

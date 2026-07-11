@@ -2,7 +2,7 @@
 
 [MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid) - eine Tabelle zur Anzeige eigener Trades.
 
-![GUI MytradeGrid](../../../../images/gui_mytradegrid.png)
+![Eigene Trades Screenshot](../../../../images/gui_mytradegrid.png)
 
 **Wichtigste Member**
 

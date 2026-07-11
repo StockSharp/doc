@@ -2,7 +2,7 @@
 
 [OrderGrid](xref:StockSharp.Xaml.OrderGrid) es una tabla para mostrar órdenes y órdenes condicionales. Además, el menú contextual de esta tabla contiene comandos para operaciones con órdenes: registro, reemplazo y cancelación de órdenes. Al seleccionar un elemento del menú se generan los eventos: [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering), [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) u [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling), respectivamente.
 
-![GUI OrderGrid](../../../../images/gui_ordergrid.png)
+![Captura de Órdenes](../../../../images/gui_ordergrid.png)
 
 > [!TIP]
 > La operación en sí (registro, reemplazo, cancelación) no se realiza. El código correspondiente debe escribirse manualmente en los manejadores de eventos.

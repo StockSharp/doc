@@ -1,6 +1,6 @@
 # Zeichenkettenformatierung
 
-![Designer String Format 00](../../../../../../images/designer_string_format_00.png)
+![Zeichenkettenformatierung Screenshot](../../../../../../images/designer_string_format_00.png)
 
 Der Würfel wandelt einen eingehenden Wert beliebigen Typs in eine Textzeichenfolge um. Die Umwandlung erfolgt anhand einer Vorlage mit Platzhaltern in geschweiften Klammern. Jeder Platzhalter verweist auf den gesamten Wert (`{0}`) oder auf eine seiner Eigenschaften (`{Price}`, `{Trade.Price}` usw.). Nach einem Doppelpunkt kann ein Format angegeben werden, um zu steuern, wie Zahlen, Datumswerte oder andere Objekte im Text erscheinen.
 

@@ -1,6 +1,6 @@
 # 字符串格式化
 
-![Designer String Format 00](../../../../../../images/designer_string_format_00.png)
+![字符串格式化 截图](../../../../../../images/designer_string_format_00.png)
 
 该模块将任意类型的传入值转换为文本字符串。转换过程使用包含花括号占位符的模板。每个占位符可以引用整个值（`{0}`），也可以引用值的某个属性（`{Price}`、`{Trade.Price}` 等）。可以在冒号后指定格式，以控制数值、日期或其他对象在文本中的显示方式。
 

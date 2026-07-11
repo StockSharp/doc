@@ -2,7 +2,7 @@
 
 [S\#](../../../api.md) предоставляет возможность добавлять аннотации на график в виде текста, линий и др. 
 
-![ChartAnnotations](../../../../images/chartannotations.png)
+![Снимок экрана: Аннотации](../../../../images/chartannotations.png)
 
 Добавление аннотаций не отличается от добавления любой другой информации на график. Сначала необходимо создать [ChartAnnotation](xref:StockSharp.Xaml.Charting.ChartAnnotation) и добавить его на область графика:
 

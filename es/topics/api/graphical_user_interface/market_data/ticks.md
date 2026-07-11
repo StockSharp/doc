@@ -1,6 +1,6 @@
 # Operaciones tick
 
-![GUI TradeGrid](../../../../images/gui_tradegrid.png)
+![Captura de Operaciones tick](../../../../images/gui_tradegrid.png)
 
 [TradeGrid](xref:StockSharp.Xaml.TradeGrid) - tabla de operaciones.
 

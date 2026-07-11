@@ -8,7 +8,7 @@ Antes de comenzar a escribir robots de trading para la plataforma de trading act
 
 El mecanismo de interacción se muestra en esta figura: 
 
-![IQFeed](../../../../images/iqfeed.jpg)
+![Captura de IQFeed 1](../../../../images/iqfeed.jpg)
 
 Para trabajar con el conector **IQFeed**, debe instalar el router **IQ Feed Client** en el equipo; puede instalarse tanto en el equipo local como en uno remoto. El intercambio de datos entre la aplicación cliente y **IQ Feed Client**, así como entre **IQ Feed Client** y los servidores, se realiza mediante el protocolo TCP\/IP. 
 
@@ -18,11 +18,11 @@ Después de instalar **IQ Feed Client**, se recomienda reiniciar el equipo.
 
 Después de instalar **IQ Feed Client, IQLink Launcher** debe iniciarse.
 
-![iQFeedIQLinkLauncher](../../../../images/iqfeediqlinklauncher.png)
+![Captura de IQFeed 2](../../../../images/iqfeediqlinklauncher.png)
 
 En la ventana **IQLink Launcher** que se abre, haga clic en **Start IQLink**.
 
-![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
+![Captura de IQFeed 3](../../../../images/iqfeediqconnectlogin.png)
 
 En la ventana **IQ Connect Login** abierta, introduzca **usuario** y **contraseña** (o PIN) recibidos del servicio **iQFeed**. Estas credenciales no son las mismas que Login y Password del sitio web **iQFeed**. Después de introducir las credenciales, haga clic en **Connect**.
 

@@ -2,7 +2,7 @@
 
 Para importar noticias, seleccione **Importar \=\> Noticias** en el menú principal de la aplicación.
 
-![hydra import news](../../../images/hydra_import_news.png)
+![Captura de Noticias](../../../images/hydra_import_news.png)
 
 ## Proceso de importación de noticias
 

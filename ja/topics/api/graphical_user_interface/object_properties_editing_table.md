@@ -2,7 +2,7 @@
 
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) は、オブジェクトプロパティを編集するためのテーブルです。このコンポーネントには、システム型および [S#](../../api.md) 型向けの追加エディターのセットが含まれています。 
 
-![GUI PropertyDataGridEx](../../../images/gui_propertydatagridex.png)
+![オブジェクトプロパティ編集テーブル のスクリーンショット](../../../images/gui_propertydatagridex.png)
 
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) には、次の型に対する独自のエディターがあります。 
 

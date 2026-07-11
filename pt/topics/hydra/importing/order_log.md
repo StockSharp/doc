@@ -2,7 +2,7 @@
 
 Para importar o log de ordens, selecione o item **Importar \=\> Registo de ordens** no menu principal da aplicação.
 
-![hydra import orderlog](../../../images/hydra_import_orderlog.png)
+![Captura de tela de Log de ordens 1](../../../images/hydra_import_orderlog.png)
 
 ## Processo de importação.
 
@@ -31,8 +31,8 @@ Para importar o log de ordens, selecione o item **Importar \=\> Registo de orden
    - Para o campo {TimeInForce}, selecione **Validade** na janela **campo S#** - uma condição de execução da ordem limite. Atribuímos-lhe o valor 9.
    - Para o campo {TradeId}, selecione o campo **ID (transação)** na janela **campo S#** - o identificador da transação. Atribuímos-lhe o valor 10.
    - Para o campo {TradePrice}, selecione o campo **Preço (transação)** na janela **campo S#** - o preço da transação. Atribuímos-lhe o valor 11.
-   - A janela de definição dos campos terá este aspeto:![hydra import prop orderlog](../../../images/hydra_import_prop_orderlog.png)
+   - A janela de definição dos campos terá este aspeto:![Captura de tela de Log de ordens 2](../../../images/hydra_import_prop_orderlog.png)
 
    O utilizador pode configurar um grande número de propriedades para os dados descarregados. Com base no modelo do ficheiro importado, é necessário especificar a propriedade e atribuir-lhe o número necessário na sequência. 
-3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
+3. Para pré-visualizar os dados, clique no botão **Pré-visualizar**.![Captura de tela de Log de ordens 3](../../../images/hydra_import_preview_orderlog.png)
 4. Clique no botão **Importar**.

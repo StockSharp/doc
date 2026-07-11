@@ -2,7 +2,7 @@
 
 すべてのコネクターでは、切断時に再接続を設定できます。[接続設定ウィンドウ](../graphical_user_interface/connection_settings_window.md) のグラフィック要素では、次のように表示されます。
 
-![API GUI ReconnectionSettings](../../../images/api_gui_reconnectionsettings.png)
+![再接続設定 のスクリーンショット 1](../../../images/api_gui_reconnectionsettings.png)
 
 **再接続プロパティ**
 
@@ -32,10 +32,10 @@
    ```
 2. 接続制御機構の動作を確認するには、インターネット接続をオフにできます。
 
-   ![transactions](../../../images/transactions.png)
+   ![再接続設定 のスクリーンショット 2](../../../images/transactions.png)
 3. 下記はプログラムログです。アプリケーションが最初は接続済み状態であり、インターネット接続をオフにした後、アプリケーションが再接続を試行していることを示しています。インターネット接続を復元すると、アプリケーションの接続も復元されます。
 
-   ![API ReconnectionLog](../../../images/api_reconnectionlog.png)
+   ![再接続設定 のスクリーンショット 3](../../../images/api_reconnectionlog.png)
 4. [Connector](xref:StockSharp.Algo.Connector) では複数の接続を使用できるため、既定では [ConnectionRestored](xref:StockSharp.Algo.Connector.ConnectionRestored) などの再接続に関連するイベントはトリガーされず、接続アダプターが自分自身で再接続を試行します。このイベントを発生させるには、アダプターの [BasketMessageAdapter.SuppressReconnectingErrors](xref:StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors) プロパティの値を **false** に設定する必要があります。
 
    ```cs

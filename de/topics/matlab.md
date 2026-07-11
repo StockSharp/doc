@@ -1,6 +1,6 @@
 # MATLAB
 
-![matlab stocksharp](../images/matlab_stocksharp.png)
+![MATLAB Screenshot](../images/matlab_stocksharp.png)
 
 **MATLAB** richtet sich an Trader, die Handelsalgorithmen in der Umgebung [MATLAB MathWorks](https://www.mathworks.com/) entwickeln.
 

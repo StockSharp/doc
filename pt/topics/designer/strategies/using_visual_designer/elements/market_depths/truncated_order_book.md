@@ -1,6 +1,6 @@
 # Livro de ofertas truncado
 
-![Designer MarketDepthTruncateDiagramElement 00](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
+![Captura de tela de Livro de ofertas truncado](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
 
 O cubo é usado para obter um livro de ordens truncado até uma profundidade especificada.
 

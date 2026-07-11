@@ -32,7 +32,7 @@ El componente "Registro de orden" se usa para colocar órdenes de trading para u
 
 **Orden condicional** – orden con condiciones adicionales que determinan el momento de colocación en el sistema de trading según la situación actual del mercado.
 
-![Designer Conditional Application](../../../../../../images/designer_conditional_application.png)
+![Captura de Registro de orden](../../../../../../images/designer_conditional_application.png)
 
 - **Conexión** – conexión donde se colocará la orden.
 - **Tipo de orden stop** – tipo de orden stop.

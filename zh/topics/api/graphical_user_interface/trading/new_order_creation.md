@@ -2,7 +2,7 @@
 
 [OrderWindow](xref:StockSharp.Xaml.OrderWindow) - 创建订单的窗口。
 
-![GUI OrderWindow](../../../../images/gui_orderwindow.png)
+![新建订单 截图](../../../../images/gui_orderwindow.png)
 
 如果连接支持注册条件单（止损、止盈），那么在此窗口中可以通过设置 **高级条件** 标志来注册具有高级条件的条件单。
 

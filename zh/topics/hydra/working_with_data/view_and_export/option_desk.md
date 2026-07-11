@@ -4,7 +4,7 @@
 
 如果没有历史数据，但有价差数据，可以计算主要的希腊字母指标，包括 Delta、Gamma、Vega、Theta、Rho 和隐含波动率。为此，请在 **计算希腊字母指标** 字段中选择所需指标。
 
-![hydra option desk](../../../../images/hydra_option_desk.png)
+![期权面板 截图](../../../../images/hydra_option_desk.png)
 
 要查看**波动率微笑**，请打开 **波动率微笑** 选项卡。
 

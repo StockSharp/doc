@@ -2,7 +2,7 @@
 
 Um [StockSharpBot](https://t.me/StockSharpBot) zu aktivieren, müssen Sie ihn starten und die Autorisierung durchführen, damit der Bot Ihren Login auf der StockSharp-Website erkennen kann. Wählen Sie dazu im Menü den Befehl **/login**:
 
-![TelegramActivating](../../images/telegramactivating.png)
+![Autorisierung Screenshot 1](../../images/telegramactivating.png)
 
 Der Bot fordert Sie auf, Ihr Profil unter [https://stocksharp.com/profile/](https://stocksharp.com/profile/) zu öffnen und das Token dort zu kopieren.
 
@@ -10,4 +10,4 @@ Der Bot fordert Sie auf, Ihr Profil unter [https://stocksharp.com/profile/](http
 
 Senden Sie es anschließend im Chat im Format **token: %your_token%** zurück an den Bot. Bei Erfolg spricht der Bot Sie mit dem Namen an, mit dem Sie sich auf der StockSharp-Website registriert haben.
 
-![TelegramActivated](../../images/telegramactivated.png)
+![Autorisierung Screenshot 2](../../images/telegramactivated.png)

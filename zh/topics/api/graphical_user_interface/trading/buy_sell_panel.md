@@ -2,7 +2,7 @@
 
 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - 一个特殊面板，使您能够快速以最佳价格注册订单。
 
-![API GUI BuySell](../../../../images/api_gui_buysell.png)
+![买/卖面板 截图](../../../../images/api_gui_buysell.png)
 
 以下是添加 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) 的代码示例。
 

@@ -4,7 +4,7 @@
 
 Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente [Chart](xref:StockSharp.Xaml.Charting.Chart). Das Beispiel basiert auf Samples/02_Candles/01_Realtime mit einigen Änderungen.
 
-![Gui ChartSample](../../../../images/gui_chartsample.png)
+![Kerzendiagramm Screenshot](../../../../images/gui_chartsample.png)
 
 ## Beispiel für den Aufbau eines Diagramms mit Chart
 

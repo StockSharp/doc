@@ -23,4 +23,4 @@
 - 用于获取数据的存储。
 - 脚本使用的工作时间周期（如果脚本需要）。
 
-单击 **开始** 按钮 ![hydra analytics compile](../../../images/hydra_analytics_compile.png)，将打开一个新选项卡并显示脚本执行结果。
+单击 **开始** 按钮 ![运行脚本 截图](../../../images/hydra_analytics_compile.png)，将打开一个新选项卡并显示脚本执行结果。

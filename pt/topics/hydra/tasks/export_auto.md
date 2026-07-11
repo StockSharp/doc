@@ -15,7 +15,7 @@ A tarefa exporta dados da bolsa para vários formatos: Excel, xml, sql, bin, Jso
 
 **Nova string de ligação**
 
-![hydra tasks connstring](../../../images/hydra_tasks_connstring.png)
+![Captura de tela de Exportação (automática)](../../../images/hydra_tasks_connstring.png)
 
 - **Fornecedor** - definições do fornecedor.
 - **Servidor** - endereço do servidor ou caminho para a base de dados.

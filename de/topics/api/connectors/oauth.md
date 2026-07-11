@@ -33,4 +33,4 @@ Für [IOAuthProvider](xref:Ecng.Net.IOAuthProvider) gibt es zwei Implementierung
 
 2. [OAuthProvider](xref:StockSharp.Studio.Controls.OAuthProvider) - für WPF-Anwendungen, in denen ein Autorisierungsfenster angezeigt werden muss:
 
-   ![OAuth-Start](../../../images/oauth_start.png)
+   ![OAuth-Autorisierung Screenshot](../../../images/oauth_start.png)

@@ -4,7 +4,7 @@
 
 以下は、[Chart](xref:StockSharp.Xaml.Charting.Chart) コンポーネントを使用してチャートを構築する例です。この例は Samples\/02\_Candles\/01\_Realtime をベースにし、一部変更を加えています。
 
-![Gui ChartSample](../../../../images/gui_chartsample.png)
+![ローソク足チャート のスクリーンショット](../../../../images/gui_chartsample.png)
 
 ## Chart を使用したチャート構築の例
 

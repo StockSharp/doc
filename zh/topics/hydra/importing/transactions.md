@@ -2,7 +2,7 @@
 
 要导入自有交易事务，请在应用程序主菜单中选择 **导入 \=\> 自有成交**。
 
-![hydra import executions](../../../images/hydra_import_executions.png)
+![交易事务 截图](../../../images/hydra_import_executions.png)
 
 ## 自有交易事务导入过程
 

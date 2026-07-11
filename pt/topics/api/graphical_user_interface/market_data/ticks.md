@@ -1,6 +1,6 @@
 # Negócios tick
 
-![GUI TradeGrid](../../../../images/gui_tradegrid.png)
+![Captura de tela de Negócios tick](../../../../images/gui_tradegrid.png)
 
 [TradeGrid](xref:StockSharp.Xaml.TradeGrid) - uma tabela de negócios.
 

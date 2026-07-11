@@ -11,7 +11,7 @@ O S# funciona com qualquer corretora, bolsa ou fonte de dados suportada pelos co
 
 ### Designer
 
-![StockSharpTitle 0](images/stocksharptitle_0.png)
+![Captura de tela de Sobre o StockSharp 1](images/stocksharptitle_0.png)
 
 O [Designer](topics/designer.md) é uma aplicação universal para criar estratégias de negociação algorítmica:
 
@@ -27,7 +27,7 @@ O [Designer](topics/designer.md) é uma aplicação universal para criar estrat�
 
 ### Hydra
 
-![StockSharpTitle 1](images/stocksharptitle_1.png)
+![Captura de tela de Sobre o StockSharp 2](images/stocksharptitle_1.png)
 
 O [Hydra](topics/hydra.md) baixa automaticamente dados de mercado históricos e em tempo real:
 

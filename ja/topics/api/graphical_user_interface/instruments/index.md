@@ -4,7 +4,7 @@
 
 [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) は、複数の銘柄を数式で組み合わせたものに基づく特殊な種類のインデックス銘柄です。この種類には [ExpressionIndexSecurity.Expression](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Expression) プロパティがあり、数式をテキスト形式で格納します。また、基礎となる [ExpressionIndexSecurity.InnerSecurityIds](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.InnerSecurityIds) 銘柄のリストも格納します。
 
-![GUI IndexSecurityWindow](../../../../images/gui_indexsecuritywindow.png)
+![インデックス のスクリーンショット](../../../../images/gui_indexsecuritywindow.png)
 
 **基本プロパティ**
 

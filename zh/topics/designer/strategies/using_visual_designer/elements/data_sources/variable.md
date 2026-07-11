@@ -1,6 +1,6 @@
 # 变量
 
-![Designer Variable 00](../../../../../../images/designer_variable_00.png)
+![变量 截图](../../../../../../images/designer_variable_00.png)
 
 该模块用于保存值，并将此前保存的值继续传递给元素链中的后续元素。
 

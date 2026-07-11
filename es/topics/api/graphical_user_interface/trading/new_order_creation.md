@@ -2,7 +2,7 @@
 
 [OrderWindow](xref:StockSharp.Xaml.OrderWindow) - ventana para crear una orden. 
 
-![GUI OrderWindow](../../../../images/gui_orderwindow.png)
+![Captura de Creación de una nueva orden](../../../../images/gui_orderwindow.png)
 
 Si la conexión admite el registro de una orden condicional (stop-loss, take-profit), en esta ventana puede registrar una orden condicional con condiciones avanzadas estableciendo la bandera **Condiciones avanzadas**.
 

@@ -1,6 +1,6 @@
 # Cancelamento em massa de ordens
 
-![Designer Mass Cancellations 00](../../../../../../images/designer_mass_cancellations_00.png)
+![Captura de tela de Cancelamento em massa de ordens](../../../../../../images/designer_mass_cancellations_00.png)
 
 Este bloco é usado para cancelar todas as ordens de um instrumento.
 

@@ -1,6 +1,6 @@
 # 订单簿
 
-![GUI MarketDepthControl](../../../../images/gui_marketdepthcontrol.png)
+![订单簿 截图](../../../../images/gui_marketdepthcontrol.png)
 
 [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl) - 一个用于显示订单簿的图形组件。该组件允许显示报价和自己的订单。
 

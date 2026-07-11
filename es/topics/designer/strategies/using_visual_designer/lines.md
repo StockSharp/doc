@@ -2,7 +2,7 @@
 
 La estrategia en el diseñador es un esquema de un conjunto de elementos y enlaces entre ellos, llamados conexiones. Cada conexión va desde el parámetro de salida de un cubo al parámetro de entrada de otro cubo. Normalmente, todas las líneas de conexión son grises, pero cuando apunta al cubo al que pertenecen, las líneas se pintan de negro.
 
-![Designer Line 00](../../../../images/designer_line_00.png)
+![Captura de Líneas](../../../../images/designer_line_00.png)
 
 Cada conexión puede resaltarse apuntando sobre ella y haciendo clic con el botón izquierdo del ratón. La conexión seleccionada se marcará con círculos en los extremos de la línea, tomándolos puede redirigir la línea. Si pulsa el botón Del sobre la línea seleccionada, se eliminará.
 

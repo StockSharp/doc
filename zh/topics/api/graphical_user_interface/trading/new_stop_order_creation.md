@@ -2,7 +2,7 @@
 
 [OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow) - 创建条件订单的窗口。
 
-![GUI OrderConditionalWindow](../../../../images/gui_orderconditionalwindow.png)
+![新建止损单 截图](../../../../images/gui_orderconditionalwindow.png)
 
 **主要属性**
 

@@ -2,7 +2,7 @@
 
 [CommissionWindow](xref:StockSharp.Xaml.CommissionWindow) - 一个用于设置佣金收取规则的特殊窗口。
 
-![API ComissionWindow](../../../images/api_comissionwindow.png)
+![佣金设置窗口 截图](../../../images/api_comissionwindow.png)
 
 下面是调用用于设置佣金收取规则的窗口的代码示例。
 

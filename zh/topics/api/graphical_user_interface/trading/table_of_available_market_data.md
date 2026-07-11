@@ -2,7 +2,7 @@
 
 [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) - 一个显示可用市场数据的表格。
 
-![API GUI MarketDataGrid](../../../../images/api_gui_marketdatagrid.png)
+![可用市场数据表 截图](../../../../images/api_gui_marketdatagrid.png)
 
 以下是将 [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) 表格添加到屏幕表单的代码示例。
 

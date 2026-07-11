@@ -1,6 +1,6 @@
 # Log de órdenes
 
-![GUI orderlog](../../../../images/gui_orderlog.png)
+![Captura de Log de órdenes](../../../../images/gui_orderlog.png)
 
 [OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - componente gráfico para mostrar el log de órdenes ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)).
 

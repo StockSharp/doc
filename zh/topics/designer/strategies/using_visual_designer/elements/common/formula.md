@@ -1,6 +1,6 @@
 # 公式
 
-![Designer Universal formula 00](../../../../../../images/designer_universal_formula_00.png)
+![公式 截图](../../../../../../images/designer_universal_formula_00.png)
 
 该模块用于计算参数数量不限的数学公式。可以从现有列表中选择公式，也可以自行编写。自行编写公式时，输入端口的数量会自动确定。
 

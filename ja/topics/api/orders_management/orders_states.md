@@ -18,7 +18,7 @@ StockSharp API は、組み込みのサブスクリプション メカニズム�
 
 注文は、その存続期間中に次の状態をたどります。
 
-![OrderStates](../../../images/orderstates.png)
+![注文状態 のスクリーンショット](../../../images/orderstates.png)
 
 - [OrderStates.None](xref:StockSharp.Messages.OrderStates.None) - 注文は取引アルゴリズム内で作成されていますが、まだ登録のために送信されていません。
 - [OrderStates.Pending](xref:StockSharp.Messages.OrderStates.Pending) - 注文は登録のために送信されています ([RegisterOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder(StockSharp.BusinessEntities.Order))。システムは取引所からの受理確認を待機しています。受理が成功すると、[OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived) イベントが発生し、注文は [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active) 状態へ移行します。[Order.Id](xref:StockSharp.BusinessEntities.Order.Id) および [Order.ServerTime](xref:StockSharp.BusinessEntities.Order.ServerTime) プロパティも初期化されます。注文が拒否された場合、[OrderRegisterFailReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderRegisterFailReceived) イベントがエラー説明付きで発生し、注文は [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed) 状態へ移行します。

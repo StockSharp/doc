@@ -6,7 +6,7 @@ La primera vez que se ejecuta, aparece la siguiente ventana para seleccionar fue
 
 En la ventana, marque las fuentes necesarias. Puede usar filtros por región, mercado, tipo de datos, pago y disponibilidad en tiempo real. Cuando termine la selección, haga clic en **OK**. Después, el programa ofrecerá habilitar las utilidades. Para obtener más detalles sobre el trabajo con utilidades, consulte la sección [Utilidades](tasks.md). Haga clic en **OK**.
 
-![hydra first started utilities 00](../../images/hydra_first_started_utilities00.png)
+![Captura de Primer inicio 1](../../images/hydra_first_started_utilities00.png)
 
 Después de esto, las fuentes se añadirán al panel izquierdo de la ventana principal de la aplicación.
 
@@ -29,7 +29,7 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
 
    En el primer inicio, el programa ofrecerá descargar todos los instrumentos de una vez para la fuente seleccionada. Más adelante, el usuario descargará los instrumentos por su cuenta. Inicialmente, la base de instrumentos de [Hydra](../hydra.md) está vacía; solo existe el instrumento auxiliar **ALL@ALL**. Al seleccionar este instrumento, se descargarán datos de todos los instrumentos disponibles para esta fuente.
 
-   Para añadir un instrumento, haga clic en el botón **Añadir** ![Hydra botón Añadir](../../images/hydra_add.png). Después se abrirá una ventana para descargar el instrumento. ![hydra securities](../../images/hydra_securities.png)
+   Para añadir un instrumento, haga clic en el botón **Añadir** ![Hydra botón Añadir](../../images/hydra_add.png). Después se abrirá una ventana para descargar el instrumento. ![Captura de Primer inicio 2](../../images/hydra_securities.png)
 
    Para descargar los instrumentos, debe hacer clic en el botón correspondiente **Descargar instrumentos**.
 
@@ -48,7 +48,7 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
    Los instrumentos seleccionados se mostrarán en la tabla **Instrumentos**, que tiene estructura de árbol. Su elemento principal es el instrumento; el elemento adicional son los tipos de datos de mercado que se recibirán para ese instrumento.
 2. Para cada instrumento seleccionado, debe elegir los tipos de datos de mercado necesarios para la descarga.
 
-   Si no se han establecido todos los parámetros necesarios del instrumento, aparecerá el icono ![hydra zero](../../images/hydra_zero.png) en la columna izquierda de la línea del instrumento. ![hydra seleccionar tipo de datos de mercado](../../images/hydra_type_market_data_choose.png)
+   Si no se han establecido todos los parámetros necesarios del instrumento, aparecerá el icono ![Captura de Primer inicio 3](../../images/hydra_zero.png) en la columna izquierda de la línea del instrumento. ![hydra seleccionar tipo de datos de mercado](../../images/hydra_type_market_data_choose.png)
 
    Seleccionemos la descarga de **Ticks** y **Velas marco temporal 5**.
 

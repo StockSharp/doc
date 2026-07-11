@@ -2046,17 +2046,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
-	public void LocalizedIndicatorMarkdownImageAltTextsDoNotMirrorImageFileNames()
+	public void LocalizedMarkdownImageAltTextsDoNotMirrorImageFileNames()
 	{
 		var errors = new List<string>();
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
-			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators", "list_of_indicators");
-			if (!Directory.Exists(indicatorRoot))
-				continue;
+			var langRoot = Path.Combine(_repoRoot, lang);
 
-			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
 			{
 				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
 				{
@@ -2068,7 +2066,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					if (!AreMarkdownImageAltTextAndFileStemEquivalent(altText.Text, imageStem))
 						continue;
 
-					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: indicator image alt text mirrors image file name '{altText.Text}'. Use a localized chart description instead.");
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text mirrors image file name '{altText.Text}'. Use a localized description instead.");
 				}
 			}
 		}

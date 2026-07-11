@@ -2,7 +2,7 @@
 
 自分のトランザクションをインポートするには、アプリケーションのメイン メニューから **インポート \=\> 自分の取引** を選択する必要があります。
 
-![hydra import executions](../../../images/hydra_import_executions.png)
+![トランザクション のスクリーンショット](../../../images/hydra_import_executions.png)
 
 ## 自分のトランザクションをインポートするプロセス
 

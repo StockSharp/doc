@@ -77,7 +77,7 @@ Se os dados de mercado não puderem ser obtidos diretamente a partir da origem, 
 
 Para apresentação gráfica das candles geradas:
 
-1. Clique no botão ![Hydra candles](../../../images/hydra_candles.png)
+1. Clique no botão ![Captura de tela de Geração de velas](../../../images/hydra_candles.png)
 2. Será aberto um gráfico com as candles construídas:
 
    ![hydra gráfico de candles por tempo gráfico](../../../images/hydra_candles_tf_chart.png)

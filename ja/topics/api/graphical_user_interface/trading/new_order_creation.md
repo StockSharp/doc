@@ -2,7 +2,7 @@
 
 [OrderWindow](xref:StockSharp.Xaml.OrderWindow) - 注文を作成するためのウィンドウです。
 
-![GUI OrderWindow](../../../../images/gui_orderwindow.png)
+![新規注文の作成 のスクリーンショット](../../../../images/gui_orderwindow.png)
 
 接続が条件付き注文（ストップロス、テイクプロフィット）の登録をサポートしている場合、このウィンドウで **詳細条件** フラグを設定することで、高度な条件を持つ条件付き注文を登録できます。
 

@@ -4,7 +4,7 @@ El componente [SecurityCreateWindow](xref:StockSharp.Xaml.SecurityCreateWindow) 
 
 A continuación se muestra la apariencia del componente y el fragmento de código con su uso. 
 
-![Gui SecurityCreateWindow](../../../../images/gui_securitycreatewindow.png)
+![Captura de Ventana](../../../../images/gui_securitycreatewindow.png)
 
 ```cs
 private void Button_Click(object sender, RoutedEventArgs e)

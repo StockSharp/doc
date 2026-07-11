@@ -8,7 +8,7 @@ Bevor Sie Handelsroboter für die aktuelle Handelsplattform schreiben, wird empf
 
 Der Interaktionsmechanismus ist in dieser Abbildung dargestellt:
 
-![IQFeed](../../../../images/iqfeed.jpg)
+![IQFeed Screenshot 1](../../../../images/iqfeed.jpg)
 
 Um mit dem **IQFeed**-Connector zu arbeiten, müssen Sie den Router **IQ Feed Client** auf dem Computer installieren; er kann sowohl auf dem lokalen als auch auf einem entfernten Computer installiert werden. Der Datenaustausch zwischen der Clientanwendung und dem **IQ Feed Client** sowie zwischen dem **IQ Feed Client** und den Servern erfolgt über das TCP/IP-Protokoll.
 
@@ -18,11 +18,11 @@ Nach der Installation von **IQ Feed Client** wird empfohlen, den Computer neu zu
 
 Nach der Installation von **IQ Feed Client, IQLink Launcher** muss dieser gestartet werden.
 
-![iQFeedIQLinkLauncher](../../../../images/iqfeediqlinklauncher.png)
+![IQFeed Screenshot 2](../../../../images/iqfeediqlinklauncher.png)
 
 Klicken Sie im geöffneten Fenster **IQLink Launcher** auf **Start IQLink**.
 
-![iQFeedIQConnectLogin](../../../../images/iqfeediqconnectlogin.png)
+![IQFeed Screenshot 3](../../../../images/iqfeediqconnectlogin.png)
 
 Geben Sie im geöffneten Fenster **IQ Connect Login** den **Benutzernamen** und das **Passwort** (oder die PIN) ein, die Sie vom Dienst **iQFeed** erhalten haben. Diese Zugangsdaten sind nicht mit dem Benutzernamen und Passwort der **iQFeed**-Website identisch. Klicken Sie nach der Eingabe der Zugangsdaten auf **Connect**.
 

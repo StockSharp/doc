@@ -1,6 +1,6 @@
 # 通知
 
-![Designer Notice 00](../../../../../../images/designer_notice_00.png)
+![通知 截图](../../../../../../images/designer_notice_00.png)
 
 当数据到达输入端口时，该模块会发送通知。传入值通过 `ToString` 转换为文本。可以连接 [变量](../data_sources/variable.md) 来发送固定文本，连接成交或K线数据流来查看其详细信息，也可以使用 [字符串格式化](string_format.md) 和 [字符串拼接](string_concat.md) 模块生成自定义消息。
 

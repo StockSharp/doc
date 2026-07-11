@@ -1,6 +1,6 @@
 # オーダーブック
 
-![GUI MarketDepthControl](../../../../images/gui_marketdepthcontrol.png)
+![オーダーブック のスクリーンショット](../../../../images/gui_marketdepthcontrol.png)
 
 [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl) は、オーダーブックを表示するためのグラフィカルコンポーネントです。このコンポーネントでは、気配と自分の注文を表示できます。
 

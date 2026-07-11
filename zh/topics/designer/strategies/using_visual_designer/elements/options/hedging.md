@@ -1,6 +1,6 @@
 # 对冲
 
-![Designer Hedging 00](../../../../../../images/designer_hedging_00.png)
+![对冲 截图](../../../../../../images/designer_hedging_00.png)
 
 该模块用于对冲期权持仓。
 

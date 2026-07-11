@@ -2,7 +2,7 @@
 
 Um Nachrichten zu importieren, wählen Sie im Hauptmenü der Anwendung **Importieren \=\> Nachrichten**.
 
-![hydra import news](../../../images/hydra_import_news.png)
+![Nachrichten Screenshot](../../../images/hydra_import_news.png)
 
 ## Nachrichtenimportprozess
 

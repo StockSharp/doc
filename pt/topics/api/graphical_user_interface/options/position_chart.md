@@ -4,7 +4,7 @@ O componente gráfico [OptionPositionChart](xref:StockSharp.Xaml.Charting.Option
 
 Segue-se o exemplo SampleOptionQuoting, no qual este gráfico é utilizado. O código-fonte do exemplo pode ser encontrado na pasta *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 
-![option volsmile](../../../../images/option_volsmile.png)
+![Captura de tela de Gráfico de posição](../../../../images/option_volsmile.png)
 
 ## Exemplo SampleOptionQuoting
 

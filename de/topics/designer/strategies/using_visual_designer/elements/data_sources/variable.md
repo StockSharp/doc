@@ -1,6 +1,6 @@
 # Variable
 
-![Designer Variable 00](../../../../../../images/designer_variable_00.png)
+![Variable Screenshot](../../../../../../images/designer_variable_00.png)
 
 Der Würfel wird verwendet, um Werte zu speichern und den zuvor gespeicherten Wert in der Elementkette weiterzugeben.
 

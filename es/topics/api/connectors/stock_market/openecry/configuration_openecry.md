@@ -2,7 +2,7 @@
 
 El mecanismo de interacción se muestra en esta figura: 
 
-![OECTrader](../../../../../images/oectrader.png)
+![Captura de Configuración OpenECry](../../../../../images/oectrader.png)
 
 Como se ve en la figura, [OpenECryMessageAdapter](xref:StockSharp.OpenECry.OpenECryMessageAdapter) se comunica con el servidor OEC mediante [GainFutures API](https://gainfutures.com/gainfuturesapi). El uso de [GainFutures API](https://gainfutures.com/gainfuturesapi) no requiere un terminal OEC Trader en funcionamiento.
 

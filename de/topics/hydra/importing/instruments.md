@@ -2,7 +2,7 @@
 
 Um Instrumente zu importieren, wählen Sie die Registerkarte **Importieren \=\> Instrumente**.
 
-![hydra import securities](../../../images/hydra_import_securities.png)
+![Instrumente Screenshot 1](../../../images/hydra_import_securities.png)
 
 ## Importprozess.
 
@@ -25,8 +25,8 @@ Um Instrumente zu importieren, wählen Sie die Registerkarte **Importieren \=\> 
    - Für das Feld {PriceStep} wählen Sie im Fenster **S#-Feld** das Feld **Nominalwert** und weisen ihm den Wert 2 zu.
    - Für das Feld {SecurityType} wählen Sie im Fenster **S#-Feld** das Feld **Typ** - den Instrumenttyp (Aktie, Währung, Futures usw.). Wir weisen ihm den Wert 3 zu.
    - Für das Feld {VolumeStep} wählen Sie im Fenster **S#-Feld** das Feld **Mindestvolumen (Basis)** - das Basis- oder Mindestvolumen des Instruments. Wir weisen ihm den Wert 4 zu.
-   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop securitiy](../../../images/hydra_import_prop_securitiy.png)
+   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![Instrumente Screenshot 2](../../../images/hydra_import_prop_securitiy.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.
-3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import preview securitiy](../../../images/hydra_import_preview_securitiy.png)
+3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![Instrumente Screenshot 3](../../../images/hydra_import_preview_securitiy.png)
 4. Klicken Sie auf die Schaltfläche **Importieren**.

@@ -4,4 +4,4 @@ Para trabajar con un conector, debe especificar **usuario** y **contraseña**. *
 
 El mecanismo de interacción se muestra en esta figura: 
 
-![blackwood trader](../../../../../images/blackwood_trader.png)
+![Captura de Configuración Blackwood (Fusion)](../../../../../images/blackwood_trader.png)

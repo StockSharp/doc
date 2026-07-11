@@ -2,7 +2,7 @@
 
 Todos los conectores proporcionan la posibilidad de configurar la reconexión en caso de desconexión. En el elemento gráfico [Ventana de configuración de conexión](../graphical_user_interface/connection_settings_window.md), se ve así: 
 
-![API GUI ReconnectionSettings](../../../images/api_gui_reconnectionsettings.png)
+![Captura de Configuración de reconexión 1](../../../images/api_gui_reconnectionsettings.png)
 
 **Propiedades de reconexión**
 
@@ -32,10 +32,10 @@ El mecanismo de reconexión se configura mediante la propiedad [ReConnectionSett
    ```
 2. Para comprobar cómo funciona el mecanismo de control de conexión, puede desactivar la conexión a Internet: 
 
-   ![transactions](../../../images/transactions.png)
+   ![Captura de Configuración de reconexión 2](../../../images/transactions.png)
 3. A continuación se muestra el log del programa, que indica que la aplicación inicialmente está conectada y que, después de desactivar la conexión a Internet, intenta reconectarse. Tras restaurar la conexión a Internet, la conexión de la aplicación se restablece: 
 
-   ![API ReconnectionLog](../../../images/api_reconnectionlog.png)
+   ![Captura de Configuración de reconexión 3](../../../images/api_reconnectionlog.png)
 4. Como pueden usarse varias conexiones en [Connector](xref:StockSharp.Algo.Connector), por defecto los eventos relacionados con la reconexión, como [ConnectionRestored](xref:StockSharp.Algo.Connector.ConnectionRestored), no se activan, y los adaptadores de conexión intentan reconectarse por sí mismos. Para que el evento empiece a generarse, debe establecer el valor de la propiedad [BasketMessageAdapter.SuppressReconnectingErrors](xref:StockSharp.Algo.BasketMessageAdapter.SuppressReconnectingErrors) del adaptador en **false**. 
 
    ```cs

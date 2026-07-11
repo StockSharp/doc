@@ -1,6 +1,6 @@
 # 取引が許可されているか
 
-![Designer TradeAllowedDiagramElement 00](../../../../../../images/designer_tradealloweddiagramelement_00.png)
+![取引が許可されているか のスクリーンショット](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
 このブロックは、現在取引が許可されているかどうかを確認するために使用します。次の条件が確認されます:
 

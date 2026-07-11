@@ -4,7 +4,7 @@ Para trabajar con un conector, debe especificar **usuario** y **contraseña**. *
 
 El mecanismo de interacción se muestra en esta figura: 
 
-![ETrade](../../../../../images/etrade.png)
+![Captura de Configuración E\TRADE](../../../../../images/etrade.png)
 
 [E\*TRADE](../e_trade.md) usa el protocolo de autorización OAuth 1.0a, que requiere login y contraseña mediante el navegador en el sitio [E\*TRADE](https://etrade.com/). La secuencia completa del procedimiento de autorización se muestra en la siguiente figura:
 

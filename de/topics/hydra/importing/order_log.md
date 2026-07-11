@@ -2,7 +2,7 @@
 
 Um das Order-Log zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Importieren \=\> Order-Log**.
 
-![hydra import orderlog](../../../images/hydra_import_orderlog.png)
+![Order-Log Screenshot 1](../../../images/hydra_import_orderlog.png)
 
 ## Importprozess.
 
@@ -31,8 +31,8 @@ Um das Order-Log zu importieren, wählen Sie im Hauptmenü der Anwendung den Ein
    - Für das Feld {TimeInForce} wählen Sie im Fenster **S#-Feld** die **Gültigkeitsdauer** - eine Ausführungsbedingung der Limit-Order. Wir weisen ihr den Wert 9 zu.
    - Für das Feld {TradeId} wählen Sie im Fenster **S#-Feld** das Feld **Kennung (Trade)** - die Trade-Kennung. Wir weisen ihm den Wert 10 zu.
    - Für das Feld {TradePrice} wählen Sie im Fenster **S#-Feld** das Feld **Preis (Trade)** - den Trade-Preis. Wir weisen ihm den Wert 11 zu.
-   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![hydra import prop orderlog](../../../images/hydra_import_prop_orderlog.png)
+   - Das Fenster zur Feldeinstellung sieht wie folgt aus:![Order-Log Screenshot 2](../../../images/hydra_import_prop_orderlog.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.
-3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![hydra import preview orderlog](../../../images/hydra_import_preview_orderlog.png)
+3. Um eine Vorschau der Daten anzuzeigen, klicken Sie auf die Schaltfläche **Vorschau**.![Order-Log Screenshot 3](../../../images/hydra_import_preview_orderlog.png)
 4. Klicken Sie auf die Schaltfläche **Importieren**.
