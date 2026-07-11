@@ -225,8 +225,8 @@ var cts = new CancellationTokenSource();
 await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
 {
     // s ist die Strategie mit Ergebnissen nach dem Backtest.
-    Console.WriteLine($"PnL={s.PnL}, LongSma={s.Parameters["LongSma"].Value}, " +
-                      $"ShortSma={s.Parameters["ShortSma"].Value}");
+    Console.WriteLine($"PnL={s.PnL}, lange SMA={s.Parameters["LongSma"].Value}, " +
+                      $"kurze SMA={s.Parameters["ShortSma"].Value}");
 }
 ```
 

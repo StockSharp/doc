@@ -411,6 +411,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		("round-trip details output", @"\bRound-trip completed:|\bOpened:|\bClosed:"),
 		("PnL summary output", @"\bRealized PnL:|\bUnrealized PnL:|\bTotal PnL:"),
 		("optimization result output", @"\bIteration complete:|\bBest result:"),
+		("optimization parameter output", @"\bLongSma=|\bShortSma="),
 		("statistics output", @"\bNet Profit:|\bNet profit:|\bTotal iterations:"),
 		("latency output", @"\bLatency:|\bRegistration latency:|\bCancellation latency:"),
 		("slippage summary output", @"\bTotal slippage:"),

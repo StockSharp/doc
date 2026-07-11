@@ -225,8 +225,8 @@ var cts = new CancellationTokenSource();
 await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
 {
     // s -- стратегия с результатами после бэктеста
-    Console.WriteLine($"PnL={s.PnL}, LongSma={s.Parameters["LongSma"].Value}, " +
-                      $"ShortSma={s.Parameters["ShortSma"].Value}");
+    Console.WriteLine($"PnL={s.PnL}, длинная SMA={s.Parameters["LongSma"].Value}, " +
+                      $"короткая SMA={s.Parameters["ShortSma"].Value}");
 }
 ```
 

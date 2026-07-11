@@ -225,8 +225,8 @@ var cts = new CancellationTokenSource();
 await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
 {
     // s 是回测后带有结果的策略。
-    Console.WriteLine($"PnL={s.PnL}, LongSma={s.Parameters["LongSma"].Value}, " +
-                      $"ShortSma={s.Parameters["ShortSma"].Value}");
+    Console.WriteLine($"PnL={s.PnL}, 长期SMA={s.Parameters["LongSma"].Value}, " +
+                      $"短期SMA={s.Parameters["ShortSma"].Value}");
 }
 ```
 
