@@ -7,8 +7,8 @@ Para utilizar el indicador, debe utilizar la clase [Aroon](xref:StockSharp.Algo.
 ## Descripción
 
 El indicador Aroon consta de dos líneas:
-- **Aroon Up** - mide la fuerza de una tendencia alcista
-- **Aroon Down** - mide la fuerza de una tendencia a la baja
+- **Aroon alcista** - mide la fuerza de una tendencia alcista
+- **Aroon bajista** - mide la fuerza de una tendencia a la baja
 
 Aroon ayuda a determinar:
 - El comienzo de una nueva tendencia.
@@ -27,14 +27,14 @@ El indicador tiene los siguientes parámetros:
 
 El cálculo del indicador Aroon se basa en determinar el tiempo (número de periodos) transcurrido desde que se alcanzaron los precios máximo y mínimo dentro del periodo especificado:
 
-1. Aroon Up se calcula mediante la fórmula:
+1. Aroon alcista se calcula mediante la fórmula:
    ```
-   Aroon Up = ((Length - Periods since high) / Length) * 100
+   Aroon alcista = ((Length - Periods since high) / Length) * 100
    ```
 
-2. Aroon Down se calcula mediante la fórmula:
+2. Aroon bajista se calcula mediante la fórmula:
    ```
-   Aroon Down = ((Length - Periods since low) / Length) * 100
+   Aroon bajista = ((Length - Periods since low) / Length) * 100
    ```
 
 donde:
@@ -48,10 +48,10 @@ Ambas líneas Aroon oscilan entre 0 y 100:
 
 ## Interpretación
 
-- **Fuerte tendencia alcista**: Aroon Up está cerca de 100 y Aroon Down está cerca de 0
-- **Fuerte tendencia a la baja**: Aroon Down está cerca de 100 y Aroon Up está cerca de 0
+- **Fuerte tendencia alcista**: Aroon alcista está cerca de 100 y Aroon bajista está cerca de 0
+- **Fuerte tendencia a la baja**: Aroon bajista está cerca de 100 y Aroon alcista está cerca de 0
 - **Movimiento lateral**: ambas líneas se mueven paralelas entre sí en niveles bajos
-- **Posible reversión de tendencia**: cruce de líneas Aroon Up y Aroon Down
+- **Posible reversión de tendencia**: cruce de líneas Aroon alcista y Aroon bajista
 - **Consolidación**: ambas líneas oscilan alrededor de 50
 
 ![indicator_aroon](../../../../images/indicator_aroon.png)

@@ -1,8 +1,8 @@
-# Bull Power
+# força compradora
 
-﻿# Bull Power
+﻿# força compradora
 
-**Bull Power** é a contraparte altista dentro do sistema Elder-ray. Mede a força com que os compradores empurram os preços acima de uma média móvel exponencial (EMA), comparando o máximo da barra com o preço médio.
+**força compradora** é a contraparte altista dentro do sistema Elder-ray. Mede a força com que os compradores empurram os preços acima de uma média móvel exponencial (EMA), comparando o máximo da barra com o preço médio.
 
 Use a classe [BullPower](xref:StockSharp.Algo.Indicators.BullPower) para trabalhar com este indicador.
 
@@ -10,7 +10,7 @@ Use a classe [BullPower](xref:StockSharp.Algo.Indicators.BullPower) para trabalh
 
 O indicador usa a fórmula:
 
-`Bull Power = High − EMA`.
+`força compradora = High − EMA`.
 
 - Valores positivos confirmam pressão compradora e sustentam uma tendência de subida.
 - Valores em queda em direção a zero ou abaixo de zero sinalizam enfraquecimento dos compradores.
@@ -18,21 +18,21 @@ O indicador usa a fórmula:
 
 ## Parâmetros
 
-Bull Power herda os seus parâmetros de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
+força compradora herda os seus parâmetros de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
 - **Length** — período da EMA.
 - **Alpha** (opcional) — coeficiente de suavização, quando aplicável.
 
 ## Utilização
 
-- Bull Power a subir em conjunto com uma EMA a subir confirma a força da tendência.
-- O preço a fazer novos máximos sem leituras mais altas de Bull Power forma divergência baixista.
-- Combine Bull e Bear Power com a EMA do preço para avaliar a estrutura completa do [Elder Ray](elder_ray.md).
+- força compradora a subir em conjunto com uma EMA a subir confirma a força da tendência.
+- O preço a fazer novos máximos sem leituras mais altas de força compradora forma divergência baixista.
+- Combine Bull e força vendedora com a EMA do preço para avaliar a estrutura completa do [raios de Elder](elder_ray.md).
 
 ![indicator_bull_power](../../../../images/indicator_bull_power.png)
 
 ## Ver também
 
-[Bear Power](bear_power.md)
-[Elder Ray](elder_ray.md)
+[força vendedora](bear_power.md)
+[raios de Elder](elder_ray.md)
 [Média móvel exponencial](ema.md)

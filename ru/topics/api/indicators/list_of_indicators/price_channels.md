@@ -8,4 +8,4 @@
 
 ## См. также
 
-[Donchian Channels](donchian_channels.md)
+[каналы Дончиана](donchian_channels.md)

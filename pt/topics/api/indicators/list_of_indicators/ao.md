@@ -23,4 +23,4 @@ Os valores são apresentados para o indicador clássico e, nas definições, é 
 
 ## Ver também
 
-[Bollinger Bands](bollinger_bands.md)
+[bandas de Bollinger](bollinger_bands.md)

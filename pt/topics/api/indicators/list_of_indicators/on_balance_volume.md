@@ -1,12 +1,12 @@
 # OBV
 
-**On-Balance Volume (OBV)** é um indicador técnico desenvolvido por Joseph Granville que usa o volume de negociação para prever alterações de preço, acumulando volume com base na direção do preço.
+**volume em balanço (OBV)** é um indicador técnico desenvolvido por Joseph Granville que usa o volume de negociação para prever alterações de preço, acumulando volume com base na direção do preço.
 
 Para usar o indicador, é necessário usar a classe [OnBalanceVolume](xref:StockSharp.Algo.Indicators.OnBalanceVolume).
 
 ## Descrição
 
-On-Balance Volume (OBV) é um indicador cumulativo que adiciona volume quando o preço de fecho sobe e subtrai volume quando o preço de fecho cai. O indicador baseia-se no conceito de que as alterações de volume antecedem as alterações de preço. De acordo com esta teoria, quando o volume aumenta significativamente sem uma alteração de preço correspondente, deve esperar-se que o preço acabe por subir, e vice-versa.
+volume em balanço (OBV) é um indicador cumulativo que adiciona volume quando o preço de fecho sobe e subtrai volume quando o preço de fecho cai. O indicador baseia-se no conceito de que as alterações de volume antecedem as alterações de preço. De acordo com esta teoria, quando o volume aumenta significativamente sem uma alteração de preço correspondente, deve esperar-se que o preço acabe por subir, e vice-versa.
 
 O OBV procura detetar momentos em que o "smart money" (grandes investidores institucionais) está a acumular ou distribuir posições, o que pode antecipar movimentos futuros do preço. O indicador é particularmente útil para identificar divergências entre preço e volume que podem sinalizar potenciais reversões de mercado.
 
@@ -14,7 +14,7 @@ O indicador OBV foi apresentado pela primeira vez por Joseph Granville em 1963 n
 
 ## Cálculo
 
-O cálculo do On-Balance Volume é muito simples:
+O cálculo do volume em balanço é muito simples:
 
 1. Definir o valor inicial do OBV (normalmente 0 ou um número arbitrário):
    ```
@@ -37,7 +37,7 @@ Onde:
 
 ## Interpretação
 
-On-Balance Volume pode ser interpretado da seguinte forma:
+volume em balanço pode ser interpretado da seguinte forma:
 
 1. **Análise da tendência**:
    - OBV em subida indica entrada de volume no mercado (acumulação), o que pode antecipar subida do preço

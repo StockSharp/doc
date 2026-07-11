@@ -1,6 +1,6 @@
-# Parabolic SAR
+# parabolischer SAR
 
-**Parabolic SAR (SAR)** – Ein Trendindikator, der Preisstopp- und Umkehrpunkte sowie die Trendrichtung anzeigt.
+**parabolischer SAR (SAR)** – Ein Trendindikator, der Preisstopp- und Umkehrpunkte sowie die Trendrichtung anzeigt.
 
 Um den Indikator zu verwenden, sollte die Klasse [ParabolicSar](xref:StockSharp.Algo.Indicators.ParabolicSar) verwendet werden.
 ##### Indikatorberechnung

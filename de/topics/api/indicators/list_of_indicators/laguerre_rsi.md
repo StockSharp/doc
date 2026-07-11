@@ -1,6 +1,6 @@
 # LRSI
 
-**Laguerre RSI (LRSI)** ist ein technischer Indikator, der auf den mathematischen Prinzipien des Laguerre-Filters basiert und von John Ehlers als erweiterte Version des traditionellen Relative Strength Index (RSI) entwickelt wurde.
+**Laguerre RSI (LRSI)** ist ein technischer Indikator, der auf den mathematischen Prinzipien des Laguerre-Filters basiert und von John Ehlers als erweiterte Version des traditionellen Relative-Stärke-Index (RSI) entwickelt wurde.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [LaguerreRSI](xref:StockSharp.Algo.Indicators.LaguerreRSI) verwenden.
 
@@ -8,7 +8,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [LaguerreRSI](xref
 
 Laguerre RSI (LRSI) ist ein innovativer Oszillator, der die Laguerre-Filter-Mathematik nutzt, um im Vergleich zum herkömmlichen RSI einen empfindlicheren und weniger nacheilenden Indikator zu erzeugen. John Ehlers hat diesen Indikator entwickelt, um das Signalverzögerungsproblem zu lösen, das vielen technischen Indikatoren innewohnt.
 
-LRSI kombiniert Laguerre-Polynomprinzipien mit dem Relative Strength Index-Konzept. Dadurch kann der Indikator schneller auf Trendänderungen reagieren und klarere Handelssignale bilden. Wie der herkömmliche RSI oszilliert der LRSI zwischen 0 und 1 (oder 0 bis 100 bei Multiplikation mit 100), weist jedoch eine weniger laute Struktur und deutlichere Kurven auf.
+LRSI kombiniert Laguerre-Polynomprinzipien mit dem Relative-Stärke-Index-Konzept. Dadurch kann der Indikator schneller auf Trendänderungen reagieren und klarere Handelssignale bilden. Wie der herkömmliche RSI oszilliert der LRSI zwischen 0 und 1 (oder 0 bis 100 bei Multiplikation mit 100), weist jedoch eine weniger laute Struktur und deutlichere Kurven auf.
 
 Der Hauptvorteil von LRSI ist seine Fähigkeit, Trendänderungen schnell zu erkennen und gleichzeitig die Signalstabilität aufrechtzuerhalten. Dies macht es besonders nützlich für den kurzfristigen Handel und die Bestimmung von Ein- und Ausstiegspunkten.
 

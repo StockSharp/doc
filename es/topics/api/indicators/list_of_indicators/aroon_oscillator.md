@@ -1,6 +1,6 @@
-# Aroon Oscillator
+# oscilador Aroon
 
-El **Aroon Oscillator** mide la diferencia entre las líneas Aroon Up y Aroon Down. Destaca de qué lado del mercado
+El **oscilador Aroon** mide la diferencia entre las líneas Aroon alcista y Aroon bajista. Destaca de qué lado del mercado
 es dominante y qué tan fuerte es la tendencia actual.
 
 Utilice la clase [AroonOscillator](xref:StockSharp.Algo.Indicators.AroonOscillator) para trabajar con este indicador.
@@ -9,8 +9,8 @@ Utilice la clase [AroonOscillator](xref:StockSharp.Algo.Indicators.AroonOscillat
 
 El oscilador oscila entre −100 y +100:
 
-- los valores positivos muestran que Aroon Up está por encima de Aroon Down y el mercado está dominado por compradores;
-- los valores negativos indican que Aroon Down está liderando y los bajistas tienen el control;
+- los valores positivos muestran que Aroon alcista está por encima de Aroon bajista y el mercado está dominado por compradores;
+- los valores negativos indican que Aroon bajista está liderando y los bajistas tienen el control;
 - las lecturas cercanas a cero reflejan equilibrio o consolidación.
 
 Cuanto más se aleje el valor de cero, más fuerte será el movimiento direccional.
@@ -21,14 +21,14 @@ Cuanto más se aleje el valor de cero, más fuerte será el movimiento direccion
 
 ## Cálculo
 
-1. Calcule las series Aroon Up y Aroon Down con el `Length` seleccionado.
-2. Resta las dos líneas:  
-   `Aroon Oscillator = Aroon Up − Aroon Down`.
+1. Calcule las series Aroon alcista y Aroon bajista con el `Length` seleccionado.
+2. Resta las dos líneas:
+   `oscilador Aroon = Aroon alcista − Aroon bajista`.
 
 ## Interpretación
 
-- **Aroon Oscillator > 0** — dominio alcista.
-- **Aroon Oscillator < 0** — dominio bajista.
+- **oscilador Aroon > 0** — dominio alcista.
+- **oscilador Aroon < 0** — dominio bajista.
 - **Zero-line cross**: posible cambio en la tendencia predominante.
 - **Valores extremos**: fuerte tendencia direccional, utilizada a menudo como filtro direccional.
 

@@ -1,8 +1,8 @@
-# Aroon Oscillator
+# oscilador Aroon
 
-﻿# Aroon Oscillator
+﻿# oscilador Aroon
 
-O **Aroon Oscillator** mede a diferença entre as linhas Aroon Up e Aroon Down. Destaca que lado do mercado é dominante e quão forte é a tendência atual.
+O **oscilador Aroon** mede a diferença entre as linhas Aroon ascendente e Aroon descendente. Destaca que lado do mercado é dominante e quão forte é a tendência atual.
 
 Use a classe [AroonOscillator](xref:StockSharp.Algo.Indicators.AroonOscillator) para trabalhar com este indicador.
 
@@ -10,8 +10,8 @@ Use a classe [AroonOscillator](xref:StockSharp.Algo.Indicators.AroonOscillator) 
 
 O oscilador oscila entre −100 e +100:
 
-- valores positivos mostram que Aroon Up está acima de Aroon Down e que o mercado é dominado por compradores;
-- valores negativos indicam que Aroon Down está a liderar e que os vendedores estão no controlo;
+- valores positivos mostram que Aroon ascendente está acima de Aroon descendente e que o mercado é dominado por compradores;
+- valores negativos indicam que Aroon descendente está a liderar e que os vendedores estão no controlo;
 - leituras em torno de zero refletem equilíbrio ou consolidação.
 
 Quanto mais o valor se afasta de zero, mais forte é o movimento direcional.
@@ -22,14 +22,14 @@ Quanto mais o valor se afasta de zero, mais forte é o movimento direcional.
 
 ## Cálculo
 
-1. Calcule as séries Aroon Up e Aroon Down com o `Length` selecionado.
-2. Subtraia as duas linhas:  
-   `Aroon Oscillator = Aroon Up − Aroon Down`.
+1. Calcule as séries Aroon ascendente e Aroon descendente com o `Length` selecionado.
+2. Subtraia as duas linhas:
+   `oscilador Aroon = Aroon ascendente − Aroon descendente`.
 
 ## Interpretação
 
-- **Aroon Oscillator > 0** — dominância compradora.
-- **Aroon Oscillator < 0** — dominância vendedora.
+- **oscilador Aroon > 0** — dominância compradora.
+- **oscilador Aroon < 0** — dominância vendedora.
 - **Cruzamento da linha zero** — potencial alteração da tendência predominante.
 - **Valores extremos** — tendência direcional forte, frequentemente usada como filtro direcional.
 

@@ -1,12 +1,12 @@
 # OBVM
 
-**On Balance Volume Mean (OBVM)** es un indicador técnico que representa un promedio móvil del indicador On Balance Volume (OBV), lo que permite señales de tendencia más claras basadas en el volumen.
+**volumen en balance Mean (OBVM)** es un indicador técnico que representa un promedio móvil del indicador volumen en balance (OBV), lo que permite señales de tendencia más claras basadas en el volumen.
 
 Para utilizar el indicador, debe utilizar la clase [OnBalanceVolumeMean](xref:StockSharp.Algo.Indicators.OnBalanceVolumeMean).
 
 ## Descripción
 
-On Balance Volume Mean (OBVM) es una modificación del indicador clásico On Balance Volume (OBV) que aplica una media móvil a los valores OBV para suavizar las fluctuaciones e identificar tendencias más claras. El indicador mantiene el concepto central de OBV: acumulación de volumen basada en el cambio de dirección del precio, pero agrega una capa adicional de filtrado.
+volumen en balance Mean (OBVM) es una modificación del indicador clásico volumen en balance (OBV) que aplica una media móvil a los valores OBV para suavizar las fluctuaciones e identificar tendencias más claras. El indicador mantiene el concepto central de OBV: acumulación de volumen basada en el cambio de dirección del precio, pero agrega una capa adicional de filtrado.
 
 OBVM ayuda a eliminar el ruido presente en el OBV original y hace que las tendencias de flujo volumétrico a largo plazo sean más notorias. Esto es particularmente útil en mercados volátiles o cuando se analizan instrumentos con volúmenes de negociación irregulares.
 
@@ -19,9 +19,9 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de On Balance Volume Mean implica los siguientes pasos:
+El cálculo de volumen en balance Mean implica los siguientes pasos:
 
-1. Calcule la base del indicador On Balance Volume (OBV):
+1. Calcule la base del indicador volumen en balance (OBV):
    ```
    Si Close[current] > Close[previous]:
        OBV[current] = OBV[previous] + Volume[current]
@@ -47,7 +47,7 @@ Nota: Se pueden utilizar otros tipos de medias móviles como EMA (media móvil e
 
 ## Interpretación
 
-On Balance Volume Mean se puede interpretar de la siguiente manera:
+volumen en balance Mean se puede interpretar de la siguiente manera:
 
 1. **Análisis de tendencias**:
    - El aumento de OBVM indica una tendencia alcista con un fuerte soporte de volumen

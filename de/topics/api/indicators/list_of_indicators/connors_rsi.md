@@ -6,7 +6,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [ConnorsRSI](xref:
 
 ## Beschreibung
 
-Connors RSI ist eine erweiterte Version des traditionellen Relative Strength Index (RSI), der zwei zusätzliche Komponenten hinzufügt, um genauere überkaufte und überverkaufte Signale zu liefern.
+Connors RSI ist eine erweiterte Version des traditionellen Relative-Stärke-Index (RSI), der zwei zusätzliche Komponenten hinzufügt, um genauere überkaufte und überverkaufte Signale zu liefern.
 
 Im Gegensatz zum Standard-RSI, das nur Preisänderungen berücksichtigt, berücksichtigt Connors RSI auch den Streak (Reihe aufeinanderfolgender Preisbewegungen in eine Richtung) und die Änderungsrate (ROC), wodurch es empfindlicher auf kurzfristige Änderungen reagiert und extreme Marktbedingungen zuverlässiger erkennt.
 

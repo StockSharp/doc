@@ -1,16 +1,16 @@
 # FR
 
-**Fibonacci Retracement (FR)** es un indicador técnico basado en números de Fibonacci que ayuda a identificar posibles niveles de soporte y resistencia basados en movimientos de precios anteriores.
+**retroceso de Fibonacci (FR)** es un indicador técnico basado en números de Fibonacci que ayuda a identificar posibles niveles de soporte y resistencia basados en movimientos de precios anteriores.
 
 Para utilizar el indicador, debe utilizar la clase [FibonacciRetracement](xref:StockSharp.Algo.Indicators.FibonacciRetracement).
 
 ## Descripción
 
-Fibonacci Retracement es una herramienta técnica popular que utiliza líneas horizontales para indicar áreas de posible soporte o resistencia en un gráfico de precios. Estos niveles se basan en los números de Fibonacci y sus correspondientes porcentajes.
+retroceso de Fibonacci es una herramienta técnica popular que utiliza líneas horizontales para indicar áreas de posible soporte o resistencia en un gráfico de precios. Estos niveles se basan en los números de Fibonacci y sus correspondientes porcentajes.
 
 El indicador se basa en la secuencia matemática de Fibonacci, donde cada número es la suma de los dos anteriores (1, 1, 2, 3, 5, 8, 13, 21, 34...). De esta secuencia se derivan los ratios clave utilizados en el análisis técnico: 23,6%, 38,2%, 50%, 61,8% y 78,6%.
 
-Fibonacci Retracement se aplica a un movimiento de precio significativo (tendencia) y muestra los niveles donde puede ocurrir una corrección (retroceso) antes de continuar en la dirección de la tendencia principal.
+retroceso de Fibonacci se aplica a un movimiento de precio significativo (tendencia) y muestra los niveles donde puede ocurrir una corrección (retroceso) antes de continuar en la dirección de la tendencia principal.
 
 El indicador es particularmente útil para:
 - Identificar posibles niveles de soporte en una tendencia alcista
@@ -25,7 +25,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-Calcular los niveles Fibonacci Retracement implica los siguientes pasos:
+Calcular los niveles retroceso de Fibonacci implica los siguientes pasos:
 
 1. Determinación de un movimiento de precio significativo (tendencia):
    - En tendencia ascendente: de menor a mayor
@@ -34,7 +34,7 @@ Calcular los niveles Fibonacci Retracement implica los siguientes pasos:
 2. Calcular los niveles de corrección en función del rango de este movimiento:
    ```
    Range = |High - Low|
-   
+
    Nivel 0% = High (para tendencia alcista) o Low (para tendencia bajista)
    Nivel 23.6% = High - (Range * 0.236) o Low + (Range * 0.236)
    Nivel 38.2% = High - (Range * 0.382) o Low + (Range * 0.382)
@@ -46,7 +46,7 @@ Calcular los niveles Fibonacci Retracement implica los siguientes pasos:
 
 ## Interpretación
 
-Los niveles Fibonacci Retracement se interpretan de la siguiente manera:
+Los niveles retroceso de Fibonacci se interpretan de la siguiente manera:
 
 1. **Principales niveles de corrección**:
    - 23,6%: nivel débil, a menudo superado durante una tendencia fuerte

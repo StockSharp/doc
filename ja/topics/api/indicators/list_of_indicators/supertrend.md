@@ -29,4 +29,4 @@ SuperTrend は、平均価格と ATR 値を使用して構築されます。イ�
 ## 関連項目
 
 [ATR](atr.md)
-[Parabolic SAR](parabolic_sar.md)
+[パラボリック SAR](parabolic_sar.md)

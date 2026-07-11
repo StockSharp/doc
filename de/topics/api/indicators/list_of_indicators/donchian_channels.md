@@ -1,19 +1,19 @@
 # DC
 
-**Donchian Channels (DC)** ist ein vom Händler Richard Donchian entwickelter technischer Indikator, der aus einem oberen und unteren Band (Kanalgrenzen) besteht, die auf den maximalen und minimalen Preiswerten über einen bestimmten Zeitraum basieren.
+**Donchian-Kanäle (DC)** ist ein vom Händler Richard Donchian entwickelter technischer Indikator, der aus einem oberen und unteren Band (Kanalgrenzen) besteht, die auf den maximalen und minimalen Preiswerten über einen bestimmten Zeitraum basieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [DonchianChannels](xref:StockSharp.Algo.Indicators.DonchianChannels) verwenden.
 
 ## Beschreibung
 
-Donchian Channels ist ein einfacher, aber effektiver Volatilitäts- und Trendindikator. Der Indikator besteht aus drei Zeilen:
+Donchian-Kanäle ist ein einfacher, aber effektiver Volatilitäts- und Trendindikator. Der Indikator besteht aus drei Zeilen:
 - Upper-Linie: höchstes Hoch im ausgewählten Zeitraum
 - Lower-Linie: niedrigstes Tief im ausgewählten Zeitraum
 - Middle-Linie: Durchschnittswert zwischen der oberen und unteren Linie
 
 Dieser Indikator wurde erstmals von Richard Donchian in seiner 4-Wochen-Kanalregel verwendet, wonach ein Kaufsignal auftritt, wenn der Preis das höchste Hoch von 4 Wochen überschreitet, und ein Verkaufssignal, wenn der Preis unter das niedrigste Tief von 4 Wochen fällt.
 
-Donchian Channels sind nützlich für:
+Donchian-Kanäle sind nützlich für:
 - Identifizierung der Marktvolatilität
 - Bestimmung der Unterstützungs- und Widerstandsniveaus
 - Erzeugen von Ausbruchssignalen
@@ -26,7 +26,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Donchian Channels-Berechnung ist ganz einfach:
+Die Donchian-Kanäle-Berechnung ist ganz einfach:
 
 1. Upper-Kanalleitung:
    ```
@@ -45,7 +45,7 @@ Die Donchian Channels-Berechnung ist ganz einfach:
 
 ## Interpretation
 
-Donchian Channels kann auf verschiedene Arten verwendet werden:
+Donchian-Kanäle kann auf verschiedene Arten verwendet werden:
 
 1. **Ausbruchsstrategien**:
    - Ein Durchbruch über die obere Kanallinie kann als Kaufsignal gewertet werden

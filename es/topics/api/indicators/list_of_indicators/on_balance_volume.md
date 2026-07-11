@@ -1,12 +1,12 @@
 # OBV
 
-**On-Balance Volume (OBV)** es un indicador técnico desarrollado por Joseph Granville que utiliza el volumen de operaciones para pronosticar cambios de precios acumulando volumen según la dirección del precio.
+**volumen en balance (OBV)** es un indicador técnico desarrollado por Joseph Granville que utiliza el volumen de operaciones para pronosticar cambios de precios acumulando volumen según la dirección del precio.
 
 Para utilizar el indicador, debe utilizar la clase [OnBalanceVolume](xref:StockSharp.Algo.Indicators.OnBalanceVolume).
 
 ## Descripción
 
-On-Balance Volume (OBV) es un indicador acumulativo que agrega volumen cuando el precio de cierre sube y resta volumen cuando el precio de cierre baja. El indicador se basa en el concepto de que los cambios de volumen preceden a los cambios de precios. Según esta teoría, cuando el volumen aumenta significativamente sin un cambio correspondiente en el precio, se debe esperar que el precio eventualmente aumente, y viceversa.
+volumen en balance (OBV) es un indicador acumulativo que agrega volumen cuando el precio de cierre sube y resta volumen cuando el precio de cierre baja. El indicador se basa en el concepto de que los cambios de volumen preceden a los cambios de precios. Según esta teoría, cuando el volumen aumenta significativamente sin un cambio correspondiente en el precio, se debe esperar que el precio eventualmente aumente, y viceversa.
 
 OBV tiene como objetivo detectar momentos en los que el "dinero inteligente" (grandes inversores institucionales) está acumulando o distribuyendo posiciones, lo que puede predecir futuros movimientos de precios. El indicador es particularmente útil para identificar divergencias entre precio y volumen que pueden indicar posibles reversiones del mercado.
 
@@ -37,7 +37,7 @@ donde:
 
 ## Interpretación
 
-On-Balance Volume se puede interpretar de la siguiente manera:
+volumen en balance se puede interpretar de la siguiente manera:
 
 1. **Análisis de tendencias**:
    - El aumento de OBV indica volumen que ingresa al mercado (acumulación), lo que puede predecir un aumento de precios

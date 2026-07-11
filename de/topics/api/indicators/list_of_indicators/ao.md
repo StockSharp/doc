@@ -21,4 +21,4 @@ Die Werte beziehen sich auf den klassischen Indikator; in den Einstellungen kön
 
 ## Siehe auch
 
-[Bollinger Bands](bollinger_bands.md)
+[Bollinger-Bänder](bollinger_bands.md)

@@ -29,4 +29,4 @@ SuperTrend строится по средней цене и значению ATR
 ## См. также
 
 [ATR](atr.md)
-[Parabolic SAR](parabolic_sar.md)
+[параболический SAR](parabolic_sar.md)

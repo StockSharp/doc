@@ -12,17 +12,17 @@
 - [AFI](list_of_indicators/approval_flow_index.md) - indicador AFI, mede a força da tendência com base no preço e no volume
 - [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - indicador ALMA, uma média móvel com menor atraso e ruído
 - [Aroon](list_of_indicators/aroon.md) - indicador Aroon, determina a força e a direção de uma tendência
-- [Aroon Oscillator](list_of_indicators/aroon_oscillator.md) - indicador Aroon Oscillator, mostra a diferença entre Aroon Up e Aroon Down
+- [oscilador Aroon](list_of_indicators/aroon_oscillator.md) - indicador oscilador Aroon, mostra a diferença entre Aroon ascendente e Aroon descendente
 - [ADX](list_of_indicators/adx.md) - indicador ADX, mede a força da tendência
 - [ATR](list_of_indicators/atr.md) - indicador ATR, mede a volatilidade do mercado
 - [AO](list_of_indicators/ao.md) - indicador AO, mede o momentum do mercado
-- [Bear Power](list_of_indicators/bear_power.md) - indicador Bear Power, mede a pressão vendedora em relação à EMA
-- [Bull Power](list_of_indicators/bull_power.md) - indicador Bull Power, mede a pressão compradora em relação à EMA
+- [força vendedora](list_of_indicators/bear_power.md) - indicador força vendedora, mede a pressão vendedora em relação à EMA
+- [força compradora](list_of_indicators/bull_power.md) - indicador força compradora, mede a pressão compradora em relação à EMA
 - [BMP](list_of_indicators/balance_of_market_power.md) - indicador BMP, compara a pressão de compra e venda
 - [BOP](list_of_indicators/balance_of_power.md) - indicador BOP, mostra a força dos compradores face aos vendedores
 - [BV](list_of_indicators/balance_volume.md) - indicador BV, relaciona o volume com alterações de preço
 - [Bollinger](list_of_indicators/bollinger_bands.md) - indicador Bollinger, mede a volatilidade e identifica condições de sobrecompra ou sobrevenda
-- [BBP](list_of_indicators/bollinger_percent_b.md) - indicador BBP, mostra a posição do preço em relação às Bollinger Bands
+- [BBP](list_of_indicators/bollinger_percent_b.md) - indicador BBP, mostra a posição do preço em relação às bandas de Bollinger
 - [Pattern](../patterns.md) - indicador Pattern, reconhece padrões de preço específicos em gráficos
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - indicador CGO, identifica potenciais pontos de reversão
 - [CMF](list_of_indicators/chaikin_money_flow.md) - indicador CMF, mede a pressão de compra e venda com base no volume
@@ -46,7 +46,7 @@
 - [EMV](list_of_indicators/ease_of_movement.md) - indicador EMV, relaciona alterações de preço com volume
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - indicador EFT, normaliza preços para destacar valores extremos
 - [EIS](list_of_indicators/elder_impulse_system.md) - indicador EIS, combina tendência e momentum para encontrar oportunidades de negociação
-- [Elder Ray](list_of_indicators/elder_ray.md) - indicador Elder Ray, avalia o equilíbrio entre compradores e vendedores usando EMA
+- [raios de Elder](list_of_indicators/elder_ray.md) - indicador raios de Elder, avalia o equilíbrio entre compradores e vendedores usando EMA
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - indicador EWO, identifica padrões de onda no movimento do preço
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - indicador EPMA, uma média móvel com menor atraso
 - [Envelope](list_of_indicators/envelope.md) - indicador Envelope, cria bandas em torno de uma média móvel para identificar níveis de sobrecompra e sobrevenda
@@ -110,7 +110,7 @@
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - indicador OBVM, uma versão suavizada do OBV
 - [OptimalTracking](list_of_indicators/optimal_tracking.md) - indicador OptimalTracking, filtra dados de preço para reduzir ruído
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - indicador OMA, mede a diferença entre uma média móvel e o preço
-- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - indicador Parabolic SAR, identifica potenciais pontos de reversão
+- [SAR parabólico](list_of_indicators/parabolic_sar.md) - indicador SAR parabólico, identifica potenciais pontos de reversão
 - [Stub](list_of_indicators/pass_through.md) - indicador Stub, um marcador para indicadores personalizados
 - [Peak](list_of_indicators/peak.md) - indicador Peak, identifica máximos locais nos dados de preço
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - indicador PPO, mede a diferença percentual entre duas médias móveis
@@ -137,7 +137,7 @@
 - [SW](list_of_indicators/sine_wave.md) - indicador SW, identifica padrões cíclicos em dados de preço
 - [SMMA](list_of_indicators/smoothed_ma.md) - indicador SMMA, uma média móvel que dá mais peso aos preços recentes
 - [Std Dev](list_of_indicators/standard_deviation.md) - indicador Std Dev, mede a dispersão dos dados de preço
-- [Standard Error](list_of_indicators/standard_error.md) - indicador Standard Error, mede a precisão da previsão
+- [erro padrão](list_of_indicators/standard_error.md) - indicador erro padrão, mede a precisão da previsão
 - [Estocástico %K](list_of_indicators/stochastic_oscillator_k.md) - indicador Estocástico %K, mede o momentum com base na posição do preço dentro de um intervalo
 - [Oscilador estocástico](list_of_indicators/stochastic_oscillator.md) - indicador Oscilador estocástico, identifica condições de sobrecompra e sobrevenda
 - [Sum](list_of_indicators/sum_n.md) - indicador Sum, calcula a soma dos últimos N preços

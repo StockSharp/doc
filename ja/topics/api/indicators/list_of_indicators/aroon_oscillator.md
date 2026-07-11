@@ -1,6 +1,6 @@
-# Aroon Oscillator
+# Aroon オシレーター
 
-**Aroon Oscillator** は、Aroon Up ラインと Aroon Down ラインの差を測定します。市場のどちら側が
+**Aroon オシレーター** は、Aroon 上昇 ラインと Aroon 下降 ラインの差を測定します。市場のどちら側が
 優勢であるか、そして現在のトレンドがどれほど強いかを明らかにします。
 
 このインジケーターを使用するには、[AroonOscillator](xref:StockSharp.Algo.Indicators.AroonOscillator) クラスを使用します。
@@ -9,8 +9,8 @@
 
 このオシレーターは -100 から +100 の間で振動します。
 
-- 正の値は、Aroon Up が Aroon Down を上回っており、市場で買い手が優勢であることを示します。
-- 負の値は、Aroon Down が先行しており、弱気側が支配していることを示します。
+- 正の値は、Aroon 上昇 が Aroon 下降 を上回っており、市場で買い手が優勢であることを示します。
+- 負の値は、Aroon 下降 が先行しており、弱気側が支配していることを示します。
 - ゼロ付近の値は、均衡または保ち合いを反映します。
 
 値がゼロから離れるほど、方向性のある値動きは強くなります。
@@ -21,14 +21,14 @@
 
 ## 計算
 
-1. 選択した `Length` で Aroon Up と Aroon Down の系列を計算します。
-2. 2 本のラインを差し引きます。  
-   `Aroon Oscillator = Aroon Up - Aroon Down`。
+1. 選択した `Length` で Aroon 上昇 と Aroon 下降 の系列を計算します。
+2. 2 本のラインを差し引きます。
+   `Aroon オシレーター = Aroon 上昇 - Aroon 下降`。
 
 ## 解釈
 
-- **Aroon Oscillator > 0** - 強気優勢。
-- **Aroon Oscillator < 0** - 弱気優勢。
+- **Aroon オシレーター > 0** - 強気優勢。
+- **Aroon オシレーター < 0** - 弱気優勢。
 - **ゼロラインのクロス** - 支配的なトレンドが転換する可能性。
 - **極端な値** - 強い方向性トレンド。多くの場合、方向フィルターとして使用されます。
 

@@ -23,7 +23,7 @@
 
 1. 使用选定的 `Length` 计算 Aroon 上升和 Aroon 下降序列。
 2. 将这两行相减：
-`Aroon Oscillator = Aroon Up − Aroon Down`。
+`Aroon 振荡器 = Aroon 上升线 − Aroon 下降线`。
 
 ## 解释
 

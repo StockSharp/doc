@@ -1,8 +1,8 @@
-# Standard Error
+# Error estándar
 
-El indicador **Standard Error** es una estimación de la desviación cuadrática media del coeficiente de regresión de su valor real. 
+El indicador **Error estándar** es una estimación de la desviación cuadrática media del coeficiente de regresión de su valor real.
 
-Para utilizar el indicador, debe utilizar la clase [StandardError](xref:StockSharp.Algo.Indicators.StandardError). 
+Para utilizar el indicador, debe utilizar la clase [StandardError](xref:StockSharp.Algo.Indicators.StandardError).
 
 ![IndicatorStandardError](../../../../images/indicatorstandarderror.png)
 

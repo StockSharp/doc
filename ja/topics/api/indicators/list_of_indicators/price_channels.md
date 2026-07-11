@@ -8,4 +8,4 @@
 
 ## 推奨コンテンツ
 
-[Donchian Channels](donchian_channels.md)
+[ドンチャンチャネル](donchian_channels.md)

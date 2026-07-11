@@ -21,4 +21,4 @@ SMA — простая скользящая средняя
 
 ## См. также
 
-[Bollinger Bands](bollinger_bands.md)
+[полосы Боллинджера](bollinger_bands.md)

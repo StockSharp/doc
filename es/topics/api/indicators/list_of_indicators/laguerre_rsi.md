@@ -1,6 +1,6 @@
 # LRSI
 
-**Laguerre RSI (LRSI)** es un indicador técnico basado en los principios matemáticos del filtro de Laguerre, desarrollado por John Ehlers como una versión avanzada del tradicional Relative Strength Index (RSI).
+**Laguerre RSI (LRSI)** es un indicador técnico basado en los principios matemáticos del filtro de Laguerre, desarrollado por John Ehlers como una versión avanzada del tradicional índice de fuerza relativa (RSI).
 
 Para utilizar el indicador, debe utilizar la clase [LaguerreRSI](xref:StockSharp.Algo.Indicators.LaguerreRSI).
 
@@ -8,7 +8,7 @@ Para utilizar el indicador, debe utilizar la clase [LaguerreRSI](xref:StockSharp
 
 Laguerre RSI (LRSI) es un oscilador innovador que utiliza matemáticas de filtro Laguerre para crear un indicador más sensible y menos retrasado en comparación con el RSI tradicional. John Ehlers desarrolló este indicador para abordar el problema de retraso de la señal inherente a muchos indicadores técnicos.
 
-LRSI combina los principios polinomiales de Laguerre con el concepto Relative Strength Index. Esto permite que el indicador responda más rápidamente a los cambios de tendencia y genere señales de trading más claras. Al igual que el RSI tradicional, el LRSI oscila entre 0 y 1 (o de 0 a 100 cuando se multiplica por 100), pero tiene una estructura menos ruidosa y giros más distintos.
+LRSI combina los principios polinomiales de Laguerre con el concepto índice de fuerza relativa. Esto permite que el indicador responda más rápidamente a los cambios de tendencia y genere señales de trading más claras. Al igual que el RSI tradicional, el LRSI oscila entre 0 y 1 (o de 0 a 100 cuando se multiplica por 100), pero tiene una estructura menos ruidosa y giros más distintos.
 
 La principal ventaja de LRSI es su capacidad para identificar rápidamente cambios de tendencia manteniendo la estabilidad de la señal. Esto lo hace particularmente útil para operaciones a corto plazo y para determinar puntos de entrada y salida.
 
@@ -55,7 +55,7 @@ El cálculo de Laguerre RSI implica varios pasos:
    ```
    LRSI = UP / (UP + DN)
    ```
-   
+
    Si (UP + DN) es cero, LRSI se establece en el valor anterior.
 
 donde:

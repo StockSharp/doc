@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [NickRypockTrailin
 
 ## Empfohlene Inhalte
 
-[Parabolic SAR](parabolic_sar.md)
+[parabolischer SAR](parabolic_sar.md)

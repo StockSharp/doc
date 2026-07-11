@@ -1,11 +1,11 @@
-# Bollinger Bands
+# Bollinger-Bänder
 
-**Bollinger Bands** sind ein oszillierender Indikator zur Messung der Marktvolatilität. Er ermöglicht die Einschätzung, ob der Preis im Vergleich zum gleitenden Durchschnitt hoch oder niedrig ist. Das mittlere Band entspricht dem einfachen gleitenden Durchschnitt des Preises. Die oberen und unteren Bänder sind Niveaus, auf denen der Preis relativ zum gleitenden Durchschnitt als hoch oder niedrig betrachtet werden kann.
+**Bollinger-Bänder** sind ein oszillierender Indikator zur Messung der Marktvolatilität. Er ermöglicht die Einschätzung, ob der Preis im Vergleich zum gleitenden Durchschnitt hoch oder niedrig ist. Das mittlere Band entspricht dem einfachen gleitenden Durchschnitt des Preises. Die oberen und unteren Bänder sind Niveaus, auf denen der Preis relativ zum gleitenden Durchschnitt als hoch oder niedrig betrachtet werden kann.
 
 Zur Verwendung des Indikators sollte die Klasse [BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) verwendet werden.
 ##### Berechnung
 
-Zur Berechnung der Bollinger Bands werden die folgenden Parameter mit entsprechenden Einstellungen verwendet:
+Zur Berechnung der Bollinger-Bänder werden die folgenden Parameter mit entsprechenden Einstellungen verwendet:
 - Typ der Standardabweichung - normalerweise double;
 - Periode des gleitenden Durchschnitts - nach Ermessen des Traders.
 

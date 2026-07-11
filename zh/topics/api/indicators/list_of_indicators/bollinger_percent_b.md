@@ -27,7 +27,7 @@ BBP 也可以取 0-1 范围之外的值：
 布林格百分比B的计算基于以下公式：
 
 ```
-BBP = (Price - Lower Bollinger Band) / (Upper Bollinger Band - Lower Bollinger Band)
+BBP = (Price - Lower 布林带) / (Upper 布林带 - Lower 布林带)
 ```
 
 其中：

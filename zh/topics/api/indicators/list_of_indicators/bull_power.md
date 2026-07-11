@@ -1,6 +1,6 @@
 # 多头力量
 
-**多头力量（Bull Power）** 是 Elder-ray 系统中的看涨对应指标。它通过比较K线最高价与
+**多头力量（多头力量）** 是 Elder-ray 系统中的看涨对应指标。它通过比较K线最高价与
 指数移动平均线（EMA）来衡量买家推动价格上涨的力度。
 
 使用 [BullPower](xref:StockSharp.Algo.Indicators.BullPower) 类可以操作该指标。
@@ -9,7 +9,7 @@
 
 该指标使用的公式为：
 
-`Bull Power = High − EMA`。
+`多头力量 = High − EMA`。
 
 - 正值表明看涨压力并支持上涨趋势。
 - 数值下降至零或低于零表示多头力量减弱。
@@ -17,7 +17,7 @@
 
 ## 参数
 
-Bull Power 从 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 继承其参数：
+多头力量 从 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 继承其参数：
 
 - **长度** — EMA周期。
 - **Alpha**（可选）——平滑系数（如适用）。

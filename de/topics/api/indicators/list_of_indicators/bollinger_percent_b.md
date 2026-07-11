@@ -1,33 +1,33 @@
 # BBP
 
-**Bollinger Percent B (BBP)** ist ein von John Bollinger entwickelter Indikator als Ergänzung zum Bollinger-Bands-Indikator. BBP zeigt die Lage des Preises relativ zum oberen und unteren Bollinger Band.
+**Bollinger Percent B (BBP)** ist ein von John Bollinger entwickelter Indikator als Ergänzung zum Bollinger-Bands-Indikator. BBP zeigt die Lage des Preises relativ zum oberen und unteren Bollinger-Band.
 
 Zur Verwendung des Indikators müssen Sie die Klasse [BollingerPercentB](xref:StockSharp.Algo.Indicators.BollingerPercentB) verwenden.
 
 ## Beschreibung
 
-Der Bollinger-Percent-B-Indikator bestimmt die Preisposition relativ zum oberen und unteren Bollinger Band als Prozentwert von 0 bis 1 (oder von 0 % bis 100 %). Dadurch kann die Preisposition im Kontext der Bollinger Bands genauer bestimmt werden:
+Der Bollinger-Percent-B-Indikator bestimmt die Preisposition relativ zum oberen und unteren Bollinger-Band als Prozentwert von 0 bis 1 (oder von 0 % bis 100 %). Dadurch kann die Preisposition im Kontext der Bollinger-Bänder genauer bestimmt werden:
 
-- Ein Wert von 1 (oder 100 %) bedeutet, dass der Preis am oberen Bollinger Band liegt.
-- Ein Wert von 0 (oder 0 %) bedeutet, dass der Preis am unteren Bollinger Band liegt.
-- Ein Wert von 0.5 (oder 50 %) bedeutet, dass der Preis am mittleren Bollinger Band (SMA) liegt.
+- Ein Wert von 1 (oder 100 %) bedeutet, dass der Preis am oberen Bollinger-Band liegt.
+- Ein Wert von 0 (oder 0 %) bedeutet, dass der Preis am unteren Bollinger-Band liegt.
+- Ein Wert von 0.5 (oder 50 %) bedeutet, dass der Preis am mittleren Bollinger-Band (SMA) liegt.
 
 BBP kann auch Werte außerhalb des Bereichs 0-1 annehmen:
-- Werte über 1 zeigen an, dass der Preis über dem oberen Bollinger Band liegt.
-- Werte unter 0 zeigen an, dass der Preis unter dem unteren Bollinger Band liegt.
+- Werte über 1 zeigen an, dass der Preis über dem oberen Bollinger-Band liegt.
+- Werte unter 0 zeigen an, dass der Preis unter dem unteren Bollinger-Band liegt.
 
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
 - **Length** - SMA-Berechnungsperiode (Standardwert: 20)
-- **StdDevMultiplier** - Multiplikator der Standardabweichung zur Berechnung der Bollinger Bands (Standardwert: 2)
+- **StdDevMultiplier** - Multiplikator der Standardabweichung zur Berechnung der Bollinger-Bänder (Standardwert: 2)
 
 ## Berechnung
 
 Die Berechnung von Bollinger Percent B basiert auf der Formel:
 
 ```
-BBP = (Price - Lower Bollinger Band) / (Upper Bollinger Band - Lower Bollinger Band)
+BBP = (Price - Lower Bollinger-Band) / (Upper Bollinger-Band - Lower Bollinger-Band)
 ```
 
 Wobei:

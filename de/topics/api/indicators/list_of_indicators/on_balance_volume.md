@@ -1,12 +1,12 @@
 # OBV
 
-**On-Balance Volume (OBV)** ist ein von Joseph Granville entwickelter technischer Indikator, der das Handelsvolumen nutzt, um Preisänderungen vorherzusagen, indem er das Volumen basierend auf der Preisrichtung akkumuliert.
+**On-Balance-Volumen (OBV)** ist ein von Joseph Granville entwickelter technischer Indikator, der das Handelsvolumen nutzt, um Preisänderungen vorherzusagen, indem er das Volumen basierend auf der Preisrichtung akkumuliert.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [OnBalanceVolume](xref:StockSharp.Algo.Indicators.OnBalanceVolume) verwenden.
 
 ## Beschreibung
 
-On-Balance Volume (OBV) ist ein kumulativer Indikator, der das Volumen erhöht, wenn der Schlusskurs steigt, und das Volumen verringert, wenn der Schlusskurs fällt. Der Indikator basiert auf dem Konzept, dass Volumenänderungen Preisänderungen vorausgehen. Nach dieser Theorie ist zu erwarten, dass der Preis irgendwann steigt, wenn das Volumen deutlich zunimmt, ohne dass es zu einer entsprechenden Preisänderung kommt, und umgekehrt.
+On-Balance-Volumen (OBV) ist ein kumulativer Indikator, der das Volumen erhöht, wenn der Schlusskurs steigt, und das Volumen verringert, wenn der Schlusskurs fällt. Der Indikator basiert auf dem Konzept, dass Volumenänderungen Preisänderungen vorausgehen. Nach dieser Theorie ist zu erwarten, dass der Preis irgendwann steigt, wenn das Volumen deutlich zunimmt, ohne dass es zu einer entsprechenden Preisänderung kommt, und umgekehrt.
 
 OBV zielt darauf ab, Momente zu erkennen, in denen „Smart Money“ (große institutionelle Anleger) Positionen akkumulieren oder verteilen, was zukünftige Preisbewegungen vorhersagen kann. Der Indikator ist besonders nützlich, um Divergenzen zwischen Preis und Volumen zu identifizieren, die auf mögliche Marktumkehrungen hinweisen können.
 
@@ -14,7 +14,7 @@ Der OBV-Indikator wurde erstmals 1963 von Joseph Granville in seinem Buch „Gra
 
 ## Berechnung
 
-Die On-Balance Volume-Berechnung ist sehr einfach:
+Die On-Balance-Volumen-Berechnung ist sehr einfach:
 
 1. Legen Sie den anfänglichen OBV-Wert fest (normalerweise 0 oder eine beliebige Zahl):
    ```
@@ -37,7 +37,7 @@ Dabei gilt:
 
 ## Interpretation
 
-On-Balance Volume kann wie folgt interpretiert werden:
+On-Balance-Volumen kann wie folgt interpretiert werden:
 
 1. **Trendanalyse**:
    - Steigender OBV weist auf ein in den Markt eintretendes Volumen (Akkumulation) hin, was einen Preisanstieg vorhersagen kann

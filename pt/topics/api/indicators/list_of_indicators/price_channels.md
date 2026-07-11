@@ -8,5 +8,5 @@ Para usar o indicador, deve usar a classe [PriceChannels](xref:StockSharp.Algo.I
 
 ## Conteúdo recomendado
 
-[Donchian Channels](donchian_channels.md)
+[canais de Donchian](donchian_channels.md)
 

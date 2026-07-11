@@ -10,17 +10,17 @@
 - [AFI](list_of_indicators/approval_flow_index.md) - インジケーター AFI、価格と出来高に基づいてトレンドの強さを測定します
 - [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - インジケーター ALMA、遅延とノイズを低減した移動平均です
 - [Aroon](list_of_indicators/aroon.md) - インジケーター Aroon、トレンドの強さと方向を判定します
-- [Aroon Oscillator](list_of_indicators/aroon_oscillator.md) - インジケーター Aroon Oscillator、Aroon Up と Aroon Down の差を示します
+- [Aroon オシレーター](list_of_indicators/aroon_oscillator.md) - インジケーター Aroon オシレーター、Aroon 上昇 と Aroon 下降 の差を示します
 - [ADX](list_of_indicators/adx.md) - インジケーター ADX、トレンドの強さを測定します
 - [ATR](list_of_indicators/atr.md) - インジケーター ATR、市場のボラティリティを測定します
 - [AO](list_of_indicators/ao.md) - インジケーター AO、市場のモメンタムを測定します
-- [Bear Power](list_of_indicators/bear_power.md) - インジケーター Bear Power、EMA に対する弱気圧力を測定します
-- [Bull Power](list_of_indicators/bull_power.md) - インジケーター Bull Power、EMA に対する強気圧力を測定します
+- [ベアパワー](list_of_indicators/bear_power.md) - インジケーター ベアパワー、EMA に対する弱気圧力を測定します
+- [ブルパワー](list_of_indicators/bull_power.md) - インジケーター ブルパワー、EMA に対する強気圧力を測定します
 - [BMP](list_of_indicators/balance_of_market_power.md) - インジケーター BMP、買い圧力と売り圧力を比較します
 - [BOP](list_of_indicators/balance_of_power.md) - インジケーター BOP、買い手と売り手の強さを示します
 - [BV](list_of_indicators/balance_volume.md) - インジケーター BV、出来高を価格変化に結び付けます
 - [Bollinger](list_of_indicators/bollinger_bands.md) - インジケーター Bollinger、ボラティリティを測定し、買われ過ぎまたは売られ過ぎの状態を特定します
-- [BBP](list_of_indicators/bollinger_percent_b.md) - インジケーター BBP、Bollinger Bands に対する価格位置を示します
+- [BBP](list_of_indicators/bollinger_percent_b.md) - インジケーター BBP、ボリンジャーバンド に対する価格位置を示します
 - [パターン](../patterns.md) - チャート上の特定の価格パターンを認識します
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - インジケーター CGO、潜在的な反転ポイントを特定します
 - [CMF](list_of_indicators/chaikin_money_flow.md) - インジケーター CMF、出来高に基づいて買い圧力と売り圧力を測定します
@@ -44,7 +44,7 @@
 - [EMV](list_of_indicators/ease_of_movement.md) - インジケーター EMV、価格変化を出来高に結び付けます
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - インジケーター EFT、極端な値を強調するために価格を正規化します
 - [EIS](list_of_indicators/elder_impulse_system.md) - インジケーター EIS、トレンドとモメンタムを組み合わせて取引機会を見つけます
-- [Elder Ray](list_of_indicators/elder_ray.md) - インジケーター Elder Ray、EMA を使用して強気派と弱気派のバランスを評価します
+- [エルダー・レイ](list_of_indicators/elder_ray.md) - インジケーター エルダー・レイ、EMA を使用して強気派と弱気派のバランスを評価します
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - インジケーター EWO、価格変動の波動パターンを特定します
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - インジケーター EPMA、遅延を低減した移動平均です
 - [Envelope](list_of_indicators/envelope.md) - インジケーター Envelope、買われ過ぎと売られ過ぎの水準を特定するため、移動平均の周囲にバンドを作成します
@@ -108,7 +108,7 @@
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - インジケーター OBVM、OBV の平滑化版です
 - [OptimalTracking](list_of_indicators/optimal_tracking.md) - John Ehlers によって公開された 最適追跡フィルター。価格データをフィルタリングしてノイズを低減します
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - インジケーター OMA、移動平均と価格との差を測定します
-- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Parabolic SAR トレンドインジケーターの実装。潜在的な反転ポイントを特定します
+- [パラボリック SAR](list_of_indicators/parabolic_sar.md) - パラボリック SAR トレンドインジケーターの実装。潜在的な反転ポイントを特定します
 - [Stub](list_of_indicators/pass_through.md) - ロジックを持たないインジケーターです。線の描画やカスタムインジケーターのプレースホルダーとして使用されます
 - [Peak](list_of_indicators/peak.md) - インジケーター Peak、価格データ内の局所的な高値を特定します
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - インジケーター PPO、2 本の移動平均間のパーセント差を測定します
@@ -135,7 +135,7 @@
 - [SW](list_of_indicators/sine_wave.md) - インジケーター SW、価格データ内の周期的パターンを特定します
 - [SMMA](list_of_indicators/smoothed_ma.md) - インジケーター SMMA、直近の価格により大きな重みを与える移動平均です
 - [Std Dev](list_of_indicators/standard_deviation.md) - インジケーター Std Dev、価格データのばらつきを測定します
-- [Standard Error](list_of_indicators/standard_error.md) - インジケーター Standard Error、予測精度を測定します
+- [標準誤差](list_of_indicators/standard_error.md) - インジケーター 標準誤差、予測精度を測定します
 - [ストキャスティクス %K](list_of_indicators/stochastic_oscillator_k.md) - インジケーター ストキャスティクス %K、レンジ内の価格位置に基づいてモメンタムを測定します
 - [ストキャスティクスオシレーター](list_of_indicators/stochastic_oscillator.md) - インジケーター ストキャスティクスオシレーター、買われ過ぎと売られ過ぎの状態を特定します
 - [Sum](list_of_indicators/sum_n.md) - インジケーター Sum、直近 N 個の価格の合計を計算します

@@ -1,33 +1,33 @@
 # BBP
 
-**Bollinger Percent B (BBP)** は、John Bollinger によって Bollinger Bands インジケーターを補完するものとして開発されたインジケーターです。BBP は、上側および下側の Bollinger Bands に対する価格の位置を示します。
+**Bollinger Percent B (BBP)** は、John Bollinger によって ボリンジャーバンド インジケーターを補完するものとして開発されたインジケーターです。BBP は、上側および下側の ボリンジャーバンド に対する価格の位置を示します。
 
 このインジケーターを使用するには、[BollingerPercentB](xref:StockSharp.Algo.Indicators.BollingerPercentB) クラスを使用する必要があります。
 
 ## 説明
 
-Bollinger Percent B インジケーターは、上側および下側の Bollinger Bands に対する価格位置を、0 から 1（または 0% から 100%）のパーセント値として判断します。これにより、Bollinger Bands の文脈で価格位置をより正確に判断できます。
+Bollinger Percent B インジケーターは、上側および下側の ボリンジャーバンド に対する価格位置を、0 から 1（または 0% から 100%）のパーセント値として判断します。これにより、ボリンジャーバンド の文脈で価格位置をより正確に判断できます。
 
-- 値 1（または 100%）は、価格が上側 Bollinger Band にあることを意味します。
-- 値 0（または 0%）は、価格が下側 Bollinger Band にあることを意味します。
-- 値 0.5（または 50%）は、価格が中央の Bollinger Band（SMA）にあることを意味します。
+- 値 1（または 100%）は、価格が上側 ボリンジャーバンド にあることを意味します。
+- 値 0（または 0%）は、価格が下側 ボリンジャーバンド にあることを意味します。
+- 値 0.5（または 50%）は、価格が中央の ボリンジャーバンド（SMA）にあることを意味します。
 
 BBP は 0-1 の範囲外の値を取ることもあります。
-- 1 を超える値は、価格が上側 Bollinger Band を上回っていることを示します。
-- 0 未満の値は、価格が下側 Bollinger Band を下回っていることを示します。
+- 1 を超える値は、価格が上側 ボリンジャーバンド を上回っていることを示します。
+- 0 未満の値は、価格が下側 ボリンジャーバンド を下回っていることを示します。
 
 ## パラメーター
 
 このインジケーターには次のパラメーターがあります。
 - **Length** - SMA の計算期間（既定値: 20）
-- **StdDevMultiplier** - Bollinger Bands を計算するための標準偏差乗数（既定値: 2）
+- **StdDevMultiplier** - ボリンジャーバンド を計算するための標準偏差乗数（既定値: 2）
 
 ## 計算
 
 Bollinger Percent B の計算は次の式に基づいています。
 
 ```
-BBP = (Price - Lower Bollinger Band) / (Upper Bollinger Band - Lower Bollinger Band)
+BBP = (Price - Lower ボリンジャーバンド) / (Upper ボリンジャーバンド - Lower ボリンジャーバンド)
 ```
 
 ここで:

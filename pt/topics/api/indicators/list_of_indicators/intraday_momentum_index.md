@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [IntradayMomentumIndex](
 
 ## Descrição
 
-O Intraday Momentum Index (IMI) foi criado como uma modificação do clássico Relative Strength Index (RSI), especificamente adaptada para analisar a dinâmica intradiária do mercado. Em vez de usar preços de fecho sequenciais, como no RSI tradicional, o IMI compara o preço de fecho com o preço de abertura de cada período.
+O Intraday Momentum Index (IMI) foi criado como uma modificação do clássico índice de força relativa (RSI), especificamente adaptada para analisar a dinâmica intradiária do mercado. Em vez de usar preços de fecho sequenciais, como no RSI tradicional, o IMI compara o preço de fecho com o preço de abertura de cada período.
 
 O IMI avalia com que frequência e com que intensidade o preço de fecho excede o preço de abertura (momentum positivo) ou fica abaixo do preço de abertura (momentum negativo) ao longo de um determinado período. Isto permite identificar a direção predominante e a força do movimento intradiário.
 

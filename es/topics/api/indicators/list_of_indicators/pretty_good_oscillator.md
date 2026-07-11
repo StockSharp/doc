@@ -1,14 +1,14 @@
 # PGO
 
-**Pretty Good Oscillator (PGO)** es un indicador técnico desarrollado por Mark Johnson que compara el precio de cierre actual con precios anteriores, considerando la volatilidad, para determinar las condiciones de sobrecompra o sobreventa del mercado.
+**oscilador bastante bueno (PGO)** es un indicador técnico desarrollado por Mark Johnson que compara el precio de cierre actual con precios anteriores, considerando la volatilidad, para determinar las condiciones de sobrecompra o sobreventa del mercado.
 
 Para utilizar el indicador, debe utilizar la clase [PrettyGoodOscillator](xref:StockSharp.Algo.Indicators.PrettyGoodOscillator).
 
 ## Descripción
 
-El Pretty Good Oscillator (PGO) es un indicador que evalúa la fortaleza del precio de cierre actual en relación con sus valores históricos durante un período específico. PGO tiene en cuenta no sólo la posición del precio actual en el rango histórico sino también la volatilidad de este rango, lo que lo hace más adaptable a las condiciones cambiantes del mercado.
+El oscilador bastante bueno (PGO) es un indicador que evalúa la fortaleza del precio de cierre actual en relación con sus valores históricos durante un período específico. PGO tiene en cuenta no sólo la posición del precio actual en el rango histórico sino también la volatilidad de este rango, lo que lo hace más adaptable a las condiciones cambiantes del mercado.
 
-El nombre "Pretty Good Oscillator" refleja el enfoque pragmático de su creador: el indicador no pretende ser una herramienta perfecta, pero ofrece una forma "bastante buena" de evaluar la situación actual del mercado.
+El nombre "oscilador bastante bueno" refleja el enfoque pragmático de su creador: el indicador no pretende ser una herramienta perfecta, pero ofrece una forma "bastante buena" de evaluar la situación actual del mercado.
 
 PGO es particularmente útil para identificar condiciones de sobrecompra y sobreventa, así como para detectar divergencias que pueden preceder a los cambios de tendencia.
 
@@ -19,7 +19,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Pretty Good Oscillator implica los siguientes pasos:
+El cálculo de oscilador bastante bueno implica los siguientes pasos:
 
 1. Determine el máximo más alto (Highest High) y el mínimo más bajo (Lowest Low) durante el período especificado:
    ```
@@ -32,7 +32,7 @@ El cálculo de Pretty Good Oscillator implica los siguientes pasos:
    Desviación estándar = StdDev(Close, Length)
    ```
 
-3. Calcule el Pretty Good Oscillator:
+3. Calcule el oscilador bastante bueno:
    ```
    PGO = (Close - (Highest High + Lowest Low) / 2) / desviación estándar
    ```
@@ -46,7 +46,7 @@ donde:
 
 ## Interpretación
 
-El Pretty Good Oscillator se puede interpretar de la siguiente manera:
+El oscilador bastante bueno se puede interpretar de la siguiente manera:
 
 1. **Niveles de sobrecompra y sobreventa**:
    - Los valores superiores a +2 suelen indicar condiciones de sobrecompra en el mercado.

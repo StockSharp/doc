@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [PriceChannels](xref:StockSha
 
 ## Contenido recomendado
 
-[Donchian Channels](donchian_channels.md)
+[canales de Donchian](donchian_channels.md)

@@ -8,4 +8,4 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [PriceChannels](xr
 
 ## Empfohlene Inhalte
 
-[Donchian Channels](donchian_channels.md)
+[Donchian-Kanäle](donchian_channels.md)

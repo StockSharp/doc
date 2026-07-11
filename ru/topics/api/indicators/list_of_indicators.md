@@ -10,12 +10,12 @@
 - [AFI](list_of_indicators/approval_flow_index.md) - индикатор AFI, измеряет силу тренда на основе цены и объёма
 - [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - индикатор ALMA, скользящая средняя с уменьшенным лагом и шумом
 - [Aroon](list_of_indicators/aroon.md) - индикатор Aroon, определяет силу и направление тренда
-- [Aroon Oscillator](list_of_indicators/aroon_oscillator.md) - индикатор Aroon Oscillator, отображает разницу между линиями Aroon Up и Aroon Down
+- [осциллятор Aroon](list_of_indicators/aroon_oscillator.md) - индикатор осциллятор Aroon, отображает разницу между линиями Aroon вверх и Aroon вниз
 - [ADX](list_of_indicators/adx.md) - индикатор ADX, измеряет силу тренда
 - [ATR](list_of_indicators/atr.md) - индикатор ATR, измеряет волатильность рынка
 - [AO](list_of_indicators/ao.md) - индикатор AO, измеряет импульс рынка
-- [Bear Power](list_of_indicators/bear_power.md) - индикатор Bear Power, показывает силу продавцов относительно EMA
-- [Bull Power](list_of_indicators/bull_power.md) - индикатор Bull Power, показывает силу покупателей относительно EMA
+- [сила продавцов](list_of_indicators/bear_power.md) - индикатор сила продавцов, показывает силу продавцов относительно EMA
+- [сила покупателей](list_of_indicators/bull_power.md) - индикатор сила покупателей, показывает силу покупателей относительно EMA
 - [BMP](list_of_indicators/balance_of_market_power.md) - индикатор BMP, сравнивает давление покупателей и продавцов
 - [BOP](list_of_indicators/balance_of_power.md) - индикатор BOP, показывает силу покупателей против продавцов
 - [BV](list_of_indicators/balance_volume.md) - индикатор BV, связывает объём с изменением цены
@@ -46,7 +46,7 @@
 - [EMV](list_of_indicators/ease_of_movement.md) - индикатор EMV, связывает изменение цены с объёмом
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - индикатор EFT, нормализует цены для выявления экстремальных значений
 - [EIS](list_of_indicators/elder_impulse_system.md) - индикатор EIS, комбинирует тренд и импульс для поиска торговых возможностей
-- [Elder Ray](list_of_indicators/elder_ray.md) - индикатор Elder Ray, оценивает баланс быков и медведей на основе EMA
+- [лучи Элдера](list_of_indicators/elder_ray.md) - индикатор лучи Элдера, оценивает баланс быков и медведей на основе EMA
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - индикатор EWO, определяет волновые модели в движении цены
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - индикатор EPMA, скользящая средняя с уменьшенным лагом
 - [Envelope](list_of_indicators/envelope.md) - индикатор Envelope, создаёт полосы вокруг скользящей средней для определения перекупленности и перепроданности
@@ -110,7 +110,7 @@
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - индикатор OBVM, сглаженная версия OBV
 - [OptimalTracking](list_of_indicators/optimal_tracking.md) - индикатор OptimalTracking, фильтрует ценовые данные для уменьшения шума
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - индикатор OMA, измеряет разницу между скользящей средней и ценой
-- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - индикатор Parabolic SAR, определяет потенциальные точки разворота
+- [параболический SAR](list_of_indicators/parabolic_sar.md) - индикатор параболический SAR, определяет потенциальные точки разворота
 - [Stub](list_of_indicators/pass_through.md) - Индикатор без логики. Используется для отрисовки линий, заглушка для пользовательских индикаторов
 - [Peak](list_of_indicators/peak.md) - индикатор Peak, определяет локальные максимумы в ценовых данных
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - индикатор PPO, измеряет процентную разницу между двумя скользящими средними
@@ -137,7 +137,7 @@
 - [SW](list_of_indicators/sine_wave.md) - индикатор SW, определяет циклические модели в ценовых данных
 - [SMMA](list_of_indicators/smoothed_ma.md) - индикатор SMMA, скользящая средняя с большим весом последних цен
 - [Std Dev](list_of_indicators/standard_deviation.md) - индикатор Std Dev, измеряет разброс ценовых данных
-- [Standard Error](list_of_indicators/standard_error.md) - индикатор Standard Error, измеряет точность прогнозов
+- [стандартная ошибка](list_of_indicators/standard_error.md) - индикатор стандартная ошибка, измеряет точность прогнозов
 - [Стохастик %K](list_of_indicators/stochastic_oscillator_k.md) - Стохастик %K, измеряет импульс на основе положения цены в диапазоне
 - [стохастический осциллятор](list_of_indicators/stochastic_oscillator.md) - индикатор стохастический осциллятор, определяет состояния перекупленности и перепроданности
 - [Sum](list_of_indicators/sum_n.md) - индикатор Sum, вычисляет сумму последних N цен

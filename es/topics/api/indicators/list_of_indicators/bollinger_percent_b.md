@@ -1,12 +1,12 @@
 # BBP
 
-**Bollinger Percent B (BBP)** es un indicador desarrollado por John Bollinger como complemento del indicador Bollinger Bands. BBP muestra la ubicación del precio en relación con el Bollinger Bands superior e inferior.
+**Bollinger Percent B (BBP)** es un indicador desarrollado por John Bollinger como complemento del indicador bandas de Bollinger. BBP muestra la ubicación del precio en relación con el bandas de Bollinger superior e inferior.
 
 Para utilizar el indicador, debe utilizar la clase [BollingerPercentB](xref:StockSharp.Algo.Indicators.BollingerPercentB).
 
 ## Descripción
 
-El indicador Bollinger Percent B determina la posición del precio en relación con el Bollinger Bands superior e inferior como un valor porcentual de 0 a 1 (o de 0% a 100%). Esto permite una determinación más precisa de la posición del precio en el contexto de Bollinger Bands:
+El indicador Bollinger Percent B determina la posición del precio en relación con el bandas de Bollinger superior e inferior como un valor porcentual de 0 a 1 (o de 0% a 100%). Esto permite una determinación más precisa de la posición del precio en el contexto de bandas de Bollinger:
 
 - Un valor de 1 (o 100%) significa que el precio está en la banda Bollinger superior.
 - Un valor de 0 (o 0%) significa que el precio está en la banda Bollinger inferior.
@@ -20,14 +20,14 @@ BBP también puede tomar valores fuera del rango 0-1:
 
 El indicador tiene los siguientes parámetros:
 - **Length** - Período de cálculo SMA (valor predeterminado: 20)
-- **StdDevMultiplier** - multiplicador de desviación estándar para calcular Bollinger Bands (valor predeterminado: 2)
+- **StdDevMultiplier** - multiplicador de desviación estándar para calcular bandas de Bollinger (valor predeterminado: 2)
 
 ## Cálculo
 
 El cálculo del porcentaje B Bollinger se basa en la fórmula:
 
 ```
-BBP = (Price - Lower Bollinger Band) / (Upper Bollinger Band - Lower Bollinger Band)
+BBP = (Price - Lower banda de Bollinger) / (Upper banda de Bollinger - Lower banda de Bollinger)
 ```
 
 donde:

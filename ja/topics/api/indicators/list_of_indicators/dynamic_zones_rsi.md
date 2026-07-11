@@ -1,6 +1,6 @@
 # DZRSI
 
-**Dynamic Zones RSI (DZRSI)** は、固定された水準の代わりに動的に変化する買われ過ぎおよび売られ過ぎ水準を使用する、従来の Relative Strength Index (RSI) の改良版です。
+**Dynamic Zones RSI (DZRSI)** は、固定された水準の代わりに動的に変化する買われ過ぎおよび売られ過ぎ水準を使用する、従来の 相対力指数 (RSI) の改良版です。
 
 この指標を使用するには、[DynamicZonesRSI](xref:StockSharp.Algo.Indicators.DynamicZonesRSI) クラスを使用する必要があります。
 

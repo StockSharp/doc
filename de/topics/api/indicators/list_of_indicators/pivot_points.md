@@ -1,20 +1,20 @@
 # PP
 
-**Pivot Points (PP)** ist ein technischer Indikator, der frühere Höchst-, Tiefst- und Schlusskurse verwendet, um potenzielle Unterstützungs- und Widerstandsniveaus für die aktuelle Handelsperiode zu bestimmen.
+**Pivot-Punkte (PP)** ist ein technischer Indikator, der frühere Höchst-, Tiefst- und Schlusskurse verwendet, um potenzielle Unterstützungs- und Widerstandsniveaus für die aktuelle Handelsperiode zu bestimmen.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [PivotPoints](xref:StockSharp.Algo.Indicators.PivotPoints) verwenden.
 
 ## Beschreibung
 
-Pivot Points (Pivot-Punkte) sind eine der ältesten und am weitesten verbreiteten Methoden zur Identifizierung wichtiger Marktniveaus. Der Indikator berechnet den zentralen Drehpunkt (PP) und mehrere Unterstützungsniveaus (S1, S2, S3) und Widerstandsniveaus (R1, R2, R3) basierend auf den Daten der vorherigen Periode.
+Pivot-Punkte (Pivot-Punkte) sind eine der ältesten und am weitesten verbreiteten Methoden zur Identifizierung wichtiger Marktniveaus. Der Indikator berechnet den zentralen Drehpunkt (PP) und mehrere Unterstützungsniveaus (S1, S2, S3) und Widerstandsniveaus (R1, R2, R3) basierend auf den Daten der vorherigen Periode.
 
-Ursprünglich wurden Pivot Points von Händlern auf Börsenparketts verwendet, um anhand der Daten des Vortages Schlüsselniveaus für den aktuellen Handelstag zu ermitteln. Heute wurde diese Methode für verschiedene Zeitrahmen angepasst – von Intraday bis monatlich.
+Ursprünglich wurden Pivot-Punkte von Händlern auf Börsenparketts verwendet, um anhand der Daten des Vortages Schlüsselniveaus für den aktuellen Handelstag zu ermitteln. Heute wurde diese Methode für verschiedene Zeitrahmen angepasst – von Intraday bis monatlich.
 
-Die Hauptidee hinter Pivot Points besteht darin, dass der Markt dazu neigt, auf diese vorberechneten Niveaus zu reagieren und sie als Umkehrpunkte oder Zonen zu nutzen, in denen eine Konsolidierung stattfinden kann. Händler nutzen diese Niveaus, um Entscheidungen über den Markteintritt und -austritt zu treffen sowie Zielniveaus und Stop-Losses festzulegen.
+Die Hauptidee hinter Pivot-Punkte besteht darin, dass der Markt dazu neigt, auf diese vorberechneten Niveaus zu reagieren und sie als Umkehrpunkte oder Zonen zu nutzen, in denen eine Konsolidierung stattfinden kann. Händler nutzen diese Niveaus, um Entscheidungen über den Markteintritt und -austritt zu treffen sowie Zielniveaus und Stop-Losses festzulegen.
 
 ## Berechnung
 
-Es gibt verschiedene Methoden zur Berechnung von Pivot Points, darunter Standard, Fibonacci, Woodie, Camarilla und DeMark. Nachfolgend finden Sie die Standardberechnungsmethode:
+Es gibt verschiedene Methoden zur Berechnung von Pivot-Punkte, darunter Standard, Fibonacci, Woodie, Camarilla und DeMark. Nachfolgend finden Sie die Standardberechnungsmethode:
 
 1. Berechnen Sie den Hauptdrehpunkt (PP):
    ```
@@ -46,7 +46,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Pivot Points kann wie folgt interpretiert werden:
+Pivot-Punkte kann wie folgt interpretiert werden:
 
 1. **Hauptdrehpunkt (PP)**:
    - PP dient als primäre Referenz zur Bestimmung der allgemeinen Marktstimmung
@@ -72,13 +72,13 @@ Pivot Points kann wie folgt interpretiert werden:
    - **Stop-Loss-Platzierung**: Platzieren Sie Stop-Loss-Werte über den entsprechenden Niveaus
 
 5. **Kombination mit anderen Indikatoren**:
-   - Pivot Points werden häufig in Kombination mit anderen technischen Indikatoren zur Bestätigung von Signalen verwendet
+   - Pivot-Punkte werden häufig in Kombination mit anderen technischen Indikatoren zur Bestätigung von Signalen verwendet
    - Besonders effektiv in Kombination mit Momentum-Indikatoren (RSI, Stochastik) und Trendindikatoren (MA, MACD)
 
 6. **Zeitrahmen**:
-   - Tägliche Pivot Points werden basierend auf dem vorherigen Handelstag berechnet
-   - Wöchentliche Pivot Points werden basierend auf der Vorwoche berechnet
-   - Monatliche Pivot Points werden basierend auf dem Vormonat berechnet
+   - Tägliche Pivot-Punkte werden basierend auf dem vorherigen Handelstag berechnet
+   - Wöchentliche Pivot-Punkte werden basierend auf der Vorwoche berechnet
+   - Monatliche Pivot-Punkte werden basierend auf dem Vormonat berechnet
    - Die Auswahl des Zeitrahmens hängt vom Handelsstil und Zeithorizont ab
 
 ![indicator_pivot_points](../../../../images/indicator_pivot_points.png)

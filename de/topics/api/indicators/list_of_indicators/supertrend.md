@@ -29,4 +29,4 @@ SuperTrend wird aus dem Durchschnittspreis und dem ATR-Wert erstellt. Die Indika
 ## Siehe auch
 
 [ATR](atr.md)
-[Parabolic SAR](parabolic_sar.md)
+[parabolischer SAR](parabolic_sar.md)

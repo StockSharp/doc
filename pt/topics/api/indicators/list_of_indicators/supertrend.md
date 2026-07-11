@@ -29,4 +29,4 @@ O SuperTrend é construído com o preço médio e o valor do ATR. A linha do ind
 ## Ver também
 
 [ATR](atr.md)
-[Parabolic SAR](parabolic_sar.md)
+[SAR parabólico](parabolic_sar.md)

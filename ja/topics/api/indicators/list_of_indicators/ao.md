@@ -21,4 +21,4 @@ SMA - 単純移動平均
 
 ## 関連項目
 
-[Bollinger Bands](bollinger_bands.md)
+[ボリンジャーバンド](bollinger_bands.md)

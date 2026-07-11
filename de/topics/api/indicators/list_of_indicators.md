@@ -10,17 +10,17 @@
 - [AFI](list_of_indicators/approval_flow_index.md) - Indikator AFI, misst Trendstärke anhand von Preis und Volumen
 - [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - Indikator ALMA, ein gleitender Durchschnitt mit reduzierter Verzögerung und weniger Rauschen
 - [Aroon](list_of_indicators/aroon.md) - Indikator Aroon, bestimmt Stärke und Richtung eines Trends
-- [Aroon Oscillator](list_of_indicators/aroon_oscillator.md) - Indikator Aroon Oscillator, zeigt die Differenz zwischen Aroon Up und Aroon Down
+- [Aroon-Oszillator](list_of_indicators/aroon_oscillator.md) - Indikator Aroon-Oszillator, zeigt die Differenz zwischen Aroon-Aufwärts und Aroon-Abwärts
 - [ADX](list_of_indicators/adx.md) - Indikator ADX, misst die Trendstärke
 - [ATR](list_of_indicators/atr.md) - Indikator ATR, misst die Marktvolatilität
 - [AO](list_of_indicators/ao.md) - Indikator AO, misst das Markt-Momentum
-- [Bear Power](list_of_indicators/bear_power.md) - Indikator Bear Power, misst bärischen Druck relativ zum EMA
-- [Bull Power](list_of_indicators/bull_power.md) - Indikator Bull Power, misst bullischen Druck relativ zum EMA
+- [Bärenstärke](list_of_indicators/bear_power.md) - Indikator Bärenstärke, misst bärischen Druck relativ zum EMA
+- [Bullenstärke](list_of_indicators/bull_power.md) - Indikator Bullenstärke, misst bullischen Druck relativ zum EMA
 - [BMP](list_of_indicators/balance_of_market_power.md) - Indikator BMP, vergleicht Kauf- und Verkaufsdruck
 - [BOP](list_of_indicators/balance_of_power.md) - Indikator BOP, zeigt die Stärke von Käufern gegenüber Verkäufern
 - [BV](list_of_indicators/balance_volume.md) - Indikator BV, verknüpft Volumen mit Preisänderungen
 - [Bollinger](list_of_indicators/bollinger_bands.md) - Indikator Bollinger, misst Volatilität und erkennt überkaufte oder überverkaufte Bedingungen
-- [BBP](list_of_indicators/bollinger_percent_b.md) - Indikator BBP, zeigt die Preisposition relativ zu den Bollinger Bands
+- [BBP](list_of_indicators/bollinger_percent_b.md) - Indikator BBP, zeigt die Preisposition relativ zu den Bollinger-Bänder
 - [Pattern](../patterns.md) - Indikator Pattern, erkennt bestimmte Kursmuster in Charts
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Indikator CGO, identifiziert mögliche Wendepunkte
 - [CMF](list_of_indicators/chaikin_money_flow.md) - Indikator CMF, misst Kauf- und Verkaufsdruck anhand des Volumens
@@ -44,7 +44,7 @@
 - [EMV](list_of_indicators/ease_of_movement.md) - Indikator EMV, verknüpft Preisänderungen mit Volumen
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - Indikator EFT, normalisiert Preise, um Extremwerte hervorzuheben
 - [EIS](list_of_indicators/elder_impulse_system.md) - Indikator EIS, kombiniert Trend und Momentum, um Handelsgelegenheiten zu finden
-- [Elder Ray](list_of_indicators/elder_ray.md) - Indikator Elder Ray, bewertet das Gleichgewicht zwischen Bullen und Bären mithilfe des EMA
+- [Elder-Ray](list_of_indicators/elder_ray.md) - Indikator Elder-Ray, bewertet das Gleichgewicht zwischen Bullen und Bären mithilfe des EMA
 - [EWO](list_of_indicators/elliot_wave_oscillator.md) - Indikator EWO, identifiziert Wellenmuster in Preisbewegungen
 - [EPMA](list_of_indicators/endpoint_moving_average.md) - Indikator EPMA, ein gleitender Durchschnitt mit reduzierter Verzögerung
 - [Envelope](list_of_indicators/envelope.md) - Indikator Envelope, erstellt Bänder um einen gleitenden Durchschnitt zur Erkennung überkaufter und überverkaufter Niveaus
@@ -108,7 +108,7 @@
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - Indikator OBVM, eine geglättete Version von OBV
 - [OptimalTracking](list_of_indicators/optimal_tracking.md) - Indikator OptimalTracking, filtert Preisdaten zur Rauschreduzierung
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - Indikator OMA, misst die Differenz zwischen gleitendem Durchschnitt und Preis
-- [Parabolic SAR](list_of_indicators/parabolic_sar.md) - Indikator Parabolic SAR, identifiziert mögliche Wendepunkte
+- [parabolischer SAR](list_of_indicators/parabolic_sar.md) - Indikator parabolischer SAR, identifiziert mögliche Wendepunkte
 - [Stub](list_of_indicators/pass_through.md) - Ein Indikator ohne Logik. Wird zum Zeichnen von Linien oder als Platzhalter für benutzerdefinierte Indikatoren verwendet
 - [Peak](list_of_indicators/peak.md) - Indikator Peak, identifiziert lokale Hochs in Preisdaten
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Indikator PPO, misst die prozentuale Differenz zwischen zwei gleitenden Durchschnitten
@@ -135,7 +135,7 @@
 - [SW](list_of_indicators/sine_wave.md) - Indikator SW, identifiziert zyklische Muster in Preisdaten
 - [SMMA](list_of_indicators/smoothed_ma.md) - Indikator SMMA, ein gleitender Durchschnitt mit höherer Gewichtung jüngerer Preise
 - [Std Dev](list_of_indicators/standard_deviation.md) - Indikator Std Dev, misst die Streuung von Preisdaten
-- [Standard Error](list_of_indicators/standard_error.md) - Indikator Standard Error, misst die Prognosegenauigkeit
+- [Standardfehler](list_of_indicators/standard_error.md) - Indikator Standardfehler, misst die Prognosegenauigkeit
 - [Stochastik %K](list_of_indicators/stochastic_oscillator_k.md) - Indikator Stochastik %K, misst Momentum anhand der Preisposition innerhalb einer Spanne
 - [Stochastischer Oszillator](list_of_indicators/stochastic_oscillator.md) - Indikator Stochastischer Oszillator, erkennt überkaufte und überverkaufte Bedingungen
 - [Sum](list_of_indicators/sum_n.md) - Indikator Sum, berechnet die Summe der letzten N Preise

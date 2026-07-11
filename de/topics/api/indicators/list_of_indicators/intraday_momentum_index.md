@@ -6,7 +6,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [IntradayMomentumI
 
 ## Beschreibung
 
-Der Intraday Momentum Index (IMI) wurde als Modifikation des klassischen Relative Strength Index (RSI) erstellt und speziell für die Analyse der Intraday-Marktdynamik angepasst. Anstatt sequenzielle Schlusskurse zu verwenden, wie beim herkömmlichen RSI, vergleicht IMI den Schlusskurs mit dem Eröffnungskurs für jede Periode.
+Der Intraday Momentum Index (IMI) wurde als Modifikation des klassischen Relative-Stärke-Index (RSI) erstellt und speziell für die Analyse der Intraday-Marktdynamik angepasst. Anstatt sequenzielle Schlusskurse zu verwenden, wie beim herkömmlichen RSI, vergleicht IMI den Schlusskurs mit dem Eröffnungskurs für jede Periode.
 
 IMI bewertet, wie oft und wie stark der Schlusskurs über einen bestimmten Zeitraum den Eröffnungskurs übersteigt (positives Momentum) oder unter den Eröffnungskurs fällt (negatives Momentum). Dies ermöglicht die Identifizierung der vorherrschenden Richtung und Stärke der Intraday-Bewegung.
 

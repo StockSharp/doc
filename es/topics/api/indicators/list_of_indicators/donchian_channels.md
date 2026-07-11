@@ -1,19 +1,19 @@
 # DC
 
-**Donchian Channels (DC)** es un indicador técnico desarrollado por el operador Richard Donchian, que consta de una banda superior e inferior (límites del canal) basada en los valores de precio máximo y mínimo durante un período específico.
+**canales de Donchian (DC)** es un indicador técnico desarrollado por el operador Richard Donchian, que consta de una banda superior e inferior (límites del canal) basada en los valores de precio máximo y mínimo durante un período específico.
 
 Para utilizar el indicador, debe utilizar la clase [DonchianChannels](xref:StockSharp.Algo.Indicators.DonchianChannels).
 
 ## Descripción
 
-Donchian Channels es un indicador de tendencia y volatilidad simple pero efectivo. El indicador consta de tres líneas:
+canales de Donchian es un indicador de tendencia y volatilidad simple pero efectivo. El indicador consta de tres líneas:
 - Línea superior: máximo más alto durante el período seleccionado
 - Línea inferior: mínimo más bajo durante el período seleccionado
 - Línea media: valor promedio entre las líneas superior e inferior
 
 Este indicador fue utilizado por primera vez por Richard Donchian en su regla del canal de 4 semanas, según la cual se produce una señal de compra cuando el precio supera el máximo de 4 semanas y una señal de venta cuando el precio cae por debajo del mínimo de 4 semanas.
 
-Donchian Channels son útiles para:
+canales de Donchian son útiles para:
 - Identificar la volatilidad del mercado
 - Determinar los niveles de soporte y resistencia.
 - Generando señales de ruptura
@@ -26,7 +26,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo de Donchian Channels es bastante simple:
+El cálculo de canales de Donchian es bastante simple:
 
 1. Línea del canal superior:
    ```
@@ -45,7 +45,7 @@ El cálculo de Donchian Channels es bastante simple:
 
 ## Interpretación
 
-Donchian Channels se puede utilizar de varias maneras:
+canales de Donchian se puede utilizar de varias maneras:
 
 1. **Estrategias de ruptura**:
    - Romper por encima de la línea superior del canal puede verse como una señal de compra.

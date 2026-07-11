@@ -7,8 +7,8 @@ Zur Verwendung des Indikators müssen Sie die Klasse [Aroon](xref:StockSharp.Alg
 ## Beschreibung
 
 Der Aroon-Indikator besteht aus zwei Linien:
-- **Aroon Up** - misst die Stärke eines Aufwärtstrends
-- **Aroon Down** - misst die Stärke eines Abwärtstrends
+- **Aroon-Aufwärts** - misst die Stärke eines Aufwärtstrends
+- **Aroon-Abwärts** - misst die Stärke eines Abwärtstrends
 
 Aroon hilft beim Bestimmen von:
 - Beginn eines neuen Trends
@@ -27,14 +27,14 @@ Der Indikator hat die folgenden Parameter:
 
 Die Berechnung des Aroon-Indikators basiert darauf, die Zeit (Anzahl der Perioden) seit dem Erreichen des höchsten bzw. niedrigsten Preises innerhalb der angegebenen Periode zu bestimmen:
 
-1. Aroon Up wird mit der Formel berechnet:
+1. Aroon-Aufwärts wird mit der Formel berechnet:
    ```
-   Aroon Up = ((Length - Periods since high) / Length) * 100
+   Aroon-Aufwärts = ((Length - Periods since high) / Length) * 100
    ```
 
-2. Aroon Down wird mit der Formel berechnet:
+2. Aroon-Abwärts wird mit der Formel berechnet:
    ```
-   Aroon Down = ((Length - Periods since low) / Length) * 100
+   Aroon-Abwärts = ((Length - Periods since low) / Length) * 100
    ```
 
 Wobei:
@@ -48,10 +48,10 @@ Beide Aroon-Linien oszillieren zwischen 0 und 100:
 
 ## Interpretation
 
-- **Starker Aufwärtstrend**: Aroon Up liegt nahe 100 und Aroon Down nahe 0
-- **Starker Abwärtstrend**: Aroon Down liegt nahe 100 und Aroon Up nahe 0
+- **Starker Aufwärtstrend**: Aroon-Aufwärts liegt nahe 100 und Aroon-Abwärts nahe 0
+- **Starker Abwärtstrend**: Aroon-Abwärts liegt nahe 100 und Aroon-Aufwärts nahe 0
 - **Seitwärtsbewegung**: beide Linien bewegen sich auf niedrigen Niveaus parallel zueinander
-- **Potenzielle Trendumkehr**: Kreuzung der Linien Aroon Up und Aroon Down
+- **Potenzielle Trendumkehr**: Kreuzung der Linien Aroon-Aufwärts und Aroon-Abwärts
 - **Konsolidierung**: beide Linien oszillieren um 50
 
 ![indicator_aroon](../../../../images/indicator_aroon.png)

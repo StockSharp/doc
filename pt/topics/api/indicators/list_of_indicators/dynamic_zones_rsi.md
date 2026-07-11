@@ -1,6 +1,6 @@
 # DZRSI
 
-**Dynamic Zones RSI (DZRSI)** é uma modificação do clássico Relative Strength Index (RSI) que usa níveis de sobrecompra e sobrevenda dinamicamente variáveis em vez de níveis estáticos.
+**Dynamic Zones RSI (DZRSI)** é uma modificação do clássico índice de força relativa (RSI) que usa níveis de sobrecompra e sobrevenda dinamicamente variáveis em vez de níveis estáticos.
 
 Para usar o indicador, deve ser usada a classe [DynamicZonesRSI](xref:StockSharp.Algo.Indicators.DynamicZonesRSI).
 

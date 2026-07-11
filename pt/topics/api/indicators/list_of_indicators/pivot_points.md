@@ -1,20 +1,20 @@
 # PP
 
-**Pivot Points (PP)** é um indicador técnico que usa os preços máximo, mínimo e de fecho anteriores para determinar potenciais níveis de suporte e resistência para o período de negociação atual.
+**pontos pivô (PP)** é um indicador técnico que usa os preços máximo, mínimo e de fecho anteriores para determinar potenciais níveis de suporte e resistência para o período de negociação atual.
 
 Para usar o indicador, é necessário usar a classe [PivotPoints](xref:StockSharp.Algo.Indicators.PivotPoints).
 
 ## Descrição
 
-Pivot Points (pontos pivô) são um dos métodos mais antigos e mais usados para identificar níveis-chave do mercado. O indicador calcula o ponto pivô central (PP) e vários níveis de suporte (S1, S2, S3) e resistência (R1, R2, R3) com base nos dados do período anterior.
+pontos pivô (pontos pivô) são um dos métodos mais antigos e mais usados para identificar níveis-chave do mercado. O indicador calcula o ponto pivô central (PP) e vários níveis de suporte (S1, S2, S3) e resistência (R1, R2, R3) com base nos dados do período anterior.
 
-Originalmente, os Pivot Points eram usados por traders nos pregões das bolsas para determinar níveis-chave para o dia de negociação atual com base nos dados do dia anterior. Hoje, este método foi adaptado a vários períodos - desde intradiário até mensal.
+Originalmente, os pontos pivô eram usados por traders nos pregões das bolsas para determinar níveis-chave para o dia de negociação atual com base nos dados do dia anterior. Hoje, este método foi adaptado a vários períodos - desde intradiário até mensal.
 
-A ideia principal dos Pivot Points é que o mercado tende a reagir a estes níveis pré-calculados, usando-os como pontos de reversão ou zonas onde pode ocorrer consolidação. Os traders usam estes níveis para tomar decisões sobre entrada e saída do mercado, bem como para definir níveis-alvo e stop-losses.
+A ideia principal dos pontos pivô é que o mercado tende a reagir a estes níveis pré-calculados, usando-os como pontos de reversão ou zonas onde pode ocorrer consolidação. Os traders usam estes níveis para tomar decisões sobre entrada e saída do mercado, bem como para definir níveis-alvo e stop-losses.
 
 ## Cálculo
 
-Existem vários métodos para calcular Pivot Points, incluindo padrão, Fibonacci, Woodie, Camarilla e DeMark. Abaixo está o método de cálculo padrão:
+Existem vários métodos para calcular pontos pivô, incluindo padrão, Fibonacci, Woodie, Camarilla e DeMark. Abaixo está o método de cálculo padrão:
 
 1. Calcular o ponto pivô principal (PP):
    ```
@@ -46,7 +46,7 @@ Onde:
 
 ## Interpretação
 
-Pivot Points podem ser interpretados da seguinte forma:
+pontos pivô podem ser interpretados da seguinte forma:
 
 1. **Ponto pivô principal (PP)**:
    - O PP serve como referência principal para determinar o sentimento geral do mercado
@@ -72,13 +72,13 @@ Pivot Points podem ser interpretados da seguinte forma:
    - **Colocação de stop-loss**: Colocar stop-losses para lá dos níveis correspondentes
 
 5. **Combinação com outros indicadores**:
-   - Pivot Points são frequentemente usados em conjunto com outros indicadores técnicos para confirmar sinais
+   - pontos pivô são frequentemente usados em conjunto com outros indicadores técnicos para confirmar sinais
    - São particularmente eficazes quando combinados com indicadores de momentum (RSI, Estocástico) e indicadores de tendência (MA, MACD)
 
 6. **Períodos**:
-   - Pivot Points diários são calculados com base no dia de negociação anterior
-   - Pivot Points semanais são calculados com base na semana anterior
-   - Pivot Points mensais são calculados com base no mês anterior
+   - pontos pivô diários são calculados com base no dia de negociação anterior
+   - pontos pivô semanais são calculados com base na semana anterior
+   - pontos pivô mensais são calculados com base no mês anterior
    - A seleção do período depende do estilo de trading e do horizonte temporal
 
 ![indicator_pivot_points](../../../../images/indicator_pivot_points.png)

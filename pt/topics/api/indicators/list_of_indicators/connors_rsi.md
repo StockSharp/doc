@@ -6,7 +6,7 @@ Para usar o indicador, deve ser usada a classe [ConnorsRSI](xref:StockSharp.Algo
 
 ## Descrição
 
-Connors RSI é uma versão avançada do Relative Strength Index (RSI) tradicional, que adiciona dois componentes adicionais para fornecer sinais de sobrecompra e sobrevenda mais precisos.
+Connors RSI é uma versão avançada do índice de força relativa (RSI) tradicional, que adiciona dois componentes adicionais para fornecer sinais de sobrecompra e sobrevenda mais precisos.
 
 Ao contrário do RSI padrão, que considera apenas a alteração do preço, Connors RSI também tem em conta a sequência (série de movimentos consecutivos do preço numa direção) e a taxa de variação (ROC), tornando-o mais sensível a alterações de curto prazo e mais fiável na identificação de condições extremas de mercado.
 

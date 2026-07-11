@@ -1,14 +1,14 @@
 # PGO
 
-**Pretty Good Oscillator (PGO)** ist ein von Mark Johnson entwickelter technischer Indikator, der den aktuellen Schlusskurs mit früheren Preisen unter Berücksichtigung der Volatilität vergleicht, um überkaufte oder überverkaufte Marktbedingungen zu ermitteln.
+**Pretty-Good-Oszillator (PGO)** ist ein von Mark Johnson entwickelter technischer Indikator, der den aktuellen Schlusskurs mit früheren Preisen unter Berücksichtigung der Volatilität vergleicht, um überkaufte oder überverkaufte Marktbedingungen zu ermitteln.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [PrettyGoodOscillator](xref:StockSharp.Algo.Indicators.PrettyGoodOscillator) verwenden.
 
 ## Beschreibung
 
-Der Pretty Good Oscillator (PGO) ist ein Indikator, der die Stärke des aktuellen Schlusskurses im Verhältnis zu seinen historischen Werten über einen bestimmten Zeitraum bewertet. PGO berücksichtigt nicht nur die Position des aktuellen Preises im historischen Bereich, sondern auch die Volatilität dieses Bereichs und macht ihn so anpassungsfähiger an sich ändernde Marktbedingungen.
+Der Pretty-Good-Oszillator (PGO) ist ein Indikator, der die Stärke des aktuellen Schlusskurses im Verhältnis zu seinen historischen Werten über einen bestimmten Zeitraum bewertet. PGO berücksichtigt nicht nur die Position des aktuellen Preises im historischen Bereich, sondern auch die Volatilität dieses Bereichs und macht ihn so anpassungsfähiger an sich ändernde Marktbedingungen.
 
-Der Name „Pretty Good Oscillator“ spiegelt den pragmatischen Ansatz seines Erfinders wider – der Indikator erhebt nicht den Anspruch, ein perfektes Werkzeug zu sein, sondern bietet eine „ziemlich gute“ Möglichkeit, die aktuelle Marktsituation einzuschätzen.
+Der Name „Pretty-Good-Oszillator“ spiegelt den pragmatischen Ansatz seines Erfinders wider – der Indikator erhebt nicht den Anspruch, ein perfektes Werkzeug zu sein, sondern bietet eine „ziemlich gute“ Möglichkeit, die aktuelle Marktsituation einzuschätzen.
 
 PGO eignet sich besonders zur Identifizierung überkaufter und überverkaufter Bedingungen sowie zur Erkennung von Divergenzen, die einer Trendumkehr vorausgehen können.
 
@@ -19,7 +19,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Pretty Good Oscillator-Berechnung umfasst die folgenden Schritte:
+Die Pretty-Good-Oszillator-Berechnung umfasst die folgenden Schritte:
 
 1. Bestimmen Sie den höchsten Höchstwert (Highest High) und den niedrigsten Tiefstwert (Lowest Low) über den angegebenen Zeitraum:
    ```
@@ -32,7 +32,7 @@ Die Pretty Good Oscillator-Berechnung umfasst die folgenden Schritte:
    Standardabweichung = StdDev(Close, Length)
    ```
 
-3. Berechnen Sie den Pretty Good Oscillator:
+3. Berechnen Sie den Pretty-Good-Oszillator:
    ```
    PGO = (Close - (Highest High + Lowest Low) / 2) / Standardabweichung
    ```
@@ -46,7 +46,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Pretty Good Oscillator kann wie folgt interpretiert werden:
+Der Pretty-Good-Oszillator kann wie folgt interpretiert werden:
 
 1. **Überkaufte und überverkaufte Niveaus**:
    - Werte über +2 weisen häufig auf überkaufte Marktbedingungen hin

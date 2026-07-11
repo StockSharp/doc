@@ -10,7 +10,7 @@
 
 该指标的计算方法是柱低与EMA值的差：
 
-`Bear Power = Low − EMA`。
+`空头力量 = Low − EMA`。
 
 - 负面读数确认了卖压。
 - 数值上升至零或零以上表明空头减弱，并可能出现看涨反转。
@@ -18,7 +18,7 @@
 
 ## 参数
 
-Bear Power 继承了 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 的配置：
+空头力量 继承了 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 的配置：
 
 - **长度** — EMA周期。
 - **Alpha**（可选）——如果EMA以这种方式配置，则为平滑系数。

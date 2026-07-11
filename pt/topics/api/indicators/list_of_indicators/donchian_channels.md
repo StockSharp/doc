@@ -1,19 +1,19 @@
 # DC
 
-**Donchian Channels (DC)** é um indicador técnico desenvolvido pelo trader Richard Donchian, composto por uma banda superior e uma inferior (limites do canal) com base nos valores máximos e mínimos do preço durante um período específico.
+**canais de Donchian (DC)** é um indicador técnico desenvolvido pelo trader Richard Donchian, composto por uma banda superior e uma inferior (limites do canal) com base nos valores máximos e mínimos do preço durante um período específico.
 
 Para usar o indicador, deve ser usada a classe [DonchianChannels](xref:StockSharp.Algo.Indicators.DonchianChannels).
 
 ## Descrição
 
-Donchian Channels são um indicador simples mas eficaz de volatilidade e tendência. O indicador é composto por três linhas:
+canais de Donchian são um indicador simples mas eficaz de volatilidade e tendência. O indicador é composto por três linhas:
 - Linha superior: máximo mais alto ao longo do período selecionado
 - Linha inferior: mínimo mais baixo ao longo do período selecionado
 - Linha média: valor médio entre as linhas superior e inferior
 
 Este indicador foi usado pela primeira vez por Richard Donchian na sua regra do canal de 4 semanas, segundo a qual ocorre um sinal de compra quando o preço excede o máximo mais alto de 4 semanas, e ocorre um sinal de venda quando o preço cai abaixo do mínimo mais baixo de 4 semanas.
 
-Donchian Channels são úteis para:
+canais de Donchian são úteis para:
 - Identificar a volatilidade do mercado
 - Determinar níveis de suporte e resistência
 - Gerar sinais de rutura
@@ -26,7 +26,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo dos Donchian Channels é bastante simples:
+O cálculo dos canais de Donchian é bastante simples:
 
 1. Linha superior do canal:
    ```
@@ -45,7 +45,7 @@ O cálculo dos Donchian Channels é bastante simples:
 
 ## Interpretação
 
-Donchian Channels podem ser usados de várias formas:
+canais de Donchian podem ser usados de várias formas:
 
 1. **Estratégias de rutura**:
    - A quebra acima da linha superior do canal pode ser vista como um sinal de compra

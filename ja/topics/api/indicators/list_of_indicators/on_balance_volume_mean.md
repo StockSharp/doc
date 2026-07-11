@@ -1,12 +1,12 @@
 # OBVM
 
-**On Balance Volume Mean (OBVM)** は、On Balance Volume (OBV) インジケーターの移動平均を表すテクニカルインジケーターであり、出来高に基づくトレンドシグナルをより明確にします。
+**オンバランスボリューム Mean (OBVM)** は、オンバランスボリューム (OBV) インジケーターの移動平均を表すテクニカルインジケーターであり、出来高に基づくトレンドシグナルをより明確にします。
 
 インジケーターを使用するには、[OnBalanceVolumeMean](xref:StockSharp.Algo.Indicators.OnBalanceVolumeMean) クラスを使用する必要があります。
 
 ## 説明
 
-On Balance Volume Mean (OBVM) は、古典的な On Balance Volume (OBV) インジケーターの改良版であり、OBV 値に移動平均を適用して変動を平滑化し、より明確なトレンドを特定します。このインジケーターは、価格方向の変化に基づく出来高の累積という OBV の中核概念を維持しながら、追加のフィルタリング層を加えます。
+オンバランスボリューム Mean (OBVM) は、古典的な オンバランスボリューム (OBV) インジケーターの改良版であり、OBV 値に移動平均を適用して変動を平滑化し、より明確なトレンドを特定します。このインジケーターは、価格方向の変化に基づく出来高の累積という OBV の中核概念を維持しながら、追加のフィルタリング層を加えます。
 
 OBVM は、元の OBV に存在するノイズを取り除き、長期的な出来高フローのトレンドをより目立たせるのに役立ちます。これは、変動の大きい市場や、不規則な取引出来高を持つ銘柄を分析する場合に特に有用です。
 
@@ -19,9 +19,9 @@ OBVM の主な利点は、古典的な OBV と比較して、より明確で誤�
 
 ## 計算
 
-On Balance Volume Mean の計算には、次の手順が含まれます:
+オンバランスボリューム Mean の計算には、次の手順が含まれます:
 
-1. 基本となる On Balance Volume (OBV) インジケーターを計算します:
+1. 基本となる オンバランスボリューム (OBV) インジケーターを計算します:
    ```
    Close[current] > Close[previous] の場合:
        OBV[current] = OBV[previous] + Volume[current]
@@ -39,7 +39,7 @@ On Balance Volume Mean の計算には、次の手順が含まれます:
 ここで:
 - Close - 終値
 - Volume - 取引出来高
-- OBV - On Balance Volume
+- OBV - オンバランスボリューム
 - SMA - 単純移動平均
 - Length - 移動平均期間
 
@@ -47,7 +47,7 @@ On Balance Volume Mean の計算には、次の手順が含まれます:
 
 ## 解釈
 
-On Balance Volume Mean は次のように解釈できます:
+オンバランスボリューム Mean は次のように解釈できます:
 
 1. **トレンド分析**:
    - OBVM の上昇は、強い出来高の支持を伴う強気トレンドを示します

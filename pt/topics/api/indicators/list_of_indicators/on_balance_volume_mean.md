@@ -1,12 +1,12 @@
 # OBVM
 
-**On Balance Volume Mean (OBVM)** é um indicador técnico que representa uma média móvel do indicador On Balance Volume (OBV), permitindo sinais de tendência mais claros com base no volume.
+**volume em balanço Mean (OBVM)** é um indicador técnico que representa uma média móvel do indicador volume em balanço (OBV), permitindo sinais de tendência mais claros com base no volume.
 
 Para usar o indicador, é necessário usar a classe [OnBalanceVolumeMean](xref:StockSharp.Algo.Indicators.OnBalanceVolumeMean).
 
 ## Descrição
 
-On Balance Volume Mean (OBVM) é uma modificação do indicador clássico On Balance Volume (OBV) que aplica uma média móvel aos valores do OBV para suavizar flutuações e identificar tendências mais claras. O indicador mantém o conceito central do OBV - acumulação de volume com base na alteração da direção do preço - mas adiciona uma camada adicional de filtragem.
+volume em balanço Mean (OBVM) é uma modificação do indicador clássico volume em balanço (OBV) que aplica uma média móvel aos valores do OBV para suavizar flutuações e identificar tendências mais claras. O indicador mantém o conceito central do OBV - acumulação de volume com base na alteração da direção do preço - mas adiciona uma camada adicional de filtragem.
 
 O OBVM ajuda a eliminar o ruído presente no OBV original e torna mais visíveis as tendências de longo prazo do fluxo de volume. Isto é particularmente útil em mercados voláteis ou ao analisar instrumentos com volumes de negociação irregulares.
 
@@ -19,9 +19,9 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do On Balance Volume Mean envolve os seguintes passos:
+O cálculo do volume em balanço Mean envolve os seguintes passos:
 
-1. Calcular o indicador On Balance Volume (OBV) base:
+1. Calcular o indicador volume em balanço (OBV) base:
    ```
    Se Close[current] > Close[previous]:
        OBV[current] = OBV[previous] + Volume[current]
@@ -39,7 +39,7 @@ O cálculo do On Balance Volume Mean envolve os seguintes passos:
 Onde:
 - Close - preço de fecho
 - Volume - volume de negociação
-- OBV - On Balance Volume
+- OBV - volume em balanço
 - SMA - média móvel simples
 - Length - período da média móvel
 
@@ -47,7 +47,7 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 
 ## Interpretação
 
-On Balance Volume Mean pode ser interpretado da seguinte forma:
+volume em balanço Mean pode ser interpretado da seguinte forma:
 
 1. **Análise da tendência**:
    - OBVM em subida indica uma tendência altista com forte suporte de volume

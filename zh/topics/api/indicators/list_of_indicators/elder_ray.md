@@ -1,7 +1,7 @@
 # 埃尔德射线指数
 
-**埃尔德射线指数**是亚历山大·埃尔德开发的一个综合指标，它将指数移动平均线与多头力量（Bull Power
-）和空头力量（Bear Power）振荡器结合在一起。它可视化买卖双方的平衡，并有助于识别何时一方失去控制。
+**埃尔德射线指数**是亚历山大·埃尔德开发的一个综合指标，它将指数移动平均线与多头力量（多头力量
+）和空头力量（空头力量）振荡器结合在一起。它可视化买卖双方的平衡，并有助于识别何时一方失去控制。
 
 使用 [ElderRay](xref:StockSharp.Algo.Indicators.ElderRay) 类来访问该指标。
 
@@ -15,7 +15,7 @@
 
 ## 参数
 
-Elder Ray 继承了 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 的设置：
+埃尔德射线 继承了 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 的设置：
 
 - **长度** — EMA周期；
 - **Alpha** — 平滑系数，直接配置时使用。

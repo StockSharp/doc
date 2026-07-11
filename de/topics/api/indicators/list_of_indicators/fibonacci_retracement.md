@@ -1,16 +1,16 @@
 # FR
 
-**Fibonacci Retracement (FR)** ist ein technischer Indikator, der auf Fibonacci-Zahlen basiert und dabei hilft, potenzielle Unterstützungs- und Widerstandsniveaus auf der Grundlage früherer Preisbewegungen zu identifizieren.
+**Fibonacci-Retracement (FR)** ist ein technischer Indikator, der auf Fibonacci-Zahlen basiert und dabei hilft, potenzielle Unterstützungs- und Widerstandsniveaus auf der Grundlage früherer Preisbewegungen zu identifizieren.
 
 Um den Indikator verwenden zu können, müssen Sie die Klasse [FibonacciRetracement](xref:StockSharp.Algo.Indicators.FibonacciRetracement) verwenden.
 
 ## Beschreibung
 
-Fibonacci Retracement ist ein beliebtes technisches Tool, das horizontale Linien verwendet, um Bereiche möglicher Unterstützung oder Widerstand auf einem Preisdiagramm anzuzeigen. Diese Werte basieren auf Fibonacci-Zahlen und den entsprechenden Prozentverhältnissen.
+Fibonacci-Retracement ist ein beliebtes technisches Tool, das horizontale Linien verwendet, um Bereiche möglicher Unterstützung oder Widerstand auf einem Preisdiagramm anzuzeigen. Diese Werte basieren auf Fibonacci-Zahlen und den entsprechenden Prozentverhältnissen.
 
 Der Indikator basiert auf der mathematischen Fibonacci-Folge, bei der jede Zahl die Summe der beiden vorhergehenden ist (1, 1, 2, 3, 5, 8, 13, 21, 34...). Aus dieser Reihenfolge werden die Schlüsselkennzahlen für die technische Analyse abgeleitet: 23,6 %, 38,2 %, 50 %, 61,8 % und 78,6 %.
 
-Fibonacci Retracement wird auf eine signifikante Preisbewegung (Trend) angewendet und zeigt die Niveaus an, bei denen eine Korrektur (Pullback) auftreten kann, bevor die Richtung des Haupttrends fortgesetzt wird.
+Fibonacci-Retracement wird auf eine signifikante Preisbewegung (Trend) angewendet und zeigt die Niveaus an, bei denen eine Korrektur (Pullback) auftreten kann, bevor die Richtung des Haupttrends fortgesetzt wird.
 
 Der Indikator ist besonders nützlich für:
 - Identifizieren potenzieller Unterstützungsniveaus in einem Aufwärtstrend
@@ -25,7 +25,7 @@ Der Indikator hat die folgenden Parameter:
 
 ## Berechnung
 
-Die Berechnung der Fibonacci Retracement-Werte umfasst die folgenden Schritte:
+Die Berechnung der Fibonacci-Retracement-Werte umfasst die folgenden Schritte:
 
 1. Feststellung einer signifikanten Preisbewegung (Trend):
    - Im Aufwärtstrend: von niedrig nach hoch
@@ -46,7 +46,7 @@ Die Berechnung der Fibonacci Retracement-Werte umfasst die folgenden Schritte:
 
 ## Interpretation
 
-Fibonacci Retracement-Stufen werden wie folgt interpretiert:
+Fibonacci-Retracement-Stufen werden wie folgt interpretiert:
 
 1. **Hauptkorrekturstufen**:
    - 23,6 % – schwaches Niveau, das während eines starken Trends oft durchbrochen wird
