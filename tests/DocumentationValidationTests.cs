@@ -2072,6 +2072,38 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedCjkConnectorDocsDoNotKeepEnglishMessageDirectionLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\*(?:incoming|outgoing)\*", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in new[] { "ja", "zh" })
+		{
+			var connectorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "connectors");
+
+			if (!Directory.Exists(connectorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(connectorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: CJK connector documentation keeps English message direction label '{match.Value}'. Localize visible direction labels.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownLinkLabelsAreTranslatedFromDefaultLanguage()
 	{
 		var errors = new List<string>();

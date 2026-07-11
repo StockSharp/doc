@@ -9,10 +9,10 @@
 
 **メッセージ** は情報を送信するエージェントとして機能します。メッセージには独自の型 [MessageTypes](xref:StockSharp.Messages.MessageTypes) があります。各メッセージ型は特定のクラスに対応します。さらに、すべてのメッセージクラスは抽象クラス [Message](xref:StockSharp.Messages.Message) から継承されます。この抽象クラスは、メッセージ型 [Message.Type](xref:StockSharp.Messages.Message.Type) や [Message.LocalTime](xref:StockSharp.Messages.Message.LocalTime)（メッセージの作成または受信のローカル時刻）などのプロパティを派生クラスに付与します。
 
-メッセージには *incoming* と *outgoing* があります。
+メッセージには *入力* と *出力* があります。
 
-- *Incoming* メッセージ - 外部システムへ送信されるメッセージ。通常、これらはプログラムによって生成されるコマンドです。たとえば、[ConnectMessage](xref:StockSharp.Messages.ConnectMessage) メッセージは、サーバーへの接続を要求するコマンドです。
-- *Outgoing* メッセージ - 外部システムから届くメッセージ。これらは、マーケットデータ、トランザクション、ポートフォリオ、接続イベントなどに関する情報を伝達するメッセージです。たとえば、[QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) メッセージは板情報の変化に関する情報を伝達します。
+- *入力* メッセージ - 外部システムへ送信されるメッセージ。通常、これらはプログラムによって生成されるコマンドです。たとえば、[ConnectMessage](xref:StockSharp.Messages.ConnectMessage) メッセージは、サーバーへの接続を要求するコマンドです。
+- *出力* メッセージ - 外部システムから届くメッセージ。これらは、マーケットデータ、トランザクション、ポートフォリオ、接続イベントなどに関する情報を伝達するメッセージです。たとえば、[QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) メッセージは板情報の変化に関する情報を伝達します。
 
 **メッセージアダプター** は、取引システムとプログラムの間の仲介役を果たします。コネクターの種類ごとに、抽象クラス [AsyncMessageAdapter](xref:StockSharp.Messages.AsyncMessageAdapter) から継承された個別のアダプタークラスがあります。
 
