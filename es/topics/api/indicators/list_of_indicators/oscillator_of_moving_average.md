@@ -68,11 +68,11 @@ El oscilador de la media móvil se puede interpretar de la siguiente manera:
    - Los valores negativos de OMA confirman una tendencia a la baja
    - El aumento del valor absoluto de OMA indica un fortalecimiento de la tendencia actual
 
-5. **Centerline (0)**:
+5. **Línea central (0)**:
    - Cuando OMA oscila alrededor de la línea cero, puede indicar la ausencia de una tendencia o consolidación pronunciada
 
-6. **Rate of Change**:
-   - XZX0000La pendiente XZX indica la tasa de cambio de tendencia
+6. **Tasa de cambio**:
+   - La pendiente indica la tasa de cambio de tendencia
    - Una pendiente pronunciada indica un rápido cambio de tendencia
    - La pendiente poco profunda indica un cambio de tendencia lento
 

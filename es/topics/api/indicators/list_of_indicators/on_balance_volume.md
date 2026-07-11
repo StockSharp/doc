@@ -52,13 +52,13 @@ On-Balance Volume se puede interpretar de la siguiente manera:
    - Divergencia alcista: el precio forma un nuevo mínimo, mientras que OBV forma un mínimo más alto (señal de compra)
    - Divergencia bajista: el precio forma un nuevo máximo, mientras que OBV forma un máximo más bajo (señal de venta)
 
-4. **OBV Breakouts**:
-   - XZX0000La ruptura XZX del nivel de resistencia o soporte a menudo precede a una ruptura similar en el gráfico de precios
+4. **Rupturas del OBV**:
+   - La ruptura del OBV de un nivel de resistencia o soporte a menudo precede a una ruptura similar en el gráfico de precios
    - Los operadores pueden utilizar las rupturas de la línea de tendencia OBV para pronosticar movimientos futuros de precios
 
-5. **Baseline**:
-   - Algunos traders utilizan las medias móviles OBV como líneas "de referencia"
-   - OBV cruzar su media móvil puede generar señales de trading
+5. **Línea base**:
+   - Algunos operadores utilizan las medias móviles OBV como líneas "de referencia"
+   - El cruce del OBV con su media móvil puede generar señales de negociación
 
 6. **Análisis técnico Patterns**:
    - En el gráfico OBV se pueden formar patrones de análisis técnico clásicos, como "cabeza y hombros", "doble fondo", etc.

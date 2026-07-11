@@ -56,12 +56,12 @@ Pivot Points podem ser interpretados da seguinte forma:
 
 2. **Níveis de resistência (R1, R2, R3)**:
    - Estes níveis representam potenciais zonas de resistência num mercado altista
-   - Um breakout de um nível pode levar à continuação do movimento até ao nível seguinte
+   - Uma rutura de um nível pode levar à continuação do movimento até ao nível seguinte
    - Um ressalto a partir de um nível pode levar a uma reversão descendente
 
 3. **Níveis de suporte (S1, S2, S3)**:
    - Estes níveis representam potenciais zonas de suporte num mercado baixista
-   - Um breakout de um nível pode levar à continuação do movimento até ao nível seguinte
+   - Uma rutura de um nível pode levar à continuação do movimento até ao nível seguinte
    - Um ressalto a partir de um nível pode levar a uma reversão ascendente
 
 4. **Estratégias de trading**:

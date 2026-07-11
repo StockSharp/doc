@@ -16,7 +16,7 @@ Dieser Indikator wurde erstmals von Richard Donchian in seiner 4-Wochen-Kanalreg
 Donchian Channels sind nützlich für:
 - Identifizierung der Marktvolatilität
 - Bestimmung der Unterstützungs- und Widerstandsniveaus
-- Erzeugen von Breakout-Signalen
+- Erzeugen von Ausbruchssignalen
 - Definieren der aktuellen Handelsspanne
 
 ## Parameter
@@ -47,7 +47,7 @@ Die Donchian Channels-Berechnung ist ganz einfach:
 
 Donchian Channels kann auf verschiedene Arten verwendet werden:
 
-1. **Breakout-Strategien**:
+1. **Ausbruchsstrategien**:
    - Ein Durchbruch über die obere Kanallinie kann als Kaufsignal gewertet werden
    - Ein Durchbruch unter die untere Kanallinie kann als Verkaufssignal angesehen werden
 

@@ -16,7 +16,7 @@ Este indicador foi usado pela primeira vez por Richard Donchian na sua regra do 
 Donchian Channels são úteis para:
 - Identificar a volatilidade do mercado
 - Determinar níveis de suporte e resistência
-- Gerar sinais de breakout
+- Gerar sinais de rutura
 - Definir o intervalo atual de trading
 
 ## Parâmetros
@@ -47,7 +47,7 @@ O cálculo dos Donchian Channels é bastante simples:
 
 Donchian Channels podem ser usados de várias formas:
 
-1. **Estratégias de breakout**:
+1. **Estratégias de rutura**:
    - A quebra acima da linha superior do canal pode ser vista como um sinal de compra
    - A quebra abaixo da linha inferior do canal pode ser vista como um sinal de venda
 

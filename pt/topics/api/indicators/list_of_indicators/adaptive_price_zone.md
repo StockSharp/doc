@@ -14,7 +14,7 @@ O APZ é especialmente útil para:
 - Identificar potenciais níveis de suporte e resistência
 - Detetar possíveis pontos de reversão de tendência
 - Revelar períodos de maior e menor volatilidade
-- Criar sistemas de negociação baseados em breakouts da zona de preço
+- Criar sistemas de negociação baseados em ruturas da zona de preço
 
 ## Parâmetros
 

@@ -70,7 +70,7 @@ On Balance Volume Mean pode ser interpretado da seguinte forma:
 
 5. **Níveis de suporte e resistência**:
    - O gráfico do OBVM pode formar os seus próprios níveis de suporte e resistência
-   - O breakout destes níveis pode anteceder breakouts semelhantes no gráfico do preço
+   - A rutura destes níveis pode anteceder ruturas semelhantes no gráfico do preço
 
 6. **Comparação com outros indicadores de volume**:
    - O OBVM pode ser comparado com outros indicadores de volume para confirmar sinais
@@ -89,4 +89,3 @@ On Balance Volume Mean pode ser interpretado da seguinte forma:
 [ADL](accumulation_distribution_line.md)
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [ForceIndex](force_index.md)
-

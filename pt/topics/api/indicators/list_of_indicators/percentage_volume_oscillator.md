@@ -84,7 +84,7 @@ O oscilador percentual de volume pode ser interpretado da seguinte forma:
 
 7. **Picos de volume**:
    - Saltos acentuados do PVO indicam alterações significativas de volume, frequentemente acompanhando eventos de mercado importantes
-   - Estes picos podem anteceder ou acompanhar breakouts de níveis-chave de preço
+   - Estes picos podem anteceder ou acompanhar ruturas de níveis-chave de preço
 
 ![indicator_percentage_volume_oscillator](../../../../images/indicator_percentage_volume_oscillator.png)
 

@@ -174,8 +174,8 @@ Esta lista incluye indicadores de análisis técnico de la biblioteca StockSharp
 - Identificación de tendencias
 - Evaluación de volatilidad
 - Detección de punto de inversión
-- XZX0000Medición XZX
+- Medición
 - Análisis del volumen de operaciones
 - Identificación de niveles de soporte y resistencia.
 
-Indicators ayuda a los operadores a tomar decisiones informadas analizando datos históricos de precios e identificando patrones.
+Los indicadores ayudan a los operadores a tomar decisiones informadas analizando datos históricos de precios e identificando patrones.

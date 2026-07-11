@@ -39,7 +39,7 @@
 - [DSP](list_of_indicators/detrended_synthetic_price.md) - indicador DSP, remove tendências para analisar flutuações de preço
 - [DMI](list_of_indicators/dmi.md) - indicador DMI, determina a direção e a força da tendência
 - [DPI](list_of_indicators/disparity_index.md) - indicador DPI, mede a diferença entre o preço e uma média móvel
-- [DC](list_of_indicators/donchian_channels.md) - indicador DC, identifica níveis de breakout com base em máximos e mínimos
+- [DC](list_of_indicators/donchian_channels.md) - indicador DC, identifica níveis de rutura com base em máximos e mínimos
 - [DEMA](list_of_indicators/dema.md) - indicador DEMA, reduz o atraso nos cálculos de média móvel
 - [DeMarker](list_of_indicators/demarker.md) - indicador DeMarker, compara máximos e mínimos consecutivos para avaliar a procura
 - [DZRSI](list_of_indicators/dynamic_zones_rsi.md) - indicador DZRSI, adapta níveis de RSI às condições de mercado

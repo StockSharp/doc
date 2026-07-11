@@ -52,13 +52,13 @@ On-Balance Volume pode ser interpretado da seguinte forma:
    - Divergência altista: o preço forma um novo mínimo, enquanto o OBV forma um mínimo mais alto (sinal de compra)
    - Divergência baixista: o preço forma um novo máximo, enquanto o OBV forma um máximo mais baixo (sinal de venda)
 
-4. **Breakouts do OBV**:
-   - Um breakout do OBV de um nível de resistência ou suporte antecede frequentemente um breakout semelhante no gráfico do preço
-   - Os traders podem usar breakouts de linhas de tendência do OBV para prever movimentos futuros do preço
+4. **Ruturas do OBV**:
+   - Uma rutura do OBV de um nível de resistência ou suporte antecede frequentemente uma rutura semelhante no gráfico do preço
+   - Os operadores podem usar ruturas de linhas de tendência do OBV para prever movimentos futuros do preço
 
 5. **Linha de base**:
-   - Alguns traders usam médias móveis do OBV como linhas de "base"
-   - O cruzamento do OBV com a sua média móvel pode gerar sinais de trading
+   - Alguns operadores usam médias móveis do OBV como linhas de "base"
+   - O cruzamento do OBV com a sua média móvel pode gerar sinais de negociação
 
 6. **Padrões de análise técnica**:
    - Padrões clássicos de análise técnica podem formar-se no gráfico do OBV, como "cabeça e ombros", "duplo fundo", etc.
@@ -78,4 +78,3 @@ On-Balance Volume pode ser interpretado da seguinte forma:
 [ChaikinMoneyFlow](chaikin_money_flow.md)
 [ForceIndex](force_index.md)
 [NegativeVolumeIndex](negative_volume_index.md)
-

@@ -57,10 +57,10 @@ Los canales de Keltner se pueden interpretar de la siguiente manera:
    - Cuando las tres líneas apuntan hacia abajo, esto indica una tendencia a la baja.
    - El movimiento de la línea horizontal indica una tendencia lateral
 
-2. **Breakouts**:
+2. **Rupturas**:
    - El precio al superar la banda superior puede indicar un fuerte impulso alcista
    - El precio al romper por debajo de la banda inferior puede indicar un fuerte impulso a la baja
-   - Breakouts se utilizan a menudo como señales de entrada en la dirección de la ruptura.
+   - Las rupturas se utilizan a menudo como señales de entrada en la dirección de la ruptura.
 
 3. **Regresa a la Línea Media**:
    - Después de romper la banda superior o inferior, el precio suele regresar a la línea media.

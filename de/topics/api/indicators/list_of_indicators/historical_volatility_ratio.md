@@ -66,7 +66,7 @@ Der Historical Volatility Ratio kann wie folgt interpretiert werden:
    - Ein fallender HVR deutet auf einen Rückgang der aktuellen Volatilität hin
 
 4. **Handelsstrategien**:
-   - Wenn HVR hoch ist, kann es angebracht sein, Breakout-basierte Strategien zu verwenden
+   - Wenn HVR hoch ist, kann es angebracht sein, ausbruchsbasierte Strategien zu verwenden
    - Wenn HVR niedrig ist, sind Mean-Reversion- oder Range-Trading-Strategien möglicherweise besser geeignet
 
 5. **Risikomanagement**:

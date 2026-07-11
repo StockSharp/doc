@@ -77,7 +77,7 @@ Keltner Channels kann wie folgt interpretiert werden:
 
 6. **Handelsstrategien**:
    - „Edge to Middle“-Strategie: Eröffnen einer Position, wenn der Preis das obere oder untere Band berührt, wobei die Mittellinie angestrebt wird
-   - Breakout-Strategie: Eröffnen einer Position, wenn der Preis das obere oder untere Band durchbricht, in Erwartung einer weiteren Bewegung in die gleiche Richtung
+   - Ausbruchsstrategie: Eröffnen einer Position, wenn der Preis das obere oder untere Band durchbricht, in Erwartung einer weiteren Bewegung in die gleiche Richtung
    - „Middle to Edge“-Strategie: Eröffnen einer Position, wenn der Preis von der Mittellinie abprallt, wobei das obere oder untere Band angestrebt wird
 
 ![indicator_keltner_channels](../../../../images/indicator_keltner_channels.png)

@@ -101,6 +101,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"\u00D1\u008F", // Ñ
 	];
 
+	private static readonly string[] _translationArtifactMarkers =
+	[
+		"XZX",
+	];
+
 	private static readonly string[] _knownEnglishUiPhrases =
 	[
 		"Add button",
@@ -2218,6 +2223,34 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedIndicatorDocsDoNotKeepEnglishBreakoutTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bbreakouts?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var indicatorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "indicators");
+			if (!Directory.Exists(indicatorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(indicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: indicator documentation keeps English trading term '{match.Value}'. Localize it in prose and labels.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void PortugueseIndicatorDocsDoNotKeepEnglishRateOfChangePhrase()
 	{
 		var errors = new List<string>();
@@ -2710,6 +2743,17 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		foreach (var file in EnumerateContentTextFiles())
 			ValidateNoMojibakeMarkers(file, errors);
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void TextFilesDoNotContainTranslationArtifactMarkers()
+	{
+		var errors = new List<string>();
+
+		foreach (var file in EnumerateContentTextFiles())
+			ValidateNoTranslationArtifactMarkers(file, errors);
 
 		AssertNoErrors(errors);
 	}
@@ -3721,6 +3765,21 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				continue;
 
 			errors.Add($"{RelativeToRepo(file)}:{line}: contains mojibake marker '{marker}', which usually means Unicode punctuation was decoded with the wrong encoding. Line: {Truncate(text.Trim(), 180)}");
+		}
+	}
+
+	private static void ValidateNoTranslationArtifactMarkers(string file, List<string> errors)
+	{
+		var line = 1;
+		using var reader = new StringReader(ReadAllText(file));
+
+		for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+		{
+			var marker = _translationArtifactMarkers.FirstOrDefault(text.Contains);
+			if (marker is null)
+				continue;
+
+			errors.Add($"{RelativeToRepo(file)}:{line}: contains translation artifact marker '{marker}'. Line: {Truncate(text.Trim(), 180)}");
 		}
 	}
 

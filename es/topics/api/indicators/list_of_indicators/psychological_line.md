@@ -52,8 +52,8 @@ El Psychological Line se puede interpretar de la siguiente manera:
    - Divergencia bajista: el precio forma un nuevo máximo, mientras que PSY forma un máximo más bajo
 
 4. **Rebotes de niveles extremos**:
-   - XZX0000La reversión XZX desde la zona de sobrecompra puede indicar una posible reversión bajista
-   - XZX0000La reversión XZX desde la zona de sobreventa puede indicar una posible reversión alcista
+   - La reversión desde la zona de sobrecompra puede indicar una posible reversión bajista
+   - La reversión desde la zona de sobreventa puede indicar una posible reversión alcista
 
 5. **Análisis de tendencias**:
    - En una fuerte tendencia alcista, PSY a menudo se mantiene por encima de 50, con rebotes periódicos desde la zona de sobrecompra.
