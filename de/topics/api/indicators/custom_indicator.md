@@ -81,7 +81,7 @@ Verfügbare Messarten:
 
 Diese Eigenschaft ist entscheidend für die korrekte Anzeige von Indikatoren in einem Chart. Wenn mehrere Indikatoren mit unterschiedlichen Dimensionen im selben Panel überlagert werden, werden für Indikatoren mit unterschiedlichen `Measure`-Typen separate Y-Achsen erstellt. Dadurch können alle Indikatoren in ihrer natürlichen Skala angezeigt werden, selbst wenn ein Indikator Werte im Tausenderbereich hat (z. B. Preis), während ein anderer in Bruchteilen einer Einheit gemessen wird (z. B. Oszillator).
 
-### Save und Load
+### Speichern und Laden
 
 Die Methoden [Save](xref:StockSharp.Algo.Indicators.BaseIndicator.Save(Ecng.Serialization.SettingsStorage)) und [Load](xref:StockSharp.Algo.Indicators.BaseIndicator.Load(Ecng.Serialization.SettingsStorage)) sind erforderlich, um Indikatoreinstellungen zu speichern und zu laden:
 

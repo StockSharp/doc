@@ -186,7 +186,7 @@ El método [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(St
 IChartCandleElement candles = DrawCandles(area, subscription);
 
 // Se pueden configurar parámetros adicionales del elemento
-candles.DrawOpenClose = true;  // Mostrar líneas open/close
+candles.DrawOpenClose = true;  // Mostrar líneas de apertura/cierre
 candles.DrawHigh = true;       // Mostrar máximos
 candles.DrawLow = true;        // Mostrar mínimos
 ```

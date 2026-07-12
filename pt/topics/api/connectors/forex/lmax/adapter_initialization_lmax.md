@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new LmaxMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Login = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
+	Login = "<O seu login>",
+	Password = "<A sua palavra-passe>".To<SecureString>(),
 	IsDemo = true
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);

@@ -19,7 +19,7 @@ Abendstern gilt als starkes Signal für eine mögliche Umkehr eines Aufwärtstre
 - Die zweite Candle (Stern) zeigt eine Abschwächung des bullischen Drucks und Unsicherheit im Markt.
 - Die dritte Candle zeigt die Rückkehr der Verkäufer und einen Kontrollwechsel von Bullen zu Bären.
 - Je tiefer die dritte Candle in den Körper der ersten Candle eindringt, desto stärker ist das Umkehrsignal.
-- Wenn die zweite Candle ein Doji ist (mit sehr kleinem Körper), wird das Muster als "Evening Doji Star" bezeichnet und gilt als noch stärkeres Signal.
+- Wenn die zweite Candle ein Doji ist (mit sehr kleinem Körper), wird das Muster als "Abend-Doji-Stern" bezeichnet und gilt als noch stärkeres Signal.
 
 ### Handelsstrategien
 

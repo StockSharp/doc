@@ -37,7 +37,7 @@ Subscreva eventos e configure os manipuladores de dados:
 // Evento de ligação bem-sucedida
 _connector.Connected += () =>
 {
-	Console.WriteLine("Connection established");
+	Console.WriteLine("Ligação estabelecida");
 	
 	// Criar uma subscrição para procurar instrumentos
 	var lookupSubscription = new Subscription(DataType.Securities);

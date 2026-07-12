@@ -35,7 +35,7 @@
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. 在 **Connect** 按钮的 **Click** 事件处理程序中，除了订阅连接器事件并调用 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法之外，我们还订阅了 [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) 事件。在该事件处理程序中，当收到新的K线时，将绘制图表。
+3. 在 **连接** 按钮的 **Click** 事件处理程序中，除了订阅连接器事件并调用 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法之外，我们还订阅了 [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) 事件。在该事件处理程序中，当收到新的K线时，将绘制图表。
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@
    }
    ```
 
-4. 在 **ShowChart** 按钮处理程序中，我们创建指标对象、区域和图表元素。我们将元素添加到区域，将区域添加到图表。我们打开图表窗口并开始订阅K线。
+4. 在 **显示图表** 按钮处理程序中，我们创建指标对象、区域和图表元素。我们将元素添加到区域，将区域添加到图表。我们打开图表窗口并开始订阅K线。
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)

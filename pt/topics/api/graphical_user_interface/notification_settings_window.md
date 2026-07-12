@@ -13,5 +13,5 @@ As notificações podem ter as seguintes formas:
 - **SMS** - será enviada uma mensagem por SMS.
 - **Email** - será enviada uma mensagem por email.
 - **Voz** - a mensagem será pronunciada pela voz gerada pelo computador.
-- **Registo** - será enviada uma mensagem para a janela Logs do Designer.
+- **Registo** - será enviada uma mensagem para a janela Registos do Designer.
 - **Desativado** - a notificação não será apresentada.

@@ -13,7 +13,7 @@ Im Gegensatz zum Standard-RSI, das nur Preisänderungen berücksichtigt, berück
 CRSI ist besonders nützlich für:
 - Identifizierung kurzfristiger Ein- und Ausstiegsmöglichkeiten
 - Bestimmung extremer überkaufter und überverkaufter Niveaus
-- Erstellen von Handelssystemen basierend auf der Mean-Reversion
+- Erstellen von Handelssystemen basierend auf der Rückkehr zum Mittelwert
 - Filtern von Signalen anderer Indikatoren
 
 ## Parameter
@@ -63,7 +63,7 @@ Connors-RSI oszilliert zwischen 0 und 100, ähnlich dem Standard-RSI:
   - Bullische Divergenz: Der Preis bildet ein neues Tief, während CRSI ein höheres Tief bildet
   - Bärische Divergenz: Der Preis bildet ein neues Hoch, während CRSI ein niedrigeres Hoch bildet
 
-Connors-RSI funktioniert am besten auf Charts mit Zeitrahmen von täglich bis wöchentlich und in Handelsstrategien, die sich an der Mean-Reversion orientieren.
+Connors-RSI funktioniert am besten auf Charts mit Zeitrahmen von täglich bis wöchentlich und in Handelsstrategien, die sich an der Rückkehr zum Mittelwert orientieren.
 
 ![CRSI Diagramm](../../../../images/indicator_connors_rsi.png)
 

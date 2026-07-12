@@ -82,7 +82,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 	// 订阅 K线接收事件
 	_connector.CandleReceived += Connector_CandleReceived;
 	
-	// Connect
+	// 连接
 	_connector.Connect();
 }
 ```
@@ -342,7 +342,7 @@ private void ExtendedCandleProcessing(Subscription subscription, ICandleMessage 
 	// 将 K线信息输出到日志
 	this.GuiAsync(() => 
 	{
-		var status = subscription.State == SubscriptionStates.Online ? "Real-time" : "History";
+		var status = subscription.State == SubscriptionStates.Online ? "实时" : "历史";
 		LogControl.LogMessage($"{status}: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice}");
 	});
 }

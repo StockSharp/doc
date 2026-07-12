@@ -319,7 +319,7 @@
       href: designer/backtesting/cloud_backtesting.md
   - name: Optimierung
     items:
-    - name: Brute Force
+    - name: Brute-Force-Optimierung
       href: designer/optimization/brute_force.md
     - name: Optimierungsparameter
       href: designer/optimization/optimization_parameters.md

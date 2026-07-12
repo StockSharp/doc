@@ -8,7 +8,7 @@
 
 - Suche und Auswahl von Daten (Instrumente, Portfolios, Adressen);
 - das Erstellen von Orders;
-- Anzeige von Börsen- und anderen Informationen (Trades, Orders, Transaktionen, Orderbücher, Logs usw.);
+- Anzeige von Börsen- und anderen Informationen (Trades, Orders, Transaktionen, Orderbücher, Protokolle usw.);
 - Zeichnen von Diagrammen.
 
 Um im XAML-Code auf die grafischen Steuerelemente von [S#](../api.md) zuzugreifen, müssen Sie Aliase für den entsprechenden Namespace definieren und diese Aliase im XAML-Code verwenden. Wie das funktioniert, zeigt das folgende Beispiel:

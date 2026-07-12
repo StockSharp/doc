@@ -49,7 +49,7 @@ dotnet add package StockSharp.Binance
 ```
 使用 StockSharp 创建满足以下条件的交易策略：
 - 继承 Strategy
-- 使用两条简单移动平均线（SMA）：fast（周期 10）和 slow（周期 30）
+- 使用两条简单移动平均线（SMA）：快速 SMA（周期 10）和慢速 SMA（周期 30）
 - 当快速 SMA 上穿慢速 SMA 时买入
 - 当快速 SMA 下穿慢速 SMA 时卖出
 - 持仓规模：1 手

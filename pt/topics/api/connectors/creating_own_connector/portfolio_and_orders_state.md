@@ -132,7 +132,7 @@ Para processar atualizações do estado das ordens em tempo real, normalmente é
 private async ValueTask SessionOnOrderReceived(Order order, CancellationToken cancellationToken)
 {
 	// Processar atualização de ordem recebida
-	// OriginTransId = 0, since this is a real-time update, not a response to a specific request
+	// OriginTransId = 0, pois esta é uma atualização em tempo real, não uma resposta a um pedido específico
 	await ProcessOrder(order, 0, cancellationToken);
 }
 ```

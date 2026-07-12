@@ -8,4 +8,4 @@ Para utilizar el indicador, debe utilizar la clase [LinearRegSlope](xref:StockSh
 
 ## Contenido recomendado
 
-[Registro de logs](../../logging.md)
+[Registro](../../logging.md)

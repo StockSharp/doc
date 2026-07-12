@@ -77,7 +77,7 @@ _quotingProcessor = new QuotingProcessor(
 ### Passo 3: Subscrever Eventos do Processador
 
 ```csharp
-// Subscrever eventos do processador para logging e tratamento
+// Subscrever eventos do processador para registo e tratamento
 _quotingProcessor.OrderRegistered += order =>
 	this.AddInfoLog($"Ordem {order.TransactionId} registada ao preço {order.Price}");
 

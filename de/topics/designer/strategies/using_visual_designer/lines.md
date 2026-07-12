@@ -8,8 +8,8 @@ Jede Verbindung kann hervorgehoben werden, indem Sie darauf zeigen und mit der l
 
 Sie können Parameter gleicher Farbe (also gleicher Datentypen) miteinander verbinden, mit Ausnahme der folgenden Parametertypen:
 
-- Der Parameter **black** kann beliebige Daten akzeptieren. Meist werden diese Parameter verwendet, um Signale für Aktionen innerhalb des Elements zu übergeben. Zum Beispiel speichert das Element [Variable](elements/data_sources/variable.md) einen Wert und gibt ihn an den Ausgang weiter, wenn es ein Signal empfängt.
-- Der Parameter **green** kann verschiedene vergleichbare Datentypen akzeptieren. Zum Beispiel numerische Werte, Indikatorwerte, Zeichenfolgen usw.
+- Der Parameter **schwarz** kann beliebige Daten akzeptieren. Meist werden diese Parameter verwendet, um Signale für Aktionen innerhalb des Elements zu übergeben. Zum Beispiel speichert das Element [Variable](elements/data_sources/variable.md) einen Wert und gibt ihn an den Ausgang weiter, wenn es ein Signal empfängt.
+- Der Parameter **grün** kann verschiedene vergleichbare Datentypen akzeptieren. Zum Beispiel numerische Werte, Indikatorwerte, Zeichenfolgen usw.
 
 ## Empfohlene Inhalte
 

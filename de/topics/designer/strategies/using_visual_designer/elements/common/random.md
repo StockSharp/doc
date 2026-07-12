@@ -4,11 +4,11 @@
 
 Dieser Block wird verwendet, um einen Zufallswert zu generieren.
 
-## Eingehende Sockets
+## Eingehende Anschlüsse
 
-- **Auslöser** - das Signal (jeder Wert außer `False`), das den Zeitpunkt bestimmt, zu dem ein generierter Zufallswert über den ausgehenden Socket weitergegeben werden soll.
+- **Auslöser** - das Signal (jeder Wert außer `False`), das den Zeitpunkt bestimmt, zu dem ein generierter Zufallswert über den ausgehenden Anschluss weitergegeben werden soll.
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **Wert** - ein Zufallswert.
 

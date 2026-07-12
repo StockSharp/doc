@@ -41,6 +41,6 @@ Se a estratégia usar interfaces de gráficos, inclua o pacote NuGet [StockSharp
 
 ![Designer criação de estratégia DLL 01](../../../images/designer_creation_strategy_dll_01.png)
 
-3. O lançamento da estratégia em [backtest](../backtesting/user_interface.md), em [live](../live_execution/getting_started.md) e outras operações funciona de forma semelhante às estratégias criadas a partir de diagramas e código:
+3. O lançamento da estratégia em [teste histórico](../backtesting/user_interface.md), em [modo ao vivo](../live_execution/getting_started.md) e outras operações funciona de forma semelhante às estratégias criadas a partir de diagramas e código:
 
 ![Designer criação de estratégia DLL 02](../../../images/designer_creation_strategy_dll_02.png)

@@ -22,4 +22,4 @@ Normally the [S#](../api.md) contains the following implementations of the [ILog
 
 [Visual monitoring](logging/visual_monitoring.md)
 
-[ILogListener creating](logging/custom_iloglistener.md)
+[Creating an ILogListener](logging/custom_iloglistener.md)

@@ -234,7 +234,7 @@ trades.SellColor = System.Drawing.Color.Red;    // 売り取引用の色
 trades.FullTitle = "自分の戦略の約定";          // 要素タイトル
 ```
 
-このメソッドは、ストラテジーによって実行されたすべての取引の表示を自動的に設定します。取引は、売買方向（buy/sell）を考慮し、約定した位置にマーカーとしてチャート上に表示されます。
+このメソッドは、ストラテジーによって実行されたすべての取引の表示を自動的に設定します。取引は、売買方向（買い/売り）を考慮し、約定した位置にマーカーとしてチャート上に表示されます。
 
 #### DrawOrders メソッド
 
@@ -287,13 +287,13 @@ DrawIndicator(secondArea, rsi);
 オープンポジションを保護するため、StockSharp は高レベルの [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) メソッドを提供します。
 
 ```cs
-// Take Profit と Stop Loss レベルでポジション保護を開始
+// テイクプロフィットとストップロスのレベルでポジション保護を開始
 StartProtection(TakeValue, StopValue);
 ```
 
 このメソッドは、すべてのオープンポジションに対する保護を自動的に設定します。
 - 価格変化を追跡します
-- Take Profit または Stop Loss レベルに達したとき、ポジションをクローズする注文を自動作成します
+- テイクプロフィットまたはストップロスのレベルに達したとき、ポジションをクローズする注文を自動作成します
 - さまざまな種類の測定単位（絶対値、パーセンテージ、ポイント）をサポートします
 - 適応的なポジション保護のためにトレーリングストップを使用できます
 
@@ -302,8 +302,8 @@ StartProtection(TakeValue, StopValue);
 ```cs
 // トレーリングストップと成行注文で保護を開始
 StartProtection(
-	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
-	stopLoss: new Unit(2, UnitTypes.Percent),     // パーセンテージでの Stop Loss
+	takeProfit: new Unit(50, UnitTypes.Absolute), // テイクプロフィット
+	stopLoss: new Unit(2, UnitTypes.Percent),     // パーセンテージでのストップロス
 	isStopTrailing: true,                         // トレーリングストップを有効化
 	useMarketOrders: true                         // 成行注文を使用
 );

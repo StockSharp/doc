@@ -16,7 +16,7 @@ Bei Box-Chart-Kerzen kann zusätzlich gruppiert werden; die Gruppierungsreihenfo
 
 ![Designer Grafikelement 05](../../../../images/designer_schedule_05.png)
 
-Über dem Chart befindet sich eine Toolbar, in der Sie Auto-Scroll, Auto-Zoom, Legendenmodi und andere allgemeine Chart-Einstellungen auswählen können. Außerdem können Sie die Elemente auswählen, die im Chart gezeichnet werden sollen: Linien, Levels, Zeiger, Rechteck, Text.
+Über dem Chart befindet sich eine Symbolleiste, in der Sie automatisches Scrollen, automatischen Zoom, Legendenmodi und andere allgemeine Chart-Einstellungen auswählen können. Außerdem können Sie die Elemente auswählen, die im Chart gezeichnet werden sollen: Linien, Niveaus, Zeiger, Rechteck, Text.
 
 ![Designer Grafikelement 03](../../../../images/designer_schedule_03.png)
 

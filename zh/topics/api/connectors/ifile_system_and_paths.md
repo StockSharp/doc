@@ -172,7 +172,7 @@ if (configFile.IsConfigExists(fs))
 
 ```csharp
 // 已弃用的方式
-[Obsolete("Use IFileSystem overload.")]
+[Obsolete("请使用 IFileSystem 重载。")]
 public LocalMarketDataDrive(string path)
     : this(Paths.FileSystem, path) { }
 

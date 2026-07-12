@@ -12,7 +12,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **palavra-passe** - Palavra-passe.
 - **Securities** - Ficheiro com títulos.
 - **Delay** - Atrasar o carregamento de instrumentos.
-- **Active** - Apenas instrumentos ativos.
+- **Ativo** - Apenas instrumentos ativos.
 - **ID do grupo** - ID do grupo.
 - **Fuso horário** - Informação sobre o fuso horário onde a bolsa está localizada.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para controlar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

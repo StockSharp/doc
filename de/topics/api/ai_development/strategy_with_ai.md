@@ -30,10 +30,10 @@ Erstellen Sie eine Datei `CLAUDE.md` (oder `.cursorrules`) im Projekt-Root:
 ```markdown
 # Projektregeln
 
-- Framework: StockSharp 5.x, .NET 10
+- Technologiestapel: StockSharp 5.x, .NET 10
 - Strategien erben von der Klasse Strategy
 - Kerzen über Connector.Subscribe(subscription) abonnieren
-- Orders über RegisterOrder(order) registrieren
+- Aufträge über RegisterOrder(order) registrieren
 - Protokollierung: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
 - Indikatoren: mit new erstellen und indicator.Process(candle) aufrufen
 - connector.Error und Strategiefehler immer behandeln
@@ -48,7 +48,7 @@ Beispiel-Prompt:
 ```
 Erstelle eine Handelsstrategie mit StockSharp, die:
 - von Strategy erbt
-- zwei einfache gleitende Durchschnitte (SMA) verwendet: fast (Periode 10) und slow (Periode 30)
+- zwei einfache gleitende Durchschnitte (SMA) verwendet: schnelle (Periode 10) und langsame (Periode 30)
 - kauft, wenn die schnelle SMA die langsame SMA nach oben kreuzt
 - verkauft, wenn die schnelle SMA die langsame SMA nach unten kreuzt
 - Positionsgröße: 1 Lot
@@ -164,13 +164,13 @@ Gehen Sie diese Checkliste durch:
 - **Candle-Abonnement**: über `Subscribe(new Subscription(...))` ✓
 - **Candle-Verarbeitung**: über die Regel `WhenCandlesFinished` ✓
 - **IsFormed-Prüfung**: Indikatoren werden auf Bereitschaft geprüft ✓
-- **Orders**: über `RegisterOrder()` mit `BuyAtMarket` / `SellAtMarket` ✓
-- **Position**: `Position` wird vor dem Platzieren von Orders geprüft ✓
+- **Aufträge**: über `RegisterOrder()` mit `BuyAtMarket` / `SellAtMarket` ✓
+- **Position**: `Position` wird vor dem Platzieren von Aufträgen geprüft ✓
 
-### Schritt 4: Die KI bitten, Backtesting hinzuzufügen
+### Schritt 4: Die KI bitten, Rücktests hinzuzufügen
 
 ```
-Füge Backtesting-Code für diese Strategie mit historischen Daten hinzu.
+Füge Rücktest-Code für diese Strategie mit historischen Daten hinzu.
 Verwende HistoryEmulationConnector, lade Daten aus dem lokalen Speicher
 und gib Zusammenfassungsstatistiken aus (PnL, Anzahl der Trades, maximaler Drawdown).
 ```
@@ -229,7 +229,7 @@ var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 connector.Subscribe(subscription);
 ```
 
-### 2. Erstellung von Orders ohne Hilfsmethoden
+### 2. Erstellung von Aufträgen ohne Hilfsmethoden
 
 **Falsch**:
 ```csharp
@@ -270,5 +270,5 @@ if (!_sma.IsFormed)
 1. **Der KI Dokumentation geben** — verweisen Sie sie auf [doc.stocksharp.com](https://doc.stocksharp.com) oder kopieren Sie Codebeispiele aus `Samples/`
 2. **CLAUDE.md verwenden** — eine Projektregel-Datei reduziert die Anzahl der Fehler erheblich
 3. **Einfach beginnen** — erstellen Sie zuerst eine einfache Strategie und fügen Sie dann Filter und Risikomanagement hinzu
-4. **Auf historischen Daten testen** — führen Sie vor dem Live-Handel immer einen Backtest durch
+4. **Auf historischen Daten testen** — führen Sie vor dem Live-Handel immer einen Rücktest durch
 5. **Das Repository klonen** — wenn die KI Zugriff auf die StockSharp-Quellen hat, wird sie die API genauer verwenden

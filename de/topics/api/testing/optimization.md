@@ -6,7 +6,7 @@ StockSharp stellt einen integrierten Mechanismus zur Optimierung von Strategiepa
 
 Es stehen zwei Optimierungsmodi zur Verfügung:
 
-- **Brute Force** -- die Klasse `BruteForceOptimizer`. Durchläuft alle möglichen Parameterkombinationen oder eine zufällige Teilmenge davon.
+- **Brute-Force-Optimierung** -- die Klasse `BruteForceOptimizer`. Durchläuft alle möglichen Parameterkombinationen oder eine zufällige Teilmenge davon.
 - **Genetischer Algorithmus** -- die Klasse `GeneticOptimizer`. Verwendet einen evolutionären Ansatz zum Finden optimaler Parameter, der bei großen Parameterräumen deutlich effizienter ist.
 
 Beide Optimierer erben von `BaseOptimizer` und arbeiten asynchron. Sie geben ein `IAsyncEnumerable` mit Ergebnissen zurück, sobald die jeweilige Iteration abgeschlossen ist.
@@ -224,7 +224,7 @@ var cts = new CancellationTokenSource();
 
 await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
 {
-    // s ist die Strategie mit Ergebnissen nach dem Backtest.
+    // s ist die Strategie mit Ergebnissen nach dem Rücktest.
     Console.WriteLine($"PnL={s.PnL}, lange SMA={s.Parameters["LongSma"].Value}, " +
                       $"kurze SMA={s.Parameters["ShortSma"].Value}");
 }
@@ -251,7 +251,7 @@ await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, st
 
 ## Genetische Optimierung
 
-Die Klasse `GeneticOptimizer` implementiert einen genetischen Algorithmus, der bei einer großen Anzahl von Parametern deutlich effizienter ist als Brute Force. Der Algorithmus konvergiert automatisch in weniger Iterationen zu optimalen Werten.
+Die Klasse `GeneticOptimizer` implementiert einen genetischen Algorithmus, der bei einer großen Anzahl von Parametern deutlich effizienter ist als die Brute-Force-Suche. Der Algorithmus konvergiert automatisch in weniger Iterationen zu optimalen Werten.
 
 ### Optimierer erstellen und konfigurieren
 
@@ -369,7 +369,7 @@ optimizer.AdapterCache = new MarketDataStorageCache();
 | Ereignis | Beschreibung |
 |-------|-------------|
 | `SingleProgressChanged` | Wird aufgerufen, wenn sich der Fortschritt einer einzelnen Iteration ändert. Parameter: `(Strategy, IStrategyParam[], int progress)`. Fortschritt `100` bedeutet, dass die Iteration abgeschlossen ist. |
-| `StrategyInitialized` | Wird aufgerufen, nachdem die Strategie initialisiert wurde und bevor der Backtest startet. |
+| `StrategyInitialized` | Wird aufgerufen, nachdem die Strategie initialisiert wurde und bevor der Rücktest startet. |
 | `ConnectorInitialized` | Wird aufgerufen, nachdem der Connector erstellt wurde und bevor er eine Verbindung herstellt. Ermöglicht die Konfiguration von Parametern des `HistoryEmulationConnector`. |
 
 ```csharp
@@ -432,7 +432,7 @@ var storageRegistry = new StorageRegistry
     DefaultDrive = new LocalMarketDataDrive(Paths.HistoryDataPath)
 };
 
-// Optimierer erstellen (Brute Force).
+// Optimierer erstellen (Brute-Force).
 var optimizer = new BruteForceOptimizer(
     new CollectionSecurityProvider(new[] { security }),
     new CollectionPortfolioProvider(new[] { portfolio }),
@@ -494,5 +494,5 @@ if (bestStrategy != null)
 
 ## Siehe auch
 
-- [Testing mit historischen Daten](historical_data.md)
+- [Tests mit historischen Daten](historical_data.md)
 - Beispiel: `Samples/07_Testing/02_Optimization`

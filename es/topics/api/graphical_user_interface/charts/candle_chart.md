@@ -35,7 +35,7 @@ A continuación se muestra un ejemplo de construcción de un gráfico usando el 
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. En el manejador del evento **Click** del botón **Connect**, además de suscribirse a los eventos del conector y llamar al método [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), nos suscribimos al evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). En este manejador de eventos, el gráfico se dibujará cuando se reciba una nueva vela.
+3. En el manejador del evento **Click** del botón **Conectar**, además de suscribirse a los eventos del conector y llamar al método [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), nos suscribimos al evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). En este manejador de eventos, el gráfico se dibujará cuando se reciba una nueva vela.
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ A continuación se muestra un ejemplo de construcción de un gráfico usando el 
    }
    ```
 
-4. En el manejador del botón **ShowChart**, creamos objetos de indicadores, áreas y elementos del gráfico. Agregamos elementos a las áreas y áreas al gráfico. Abrimos la ventana del gráfico e iniciamos una suscripción a velas.
+4. En el manejador del botón **Mostrar gráfico**, creamos objetos de indicadores, áreas y elementos del gráfico. Agregamos elementos a las áreas y áreas al gráfico. Abrimos la ventana del gráfico e iniciamos una suscripción a velas.
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)
@@ -264,4 +264,3 @@ _candlesArea.Reset();
 // Limpiar un elemento específico
 _candlesElem.Reset();
 ```
-

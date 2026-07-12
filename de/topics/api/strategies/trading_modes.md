@@ -31,7 +31,7 @@ strategy.TradingMode = StrategyTradingModes.Disabled;
 
 Beim Versuch, eine Order zu registrieren, prüft die Strategie den aktuellen Modus:
 
-- **`Disabled`** -- die Order wird mit dem Grund "trading is prohibited" abgelehnt.
+- **`Disabled`** -- die Order wird mit dem Grund "Handel ist verboten" abgelehnt.
 - **`ReducePositionOnly`** -- die Order wird abgelehnt, wenn die aktuelle Position null ist, wenn die Orderrichtung der Positionsrichtung entspricht oder wenn das Ordervolumen den absoluten Wert der Position überschreitet.
 - **`LongOnly`** -- eine Verkaufsorder wird abgelehnt, wenn die aktuelle Position nicht positiv ist oder wenn das Verkaufsvolumen die aktuelle Position überschreitet.
 - **`Full`** -- keine Einschränkungen.
@@ -57,13 +57,13 @@ if (!IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly))
 
 Berechtigungslogik beim Aufruf mit einem `required`-Parameter:
 
-| Current TradingMode \ required | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
+| Aktueller TradingMode \ required | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
 |-------------------------------|--------|---------------------|---------------------|
-| `Full` | yes | yes | yes |
-| `Disabled` | no | no | no |
-| `CancelOrdersOnly` | no | yes | no |
-| `ReducePositionOnly` | no | yes | yes |
-| `LongOnly` | no | yes | yes |
+| `Full` | ja | ja | ja |
+| `Disabled` | nein | nein | nein |
+| `CancelOrdersOnly` | nein | ja | nein |
+| `ReducePositionOnly` | nein | ja | ja |
+| `LongOnly` | nein | ja | ja |
 
 ## Verwendungsbeispiel
 
@@ -124,4 +124,3 @@ strategy.TradingMode = StrategyTradingModes.Disabled;
 ```
 
 In diesem Beispiel arbeitet die Strategie zunächst im Modus `LongOnly`, der nur Käufe und das Schließen von Long-Positionen erlaubt. Wenn sich die Marktbedingungen ändern, kann der Modus auf `ReducePositionOnly` für schrittweises Schließen von Positionen und anschließend auf `Disabled` für eine vollständige Unterbrechung der Handelsaktivität umgeschaltet werden.
-

@@ -1,6 +1,6 @@
 # Volume Intradiário
 
-O script "Volume intradiário" é uma ferramenta para analisar a distribuição do volume de negociação de securities por horas dentro de uma única sessão de negociação. Concebido para utilização na plataforma StockSharp, destina-se a traders e analistas quantitativos que procuram um estudo aprofundado do comportamento do mercado e a otimização de estratégias de negociação.
+O script "Volume intradiário" é uma ferramenta para analisar a distribuição do volume de negociação dos instrumentos por hora dentro de uma única sessão de negociação. Concebido para utilização na plataforma StockSharp, destina-se a traders e analistas quantitativos que procuram um estudo aprofundado do comportamento do mercado e a otimização de estratégias de negociação.
 
 ![Volume Intradiário](../../../../images/hydra_analytics_intraday_volume.png)
 
@@ -40,7 +40,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Sem instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -55,7 +55,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("Sem dados.");
 				return Task.CompletedTask;
 			}
 
@@ -65,13 +65,13 @@ namespace StockSharp.Algo.Analytics
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
 
 			// colocar os nossos cálculos na grelha
-			var grid = panel.CreateGrid("Time", "Volume");
+			var grid = panel.CreateGrid("Hora", "Volume negociado");
 
 			foreach (var row in rows)
 				grid.SetRow(row.Key, row.Value);
 
 			// ordenar pela coluna de volume (descendente)
-			grid.SetSort("Volume", false);
+			grid.SetSort("Volume negociado", false);
 
 			return Task.CompletedTask;
 		}
@@ -116,7 +116,7 @@ class time_volume_script(IAnalyticsScript):
 	):
 		# Verificar se não existem instrumentos
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Sem instrumentos.")
 			return Task.CompletedTask
 
 		# O script pode processar apenas 1 instrumento
@@ -135,7 +135,7 @@ class time_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("Sem dados.")
 			return Task.CompletedTask
 
 		# Agrupar candles pela hora de abertura (truncagem horária) e somar os seus volumes
@@ -147,13 +147,13 @@ class time_volume_script(IAnalyticsScript):
 			rows[truncated] = rows.get(truncated, 0) + candle.TotalVolume
 
 		# Colocar os nossos cálculos na grelha
-		grid = panel.CreateGrid("Time", "Volume")
+		grid = panel.CreateGrid("Hora", "Volume negociado")
 
 		for key, value in rows.items():
 			grid.SetRow(key, value)
 
 		# Ordenar pela coluna Volume por ordem descendente
-		grid.SetSort("Volume", False)
+		grid.SetSort("Volume negociado", False)
 
 		return Task.CompletedTask
 

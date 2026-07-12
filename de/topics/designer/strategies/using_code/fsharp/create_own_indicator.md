@@ -95,7 +95,7 @@ type EmptyIndicator() as this =
 	/// Eine Zeichenfolgendarstellung, die den aktuellen <see cref="Change"/>-Wert enthält.
 	/// </summary>
 	override this.ToString() =
-		sprintf "Change: %d" this.Change
+		sprintf "Änderung: %d" this.Change
 
 ```
 

@@ -45,7 +45,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Нет инструментов.");
 				return Task.CompletedTask;
 			}
 
@@ -60,7 +60,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("Нет данных.");
 				return Task.CompletedTask;
 			}
 
@@ -115,7 +115,7 @@ class price_volume_script(IAnalyticsScript):
 	):
 		# Проверить, что инструменты отсутствуют
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Нет инструментов.")
 			return Task.CompletedTask
 
 		# Скрипт может обрабатывать только 1 инструмент
@@ -134,7 +134,7 @@ class price_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("Нет данных.")
 			return Task.CompletedTask
 
 		# Группировка свечей по средней цене и суммирование объёмов

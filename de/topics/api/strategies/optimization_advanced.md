@@ -54,7 +54,7 @@ Die folgenden Variablen stehen in Formeln der Fitnessfunktion zur Verfügung und
 | WinTrades | Gewinntrades |
 | LosTrades | Verlusttrades |
 | TCount | Gesamtzahl der Trades |
-| RTrip | Round-Trips |
+| RTrip | Positionszyklen |
 | AvgTPnL | Durchschnittlicher Gewinn pro Trade |
 | AvgWTrades | Durchschnittlicher Gewinntrade |
 | AvgLTrades | Durchschnittlicher Verlusttrade |
@@ -145,8 +145,8 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 	if (progress == 100)
 	{
 		tracker.IterationCompleted();
-		Console.WriteLine($"Progress: {tracker.TotalProgress:F1}%, " +
-			$"Remaining: {tracker.Remaining:hh\\:mm\\:ss}");
+		Console.WriteLine($"Fortschritt: {tracker.TotalProgress:F1}%, " +
+			$"Verbleibend: {tracker.Remaining:hh\\:mm\\:ss}");
 	}
 };
 ```
@@ -156,4 +156,3 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 - [Strategieoptimierung](../testing/optimization.md)
 - [Strategiestatistiken](statistics.md)
 - [Genetische Optimierung im Designer](../../designer/optimization/genetic.md)
-

@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new FixMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Login = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
+	Login = "<您的登录名>",
+	Password = "<您的密码>".To<SecureString>(),
 	Address = "<Address>".To<EndPoint>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
@@ -23,8 +23,8 @@ Connector Connector = new Connector();
 ...
 Connector.AddAdapter<FixMessageAdapter>(a =>
 {
-	a.Login = "<Your Login>";
-	a.Password = "<Your Password>".To<SecureString>();
+	a.Login = "<您的登录名>";
+	a.Password = "<您的密码>".To<SecureString>();
 	a.Address = "<Address>".To<EndPoint>();
 });
 ```

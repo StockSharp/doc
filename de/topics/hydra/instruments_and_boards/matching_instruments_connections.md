@@ -16,7 +16,7 @@ Um Instrumente und Verbindungen zuzuordnen, gehen Sie wie folgt vor:
 
    APPLE-Aktieninstrument.
    - Verbindung - **Interactive Brokers**. Klicken Sie auf die Schaltfläche ![Designer Schaltfläche Hinzufügen 00](../../../images/designer_creation_tool_00.png), danach wird eine neue Zeile hinzugefügt.
-   - Geben Sie in den Spalten **Instrumentcode** und **Handelsplatzcode** den Instrumentcode und den Board-Code an. Geben Sie in den Spalten **Instrumentcode im Adapter** und **Handelsplatzcode im Adapter** den Instrumentcode und den Board-Code so an, wie sie im externen Handelssystem angegeben sind. Klicken Sie auf **OK** ![Designer Instrumentzuordnung 01 01](../../../images/designer_security_mapping_01_01.png)
+   - Geben Sie in den Spalten **Instrumentcode** und **Handelsplatzcode** den Instrumentcode und den Handelsplatzcode an. Geben Sie in den Spalten **Instrumentcode im Adapter** und **Handelsplatzcode im Adapter** den Instrumentcode und den Handelsplatzcode so an, wie sie im externen Handelssystem angegeben sind. Klicken Sie auf **OK** ![Designer Instrumentzuordnung 01 01](../../../images/designer_security_mapping_01_01.png)
    - Wiederholen Sie die Schritte für die Verbindungen **Interactive Brokers** und **CQG Continuum** auf die gleiche Weise.
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |

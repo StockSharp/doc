@@ -1,8 +1,8 @@
 # Testes com dados de mercado em tempo real
 
-Os testes com dados de mercado em tempo real envolvem negociação com uma ligação real à bolsa (cotações "live"), mas sem colocar ordens reais na bolsa. Todas as ordens registadas são intercetadas, e a sua execução é emulada com base nos livros de ordens de mercado. Este tipo de teste pode ser útil, por exemplo, ao desenvolver um simulador de negociação ou ao verificar um algoritmo de negociação durante um curto período com cotações reais.
+Os testes com dados de mercado em tempo real envolvem negociação com uma ligação real à bolsa (cotações em tempo real), mas sem colocar ordens reais na bolsa. Todas as ordens registadas são intercetadas, e a sua execução é emulada com base nos livros de ordens de mercado. Este tipo de teste pode ser útil, por exemplo, ao desenvolver um simulador de negociação ou ao verificar um algoritmo de negociação durante um curto período com cotações reais.
 
-Para emular a negociação com dados reais, é necessário usar [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), que atua como um "wrapper" para um conector de sistema de negociação específico ([Binance](../connectors/crypto_exchanges/binance.md), [Interactive Brokers](../connectors/stock_market/interactive_brokers.md), etc.).
+Para emular a negociação com dados reais, é necessário usar [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1), que encapsula um conector de sistema de negociação específico ([Binance](../connectors/crypto_exchanges/binance.md), [Interactive Brokers](../connectors/stock_market/interactive_brokers.md), etc.).
 
 ## Criar um conector de emulação
 

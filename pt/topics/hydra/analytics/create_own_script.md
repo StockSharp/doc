@@ -1,6 +1,6 @@
 # Criar um Script
 
-O **Analytics** permite criar os seus próprios scripts. Como exemplo, vamos analisar o **ChartDrawScript**, que demonstra as capacidades de desenho de gráficos:
+A funcionalidade **Análises** permite criar os seus próprios scripts. Como exemplo, vamos analisar o **ChartDrawScript**, que demonstra as capacidades de desenho de gráficos:
 
 ```cs
 namespace StockSharp.Algo.Analytics
@@ -14,7 +14,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Sem instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -41,8 +41,8 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// desenhar séries no gráfico como linha e histograma
-				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
-				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
+				lineChart.Append($"{security} (fecho)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
+				histogramChart.Append($"{security} (volume)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}
 
 			return Task.CompletedTask;
@@ -83,13 +83,13 @@ O método [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging
 
 ## Detalhes de Implementação
 
-A classe `ChartDrawScript` processa especificamente dados de mercado para cada security fornecida. Cria dois tipos de gráficos: um gráfico de linhas para os preços de fecho e um histograma para os dados de volume.
+A classe `ChartDrawScript` processa especificamente dados de mercado para cada instrumento fornecido. Cria dois tipos de gráficos: um gráfico de linhas para os preços de fecho e um histograma para os dados de volume.
 
 ### Principais Etapas de Processamento:
 
 1. Verificar a presença de instrumentos a processar. Se nenhum estiver disponível, registar um aviso e concluir a tarefa.
 2. Criar um gráfico de linhas e um histograma usando o método [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart``2).
-3. Iterar por cada security e verificar pedidos de cancelamento.
+3. Iterar por cada instrumento e verificar pedidos de cancelamento.
 4. Obter o armazenamento de candles usando o método `storage.GetCandleMessageStorage`.
 5. Carregar dados de candles dentro do intervalo de datas especificado.
 6. Preencher dicionários com dados de séries temporais de abertura, preços de fecho correspondentes e volumes totais.

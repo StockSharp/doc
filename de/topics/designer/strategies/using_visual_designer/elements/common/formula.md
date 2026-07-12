@@ -2,13 +2,13 @@
 
 ![Formel Bildschirmfoto](../../../../../../images/designer_universal_formula_00.png)
 
-Ein Würfel wird verwendet, um eine mathematische Formel mit einer beliebigen Anzahl von Argumenten zu berechnen. Sie können eine Formel aus der verfügbaren Liste auswählen oder eine eigene schreiben. Beim Schreiben einer eigenen Formel wird die Anzahl der eingehenden Sockets automatisch bestimmt.
+Ein Würfel wird verwendet, um eine mathematische Formel mit einer beliebigen Anzahl von Argumenten zu berechnen. Sie können eine Formel aus der verfügbaren Liste auswählen oder eine eigene schreiben. Beim Schreiben einer eigenen Formel wird die Anzahl der eingehenden Anschlüssen automatisch bestimmt.
 
-## Eingehende Sockets
+## Eingehende Anschlüsse
 
 - **Wert** – der Wert, mit dem mathematische Operationen durchgeführt werden können (zum Beispiel eine Zahl oder ein Indikator). Die Anzahl der Eingangswerte hängt von der Formel ab.
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **Ergebnis** – berechneter Wert der mathematischen Formel.
 

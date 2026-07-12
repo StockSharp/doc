@@ -46,7 +46,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Нет инструментов.");
 				return Task.CompletedTask;
 			}
 
@@ -106,7 +106,7 @@ from indicator_extensions import *
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Нет инструментов.")
 			return Task.CompletedTask
 
 		chart = create_chart(panel, datetime, float)

@@ -4,7 +4,7 @@
 
 ![Designer 优化 00](../../../images/designer_optimization_00.png)
 
-工作区会打开名为“Optimization + 策略名称”的选项卡。**优化** 选项卡分为两个区域：**属性** 和 **优化结果**。
+工作区会打开名为“优化 + 策略名称”的选项卡。**优化** 选项卡分为两个区域：**属性** 和 **优化结果**。
 
 ![Designer 优化 02](../../../images/designer_optimization_02.png)
 

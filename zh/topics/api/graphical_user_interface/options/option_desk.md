@@ -113,7 +113,7 @@
    		Connector.Disconnect();
    }
    ```
-4. 在接收工具时，我们将基础资产添加到清单中。
+4. 在接收交易品种时，我们将基础资产添加到清单中。
 
    ```cs
    // 填充标的资产列表
@@ -124,7 +124,7 @@
    };
    ```
 5. 选择交易品种时：
-   - 用一连串选项填充数组，其中所选的工具作为基础资产；
+   - 用一连串期权填充数组，其中所选交易品种作为标的资产；
    - 将此数组分配给 [OptionDeskModel.Options](xref:StockSharp.Xaml.OptionDeskModel.Options) 属性；
    - 使用 [OptionDeskModel.Clear](xref:StockSharp.Xaml.OptionDeskModel.Clear) 方法清除选项板的值。
    ```cs

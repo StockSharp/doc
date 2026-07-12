@@ -34,7 +34,7 @@ public class CommentStrategy : Strategy
 }
 ```
 
-Con el valor `Name` y una estrategia llamada "SMA Crossover", cada orden recibirá el comentario "SMA Crossover", lo que permite filtrar las órdenes de esta estrategia en el diario de operaciones.
+Con el valor `Name` y una estrategia llamada "Cruce de SMA", cada orden recibirá el comentario "Cruce de SMA", lo que permite filtrar las órdenes de esta estrategia en el diario de operaciones.
 
 ## WorkingTime -- horario de trabajo
 

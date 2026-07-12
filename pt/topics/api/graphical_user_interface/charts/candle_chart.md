@@ -35,7 +35,7 @@ Abaixo está um exemplo de construção de um gráfico utilizando o componente [
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. No manipulador do evento **Click** do botão **Connect**, juntamente com a subscrição dos eventos do conector e a chamada ao método [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), subscrevemos o evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). Neste manipulador de evento, o gráfico será desenhado quando uma nova vela for recebida.
+3. No manipulador do evento **Click** do botão **Conectar**, juntamente com a subscrição dos eventos do conector e a chamada ao método [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), subscrevemos o evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). Neste manipulador de evento, o gráfico será desenhado quando uma nova vela for recebida.
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ Abaixo está um exemplo de construção de um gráfico utilizando o componente [
    }
    ```
 
-4. No manipulador do botão **ShowChart**, criamos objetos de indicadores, áreas e elementos do gráfico. Adicionamos elementos às áreas e áreas ao gráfico. Abrimos a janela do gráfico e iniciamos uma subscrição de velas.
+4. No manipulador do botão **Mostrar gráfico**, criamos objetos de indicadores, áreas e elementos do gráfico. Adicionamos elementos às áreas e áreas ao gráfico. Abrimos a janela do gráfico e iniciamos uma subscrição de velas.
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)

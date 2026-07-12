@@ -8,7 +8,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API-GUI-Einstellungen GDAX](../../../../../images/api_gui_settings_gdax.png)
 
 - **Schlüssel** - Schlüssel.
-- **Geheimnis** - Secret.
+- **Geheimnis** - Geheimer Schlüssel.
 - **Kennphrase** - Kennphrase.
 - **Saldo** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.
 - **Verbindungsprüfung** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

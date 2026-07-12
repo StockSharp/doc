@@ -6,7 +6,7 @@
 - [F#](using_code/fsharp.md) 
 - [Python](using_code/python.md)
 
-C# と Python の豊富なストラテジーサンプルは、[AlgoTrading API folder](https://github.com/StockSharp/AlgoTrading/tree/main/API) で入手できます。これらはすべて [Designer](../../designer.md) で動作します。
+C# と Python の豊富なストラテジーサンプルは、[AlgoTrading API フォルダー](https://github.com/StockSharp/AlgoTrading/tree/main/API) で入手できます。これらはすべて [Designer](../../designer.md) で動作します。
 
 ## C#
 

@@ -1,4 +1,4 @@
-# Backtesting\/Emulación
+# Pruebas históricas\/Emulación
 
 Las estrategias escritas con [Strategy](xref:StockSharp.Algo.Strategies.Strategy) pueden probarse en tres modos: 
 

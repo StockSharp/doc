@@ -5,7 +5,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 ![Configurações da API GUI Bibox](../../../../../images/api_gui_settings_bibox.png)
 
 - **chave** - Key.
-- **segredo** - Secret.
+- **segredo** - segredo da API.
 - **palavra-passe** - Palavra-passe administrativa.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para monitorizar se a ligação está ativa. Por defeito é de 1 minuto.
 - **Definições de religação** - Mecanismo de monitorização das ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))

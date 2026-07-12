@@ -37,7 +37,7 @@ class SmaStrategy : Strategy
             .SetOptimize(
                 TimeSpan.FromMinutes(5),    // 5 分から
                 TimeSpan.FromMinutes(15),   // 15 分まで
-                TimeSpan.FromMinutes(5));   // with a step of 5 minutes
+                TimeSpan.FromMinutes(5));   // 5 分刻み
 
         _candleType = Param(nameof(CandleType),
             TimeSpan.FromMinutes(1).TimeFrame()).SetRequired();
@@ -184,13 +184,13 @@ var optimizer = new BruteForceOptimizer(
 
 // エミュレーションパラメータを設定。
 var settings = optimizer.EmulationSettings;
-settings.MaxIterations = 100;                          // maximum iterations (0 = unlimited)
-settings.CommissionRules = new[]                       // commission
+settings.MaxIterations = 100;                          // 最大反復回数 (0 = 無制限)
+settings.CommissionRules = new[]                       // 手数料
 {
     new CommissionTradeRule { Value = 0.01m },
 };
-// settings.BatchSize = 8;                             // number of parallel threads
-                                                       // default = CPU * 2
+// settings.BatchSize = 8;                             // 並列スレッド数
+                                                       // 既定値 = CPU * 2
 
 // 最適化を高速化するため、反復間で市場データをキャッシュ。
 optimizer.AdapterCache = new();
@@ -331,7 +331,7 @@ var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.Cand
 var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerable)[]
 {
     (tfParam, new[] { TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(15) }),
-    (longParam, null),   // null = use the range from SetOptimize
+    (longParam, null),   // null = SetOptimize の範囲を使用
     (shortParam, null),
 });
 

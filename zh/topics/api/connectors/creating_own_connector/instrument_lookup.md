@@ -6,12 +6,12 @@
 
 **SecurityLookupAsync** 方法通常执行以下操作：
 
-1. 从传入消息中获取支持的金融工具类型列表。
+1. 从传入消息中获取支持的交易品种类型列表。
 2. 通过 API 向交易所请求交易品种列表。
-3. 为每个接收到的金融工具创建一个 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息，并填充相应的工具数据。
-4. 检查该金融工具是否符合搜索条件。
+3. 为每个接收到的交易品种创建一个 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息，并填充相应的交易品种数据。
+4. 检查该交易品种是否符合搜索条件。
 5. 通过 **SendOutMessageAsync** 方法发送创建好的 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息。
-6. 处理完所有金融工具后，发送搜索完成的消息。
+6. 处理完所有交易品种后，发送搜索完成的消息。
 
 下面是基于 Coinbase 交易所适配器的 SecurityLookupAsync 方法实现示例。在创建自己的适配器时，需要将此代码适配到所使用交易所的 API。
 
@@ -75,4 +75,4 @@ public override async ValueTask SecurityLookupAsync(SecurityLookupMessage lookup
 }
 ```
 
-此方法可以获取交易所可用金融工具的相关信息，包括工具类型、最小交易量、价格步长等主要特征。
+此方法可以获取交易所可用交易品种的相关信息，包括交易品种类型、最小交易量、价格步长等主要特征。

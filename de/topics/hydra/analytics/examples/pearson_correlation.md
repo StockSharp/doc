@@ -1,6 +1,6 @@
 # Pearson-Korrelation
 
-Die Pearson-Korrelation ist eine statistische Methode zur Messung des Grades einer linearen Beziehung zwischen zwei quantitativen Variablen. In der Finanzanalyse wird diese Methode häufig verwendet, um Beziehungen zwischen verschiedenen Assets wie Aktien oder Wahrungspaaren zu untersuchen.
+Die Pearson-Korrelation ist eine statistische Methode zur Messung des Grades einer linearen Beziehung zwischen zwei quantitativen Variablen. In der Finanzanalyse wird diese Methode häufig verwendet, um Beziehungen zwischen verschiedenen Assets wie Aktien oder Währungspaaren zu untersuchen.
 
 ![Pearson-Korrelation](../../../../images/hydra_analytics_pearson_correlation.png)
 
@@ -40,7 +40,7 @@ Ein Skript zur Berechnung der Pearson-Korrelation sollte die folgenden Schritte 
 3. **Berechnung**: Anwenden der Pearson-Korrelationsformel auf die verarbeiteten Daten.
 4. **Analyse der Ergebnisse**: Interpretieren des resultierenden Korrelationskoeffizienten für die Entscheidungsfindung.
 
-Die Berechnung der Pearson-Korrelation liefert wichtige Informationen für Marktanalyse und Optimierung von Anlagestrategien, da sie die Einschatzung des gegenseitigen Einflusses zwischen Finanzassets ermöglicht.
+Die Berechnung der Pearson-Korrelation liefert wichtige Informationen für Marktanalyse und Optimierung von Anlagestrategien, da sie die Einschätzung des gegenseitigen Einflusses zwischen Finanzassets ermöglicht.
 
 ## Skriptcode in C#
 
@@ -58,7 +58,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Keine Instrumente.");
 				return Task.CompletedTask;
 			}
 
@@ -115,7 +115,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# .NET-Referenzen hinzufugen
+# .NET-Referenzen hinzufügen
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -148,7 +148,7 @@ class pearson_correlation_script(IAnalyticsScript):
 		cancellation_token
 	):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Keine Instrumente.")
 			return Task.CompletedTask
 
 		closes = []

@@ -10,8 +10,8 @@ Der folgende Code zeigt, wie der [QuoinexMessageAdapter](xref:StockSharp.Quoinex
 			...
 			var messageAdapter = new QuoinexMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ihr API-Schlüssel>".To<SecureString>(),
+				Secret = "<Ihr API-Geheimnis>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...

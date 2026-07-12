@@ -4,7 +4,7 @@
 
 Das Element stellt P/L-Informationen der Strategie bereit.
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **P/L nicht realisiert** – numerischer Wert des nicht realisierten Gewinns/Verlusts.
 - **P/L realisiert** – numerischer Wert des realisierten Gewinns/Verlusts.

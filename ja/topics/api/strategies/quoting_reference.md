@@ -12,7 +12,7 @@
 
 非推奨クラスの主なパラメーター:
 
-- `QuotingSide` -- クォーティング方向 (Buy/Sell)
+- `QuotingSide` -- クォーティング方向（買い/売り）
 - `QuotingVolume` -- クォーティング数量
 - `TimeOut` -- 実行タイムアウト
 - `UseBidAsk` -- オーダーブック価格を使用する

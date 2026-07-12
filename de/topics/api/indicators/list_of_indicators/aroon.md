@@ -29,18 +29,18 @@ Die Berechnung des Aroon-Indikators basiert darauf, die Zeit (Anzahl der Periode
 
 1. Aroon-Aufwärts wird mit der Formel berechnet:
    ```
-   Aroon-Aufwärts = ((Length - Periods since high) / Length) * 100
+   Aroon-Aufwärts = ((Length - Perioden seit Hoch) / Length) * 100
    ```
 
 2. Aroon-Abwärts wird mit der Formel berechnet:
    ```
-   Aroon-Abwärts = ((Length - Periods since low) / Length) * 100
+   Aroon-Abwärts = ((Length - Perioden seit Tief) / Length) * 100
    ```
 
 Wobei:
 - Length - ausgewählte Periode
-- "Periods since high" - Anzahl der Perioden seit Erreichen des höchsten Preises innerhalb der Length-Periode
-- "Periods since low" - Anzahl der Perioden seit Erreichen des niedrigsten Preises innerhalb der Length-Periode
+- "Perioden seit Hoch" - Anzahl der Perioden seit Erreichen des höchsten Preises innerhalb der Length-Periode
+- "Perioden seit Tief" - Anzahl der Perioden seit Erreichen des niedrigsten Preises innerhalb der Length-Periode
 
 Beide Aroon-Linien oszillieren zwischen 0 und 100:
 - Ein Wert von 100 bedeutet, dass das Hoch/Tief in der jüngsten Periode erreicht wurde

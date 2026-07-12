@@ -4,16 +4,16 @@
 
 O elemento é utilizado para obter informação sobre a alteração da posição para o instrumento e a carteira especificados.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Instrumento** - o instrumento para o qual pretende obter uma posição.
 - **Carteira** - a carteira para a qual pretende obter uma posição.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Posição** - o valor numérico da posição no instrumento ou o montante actual de fundos disponíveis na conta. Este valor é gerado quando a posição ou os fundos se alteram e depois de a estratégia ser iniciada.
 

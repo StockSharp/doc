@@ -8,7 +8,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API-GUI-Einstellungen FatBTC](../../../../../images/api_gui_settings_fatbtc.png)
 
 - **Schlüssel** - Schlüssel.
-- **Geheimnis** - Secret.
+- **Geheimnis** - Geheimer Schlüssel.
 - **Saldo** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.
 - **Domain (Adresse)** - Domainadresse.
 - **Verbindungsprüfung** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

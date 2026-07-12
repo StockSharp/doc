@@ -1,8 +1,8 @@
-# Registo de logs
+# Registo
 
-[S#](../../api.md) disponibiliza vários componentes gráficos para apresentar logs: [LogControl](xref:StockSharp.Xaml.LogControl) e [Monitor](xref:StockSharp.Xaml.Monitor).
+[S#](../../api.md) disponibiliza vários componentes gráficos para apresentar registos: [LogControl](xref:StockSharp.Xaml.LogControl) e [Monitor](xref:StockSharp.Xaml.Monitor).
 
-Ao utilizar os componentes visuais de registo, é necessário utilizar o logger [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) como "listener". Este logger fornece sincronização em fluxo com a GUI ao gravar novas mensagens [LogMessage](xref:Ecng.Logging.LogMessage).
+Ao utilizar os componentes visuais de registo, é necessário utilizar o registador [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) como ouvinte. Este registador fornece sincronização em fluxo com a GUI ao gravar novas mensagens [LogMessage](xref:Ecng.Logging.LogMessage).
 
 Para implementar a possibilidade de registo na sua própria classe, é necessário implementar a interface [ILogReceiver](xref:Ecng.Logging.ILogReceiver). Uma forma mais simples é herdar da classe [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver), como mostrado no exemplo *Samples\/08\_Misc\/01\_Logging*:
 
@@ -21,7 +21,7 @@ public MainWindow()
 	_logManager.Sources.Add(_testSource);
 	// definir fonte baseada no sistema .NET Trace
 	_logManager.Sources.Add(new Ecng.Logging.TraceSource());
-	// gravar logs em MainWindow
+	// gravar registos em MainWindow
 	_logManager.Listeners.Add(new GuiLogListener(Monitor));
 	// e no arquivo logs.txt
 	_logManager.Listeners.Add(new FileLogListener

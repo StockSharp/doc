@@ -169,7 +169,7 @@ def OnProcess(self, candle, longValue, shortValue):
 ```python
 def CreateClone(self):
 	"""
-	!! ERFORDERLICH!! Erstellt eine neue Instanz der Strategie.
+	!! ERFORDERLICH !! Erstellt eine neue Instanz der Strategie.
 	"""
 	return sma_strategy()
 ```

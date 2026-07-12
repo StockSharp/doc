@@ -65,7 +65,7 @@ Por exemplo, se a posição era +2 e chegou um negócio de -5 contratos, então 
 | `UseOrderLog` | `false` | Usar log de ordens. |
 | `UseCandles` | `true` | Usar velas (preço de fecho). |
 
-## Integração via Adapter
+## Integração via adaptador
 
 A classe [PnLMessageAdapter](xref:StockSharp.Algo.PnL.PnLMessageAdapter) envolve um adapter interno e processa automaticamente todas as mensagens para o cálculo de PnL.
 

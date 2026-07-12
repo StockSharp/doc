@@ -1,6 +1,6 @@
 # 收盘价归一化
 
-`Closing Price Normalization` 脚本用于对交易品种的收盘价进行归一化，以便在统一尺度下比较和分析不同资产。这在比较价格水平和波动性各不相同的交易品种时尤其有用。
+`收盘价归一化` 脚本用于对交易品种的收盘价进行归一化，以便在统一尺度下比较和分析不同资产。这在比较价格水平和波动性各不相同的交易品种时尤其有用。
 
 ![收盘价归一化](../../../../images/hydra_analytics_normalize.png)
 
@@ -30,7 +30,7 @@
 2. **处理数据**：对每个交易品种的收盘价应用所选归一化方法。
 3. **分析结果**：使用归一化数据进行后续分析和交易品种比较。
 
-`Closing Price Normalization` 脚本是为交易和量化分析准备数据的重要工具，使交易者和分析人员能够在各种策略与研究中更准确地比较和评估金融资产。
+`收盘价归一化` 脚本是为交易和量化分析准备数据的重要工具，使交易者和分析人员能够在各种策略与研究中更准确地比较和评估金融资产。
 
 ## C# 脚本代码
 
@@ -46,7 +46,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("没有交易品种。");
 				return Task.CompletedTask;
 			}
 
@@ -106,7 +106,7 @@ from indicator_extensions import *
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("没有交易品种。")
 			return Task.CompletedTask
 
 		chart = create_chart(panel, datetime, float)

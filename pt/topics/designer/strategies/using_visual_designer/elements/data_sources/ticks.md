@@ -4,15 +4,15 @@
 
 Este bloco é usado para receber dados **Tique** de um instrumento.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Instrumento** - o instrumento para o qual é necessário receber dados **Nível 1**.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Tique** - uma transação tick.
 
@@ -20,7 +20,7 @@ Sockets de saída
 
 Parâmetros
 
-- **Subscrever por sinal** - subscrever dados apenas depois de chegar um trigger.
+- **Subscrever por sinal** - subscrever dados apenas depois de chegar um sinal de acionamento.
 
 ## Ver também
 

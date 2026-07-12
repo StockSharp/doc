@@ -1,9 +1,9 @@
 
-# Export aus Designer
+# Export aus dem Designer
 
-**Runner** ermöglicht das Ausführen von Strategien, die in [Designer](../designer.md) erstellt wurden. Dies ist die bequemste Möglichkeit, **Runner** einzurichten, da alle Konfigurationen visuell vorgenommen werden.
+**Runner** ermöglicht das Ausführen von Strategien, die im [Designer](../designer.md) erstellt wurden. Dies ist die bequemste Möglichkeit, **Runner** einzurichten, da alle Konfigurationen visuell vorgenommen werden.
 
-So exportieren Sie eine Strategie aus [Designer](../designer.md):
+So exportieren Sie eine Strategie aus dem [Designer](../designer.md):
 
 - Wählen Sie die gewünschte Strategie in der Baumansicht aus, klicken Sie mit der rechten Maustaste darauf und wählen Sie den Menüpunkt **Runner**:
 

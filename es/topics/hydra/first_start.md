@@ -71,7 +71,7 @@ Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos c
 
    El proceso de trabajo puede observarse en la pestaña especial **Registros**, fijada en la parte inferior del programa. Además, los registros se guardan en archivos en la carpeta local.
 
-![Hydra vista principal start](../../images/hydra_main_start.png)
+![Hydra vista principal tras el inicio](../../images/hydra_main_start.png)
 
 El usuario también puede añadir [fuentes adicionales](data_sources/select_source.md).
 

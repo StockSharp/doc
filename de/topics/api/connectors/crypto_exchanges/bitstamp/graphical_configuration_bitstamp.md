@@ -5,8 +5,8 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 ![API-GUI-Einstellungen Bitstamp](../../../../../images/api_gui_settings_bitstamp.png)
 
 - **Schlüssel** - Key.
-- **Geheimnis** - Secret.
-- **Client** - Client-ID.
+- **Geheimnis** - Geheimer Schlüssel.
+- **Client** - Client-Kennung.
 - **Saldo** - Intervall der Kontostandsprüfung. Erforderlich bei Ein- und Auszahlungsvorgängen.
 - **Verbindungsprüfung** - Intervall der Serverprüfung, um zu verfolgen, dass die Verbindung aktiv ist. Standardmäßig gleich 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

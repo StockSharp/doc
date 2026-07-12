@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API-GUI-Einstellungen Coinigy](../../../../../images/api_gui_settings_coinigy.png)
 
 - **Schlüssel** - Schlüssel.
-- **Geheimnis** - Secret.
+- **Geheimnis** - Geheimer Schlüssel.
 - **Passwort** - Administratives Passwort.
 - **Websocket** - WebSocket-ID.
 - **Saldo** - Intervall zur Guthabenprüfung. Erforderlich bei Ein- und Auszahlungsvorgängen.

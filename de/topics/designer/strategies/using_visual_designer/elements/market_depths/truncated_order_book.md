@@ -4,11 +4,11 @@
 
 Der Würfel wird verwendet, um ein auf eine angegebene Tiefe gekürztes Orderbuch zu erhalten.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
 - **Orderbuch** ist ein Orderbuch, das gekürzt werden soll.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
 - **Orderbuch** ist das gekürzte Orderbuch.
 

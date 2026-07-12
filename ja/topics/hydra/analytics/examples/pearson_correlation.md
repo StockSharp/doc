@@ -58,7 +58,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("銘柄がありません。");
 				return Task.CompletedTask;
 			}
 
@@ -148,7 +148,7 @@ class pearson_correlation_script(IAnalyticsScript):
 		cancellation_token
 	):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("銘柄がありません。")
 			return Task.CompletedTask
 
 		closes = []

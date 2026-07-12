@@ -31,7 +31,7 @@ _logManager.Listeners.Add(new GuiLogListener(LogControl));
 ..........................                  
 // При использовании в качестве источника TraceSource отладочные сообщения можно добавлять следующим образом:
 Trace.TraceInformation("Info  test message");
-Trace.TraceWarning("Warning test message");
+Trace.TraceWarning("Тестовое предупреждающее сообщение");
 Trace.TraceError("Тестовое сообщение об ошибке");
 					
 ```

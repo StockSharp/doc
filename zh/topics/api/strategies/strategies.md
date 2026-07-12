@@ -68,7 +68,7 @@ public class MyStrategy : Strategy
 }
 ```
 
-## 战略生命周期
+## 策略生命周期
 
 1. **创建** -- 构造函数，通过 `Param<T>` 声明参数。
 2. **配置** -- 设置 `Security`、`Portfolio`、`Connector` 及参数。

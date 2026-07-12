@@ -57,7 +57,7 @@ using StockSharp.Algo.Candles.Patterns;
 
 // Komplexes Muster erstellen: zuerst eine bärische Candle, dann bullische Umschließung
 var complex = new ComplexCandlePattern(
-    "Reversal Up",
+    "Aufwärtsumkehr",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Black,            // 1 Candle: bärisch

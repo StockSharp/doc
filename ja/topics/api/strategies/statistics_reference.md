@@ -90,7 +90,7 @@
 |-------|-------------|------------|
 | [OrderCountParameter](xref:StockSharp.Algo.Statistics.OrderCountParameter) | 登録された注文の総数 | `int` |
 | [OrderRegisterErrorCountParameter](xref:StockSharp.Algo.Statistics.OrderRegisterErrorCountParameter) | 注文登録エラーの数 | `int` |
-| [OrderInsufficientFundErrorCountParameter](xref:StockSharp.Algo.Statistics.OrderInsufficientFundErrorCountParameter) | "insufficient funds" エラーの数 (型 `InsufficientFundException`) | `int` |
+| [OrderInsufficientFundErrorCountParameter](xref:StockSharp.Algo.Statistics.OrderInsufficientFundErrorCountParameter) | 「資金不足」エラーの数 (型 `InsufficientFundException`) | `int` |
 | [OrderCancelErrorCountParameter](xref:StockSharp.Algo.Statistics.OrderCancelErrorCountParameter) | 注文キャンセルエラーの数 | `int` |
 
 ## レイテンシーパラメーター

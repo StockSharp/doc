@@ -10,7 +10,7 @@ O teste pode ser realizado usando vários tipos de dados de mercado:
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (melhores preços bid e ask)
 - Combinações de diferentes tipos de dados
 
-Se não existirem livros de ordens guardados para o período de teste, estes podem ser gerados com base nas transações usando [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) ou reconstruídos a partir do order log usando [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder).
+Se não existirem livros de ordens guardados para o período de teste, estes podem ser gerados com base nas transações usando [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) ou reconstruídos a partir do log de ordens usando [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder).
 
 Os dados para testes históricos devem ser descarregados e guardados antecipadamente num formato especial [S#](../../api.md). Isto pode ser feito manualmente usando [Conectores](../connectors.md) e a [Storage API](../market_data_storage/api.md), ou configurando e executando a aplicação especial [Hydra](../../hydra.md).
 
@@ -46,7 +46,7 @@ var security = new Security
 // carteira de teste
 var portfolio = new Portfolio
 {
-	Name = "test account",
+	Name = "conta de teste",
 	BeginValue = 1000000,
 };
 ```

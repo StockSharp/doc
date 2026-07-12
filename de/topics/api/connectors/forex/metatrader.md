@@ -51,7 +51,7 @@ Beide Connectoren werden auf die gleiche Weise verwendet. Daher wird im Folgende
 
     ![MetaTrader Bildschirmfoto 6](../../../../images/mt_6.png)![MetaTrader Bildschirmfoto 7](../../../../images/mt_7.png)
 
-    Ähnliche Einstellungen müssen in [Designer](../../../designer.md), [Hydra](../../../hydra.md) oder beliebigen API-Programmen vorgenommen werden.
+    Ähnliche Einstellungen müssen im [Designer](../../../designer.md), in [Hydra](../../../hydra.md) oder beliebigen API-Programmen vorgenommen werden.
 
     Login und Passwort bleiben bei anonymer Autorisierung leer (vorheriger Punkt). Wenn mehrere Roboter mit MT verbunden werden, muss zur Unterscheidung der Verbindungen ein eindeutiger Login angegeben werden.
 
@@ -63,6 +63,6 @@ Beide Connectoren werden auf die gleiche Weise verwendet. Daher wird im Folgende
 
     ![MetaTrader Bildschirmfoto 8](../../../../images/mt_8.png)
 
-13. Bei Fehlern werden die Connector-Logs im Ordner **Experts\\StockSharp\\Data\\Log** gespeichert:
+13. Bei Fehlern werden die Connector-Protokolle im Ordner **Experts\\StockSharp\\Data\\Log** gespeichert:
 
     ![MetaTrader Bildschirmfoto 9](../../../../images/mt_9.png)

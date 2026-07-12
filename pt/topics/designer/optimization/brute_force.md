@@ -4,7 +4,7 @@ Para mudar para o modo de otimização de estratégia, clique no botão **Otimiz
 
 ![Designer Otimização 00](../../../images/designer_optimization_00.png)
 
-Será aberto no espaço de trabalho um separador chamado Optimization + 'Strategy Name'. O separador **Otimização** está dividido em duas áreas, **Propriedades** e **Resultado da otimização**:
+Será aberto no espaço de trabalho um separador chamado Otimização + 'Nome da estratégia'. O separador **Otimização** está dividido em duas áreas, **Propriedades** e **Resultado da otimização**:
 
 ![Designer Otimização 02](../../../images/designer_optimization_02.png)
 
@@ -17,4 +17,4 @@ A definição dos parâmetros para iteração resulta em mais de 1000 iteraçõe
 
 ## Consulte também
 
-[Exemplo de backtesting](../backtesting/getting_started.md)
+[Exemplo de testes históricos](../backtesting/getting_started.md)

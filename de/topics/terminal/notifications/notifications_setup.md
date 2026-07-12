@@ -4,7 +4,7 @@ Um eine Benachrichtigung einzurichten, klicken Sie im Benachrichtigungspanel ([B
 
 ![Designer Benachrichtigungseinstellung](../../../images/designer_notifications_setting.png)
 
-Benachrichtigungen können für Änderungen der folgenden Datentypen konfiguriert werden: Portfolio, Clientcode, Broker, Verwahrstelle, Serverzeit, Transaktion, Datentyp, Stornierung, Order-ID, Order-ID (String), Order-ID (Board), Derivat, Derivat (String), Preis, Volumen (Order), Volumen (Trade), sichtbares Volumen, Richtung, Rest, Ordertyp, Status, Kommentar, Ordernachricht, Systemorder, Ablaufzeit der Order, Ausführungsbedingung, Order-ID, Order-ID (String), Preis, Trade-Initiator, Open Interest, Fehler, Bedingung, Aufwärtstrend, Kommission, Verzögerung, Slippage, ID (Benutzer), Währung, P/L, Position, Market Maker.
+Benachrichtigungen können für Änderungen der folgenden Datentypen konfiguriert werden: Portfolio, Clientcode, Broker, Verwahrstelle, Serverzeit, Transaktion, Datentyp, Stornierung, Order-ID, Order-ID (String), Order-ID (Board), Derivat, Derivat (String), Preis, Volumen (Order), Volumen (Trade), sichtbares Volumen, Richtung, Rest, Ordertyp, Status, Kommentar, Ordernachricht, Systemorder, Ablaufzeit der Order, Ausführungsbedingung, Order-ID, Order-ID (String), Preis, Handelsinitiator, offenes Interesse, Fehler, Bedingung, Aufwärtstrend, Kommission, Verzögerung, Slippage, ID (Benutzer), Währung, P/L, Position, Marktmacher.
 
 Benachrichtigungen können folgende Formen haben:
 

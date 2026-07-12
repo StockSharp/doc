@@ -4,7 +4,7 @@
 
 O componente "Registo de ordem" é utilizado para colocar ordens de negociação para um instrumento seleccionado.
 
-## Sockets de entrada
+## Conectores de entrada
 
 - **Instrumento** - O instrumento seleccionado para a ordem.
 - **Preço** - Especifica o preço de uma ordem limitada.
@@ -12,7 +12,7 @@ O componente "Registo de ordem" é utilizado para colocar ordens de negociação
 - **Volume** - A quantidade de instrumentos para a ordem.
 - **Carteira** - A carteira no âmbito da qual a ordem será colocada.
 
-## Sockets de saída
+## Conectores de saída
 
 - **Ordem** - Informação sobre a ordem colocada.
 - **Erro** - Informação sobre qualquer erro durante o registo da ordem.

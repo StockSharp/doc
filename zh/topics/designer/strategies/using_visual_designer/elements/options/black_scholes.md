@@ -1,6 +1,6 @@
 # 布莱克-斯科尔斯
 
-![Designer Black Sols 00](../../../../../../images/designer_black_scholes_00.png)
+![Designer 中的 Black-Scholes 期权模型模块](../../../../../../images/designer_black_scholes_00.png)
 
 该模块用于创建期权定价模型。
 

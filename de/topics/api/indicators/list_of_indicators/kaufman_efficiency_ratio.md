@@ -50,7 +50,7 @@ Wenn die Volatilität Null ist (was unwahrscheinlich ist), wird KER auf Null ges
 Der Kaufman-Effizienzverhältnis kann wie folgt interpretiert werden:
 
 1. **Effizienzstufen**:
-   - High KER-Werte (>0,6) weisen auf einen starken Trend hin
+   - Hohe KER-Werte (>0,6) weisen auf einen starken Trend hin
    - Mittlere KER-Werte (0,3–0,6) weisen auf einen moderaten Trend hin
    - Niedrige KER-Werte (<0,3) weisen auf einen Seitwärtsmarkt oder eine hohe Volatilität hin
 
@@ -60,7 +60,7 @@ Der Kaufman-Effizienzverhältnis kann wie folgt interpretiert werden:
 
 3. **Handelsstrategien**:
    - In Zeiten hoher Effizienz (hoher KER) sind Trendstrategien vorzuziehen
-   - In Zeiten geringer Effizienz (niedriger KER) sind Range-Trading-Strategien vorzuziehen
+   - In Zeiten geringer Effizienz (niedriger KER) sind Seitwärtshandelsstrategien vorzuziehen
 
 4. **Signalfilterung**:
    - KER kann zum Filtern von Signalen anderer Indikatoren verwendet werden

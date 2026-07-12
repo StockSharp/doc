@@ -59,6 +59,6 @@ protected override void OnStarted2(DateTime time)
 
 - Demuestra la creación de reglas combinadas mediante `Or()`
 - Usa `WhenLastTradePriceMore` y `WhenLastTradePriceLess` para el análisis de precios
-- Muestra un ejemplo de logging de información sobre operaciones mediante el método `LogInfo`
+- Muestra un ejemplo de registro de información sobre operaciones mediante el método `LogInfo`
 - Ilustra el uso de `Once()` para limitar la activación de reglas
 - Pasa el parámetro tick al controlador de eventos (a diferencia del ejemplo de la documentación)

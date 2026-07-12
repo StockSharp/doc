@@ -4,7 +4,7 @@ Los snapshots en StockSharp representan un mecanismo para guardar el último est
 
 ## Propósito de los snapshots
 
-Al trabajar con datos en streaming, a menudo es necesario conocer el último estado de un instrumento: precio actual, libro de órdenes, posición abierta. Sin snapshots, obtener esta información requeriría cargar y procesar todo el histórico. El sistema de snapshots resuelve este problema guardando el último estado de cada objeto y proporcionando acceso a él en tiempo mínimo.
+Al trabajar con datos en flujo continuo, a menudo es necesario conocer el último estado de un instrumento: precio actual, libro de órdenes, posición abierta. Sin snapshots, obtener esta información requeriría cargar y procesar todo el histórico. El sistema de snapshots resuelve este problema guardando el último estado de cada objeto y proporcionando acceso a él en tiempo mínimo.
 
 ## ISnapshotStorage -- Interfaz de almacenamiento de snapshots
 

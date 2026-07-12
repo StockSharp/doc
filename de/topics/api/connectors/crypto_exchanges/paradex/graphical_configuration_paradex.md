@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 Wichtige Felder:
 
 - **Schlüssel** - API-Schlüssel.
-- **Geheimnis** - API-Secret.
+- **Geheimnis** - API-Geheimnis.
 - **Starknet-Konto** - Header-Wert des Starknet-Kontos.
 - **Starknet-Schlüssel** - Material des privaten Starknet-Schlüssels.
 - **Handelsbereich** - Handelsbereich (`Spot` oder `Derivatives`).

@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new DXtradeMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>".To<SecureString>(),
-	Secret = "<Your API Secret>".To<SecureString>(),
+	Key = "<Su clave API>".To<SecureString>(),
+	Secret = "<Su secreto API>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...

@@ -12,11 +12,11 @@ cTrader は OAuth 方式の認証のみを提供しています。
 
 OAuth 認証プロセス:
 
-1. "Check" ボタンをクリックすると、ウィンドウが開きます。
+1. "確認" ボタンをクリックすると、ウィンドウが開きます。
 
    ![OAuth 開始](../../../../../images/oauth_start.png)
 
-2. "Start" をクリックすると、ユーザーはログインのために cTrader Web サイトへリダイレクトされます。cTrader Web サイトでは、StockSharp アプリケーションに取引操作へのアクセスを許可する必要があります。
+2. "開始" をクリックすると、ユーザーはログインのために cTrader Web サイトへリダイレクトされます。cTrader Web サイトでは、StockSharp アプリケーションに取引操作へのアクセスを許可する必要があります。
 
    ![cTrader ログイン](../../../../../images/api_gui_settings_ctrader_2.png)
 

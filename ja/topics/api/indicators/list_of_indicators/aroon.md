@@ -29,18 +29,18 @@ Aroon インジケーターの計算は、指定期間内で最高価格と最�
 
 1. Aroon 上昇 は次の式で計算されます。
    ```
-   Aroon 上昇 = ((Length - Periods since high) / Length) * 100
+   Aroon 上昇 = ((Length - 最高値からの経過期間) / Length) * 100
    ```
 
 2. Aroon 下降 は次の式で計算されます。
    ```
-   Aroon 下降 = ((Length - Periods since low) / Length) * 100
+   Aroon 下降 = ((Length - 最安値からの経過期間) / Length) * 100
    ```
 
 ここで:
 - Length - 選択した期間
-- "Periods since high" - Length 期間内で最高価格に到達してからの期間数
-- "Periods since low" - Length 期間内で最低価格に到達してからの期間数
+- "最高値からの経過期間" - Length 期間内で最高価格に到達してからの期間数
+- "最安値からの経過期間" - Length 期間内で最低価格に到達してからの期間数
 
 Aroon の両ラインは 0 から 100 の間で振動します。
 - 値が 100 の場合、高値/安値が直近の期間で到達されたことを意味します

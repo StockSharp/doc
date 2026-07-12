@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new OpenECryMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Login = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
+	Login = "<您的登录名>",
+	Password = "<您的密码>".To<SecureString>(),
 	Address = "<Address>".To<EndPoint>(),
 	EnableOECLogging = true,
 };

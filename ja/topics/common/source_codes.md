@@ -1,6 +1,6 @@
 # ソースコード
 
-現在、[S#](../api.md) コアは Open Source コミュニティの一部として開発されており、ソースコードとして利用可能で、[GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) リポジトリでホストされています。
+現在、[S#](../api.md) コアはオープンソースコミュニティの一部として開発されており、ソースコードとして利用可能で、[GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) リポジトリでホストされています。
 
 [GitHub の使用手順](https://stocksharp.com/forum/4848/rukovodstvo-po-github/)
 

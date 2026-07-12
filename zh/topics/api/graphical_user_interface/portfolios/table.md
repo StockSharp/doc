@@ -7,8 +7,8 @@
 **主要属性**
 
 - [PortfolioGrid.Positions](xref:StockSharp.Xaml.PortfolioGrid.Positions) – 持仓列表。
-- [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – 选定的位置。
-- [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) - 已选择的位置。
+- [PortfolioGrid.SelectedPosition](xref:StockSharp.Xaml.PortfolioGrid.SelectedPosition) – 选定的持仓。
+- [PortfolioGrid.SelectedPositions](xref:StockSharp.Xaml.PortfolioGrid.SelectedPositions) - 已选择的持仓。
 
 以下代码片段演示了它的用法。代码示例取自 *Samples/InteractiveBrokers/SampleIB*。
 

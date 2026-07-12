@@ -6,25 +6,25 @@ Das Skript "Intraday-Volumen" ist ein Werkzeug zur Analyse der Verteilung des Ha
 
 ## Funktionsbeschreibung
 
-Das Skript sammelt Daten zu Handelsoperationen für einen ausgewählten Zeitraum und stellt sie in Diagrammform dar. Dadurch können Benutzer visualisieren, wie sich das Handelsvolumen nach Stunden verandert. So lasst sich einschätzen, zu welchen Tageszeiten die Handelsaktivitat zunimmt oder abnimmt.
+Das Skript sammelt Daten zu Handelsoperationen für einen ausgewählten Zeitraum und stellt sie in Diagrammform dar. Dadurch können Benutzer visualisieren, wie sich das Handelsvolumen nach Stunden verändert. So lässt sich einschätzen, zu welchen Tageszeiten die Handelsaktivität zunimmt oder abnimmt.
 
 ## Praktische Bedeutung
 
-- **Für den Handel**: Das Verstandnis von Spitzen- und Nebenzeiten hilft, die aktivsten Marktphasen zu erkennen, und beeinflusst Entscheidungen daruber, wann Positionen eroffnet oder geschlossen werden.
+- **Für den Handel**: Das Verständnis von Spitzen- und Nebenzeiten hilft, die aktivsten Marktphasen zu erkennen, und beeinflusst Entscheidungen darüber, wann Positionen eröffnet oder geschlossen werden.
 - **Für quantitative Analyse**: Quantitative Analysten können Intraday-Volumendaten verwenden, um mathematische Modelle und Algorithmen zu erstellen, die Marktverhalten anhand von Volumenindikatoren prognostizieren.
 
 ## Stundenverteilung
 
-Die Verteilung des Handelsvolumens nach Stunden verdeutlicht die Marktdynamik und hebt Zeitintervalle mit der wichtigsten Handelsaktivitat hervor. Dies kann auf Trendanderungen, Unterstutzungs- und Widerstandsniveaus sowie potenzielle Momente erhohter oder knapper Liquiditat hinweisen.
+Die Verteilung des Handelsvolumens nach Stunden verdeutlicht die Marktdynamik und hebt Zeitintervalle mit der wichtigsten Handelsaktivität hervor. Dies kann auf Trendänderungen, Unterstützungs- und Widerstandsniveaus sowie potenzielle Momente erhöhter oder knapper Liquidität hinweisen.
 
 ## Datenanwendung
 
 Das Skript "Intraday-Volumen" kann in ein breiteres Marktanalysesystem integriert werden und Daten liefern, die für Folgendes genutzt werden können:
 
-- **Strategieanpassung**: Anpassung der Parameter von Handelsalgorithmen an das Niveau der Marktaktivitat.
-- **Risikobewertung**: Berechnung der Wahrscheinlichkeit signifikanter Preisbewegungen in Abhangigkeit von der Tageszeit.
+- **Strategieanpassung**: Anpassung der Parameter von Handelsalgorithmen an das Niveau der Marktaktivität.
+- **Risikobewertung**: Berechnung der Wahrscheinlichkeit signifikanter Preisbewegungen in Abhängigkeit von der Tageszeit.
 
-Die Verwendung des Skripts "Intraday-Volumen" innerhalb der StockSharp-Handelsplattform ermöglicht Tradern und Analysten, ihre Entscheidungen auf konkrete Daten zur Marktaktivitat zu stutzen und Strategien optimal an die aktuellen Handelsbedingungen anzupassen.
+Die Verwendung des Skripts "Intraday-Volumen" innerhalb der StockSharp-Handelsplattform ermöglicht Tradern und Analysten, ihre Entscheidungen auf konkrete Daten zur Marktaktivität zu stützen und Strategien optimal an die aktuellen Handelsbedingungen anzupassen.
 
 ## Skriptcode in C#
 
@@ -40,7 +40,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Keine Instrumente.");
 				return Task.CompletedTask;
 			}
 
@@ -55,23 +55,23 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("Keine Daten.");
 				return Task.CompletedTask;
 			}
 
-			// Kerzen nach Eroffnungszeit gruppieren (nur Zeitanteil) mit Kurzung auf 1 Stunde
+			// Kerzen nach Eröffnungszeit gruppieren (nur Zeitanteil) mit Kürzung auf 1 Stunde
 			var rows = candleStorage.Load(from, to)
 				.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
 
-			// Unsere Berechnungen in das Grid einfugen
-			var grid = panel.CreateGrid("Time", "Volume");
+			// Unsere Berechnungen in das Grid einfügen
+			var grid = panel.CreateGrid("Zeit", "Volumen");
 
 			foreach (var row in rows)
 				grid.SetRow(row.Key, row.Value);
 
 			// Nach Volumenspalte sortieren (absteigend)
-			grid.SetSort("Volume", false);
+			grid.SetSort("Volumen", false);
 
 			return Task.CompletedTask;
 		}
@@ -85,7 +85,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# .NET-Referenzen hinzufugen
+# .NET-Referenzen hinzufügen
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("Ecng.Drawing")
@@ -114,9 +114,9 @@ class time_volume_script(IAnalyticsScript):
 		data_type,
 		cancellation_token
 	):
-		# Prufen, ob keine Instrumente vorhanden sind
+		# Prüfen, ob keine Instrumente vorhanden sind
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Keine Instrumente.")
 			return Task.CompletedTask
 
 		# Skript kann nur 1 Instrument verarbeiten
@@ -135,10 +135,10 @@ class time_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("Keine Daten.")
 			return Task.CompletedTask
 
-		# Kerzen nach Eroffnungszeit gruppieren (stundliche Kurzung) und ihre Volumina summieren
+		# Kerzen nach Eröffnungszeit gruppieren (stündliche Kürzung) und ihre Volumina summieren
 		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows = {}
 		for candle in candles:
@@ -146,14 +146,14 @@ class time_volume_script(IAnalyticsScript):
 			truncated = TimeSpan.FromHours(int(time_of_day.TotalHours))
 			rows[truncated] = rows.get(truncated, 0) + candle.TotalVolume
 
-		# Unsere Berechnungen in das Grid einfugen
-		grid = panel.CreateGrid("Time", "Volume")
+		# Unsere Berechnungen in das Grid einfügen
+		grid = panel.CreateGrid("Zeit", "Volumen")
 
 		for key, value in rows.items():
 			grid.SetRow(key, value)
 
 		# Nach der Volume-Spalte absteigend sortieren
-		grid.SetSort("Volume", False)
+		grid.SetSort("Volumen", False)
 
 		return Task.CompletedTask
 

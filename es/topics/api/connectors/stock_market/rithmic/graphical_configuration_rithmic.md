@@ -20,7 +20,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **dominio (nombre)** - Nombre de dominio.
 - **Licencias** - Dirección del servidor de licencias.
 - **Bróker** - Dirección del bróker.
-- **Registro (dirección)** - Dirección del logger.
+- **Registro (dirección)** - Dirección del registrador.
 - **Nombre de usuario (hist)** - Usuario adicional. ID de usuario usado para autenticarse con servicio histórico.
 - **contraseña (historial)** - Contraseña adicional. Contraseña usada para autenticarse con servicio histórico
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.

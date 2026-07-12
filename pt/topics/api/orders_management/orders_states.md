@@ -94,7 +94,7 @@ Connector.Subscribe(ordersSubscription);
 São usados métodos de extensão para determinar o estado atual de uma ordem:
 
 ```cs
-// Verificar status da ordem
+// Verificar estado da ordem
 Order order = ...; // ordem recebida
 
 // A ordem foi cancelada

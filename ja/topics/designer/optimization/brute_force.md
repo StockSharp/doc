@@ -4,7 +4,7 @@
 
 ![Designer 最適化 00](../../../images/designer_optimization_00.png)
 
-ワークスペースに Optimization + 「ストラテジー名」という名前のタブが開きます。**最適化** タブは、**プロパティ** と **最適化結果** の 2 つの領域に分かれています。
+ワークスペースに「最適化 + ストラテジー名」という名前のタブが開きます。**最適化** タブは、**プロパティ** と **最適化結果** の 2 つの領域に分かれています。
 
 ![Designer 最適化 02](../../../images/designer_optimization_02.png)
 
@@ -18,4 +18,3 @@
 ## 関連項目
 
 [バックテストの例](../backtesting/getting_started.md)
-

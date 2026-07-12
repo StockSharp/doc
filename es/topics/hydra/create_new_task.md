@@ -205,7 +205,7 @@ Un paso importante al crear la utilidad es implementar el método [BaseHydraTask
 		}
 		private static BackupEntry ToEntry(DirectoryInfo di)
 		{
-			// is a disk
+			// es un disco
 			if (di.Parent == null)
 				return null;
 			return new BackupEntry

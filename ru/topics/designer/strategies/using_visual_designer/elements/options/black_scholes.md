@@ -1,6 +1,6 @@
 # Блэк\-Шоулз
 
-![Designer Black Sols 00](../../../../../../images/designer_black_scholes_00.png)
+![Блок модели опционов Black-Scholes в Designer](../../../../../../images/designer_black_scholes_00.png)
 
 Кубик используется для создания модели расчета опционов.
 

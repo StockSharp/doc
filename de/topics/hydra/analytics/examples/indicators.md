@@ -1,12 +1,12 @@
 # Indikatoren
 
-Das Skript "Indicator" demonstriert die Arbeit mit technischen Analyseindikatoren innerhalb der StockSharp-Plattform. Es ermöglicht Benutzern, historische Daten zu laden, verschiedene Indikatoren darauf anzuwenden und die Ergebnisse in einem Chart anzuzeigen. Dieser Ansatz unterstützt die Analyse von Markttrends und fundierte Handelsentscheidungen.
+Das Skript "Indikator" demonstriert die Arbeit mit technischen Analyseindikatoren innerhalb der StockSharp-Plattform. Es ermöglicht Benutzern, historische Daten zu laden, verschiedene Indikatoren darauf anzuwenden und die Ergebnisse in einem Chart anzuzeigen. Dieser Ansatz unterstützt die Analyse von Markttrends und fundierte Handelsentscheidungen.
 
 ![Indikatoren](../../../../images/hydra_analytics_indicator.png)
 
 ## Funktionen
 
-Das Skript bietet die folgende Funktionalitat:
+Das Skript bietet die folgende Funktionalität:
 
 - **Laden historischer Daten**: Auswahl interessanter Finanzinstrumente und Laden ihrer historischen Daten für einen angegebenen Zeitraum.
 - **Anwenden von Indikatoren**: Anwendung eines oder mehrerer technischer Analyseindikatoren auf die geladenen Daten.
@@ -17,7 +17,7 @@ Das Skript bietet die folgende Funktionalitat:
 Das Skript kann mit einer großen Auswahl von Indikatoren arbeiten, darunter unter anderem:
 
 - **Gleitende Durchschnitte (MA)**: Stellen den Durchschnittspreis über einen bestimmten Zeitraum dar und helfen, Trends zu identifizieren.
-- **Relative Strength Index (RSI)**: Bewertet Ausmass und Geschwindigkeit von Preisanderungen und hilft, uberkaufte oder uberverkaufte Bedingungen zu erkennen.
+- **Relative Strength Index (RSI)**: Bewertet Ausmaß und Geschwindigkeit von Preisänderungen und hilft, überkaufte oder überverkaufte Bedingungen zu erkennen.
 - **Bollinger-Bänder (BB)**: Zeigen Preisspanne und Volatilität auf Basis gleitender Durchschnitte und Standardabweichungen.
 
 ## Anwendung im Handel und in der Analyse
@@ -36,7 +36,7 @@ Für die Arbeit mit dem Skript sind die folgenden Schritte erforderlich:
 2. **Anwenden von Indikatoren**: Auswahl und Parametrierung der Indikatoren, die auf die Daten angewendet werden sollen.
 3. **Anzeige der Ergebnisse**: Visualisierung historischer Daten und Indikatoren in einem Chart zur Analyse.
 
-Das Skript "Indicator" stellt ein leistungsfahiges Werkzeug für die detaillierte Analyse von Finanzmarkten bereit und ermöglicht Tradern und Analysten, diese Indikatoren zur Entwicklung wirksamer Handelsstrategien zu nutzen.
+Das Skript "Indikator" stellt ein leistungsfähiges Werkzeug für die detaillierte Analyse von Finanzmarkten bereit und ermöglicht Tradern und Analysten, diese Indikatoren zur Entwicklung wirksamer Handelsstrategien zu nutzen.
 
 ## Skriptcode in C#
 
@@ -52,7 +52,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Keine Instrumente.");
 				return Task.CompletedTask;
 			}
 
@@ -77,13 +77,13 @@ namespace StockSharp.Algo.Analytics
 
 				foreach (var candle in candleStorage.Load(from, to))
 				{
-					// Reihen befullen
+					// Reihen befüllen
 					candlesSeries[candle.OpenTime] = candle.ClosePrice;
 					indicatorSeries[candle.OpenTime] = roc.Process(candle).ToDecimal();
 				}
 
 				// Reihen im Chart zeichnen
-				candleChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values);
+				candleChart.Append($"{security} (Schlusskurs)", candlesSeries.Keys, candlesSeries.Values);
 				indicatorChart.Append($"{security} (ROC)", indicatorSeries.Keys, indicatorSeries.Values);
 			}
 
@@ -99,7 +99,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# .NET-Referenzen hinzufugen
+# .NET-Referenzen hinzufügen
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -117,7 +117,7 @@ from indicator_extensions import *
 class indicator_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Keine Instrumente.")
 			return Task.CompletedTask
 
 		# 2 Bereiche für Kerzen und Indikatorreihen erstellen
@@ -145,13 +145,13 @@ class indicator_script(IAnalyticsScript):
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			for candle in load_range(candle_storage, message_type, from_date, to_date):
-				# Reihen befullen
+				# Reihen befüllen
 				candles_series[candle.OpenTime] = candle.ClosePrice
 				indicator_series[candle.OpenTime] = to_decimal(process_candle(roc, candle))
 
 			# Reihen im Chart zeichnen
 			candle_chart.Append(
-				f"{security} (close)",
+				f"{security} (Schlusskurs)",
 				list(candles_series.keys()),
 				list(candles_series.values())
 			)

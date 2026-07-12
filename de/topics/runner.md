@@ -10,4 +10,4 @@
 
 - Start von Strategien aus C#-Code, [Designer](designer.md)-Schemata oder fertigen DLL-Assemblies.
 
-- Ausführung von Strategien im Live-Handel oder beim Backtesting auf historischen Daten.
+- Ausführung von Strategien im Live-Handel oder bei Rücktests mit historischen Daten.

@@ -234,7 +234,7 @@ trades.SellColor = System.Drawing.Color.Red;    // Cor para negócios de venda
 trades.FullTitle = "Negócios da minha estratégia"; // Título do elemento
 ```
 
-Este método configura automaticamente a apresentação de todos os negócios executados pela estratégia. Os negócios são apresentados no gráfico como marcadores nos pontos em que foram executados, tendo em conta o lado do negócio (buy/sell).
+Este método configura automaticamente a apresentação de todos os negócios executados pela estratégia. Os negócios são apresentados no gráfico como marcadores nos pontos em que foram executados, tendo em conta o lado do negócio (compra/venda).
 
 #### Método DrawOrders
 

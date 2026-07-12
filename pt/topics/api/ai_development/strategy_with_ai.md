@@ -30,11 +30,11 @@ Crie um arquivo `CLAUDE.md` (ou `.cursorrules`) na raiz do projeto:
 ```markdown
 # Regras do projeto
 
-- Framework: StockSharp 5.x, .NET 10
+- Plataforma: StockSharp 5.x, .NET 10
 - As estratégias herdam da classe Strategy
 - Subscrever candles via Connector.Subscribe(subscription)
 - Registar ordens via RegisterOrder(order)
-- Registo de logs: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
+- Registo: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
 - Indicadores: criar com new e chamar indicator.Process(candle)
 - Tratar sempre connector.Error e os erros da estratégia
 ```
@@ -48,7 +48,7 @@ Exemplo de prompt:
 ```
 Crie uma estratégia de negociação com StockSharp que:
 - herde de Strategy
-- use duas médias móveis simples (SMA): fast (período 10) e slow (período 30)
+- use duas médias móveis simples (SMA): rápida (período 10) e lenta (período 30)
 - compre quando a SMA rápida cruza acima da SMA lenta
 - venda quando a SMA rápida cruza abaixo da SMA lenta
 - tamanho da posição: 1 lote
@@ -167,10 +167,10 @@ Percorra esta lista de verificação:
 - **Ordens**: via `RegisterOrder()` com `BuyAtMarket` / `SellAtMarket` ✓
 - **Posição**: `Position` é verificada antes de enviar ordens ✓
 
-### Passo 4: Peça à IA para Adicionar Backtesting
+### Passo 4: Peça à IA para adicionar testes históricos
 
 ```
-Adicione código de backtesting para esta estratégia usando dados históricos.
+Adicione código de testes históricos para esta estratégia usando dados históricos.
 Use HistoryEmulationConnector, carregue dados do armazenamento local
 e apresente estatísticas resumidas (PnL, número de transações, drawdown máximo).
 ```
@@ -270,5 +270,5 @@ if (!_sma.IsFormed)
 1. **Forneça a documentação à IA** — aponte-a para [doc.stocksharp.com](https://doc.stocksharp.com) ou copie exemplos de código de `Samples/`
 2. **Use o CLAUDE.md** — um arquivo de regras do projeto reduz muito o número de erros
 3. **Comece simples** — crie primeiro uma estratégia básica, depois adicione filtros e gestão de risco
-4. **Teste no histórico** — sempre execute um backtest antes da negociação ao vivo
+4. **Teste no histórico** — sempre execute um teste histórico antes da negociação ao vivo
 5. **Clone o repositório** — se a IA tiver acesso aos códigos-fonte do StockSharp, ela usará a API com mais precisão

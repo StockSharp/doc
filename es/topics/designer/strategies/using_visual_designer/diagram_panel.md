@@ -1,14 +1,14 @@
 # Diseñador de estrategias
 
-El proceso principal de diseño de una estrategia y sus elementos componentes se realiza en el panel **Esquema**, combinando bloques y líneas de conexión. El panel Esquema consta de los paneles **Paleta**, **Designer** y **Propiedades**.
+El proceso principal de diseño de una estrategia y sus elementos componentes se realiza en el panel **Esquema**, combinando bloques y líneas de conexión. El panel Esquema consta de los paneles **Paleta**, **Diseñador** y **Propiedades**.
 
 ![Designer Esquemas, estrategias y elementos de componentes de Designer 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
-## Panel Palette
+## Panel Paleta
 
 El panel **Paleta** contiene bloques a partir de los cuales se crean estrategias. Todos los elementos de la paleta están divididos en categorías, descritas en la sección [Descripción de bloques](elements.md). Para añadir un bloque al panel **Diseñador**, haga clic con el botón derecho en el bloque requerido y, sin soltar el botón, arrástrelo al panel **Diseñador**. Después, el elemento se seleccionará automáticamente y sus parámetros se mostrarán en la ventana para editar las propiedades del bloque.
 
-## Panel Designer
+## Panel Diseñador
 
 El panel **Diseñador** es donde ocurre todo el proceso de creación de una estrategia mediante la combinación de bloques y conexiones (líneas). Representa visualmente el esquema de la estrategia. La información detallada sobre la creación de una estrategia se describe en la sección [Creación de un algoritmo a partir de bloques](first_strategy.md).
 
@@ -20,20 +20,20 @@ El panel **Propiedades** muestra los parámetros del bloque seleccionado en el p
 
 El panel **Propiedades** puede mostrarse en dos modos: *Configuración básica* y *Configuración avanzada*.
 
-De forma predeterminada, al construir un esquema, las propiedades se muestran inicialmente en modo *basic settings*. Para cambiar al modo *advanced settings*, debe hacer clic en el título correspondiente.
+De forma predeterminada, al construir un esquema, las propiedades se muestran inicialmente en modo *configuración básica*. Para cambiar al modo *configuración avanzada*, debe hacer clic en el título correspondiente.
 
 En el modo *configuración básica*, solo se muestran las propiedades más necesarias del bloque. Por ejemplo, para el bloque [Velas](elements/data_sources/candles.md), se mostrará el marco temporal, la bandera para recibir solo velas formadas, la bandera de posibilidad de construir velas a partir de un marco temporal menor y la bandera de suscripción a velas por señal.
 
-En el modo *advanced settings*, se mostrarán todas las propiedades del bloque disponibles para cambio y configuración.
+En el modo *configuración avanzada*, se mostrarán todas las propiedades del bloque disponibles para cambio y configuración.
 
 ![Designer Panel de propiedades 00 (2)](../../../../images/designer_properties_panel_01.png)
 
-Todos los bloques contienen un conjunto de propiedades predefinidas que se hacen visibles en el modo *advanced settings*:
+Todos los bloques contienen un conjunto de propiedades predefinidas que se hacen visibles en el modo *configuración avanzada*:
 
 - **Nombre** – nombre del elemento mostrado en el diseñador.
 - **Nivel de registro** – nivel de registro para este elemento.
 - **Parámetros** – mostrar los parámetros del elemento en elementos de nivel superior.
-- **Conectores** – mostrar los sockets del elemento en elementos de nivel superior.
+- **Conectores** – mostrar los conectores del elemento en elementos de nivel superior.
 
 La información detallada sobre las propiedades de cada bloque se describe en la sección [Descripción de bloques](elements.md).
 

@@ -47,8 +47,8 @@ Ebenso können Sie Verbindungen direkt aus dem Code (ohne grafische Fenster) hin
 // Adapter für die Verbindung zu Binance hinzufügen
 connector.AddAdapter<BinanceMessageAdapter>(a =>
 {
-	a.Key = "<Your API Key>";
-	a.Secret = "<Your Secret Key>";
+	a.Key = "<Ihr API-Schlüssel>";
+	a.Secret = "<Ihr geheimer Schlüssel>";
 });
 
 // RSS für Nachrichten hinzufügen

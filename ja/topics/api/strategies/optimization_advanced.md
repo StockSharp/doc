@@ -145,8 +145,8 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 	if (progress == 100)
 	{
 		tracker.IterationCompleted();
-		Console.WriteLine($"Progress: {tracker.TotalProgress:F1}%, " +
-			$"Remaining: {tracker.Remaining:hh\\:mm\\:ss}");
+		Console.WriteLine($"進捗: {tracker.TotalProgress:F1}%, " +
+			$"残り: {tracker.Remaining:hh\\:mm\\:ss}");
 	}
 };
 ```

@@ -6,8 +6,8 @@ O StockSharp fornece um mecanismo incorporado para otimizar parâmetros de estra
 
 Estão disponíveis dois modos de otimização:
 
-- **Brute force** -- a classe `BruteForceOptimizer`. Percorre todas as combinações possíveis de parâmetros, ou um subconjunto aleatório delas.
-- **Genetic algorithm** -- a classe `GeneticOptimizer`. Usa uma abordagem evolutiva para encontrar parâmetros ótimos, o que é muito mais eficiente para espaços de parâmetros grandes.
+- **Força bruta** -- a classe `BruteForceOptimizer`. Percorre todas as combinações possíveis de parâmetros, ou um subconjunto aleatório delas.
+- **Algoritmo genético** -- a classe `GeneticOptimizer`. Usa uma abordagem evolutiva para encontrar parâmetros ótimos, o que é muito mais eficiente para espaços de parâmetros grandes.
 
 Ambos os otimizadores herdam de `BaseOptimizer` e trabalham de forma assíncrona, devolvendo um `IAsyncEnumerable` com resultados à medida que cada iteração termina.
 
@@ -154,7 +154,7 @@ _candleType = Param(nameof(CandleType), TimeSpan.FromMinutes(5).TimeFrame())
     });
 ```
 
-## Otimização brute force
+## Otimização por força bruta
 
 A classe `BruteForceOptimizer` percorre todas as combinações possíveis de valores dos parâmetros. Este modo é adequado para espaços de parâmetros pequenos.
 
@@ -196,7 +196,7 @@ settings.CommissionRules = new[]                       // comissão
 optimizer.AdapterCache = new();
 ```
 
-### Executar otimização brute force
+### Executar otimização por força bruta
 
 ```csharp
 // Estratégia base com intervalos de otimização.
@@ -224,7 +224,7 @@ var cts = new CancellationTokenSource();
 
 await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
 {
-    // s é a estratégia com resultados após o backtesting.
+    // s é a estratégia com resultados após os testes históricos.
     Console.WriteLine($"PnL={s.PnL}, SMA longa={s.Parameters["LongSma"].Value}, " +
                       $"SMA curta={s.Parameters["ShortSma"].Value}");
 }
@@ -251,7 +251,7 @@ await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, st
 
 ## Otimização genética
 
-A classe `GeneticOptimizer` implementa um algoritmo genético que é muito mais eficiente do que brute force quando o número de parâmetros é grande. O algoritmo converge automaticamente para valores ótimos em menos iterações.
+A classe `GeneticOptimizer` implementa um algoritmo genético que é muito mais eficiente do que a força bruta quando o número de parâmetros é grande. O algoritmo converge automaticamente para valores ótimos em menos iterações.
 
 ### Criar e configurar o otimizador
 
@@ -369,7 +369,7 @@ optimizer.AdapterCache = new MarketDataStorageCache();
 | Evento | Descrição |
 |--------|-----------|
 | `SingleProgressChanged` | Chamado quando o progresso muda para uma única iteração. Parâmetros: `(Strategy, IStrategyParam[], int progress)`. Progresso `100` significa que a iteração está concluída. |
-| `StrategyInitialized` | Chamado depois de a estratégia ser inicializada e antes de o backtest começar. |
+| `StrategyInitialized` | Chamado depois de a estratégia ser inicializada e antes de o teste histórico começar. |
 | `ConnectorInitialized` | Chamado depois de o conector ser criado e antes de se ligar. Permite configurar parâmetros de `HistoryEmulationConnector`. |
 
 ```csharp
@@ -432,7 +432,7 @@ var storageRegistry = new StorageRegistry
     DefaultDrive = new LocalMarketDataDrive(Paths.HistoryDataPath)
 };
 
-// Criar o otimizador (brute force).
+// Criar o otimizador (força bruta).
 var optimizer = new BruteForceOptimizer(
     new CollectionSecurityProvider(new[] { security }),
     new CollectionPortfolioProvider(new[] { portfolio }),

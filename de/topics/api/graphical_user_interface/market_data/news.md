@@ -88,9 +88,9 @@ private void OnFilteredNewsReceived(Subscription subscription, News news)
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 
 	// Nachrichteninformationen ausgeben
-	Console.WriteLine($"News: {news.Headline}");
-	Console.WriteLine($"Source: {news.Source}");
-	Console.WriteLine($"Time: {news.ServerTime}");
+	Console.WriteLine($"Nachricht: {news.Headline}");
+	Console.WriteLine($"Quelle: {news.Source}");
+	Console.WriteLine($"Zeit: {news.ServerTime}");
 	if (!string.IsNullOrEmpty(news.Story))
 		Console.WriteLine($"Text: {news.Story}");
 }
@@ -118,7 +118,7 @@ public void FilterNewsByKeywords(IEnumerable<string> keywords)
 			this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 
 			// Benachrichtigung anzeigen
-			ShowNotification($"New news on topic: {news.Headline}");
+			ShowNotification($"Neue Nachricht zum Thema: {news.Headline}");
 		}
 	};
 }

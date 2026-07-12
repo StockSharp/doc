@@ -7,7 +7,7 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new TinkoffMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Token = "<Your Token>",
+	Token = "<Ваш токен>",
         // раскомментировать для подключения к демо торгам
 	//IsDemo = true,
 };

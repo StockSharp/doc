@@ -26,15 +26,15 @@ private void OnNewsReceived(Subscription subscription, News news)
 		return;
 
 	// 受信したニュースを処理します
-	Console.WriteLine($"News: {news.Id}");
-	Console.WriteLine($"Headline: {news.Headline}");
-	Console.WriteLine($"Source: {news.Source}");
-	Console.WriteLine($"Time: {news.ServerTime}");
-	Console.WriteLine($"URL: {news.Url}");
+	Console.WriteLine($"ニュース: {news.Id}");
+	Console.WriteLine($"見出し: {news.Headline}");
+	Console.WriteLine($"ソース: {news.Source}");
+	Console.WriteLine($"時刻: {news.ServerTime}");
+	Console.WriteLine($"リンク: {news.Url}");
 
 	// ニュース本文がある場合
 	if (!string.IsNullOrEmpty(news.Story))
-		Console.WriteLine($"Story: {news.Story}");
+		Console.WriteLine($"本文: {news.Story}");
 
 	// ニュースが特定の銘柄に関連している場合
 	if (news.SecurityId != null)
@@ -117,8 +117,8 @@ var connector = new Connector();
 // Binance に接続するためのメインアダプターを追加します
 var binanceAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>",
-	Secret = "<Your Secret Key>",
+	Key = "<APIキー>",
+	Secret = "<シークレットキー>",
 };
 connector.Adapter.InnerAdapters.Add(binanceAdapter);
 
@@ -148,4 +148,3 @@ connector.Connect();
 
 - [サブスクリプション](subscriptions.md)
 - [グラフィカルコンポーネント](../graphical_user_interface.md)
-

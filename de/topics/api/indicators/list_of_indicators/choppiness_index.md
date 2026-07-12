@@ -32,7 +32,7 @@ Die Choppiness-Index-Berechnung umfasst die folgenden Schritte:
    Summe von TR = Sum(TR(i)) für i von 1 bis Length
    ```
 
-2. Berechnen Sie den höchsten High und den niedrigsten Low über den ausgewählten Zeitraum:
+2. Berechnen Sie das höchste Hoch und das tiefste Tief über den ausgewählten Zeitraum:
    ```
    höchstes Hoch = maximaler High-Wert über Length-Periode
    tiefstes Tief = minimaler Low-Wert über Length-Periode
@@ -50,16 +50,16 @@ Dabei gilt:
 
 ## Interpretation
 
-- **High CHOP-Werte (über 60-70)** zeigen an, dass sich der Markt in einer Seitwärtsbewegung (Konsolidierung) befindet. In dieser Zeit ist es besser, Trendstrategien zu vermeiden und Range-Trading-Strategien in Betracht zu ziehen.
+- **Hohe CHOP-Werte (über 60-70)** zeigen an, dass sich der Markt in einer Seitwärtsbewegung (Konsolidierung) befindet. In dieser Zeit ist es besser, Trendstrategien zu vermeiden und Seitwärtsstrategien in Betracht zu ziehen.
 
 - **Niedrige CHOP-Werte (unter 30-40)** weisen auf einen starken Richtungstrend hin. Dies ist ein guter Zeitpunkt, Trendstrategien anzuwenden und Preisbewegungen zu verfolgen.
 
 - **Übergänge zwischen hohen und niedrigen Werten** können auf eine Veränderung des Marktcharakters hinweisen. Ein Rückgang des CHOP von hohen Werten könnte den Beginn eines neuen Trends signalisieren. Ein CHOP-Anstieg ausgehend von niedrigen Werten könnte ein Anzeichen für eine Erschöpfung des Trends und einen Übergang zur Konsolidierung sein.
 
 - **Schwellenwerte festlegen**: Typischerweise werden die folgenden Schwellenwerte verwendet:
-  - Über 60-70: High „abgehacktes Gefühl“ (Seitwärtsbewegung)
-  - 30-60: Mäßiges „Rubbeln“ (Übergangszustand)
-  - Unter 30: Low „abgehackt“ (starker Trend)
+  - Über 60-70: hohe Unruhe (Seitwärtsbewegung)
+  - 30-60: mäßige Unruhe (Übergangszustand)
+  - Unter 30: geringe Unruhe (starker Trend)
 
 ![CHOP Diagramm](../../../../images/indicator_choppiness_index.png)
 

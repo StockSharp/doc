@@ -1,6 +1,6 @@
 # 終値の正規化
 
-"Closing Price Normalization" スクリプトは、金融商品の終値を標準化し、異なる資産を統一されたスケールで比較および分析できるように設計されています。これは、価格水準やボラティリティが異なる銘柄を比較する場合に特に有用です。
+"終値の正規化" スクリプトは、金融商品の終値を標準化し、異なる資産を統一されたスケールで比較および分析できるように設計されています。これは、価格水準やボラティリティが異なる銘柄を比較する場合に特に有用です。
 
 ![終値の正規化](../../../../images/hydra_analytics_normalize.png)
 
@@ -30,7 +30,7 @@
 2. **データ処理**: 選択した正規化方法を各銘柄の終値に適用します。
 3. **結果分析**: 正規化されたデータを、その後の分析や銘柄比較に使用します。
 
-"Closing Price Normalization" スクリプトは、取引およびクオンツ分析のためのデータ準備において重要なツールであり、トレーダーやアナリストがさまざまな戦略や研究の中で金融資産をより正確に比較および評価できるようにします。
+"終値の正規化" スクリプトは、取引およびクオンツ分析のためのデータ準備において重要なツールであり、トレーダーやアナリストがさまざまな戦略や研究の中で金融資産をより正確に比較および評価できるようにします。
 
 ## C# のスクリプトコード
 
@@ -46,7 +46,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("銘柄がありません。");
 				return Task.CompletedTask;
 			}
 
@@ -106,7 +106,7 @@ from indicator_extensions import *
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("銘柄がありません。")
 			return Task.CompletedTask
 
 		chart = create_chart(panel, datetime, float)

@@ -46,7 +46,7 @@ var security = new Security
 // cartera de prueba
 var portfolio = new Portfolio
 {
-	Name = "test account",
+	Name = "cuenta de prueba",
 	BeginValue = 1000000,
 };
 ```

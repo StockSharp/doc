@@ -219,7 +219,7 @@ this.WhenCandlesStarted(subscription)
 Subscribe(subscription);
 ```
 
-### Regeln auf Orderbücher (Market Depth)
+### Regeln für Orderbücher (Markttiefe)
 
 ```cs
 // Abonnement für Orderbuchdaten

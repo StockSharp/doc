@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API-GUI-Einstellungen Huobi](../../../../../images/api_gui_settings_huobi.png)
 
 - **Schlüssel** - Schlüssel.
-- **Geheimnis** - Secret.
+- **Geheimnis** - Geheimer Schlüssel.
 - **Saldo** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.
 - **HADAX** - HADAX verwenden.
 - **Verbindungsprüfung** - Intervall für die Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

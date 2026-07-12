@@ -41,7 +41,7 @@ Crie um arquivo de regras do projeto na raiz do repositório:
 - As estratégias herdam de Strategy
 - Os conectores implementam MessageAdapter
 - Todas as subscrições via Connector.Subscribe()
-- Registo de logs via this.AddInfoLog() / this.AddErrorLog()
+- Registo via this.AddInfoLog() / this.AddErrorLog()
 ```
 
 ### 3. Abordagem Iterativa

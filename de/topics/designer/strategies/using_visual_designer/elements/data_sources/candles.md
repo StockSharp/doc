@@ -4,15 +4,15 @@
 
 Dieser Block wird verwendet, um Kerzen für ein angegebenes Instrument zu bilden.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Handelsinstrument** – das Instrument, für das die Kerzen mit den angegebenen Parametern gebildet werden sollen.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Kerzen** – die gebildeten Kerzen.
 
@@ -23,7 +23,7 @@ Parameter
 - **Serie** – der Typ der Kerzenserie und die Parameter für den angegebenen Typ;
 - **Nur abgeschlossene** – nur vollständig gebildete Kerzen oder jede Änderung an den Ausgang weitergeben;
 - **Kleinerer Zeitrahmen** – Kerzen aus einem kleineren Zeitrahmen bilden;
-- **Bei Signal abonnieren** – Daten erst nach Empfang eines Triggers abonnieren.
+- **Bei Signal abonnieren** – Daten erst nach Empfang eines Auslösers abonnieren.
 
 ## Siehe auch
 

@@ -1,6 +1,6 @@
 # Otimização de portefólio
 
-O [Designer](../../designer.md) permite testar uma estratégia em vários instrumentos em simultâneo. Para isso, clique no botão [Optimization](brute_force.md).
+O [Designer](../../designer.md) permite testar uma estratégia em vários instrumentos em simultâneo. Para isso, clique no botão [Otimização](brute_force.md).
 
 ![Designer Teste de carteira](../../../images/designer_portfolio_testing.png)
 

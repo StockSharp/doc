@@ -4,15 +4,15 @@
 
 Dieser Block wird verwendet, um ein Optionspreismodell zu erstellen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Optionen** - die Strikes, für die das Modell erstellt werden soll.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Modell** - das Preismodell (zum Beispiel Black-Scholes).
 

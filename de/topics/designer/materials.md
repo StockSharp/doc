@@ -4,7 +4,7 @@ Diese Dokumentation soll Ihnen die wichtigsten Ressourcen vorstellen, die StockS
 
 ## Lernvideos
 
-Auf dem YouTube-Kanal von StockSharp finden Sie Anleitungsvideos, die zeigen, wie Sie mit "Designer" arbeiten, einschließlich Parametereinstellung, Strategieerstellung und Testing.
+Auf dem YouTube-Kanal von StockSharp finden Sie Anleitungsvideos, die zeigen, wie Sie mit "Designer" arbeiten, einschließlich Parametereinstellung, Strategieerstellung und Tests.
 
 - **"Designer"-Playlist auf YouTube**: [Playlist anzeigen](https://www.youtube.com/playlist?list=PLpwmSw294KYrfM1ALrONIz9MLpRQ1Uwfe)
 

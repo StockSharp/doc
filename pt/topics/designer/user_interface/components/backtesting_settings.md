@@ -1,4 +1,4 @@
-# Definições de backtesting
+# Definições de testes históricos
 
 O painel **Propriedades** está minimizado por predefinição no lado direito do separador da estratégia. Este painel é uma tabela de propriedades de emulação ou de negociação em tempo real. Quando selecciona uma propriedade específica, aparece uma descrição detalhada dessa propriedade na parte inferior da tabela. Todas as propriedades estão agrupadas em grupos:
 

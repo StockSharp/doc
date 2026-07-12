@@ -205,7 +205,7 @@
 		}
 		private static BackupEntry ToEntry(DirectoryInfo di)
 		{
-			// is a disk
+			// 是磁盘
 			if (di.Parent == null)
 				return null;
 			return new BackupEntry

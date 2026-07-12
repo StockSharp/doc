@@ -18,7 +18,7 @@ Harami altista sinaliza um potencial fim de uma tendência descendente:
 - A primeira vela confirma a tendência descendente existente e a força dos vendedores.
 - A segunda vela, completamente contida dentro da primeira, indica uma perda de momentum baixista e o possível aparecimento de compradores.
 - Quanto menor for o corpo da segunda vela em comparação com a primeira, mais pronunciada é a incerteza e o potencial de reversão.
-- Se a segunda vela for um doji (com um corpo muito pequeno), o padrão é chamado "Harami Cross" e é considerado um sinal mais forte de incerteza.
+- Se a segunda vela for um doji (com um corpo muito pequeno), o padrão é chamado "Cruz Harami" e é considerado um sinal mais forte de incerteza.
 - Este padrão é frequentemente considerado um sinal mais fraco em comparação com Engolfo altista, mas pode ser um indicador mais precoce de uma possível reversão.
 
 ### Estratégias de Negociação

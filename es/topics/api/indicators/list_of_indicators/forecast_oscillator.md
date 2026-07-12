@@ -52,7 +52,7 @@ El Oscilador de pronóstico se interpreta de la siguiente manera:
    - Valores positivos muy altos pueden indicar condiciones de sobrecompra del mercado en relación con la tendencia.
    - Valores negativos muy bajos pueden indicar condiciones de sobreventa del mercado en relación con la tendencia.
 
-3. **Return to Zero**:
+3. **Retorno a cero**:
    - El movimiento de FOSC desde valores extremos hacia cero puede indicar un posible retorno del precio a su línea de tendencia
 
 4. **Cruces de línea cero**:

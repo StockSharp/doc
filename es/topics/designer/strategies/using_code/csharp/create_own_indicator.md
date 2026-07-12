@@ -16,7 +16,7 @@ El código del indicador tendrá este aspecto:
 ///
 /// Vea más ejemplos https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
 ///
-/// Doc https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
+/// Documentación https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
 /// </summary>
 public class EmptyIndicator : BaseIndicator
 {
@@ -86,7 +86,7 @@ public class EmptyIndicator : BaseIndicator
 		storage.SetValue(nameof(Change), Change);
 	}
 
-	public override string ToString() => $"Change: {Change}";
+	public override string ToString() => $"Cambio: {Change}";
 }
 ```
 

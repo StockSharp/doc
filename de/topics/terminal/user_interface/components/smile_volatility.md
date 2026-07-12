@@ -10,4 +10,4 @@ Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen so
 
 ## Empfohlene Inhalte
 
-[Orderlog](order_log.md)
+[Orderprotokoll](order_log.md)

@@ -4,17 +4,17 @@
 
 Der Würfel wird verwendet, um den vorherigen an den Eingang übergebenen Wert mit dem angegebenen Offset zu erhalten.
 
-## Eingehende Sockets
+## Eingehende Anschlüsse
 
 - **Beliebige Daten** - ein bestimmter Datentyp, der empfangen und weitergegeben wird.
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **Beliebige Daten** - ein bestimmter Datentyp, der empfangen und weitergegeben wird; am Eingang mit dem in den Parametern angegebenen Offset eingegangen.
 
 ## Parameter
 
-- **Datentyp** - der Datentyp, der über den Eingabe-Socket eingegeben werden kann. Wenn Sie diesen Parameter ändern, wird der Datentyp für die Parameter automatisch geändert.
+- **Datentyp** - der Datentyp, der über den Eingabeanschluss eingegeben werden kann. Wenn Sie diesen Parameter ändern, wird der Datentyp für die Parameter automatisch geändert.
 - **Versatz** - die Größe des Offsets, also um wie viele Änderungen der Ausgabewert dem Eingabewert hinterherhinkt.
 
 ## Empfohlene Inhalte

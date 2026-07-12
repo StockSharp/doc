@@ -3,20 +3,20 @@
 ![Captura de tela de Formatação de strings](../../../../../../images/designer_string_format_00.png)
 
 O cubo converte um valor recebido de qualquer tipo numa string de texto. A
-conversão é executada de acordo com um modelo com placeholders entre chavetas.
-Cada placeholder refere-se ao valor inteiro (`{0}`) ou a uma das suas
+conversão é executada de acordo com um modelo com marcadores de posição entre chavetas.
+Cada marcador de posição refere-se ao valor inteiro (`{0}`) ou a uma das suas
 propriedades (`{Price}`, `{Trade.Price}`, etc.). Pode especificar um formato depois de
 dois pontos para controlar como números, datas ou outros objetos aparecem no texto.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
-- **Entrada** - o valor a formatar. O socket aceita dados de qualquer tipo.
+- **Entrada** - o valor a formatar. O conector aceita dados de qualquer tipo.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Texto** - o resultado da aplicação do modelo ao valor recebido.
 
@@ -26,7 +26,7 @@ Parâmetros
 
 - **Modelo** - modelo de formatação de strings aplicado ao valor recebido. O
   modelo predefinido é `{0}`, o que significa que o valor é inserido sem formatação
-  adicional. Os placeholders podem conter nomes de propriedades e strings de formato, por
+  adicional. Os marcadores de posição podem conter nomes de propriedades e strings de formato, por
   exemplo `Price: {0:0.00}` ou `{Price:0.00}`.
 
 ### Exemplos

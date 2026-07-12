@@ -4,19 +4,19 @@
 
 Este bloco é usado para cancelar todas as ordens de um instrumento.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Acionador** - o sinal que determina o momento em que é necessário cancelar ordens.
 - **Carteira** - a carteira para a qual todas as ordens têm de ser canceladas.
 - **Instrumento** - o instrumento para o qual todas as ordens têm de ser canceladas.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
-- **Resultado** - uma flag que sinaliza o sucesso da operação.
+- **Resultado** - um sinalizador que sinaliza o sucesso da operação.
 
 ### Parâmetros
 

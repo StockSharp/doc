@@ -6,9 +6,9 @@ Der Würfel wird verwendet, um den Optionsdesk anzuzeigen.
 
 Um das **Optionsarbeitsplatz** anzuzeigen, müssen Sie die grafische Komponente **Optionsarbeitsplatz** hinzufügen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
 

@@ -28,7 +28,7 @@ Crie um arquivo `CLAUDE.md`:
 ```markdown
 # Regras do projeto — conector de exchange
 
-- Framework: StockSharp 5.x, .NET 10
+- Plataforma: StockSharp 5.x, .NET 10
 - O conector é implementado como um MessageAdapter
 - Herdar de AsyncMessageAdapter para async/await
 - Todos os pedidos HTTP via HttpClient com CancellationToken
@@ -90,16 +90,16 @@ Adicione ao adaptador a subscrição de dados de mercado:
 
 1. Candles (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
-   - WebSocket: subscribe to channel kline_{symbol}_{interval}
-   - Interval mapping: 1m, 5m, 15m, 1h, 4h, 1d
+   - WebSocket: subscrever o canal kline_{symbol}_{interval}
+   - Mapeamento de intervalos: 1m, 5m, 15m, 1h, 4h, 1d
 
 2. Livro de ordens (MarketDataTypes.MarketDepth):
-   - WebSocket: subscribe to channel depth_{symbol}
-   - Parse bids/asks into QuoteChangeMessage
+   - WebSocket: subscrever o canal depth_{symbol}
+   - Converter bids/asks em QuoteChangeMessage
 
 3. Ticks (MarketDataTypes.Trades):
-   - WebSocket: subscribe to channel trades_{symbol}
-   - Parse into ExecutionMessage with ExecutionTypes.Tick
+   - WebSocket: subscrever o canal trades_{symbol}
+   - Converter em ExecutionMessage com ExecutionTypes.Tick
 ```
 
 ### Passo 4: Operações de Negociação
@@ -109,21 +109,21 @@ Prompt:
 ```
 Adicione ao adaptador suporte para operações de negociação:
 
-1. Order registration (OrderRegisterMessage):
-   - POST /api/v1/order with params: symbol, side, type, quantity, price
-   - Return ExecutionMessage with ExecutionTypes.Transaction
+1. Registo de ordem (OrderRegisterMessage):
+   - POST /api/v1/order com parâmetros: symbol, side, type, quantity, price
+   - Devolver ExecutionMessage com ExecutionTypes.Transaction
 
-2. Order cancellation (OrderCancelMessage):
+2. Cancelamento de ordem (OrderCancelMessage):
    - DELETE /api/v1/order/{orderId}
-   - Return ExecutionMessage with status OrderStates.Done
+   - Devolver ExecutionMessage com estado OrderStates.Done
 
-3. Portfolio retrieval (PortfolioLookupMessage):
+3. Obtenção de carteira (PortfolioLookupMessage):
    - GET /api/v1/account
-   - Parse balances into PositionChangeMessage
+   - Converter saldos em PositionChangeMessage
 
-4. WebSocket for order updates:
-   - Channel orders_{listenKey}
-   - Parse order status updates
+4. WebSocket para atualizações de ordens:
+   - Canal orders_{listenKey}
+   - Processar atualizações do estado das ordens
 ```
 
 ### Passo 5: Revisão de Código
@@ -212,7 +212,7 @@ private string SignRequest(string payload)
 ### Negociação
 - [ ] Ordens limit: criação, cancelamento
 - [ ] Ordens market: criação
-- [ ] Atualizações de status de ordem
+- [ ] Atualizações do estado da ordem
 - [ ] Atualizações de saldo do portfólio
 
 ### Geral
@@ -248,5 +248,5 @@ Adicione ao meu conector o tratamento de limites de frequência:
 1. **Comece somente leitura** — primeiro implemente conexão, instrumentos e dados de mercado. Adicione operações de negociação após a verificação
 2. **Use o sandbox** — teste no ambiente de testes da bolsa
 3. **Referencie conectores existentes** — forneça à IA código de um conector StockSharp existente como referência
-4. **Registre tudo** — logs detalhados são inestimáveis ao depurar um conector
+4. **Registe tudo** — registos detalhados são inestimáveis ao depurar um conector
 5. **Trate casos extremos** — reconexão, mudanças de instrumentos, tipos de ordem não padronizados

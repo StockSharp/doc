@@ -11,7 +11,7 @@ stocksharp.studio.runner setup
 
 ![接続設定 1 (1)](../../images/runner_setup_1.png)
 
-Connections 項目を選択すると、プログラムはコネクター設定モードに入ります。
+接続項目を選択すると、プログラムはコネクター設定モードに入ります。
 
 ![接続設定 2 (1)](../../images/runner_setup_2.png)
 

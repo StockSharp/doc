@@ -8,7 +8,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 ![Configurações da API GUI FatBTC](../../../../../images/api_gui_settings_fatbtc.png)
 
 - **chave** - Key.
-- **segredo** - Secret.
+- **segredo** - segredo da API.
 - **Saldo** - Intervalo de verificação do saldo. Necessário em caso de ações de depósito e levantamento.
 - **domínio (endereço)** - Endereço de domínio.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para monitorizar se a ligação está ativa. Por defeito é de 1 minuto.

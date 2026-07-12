@@ -63,7 +63,7 @@ R-Quadrat der linearen Regression kann wie folgt interpretiert werden:
 
 2. **Auswahl der Handelsstrategie**:
    - Bei hohen R²-Werten (starker Trend) sind Trendfolgestrategien wirksam
-   - Bei niedrigen R²-Werten (Seitwärtsbewegung) sind Range-Trading-Strategien effektiv
+   - Bei niedrigen R²-Werten (Seitwärtsbewegung) sind Seitwärtshandelsstrategien effektiv
 
 3. **Übergangspunktsuche**:
    - Ein steigender R² könnte die Bildung eines neuen Trends signalisieren
@@ -78,7 +78,7 @@ R-Quadrat der linearen Regression kann wie folgt interpretiert werden:
    - Verwenden Sie beispielsweise gleitende Durchschnitte mit hohem R² und stochastische Oszillatoren mit niedrigem R²
 
 6. **Bewertung der Marktvorhersehbarkeit**:
-   - High R²-Werte deuten auf eine vorhersehbarere kurzfristige Preisbewegung hin
+   - Hohe R²-Werte deuten auf eine vorhersehbarere kurzfristige Preisbewegung hin
    - Niedrige R²-Werte deuten auf chaotischere, unvorhersehbarere Bewegungen hin
 
 7. **Zeitrahmen**:

@@ -11,7 +11,7 @@ Ein Menü erscheint:
 
 ![Verbindung einrichten 1 (1)](../../images/runner_setup_1.png)
 
-Wenn Sie den Menüpunkt Connections auswählen, wechselt das Programm in den Modus zur Einrichtung des Connectors:
+Wenn Sie den Menüpunkt Verbindungen auswählen, wechselt das Programm in den Modus zur Einrichtung des Connectors:
 
 ![Verbindung einrichten 2 (1)](../../images/runner_setup_2.png)
 

@@ -54,7 +54,7 @@ Func<Strategy, decimal> fitness = fitnessProvider.Compile("PnL / (MaxDD + 1)");
 | 赢利交易 | 赢利交易 |
 | 亏损交易 | 亏损的交易 |
 | TCount | 总交易 |
-| RTrip | 往返旅行 |
+| RTrip | 往返交易 |
 | 平均每笔交易利润 | 每笔交易的平均利润 |
 | AvgWTrades | 平均获利交易 |
 | AvgLTrades | 平均亏损交易 |
@@ -145,8 +145,8 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 	if (progress == 100)
 	{
 		tracker.IterationCompleted();
-		Console.WriteLine($"Progress: {tracker.TotalProgress:F1}%, " +
-			$"Remaining: {tracker.Remaining:hh\\:mm\\:ss}");
+		Console.WriteLine($"进度: {tracker.TotalProgress:F1}%, " +
+			$"剩余: {tracker.Remaining:hh\\:mm\\:ss}");
 	}
 };
 ```

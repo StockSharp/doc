@@ -4,7 +4,7 @@
 
 Die Komponente „Orderregistrierung“ wird verwendet, um Handelsorders für ein ausgewähltes Instrument zu platzieren.
 
-## Eingabe-Sockets
+## Eingabeanschlüsse
 
 - **Handelsinstrument** - das ausgewählte Instrument für die Order.
 - **Preis** - gibt den Preis für eine Limit-Order an.
@@ -12,7 +12,7 @@ Die Komponente „Orderregistrierung“ wird verwendet, um Handelsorders für ei
 - **Volumen** - die Anzahl der Instrumente für die Order.
 - **Portfolio** - das Portfolio, in dem die Order platziert wird.
 
-## Ausgabe-Sockets
+## Ausgabeanschlüsse
 
 - **Auftrag** - Informationen über die platzierte Order.
 - **Fehler** - Informationen über Fehler bei der Orderregistrierung.
@@ -55,7 +55,7 @@ Die Komponente „Orderregistrierung“ wird verwendet, um Handelsorders für ei
 
 ## Hinweis
 
-Die Arbeit mit Orders ist eine Low-Level-Methode zur Positionsverwaltung. Für eine Verwaltung auf höherer Ebene wird empfohlen, die Komponente „Position ändern“ zu verwenden, die unter [Position ändern](../positions/modify.md) beschrieben ist.
+Die Arbeit mit Orders ist eine Methode auf niedriger Ebene zur Positionsverwaltung. Für eine Verwaltung auf höherer Ebene wird empfohlen, die Komponente „Position ändern“ zu verwenden, die unter [Position ändern](../positions/modify.md) beschrieben ist.
 
 ## Siehe auch
 

@@ -1,10 +1,10 @@
-# Logging de IConnector
+# Registro de IConnector
 
 Los objetos [IConnector](xref:StockSharp.BusinessEntities.IConnector), de forma similar a las [estrategias](strategy_logging.md), también implementan la interfaz [ILogSource](xref:Ecng.Logging.ILogSource). Por lo tanto, desde el objeto [IConnector](xref:StockSharp.BusinessEntities.IConnector) puede recibir mensajes mediante [LogManager](xref:Ecng.Logging.LogManager) por todos los medios disponibles para las estrategias. 
 
-## Ejemplo de logging de IConnector
+## Ejemplo de registro de IConnector
 
-1. Primero, necesita crear un administrador de logs: 
+1. Primero, necesita crear un administrador de registros:
 
    ```cs
    ...
@@ -14,7 +14,7 @@ Los objetos [IConnector](xref:StockSharp.BusinessEntities.IConnector), de forma 
    				
    				
    ```
-2. Después necesita crear un logger de archivo y agregarlo a [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners): 
+2. Después necesita crear un registrador de archivo y agregarlo a [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners):
 
    ```cs
    _logManager.Listeners.Add(new FileLogListener());

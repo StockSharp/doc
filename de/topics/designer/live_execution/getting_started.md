@@ -8,7 +8,7 @@ Sie können eine Strategie auch zum Live-Handel hinzufügen, indem Sie im Tab **
 
 ![Designer Live-Handel 02](../../../images/designer_live_trade_02.png)
 
-Der Ordner Trade enthält die Strategien, die für die Ausführung im Live-Handel hinzugefügt wurden. Laufende Strategien sind mit dem Zeichen ![Designer Schaltungs-Panel 02](../../../images/designer_panel_circuits_02.png) markiert, gestoppte Strategien mit dem Zeichen ![Designer Schaltungs-Panel 03](../../../images/designer_panel_circuits_03.png).
+Der Ordner **Handel** enthält die Strategien, die für die Ausführung im Live-Handel hinzugefügt wurden. Laufende Strategien sind mit dem Zeichen ![Designer Schaltungs-Panel 02](../../../images/designer_panel_circuits_02.png) markiert, gestoppte Strategien mit dem Zeichen ![Designer Schaltungs-Panel 03](../../../images/designer_panel_circuits_03.png).
 
 ## Empfohlene Inhalte
 

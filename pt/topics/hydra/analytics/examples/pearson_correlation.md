@@ -50,7 +50,7 @@ namespace StockSharp.Algo.Analytics
 	using MathNet.Numerics.Statistics;
 
 	/// <summary>
-	/// O script analítico, calcula a correlação de Pearson por securities especificadas.
+	/// O script analítico, calcula a correlação de Pearson para instrumentos especificados.
 	/// </summary>
 	public class PearsonCorrelationScript : IAnalyticsScript
 	{
@@ -58,7 +58,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Sem instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -132,7 +132,7 @@ from numpy_extensions import nx
 clr.AddReference("NumpyDotNet")
 from NumpyDotNet import np
 
-# O script analítico, calcula a correlação de Pearson por securities especificadas.
+# O script analítico, calcula a correlação de Pearson para instrumentos especificados.
 class pearson_correlation_script(IAnalyticsScript):
 	def Run(
 		self,
@@ -148,7 +148,7 @@ class pearson_correlation_script(IAnalyticsScript):
 		cancellation_token
 	):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Sem instrumentos.")
 			return Task.CompletedTask
 
 		closes = []

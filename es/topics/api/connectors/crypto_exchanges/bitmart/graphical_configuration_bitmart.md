@@ -6,7 +6,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 - **clave** - Clave.
 - **secreto** - Secreto.
-- **Board** - Sección a conectar (Spot, Futures).
+- **Sección** - Sección a conectar (Spot, Futures).
 - **frase de acceso** - Contraseña administrativa.
 
 ## Contenido recomendado

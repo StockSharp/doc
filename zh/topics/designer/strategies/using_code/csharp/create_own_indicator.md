@@ -14,9 +14,9 @@
 /// 
 /// 将输入价格改变 +20% 或 -20%。
 /// 
-/// See more examples https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
+/// 更多示例 https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
 /// 
-/// Doc https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
+/// 文档 https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
 /// </summary>
 public class EmptyIndicator : BaseIndicator
 {
@@ -86,7 +86,7 @@ public class EmptyIndicator : BaseIndicator
 		storage.SetValue(nameof(Change), Change);
 	}
 
-	public override string ToString() => $"Change: {Change}";
+	public override string ToString() => $"变化: {Change}";
 }
 ```
 

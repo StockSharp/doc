@@ -67,10 +67,10 @@ Der Historisches Volatilitätsverhältnis kann wie folgt interpretiert werden:
 
 4. **Handelsstrategien**:
    - Wenn HVR hoch ist, kann es angebracht sein, ausbruchsbasierte Strategien zu verwenden
-   - Wenn HVR niedrig ist, sind Mean-Reversion- oder Range-Trading-Strategien möglicherweise besser geeignet
+   - Wenn HVR niedrig ist, sind Strategien zur Rückkehr zum Mittelwert oder Seitwärtshandelsstrategien möglicherweise besser geeignet
 
 5. **Risikomanagement**:
-   - High HVR-Werte können auf die Notwendigkeit hinweisen, die Positionsgrößen aufgrund erhöhter Volatilität zu reduzieren
+   - Hohe HVR-Werte können auf die Notwendigkeit hinweisen, die Positionsgrößen aufgrund erhöhter Volatilität zu reduzieren
    - Niedrige HVR-Werte können aufgrund der geringeren Volatilität größere Positionsgrößen ermöglichen
 
 6. **Mögliche Umkehrungen**:

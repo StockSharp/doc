@@ -219,7 +219,7 @@ this.WhenCandlesStarted(subscription)
 Subscribe(subscription);
 ```
 
-### オーダーブック（Market Depth）のルール
+### オーダーブック（市場深度）のルール
 
 ```cs
 // オーダーブックデータへのサブスクリプション

@@ -224,7 +224,7 @@ var cts = new CancellationTokenSource();
 
 await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, strategies, cts.Token))
 {
-    // s es la estrategia con resultados después del backtesting.
+    // s es la estrategia con resultados después de las pruebas históricas.
     Console.WriteLine($"PnL={s.PnL}, SMA larga={s.Parameters["LongSma"].Value}, " +
                       $"SMA corta={s.Parameters["ShortSma"].Value}");
 }
@@ -369,7 +369,7 @@ optimizer.AdapterCache = new MarketDataStorageCache();
 | Evento | Descripción |
 |--------|-------------|
 | `SingleProgressChanged` | Se llama cuando cambia el progreso de una sola iteración. Parámetros: `(Strategy, IStrategyParam[], int progress)`. Progreso `100` significa que la iteración está completa. |
-| `StrategyInitialized` | Se llama después de inicializar la estrategia y antes de iniciar el backtest. |
+| `StrategyInitialized` | Se llama después de inicializar la estrategia y antes de iniciar la prueba histórica. |
 | `ConnectorInitialized` | Se llama después de crear el conector y antes de que se conecte. Permite configurar parámetros de `HistoryEmulationConnector`. |
 
 ```csharp

@@ -10,4 +10,4 @@ O **Runner** é uma aplicação para iniciar estratégias escritas para a plataf
 
 - Execução de estratégias a partir de código C#, esquemas do [Designer](designer.md) ou assemblies DLL prontos a utilizar.
 
-- Execução de estratégias em modo de negociação real ou em backtesting com dados históricos.
+- Execução de estratégias em modo de negociação real ou em testes históricos com dados históricos.

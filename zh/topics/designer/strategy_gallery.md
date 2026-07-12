@@ -4,7 +4,7 @@
 
 要将策略下载到本地计算机：
 
-- 选择所需策略，然后单击 Download 按钮：
+- 选择所需策略，然后单击下载按钮：
 
   ![Designer 策略库 00](../../images/designer_gallery_of_strategies_00.png)
 

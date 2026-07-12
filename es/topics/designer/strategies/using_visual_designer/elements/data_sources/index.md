@@ -4,9 +4,9 @@
 
 El cubo se usa para crear su propio índice.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Instrumento** - índice calculado, representado como **Instrumento**.
 

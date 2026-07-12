@@ -31,7 +31,7 @@ For each instrument, you can specify the following data import properties:
 
 **General**
 
-- **Header** - Converter. 
+- **Header** - task title.
 - **Working hours** - setting up the board work schedule. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
 - **Interval of operation** - the interval of operation. 
 - **Data directory** - data directory, from where the data for conversion will be received. 

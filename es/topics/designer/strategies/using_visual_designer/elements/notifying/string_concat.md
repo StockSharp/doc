@@ -3,19 +3,19 @@
 ![Captura de Concatenación de cadenas](../../../../../../images/designer_string_concat_00.png)
 
 El cubo concatena varios valores entrantes en una sola cadena de texto según
-una plantilla con marcadores de posición entre llaves. Cada nombre de marcador añade un socket de entrada
+una plantilla con marcadores de posición entre llaves. Cada nombre de marcador añade un conector de entrada
 con el mismo nombre. Puede referirse a propiedades anidadas mediante puntos y
 especificar formato después de dos puntos.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
-- Se crean dinámicamente a partir de nombres de marcadores. Cada socket acepta datos de cualquier tipo.
+- Se crean dinámicamente a partir de nombres de marcadores. Cada conector acepta datos de cualquier tipo.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Texto** – cadena concatenada y formateada.
 
@@ -24,15 +24,15 @@ Sockets de salida
 Parámetros
 
 - **Plantilla** – plantilla de concatenación y formateo de cadenas. Editar la plantilla
-  actualiza la lista de sockets de entrada.
+  actualiza la lista de conectores de entrada.
 
 ### Ejemplos
 
 - La plantilla `Price: {price:0.00}, Qty: {qty}` con `price = 10.5` y `qty = 2`
   produce `Price: 10.50, Qty: 2`.
-- La plantilla `{time:HH:mm:ss} - {trade.Price}` con sockets `time` y `trade`
+- La plantilla `{time:HH:mm:ss} - {trade.Price}` con conectores `time` y `trade`
   (`trade.Price = 100`) produce `09:15:00 - 100`.
-- La plantilla `{side} {volume} @ {trade.Price}` con sockets `side = Buy`,
+- La plantilla `{side} {volume} @ {trade.Price}` con conectores `side = Buy`,
   `volume = 1`, `trade.Price = 100` produce `Buy 1 @ 100`.
 
 ## Contenido recomendado

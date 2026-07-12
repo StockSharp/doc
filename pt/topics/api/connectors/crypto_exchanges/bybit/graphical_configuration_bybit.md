@@ -5,7 +5,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 ![Configurações da API GUI ByBit](../../../../../images/api_gui_settings_bybit.png)
 
 - **chave** - Key.
-- **segredo** - Secret.
+- **segredo** - segredo da API.
 - **Secções** - Secções de negociação.
 - **Demonstração** - Ligação à negociação demo.
 

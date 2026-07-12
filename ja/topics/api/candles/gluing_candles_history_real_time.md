@@ -341,7 +341,7 @@ private void ExtendedCandleProcessing(Subscription subscription, ICandleMessage 
 	// ログへローソク足に関する情報を出力
 	this.GuiAsync(() => 
 	{
-		var status = subscription.State == SubscriptionStates.Online ? "Real-time" : "History";
+		var status = subscription.State == SubscriptionStates.Online ? "リアルタイム" : "履歴";
 		LogControl.LogMessage($"{status}: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice}");
 	});
 }

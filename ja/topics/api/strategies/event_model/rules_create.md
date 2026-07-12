@@ -40,7 +40,7 @@ public static MarketRule<Portfolio, Portfolio> WhenMoneyMore(this Portfolio port
 	var finishMoney = money.Type == UnitTypes.Limit ? money : portfolio.CurrentValue + money;
 	return new PortfolioRule(portfolio, pf => pf.CurrentValue > finishMoney)
 	{
-		Name = "Money increase of portfolio {0} above {1}".Put(portfolio, finishMoney)
+		Name = "ポートフォリオ {0} の資金増加が {1} を超過".Put(portfolio, finishMoney)
 	};
 }		
 ```

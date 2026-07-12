@@ -6,16 +6,16 @@
 
 Dieser Block wird verwendet, um offene Trades automatisch mit Stop-Loss und Take-Profit zu schützen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Eigene Ausführung** - der Trade, der mit Stop-Loss und Take-Profit geschützt werden soll.
 - **Preis** - der aktuelle Preis (kann aus einer Kerze, dem letzten Tick usw. entnommen werden). Er ist erforderlich, um den aktuellen Preis des Instruments zu verfolgen und Schutzorders zu aktivieren.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Take-Profit** - eine Order zur Gewinnsicherung.
 - **Stop-Loss** - eine Order zur Verlustbegrenzung.
@@ -33,5 +33,5 @@ Take- und Stop-Parameter
 ![Designer Positionen schützen 02](../../../../../../images/designer_protect_positions_02.png)
 
 > [!WARNING]
-> Eingehende Transaktionen DÜRFEN KEINE Transaktionen der gesamten Strategie sein (der Block [Trades nach Strategie](../common/trades_by_strategy.md)), da dies zu einer fehlerhaften Berechnung der aktuellen Position führt: Die Schutztransaktionen würden ebenfalls zu Strategietransaktionen. Der Block **Positionsschutz** sollte Transaktionen aus dem Ausgabe-Socket **Transaktion** der Würfel [Orderregistrierung](../orders/register.md) und [Position ändern](modify.md) oder ähnlicher Komponenten erhalten, die die Position direkt ändern.
+> Eingehende Transaktionen DÜRFEN KEINE Transaktionen der gesamten Strategie sein (der Block [Trades nach Strategie](../common/trades_by_strategy.md)), da dies zu einer fehlerhaften Berechnung der aktuellen Position führt: Die Schutztransaktionen würden ebenfalls zu Strategietransaktionen. Der Block **Positionsschutz** sollte Transaktionen aus dem Ausgabeanschluss **Transaktion** der Würfel [Orderregistrierung](../orders/register.md) und [Position ändern](modify.md) oder ähnlicher Komponenten erhalten, die die Position direkt ändern.
 

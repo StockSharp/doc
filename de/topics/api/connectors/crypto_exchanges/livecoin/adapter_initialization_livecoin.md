@@ -10,8 +10,8 @@ Der folgende Code zeigt, wie der [LiveCoinMessageAdapter](xref:StockSharp.LiveCo
 			...
 			var messageAdapter = new LiveCoinMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ihr API-Schlüssel>".To<SecureString>(),
+				Secret = "<Ihr API-Geheimnis>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...

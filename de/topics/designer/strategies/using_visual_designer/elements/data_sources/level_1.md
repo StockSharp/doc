@@ -4,15 +4,15 @@
 
 Dieser Block wird verwendet, um **Level1**-Daten für ein Instrument zu empfangen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Handelsinstrument** – das Instrument, für das **Level1**-Daten empfangen werden müssen.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Änderung** – **Level1**-Werte des verfolgten Parameters.
 
@@ -21,7 +21,7 @@ Ausgehende Sockets
 Parameter
 
 - **Wert** – der **Level1**-Parameter, der verfolgt werden muss.
-- **Bei Signal abonnieren** – Daten erst nach Eintreffen eines Triggers abonnieren.
+- **Bei Signal abonnieren** – Daten erst nach Eintreffen eines Auslösers abonnieren.
 
 ## Siehe auch
 

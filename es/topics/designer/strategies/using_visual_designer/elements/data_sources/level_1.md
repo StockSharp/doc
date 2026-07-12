@@ -4,15 +4,15 @@
 
 Este bloque se usa para recibir datos **Nivel 1** para un instrumento.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Instrumento** – instrumento para el que deben recibirse datos **Nivel 1**.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Cambio** – valores **Nivel 1** del parámetro rastreado.
 

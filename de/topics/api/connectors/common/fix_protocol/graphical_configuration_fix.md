@@ -28,7 +28,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Servername** - Servername, der die SSL-Verbindung verwendet.
 - **Einstellungen für die Wiederverbindung** - Einstellungen des Mechanismus zur Überwachung der Verbindung mit dem Handelssystem ([Wiederverbindungseinstellungen](../../reconnection_settings.md)).
 - **Intervall der Verbindungsprüfung** - Intervall zur Benachrichtigung des Servers, dass die Verbindung noch aktiv ist. Der Standardwert beträgt 1 Minute.
-- **Vereinheitlichter Board-Code** - Board-Code für das vereinheitlichte Instrument.
+- **Vereinheitlichter Handelsplatzcode** - Handelsplatzcode für das vereinheitlichte Instrument.
 
 ## Siehe auch
 

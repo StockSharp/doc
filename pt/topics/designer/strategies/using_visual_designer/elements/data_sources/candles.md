@@ -4,15 +4,15 @@
 
 Este bloco é usado para construir candles para um instrumento especificado.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Instrumento** - o instrumento para o qual os candles devem ser construídos com os parâmetros indicados.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Velas** - as velas construídas.
 
@@ -23,7 +23,7 @@ Parâmetros
 - **Série** - o tipo da série de candles e os parâmetros para o tipo especificado;
 - **Apenas formadas** - passar para a saída apenas candles totalmente formados ou qualquer alteração;
 - **Período menor** - construir candles a partir de um período menor;
-- **Subscrever por sinal** - subscrever dados apenas depois de receber um trigger.
+- **Subscrever por sinal** - subscrever dados apenas depois de receber um sinal de acionamento.
 
 ## Ver também
 

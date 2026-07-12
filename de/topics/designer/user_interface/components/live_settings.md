@@ -6,7 +6,7 @@ Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strate
 
 **Protokollierung**
 
-- **Protokollierungsstufe** - der Logging-Level für dieses Element.
+- **Protokollierungsstufe** - die Protokollierungsstufe für dieses Element.
 
 **Initialisierung**
 

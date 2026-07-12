@@ -57,7 +57,7 @@ using StockSharp.Algo.Candles.Patterns;
 
 // Crear un patrón complejo: primero una vela bajista, después envolvente alcista
 var complex = new ComplexCandlePattern(
-    "Reversal Up",
+    "Reversión alcista",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Black,            // 1 vela: bajista

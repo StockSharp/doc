@@ -1,6 +1,6 @@
 # LMAX
 
-**LMAX Global** - a LMAX Global é um broker de FX regulado pela FCA. A LMAX Global oferece a brokers e traders profissionais a possibilidade de negociar no livro central de ordens limitadas da LMAX Exchange, disponibilizando spreads mais apertados sobre liquidez firme em streaming de bancos de primeira linha e empresas de negociação proprietária.
+**LMAX Global** - a LMAX Global é um broker de FX regulado pela FCA. A LMAX Global oferece a brokers e traders profissionais a possibilidade de negociar no livro central de ordens limitadas da LMAX Exchange, disponibilizando spreads mais apertados sobre liquidez firme em fluxo contínuo de bancos de primeira linha e empresas de negociação proprietária.
 
 Antes de começar a escrever robôs de negociação para a plataforma de negociação atual, recomenda-se ler as ligações em [Conectores](../../connectors.md). 
 

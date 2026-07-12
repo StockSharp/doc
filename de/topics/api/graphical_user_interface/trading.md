@@ -1,10 +1,10 @@
 # Handel
 
-Dieser Abschnitt stellt die Komponenten vor, die mit eigenen Handelstransaktionen verbunden sind: Orders ([OrderGrid](xref:StockSharp.Xaml.OrderGrid), [OrderWindow](xref:StockSharp.Xaml.OrderWindow)), bedingte Orders ([OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow)) und eigene Trades ([MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid)).
+Dieser Abschnitt stellt die Komponenten vor, die mit eigenen Handelstransaktionen verbunden sind: Aufträge ([OrderGrid](xref:StockSharp.Xaml.OrderGrid), [OrderWindow](xref:StockSharp.Xaml.OrderWindow)), bedingte Aufträge ([OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow)) und eigene Ausführungen ([MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid)).
 
 ## Empfohlene Inhalte
 
-[Orders](trading/orders.md)
+[Aufträge](trading/orders.md)
 
 [Erstellen einer neuen Order](trading/new_order_creation.md)
 

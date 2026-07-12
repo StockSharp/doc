@@ -62,7 +62,7 @@ Todos os parâmetros deste grupo implementam a interface [ITradeStatisticParamet
 | [TradeCountParameter](xref:StockSharp.Algo.Statistics.TradeCountParameter) | Número total de transações (apenas são contabilizadas transações com `ClosedVolume > 0`) | `int` |
 | [WinningTradesParameter](xref:StockSharp.Algo.Statistics.WinningTradesParameter) | Número de transações lucrativas (`ClosedVolume > 0` e `PnL > 0`) | `int` |
 | [LossingTradesParameter](xref:StockSharp.Algo.Statistics.LossingTradesParameter) | Número de transações perdedoras (`ClosedVolume > 0` e `PnL < 0`) | `int` |
-| [RoundtripCountParameter](xref:StockSharp.Algo.Statistics.RoundtripCountParameter) | Número de round-trips concluídos (transações de fecho com `ClosedVolume > 0`) | `int` |
+| [RoundtripCountParameter](xref:StockSharp.Algo.Statistics.RoundtripCountParameter) | Número de ciclos completos concluídos (transações de fecho com `ClosedVolume > 0`) | `int` |
 | [AverageTradeProfitParameter](xref:StockSharp.Algo.Statistics.AverageTradeProfitParameter) | Lucro médio por transação. Fórmula: `SumPnL / Count` | `decimal` |
 | [AverageWinTradeParameter](xref:StockSharp.Algo.Statistics.AverageWinTradeParameter) | Lucro médio das transações lucrativas. Apenas são consideradas transações com `PnL > 0` | `decimal` |
 | [AverageLossTradeParameter](xref:StockSharp.Algo.Statistics.AverageLossTradeParameter) | Perda média das transações perdedoras. Apenas são consideradas transações com `PnL < 0` | `decimal` |

@@ -6,7 +6,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 - **chave** - Chave.
 - **segredo** - Chave secreta.
-- **Board** - Seção para conectar (Spot, Futures).
+- **Seção** - Seção para conectar (Spot, Futures).
 - **frase-passe** - Senha administrativa.
 
 ## Conteúdo recomendado

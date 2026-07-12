@@ -51,7 +51,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Sem instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 
 				if (dates.Length == 0)
 				{
-					logs.LogWarning("no data");
+					logs.LogWarning("Sem dados.");
 					return Task.CompletedTask;
 				}
 
@@ -97,7 +97,7 @@ namespace StockSharp.Algo.Analytics
 					z[i, pair.Key] = (double)pair.Value;
 			}
 
-			panel.Draw3D(x, y, z, "Instruments", "Hours", "Volume");
+			panel.Draw3D(x, y, z, "Instrumentos", "Horas", "Volume negociado");
 
 			return Task.CompletedTask;
 		}
@@ -141,7 +141,7 @@ class chart3d_script(IAnalyticsScript):
 	):
 		# Verificar se não existem instrumentos
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Sem instrumentos.")
 			return Task.CompletedTask
 
 		x = []  # Etiquetas X para instrumentos
@@ -165,17 +165,17 @@ class chart3d_script(IAnalyticsScript):
 			if cancellation_token.IsCancellationRequested:
 				break
 
-			# Preencher etiquetas X com identificadores da security
+			# Preencher etiquetas X com identificadores do instrumento
 			x.append(to_string_id(security))
 
-			# Obter o armazenamento de candles para a security atual
+			# Obter o armazenamento de candles para o instrumento atual
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			# Obter datas disponíveis para o período especificado
 			dates = get_dates(candle_storage, from_date, to_date)
 
 			if len(dates) == 0:
-				logs.LogWarning("no data")
+				logs.LogWarning("Sem dados.")
 				return Task.CompletedTask
 
 			# Agrupar candles pela hora de abertura (truncada à hora mais próxima) e somar volumes
@@ -185,13 +185,13 @@ class chart3d_script(IAnalyticsScript):
 				hour = int(candle.OpenTime.TimeOfDay.TotalHours)
 				by_hours[hour] = by_hours.get(hour, 0) + candle.TotalVolume
 
-			# Preencher valores Z para a security atual
+			# Preencher valores Z para o instrumento atual
 			for hour, volume in by_hours.items():
 				if hour < len(y):
 					z[i][hour] = float(volume)
 
 		# Desenhar o gráfico 3D usando o painel
-		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
+		panel.Draw3D(x, y, nx.to2darray(z), "Instrumentos", "Horas", "Volume negociado")
 
 		return Task.CompletedTask
 

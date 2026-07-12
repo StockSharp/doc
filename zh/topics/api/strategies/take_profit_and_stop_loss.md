@@ -21,7 +21,7 @@ private IProtectivePositionController _posController;
 ```
 
 - `_protectiveController`：用于管理所有持仓保护的主控制器。
-- `_posController`：特定位置的控制器。
+- `_posController`：特定持仓的控制器。
 
 ### 保护初始化
 
@@ -55,9 +55,9 @@ this.WhenOwnTradeReceived()
 // 更新控制器中的持仓信息，并在需要时激活保护。
 ```
 
-这会为特定位置创建一个带有指定止盈和止损参数的控制器。
+这会为特定持仓创建一个带有指定止盈和止损参数的控制器。
 
-### 更新位置信息
+### 更新持仓信息
 
 ```cs
 var info = _posController?.Update(t.Trade.Price, t.GetPosition());
@@ -66,7 +66,7 @@ if (info is not null)
 	ActiveProtection(info.Value);
 ```
 
-这允许控制器跟踪位置的当前状态，并在必要时调整保护性指令。
+这允许控制器跟踪持仓的当前状态，并在必要时调整保护性指令。
 
 ### 检查保护的激活条件
 

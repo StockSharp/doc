@@ -62,7 +62,7 @@ Alle Parameter in dieser Gruppe implementieren die Schnittstelle [ITradeStatisti
 | [TradeCountParameter](xref:StockSharp.Algo.Statistics.TradeCountParameter) | Gesamtzahl der Trades (nur Trades mit `ClosedVolume > 0` werden gezählt) | `int` |
 | [WinningTradesParameter](xref:StockSharp.Algo.Statistics.WinningTradesParameter) | Anzahl profitabler Trades (`ClosedVolume > 0` und `PnL > 0`) | `int` |
 | [LossingTradesParameter](xref:StockSharp.Algo.Statistics.LossingTradesParameter) | Anzahl verlustbringender Trades (`ClosedVolume > 0` und `PnL < 0`) | `int` |
-| [RoundtripCountParameter](xref:StockSharp.Algo.Statistics.RoundtripCountParameter) | Anzahl abgeschlossener Roundtrips (schließende Trades mit `ClosedVolume > 0`) | `int` |
+| [RoundtripCountParameter](xref:StockSharp.Algo.Statistics.RoundtripCountParameter) | Anzahl abgeschlossener Positionszyklen (schließende Trades mit `ClosedVolume > 0`) | `int` |
 | [AverageTradeProfitParameter](xref:StockSharp.Algo.Statistics.AverageTradeProfitParameter) | Durchschnittlicher Gewinn pro Trade. Formel: `SumPnL / Count` | `decimal` |
 | [AverageWinTradeParameter](xref:StockSharp.Algo.Statistics.AverageWinTradeParameter) | Durchschnittlicher Gewinn profitabler Trades. Es werden nur Trades mit `PnL > 0` berücksichtigt | `decimal` |
 | [AverageLossTradeParameter](xref:StockSharp.Algo.Statistics.AverageLossTradeParameter) | Durchschnittlicher Verlust verlustbringender Trades. Es werden nur Trades mit `PnL < 0` berücksichtigt | `decimal` |
@@ -90,7 +90,7 @@ Alle Parameter in dieser Gruppe implementieren die Schnittstelle [IOrderStatisti
 |-------|-------------|------------|
 | [OrderCountParameter](xref:StockSharp.Algo.Statistics.OrderCountParameter) | Gesamtzahl registrierter Orders | `int` |
 | [OrderRegisterErrorCountParameter](xref:StockSharp.Algo.Statistics.OrderRegisterErrorCountParameter) | Anzahl von Fehlern bei der Order-Registrierung | `int` |
-| [OrderInsufficientFundErrorCountParameter](xref:StockSharp.Algo.Statistics.OrderInsufficientFundErrorCountParameter) | Anzahl von Fehlern wegen "insufficient funds" (Typ `InsufficientFundException`) | `int` |
+| [OrderInsufficientFundErrorCountParameter](xref:StockSharp.Algo.Statistics.OrderInsufficientFundErrorCountParameter) | Anzahl von Fehlern wegen "unzureichender Mittel" (Typ `InsufficientFundException`) | `int` |
 | [OrderCancelErrorCountParameter](xref:StockSharp.Algo.Statistics.OrderCancelErrorCountParameter) | Anzahl von Fehlern bei der Order-Stornierung | `int` |
 
 ## Latenzparameter

@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new AsterMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>".To<SecureString>(),
-	Secret = "<Your API Secret>".To<SecureString>(),
+	Key = "<APIキー>".To<SecureString>(),
+	Secret = "<APIシークレット>".To<SecureString>(),
 	Section = AsterSections.Derivatives,
 	DerivativesProtocolMode = AsterDerivativesProtocolModes.Legacy,
 };

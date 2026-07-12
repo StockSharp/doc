@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 ![API-GUI-Einstellungen Kucoin](../../../../../images/api_gui_settings_kucoin.png)
 
 - **Schlüssel** - Schlüssel.
-- **Geheimnis** - Secret.
+- **Geheimnis** - Geheimer Schlüssel.
 - **Kennphrase** - Kennphrase.
 - **Demomodus** - Verbindung zum Demo-Handel statt zum realen Handelsserver.
 - **Saldo** - Intervall für die Saldenprüfung. Erforderlich bei Ein- und Auszahlungen.

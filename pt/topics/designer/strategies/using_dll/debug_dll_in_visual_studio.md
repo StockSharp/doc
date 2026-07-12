@@ -6,7 +6,7 @@ O Visual Studio fornece um mecanismo para anexar a processos em execução usand
 
 ![Designer criação de estratégia DLL 01](../../../../images/designer_creation_strategy_dll_01.png)
 
-2. No Visual Studio, selecione **Debug -> Attach to Process**.
+2. No Visual Studio, selecione **Depurar -> Anexar ao processo**.
 
 ![Designer Depuração de um cubo DLL com Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
@@ -18,13 +18,13 @@ Se o processo estiver em execução com outra conta de utilizador, tem de marcar
 
 4. É importante que a janela **Anexar a** especifique o tipo de código que tem de ser depurado. O parâmetro predefinido **Automático** tenta determinar o tipo de código a depurar, mas nem sempre identifica corretamente o tipo de código. Para definir manualmente o tipo de código, tem de executar os seguintes passos.
 
-- No campo Attach to, clique em **Selecionar**.
+- No campo **Anexar a**, clique em **Selecionar**.
 - Na caixa de diálogo **Selecionar tipo de código**, clique no botão **Depurar estes tipos de código** e selecione os tipos para depuração.
 - Clique em OK.
 
 ![Designer Depuração de um cubo DLL com Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
 
-5. Clique no botão Attach.
+5. Clique no botão **Anexar**.
 
 6. No Visual Studio, defina pontos de interrupção no código. Se os pontos de interrupção estiverem vermelhos e preenchidos a vermelho ![Designer Depuração de um cubo DLL com Visual Studio 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png) (e o Studio estiver em modo de depuração), isso significa que foi carregada a versão exata da DLL. Se os pontos de interrupção estiverem vermelhos e preenchidos a branco ![Designer Depuração de um cubo DLL com Visual Studio 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png) (e o Studio estiver em modo de depuração), isso significa que foi carregada a versão errada da DLL.
 

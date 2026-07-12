@@ -70,7 +70,7 @@ ISubscriptionHandler<IOrderBookMessage> SubscribeOrderBook(Subscription subscrip
 
 `ISubscriptionHandler<T>` オブジェクトは、次のメソッドを提供します。
 
-### Start / Stop
+### 開始 / 停止
 
 サブスクリプションの開始と停止:
 

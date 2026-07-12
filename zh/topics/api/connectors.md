@@ -47,8 +47,8 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 // 添加用于连接 Binance 的适配器
 connector.AddAdapter<BinanceMessageAdapter>(a => 
 {
-	a.Key = "<Your API Key>";
-	a.Secret = "<Your Secret Key>";
+	a.Key = "<您的 API 访问密钥>";
+	a.Secret = "<您的秘密密钥>";
 });
 
 // 添加用于新闻的 RSS

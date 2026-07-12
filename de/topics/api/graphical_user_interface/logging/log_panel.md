@@ -1,6 +1,6 @@
-# Log-Panel
+# Protokoll-Panel
 
-[LogControl](xref:StockSharp.Xaml.LogControl) ist eine Tabelle zur Anzeige von Logmeldungen. Mit den Schaltflächen der Symbolleiste können Sie Meldungen nach verschiedenen Logging-Stufen filtern.
+[LogControl](xref:StockSharp.Xaml.LogControl) ist eine Tabelle zur Anzeige von Logmeldungen. Mit den Schaltflächen der Symbolleiste können Sie Meldungen nach verschiedenen Protokollierungsstufen filtern.
 
 ## LogControl
 
@@ -23,14 +23,14 @@ Beispielcode
 ```cs
 // Neue Instanz von LogManager erstellen
 _logManager = new LogManager();
-// .NET Tracing als Logquelle hinzufügen.
+// .NET Tracing als Protokollquelle hinzufügen.
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
-// LogControl als Loglistener hinzufügen.
+// LogControl als Protokollempfänger hinzufügen.
 _logManager.Listeners.Add(new GuiLogListener(LogControl));
 ..........................
 // Testmeldungen aus der TraceSource senden:
-Trace.TraceInformation("Info  test message");
-Trace.TraceWarning("Warning test message");
+Trace.TraceInformation("Infotestmeldung");
+Trace.TraceWarning("Warnungstestmeldung");
 Trace.TraceError("Fehlertestmeldung");
 
 ```

@@ -26,7 +26,7 @@ Parámetros disponibles:
 - --tm - (opcional) timeout de la estrategia.
 - --memory - (opcional) tamaño máximo de memoria (en megabytes).
 - --cpu - (opcional) máscara del procesador.
-- -l - (opcional) nivel de logging (Info, Debug, Error, Warning, Verbose).
+- -l - (opcional) nivel de registro (Info, Debug, Error, Warning, Verbose).
 
 Inicio de **Runner** para optimización:
 

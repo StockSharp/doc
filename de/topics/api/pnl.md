@@ -62,7 +62,7 @@ Wenn die Position beispielsweise +2 war und ein Trade über -5 Kontrakte eingetr
 | `UseTick` | `true` | Tick-Trades verwenden. |
 | `UseOrderBook` | `false` | Orderbuch verwenden (bestes Bid/Ask). |
 | `UseLevel1` | `false` | Level1-Daten verwenden. |
-| `UseOrderLog` | `false` | Order-Log verwenden. |
+| `UseOrderLog` | `false` | Orderprotokoll verwenden. |
 | `UseCandles` | `true` | Candles verwenden (Schlusskurs). |
 
 ## Integration über Adapter

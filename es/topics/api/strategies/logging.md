@@ -1,18 +1,18 @@
-# Logging en estrategias
+# Registro en estrategias
 
 En StockSharp, la clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) hereda de [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver), lo que permite usar herramientas integradas para registrar todas las acciones y eventos que ocurren durante el funcionamiento de una estrategia de trading.
 
-## Niveles de logging
+## Niveles de registro
 
-StockSharp admite los siguientes niveles de logging (enumerados en orden de importancia creciente):
+StockSharp admite los siguientes niveles de registro (enumerados en orden de importancia creciente):
 
-1. Verbose - el nivel de logging más detallado para trazas
+1. Verbose - el nivel de registro más detallado para trazas
 2. Debug - mensajes para depuración
 3. Info - mensajes informativos habituales
 4. Warning - advertencias sobre posibles problemas
 5. Error - mensajes de error
 
-## Métodos de logging en Strategy
+## Métodos de registro en Strategy
 
 La estrategia proporciona los siguientes métodos para escribir mensajes en el log:
 
@@ -108,20 +108,20 @@ catch (Exception ex)
 }
 ```
 
-## Configuración del nivel de logging
+## Configuración del nivel de registro
 
 La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contiene una propiedad [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) que determina qué mensajes se escribirán en el log:
 
 ```cs
-// Establecer el nivel de logging para la estrategia
+// Establecer el nivel de registro para la estrategia
 strategy.LogLevel = LogLevels.Info;
 ```
 
-Con el nivel de logging seleccionado, solo se registrarán los mensajes de ese nivel y de niveles superiores. Por ejemplo, si se establece `LogLevels.Info`, los mensajes Verbose y Debug se ignorarán.
+Con el nivel de registro seleccionado, solo se registrarán los mensajes de ese nivel y de niveles superiores. Por ejemplo, si se establece `LogLevels.Info`, los mensajes Verbose y Debug se ignorarán.
 
 ## Parámetro LogLevel
 
-Para configurar cómodamente el nivel de logging en el constructor de la estrategia, puede agregar un parámetro:
+Para configurar cómodamente el nivel de registro en el constructor de la estrategia, puede agregar un parámetro:
 
 ```cs
 public class SmaStrategy : Strategy
@@ -146,7 +146,7 @@ public class SmaStrategy : Strategy
 
 ## Ejemplos de uso en una estrategia real
 
-### Logging del inicio y parada de la estrategia
+### Registro del inicio y la parada de la estrategia
 
 ```cs
 protected override void OnStarted2(DateTime time)
@@ -168,13 +168,13 @@ protected override void OnStopped()
 }
 ```
 
-### Logging de operaciones
+### Registro de operaciones
 
 ```cs
 protected override void OnNewMyTrade(MyTrade trade)
 {
 	LogInfo("{0} {1} {2} al precio {3}. Volumen: {4}",
-		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
+		trade.Order.Direction == Sides.Buy ? "Comprado" : "Vendido",
 		trade.Order.Security.Code,
 		trade.Order.Type,
 		trade.Trade.Price,
@@ -184,7 +184,7 @@ protected override void OnNewMyTrade(MyTrade trade)
 }
 ```
 
-### Logging de errores de registro de órdenes
+### Registro de errores al registrar órdenes
 
 ```cs
 protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
@@ -196,9 +196,9 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 }
 ```
 
-## Conexión de listeners de log
+## Conexión de receptores de registro
 
-Para recibir mensajes de una estrategia, conecte listeners mediante [LogManager](xref:Ecng.Logging.LogManager):
+Para recibir mensajes de una estrategia, conecte receptores mediante [LogManager](xref:Ecng.Logging.LogManager):
 
 ```cs
 var logManager = new LogManager();
@@ -216,15 +216,15 @@ logManager.Listeners.Add(emailListener);
 logManager.Sources.Add(strategy);
 ```
 
-## Visualización de logs
+## Visualización de registros
 
 Los mensajes escritos en el log de la estrategia se pueden ver:
 
-1. En el programa [Designer](../../designer.md), en el panel "Logs"
+1. En el programa [Designer](../../designer.md), en el panel "Registros"
 2. En archivos de log, si [FileLogListener](xref:Ecng.Logging.FileLogListener) está configurado
 3. En la interfaz de usuario mediante [LogControl](xref:StockSharp.Xaml.LogControl), si se usa [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)
 
 ## Ver también
 
-[Registro de logs](../logging.md)
+[Registro](../logging.md)
 [Componente LogControl](../graphical_user_interface/logging/log_panel.md)

@@ -1,6 +1,6 @@
 # インジケーター
 
-"Indicator" スクリプトは、StockSharp プラットフォーム内でテクニカル分析インジケーターを扱う方法を示すことを目的としています。ユーザーは履歴データを読み込み、さまざまなインジケーターを適用し、その結果をチャートに表示できます。このアプローチは、市場トレンドの分析と、情報に基づく取引判断に役立ちます。
+"インジケーター" スクリプトは、StockSharp プラットフォーム内でテクニカル分析インジケーターを扱う方法を示すことを目的としています。ユーザーは履歴データを読み込み、さまざまなインジケーターを適用し、その結果をチャートに表示できます。このアプローチは、市場トレンドの分析と、情報に基づく取引判断に役立ちます。
 
 ![インジケーター](../../../../images/hydra_analytics_indicator.png)
 
@@ -36,7 +36,7 @@
 2. **インジケーターの適用**: データに適用するインジケーターを選択し、パラメーターを設定します。
 3. **結果の表示**: 分析のため、履歴データとインジケーターをチャート上に可視化します。
 
-"Indicator" スクリプトは、金融市場を詳細に分析するための強力なツールを提供し、トレーダーやアナリストがこれらのインジケーターを使用して効果的な取引戦略を開発できるようにします。
+"インジケーター" スクリプトは、金融市場を詳細に分析するための強力なツールを提供し、トレーダーやアナリストがこれらのインジケーターを使用して効果的な取引戦略を開発できるようにします。
 
 ## C# のスクリプトコード
 
@@ -52,7 +52,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("銘柄がありません。");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// 系列をチャートに描画
-				candleChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values);
+				candleChart.Append($"{security} (終値)", candlesSeries.Keys, candlesSeries.Values);
 				indicatorChart.Append($"{security} (ROC)", indicatorSeries.Keys, indicatorSeries.Values);
 			}
 
@@ -117,7 +117,7 @@ from indicator_extensions import *
 class indicator_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("銘柄がありません。")
 			return Task.CompletedTask
 
 		# ローソク足とインジケーター系列用に 2 つのペインを作成
@@ -151,7 +151,7 @@ class indicator_script(IAnalyticsScript):
 
 			# 系列をチャートに描画
 			candle_chart.Append(
-				f"{security} (close)",
+				f"{security} (終値)",
 				list(candles_series.keys()),
 				list(candles_series.values())
 			)

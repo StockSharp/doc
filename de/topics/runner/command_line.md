@@ -18,8 +18,8 @@ Verfügbare Parameter:
 - -h - Pfad zum Verzeichnis mit historischen Daten. Bei Verwendung des Servermodus [server](../hydra_server.md) kann dies eine Netzwerkadresse sein.
 - --hl - (optional) Login, der im Servermodus [server](../hydra_server.md) verwendet wird.
 - --hp - (optional) Passwort, das im Servermodus [server](../hydra_server.md) verwendet wird.
-- --hf - Startdatum für das Testing im Format YYYYMMDD.
-- --ht - Enddatum für das Testing im Format YYYYMMDD.
+- --hf - Startdatum für den Test im Format YYYYMMDD.
+- --ht - Enddatum für den Test im Format YYYYMMDD.
 - -f - (optional) Speicherformat (Binary oder Csv).
 - --sec - (optional) [Instrumentenkennung](../api/instruments/instrument_identifier.md).
 - -r - (optional) Format des Testergebnisberichts (json, xml, csv).

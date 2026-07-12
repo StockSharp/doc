@@ -34,7 +34,7 @@ public class CommentStrategy : Strategy
 }
 ```
 
-`Name` 値を使用し、戦略名が "SMA Crossover" の場合、すべての注文のコメントは "SMA Crossover" になります。これにより、取引ジャーナルでこの戦略の注文をフィルターできます。
+`Name` 値を使用し、戦略名が "SMAクロス" の場合、すべての注文のコメントは "SMAクロス" になります。これにより、取引ジャーナルでこの戦略の注文をフィルターできます。
 
 ## WorkingTime -- 稼働スケジュール
 

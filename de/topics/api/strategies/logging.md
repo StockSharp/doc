@@ -1,20 +1,20 @@
-# Logging in Strategien
+# Protokollierung in Strategien
 
 In StockSharp erbt die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) von [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver). Dadurch können integrierte Werkzeuge verwendet werden, um alle Aktionen und Ereignisse zu protokollieren, die während der Ausführung einer Handelsstrategie auftreten.
 
-## Logging-Stufen
+## Protokollierungsstufen
 
-StockSharp unterstützt die folgenden Logging-Stufen, aufgelistet in aufsteigender Wichtigkeit:
+StockSharp unterstützt die folgenden Protokollierungsstufen, aufgelistet in aufsteigender Wichtigkeit:
 
-1. Verbose - die detaillierteste Logging-Stufe für Tracing
+1. Verbose - die detaillierteste Protokollierungsstufe für Tracing
 2. Debug - Meldungen für die Fehlersuche
 3. Info - normale Informationsmeldungen
 4. Warning - Warnungen vor potenziellen Problemen
 5. Error - Fehlermeldungen
 
-## Logging-Methoden in Strategy
+## Protokollierungsmethoden in Strategy
 
-Die Strategie stellt die folgenden Methoden zum Schreiben von Meldungen in das Log bereit:
+Die Strategie stellt die folgenden Methoden zum Schreiben von Meldungen in das Protokoll bereit:
 
 ### LogVerbose
 
@@ -108,20 +108,20 @@ catch (Exception ex)
 }
 ```
 
-## Konfigurieren der Logging-Stufe
+## Konfigurieren der Protokollierungsstufe
 
-Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) enthält die Eigenschaft [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel), die bestimmt, welche Meldungen in das Log geschrieben werden:
+Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) enthält die Eigenschaft [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel), die bestimmt, welche Meldungen in das Protokoll geschrieben werden:
 
 ```cs
-// Logging-Stufe für die Strategie festlegen
+// Protokollierungsstufe für die Strategie festlegen
 strategy.LogLevel = LogLevels.Info;
 ```
 
-Bei der ausgewählten Logging-Stufe werden nur Meldungen dieser Stufe und höherer Stufen aufgezeichnet. Wenn beispielsweise `LogLevels.Info` gesetzt ist, werden Verbose- und Debug-Meldungen ignoriert.
+Bei der ausgewählten Protokollierungsstufe werden nur Meldungen dieser Stufe und höherer Stufen aufgezeichnet. Wenn beispielsweise `LogLevels.Info` gesetzt ist, werden Verbose- und Debug-Meldungen ignoriert.
 
 ## LogLevel-Parameter
 
-Für eine bequeme Konfiguration der Logging-Stufe im Strategiekonstruktor können Sie einen Parameter hinzufügen:
+Für eine bequeme Konfiguration der Protokollierungsstufe im Strategiekonstruktor können Sie einen Parameter hinzufügen:
 
 ```cs
 public class SmaStrategy : Strategy
@@ -131,7 +131,7 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
-					.SetDisplay("Logging-Stufe", "Detailstufe der Logmeldung", "Logging-Einstellungen");
+					.SetDisplay("Protokollierungsstufe", "Detailstufe der Logmeldung", "Protokollierungseinstellungen");
 	}
 
 	public override LogLevels LogLevel
@@ -196,9 +196,9 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 }
 ```
 
-## Log-Listener verbinden
+## Protokoll-Empfänger verbinden
 
-Um Meldungen von einer Strategie zu empfangen, verbinden Sie Listener über [LogManager](xref:Ecng.Logging.LogManager):
+Um Meldungen von einer Strategie zu empfangen, verbinden Sie Empfänger über [LogManager](xref:Ecng.Logging.LogManager):
 
 ```cs
 var logManager = new LogManager();
@@ -212,15 +212,15 @@ var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.c
 emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
 logManager.Listeners.Add(emailListener);
 
-// Strategie als Log-Quelle hinzufügen
+// Strategie als Protokollquelle hinzufügen
 logManager.Sources.Add(strategy);
 ```
 
-## Logs anzeigen
+## Protokolle anzeigen
 
 Meldungen, die in das Strategielog geschrieben wurden, können angezeigt werden:
 
-1. Im Programm [Designer](../../designer.md) im Bereich "Logs"
+1. Im Programm [Designer](../../designer.md) im Bereich "Protokolle"
 2. In Logdateien, wenn [FileLogListener](xref:Ecng.Logging.FileLogListener) konfiguriert ist
 3. In der Benutzeroberfläche über [LogControl](xref:StockSharp.Xaml.LogControl), wenn [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) verwendet wird
 

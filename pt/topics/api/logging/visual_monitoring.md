@@ -1,6 +1,6 @@
 # Monitorização visual
 
-Para simplificar a monitorização, pode utilizar o componente especial [Monitor](xref:StockSharp.Xaml.Monitor). Consulte também [Componentes visuais de logging](../graphical_user_interface/logging.md).
+Para simplificar a monitorização, pode utilizar o componente especial [Monitor](xref:StockSharp.Xaml.Monitor). Consulte também [Componentes visuais de registo](../graphical_user_interface/logging.md).
 
 ![painel de registo GUI](../../../images/gui_logcontrol.png)
 
@@ -24,4 +24,4 @@ O aninhamento das fontes é mostrado sob a forma de uma árvore. Cada nó pai co
 
 ## Conteúdo recomendado
 
-[Componentes visuais de logging](../graphical_user_interface/logging.md)
+[Componentes visuais de registo](../graphical_user_interface/logging.md)

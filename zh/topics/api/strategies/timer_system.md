@@ -50,10 +50,10 @@ ITimerHandler StartTimer(TimeSpan interval, Action callback);
 ```csharp
 var timer = CreateTimer(TimeSpan.FromMinutes(1), MyCallback);
 
-// Start
+// 启动
 timer.Start();
 
-// Stop
+// 停止
 timer.Stop();
 
 // 更改间隔

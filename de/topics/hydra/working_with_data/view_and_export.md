@@ -2,7 +2,7 @@
 
 Die empfangenen [Hydra](../../hydra.md)-Daten können in speziellen Panels angezeigt werden.
 
-Klicken Sie dazu auf der Registerkarte **Allgemein** auf eine der folgenden Schaltflächen: [Ticks](view_and_export/ticks.md), [Orderbücher](view_and_export/order_books.md), [Kerzengenerierung](candles_generation.md), [Order-Log](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [Nachrichten](view_and_export/news.md), [Transaktionen](view_and_export/transactions.md), [Optionsdesk](view_and_export/option_desk.md), [Indikatoren](view_and_export/indicators.md), [Positionen](view_and_export/positions.md).
+Klicken Sie dazu auf der Registerkarte **Allgemein** auf eine der folgenden Schaltflächen: [Ticks](view_and_export/ticks.md), [Orderbücher](view_and_export/order_books.md), [Kerzengenerierung](candles_generation.md), [Orderprotokoll](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [Nachrichten](view_and_export/news.md), [Transaktionen](view_and_export/transactions.md), [Optionsdesk](view_and_export/option_desk.md), [Indikatoren](view_and_export/indicators.md), [Positionen](view_and_export/positions.md).
 
 Alternativ klicken Sie mit der rechten Maustaste auf den erforderlichen Datentyp, wie in der Abbildung gezeigt, oder doppelklicken Sie auf den erforderlichen Datentyp.
 

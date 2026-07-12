@@ -4,15 +4,15 @@
 
 El cubo se usa para obtener una lista de opciones por un filtro especificado.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Instrumento** – instrumento, el activo subyacente.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Opciones** - lista de opciones por activo subyacente.
 
@@ -20,7 +20,7 @@ Sockets de salida
 
 Parámetros
 
-- **Tipo de opción** – el tipo de opción puede ser Call option o Put option.
+- **Tipo de opción** – el tipo de opción puede ser opción de compra (call) u opción de venta (put).
 - **Fecha de vencimiento** - fecha de vencimiento de la opción.
 - **Strike (menor)** – desplazamiento a la izquierda (menor) desde el strike central. Si el precio no está establecido, se usarán todos los strikes con un valor central inferior. El desplazamiento se calcula en pasos de strike; por ejemplo, si el paso de strike es 500 u.m., un desplazamiento igual a 3 será 1.500 u.m.
 - **Strike (mayor)** – desplazamiento a la derecha (mayor) desde el strike central. Si el precio no está establecido, se usarán todos los strikes con un valor central mayor. El desplazamiento se calcula en pasos de strike; por ejemplo, si el paso de strike es 500 u.m., un desplazamiento igual a 3 será 1.500 u.m.

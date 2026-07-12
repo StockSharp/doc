@@ -34,7 +34,7 @@ public class CommentStrategy : Strategy
 }
 ```
 
-使用 `Name` 值和策略名称“SMA Crossover”，每个订单都会收到评论“SMA Crossover”，从而让您可以在交易日志中筛选该策略的订单。
+使用 `Name` 值和策略名称“SMA 交叉”，每个订单都会收到评论“SMA 交叉”，从而让您可以在交易日志中筛选该策略的订单。
 
 ## 工作时间 -- 工作安排
 

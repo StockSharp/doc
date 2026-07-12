@@ -1,6 +1,6 @@
 # Indicators
 
-In the panel that appears, select the instrument, time range of interest, specify the data type from which the indicator will be built, set the [indicator](../../../api/indicators/list_of_indicators.md) and its parameters, and then click the ![hydra find](../../../../images/hydra_find.png) button: :
+In the panel that appears, select the instrument, time range of interest, specify the data type from which the indicator will be built, set the [indicator](../../../api/indicators/list_of_indicators.md) and its parameters, and then click the ![hydra find](../../../../images/hydra_find.png) button:
 
 ![hydra export indicator](../../../../images/hydra_export_indicator.png)
 

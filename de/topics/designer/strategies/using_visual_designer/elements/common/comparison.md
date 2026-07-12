@@ -4,12 +4,12 @@
 
 Ein Element wird verwendet, um zwei Eingabeobjekte zu vergleichen.
 
-## Eingehende Sockets
+## Eingehende Anschlüsse
 
 - **Wert 1** – Werte, die verglichen werden können (zum Beispiel ein numerischer Wert, eine Zeichenfolge, ein Indikatorwert usw.).
 - **Wert 2** – Werte, die verglichen werden können (zum Beispiel ein numerischer Wert, eine Zeichenfolge, ein Indikatorwert usw.).
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **Markierung** – der Flag-Wert (zeigt den Zustand an und hat zwei Werte: oben (true) und unten (false)).
 

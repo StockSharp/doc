@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-Las estrategias en StockSharp admiten un sistema de temporizadores integrado que permite ejecutar acciones en intervalos de tiempo especificados. Los temporizadores se basan en el mecanismo `WhenIntervalElapsed` del conector y funcionan correctamente tanto en trading real como durante backtesting (usando el tiempo virtual del emulador).
+Las estrategias en StockSharp admiten un sistema de temporizadores integrado que permite ejecutar acciones en intervalos de tiempo especificados. Los temporizadores se basan en el mecanismo `WhenIntervalElapsed` del conector y funcionan correctamente tanto en trading real como durante las pruebas históricas (usando el tiempo virtual del emulador).
 
 Los temporizadores son cómodos para:
 

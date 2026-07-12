@@ -7,8 +7,8 @@ El siguiente código muestra cómo inicializar [BitalongMessageAdapter](xref:Sto
 			...
 			var messageAdapter = new BitalongMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Su clave API>".To<SecureString>(),
+				Secret = "<Su secreto API>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...

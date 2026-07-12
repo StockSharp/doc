@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 Wichtige Felder:
 
 - **Schlüssel** - API-Schlüssel.
-- **Geheimnis** - API-Secret.
+- **Geheimnis** - API-Geheimnis.
 - **Clearing-Konto** - Wert des Clearing-Kontos.
 - **Kennphrase** - Wert der Kennphrase.
 - **Handelsbereich** - Handelsbereich (`Spot` oder `Derivatives`).

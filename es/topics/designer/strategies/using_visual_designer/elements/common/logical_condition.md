@@ -4,12 +4,12 @@
 
 Este elemento se usa para calcular una fórmula lógica con dos argumentos.
 
-## Sockets de entrada
+## Conectores de entrada
 
 - **Indicador** – valor de bandera (caracteriza el estado y tiene dos valores: levantada (true) y bajada (false)).
 - **Indicador** – valor de bandera (caracteriza el estado y tiene dos valores: levantada (true) y bajada (false)).
 
-## Sockets de salida
+## Conectores de salida
 
 - **Indicador** – valor de bandera (caracteriza el estado y tiene dos valores: levantada (true) y bajada (false)).
 

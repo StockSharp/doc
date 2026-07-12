@@ -438,13 +438,13 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 }
 ```
 
-## Abonnieren des Order-Logs
+## Abonnieren des Orderprotokolls
 
-Das Order-Log sind detaillierte Informationen über alle Änderungen im Orderbuch, einschließlich des Hinzufügens, Änderns und Löschens von Orders. Diese Daten sind spezifisch und werden nicht von allen Datenquellen bereitgestellt. Coinbase unterstützt beispielsweise die Bereitstellung eines Order-Logs nicht.
+Das Orderprotokoll enthält detaillierte Informationen über alle Änderungen im Orderbuch, einschließlich des Hinzufügens, Änderns und Löschens von Orders. Diese Daten sind spezifisch und werden nicht von allen Datenquellen bereitgestellt. Coinbase unterstützt beispielsweise die Bereitstellung eines Orderprotokolls nicht.
 
-Um ein Abonnement eines Order-Logs in einem Adapter zu implementieren, wird die Methode **OnOrderLogSubscriptionAsync** verwendet. Diese Methode wird aufgerufen, wenn eine Nachricht [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) mit dem Datentyp [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) empfangen wird.
+Um ein Abonnement eines Orderprotokolls in einem Adapter zu implementieren, wird die Methode **OnOrderLogSubscriptionAsync** verwendet. Diese Methode wird aufgerufen, wenn eine Nachricht [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) mit dem Datentyp [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) empfangen wird.
 
-Nachfolgend finden Sie ein Beispiel für die Implementierung dieser Methode aus dem Connector [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), der das Order-Log unterstützt:
+Nachfolgend finden Sie ein Beispiel für die Implementierung dieser Methode aus dem Connector [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), der das Orderprotokoll unterstützt:
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
@@ -459,7 +459,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 	{
 		if (!mdMsg.IsHistoryOnly())
 		{
-			// Orderlog in Echtzeit abonnieren
+			// Orderprotokoll in Echtzeit abonnieren
 			await _pusherClient.SubscribeOrderLog(symbol, cancellationToken);
 		}
 
@@ -467,17 +467,17 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
-		// Orderlog abbestellen
+		// Orderprotokoll abbestellen
 		await _pusherClient.UnSubscribeOrderLog(symbol, cancellationToken);
 }
 ```
 
-Bei der Verarbeitung von Order-Log-Daten, die von der Börse empfangen werden, wird üblicherweise eine separate Methode verwendet, die die empfangenen Daten in Nachrichten [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) vom Typ [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog) konvertiert:
+Bei der Verarbeitung von Orderprotokolldaten, die von der Börse empfangen werden, wird üblicherweise eine separate Methode verwendet, die die empfangenen Daten in Nachrichten [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) vom Typ [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog) konvertiert:
 
 ```cs
 private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, Order order, CancellationToken cancellationToken)
 {
-	// Nachricht mit Informationen über einen neuen Orderlog-Eintrag erstellen und senden
+	// Nachricht mit Informationen über einen neuen Orderprotokolleintrag erstellen und senden
 	await SendOutMessageAsync(new ExecutionMessage
 	{
 		DataTypeEx = DataType.OrderLog,

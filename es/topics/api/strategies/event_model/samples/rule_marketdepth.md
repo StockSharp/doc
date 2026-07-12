@@ -84,5 +84,5 @@ protected override void OnStarted2(DateTime time)
 
 - Demuestra distintas formas de crear y aplicar reglas en StockSharp
 - Usa suscripción a operaciones y libros de órdenes
-- Muestra un ejemplo de logging de información en una estrategia mediante el método `LogInfo`
+- Muestra un ejemplo de registro de información en una estrategia mediante el método `LogInfo`
 - Ilustra el uso de `Once()` para limitar la activación de reglas

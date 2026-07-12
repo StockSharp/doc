@@ -26,15 +26,15 @@ private void OnNewsReceived(Subscription subscription, News news)
 		return;
 
 	// Processar a notícia recebida
-	Console.WriteLine($"News: {news.Id}");
-	Console.WriteLine($"Headline: {news.Headline}");
-	Console.WriteLine($"Source: {news.Source}");
-	Console.WriteLine($"Time: {news.ServerTime}");
-	Console.WriteLine($"URL: {news.Url}");
+	Console.WriteLine($"Notícia: {news.Id}");
+	Console.WriteLine($"Título: {news.Headline}");
+	Console.WriteLine($"Fonte: {news.Source}");
+	Console.WriteLine($"Hora: {news.ServerTime}");
+	Console.WriteLine($"Ligação: {news.Url}");
 
 	// Se existir texto da notícia
 	if (!string.IsNullOrEmpty(news.Story))
-		Console.WriteLine($"Story: {news.Story}");
+		Console.WriteLine($"Texto: {news.Story}");
 
 	// Se a notícia estiver relacionada com instrumentos específicos
 	if (news.SecurityId != null)
@@ -117,8 +117,8 @@ var connector = new Connector();
 // Adicionar o adaptador principal para ligação à Binance
 var binanceAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>",
-	Secret = "<Your Secret Key>",
+	Key = "<A sua chave de API>",
+	Secret = "<A sua chave secreta>",
 };
 connector.Adapter.InnerAdapters.Add(binanceAdapter);
 

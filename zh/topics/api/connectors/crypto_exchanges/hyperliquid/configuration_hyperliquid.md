@@ -17,5 +17,5 @@
 
 - [Hyperliquid API](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api)
 - [信息端点](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/info-endpoint)
-- [交换端点](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint)
+- [交易端点](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/exchange-endpoint)
 - [WebSocket](https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/api/websocket)

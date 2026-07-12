@@ -24,21 +24,21 @@ StockSharp 支持处理所有主要类型的金融工具：
 - **ETF** - 交易型开放式指数基金
 - **指数** - 市场或行业状况的计算指标
 
-## 器械篮
+## 交易品种篮
 
 除了常规交易品种外，StockSharp 还实现了用于处理交易品种组合的特殊类：
 
-- [指数交易品种](xref:StockSharp.Algo.IndexSecurity) - 一种基于基础工具的指数的工具
-- [加权指数交易品种](xref:StockSharp.Algo.WeightedIndexSecurity) - 每个工具都有权重系数的指数
-- [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) - 用于操作一系列期货合约的连续工具
+- [指数交易品种](xref:StockSharp.Algo.IndexSecurity) - 一种基于标的交易品种的指数交易品种
+- [加权指数交易品种](xref:StockSharp.Algo.WeightedIndexSecurity) - 每个交易品种都有权重系数的指数
+- [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) - 用于操作一系列期货合约的连续交易品种
 
-这些类允许您创建复合工具，并以与常规工具相同的方式使用它们，包括接收汇总的市场数据、计算统计数据以及执行交易操作。
+这些类允许您创建复合交易品种，并以与常规交易品种相同的方式使用它们，包括接收汇总的市场数据、计算统计数据以及执行交易操作。
 
 ## 处理交易品种信息
 
 StockSharp 提供了用于处理金融工具信息的强大工具：
 
-- **工具搜索** - 按各种条件（代码、名称、类别）
+- **交易品种搜索** - 按各种条件（代码、名称、类别）
 - **筛选** - 根据指定参数选择交易品种
 - **存储** - 将交易品种信息保存到本地或远程存储
 - **正在获取交易所信息** - 正在从交易所加载详细信息

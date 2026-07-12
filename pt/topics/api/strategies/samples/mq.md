@@ -90,7 +90,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Parent = this
 	};
 
-	// Subscrever eventos do processador para logging
+	// Subscrever eventos do processador para registo
 	_quotingProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Ordem {order.TransactionId} registada ao preço {order.Price}");
 
@@ -143,6 +143,6 @@ protected override void OnStopped()
 - Utiliza o processador de cotação moderno em vez das estratégias de cotação legadas
 - Responde de forma adaptativa a alterações de posição ao mudar a direção da cotação
 - Suporta a configuração de vários parâmetros de cotação (tipo de preço, desvio, desvio mínimo)
-- Inclui logging detalhado dos eventos do processador de cotação
+- Inclui registo detalhado dos eventos do processador de cotação
 - Gere corretamente recursos ao parar a estratégia e ao criar novos processadores
 - Suporta trabalho com diferentes tipos de preços de mercado (Following, Best, Opposite, etc.)

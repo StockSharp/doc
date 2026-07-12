@@ -30,8 +30,8 @@ public class MyOrderCondition : OrderCondition
 
 StockSharp は、特定の種類の注文条件向けにいくつかのインターフェイスを定義しています。
 
-- [ITakeProfitOrderCondition](xref:StockSharp.Messages.ITakeProfitOrderCondition) - Take-Profit 条件を持つ注文用
-- [IStopLossOrderCondition](xref:StockSharp.Messages.IStopLossOrderCondition) - Stop-Loss 条件を持つ注文用
+- [ITakeProfitOrderCondition](xref:StockSharp.Messages.ITakeProfitOrderCondition) - テイクプロフィット条件を持つ注文用
+- [IStopLossOrderCondition](xref:StockSharp.Messages.IStopLossOrderCondition) - ストップロス条件を持つ注文用
 - [IWithdrawOrderCondition](xref:StockSharp.Messages.IWithdrawOrderCondition) - 出金注文用
 - [IRepoOrderCondition](xref:StockSharp.Messages.IRepoOrderCondition) - REPO 注文用
 - [INtmOrderCondition](xref:StockSharp.Messages.INtmOrderCondition) - 相対取引モード (NDM) の注文用
@@ -53,7 +53,7 @@ public class MyWithdrawCondition : BaseWithdrawOrderCondition
 
 ## CoinbaseOrderCondition
 
-Coinbase はプログラムによる資産出金をサポートしているため、`CoinbaseOrderCondition` クラスは `BaseWithdrawOrderCondition` から継承されています。さらに、Stop-Loss 注文で使用できるようにするため、`IStopLossOrderCondition` インターフェイスを実装しています。
+Coinbase はプログラムによる資産出金をサポートしているため、`CoinbaseOrderCondition` クラスは `BaseWithdrawOrderCondition` から継承されています。さらに、ストップロス注文で使用できるようにするため、`IStopLossOrderCondition` インターフェイスを実装しています。
 
 ```cs
 [Serializable]

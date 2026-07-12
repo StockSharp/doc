@@ -185,7 +185,7 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 	
 	if (string.IsNullOrWhiteSpace(searchText))
 	{
-		MessageBox.Show("Enter a search criterion");
+		MessageBox.Show("Introduzca un criterio de búsqueda");
 		return;
 	}
 	

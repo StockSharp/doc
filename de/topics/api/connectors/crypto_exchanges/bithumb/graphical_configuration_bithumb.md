@@ -9,7 +9,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Saldo** - Intervall der Guthabenprüfung. Erforderlich bei Einzahlungs- und Auszahlungsvorgängen.
 - **Verbindungsprüfung** - Intervall der Serverüberprüfung, um zu verfolgen, dass die Verbindung aktiv ist. Standardmäßig gleich 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Verfolgung von Verbindungen mit den Einstellungen des Handelssystems. ([Wiederverbindungseinstellungen](../../reconnection_settings.md))
-- **IsPrime** - IsPrime
+- **Prime-Kontomodus** - Prime-Kontomodus verwenden.
 
 ## Empfohlener Inhalt
 

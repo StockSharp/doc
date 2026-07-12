@@ -4,11 +4,11 @@
 
 Dieser Block wird zur Berechnung von Indikatorwerten verwendet.
 
-## Eingehende Sockets
+## Eingehende Anschlüsse
 
 - **Beliebige Daten** – ein bestimmter Datentyp, auf dessen Grundlage der ausgewählte Indikator berechnet werden soll (je nach Indikator kann dies ein numerischer Wert, eine Kerze usw. sein).
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **Indikator** – der berechnete Indikatorwert, der zur Anzeige im Chart-Panel oder für weitere Berechnungen verwendet werden kann.
 

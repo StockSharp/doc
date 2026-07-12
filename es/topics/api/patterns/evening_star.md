@@ -19,7 +19,7 @@ Estrella vespertina se considera una señal fuerte de una posible reversión de 
 - La segunda vela (estrella) muestra debilitamiento de la presión alcista e incertidumbre en el mercado.
 - La tercera vela demuestra el regreso de los vendedores y un cambio de control de alcistas a bajistas.
 - Cuanto más profundamente penetre la tercera vela en el cuerpo de la primera, más fuerte será la señal de reversión.
-- Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Evening Doji Star" y se considera una señal aún más fuerte.
+- Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Estrella doji vespertina" y se considera una señal aún más fuerte.
 
 ### Estrategias de trading
 

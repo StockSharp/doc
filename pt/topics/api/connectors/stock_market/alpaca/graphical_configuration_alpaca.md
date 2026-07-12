@@ -5,7 +5,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 ![Configurações da API GUI Alpaca](../../../../../images/api_gui_settings_alpaca.png)
 
 - **chave** - Chave.
-- **segredo** - Secret.
+- **segredo** - segredo da API.
 - **Demonstração** - Modo sandbox.
 
 ## Ver também

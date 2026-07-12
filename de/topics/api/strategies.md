@@ -18,13 +18,13 @@ StockSharp stellt eine leistungsfähige Infrastruktur zum Erstellen, Testen und 
 
 - [Strategieparameter](strategies/parameters.md) - Anleitung zur Arbeit mit Strategieparametern über [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1). Beschreibt, wie konfigurierbare Parameter erstellt, ihre Anzeige in der GUI festgelegt und sie in der Optimierung verwendet werden.
 
-- [Logging in Strategien](strategies/logging.md) - Anleitung zur Verwendung des Logging-Mechanismus in Strategien zur Nachverfolgung und Fehlersuche bei der Algorithmusausführung.
+- [Protokollierung in Strategien](strategies/logging.md) - Anleitung zur Verwendung des Protokollierungsmechanismus in Strategien zur Nachverfolgung und Fehlersuche bei der Algorithmusausführung.
 
 ### Erweiterte Funktionen
 
-- [Kompatibilität von Strategieplattformen](strategies/compatibility.md) - Empfehlungen zum Erstellen von Strategien, die mit verschiedenen StockSharp-Plattformen kompatibel sind: [Designer](../designer.md), [Shell](../shell.md), [Runner](../runner.md) und Cloud-Testing.
+- [Kompatibilität von Strategieplattformen](strategies/compatibility.md) - Empfehlungen zum Erstellen von Strategien, die mit verschiedenen StockSharp-Plattformen kompatibel sind: [Designer](../designer.md), [Shell](../shell.md), [Runner](../runner.md) und Cloud-Tests.
 
-- [High-Level-APIs in Strategien](strategies/high_level_api.md) - Beschreibung von High-Level-Methoden, die die Arbeit mit Abonnements, Indikatoren, Charts und Positionsschutz vereinfachen. Erläutert, wie saubererer Code geschrieben wird, indem der Fokus auf der Handelslogik liegt.
+- [APIs auf höherer Ebene in Strategien](strategies/high_level_api.md) - Beschreibung von Methoden auf höherer Ebene, die die Arbeit mit Abonnements, Indikatoren, Charts und Positionsschutz vereinfachen. Erläutert, wie saubererer Code geschrieben wird, indem der Fokus auf der Handelslogik liegt.
 
 - [Arbeiten mit Charts in Strategien](strategies/chart.md) - Anleitung zur Visualisierung von Strategiedaten in einem Chart. Erläutert den Zugriff auf den Chart, das Erstellen von Bereichen, das Hinzufügen von Elementen und die Darstellung von Daten.
 
@@ -52,7 +52,7 @@ Um mit der Entwicklung Ihrer eigenen Strategie zu beginnen, wird empfohlen:
 
 5. Prüfen Sie den Abschnitt [Strategieparameter](strategies/parameters.md), um die Mechanismen der Strategiekonfiguration kennenzulernen.
 
-6. Machen Sie sich mit dem Abschnitt [High-Level-APIs in Strategien](strategies/high_level_api.md) vertraut, um Strategiecode mithilfe integrierter High-Level-Funktionen zu vereinfachen.
+6. Machen Sie sich mit dem Abschnitt [APIs auf höherer Ebene in Strategien](strategies/high_level_api.md) vertraut, um Strategiecode mithilfe integrierter Funktionen auf höherer Ebene zu vereinfachen.
 
 ## Strategietests
 
@@ -62,4 +62,4 @@ StockSharp bietet verschiedene Methoden zum Testen von Strategien:
 - **Parameteroptimierung** - Hilft, optimale Werte für Strategieparameter zu finden.
 - **Testen mit virtuellem Konto** - Ermöglicht die Überprüfung der Strategieleistung im Echtzeitmodus, ohne reale Mittel zu riskieren.
 
-Detaillierte Beschreibungen der Testmethoden und der Bewertung der Strategieleistung finden Sie im Abschnitt [Testing](../api/testing.md).
+Detaillierte Beschreibungen der Testmethoden und der Bewertung der Strategieleistung finden Sie im Abschnitt [Tests](../api/testing.md).

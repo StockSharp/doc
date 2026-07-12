@@ -14,17 +14,17 @@ Autorização OAuth:
 
 Processo de autorização OAuth:
 
-1. Ao clicar no botão "Check", será aberta uma janela:
+1. Ao clicar no botão "Verificar", será aberta uma janela:
 
    ![início do OAuth](../../../../../images/oauth_start.png)
 
-2. Depois de clicar em "Start", o utilizador será redirecionado para o site da Tradier para iniciar sessão:
+2. Depois de clicar em "Iniciar", o utilizador será redirecionado para o site da Tradier para iniciar sessão:
 
-   ![Login Tradier](../../../../../images/api_gui_settings_tradier_2.png)
+   ![Início de sessão Tradier](../../../../../images/api_gui_settings_tradier_2.png)
 
 3. No site da Tradier, é necessário permitir o acesso da aplicação StockSharp às operações de negociação:
 
-   ![Tradier Permissions](../../../../../images/api_gui_settings_tradier_3.png)
+   ![Permissões Tradier](../../../../../images/api_gui_settings_tradier_3.png)
 
 4. Depois disso, será redirecionado de volta para o site da StockSharp e o programa iniciará sessão automaticamente.
 

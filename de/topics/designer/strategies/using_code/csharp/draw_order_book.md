@@ -40,7 +40,7 @@ Im Do-Handler wird die Methode [DrawOrderBook](xref:StockSharp.Algo.Strategies.S
 
   ![Designer Quellcode-Orderbuch 00](../../../../../images/designer_source_code_orderbook_00.png)
 
-5. Nach dem Start der Strategie zum Testing wird das Orderbuch mit Daten gefüllt:
+5. Nach dem Start der Strategie zum Testen wird das Orderbuch mit Daten gefüllt:
 
   ![Designer Quellcode-Orderbuch 01](../../../../../images/designer_source_code_orderbook_01.png)
 

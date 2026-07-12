@@ -1,10 +1,10 @@
-# High-Level-Abonnements
+# Abonnements auf höherer Ebene
 
 ## Überblick
 
-Die Klasse `Strategy` stellt eine Reihe von High-Level-Methoden für Marktdatenabonnements bereit: `SubscribeCandles`, `SubscribeTicks`, `SubscribeLevel1` und `SubscribeOrderBook`. Diese Methoden geben ein Objekt `ISubscriptionHandler<T>` zurück, mit dem Datenhandler und Indikatoren bequem im Fluent-Stil gebunden werden können.
+Die Klasse `Strategy` stellt eine Reihe von Methoden auf höherer Ebene für Marktdatenabonnements bereit: `SubscribeCandles`, `SubscribeTicks`, `SubscribeLevel1` und `SubscribeOrderBook`. Diese Methoden geben ein Objekt `ISubscriptionHandler<T>` zurück, mit dem Datenhandler und Indikatoren bequem im Fluent-Stil gebunden werden können.
 
-Im Unterschied zum manuellen Erstellen eines `Subscription`-Objekts und zum Aufruf von `Subscribe()` erledigen die High-Level-Methoden Folgendes:
+Im Unterschied zum manuellen Erstellen eines `Subscription`-Objekts und zum Aufruf von `Subscribe()` erledigen die Methoden auf höherer Ebene Folgendes:
 
 - Sie erstellen automatisch ein Abonnement mit den richtigen Parametern.
 - Sie stellen einen typisierten `ISubscriptionHandler<T>` zum Binden von Handlern bereit.
@@ -70,7 +70,7 @@ Wenn der Parameter `security` nicht angegeben ist, wird `Security` der Strategie
 
 Das Objekt `ISubscriptionHandler<T>` stellt die folgenden Methoden bereit:
 
-### Start / Stop
+### Starten / Stoppen
 
 Starten und Stoppen des Abonnements:
 
@@ -238,7 +238,7 @@ protected override void OnStarted2(DateTime time)
 
 ## Unterschiede zur manuellen Abonnementerstellung
 
-| Aspekt | Manuelles Abonnement | High-Level-Methode |
+| Aspekt | Manuelles Abonnement | Methode auf höherer Ebene |
 |--------|----------------------|--------------------|
 | Erstellung | `new Subscription(DataType, Security)` | `SubscribeCandles(tf)` |
 | Datenverarbeitung | Abonnieren von Connector-Ereignissen | `Bind(callback)` |
@@ -246,4 +246,4 @@ protected override void OnStarted2(DateTime time)
 | Indikatorregistrierung | Manuelles Hinzufügen zu `Indicators` | Automatisch bei `Bind` |
 | Chart-Darstellung | Manuelle Integration mit `IChart` | `DrawCandles`, `DrawIndicator` |
 
-High-Level-Methoden werden für die meisten Strategien empfohlen, da sie den Codeumfang deutlich reduzieren und die Fehlerwahrscheinlichkeit senken.
+Methoden auf höherer Ebene werden für die meisten Strategien empfohlen, da sie den Codeumfang deutlich reduzieren und die Fehlerwahrscheinlichkeit senken.

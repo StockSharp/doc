@@ -10,8 +10,8 @@ Der folgende Code zeigt, wie man den [BWMessageAdapter](xref:StockSharp.BW.BWMes
 			...
 			var messageAdapter = new BWMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ihr API-Schlüssel>".To<SecureString>(),
+				Secret = "<Ihr API-Geheimnis>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...

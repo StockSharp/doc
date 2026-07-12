@@ -7,8 +7,8 @@ O código abaixo demonstra como inicializar o [BitexbookMessageAdapter](xref:Sto
 			...
 			var messageAdapter = new BitexbookMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<A sua chave de API>".To<SecureString>(),
+				Secret = "<O seu segredo de API>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...

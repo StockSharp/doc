@@ -1,6 +1,6 @@
 # Comisiones
 
-En el panel [Configuración de backtesting](components/backtesting_settings.md), puede establecer la configuración de monitoreo de comisiones.
+En el panel [Configuración de pruebas históricas](components/backtesting_settings.md), puede establecer la configuración de monitoreo de comisiones.
 
 En la ventana **Comisiones**, debe seleccionar el tipo de comisión, establecer el valor de comisión y la condición bajo la cual se cobrará.
 

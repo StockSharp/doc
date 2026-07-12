@@ -40,7 +40,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("銘柄がありません。");
 				return Task.CompletedTask;
 			}
 
@@ -55,7 +55,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("データがありません。");
 				return Task.CompletedTask;
 			}
 
@@ -65,13 +65,13 @@ namespace StockSharp.Algo.Analytics
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
 
 			// 計算結果をグリッドに入れる
-			var grid = panel.CreateGrid("Time", "Volume");
+			var grid = panel.CreateGrid("時刻", "出来高");
 
 			foreach (var row in rows)
 				grid.SetRow(row.Key, row.Value);
 
 			// Volume 列で並べ替え (降順)
-			grid.SetSort("Volume", false);
+			grid.SetSort("出来高", false);
 
 			return Task.CompletedTask;
 		}
@@ -116,7 +116,7 @@ class time_volume_script(IAnalyticsScript):
 	):
 		# 銘柄がないか確認
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("銘柄がありません。")
 			return Task.CompletedTask
 
 		# スクリプトは 1 つの銘柄のみ処理できます
@@ -135,7 +135,7 @@ class time_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("データがありません。")
 			return Task.CompletedTask
 
 		# 始値時刻 (時間単位で切り詰め) でローソク足をグループ化し、出来高を合計
@@ -147,13 +147,13 @@ class time_volume_script(IAnalyticsScript):
 			rows[truncated] = rows.get(truncated, 0) + candle.TotalVolume
 
 		# 計算結果をグリッドに入れる
-		grid = panel.CreateGrid("Time", "Volume")
+		grid = panel.CreateGrid("時刻", "出来高")
 
 		for key, value in rows.items():
 			grid.SetRow(key, value)
 
 		# Volume 列で降順に並べ替え
-		grid.SetSort("Volume", False)
+		grid.SetSort("出来高", False)
 
 		return Task.CompletedTask
 

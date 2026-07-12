@@ -5,7 +5,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 ![Configurações da API GUI Kucoin](../../../../../images/api_gui_settings_kucoin.png)
 
 - **chave** - Key.
-- **segredo** - Secret.
+- **segredo** - segredo da API.
 - **frase-passe** - Frase-passe.
 - **Demonstração** - ligar à negociação demo em vez do servidor de negociação real.
 - **Saldo** - intervalo de verificação do saldo. Necessário em caso de ações de depósito e levantamento.

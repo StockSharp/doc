@@ -45,7 +45,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("銘柄がありません。");
 				return Task.CompletedTask;
 			}
 
@@ -60,7 +60,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("データがありません。");
 				return Task.CompletedTask;
 			}
 
@@ -115,7 +115,7 @@ class price_volume_script(IAnalyticsScript):
 	):
 		# 銘柄がないか確認
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("銘柄がありません。")
 			return Task.CompletedTask
 
 		# スクリプトは 1 つの銘柄のみ処理できます
@@ -134,7 +134,7 @@ class price_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("データがありません。")
 			return Task.CompletedTask
 
 		# ローソク足を中間価格でグループ化し、その出来高を合計

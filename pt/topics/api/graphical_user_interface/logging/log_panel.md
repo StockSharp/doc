@@ -25,12 +25,12 @@ Código de exemplo
 _logManager = new LogManager();
 // adicionar .NET tracing como fonte de log.
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
-// adicionar LogControl como listener de log.
+// adicionar LogControl como ouvinte de registo.
 _logManager.Listeners.Add(new GuiLogListener(LogControl));
 ..........................                  
 // enviar mensagens de teste do TraceSource:
-Trace.TraceInformation("Info  test message");
-Trace.TraceWarning("Warning test message");
+Trace.TraceInformation("Mensagem de teste de informação");
+Trace.TraceWarning("Mensagem de teste de aviso");
 Trace.TraceError("Mensagem de teste de erro");
 					
 ```

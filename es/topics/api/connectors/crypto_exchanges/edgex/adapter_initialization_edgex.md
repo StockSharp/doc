@@ -7,10 +7,10 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new EdgeXMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>".To<SecureString>(),
-	Secret = "<Your API Secret>".To<SecureString>(),
-	ClearingAccount = "<Your Clearing Account>",
-	Passphrase = "<Your Passphrase>".To<SecureString>(),
+	Key = "<Su clave API>".To<SecureString>(),
+	Secret = "<Su secreto API>".To<SecureString>(),
+	ClearingAccount = "<Su cuenta de compensación>",
+	Passphrase = "<Su frase de contraseña>".To<SecureString>(),
 	Section = EdgeXSections.Derivatives,
 	EnableSpotSection = false,
 };

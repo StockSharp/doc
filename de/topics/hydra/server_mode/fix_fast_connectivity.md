@@ -59,7 +59,7 @@ _connector.SecurityReceived += (subscription, security) =>
 	// Wenn dies das Zielinstrument ist, seine Daten abonnieren
 	if (security.Id == targetSecurityId)
 	{
-		// Order-Book-Subscription
+		// Orderbuch-Abonnement
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
 
@@ -165,7 +165,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 ## Verbindung zum Hydra-Server trennen
 
 ```cs
-// Verbindung korrekt schliessen
+// Verbindung korrekt schließen
 private void DisconnectFromServer()
 {
 	// Von allen Subscriptions abmelden

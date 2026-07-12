@@ -72,7 +72,7 @@
    ```
 
    Este enfoque tiene las siguientes ventajas:
-   - Se alinea con el modelo de procesamiento de datos en streaming (recibir → procesar → usar el resultado)
+   - Se alinea con el modelo de procesamiento de datos en flujo continuo (recibir → procesar → usar el resultado)
    - Es más eficiente ya que evita acceder repetidamente al contenedor de valores acumulados.
    - Elimina posibles problemas de sincronización entre la llamada al proceso y las llamadas posteriores a GetCurrentValue.
 
@@ -117,7 +117,7 @@ public class SmaStrategy : Strategy
 
 	public SmaStrategy()
 	{
-		base.Name = "SMA strategy";
+		base.Name = "Estrategia SMA";
 
 		// Inicializar parámetros de estrategia
 		_longSmaLength = Param(nameof(LongSmaLength), 80);

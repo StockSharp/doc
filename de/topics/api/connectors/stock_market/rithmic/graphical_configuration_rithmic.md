@@ -20,7 +20,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Domain (Name)** - Domainname.
 - **Lizenzen** - Adresse des Lizenzservers.
 - **Brokeradresse** - Brokeradresse.
-- **Log (Adresse)** - Logger-Adresse.
+- **Log (Adresse)** - Adresse des Protokollierers.
 - **Benutzername (hist)** - Zusätzlicher Benutzername. Benutzer-ID für die Authentifizierung beim Historienservice.
 - **Passwort (Historie)** - Zusätzliches Passwort. Passwort für die Authentifizierung beim Historienservice.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um die Verbindung zu überwachen. Standardmäßig 1 Minute.

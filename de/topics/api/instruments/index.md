@@ -1,6 +1,6 @@
 # Index
 
-[IndexSecurity](xref:StockSharp.Algo.IndexSecurity) ist ein aus Instrumenten aufgebauter Index. Er kann beispielsweise verwendet werden, um einen Spread für Arbitrage oder Pairs Trading zu definieren. Es gibt folgende Implementierungen:
+[IndexSecurity](xref:StockSharp.Algo.IndexSecurity) ist ein aus Instrumenten aufgebauter Index. Er kann beispielsweise verwendet werden, um einen Spread für Arbitrage oder Paarhandel zu definieren. Es gibt folgende Implementierungen:
 
 1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) ist ein Index, der aus einer Kombination mehrerer Instrumente mithilfe einer mathematischen Formel in [ExpressionIndexSecurity.Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula) gebildet wird.
 

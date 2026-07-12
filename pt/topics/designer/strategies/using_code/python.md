@@ -26,7 +26,7 @@ O painel **Lista de erros** é uma tabela com uma lista de erros no código; um 
 
 Ao editar o código, aparecerá um ícone ![Designer Criação do cubo com código-fonte 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) no canto inferior direito do painel **Lista de erros**, indicando que o acompanhamento de alterações começou. A compilação do código ocorre quando o código deixa de mudar.
 
-Executar a estratégia em [backtest](../../backtesting/user_interface.md), em [live](../../live_execution/getting_started.md) e outras operações funciona de forma semelhante às estratégias criadas a partir de esquemas.
+Executar a estratégia em [teste histórico](../../backtesting/user_interface.md), em [modo ao vivo](../../live_execution/getting_started.md) e outras operações funciona de forma semelhante às estratégias criadas a partir de esquemas.
 
 ## Limitações
 

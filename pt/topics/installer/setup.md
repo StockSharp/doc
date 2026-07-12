@@ -19,7 +19,7 @@
 6. Em seguida, o [Installer](../installer.md) será descompactado. Aguarde até o processo terminar.
 7. Durante o primeiro arranque, é necessário introduzir o seu login e palavra-passe **StockSharp**.
 
-    ![login do instalador](../../images/login_installer.png)
+    ![Início de sessão do instalador](../../images/login_installer.png)
 
     Pode iniciar sessão introduzindo diretamente as suas credenciais ou através de autorização por rede social. Se se registou no site da StockSharp através de uma rede social, não terá uma palavra-passe.
 

@@ -51,7 +51,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Нет инструментов.");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 
 				if (dates.Length == 0)
 				{
-					logs.LogWarning("no data");
+					logs.LogWarning("Нет данных.");
 					return Task.CompletedTask;
 				}
 
@@ -97,7 +97,7 @@ namespace StockSharp.Algo.Analytics
 					z[i, pair.Key] = (double)pair.Value;
 			}
 
-			panel.Draw3D(x, y, z, "Instruments", "Hours", "Volume");
+			panel.Draw3D(x, y, z, "Инструменты", "Часы", "Объем");
 
 			return Task.CompletedTask;
 		}
@@ -141,7 +141,7 @@ class chart3d_script(IAnalyticsScript):
 	):
 		# Проверить, что инструменты отсутствуют
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Нет инструментов.")
 			return Task.CompletedTask
 
 		x = []  # Метки X для инструментов
@@ -175,7 +175,7 @@ class chart3d_script(IAnalyticsScript):
 			dates = get_dates(candle_storage, from_date, to_date)
 
 			if len(dates) == 0:
-				logs.LogWarning("no data")
+				logs.LogWarning("Нет данных.")
 				return Task.CompletedTask
 
 			# Группировка свечей по времени открытия (усечённому до ближайшего часа) и суммирование объёмов
@@ -191,7 +191,7 @@ class chart3d_script(IAnalyticsScript):
 					z[i][hour] = float(volume)
 
 		# Нарисовать 3D-график с использованием панели
-		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
+		panel.Draw3D(x, y, nx.to2darray(z), "Инструменты", "Часы", "Объем")
 
 		return Task.CompletedTask
 

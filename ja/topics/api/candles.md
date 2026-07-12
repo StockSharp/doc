@@ -72,7 +72,7 @@ _connector.Subscribe(subscription);
 
 4. [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) イベントは、新しいキャンドルが出現したときだけでなく、現在のキャンドルが変化したときにも呼び出されます。
 
-**"complete"** キャンドルのみを表示する必要がある場合は、受信したキャンドルの [ICandleMessage.State](xref:StockSharp.Messages.ICandleMessage.State) プロパティを確認する必要があります:
+**"完了済み"** キャンドルのみを表示する必要がある場合は、受信したキャンドルの [ICandleMessage.State](xref:StockSharp.Messages.ICandleMessage.State) プロパティを確認する必要があります:
 
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
@@ -315,4 +315,3 @@ _connector.Subscribe(pnfCandleSubscription);
 [チャート](candles/chart.md)
 
 [カスタムキャンドルタイプ](candles/custom_type_of_candle.md)
-

@@ -1,6 +1,6 @@
 # Quellenbeispiele
 
-Verbindungseinstellungen in [Designer](../../designer.md), [Terminal](../../terminal.md) und [Hydra](../../hydra.md).
+Verbindungseinstellungen im [Designer](../../designer.md), in [Terminal](../../terminal.md) und in [Hydra](../../hydra.md).
 
 Weitere Informationen zur grafischen Verbindungskonfiguration für verschiedene Konnektoren finden Sie unter [Grafische Konfiguration](../../api/connectors/graphical_configuration.md).
 

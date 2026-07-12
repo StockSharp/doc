@@ -4,15 +4,15 @@
 
 El cubo se usa para convertir objetos complejos en tipos de datos simples. Por ejemplo, permite obtener el valor del paso de precio de un instrumento.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Cualquier dato** - cierto tipo de objetos complejos que se reciben.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Cualquier dato** - valor de la propiedad seleccionada para el objeto recibido.
 

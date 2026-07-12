@@ -21,11 +21,11 @@
 
 2. После нажатия "Старт" пользователь будет перенаправлен на сайт Alor Broker для входа:
 
-   ![Alor Login](../../../../../images/api_gui_settings_alor_2.png)
+   ![Вход Alor](../../../../../images/api_gui_settings_alor_2.png)
 
 3. На сайте Alor Broker нужно разрешить приложению StockSharp доступ к торговым операциям:
 
-   ![Alor Permissions](../../../../../images/api_gui_settings_alor_3.png)
+   ![Разрешения Alor](../../../../../images/api_gui_settings_alor_3.png)
 
 4. После этого произойдет перенаправление обратно на сайт StockSharp, и программа автоматически выполнит вход.
 

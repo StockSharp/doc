@@ -30,7 +30,7 @@ The task exports exchange data into various formats: Excel, xml, sql, bin, Json 
 
 **General**
 
-- **Header** - Converter. 
+- **Header** - task title.
 - **Working hours** - setting up the board work schedule. ![hydra tasks backup desk](../../../images/hydra_tasks_backup_desk.png)
 - **Interval of operation** - the interval of operation. 
 - **Data directory** - data directory, from where the data for conversion will be received. 

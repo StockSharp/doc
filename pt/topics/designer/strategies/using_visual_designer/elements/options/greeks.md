@@ -4,17 +4,17 @@
 
 Este bloco é usado para calcular os principais "Gregos": Delta, Gamma, Vega, Theta, Rho no momento atual.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Modelo** - o modelo de cálculo (por exemplo, Black-Scholes).
 - **Preço do ativo subjacente** - o preço do ativo subjacente.
 - **Desvio máximo** - o desvio máximo.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Resultado** - o resultado do cálculo dos principais "Gregos": Delta, Gamma, Vega, Theta, Rho no momento atual.
 

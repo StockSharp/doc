@@ -191,7 +191,7 @@ private void CreateQuotingProcessor(Sides side)
 - Die Strategie arbeitet nur mit abgeschlossenen Kerzen.
 - Für einen effizienteren Markteinstieg wird Quoting statt Market-Orders verwendet.
 - Die Strategie nutzt einen Gegentrendansatz und eröffnet Positionen gegen den etablierten Trend.
-- Detailliertes Logging der wichtigsten Ereignisse für das Debugging ist implementiert.
+- Detaillierte Protokollierung der wichtigsten Ereignisse für das Debugging ist implementiert.
 - Der Quoting-Prozessor wird automatisch bereinigt, wenn sich die Trendrichtung ändert oder Ziele erreicht werden.
 - Die Visualisierung von Kerzen und Trades im Chart wird unterstützt.
 - Die Optimierung des Parameters für die Sequenzlänge ist für die Strategiekonfiguration implementiert.

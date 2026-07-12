@@ -32,7 +32,7 @@ StockSharp 中的 [IStatisticManager](xref:StockSharp.Algo.Statistics.IStatistic
 - 最大相对回撤
 - 采收率
 
-### 贸易统计
+### 交易统计
 
 - 盈利交易数量
 - 亏损交易次数

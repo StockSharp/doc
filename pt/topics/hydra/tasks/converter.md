@@ -1,6 +1,6 @@
 # Conversor
 
-A tarefa converte dados da bolsa. Por exemplo, de logs de ordens para ticks ou de ticks para candles, etc.
+A tarefa converte dados da bolsa. Por exemplo, de registos de ordens para ticks ou de ticks para candles, etc.
 
 ![Hydra tarefas de conversão](../../../images/hydra_tasks_converter.png)
 

@@ -47,8 +47,8 @@ De manera similar, puede agregar conexiones directamente desde el código (sin v
 // Añadir adaptador para conectarse a Binance
 connector.AddAdapter<BinanceMessageAdapter>(a =>
 {
-	a.Key = "<Your API Key>";
-	a.Secret = "<Your Secret Key>";
+	a.Key = "<Su clave API>";
+	a.Secret = "<Su clave secreta>";
 });
 
 // Añadir RSS para noticias
@@ -96,16 +96,16 @@ private void InitConnector()
 	// Instruments
 	Connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
 
-	// Tick trades
+	// Operaciones tick
 	Connector.TickTradeReceived += (sub, trade) => _tradesWindow.TradeGrid.Trades.TryAdd(trade);
 
-	// Orders
+	// Órdenes
 	Connector.OrderReceived += (sub, order) => _ordersWindow.OrderGrid.Orders.TryAdd(order);
 
-	// Own trades
+	// Operaciones propias
 	Connector.OwnTradeReceived += (sub, trade) => _myTradesWindow.TradeGrid.Trades.TryAdd(trade);
 
-	// Positions
+	// Posiciones
 	Connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 
 	// Fallos de registro de órdenes

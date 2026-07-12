@@ -4,18 +4,18 @@
 
 Este bloque se usa para modificar una orden de un instrumento.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Activador** - señal que determina cuándo mover una orden.
 - **Orden** - orden que se modificará.
 - **Precio** - valor numérico del nuevo precio.
 - **Volumen** - valor numérico del nuevo volumen.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Orden** - orden modificada, que puede usarse para obtener sus transacciones mediante el elemento **Transacciones por orden** y para mostrarla en el gráfico usando el bloque **Panel de gráfico**.
 - **Error** - error al mover la orden.

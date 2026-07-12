@@ -90,7 +90,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Parent = this
 	};
 
-	// Prozessorereignisse für das Logging abonnieren
+	// Prozessorereignisse für die Protokollierung abonnieren
 	_quotingProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Auftrag {order.TransactionId} zum Preis {order.Price} registriert");
 
@@ -143,6 +143,6 @@ protected override void OnStopped()
 - Verwendet den modernen Quoting-Prozessor statt älterer Quoting-Strategien.
 - Reagiert adaptiv auf Positionsänderungen, indem die Quoting-Richtung geändert wird.
 - Unterstützt die Konfiguration verschiedener Quoting-Parameter (Preistyp, Abstand, Mindestabweichung).
-- Enthält detailliertes Logging der Ereignisse des Quoting-Prozessors.
+- Enthält detaillierte Protokollierung der Ereignisse des Quoting-Prozessors.
 - Verwaltet Ressourcen korrekt beim Stoppen der Strategie und beim Erstellen neuer Prozessoren.
 - Unterstützt die Arbeit mit verschiedenen Typen von Marktpreisen (Following, Best, Opposite usw.).

@@ -31,7 +31,7 @@ strategy.TradingMode = StrategyTradingModes.Disabled;
 
 Ao tentar registar uma ordem, a estratégia verifica o modo atual:
 
-- **`Disabled`** -- a ordem é rejeitada com o motivo "trading is prohibited".
+- **`Disabled`** -- a ordem é rejeitada com o motivo "negociação proibida".
 - **`ReducePositionOnly`** -- a ordem é rejeitada se a posição atual for zero, se a direção da ordem corresponder à direção da posição, ou se o volume da ordem exceder o valor absoluto da posição.
 - **`LongOnly`** -- uma ordem de venda é rejeitada se a posição atual não for positiva ou se o volume de venda exceder a posição atual.
 - **`Full`** -- sem restrições.
@@ -124,4 +124,3 @@ strategy.TradingMode = StrategyTradingModes.Disabled;
 ```
 
 Neste exemplo, a estratégia opera inicialmente no modo `LongOnly`, que permite apenas compras e o fecho de posições longas. Quando as condições de mercado mudam, o modo pode ser alterado para `ReducePositionOnly` para o fecho gradual da posição, e depois para `Disabled` para uma paragem completa da atividade de negociação.
-

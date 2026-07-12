@@ -1,4 +1,4 @@
-# Order-Log
+# Orderprotokoll
 
 Wählen Sie im erscheinenden Fenster die Instrumente und das erforderliche Zeitintervall aus und klicken Sie auf die Schaltfläche ![Hydra Suchschaltfläche](../../../../images/hydra_find.png):
 

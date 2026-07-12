@@ -1,8 +1,8 @@
-# Andere Logquellen
+# Andere Protokollquellen
 
-In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettete Objekte die Logquellen. [S#](../../api.md) bietet Möglichkeiten für Fälle, in denen die Logquelle Ihre eigene Klasse ist oder die Quelle nicht an eine bestimmte Klasse gebunden sein muss, sondern der gesamten Anwendung dient. Im ersten Fall müssen Sie in Ihrer Klasse das Interface [ILogSource](xref:Ecng.Logging.ILogSource) implementieren oder von [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver) erben. Im zweiten Fall können Sie [TraceSource](xref:Ecng.Logging.TraceSource) verwenden, das das .NET-Tracing-System nutzt. Wie das funktioniert, zeigt das Beispiel *Samples\/08\_Misc\/01\_Logging*.
+In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettete Objekte die Protokollquellen. [S#](../../api.md) bietet Möglichkeiten für Fälle, in denen die Protokollquelle Ihre eigene Klasse ist oder die Quelle nicht an eine bestimmte Klasse gebunden sein muss, sondern der gesamten Anwendung dient. Im ersten Fall müssen Sie in Ihrer Klasse das Interface [ILogSource](xref:Ecng.Logging.ILogSource) implementieren oder von [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver) erben. Im zweiten Fall können Sie [TraceSource](xref:Ecng.Logging.TraceSource) verwenden, das das .NET-Tracing-System nutzt. Wie das funktioniert, zeigt das Beispiel *Samples\/08\_Misc\/01\_Logging*.
 
-## Logging-Beispiel
+## Protokollierungsbeispiel
 
 1. Erstellen Sie eine benutzerdefinierte Klasse, die von [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver) erbt.
 
@@ -18,14 +18,14 @@ In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettet
    private readonly TestSource _testSource;
 
    ```
-3. Fügen Sie Logquellen hinzu.
+3. Fügen Sie Protokollquellen hinzu.
 
    ```cs
    _logManager.Sources.Add(_testSource = new TestSource());
    _logManager.Sources.Add(new Ecng.Logging.TraceSource());
 
    ```
-4. Fügen Sie Loglistener hinzu.
+4. Fügen Sie Protokollempfänger hinzu.
 
    ```cs
    // Lognachrichten werden in der GUI-Komponente angezeigt
@@ -37,7 +37,7 @@ In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettet
    });
 
    ```
-5. Fügen Sie Logging-Nachrichten der benutzerdefinierten Klasse hinzu. Die Logging-Stufe wird zufällig ausgewählt.
+5. Fügen Sie Protokollierungsnachrichten der benutzerdefinierten Klasse hinzu. Die Protokollierungsstufe wird zufällig ausgewählt.
 
    ```cs
    var level = RandomGen.GetEnum<LogLevels>();
@@ -47,10 +47,10 @@ In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettet
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		_testSource.AddInfoLog("{0} (source)!!!".Put(level));
+		_testSource.AddInfoLog("{0} (Quelle)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		_testSource.AddWarningLog("Warning (source)!!!");
+		_testSource.AddWarningLog("Warnung (Quelle)!!!");
    		break;
    	case LogLevels.Error:
 		_testSource.AddErrorLog("Fehler (Quelle)!!!");
@@ -69,13 +69,13 @@ In den vorherigen Themen waren in die Klassen von [S#](../../api.md) eingebettet
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		Trace.TraceInformation("{0} (trace)!!!".Put(level));
+		Trace.TraceInformation("{0} (Ablaufverfolgung)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		Trace.TraceWarning("Warning (trace)!!!");
+		Trace.TraceWarning("Warnung (Ablaufverfolgung)!!!");
    		break;
    	case LogLevels.Error:
-   		Trace.TraceError("Error (trace)!!!");
+		Trace.TraceError("Fehler (Ablaufverfolgung)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();

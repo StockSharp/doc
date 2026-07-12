@@ -6,9 +6,9 @@ Der Würfel wird verwendet, um den **Diagramm der Optionspositionen** anzuzeigen
 
 Um den **Diagramm der Optionspositionen** anzuzeigen, müssen Sie die grafische Komponente **Diagramm der Optionspositionen** hinzufügen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
 - **Preis des Basiswerts** - der Preis des Basiswerts.

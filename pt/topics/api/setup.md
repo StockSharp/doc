@@ -64,7 +64,7 @@ StockSharp é distribuído via NuGet. Abaixo está o catálogo completo de pacot
 
 | Pacote | Descrição |
 |---------|-------------|
-| [StockSharp.Algo.Testing](https://www.nuget.org/packages/StockSharp.Algo.Testing/) | Backtesting em dados históricos, emulação de negociação |
+| [StockSharp.Algo.Testing](https://www.nuget.org/packages/StockSharp.Algo.Testing/) | Testes com dados históricos, emulação de negociação |
 
 ### Armazenamento e Dados
 

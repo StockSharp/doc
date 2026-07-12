@@ -4,15 +4,15 @@
 
 Das Element wird verwendet, um ein Element aus einer Sammlung mit dem angegebenen Index abzurufen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Beliebige Daten** – die Sammlung von Elementen.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Beliebige Daten** - das Element aus der Sammlung mit dem in den Parametern angegebenen Index.
 

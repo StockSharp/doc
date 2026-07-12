@@ -1,6 +1,6 @@
 # MetaTrader
 
-[StockSharp](../../../api.md) se integra con terminales MT4 y MT5 mediante conectores especiales. Para instalar estos conectores, use [Installer](../../../installer.md) (para más detalles, consulte [Instalación y eliminación de programas](../../../installer/install_and_remove_apps.md)).
+[StockSharp](../../../api.md) se integra con terminales MT4 y MT5 mediante conectores especiales. Para instalar estos conectores, utilice [Installer](../../../installer.md) (para más detalles, consulte [Instalación y eliminación de programas](../../../installer/install_and_remove_apps.md)).
 
 Ambos conectores se usan de la misma manera, por lo que a continuación se describe el proceso de conexión a MT5:
 
@@ -63,6 +63,6 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
 
     ![Captura de MetaTrader 8](../../../../images/mt_8.png)
 
-13. En caso de errores, se guardan logs del conector, disponibles en la carpeta **Experts\\StockSharp\\Data\\Log**:
+13. En caso de errores, se guardan registros del conector, disponibles en la carpeta **Experts\\StockSharp\\Data\\Log**:
 
     ![Captura de MetaTrader 9](../../../../images/mt_9.png)

@@ -4,11 +4,11 @@
 
 O cubo é usado para obter um livro de ordens truncado até uma profundidade especificada.
 
-### Sockets de entrada
+### Conectores de entrada
 
 - **Livro de ofertas** é um livro de ordens que tem de ser truncado.
 
-### Sockets de saída
+### Conectores de saída
 
 - **Livro de ofertas** é o livro de ordens truncado.
 

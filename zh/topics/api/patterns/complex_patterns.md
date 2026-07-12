@@ -57,7 +57,7 @@ using StockSharp.Algo.Candles.Patterns;
 
 // 创建复杂形态：先是看跌 K线，然后是看涨吞没
 var complex = new ComplexCandlePattern(
-    "Reversal Up",
+    "看涨反转",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Black,            // 1 根 K 线：看跌

@@ -40,7 +40,7 @@ Dabei gilt:
 Der Gopalakrishnan-Range-Index kann wie folgt interpretiert werden:
 
 1. **Absolute Werte**:
-   - High GAPO-Werte weisen auf Perioden hoher Volatilität hin
+   - Hohe GAPO-Werte weisen auf Perioden hoher Volatilität hin
    - Niedrige GAPO-Werte weisen auf Perioden geringer Volatilität hin
    - Extrem hohe Werte können auf eine mögliche Überdehnung des Marktes und eine mögliche Umkehr hinweisen
 
@@ -56,7 +56,7 @@ Der Gopalakrishnan-Range-Index kann wie folgt interpretiert werden:
 
 4. **Handelsstrategien**:
    - In Zeiten hoher Volatilität (hohe GAPO-Werte) kann es angebracht sein, den Stop-Loss und die angestrebten Gewinngrößen zu erhöhen
-   - In Zeiten geringer Volatilität (niedrige GAPO-Werte) können Range-Trading-Strategien besser geeignet sein
+   - In Zeiten geringer Volatilität (niedrige GAPO-Werte) können Seitwärtshandelsstrategien besser geeignet sein
    - Extreme GAPO-Werte können als gegensätzliche Indikatoren zur Suche nach Umkehrpunkten verwendet werden
 
 5. **Kombination mit anderen Indikatoren**:

@@ -20,7 +20,7 @@ A tarefa exporta dados da bolsa para vários formatos: Excel, xml, sql, bin, Jso
 - **Fornecedor** - definições do fornecedor.
 - **Servidor** - endereço do servidor ou caminho para a base de dados.
 - **Base de dados** - nome da base de dados. Não utilizado para SQLite.
-- **Login** - login para aceder à base de dados. Não utilizado para acesso anónimo.
+- **Início de sessão** - início de sessão para aceder à base de dados. Não utilizado para acesso anónimo.
 - **Palavra-passe** - palavra-passe para aceder à base de dados. Não utilizada para acesso anónimo.
 - **Windows** - utilizar a conta atual do Windows para ligar à base de dados.
 - **Ligação** - string de ligação pronta a utilizar.
@@ -30,7 +30,7 @@ A tarefa exporta dados da bolsa para vários formatos: Excel, xml, sql, bin, Jso
 
 **Geral**
 
-- **Cabeçalho** - Converter.
+- **Cabeçalho** - título da tarefa.
 - **Horário de trabalho** - configuração do horário de funcionamento da board. ![Hydra tarefas de cópia de segurança](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operação** - o intervalo de funcionamento.
 - **Diretório de dados** - diretório de dados, de onde serão recebidos os dados para conversão.
@@ -51,7 +51,7 @@ A tarefa exporta dados da bolsa para vários formatos: Excel, xml, sql, bin, Jso
 - **Desfasamento temporal** - desfasamento temporal em dias.
 - **Diretório de exportação** - diretório para onde os dados serão exportados.
 - **Formato** - formato dos dados.
-- **Split** - tipo de divisão.
+- **Divisão** - tipo de divisão.
 
 **Registo**
 

@@ -26,4 +26,4 @@ El panel **Lista de errores** es una tabla con la lista de errores en el código
 
 Al editar el código, aparecerá un icono ![Designer Creación del cubo con código fuente 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Lista de errores**, indicando que ha comenzado el seguimiento de cambios. El código se compila en el momento en que deja de cambiar.
 
-La ejecución de la estrategia en [backtest](../../backtesting/user_interface.md), en [live](../../live_execution/getting_started.md) y otras operaciones son similares a las de una estrategia creada a partir de diagramas.
+La ejecución de la estrategia en [prueba histórica](../../backtesting/user_interface.md), en [modo en vivo](../../live_execution/getting_started.md) y otras operaciones son similares a las de una estrategia creada a partir de diagramas.

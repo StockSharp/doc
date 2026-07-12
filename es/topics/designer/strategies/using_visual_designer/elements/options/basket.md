@@ -4,15 +4,15 @@
 
 Este bloque se usa para crear un modelo de valoración de opciones.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Opciones** – strikes para los que debe crearse el modelo.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Modelo** – modelo de valoración (por ejemplo, Black-Scholes).
 

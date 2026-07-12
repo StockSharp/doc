@@ -4,7 +4,7 @@ Die Optimierung wird für Strategieparameter mit den folgenden Typen durchgefüh
 
 - Numerisch (ganzzahlig und gebrochen)
 - Zeit ([TimeSpan](xref:System.TimeSpan))
-- Boolescher Wert (True-False)
+- Boolescher Wert (Wahr-Falsch)
 - [Unit](../../api/strategies/unit_type.md)-Wert
 
 Standardmäßig erscheinen alle Parameter mit diesen Typen in der [Tabelle der Optimiererparameter](brute_force.md). Um einen Parameter von der Optimierung auszuschließen:

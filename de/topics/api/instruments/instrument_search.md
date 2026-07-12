@@ -19,7 +19,7 @@ var lookupMessage = new SecurityLookupMessage
 	{
 		// Suche nach Instrumentencode (Sie können eine Maske wie "AAPL*" verwenden)
 		SecurityCode = "AAPL",
-		// Optional kann der Board-Code angegeben werden
+		// Optional kann der Handelsplatzcode angegeben werden
 		BoardCode = "NASDAQ"
 	},
 	// Der Instrumententyp kann angegeben werden
@@ -38,7 +38,7 @@ Die Nachricht [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMes
 
 - **SecurityId** - Instrumentenbezeichner, bestehend aus:
   - **SecurityCode** - Code oder Maske des Instrumentencodes (zum Beispiel "AAPL" oder "MS*")
-  - **BoardCode** - Börsen-Board-Code (zum Beispiel [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
+  - **BoardCode** - Börsen-Handelsplatzcode (zum Beispiel [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
 - **SecurityType** - Instrumententyp ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) usw.)
 - **SecurityTypes** - Array von Instrumententypen für erweiterte Suche
 - **Currency** - Handelswährung des Instruments
@@ -175,7 +175,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 
 ### Verwendungsbeispiel in einer WPF-Anwendung
 
-In einer grafischen Anwendung wird die Instrumentensuche häufig aus einem Button-Click-Handler aufgerufen:
+In einer grafischen Anwendung wird die Instrumentensuche häufig aus dem Klick-Handler einer Schaltfläche aufgerufen:
 
 ```csharp
 private void FindButton_Click(object sender, RoutedEventArgs e)
@@ -185,7 +185,7 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 
 	if (string.IsNullOrWhiteSpace(searchText))
 	{
-		MessageBox.Show("Enter a search criterion");
+		MessageBox.Show("Suchkriterium eingeben");
 		return;
 	}
 

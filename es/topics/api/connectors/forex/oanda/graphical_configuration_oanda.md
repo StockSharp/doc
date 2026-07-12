@@ -4,13 +4,13 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 ![Configuración de API GUI OANDA](../../../../../images/api_gui_settings_oanda.png)
 
-- **Server** - Servidor.
+- **Servidor** - Servidor.
 - **Token** - Token.
-- **Compression** - Compresión.
-- **Transactions only** - Escribir mensajes de log solo para el flujo de transacciones.
+- **Compresión** - Compresión.
+- **Solo transacciones** - Escribir mensajes de registro solo para el flujo de transacciones.
 - **Configuración de reconexión** - Configuración del mecanismo para rastrear la conexión con el sistema de trading ([Configuración de reconexión](../../reconnection_settings.md)).
 - **Intervalo de comprobación** - Intervalo para notificar al servidor que la conexión sigue activa. El valor predeterminado es 1 minuto.
-- **Código de mercado unificado** - Código de board para el instrumento unificado.
+- **Código de mercado unificado** - Código de mercado para el instrumento unificado.
 
 ## Ver también
 

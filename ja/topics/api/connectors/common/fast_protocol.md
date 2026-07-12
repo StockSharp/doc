@@ -4,4 +4,4 @@
 
 ## 推奨コンテンツ
 
-[FAST protocol](https://www.fixtrading.org/standards/fast/)
+[FAST プロトコル](https://www.fixtrading.org/standards/fast/)

@@ -13,11 +13,10 @@ Ein Beispiel für die Anzeige der Werte am Ein- und Ausgang eines zusammengesetz
 
 Haltepunkte können sowohl vor dem Start des Testprozesses als auch während des Testings der Strategie auf historischen Daten hinzugefügt werden.
 
-Wenn Sie auf die Schaltfläche ![Designer Fehlersuche 01](../../../../images/designer_debug_01.png)**Haltepunkte** klicken, erscheint ein Fenster, in dem alle Haltepunkte angezeigt werden. Für jeden Haltepunkt kann eine zusätzliche Auslösebedingung festgelegt werden. Beispielsweise können Sie für ein logisches Signal den Wert **True** festlegen. In diesem Fall hält der Haltepunkt nur an, wenn der Signalwert **True** ist.
+Wenn Sie auf die Schaltfläche ![Designer Fehlersuche 01](../../../../images/designer_debug_01.png)**Haltepunkte** klicken, erscheint ein Fenster, in dem alle Haltepunkte angezeigt werden. Für jeden Haltepunkt kann eine zusätzliche Auslösebedingung festgelegt werden. Beispielsweise können Sie für ein logisches Signal den Wert **Wahr** festlegen. In diesem Fall hält der Haltepunkt nur an, wenn der Signalwert **Wahr** ist.
 
 ![Designer Haltepunkt 02](../../../../images/designer_stopping_point_02.png)
 
 ## Empfohlene Inhalte
 
 [Schrittweise Ausführung](step_by_step_execution.md)
-

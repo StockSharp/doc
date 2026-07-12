@@ -4,19 +4,19 @@
 
 O cubo é usado para cobrir posições sobre opções.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Modelo** - o modelo de cálculo (por exemplo, Black-Scholes).
 - **Instrumento** - o instrumento, o ativo subjacente.
 - **Volume** - o valor numérico do volume.
 - **Posição por ativo subjacente** - a posição pelo ativo subjacente.
-- **Sinalizador** - o sinal (flag) que inicia o processo de cobertura.
+- **Sinalizador** - o sinal que inicia o processo de cobertura.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Ordem** - a ordem registada que pode ser usada para obter negócios sobre ela usando o elemento **Negócios por ordem** e apresentá-los no gráfico usando o cubo **Painel de gráfico**
 

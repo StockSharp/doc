@@ -2,7 +2,7 @@
 
 O [S#](../../api.md) fornece funcionalidade para cópia de segurança dos dados descarregados para o armazenamento na nuvem [Amazon Web Services (AWS)](https://aws.amazon.com/s3/).
 
-Para fins de cópia de segurança, é necessário criar e configurar uma conta na AWS e depois criar e configurar a "Backup task".
+Para fins de cópia de segurança, é necessário criar e configurar uma conta na AWS e depois criar e configurar a "tarefa de cópia de segurança".
 
 ## Conteúdo recomendado
 

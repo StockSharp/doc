@@ -4,9 +4,9 @@
 
 Der Würfel wird verwendet, um einen eigenen Index zu erstellen.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Handelsinstrument** - der berechnete Index, dargestellt als **Handelsinstrument**.
 

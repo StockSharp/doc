@@ -1,6 +1,6 @@
 # 指标
 
-`Indicator` 脚本用于演示如何在 StockSharp 平台中使用技术分析指标。用户可以加载历史数据、对其应用各种指标，并在图表中显示结果。这种方式有助于分析市场趋势并作出有依据的交易决策。
+“指标” 脚本用于演示如何在 StockSharp 平台中使用技术分析指标。用户可以加载历史数据、对其应用各种指标，并在图表中显示结果。这种方式有助于分析市场趋势并作出有依据的交易决策。
 
 ![指标](../../../../images/hydra_analytics_indicator.png)
 
@@ -36,7 +36,7 @@
 2. **应用指标**：选择指标并设置其参数，然后将其应用于数据。
 3. **显示结果**：在图表中显示历史数据和指标，以便进行分析。
 
-`Indicator` 脚本为深入分析金融市场提供了有力工具，使交易者和分析人员能够利用这些指标制定有效的交易策略。
+“指标” 脚本为深入分析金融市场提供了有力工具，使交易者和分析人员能够利用这些指标制定有效的交易策略。
 
 ## C# 脚本代码
 
@@ -52,7 +52,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("没有交易品种。");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// 在图表上绘制序列
-				candleChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values);
+				candleChart.Append($"{security} (收盘价)", candlesSeries.Keys, candlesSeries.Values);
 				indicatorChart.Append($"{security} (ROC)", indicatorSeries.Keys, indicatorSeries.Values);
 			}
 
@@ -117,7 +117,7 @@ from indicator_extensions import *
 class indicator_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("没有交易品种。")
 			return Task.CompletedTask
 
 		# 为K线和指标序列创建两个面板
@@ -151,7 +151,7 @@ class indicator_script(IAnalyticsScript):
 
 			# 在图表上绘制序列
 			candle_chart.Append(
-				f"{security} (close)",
+				f"{security} (收盘价)",
 				list(candles_series.keys()),
 				list(candles_series.values())
 			)

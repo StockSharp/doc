@@ -88,11 +88,11 @@ private void OnFilteredNewsReceived(Subscription subscription, News news)
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 	
 	// ニュース情報を出力します
-	Console.WriteLine($"News: {news.Headline}");
-	Console.WriteLine($"Source: {news.Source}");
-	Console.WriteLine($"Time: {news.ServerTime}");
+	Console.WriteLine($"ニュース: {news.Headline}");
+	Console.WriteLine($"ソース: {news.Source}");
+	Console.WriteLine($"時刻: {news.ServerTime}");
 	if (!string.IsNullOrEmpty(news.Story))
-		Console.WriteLine($"Text: {news.Story}");
+		Console.WriteLine($"本文: {news.Story}");
 }
 ```
 
@@ -118,7 +118,7 @@ public void FilterNewsByKeywords(IEnumerable<string> keywords)
 			this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 			
 			// 通知を表示します
-			ShowNotification($"New news on topic: {news.Headline}");
+			ShowNotification($"トピックの新しいニュース: {news.Headline}");
 		}
 	};
 }

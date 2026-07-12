@@ -7,8 +7,8 @@
 			...				
 			var messageAdapter = new BinanceMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ваш API-ключ>".To<SecureString>(),
+				Secret = "<Ваш API-секрет>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...	
@@ -22,8 +22,8 @@ Connector Connector = new Connector();
 ...
 Connector.AddAdapter<BinanceMessageAdapter>(a =>
 {
-	a.Key = "<Your API Key>".To<SecureString>();
-	a.Secret = "<Your API Secret>".To<SecureString>();
+	a.Key = "<Ваш API-ключ>".To<SecureString>();
+	a.Secret = "<Ваш API-секрет>".To<SecureString>();
 });
 ```
 

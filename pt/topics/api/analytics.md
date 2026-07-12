@@ -22,7 +22,7 @@ Task Run(
 
 Parâmetros:
 
-- **logs** — receptor de logs para gerar mensagens de diagnóstico.
+- **logs** — receptor de registos para gerar mensagens de diagnóstico.
 - **panel** — painel para exibir os resultados da análise.
 - **securities** — array de instrumentos a analisar.
 - **from** / **to** — intervalo de tempo.

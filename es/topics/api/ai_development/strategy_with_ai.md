@@ -30,7 +30,7 @@ Cree un archivo `CLAUDE.md` (o `.cursorrules`) en la raíz del proyecto:
 ```markdown
 # Reglas del proyecto
 
-- Framework: StockSharp 5.x, .NET 10
+- Marco de trabajo: StockSharp 5.x, .NET 10
 - Las estrategias heredan de la clase Strategy
 - Suscribirse a velas mediante Connector.Subscribe(subscription)
 - Registrar órdenes mediante RegisterOrder(order)
@@ -48,7 +48,7 @@ Ejemplo de prompt:
 ```
 Cree una estrategia de trading con StockSharp que:
 - herede de Strategy
-- use dos medias móviles simples (SMA): fast (periodo 10) y slow (periodo 30)
+- use dos medias móviles simples (SMA): rápida (periodo 10) y lenta (periodo 30)
 - compre cuando la SMA rápida cruza por encima de la SMA lenta
 - venda cuando la SMA rápida cruza por debajo de la SMA lenta
 - tamaño de posición: 1 lote
@@ -167,10 +167,10 @@ Repase esta lista de verificación:
 - **Órdenes**: mediante `RegisterOrder()` con `BuyAtMarket` / `SellAtMarket` ✓
 - **Posición**: `Position` se comprueba antes de colocar órdenes ✓
 
-### Paso 4: Pida a la IA que añada backtesting
+### Paso 4: Pida a la IA que añada pruebas históricas
 
 ```
-Agregue código de backtesting para esta estrategia usando datos históricos.
+Agregue código de pruebas históricas para esta estrategia usando datos históricos.
 Use HistoryEmulationConnector, cargue datos desde el almacenamiento local
 y muestre estadísticas resumidas (PnL, número de operaciones, reducción máxima).
 ```
@@ -270,5 +270,5 @@ if (!_sma.IsFormed)
 1. **Proporcione documentación a la IA** — indíquele [doc.stocksharp.com](https://doc.stocksharp.com) o copie ejemplos de código de `Samples/`
 2. **Use CLAUDE.md** — un archivo de reglas del proyecto reduce considerablemente el número de errores
 3. **Empiece de forma simple** — cree primero una estrategia básica y luego añada filtros y gestión de riesgo
-4. **Pruebe con el histórico** — ejecute siempre un backtest antes de operar en real
+4. **Pruebe con el histórico** — ejecute siempre una prueba histórica antes de operar en real
 5. **Clone el repositorio** — si la IA tiene acceso a los fuentes de StockSharp, usará la API con mayor precisión

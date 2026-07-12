@@ -30,7 +30,7 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-Die Methode [GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) gibt eine [IChart](xref:StockSharp.Charting.IChart)-Schnittstelle zurück, die Zugriff auf Chart-Funktionen bietet. Es ist wichtig, das Ergebnis auf `null` zu prüfen, da der Chart beispielsweise beim Ausführen einer Strategie im Konsolenmodus oder beim Cloud-Testing nicht verfügbar sein kann.
+Die Methode [GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) gibt eine [IChart](xref:StockSharp.Charting.IChart)-Schnittstelle zurück, die Zugriff auf Chart-Funktionen bietet. Es ist wichtig, das Ergebnis auf `null` zu prüfen, da der Chart beispielsweise beim Ausführen einer Strategie im Konsolenmodus oder bei Cloud-Tests nicht verfügbar sein kann.
 
 ### SetChart-Methode
 
@@ -487,7 +487,7 @@ public class SmaStrategy : Strategy
 
 Charts in StockSharp-Strategien ermöglichen die Visualisierung von Handelsaktivitäten. Das vereinfacht die Entwicklung, das Debugging und die Überwachung von Handelsstrategien erheblich. Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) stellt viele Methoden für die Arbeit mit Charts bereit, mit denen sich verschiedene Elemente einfach hinzufügen und Daten rendern lassen.
 
-Wenn Sie eine Strategie mit grafischer Oberfläche entwickeln, berücksichtigen Sie immer, dass der Chart beispielsweise beim Start im Konsolenmodus oder beim Cloud-Testing nicht verfügbar sein kann. Deshalb ist es wichtig, das Ergebnis der Methode [GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) auf `null` zu prüfen und ein alternatives Szenario vorzusehen, damit die Strategie ohne Visualisierung arbeiten kann.
+Wenn Sie eine Strategie mit grafischer Oberfläche entwickeln, berücksichtigen Sie immer, dass der Chart beispielsweise beim Start im Konsolenmodus oder bei Cloud-Tests nicht verfügbar sein kann. Deshalb ist es wichtig, das Ergebnis der Methode [GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) auf `null` zu prüfen und ein alternatives Szenario vorzusehen, damit die Strategie ohne Visualisierung arbeiten kann.
 
 ## Siehe auch
 

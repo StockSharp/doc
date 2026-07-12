@@ -1,18 +1,18 @@
 # Black-Scholes
 
-![Designer Black Sols 00](../../../../../../images/designer_black_scholes_00.png)
+![Bloco do modelo de opções Black-Scholes no Designer](../../../../../../images/designer_black_scholes_00.png)
 
 Este bloco é usado para criar um modelo de precificação de opções.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Opção** - o strike para o qual o modelo tem de ser criado.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Modelo** - o modelo de precificação (por exemplo, Black-Scholes).
 
@@ -20,7 +20,7 @@ Sockets de saída
 
 Parâmetros
 
-- **Modelo Black** - uma flag que indica se deve ser criado um modelo Black-Scholes.
+- **Modelo Black** - um sinalizador que indica se deve ser criado um modelo Black-Scholes.
 
 ## Ver também
 

@@ -6,11 +6,11 @@
 
 El cubo se usa para obtener un libro de órdenes agrupado.
 
-### Sockets de entrada
+### Conectores de entrada
 
 - **Libro de órdenes** - libro de órdenes que se debe agrupar.
 
-### Sockets de salida
+### Conectores de salida
 
 - **Libro de órdenes** - libro de órdenes agrupado.
 

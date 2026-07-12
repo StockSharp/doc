@@ -2,7 +2,7 @@
 
 Benachrichtigungen sind ein System, das Benutzer über das Eintreten eines vorab festgelegten Ereignisses informiert.
 
-Benachrichtigungen können für eine breite Palette von Handelsereignissen für folgende Objekte eingerichtet werden: Portfolio, Position, Level 1, News. Beispiele sind das Überschreiten eines bestimmten gewichteten Durchschnittspreises einer Position oder das Erscheinen einer Nachricht mit einem bestimmten Titel.
+Benachrichtigungen können für eine breite Palette von Handelsereignissen für folgende Objekte eingerichtet werden: Portfolio, Position, Level 1, Nachrichten. Beispiele sind das Überschreiten eines bestimmten gewichteten Durchschnittspreises einer Position oder das Erscheinen einer Nachricht mit einem bestimmten Titel.
 
 Benachrichtigungen können folgende Formen haben:
 

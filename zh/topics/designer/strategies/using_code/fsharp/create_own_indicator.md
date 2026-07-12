@@ -95,7 +95,7 @@ type EmptyIndicator() as this =
 	/// 包含当前 <see cref="Change"/> 值的字符串表示。
 	/// </summary>
 	override this.ToString() =
-		sprintf "Change: %d" this.Change
+		sprintf "变化: %d" this.Change
 
 ```
 

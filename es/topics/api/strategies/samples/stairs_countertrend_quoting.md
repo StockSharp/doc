@@ -191,7 +191,7 @@ private void CreateQuotingProcessor(Sides side)
 - La estrategia solo trabaja con velas completadas
 - Se usa quoting en lugar de órdenes de mercado para una entrada al mercado más eficiente
 - La estrategia aplica un enfoque de contratendencia, abriendo posiciones contra la tendencia establecida
-- Se implementa logging detallado de los eventos principales para depuración
+- Se implementa registro detallado de los eventos principales para depuración
 - El procesador de quoting se limpia automáticamente cuando cambia la dirección de tendencia o se alcanzan objetivos
 - Se admite visualización de velas y operaciones en el gráfico
 - Se implementa optimización del parámetro de longitud de secuencia para la configuración de la estrategia

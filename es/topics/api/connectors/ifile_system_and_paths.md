@@ -172,7 +172,7 @@ Muchas clases conservan constructores sin `IFileSystem` por compatibilidad hacia
 
 ```csharp
 // Forma obsoleta
-[Obsolete("Use IFileSystem overload.")]
+[Obsolete("Use la sobrecarga con IFileSystem.")]
 public LocalMarketDataDrive(string path)
     : this(Paths.FileSystem, path) { }
 

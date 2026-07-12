@@ -12,7 +12,7 @@ Die Klasse [QuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.QuotingStra
 
 Hauptparameter der veralteten Klasse:
 
-- `QuotingSide` -- Quoting-Richtung (Buy/Sell)
+- `QuotingSide` -- Quoting-Richtung (Kauf/Verkauf)
 - `QuotingVolume` -- Quoting-Volumen
 - `TimeOut` -- Ausführungs-Timeout
 - `UseBidAsk` -- Orderbuchpreise verwenden

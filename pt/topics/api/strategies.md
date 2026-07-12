@@ -18,7 +18,7 @@ StockSharp fornece uma infraestrutura poderosa para criar, testar e executar est
 
 - [Parâmetros de Estratégia](strategies/parameters.md) - Guia para trabalhar com parâmetros de estratégia através de [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1). Descreve como criar parâmetros configuráveis, definir a sua apresentação na GUI e utilizá-los na otimização.
 
-- [Logging em Estratégias](strategies/logging.md) - Guia para usar o mecanismo de logging em estratégias para acompanhar e depurar o desempenho do algoritmo.
+- [Registo em estratégias](strategies/logging.md) - Guia para usar o mecanismo de registo em estratégias para acompanhar e depurar o desempenho do algoritmo.
 
 ### Funcionalidades Avançadas
 

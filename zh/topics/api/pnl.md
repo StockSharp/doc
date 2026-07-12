@@ -69,7 +69,7 @@ Multiplier = (StepPrice / PriceStep) * Leverage * LotMultiplier
 
 [PnLMessageAdapter](xref:StockSharp.Algo.PnL.PnLMessageAdapter) 类封装了一个内部适配器，并自动处理所有用于盈亏计算的消息。
 
-## 与战略的整合
+## 与策略的集成
 
 该策略 ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) 提供：
 

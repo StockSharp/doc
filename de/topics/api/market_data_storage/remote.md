@@ -1,10 +1,10 @@
-# Arbeiten mit Remote Storage
+# Arbeiten mit Remote-Speicher
 
 ## Einführung
 
 Zusätzlich zum lokalen Speicher bietet die API die Möglichkeit, mit entferntem Marktdatenspeicher zu arbeiten. Dies ist besonders nützlich, wenn Hydra im [Servermodus](../../hydra/server_mode/settings.md) verwendet wird oder wenn eine Verbindung zu einem [Hydra-Server](../../hydra_server.md) hergestellt wird.
 
-## Verbindung zu Remote Storage herstellen
+## Verbindung zum Remote-Speicher herstellen
 
 Für die Arbeit mit entferntem Speicher verwenden Sie die Klasse [RemoteMarketDataDrive](xref:StockSharp.Algo.Storages.RemoteMarketDataDrive).
 
@@ -94,7 +94,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
 	// ... (Code zur Datenverarbeitung)
 
-	// Fehlerbehandlung und Logging
+	// Fehlerbehandlung und Protokollierung
 	Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
 	Console.WriteLine($"{dataType}={dateTime}");
 }
@@ -103,4 +103,3 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 ## Fazit
 
 Die Funktionalität der API für entfernten Marktdatenspeicher bietet flexible Möglichkeiten zum Abrufen und Verwenden historischer Daten. Dadurch können Handelsstrategien effizient getestet und Marktanalysen mit umfangreichen Datensätzen durchgeführt werden, die über den [Hydra-Server](../../hydra_server.md) verfügbar sind.
-

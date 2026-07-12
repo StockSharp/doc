@@ -124,7 +124,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 			_candlesTransIds[symbol] = mdMsg.TransactionId;
 			await _socketClient.SubscribeCandles(symbol, cancellationToken);
 
-			// Notificar que a assinatura passou para o status online
+			// Notificar que a assinatura passou para o estado online
 			await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 		}
 		else
@@ -440,11 +440,11 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 
 ## Subscrição ao log de ordens
 
-O order log é uma informação detalhada sobre todas as mudanças no livro de ofertas, incluindo a adição, modificação e exclusão de ordens. Esses dados são específicos e não são fornecidos por todas as fontes de dados. Por exemplo, o Coinbase não suporta o fornecimento de order log.
+O log de ordens é uma informação detalhada sobre todas as mudanças no livro de ofertas, incluindo a adição, modificação e exclusão de ordens. Esses dados são específicos e não são fornecidos por todas as fontes de dados. Por exemplo, o Coinbase não suporta o fornecimento de log de ordens.
 
-Para implementar uma assinatura de order log em um adaptador, o método **OnOrderLogSubscriptionAsync** é usado. Esse método é chamado quando uma mensagem [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) com o tipo de dado [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) é recebida.
+Para implementar uma assinatura de log de ordens em um adaptador, o método **OnOrderLogSubscriptionAsync** é usado. Esse método é chamado quando uma mensagem [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) com o tipo de dado [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) é recebida.
 
-Abaixo está um exemplo de implementação desse método retirado do conector [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), que suporta order log:
+Abaixo está um exemplo de implementação desse método retirado do conector [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), que suporta log de ordens:
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)
@@ -472,7 +472,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 }
 ```
 
-Ao processar dados de order log recebidos da exchange, um método separado geralmente é usado, que converte os dados recebidos em mensagens [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) com o tipo [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog):
+Ao processar dados de log de ordens recebidos da exchange, um método separado geralmente é usado, que converte os dados recebidos em mensagens [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) com o tipo [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog):
 
 ```cs
 private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, Order order, CancellationToken cancellationToken)

@@ -4,7 +4,7 @@ La optimización se realiza sobre parámetros de estrategia que tienen los sigui
 
 - Numéricos (enteros y fraccionarios)
 - Tiempo ([TimeSpan](xref:System.TimeSpan))
-- Valor booleano (True-False)
+- Valor booleano (Verdadero-Falso)
 - Valor [Unit](../../api/strategies/unit_type.md)
 
 De forma predeterminada, todos los parámetros con estos tipos aparecen en la [tabla de parámetros del optimizador](brute_force.md). Para excluir un parámetro de la optimización:

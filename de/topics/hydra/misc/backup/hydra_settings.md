@@ -12,7 +12,7 @@ Im Folgenden wird beschrieben, wie Sie eine Backup-Aufgabe erstellen und konfigu
    - **Anmeldung** - Anmeldung. **Access Key ID**.
    - **Passwort** - Passwort. **Secret Access Key**.
    - **Startdatum** - ab welchem Datum das Backup gestartet werden soll.
-   - **Zeitversatz** - ein Offset in Tagen ab dem aktuellen Datum.
+   - **Zeitversatz** - ein Versatz in Tagen ab dem aktuellen Datum.
 
    **Allgemein**
    - **Kopfzeile** - Aufgabentitel.

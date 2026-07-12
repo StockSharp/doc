@@ -1,12 +1,12 @@
 # Analytik
 
-Die Funktion **Analytics** stellt Benutzern ein Werkzeug zur Analyse von Marktdaten bereit. Diese Funktionalitat ermöglicht eine detaillierte Analyse von Preisdaten, Volumina und anderen Marktindikatoren mithilfe einbindbarer [Skripte](analytics/running_a_script.md) in den Sprachen C#, F# und Python.
+Die Funktion **Analytik** stellt Benutzern ein Werkzeug zur Analyse von Marktdaten bereit. Diese Funktionalität ermöglicht eine detaillierte Analyse von Preisdaten, Volumina und anderen Marktindikatoren mithilfe einbindbarer [Skripte](analytics/running_a_script.md) in den Sprachen C#, F# und Python.
 
 > [!Video https://www.youtube.com/embed/wp_l0VBfY2o]
 
 ## Hauptfunktionen
 
-- **Analyse historischer Daten**: Die Analytics-Funktion ermöglicht Benutzern, historische Handelsdaten über verschiedene Zeitraume hinweg zu laden, anzuzeigen und zu analysieren.
+- **Analyse historischer Daten**: Die Analytikfunktion ermöglicht Benutzern, historische Handelsdaten über verschiedene Zeiträume hinweg zu laden, anzuzeigen und zu analysieren.
 
 - **Datenvisualisierung**: Hydra bietet verschiedene Werkzeuge zur Datenvisualisierung, darunter Charts und Diagramme, die bei der Analyse von Trends und beim Erkennen von Mustern helfen.
 

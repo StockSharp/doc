@@ -1,6 +1,6 @@
 # 交易品种标识符
 
-[S#](../../api.md) 中来自不同来源的工具具有 [Security.Id](xref:StockSharp.BusinessEntities.Security.Id) 统一标识符。这样做的目的是使交易算法代码不依赖于连接类型（[OpenECry](../connectors/stock_market/openecry.md)、[Rithmic](../connectors/stock_market/rithmic.md)、[Interactive Brokers](../connectors/stock_market/interactive_brokers.md) 等）。对于工具标识符，使用以下语法 - **[instrument code]@[board code]**。例如，苹果公司股票的标识符将是 **AAPL@NASDAQ**。对于衍生品市场工具，交易板为 **NYSE**（或 **AAPL** 期货交易的其他板名称）。例如，对于 ES 指数六月份期货，其标识符将是 **ESM5@NYSE**。
+[S#](../../api.md) 中来自不同来源的交易品种具有 [Security.Id](xref:StockSharp.BusinessEntities.Security.Id) 统一标识符。这样做的目的是使交易算法代码不依赖于连接类型（[OpenECry](../connectors/stock_market/openecry.md)、[Rithmic](../connectors/stock_market/rithmic.md)、[Interactive Brokers](../connectors/stock_market/interactive_brokers.md) 等）。对于交易品种标识符，使用以下语法 - **[交易品种代码]@[交易板代码]**。例如，苹果公司股票的标识符将是 **AAPL@NASDAQ**。对于衍生品市场交易品种，交易板为 **NYSE**（或 **AAPL** 期货交易的其他板名称）。例如，对于 ES 指数六月份期货，其标识符将是 **ESM5@NYSE**。
 
 > [!TIP]
 > [Hydra](../../hydra.md) 市场数据下载应用程序使用相同机制枚举具有历史记录的文件夹。

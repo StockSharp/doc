@@ -8,7 +8,7 @@
 
 ![Designer ライブ取引 02](../../../images/designer_live_trade_02.png)
 
-Trade フォルダーには、ライブ取引で実行するために追加されたストラテジーが含まれます。実行中のストラテジーは ![Designer 回路パネル 02](../../../images/designer_panel_circuits_02.png) 記号で、停止中のストラテジーは ![Designer 回路パネル 03](../../../images/designer_panel_circuits_03.png) 記号で示されます。
+取引フォルダーには、ライブ取引で実行するために追加されたストラテジーが含まれます。実行中のストラテジーは ![Designer 回路パネル 02](../../../images/designer_panel_circuits_02.png) 記号で、停止中のストラテジーは ![Designer 回路パネル 03](../../../images/designer_panel_circuits_03.png) 記号で示されます。
 
 ## 推奨コンテンツ
 

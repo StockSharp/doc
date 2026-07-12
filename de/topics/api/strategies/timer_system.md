@@ -2,7 +2,7 @@
 
 ## Überblick
 
-Strategien in StockSharp unterstützen ein integriertes Timer-System, mit dem Aktionen in festgelegten Zeitintervallen ausgeführt werden können. Timer basieren auf dem Mechanismus `WhenIntervalElapsed` des Connectors und funktionieren sowohl im Live-Handel als auch beim Backtesting korrekt, wobei im Backtesting die virtuelle Zeit des Emulators verwendet wird.
+Strategien in StockSharp unterstützen ein integriertes Timer-System, mit dem Aktionen in festgelegten Zeitintervallen ausgeführt werden können. Timer basieren auf dem Mechanismus `WhenIntervalElapsed` des Connectors und funktionieren sowohl im Live-Handel als auch bei Rücktests korrekt, wobei im Rücktest die virtuelle Zeit des Emulators verwendet wird.
 
 Timer sind nützlich für:
 

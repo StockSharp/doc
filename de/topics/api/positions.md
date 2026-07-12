@@ -74,11 +74,11 @@ state.Clear();
 
 ## PositionLifecycleTracker
 
-Die Klasse [PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) verfolgt den vollständigen Lebenszyklus von Positionen - von der Eröffnung bis zur Schließung (Round-Trip). Dies ist nützlich für die Analyse einzelner Trades, die Gewinnberechnung pro Position und die Erstellung von Berichten.
+Die Klasse [PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) verfolgt den vollständigen Lebenszyklus von Positionen - von der Eröffnung bis zur Schließung (Positionszyklus). Dies ist nützlich für die Analyse einzelner Trades, die Gewinnberechnung pro Position und die Erstellung von Berichten.
 
 ### Hauptmerkmale
 
-- **Historie**: Die Eigenschaft `History` (`IReadOnlyList<ReportPosition>`) enthält alle abgeschlossenen Round-Trip-Positionen.
+- **Historie**: Die Eigenschaft `History` (`IReadOnlyList<ReportPosition>`) enthält alle abgeschlossenen Positionszyklen.
 - **Ereignis `RoundTripClosed`**: Wird ausgelöst, wenn eine Position geschlossen wird (Wert erreicht null) oder umgekehrt wird (Positionsvorzeichen ändert sich).
 - **Methode `ProcessPosition`**: Akzeptiert ein Objekt [Position](xref:StockSharp.BusinessEntities.Position) und aktualisiert den internen Zustand.
 
@@ -97,7 +97,7 @@ var tracker = new PositionLifecycleTracker();
 
 tracker.RoundTripClosed += report =>
 {
-    Console.WriteLine($"Round-Trip abgeschlossen:");
+    Console.WriteLine($"Positionszyklus abgeschlossen:");
     Console.WriteLine($"  Eröffnet: {report.OpenTime}");
     Console.WriteLine($"  Geschlossen: {report.CloseTime}");
 };
@@ -114,7 +114,7 @@ foreach (var report in tracker.History)
 
 ## PositionMessageAdapter
 
-Die Klasse [PositionMessageAdapter](xref:StockSharp.Algo.Positions.PositionMessageAdapter) ist ein Wrapper um einen Nachrichtenadapter, der Positionen automatisch aus dem Nachrichtenstrom berechnet. Sie wird innerhalb der internen Connector-Infrastruktur verwendet.
+Die Klasse [PositionMessageAdapter](xref:StockSharp.Algo.Positions.PositionMessageAdapter) umschließt einen Nachrichtenadapter, der Positionen automatisch aus dem Nachrichtenstrom berechnet. Sie wird innerhalb der internen Connector-Infrastruktur verwendet.
 
 ### Funktionsweise
 

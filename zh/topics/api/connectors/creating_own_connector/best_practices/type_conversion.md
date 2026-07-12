@@ -6,7 +6,7 @@
 
 1. 将 StockSharp 类型（例如 [Sides](xref:StockSharp.Messages.Sides)、[OrderTypes](xref:StockSharp.Messages.OrderTypes)、[TimeInForce](xref:StockSharp.Messages.TimeInForce)）转换为交易所使用的字符串表示形式。
 2. 将从交易所接收的数据反向转换为 StockSharp 类型。
-3. 在 StockSharp 和交易所格式之间转换金融工具标识符。
+3. 在 StockSharp 和交易所格式之间转换交易品种标识符。
 4. 转换时间格式和时间周期。
 
 ## 实现示例

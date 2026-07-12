@@ -18,7 +18,7 @@ Bärischer Harami signalisiert ein mögliches Ende eines Aufwärtstrends:
 - Die erste Candle bestätigt den bestehenden Aufwärtstrend und die Stärke der Käufer.
 - Die zweite Candle, vollständig in der ersten enthalten, weist auf einen Verlust des bullischen Momentums und ein mögliches Auftreten von Verkäufern hin.
 - Je kleiner der Körper der zweiten Candle im Vergleich zur ersten ist, desto ausgeprägter sind Unsicherheit und Umkehrpotenzial.
-- Wenn die zweite Candle ein Doji ist (mit sehr kleinem Körper), wird das Muster "Harami Cross" genannt und gilt als stärkeres Unsicherheitssignal.
+- Wenn die zweite Candle ein Doji ist (mit sehr kleinem Körper), wird das Muster "Harami-Kreuz" genannt und gilt als stärkeres Unsicherheitssignal.
 - Dieses Muster gilt häufig als schwächeres Signal als Bärische Umschließung, kann jedoch ein früherer Hinweis auf eine mögliche Umkehr sein.
 
 ### Handelsstrategien
@@ -37,4 +37,3 @@ Bärischer Harami erfordert für den Positionseinstieg in der Regel zusätzliche
 [Bullischer Harami](bullish_harami.md)
 
 [Bärisches Engulfing](bearish_engulfing.md)
-

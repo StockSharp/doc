@@ -1,6 +1,6 @@
 # Visuelles Monitoring
 
-Zur Vereinfachung des Monitorings können Sie die spezielle Komponente [Monitor](xref:StockSharp.Xaml.Monitor) verwenden. Siehe auch [Visuelle Logging-Komponenten](../graphical_user_interface/logging.md).
+Zur Vereinfachung des Monitorings können Sie die spezielle Komponente [Monitor](xref:StockSharp.Xaml.Monitor) verwenden. Siehe auch [Visuelle Protokollierungskomponenten](../graphical_user_interface/logging.md).
 
 ![GUI-Protokollanzeige](../../../images/gui_logcontrol.png)
 
@@ -24,5 +24,4 @@ Die Verschachtelung der Quellen wird in Form eines Baums dargestellt. Jeder übe
 
 ## Empfohlene Inhalte
 
-[Visuelle Logging-Komponenten](../graphical_user_interface/logging.md)
-
+[Visuelle Protokollierungskomponenten](../graphical_user_interface/logging.md)

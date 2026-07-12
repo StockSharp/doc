@@ -132,7 +132,7 @@ private async ValueTask ProcessOrder(Order order, long originTransId, Cancellati
 private async ValueTask SessionOnOrderReceived(Order order, CancellationToken cancellationToken)
 {
 	// 处理收到的订单更新
-	// OriginTransId = 0, since this is a real-time update, not a response to a specific request
+	// OriginTransId = 0，因为这是实时更新，而不是对特定请求的响应
 	await ProcessOrder(order, 0, cancellationToken);
 }
 ```

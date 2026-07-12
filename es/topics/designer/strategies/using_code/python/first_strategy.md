@@ -169,7 +169,7 @@ def OnProcess(self, candle, longValue, shortValue):
 ```python
 def CreateClone(self):
 	"""
-	!! OBLIGATORIO!! Crea una nueva instancia de la estrategia.
+	!! OBLIGATORIO !! Crea una nueva instancia de la estrategia.
 	"""
 	return sma_strategy()
 ```

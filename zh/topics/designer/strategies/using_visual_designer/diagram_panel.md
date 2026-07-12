@@ -4,7 +4,7 @@
 
 ![Designer Designer 方案、策略和组件元素 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
-## Palette 面板
+## 元素面板
 
 **元素面板** 面板包含用于创建策略的模块。面板中的全部元素按类别划分，详见[模块说明](elements.md)。要将模块添加到 **Designer** 面板，请在所需模块上按住鼠标右键，将其拖动到 **Designer** 面板后松开。随后程序会自动选中该元素，并在属性编辑窗口中显示模块参数。
 

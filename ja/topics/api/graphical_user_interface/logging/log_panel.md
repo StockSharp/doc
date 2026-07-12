@@ -29,8 +29,8 @@ _logManager.Sources.Add(new Ecng.Logging.TraceSource());
 _logManager.Listeners.Add(new GuiLogListener(LogControl));
 ..........................                  
 // TraceSource からテストメッセージを送信します:
-Trace.TraceInformation("Info  test message");
-Trace.TraceWarning("Warning test message");
+Trace.TraceInformation("情報テストメッセージ");
+Trace.TraceWarning("警告テストメッセージ");
 Trace.TraceError("エラーテストメッセージ");
 					
 ```

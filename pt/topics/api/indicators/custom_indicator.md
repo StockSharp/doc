@@ -81,7 +81,7 @@ Tipos de medição disponíveis:
 
 Esta propriedade é criticamente importante para apresentar corretamente indicadores num gráfico. Quando vários indicadores com dimensões diferentes são sobrepostos no mesmo painel, são criados eixos Y separados para indicadores com tipos `Measure` diferentes. Isto permite apresentar visualmente todos os indicadores na sua escala natural, mesmo que um tenha valores na ordem dos milhares (por exemplo, preço), enquanto outro é medido em frações de uma unidade (por exemplo, oscilador).
 
-### Save e Load
+### Guardar e carregar
 
 Os métodos [Save](xref:StockSharp.Algo.Indicators.BaseIndicator.Save(Ecng.Serialization.SettingsStorage)) e [Load](xref:StockSharp.Algo.Indicators.BaseIndicator.Load(Ecng.Serialization.SettingsStorage)) são necessários para guardar e carregar definições de indicadores:
 
@@ -379,8 +379,8 @@ public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageV
 	/// <summary>
 	/// Inicializa uma nova instância da classe <see cref="PercentageVolumeOscillatorValue"/>.
 	/// </summary>
-	/// <param name="indicator">Indicator.</param>
-	/// <param name="time">Value time.</param>
+	/// <param name="indicator">Indicador.</param>
+	/// <param name="time">Hora do valor.</param>
 	public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
 			: base(indicator, time)
 	{

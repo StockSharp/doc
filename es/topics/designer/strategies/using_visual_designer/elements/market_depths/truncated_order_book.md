@@ -4,11 +4,11 @@
 
 El cubo se usa para obtener un libro de órdenes truncado a una profundidad especificada.
 
-### Sockets de entrada
+### Conectores de entrada
 
 - **Libro de órdenes** es un libro de órdenes que debe truncarse.
 
-### Sockets de salida
+### Conectores de salida
 
 - **Libro de órdenes** es el libro de órdenes truncado.
 

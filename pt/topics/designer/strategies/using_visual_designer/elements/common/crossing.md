@@ -4,14 +4,14 @@
 
 Este elemento é usado para acompanhar a posição de dois valores um em relação ao outro. Por exemplo, para determinar o momento de cruzamento entre duas linhas.
 
-A comparação é feita relativamente aos valores nos dois sockets **Acima** e **Abaixo**.
+A comparação é feita relativamente aos valores nos dois conectores **Acima** e **Abaixo**.
 
-## Sockets de entrada
+## Conectores de entrada
 
 - **Acima** - valores que permitem comparação (por exemplo, um valor numérico, um valor de indicador, etc.).
 - **Abaixo** - valores que permitem comparação (por exemplo, um valor numérico, um valor de indicador, etc.).
 
-## Sockets de saída
+## Conectores de saída
 
 - **Sinalizador** - true se **Acima** for maior do que **Abaixo**; caso contrário, false.
 

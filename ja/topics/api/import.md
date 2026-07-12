@@ -55,10 +55,10 @@ var importer = new CsvImporter(
 await using var stream = File.OpenRead("trades.csv");
 var (count, lastTime) = await importer.Import(
     stream,
-    p => Console.WriteLine($"Progress: {p}%"),
+    p => Console.WriteLine($"進捗: {p}%"),
     token);
 
-Console.WriteLine($"Imported {count} records, last: {lastTime}");
+Console.WriteLine($"{count} 件のレコードをインポートしました。最後: {lastTime}");
 ```
 
 ## FieldMapping — フィールド記述

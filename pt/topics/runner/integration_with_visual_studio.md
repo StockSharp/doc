@@ -30,6 +30,6 @@ $(TargetPath) - é uma macro especial do **Visual Studio** que é automaticament
 
 ![Integração com o Visual Studio 03](../../images/runner_debug_03.png)
 
-5. Ao definir breakpoints, a execução do programa irá parar quando os atingir. Por exemplo, para depurar a lógica de negociação quando aparece uma nova vela:
+5. Ao definir pontos de interrupção, a execução do programa irá parar quando os atingir. Por exemplo, para depurar a lógica de negociação quando aparece uma nova vela:
 
 ![Integração com o Visual Studio 04](../../images/runner_debug_04.png)

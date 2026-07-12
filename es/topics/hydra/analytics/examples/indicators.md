@@ -1,6 +1,6 @@
 # Indicadores
 
-El script "Indicator" está destinado a demostrar el trabajo con indicadores de análisis técnico dentro de la plataforma StockSharp. Permite cargar datos históricos, aplicarles distintos indicadores y mostrar los resultados en un gráfico. Este enfoque ayuda a analizar tendencias del mercado y tomar decisiones de trading informadas.
+El script "Indicador" está destinado a demostrar el trabajo con indicadores de análisis técnico dentro de la plataforma StockSharp. Permite cargar datos históricos, aplicarles distintos indicadores y mostrar los resultados en un gráfico. Este enfoque ayuda a analizar tendencias del mercado y tomar decisiones de trading informadas.
 
 ![Indicadores](../../../../images/hydra_analytics_indicator.png)
 
@@ -36,7 +36,7 @@ Para trabajar con el script, deben realizarse los siguientes pasos:
 2. **Aplicar indicadores**: elegir y configurar parámetros para los indicadores que se aplicarán a los datos.
 3. **Mostrar resultados**: visualizar datos históricos e indicadores en un gráfico para su análisis.
 
-El script "Indicator" proporciona una herramienta potente para el análisis profundo de mercados financieros, permitiendo a traders y analistas usar estos indicadores para desarrollar estrategias de trading eficaces.
+El script "Indicador" proporciona una herramienta potente para el análisis profundo de mercados financieros, permitiendo a traders y analistas usar estos indicadores para desarrollar estrategias de trading eficaces.
 
 ## Código del script en C#
 
@@ -52,7 +52,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("No hay instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// dibujar series en el gráfico
-				candleChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values);
+				candleChart.Append($"{security} (cierre)", candlesSeries.Keys, candlesSeries.Values);
 				indicatorChart.Append($"{security} (ROC)", indicatorSeries.Keys, indicatorSeries.Values);
 			}
 
@@ -117,7 +117,7 @@ from indicator_extensions import *
 class indicator_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("No hay instrumentos.")
 			return Task.CompletedTask
 
 		# crear 2 paneles para velas y series de indicador
@@ -151,7 +151,7 @@ class indicator_script(IAnalyticsScript):
 
 			# dibujar series en el gráfico
 			candle_chart.Append(
-				f"{security} (close)",
+				f"{security} (cierre)",
 				list(candles_series.keys()),
 				list(candles_series.values())
 			)

@@ -4,6 +4,6 @@
 
 Este bloco é utilizado para obter a hora actual.
 
-#### Sockets de saída
+#### Conectores de saída
 
 - **Saída** - a hora actual.

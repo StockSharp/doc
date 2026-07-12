@@ -8,7 +8,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 ![Configurações da API GUI Gopax](../../../../../images/api_gui_settings_gopax.png)
 
 - **chave** - Key.
-- **segredo** - Secret.
+- **segredo** - segredo da API.
 - **Saldo** - Intervalo de verificação do saldo. Necessário em caso de ações de depósito e levantamento.
 - **domínio (endereço)** - Endereço de domínio.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

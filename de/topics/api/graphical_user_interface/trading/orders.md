@@ -1,17 +1,17 @@
-# Orders
+# Aufträge
 
-[OrderGrid](xref:StockSharp.Xaml.OrderGrid) ist eine Tabelle zur Anzeige von Orders und bedingten Orders. Außerdem enthält das Kontextmenü dieser Tabelle Befehle für Operationen mit Orders: Registrierung, Änderung und Stornierung von Orders. Die Auswahl eines Menüeintrags erzeugt die Ereignisse [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering), [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) bzw. [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling).
+[OrderGrid](xref:StockSharp.Xaml.OrderGrid) ist eine Tabelle zur Anzeige von Aufträgen und bedingten Aufträgen. Außerdem enthält das Kontextmenü dieser Tabelle Befehle für Operationen mit Aufträgen: Registrierung, Änderung und Stornierung von Aufträgen. Die Auswahl eines Menüeintrags erzeugt die Ereignisse [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering), [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) bzw. [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling).
 
-![Orders Bildschirmfoto](../../../../images/gui_ordergrid.png)
+![Aufträge Bildschirmfoto](../../../../images/gui_ordergrid.png)
 
 > [!TIP]
 > Die Operation selbst (Registrierung, Änderung, Stornierung) wird nicht ausgeführt. Der entsprechende Code muss manuell in den Ereignishandlern geschrieben werden.
 
 **Wichtigste Member**
 
-- [OrderGrid.Orders](xref:StockSharp.Xaml.OrderGrid.Orders) - Liste der Orders.
+- [OrderGrid.Orders](xref:StockSharp.Xaml.OrderGrid.Orders) - Liste der Aufträge.
 - [OrderGrid.SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) - ausgewählte Order.
-- [OrderGrid.SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) - ausgewählte Orders.
+- [OrderGrid.SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) - ausgewählte Aufträge.
 - [OrderGrid.AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail))**(**[StockSharp.BusinessEntities.OrderFail](xref:StockSharp.BusinessEntities.OrderFail) fail **)** - Methode, die eine Fehlermeldung zur Orderregistrierung zum Kommentarfeld hinzufügt.
 - [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) - Ereignis zur Orderregistrierung (tritt nach Auswahl des entsprechenden Kontextmenüeintrags auf).
 - [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) - Ereignis zur Orderänderung (tritt nach Auswahl des entsprechenden Kontextmenüeintrags auf).
@@ -39,7 +39,7 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	// Sonstiger Code während der Verbindung...
 
-	// Ereignis für empfangene Orders abonnieren
+	// Ereignis für empfangene Aufträge abonnieren
 	_connector.OrderReceived += (subscription, order) =>
 	{
 		// Aufträge zur Tabelle OrderGrid hinzufügen
@@ -50,10 +50,10 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 	_connector.Connect();
 }
 
-// Storniert alle ausgewählten Orders
+// Storniert alle ausgewählten Aufträge
 private void OrderGrid_OnOrderCanceling(IEnumerable<Order> orders)
 {
-	// Durch ausgewählte Orders iterieren und jede stornieren
+	// Durch ausgewählte Aufträge iterieren und jeden stornieren
 	foreach (var order in orders)
 	{
 		_connector.CancelOrder(order);
@@ -78,21 +78,21 @@ private void OrderGrid_OnOrderReRegistering(Order order)
 
 ```
 
-## Arbeiten mit Orders über Subscriptions
+## Arbeiten mit Aufträgen über Subscriptions
 
-Der moderne Ansatz für die Arbeit mit Orders verwendet Subscriptions:
+Der moderne Ansatz für die Arbeit mit Aufträgen verwendet Subscriptions:
 
 ```cs
-// Ereignis für empfangene Orders abonnieren
+// Ereignis für empfangene Aufträge abonnieren
 _connector.OrderReceived += OnOrderReceived;
 
-// Handler für empfangene Orders
+// Handler für empfangene Aufträge
 private void OnOrderReceived(Subscription subscription, Order order)
 {
 	// Prüfen, ob die Order zu der für uns relevanten Subscription gehört
 	if (subscription == _ordersSubscription)
 	{
-		// Order zur Tabelle hinzufügen
+		// Auftrag zur Tabelle hinzufügen
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 
 		// Zusätzliche Orderverarbeitung
@@ -102,14 +102,14 @@ private void OnOrderReceived(Subscription subscription, Order order)
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
 		{
 			this.GuiAsync(() => {
-				// Oberfläche für abgeschlossene Orders aktualisieren
+				// Oberfläche für abgeschlossene Aufträge aktualisieren
 			});
 		}
 	}
 }
 ```
 
-## Orders stornieren
+## Aufträge stornieren
 
 ```cs
 // Moderner Ansatz zur Orderstornierung
@@ -128,7 +128,7 @@ private void CancelOrder(Order order)
 	}
 }
 
-// Massenstornierung von Orders
+// Massenstornierung von Aufträgen
 private void CancelAllOrders()
 {
 	var activeOrders = _ordersWindow.OrderGrid.Orders

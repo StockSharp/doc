@@ -4,16 +4,16 @@
 
 Das Element wird verwendet, um Informationen über Positionsänderungen für das angegebene Instrument und Portfolio zu erhalten.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Handelsinstrument** - das Instrument, für das Sie eine Position erhalten möchten.
 - **Portfolio** - das Portfolio, für das Sie eine Position erhalten möchten.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Position** - der numerische Wert der Position im Instrument oder der aktuelle Betrag verfügbarer Mittel auf dem Konto. Dieser Wert wird erzeugt, wenn sich entweder die Position oder die Mittel ändern, sowie nach dem Start der Strategie.
 

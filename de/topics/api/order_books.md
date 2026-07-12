@@ -2,7 +2,7 @@
 
 ## Beschreibung
 
-Das Orderbuch (auch Market Depth) enthält Informationen über aktuelle Kauf- und Verkaufsorders für ein bestimmtes Wertpapier, organisiert nach Preisniveaus. In StockSharp liefert das Orderbuch Daten zu Nachfrage und Angebot und ermöglicht Marktanalysen in Echtzeit.
+Das Orderbuch (auch Markttiefe) enthält Informationen über aktuelle Kauf- und Verkaufsorders für ein bestimmtes Wertpapier, organisiert nach Preisniveaus. In StockSharp liefert das Orderbuch Daten zu Nachfrage und Angebot und ermöglicht Marktanalysen in Echtzeit.
 
 ## Struktur
 

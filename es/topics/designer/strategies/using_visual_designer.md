@@ -16,7 +16,7 @@ Después de pulsar **Aceptar**, aparecerá una nueva estrategia en la carpeta **
 
 ![Designer Creación de una estrategia 01](../../../images/designer_creation_of_strategy_01.png)
 
-La pestaña de estrategia consta del panel **Esquema** ([Diseñador de estrategias](using_visual_designer/diagram_panel.md)), así como de otras pestañas que representan los [componentes gráficos](../user_interface/components.md) de la estrategia, necesarios para mostrar los resultados de la prueba de la estrategia creada en el área **Esquema**. La información detallada sobre las pruebas de estrategias se describe en la sección [Ejemplo de backtesting](../backtesting/getting_started.md).
+La pestaña de estrategia consta del panel **Esquema** ([Diseñador de estrategias](using_visual_designer/diagram_panel.md)), así como de otras pestañas que representan los [componentes gráficos](../user_interface/components.md) de la estrategia, necesarios para mostrar los resultados de la prueba de la estrategia creada en el área **Esquema**. La información detallada sobre las pruebas de estrategias se describe en la sección [Ejemplo de pruebas históricas](../backtesting/getting_started.md).
 
 ## Véase también
 

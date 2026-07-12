@@ -1,6 +1,6 @@
 # 3D 报告
 
-优化结果可以使用 3D 图表查看。为此，请在结果面板中切换到 Chart 选项卡：
+优化结果可以使用 3D 图表查看。为此，请在结果面板中切换到图表选项卡：
 
 ![Designer 优化图表 00](../../../images/designer_optimization_chart_00.png)
 

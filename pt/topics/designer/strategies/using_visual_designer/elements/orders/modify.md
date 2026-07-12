@@ -4,18 +4,18 @@
 
 Este bloco é utilizado para modificar uma ordem de um instrumento.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Acionador** - o sinal que determina quando deslocar uma ordem.
 - **Ordem** - a ordem que será modificada.
 - **Preço** - valor numérico do novo preço.
 - **Volume** - valor numérico do novo volume.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Ordem** - a ordem modificada, que pode ser utilizada para obter transacções correspondentes através do elemento **Transações por ordem** e para apresentação no gráfico através do bloco **Painel do gráfico**.
 - **Erro** - um erro ao deslocar a ordem.

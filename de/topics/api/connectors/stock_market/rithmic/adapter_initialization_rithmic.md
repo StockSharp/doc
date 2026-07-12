@@ -7,9 +7,9 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new RithmicMessageAdapter(Connector.TransactionIdGenerator)
 {
-	UserName = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
-	CertFile = "<Path to certificate file>",
+	UserName = "<Ihr Login>",
+	Password = "<Ihr Passwort>".To<SecureString>(),
+	CertFile = "<Pfad zur Zertifikatsdatei>",
 	Server = RithmicServers.Real,
 	//Server = RithmicServers.Test,
 	//Server = RithmicServers.Simulator,
@@ -26,9 +26,9 @@ Connector Connector = new Connector();
 ...
 Connector.AddAdapter<RithmicMessageAdapter>(a =>
 {
-	a.UserName = "<Your Login>";
-	a.Password = "<Your Password>".To<SecureString>();
-	a.CertFile = "<Path to certificate file>";
+	a.UserName = "<Ihr Login>";
+	a.Password = "<Ihr Passwort>".To<SecureString>();
+	a.CertFile = "<Pfad zur Zertifikatsdatei>";
 	a.Server = RithmicServers.Real;
 });
 ```

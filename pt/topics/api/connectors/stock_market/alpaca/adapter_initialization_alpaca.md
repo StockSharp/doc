@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new AlpacaMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>".To<SecureString>(),
-	Secret = "<Your API Secret>".To<SecureString>(),
+	Key = "<A sua chave de API>".To<SecureString>(),
+	Secret = "<O seu segredo de API>".To<SecureString>(),
 
 	// descomente para o modo sandbox
 	//IsDemo = true,

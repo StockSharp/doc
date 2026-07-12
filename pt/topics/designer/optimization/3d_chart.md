@@ -1,6 +1,6 @@
 # Relatório 3D
 
-Os resultados da otimização podem ser visualizados como um gráfico 3D. Para isso, no painel de resultados, tem de mudar o separador para Chart:
+Os resultados da otimização podem ser visualizados como um gráfico 3D. Para isso, no painel de resultados, tem de mudar para o separador Gráfico:
 
 ![Designer Gráfico de otimização 00](../../../images/designer_optimization_chart_00.png)
 

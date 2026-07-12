@@ -29,7 +29,7 @@ O script analisa um conjunto de instrumentos especificados, procura entre eles c
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// O script analítico, mostra a maior candle (por volume e por comprimento) para securities especificadas.
+	/// O script analítico, mostra a maior candle (por volume e por comprimento) para instrumentos especificados.
 	/// </summary>
 	public class BiggestCandleScript : IAnalyticsScript
 	{
@@ -37,7 +37,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Sem instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -70,8 +70,8 @@ namespace StockSharp.Algo.Analytics
 			}
 
 			// desenhar séries no gráfico
-			priceChart.Append("prices", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
-			volChart.Append("prices", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
+			priceChart.Append("preços", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
+			volChart.Append("preços", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
 
 			return Task.CompletedTask;
 		}
@@ -98,11 +98,11 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# O script analítico, mostra a maior candle (por volume e por comprimento) para securities especificadas.
+# O script analítico, mostra a maior candle (por volume e por comprimento) para instrumentos especificados.
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Sem instrumentos.")
 			return Task.CompletedTask
 
 		price_chart = create_3d_chart(panel, datetime, float, float)
@@ -139,14 +139,14 @@ class biggest_candle_script(IAnalyticsScript):
 
 		# desenhar séries no gráfico
 		price_chart.Append(
-			"prices",
+			"preços",
 			[c.OpenTime for c in big_price_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[get_length(c) for c in big_price_candles]
 		)
 
 		vol_chart.Append(
-			"prices",
+			"preços",
 			[c.OpenTime for c in big_vol_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[c.TotalVolume for c in big_vol_candles]

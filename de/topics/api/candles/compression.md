@@ -60,7 +60,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 		case BuildTypes.OrderLog:
-			// ... (Code zum Erstellen von Kerzen aus dem Orderlog)
+			// ... (Code zum Erstellen von Kerzen aus dem Orderprotokoll)
 
 		case BuildTypes.Depths:
 			return StorageRegistry
@@ -73,7 +73,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 }
 
 // Diese Methode zeigt verschiedene Möglichkeiten zum Erstellen von Kerzen je nach Quelldatentyp.
-// Es unterstützt das Erstellen aus Ticks, Orderlog, Spreads und anderen Quellen.
+// Es unterstützt das Erstellen aus Ticks, Orderprotokoll, Spreads und anderen Quellen.
 ```
 
 ## Zusätzliche Funktionen
@@ -90,7 +90,7 @@ switch (type)
 		// ... (Code für Ticks)
 
 	case BuildTypes.OrderLog:
-		// ... (Code für Order-Log)
+		// ... (Code für Orderprotokoll)
 
 	case BuildTypes.Depths:
 		// ... (Code für Spreads)
@@ -106,7 +106,7 @@ switch (type)
 	// ... (andere Fälle)
 }
 
-// Dieser Code zeigt, wie Kerzen aus verschiedenen Datenquellen erstellt werden: Ticks, Orderlog, Spreads, Level1-Daten und sogar Kerzen kleinerer Zeitrahmen.
+// Dieser Code zeigt, wie Kerzen aus verschiedenen Datenquellen erstellt werden: Ticks, Orderprotokoll, Spreads, Level1-Daten und sogar Kerzen kleinerer Zeitrahmen.
 ```
 
 ## Fazit

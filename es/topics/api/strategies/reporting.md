@@ -26,7 +26,7 @@ La interfaz `IReportSource` proporciona todos los datos necesarios para generar 
 | `StatisticParameters` | `IEnumerable<(string, object)>` | Parámetros estadísticos |
 | `Orders` | `IEnumerable<ReportOrder>` | Órdenes |
 | `OwnTrades` | `IEnumerable<ReportTrade>` | Operaciones propias |
-| `Positions` | `IEnumerable<ReportPosition>` | Round-trips de posición |
+| `Positions` | `IEnumerable<ReportPosition>` | Ciclos completos de posición |
 
 Antes de leer los datos, se llama al método `Prepare()` para sincronizar el estado interno de la fuente.
 
@@ -78,18 +78,18 @@ Durante la agregación, las órdenes y operaciones se agrupan por intervalo de t
 
 ## PositionLifecycleTracker
 
-`PositionLifecycleTracker` sigue el ciclo de vida de posiciones y genera round-trips: registros de apertura y cierre de posición.
+`PositionLifecycleTracker` sigue el ciclo de vida de posiciones y genera ciclos completos: registros de apertura y cierre de posición.
 
-Un round-trip se registra cuando:
+Un ciclo completo se registra cuando:
 - Una posición se cierra por completo (el valor se vuelve cero)
 - Se produce una reversión de posición (cambio de signo)
 
-En la clase `Strategy`, el tracker se integra automáticamente: los round-trips completados se agregan a `ReportSource` mediante el evento `RoundTripClosed`.
+En la clase `Strategy`, el tracker se integra automáticamente: los ciclos completos finalizados se agregan a `ReportSource` mediante el evento `RoundTripClosed`.
 
 ```csharp
 var tracker = new PositionLifecycleTracker();
 
-// Evento al cerrar round-trip
+// Evento al cerrar un ciclo completo
 tracker.RoundTripClosed += roundTrip =>
 {
     Console.WriteLine($"Posición cerrada: {roundTrip.SecurityId}, " +
@@ -101,7 +101,7 @@ tracker.RoundTripClosed += roundTrip =>
 // Procesar actualización de posición
 tracker.ProcessPosition(position);
 
-// Acceder al historial de round-trips
+// Acceder al historial de ciclos completos
 IReadOnlyList<ReportPosition> history = tracker.History;
 ```
 
@@ -206,4 +206,4 @@ public class ReportingStrategy : Strategy
 }
 ```
 
-En este ejemplo, la estrategia crea automáticamente un informe CSV cuando se detiene. El informe incluye parámetros de estrategia, estadísticas, órdenes, operaciones y round-trips de posición.
+En este ejemplo, la estrategia crea automáticamente un informe CSV cuando se detiene. El informe incluye parámetros de estrategia, estadísticas, órdenes, operaciones y ciclos completos de posición.

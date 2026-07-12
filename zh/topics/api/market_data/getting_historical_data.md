@@ -15,12 +15,12 @@ var connector = new Connector();
 // 添加用于连接 Binance 的适配器
 var messageAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>",
-	Secret = "<Your Secret Key>",
+	Key = "<您的 API 访问密钥>",
+	Secret = "<您的秘密密钥>",
 };
 connector.Adapter.InnerAdapters.Add(messageAdapter);
 
-// Connect
+// 连接
 connector.Connect();
 ```
 

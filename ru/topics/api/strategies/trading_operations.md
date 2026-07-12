@@ -64,7 +64,7 @@ var order = new Order
 	Type = OrderTypes.Limit,
 	Price = price,
 	Volume = volume,
-	Comment = "Custom order"
+	Comment = "Пользовательская заявка"
 };
 
 // Регистрация заявки

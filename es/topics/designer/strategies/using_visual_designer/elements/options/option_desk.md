@@ -6,9 +6,9 @@ El cubo se usa para mostrar el option desk.
 
 Para mostrar el **Panel de opciones**, debe añadir el componente gráfico **Panel de opciones**.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Modelo** – modelo de cálculo (por ejemplo, Black-Scholes).
 

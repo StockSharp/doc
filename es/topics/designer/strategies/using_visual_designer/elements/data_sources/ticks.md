@@ -4,15 +4,15 @@
 
 Este bloque se usa para recibir datos **Tick** para un instrumento.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Instrumento** – instrumento para el que deben recibirse datos **Nivel 1**.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Tick** – una transacción tick.
 

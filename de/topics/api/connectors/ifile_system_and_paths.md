@@ -172,7 +172,7 @@ Viele Klassen behalten aus Gründen der Abwärtskompatibilität Konstruktoren oh
 
 ```csharp
 // Veraltete Variante
-[Obsolete("Use IFileSystem overload.")]
+[Obsolete("IFileSystem-Überladung verwenden.")]
 public LocalMarketDataDrive(string path)
     : this(Paths.FileSystem, path) { }
 

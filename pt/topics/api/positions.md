@@ -68,17 +68,17 @@ state.UpdateOrderBalance(12345, newBalance: 60);
 var newPosition = state.UpdatePosition(secId, "MyPortfolio", diff: 40);
 Console.WriteLine($"Posição atual: {newPosition}");
 
-// Clear
+// Limpar
 state.Clear();
 ```
 
 ## PositionLifecycleTracker
 
-A classe [PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) acompanha o ciclo de vida completo das posições -- desde a abertura até ao fecho (round-trip). Isto é útil para analisar negócios individuais, calcular o lucro de cada posição e gerar relatórios.
+A classe [PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) acompanha o ciclo de vida completo das posições -- desde a abertura até ao fecho (ciclo completo). Isto é útil para analisar negócios individuais, calcular o lucro de cada posição e gerar relatórios.
 
 ### Características Principais
 
-- **Histórico**: a propriedade `History` (`IReadOnlyList<ReportPosition>`) contém todas as posições round-trip concluídas.
+- **Histórico**: a propriedade `History` (`IReadOnlyList<ReportPosition>`) contém todos os ciclos completos de posição concluídos.
 - Evento **`RoundTripClosed`**: é acionado quando uma posição é fechada (valor chegou a zero) ou revertida (sinal da posição mudou).
 - Método **`ProcessPosition`**: aceita um objeto [Position](xref:StockSharp.BusinessEntities.Position) e atualiza o estado interno.
 
@@ -114,7 +114,7 @@ foreach (var report in tracker.History)
 
 ## PositionMessageAdapter
 
-A classe [PositionMessageAdapter](xref:StockSharp.Algo.Positions.PositionMessageAdapter) é um wrapper em torno de um adapter de mensagens que calcula automaticamente posições a partir do fluxo de mensagens. É usada dentro da infraestrutura interna do conector.
+A classe [PositionMessageAdapter](xref:StockSharp.Algo.Positions.PositionMessageAdapter) encapsula um adaptador de mensagens que calcula automaticamente posições a partir do fluxo de mensagens. É usada dentro da infraestrutura interna do conector.
 
 ### Como Funciona
 

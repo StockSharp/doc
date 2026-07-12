@@ -90,7 +90,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Parent = this
 	};
 
-	// Suscribirse a eventos del procesador para logging
+	// Suscribirse a eventos del procesador para registro
 	_quotingProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Orden {order.TransactionId} registrada al precio {order.Price}");
 
@@ -143,6 +143,6 @@ protected override void OnStopped()
 - Usa el procesador de quoting moderno en lugar de estrategias de quoting heredadas
 - Responde de forma adaptativa a cambios de posición cambiando la dirección de quoting
 - Admite configuración de varios parámetros de quoting (tipo de precio, desplazamiento, desviación mínima)
-- Incluye logging detallado de eventos del procesador de quoting
+- Incluye registro detallado de eventos del procesador de quoting
 - Gestiona correctamente los recursos al detener la estrategia y crear nuevos procesadores
 - Admite trabajar con distintos tipos de precios de mercado (Following, Best, Opposite, etc.)

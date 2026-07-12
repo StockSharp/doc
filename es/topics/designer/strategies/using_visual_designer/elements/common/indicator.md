@@ -4,11 +4,11 @@
 
 Este bloque se usa para calcular valores de indicadores.
 
-## Sockets de entrada
+## Conectores de entrada
 
 - **Cualquier dato** – tipo específico de datos con base en el cual debe calcularse el indicador seleccionado (según el indicador, puede ser un valor numérico, una vela, etc.).
 
-## Sockets de salida
+## Conectores de salida
 
 - **Indicador** – valor calculado del indicador, que puede usarse para mostrarlo en el panel de gráfico o para cálculos posteriores.
 

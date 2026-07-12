@@ -4,16 +4,16 @@
 
 Der Würfel wird verwendet, um Werte zu speichern und den zuvor gespeicherten Wert in der Elementkette weiterzugeben.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Beliebige Daten** – der Wert des ausgewählten Typs, der statt des Standardwerts gespeichert wird.
-- **Auslöser** – das Signal (jeder Wert außer `False`), das den Zeitpunkt bestimmt, zu dem der gespeicherte Wert über den Ausgangs-Socket weitergegeben werden muss.
+- **Auslöser** – das Signal (jeder Wert außer `False`), das den Zeitpunkt bestimmt, zu dem der gespeicherte Wert über den Ausgangsanschluss weitergegeben werden muss.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Beliebige Daten** – der Wert des ausgewählten Typs der übergebenen Daten.
 

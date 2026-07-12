@@ -31,18 +31,18 @@ O cálculo do indicador Aroon baseia-se na determinação do tempo (número de p
 
 1. Aroon ascendente é calculado usando a fórmula:
    ```
-   Aroon ascendente = ((Length - Periods since high) / Length) * 100
+   Aroon ascendente = ((Length - Períodos desde a máxima) / Length) * 100
    ```
 
 2. Aroon descendente é calculado usando a fórmula:
    ```
-   Aroon descendente = ((Length - Periods since low) / Length) * 100
+   Aroon descendente = ((Length - Períodos desde a mínima) / Length) * 100
    ```
 
 Onde:
 - Length - período selecionado
-- "Periods since high" - número de períodos desde que foi atingido o preço mais alto dentro do período Length
-- "Periods since low" - número de períodos desde que foi atingido o preço mais baixo dentro do período Length
+- "Períodos desde a máxima" - número de períodos desde que foi atingido o preço mais alto dentro do período Length
+- "Períodos desde a mínima" - número de períodos desde que foi atingido o preço mais baixo dentro do período Length
 
 Ambas as linhas Aroon oscilam entre 0 e 100:
 - Um valor de 100 significa que o máximo/mínimo foi atingido no período mais recente

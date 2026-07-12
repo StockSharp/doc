@@ -8,12 +8,12 @@ Dieser Block wird verwendet, um zu prüfen, ob der Handel aktuell erlaubt ist. D
 - Alle Indikatoren müssen [formed](../../../../../api/indicators.md) sein.
 - Bei [Live-Handel](../../../../live_execution/getting_started.md) muss der eingehende Triggerwert einen Zeitstempel haben, der größer ist als die Startzeit der Strategie.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
 
 - **Auslöser** - das Signal, das bestimmt, wann die Prüfung ausgeführt werden soll.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
 
 - **Markierung** - ein Flag, das bestimmt, ob die Handelssitzung aktiv ist.

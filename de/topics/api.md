@@ -6,7 +6,7 @@ Die StockSharp-API, auch bekannt als S#-API, ist ein Software Development Kit (S
 
 ## Funktionen
 
-- **Strategie-Skripting**: Mit der StockSharp-API können Benutzer Handelsstrategien direkt in [Designer](designer/strategies/using_code.md) schreiben und ausführen. Strategien können mit C#, F# oder Python entwickelt, getestet und bereitgestellt werden.
+- **Strategie-Skripting**: Mit der StockSharp-API können Benutzer Handelsstrategien direkt im [Designer](designer/strategies/using_code.md) schreiben und ausführen. Strategien können mit C#, F# oder Python entwickelt, getestet und bereitgestellt werden.
 
 - **Analysetools**: Die API integriert sich mit Hydra für detaillierte [Marktdatenanalysen](hydra/analytics.md). Sie unterstützt Datenverarbeitung, Speicherung und benutzerdefinierte Analyse-Workflows.
 
@@ -18,9 +18,9 @@ Die StockSharp-API, auch bekannt als S#-API, ist ein Software Development Kit (S
 
 Die StockSharp-API ist auf Modularität und [Erweiterbarkeit](api/connectors/creating_own_connector.md) ausgelegt. Entwickler können sie mit Plugins und zusätzlichen Modulen erweitern, ohne das Kernsystem zu verändern. Diese Architektur hilft beim Aufbau skalierbarer und wartbarer Handelsanwendungen.
 
-## Open Source
+## Quelloffen
 
-Der Kern der StockSharp-API ist Open Source. Der Quellcode ist auf GitHub verfügbar, sodass Entwickler ihn studieren, modifizieren und Verbesserungen beisteuern können.
+Der Kern der StockSharp-API ist quelloffen. Der Quellcode ist auf GitHub verfügbar, sodass Entwickler ihn studieren, modifizieren und Verbesserungen beisteuern können.
 
 ## GitHub-Repository
 

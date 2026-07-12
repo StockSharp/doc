@@ -1,6 +1,6 @@
 # Konverter
 
-Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order-Logs in Ticks oder von Ticks in Kerzen usw.
+Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Orderprotokollen in Ticks oder von Ticks in Kerzen usw.
 
 ![Hydra Aufgaben Konverter](../../../images/hydra_tasks_converter.png)
 
@@ -15,11 +15,11 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order-Logs in Ticks oder 
 
 **Orderbücher**
 
-- **Intervall** - Intervall für die Order-Book-Erzeugung.
-- **Tiefe** - maximale Tiefe der Order-Book-Erzeugung.
-- **Order-Log** - wie Orderbücher aus dem Order-Log erstellt werden.
+- **Intervall** - Intervall für die Orderbucherzeugung.
+- **Tiefe** - maximale Tiefe der Orderbucherzeugung.
+- **Orderprotokoll** - wie Orderbücher aus dem Orderprotokoll erstellt werden.
 
-  Jede Börse hat ihr eigenes **Order-Log**-Format. Das Programm [Hydra](../../hydra.md) unterstützt drei Formate:
+  Jede Börse hat ihr eigenes **Orderprotokoll**-Format. Das Programm [Hydra](../../hydra.md) unterstützt drei Formate:
   - **Standardmäßig** - wird in den meisten Fällen verwendet.
   - **ITCH** - wird für das ITCH-Protokoll verwendet (Börsen: LSE und Nasdaq).
 
@@ -36,7 +36,7 @@ Die Aufgabe konvertiert Börsendaten. Zum Beispiel von Order-Logs in Ticks oder 
 **Protokollierung**
 
 - **Kennung** - die Kennung.
-- **Protokollierungsstufe** - der Logging-Level.
+- **Protokollierungsstufe** - die Protokollierungsstufe.
 
 Betrachten wir ein Beispiel für eine Datenkonvertierung.
 

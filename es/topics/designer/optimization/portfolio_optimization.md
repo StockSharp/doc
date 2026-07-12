@@ -1,6 +1,6 @@
 # Optimización de cartera
 
-[Designer](../../designer.md) permite probar una estrategia en varios instrumentos al mismo tiempo. Para ello, haga clic en el botón [Optimization](brute_force.md).
+[Designer](../../designer.md) permite probar una estrategia en varios instrumentos al mismo tiempo. Para ello, haga clic en el botón [Optimización](brute_force.md).
 
 ![Designer Prueba de cartera](../../../images/designer_portfolio_testing.png)
 

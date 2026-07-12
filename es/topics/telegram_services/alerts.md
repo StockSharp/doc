@@ -49,7 +49,7 @@ El canal que ha creado ya está disponible para sus estrategias y robots de trad
 
 Si tiene varios canales de salida en Telegram y desea dirigir distintas estrategias a canales separados, puede especificar los canales para cada estrategia en la configuración:
 
-![Remote configuración in Designer](../../images/designerremotesettings.png)
+![Configuración remota en Designer](../../images/designerremotesettings.png)
 
 - En otros programas, la configuración se realiza de forma similar a [Designer](../designer.md). Por ejemplo, en el programa [Hydra](../hydra.md), puede configurar el registro de errores de descarga de datos de mercado si [Hydra](../hydra.md) se encuentra en un servidor y necesita recibir rápidamente información sobre una conexión no funcional.
 - En el caso de [Shell](../shell.md) o [S#](../api.md), puede ver el código que integra sus estrategias con el servicio Telegram.

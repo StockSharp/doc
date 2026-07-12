@@ -57,7 +57,7 @@ using StockSharp.Algo.Candles.Patterns;
 
 // 複合パターンを作成: 最初に弱気ローソク足、次に強気包み足
 var complex = new ComplexCandlePattern(
-    "Reversal Up",
+    "上昇反転",
     new ICandlePattern[]
     {
         CandlePatternRegistry.Black,            // 1 本のローソク足: 弱気

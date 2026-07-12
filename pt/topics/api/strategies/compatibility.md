@@ -90,7 +90,7 @@ protected override void OnStarted2(DateTime time)
 	}
 	else
 	{
-		// O gráfico não está disponível (por exemplo, no Runner ou em backtesting na nuvem)
+		// O gráfico não está disponível (por exemplo, no Runner ou em testes históricos na nuvem)
 		// A estratégia continua funcionando sem visualização
 	}
 }
@@ -207,7 +207,7 @@ protected override void OnStopped()
 	// NÃO faça isso
 	File.WriteAllText("results.txt", $"PnL: {PnL}");
 	
-	// or this
+	// ou isto
 	using (var connection = new SqlConnection("..."))
 	{
 		// ...
@@ -225,7 +225,7 @@ Para guardar resultados da estratégia, use:
 - Mecanismos de armazenamento integrados no [Designer](../../designer.md) e no [Shell](../../shell.md)
 - [Estatísticas](xref:StockSharp.Algo.Statistics.StatisticManager) para recolher métricas de negociação
 
-### Métodos Save e Load
+### Métodos para guardar e carregar
 
 Os métodos [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) e [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)) foram concebidos especificamente para guardar dados adicionais da estratégia que não são definições ou parâmetros. Este é o local ideal para guardar dados necessários para restaurar o estado da estratégia:
 
@@ -440,4 +440,4 @@ public class SmaStrategy : Strategy
 
 - [Parâmetros da Estratégia](parameters.md)
 - [Modelo de Eventos](event_model.md)
-- [Logging da Estratégia](logging.md)
+- [Registo da estratégia](logging.md)

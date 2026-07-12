@@ -14,7 +14,7 @@
 | [IPnLStatisticParameter](xref:StockSharp.Algo.Statistics.IPnLStatisticParameter) | 基于盈亏的参数：方法 `Add(marketTime, pnl, commission)` |
 | [ITradeStatisticParameter](xref:StockSharp.Algo.Statistics.ITradeStatisticParameter) | 基于交易的参数：方法 `Add(PnLInfo)` |
 | [IOrderStatisticParameter](xref:StockSharp.Algo.Statistics.IOrderStatisticParameter) | 基于订单的参数：方法 `New(order)`、`Changed(order)`、`RegisterFailed(fail)`、`CancelFailed(fail)` |
-| [IPositionStatisticParameter](xref:StockSharp.Algo.Statistics.IPositionStatisticParameter) | 基于位置的参数：方法 `Add(marketTime, position)` |
+| [IPositionStatisticParameter](xref:StockSharp.Algo.Statistics.IPositionStatisticParameter) | 基于持仓的参数：方法 `Add(marketTime, position)` |
 | [IRiskFreeRateStatisticParameter](xref:StockSharp.Algo.Statistics.IRiskFreeRateStatisticParameter) | 带有无风险利率的参数: 属性 `RiskFreeRate` |
 | [IBeginValueStatisticParameter](xref:StockSharp.Algo.Statistics.IBeginValueStatisticParameter) | 带有初始值的参数：属性 `BeginValue` |
 
@@ -73,7 +73,7 @@
 | [GrossProfitParameter](xref:StockSharp.Algo.Statistics.GrossProfitParameter) | 毛利润。所有盈利交易的损益总和 (`PnL > 0`) | `decimal` |
 | [GrossLossParameter](xref:StockSharp.Algo.Statistics.GrossLossParameter) | 总亏损。所有亏损交易的盈亏总和（`PnL < 0`，数值为负） | `decimal` |
 
-## 位置参数
+## 持仓参数
 
 此组中的参数实现了 [IPositionStatisticParameter](xref:StockSharp.Algo.Statistics.IPositionStatisticParameter) 接口。它们在每次持仓变动时接收数据。
 
@@ -167,7 +167,7 @@ strategy.StatisticManager.Reset();
 所有参数都支持通过 `IPersistable` 接口进行序列化：
 
 ```cs
-// Saving
+// 保存
 var storage = new SettingsStorage();
 strategy.StatisticManager.Save(storage);
 

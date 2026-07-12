@@ -54,7 +54,7 @@ Las siguientes variables están disponibles en fórmulas de función fitness, co
 | WinTrades | Operaciones ganadoras |
 | LosTrades | Operaciones perdedoras |
 | TCount | Operaciones totales |
-| RTrip | Round-trips |
+| RTrip | Ciclos completos |
 | AvgTPnL | Beneficio medio por operación |
 | AvgWTrades | Operación ganadora media |
 | AvgLTrades | Operación perdedora media |
@@ -145,8 +145,8 @@ optimizer.SingleProgressChanged += (strategy, parameters, progress) =>
 	if (progress == 100)
 	{
 		tracker.IterationCompleted();
-		Console.WriteLine($"Progress: {tracker.TotalProgress:F1}%, " +
-			$"Remaining: {tracker.Remaining:hh\\:mm\\:ss}");
+		Console.WriteLine($"Progreso: {tracker.TotalProgress:F1}%, " +
+			$"Restante: {tracker.Remaining:hh\\:mm\\:ss}");
 	}
 };
 ```

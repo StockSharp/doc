@@ -49,7 +49,7 @@
 
 如果 Telegram 中配置了多个输出频道，并希望将不同策略的消息发送到不同频道，可以在每个策略的设置中分别指定频道：
 
-![Remote 设置 in Designer](../../images/designerremotesettings.png)
+![Designer 中的远程设置](../../images/designerremotesettings.png)
 
 - 其他程序的配置方式与 [Designer](../designer.md) 类似。例如，如果 [Hydra](../hydra.md) 部署在服务器上，可以在 [Hydra](../hydra.md) 中配置市场数据下载错误日志，以便在连接停止工作时及时收到通知。
 - 对于 [Shell](../shell.md) 或 [S#](../api.md)，可以查看将策略与 Telegram 服务集成的代码。

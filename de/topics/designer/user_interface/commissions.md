@@ -1,6 +1,6 @@
 # Kommissionen
 
-Im Panel [Backtesting-Einstellungen](components/backtesting_settings.md) können Sie die Einstellungen zur Provisionsüberwachung festlegen.
+Im Panel [Rücktest-Einstellungen](components/backtesting_settings.md) können Sie die Einstellungen zur Provisionsüberwachung festlegen.
 
 Im Fenster **Provisionen** sollten Sie den Provisionstyp auswählen, den Provisionswert festlegen und die Bedingung angeben, unter der die Provision berechnet wird.
 
@@ -20,5 +20,5 @@ Liste der Provisionstypen
 - **Handelsinstrument** - die Instrumentenprovision.
 - **Instrument (Typ)** - die Provision für den Instrumententyp.
 - **Umsatz** - die Provision für den Umsatz.
-- **Board** - die Board-Provision.
+- **Börsenplatz** - die Börsenplatz-Provision.
 

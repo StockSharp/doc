@@ -39,7 +39,7 @@ _connector.Connected += () =>
 {
 	Console.WriteLine("连接已建立");
 	
-	// 创建搜索工具的订阅
+	// 创建搜索交易品种的订阅
 	var lookupSubscription = new Subscription(DataType.Securities);
 	_connector.Subscribe(lookupSubscription);
 };

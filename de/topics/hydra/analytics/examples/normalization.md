@@ -1,12 +1,12 @@
 # Normalisierung des Schlusskurses
 
-Das Skript "Closing Price Normalization" dient zur Standardisierung der Schlusskurse von Finanzinstrumenten und ermöglicht den Vergleich und die Analyse unterschiedlicher Assets auf einer einheitlichen Skala. Dies ist besonders nutzlich beim Vergleich von Instrumenten mit unterschiedlichen Preisen und unterschiedlicher Volatilität.
+Das Skript "Normalisierung des Schlusskurses" dient zur Standardisierung der Schlusskurse von Finanzinstrumenten und ermöglicht den Vergleich und die Analyse unterschiedlicher Assets auf einer einheitlichen Skala. Dies ist besonders nützlich beim Vergleich von Instrumenten mit unterschiedlichen Preisen und unterschiedlicher Volatilität.
 
 ![Normalisierung des Schlusskurses](../../../../images/hydra_analytics_normalize.png)
 
 ## Beschreibung der Skriptausführung
 
-Das Skript passt Schlusskursdaten an, indem es sie entsprechend der gewahlten Normalisierungsmethode skaliert oder transformiert. Das Ergebnis ist ein Satz standardisierter Werte, der für quantitative Vergleiche und Multi-Instrument-Analysen verwendet werden kann.
+Das Skript passt Schlusskursdaten an, indem es sie entsprechend der gewählten Normalisierungsmethode skaliert oder transformiert. Das Ergebnis ist ein Satz standardisierter Werte, der für quantitative Vergleiche und Multi-Instrument-Analysen verwendet werden kann.
 
 ## Anwendung der Normalisierung
 
@@ -20,17 +20,17 @@ Die Normalisierung kann folgende Methoden umfassen:
 
 1. **Skalierung**: Anpassung der Schlusskurse an einen bestimmten Wertebereich, zum Beispiel von 0 bis 1.
 2. **Z-Score**: Transformation der Schlusskurse mit dem Z-Score, der angibt, wie viele Standardabweichungen ein Wert vom Mittelwert entfernt ist.
-3. **Logarithmierung**: Anwendung einer logarithmischen Transformation, um die Datenstreuung zu glatten und den Einfluss extremer Werte zu reduzieren.
+3. **Logarithmierung**: Anwendung einer logarithmischen Transformation, um die Datenstreuung zu glätten und den Einfluss extremer Werte zu reduzieren.
 
 ## Skriptimplementierung
 
 Der Normalisierungsprozess umfasst typischerweise die folgenden Schritte:
 
 1. **Auswahl der Normalisierung**: Festlegen der Normalisierungsmethode anhand der Analyseziele und Dateneigenschaften.
-2. **Datenverarbeitung**: Anwenden der gewahlten Normalisierungsmethode auf die Schlusskurse jedes Instruments.
-3. **Analyse der Ergebnisse**: Verwenden normalisierter Daten für die anschliessende Analyse und den Vergleich von Instrumenten.
+2. **Datenverarbeitung**: Anwenden der gewählten Normalisierungsmethode auf die Schlusskurse jedes Instruments.
+3. **Analyse der Ergebnisse**: Verwenden normalisierter Daten für die anschließende Analyse und den Vergleich von Instrumenten.
 
-Das Skript "Closing Price Normalization" ist ein wichtiges Werkzeug zur Vorbereitung von Daten für Handel und quantitative Analyse. Es ermöglicht Tradern und Analysten, Finanzassets innerhalb verschiedener Strategien und Studien genauer zu vergleichen und zu bewerten.
+Das Skript "Normalisierung des Schlusskurses" ist ein wichtiges Werkzeug zur Vorbereitung von Daten für Handel und quantitative Analyse. Es ermöglicht Tradern und Analysten, Finanzassets innerhalb verschiedener Strategien und Studien genauer zu vergleichen und zu bewerten.
 
 ## Skriptcode in C#
 
@@ -46,7 +46,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Keine Instrumente.");
 				return Task.CompletedTask;
 			}
 
@@ -89,7 +89,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# .NET-Referenzen hinzufugen
+# .NET-Referenzen hinzufügen
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -106,7 +106,7 @@ from indicator_extensions import *
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Keine Instrumente.")
 			return Task.CompletedTask
 
 		chart = create_chart(panel, datetime, float)

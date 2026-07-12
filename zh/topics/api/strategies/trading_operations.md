@@ -64,7 +64,7 @@ var order = new Order
 	Type = OrderTypes.Limit,
 	Price = price,
 	Volume = volume,
-	Comment = "Custom order"
+	Comment = "自定义订单"
 };
 
 // 注册订单
@@ -144,10 +144,10 @@ decimal currentPosition = Position;
 // 关闭当前持仓
 ClosePosition();
 
-// 使用 stop-loss 和 take-profit 保护持仓
+// 使用止损和止盈保护持仓
 StartProtection(
-	takeProfit: new Unit(50, UnitTypes.Absolute),   // take-profit
-	stopLoss: new Unit(20, UnitTypes.Absolute),     // stop-loss
+	takeProfit: new Unit(50, UnitTypes.Absolute),   // 止盈
+	stopLoss: new Unit(20, UnitTypes.Absolute),     // 止损
 	isStopTrailing: true,                        // 跟踪止损
 	useMarketOrders: true                        // 使用市价单
 );
@@ -161,7 +161,7 @@ StartProtection(
 
 [IsFormed](xref:StockSharp.Algo.Strategies.Strategy.IsFormed) 属性指示策略中使用的所有指标是否已形成（已准备好）。默认情况下，它会检查添加到 [Indicators](xref:StockSharp.Algo.Strategies.Strategy.Indicators) 集合中的所有指标是否处于状态 [IIndicator.IsFormed](xref:StockSharp.Algo.Indicators.IIndicator.IsFormed) = `true`。
 
-关于在策略中使用指标的更多信息，请参见 [战略中的指标](indicators.md) 部分。
+关于在策略中使用指标的更多信息，请参见 [策略中的指标](indicators.md) 部分。
 
 ### 是否在线属性
 
@@ -176,7 +176,7 @@ StartProtection(
 - [StrategyTradingModes.Full](xref:StockSharp.Algo.Strategies.StrategyTradingModes.Full) - 允许所有交易操作（默认模式）
 - [StrategyTradingModes.Disabled](xref:StockSharp.Algo.Strategies.StrategyTradingModes.Disabled) - 交易已完全禁用
 - [StrategyTradingModes.CancelOrdersOnly](xref:StockSharp.Algo.Strategies.StrategyTradingModes.CancelOrdersOnly) - 只允许取消订单
-- [StrategyTradingModes.ReducePositionOnly](xref:StockSharp.Algo.Strategies.StrategyTradingModes.ReducePositionOnly) - 只允许位置减操作
+- [StrategyTradingModes.ReducePositionOnly](xref:StockSharp.Algo.Strategies.StrategyTradingModes.ReducePositionOnly) - 只允许减仓操作
 
 此属性可以通过策略参数进行配置：
 
@@ -289,7 +289,7 @@ private void ProcessCandle(ICandleMessage candle)
 		order
 			.WhenMatched(this)
 			.Do(() => {
-				// 订单成交后设置 stop-loss 和 take-profit
+				// 订单成交后设置止损和止盈
 				StartProtection(
 					takeProfit: new Unit(50, UnitTypes.Absolute),
 					stopLoss: new Unit(20, UnitTypes.Absolute)

@@ -1,6 +1,6 @@
 # ブラック・ショールズ
 
-![Designer Black Sols 00](../../../../../../images/designer_black_scholes_00.png)
+![Designer の Black-Scholes オプションモデルブロック](../../../../../../images/designer_black_scholes_00.png)
 
 このブロックは、オプション価格モデルを作成するために使用します。
 

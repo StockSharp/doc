@@ -46,7 +46,7 @@ var security = new Security
 // テスト用ポートフォリオ
 var portfolio = new Portfolio
 {
-	Name = "test account",
+	Name = "テスト口座",
 	BeginValue = 1000000,
 };
 ```

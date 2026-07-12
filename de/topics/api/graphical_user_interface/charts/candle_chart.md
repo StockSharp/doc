@@ -35,7 +35,7 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. Im **Click**-Ereignishandler der Schaltfläche **Connect** abonnieren wir neben den Connector-Ereignissen und dem Aufruf der Methode [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) auch das Ereignis [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). In diesem Ereignishandler wird das Diagramm gezeichnet, wenn eine neue Kerze empfangen wird.
+3. Im **Click**-Ereignishandler der Schaltfläche **Verbinden** abonnieren wir neben den Connector-Ereignissen und dem Aufruf der Methode [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) auch das Ereignis [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). In diesem Ereignishandler wird das Diagramm gezeichnet, wenn eine neue Kerze empfangen wird.
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ Unten sehen Sie ein Beispiel für den Aufbau eines Diagramms mit der Komponente 
    }
    ```
 
-4. Im Handler der Schaltfläche **ShowChart** erstellen wir Indikatorobjekte, Bereiche und Diagrammelemente. Wir fügen Elemente zu Bereichen und Bereiche zum Diagramm hinzu. Dann öffnen wir das Diagrammfenster und starten ein Kerzenabonnement.
+4. Im Handler der Schaltfläche **Diagramm anzeigen** erstellen wir Indikatorobjekte, Bereiche und Diagrammelemente. Wir fügen Elemente zu Bereichen und Bereiche zum Diagramm hinzu. Dann öffnen wir das Diagrammfenster und starten ein Kerzenabonnement.
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)

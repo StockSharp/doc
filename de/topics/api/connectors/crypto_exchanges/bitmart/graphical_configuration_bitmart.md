@@ -6,7 +6,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 - **Schlüssel** - Schlüssel.
 - **Geheimnis** - Geheimschlüssel.
-- **Board** - Bereich für die Verbindung (Spot, Futures).
+- **Bereich** - Bereich für die Verbindung (Spot, Futures).
 - **Kennphrase** - Administratives Passwort.
 
 ## Empfohlener Inhalt

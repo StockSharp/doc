@@ -47,10 +47,10 @@
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		_testSource.AddInfoLog("{0} (source)!!!".Put(level));
+		_testSource.AddInfoLog("{0} (ソース)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		_testSource.AddWarningLog("Warning (source)!!!");
+		_testSource.AddWarningLog("警告 (ソース)!!!");
    		break;
    	case LogLevels.Error:
 		_testSource.AddErrorLog("エラー (ソース)!!!");
@@ -69,13 +69,13 @@
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		Trace.TraceInformation("{0} (trace)!!!".Put(level));
+		Trace.TraceInformation("{0} (トレース)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		Trace.TraceWarning("Warning (trace)!!!");
+		Trace.TraceWarning("警告 (トレース)!!!");
    		break;
    	case LogLevels.Error:
-   		Trace.TraceError("Error (trace)!!!");
+		Trace.TraceError("エラー (トレース)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();

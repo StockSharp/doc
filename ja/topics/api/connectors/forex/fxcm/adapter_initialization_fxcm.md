@@ -7,9 +7,9 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new FxcmMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Login = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
-	Address = "<Your Address>".To<Uri>(),
+	Login = "<ログイン名>",
+	Password = "<パスワード>".To<SecureString>(),
+	Address = "<アドレス>".To<Uri>(),
 	IsDemo = true
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);

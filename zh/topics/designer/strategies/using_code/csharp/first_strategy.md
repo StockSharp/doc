@@ -83,7 +83,7 @@ if (area != null)
 4. 如果策略逻辑需要，请通过 [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) 启动持仓保护：
 
 ```cs
-// 按 take profit 和/或 stop loss 启动保护
+// 按止盈和/或止损启动保护
 StartProtection(TakeValue, StopValue);
 ```
 

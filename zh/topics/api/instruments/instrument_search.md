@@ -4,11 +4,11 @@
 
 ## 交易品种搜索基础
 
-在 S# 中搜索工具时，使用订阅机制，类似于接收市场数据。这种方法允许对所有类型的数据，包括工具，使用统一的代码。
+在 S# 中搜索交易品种时，使用订阅机制，类似于接收市场数据。这种方法允许对所有类型的数据，包括交易品种，使用统一的代码。
 
 ### 为交易品种搜索创建订阅
 
-要搜索工具，您需要创建 [Subscription](xref:StockSharp.BusinessEntities.Subscription) 类的实例，并以包含过滤参数的 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息为基础：
+要搜索交易品种，您需要创建 [Subscription](xref:StockSharp.BusinessEntities.Subscription) 类的实例，并以包含过滤参数的 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息为基础：
 
 ```csharp
 // 创建搜索过滤对象
@@ -36,12 +36,12 @@ var subscription = new Subscription(lookupMessage);
 
 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息允许设置以下搜索条件：
 
-- **SecurityId** — 工具标识符，包含：
+- **SecurityId** — 交易品种标识符，包含：
   - **SecurityCode** — 交易品种代码或代码掩码（例如，“AAPL”或“MS*”）
   - **BoardCode** — 交易板代码（例如，[ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
-- **SecurityType** — 工具类型 ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) 等)
-- **SecurityTypes** — 用于高级搜索的工具类型数组
-- **货币** — 该工具的交易货币
+- **SecurityType** — 交易品种类型 ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) 等)
+- **SecurityTypes** — 用于高级搜索的交易品种类型数组
+- **货币** — 该交易品种的交易货币
 - **ExpiryDate** — 到期日（用于衍生品）
 - **行权价** — 期权的行权价
 - **OptionType** — 期权类型（适用于期权）
@@ -50,7 +50,7 @@ var subscription = new Subscription(lookupMessage);
 
 ### 正在处理搜索结果
 
-创建订阅后，您需要订阅事件以接收工具并发送请求：
+创建订阅后，您需要订阅事件以接收交易品种并发送请求：
 
 ```csharp
 // 交易品种接收事件处理器
@@ -185,7 +185,7 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 	
 	if (string.IsNullOrWhiteSpace(searchText))
 	{
-		MessageBox.Show("Enter a search criterion");
+		MessageBox.Show("请输入搜索条件");
 		return;
 	}
 	

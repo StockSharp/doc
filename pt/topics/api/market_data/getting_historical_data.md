@@ -2,7 +2,7 @@
 
 A API StockSharp fornece mecanismos convenientes para obter dados históricos, que podem ser utilizados tanto para testar estratégias de negociação como para construir [Indicadores](../indicators.md).
 
-## Obter Dados Históricos via Connector
+## Obter dados históricos via conector
 
 ### Configurar a Ligação
 
@@ -15,8 +15,8 @@ var connector = new Connector();
 // Adicionar um adaptador para ligação à Binance
 var messageAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>",
-	Secret = "<Your Secret Key>",
+	Key = "<A sua chave de API>",
+	Secret = "<A sua chave secreta>",
 };
 connector.Adapter.InnerAdapters.Add(messageAdapter);
 

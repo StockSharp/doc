@@ -7,8 +7,8 @@ Der folgende Code zeigt, wie der [CoinbaseMessageAdapter](xref:StockSharp.Coinba
 			...
 var messageAdapter = new CoinbaseMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ihr API-Schlüssel>".To<SecureString>(),
+				Secret = "<Ihr API-Geheimnis>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...
@@ -22,8 +22,8 @@ Connector Connector = new Connector();
 ...
 Connector.AddAdapter<CoinbaseMessageAdapter>(a =>
 {
-	a.Key = "<Your API Key>".To<SecureString>();
-	a.Secret = "<Your API Secret>".To<SecureString>();
+	a.Key = "<Ihr API-Schlüssel>".To<SecureString>();
+	a.Secret = "<Ihr API-Geheimnis>".To<SecureString>();
 });
 ```
 

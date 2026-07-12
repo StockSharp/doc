@@ -7,10 +7,10 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new ParadexMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>".To<SecureString>(),
-	Secret = "<Your API Secret>".To<SecureString>(),
-	StarknetAccount = "<Your Starknet Account>",
-	StarknetPrivateKey = "<Your Starknet Private Key>".To<SecureString>(),
+	Key = "<A sua chave de API>".To<SecureString>(),
+	Secret = "<O seu segredo de API>".To<SecureString>(),
+	StarknetAccount = "<A sua conta Starknet>",
+	StarknetPrivateKey = "<A sua chave privada Starknet>".To<SecureString>(),
 	Section = ParadexSections.Derivatives,
 	AuthPath = "/v1/auth",
 };

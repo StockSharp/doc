@@ -1,8 +1,8 @@
-# Panel de logs extendido
+# Panel de registros extendido
 
 [Monitor](xref:StockSharp.Xaml.Monitor) - es el elemento visual donde [LogControl](log_panel.md) se usa junto con el árbol jerárquico **TreeView**, en el que se muestran las fuentes de log. Inicialmente, el componente se diseñó para supervisar estrategias de trading. Por ello, de forma predeterminada, el "árbol" incluye el nodo **Estrategia**. Al mismo tiempo, con este componente se pueden usar otras fuentes.
 
-![Captura de Panel de logs extendido](../../../../images/gui_monitor.png)
+![Captura de Panel de registros extendido](../../../../images/gui_monitor.png)
 
 Código de ejemplo
 
@@ -23,7 +23,7 @@ Código de ejemplo
 _logManager = new LogManager();
 // agregar .NET tracing como fuente de log.
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
-// agregar Monitor como listener de log.
+// agregar Monitor como receptor de registro.
 _logManager.Listeners.Add(new GuiLogListener(Monitor));
 					
 ```

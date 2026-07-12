@@ -1,6 +1,6 @@
 # 创建脚本
 
-**Analytics** 支持创建自定义脚本。下面以 **ChartDrawScript** 为例，介绍图表绘制功能：
+**分析** 支持创建自定义脚本。下面以 **ChartDrawScript** 为例，介绍图表绘制功能：
 
 ```cs
 namespace StockSharp.Algo.Analytics
@@ -14,7 +14,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("没有交易品种。");
 				return Task.CompletedTask;
 			}
 
@@ -41,8 +41,8 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// 将序列以折线和柱状图绘制到图表上
-				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
-				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
+				lineChart.Append($"{security} (收盘价)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
+				histogramChart.Append($"{security} (成交量)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}
 
 			return Task.CompletedTask;

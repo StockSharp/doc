@@ -70,7 +70,7 @@ Se o parâmetro `security` não for especificado, é usado o `Security` da estra
 
 O objeto `ISubscriptionHandler<T>` fornece os seguintes métodos:
 
-### Start / Stop
+### Iniciar / parar
 
 Iniciar e parar a subscrição:
 
@@ -181,7 +181,7 @@ public class SmaStrategy : Strategy
             })
             .Start();
 
-        // Chart setup
+        // Configuração do gráfico
         var area = CreateChartArea();
         if (area != null)
         {

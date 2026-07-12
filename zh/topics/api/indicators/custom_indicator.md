@@ -379,8 +379,8 @@ public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageV
 	/// <summary>
 	/// 初始化 <see cref="PercentageVolumeOscillatorValue"/> 类的新实例。
 	/// </summary>
-	/// <param name="indicator">Indicator.</param>
-	/// <param name="time">Value time.</param>
+	/// <param name="indicator">指标。</param>
+	/// <param name="time">值的时间。</param>
 	public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
 			: base(indicator, time)
 	{

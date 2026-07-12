@@ -12,7 +12,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **contraseña** - Contraseña.
 - **Securities** - Archivo con instrumentos.
 - **Delay** - Carga diferida de instrumentos.
-- **Active** - Solo instrumentos activos.
+- **Activo** - Solo instrumentos activos.
 - **ID de grupo** - ID de grupo.
 - **Zona horaria** - Información sobre la zona horaria donde se encuentra el exchange.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.

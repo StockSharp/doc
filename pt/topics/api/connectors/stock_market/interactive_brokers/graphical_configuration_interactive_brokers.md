@@ -11,7 +11,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Campos de dados de mercado** - Campos de dados de mercado que serão recebidos com as mensagens Level1 subscritas.
 - **Protocol** - Protocolo SSL para estabelecer a ligação
 - **certificado** - Certificado SSL.
-- **palavra-passe** - Password do certificado SSL.
+- **palavra-passe** - Palavra-passe do certificado SSL.
 - **Verificar revogação** - Verificar a revogação do certificado.
 - **Validar certificados remotos** - Validar certificados remotos.
 - **Nome do host** - O nome do servidor que partilha a ligação SSL.

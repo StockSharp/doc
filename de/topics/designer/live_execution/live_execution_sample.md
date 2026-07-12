@@ -6,7 +6,7 @@ Um ein Beispiel in **Live-Handel** auszuführen, benötigen Sie:
 
 2. Richten Sie das Terminal IB TWS Demo für die Arbeit mit [Designer](../../designer.md) ein. Siehe **IB TWS-Einstellungsbeispiel** im Abschnitt [Interactive Brokers](../../api/connectors/stock_market/interactive_brokers.md).
 
-3. Richten Sie die Verbindung zu IB TWS Demo in [Designer](../../designer.md) ein und verbinden Sie sich.
+3. Richten Sie die Verbindung zu IB TWS Demo im [Designer](../../designer.md) ein und verbinden Sie sich.
 
 4. Laden Sie die Historie für das erforderliche Instrument herunter. In diesem Beispiel wird das Instrument **AAPL@NASDAQ** verwendet. Die Strategie verwendet Kerzen mit einem Zeitrahmen von 5 Sekunden; die Historie wird nicht benötigt, reicht aber aus, um die Möglichkeit zu demonstrieren.
 
@@ -34,11 +34,11 @@ Nach dem Klicken auf die Schaltfläche ![Designer Schaltungs-Panel 02](../../../
 
 Nachdem die gesamte Historie aus dem [Marktdatenspeicher](../market_data_storage.md) und die Tabelle der anonymen Trades aus dem Terminal geladen wurden, beginnt die Strategie zu handeln.
 
-Unten sehen Sie Charts aus [Designer](../../designer.md) und dem Handelsterminal für denselben Zeitraum.
+Unten sehen Sie Charts aus dem [Designer](../../designer.md) und dem Handelsterminal für denselben Zeitraum.
 
 ![Designer Beispiel für Live-Handel 03](../../../images/designer_example_of_live_trading_03.png)
 
-Chart aus [Designer](../../designer.md):
+Chart aus dem [Designer](../../designer.md):
 
 ![Designer Beispiel für Live-Handel 04](../../../images/designer_example_of_live_trading_04.png)
 

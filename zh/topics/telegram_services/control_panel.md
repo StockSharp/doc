@@ -10,7 +10,7 @@
 
   ![控制面板 01](../../images/designerribbon.png)
 
-  所有以 Live 模式运行的策略都会自动传送到 Telegram 机器人，之后即可通过手机进行控制。
+  所有以 **实盘** 模式运行的策略都会自动传送到 Telegram 机器人，之后即可通过手机进行控制。
 
   在 [StockSharpBot](https://t.me/StockSharpBot) 中选择 /apps 命令，查看所有程序的列表：
 

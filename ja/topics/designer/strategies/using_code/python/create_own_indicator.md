@@ -22,7 +22,7 @@ class empty_indicator(BaseIndicator):
 	"""
 	パラメーターの保存と読み込みを示すサンプルインジケーター。
 
-	Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
+	ドキュメント https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
 
 	入力価格を +20% または -20% 変化させます。
 	"""
@@ -96,7 +96,7 @@ class empty_indicator(BaseIndicator):
 		storage.SetValue("Change", self.Change)
 
 	def __str__(self):
-		return f"Change: {self.Change}"
+		return f"変化: {self.Change}"
 
 	def ToString(self):
 		return str(self)

@@ -1,4 +1,4 @@
-# Configuración de backtesting
+# Configuración de pruebas históricas
 
 El panel **Propiedades** está minimizado de forma predeterminada en el lado derecho de la pestaña de estrategia. Este panel es una tabla de propiedades de emulación o trading en vivo. Cuando selecciona una propiedad concreta, aparece una descripción detallada de esta propiedad en la parte inferior de la tabla. Todas las propiedades están agrupadas:
 
@@ -35,7 +35,7 @@ El panel **Propiedades** está minimizado de forma predeterminada en el lado der
 - **Zona horaria** – información sobre la zona horaria donde se encuentra el exchange.
 - **Desplazamiento de precio** – desplazamiento de precio desde la última operación, que especifica los límites de precios máximo y mínimo para la siguiente sesión.
 - **Añadir volumen extra** – añadir volumen extra al libro de órdenes al registrar órdenes de gran volumen.
-- **[Comisiones](../commissions.md)** – comisión (brokerage, exchange, etc.).
+- **[Comisiones](../commissions.md)** – comisión (corretaje, bolsa, etc.).
 
 **Registro**
 

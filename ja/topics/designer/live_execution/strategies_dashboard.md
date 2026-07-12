@@ -19,4 +19,4 @@
 
 ## 推奨コンテンツ
 
-[Live 実行の例](live_execution_sample.md)
+[ライブ実行の例](live_execution_sample.md)

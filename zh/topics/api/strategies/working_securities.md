@@ -23,7 +23,7 @@ public override IEnumerable<(Security sec, DataType dt)> GetWorkingSecurities()
 	return new[] 
 	{ 
 		(Security, CandleType),
-		// 如果策略使用多个工具，则列出其他工具-数据类型对
+		// 如果策略使用多个交易品种，则列出其他交易品种-数据类型对
 	};
 }
 ```

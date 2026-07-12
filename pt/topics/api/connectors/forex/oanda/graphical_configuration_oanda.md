@@ -4,13 +4,13 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![Configurações da API GUI OANDA](../../../../../images/api_gui_settings_oanda.png)
 
-- **Server** - Servidor.
+- **Servidor** - Servidor.
 - **Token** - Token.
-- **Compression** - Compressão.
-- **Transactions only** - Escrever mensagens de log apenas para o fluxo de transações.
+- **Compressão** - Compressão.
+- **Apenas transações** - Escrever mensagens de registro apenas para o fluxo de transações.
 - **Definições de religação** - Definições do mecanismo para acompanhar a ligação ao sistema de negociação ([Definições de religação](../../reconnection_settings.md)).
 - **Intervalo de verificação da ligação** - Intervalo para notificar o servidor de que a ligação ainda está ativa. O valor predefinido é 1 minuto.
-- **Código de mercado unificado** - Código de board para o instrumento unificado.
+- **Código de mercado unificado** - Código de mercado para o instrumento unificado.
 
 ## Ver também
 

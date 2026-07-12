@@ -1,18 +1,18 @@
 # Black-Scholes
 
-![Designer Black Sols 00](../../../../../../images/designer_black_scholes_00.png)
+![Bloque de modelo de opciones Black-Scholes en Designer](../../../../../../images/designer_black_scholes_00.png)
 
 Este bloque se usa para crear un modelo de valoración de opciones.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Opción** – strike para el que debe crearse el modelo.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Modelo** – modelo de valoración (por ejemplo, Black-Scholes).
 

@@ -1,14 +1,14 @@
-# Orderlog
+# Orderprotokoll
 
-![Orderlog Bildschirmfoto](../../../../images/gui_orderlog.png)
+![Orderprotokoll Bildschirmfoto](../../../../images/gui_orderlog.png)
 
-[OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - eine grafische Komponente zur Anzeige des Orderlogs ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)).
+[OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - eine grafische Komponente zur Anzeige des Orderprotokolls ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)).
 
 **Wichtigste Eigenschaften und Methoden**
 
-- [OrderLogGrid.LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) - Liste der Orderlog-Einträge.
-- [OrderLogGrid.SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) - ausgewählter Orderlog-Eintrag.
-- [OrderLogGrid.SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) - ausgewählte Orderlog-Einträge.
+- [OrderLogGrid.LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) - Liste der Orderprotokolleinträge.
+- [OrderLogGrid.SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) - ausgewählter Orderprotokolleintrag.
+- [OrderLogGrid.SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) - ausgewählte Orderprotokolleinträge.
 
 Die folgenden Codefragmente zeigen die Verwendung:
 
@@ -37,17 +37,17 @@ public class OrderLogWindow
 		_connector = connector;
 		_security = security;
 
-		// Empfangsereignis für Orderlog-Einträge abonnieren
+		// Empfangsereignis für Orderprotokolleinträge abonnieren
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 
-		// Subscription auf das Orderlog erstellen
+		// Subscription auf das Orderprotokoll erstellen
 		_orderLogSubscription = new Subscription(DataType.OrderLog, security);
 
 		// Subscription starten
 		_connector.Subscribe(_orderLogSubscription);
 	}
 
-	// Handler für das Empfangsereignis von Orderlog-Einträgen
+	// Handler für das Empfangsereignis von Orderprotokolleinträgen
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
 		// Prüfen, ob der Logeintrag zu unserer Subscription gehört
@@ -71,13 +71,13 @@ public class OrderLogWindow
 }
 ```
 
-### Orderlog filtern
+### Orderprotokoll filtern
 
 ```cs
-// Subscription auf das Orderlog mit Filterung erstellen
+// Subscription auf das Orderprotokoll mit Filterung erstellen
 public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 {
-	// Subscription auf das Orderlog erstellen
+	// Subscription auf das Orderprotokoll erstellen
 	var orderLogSubscription = new Subscription(DataType.OrderLog, security)
 	{
 		MarketData =
@@ -88,14 +88,14 @@ public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 		}
 	};
 
-	// Empfangsereignis für Orderlog-Einträge abonnieren
+	// Empfangsereignis für Orderprotokolleinträge abonnieren
 	_connector.OrderLogItemReceived += OnFilteredOrderLogItemReceived;
 
 	// Subscription starten
 	_connector.Subscribe(orderLogSubscription);
 }
 
-// Handler für das Empfangsereignis von Orderlog-Einträgen mit Filterung
+// Handler für das Empfangsereignis von Orderprotokolleinträgen mit Filterung
 private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 {
 	// Subscription-Typ prüfen
@@ -118,10 +118,10 @@ private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogI
 }
 ```
 
-### Analyse der Orderlog-Dynamik
+### Analyse der Orderprotokolldynamik
 
 ```cs
-// Klasse zur Analyse der Orderlog-Dynamik
+// Klasse zur Analyse der Orderprotokolldynamik
 public class OrderLogAnalyzer
 {
 	private readonly Connector _connector;
@@ -140,23 +140,23 @@ public class OrderLogAnalyzer
 		_security = security;
 		_orderLogGrid = orderLogGrid;
 
-		// Empfangsereignis für Orderlog-Einträge abonnieren
+		// Empfangsereignis für Orderprotokolleinträge abonnieren
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 
-		// Subscription auf das Orderlog erstellen
+		// Subscription auf das Orderprotokoll erstellen
 		var subscription = new Subscription(DataType.OrderLog, security);
 
 		// Subscription starten
 		_connector.Subscribe(subscription);
 	}
 
-	// Handler für das Empfangsereignis von Orderlog-Einträgen
+	// Handler für das Empfangsereignis von Orderprotokolleinträgen
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
 		if (item.SecurityId != _security.ToSecurityId())
 			return;
 
-		// Orderlog-Eintrag analysieren
+		// Orderprotokolleintrag analysieren
 		if (item.Side == Sides.Buy)
 		{
 			_buyCount++;

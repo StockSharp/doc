@@ -4,12 +4,12 @@
 
 El elemento se usa para comparar dos objetos de entrada.
 
-## Sockets de entrada
+## Conectores de entrada
 
 - **Valor 1** – valores que pueden compararse (por ejemplo, valor numérico, cadena, valor de indicador, etc.).
 - **Valor 2** – valores que pueden compararse (por ejemplo, valor numérico, cadena, valor de indicador, etc.).
 
-## Sockets de salida
+## Conectores de salida
 
 - **Indicador** – valor de bandera (indica el estado y tiene dos valores: arriba (true) y abajo (false)).
 

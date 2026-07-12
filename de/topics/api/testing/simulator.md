@@ -1,8 +1,8 @@
-# Testing mit Echtzeit-Marktdaten
+# Tests mit Echtzeit-Marktdaten
 
-Testing mit Echtzeit-Marktdaten bedeutet Handel über eine echte Verbindung zur Börse ("Live"-Kurse), jedoch ohne reale Orders an der Börse zu platzieren. Alle registrierten Orders werden abgefangen und ihre Ausführung wird auf Basis von Markt-Orderbüchern emuliert. Ein solches Testing kann zum Beispiel bei der Entwicklung eines Handelssimulators oder bei der Überprüfung eines Handelsalgorithmus über einen kurzen Zeitraum mit echten Kursen nützlich sein.
+Tests mit Echtzeit-Marktdaten bedeuten Handel über eine echte Verbindung zur Börse ("Live"-Kurse), jedoch ohne reale Orders an der Börse zu platzieren. Alle registrierten Orders werden abgefangen und ihre Ausführung wird auf Basis von Markt-Orderbüchern emuliert. Ein solcher Test kann zum Beispiel bei der Entwicklung eines Handelssimulators oder bei der Überprüfung eines Handelsalgorithmus über einen kurzen Zeitraum mit echten Kursen nützlich sein.
 
-Um Handel mit realen Daten zu emulieren, verwenden Sie [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1). Diese Klasse dient als "Wrapper" für einen Connector zu einem bestimmten Handelssystem ([Binance](../connectors/crypto_exchanges/binance.md), [Interactive Brokers](../connectors/stock_market/interactive_brokers.md) usw.).
+Um Handel mit realen Daten zu emulieren, verwenden Sie [RealTimeEmulationTrader\<TAdapter\>](xref:StockSharp.Algo.Testing.RealTimeEmulationTrader`1). Diese Klasse umschließt einen Connector zu einem bestimmten Handelssystem ([Binance](../connectors/crypto_exchanges/binance.md), [Interactive Brokers](../connectors/stock_market/interactive_brokers.md) usw.).
 
 ## Emulations-Connector erstellen
 
@@ -144,13 +144,12 @@ Die Anwendungsoberfläche enthält die folgenden Elemente:
 
 ## Vorteile und Einschränkungen
 
-Testing mit Echtzeit-Marktdaten hat folgende Vorteile:
+Tests mit Echtzeit-Marktdaten haben folgende Vorteile:
 - Nutzung realer Marktdaten ohne finanzielle Risiken
-- Testing von Algorithmen unter Bedingungen, die dem realen Handel sehr nahekommen
+- Testen von Algorithmen unter Bedingungen, die dem realen Handel sehr nahekommen
 - Möglichkeit, Ergebnisse in Echtzeit mit dem realen Markt zu vergleichen
 
 Einschränkungen:
 - Die Testgeschwindigkeit ist durch die Geschwindigkeit der realen Daten begrenzt
 - Historische Zeiträume können nicht getestet werden
 - Abhängigkeit von Qualität und Vollständigkeit der empfangenen Marktdaten
-

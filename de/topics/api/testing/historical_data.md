@@ -10,7 +10,7 @@ Tests können mit verschiedenen Arten von Marktdaten durchgeführt werden:
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (beste Geld- und Briefkurse)
 - Kombinationen verschiedener Datentypen
 
-Wenn für den Testzeitraum keine gespeicherten Orderbücher vorhanden sind, können sie auf Basis von Trades mit [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) generiert oder aus dem Order-Log mit [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder) rekonstruiert werden.
+Wenn für den Testzeitraum keine gespeicherten Orderbücher vorhanden sind, können sie auf Basis von Trades mit [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) generiert oder aus dem Orderprotokoll mit [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder) rekonstruiert werden.
 
 Daten für historische Tests müssen im Voraus in einem speziellen [S#](../../api.md)-Format heruntergeladen und gespeichert werden. Dies kann manuell über [Konnektoren](../connectors.md) und die [Storage API](../market_data_storage/api.md) erfolgen oder durch Konfiguration und Start der speziellen Anwendung [Hydra](../../hydra.md).
 
@@ -46,7 +46,7 @@ var security = new Security
 // Testportfolio
 var portfolio = new Portfolio
 {
-	Name = "test account",
+	Name = "Testkonto",
 	BeginValue = 1000000,
 };
 ```
@@ -247,12 +247,12 @@ connector.Connect();
 
 ## Moderne Implementierung historischer Tests
 
-In den aktuellen Versionen von [S#](../../api.md) wurde das Beispiel für historisches Testing erheblich modernisiert. Es ermöglicht jetzt das Testen von Strategien mit verschiedenen Arten von Marktdaten:
+In den aktuellen Versionen von [S#](../../api.md) wurde das Beispiel für historische Tests erheblich modernisiert. Es ermöglicht jetzt das Testen von Strategien mit verschiedenen Arten von Marktdaten:
 
 - Ticks (Trades)
 - Orderbücher
 - Kerzen verschiedener Zeitrahmen
-- Order-Log
+- Orderprotokoll
 - Level1-Daten (beste Preise)
 - Kombinationen verschiedener Datentypen
 
@@ -303,7 +303,7 @@ Dieser Ansatz ermöglicht einen visuellen Vergleich der Strategieleistung bei Ve
 
 ## Verbesserte SMA-Strategie
 
-Die Moving-Average-Strategie (SMA) wurde überarbeitet und verwendet nun einen moderneren Ansatz für Datenabonnements und Kerzenverarbeitung:
+Die Strategie mit gleitendem Durchschnitt (SMA) wurde überarbeitet und verwendet nun einen moderneren Ansatz für Datenabonnements und Kerzenverarbeitung:
 
 ```csharp
 protected override void OnStarted2(DateTime time)

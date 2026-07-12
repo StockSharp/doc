@@ -199,6 +199,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Key",
 		"Licenses",
 		"Market slippage",
+		"Orders",
 		"Passphrase",
 		"P/L realized",
 		"P/L unrealized",
@@ -230,6 +231,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private static readonly string[] _knownEnglishDesignerElementColorLabels =
 	[
 		"Black",
+		"Green",
 		"Dark green",
 		"Dark cyan",
 		"Cyan",
@@ -296,9 +298,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Black Candle",
 		"White Candle",
 		"Evening Star",
+		"Evening Doji Star",
 		"Morning Star",
 		"Shooting Star",
 		"Morning Doji Star",
+		"Harami Cross",
 		"Inverted Hammer",
 		"Hanging Man",
 		"Spinning Top",
@@ -328,7 +332,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Order expiration time",
 		"Execution condition",
 		"Trade initiator",
+		"Open Interest",
 		"Identifier (user)",
+		"Market Maker",
 	];
 
 	private static readonly string[] _knownEnglishNotificationFormLabels =
@@ -947,6 +953,40 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedTocFilesDoNotKeepKnownEnglishLabels()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				Lang: "de",
+				RelativePath: "topics/toc.yml",
+				Labels: new[] { "Brute Force" }
+			),
+		};
+
+		foreach (var check in checks)
+		{
+			var tocPath = Path.Combine(_repoRoot, check.Lang, check.RelativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(tocPath))
+				continue;
+
+			foreach (var nameLine in EnumerateTocNameLines(tocPath))
+			{
+				foreach (var label in check.Labels)
+				{
+					if (!nameLine.Name.Equals(label, StringComparison.OrdinalIgnoreCase))
+						continue;
+
+					errors.Add($"{RelativeToRepo(tocPath)}:{nameLine.Line}: localized TOC keeps English label '{label}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedCjkTocNamesDoNotLookLikeEnglish()
 	{
 		var errors = new List<string>();
@@ -1347,6 +1387,122 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void GermanHydraFirstStartDoesNotKeepEnglishUtilitiesLinkLabel()
+	{
+		var errors = new List<string>();
+		var file = Path.Combine(_repoRoot, "de", "topics", "hydra", "first_start.md");
+
+		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+		{
+			if (!text.Contains("[Utilities](tasks.md)", StringComparison.Ordinal))
+				continue;
+
+			errors.Add($"{RelativeToRepo(file)}:{line}: German Hydra first-start documentation keeps the English Utilities link label. Use the localized section title.");
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void HydraIndicatorViewDocsDoNotKeepColonArtifactsOrEnglishFragments()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "hydra", "working_with_data", "view_and_export", "indicators.md");
+		var colonArtifact = new Regex(@":\s+:", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!colonArtifact.IsMatch(text))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Hydra indicator-view documentation keeps a duplicated colon artifact.");
+			}
+		}
+
+		var germanFile = Path.Combine(_repoRoot, "de", relative);
+		foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(germanFile)))
+		{
+			if (!text.Contains("[indicator](../../../api/indicators/list_of_indicators.md)", StringComparison.Ordinal))
+				continue;
+
+			errors.Add($"{RelativeToRepo(germanFile)}:{line}: German Hydra indicator-view documentation keeps the English indicator link label.");
+		}
+
+		var russianFile = Path.Combine(_repoRoot, "ru", relative);
+		foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(russianFile)))
+		{
+			if (!altText.Text.Contains(" view", StringComparison.Ordinal))
+				continue;
+
+			errors.Add($"{RelativeToRepo(russianFile)}:{altText.Line}: Russian Hydra indicator-view image alt text keeps the English word 'view'.");
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void MarkdownBangBangCalloutsUseBalancedSpacing()
+	{
+		var errors = new List<string>();
+		var badPattern = new Regex(@"!!\s*[^\s!][^!\r\n]*[^\s!]!!", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = badPattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: bang-bang emphasis marker is missing whitespace before the closing marker: '{match.Value}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void JapaneseDesignerCodeDocsDoNotKeepEnglishAlgoTradingFolderLinkLabel()
+	{
+		var errors = new List<string>();
+		var badLabel = "[AlgoTrading API folder]";
+		var langRoot = Path.Combine(_repoRoot, "ja");
+
+		foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!text.Contains(badLabel, StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Japanese documentation keeps the English AlgoTrading API folder link label.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedNotificationDataTypeListsDoNotKeepEnglishLabels()
 	{
 		var errors = new List<string>();
@@ -1422,7 +1578,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	public void LocalizedConnectorDocsDoNotKeepEnglishCredentialDescriptions()
 	{
 		var errors = new List<string>();
-		var credentialPattern = new Regex(@"^\s*[-*]\s+\*\*[^*]+\*\*\s*(?:-|—|:)\s*(?:Login|Password)\.\s*$|\b(?:Login|Password) adicional\b|\bZusätzliches Login\.", RegexOptions.CultureInvariant);
+		var credentialPattern = new Regex(@"^\s*[-*]\s+\*\*[^*]+\*\*\s*(?:-|—|–|:|：)\s*(?:Login|Password)[.。．]\s*$|\b(?:Login|Password) adicional\b|\bZusätzliches Login\.", RegexOptions.CultureInvariant);
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
@@ -1442,6 +1598,149 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						continue;
 
 					errors.Add($"{RelativeToRepo(file)}:{line}: connector field description keeps untranslated English credential text. Localize 'Login' and 'Password' descriptions.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedConnectorDocsDoNotKeepKnownEnglishCredentialPhrases()
+	{
+		var errors = new List<string>();
+		var patterns = new[]
+		{
+			new Regex(@"\bLogin\b.*\bPassword\b|\bPassword\b.*\bLogin\b", RegexOptions.CultureInvariant),
+			new Regex(@"\blogin\s+(?:e|y)\s+password\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"\bPassword\s+do\b", RegexOptions.CultureInvariant),
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var connectorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "connectors");
+
+			if (!Directory.Exists(connectorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(connectorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var pattern in patterns)
+					{
+						var match = pattern.Match(text);
+						if (!match.Success)
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: connector documentation keeps untranslated English credential phrase '{match.Value}'.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerDocsDoNotKeepKnownEnglishUiLabels()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				RelativePath: "topics/designer/strategies/using_visual_designer/diagram_panel.md",
+				Fragments: new[] { "*basic settings*", "*advanced settings*", "Panel Palette", "Painel Palette", "Panel Designer", "Palette パネル", "Palette 面板" }
+			),
+			(
+				RelativePath: "topics/designer/user_interface/risk_management.md",
+				Fragments: new[] { "Risk Rules" }
+			),
+			(
+				RelativePath: "topics/designer/optimization/portfolio_optimization.md",
+				Fragments: new[] { "[Optimization]" }
+			),
+			(
+				RelativePath: "topics/designer/live_execution/getting_started.md",
+				Fragments: new[] { "Live trade", "Live-trade", "carpeta Trade", "pasta Trade", "Ordner Trade" }
+			),
+			(
+				RelativePath: "topics/designer/optimization/brute_force.md",
+				Fragments: new[] { "Optimization +" }
+			),
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			foreach (var check in checks)
+			{
+				var file = Path.Combine(_repoRoot, lang, check.RelativePath.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var fragment in check.Fragments)
+					{
+						if (!text.Contains(fragment, StringComparison.Ordinal))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer documentation keeps English UI label '{fragment}'.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedApiDocsDoNotKeepKnownEnglishShortLabels()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				RelativePath: "topics/api/options/graphic_components.md",
+				Fragments: new[] { "Graphic components" }
+			),
+			(
+				RelativePath: "topics/api/market_data/getting_news_data.md",
+				Fragments: new[] { "Graphical Components" }
+			),
+			(
+				RelativePath: "topics/api/market_data_storage.md",
+				Fragments: new[] { "Remote Storage" }
+			),
+			(
+				RelativePath: "topics/api/market_data_storage/remote.md",
+				Fragments: new[] { "Remote Storage" }
+			),
+			(
+				RelativePath: "topics/api/market_data_storage/drives.md",
+				Fragments: new[] { "Remote Storage" }
+			),
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			foreach (var check in checks)
+			{
+				var file = Path.Combine(_repoRoot, lang, check.RelativePath.Replace('/', Path.DirectorySeparatorChar));
+
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var fragment in check.Fragments)
+					{
+						if (!text.Contains(fragment, StringComparison.Ordinal))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized API documentation keeps English label '{fragment}'.");
+					}
 				}
 			}
 		}
@@ -1621,6 +1920,59 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedCodePlaceholdersDoNotKeepEnglishYourPrompts()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"<Your [^>]+>", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized code placeholder keeps English prompt '{match.Value}'. Localize user-provided placeholder text.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedRestClientSamplesDoNotKeepEnglishUserAgentPlaceholder()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "api", "connectors", "creating_own_connector", "best_practices", "rest_client.md");
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (!literal.Text.Equals("YourAppName/1.0", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized REST client sample keeps the English User-Agent placeholder 'YourAppName/1.0'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedHydraCustomCandleInstructionsDoNotKeepEnglishStartButtonText()
 	{
 		var errors = new List<string>();
@@ -1644,6 +1996,203 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					continue;
 
 				errors.Add($"{RelativeToRepo(file)}:{line}: Hydra custom candle instruction keeps English Start button text. Localize the visible action text.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraAnalyticsDocsDoNotKeepEnglishScriptNames()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			Path.Combine("topics", "hydra", "analytics", "examples", "normalization.md"),
+			Path.Combine("topics", "hydra", "analytics", "examples", "largest_candles.md"),
+		};
+		var pattern = new Regex(@"\b(?:Closing Price Normalization|Largest Candles)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath);
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Hydra analytics docs keep English script name '{match.Value}'. Use the localized script title in visible text.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraAnalyticsUiDocsDoNotKeepEnglishPanelLabels()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "hydra", "analytics", "running_a_script.md");
+		var pattern = new Regex(@"\b(?:Navigation Tree|Code Window|Parameter Panel|Error List)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Hydra analytics UI docs keep English panel label '{match.Value}'. Localize the visible panel name.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraAnalyticsDocsDoNotKeepEnglishAnalyticsFeatureLabels()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			Path.Combine("topics", "hydra", "analytics.md"),
+			Path.Combine("topics", "hydra", "analytics", "running_a_script.md"),
+			Path.Combine("topics", "hydra", "analytics", "create_own_script.md"),
+		};
+		var pattern = new Regex(
+			@"\*\*Analytics\*\*|Analytics-Funktion|Analytics-Skript|Analytics\s+機能|Analytics\s+功能|script(?:s)?\s+de\s+analytics|fun(?:ç|c)ão\s+Analytics|función\s+Analytics",
+			RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages().Where(lang => !lang.Equals("ru", StringComparison.Ordinal)))
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath);
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Hydra analytics documentation keeps English Analytics feature label '{match.Value}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseLiveDocsDoNotKeepEnglishLiveModeLabel()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			Path.Combine("topics", "designer", "live_execution", "live_execution_sample.md"),
+			Path.Combine("topics", "telegram_services", "control_panel.md"),
+		};
+		var pattern = new Regex(@"\bLive\s+模式", RegexOptions.CultureInvariant);
+
+		foreach (var relativePath in relativePaths)
+		{
+			var file = Path.Combine(_repoRoot, "zh", relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Chinese live documentation keeps English Live mode label '{match.Value}'. Use the localized live-trading term.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void JapaneseApiDocsDoNotKeepKnownEnglishUiPhrases()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				RelativePath: Path.Combine("topics", "api", "graphical_user_interface", "notification_settings_window.md"),
+				Pattern: new Regex(@"\bDesigner Logs window\b", RegexOptions.CultureInvariant),
+				Description: "notification log-window label"
+			),
+			(
+				RelativePath: Path.Combine("topics", "api", "strategies", "quoting.md"),
+				Pattern: new Regex(@"\bQuoting Behavior\b", RegexOptions.CultureInvariant),
+				Description: "quoting behavior heading"
+			),
+		};
+
+		foreach (var check in checks)
+		{
+			var file = Path.Combine(_repoRoot, "ja", check.RelativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = check.Pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Japanese API docs keep English {check.Description} '{match.Value}'. Localize the visible UI phrase.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedAiDevelopmentDocsDoNotKeepEnglishPromptFragments()
+	{
+		var errors = new List<string>();
+		var aiRootRelative = Path.Combine("topics", "api", "ai_development");
+		var badPattern = new Regex(
+			@"Framework:\s+StockSharp|subscribe to channel|Interval mapping|Parse bids/asks into|Parse into ExecutionMessage|Order registration|Order cancellation|Portfolio retrieval|WebSocket for order updates|Parse order status updates|Return ExecutionMessage with|with params:|edge cases",
+			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var aiRoot = Path.Combine(_repoRoot, lang, aiRootRelative);
+
+			if (!Directory.Exists(aiRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(aiRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = badPattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: AI development documentation keeps English prompt fragment '{match.Value}'. Localize visible prompt text.");
+				}
 			}
 		}
 
@@ -1681,22 +2230,29 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	public void LocalizedDesignerElementDocsDoNotKeepEnglishColorLabels()
 	{
 		var errors = new List<string>();
-		const string relativePath = "topics/designer/strategies/using_visual_designer/elements.md";
+		var relativePaths = new[]
+		{
+			"topics/designer/strategies/using_visual_designer/elements.md",
+			"topics/designer/strategies/using_visual_designer/lines.md",
+		};
 
 		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
-			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
-			if (!File.Exists(file))
-				continue;
-
-			foreach (var label in EnumerateMarkdownBoldTexts(ReadAllText(file)))
+			foreach (var relativePath in relativePaths)
 			{
-				foreach (var color in _knownEnglishDesignerElementColorLabels)
-				{
-					if (!ContainsStandaloneText(label.Text, color))
-						continue;
+				var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
 
-					errors.Add($"{RelativeToRepo(file)}:{label.Line}: designer element color legend keeps English color label '{color}'. Localize color names in the target language.");
+				foreach (var label in EnumerateMarkdownBoldTexts(ReadAllText(file)))
+				{
+					foreach (var color in _knownEnglishDesignerElementColorLabels)
+					{
+						if (!ContainsStandaloneText(label.Text, color))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{label.Line}: designer element color legend keeps English color label '{color}'. Localize color names in the target language.");
+					}
 				}
 			}
 		}
@@ -1854,6 +2410,2763 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					if (adjectiveMatch.Success)
 						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized candle pattern code comment keeps English adjective '{adjectiveMatch.Value}'. Localize the code comment.");
 				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedComplexPatternSampleDoesNotKeepEnglishCustomName()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "api", "patterns", "complex_patterns.md");
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (!literal.Text.Equals("Reversal Up", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized complex pattern sample keeps the English custom pattern name 'Reversal Up'. Localize the sample string literal.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedAdvancedStrategyDocsDoNotKeepEnglishSampleStrategyName()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "api", "strategies", "advanced_features.md");
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (!text.Contains("SMA Crossover", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized advanced strategy documentation keeps the English sample strategy name 'SMA Crossover'. Localize the visible example name.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedTradingOperationSamplesDoNotKeepEnglishCustomOrderComment()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "api", "strategies", "trading_operations.md");
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (!literal.Text.Equals("Custom order", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized trading operation sample keeps the English order comment 'Custom order'. Localize the sample string literal.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedShortSampleStringsDoNotKeepKnownEnglishLiterals()
+	{
+		var errors = new List<string>();
+		var phrasesByRelativePath = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
+		{
+			["topics/api/strategies/parameters.md"] = ["SMA strategy"],
+			["topics/api/indicators.md"] = ["SMA strategy"],
+			["topics/api/graphical_user_interface/charts/annotations.md"] = ["New annotation"],
+			["topics/api/basket_routing.md"] = ["All adapters connected"],
+			["topics/hydra/server_mode/fix_fast_connectivity.md"] = ["Connection established"],
+			["topics/api/instruments/instrument_search.md"] = ["Enter a search criterion"],
+			["topics/api/graphical_user_interface/logging/log_panel.md"] = ["Warning test message"],
+			["topics/api/testing/historical_data.md"] = ["test account"],
+			["topics/api/logging/other_logs_sources.md"] = ["Warning (source)!!!", "Warning (trace)!!!", "Error (trace)!!!", "{0} (source)!!!", "{0} (trace)!!!"],
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var (relative, phrases) in phrasesByRelativePath)
+			{
+				var file = Path.Combine(langRoot, relative.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!literal.Text.Equals(phrase, StringComparison.Ordinal))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized sample keeps the English string literal '{phrase}'. Localize the sample string literal.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedOAuthConnectorDocsDoNotKeepEnglishActionButtonLabels()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			Path.Combine("topics", "api", "connectors", "forex", "ctrader", "graphical_configuration_ctrader.md"),
+			Path.Combine("topics", "api", "connectors", "stock_market", "tradier", "graphical_configuration_tradier.md"),
+		};
+		var phrases = new[] { "\"Check\"", "\"Start\"" };
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath);
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!text.Contains(phrase, StringComparison.Ordinal))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized OAuth connector documentation keeps English button label {phrase}.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedConnectionSettingsDocsDoNotKeepEnglishCheckButtonLabel()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "api", "graphical_user_interface", "connection_settings_window.md");
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (!text.Contains("**Check**", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized connection settings documentation keeps the English button label '**Check**'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraInstrumentListDoesNotKeepEnglishGeneralTabLabel()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "hydra", "instruments_and_boards", "instruments_list.md");
+		var languages = new[] { "de", "ja", "pt", "zh" };
+
+		foreach (var lang in languages)
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (!ContainsStandaloneText(text, "General"))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Hydra instrument list keeps the English 'General' tab label.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedGeneralDocsDoNotKeepEnglishExplanatoryPhrases()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				Lang: "de",
+				RelativePath: "topics/shell.md",
+				Fragments: new[] { "Graphical User Interface" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/shell.md",
+				Fragments: new[] { "Graphical User Interface" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/shell.md",
+				Fragments: new[] { "Graphical User Interface" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/shell.md",
+				Fragments: new[] { "Graphical User Interface" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/market_data_storage.md",
+				Fragments: new[] { "Data Mining" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api.md",
+				Fragments: new[] { "Open Source" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/common/source_codes.md",
+				Fragments: new[] { "Open Source" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/common/source_codes.md",
+				Fragments: new[] { "Open Source" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/common/source_codes.md",
+				Fragments: new[] { "Open Source" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/designer/user_interface/components/chart.md",
+				Fragments: new[] { "Toolbar", "Auto-Scroll", "Auto-Zoom", "Levels" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/terminal/user_interface/components/chart.md",
+				Fragments: new[] { "Toolbar", "Auto-Scroll", "Auto-Zoom", "Levels" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/runner/connection_setup.md",
+				Fragments: new[] { "Connections" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/runner/connection_setup.md",
+				Fragments: new[] { "Connections" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/runner/connection_setup.md",
+				Fragments: new[] { "Connections" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/runner/connection_setup.md",
+				Fragments: new[] { "Connections" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/runner/connection_setup.md",
+				Fragments: new[] { "Connections" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/server_mode/settings.md",
+				Fragments: new[] { "FIX/FAST connectivity" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/server_mode/settings.md",
+				Fragments: new[] { "Dialect des", "Sender und Recipient", "Subscriptions beim" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/server_mode/hydra_client_connectivity.md",
+				Fragments: new[] { "FIX protocol" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/hydra/server_mode/settings.md",
+				Fragments: new[] { "Dialect", "Sender", "Recipient", "Data format" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/hydra/server_mode/settings.md",
+				Fragments: new[] { "Sender e Recipient" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/testing/optimization.md",
+				Fragments: new[] { "Brute force", "Genetic algorithm" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/testing/optimization.md",
+				Fragments: new[] { "Brute Force" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/designer/optimization/brute_force.md",
+				Fragments: new[] { "Brute Force" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/api/testing/optimization.md",
+				Fragments: new[] { "Brute force", "Genetic algorithm" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/hydra/importing/order_log.md",
+				Fragments: new[] { "Time in force" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/prepare_for_download/custom_candles.md",
+				Fragments: new[] { "Custom", "Generated" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/hydra/prepare_for_download/custom_candles.md",
+				Fragments: new[] { "Custom", "Generated" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/hydra/prepare_for_download/custom_candles.md",
+				Fragments: new[] { "Custom", "Generated", "Ticks" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/hydra/prepare_for_download/custom_candles.md",
+				Fragments: new[] { "Custom", "Generated" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/hydra/prepare_for_download/custom_candles.md",
+				Fragments: new[] { "Custom", "Generated", "Ticks" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/hydra/importing/ticks.md",
+				Fragments: new[] { "Ticks" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/hydra/server_mode/emulation_setup.md",
+				Fragments: new[] { "Re-registration" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/hydra/server_mode/settings.md",
+				Fragments: new[] { "Simulator" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/hydra/server_mode/settings.md",
+				Fragments: new[] { "Simulator" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/hydra/server_mode/settings.md",
+				Fragments: new[] { "Simulator" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/hydra/server_mode/settings.md",
+				Fragments: new[] { "Simulator" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/tasks/export_auto.md",
+				Fragments: new[] { "Split" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/hydra/tasks/export_auto.md",
+				Fragments: new[] { "Split" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/hydra/tasks/export_auto.md",
+				Fragments: new[] { "Split" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/hydra/tasks/export_auto.md",
+				Fragments: new[] { "Split" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/hydra/tasks/export_auto.md",
+				Fragments: new[] { "Split" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/hydra/analytics/running_a_script.md",
+				Fragments: new[] { "Instrument" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/hydra/analytics/running_a_script.md",
+				Fragments: new[] { "Instrument" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/designer/backtesting/debugging/break_points.md",
+				Fragments: new[] { "True" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/designer/backtesting/debugging/break_points.md",
+				Fragments: new[] { "True" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/backtesting/debugging/break_points.md",
+				Fragments: new[] { "True" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/designer/backtesting/debugging/break_points.md",
+				Fragments: new[] { "True" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/designer/backtesting/debugging/break_points.md",
+				Fragments: new[] { "True" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/designer/backtesting/debugging.md",
+				Fragments: new[] { "breakpoint", "breakpoints" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/designer/backtesting/debugging/break_points.md",
+				Fragments: new[] { "breakpoint", "breakpoints" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/designer/optimization/optimization_parameters.md",
+				Fragments: new[] { "True-False" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/designer/optimization/optimization_parameters.md",
+				Fragments: new[] { "True-False" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/optimization/optimization_parameters.md",
+				Fragments: new[] { "True-False" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/designer/optimization/optimization_parameters.md",
+				Fragments: new[] { "True-False" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/designer/optimization/optimization_parameters.md",
+				Fragments: new[] { "True-False" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/strategies/using_visual_designer/elements.md",
+				Fragments: new[] { "up（true）", "down（false）" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/strategies/using_visual_designer/elements/common/logical_condition.md",
+				Fragments: new[] { "raised（true）", "lowered（false）" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/strategies/using_visual_designer/elements/common/comparison.md",
+				Fragments: new[] { "up（true）", "down（false）" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/import.md",
+				Fragments: new[] { "order log" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/api/import.md",
+				Fragments: new[] { "ticks", "candles", "order books", "order log", "transactions", "instruments", "positions" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/instruments/instrument_identifier.md",
+				Fragments: new[] { "instrument code", "board code" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/designer/user_interface/boards.md",
+				Fragments: new[] { "board code" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/designer/market_data_storage/create_instrument.md",
+				Fragments: new[] { "security code", "board code" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/api/instruments/instrument_identifier.md",
+				Fragments: new[] { "instrument code", "board code" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/market_data_storage/create_instrument.md",
+				Fragments: new[] { "security code", "board code" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/designer/market_data_storage/create_instrument.md",
+				Fragments: new[] { "security code", "board code" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/api/instruments/instrument_identifier.md",
+				Fragments: new[] { "instrument code", "board code" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/designer/user_interface/boards.md",
+				Fragments: new[] { "board code" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/designer/strategies/using_visual_designer/elements/options/strikes.md",
+				Fragments: new[] { "Call option", "Put option" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/designer/strategies/using_visual_designer/elements/options/strikes.md",
+				Fragments: new[] { "Call option", "Put option" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/strategies/using_visual_designer/elements/options/strikes.md",
+				Fragments: new[] { "Call option", "Put option" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/designer/strategies/using_visual_designer/elements/options/strikes.md",
+				Fragments: new[] { "Call option", "Put option" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/designer/strategies/using_visual_designer/elements/options/strikes.md",
+				Fragments: new[] { "Call option", "Put option" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/api/indicators/list_of_indicators/oscillator_of_moving_average.md",
+				Fragments: new[] { "oscillates" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/strategies/trading_modes.md",
+				Fragments: new[] { "trading is prohibited", "| yes |", "| no |" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/strategies/trading_modes.md",
+				Fragments: new[] { "trading is prohibited" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/api/strategies/trading_modes.md",
+				Fragments: new[] { "trading is prohibited" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/strategies/trading_modes.md",
+				Fragments: new[] { "trading is prohibited" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/strategies/statistics_reference.md",
+				Fragments: new[] { "insufficient funds" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/api/strategies/statistics_reference.md",
+				Fragments: new[] { "insufficient funds" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/runner/integration_with_visual_studio.md",
+				Fragments: new[] { "breakpoint", "breakpoints" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/testing/historical_data.md",
+				Fragments: new[] { "order log" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/pnl.md",
+				Fragments: new[] { "order log" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/export.md",
+				Fragments: new[] { "order log" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/connectors/creating_own_connector/market_data.md",
+				Fragments: new[] { "order log" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/order_books.md",
+				Fragments: new[] { "Market Depth" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/strategies/event_model/rules_using.md",
+				Fragments: new[] { "Market Depth" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/order_books/display.md",
+				Fragments: new[] { "Market Depth" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/strategies/event_model/rules_using.md",
+				Fragments: new[] { "Market Depth" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/api/strategies/event_model/rules_using.md",
+				Fragments: new[] { "Market Depth" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/indicators/list_of_indicators/forecast_oscillator.md",
+				Fragments: new[] { "Return to Zero" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/indicators/list_of_indicators/fractal_dimension.md",
+				Fragments: new[] { "FDI closer to 2" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/testing/random_data.md",
+				Fragments: new[] { "on the fly" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/testing/random_data.md",
+				Fragments: new[] { "on the fly" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/instruments/instrument_search.md",
+				Fragments: new[] { "Button-Click-Handler" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/pnl.md",
+				Fragments: new[] { "via Adapter" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/slippage.md",
+				Fragments: new[] { "via Adapter" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/market_data/getting_historical_data.md",
+				Fragments: new[] { "via Connector" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/connectors/forex/metatrader.md",
+				Fragments: new[] { "use Installer" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/connectors/creating_own_connector/instrument_lookup.md",
+				Fragments: new[] { "exchange via API" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/designer/connections_settings/simulator.md",
+				Fragments: new[] { "in Batches" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/misc/backup/hydra_settings.md",
+				Fragments: new[] { "Offset in Tagen" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/graphical_user_interface/notification_settings_window.md",
+				Fragments: new[] { "Trade-Initiator", "Market-Maker" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/terminal/notifications/notifications_setup.md",
+				Fragments: new[] { "Trade-Initiator", "Market-Maker" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/importing/ticks.md",
+				Fragments: new[] { "Trade-Initiator" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/strategies.md",
+				Fragments: new[] { "Logging in Strategien", "Logging-Mechanismus" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/logging/strategy_logging.md",
+				Fragments: new[] { "Logging in eine Testdatei", "Logging in das LogWindow", "Strategie-Logging", "Visuelle Logging-Komponenten" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/strategies/logging.md",
+				Fragments: new[] { "Logging in Strategien", "Logging-Stufen", "Logging-Methoden", "Logging-Stufe", "Logging-Einstellungen" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/api/graphical_user_interface/logging.md",
+				Fragments: new[] { "visueller Logging-Komponenten", "Um Logging", "Logs in MainWindow" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/analytics/create_own_script.md",
+				Fragments: new[] { "für das Logging" }
+			),
+			(
+				Lang: "ru",
+				RelativePath: "topics/designer/backtesting/debugging.md",
+				Fragments: new[] { "Step to out" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/indicators/list_of_indicators/detrended_synthetic_price.md",
+				Fragments: new[] { "head and shoulders", "double bottom" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/videos/converter_task.md",
+				Fragments: new[] { "Converter-Aufgabe" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/hydra/videos/converter_task.md",
+				Fragments: new[] { "Tarea Converter" }
+			),
+		};
+
+		foreach (var check in checks)
+		{
+			var file = Path.Combine(_repoRoot, check.Lang, check.RelativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (var fragment in check.Fragments)
+				{
+					if (!text.Contains(fragment, StringComparison.OrdinalIgnoreCase))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English explanatory phrase '{fragment}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void HydraCommonTaskSettingsDoNotKeepConverterHeaderInNonConverterTasks()
+	{
+		var errors = new List<string>();
+		var languages = new[] { "en", "de", "es", "ja", "pt", "ru", "zh" };
+		var relativePaths = new[]
+		{
+			"topics/hydra/tasks/import_auto.md",
+			"topics/hydra/tasks/export_auto.md",
+			"topics/hydra/misc/backup/hydra_settings.md",
+		};
+
+		foreach (var lang in languages)
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!text.Contains("Converter", StringComparison.Ordinal))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: non-converter Hydra task common settings keep 'Converter' as the task header.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void SpanishPortugueseDocsDoNotKeepEnglishLoggingProse()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\blogging\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var checks = new[]
+		{
+			(Lang: "es", LocalizedTerm: "registro"),
+			(Lang: "pt", LocalizedTerm: "registo"),
+		};
+
+		foreach (var check in checks)
+		{
+			var root = Path.Combine(_repoRoot, check.Lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English 'logging' prose. Use '{check.LocalizedTerm}' outside API identifiers.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized image alt text keeps English 'logging' prose. Use '{check.LocalizedTerm}'.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English 'logging' prose. Use '{check.LocalizedTerm}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void SpanishPortugueseDocsDoNotKeepEnglishLoggerListenerProse()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:logger|listeners?)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var checks = new[]
+		{
+			(Lang: "es", LoggerTerm: "registrador", ListenerTerm: "receptor"),
+			(Lang: "pt", LoggerTerm: "registador", ListenerTerm: "ouvinte"),
+		};
+
+		foreach (var check in checks)
+		{
+			var root = Path.Combine(_repoRoot, check.Lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English logger/listener prose. Use '{check.LoggerTerm}' or '{check.ListenerTerm}' outside API identifiers.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized image alt text keeps English logger/listener prose. Use localized wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English logger/listener prose. Use localized wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void SpanishPortugueseDocsDoNotKeepEnglishLogsProse()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\blogs\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var checks = new[]
+		{
+			(Lang: "es", LocalizedTerm: "registros"),
+			(Lang: "pt", LocalizedTerm: "registos"),
+		};
+
+		foreach (var check in checks)
+		{
+			var root = Path.Combine(_repoRoot, check.Lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English 'logs' prose. Use '{check.LocalizedTerm}' outside API identifiers, paths, and filenames.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized image alt text keeps English 'logs' prose. Use '{check.LocalizedTerm}'.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English 'logs' prose. Use '{check.LocalizedTerm}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanSpanishPortugueseDocsDoNotKeepEnglishStreamingTerms()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bstreaming\b|\bdata[- ]feed\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in new[] { "de", "es", "pt" })
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English streaming/data-feed wording.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized image alt text keeps English streaming/data-feed wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English streaming/data-feed wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedChoppinessDocsDoNotKeepEnglishProseFragments()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"Setting threshold levels|\b(?:High|Low)\s+[""„]|\bHigh CHOP\b|[""„]choppiness[""“]|\bRange-Trading\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var relativePaths = new[]
+		{
+			"topics/api/indicators/list_of_indicators/choppiness_index.md",
+		};
+
+		foreach (var lang in new[] { "de", "es", "pt" })
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized CHOP documentation keeps an English prose fragment.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedOptimizationCodeCommentsDoNotKeepEnglishPhrases()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"maximum iterations|number of parallel threads|default = CPU|commission|with a step of|use the range from SetOptimize", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		const string relativePath = "topics/api/testing/optimization.md";
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+			{
+				if (pattern.IsMatch(comment.Text))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized optimization code comment keeps an English phrase.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedConnectorCodeCommentsDoNotKeepEnglishRealtimeUpdatePhrase()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"since this is|real-time update|not a response to|specific request", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+				{
+					if (pattern.IsMatch(comment.Text))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps an English real-time update phrase.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCodeCommentsDoNotKeepEnglishOrThisPhrase()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bor this\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+				{
+					if (pattern.IsMatch(comment.Text))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English 'or this' wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void PortugueseDocsDoNotKeepEnglishStatusPhrases()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bstatus\s+(?:online|d[ae]\s+ordem)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var root = Path.Combine(_repoRoot, "pt", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+					errors.Add($"{RelativeToRepo(file)}:{line}: Portuguese documentation keeps English 'status' wording.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: Portuguese image alt text keeps English 'status' wording.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: Portuguese code comment keeps English 'status' wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void JapaneseDocsDoNotKeepEnglishCompleteTerms()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bcomplete(?:d)?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var root = Path.Combine(_repoRoot, "ja", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+					errors.Add($"{RelativeToRepo(file)}:{line}: Japanese documentation keeps English complete/completed wording.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: Japanese image alt text keeps English complete/completed wording.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: Japanese code comment keeps English complete/completed wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCandleGluingSampleStatusStringsAreTranslated()
+	{
+		var errors = new List<string>();
+		var relativePath = "topics/api/candles/gluing_candles_history_real_time.md";
+		var forbidden = new HashSet<string>(StringComparer.Ordinal)
+		{
+			"Real-time",
+			"History",
+		};
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (forbidden.Contains(literal.Text))
+					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized candle gluing sample keeps an English status string literal.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCustomIndicatorXmlCommentsDoNotKeepEnglishParamText()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@">\s*(?:Indicator|Value time)\.\s*</param>", RegexOptions.CultureInvariant);
+		var relativePath = "topics/api/indicators/custom_indicator.md";
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+			{
+				if (pattern.IsMatch(comment.Text))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized XML doc comment keeps English param text.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerCodeCommentsDoNotKeepEnglishDocumentationLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bSee more examples\b|^Doc\s+https?://", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var rootNames = new[] { "designer", "topics/designer" };
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			foreach (var rootName in rootNames)
+			{
+				var root = Path.Combine(_repoRoot, lang, rootName.Replace('/', Path.DirectorySeparatorChar));
+				if (!Directory.Exists(root))
+					continue;
+
+				foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+				{
+					var markdown = ReadAllText(file);
+
+					foreach (var comment in EnumerateCodeComments(markdown))
+					{
+						if (pattern.IsMatch(comment.Text))
+							errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized Designer code comment keeps an English documentation label.");
+					}
+
+					var lines = markdown.Replace("\r\n", "\n").Split('\n');
+					for (var i = 0; i < lines.Length; i++)
+					{
+						var text = Regex.Replace(lines[i].Trim(), @"^(?:///|//|#)\s*", string.Empty, RegexOptions.CultureInvariant);
+						if (pattern.IsMatch(text))
+							errors.Add($"{RelativeToRepo(file)}:{i + 1}: localized Designer documentation string keeps an English documentation label.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void PortugueseStrategyIndicatorCommentsDoNotKeepEnglishIncorrectLabel()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bincorrect\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var file = Path.Combine(_repoRoot, "pt", "topics", "api", "strategies", "indicators.md");
+
+		foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+		{
+			if (pattern.IsMatch(comment.Text))
+				errors.Add($"{RelativeToRepo(file)}:{comment.Line}: Portuguese strategy indicator comment keeps English 'incorrect' label.");
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedIFileSystemDocsDoNotKeepEnglishObsoleteMessage()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/connectors/ifile_system_and_paths.md";
+		const string forbidden = "Use IFileSystem overload.";
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (literal.Text.Equals(forbidden, StringComparison.Ordinal))
+					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized IFileSystem documentation keeps an English obsolete message.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedNewsExamplesDoNotKeepEnglishConsoleLabels()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/api/market_data/getting_news_data.md",
+			"topics/api/graphical_user_interface/market_data/news.md",
+		};
+		var forbiddenLabels = new HashSet<string>(StringComparer.Ordinal)
+		{
+			"News:",
+			"Headline:",
+			"Source:",
+			"Time:",
+			"URL:",
+			"Story:",
+			"New news on topic: {news.Headline}",
+		};
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+				{
+					if (forbiddenLabels.Contains(literal.Text) || (lang != "de" && literal.Text.Equals("Text:", StringComparison.Ordinal)))
+						errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized news example keeps an English console label '{literal.Text}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedImportExamplesDoNotKeepEnglishConsoleLabels()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/import.md";
+		var forbiddenLabels = new HashSet<string>(StringComparer.Ordinal)
+		{
+			"Progress: {p}%",
+			"Imported {count} records, last: {lastTime}",
+		};
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (forbiddenLabels.Contains(literal.Text))
+					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized import example keeps an English console label '{literal.Text}'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedOptimizationAdvancedExamplesDoNotKeepEnglishProgressLabels()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/strategies/optimization_advanced.md";
+		var forbiddenLabels = new HashSet<string>(StringComparer.Ordinal)
+		{
+			"Progress: {tracker.TotalProgress:F1}%, ",
+			@"Remaining: {tracker.Remaining:hh\\:mm\\:ss}",
+		};
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (forbiddenLabels.Contains(literal.Text))
+					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized advanced optimization example keeps an English progress label '{literal.Text}'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedEventRuleNamesDoNotKeepEnglishMoneyIncreaseLabel()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/strategies/event_model/rules_create.md";
+		const string forbidden = "Money increase of portfolio {0} above {1}";
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (literal.Text.Equals(forbidden, StringComparison.Ordinal))
+					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized event rule keeps an English rule name.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedArbitrageSamplesDoNotKeepEnglishProfitLabel()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/strategies/samples/arbitrage.md";
+		const string forbidden = "Profit: {_profit}";
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				if (literal.Text.Equals(forbidden, StringComparison.Ordinal))
+					errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized arbitrage sample keeps an English profit label.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerCustomIndicatorSamplesDoNotKeepEnglishChangeLabel()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			"topics/designer/strategies/using_code/csharp/create_own_indicator.md",
+			"topics/designer/strategies/using_code/fsharp/create_own_indicator.md",
+			"topics/designer/strategies/using_code/python/create_own_indicator.md",
+		};
+		var forbiddenLabels = new HashSet<string>(StringComparer.Ordinal)
+		{
+			"Change: {Change}",
+			"Change: %d",
+			"Change: {self.Change}",
+		};
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+				{
+					if (forbiddenLabels.Contains(literal.Text))
+						errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized Designer custom indicator sample keeps an English change label '{literal.Text}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedAiStrategyPromptDoesNotKeepEnglishFastSlowTerms()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bfast\b|\bslow\b|\bperiod\s+\d+\b", RegexOptions.CultureInvariant);
+		const string relativePath = "topics/api/ai_development/strategy_with_ai.md";
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			var lines = ReadAllText(file).Replace("\r\n", "\n").Split('\n');
+			for (var i = 0; i < lines.Length; i++)
+			{
+				if (pattern.IsMatch(lines[i]))
+					errors.Add($"{RelativeToRepo(file)}:{i + 1}: localized AI strategy prompt keeps English fast/slow/period wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedFastProtocolDocsDoNotKeepEnglishProtocolLinkLabel()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\[FAST protocol\]", RegexOptions.CultureInvariant);
+		const string relativePath = "topics/api/connectors/common/fast_protocol.md";
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			var markdown = ReadAllText(file);
+			if (pattern.IsMatch(markdown))
+				errors.Add($"{RelativeToRepo(file)}: localized FAST protocol documentation keeps English link label '[FAST protocol]'.");
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedSaveLoadHeadingsDoNotKeepEnglishLabels()
+	{
+		var errors = new List<string>();
+		var headingPattern = new Regex(@"^#{2,6}\s+.*\b(?:Save|Load)\b", RegexOptions.CultureInvariant);
+		var relativePaths = new[]
+		{
+			"topics/api/indicators/custom_indicator.md",
+			"topics/api/strategies/compatibility.md",
+		};
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(file))
+					continue;
+
+				var lines = ReadAllText(file).Replace("\r\n", "\n").Split('\n');
+				for (var i = 0; i < lines.Length; i++)
+				{
+					if (!headingPattern.IsMatch(lines[i]))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{i + 1}: localized heading keeps English Save/Load label.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHighLevelSubscriptionDocsDoNotKeepEnglishStartStopHeading()
+	{
+		var errors = new List<string>();
+		var headingPattern = new Regex(@"^#{2,6}\s+Start\s*/\s*Stop\s*$", RegexOptions.CultureInvariant);
+		const string relativePath = "topics/api/strategies/high_level_subscriptions.md";
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			var lines = ReadAllText(file).Replace("\r\n", "\n").Split('\n');
+			for (var i = 0; i < lines.Length; i++)
+			{
+				if (!headingPattern.IsMatch(lines[i]))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{i + 1}: localized subscription documentation keeps English Start/Stop heading.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedTradingModePermissionTableDoesNotKeepEnglishLabels()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/api/strategies/trading_modes.md";
+		var englishYesPattern = new Regex(@"^\|\s*`(?:Full|CancelOrdersOnly|ReducePositionOnly|LongOnly)`\s*\|.*\byes\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			var lines = ReadAllText(file).Replace("\r\n", "\n").Split('\n');
+			for (var i = 0; i < lines.Length; i++)
+			{
+				var line = lines[i];
+				if (line.Contains("| Current TradingMode \\ required |", StringComparison.Ordinal))
+					errors.Add($"{RelativeToRepo(file)}:{i + 1}: localized trading-mode table keeps English Current/required header.");
+
+				if (englishYesPattern.IsMatch(line))
+					errors.Add($"{RelativeToRepo(file)}:{i + 1}: localized trading-mode permission table keeps English 'yes' value.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedConnectorConfigurationDoesNotKeepEnglishPlaceholders()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"<Path to certificate file>|\*\*Active\*\*", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics", "api", "connectors");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(text))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized connector configuration keeps an English placeholder or UI label.");
+				}
+
+				foreach (var literal in EnumerateCodeStringLiterals(markdown))
+				{
+					if (pattern.IsMatch(literal.Text))
+						errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized connector code string keeps an English placeholder.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDocsDoNotKeepEnglishCommissionExamples()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bbrokerage\b|\bexchange,\s*etc\.", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps an English commission example.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDocsDoNotKeepEnglishWrapperTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bwrapper\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English 'wrapper' wording.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized image alt text keeps English 'wrapper' wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English 'wrapper' wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDocsDoNotKeepEnglishBacktestingTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bbacktesting\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English 'backtesting' wording.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized image alt text keeps English 'backtesting' wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English 'backtesting' wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDocsDoNotKeepEnglishBacktestTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bbacktests?\b|\bbacktester\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English 'backtest' wording.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized image alt text keeps English 'backtest' wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English 'backtest' wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDocsDoNotKeepEnglishPlaceholderTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bplaceholders?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != DefaultLanguage && lang != "ru"))
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English placeholder wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanSpanishPortugueseDesignerDocsDoNotKeepEnglishSocketTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bsockets?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in new[] { "de", "es", "pt" })
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics", "designer");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer documentation keeps English 'socket' wording.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized Designer image alt text keeps English 'socket' wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized Designer code comment keeps English 'socket' wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanPortugueseDesignerDocsDoNotKeepEnglishTriggerTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\btriggers?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in new[] { "de", "pt" })
+		{
+			var root = Path.Combine(_repoRoot, lang, "topics", "designer");
+
+			foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer documentation keeps English 'trigger' wording.");
+				}
+
+				foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized Designer image alt text keeps English 'trigger' wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+						errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized Designer code comment keeps English 'trigger' wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void PortugueseDesignerDocsDoNotKeepEnglishFlagTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bflag\b", RegexOptions.CultureInvariant);
+		var root = Path.Combine(_repoRoot, "pt", "topics", "designer");
+
+		foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+					errors.Add($"{RelativeToRepo(file)}:{line}: Portuguese Designer documentation keeps English lowercase 'flag' wording.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: Portuguese Designer image alt text keeps English lowercase 'flag' wording.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: Portuguese Designer code comment keeps English lowercase 'flag' wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanDocsDoNotKeepEnglishTestingTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bTesting\b", RegexOptions.CultureInvariant);
+		var germanRoot = Path.Combine(_repoRoot, "de", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForGermanTestingTermCheck(text)))
+					errors.Add($"{RelativeToRepo(file)}:{line}: German documentation keeps English 'Testing' wording. Use 'Tests' or 'Testen' outside API identifiers and sample paths.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForGermanTestingTermCheck(altText.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: German image alt text keeps English 'Testing' wording. Use localized wording.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForGermanTestingTermCheck(comment.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: German code comment keeps English 'Testing' wording. Use localized wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanDocsDoNotKeepEnglishTradingConceptTerms()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bMoving-Average\b|\bRange-Trading\b|\bMean-Reversion\b|\bPairs?[- ]Trading\b", RegexOptions.CultureInvariant);
+		var germanRoot = Path.Combine(_repoRoot, "de", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+					errors.Add($"{RelativeToRepo(file)}:{line}: German documentation keeps an English trading concept term. Use localized wording such as 'gleitender Durchschnitt', 'Rückkehr zum Mittelwert', 'Seitwärtshandel', or 'Paarhandel'.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: German image alt text keeps an English trading concept term.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: German code comment keeps an English trading concept term.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanDocsDoNotKeepEnglishLevelTerminology()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:High-Level|Low-Level)\b", RegexOptions.CultureInvariant);
+		var germanRoot = Path.Combine(_repoRoot, "de", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+					errors.Add($"{RelativeToRepo(file)}:{line}: German documentation keeps English High-Level/Low-Level wording. Use localized wording such as 'auf höherer Ebene' or 'auf niedriger Ebene'.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: German image alt text keeps English High-Level/Low-Level wording.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: German code comment keeps English High-Level/Low-Level wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanIndicatorDocsDoNotKeepEnglishHighLowLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:High|Low)\s+(?:GAPO|HVR|KER|R²|MMI)\b", RegexOptions.CultureInvariant);
+		var germanIndicatorRoot = Path.Combine(_repoRoot, "de", "topics", "api", "indicators");
+
+		foreach (var file in Directory.EnumerateFiles(germanIndicatorRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+					errors.Add($"{RelativeToRepo(file)}:{line}: German indicator documentation keeps English High/Low labels in prose. Use localized labels such as 'Hohe', 'Hoher', or 'Niedriger'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanDocsDoNotKeepEnglishOrderLogTerm()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bOrder-Logs?\b|\bOrderlogs?\b", RegexOptions.CultureInvariant);
+		var germanRoot = Path.Combine(_repoRoot, "de", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var withoutCode = Regex.Replace(text, @"`[^`]*`", " ", RegexOptions.CultureInvariant);
+				if (pattern.IsMatch(withoutCode))
+					errors.Add($"{RelativeToRepo(file)}:{line}: German documentation keeps English order-log wording. Use 'Orderprotokoll' in visible text.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+			{
+				if (pattern.IsMatch(comment.Text))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: German code comment keeps English order-log wording. Use 'Orderprotokoll' in explanatory comments.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanDocsDoNotKeepEnglishBoardCodeAndOrderBookHyphenTerms()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bBoard-Codes?\b|\bOrder-Book\b", RegexOptions.CultureInvariant);
+		var germanRoot = Path.Combine(_repoRoot, "de", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var withoutCode = Regex.Replace(text, @"`[^`]*`", " ", RegexOptions.CultureInvariant);
+				if (pattern.IsMatch(withoutCode))
+					errors.Add($"{RelativeToRepo(file)}:{line}: German documentation keeps English hyphenated board/order-book wording. Use localized visible terminology.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+			{
+				if (pattern.IsMatch(comment.Text))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: German code comment keeps English hyphenated board/order-book wording. Use localized explanatory comments.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanDocsDoNotKeepBareDesignerPreposition()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:in|aus) Designer\b", RegexOptions.CultureInvariant);
+		var germanRoot = Path.Combine(_repoRoot, "de", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				var normalized = Regex.Replace(text, @"\[(?<label>[^\]]+)\]\([^)]+\)", "${label}", RegexOptions.CultureInvariant);
+				if (pattern.IsMatch(normalized))
+					errors.Add($"{RelativeToRepo(file)}:{line}: German documentation uses a bare preposition before Designer. Use 'im Designer' or 'aus dem Designer'.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				if (pattern.IsMatch(altText.Text))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: German image alt text uses a bare preposition before Designer. Use 'im Designer' or 'aus dem Designer'.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				if (pattern.IsMatch(comment.Text))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: German code comment uses a bare preposition before Designer. Use 'im Designer' or 'aus dem Designer'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanDocsDoNotKeepEnglishLoggingPhrases()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:Strategie-Logging|IConnector-Logging|Andere Logquellen|Logging-Beispiel|Logging in|Logging-Stufen?|Logging-Methoden|Logging-Mechanismus|Logging-Einstellungen|Logging-Nachrichten|Logging-Level|Detailliertes Logging|detailliertes Logging|Logquellen?|Loglisteners?|Log-Listeners?|Logger|Listeners?|Logs|Log-Panel|ILogListener creating|Visuelle Logging-Komponenten|Um Logging|Logs in MainWindow|für das Logging|für Logging|und Logging|Streaming-Synchronisierung)\b", RegexOptions.CultureInvariant);
+		var germanRoot = Path.Combine(_repoRoot, "de", "topics");
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(text)))
+					errors.Add($"{RelativeToRepo(file)}:{line}: German documentation keeps English logging wording. Use 'Protokollierung' in visible prose.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(altText.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: German image alt text keeps English logging wording. Use 'Protokollierung'.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				if (pattern.IsMatch(NormalizeMarkdownTextForLocalizedLoggingTermCheck(comment.Text)))
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: German code comment keeps English logging wording. Use 'Protokollierung'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedOandaGraphicalConfigurationDoesNotKeepEnglishFieldLabels()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				Lang: "de",
+				Fragments: new[] { "**Compression**", "**Transactions only**", "Board-Code" }
+			),
+			(
+				Lang: "es",
+				Fragments: new[] { "**Server**", "**Compression**", "**Transactions only**", "Código de board" }
+			),
+			(
+				Lang: "pt",
+				Fragments: new[] { "**Server**", "**Compression**", "**Transactions only**", "Código de board" }
+			),
+		};
+
+		foreach (var check in checks)
+		{
+			var file = Path.Combine(_repoRoot, check.Lang, "topics", "api", "connectors", "forex", "oanda", "graphical_configuration_oanda.md");
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (var fragment in check.Fragments)
+				{
+					if (text.Contains(fragment, StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(file)}:{line}: Oanda graphical configuration keeps English UI label '{fragment}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraCredentialDocsDoNotKeepEnglishLoginText()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/tasks/export_auto.md",
+				Fragments: new[] { "**Login**", "Login für" }
+			),
+			(
+				Lang: "de",
+				RelativePath: "topics/hydra/server_mode/hydra_client_connectivity.md",
+				Fragments: new[] { "- **Anmeldung** - Login" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/hydra/tasks/export_auto.md",
+				Fragments: new[] { "login para" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/hydra/misc/backup/setup.md",
+				Fragments: new[] { "como login" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/hydra/tasks/export_auto.md",
+				Fragments: new[] { "**Login**", "login para" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/hydra/server_mode/hydra_client_connectivity.md",
+				Fragments: new[] { "- **Início de sessão** - login" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/hydra/misc/backup/setup.md",
+				Fragments: new[] { "como login" }
+			),
+		};
+
+		foreach (var check in checks)
+		{
+			var file = Path.Combine(_repoRoot, check.Lang, check.RelativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (var fragment in check.Fragments)
+				{
+					if (!text.Contains(fragment, StringComparison.OrdinalIgnoreCase))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Hydra credential docs keep English login text '{fragment}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedVisualStudioDllDebugDocsDoNotKeepEnglishAttachLabels()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "designer", "strategies", "using_dll", "debug_dll_in_visual_studio.md");
+		var phrases = new[]
+		{
+			"Debug -> Attach to Process",
+			"Feld Attach to",
+			"campo Attach to",
+			"Attach to フィールド",
+			"Attach to 字段",
+			"Schaltfläche Attach",
+			"botón Attach",
+			"botão Attach",
+			"Attach ボタン",
+			"Attach 按钮",
+		};
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (var phrase in phrases)
+				{
+					if (!text.Contains(phrase, StringComparison.Ordinal))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Visual Studio DLL debugging documentation keeps English attach UI label '{phrase}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedTradierOAuthDocsDoNotKeepEnglishPermissionsImageAltText()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "api", "connectors", "stock_market", "tradier", "graphical_configuration_tradier.md");
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+			{
+				if (!altText.Text.Equals("Tradier Permissions", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{altText.Line}: localized Tradier OAuth documentation keeps the English image alt text 'Tradier Permissions'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraImageAltTextsDoNotKeepEnglishExportAndMenuWords()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				Lang: "ja",
+				RelativePath: Path.Combine("topics", "hydra", "working_with_data", "view_and_export", "transactions.md"),
+				Fragments: new[] { "executions" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: Path.Combine("topics", "hydra", "working_with_data", "view_and_export", "transactions.md"),
+				Fragments: new[] { "executions" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: Path.Combine("topics", "hydra", "working_with_data", "view_and_export", "news.md"),
+				Fragments: new[] { "news" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: Path.Combine("topics", "hydra", "working_with_data", "view_and_export", "news.md"),
+				Fragments: new[] { "news" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: Path.Combine("topics", "hydra", "server_mode", "settings.md"),
+				Fragments: new[] { "menu" }
+			),
+			(
+				Lang: "zh",
+				RelativePath: Path.Combine("topics", "hydra", "server_mode", "settings.md"),
+				Fragments: new[] { "menu" }
+			),
+		};
+
+		foreach (var check in checks)
+		{
+			var file = Path.Combine(_repoRoot, check.Lang, check.RelativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+			{
+				foreach (var fragment in check.Fragments)
+				{
+					if (!altText.Text.Contains(fragment, StringComparison.OrdinalIgnoreCase))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text keeps English word '{fragment}'. Localize the visible image description.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void RussianAlorOAuthDocsDoNotKeepEnglishLoginAndPermissionsImageAltText()
+	{
+		var errors = new List<string>();
+		var file = Path.Combine(_repoRoot, "ru", "topics", "api", "connectors", "russia", "alor", "ui_settings.md");
+		var phrases = new[] { "Alor Login", "Alor Permissions" };
+
+		foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+		{
+			foreach (var phrase in phrases)
+			{
+				if (!altText.Text.Equals(phrase, StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{altText.Line}: Russian Alor OAuth documentation keeps the English image alt text '{phrase}'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedImageAltTextsDoNotKeepKnownMixedEnglishFragments()
+	{
+		var errors = new List<string>();
+		var startPattern = new Regex(@"\bstart\b", RegexOptions.CultureInvariant);
+		var mixedDesignerPattern = new Regex(@"\bin Designer\b", RegexOptions.CultureInvariant);
+		var portuguesePattern = new Regex(@"\bLogin\s+(?:cTrader|Sterling|Tradier)\b|^(?:download|login)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+				{
+					if (startPattern.IsMatch(altText.Text))
+					{
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text keeps lowercase English 'start' fragment '{altText.Text}'. Localize the screenshot description.");
+						continue;
+					}
+
+					if ((lang == "es" || lang == "pt" || lang == "zh") && mixedDesignerPattern.IsMatch(altText.Text))
+					{
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: image alt text mixes a localized label with English 'in Designer': '{altText.Text}'. Localize the relationship wording.");
+						continue;
+					}
+
+					if (lang == "pt" && portuguesePattern.IsMatch(altText.Text))
+						errors.Add($"{RelativeToRepo(file)}:{altText.Line}: Portuguese image alt text keeps an English login/download label '{altText.Text}'. Localize the visible description.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void BlackScholesImageAltTextUsesModelName()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/designer/strategies/using_visual_designer/elements/options/black_scholes.md";
+		const string badAltText = "Designer Black Sols 00";
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(ReadAllText(file)))
+			{
+				if (altText.Text.Equals(badAltText, StringComparison.Ordinal))
+					errors.Add($"{RelativeToRepo(file)}:{altText.Line}: Black-Scholes screenshot alt text keeps misspelled model name '{badAltText}'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void SpanishHydraVideoDocsDoNotKeepEnglishImportExportHeadings()
+	{
+		var errors = new List<string>();
+		var relativeRoot = Path.Combine("topics", "hydra", "videos");
+		var pattern = new Regex(@"^#\s+Tarea\s+(?:Import|Export)\s*$", RegexOptions.CultureInvariant);
+
+		foreach (var file in Directory.EnumerateFiles(Path.Combine(_repoRoot, "es", relativeRoot), "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!pattern.IsMatch(text))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Spanish Hydra video heading keeps an English Import/Export task label '{text}'. Localize the task title.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedAroonDocsDoNotKeepEnglishCalculationLabels()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "api", "indicators", "list_of_indicators", "aroon.md");
+		var phrases = new[] { "Periods since high", "Periods since low" };
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			var markdown = ReadAllText(file);
+			foreach (var phrase in phrases)
+			{
+				if (!markdown.Contains(phrase, StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}: localized Aroon documentation keeps the English calculation label '{phrase}'. Localize the formula label and its explanation.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedBackupDocsDoNotKeepEnglishBackupTaskLabel()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "hydra", "misc", "backup.md");
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (!text.Contains("Backup task", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized backup documentation keeps the English label 'Backup task'. Localize the visible task label.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraAnalyticsSamplesDoNotKeepEnglishDiagnosticMessages()
+	{
+		var errors = new List<string>();
+		var phrases = new[] { "No instruments.", "no data" };
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var analyticsRoot = Path.Combine(_repoRoot, lang, "topics", "hydra", "analytics");
+			if (!Directory.Exists(analyticsRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(analyticsRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+				{
+					foreach (var phrase in phrases)
+					{
+						if (!literal.Text.Equals(phrase, StringComparison.Ordinal))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized Hydra analytics sample keeps the English diagnostic string '{phrase}'. Localize the sample string literal.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraAnalyticsSamplesDoNotKeepEnglishChartLabels()
+	{
+		var errors = new List<string>();
+		var phrases = new[] { "\"prices\"", "\"Instruments\"", "\"Hours\"", "\"Time\"", "\"Volume\"", "(close)", "(vol)" };
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var analyticsRoot = Path.Combine(_repoRoot, lang, "topics", "hydra", "analytics");
+			if (!Directory.Exists(analyticsRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(analyticsRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var phrase in phrases)
+				{
+					if (!markdown.Contains(phrase, StringComparison.Ordinal))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}: localized Hydra analytics sample keeps the English chart label {phrase}. Localize visible chart and grid labels.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedHydraAnalyticsIndicatorDocsDoNotKeepEnglishSampleScriptName()
+	{
+		var errors = new List<string>();
+		var relativePath = Path.Combine("topics", "hydra", "analytics", "examples", "indicators.md");
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				if (!text.Contains("Indicator", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Hydra analytics indicator documentation keeps the English sample script name 'Indicator'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanHydraAnalyticsDocsDoNotKeepKnownAsciiUmlautFallbacks()
+	{
+		var errors = new List<string>();
+		var analyticsRoot = Path.Combine(_repoRoot, "de", "topics", "hydra", "analytics");
+		var phrases = new[]
+		{
+			"Grosste",
+			"ausgewahl",
+			"nutzlich",
+			"Einschatzung",
+			"Starke",
+			"Abschwachung",
+			"Anderung",
+			"Handelsaktivitat",
+			"verandert",
+			"lasst",
+			"Trendanderungen",
+			"Unterstutzungs",
+			"erhohter",
+			"Liquiditat",
+			"leistungsfahig",
+			"Berucksichtigung",
+			"Funktionalitat",
+			"Zeitraume",
+			"Oberflach",
+			"einschliesslich",
+			"Marktaktivitat",
+			"Traderaktivitat",
+			"hochsten",
+			"stutzen",
+		};
+
+		foreach (var file in Directory.EnumerateFiles(analyticsRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (var phrase in phrases)
+				{
+					if (!text.Contains(phrase, StringComparison.Ordinal))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: German Hydra analytics documentation keeps ASCII umlaut fallback '{phrase}'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanDocsDoNotKeepKnownAsciiUmlautFallbacks()
+	{
+		var errors = new List<string>();
+		var germanRoot = Path.Combine(_repoRoot, "de");
+		var fragments = new[]
+		{
+			"ausserdem",
+			"einschliesslich",
+			"einschliessen",
+			"schliessen",
+			"Anschliessend",
+			"anschliessende",
+			"Ubernimmt",
+			"ubergebene",
+			"Befullen",
+			"befullen",
+			"Eroffnungs",
+			"Eroffnungszeit",
+			"Verstandnis",
+			"daruber",
+			"eroffnet",
+			"Abhangigkeit",
+			"Kurzung",
+			"einfugen",
+			"hinzufugen",
+			"Prufen",
+			"Ausmass",
+			"Preisanderungen",
+			"uberkaufte",
+			"uberverkaufte",
+			"nachste",
+			"gekurzt",
+			"ubergeordnete",
+			"Fensteroberflache",
+			"ahnlich",
+			"gedruckt",
+			"Randern",
+			"reprasentieren",
+			"Funktionalitat",
+			"Qualitat",
+			"Wahrung",
+			"gewahlten",
+			"glatten",
+			"Kerzenkorperlange",
+			"Fugen",
+			"Positionsgrosse",
+			"Haufigkeit",
+			"Hohe von",
+			"Hohe der",
+			"Hohe des",
+			"Hohe oder",
+			"uberwacht",
+		};
+
+		foreach (var file in Directory.EnumerateFiles(germanRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				AddAsciiFallbackErrors(file, line, text, "visible text");
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+				AddAsciiFallbackErrors(file, comment.Line, comment.Text, "code comment");
+		}
+
+		AssertNoErrors(errors);
+
+		void AddAsciiFallbackErrors(string file, int line, string text, string source)
+		{
+			foreach (var fragment in fragments)
+			{
+				if (!text.Contains(fragment, StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: German {source} keeps ASCII umlaut fallback '{fragment}'.");
+			}
+		}
+	}
+
+	[TestMethod]
+	public void PortugueseHydraAnalyticsDocsDoNotKeepEnglishSecurityTerms()
+	{
+		var errors = new List<string>();
+		var analyticsRoot = Path.Combine(_repoRoot, "pt", "topics", "hydra", "analytics");
+		var pattern = new Regex(@"\bsecurit(?:y|ies)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var file in Directory.EnumerateFiles(analyticsRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				var textWithoutInlineCode = Regex.Replace(text, @"`[^`\r\n]*`", " ", RegexOptions.CultureInvariant);
+				var match = pattern.Match(textWithoutInlineCode);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Portuguese Hydra analytics documentation keeps English term '{match.Value}' in visible text.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				var match = pattern.Match(comment.Text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{comment.Line}: Portuguese Hydra analytics code comment keeps English term '{match.Value}'.");
 			}
 		}
 
@@ -2049,6 +5362,78 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				var markdown = ReadAllText(file);
 				foreach (Match match in pattern.Matches(markdown))
 					errors.Add($"{RelativeToRepo(file)}:{GetLineNumber(GetLineStarts(markdown), match.Index)}: localized trade execution log keeps English price separator 'at'. Localize the log string.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedLoggingSamplesDoNotKeepEnglishDemoMessages()
+	{
+		var errors = new List<string>();
+		var relativePaths = new[]
+		{
+			Path.Combine("topics", "api", "graphical_user_interface", "logging", "log_panel.md"),
+			Path.Combine("topics", "api", "logging", "other_logs_sources.md"),
+		};
+		var patterns = new[]
+		{
+			new Regex(@"\bInfo\s+test message\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"\bWarning test message\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"\bError test message\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"^(?:\{0\}\s+)?\(source\)!!!$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"^(?:\{0\}\s+)?\(trace\)!!!$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+			new Regex(@"\b(?:Warning|Error)\s+\((?:source|trace)\)!!!", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
+		};
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			foreach (var relativePath in relativePaths)
+			{
+				var file = Path.Combine(_repoRoot, lang, relativePath);
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+				{
+					foreach (var pattern in patterns)
+					{
+						if (!pattern.IsMatch(literal.Text))
+							continue;
+
+						errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized logging sample keeps English demo log text '{literal.Text}'. Localize user-visible log strings.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCandleChartDocsDoNotKeepEnglishButtonLabels()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "api", "graphical_user_interface", "charts", "candle_chart.md");
+		var labels = new HashSet<string>(StringComparer.Ordinal)
+		{
+			"Connect",
+			"ShowChart",
+		};
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var label in EnumerateMarkdownBoldTexts(ReadAllText(file)))
+			{
+				if (!labels.Contains(label.Text))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{label.Line}: localized candle-chart docs keep English button label '{label.Text}'. Localize the visible button text.");
 			}
 		}
 
@@ -2274,6 +5659,32 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						continue;
 
 					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: code comment keeps English signal label '{comment.Text}'. Localize the comment.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCodeCommentsDoNotKeepKnownEnglishChartTerms()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bopen/close\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+				{
+					var match = pattern.Match(comment.Text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: code comment keeps English chart term '{match.Value}'. Localize the comment.");
 				}
 			}
 		}
@@ -2778,6 +6189,940 @@ public sealed class DocumentationValidationTests : BaseTestClass
 						continue;
 
 					errors.Add($"{RelativeToRepo(file)}:{line}: CJK connector documentation keeps English message direction label '{match.Value}'. Localize visible direction labels.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedConnectorGraphicalConfigsDoNotKeepEnglishFieldDescriptions()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"-\s+\*\*[^*\r\n]+\*\*\s*(?:-|–|—)\s*(?:Client ID|Client-ID|Websocket ID|WebSocket ID|RequestWithdrawAccounts|IsPrime|(?:API-)?Secret)[.。]?\s*$|-\s+\*\*Board\*\*\s*(?:-|–|—)", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var connectorRoot = Path.Combine(_repoRoot, lang, "topics", "api", "connectors");
+
+			if (!Directory.Exists(connectorRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(connectorRoot, "graphical_configuration*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: connector graphical configuration keeps English field description '{match.Value}'. Localize the visible field description.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedTradingSideDocsDoNotKeepEnglishBuySellPairs()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b[Bb]uy\s*/\s*[Ss]ell\b|\b[Bb]uy\s+(?:or|oder|e|y|または|或|或者)\s+[Ss]ell\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English trading side pair '{match.Value}'. Localize visible buy/sell wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					var match = pattern.Match(comment.Text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English trading side pair '{match.Value}'. Localize visible buy/sell wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedOwnTradeDocsDoNotKeepEnglishLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b[Oo]wn trades?\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var markdown = ReadAllText(file);
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps English own-trade label '{match.Value}'. Localize the visible own-trade wording.");
+				}
+
+				foreach (var comment in EnumerateCodeComments(markdown))
+				{
+					var match = pattern.Match(comment.Text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps English own-trade label '{match.Value}'. Localize the own-trade wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCodeCommentsDoNotKeepShortEnglishLabels()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"^\s*(?:Start|Stop|Saving|Loading|Counter|Clear|Connect|Disconnect|Chart setup|Tick trades|Orders|Positions|Portfolios|Securities|Trades|Candles|Indicators|Timer|Subscribe|Unsubscribe)\s*$", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+				{
+					var match = pattern.Match(comment.Text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized code comment keeps short English label '{match.Value}'. Localize the comment label.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerPositionModifyDocsDoNotKeepEnglishOperationLabels()
+	{
+		var errors = new List<string>();
+		var fileParts = new[] { "topics", "designer", "strategies", "using_visual_designer", "elements", "positions", "modify.md" };
+		var pattern = new Regex(@"\b(?:None|OpenPosition|ClosePosition|Decrease|Increase|Reverse|Close Position|Market Order)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(new[] { _repoRoot, lang }.Concat(fileParts).ToArray());
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (Match match in pattern.Matches(text))
+				{
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer position-modify docs keep English operation label '{match.Value}'. Localize visible operation labels.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerStatisticsDocsDoNotKeepEnglishCategoryLabels()
+	{
+		var errors = new List<string>();
+		var files = new[]
+		{
+			Path.Combine("topics", "designer", "user_interface", "components.md"),
+			Path.Combine("topics", "designer", "user_interface", "components", "statistics.md"),
+		};
+		var categoryLinePattern = new Regex(@"categor|Kategor|カテゴリ|类别|分類|分类", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var englishLabelPattern = new Regex(@"\b(?:Trades|Positions|Orders)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var relative in files)
+			{
+				var file = Path.Combine(langRoot, relative);
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!categoryLinePattern.IsMatch(text))
+						continue;
+
+					foreach (Match match in englishLabelPattern.Matches(text))
+					{
+						errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer statistics docs keep English category label '{match.Value}'. Localize visible result-category labels.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerResultDocsDoNotKeepEnglishResultComponentLabels()
+	{
+		var errors = new List<string>();
+		var files = new[]
+		{
+			Path.Combine("topics", "designer", "backtesting", "getting_started.md"),
+			Path.Combine("topics", "designer", "quick_start.md"),
+		};
+		var labelPattern = new Regex(@"\b(?:Chart|Orders|Trades|Positions|Statistics)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var relative in files)
+			{
+				var file = Path.Combine(langRoot, relative);
+				if (!File.Exists(file))
+					continue;
+
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var matches = labelPattern.Matches(text);
+					if (matches.Count < 2)
+						continue;
+
+					var values = string.Join(", ", matches.Cast<Match>().Select(match => match.Value).Distinct(StringComparer.Ordinal));
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer result docs keep English result component labels '{values}'. Localize visible result-tab/table labels.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerComponentsOverviewDoesNotKeepEnglishComponentLabels()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "user_interface", "components.md");
+		var pattern = new Regex(@"\[(?:Source Code|Depth)\]\(", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer components overview keeps English component link label '{match.Value}'. Localize the visible component label.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerCurrentPositionSampleDoesNotKeepEnglishCubeLabels()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "strategies", "using_visual_designer", "schema_samples", "get_current_position.md");
+		var pattern = new Regex(@"\b(?:Conditional operator|Conditional statement|Variable\s*模块)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (Match match in pattern.Matches(text))
+				{
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer current-position sample keeps English cube label '{match.Value}'. Localize visible cube labels.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerOptimizationDocsDoNotKeepEnglishChartTabLabel()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "optimization", "3d_chart.md");
+		var pattern = new Regex(@"\bTab\s+Chart\b|\bpestaña\s+a\s+Chart\b|\bseparador\s+para\s+Chart\b|タブ[^\r\n]{0,12}\bChart\b|\bChart\s*选项卡", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer optimization docs keep English Chart tab label. Localize the visible tab name.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCjkDesignerLiveExecutionDocsDoNotKeepEnglishTradeFolderLabel()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "live_execution", "getting_started.md");
+		var pattern = new Regex(@"\bTrade\s*(?:フォルダー|文件夹)", RegexOptions.CultureInvariant);
+
+		foreach (var lang in new[] { "ja", "zh" })
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: CJK Designer live-execution docs keep English Trade folder label '{match.Value}'. Localize the visible folder name.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerMaterialsDocsDoNotKeepEnglishStrategyGalleryLabel()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "materials.md");
+		var pattern = new Regex(@"\bStrategy Gallery\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer materials docs keep English Strategy Gallery label. Localize the visible gallery name.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerStrategyGalleryDocsDoNotKeepEnglishDownloadButtonLabel()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "strategy_gallery.md");
+		var pattern = new Regex(@"\bDownload\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer strategy-gallery docs keep English Download button label. Localize the visible button text.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerRibbonDocsDoNotKeepEnglishCloudTasksLabel()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "user_interface", "ribbon.md");
+		var pattern = new Regex(@"\bCloud Tasks\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer ribbon docs keep English Cloud Tasks label. Localize the visible cloud task label.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerDocsDoNotKeepEnglishStrategyNamePlaceholder()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\bStrategy Name\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var designerRoot = Path.Combine(_repoRoot, lang, "topics", "designer");
+			if (!Directory.Exists(designerRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(designerRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer docs keep English strategy-name placeholder '{match.Value}'. Localize the placeholder text.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedDesignerLiveExecutionDocsDoNotKeepEnglishLiveTabTitle()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "designer", "live_execution", "user_interface.md");
+		var pattern = new Regex(@"\bLive\s*\[", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: localized Designer live-execution docs keep English Live tab title prefix. Localize the visible live tab title.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedLiveDocsDoNotKeepBareEnglishLiveLabels()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				Lang: "es",
+				RelativePath: "topics/telegram_services/control_panel.md",
+				Fragments: new[] { "modo Live" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/designer/user_interface/risk_management.md",
+				Fragments: new[] { "Configuración live" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/designer/user_interface/components.md",
+				Fragments: new[] { "Configuración live" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/designer/user_interface/components/live_settings.md",
+				Fragments: new[] { "Configuración live", "configuración Live" }
+			),
+			(
+				Lang: "es",
+				RelativePath: "topics/api/testing/simulator.md",
+				Fragments: new[] { "cotizaciones \"live\"" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/telegram_services/control_panel.md",
+				Fragments: new[] { "modo Live" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/designer/live_execution/live_execution_sample.md",
+				Fragments: new[] { "em Live" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/designer/live_execution/strategies_dashboard.md",
+				Fragments: new[] { "em Live" }
+			),
+			(
+				Lang: "pt",
+				RelativePath: "topics/api/testing/simulator.md",
+				Fragments: new[] { "cotações \"live\"" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/telegram_services/control_panel.md",
+				Fragments: new[] { "Live モード" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/user_interface/components.md",
+				Fragments: new[] { "Live 設定" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/user_interface/components/live_settings.md",
+				Fragments: new[] { "Live 設定" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/user_interface/components/backtesting_settings.md",
+				Fragments: new[] { "Live 取引" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/live_execution/live_execution_sample.md",
+				Fragments: new[] { "Live 実行" }
+			),
+			(
+				Lang: "ja",
+				RelativePath: "topics/designer/live_execution/strategies_dashboard.md",
+				Fragments: new[] { "Live 実行" }
+			),
+		};
+
+		foreach (var check in checks)
+		{
+			var file = Path.Combine(_repoRoot, check.Lang, check.RelativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				foreach (var fragment in check.Fragments)
+				{
+					if (!text.Contains(fragment, StringComparison.Ordinal))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized live documentation keeps bare English live label '{fragment}'.");
+				}
+			}
+		}
+
+		foreach (var lang in new[] { "es", "pt" })
+		{
+			var designerRoot = Path.Combine(_repoRoot, lang, "topics", "designer", "strategies");
+			if (!Directory.Exists(designerRoot))
+				continue;
+
+			foreach (var file in Directory.EnumerateFiles(designerRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+				{
+					if (!text.Contains("[live]", StringComparison.Ordinal))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized strategy docs keep English live link label '[live]'.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void JapanesePositionProtectionDocsDoNotKeepEnglishTakeStopParameterLabels()
+	{
+		var errors = new List<string>();
+		var file = Path.Combine(_repoRoot, "ja", "topics", "designer", "strategies", "using_visual_designer", "elements", "positions", "protect.md");
+		var pattern = new Regex(@"\b(?:Take|Stop)\b|テイクまたはストップ", RegexOptions.CultureInvariant);
+
+		if (File.Exists(file))
+		{
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Japanese position-protection docs keep English take/stop parameter label '{match.Value}'. Use localized protection terminology.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedStrategyLoggingCodeLiteralsDoNotKeepEnglishTradeActionLabels()
+	{
+		var errors = new List<string>();
+		var relative = Path.Combine("topics", "api", "strategies", "logging.md");
+		var pattern = new Regex(@"\b(?:Bought|Sold)\b", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var file = Path.Combine(_repoRoot, lang, relative);
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var literal in EnumerateCodeStringLiterals(ReadAllText(file)))
+			{
+				var match = pattern.Match(literal.Text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{literal.Line}: localized strategy logging example keeps English trade action label '{match.Value}'. Localize visible log output.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void GermanTradingOrderDocsDoNotKeepEnglishOrdersLabels()
+	{
+		var errors = new List<string>();
+		var files = new[]
+		{
+			Path.Combine("topics", "api", "ai_development", "strategy_with_ai.md"),
+			Path.Combine("topics", "api", "graphical_user_interface", "trading.md"),
+			Path.Combine("topics", "api", "graphical_user_interface", "trading", "orders.md"),
+		};
+		var pattern = new Regex(@"(?<![A-Za-z.])Orders(?![A-Za-z])", RegexOptions.CultureInvariant);
+
+		foreach (var relative in files)
+		{
+			var file = Path.Combine(_repoRoot, "de", relative);
+			if (!File.Exists(file))
+				continue;
+
+			var markdown = ReadAllText(file);
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(markdown))
+			{
+				if (text.Contains("Samples", StringComparison.Ordinal))
+					continue;
+
+				var match = pattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: German trading docs keep English order label '{match.Value}'. Use localized visible order wording.");
+			}
+
+			foreach (var altText in EnumerateMarkdownImageAltTexts(markdown))
+			{
+				var match = pattern.Match(altText.Text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{altText.Line}: German trading docs keep English order label '{match.Value}' in image alt text. Localize the image description.");
+			}
+
+			foreach (var comment in EnumerateCodeComments(markdown))
+			{
+				var match = pattern.Match(comment.Text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{comment.Line}: German trading docs keep English order label '{match.Value}' in a code comment. Localize the comment.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedCjkTradingProtectionDocsDoNotKeepEnglishTakeProfitStopLossTerms()
+	{
+		var errors = new List<string>();
+		var pattern = new Regex(@"\b(?:take[- ]profit|stop[- ]loss)\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in new[] { "ja", "zh" })
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = pattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: CJK documentation keeps English protection term '{match.Value}'. Localize visible take-profit/stop-loss wording.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseReportingDocsUsePositionRoundTripTerminology()
+	{
+		var errors = new List<string>();
+		var file = Path.Combine(_repoRoot, "zh", "topics", "api", "strategies", "reporting.md");
+		var badPattern = new Regex(@"位置回程|往返行程|位置反转|来回交易", RegexOptions.CultureInvariant);
+
+		if (File.Exists(file))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var match = badPattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Chinese reporting documentation uses an incorrect position round-trip term '{match.Value}'. Use 持仓往返交易 terminology.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseTradingDocsUsePositionTerminologyForHoldings()
+	{
+		var errors = new List<string>();
+		var checks = new Dictionary<string, string[]>
+		{
+			["topics/api/graphical_user_interface/portfolios/table.md"] = ["选定的位置", "已选择的位置"],
+			["topics/api/orders_management/orders_states.md"] = ["位置信息"],
+			["topics/api/strategies/trading_operations.md"] = ["只允许位置减操作"],
+			["topics/api/strategies/target_position_management.md"] = ["当前位置", "目标位置", "位置变动算法"],
+			["topics/api/strategies/take_profit_and_stop_loss.md"] = ["特定位置", "更新位置信息", "跟踪位置"],
+			["topics/api/strategies/statistics_reference.md"] = ["基于位置的参数", "位置参数"],
+			["topics/api/strategies/samples/mq.md"] = ["当前位置确定", "位置变化"],
+		};
+
+		foreach (var (relativePath, badPhrases) in checks)
+		{
+			var file = Path.Combine(_repoRoot, "zh", relativePath.Replace('/', Path.DirectorySeparatorChar));
+
+			if (!File.Exists(file))
+				continue;
+
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				foreach (var phrase in badPhrases)
+				{
+					if (!text.Contains(phrase, StringComparison.Ordinal))
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: Chinese trading documentation uses '{phrase}' for a trading position. Use 持仓 terminology.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseDocsDoNotUseCommerceTermForTradingTrades()
+	{
+		var errors = new List<string>();
+		var zhRoot = Path.Combine(_repoRoot, "zh");
+		var badPattern = new Regex(@"贸易|own trade", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var file in Directory.EnumerateFiles(zhRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var match = badPattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Chinese documentation uses '{match.Value}' for trading trade terminology. Use 交易 or 成交 wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseDocsDoNotUseShoppingOrderTermForTradingOrders()
+	{
+		var errors = new List<string>();
+		var zhRoot = Path.Combine(_repoRoot, "zh");
+
+		foreach (var file in Directory.EnumerateFiles(zhRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!text.Contains("订购", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Chinese documentation uses shopping-order term '订购' in trading documentation. Use 订单 or 订阅 depending on context.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseDocsUseStrategyTermForStockSharpStrategies()
+	{
+		var errors = new List<string>();
+		var zhRoot = Path.Combine(_repoRoot, "zh");
+
+		foreach (var file in Directory.EnumerateFiles(zhRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				if (!text.Contains("战略", StringComparison.Ordinal))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Chinese documentation uses '战略' for strategy documentation. Use 策略 terminology.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseDocsDoNotUseSwapTermForExchangeTradingContext()
+	{
+		var errors = new List<string>();
+		var zhRoot = Path.Combine(_repoRoot, "zh");
+		var badPattern = new Regex(@"交换工作|交换端点", RegexOptions.CultureInvariant);
+
+		foreach (var file in Directory.EnumerateFiles(zhRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var match = badPattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Chinese documentation uses swap term '{match.Value}' for exchange/trading context. Use 交易所 or 交易 wording.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseDocsUseSecurityTerminologyForTradingInstruments()
+	{
+		var errors = new List<string>();
+		var zhRoot = Path.Combine(_repoRoot, "zh");
+		var badPattern = new Regex(@"器械|非流动性工具|基础工具|所选的工具|多个工具|第一个工具|第二个工具|工具标识符|工具类型|搜索工具|接收工具", RegexOptions.CultureInvariant);
+
+		foreach (var file in Directory.EnumerateFiles(zhRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var line = 1;
+			using var reader = new StringReader(ReadAllText(file));
+
+			for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+			{
+				var match = badPattern.Match(text);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{line}: Chinese documentation uses generic instrument wording '{match.Value}'. Use 交易品种 terminology in trading contexts.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedRoundTripDocsDoNotKeepEnglishOrTravelTerms()
+	{
+		var errors = new List<string>();
+		var badPattern = new Regex(@"\b(?:[Rr]ound[- ][Tt]rips?|[Rr]oundtrips?)\b|раундтрип|往返旅行|往返行程|位置回程|来回交易|往返持仓|（往返）", RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetLocalizedContentQualityLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var line = 1;
+				using var reader = new StringReader(ReadAllText(file));
+
+				for (var text = reader.ReadLine(); text is not null; text = reader.ReadLine(), line++)
+				{
+					var match = badPattern.Match(text);
+					if (!match.Success)
+						continue;
+
+					errors.Add($"{RelativeToRepo(file)}:{line}: localized documentation keeps incorrect round-trip terminology '{match.Value}'. Localize the visible term consistently.");
 				}
 			}
 		}
@@ -4556,6 +8901,40 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedHydraTaskCodeCommentsDoNotKeepEnglishDiskComment()
+	{
+		var errors = new List<string>();
+		var checks = new[]
+		{
+			(
+				Lang: "es",
+				RelativePath: "topics/hydra/create_new_task.md"
+			),
+			(
+				Lang: "zh",
+				RelativePath: "topics/hydra/create_new_task.md"
+			),
+		};
+
+		foreach (var check in checks)
+		{
+			var file = Path.Combine(_repoRoot, check.Lang, check.RelativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var comment in EnumerateCodeComments(ReadAllText(file)))
+			{
+				if (!comment.Text.Contains("is a disk", StringComparison.OrdinalIgnoreCase))
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{comment.Line}: localized Hydra task sample keeps the English code comment 'is a disk'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedCodeCommentsAreTranslatedFromDefaultLanguage()
 	{
 		var errors = new List<string>();
@@ -5263,6 +9642,27 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static string NormalizeHumanText(string text)
 		=> Regex.Replace(text, @"\s+", " ", RegexOptions.CultureInvariant).Trim();
+
+	private static string NormalizeMarkdownTextForLocalizedLoggingTermCheck(string text)
+	{
+		var normalized = Regex.Replace(text, @"!\[(?<label>[^\]\r\n]*)\]\([^\)\r\n]*\)", "${label}", RegexOptions.CultureInvariant);
+		normalized = Regex.Replace(normalized, @"\[(?<label>[^\]\r\n]*)\]\([^\)\r\n]*\)", "${label}", RegexOptions.CultureInvariant);
+		normalized = Regex.Replace(normalized, @"`[^`\r\n]*`", " ", RegexOptions.CultureInvariant);
+		normalized = Regex.Replace(normalized, @"\*\*[A-Za-z_]\w*\*\*", " ", RegexOptions.CultureInvariant);
+		normalized = Regex.Replace(normalized, @"\blogs\.[A-Za-z0-9]+\b", " ", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		normalized = Regex.Replace(normalized, @"\b[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+\b", " ", RegexOptions.CultureInvariant);
+
+		return normalized;
+	}
+
+	private static string NormalizeMarkdownTextForGermanTestingTermCheck(string text)
+	{
+		var normalized = NormalizeMarkdownTextForLocalizedLoggingTermCheck(text).Replace("\\/", "/", StringComparison.Ordinal);
+		normalized = Regex.Replace(normalized, @"(?:\.\.)?Samples/Testing/[A-Za-z0-9_./-]+", " ", RegexOptions.CultureInvariant);
+		normalized = Regex.Replace(normalized, @"\bSample[A-Za-z0-9_]*Testing[A-Za-z0-9_]*\b", " ", RegexOptions.CultureInvariant);
+
+		return normalized;
+	}
 
 	private static bool ContainsStandaloneText(string text, string value)
 		=> Regex.IsMatch(text, $@"(?<![A-Za-z]){Regex.Escape(value)}(?![A-Za-z])", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);

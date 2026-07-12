@@ -4,15 +4,15 @@
 
 O elemento é usado para obter um elemento de uma coleção com o índice especificado.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Quaisquer dados** - a coleção de elementos.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Quaisquer dados** - o elemento da coleção com o índice especificado nos parâmetros.
 

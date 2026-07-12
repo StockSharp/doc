@@ -4,11 +4,11 @@ Para añadir una estrategia a **Trading en vivo**, en el panel [Esquemas](../use
 
 ![Designer Trading en vivo 01](../../../images/designer_live_trade_01.png)
 
-También puede añadir una estrategia a Live trade haciendo clic en el botón ![Designer Trading en vivo 00](../../../images/designer_live_trade_00.png) **En vivo** en la pestaña **Prueba histórica**.
+También puede añadir una estrategia al trading en vivo haciendo clic en el botón ![Designer Trading en vivo 00](../../../images/designer_live_trade_00.png) **En vivo** en la pestaña **Prueba histórica**.
 
 ![Designer Trading en vivo 02](../../../images/designer_live_trade_02.png)
 
-La carpeta Trade contiene las estrategias añadidas para ejecutarse en Live-trade. Las estrategias en ejecución se marcan con el icono ![Designer Panel de circuitos 02](../../../images/designer_panel_circuits_02.png), y las detenidas con el icono ![Designer Panel de circuitos 03](../../../images/designer_panel_circuits_03.png).
+La carpeta **En vivo** contiene las estrategias añadidas para ejecutarse en trading en vivo. Las estrategias en ejecución se marcan con el icono ![Designer Panel de circuitos 02](../../../images/designer_panel_circuits_02.png), y las detenidas con el icono ![Designer Panel de circuitos 03](../../../images/designer_panel_circuits_03.png).
 
 ## Contenido recomendado
 

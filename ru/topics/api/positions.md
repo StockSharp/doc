@@ -74,11 +74,11 @@ state.Clear();
 
 ## PositionLifecycleTracker
 
-Класс [PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) отслеживает полный жизненный цикл позиций -- от открытия до закрытия (round-trip). Это полезно для анализа отдельных сделок, расчёта прибыли по каждой позиции и построения отчётов.
+Класс [PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) отслеживает полный жизненный цикл позиций -- от открытия до закрытия (раунд-трип). Это полезно для анализа отдельных сделок, расчёта прибыли по каждой позиции и построения отчётов.
 
 ### Основные возможности
 
-- **История**: свойство `History` (`IReadOnlyList<ReportPosition>`) содержит все завершённые round-trip позиции.
+- **История**: свойство `History` (`IReadOnlyList<ReportPosition>`) содержит все завершённые раунд-трипы по позициям.
 - **Событие `RoundTripClosed`**: срабатывает при закрытии позиции (значение достигло нуля) или при развороте (смена знака позиции).
 - **Метод `ProcessPosition`**: принимает объект [Position](xref:StockSharp.BusinessEntities.Position) и обновляет внутреннее состояние.
 

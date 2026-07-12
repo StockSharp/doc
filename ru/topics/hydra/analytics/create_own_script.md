@@ -14,7 +14,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Нет инструментов.");
 				return Task.CompletedTask;
 			}
 
@@ -41,8 +41,8 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// нарисовать серии на графике как линию и гистограмму
-				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
-				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
+				lineChart.Append($"{security} (закрытие)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
+				histogramChart.Append($"{security} (объем)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}
 
 			return Task.CompletedTask;

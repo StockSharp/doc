@@ -8,7 +8,7 @@
 
 - pesquisar e selecionar dados (instrumentos, portfólios, endereços);
 - a criação de ordens;
-- apresentar informação de bolsa e outra informação (negócios, ordens, transações, livros de ordens, logs, etc.);
+- apresentar informação de bolsa e outra informação (negócios, ordens, transações, livros de ordens, registos, etc.);
 - construção de gráficos.
 
 Para aceder aos controlos gráficos [S#](../api.md) no código XAML, é necessário definir os aliases para o namespace correspondente e utilizar estes aliases no código XAML. O exemplo seguinte mostra como fazer isto:

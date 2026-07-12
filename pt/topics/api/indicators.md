@@ -72,7 +72,7 @@
    ```
 
    Esta abordagem tem as seguintes vantagens:
-   - Está alinhada com o modelo de processamento de dados em streaming (receber → processar → usar o resultado)
+   - Está alinhada com o modelo de processamento de dados em fluxo contínuo (receber → processar → usar o resultado)
    - É mais eficiente, pois evita aceder repetidamente ao contentor de valores acumulados
    - Elimina potenciais problemas de sincronização entre a chamada de Process e chamadas posteriores a GetCurrentValue
 
@@ -91,7 +91,7 @@
    var isShortLessThenLong = _shortSma.GetCurrentValue() < _longSma.GetCurrentValue();
    ```
    
-   Com esta abordagem, há um acesso adicional ao contentor de valores históricos do indicador, o que introduz atrasos e quebra o modelo de streaming do processamento de dados.
+   Com esta abordagem, há um acesso adicional ao contentor de valores históricos do indicador, o que introduz atrasos e quebra o modelo de fluxo contínuo do processamento de dados.
 
 6. Todos os indicadores têm a propriedade [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), que indica se o indicador está pronto para uso. Por exemplo, o indicador [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) tem um período e, até o indicador processar um número de candles igual ao período do indicador, será considerado não pronto para uso. E a propriedade [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) será false.
 
@@ -117,7 +117,7 @@ public class SmaStrategy : Strategy
 
 	public SmaStrategy()
 	{
-		base.Name = "SMA strategy";
+		base.Name = "Estratégia SMA";
 
 		// Inicializar parâmetros da estratégia
 		_longSmaLength = Param(nameof(LongSmaLength), 80);
@@ -200,4 +200,4 @@ public class SmaStrategy : Strategy
 }
 ```
 
-Este exemplo demonstra a abordagem correta para trabalhar com indicadores no modelo de streaming do StockSharp.
+Este exemplo demonstra a abordagem correta para trabalhar com indicadores no modelo de fluxo contínuo do StockSharp.

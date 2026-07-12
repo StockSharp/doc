@@ -5,11 +5,11 @@
 ![API GUI 設定 Bitbank](../../../../../images/api_gui_settings_bitbank.png)
 
 - **キー** - Key。
-- **シークレット** - Secret。
+- **シークレット** - シークレットキー。
 - **残高** - 残高確認間隔。入金および出金操作の場合に必要です。
 - **ハートビート** - 接続が維持されていることを追跡するためのサーバーチェック間隔。既定では 1 分です。
 - **再接続設定** - 取引システム設定との接続を追跡するためのメカニズム。([再接続設定](../../reconnection_settings.md))
-- **RequestWithdrawAccounts** - RequestWithdrawAccounts
+- **出金アカウント要求** - 出金アカウントを要求します。
 
 ## 推奨コンテンツ
 

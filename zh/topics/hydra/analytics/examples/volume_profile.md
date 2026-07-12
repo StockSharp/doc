@@ -45,7 +45,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("没有交易品种。");
 				return Task.CompletedTask;
 			}
 
@@ -60,7 +60,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("没有数据。");
 				return Task.CompletedTask;
 			}
 
@@ -115,7 +115,7 @@ class price_volume_script(IAnalyticsScript):
 	):
 		# 检查是否 没有交易品种
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("没有交易品种。")
 			return Task.CompletedTask
 
 		# 脚本只能处理 1 个工具
@@ -134,7 +134,7 @@ class price_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("没有数据。")
 			return Task.CompletedTask
 
 		# 按中间价对K线分组并汇总成交量

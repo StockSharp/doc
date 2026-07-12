@@ -10,8 +10,8 @@ El siguiente código muestra cómo inicializar [GdaxMessageAdapter](xref:StockSh
 			...				
 			var messageAdapter = new GdaxMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Su clave API>".To<SecureString>(),
+				Secret = "<Su secreto API>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...	

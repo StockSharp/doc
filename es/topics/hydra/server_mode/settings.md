@@ -34,7 +34,7 @@ Después haga clic en el botón **Configuración** para abrir la ventana de conf
 - **Libros de órdenes (días)** - número máximo de días disponibles para descargar historial del libro de órdenes.
 - **OL (días)** - número máximo de días disponibles para descargar historial de datos OL.
 - **Transacciones (días)** - número máximo de días disponibles para descargar historial de transacciones.
-- **Simulator** - activar el modo simulador.
+- **Simulador** - activar el modo simulador.
 - **Mapeo de instrumentos** - habilitar el modo de transferencia solo para los instrumentos especificados.
 
 Si establece **Autorización** en un valor distinto de **Anónimo**, aparecerá el botón **Usuarios** en la pestaña **Común**. Al hacer clic en él, aparecerá la ventana **Usuarios**.

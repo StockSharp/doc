@@ -11,7 +11,7 @@ No modo de servidor, é possível ligar outro programa Hydra, que atuará como c
 ![Hydra tarefa do servidor (2)](../../../images/hydratasksserver_2.png)
 
 - **Endereço** - o endereço do servidor Hydra.
-- **Início de sessão** - login (necessário se o servidor exigir autorização).
+- **Início de sessão** - início de sessão (necessário se o servidor exigir autorização).
 - **Palavra-passe** - palavra-passe (necessária se o servidor exigir autorização).
 - **Desfasamento temporal** - um desfasamento temporal em dias relativamente à data atual, necessário para evitar o descarregamento de dados incompletos da sessão de negociação atual.
 - **Fins de semana** - se deve descarregar dados dos fins de semana.

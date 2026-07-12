@@ -10,7 +10,7 @@ Depois disso, o bot está pronto para utilização. Em seguida, para que o bot c
 
   ![Painel de Controlo 01](../../images/designerribbon.png)
 
-  Todas as estratégias executadas em modo Live serão automaticamente transferidas para o bot do Telegram, e poderá controlá-las a partir do seu telefone.
+  Todas as estratégias executadas em modo ao vivo serão automaticamente transferidas para o bot do Telegram, e poderá controlá-las a partir do seu telefone.
 
   No [StockSharpBot](https://t.me/StockSharpBot), selecione o comando /apps para ver uma lista de todos os programas:
 

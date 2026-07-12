@@ -1,18 +1,18 @@
-# Logging em Estratégias
+# Registo em estratégias
 
 Em StockSharp, a classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) herda de [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver), o que permite usar ferramentas integradas para registar todas as ações e eventos que ocorrem durante a operação de uma estratégia de negociação.
 
-## Níveis de Logging
+## Níveis de registo
 
-StockSharp suporta os seguintes níveis de logging (listados por ordem crescente de importância):
+StockSharp suporta os seguintes níveis de registo (listados por ordem crescente de importância):
 
-1. Verbose - o nível de logging mais detalhado para rastreamento
+1. Verbose - o nível de registo mais detalhado para rastreamento
 2. Debug - mensagens para depuração
 3. Info - mensagens informativas regulares
 4. Warning - avisos sobre problemas potenciais
 5. Error - mensagens de erro
 
-## Métodos de Logging na Estratégia
+## Métodos de registo na estratégia
 
 A estratégia fornece os seguintes métodos para escrever mensagens no log:
 
@@ -108,7 +108,7 @@ catch (Exception ex)
 }
 ```
 
-## Configurar o Nível de Logging
+## Configurar o nível de registo
 
 A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contém uma propriedade [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) que determina que mensagens serão escritas no log:
 
@@ -117,11 +117,11 @@ A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contém uma propri
 strategy.LogLevel = LogLevels.Info;
 ```
 
-Com o nível de logging selecionado, apenas as mensagens desse nível e de níveis superiores serão registadas. Por exemplo, se `LogLevels.Info` estiver definido, as mensagens Verbose e Debug serão ignoradas.
+Com o nível de registo selecionado, apenas as mensagens desse nível e de níveis superiores serão registadas. Por exemplo, se `LogLevels.Info` estiver definido, as mensagens Verbose e Debug serão ignoradas.
 
 ## Parâmetro LogLevel
 
-Para configurar convenientemente o nível de logging no construtor da estratégia, pode adicionar um parâmetro:
+Para configurar convenientemente o nível de registo no construtor da estratégia, pode adicionar um parâmetro:
 
 ```cs
 public class SmaStrategy : Strategy
@@ -174,7 +174,7 @@ protected override void OnStopped()
 protected override void OnNewMyTrade(MyTrade trade)
 {
 	LogInfo("{0} {1} {2} ao preço {3}. Volume: {4}",
-		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
+		trade.Order.Direction == Sides.Buy ? "Comprado" : "Vendido",
 		trade.Order.Security.Code,
 		trade.Order.Type,
 		trade.Trade.Price,
@@ -196,9 +196,9 @@ protected override void OnOrderRegisterFailed(OrderFail fail, bool calcRisk)
 }
 ```
 
-## Ligar Listeners de Log
+## Ligar ouvintes de registo
 
-Para receber mensagens de uma estratégia, ligue listeners através de [LogManager](xref:Ecng.Logging.LogManager):
+Para receber mensagens de uma estratégia, ligue ouvintes através de [LogManager](xref:Ecng.Logging.LogManager):
 
 ```cs
 var logManager = new LogManager();
@@ -216,15 +216,15 @@ logManager.Listeners.Add(emailListener);
 logManager.Sources.Add(strategy);
 ```
 
-## Visualizar Logs
+## Visualizar registos
 
 As mensagens escritas no log da estratégia podem ser visualizadas:
 
-1. No programa [Designer](../../designer.md), no painel "Logs"
+1. No programa [Designer](../../designer.md), no painel "Registos"
 2. Em ficheiros de log, se [FileLogListener](xref:Ecng.Logging.FileLogListener) estiver configurado
 3. Na interface de utilizador através de [LogControl](xref:StockSharp.Xaml.LogControl), se [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) for usado
 
 ## Ver Também
 
-[Registo de logs](../logging.md)
+[Registo](../logging.md)
 [Componente LogControl](../graphical_user_interface/logging/log_panel.md)

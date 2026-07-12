@@ -1,6 +1,6 @@
 # Skript erstellen
 
-Mit **Analytics** können Sie eigene Skripte erstellen. Als Beispiel betrachten wir **ChartDrawScript**, das die Möglichkeiten zum Zeichnen von Charts demonstriert:
+Mit **Analytik** können Sie eigene Skripte erstellen. Als Beispiel betrachten wir **ChartDrawScript**, das die Möglichkeiten zum Zeichnen von Charts demonstriert:
 
 ```cs
 namespace StockSharp.Algo.Analytics
@@ -14,7 +14,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Keine Instrumente.");
 				return Task.CompletedTask;
 			}
 
@@ -35,14 +35,14 @@ namespace StockSharp.Algo.Analytics
 
 				foreach (var candle in candleStorage.Load(from, to))
 				{
-					// Reihen befullen
+					// Reihen befüllen
 					candlesSeries[candle.OpenTime] = candle.ClosePrice;
 					volsSeries[candle.OpenTime] = candle.TotalVolume;
 				}
 
 				// Reihen im Chart als Linie und Histogramm zeichnen
-				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
-				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
+				lineChart.Append($"{security} (Schlusskurs)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
+				histogramChart.Append($"{security} (Volumen)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}
 
 			return Task.CompletedTask;
@@ -66,8 +66,8 @@ Die Methode [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Loggi
 
 #### Parameter:
 
-- `logs`: Ubernimmt eine Instanz von [ILogReceiver](xref:Ecng.Logging.ILogReceiver) für das Logging innerhalb des Skripts.
-- `panel`: Stellt [IAnalyticsPanel](xref:StockSharp.Algo.Analytics.IAnalyticsPanel) bereit, ein Benutzeroberflachenelement zum Zeichnen von Charts und Anzeigen von Ergebnissen.
+- `logs`: Übernimmt eine Instanz von [ILogReceiver](xref:Ecng.Logging.ILogReceiver) für die Protokollierung innerhalb des Skripts.
+- `panel`: Stellt [IAnalyticsPanel](xref:StockSharp.Algo.Analytics.IAnalyticsPanel) bereit, ein Benutzeroberflächenelement zum Zeichnen von Charts und Anzeigen von Ergebnissen.
 - `securities`: Ein Array von [SecurityId](xref:StockSharp.Messages.SecurityId), das die Finanzinstrumente für die Analyse identifiziert.
 - `from`: Das Startdatum des Datenbereichs für die Analyse.
 - `to`: Das Enddatum des Datenbereichs für die Analyse.
@@ -83,7 +83,7 @@ Die Methode [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Loggi
 
 ## Implementierungsdetails
 
-Die Klasse `ChartDrawScript` verarbeitet gezielt Marktdaten für jedes ubergebene Instrument. Sie erstellt zwei Charttypen: einen Linienchart für Schlusskurse und ein Histogramm für Volumendaten.
+Die Klasse `ChartDrawScript` verarbeitet gezielt Marktdaten für jedes übergebene Instrument. Sie erstellt zwei Charttypen: einen Linienchart für Schlusskurse und ein Histogramm für Volumendaten.
 
 ### Hauptverarbeitungsschritte:
 
@@ -92,7 +92,7 @@ Die Klasse `ChartDrawScript` verarbeitet gezielt Marktdaten für jedes ubergeben
 3. Durchlaufen jedes Instruments und Prüfen auf Abbruchanforderungen.
 4. Abrufen des Kerzenspeichers mit der Methode `storage.GetCandleMessageStorage`.
 5. Laden der Kerzendaten innerhalb des angegebenen Datumsbereichs.
-6. Befullen von Dictionaries mit Zeitreihendaten der Eroffnungszeit, den entsprechenden Schlusskursen und Gesamtvolumina.
+6. Befüllen von Dictionaries mit Zeitreihendaten der Eröffnungszeit, den entsprechenden Schlusskursen und Gesamtvolumina.
 7. Zeichnen der Reihendaten in Charts mit den Methoden `lineChart.Append` und `histogramChart.Append`.
 
 Das Skript verwendet Stile wie [DrawStyles.DashedLine](xref:Ecng.Drawing.DrawStyles.DashedLine) für den Linienchart und [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram) für das Histogramm, um unterschiedliche Datendarstellungen visuell zu unterscheiden.

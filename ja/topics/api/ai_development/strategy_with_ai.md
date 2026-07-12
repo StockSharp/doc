@@ -48,9 +48,9 @@ dotnet add package StockSharp.Binance
 ```
 StockSharp を使用して、次の条件を満たすトレーディング戦略を作成してください:
 - Strategy を継承する
-- 2 本の単純移動平均 (SMA) を使用する: fast (period 10) と slow (period 30)
-- fast SMA が slow SMA を上抜けたら — 買い
-- fast SMA が slow SMA を下抜けたら — 売り
+- 2 本の単純移動平均 (SMA) を使用する: 短期 (期間 10) と長期 (期間 30)
+- 短期 SMA が長期 SMA を上抜けたら — 買い
+- 短期 SMA が長期 SMA を下抜けたら — 売り
 - ポジションサイズ: 1 lot
 - 5 分足キャンドルを使用する
 - OnStarted() でキャンドルをサブスクライブする

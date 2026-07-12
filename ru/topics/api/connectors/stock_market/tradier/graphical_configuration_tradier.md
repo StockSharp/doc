@@ -24,7 +24,7 @@
 
 3. На сайте Tradier нужно разрешить приложению StockSharp доступ к торговым операциям:
 
-   ![Tradier Permissions](../../../../../images/api_gui_settings_tradier_3.png)
+   ![Разрешения Tradier](../../../../../images/api_gui_settings_tradier_3.png)
 
 4. После этого произойдет перенаправление обратно на сайт StockSharp, и программа автоматически выполнит вход.
 

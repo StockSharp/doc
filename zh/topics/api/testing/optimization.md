@@ -6,8 +6,8 @@ StockSharp 提供了内置机制，可在历史数据上优化策略参数。优
 
 可用的优化模式有两种：
 
-- **Brute force** -- `BruteForceOptimizer` 类。遍历所有可能的参数组合，或遍历其中的随机子集。
-- **Genetic algorithm** -- `GeneticOptimizer` 类。使用进化算法寻找最优参数，对于较大的参数空间效率更高。
+- **穷举搜索** -- `BruteForceOptimizer` 类。遍历所有可能的参数组合，或遍历其中的随机子集。
+- **遗传算法** -- `GeneticOptimizer` 类。使用进化算法寻找最优参数，对于较大的参数空间效率更高。
 
 两个优化器都继承自 `BaseOptimizer`，并以异步方式运行，在每次迭代完成时通过 `IAsyncEnumerable` 返回结果。
 
@@ -37,7 +37,7 @@ class SmaStrategy : Strategy
             .SetOptimize(
                 TimeSpan.FromMinutes(5),    // 从 5 分钟
                 TimeSpan.FromMinutes(15),   // 到 15 分钟
-                TimeSpan.FromMinutes(5));   // with a step of 5 minutes
+                TimeSpan.FromMinutes(5));   // 步长为 5 分钟
 
         _candleType = Param(nameof(CandleType),
             TimeSpan.FromMinutes(1).TimeFrame()).SetRequired();
@@ -154,7 +154,7 @@ _candleType = Param(nameof(CandleType), TimeSpan.FromMinutes(5).TimeFrame())
     });
 ```
 
-## Brute force 优化
+## 穷举优化
 
 `BruteForceOptimizer` 类会遍历参数值的所有可能组合。该模式适用于较小的参数空间。
 
@@ -184,19 +184,19 @@ var optimizer = new BruteForceOptimizer(
 
 // 配置仿真参数。
 var settings = optimizer.EmulationSettings;
-settings.MaxIterations = 100;                          // maximum iterations (0 = unlimited)
-settings.CommissionRules = new[]                       // commission
+settings.MaxIterations = 100;                          // 最大迭代次数（0 = 不限制）
+settings.CommissionRules = new[]                       // 手续费
 {
     new CommissionTradeRule { Value = 0.01m },
 };
-// settings.BatchSize = 8;                             // number of parallel threads
-                                                       // default = CPU * 2
+// settings.BatchSize = 8;                             // 并行线程数
+                                                       // 默认值 = CPU * 2
 
 // 在迭代之间缓存市场数据以加快优化。
 optimizer.AdapterCache = new();
 ```
 
-### 运行 brute force 优化
+### 运行穷举优化
 
 ```csharp
 // 带优化范围的基础策略。
@@ -249,9 +249,9 @@ await foreach (var (s, parameters) in optimizer.RunAsync(startTime, stopTime, st
 }
 ```
 
-## Genetic 优化
+## 遗传优化
 
-`GeneticOptimizer` 类实现了遗传算法。当参数数量较多时，它比 brute force 更高效。该算法会自动在较少迭代中向最优值收敛。
+`GeneticOptimizer` 类实现了遗传算法。当参数数量较多时，它比穷举搜索更高效。该算法会自动在较少迭代中向最优值收敛。
 
 ### 创建并配置优化器
 
@@ -310,7 +310,7 @@ optimizer.EmulationSettings.MaxIterations = 100;
 
 公式可以组合使用，例如 `"PnL - MaxDD"` 或 `"Recovery"`。
 
-### 运行 genetic 优化
+### 运行遗传优化
 
 ```csharp
 var strategy = new SmaStrategy
@@ -331,7 +331,7 @@ var tfParam = (StrategyParam<TimeSpan?>)strategy.Parameters[nameof(strategy.Cand
 var geneticParams = strategy.ToGeneticParameters(new (IStrategyParam, IEnumerable)[]
 {
     (tfParam, new[] { TimeSpan.FromMinutes(5), TimeSpan.FromMinutes(15) }),
-    (longParam, null),   // null = use the range from SetOptimize
+    (longParam, null),   // null = 使用 SetOptimize 中的范围
     (shortParam, null),
 });
 

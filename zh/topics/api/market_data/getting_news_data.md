@@ -26,15 +26,15 @@ private void OnNewsReceived(Subscription subscription, News news)
 		return;
 
 	// 处理收到的新闻
-	Console.WriteLine($"News: {news.Id}");
-	Console.WriteLine($"Headline: {news.Headline}");
-	Console.WriteLine($"Source: {news.Source}");
-	Console.WriteLine($"Time: {news.ServerTime}");
-	Console.WriteLine($"URL: {news.Url}");
+	Console.WriteLine($"新闻: {news.Id}");
+	Console.WriteLine($"标题: {news.Headline}");
+	Console.WriteLine($"来源: {news.Source}");
+	Console.WriteLine($"时间: {news.ServerTime}");
+	Console.WriteLine($"链接: {news.Url}");
 
 	// 如果存在新闻文本
 	if (!string.IsNullOrEmpty(news.Story))
-		Console.WriteLine($"Story: {news.Story}");
+		Console.WriteLine($"正文: {news.Story}");
 
 	// 如果新闻与特定交易品种相关
 	if (news.SecurityId != null)
@@ -117,8 +117,8 @@ var connector = new Connector();
 // 添加用于连接 Binance 的主适配器
 var binanceAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>",
-	Secret = "<Your Secret Key>",
+	Key = "<您的 API 访问密钥>",
+	Secret = "<您的秘密密钥>",
 };
 connector.Adapter.InnerAdapters.Add(binanceAdapter);
 
@@ -133,7 +133,7 @@ connector.Adapter.InnerAdapters.Add(rssAdapter);
 // 订阅新闻接收事件
 connector.NewsReceived += OnNewsReceived;
 
-// Connect
+// 连接
 connector.Connect();
 ```
 

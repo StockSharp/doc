@@ -1,6 +1,6 @@
 # 选择器
 
-[SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) 组件用于查找和选择工具。它支持单选和多选。该组件允许您按工具类型过滤工具列表。此组件还可以用于显示财务信息（一级字段），如[表格](table.md)部分所示。
+[SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) 组件用于查找和选择交易品种。它支持单选和多选。该组件允许您按交易品种类型过滤交易品种列表。此组件还可以用于显示财务信息（一级字段），如[表格](table.md)部分所示。
 
 ![GUI 交易品种选择器](../../../../images/gui_securitypicker2.png)
 
@@ -21,7 +21,7 @@
 - [SecurityPicker.SelectedSecurities](xref:StockSharp.Xaml.SecurityPicker.SelectedSecurities) - 所选交易品种列表。
 - [SecurityPicker.FilteredSecurities](xref:StockSharp.Xaml.SecurityPicker.FilteredSecurities) - 筛选过的交易品种列表。
 - [SecurityPicker.ExcludeSecurities](xref:StockSharp.Xaml.SecurityPicker.ExcludeSecurities) - 隐藏交易品种的列表。
-- [SecurityPicker.SelectedType](xref:StockSharp.Xaml.SecurityPicker.SelectedType) - 所选的工具类型。
+- [SecurityPicker.SelectedType](xref:StockSharp.Xaml.SecurityPicker.SelectedType) - 所选的交易品种类型。
 - [SecurityPicker.SecurityProvider](xref:StockSharp.Xaml.SecurityPicker.SecurityProvider) - 关于交易品种信息的提供者。
 - [SecurityPicker.MarketDataProvider](xref:StockSharp.Xaml.SecurityPicker.MarketDataProvider) - 市场数据提供商。
 

@@ -1,6 +1,6 @@
 # 最大K线
 
-`Largest Candles` 脚本用于在指定时间段内，从所选交易品种的图表中找出成交量最大以及实体最长的K线。该工具可帮助交易者和分析人员识别重要的市场事件及市场参与者的反应。
+`最大K线` 脚本用于在指定时间段内，从所选交易品种的图表中找出成交量最大以及实体最长的K线。该工具可帮助交易者和分析人员识别重要的市场事件及市场参与者的反应。
 
 ![最大K线](../../../../images/hydra_analytics_big_candle.png)
 
@@ -37,7 +37,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("没有交易品种。");
 				return Task.CompletedTask;
 			}
 
@@ -70,8 +70,8 @@ namespace StockSharp.Algo.Analytics
 			}
 
 			// 在图表上绘制序列
-			priceChart.Append("prices", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
-			volChart.Append("prices", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
+			priceChart.Append("价格", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
+			volChart.Append("价格", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
 
 			return Task.CompletedTask;
 		}
@@ -102,7 +102,7 @@ from indicator_extensions import *
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("没有交易品种。")
 			return Task.CompletedTask
 
 		price_chart = create_3d_chart(panel, datetime, float, float)
@@ -139,14 +139,14 @@ class biggest_candle_script(IAnalyticsScript):
 
 		# 在图表上绘制序列
 		price_chart.Append(
-			"prices",
+			"价格",
 			[c.OpenTime for c in big_price_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[get_length(c) for c in big_price_candles]
 		)
 
 		vol_chart.Append(
-			"prices",
+			"价格",
 			[c.OpenTime for c in big_vol_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[c.TotalVolume for c in big_vol_candles]

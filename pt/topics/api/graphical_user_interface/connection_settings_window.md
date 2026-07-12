@@ -20,7 +20,7 @@ Esta janela deve ser chamada através do método de extensão [Extensions.Config
 ```
 
 > [!TIP]
-> A correção da ligação pode ser verificada utilizando o botão **Check**.
+> A correção da ligação pode ser verificada utilizando o botão **Verificar**.
 
 O resultado desta janela será criar e adicionar adaptadores à lista de *adaptadores internos* da propriedade [Connector.Adapter](xref:StockSharp.Algo.Connector.Adapter).
 

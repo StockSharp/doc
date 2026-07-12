@@ -92,16 +92,16 @@ Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
 
 1. Candles (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
-   - WebSocket: subscribe to channel kline_{symbol}_{interval}
-   - Interval mapping: 1m, 5m, 15m, 1h, 4h, 1d
+   - WebSocket：订阅 kline_{symbol}_{interval} 频道
+   - 周期间隔映射：1m、5m、15m、1h、4h、1d
 
 2. 订单簿 (MarketDataTypes.MarketDepth):
-   - WebSocket: subscribe to channel depth_{symbol}
-   - Parse bids/asks into QuoteChangeMessage
+   - WebSocket：订阅 depth_{symbol} 频道
+   - 将 bids/asks 解析为 QuoteChangeMessage
 
 3. Ticks (MarketDataTypes.Trades):
-   - WebSocket: subscribe to channel trades_{symbol}
-   - Parse into ExecutionMessage with ExecutionTypes.Tick
+   - WebSocket：订阅 trades_{symbol} 频道
+   - 解析为带有 ExecutionTypes.Tick 的 ExecutionMessage
 ```
 
 ### 第 4 步：交易操作
@@ -111,21 +111,21 @@ Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
 ```
 为适配器添加交易操作支持：
 
-1. Order registration (OrderRegisterMessage):
-   - POST /api/v1/order with params: symbol, side, type, quantity, price
-   - Return ExecutionMessage with ExecutionTypes.Transaction
+1. 订单注册 (OrderRegisterMessage):
+   - 使用参数 symbol、side、type、quantity、price 调用 POST /api/v1/order
+   - 返回带有 ExecutionTypes.Transaction 的 ExecutionMessage
 
-2. Order cancellation (OrderCancelMessage):
+2. 订单取消 (OrderCancelMessage):
    - DELETE /api/v1/order/{orderId}
-   - Return ExecutionMessage with status OrderStates.Done
+   - 返回状态为 OrderStates.Done 的 ExecutionMessage
 
-3. Portfolio retrieval (PortfolioLookupMessage):
+3. 投资组合获取 (PortfolioLookupMessage):
    - GET /api/v1/account
-   - Parse balances into PositionChangeMessage
+   - 将余额解析为 PositionChangeMessage
 
-4. WebSocket for order updates:
-   - Channel orders_{listenKey}
-   - Parse order status updates
+4. 用于订单更新的 WebSocket:
+   - 频道 orders_{listenKey}
+   - 解析订单状态更新
 ```
 
 ### 第 5 步：代码审查

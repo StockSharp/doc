@@ -14,7 +14,7 @@ Sie können den Remote-Speicher auf einem lokalen Computer reproduzieren, indem 
 
 ![Designer Erstellen eines Repositorys historischer Daten 04](../../../images/designer_creating_repository_of_historical_data_04.png)
 
-Erstellen Sie danach in [Designer](../../designer.md) einen neuen Speicher, indem Sie auf die Schaltfläche ![Designer Erstellen eines Repositorys historischer Daten 00](../../../images/designer_creating_repository_of_historical_data_00.png) klicken. Geben Sie in den Speichereinstellungen im Adressfeld "net.tcp:\/\/localhost:8000" an. Klicken Sie auf OK. Wenn Sie [Hydra](../../hydra.md) als Remote-Speicher verwenden, vergessen Sie nicht, dass [Hydra](../../hydra.md) gestartet und entsprechend konfiguriert sein muss.
+Erstellen Sie danach im [Designer](../../designer.md) einen neuen Speicher, indem Sie auf die Schaltfläche ![Designer Erstellen eines Repositorys historischer Daten 00](../../../images/designer_creating_repository_of_historical_data_00.png) klicken. Geben Sie in den Speichereinstellungen im Adressfeld "net.tcp:\/\/localhost:8000" an. Klicken Sie auf OK. Wenn Sie [Hydra](../../hydra.md) als Remote-Speicher verwenden, vergessen Sie nicht, dass [Hydra](../../hydra.md) gestartet und entsprechend konfiguriert sein muss.
 
 ![Designer Erstellen eines Repositorys historischer Daten 05](../../../images/designer_creating_repository_of_historical_data_05.png)
 

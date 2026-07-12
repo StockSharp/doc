@@ -1,4 +1,4 @@
-# Exemplo de execução em Live
+# Exemplo de execução ao vivo
 
 Para executar um exemplo em **Ao vivo**, irá precisar de:
 

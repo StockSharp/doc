@@ -6,7 +6,7 @@ Visual Studio には、Visual Studio デバッガーを使用して実行中の�
 
 ![Designer DLL 戦略の作成 01](../../../../images/designer_creation_strategy_dll_01.png)
 
-2. Visual Studio で **Debug -> Attach to Process** を選択します。
+2. Visual Studio で **デバッグ -> プロセスにアタッチ** を選択します。
 
 ![Designer Visual Studio を使用した DLL キューブのデバッグ 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
@@ -18,13 +18,13 @@ Visual Studio には、Visual Studio デバッガーを使用して実行中の�
 
 4. **アタッチ先** ウィンドウで、デバッグする必要があるコードタイプが指定されていることが重要です。既定の **自動** パラメーターはデバッグ対象のコードタイプを判定しようとしますが、常に正しく識別できるとは限りません。コードタイプを手動で設定するには、次の手順を実行する必要があります。
 
-- Attach to フィールドで **選択** をクリックします。
+- **アタッチ先** フィールドで **選択** をクリックします。
 - **コードタイプを選択** ダイアログボックスで **これらのコードタイプをデバッグ** ボタンをクリックし、デバッグ対象の型を選択します。
 - OK をクリックします。
 
 ![Designer Visual Studio を使用した DLL キューブのデバッグ 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
 
-5. Attach ボタンをクリックします。
+5. **アタッチ** ボタンをクリックします。
 
 6. Visual Studio でコードにブレークポイントを設定します。ブレークポイントが赤く、赤で塗りつぶされている場合 ![Designer Visual Studio を使用した DLL キューブのデバッグ 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png)（かつ Studio がデバッグモードの場合）、正確なバージョンの DLL が読み込まれたことを意味します。ブレークポイントが赤く、白で塗りつぶされている場合 ![Designer Visual Studio を使用した DLL キューブのデバッグ 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png)（かつ Studio がデバッグモードの場合）、誤ったバージョンの DLL が読み込まれたことを意味します。
 

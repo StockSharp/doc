@@ -94,7 +94,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 {
 	// ... (código de procesamiento de datos)
 
-	// Manejo de errores y logging
+	// Manejo de errores y registro
 	Console.WriteLine($"Remote {dataType}: {remoteStorage.Dates.FirstOrDefault()}-{remoteStorage.Dates.LastOrDefault()}");
 	Console.WriteLine($"{dataType}={dateTime}");
 }

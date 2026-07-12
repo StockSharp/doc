@@ -12,13 +12,13 @@ O cTrader fornece apenas o método de autorização OAuth.
 
 Processo de autorização OAuth:
 
-1. Ao clicar no botão "Check", será aberta uma janela:
+1. Ao clicar no botão "Verificar", será aberta uma janela:
 
    ![início do OAuth](../../../../../images/oauth_start.png)
 
-2. Depois de clicar em "Start", o utilizador será redirecionado para o site do cTrader para iniciar sessão. No site do cTrader, é necessário permitir que a aplicação StockSharp aceda às operações de negociação:
+2. Depois de clicar em "Iniciar", o utilizador será redirecionado para o site do cTrader para iniciar sessão. No site do cTrader, é necessário permitir que a aplicação StockSharp aceda às operações de negociação:
 
-   ![Login cTrader](../../../../../images/api_gui_settings_ctrader_2.png)
+   ![Início de sessão cTrader](../../../../../images/api_gui_settings_ctrader_2.png)
 
 3. Depois disso, será redirecionado de volta para o site da StockSharp, e o programa iniciará sessão automaticamente.
 

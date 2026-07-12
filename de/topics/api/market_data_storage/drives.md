@@ -74,7 +74,7 @@ await foreach (var dataType in remoteDrive.GetAvailableDataTypesAsync(secId, Sto
 }
 ```
 
-Weitere Details zur Arbeit mit entferntem Speicher finden Sie im Abschnitt [Arbeiten mit Remote Storage](remote.md).
+Weitere Details zur Arbeit mit entferntem Speicher finden Sie im Abschnitt [Arbeiten mit Remote-Speicher](remote.md).
 
 ## DriveCache - Laufwerksverwaltung
 
@@ -110,6 +110,6 @@ driveCache.NewDriveCreated += drive =>
 ## Siehe auch
 
 - [Arbeiten mit der API](api.md)
-- [Arbeiten mit Remote Storage](remote.md)
+- [Arbeiten mit Remote-Speicher](remote.md)
 - [Speicherformate](formats.md)
 

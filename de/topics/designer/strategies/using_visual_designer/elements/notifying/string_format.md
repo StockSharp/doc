@@ -4,15 +4,15 @@
 
 Der Würfel wandelt einen eingehenden Wert beliebigen Typs in eine Textzeichenfolge um. Die Umwandlung erfolgt anhand einer Vorlage mit Platzhaltern in geschweiften Klammern. Jeder Platzhalter verweist auf den gesamten Wert (`{0}`) oder auf eine seiner Eigenschaften (`{Price}`, `{Trade.Price}` usw.). Nach einem Doppelpunkt kann ein Format angegeben werden, um zu steuern, wie Zahlen, Datumswerte oder andere Objekte im Text erscheinen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
-- **Eingabe** - der zu formatierende Wert. Der Socket akzeptiert Daten beliebigen Typs.
+- **Eingabe** - der zu formatierende Wert. Der Anschluss akzeptiert Daten beliebigen Typs.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Text** - das Ergebnis der Anwendung der Vorlage auf den eingehenden Wert.
 

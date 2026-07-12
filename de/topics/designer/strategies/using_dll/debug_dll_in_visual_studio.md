@@ -6,7 +6,7 @@ Visual Studio bietet einen Mechanismus, um sich mit dem Visual-Studio-Debugger a
 
 ![Designer DLL-Strategie erstellen 01](../../../../images/designer_creation_strategy_dll_01.png)
 
-2. Wählen Sie in Visual Studio **Debug -> Attach to Process** aus.
+2. Wählen Sie in Visual Studio **Debuggen -> An Prozess anhängen** aus.
 
 ![Designer Debugging eines DLL-Würfels mit Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
@@ -18,17 +18,17 @@ Wenn der Prozess unter einem anderen Benutzerkonto ausgeführt wird, müssen Sie
 
 4. Wichtig ist, dass im Fenster **Anhängen an** der Codetyp angegeben ist, der debuggt werden soll. Der Standardparameter **Automatisch** versucht, den zu debuggenden Codetyp zu bestimmen, erkennt ihn aber nicht immer korrekt. Um den Codetyp manuell festzulegen, führen Sie die folgenden Schritte aus.
 
-- Klicken Sie im Feld Attach to auf **Auswählen**.
+- Klicken Sie im Feld **Anhängen an** auf **Auswählen**.
 - Klicken Sie im Dialogfeld **Codetyp auswählen** auf die Schaltfläche **Diese Codetypen debuggen** und wählen Sie die Typen für das Debugging aus.
 - Klicken Sie auf OK.
 
 ![Designer Debugging eines DLL-Würfels mit Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
 
-5. Klicken Sie auf die Schaltfläche Attach.
+5. Klicken Sie auf die Schaltfläche **Anhängen**.
 
 6. Setzen Sie in Visual Studio Haltepunkte im Code. Wenn die Haltepunkte rot und rot ausgefüllt sind ![Designer Debugging eines DLL-Würfels mit Visual Studio 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png) (und Studio sich im Debugging-Modus befindet), bedeutet dies, dass die exakte Version der DLL geladen wurde. Wenn die Haltepunkte rot und weiß ausgefüllt sind ![Designer Debugging eines DLL-Würfels mit Visual Studio 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png) (und Studio sich im Debugging-Modus befindet), bedeutet dies, dass die falsche Version der DLL geladen wurde.
 
-7. Im Beispiel wird der Haltepunkt in der ersten Zeile der Methode **public void ProcessCandle(Candle candle)** gesetzt. Wenn die Strategie in [Designer](../../../designer.md) läuft, hält Visual Studio am Haltepunkt an, sobald Kerzenwerte an die DLL übergeben werden. Von dort aus können Sie die Ausführung des Codes verfolgen:
+7. Im Beispiel wird der Haltepunkt in der ersten Zeile der Methode **public void ProcessCandle(Candle candle)** gesetzt. Wenn die Strategie im [Designer](../../../designer.md) läuft, hält Visual Studio am Haltepunkt an, sobald Kerzenwerte an die DLL übergeben werden. Von dort aus können Sie die Ausführung des Codes verfolgen:
 
 ![Designer Debugging eines DLL-Würfels mit Visual Studio 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
 

@@ -22,13 +22,13 @@
 - **Fehlerprozentsatz** - Prozentwert des Fehlers bei der Registrierung neuer Orders. Der Wert kann von 0 (keine Fehler) bis 100 reichen.
 - **Latenz** - Mindestwert der Verzögerung für registrierte Orders.
 - **Erneute Registrierung** - Wird die erneute Registrierung von Orders in Form eines einzelnen Trades unterstützt?
-- **Pufferungszeitraum** - Antworten in Batches in einem einzelnen Paket senden. Die Netzwerkverzögerung und die gepufferte Arbeit des Börsenkerns werden emuliert.
+- **Pufferungszeitraum** - Antworten gebündelt in einem einzelnen Paket senden. Die Netzwerkverzögerung und die gepufferte Arbeit des Börsenkerns werden emuliert.
 - **Order-ID** - Die Nummer, ab der der Emulator Identifikatoren für Orders generiert.
 - **Trade-ID** - Die Nummer, ab der der Emulator Identifikatoren für Trades generiert.
 - **Transaktion** - Die Nummer, ab der der Emulator Identifikatoren für Ordertransaktionen generiert.
 - **Spread-Größe** - Spread-Größe in Preisschritten. Wird bei der Bestimmung des Spreads für die Orderbuchgenerierung aus Tick-Trades verwendet.
 - **Orderbuchtiefe** - Die maximale Tiefe des Orderbuchs, das aus Ticks generiert wird.
-- **Anzahl der Volumenschritte** - Die Anzahl der Volumenschritte, um die die Order größer als der Tick-Trade ist. Wird beim Testing von Tick-Trades verwendet.
+- **Anzahl der Volumenschritte** - Die Anzahl der Volumenschritte, um die die Order größer als der Tick-Trade ist. Wird beim Testen mit Tick-Trades verwendet.
 - **Portfoliointervall** - Intervall zur Portfolioneuberechnung. Wenn das Intervall null ist, wird keine Neuberechnung durchgeführt.
 - **Zeit ändern** - Zeitänderung für Orders und Trades mit Börsenzeit.
 - **Zeitzone** - Informationen zur Zeitzone der Börse.

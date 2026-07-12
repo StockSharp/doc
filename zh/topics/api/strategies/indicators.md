@@ -1,4 +1,4 @@
-# 战略中的指标
+# 策略中的指标
 
 在 StockSharp 中，[Strategy](xref:StockSharp.Algo.Strategies.Strategy) 类提供了一种用于处理指标的特殊机制，这使您能够控制它们的形成状态，并确定策略何时可以开始工作。
 

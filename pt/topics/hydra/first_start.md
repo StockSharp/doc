@@ -69,9 +69,9 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
      O utilizador também tem a possibilidade de selecionar um [tipo personalizado](prepare_for_download/custom_candles.md) de velas para personalizar os dados recebidos.
    - Depois de selecionar um instrumento, o tipo de dados de mercado e definir o período, deve clicar no botão **Iniciar**. Depois disso, a transferência dos dados de mercado será iniciada.
 
-   O processo de trabalho pode ser observado no separador especial **Registos**, fixado na parte inferior do programa. Além disso, os logs são guardados em ficheiros na pasta local.
+   O processo de trabalho pode ser observado no separador especial **Registos**, fixado na parte inferior do programa. Além disso, os registos são guardados em ficheiros na pasta local.
 
-![Hydra principal start](../../images/hydra_main_start.png)
+![Hydra ecrã principal após o arranque](../../images/hydra_main_start.png)
 
 Além disso, o utilizador pode adicionar [fontes adicionais](data_sources/select_source.md).
 

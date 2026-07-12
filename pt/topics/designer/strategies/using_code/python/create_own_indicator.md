@@ -96,7 +96,7 @@ class empty_indicator(BaseIndicator):
 		storage.SetValue("Change", self.Change)
 
 	def __str__(self):
-		return f"Change: {self.Change}"
+		return f"Alteração: {self.Change}"
 
 	def ToString(self):
 		return str(self)

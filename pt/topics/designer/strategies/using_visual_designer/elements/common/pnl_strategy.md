@@ -4,7 +4,7 @@
 
 O elemento fornece informações de P\/L da estratégia.
 
-## Sockets de saída
+## Conectores de saída
 
 - **P\/L não realizado** - é o valor numérico do lucro\/perda não realizado.
 - **P\/L realizado** - é o valor numérico do lucro\/perda realizado.

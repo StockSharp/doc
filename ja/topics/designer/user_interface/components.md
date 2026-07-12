@@ -9,10 +9,10 @@
 - [約定](components/trades.md) - 約定のテーブルを表し、ストラテジーのすべての約定に関する完全な情報を表示します。
 - [注文](components/orders.md) - 注文のテーブルを表し、ストラテジーのすべての注文に関する完全な情報を表示します。
 - [ポジション](components/positions.md) - ストラテジーの銘柄に対するポジションのテーブルを表します。
-- [統計](components/statistics.md) - P/L、Trades、Positions、Orders のカテゴリでグループ化されたテーブルを表します。ストラテジーのパフォーマンスに関するデータを含みます。
+- [統計](components/statistics.md) - P/L、約定、ポジション、注文のカテゴリでグループ化されたテーブルを表します。ストラテジーのパフォーマンスに関するデータを含みます。
 - [ティック約定](components/tick_trades.md) - 約定のテーブルを表し、選択した銘柄のすべての約定に関する完全な情報を表示します。
-- [ポジションチャート](components/positions.md) - Position チャートを表します。
-- プロパティ - [バックテスト設定](components/backtesting_settings.md) のテーブル、または [Live 設定](components/live_settings.md) のテーブルを表します。
+- [ポジションチャート](components/positions.md) - ポジションチャートを表します。
+- プロパティ - [バックテスト設定](components/backtesting_settings.md) のテーブル、または [ライブ設定](components/live_settings.md) のテーブルを表します。
 - [スキーマ](../strategies/using_visual_designer/diagram_panel.md) - スキーマデザイナーを表します。
 - [ソースコード](../strategies/using_code.md) - ソースコードに基づくストラテジーを作成または編集するためのウィンドウを表します。
 - [DLL](../strategies/using_dll/dll_panel.md) - DLL メタデータを表示するためのウィンドウです。既製の DLL に基づいてストラテジーを作成する場合に使用します。

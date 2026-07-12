@@ -24,7 +24,7 @@ var data = new ChartDrawData.AnnotationData
 	IsVisible = true,
 	Stroke = new SolidColorBrush(Color.FromRgb(0, 0, 255)),
 	Thickness = new Thickness(3),
-	Text = "New annotation",
+	Text = "新しい注釈",
 	HorizontalAlignment = HorizontalAlignment.Stretch,
 	VerticalAlignment = VerticalAlignment.Stretch,
 	LabelPlacement = LabelPlacement.Axis,
@@ -36,4 +36,3 @@ drawData.Add(_annotation, data);
 Chart.Draw(drawData);
 		
 ```
-

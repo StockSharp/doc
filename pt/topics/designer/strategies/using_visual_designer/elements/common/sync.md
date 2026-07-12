@@ -4,14 +4,14 @@
 
 O bloco Sincronização foi concebido para acumular e sincronizar dados de várias fontes (por exemplo, velas de diferentes instrumentos, diferentes períodos, combinações de velas e transações) e, posteriormente, emiti-los quando uma determinada quantidade for acumulada. Este bloco é útil para criar índices personalizados ou arbitragem.
 
-## Sockets de entrada
+## Conectores de entrada
 
-- **Entrada**: Quando uma nova fonte de dados é ligada, são criados automaticamente um socket de saída correspondente e um novo socket de entrada. O número de valores de entrada é ilimitado.
+- **Entrada**: Quando uma nova fonte de dados é ligada, são criados automaticamente um conector de saída correspondente e um novo conector de entrada. O número de valores de entrada é ilimitado.
 
 ## Parâmetros
 
 - **Intervalo**: Define o tempo após o qual os dados têm de ser atualizados ou eliminados. Se chegar um valor de entrada com uma hora que exceda o valor anterior mais o intervalo, os dados antigos são limpos e começa uma nova série de acumulação de dados.
-- **Limpar itens**: Se esta opção estiver ativada, os dados são limpos após a sua acumulação para todos os sockets de entrada ligados, ou os dados são acumulados até aparecerem dados do intervalo de tempo seguinte.
+- **Limpar itens**: Se esta opção estiver ativada, os dados são limpos após a sua acumulação para todos os conectores de entrada ligados, ou os dados são acumulados até aparecerem dados do intervalo de tempo seguinte.
 
 ## Exemplos de utilização
 

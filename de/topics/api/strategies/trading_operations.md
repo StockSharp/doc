@@ -6,7 +6,7 @@ In StockSharp stellt die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strat
 
 Es gibt mehrere Möglichkeiten, Orders in StockSharp-Strategien zu platzieren:
 
-### 1. Verwendung von High-Level-Methoden
+### 1. Verwendung von Methoden auf höherer Ebene
 
 Am einfachsten ist die Verwendung integrierter Methoden, die eine Order in einem einzigen Aufruf erstellen und registrieren:
 
@@ -64,7 +64,7 @@ var order = new Order
 	Type = OrderTypes.Limit,
 	Price = price,
 	Volume = volume,
-	Comment = "Custom order"
+	Comment = "Benutzerdefinierte Order"
 };
 
 // Order registrieren
@@ -282,7 +282,7 @@ private void ProcessCandle(ICandleMessage candle)
 	// Beispielhafte Handelslogik auf Basis des Schlusskurses
 	if (candle.ClosePrice > _previousClose * 1.01)
 	{
-		// Option 1: Verwendung einer High-Level-Methode
+		// Option 1: Verwendung einer Methode auf höherer Ebene
 		var order = BuyLimit(candle.ClosePrice, Volume);
 
 		// Regel zur Verarbeitung der Order-Ausführung erstellen

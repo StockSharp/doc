@@ -25,7 +25,7 @@ Wichtige Fähigkeiten der Klasse `Strategy`:
 - [Alert-System](alert_system.md) -- Senden von Benachrichtigungen (Popup, Sound, Log, Telegram)
 - [Timer-System](timer_system.md) -- Ausführung periodischer Aktionen
 - [Risikomanagement](risk_management.md) -- Regeln für das Risikomanagement
-- [High-Level-Abonnements](high_level_subscriptions.md) -- vereinfachte Marktdatenabonnements
+- [Abonnements auf höherer Ebene](high_level_subscriptions.md) -- vereinfachte Marktdatenabonnements
 - [Strategieberichte](reporting.md) -- Erzeugen von Berichten über Handelsergebnisse
 - [Erweiterte Funktionen](advanced_features.md) -- Orderkommentare, Zeitpläne, risikofreier Zinssatz, Indikatorquelle
 
@@ -75,4 +75,3 @@ public class MyStrategy : Strategy
 3. **Start** -- Aufruf von `Start()`, Übergang in den Zustand `ProcessStates.Started`, Aufruf von `OnStarted2(DateTime)`.
 4. **Ausführung** -- Verarbeitung von Marktdaten, Platzierung von Orders.
 5. **Stopp** -- Aufruf von `Stop()`, Übergang über `ProcessStates.Stopping` zu `ProcessStates.Stopped`, Aufruf von `OnStopped()`.
-

@@ -23,7 +23,7 @@ Código de exemplo
 _logManager = new LogManager();
 // adicionar .NET tracing como fonte de log.
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
-// adicionar Monitor como listener de log.
+// adicionar Monitor como ouvinte de registo.
 _logManager.Listeners.Add(new GuiLogListener(Monitor));
 					
 ```

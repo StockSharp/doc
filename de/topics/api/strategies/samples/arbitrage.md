@@ -145,7 +145,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 	if (_currentState != ArbitrageState.None && _currentState != ArbitrageState.OrderRegistration)
 	{
 		CalculateProfit();
-		LogInfo($"Profit: {_profit}");
+		LogInfo($"Gewinn: {_profit}");
 	}
 
 	// Signale anhand des aktuellen Zustands und der Marktbedingungen verarbeiten

@@ -4,14 +4,14 @@
 
 Este elemento é usado para calcular uma fórmula lógica com dois argumentos.
 
-## Sockets de entrada
+## Conectores de entrada
 
-- **Sinalizador** - o valor da flag (caracteriza o estado e tem dois valores: levantada (true) e baixada (false)).
-- **Sinalizador** - o valor da flag (caracteriza o estado e tem dois valores: levantada (true) e baixada (false)).
+- **Sinalizador** - o valor do sinalizador (caracteriza o estado e tem dois valores: ativado (true) e desativado (false)).
+- **Sinalizador** - o valor do sinalizador (caracteriza o estado e tem dois valores: ativado (true) e desativado (false)).
 
-## Sockets de saída
+## Conectores de saída
 
-- **Sinalizador** - o valor da flag (caracteriza o estado e tem dois valores: levantada (true) e baixada (false)).
+- **Sinalizador** - o valor do sinalizador (caracteriza o estado e tem dois valores: ativado (true) e desativado (false)).
 
 ## Parâmetros
 

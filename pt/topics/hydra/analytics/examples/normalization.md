@@ -1,6 +1,6 @@
 # Normalização do Preço de Fecho
 
-O script "Closing Price Normalization" foi concebido para normalizar os preços de fecho de instrumentos financeiros, permitindo a comparação e análise de diferentes ativos numa escala unificada. Isto é particularmente útil ao comparar instrumentos com custos e volatilidade variados.
+O script "Normalização do Preço de Fecho" foi concebido para normalizar os preços de fecho de instrumentos financeiros, permitindo a comparação e análise de diferentes ativos numa escala unificada. Isto é particularmente útil ao comparar instrumentos com custos e volatilidade variados.
 
 ![Normalização do Preço de Fecho](../../../../images/hydra_analytics_normalize.png)
 
@@ -30,7 +30,7 @@ O processo de normalização inclui normalmente os seguintes passos:
 2. **Processamento de Dados**: Aplicar o método de normalização escolhido aos preços de fecho de cada instrumento.
 3. **Análise dos Resultados**: Usar dados normalizados para posterior análise e comparação de instrumentos.
 
-O script "Closing Price Normalization" é uma ferramenta crucial para preparar dados para negociação e análise quantitativa, permitindo que traders e analistas comparem e avaliem ativos financeiros com maior precisão em várias estratégias e estudos.
+O script "Normalização do Preço de Fecho" é uma ferramenta crucial para preparar dados para negociação e análise quantitativa, permitindo que traders e analistas comparem e avaliem ativos financeiros com maior precisão em várias estratégias e estudos.
 
 ## Código do Script em C#
 
@@ -38,7 +38,7 @@ O script "Closing Price Normalization" é uma ferramenta crucial para preparar d
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// O script analítico, normaliza os preços de fecho das securities e mostra-os no mesmo gráfico.
+	/// O script analítico, normaliza os preços de fecho dos instrumentos e mostra-os no mesmo gráfico.
 	/// </summary>
 	public class NormalizePriceScript : IAnalyticsScript
 	{
@@ -46,7 +46,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Sem instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -102,11 +102,11 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# O script analítico, normaliza os preços de fecho das securities e mostra-os no mesmo gráfico.
+# O script analítico, normaliza os preços de fecho dos instrumentos e mostra-os no mesmo gráfico.
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Sem instrumentos.")
 			return Task.CompletedTask
 
 		chart = create_chart(panel, datetime, float)

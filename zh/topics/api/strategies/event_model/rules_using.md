@@ -261,7 +261,7 @@ Subscribe(mdSub);
 // 订单簿数据订阅
 var mdSub = new Subscription(DataType.MarketDepth, Security);
 
-// Counter
+// 计数器
 var i = 0;
 
 // 创建处理订单簿直到 i 达到 10 的规则

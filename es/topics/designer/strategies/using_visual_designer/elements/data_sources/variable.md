@@ -4,16 +4,16 @@
 
 El cubo se usa para almacenar valores y pasar el valor previamente almacenado más adelante por la cadena de elementos.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Cualquier dato** – valor del tipo seleccionado, que se almacenará en lugar del valor predeterminado.
-- **Activador** – señal (cualquier valor excepto `False`) que determina el punto en el que debe pasar el valor almacenado por el socket de salida.
+- **Activador** – señal (cualquier valor excepto `False`) que determina el punto en el que debe pasar el valor almacenado por el conector de salida.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Cualquier dato** – valor del tipo seleccionado de datos pasados.
 

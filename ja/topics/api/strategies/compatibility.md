@@ -225,7 +225,7 @@ protected override void OnStopped()
 - [Designer](../../designer.md) と [Shell](../../shell.md) の組み込みストレージメカニズム
 - 取引メトリクスの収集には [統計](xref:StockSharp.Algo.Statistics.StatisticManager)
 
-### Save メソッドと Load メソッド
+### 保存メソッドと読み込みメソッド
 
 [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) メソッドと [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)) メソッドは、設定やパラメーターではない追加のストラテジーデータを保存するために専用設計されています。これは、ストラテジー状態の復元に必要なデータを保存する理想的な場所です。
 

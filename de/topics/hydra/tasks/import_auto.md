@@ -20,7 +20,7 @@ Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben
 - **Dateiname** - vollständiger Pfad zur Datei.
 - **Datenverzeichnis** - Datenverzeichnis.
 - **Dateimaske** - Dateimaske, die beim Scannen des Verzeichnisses verwendet wird. Zum Beispiel candles\*.csv.
-- **Unterverzeichnisse** - Unterverzeichnisse einschliessen.
+- **Unterverzeichnisse** - Unterverzeichnisse einschließen.
 - **Spaltentrennzeichen** - Spaltentrennzeichen. Tabulator wird als TAB bezeichnet.
 - **Einzug vom Anfang** - Anzahl der Zeilen, die am Anfang der Datei übersprungen werden sollen (wenn sie Metainformationen enthalten).
 - **Zeitzone** - Zeitzone.
@@ -31,7 +31,7 @@ Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben
 
 **Allgemein**
 
-- **Kopfzeile** - Converter.
+- **Kopfzeile** - Aufgabentitel.
 - **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![Hydra Aufgaben Sicherung](../../../images/hydra_tasks_backup_desk.png)
 - **Betriebsintervall** - das Ausführungsintervall.
 - **Datenverzeichnis** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
@@ -42,4 +42,4 @@ Für jedes Instrument können Sie die folgenden Datenimporteigenschaften angeben
 **Protokollierung**
 
 - **Kennung** - die Kennung.
-- **Protokollierungsstufe** - der Logging-Level.
+- **Protokollierungsstufe** - die Protokollierungsstufe.

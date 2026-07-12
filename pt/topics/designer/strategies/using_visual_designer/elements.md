@@ -21,7 +21,7 @@ A cor indica o tipo de dados que é passado nos parâmetros. Diferentes parâmet
 - **Oliva** - a ordem.
 - **Vermelho-violeta pálido** - erro da ordem.
 - **Verde-oliva escuro** - negócio próprio.
-- **Azul vivo** - o valor da flag (indica o estado e tem dois valores: levantada (true) e baixada (false)).
+- **Azul vivo** - o valor do sinalizador (indica o estado e tem dois valores: ativado (true) e desativado (false)).
 - **Verde-mar médio** - um valor numérico, que pode ser definido como número ou percentagem.
 - **Azul-ardósia escuro** - valores que podem ser comparados (por exemplo, um valor numérico, uma cadeia de texto, um valor de indicador, etc.).
 - **Castanho** - o portefólio.

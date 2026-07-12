@@ -54,7 +54,7 @@ As seguintes variáveis estão disponíveis em fórmulas de função de fitness,
 | WinTrades | Negócios vencedores |
 | LosTrades | Negócios perdedores |
 | TCount | Total de negócios |
-| RTrip | Round-trips |
+| RTrip | Ciclos completos |
 | AvgTPnL | Lucro médio por negócio |
 | AvgWTrades | Negócio vencedor médio |
 | AvgLTrades | Negócio perdedor médio |

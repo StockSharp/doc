@@ -37,7 +37,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Нет инструментов.");
 				return Task.CompletedTask;
 			}
 
@@ -70,8 +70,8 @@ namespace StockSharp.Algo.Analytics
 			}
 
 			// отрисовать серии на графике
-			priceChart.Append("prices", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
-			volChart.Append("prices", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
+			priceChart.Append("цены", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
+			volChart.Append("цены", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
 
 			return Task.CompletedTask;
 		}
@@ -102,7 +102,7 @@ from indicator_extensions import *
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Нет инструментов.")
 			return Task.CompletedTask
 
 		price_chart = create_3d_chart(panel, datetime, float, float)
@@ -139,14 +139,14 @@ class biggest_candle_script(IAnalyticsScript):
 
 		# отрисовать серии на графике
 		price_chart.Append(
-			"prices",
+			"цены",
 			[c.OpenTime for c in big_price_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[get_length(c) for c in big_price_candles]
 		)
 
 		vol_chart.Append(
-			"prices",
+			"цены",
 			[c.OpenTime for c in big_vol_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[c.TotalVolume for c in big_vol_candles]

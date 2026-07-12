@@ -10,7 +10,7 @@ Im folgenden Beispiel erbt der Würfel von der Klasse [DiagramExternalElement](x
 
 ```cs
 /// <summary>
-/// Beispiel-Diagrammelement, das die Verwendung von Eingabe- und Ausgabesockets demonstriert.
+/// Beispiel-Diagrammelement, das die Verwendung von Eingabe- und Ausgabeanschlüssen demonstriert.
 ///
 /// https://doc.stocksharp.com/topics/Designer_Combine_Source_code_and_standard_elements.html
 /// </summary>
@@ -27,7 +27,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 			.SetDisplay("Parameter", "Mindestwert", "Beschreibung des Mindestwert-Parameter", 10);
 	}
 
-	// Ausgabesockets sind Ereignisse, die mit dem Attribut DiagramExternal markiert sind.
+	// Ausgabeanschlüsse sind Ereignisse, die mit dem Attribut DiagramExternal markiert sind.
 
 	[DiagramExternal]
 	public event Action<Unit> Output1;
@@ -35,7 +35,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 	[DiagramExternal]
 	public event Action<Unit> Output2;
 
-	// Eingabesockets sind Methodenparameter, die mit dem Attribut DiagramExternal markiert sind.
+	// Eingabeanschlüsse sind Methodenparameter, die mit dem Attribut DiagramExternal markiert sind.
 
 	// Auskommentierung entfernen, damit die Process-Methode jedes Mal aufgerufen wird,
 	// wenn ein neues Argument empfangen wurde.
@@ -76,14 +76,14 @@ public class EmptyDiagramElement : DiagramExternalElement
 }
 ```
 
-In diesem Code hat der Würfel zwei eingehende und zwei ausgehende Sockets. Eingehende Sockets werden definiert, indem das Attribut [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) auf die Methode angewendet wird:
+In diesem Code hat der Würfel zwei eingehende und zwei ausgehende Anschlüsse. Eingehende Anschlüsse werden definiert, indem das Attribut [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) auf die Methode angewendet wird:
 
 ```cs
 [DiagramExternal]
 public void Process(CandleMessage candle, Unit diff)
 ```
 
-Ausgehende Sockets werden definiert, indem das Attribut auf ein Ereignis angewendet wird. Im Beispiel des Würfels gibt es zwei solche Ereignisse:
+Ausgehende Anschlüsse werden definiert, indem das Attribut auf ein Ereignis angewendet wird. Im Beispiel des Würfels gibt es zwei solche Ereignisse:
 
 
 ```cs
@@ -94,7 +94,7 @@ public event Action<Unit> Output1;
 public event Action<Unit> Output2;
 ```
 
-Daher gibt es auch zwei ausgehende Sockets.
+Daher gibt es auch zwei ausgehende Anschlüsse.
 
 Zusätzlich zeigt das Beispiel, wie eine Eigenschaft für den Würfel erstellt wird:
 
@@ -108,7 +108,7 @@ Die Verwendung der Klasse [DiagramElementParam](xref:StockSharp.Diagram.DiagramE
 
 Die Eigenschaft **Mindestwert** ist als basic markiert und wird im Modus [Grundeigenschaften](../../using_visual_designer/diagram_panel.md) sichtbar sein.
 
-Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) ist für den Zeitpunkt des Methodenaufrufs mit eingehenden Sockets zuständig:
+Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) ist für den Zeitpunkt des Methodenaufrufs mit eingehenden Anschlüssen zuständig:
 
 ```cs
 //public override bool WaitAllInput => false;

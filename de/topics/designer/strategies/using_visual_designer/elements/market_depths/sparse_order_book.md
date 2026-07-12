@@ -6,11 +6,11 @@
 
 Der Würfel wird verwendet, um ein ausgedünntes Orderbuch für das angegebene Instrument zu erhalten.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
 - Orderbuch - das Orderbuch, das ausgedünnt werden soll.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
 - Orderbuch - das ausgedünnte Orderbuch.
 

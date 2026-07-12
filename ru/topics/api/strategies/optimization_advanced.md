@@ -54,7 +54,7 @@ Func<Strategy, decimal> fitness = fitnessProvider.Compile("PnL / (MaxDD + 1)");
 | WinTrades | Прибыльные сделки |
 | LosTrades | Убыточные сделки |
 | TCount | Всего сделок |
-| RTrip | Раундтрипы |
+| RTrip | Раунд-трипы |
 | AvgTPnL | Средняя прибыль на сделку |
 | AvgWTrades | Средняя прибыльная сделка |
 | AvgLTrades | Средняя убыточная сделка |

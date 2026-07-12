@@ -15,7 +15,7 @@ The following describes how to create and configure a backup task.
    - **Time offset** - an offset in days from the current date. 
 
    **General**
-   - **Header** - Converter. 
+   - **Header** - task title.
    - **Working hours** - setting up the board work schedule. ![hydra tasks backup desk](../../../../images/hydra_tasks_backup_desk.png)
    - **Interval of operation** - the interval of operation. 
   - **Data directory** - data directory, from which the data for conversion will be received.

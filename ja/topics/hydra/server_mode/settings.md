@@ -8,7 +8,7 @@
 
 [Hydra](../../hydra.md) サーバーモードを有効にするには、プログラムの上部メニューで **サーバーモード** タブを選択します。
 
-![Hydra サーバー menu](../../../images/hydra_server_menu.png)
+![Hydra サーバーメニュー](../../../images/hydra_server_menu.png)
 
 その後、**設定** ボタンをクリックして、サーバーモード設定ウィンドウを開きます。
 
@@ -23,7 +23,7 @@
   2. **QuotesInterval** - 気配値の更新期間
   3. **TransactionSession** - 取引セッションの設定。[Hydra](../../hydra.md) プログラム経由で取引するための設定。
 
-     この設定により、FIX プロトコルの Dialect、Sender と Recipient、Data format、およびその他の設定を構成できます。詳細は [FIXServer プロパティ](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) を参照してください。
+     この設定により、FIX プロトコルのダイアレクト、送信者と受信者、データ形式、およびその他の設定を構成できます。詳細は [FIXServer プロパティ](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) を参照してください。
   4. **MarketDataSession** - [Hydra](../../hydra.md) を使用して受信したマーケットデータを転送するための設定。詳細は [FIXServer プロパティ](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) を参照してください。
   5. **KeepSubscriptionsOnDisconnect** - ソースから切断されたときにサブスクリプションを保持します。
   6. **DeadSessionCleanupInterval** - 接続が切断された場合、どの時間間隔後に情報をクリアするか。
@@ -34,7 +34,7 @@
 - **板情報（日）** - 板情報履歴をダウンロードできる最大日数
 - **OL（日）** - OL データ履歴をダウンロードできる最大日数
 - **トランザクション（日）** - トランザクション履歴をダウンロードできる最大日数
-- **Simulator** - シミュレーターモードをオンにします
+- **シミュレーター** - シミュレーターモードをオンにします
 - **銘柄マッピング** - 指定した銘柄のみの転送モードを有効にします。
 
 **認可** を **匿名** 以外に設定すると、**共通** タブに **ユーザー** ボタンが表示されます。それをクリックすると、**ユーザー** ウィンドウが表示されます。

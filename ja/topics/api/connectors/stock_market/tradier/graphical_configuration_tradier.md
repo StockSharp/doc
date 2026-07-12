@@ -14,17 +14,17 @@ OAuth 認可:
 
 OAuth 認可プロセス:
 
-1. "Check" ボタンをクリックすると、ウィンドウが開きます。
+1. "確認" ボタンをクリックすると、ウィンドウが開きます。
 
    ![OAuth 開始](../../../../../images/oauth_start.png)
 
-2. "Start" をクリックすると、ユーザーはログインのため Tradier Web サイトにリダイレクトされます。
+2. "開始" をクリックすると、ユーザーはログインのため Tradier Web サイトにリダイレクトされます。
 
    ![Tradier ログイン](../../../../../images/api_gui_settings_tradier_2.png)
 
 3. Tradier Web サイトで、StockSharp アプリケーションに取引操作へのアクセスを許可する必要があります。
 
-   ![Tradier Permissions](../../../../../images/api_gui_settings_tradier_3.png)
+   ![Tradier の権限](../../../../../images/api_gui_settings_tradier_3.png)
 
 4. その後、StockSharp Web サイトにリダイレクトされ、プログラムは自動的にログインします。
 

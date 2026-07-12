@@ -18,7 +18,7 @@ Harami bajista señala un posible final de una tendencia alcista:
 - La primera vela confirma la tendencia alcista existente y la fuerza de los compradores.
 - La segunda vela, completamente contenida dentro de la primera, indica una pérdida de impulso alcista y posible aparición de vendedores.
 - Cuanto menor sea el cuerpo de la segunda vela en comparación con la primera, más pronunciada será la incertidumbre y el potencial de reversión.
-- Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Harami Cross" y se considera una señal más fuerte de incertidumbre.
+- Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Cruz harami" y se considera una señal más fuerte de incertidumbre.
 - Este patrón suele considerarse una señal más débil en comparación con Envolvente bajista, pero puede ser un indicador más temprano de una posible reversión.
 
 ### Estrategias de trading

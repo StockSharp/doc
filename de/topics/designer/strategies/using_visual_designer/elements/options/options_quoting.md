@@ -4,16 +4,16 @@
 
 Der Würfel wird verwendet, um Optionen gemäß den angegebenen Parametern zu quotieren.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
 - **Volumen** - das Quoting-Volumen.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Auftrag** - die registrierte Order, die verwendet werden kann, um über das Element **Trades nach Order** Trades dafür zu erhalten und sie mit dem Würfel **Diagrammbereich** im Chart anzuzeigen.
 

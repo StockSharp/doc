@@ -8,8 +8,8 @@ Connector Connector = new Connector();
 var address = "<Address>".To<IPAddress>();
 var messageAdapter = new BlackwoodMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Login = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
+	Login = "<Ihr Login>",
+	Password = "<Ihr Passwort>".To<SecureString>(),
 	ExecutionAddress = new IPEndPoint(address, BlackwoodAddresses.ExecutionPort),
 	MarketDataAddress = new IPEndPoint(address, BlackwoodAddresses.MarketDataPort),
 	HistoricalDataAddress = new IPEndPoint(address, BlackwoodAddresses.HistoricalDataPort)

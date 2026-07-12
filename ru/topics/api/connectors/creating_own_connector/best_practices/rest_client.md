@@ -38,7 +38,7 @@ class HttpClient : BaseLogReceiver
 		var options = new RestClientOptions
 		{
 			BaseUrl = new Uri("https://api.example.com"),
-			UserAgent = "YourAppName/1.0"
+			UserAgent = "VashePrilozhenie/1.0"
 		};
 
 		_restClient = new RestClient(options);

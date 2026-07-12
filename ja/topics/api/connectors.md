@@ -47,8 +47,8 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 // Binance に接続するためのアダプターを追加
 connector.AddAdapter<BinanceMessageAdapter>(a => 
 {
-	a.Key = "<Your API Key>";
-	a.Secret = "<Your Secret Key>";
+	a.Key = "<APIキー>";
+	a.Secret = "<シークレットキー>";
 });
 
 // ニュース用 RSS を追加

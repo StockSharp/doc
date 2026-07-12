@@ -12,7 +12,7 @@ A classe [QuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.QuotingStrate
 
 Parâmetros principais da classe obsoleta:
 
-- `QuotingSide` -- direção da cotação (Buy/Sell)
+- `QuotingSide` -- direção da cotação (compra/venda)
 - `QuotingVolume` -- volume da cotação
 - `TimeOut` -- timeout de execução
 - `UseBidAsk` -- utilizar preços do livro de ordens

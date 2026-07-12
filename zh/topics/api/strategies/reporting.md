@@ -1,4 +1,4 @@
-# 战略报告
+# 策略报告
 
 ## 概览
 
@@ -26,7 +26,7 @@ StockSharp 提供了一个用于策略交易结果的报表生成系统。该系
 | `StatisticParameters` | `IEnumerable<(string, object)>` | 统计参数 |
 | `Orders` | `IEnumerable<ReportOrder>` | 订单 |
 | `OwnTrades` | `IEnumerable<ReportTrade>` | 自有交易 |
-| `Positions` | `IEnumerable<ReportPosition>` | 位置回程 |
+| `Positions` | `IEnumerable<ReportPosition>` | 持仓往返交易 |
 
 在读取数据之前，会调用 `Prepare()` 方法来同步源的内部状态。
 
@@ -78,13 +78,13 @@ source.AggregateTrades(TimeSpan.FromHours(1));
 
 ## 持仓生命周期追踪器
 
-`PositionLifecycleTracker` 跟踪持仓的生命周期并生成往返记录——持仓开仓和平仓的记录。当发生以下情况时，会记录一次往返：
+`PositionLifecycleTracker` 跟踪持仓的生命周期并生成往返交易记录——持仓开仓和平仓的记录。发生以下情况时，会记录一次往返交易：
 
 
 - 一个持仓已完全平仓（价值变为零）
-- 位置反转发生（符号变化）
+- 发生持仓反转（符号变化）
 
-在 `Strategy` 类中，跟踪器是自动集成的：完成的往返行程通过 `RoundTripClosed` 事件被添加到 `ReportSource`。
+在 `Strategy` 类中，跟踪器是自动集成的：完成的往返交易通过 `RoundTripClosed` 事件被添加到 `ReportSource`。
 
 ```csharp
 var tracker = new PositionLifecycleTracker();
@@ -206,4 +206,4 @@ public class ReportingStrategy : Strategy
 }
 ```
 
-在这个例子中，该策略在停止时会自动创建一个 CSV 报告。报告包含策略参数、统计数据、订单、交易和持仓来回交易信息。
+在这个例子中，该策略在停止时会自动创建一个 CSV 报告。报告包含策略参数、统计数据、订单、交易和持仓往返交易信息。

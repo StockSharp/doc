@@ -6,9 +6,9 @@ O cubo é usado para apresentar o painel de opções.
 
 Para apresentar o **Mesa de opções**, é necessário adicionar o componente gráfico **Mesa de opções**.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Modelo** - o modelo de cálculo (por exemplo, Black-Scholes).
 

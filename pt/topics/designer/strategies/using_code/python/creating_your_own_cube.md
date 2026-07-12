@@ -23,10 +23,10 @@ from StockSharp.Diagram import DiagramExternalElement
 
 from designer_extensions import diagram_external
 
-# Classe de elemento de diagrama personalizada que demonstra a utilização de sockets de entrada e saída
+# Classe de elemento de diagrama personalizada que demonstra a utilização de conectores de entrada e saída
 class empty_diagram_element(DiagramExternalElement):
 	"""
-	Exemplo de elemento de diagrama que demonstra a utilização de sockets de entrada e saída.
+	Exemplo de elemento de diagrama que demonstra a utilização de conectores de entrada e saída.
 
 	https://doc.stocksharp.com/topics/designer/strategies/using_code/python/creating_your_own_cube.html
 	"""
@@ -45,7 +45,7 @@ class empty_diagram_element(DiagramExternalElement):
 		self._output1_handlers = []
 		self._output2_handlers = []
 
-	# Os sockets de saída são eventos assinalados com o atributo DiagramExternal
+	# Os conectores de saída são eventos assinalados com o atributo DiagramExternal
 
 	@diagram_external
 	def add_Output1(self, handler: Action[Unit]):
@@ -94,7 +94,7 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 		"""
-		Os sockets de entrada são parâmetros de métodos assinalados com o atributo DiagramExternal.
+		Os conectores de entrada são parâmetros de métodos assinalados com o atributo DiagramExternal.
 		Processa uma vela e um valor diff e, em seguida, invoca eventos de saída com base na lógica.
 
 		:param candle: Entrada CandleMessage que representa uma vela.
@@ -134,17 +134,17 @@ class empty_diagram_element(DiagramExternalElement):
 		# Adicionar lógica personalizada para repor o estado interno do elemento
 ```
 
-Neste código, o cubo tem dois sockets de entrada e dois sockets de saída. Os sockets de entrada são definidos aplicando o decorador @diagram_external a um método:
+Neste código, o cubo tem dois conectores de entrada e dois conectores de saída. Os conectores de entrada são definidos aplicando o decorador @diagram_external a um método:
 
 ```python
 @diagram_external
 def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 ```
 
-Os sockets de saída são definidos aplicando o decorador @diagram_external a um evento (operação de subscrição de evento add_NNN). No exemplo do cubo, existem dois eventos deste tipo:
+Os conectores de saída são definidos aplicando o decorador @diagram_external a um evento (operação de subscrição de evento add_NNN). No exemplo do cubo, existem dois eventos deste tipo:
 
 ```python
-# Os sockets de saída são eventos assinalados com o atributo DiagramExternal
+# Os conectores de saída são eventos assinalados com o atributo DiagramExternal
 
 @diagram_external
 def add_Output1(self, handler: Action[Unit]):
@@ -183,7 +183,7 @@ def remove_Output2(self, handler):
 		self._output2_handlers.remove(handler)
 ```
 
-Assim, também existirão dois sockets de saída.
+Assim, também existirão dois conectores de saída.
 
 Além disso, é mostrado como criar uma propriedade para o cubo:
 
@@ -197,7 +197,7 @@ Ao utilizar a classe [DiagramElementParam](xref:StockSharp.Diagram.DiagramElemen
 
 A propriedade **Valor mínimo** está marcada como básica e ficará visível no modo [Definições básicas](../../using_visual_designer/diagram_panel.md).
 
-A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) determina quando é chamado o método com sockets de entrada:
+A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) determina quando é chamado o método com conectores de entrada:
 
 ```python
 # @property

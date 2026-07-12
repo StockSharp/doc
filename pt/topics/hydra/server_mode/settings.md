@@ -23,7 +23,7 @@ Depois disso, clique no botão **Definições** para abrir a janela de definiç�
   2. **QuotesInterval** - período de atualização das cotações
   3. **TransactionSession** - definição de uma sessão de negociação. Configuração para negociação através do programa [Hydra](../../hydra.md).
 
-     Esta definição permite configurar o dialeto do protocolo FIX, Sender e Recipient, formato dos dados e outras definições. Consulte as [propriedades FIXServer](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) para obter detalhes.
+     Esta definição permite configurar o dialeto do protocolo FIX, o remetente e o destinatário, o formato dos dados e outras definições. Consulte as [propriedades FIXServer](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) para obter detalhes.
   4. **MarketDataSession** - definições para a transferência de dados de mercado recebidos através do [Hydra](../../hydra.md). Consulte as [propriedades FIXServer](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) para obter detalhes.
   5. **KeepSubscriptionsOnDisconnect** - manter subscrições quando a ligação à fonte é desligada.
   6. **DeadSessionCleanupInterval** - após que intervalo de tempo a informação será limpa se a ligação for desligada.
@@ -34,7 +34,7 @@ Depois disso, clique no botão **Definições** para abrir a janela de definiç�
 - **Livros de ordens (dias)** - o número máximo de dias disponíveis para descarregar o histórico de livros de ordens
 - **OL (dias)** - o número máximo de dias disponíveis para descarregar o histórico de dados OL
 - **Transações (dias)** - o número máximo de dias disponíveis para descarregar o histórico de transações
-- **Simulator** - ativar o modo de simulador
+- **Simulador** - ativar o modo de simulador
 - **Mapeamento de instrumentos** - ativar o modo de transferência apenas dos instrumentos especificados.
 
 Se definir **Autorização** como algo diferente de **Anónimo**, o botão **Utilizadores** aparecerá no separador **Comum**. Depois de clicar nele, aparece a janela **Utilizadores**.

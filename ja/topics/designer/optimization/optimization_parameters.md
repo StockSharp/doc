@@ -4,7 +4,7 @@
 
 - 数値（整数および小数）
 - 時間（[TimeSpan](xref:System.TimeSpan)）
-- ブール値（True-False）
+- ブール値（真-偽）
 - [Unit](../../api/strategies/unit_type.md) 値
 
 既定では、これらの型を持つすべてのパラメーターが [オプティマイザーパラメーター表](brute_force.md) に表示されます。最適化からパラメーターを除外するには、次のようにします。

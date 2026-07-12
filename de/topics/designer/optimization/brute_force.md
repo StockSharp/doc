@@ -1,4 +1,4 @@
-# Brute Force
+# Brute-Force-Optimierung
 
 Um in den Strategieoptimierungsmodus zu wechseln, klicken Sie im Tab **Simulation** auf die Schaltfläche **Optimierung**. Das Optimierungsbeispiel wird anhand der SMA-Strategie betrachtet, die [aus Würfeln](../strategies/using_visual_designer/first_strategy.md) erstellt wurde.
 
@@ -17,5 +17,5 @@ Das Festlegen der Parameter für die Iteration führt zu mehr als 1000 Iteration
 
 ## Siehe auch
 
-[Beispiel für Backtesting](../backtesting/getting_started.md)
+[Rücktestbeispiel](../backtesting/getting_started.md)
 

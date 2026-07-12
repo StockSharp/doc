@@ -8,7 +8,6 @@ Um Instrumente und Verbindungen einander zuzuordnen, klicken Sie im Panel **Alle
 
 Klicken Sie im geöffneten Fenster auf die Schaltfläche ![Designer Schaltfläche Hinzufügen 00](../../../images/designer_creation_tool_00.png), um eine neue Zeile hinzuzufügen.
 
-Wählen Sie in der Spalte **Verbindung** eine Verbindung aus der Dropdown-Liste. Geben Sie in den Spalten **Instrumentcode** und **Board-Code** die Instrument- und Board-Codes so an, wie sie in **Designer** angegeben sind. Geben Sie in den Spalten **Adaptercode** und **Adapter-Board** die Instrument- und Board-Codes so an, wie sie im externen Handelssystem angegeben sind.
+Wählen Sie in der Spalte **Verbindung** eine Verbindung aus der Dropdown-Liste. Geben Sie in den Spalten **Instrumentcode** und **Handelsplatzcode** die Instrument- und Handelsplatzcodes so an, wie sie in **Designer** angegeben sind. Geben Sie in den Spalten **Adaptercode** und **Adapter-Handelsplatz** die Instrument- und Handelsplatzcodes so an, wie sie im externen Handelssystem angegeben sind.
 
 ![Designer Instrumentzuordnung 01](../../../images/designer_security_mapping_01.png)
-

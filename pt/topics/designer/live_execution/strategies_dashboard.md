@@ -19,4 +19,4 @@ Fazer duplo clique numa linha selecionada abrirá o painel com a estratégia.
 
 ## Conteúdo recomendado
 
-[Exemplo de execução em Live](live_execution_sample.md)
+[Exemplo de execução ao vivo](live_execution_sample.md)

@@ -1,6 +1,6 @@
 # Zufallsdaten
 
-Testing mit Zufallsdaten ist eine besondere Art des Testings. Es dient nicht dazu, optimale Parameter zu suchen. Stattdessen kann ein solches Testing Fehler im Code aufdecken, indem der Handelsalgorithmus unterschiedlichen Börsenszenarien ausgesetzt wird.
+Das Testen mit Zufallsdaten ist eine besondere Art des Testens. Es dient nicht dazu, optimale Parameter zu suchen. Stattdessen kann ein solcher Test Fehler im Code aufdecken, indem der Handelsalgorithmus unterschiedlichen Börsenszenarien ausgesetzt wird.
 
 In der Algorithmusentwicklung wird in der Regel nur eine bestimmte Menge von Szenarien verwendet. Tritt deshalb eine spezielle Situation auf, kann der Algorithmus falsch reagieren oder Ausnahmen auslösen. Zum Beispiel können folgende Situationen auftreten:
 
@@ -8,11 +8,11 @@ In der Algorithmusentwicklung wird in der Regel nur eine bestimmte Menge von Sze
 - Die Strategie arbeitet mit einem illiquiden Instrument und verwendet [IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage). Sie erwartet, dass das Orderbuch immer gefüllt ist. Zu einem bestimmten Zeitpunkt ist das Orderbuch nur teilweise gefüllt, zum Beispiel gibt es Gebote, aber keine Angebote. Wenn die Strategie diese Situation nicht berücksichtigt, registriert sie entweder eine Order falsch oder löst eine Ausnahme aus und stoppt.
 - Die Strategie berechnet Preisniveaus. Der Code ist so geschrieben, dass die Strategie wartet, bis vorab gesetzte Niveaus durchbrochen werden. Wenn die Niveaus falsch berechnet oder gesetzt wurden, werden sie entweder nie durchbrochen oder es wird immer nur eines davon durchbrochen. Dadurch führt die Strategie entweder gar keine Trades aus oder diese Trades verursachen Verluste.
 
-Für diese und viele andere Börsenszenarien, die sich im Voraus nicht vorhersagen lassen, stellt [S#](../../api.md) Testing mit Zufallsdaten bereit. Durch die gleichmäßige Einzigartigkeit der generierten Daten kann in kurzer Zeit eine maximale Anzahl von Bedingungen erzeugt werden.
+Für diese und viele andere Börsenszenarien, die sich im Voraus nicht vorhersagen lassen, stellt [S#](../../api.md) Tests mit Zufallsdaten bereit. Durch die gleichmäßige Einzigartigkeit der generierten Daten kann in kurzer Zeit eine maximale Anzahl von Bedingungen erzeugt werden.
 
-## Testing einer Moving-Average-Strategie mit Zufallsdaten
+## Test einer Strategie mit gleitendem Durchschnitt anhand von Zufallsdaten
 
-1. Das Beispiel SampleRandomEmulation (*..Samples\/Testing\/SampleRandomEmulation*) ist durch die Verwendung der einheitlichen Klasse [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) fast identisch mit dem Beispiel SampleHistoryTesting. Dessen Beschreibung finden Sie im Abschnitt [Testing mit historischen Daten](historical_data.md). Im Unterschied zum [Testing mit historischen Daten](historical_data.md) werden beim Testing mit Zufallsdaten die Marktdaten jedoch nicht geladen, sondern "on the fly" erzeugt. Daher werden dem Beispiel zwei Zufallsdatengeneratoren hinzugefügt: einer für das Orderbuch und einer für Tick-Trades. In SampleHistoryTesting wird nur ein Generator verwendet, nämlich für das Orderbuch, da keine gespeicherte Historie vorhanden ist.
+1. Das Beispiel SampleRandomEmulation (*..Samples\/Testing\/SampleRandomEmulation*) ist durch die Verwendung der einheitlichen Klasse [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector) fast identisch mit dem Beispiel SampleHistoryTesting. Dessen Beschreibung finden Sie im Abschnitt [Tests mit historischen Daten](historical_data.md). Im Unterschied zu den [Tests mit historischen Daten](historical_data.md) werden beim Testen mit Zufallsdaten die Marktdaten jedoch nicht geladen, sondern zur Laufzeit erzeugt. Daher werden dem Beispiel zwei Zufallsdatengeneratoren hinzugefügt: einer für das Orderbuch und einer für Tick-Trades. In SampleHistoryTesting wird nur ein Generator verwendet, nämlich für das Orderbuch, da keine gespeicherte Historie vorhanden ist.
 
    ```cs
    _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage

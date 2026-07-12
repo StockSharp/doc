@@ -1,12 +1,12 @@
 # Compatibilidad de estrategias con plataformas StockSharp
 
-Al desarrollar estrategias de trading en StockSharp, es importante considerar su compatibilidad con varias plataformas: [Designer](../../designer.md), [Shell](../../shell.md), [Runner](../../runner.md) y [backtesting en la nube](../../designer/backtesting/cloud_backtesting.md). Siguiendo las recomendaciones siguientes, creará una estrategia que funciona correctamente en todos los entornos.
+Al desarrollar estrategias de trading en StockSharp, es importante considerar su compatibilidad con varias plataformas: [Designer](../../designer.md), [Shell](../../shell.md), [Runner](../../runner.md) y [pruebas históricas en la nube](../../designer/backtesting/cloud_backtesting.md). Siguiendo las recomendaciones siguientes, creará una estrategia que funciona correctamente en todos los entornos.
 
 ## Parámetros del constructor de la estrategia
 
 ### Evite parámetros en el constructor
 
-Para garantizar la compatibilidad con plataformas StockSharp, especialmente con backtesting en la nube, **no debe agregar parámetros al constructor de la estrategia**:
+Para garantizar la compatibilidad con plataformas StockSharp, especialmente con pruebas históricas en la nube, **no debe agregar parámetros al constructor de la estrategia**:
 
 ```cs
 // Correcto: constructor sin parámetros
@@ -66,7 +66,7 @@ Los parámetros creados mediante [StrategyParam\<T\>](xref:StockSharp.Algo.Strat
 - Se muestran en las interfaces de usuario de la plataforma
 - Se guardan y cargan sin sobrescribir los métodos `Save` y `Load`
 - Se usan en optimización
-- Se serializan correctamente al enviarse a backtesting en la nube
+- Se serializan correctamente al enviarse a pruebas históricas en la nube
 
 ## Trabajo con la interfaz de usuario
 
@@ -90,7 +90,7 @@ protected override void OnStarted2(DateTime time)
 	}
 	else
 	{
-		// El gráfico no está disponible (por ejemplo, en Runner o backtesting en la nube)
+		// El gráfico no está disponible (por ejemplo, en Runner o pruebas históricas en la nube)
 		// La estrategia continúa funcionando sin visualización
 	}
 }
@@ -105,7 +105,7 @@ private void InitChart()
 }
 ```
 
-El método [Strategy.GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) devuelve una interfaz [IChart](xref:StockSharp.Charting.IChart) si hay un gráfico disponible en el entorno de ejecución actual. Si la estrategia se ejecuta en el [Runner](../../runner.md) de consola o en backtesting en la nube, donde no hay interfaz gráfica, el método devolverá `null`.
+El método [Strategy.GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) devuelve una interfaz [IChart](xref:StockSharp.Charting.IChart) si hay un gráfico disponible en el entorno de ejecución actual. Si la estrategia se ejecuta en el [Runner](../../runner.md) de consola o en pruebas históricas en la nube, donde no hay interfaz gráfica, el método devolverá `null`.
 
 La interfaz [IChart](xref:StockSharp.Charting.IChart) proporciona métodos para trabajar con gráficos:
 - [AddArea](xref:StockSharp.Charting.IChart.AddArea(StockSharp.Charting.IChartArea)) - para agregar un área al gráfico
@@ -225,7 +225,7 @@ Para guardar resultados de estrategia, use:
 - Mecanismos de almacenamiento integrados en [Designer](../../designer.md) y [Shell](../../shell.md)
 - [Estadísticas](xref:StockSharp.Algo.Statistics.StatisticManager) para recopilar métricas de trading
 
-### Métodos Save y Load
+### Métodos de guardado y carga
 
 Los métodos [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) y [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)) están diseñados específicamente para guardar datos adicionales de estrategia que no son ajustes ni parámetros. Este es el lugar ideal para guardar datos necesarios para restaurar el estado de la estrategia:
 
@@ -440,4 +440,4 @@ public class SmaStrategy : Strategy
 
 - [Parámetros de estrategia](parameters.md)
 - [Modelo de eventos](event_model.md)
-- [Logging de estrategia](logging.md)
+- [Registro de estrategia](logging.md)

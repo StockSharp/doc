@@ -23,7 +23,7 @@
 
 当收到 [OrderCancelMessage](xref:StockSharp.Messages.OrderCancelMessage) 时，管理器会保存这一对 (`TransactionId`, `LocalTime`) —— 即取消发送的时刻。
 
-### 3. 订购替换
+### 3. 订单替换
 
 当收到一个 [OrderReplaceMessage](xref:StockSharp.Messages.OrderReplaceMessage) 时，管理器会同时登记一个取消（旧订单的）和一个注册（新订单的）。
 
@@ -56,7 +56,7 @@ Latency = ExecutionMessage.LocalTime - StoredLocalTime
 
 [LatencyMessageAdapter](xref:StockSharp.Algo.Latency.LatencyMessageAdapter) 类封装了一个内部适配器，并自动测量所有订单操作的延迟。
 
-## 与战略的整合
+## 与策略的集成
 
 该策略 ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) 公开了 `Latency` 属性以跟踪延迟。
 

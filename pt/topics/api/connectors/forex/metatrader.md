@@ -63,6 +63,6 @@ Ambos os conectores são utilizados da mesma forma, pelo que abaixo é descrito 
 
     ![Captura de tela de MetaTrader 8](../../../../images/mt_8.png)
 
-13. Em caso de erros, são mantidos logs do conector, disponíveis na pasta **Experts\\StockSharp\\Data\\Log**:
+13. Em caso de erros, são mantidos registos do conector, disponíveis na pasta **Experts\\StockSharp\\Data\\Log**:
 
     ![Captura de tela de MetaTrader 9](../../../../images/mt_9.png)

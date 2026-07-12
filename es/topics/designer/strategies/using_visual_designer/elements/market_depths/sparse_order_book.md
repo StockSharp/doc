@@ -6,11 +6,11 @@
 
 El cubo se usa para obtener un libro de órdenes disperso para el instrumento especificado.
 
-### Sockets de entrada
+### Conectores de entrada
 
 - Libro de órdenes - libro de órdenes que debe reducirse.
 
-### Sockets de salida
+### Conectores de salida
 
 - Libro de órdenes - libro de órdenes disperso.
 

@@ -10,7 +10,7 @@ stocksharp.studio.runner setup
 
 ![连接设置 1 (1)](../../images/runner_setup_1.png)
 
-选择 Connections 后，程序将进入连接器设置模式：
+选择连接后，程序将进入连接器设置模式：
 
 ![连接设置 2 (1)](../../images/runner_setup_2.png)
 

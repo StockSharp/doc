@@ -38,7 +38,7 @@ SMA 策略示例使用以下参数：
 
 ![Designer 实盘交易示例 03](../../../images/designer_example_of_live_trading_03.png)
 
-在 [Designer](../../designer.md) 中，策略继续在 Live 模式下运行，并显示实时交易结果：
+在 [Designer](../../designer.md) 中，策略继续在 **实盘** 模式下运行，并显示实时交易结果：
 
 ![Designer 实盘交易示例 04](../../../images/designer_example_of_live_trading_04.png)
 

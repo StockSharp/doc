@@ -9,7 +9,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 - **Saldo** - Intervalo de verificação de saldo. Necessário em caso de ações de depósito e retirada.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para rastrear se a conexão está ativa. Por padrão, igual a 1 minuto.
 - **Definições de religação** - Mecanismo de rastreamento de conexões com as configurações do sistema de negociação. ([Configurações de reconexão](../../reconnection_settings.md))
-- **IsPrime** - IsPrime
+- **Modo de conta Prime** - usar o modo de conta Prime.
 
 ## Conteúdo recomendado
 

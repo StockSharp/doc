@@ -5,7 +5,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 ![API-GUI-Einstellungen E TRADE](../../../../../images/api_gui_settings_e_trade.png)
 
 - **Schlüssel** - Schlüssel.
-- **Geheimnis** - Secret.
+- **Geheimnis** - Geheimer Schlüssel.
 - **Demomodus** - Mit dem Demo-Handel statt mit dem echten Handelsserver verbinden.
 - **Verifizierungscode** - Verifizierungscode, den der Benutzer im Browser nach Bestätigung der Programmberechtigung erhält.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

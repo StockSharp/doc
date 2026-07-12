@@ -73,5 +73,5 @@ protected override void OnStarted2(DateTime time)
 - Demuestra el uso de las reglas `WhenCandlesStarted` y `WhenTotalVolumeMore`
 - Usa el mecanismo de suscripción a velas
 - Muestra un ejemplo de creación de un valor porcentual mediante `"10%".ToUnit()`
-- Muestra un ejemplo de logging de información en una estrategia mediante el método `LogInfo`
+- Muestra un ejemplo de registro de información en una estrategia mediante el método `LogInfo`
 - Contiene código comentado para configurar la construcción de velas a partir de ticks

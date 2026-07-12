@@ -4,17 +4,17 @@
 
 Dieser Block wird verwendet, um die wichtigsten Optionsgriechen zum aktuellen Zeitpunkt zu berechnen: Delta, Gamma, Vega, Theta und Rho.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
 - **Preis des Basiswerts** - der Preis des Basiswerts.
 - **Maximale Abweichung** - die maximale Abweichung.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Ergebnis** - das Ergebnis der Berechnung der wichtigsten Optionsgriechen zum aktuellen Zeitpunkt: Delta, Gamma, Vega, Theta und Rho.
 

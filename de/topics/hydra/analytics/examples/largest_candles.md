@@ -1,14 +1,14 @@
-# Grosste Kerzen
+# Größte Kerzen
 
-Das Skript "Largest Candles" dient dazu, Kerzen mit maximalem Volumen und der größten Körperlänge in den Charts ausgewahlter Finanzinstrumente über einen bestimmten Zeitraum zu identifizieren. Dieses Werkzeug hilft Tradern und Analysten, wichtige Marktereignisse und die Reaktion der Marktteilnehmer zu erkennen.
+Das Skript "Größte Kerzen" dient dazu, Kerzen mit maximalem Volumen und der größten Körperlänge in den Charts ausgewählter Finanzinstrumente über einen bestimmten Zeitraum zu identifizieren. Dieses Werkzeug hilft Tradern und Analysten, wichtige Marktereignisse und die Reaktion der Marktteilnehmer zu erkennen.
 
-![Grosste Kerzen](../../../../images/hydra_analytics_big_candle.png)
+![Größte Kerzen](../../../../images/hydra_analytics_big_candle.png)
 
 ## Hauptfunktionen
 
 Das Skript analysiert eine Gruppe angegebener Instrumente, sucht darin nach Kerzen mit dem größten Volumen und der größten Körperlänge und zeigt diese Daten in zwei Diagrammen an:
 
-- **Chart der Kerzenkorperlange**: Zeigt Kerzen mit der größten Differenz zwischen Eroffnungs- und Schlusskurs.
+- **Chart der Kerzenkörperlänge**: Zeigt Kerzen mit der größten Differenz zwischen Eröffnungs- und Schlusskurs.
 - **Chart des Handelsvolumens**: Zeigt Kerzen mit dem maximalen Handelsvolumen für die Existenzdauer der Kerze.
 
 ## Ablauf
@@ -19,9 +19,9 @@ Das Skript analysiert eine Gruppe angegebener Instrumente, sucht darin nach Kerz
 
 ## Anwendung
 
-- **Analyse der Marktaktivitat**: Hilft, Momente der größten Traderaktivitat und potenzielle Marktumkehrungen zu bestimmen.
-- **Identifikation wichtiger Niveaus**: Kerzen mit signifikantem Volumen und größer Körperlänge entstehen häufig an wichtigen Unterstutzungs- und Widerstandsniveaus.
-- **Strategische Planung**: Informationen über die größten Kerzen können für die Planung von Marktein- und -ausstiegen unter Berucksichtigung potenzieller Volatilität verwendet werden.
+- **Analyse der Marktaktivität**: Hilft, Momente der größten Traderaktivität und potenzielle Marktumkehrungen zu bestimmen.
+- **Identifikation wichtiger Niveaus**: Kerzen mit signifikantem Volumen und größerer Körperlänge entstehen häufig an wichtigen Unterstützungs- und Widerstandsniveaus.
+- **Strategische Planung**: Informationen über die größten Kerzen können für die Planung von Marktein- und -ausstiegen unter Berücksichtigung potenzieller Volatilität verwendet werden.
 
 ## Skriptcode in C#
 
@@ -37,7 +37,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Keine Instrumente.");
 				return Task.CompletedTask;
 			}
 
@@ -70,8 +70,8 @@ namespace StockSharp.Algo.Analytics
 			}
 
 			// Reihen im Chart zeichnen
-			priceChart.Append("prices", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
-			volChart.Append("prices", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
+			priceChart.Append("Preise", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
+			volChart.Append("Preise", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
 
 			return Task.CompletedTask;
 		}
@@ -85,7 +85,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# .NET-Referenzen hinzufugen
+# .NET-Referenzen hinzufügen
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -102,7 +102,7 @@ from indicator_extensions import *
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Keine Instrumente.")
 			return Task.CompletedTask
 
 		price_chart = create_3d_chart(panel, datetime, float, float)
@@ -139,14 +139,14 @@ class biggest_candle_script(IAnalyticsScript):
 
 		# Reihen im Chart zeichnen
 		price_chart.Append(
-			"prices",
+			"Preise",
 			[c.OpenTime for c in big_price_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[get_length(c) for c in big_price_candles]
 		)
 
 		vol_chart.Append(
-			"prices",
+			"Preise",
 			[c.OpenTime for c in big_vol_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[c.TotalVolume for c in big_vol_candles]

@@ -4,7 +4,7 @@ La **Galería de estrategias** ofrece la posibilidad de descargar estrategias de
 
 Para descargar una estrategia a su ordenador, debe:
 
-- seleccionar la estrategia de interés y hacer clic en el botón Download:
+- seleccionar la estrategia de interés y hacer clic en el botón Descargar:
 
   ![Designer Galería de estrategias 00](../../images/designer_gallery_of_strategies_00.png)
 

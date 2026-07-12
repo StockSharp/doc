@@ -10,7 +10,7 @@ Será apresentado um menu:
 
 ![Configuração da Ligação 1 (1)](../../images/runner_setup_1.png)
 
-Ao selecionar o item Connections, o programa entrará no modo de configuração do conector:
+Ao selecionar o item Ligações, o programa entrará no modo de configuração do conector:
 
 ![Configuração da Ligação 2 (1)](../../images/runner_setup_2.png)
 

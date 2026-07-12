@@ -4,7 +4,7 @@ O principal processo de conceção de uma estratégia e dos seus elementos compo
 
 ![Designer Esquemas, estratégias e elementos de componentes do Designer 00](../../../../images/designer_designer_schemes_strategies_and_component_elements_00.png)
 
-## Painel Palette
+## Painel Paleta
 
 O painel **Paleta** contém os blocos a partir dos quais as estratégias são criadas. Todos os elementos da paleta estão divididos em categorias, descritas na secção [Descrição dos blocos](elements.md). Para adicionar um bloco ao painel **Designer**, clique com o botão direito do rato no bloco pretendido e, sem soltar o botão, arraste-o para o painel **Designer**. Depois disso, o elemento será automaticamente selecionado e os seus parâmetros serão mostrados na janela para editar as propriedades do bloco.
 
@@ -24,16 +24,16 @@ Por predefinição, ao construir um esquema, as propriedades são inicialmente a
 
 No modo *definições básicas*, são apresentadas apenas as propriedades mais necessárias do bloco. Por exemplo, para o bloco [Velas](elements/data_sources/candles.md), serão apresentados o período, a opção para receber apenas velas formadas, a opção para construir velas a partir de um período menor e a opção para subscrever velas por sinal.
 
-No modo *advanced settings*, serão apresentadas todas as propriedades do bloco disponíveis para alteração e definição.
+No modo *definições avançadas*, serão apresentadas todas as propriedades do bloco disponíveis para alteração e definição.
 
 ![Designer Painel de propriedades 00 (2)](../../../../images/designer_properties_panel_01.png)
 
-Todos os blocos contêm um conjunto de propriedades predefinidas, que ficam visíveis no modo *advanced settings*:
+Todos os blocos contêm um conjunto de propriedades predefinidas, que ficam visíveis no modo *definições avançadas*:
 
 - **Nome** - o nome do elemento, apresentado no designer.
 - **Nível de registo** - o nível de registo para este elemento.
 - **Parâmetros** - apresenta os parâmetros do elemento em elementos de nível superior.
-- **Conectores** - apresenta os sockets do elemento em elementos de nível superior.
+- **Conectores** - apresenta os conectores do elemento em elementos de nível superior.
 
 As informações detalhadas sobre as propriedades de cada bloco são descritas na secção [Descrição dos blocos](elements.md).
 

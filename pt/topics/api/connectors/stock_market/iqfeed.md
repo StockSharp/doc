@@ -24,7 +24,7 @@ Na janela **IQLink Launcher** que se abre, clique em **Start IQLink**.
 
 ![Captura de tela de IQFeed 3](../../../../images/iqfeediqconnectlogin.png)
 
-Na janela **IQ Connect Login** aberta, introduza o **nome de utilizador** e a **palavra-passe** (ou PIN) recebidos do serviço **iQFeed**. Estas credenciais não são as mesmas que o Login e a Password do site **iQFeed**. Depois de introduzir as credenciais, clique em **Connect**.
+Na janela **IQ Connect Login** aberta, introduza o **nome de utilizador** e a **palavra-passe** (ou PIN) recebidos do serviço **iQFeed**. Estas credenciais não são as mesmas que o nome de utilizador e a palavra-passe do site **iQFeed**. Depois de introduzir as credenciais, clique em **Connect**.
 
 Para receber dados, a aplicação cliente utiliza quatro ligações através de portas diferentes:
 

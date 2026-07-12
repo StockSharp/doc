@@ -62,7 +62,7 @@
 | [TradeCountParameter](xref:StockSharp.Algo.Statistics.TradeCountParameter) | Общее количество сделок (учитываются только сделки с `ClosedVolume > 0`) | `int` |
 | [WinningTradesParameter](xref:StockSharp.Algo.Statistics.WinningTradesParameter) | Количество прибыльных сделок (`ClosedVolume > 0` и `PnL > 0`) | `int` |
 | [LossingTradesParameter](xref:StockSharp.Algo.Statistics.LossingTradesParameter) | Количество убыточных сделок (`ClosedVolume > 0` и `PnL < 0`) | `int` |
-| [RoundtripCountParameter](xref:StockSharp.Algo.Statistics.RoundtripCountParameter) | Количество завершенных раундтрипов (закрывающих сделок с `ClosedVolume > 0`) | `int` |
+| [RoundtripCountParameter](xref:StockSharp.Algo.Statistics.RoundtripCountParameter) | Количество завершенных раунд-трипов (закрывающих сделок с `ClosedVolume > 0`) | `int` |
 | [AverageTradeProfitParameter](xref:StockSharp.Algo.Statistics.AverageTradeProfitParameter) | Средняя прибыль на сделку. Формула: `SumPnL / Count` | `decimal` |
 | [AverageWinTradeParameter](xref:StockSharp.Algo.Statistics.AverageWinTradeParameter) | Средняя прибыль прибыльных сделок. Учитываются только сделки с `PnL > 0` | `decimal` |
 | [AverageLossTradeParameter](xref:StockSharp.Algo.Statistics.AverageLossTradeParameter) | Средний убыток убыточных сделок. Учитываются только сделки с `PnL < 0` | `decimal` |

@@ -7,8 +7,8 @@ Der folgende Code zeigt, wie der [KrakenMessageAdapter](xref:StockSharp.Kraken.K
 			...
 			var messageAdapter = new KrakenMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ihr API-Schlüssel>".To<SecureString>(),
+				Secret = "<Ihr API-Geheimnis>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...

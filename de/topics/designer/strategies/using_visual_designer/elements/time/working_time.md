@@ -3,10 +3,10 @@
 ![Designer Arbeitszeit 00](../../../../../../images/designer_working_time_00.png)
 
 Dieser Block wird verwendet, um die Arbeitszeit für die Strategie zu bestimmen. Zum Beispiel lässt sich damit festlegen, wann für ein bestimmtes Instrument gehandelt wird oder wann die Strategie handeln darf.
-#### Eingehende Sockets
+#### Eingehende Anschlüsse
 
 - **Beliebige Daten** - der Block akzeptiert jeden Wert, entnimmt ihm aber den Zeitstempel, der anschließend mit den Parametern des Blocks verglichen wird.
-#### Ausgehende Sockets
+#### Ausgehende Anschlüsse
 
 - **Markierung** - ein Flag, das bestimmt, ob der Zeitstempel den Parametern des Blocks entspricht (true) oder nicht (false).
 #### Parameter

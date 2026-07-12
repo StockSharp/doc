@@ -50,7 +50,7 @@ A implementação predefinida é [SlippageManagerState](xref:StockSharp.Algo.Sli
 |----------|:-------:|-------------|
 | `CalculateNegative` | `true` | Contabilizar slippage favorável. Se `false`, os valores negativos são substituídos por zero. |
 
-## Integração via Adapter
+## Integração via adaptador
 
 A classe [SlippageMessageAdapter](xref:StockSharp.Algo.Slippage.SlippageMessageAdapter) envolve um adapter interno e calcula automaticamente o slippage para todos os negócios.
 

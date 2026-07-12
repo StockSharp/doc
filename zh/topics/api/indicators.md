@@ -117,7 +117,7 @@ public class SmaStrategy : Strategy
 
 	public SmaStrategy()
 	{
-		base.Name = "SMA strategy";
+		base.Name = "SMA 策略";
 
 		// 初始化策略参数
 		_longSmaLength = Param(nameof(LongSmaLength), 80);

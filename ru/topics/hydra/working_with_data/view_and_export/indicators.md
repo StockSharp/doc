@@ -6,6 +6,6 @@
 
 Для просмотра графика значений достаточно нажать на кнопку ![Hydra свечи](../../../../images/hydra_candles.png).
 
-![Hydra экспорт индикатор view](../../../../images/hydra_export_indicator_view.png)
+![Hydra просмотр экспорта индикатора](../../../../images/hydra_export_indicator_view.png)
 
 Полученные значения индикатора можно [экспортировать в нужный формат](../export_data.md).

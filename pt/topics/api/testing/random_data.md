@@ -12,7 +12,7 @@ Para estes e muitos outros cenários de funcionamento da bolsa, impossíveis de 
 
 ## Teste com dados aleatórios da estratégia de médias móveis
 
-1. O exemplo SampleRandomEmulation (*..Samples\/Testing\/SampleRandomEmulation*) é quase idêntico ao exemplo SampleHistoryTesting (a sua descrição encontra-se na secção [teste com dados históricos](historical_data.md)) devido ao uso da classe unificada [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector). Mas, ao contrário do [teste com dados históricos](historical_data.md), no teste com dados aleatórios os dados de mercado não são carregados e são gerados "on the fly". Por isso, são adicionados ao exemplo dois geradores de dados aleatórios: um para o livro de ordens e outro para as tick trades. Em SampleHistoryTesting é usado apenas um gerador - para o livro de ordens, uma vez que não há histórico armazenado. 
+1. O exemplo SampleRandomEmulation (*..Samples\/Testing\/SampleRandomEmulation*) é quase idêntico ao exemplo SampleHistoryTesting (a sua descrição encontra-se na secção [teste com dados históricos](historical_data.md)) devido ao uso da classe unificada [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector). Mas, ao contrário do [teste com dados históricos](historical_data.md), no teste com dados aleatórios os dados de mercado não são carregados e são gerados dinamicamente. Por isso, são adicionados ao exemplo dois geradores de dados aleatórios: um para o livro de ordens e outro para as tick trades. Em SampleHistoryTesting é usado apenas um gerador - para o livro de ordens, uma vez que não há histórico armazenado.
 
    ```cs
    _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage

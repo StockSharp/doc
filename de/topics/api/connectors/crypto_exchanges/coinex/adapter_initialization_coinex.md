@@ -7,8 +7,8 @@ Der folgende Code zeigt, wie der [CoinExMessageAdapter](xref:StockSharp.CoinEx.C
 			...
 			var messageAdapter = new CoinExMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ihr API-Schlüssel>".To<SecureString>(),
+				Secret = "<Ihr API-Geheimnis>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...

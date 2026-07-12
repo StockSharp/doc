@@ -50,7 +50,7 @@ Der Marktgemeinheitsindex kann wie folgt interpretiert werden:
    - Je näher MMI an 0 liegt, desto ausgeprägter ist der Trend
 
 2. **Anwendung der Handelsstrategie**:
-   - Wenn MMI hoch ist (>50), verwenden Sie Strategien, die auf einen Seitwärtsmarkt ausgerichtet sind (z. B. Range-Trading, Oszillatoren).
+   - Wenn MMI hoch ist (>50), verwenden Sie Strategien, die auf einen Seitwärtsmarkt ausgerichtet sind (z. B. Seitwärtshandel, Oszillatoren).
    - Wenn MMI niedrig ist (<50), verwenden Sie Trendstrategien (z. B. Trendfolge).
 
 3. **Dynamik der Veränderungen**:
@@ -68,8 +68,8 @@ Der Marktgemeinheitsindex kann wie folgt interpretiert werden:
 
 6. **Kombination mit anderen Indikatoren**:
    - MMI funktioniert gut in Kombination mit ADX (Durchschnittlicher Richtungsindex)
-   - Low MMI und der hohe ADX bestätigen einen starken Trend
-   - High MMI und niedriges ADX bestätigen einen Seitwärtsmarkt
+   - Niedriger MMI und der hohe ADX bestätigen einen starken Trend
+   - Hoher MMI und niedriges ADX bestätigen einen Seitwärtsmarkt
 
 7. **Zeitrahmen**:
    - MMI kann in verschiedenen Zeitrahmen verwendet werden, um den Marktcharakter zu bestimmen

@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new LigtherMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>".To<SecureString>(),
-	Secret = "<Your API Secret>".To<SecureString>(),
+	Key = "<Su clave API>".To<SecureString>(),
+	Secret = "<Su secreto API>".To<SecureString>(),
 	AccountIndex = 0,
 	ApiKeyIndex = 0,
 	Section = LigtherSections.Derivatives,

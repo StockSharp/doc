@@ -7,7 +7,7 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new InteractiveBrokersMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Address = "<Your Address>".To<EndPoint>(),
+	Address = "<Su dirección>".To<EndPoint>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	
@@ -21,7 +21,7 @@ Connector Connector = new Connector();
 ...
 Connector.AddAdapter<InteractiveBrokersMessageAdapter>(a =>
 {
-	a.Address = "<Your Address>".To<EndPoint>();
+	a.Address = "<Su dirección>".To<EndPoint>();
 });
 ```
 

@@ -10,7 +10,7 @@ Die abstrakte Basisklasse [BaseExporter](xref:StockSharp.Algo.Export.BaseExporte
 - **Encoding** - Kodierung (standardmäßig UTF-8).
 - **Export\<T\>(IAsyncEnumerable\<T\>, CancellationToken)** - die zentrale Exportmethode. Gibt `Task<(int count, DateTime? lastTime)>` zurück - die Anzahl der exportierten Datensätze und die Zeit des letzten Datensatzes.
 
-Die Methode leitet Daten automatisch an typspezifische Handler weiter für: [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage), [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage), [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) (Ticks, Orderlog, Transaktionen), [CandleMessage](xref:StockSharp.Messages.CandleMessage), [NewsMessage](xref:StockSharp.Messages.NewsMessage), [SecurityMessage](xref:StockSharp.Messages.SecurityMessage), [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage), [IndicatorValue](xref:StockSharp.Messages.IndicatorValue) und [BoardStateMessage](xref:StockSharp.Messages.BoardStateMessage).
+Die Methode leitet Daten automatisch an typspezifische Handler weiter für: [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage), [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage), [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) (Ticks, Orderprotokoll, Transaktionen), [CandleMessage](xref:StockSharp.Messages.CandleMessage), [NewsMessage](xref:StockSharp.Messages.NewsMessage), [SecurityMessage](xref:StockSharp.Messages.SecurityMessage), [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage), [IndicatorValue](xref:StockSharp.Messages.IndicatorValue) und [BoardStateMessage](xref:StockSharp.Messages.BoardStateMessage).
 
 ## Exporter-Typen
 
@@ -112,7 +112,7 @@ Die Klasse [TemplateTxtRegistry](xref:StockSharp.Algo.Export.TemplateTxtRegistry
 - **TemplateTxtDepth** - Vorlage für Orderbücher.
 - **TemplateTxtCandle** - Vorlage für Kerzen.
 - **TemplateTxtLevel1** - Vorlage für Level1-Daten.
-- **TemplateTxtOrderLog** - Vorlage für Orderlog.
+- **TemplateTxtOrderLog** - Vorlage für Orderprotokoll.
 - **TemplateTxtTransaction** - Vorlage für Transaktionen.
 - **TemplateTxtSecurity** - Vorlage für Instrumente.
 - **TemplateTxtNews** - Vorlage für Nachrichten.

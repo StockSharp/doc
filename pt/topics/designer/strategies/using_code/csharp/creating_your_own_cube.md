@@ -10,7 +10,7 @@ No exemplo apresentado abaixo, o cubo herda da classe [DiagramExternalElement](x
 
 ```cs
 /// <summary>
-/// Elemento de diagrama de exemplo que demonstra a utilização de sockets de entrada e saída.
+/// Elemento de diagrama de exemplo que demonstra a utilização de conectores de entrada e saída.
 ///
 /// https://doc.stocksharp.com/topics/Designer_Combine_Source_code_and_standard_elements.html
 /// </summary>
@@ -27,7 +27,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 			.SetDisplay("Parâmetros", "Valor mínimo", "Descrição do parâmetro de valor mínimo", 10);
 	}
 
-	// sockets de saída são eventos marcados com o atributo DiagramExternal
+	// conectores de saída são eventos marcados com o atributo DiagramExternal
 
 	[DiagramExternal]
 	public event Action<Unit> Output1;
@@ -35,7 +35,7 @@ public class EmptyDiagramElement : DiagramExternalElement
 	[DiagramExternal]
 	public event Action<Unit> Output2;
 
-	// sockets de entrada são parâmetros de métodos marcados com o atributo DiagramExternal
+	// conectores de entrada são parâmetros de métodos marcados com o atributo DiagramExternal
 
 	// descomente para que o método Process seja chamado sempre que for recebido um novo argumento
 	// (não é necessário esperar até todos os argumentos de entrada serem recebidos)
@@ -75,14 +75,14 @@ public class EmptyDiagramElement : DiagramExternalElement
 }
 ```
 
-Neste código, o cubo tem dois sockets de entrada e dois sockets de saída. Os sockets de entrada são definidos aplicando o atributo [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) ao método:
+Neste código, o cubo tem dois conectores de entrada e dois conectores de saída. Os conectores de entrada são definidos aplicando o atributo [DiagramExternalAttribute](xref:StockSharp.Diagram.DiagramExternalAttribute) ao método:
 
 ```cs
 [DiagramExternal]
 public void Process(CandleMessage candle, Unit diff)
 ```
 
-Os sockets de saída são definidos aplicando o atributo a um evento. No exemplo do cubo, existem dois eventos deste tipo:
+Os conectores de saída são definidos aplicando o atributo a um evento. No exemplo do cubo, existem dois eventos deste tipo:
 
 
 ```cs
@@ -93,7 +93,7 @@ public event Action<Unit> Output1;
 public event Action<Unit> Output2;
 ```
 
-Por isso, existirão também dois sockets de saída.
+Por isso, existirão também dois conectores de saída.
 
 Além disso, é mostrado como criar uma propriedade para o cubo:
 
@@ -107,7 +107,7 @@ A utilização da classe [DiagramElementParam](xref:StockSharp.Diagram.DiagramEl
 
 A propriedade **Valor mínimo** está marcada como básica e ficará visível no modo [Propriedades básicas](../../using_visual_designer/diagram_panel.md).
 
-A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) é responsável pelo momento da chamada do método com sockets de entrada:
+A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) é responsável pelo momento da chamada do método com conectores de entrada:
 
 ```cs
 //public override bool WaitAllInput => false;

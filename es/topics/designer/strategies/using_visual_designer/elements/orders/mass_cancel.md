@@ -4,17 +4,17 @@
 
 Este bloque se usa para cancelar todas las órdenes de un instrumento.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Activador** - señal que determina el momento en que es necesario cancelar órdenes.
 - **Cartera** – cartera para la que deben cancelarse todas las órdenes.
 - **Instrumento** – instrumento para el que deben cancelarse todas las órdenes.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Resultado** - bandera que señala el éxito de la operación.
 

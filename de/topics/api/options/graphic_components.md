@@ -1,4 +1,3 @@
 # Grafische Komponenten
 
-Siehe Abschnitt [Graphic components](../graphical_user_interface/options.md).
-
+Siehe Abschnitt [Grafische Komponenten](../graphical_user_interface/options.md).

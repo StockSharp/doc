@@ -17,4 +17,4 @@ Configurar los parámetros para iteración produce más de 1000 iteraciones. Des
 
 ## Véase también
 
-[Ejemplo de backtesting](../backtesting/getting_started.md)
+[Ejemplo de pruebas históricas](../backtesting/getting_started.md)

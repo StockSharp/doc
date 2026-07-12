@@ -20,7 +20,7 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 - **Provider** - Provider-Einstellungen.
 - **Server** - Serveradresse oder Pfad zur Datenbank.
 - **Datenbank** - Datenbankname. Wird für SQLite nicht verwendet.
-- **Login** - Login für den Zugriff auf die Datenbank. Wird für anonymen Zugriff nicht verwendet.
+- **Anmeldung** - Anmeldung für den Zugriff auf die Datenbank. Wird für anonymen Zugriff nicht verwendet.
 - **Passwort** - Passwort für den Zugriff auf die Datenbank. Wird für anonymen Zugriff nicht verwendet.
 - **Windows** - das aktuelle Windows-Konto für die Verbindung zur Datenbank verwenden.
 - **Verbindung** - fertige Verbindungszeichenfolge.
@@ -30,7 +30,7 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 
 **Allgemein**
 
-- **Kopfzeile** - Converter.
+- **Kopfzeile** - Aufgabentitel.
 - **Arbeitszeiten** - Einrichtung des Arbeitszeitplans des Boards. ![Hydra Aufgaben Sicherung](../../../images/hydra_tasks_backup_desk.png)
 - **Betriebsintervall** - das Ausführungsintervall.
 - **Datenverzeichnis** - Datenverzeichnis, aus dem die Daten für die Konvertierung gelesen werden.
@@ -51,12 +51,12 @@ Die Aufgabe exportiert Börsendaten in verschiedene Formate: Excel, xml, sql, bi
 - **Zeitversatz** - Zeitoffset in Tagen.
 - **Exportverzeichnis** - Verzeichnis, in das Daten exportiert werden.
 - **Format** - Datenformat.
-- **Split** - Aufteilungstyp.
+- **Aufteilung** - Aufteilungstyp.
 
 **Protokollierung**
 
 - **Kennung** - die Kennung.
-- **Protokollierungsstufe** - der Logging-Level.
+- **Protokollierungsstufe** - die Protokollierungsstufe.
 
 Betrachten wir ein Beispiel für den automatischen Export:
 

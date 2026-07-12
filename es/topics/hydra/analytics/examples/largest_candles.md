@@ -1,6 +1,6 @@
 # Velas más grandes
 
-El script "Largest Candles" está diseñado para identificar velas con el volumen máximo y la mayor longitud de cuerpo en los gráficos de instrumentos financieros seleccionados durante un período dado. Esta herramienta permite a traders y analistas identificar eventos de mercado significativos y la reacción de los participantes del mercado.
+El script "Velas más grandes" está diseñado para identificar velas con el volumen máximo y la mayor longitud de cuerpo en los gráficos de instrumentos financieros seleccionados durante un período dado. Esta herramienta permite a traders y analistas identificar eventos de mercado significativos y la reacción de los participantes del mercado.
 
 ![Velas más grandes](../../../../images/hydra_analytics_big_candle.png)
 
@@ -37,7 +37,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("No hay instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -70,8 +70,8 @@ namespace StockSharp.Algo.Analytics
 			}
 
 			// dibujar series en el gráfico
-			priceChart.Append("prices", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
-			volChart.Append("prices", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
+			priceChart.Append("precios", bigPriceCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigPriceCandles.Select(c => c.GetLength()));
+			volChart.Append("precios", bigVolCandles.Select(c => c.OpenTime), bigPriceCandles.Select(c => c.GetMiddlePrice(null)), bigVolCandles.Select(c => c.TotalVolume));
 
 			return Task.CompletedTask;
 		}
@@ -102,7 +102,7 @@ from indicator_extensions import *
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("No hay instrumentos.")
 			return Task.CompletedTask
 
 		price_chart = create_3d_chart(panel, datetime, float, float)
@@ -139,14 +139,14 @@ class biggest_candle_script(IAnalyticsScript):
 
 		# dibujar series en el gráfico
 		price_chart.Append(
-			"prices",
+			"precios",
 			[c.OpenTime for c in big_price_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[get_length(c) for c in big_price_candles]
 		)
 
 		vol_chart.Append(
-			"prices",
+			"precios",
 			[c.OpenTime for c in big_vol_candles],
 			[get_middle_price(c) for c in big_price_candles],
 			[c.TotalVolume for c in big_vol_candles]

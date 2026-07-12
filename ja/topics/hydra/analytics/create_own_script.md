@@ -1,6 +1,6 @@
 # スクリプトの作成
 
-**Analytics** では、独自のスクリプトを作成できます。例として、チャート描画の機能を示す **ChartDrawScript** を確認しましょう。
+**分析** では、独自のスクリプトを作成できます。例として、チャート描画の機能を示す **ChartDrawScript** を確認しましょう。
 
 ```cs
 namespace StockSharp.Algo.Analytics
@@ -14,7 +14,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("銘柄がありません。");
 				return Task.CompletedTask;
 			}
 
@@ -41,8 +41,8 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// 系列をラインおよびヒストグラムとしてチャートに描画
-				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
-				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
+				lineChart.Append($"{security} (終値)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
+				histogramChart.Append($"{security} (出来高)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}
 
 			return Task.CompletedTask;

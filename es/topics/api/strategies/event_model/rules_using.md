@@ -219,7 +219,7 @@ this.WhenCandlesStarted(subscription)
 Subscribe(subscription);
 ```
 
-### Reglas sobre libros de órdenes (Market Depth)
+### Reglas sobre libros de órdenes (profundidad de mercado)
 
 ```cs
 // Suscripción a datos del libro de órdenes

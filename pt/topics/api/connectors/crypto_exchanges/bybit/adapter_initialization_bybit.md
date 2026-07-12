@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new ByBitMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>".To<SecureString>(),
-	Secret = "<Your API Secret>".To<SecureString>(),
+	Key = "<A sua chave de API>".To<SecureString>(),
+	Secret = "<O seu segredo de API>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...
@@ -22,8 +22,8 @@ Connector Connector = new Connector();
 ...
 Connector.AddAdapter<ByBitMessageAdapter>(a =>
 {
-	a.Key = "<Your API Key>".To<SecureString>();
-	a.Secret = "<Your API Secret>".To<SecureString>();
+	a.Key = "<A sua chave de API>".To<SecureString>();
+	a.Secret = "<O seu segredo de API>".To<SecureString>();
 });
 ```
 

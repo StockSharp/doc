@@ -35,7 +35,7 @@
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. **Connect** ボタンの **Click** イベントハンドラーで、コネクターイベントの購読および [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) メソッドの呼び出しと併せて、[Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) イベントを購読します。このイベントハンドラーでは、新しいキャンドルを受信したときにチャートが描画されます。
+3. **接続** ボタンの **Click** イベントハンドラーで、コネクターイベントの購読および [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) メソッドの呼び出しと併せて、[Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) イベントを購読します。このイベントハンドラーでは、新しいキャンドルを受信したときにチャートが描画されます。
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@
    }
    ```
 
-4. **ShowChart** ボタンのハンドラーで、インジケーターオブジェクト、領域、チャート要素を作成します。要素を領域に追加し、領域をチャートに追加します。チャートウィンドウを開き、キャンドルへのサブスクリプションを開始します。
+4. **チャート表示** ボタンのハンドラーで、インジケーターオブジェクト、領域、チャート要素を作成します。要素を領域に追加し、領域をチャートに追加します。チャートウィンドウを開き、キャンドルへのサブスクリプションを開始します。
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)

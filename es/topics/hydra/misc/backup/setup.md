@@ -17,7 +17,7 @@ A continuación se describe cómo crear y configurar una cuenta de AWS.
 
   Las claves creadas se pueden guardar en un archivo con el botón **Download Key File**.
 
-   Tenga en cuenta que al configurar una tarea de copia de seguridad, **Access Key ID** debe usarse como login y **Secret Access Key** como contraseña.
+   Tenga en cuenta que al configurar una tarea de copia de seguridad, **Access Key ID** debe usarse como inicio de sesión y **Secret Access Key** como contraseña.
 
 ## Contenido recomendado
 

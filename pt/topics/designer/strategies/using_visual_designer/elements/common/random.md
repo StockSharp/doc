@@ -4,11 +4,11 @@
 
 Este bloco é usado para gerar um valor aleatório.
 
-## Sockets de entrada
+## Conectores de entrada
 
-- **Acionador** - o sinal (qualquer valor exceto `False`) que determina o momento em que é necessário passar um valor aleatório gerado através do socket de saída.
+- **Acionador** - o sinal (qualquer valor exceto `False`) que determina o momento em que é necessário passar um valor aleatório gerado através do conector de saída.
 
-## Sockets de saída
+## Conectores de saída
 
 - **Valor** - um valor aleatório.
 

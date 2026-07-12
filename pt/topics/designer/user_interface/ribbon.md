@@ -6,7 +6,7 @@ O principal elemento da interface de utilizador do [Designer](../../designer.md)
 
 ![Designer faixa 00](../../../images/designer_tape_00.png)
 
-2. O separador **Teste histórico** abre automaticamente ao selecionar uma estratégia no painel [Esquemas](schemas.md). O separador **Teste histórico** contém os principais elementos para criar, depurar, testar e otimizar estratégias ([Criar uma estratégia](../strategies/using_visual_designer.md), [Exemplo de backtesting](../backtesting/getting_started.md)). Também neste separador, a estratégia é iniciada para negociação real e são selecionados os componentes necessários para a sua estratégia: gráfico, livro de ordens, negócios, etc.
+2. O separador **Teste histórico** abre automaticamente ao selecionar uma estratégia no painel [Esquemas](schemas.md). O separador **Teste histórico** contém os principais elementos para criar, depurar, testar e otimizar estratégias ([Criar uma estratégia](../strategies/using_visual_designer.md), [Exemplo de testes históricos](../backtesting/getting_started.md)). Também neste separador, a estratégia é iniciada para negociação real e são selecionados os componentes necessários para a sua estratégia: gráfico, livro de ordens, negócios, etc.
 
 ![Designer faixa 01](../../../images/designer_tape_01.png)
 
@@ -14,7 +14,7 @@ O principal elemento da interface de utilizador do [Designer](../../designer.md)
 
 ![Designer faixa 02](../../../images/designer_tape_02.png)
 
-4. O separador **Nuvem**. O [Designer](../../designer.md) foi concebido para trabalhar com serviços de nuvem. Permite ver *Cloud Tasks* concluídas, obter informações sobre instrumentos disponíveis na Cloud e configurar o trabalho remoto com canais e robôs.
+4. O separador **Nuvem**. O [Designer](../../designer.md) foi concebido para trabalhar com serviços de nuvem. Permite ver *tarefas na nuvem* concluídas, obter informações sobre instrumentos disponíveis na nuvem e configurar o trabalho remoto com canais e robôs.
 
 ![Designer faixa 03](../../../images/designer_tape_03.png)
 

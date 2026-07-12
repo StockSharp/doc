@@ -43,13 +43,13 @@ Der von Ihnen erstellte Kanal ist nun für Ihre Strategien und Handelsroboter ve
 
   Durch Drücken der Telegram-Symbolschaltfläche wird eine Testnachricht gesendet. Wenn sie empfangen wird, ist alles korrekt eingerichtet.
 
-  ![Senden einer Testnachricht aus Designer](../../images/designertestmessage.png)
+  ![Senden einer Testnachricht aus dem Designer](../../images/designertestmessage.png)
 
   *Im kostenlosen Tarif wird eine Zeile mit Hinweis auf die StockSharp-Website hinzugefügt. In kostenpflichtigen Tarifen wird diese Zeile entfernt.*
 
 Wenn Sie mehrere Ausgabekanäle in Telegram haben und verschiedene Strategien auf separate Kanäle leiten möchten, können Sie die Kanäle für jede Strategie in den Einstellungen angeben:
 
-![Remote Einstellungen in Designer](../../images/designerremotesettings.png)
+![Remote-Einstellungen im Designer](../../images/designerremotesettings.png)
 
-- In anderen Programmen werden die Einstellungen ähnlich wie in [Designer](../designer.md) vorgenommen. Zum Beispiel können Sie im Programm [Hydra](../hydra.md) die Fehlerprotokollierung für das Herunterladen von Marktdaten konfigurieren, wenn [Hydra](../hydra.md) auf einem Server läuft und Sie zeitnah Informationen über eine nicht funktionierende Verbindung erhalten müssen.
+- In anderen Programmen werden die Einstellungen ähnlich wie im [Designer](../designer.md) vorgenommen. Zum Beispiel können Sie im Programm [Hydra](../hydra.md) die Fehlerprotokollierung für das Herunterladen von Marktdaten konfigurieren, wenn [Hydra](../hydra.md) auf einem Server läuft und Sie zeitnah Informationen über eine nicht funktionierende Verbindung erhalten müssen.
 - Bei [Shell](../shell.md) oder [S#](../api.md) können Sie den Code ansehen, der Ihre Strategien mit dem Telegram-Dienst integriert.

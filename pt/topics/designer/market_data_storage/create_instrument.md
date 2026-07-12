@@ -4,7 +4,7 @@ Ao clicar no botão **Criar instrumento** ![Designer botão Adicionar 00](../../
 
 ![Designer botão Adicionar 01](../../../images/designer_creation_tool_01.png)
 
-Os títulos de diferentes fontes têm identificadores unificados. Isto é feito para que o código do robô de negociação não dependa do tipo de ligação ([Conectores](../../api/connectors.md)). É usada a seguinte sintaxe para o identificador do título - **\[security code\]@\[board code\]**. Por exemplo, para ações da Apple na bolsa NASDAQ, o identificador será **AAPL@NASDAQ**.
+Os títulos de diferentes fontes têm identificadores unificados. Isto é feito para que o código do robô de negociação não dependa do tipo de ligação ([Conectores](../../api/connectors.md)). É usada a seguinte sintaxe para o identificador do título - **\[código do instrumento\]@\[código da bolsa\]**. Por exemplo, para ações da Apple na bolsa NASDAQ, o identificador será **AAPL@NASDAQ**.
 
 ## Conteúdo recomendado
 

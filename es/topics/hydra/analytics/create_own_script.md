@@ -1,6 +1,6 @@
 # Creación de un script
 
-**Analytics** permite crear sus propios scripts. Como ejemplo, revisemos **ChartDrawScript**, que demuestra las capacidades de dibujo de gráficos:
+**Analítica** permite crear sus propios scripts. Como ejemplo, revisemos **ChartDrawScript**, que demuestra las capacidades de dibujo de gráficos:
 
 ```cs
 namespace StockSharp.Algo.Analytics
@@ -14,7 +14,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("No hay instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -41,8 +41,8 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// dibujar series en el gráfico como línea e histograma
-				lineChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
-				histogramChart.Append($"{security} (vol)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
+				lineChart.Append($"{security} (cierre)", candlesSeries.Keys, candlesSeries.Values, DrawStyles.DashedLine);
+				histogramChart.Append($"{security} (volumen)", volsSeries.Keys, volsSeries.Values, DrawStyles.Histogram);
 			}
 
 			return Task.CompletedTask;

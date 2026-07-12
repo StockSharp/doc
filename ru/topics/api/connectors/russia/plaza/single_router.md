@@ -5,8 +5,8 @@
 ```cs
 var messageAdapter = new PlazaMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Login = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
+	Login = "<Ваш логин>",
+	Password = "<Ваш пароль>".To<SecureString>(),
 	Address = SmartComAddresses.Demo,
 	AppName = "robot_PRADA",
 };      

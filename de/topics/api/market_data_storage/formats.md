@@ -11,7 +11,7 @@ Das Binärformat ist das primäre Hochleistungsformat zur Speicherung von Daten 
 - **Kompaktheit** - Daten werden binär mit Komprimierung serialisiert, wodurch minimale Dateigrößen erreicht werden.
 - **Performance** - Lesen und Schreiben sind deutlich schneller als bei Textformaten.
 - **Metadaten** - die Klasse `BinaryMetaInfo` speichert Hilfsinformationen: erste und letzte Preise, Bruchteilswerte, Zeitstempel. Dadurch können allgemeine Dateninformationen schnell abgerufen werden, ohne die Datei vollständig zu lesen.
-- **Kompressionsfähige Architektur** - das Format ist von Grund auf für effiziente Streaming-Komprimierung ausgelegt.
+- **Kompressionsfähige Architektur** - das Format ist von Grund auf für effiziente Komprimierung von Datenströmen ausgelegt.
 
 Binärdateien haben die Erweiterung `.bin`.
 

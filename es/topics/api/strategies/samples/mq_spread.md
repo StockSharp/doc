@@ -125,7 +125,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 	// Registrar creación de nuevos procesadores de quoting
 	this.AddInfoLog($"Spread de compra/venta creado en {CurrentTime}");
 
-	// Suscribirse a eventos del procesador de compra para logging
+	// Suscribirse a eventos del procesador de compra para registro
 	_buyProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Orden de compra {order.TransactionId} registrada al precio {order.Price}");
 
@@ -141,7 +141,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		_buyProcessor = null;
 	};
 
-	// Suscribirse a eventos del procesador de venta para logging
+	// Suscribirse a eventos del procesador de venta para registro
 	_sellProcessor.OrderRegistered += order =>
 		this.AddInfoLog($"Orden de venta {order.TransactionId} registrada al precio {order.Price}");
 
@@ -199,6 +199,6 @@ protected override void OnStopped()
 - Crea un spread en el mercado colocando simultáneamente órdenes de compra y venta
 - Trabaja solo con posición cero, evitando la acumulación de riesgo no deseado
 - Admite configuración de varios parámetros de quoting (tipo de precio, desplazamiento, desviación mínima)
-- Incluye logging detallado de eventos del procesador de quoting
+- Incluye registro detallado de eventos del procesador de quoting
 - Gestiona correctamente los recursos al detener la estrategia y crear nuevos procesadores
 - Admite trabajar con distintos tipos de precios de mercado (Following, Best, Opposite, etc.)

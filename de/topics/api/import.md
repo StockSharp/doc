@@ -99,7 +99,7 @@ Die statische Klasse [FieldMappingRegistry](xref:StockSharp.Algo.Import.FieldMap
 
 - **CreateFields(DataType)** - gibt eine Liste von [FieldMapping](xref:StockSharp.Algo.Import.FieldMapping) für den angegebenen Datentyp zurück.
 
-Unterstützte Datentypen: Ticks, Kerzen, Orderbücher, Level1, Orderlog, Transaktionen, Instrumente, Nachrichten und Positionen.
+Unterstützte Datentypen: Ticks, Kerzen, Orderbücher, Level1, Orderprotokoll, Transaktionen, Instrumente, Nachrichten und Positionen.
 
 ## ImportSettings - Importeinstellungen
 

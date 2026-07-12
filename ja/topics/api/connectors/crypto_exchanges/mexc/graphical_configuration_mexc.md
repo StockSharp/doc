@@ -5,7 +5,7 @@
 ![API GUI 設定 MEXC](../../../../../images/api_gui_settings_mexc.png)
 
 - **キー** - Key。
-- **シークレット** - Secret。
+- **シークレット** - シークレットキー。
 - **デモ** - デモモード。
 - **再接続設定** - 取引システムとの再接続メカニズムのパラメーター（[再接続設定](../../reconnection_settings.md)）。
 

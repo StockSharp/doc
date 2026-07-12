@@ -7,7 +7,7 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new BarChartMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Token = "<Your Token>".To<SecureString>(),
+	Token = "<トークン>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

@@ -6,11 +6,11 @@
 
 Der Würfel wird verwendet, um ein gruppiertes Orderbuch zu erhalten.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
 - **Orderbuch** - das zu gruppierende Orderbuch.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
 - **Orderbuch** - das gruppierte Orderbuch.
 

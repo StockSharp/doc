@@ -19,7 +19,7 @@ Estrela da noite é considerado um sinal forte de potencial reversão de uma ten
 - A segunda vela (estrela) mostra enfraquecimento da pressão altista e incerteza no mercado.
 - A terceira vela demonstra o regresso dos vendedores e uma mudança de controlo dos bulls para os bears.
 - Quanto mais profundamente a terceira vela penetrar no corpo da primeira vela, mais forte é o sinal de reversão.
-- Se a segunda vela for um doji (com um corpo muito pequeno), o padrão é chamado "Evening Doji Star" e é considerado um sinal ainda mais forte.
+- Se a segunda vela for um doji (com um corpo muito pequeno), o padrão é chamado "Estrela Doji Vespertina" e é considerado um sinal ainda mais forte.
 
 ### Estratégias de Negociação
 

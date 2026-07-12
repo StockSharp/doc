@@ -26,15 +26,15 @@ private void OnNewsReceived(Subscription subscription, News news)
 		return;
 
 	// Empfangene Nachricht verarbeiten
-	Console.WriteLine($"News: {news.Id}");
-	Console.WriteLine($"Headline: {news.Headline}");
-	Console.WriteLine($"Source: {news.Source}");
-	Console.WriteLine($"Time: {news.ServerTime}");
-	Console.WriteLine($"URL: {news.Url}");
+	Console.WriteLine($"Nachricht: {news.Id}");
+	Console.WriteLine($"Überschrift: {news.Headline}");
+	Console.WriteLine($"Quelle: {news.Source}");
+	Console.WriteLine($"Zeit: {news.ServerTime}");
+	Console.WriteLine($"Link: {news.Url}");
 
 	// Wenn Nachrichtentext vorhanden ist
 	if (!string.IsNullOrEmpty(news.Story))
-		Console.WriteLine($"Story: {news.Story}");
+		Console.WriteLine($"Text: {news.Story}");
 
 	// Wenn die Nachricht bestimmten Instrumenten zugeordnet ist
 	if (news.SecurityId != null)
@@ -117,8 +117,8 @@ var connector = new Connector();
 // Hauptadapter für die Verbindung zu Binance hinzufügen
 var binanceAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>",
-	Secret = "<Your Secret Key>",
+	Key = "<Ihr API-Schlüssel>",
+	Secret = "<Ihr geheimer Schlüssel>",
 };
 connector.Adapter.InnerAdapters.Add(binanceAdapter);
 
@@ -147,5 +147,5 @@ connector.Connect();
 ## Siehe auch
 
 - [Abonnements](subscriptions.md)
-- [Graphical Components](../graphical_user_interface.md)
+- [Grafische Komponenten](../graphical_user_interface.md)
 

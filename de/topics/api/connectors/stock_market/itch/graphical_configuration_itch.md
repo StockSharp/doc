@@ -12,7 +12,7 @@ Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der
 - **Passwort** - Passwort.
 - **Securities** - Datei mit Wertpapieren.
 - **Delay** - Instrumente verzögert laden.
-- **Active** - Nur aktive Instrumente.
+- **Aktiv** - Nur aktive Instrumente.
 - **Gruppen-ID** - Gruppen-ID.
 - **Zeitzone** - Informationen zur Zeitzone, in der sich die Börse befindet.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu verfolgen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.

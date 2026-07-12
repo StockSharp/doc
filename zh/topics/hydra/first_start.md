@@ -71,7 +71,7 @@
 
    可以在程序底部固定的 **日志** 选项卡中观察运行过程。此外，日志也会保存到本地文件夹中的文件内。
 
-![Hydra 主界面 start](../../images/hydra_main_start.png)
+![Hydra 启动后的主界面](../../images/hydra_main_start.png)
 
 用户还可以添加[其他数据源](data_sources/select_source.md)。
 

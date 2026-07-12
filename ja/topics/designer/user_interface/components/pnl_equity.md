@@ -6,4 +6,4 @@ P\/L コンポーネントは、損益（未実現）、損益（実現）、手
 
 ## 推奨コンテンツ
 
-[Live 実行サンプル](../../live_execution/live_execution_sample.md)
+[ライブ実行サンプル](../../live_execution/live_execution_sample.md)

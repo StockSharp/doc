@@ -21,8 +21,7 @@ Offizielle API-Dokumentation:
 - [Neuen Auftrag erstellen](https://docs.paradex.trade/api/prod/orders/create-a-new-order)
 - [Websocket-Einführung](https://docs.paradex.trade/api/prod/websocket/introduction)
 - [Websocket-Kanäle](https://docs.paradex.trade/api/prod/websocket/channels)
-- [Order-Book-Kanal](https://docs.paradex.trade/api/prod/websocket/channels/order_book_channel)
+- [Orderbuchkanal](https://docs.paradex.trade/api/prod/websocket/channels/order_book_channel)
 
 > [!TIP]
 > Paradex-Derivate werden vollständig unterstützt. Aktivieren Sie `Spot` nur, wenn die Ziel-API-Umgebung die Spot-Unterstützung bestätigt.
-

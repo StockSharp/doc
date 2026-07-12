@@ -40,7 +40,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Нет инструментов.");
 				return Task.CompletedTask;
 			}
 
@@ -55,7 +55,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("Нет данных.");
 				return Task.CompletedTask;
 			}
 
@@ -65,13 +65,13 @@ namespace StockSharp.Algo.Analytics
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
 
 			// поместить расчёты в таблицу
-			var grid = panel.CreateGrid("Time", "Volume");
+			var grid = panel.CreateGrid("Время", "Объем");
 
 			foreach (var row in rows)
 				grid.SetRow(row.Key, row.Value);
 
 // сортировка по столбцу объёма (по убыванию)
-			grid.SetSort("Volume", false);
+			grid.SetSort("Объем", false);
 
 			return Task.CompletedTask;
 		}
@@ -116,7 +116,7 @@ class time_volume_script(IAnalyticsScript):
 	):
 		# Проверить, что инструменты отсутствуют
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Нет инструментов.")
 			return Task.CompletedTask
 
 		# Скрипт может обрабатывать только 1 инструмент
@@ -135,7 +135,7 @@ class time_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("Нет данных.")
 			return Task.CompletedTask
 
 		# Группировка свечей по времени открытия (почасовое усечение) и суммирование их объёмов
@@ -147,13 +147,13 @@ class time_volume_script(IAnalyticsScript):
 			rows[truncated] = rows.get(truncated, 0) + candle.TotalVolume
 
 		# Поместить расчёты в таблицу
-		grid = panel.CreateGrid("Time", "Volume")
+		grid = panel.CreateGrid("Время", "Объем")
 
 		for key, value in rows.items():
 			grid.SetRow(key, value)
 
 		# Сортировка по столбцу Volume по убыванию
-		grid.SetSort("Volume", False)
+		grid.SetSort("Объем", False)
 
 		return Task.CompletedTask
 

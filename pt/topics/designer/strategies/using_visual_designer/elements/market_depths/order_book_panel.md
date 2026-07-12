@@ -6,7 +6,7 @@ O cubo foi concebido para apresentar o livro de ordens num componente gráfico e
 
 O componente [Livro de ordens](../../../../user_interface/components/order_book.md) deve ser adicionado a partir do grupo [Componentes](../../../../user_interface/components.md) dos separadores **Simulação** ou **Negociação**. Pode encontrar mais detalhes sobre o componente [Livro de ordens](../../../../user_interface/components/order_book.md) na secção [Livro de ordens](../../../../user_interface/components/order_book.md).
 
-### Sockets de entrada
+### Conectores de entrada
 
 - **Livro de ofertas** - o livro de ordens que tem de ser apresentado.
 - **Ordem** - uma ordem, cujo volume tem de ser apresentado na coluna *Own Volume*.

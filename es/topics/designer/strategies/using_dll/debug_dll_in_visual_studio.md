@@ -6,7 +6,7 @@ Visual Studio proporciona un mecanismo para adjuntarse a procesos en ejecución 
 
 ![Designer creación de estrategia DLL 01](../../../../images/designer_creation_strategy_dll_01.png)
 
-2. En Visual Studio, seleccione **Debug -> Attach to Process**.
+2. En Visual Studio, seleccione **Depurar -> Adjuntar al proceso**.
 
 ![Designer Depuración de un cubo DLL con Visual Studio 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
@@ -18,13 +18,13 @@ Si el proceso se ejecuta bajo otra cuenta de usuario, debe marcar la casilla **M
 
 4. Es importante que la ventana **Asociar a** especifique el tipo de código que debe depurarse. El parámetro predeterminado **Automático** intenta determinar el tipo de código que se debe depurar, pero no siempre identifica correctamente el tipo de código. Para establecer manualmente el tipo de código, debe realizar los siguientes pasos.
 
-- En el campo Attach to, haga clic en **Seleccionar**.
+- En el campo **Adjuntar a**, haga clic en **Seleccionar**.
 - En el cuadro de diálogo **Seleccionar tipo de código**, haga clic en el botón **Depurar estos tipos de código** y seleccione los tipos para depuración.
 - Haga clic en OK.
 
 ![Designer Depuración de un cubo DLL con Visual Studio 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
 
-5. Haga clic en el botón Attach.
+5. Haga clic en el botón **Adjuntar**.
 
 6. En Visual Studio, establezca puntos de interrupción en el código. Si los puntos de interrupción son rojos y están rellenos de rojo ![Designer Depuración de un cubo DLL con Visual Studio 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png) (y Studio está en modo de depuración), significa que se cargó la versión exacta de la DLL. Si los puntos de interrupción son rojos y están rellenos de blanco ![Designer Depuración de un cubo DLL con Visual Studio 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png) (y Studio está en modo de depuración), significa que se cargó una versión incorrecta de la DLL.
 

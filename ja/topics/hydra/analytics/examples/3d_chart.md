@@ -51,7 +51,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("銘柄がありません。");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 
 				if (dates.Length == 0)
 				{
-					logs.LogWarning("no data");
+					logs.LogWarning("データがありません。");
 					return Task.CompletedTask;
 				}
 
@@ -97,7 +97,7 @@ namespace StockSharp.Algo.Analytics
 					z[i, pair.Key] = (double)pair.Value;
 			}
 
-			panel.Draw3D(x, y, z, "Instruments", "Hours", "Volume");
+			panel.Draw3D(x, y, z, "銘柄", "時間", "出来高");
 
 			return Task.CompletedTask;
 		}
@@ -141,7 +141,7 @@ class chart3d_script(IAnalyticsScript):
 	):
 		# 銘柄がないか確認
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("銘柄がありません。")
 			return Task.CompletedTask
 
 		x = []  # 銘柄の X ラベル
@@ -175,7 +175,7 @@ class chart3d_script(IAnalyticsScript):
 			dates = get_dates(candle_storage, from_date, to_date)
 
 			if len(dates) == 0:
-				logs.LogWarning("no data")
+				logs.LogWarning("データがありません。")
 				return Task.CompletedTask
 
 			# 始値時刻 (直近の時間に切り詰め) でローソク足をグループ化し、出来高を合計
@@ -191,7 +191,7 @@ class chart3d_script(IAnalyticsScript):
 					z[i][hour] = float(volume)
 
 		# panel を使用して 3D チャートを描画
-		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
+		panel.Draw3D(x, y, nx.to2darray(z), "銘柄", "時間", "出来高")
 
 		return Task.CompletedTask
 

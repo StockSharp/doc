@@ -51,7 +51,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("没有交易品种。");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 
 				if (dates.Length == 0)
 				{
-					logs.LogWarning("no data");
+					logs.LogWarning("没有数据。");
 					return Task.CompletedTask;
 				}
 
@@ -97,7 +97,7 @@ namespace StockSharp.Algo.Analytics
 					z[i, pair.Key] = (double)pair.Value;
 			}
 
-			panel.Draw3D(x, y, z, "Instruments", "Hours", "Volume");
+			panel.Draw3D(x, y, z, "交易品种", "小时", "成交量");
 
 			return Task.CompletedTask;
 		}
@@ -141,7 +141,7 @@ class chart3d_script(IAnalyticsScript):
 	):
 		# 检查是否 没有交易品种
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("没有交易品种。")
 			return Task.CompletedTask
 
 		x = []  # 标的的 X 标签
@@ -165,7 +165,7 @@ class chart3d_script(IAnalyticsScript):
 			if cancellation_token.IsCancellationRequested:
 				break
 
-			# 用工具标识符填充 X 标签
+			# 用交易品种标识符填充 X 标签
 			x.append(to_string_id(security))
 
 			# 获取当前工具的K线存储
@@ -175,7 +175,7 @@ class chart3d_script(IAnalyticsScript):
 			dates = get_dates(candle_storage, from_date, to_date)
 
 			if len(dates) == 0:
-				logs.LogWarning("no data")
+				logs.LogWarning("没有数据。")
 				return Task.CompletedTask
 
 			# 按开盘时间对 K线分组（截断到最近的小时）并汇总成交量
@@ -191,7 +191,7 @@ class chart3d_script(IAnalyticsScript):
 					z[i][hour] = float(volume)
 
 		# 使用面板绘制 3D 图表
-		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
+		panel.Draw3D(x, y, nx.to2darray(z), "交易品种", "小时", "成交量")
 
 		return Task.CompletedTask
 

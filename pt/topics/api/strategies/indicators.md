@@ -75,8 +75,8 @@ Deve adicionar apenas **indicadores independentes** à coleção [Indicators](xr
    // Adicione apenas o primeiro indicador da cadeia
    Indicators.Add(sma);
    // NÃO adicione indicadores dependentes de outros indicadores
-   // Indicators.Add(stdev); - incorrect
-   // Indicators.Add(bollingerBands); - incorrect
+   // Indicators.Add(stdev); - incorreto
+   // Indicators.Add(bollingerBands); - incorreto
    ```
 
 3. **Indicadores Combinados** - para indicadores que usam vários indicadores independentes (por exemplo, MACD), adicione todos eles:

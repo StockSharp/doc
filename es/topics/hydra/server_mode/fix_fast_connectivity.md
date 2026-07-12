@@ -37,7 +37,7 @@ Suscríbase a eventos y configure los manejadores de datos:
 // Evento de conexión correcta
 _connector.Connected += () =>
 {
-	Console.WriteLine("Connection established");
+	Console.WriteLine("Conexión establecida");
 	
 	// Crear una suscripción para buscar instrumentos
 	var lookupSubscription = new Subscription(DataType.Securities);

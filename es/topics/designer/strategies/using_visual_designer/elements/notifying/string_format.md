@@ -8,15 +8,15 @@ llaves. Cada marcador se refiere al valor completo (`{0}`) o a una de sus
 propiedades (`{Price}`, `{Trade.Price}`, etc.). Puede especificar un formato después de
 dos puntos para controlar cómo aparecen en el texto números, fechas u otros objetos.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
-- **Entrada** – valor que se va a formatear. El socket acepta datos de cualquier tipo.
+- **Entrada** – valor que se va a formatear. El conector acepta datos de cualquier tipo.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Texto** – resultado de aplicar la plantilla al valor entrante.
 

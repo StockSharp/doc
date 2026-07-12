@@ -7,7 +7,7 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new IEXMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Token  = "<Your Token>".To<SecureString>(),
+	Token  = "<Su token>".To<SecureString>(),
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...	

@@ -4,16 +4,16 @@
 
 Der Würfel wird verwendet, um ein Orderbuch der impliziten Volatilität zu berechnen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
 - **Orderbuch** - das Orderbuch.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Orderbuch** - die Werte des Orderbuchs der impliziten Volatilität.
 

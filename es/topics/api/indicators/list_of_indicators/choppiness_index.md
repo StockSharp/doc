@@ -32,7 +32,7 @@ El cálculo de índice de lateralidad implica los siguientes pasos:
    Suma de TR = Sum(TR(i)) para i de 1 a Length
    ```
 
-2. Calcule el High más alto y el Low más bajo durante el período seleccionado:
+2. Calcule el máximo más alto y el mínimo más bajo durante el período seleccionado:
    ```
    máximo más alto = valor High máximo durante el periodo Length
    mínimo más bajo = valor Low mínimo durante el periodo Length
@@ -56,10 +56,10 @@ donde:
 
 - **Transiciones entre valores altos y bajos** puede indicar un cambio en el carácter del mercado. Una caída de CHOP desde valores altos puede indicar el comienzo de una nueva tendencia. Un aumento de CHOP desde valores bajos puede advertir sobre el agotamiento de la tendencia y la transición a la consolidación.
 
-- **Setting threshold levels**: Normalmente, se utilizan los siguientes niveles de umbral:
-  - Por encima de 60-70: High "entrecortamiento" (movimiento lateral)
+- **Configuración de niveles de umbral**: Normalmente, se utilizan los siguientes niveles de umbral:
+  - Por encima de 60-70: "entrecortamiento" alto (movimiento lateral)
   - 30-60: "entrecortamiento" moderado (estado de transición)
-  - Por debajo de 30: Low "entrecortamiento" (tendencia fuerte)
+  - Por debajo de 30: "entrecortamiento" bajo (tendencia fuerte)
 
 ![Gráfico del indicador CHOP](../../../../images/indicator_choppiness_index.png)
 

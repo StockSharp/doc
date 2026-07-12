@@ -132,7 +132,7 @@ Zur Verarbeitung von Echtzeit-Aktualisierungen des Auftragszustands wird in der 
 private async ValueTask SessionOnOrderReceived(Order order, CancellationToken cancellationToken)
 {
 	// Empfangenes Orderupdate verarbeiten
-	// OriginTransId = 0, since this is a real-time update, not a response to a specific request
+	// OriginTransId = 0, da dies eine Echtzeit-Aktualisierung und keine Antwort auf eine bestimmte Anfrage ist
 	await ProcessOrder(order, 0, cancellationToken);
 }
 ```

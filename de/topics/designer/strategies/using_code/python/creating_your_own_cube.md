@@ -23,10 +23,10 @@ from StockSharp.Diagram import DiagramExternalElement
 
 from designer_extensions import diagram_external
 
-# Benutzerdefinierte Diagrammelementklasse, die die Verwendung von Eingabe- und Ausgabesockets demonstriert
+# Benutzerdefinierte Diagrammelementklasse, die die Verwendung von Eingabe- und Ausgabeanschlüssen demonstriert
 class empty_diagram_element(DiagramExternalElement):
 	"""
-	Beispiel-Diagrammelement zur Demonstration der Verwendung von Eingabe- und Ausgabesockets.
+	Beispiel-Diagrammelement zur Demonstration der Verwendung von Eingabe- und Ausgabeanschlüssen.
 
 	https://doc.stocksharp.com/topics/designer/strategies/using_code/python/creating_your_own_cube.html
 	"""
@@ -45,7 +45,7 @@ class empty_diagram_element(DiagramExternalElement):
 		self._output1_handlers = []
 		self._output2_handlers = []
 
-	# Ausgabesockets sind Ereignisse, die mit dem Attribut DiagramExternal markiert sind
+	# Ausgabeanschlüsse sind Ereignisse, die mit dem Attribut DiagramExternal markiert sind
 
 	@diagram_external
 	def add_Output1(self, handler: Action[Unit]):
@@ -94,7 +94,7 @@ class empty_diagram_element(DiagramExternalElement):
 	@diagram_external
 	def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 		"""
-		Eingabesockets sind Methodenparameter, die mit dem Attribut DiagramExternal markiert sind.
+		Eingabeanschlüsse sind Methodenparameter, die mit dem Attribut DiagramExternal markiert sind.
 		Verarbeitet eine Kerze und einen diff-Wert und ruft anschließend gemäß der Logik Ausgabeereignisse auf.
 
 		:param candle: CandleMessage-Eingabe, die eine Kerze darstellt.
@@ -134,17 +134,17 @@ class empty_diagram_element(DiagramExternalElement):
 		# Benutzerdefinierte Logik zum Zurücksetzen des internen Zustands des Elements hinzufügen
 ```
 
-In diesem Code hat der Würfel zwei eingehende und zwei ausgehende Sockets. Eingehende Sockets werden definiert, indem der Decorator @diagram_external auf eine Methode angewendet wird:
+In diesem Code hat der Würfel zwei eingehende und zwei ausgehende Anschlüsse. Eingehende Anschlüsse werden definiert, indem der Decorator @diagram_external auf eine Methode angewendet wird:
 
 ```python
 @diagram_external
 def Process(self, candle: ICandleMessage, diff: Unit) -> None:
 ```
 
-Ausgehende Sockets werden definiert, indem der Decorator @diagram_external auf ein Ereignis angewendet wird (Ereignisabonnement-Operation add_NNN). Im Beispiel des Würfels gibt es zwei solche Ereignisse:
+Ausgehende Anschlüsse werden definiert, indem der Decorator @diagram_external auf ein Ereignis angewendet wird (Ereignisabonnement-Operation add_NNN). Im Beispiel des Würfels gibt es zwei solche Ereignisse:
 
 ```python
-# Ausgabesockets sind Ereignisse, die mit dem Attribut DiagramExternal markiert sind
+# Ausgabeanschlüsse sind Ereignisse, die mit dem Attribut DiagramExternal markiert sind
 
 @diagram_external
 def add_Output1(self, handler: Action[Unit]):
@@ -183,7 +183,7 @@ def remove_Output2(self, handler):
 		self._output2_handlers.remove(handler)
 ```
 
-Daher gibt es auch zwei ausgehende Sockets.
+Daher gibt es auch zwei ausgehende Anschlüsse.
 
 Zusätzlich wird gezeigt, wie eine Eigenschaft für den Würfel erstellt wird:
 
@@ -197,7 +197,7 @@ Bei Verwendung der Klasse [DiagramElementParam](xref:StockSharp.Diagram.DiagramE
 
 Die Eigenschaft **Mindestwert** ist als Basiseigenschaft markiert und wird im Modus [Basiseinstellungen](../../using_visual_designer/diagram_panel.md) sichtbar sein.
 
-Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) bestimmt, wann die Methode mit eingehenden Sockets aufgerufen wird:
+Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) bestimmt, wann die Methode mit eingehenden Anschlüssen aufgerufen wird:
 
 ```python
 # @property

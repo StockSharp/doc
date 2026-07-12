@@ -4,7 +4,7 @@
 
 Dieser Block wird verwendet, um die aktuelle Uhrzeit zu erhalten.
 
-#### Ausgehende Sockets
+#### Ausgehende Anschlüsse
 
 - **Ausgabe** - die aktuelle Uhrzeit.
 

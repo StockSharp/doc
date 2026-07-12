@@ -10,7 +10,7 @@ Die folgenden Typen können importiert werden:
 - [Instrumente](importing/instruments.md)
 - [Trades](importing/ticks.md)
 - [Orderbücher](importing/order_books.md)
-- [Order-Log](importing/order_log.md)
+- [Orderprotokoll](importing/order_log.md)
 - [Level 1](importing/level_1.md)
 - [Nachrichten](importing/news.md)
 - [Eigene Transaktionen](importing/transactions.md)

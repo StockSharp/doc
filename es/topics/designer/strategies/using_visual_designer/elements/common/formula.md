@@ -2,13 +2,13 @@
 
 ![Captura de Fórmula](../../../../../../images/designer_universal_formula_00.png)
 
-El cubo se usa para calcular una fórmula matemática con un número arbitrario de argumentos. Puede elegir una fórmula de la lista disponible o escribir la suya propia. Al escribir una fórmula propia, el número de sockets de entrada se determina automáticamente.
+El cubo se usa para calcular una fórmula matemática con un número arbitrario de argumentos. Puede elegir una fórmula de la lista disponible o escribir la suya propia. Al escribir una fórmula propia, el número de conectores de entrada se determina automáticamente.
 
-## Sockets de entrada
+## Conectores de entrada
 
 - **Valor** – valor con el que se pueden realizar operaciones matemáticas (por ejemplo, número o indicador). El número de valores de entrada depende de la fórmula.
 
-## Sockets de salida
+## Conectores de salida
 
 - **Resultado** – valor calculado de la fórmula matemática.
 

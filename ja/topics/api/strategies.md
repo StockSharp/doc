@@ -14,7 +14,7 @@ StockSharp は、取引戦略の作成、テスト、実行のための強力な
 
 - [戦略での取引操作](strategies/trading_operations.md) - 戦略で取引操作を実行するためのガイドです。注文の作成と送信、ポジションのクローズ、状態監視のためのメソッドについて説明します。
 
-- [ポジション保護](strategies/take_profit_and_stop_loss.md) - Take Profit と Stop Loss を使用してオープンポジションを保護する仕組みの説明です。ポジション保護に対するローカル方式とサーバー方式を検討します。
+- [ポジション保護](strategies/take_profit_and_stop_loss.md) - テイクプロフィットとストップロスを使用してオープンポジションを保護する仕組みの説明です。ポジション保護に対するローカル方式とサーバー方式を検討します。
 
 - [戦略パラメーター](strategies/parameters.md) - [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1) を通じて戦略パラメーターを扱うためのガイドです。構成可能なパラメーターの作成、GUI での表示設定、最適化での使用方法について説明します。
 

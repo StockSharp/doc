@@ -4,14 +4,14 @@
 
 Dieses Element wird verwendet, um die Position zweier Werte relativ zueinander zu verfolgen, zum Beispiel um den Zeitpunkt der Kreuzung zweier Linien zu bestimmen.
 
-Der Vergleich erfolgt anhand der Werte an den beiden Sockets **Aufwärts** und **Abwärts**.
+Der Vergleich erfolgt anhand der Werte an den beiden Anschlüssen **Aufwärts** und **Abwärts**.
 
-## Eingehende Sockets
+## Eingehende Anschlüsse
 
 - **Aufwärts** – Werte, die einen Vergleich erlauben (zum Beispiel ein numerischer Wert, ein Indikatorwert usw.).
 - **Abwärts** – Werte, die einen Vergleich erlauben (zum Beispiel ein numerischer Wert, ein Indikatorwert usw.).
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **Markierung** – true, wenn **Aufwärts** größer als **Abwärts** ist, andernfalls false.
 

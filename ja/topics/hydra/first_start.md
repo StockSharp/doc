@@ -71,7 +71,7 @@
 
    作業プロセスは、プログラム下部に固定されている専用の **ログ** タブで確認できます。また、ログはローカル フォルダー内のファイルにも保存されます。
 
-![Hydra メイン start](../../images/hydra_main_start.png)
+![Hydra 開始後のメイン画面](../../images/hydra_main_start.png)
 
 ユーザーは[追加ソース](data_sources/select_source.md)を追加することもできます。
 

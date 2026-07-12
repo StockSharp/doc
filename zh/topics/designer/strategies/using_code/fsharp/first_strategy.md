@@ -25,11 +25,11 @@ let longParam =
 let shortParam =
 	this.Param<int>(nameof(this.Short), 30)
 
-// take profit 参数
+// 止盈参数
 let takeValueParam =
 	this.Param<Unit>(nameof(this.TakeValue), Unit(0m, UnitTypes.Absolute))
 
-// stop loss 参数
+// 止损参数
 let stopValueParam =
 	this.Param<Unit>(nameof(this.StopValue), Unit(2m, UnitTypes.Percent))
 
@@ -53,12 +53,12 @@ member this.Short
 	with get () = shortParam.Value
 	and set value = shortParam.Value <- value
 
-/// <summary>take profit 值。</summary>
+/// <summary>止盈值。</summary>
 member this.TakeValue
 	with get () = takeValueParam.Value
 	and set value = takeValueParam.Value <- value
 
-/// <summary>stop loss 值。</summary>
+/// <summary>止损值。</summary>
 member this.StopValue
 	with get () = stopValueParam.Value
 	and set value = stopValueParam.Value <- value

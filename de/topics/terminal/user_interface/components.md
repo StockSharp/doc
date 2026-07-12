@@ -20,4 +20,4 @@ Beim Handeln kann es erforderlich sein, den Prozess vollständig zu kontrolliere
 - [Positionen (Optionen)](components/positions_options.md) - ist eine grafische Darstellung der Optionsposition.
 - [Optionsdesk](components/option_desk.md) - ist eine Tabelle mit den wichtigsten Parametern der ausgewählten Optionen für den Basiswert.
 - [Smile-Volatilität](components/smile_volatility.md) - ist eine grafische Darstellung des erwarteten Volatilitätsniveaus für Optionen mit demselben Basiswert und unterschiedlichen Strikes.
-- [Orderlog](components/order_log.md) - ist eine Tabelle mit Orders, die vollständige Informationen über alle Orders für die ausgewählten Instrumente anzeigt.
+- [Orderprotokoll](components/order_log.md) - ist eine Tabelle mit Orders, die vollständige Informationen über alle Orders für die ausgewählten Instrumente anzeigt.

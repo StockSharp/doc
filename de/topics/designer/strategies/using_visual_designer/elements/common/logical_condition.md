@@ -4,12 +4,12 @@
 
 Dieses Element wird verwendet, um eine logische Formel mit zwei Argumenten zu berechnen.
 
-## Eingehende Sockets
+## Eingehende Anschlüsse
 
 - **Markierung** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
 - **Markierung** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **Markierung** – der Flag-Wert (kennzeichnet den Zustand und hat zwei Werte: gesetzt (true) und abgesenkt (false)).
 

@@ -34,7 +34,7 @@ public class CommentStrategy : Strategy
 }
 ```
 
-Mit dem Wert `Name` und dem Strategienamen "SMA Crossover" erhält jede Order den Kommentar "SMA Crossover", sodass Sie die Orders dieser Strategie im Handelsjournal filtern können.
+Mit dem Wert `Name` und dem Strategienamen "SMA-Kreuzung" erhält jede Order den Kommentar "SMA-Kreuzung", sodass Sie die Orders dieser Strategie im Handelsjournal filtern können.
 
 ## WorkingTime - Arbeitszeitplan
 

@@ -1,12 +1,12 @@
 # Strategiekompatibilität mit StockSharp-Plattformen
 
-Bei der Entwicklung von Handelsstrategien in StockSharp ist es wichtig, ihre Kompatibilität mit verschiedenen Plattformen zu berücksichtigen: [Designer](../../designer.md), [Shell](../../shell.md), [Runner](../../runner.md) und [Cloud-Backtesting](../../designer/backtesting/cloud_backtesting.md). Wenn Sie die folgenden Empfehlungen beachten, erstellen Sie eine Strategie, die in allen Umgebungen korrekt funktioniert.
+Bei der Entwicklung von Handelsstrategien in StockSharp ist es wichtig, ihre Kompatibilität mit verschiedenen Plattformen zu berücksichtigen: [Designer](../../designer.md), [Shell](../../shell.md), [Runner](../../runner.md) und [Cloud-Rücktests](../../designer/backtesting/cloud_backtesting.md). Wenn Sie die folgenden Empfehlungen beachten, erstellen Sie eine Strategie, die in allen Umgebungen korrekt funktioniert.
 
 ## Parameter im Strategiekonstruktor
 
 ### Parameter im Konstruktor vermeiden
 
-Um die Kompatibilität mit StockSharp-Plattformen sicherzustellen, insbesondere mit Cloud-Backtesting, **sollten Sie dem Strategiekonstruktor keine Parameter hinzufügen**:
+Um die Kompatibilität mit StockSharp-Plattformen sicherzustellen, insbesondere mit Cloud-Rücktests, **sollten Sie dem Strategiekonstruktor keine Parameter hinzufügen**:
 
 ```cs
 // Korrekt: Konstruktor ohne Parameter
@@ -66,7 +66,7 @@ public int LongSmaLength
 - In den Benutzeroberflächen der Plattformen angezeigt
 - Ohne Überschreiben der Methoden `Save` und `Load` gespeichert und geladen
 - In der Optimierung verwendet
-- Beim Senden an Cloud-Backtesting korrekt serialisiert
+- Beim Senden an Cloud-Rücktests korrekt serialisiert
 
 ## Arbeit mit der Benutzeroberfläche
 
@@ -85,12 +85,12 @@ protected override void OnStarted2(DateTime time)
 
 	if (_chart != null)
 	{
-		// Chart ist verfügbar (z. B. in Designer oder Shell)
+		// Chart ist verfügbar (z. B. im Designer oder in Shell)
 		InitChart();
 	}
 	else
 	{
-		// Chart ist nicht verfügbar (z. B. in Runner oder Cloud-Backtesting)
+		// Chart ist nicht verfügbar (z. B. in Runner oder Cloud-Rücktests)
 		// Strategie arbeitet ohne Visualisierung weiter
 	}
 }
@@ -105,7 +105,7 @@ private void InitChart()
 }
 ```
 
-Die Methode [Strategy.GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) gibt eine [IChart](xref:StockSharp.Charting.IChart)-Schnittstelle zurück, wenn in der aktuellen Laufzeitumgebung ein Chart verfügbar ist. Wenn die Strategie im Konsolen-[Runner](../../runner.md) oder im Cloud-Backtesting ausgeführt wird, wo keine grafische Oberfläche vorhanden ist, gibt die Methode `null` zurück.
+Die Methode [Strategy.GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) gibt eine [IChart](xref:StockSharp.Charting.IChart)-Schnittstelle zurück, wenn in der aktuellen Laufzeitumgebung ein Chart verfügbar ist. Wenn die Strategie im Konsolen-[Runner](../../runner.md) oder in Cloud-Rücktests ausgeführt wird, wo keine grafische Oberfläche vorhanden ist, gibt die Methode `null` zurück.
 
 Die Schnittstelle [IChart](xref:StockSharp.Charting.IChart) stellt Methoden zur Arbeit mit Charts bereit:
 - [AddArea](xref:StockSharp.Charting.IChart.AddArea(StockSharp.Charting.IChartArea)) - zum Hinzufügen eines Bereichs zum Chart
@@ -222,10 +222,10 @@ protected override void OnStopped()
 Zum Speichern von Strategieergebnissen verwenden Sie:
 
 - [Strategieparameter](parameters.md) für Einstellungen und Konfiguration
-- Integrierte Speichermechanismen in [Designer](../../designer.md) und [Shell](../../shell.md)
+- Integrierte Speichermechanismen im [Designer](../../designer.md) und in [Shell](../../shell.md)
 - [Statistics](xref:StockSharp.Algo.Statistics.StatisticManager) zum Sammeln von Handelskennzahlen
 
-### Save- und Load-Methoden
+### Speicher- und Lademethoden
 
 Die Methoden [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) und [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)) sind speziell zum Speichern zusätzlicher Strategiedaten vorgesehen, die keine Einstellungen oder Parameter sind. Dies ist der ideale Ort, um Daten zu speichern, die zur Wiederherstellung des Strategiezustands benötigt werden:
 
@@ -287,7 +287,7 @@ Regeln haben gegenüber normalen Ereignishandlern mehrere wichtige Vorteile:
 
 1. **Automatisches Abmelden** - Regeln melden sich automatisch von Ereignissen ab, wenn die Strategie stoppt oder wenn sie nicht mehr benötigt werden. Sie müssen Abonnements nicht manuell verwalten.
 
-2. **High-Level-API** - Regeln bieten eine verständlichere und bequemere Schnittstelle als standardmäßige Ereignishandler. Beispielsweise ist `WhenCandlesFinished` deutlich klarer als das Abonnieren des Ereignisses `CandleReceived` mit anschließender Prüfung des Kerzenzustands.
+2. **API auf höherer Ebene** - Regeln bieten eine verständlichere und bequemere Schnittstelle als standardmäßige Ereignishandler. Beispielsweise ist `WhenCandlesFinished` deutlich klarer als das Abonnieren des Ereignisses `CandleReceived` mit anschließender Prüfung des Kerzenzustands.
 
 3. **Kombinieren von Bedingungen** - Regeln können mit Operatoren wie `And`, `Or` und anderen kombiniert werden, um komplexe Aktivierungsbedingungen zu erstellen:
 
@@ -440,5 +440,5 @@ public class SmaStrategy : Strategy
 
 - [Strategieparameter](parameters.md)
 - [Ereignismodell](event_model.md)
-- [Strategie-Logging](logging.md)
+- [Strategieprotokollierung](logging.md)
 

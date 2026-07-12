@@ -1,8 +1,8 @@
-# Pairs-Trading-Strategie
+# Paarhandelsstrategie
 
 ## Überblick
 
-`PairsTradingStrategy` ist eine Pairs-Trading-Strategie auf Basis statistischer Arbitrage zwischen zwei verwandten Instrumenten. Sie verfolgt den Spread zwischen den Preisen zweier Assets und eröffnet Positionen, wenn der Spread deutlich vom Mittelwert abweicht, in Erwartung einer Rückkehr zum Mittelwert.
+`PairsTradingStrategy` ist eine Paarhandelsstrategie auf Basis statistischer Arbitrage zwischen zwei verwandten Instrumenten. Sie verfolgt den Spread zwischen den Preisen zweier Assets und eröffnet Positionen, wenn der Spread deutlich vom Mittelwert abweicht, in Erwartung einer Rückkehr zum Mittelwert.
 
 ## Hauptkomponenten
 
@@ -42,7 +42,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Zwei Instrumente für Pairs Trading abrufen
+	// Zwei Instrumente für den Paarhandel abrufen
 	var securities = GetWorkingSecurities().ToArray();
 	if (securities.Length < 2)
 		throw new InvalidOperationException("Zwei Instrumente müssen angegeben werden.");
@@ -145,7 +145,6 @@ private void ProcessSpread(decimal price1, decimal price2,
 - Die Strategie arbeitet mit zwei Instrumenten, die über die Methode `GetWorkingSecurities()` abgerufen werden.
 - Der Spread wird als Differenz der Schlusskurse von Kerzen aus zwei Instrumenten berechnet.
 - Der Z-Score wird verwendet, um die Spread-Abweichung vom Mittelwert zu normalisieren.
-- Die Strategie implementiert das klassische Mean-Reversion-Konzept.
+- Die Strategie implementiert das klassische Konzept der Rückkehr zum Mittelwert.
 - Die Strategie arbeitet nur mit abgeschlossenen Kerzen.
 - Parameteroptimierung wird unterstützt, um optimale Strategieeinstellungen zu finden.
-

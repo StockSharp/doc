@@ -22,7 +22,7 @@ class empty_indicator(BaseIndicator):
 	"""
 	Indicador de ejemplo que demuestra cómo guardar y cargar parámetros.
 
-	Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
+	Documentación https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
 
 	Cambia el precio de entrada en +20% o -20%.
 	"""
@@ -96,7 +96,7 @@ class empty_indicator(BaseIndicator):
 		storage.SetValue("Change", self.Change)
 
 	def __str__(self):
-		return f"Change: {self.Change}"
+		return f"Cambio: {self.Change}"
 
 	def ToString(self):
 		return str(self)

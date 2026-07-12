@@ -86,7 +86,7 @@ public class EmptyIndicator : BaseIndicator
 		storage.SetValue(nameof(Change), Change);
 	}
 
-	public override string ToString() => $"Change: {Change}";
+	public override string ToString() => $"Änderung: {Change}";
 }
 ```
 

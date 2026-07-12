@@ -14,7 +14,7 @@
 
 ![Designer 功能区 02](../../../images/designer_tape_02.png)
 
-4. **云** 选项卡。[Designer](../../designer.md) 支持使用云服务，可以查看已完成的 *Cloud Tasks*、获取云端可用交易品种的信息，以及配置对通道和机器人的远程操作。
+4. **云** 选项卡。[Designer](../../designer.md) 支持使用云服务，可以查看已完成的 *云任务*、获取云端可用交易品种的信息，以及配置对通道和机器人的远程操作。
 
 ![Designer 功能区 03](../../../images/designer_tape_03.png)
 

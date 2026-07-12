@@ -15,8 +15,8 @@ var connector = new Connector();
 // Adapter für die Verbindung zu Binance hinzufügen
 var messageAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>",
-	Secret = "<Your Secret Key>",
+	Key = "<Ihr API-Schlüssel>",
+	Secret = "<Ihr geheimer Schlüssel>",
 };
 connector.Adapter.InnerAdapters.Add(messageAdapter);
 

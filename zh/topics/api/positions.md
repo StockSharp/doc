@@ -68,17 +68,17 @@ state.UpdateOrderBalance(12345, newBalance: 60);
 var newPosition = state.UpdatePosition(secId, "MyPortfolio", diff: 40);
 Console.WriteLine($"当前持仓: {newPosition}");
 
-// Clear
+// 清除
 state.Clear();
 ```
 
 ## 持仓生命周期追踪器
 
-[PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) 类跟踪持仓的完整生命周期——从开仓到平仓（往返）。这对于分析单个交易、计算每个持仓的利润以及生成报告非常有用。
+[PositionLifecycleTracker](xref:StockSharp.Algo.Positions.PositionLifecycleTracker) 类跟踪持仓的完整生命周期——从开仓到平仓（一次往返交易）。这对于分析单个交易、计算每个持仓的利润以及生成报告非常有用。
 
 ### 主要特点
 
-- **历史**：`History` 属性（`IReadOnlyList<ReportPosition>`）包含所有已完成的往返持仓。
+- **历史**：`History` 属性（`IReadOnlyList<ReportPosition>`）包含所有已完成的持仓往返交易。
 - **`RoundTripClosed` 事件**：当一个持仓被平仓（数值变为零）或反转（持仓符号改变）时触发。
 - **`ProcessPosition` 方法**：接受一个 [Position](xref:StockSharp.BusinessEntities.Position) 对象并更新内部状态。
 

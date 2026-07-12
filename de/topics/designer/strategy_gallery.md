@@ -4,7 +4,7 @@ Die **Strategiegalerie** bietet die Möglichkeit, fertige Handelsstrategien auf 
 
 Um eine Strategie auf Ihren Computer herunterzuladen, müssen Sie:
 
-- die gewünschte Strategie auswählen und auf die Schaltfläche Download klicken:
+- die gewünschte Strategie auswählen und auf die Schaltfläche Herunterladen klicken:
 
   ![Designer Strategiegalerie 00](../../images/designer_gallery_of_strategies_00.png)
 

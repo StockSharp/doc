@@ -4,16 +4,16 @@
 
 O cubo é usado para cotar opções de acordo com os parâmetros especificados.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Modelo** - o modelo de cálculo (por exemplo, Black-Scholes).
 - **Volume** - o volume de cotação.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Ordem** - a ordem registada que pode ser usada para obter negócios sobre ela usando o elemento **Negócios** pela ordem e apresentá-la no gráfico usando o cubo **Painel do gráfico**.
 

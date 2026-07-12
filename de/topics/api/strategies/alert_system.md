@@ -4,7 +4,7 @@
 
 Strategien in StockSharp besitzen ein integriertes Alert-System, mit dem Benachrichtigungen verschiedener Typen gesendet werden können: Popup-Fenster, Tonsignale, Logeinträge und Telegram-Nachrichten. Alerts sind nützlich, um den Trader über wichtige Ereignisse zu informieren - Positionseinstiege, Level-Durchbrüche, Fehler und andere Handelssignale.
 
-Während des Backtestings werden Alerts außer dem Typ `Log` automatisch übersprungen, damit sie den Testlauf nicht stören.
+Während der Rücktests werden Alerts außer dem Typ `Log` automatisch übersprungen, damit sie den Testlauf nicht stören.
 
 ## Alert-Typen
 
@@ -49,7 +49,7 @@ AlertSound(string message);
 
 ### AlertLog
 
-Sendet eine Benachrichtigung in das Log. Dieser Typ funktioniert auch während des Backtestings:
+Sendet eine Benachrichtigung in das Log. Dieser Typ funktioniert auch während der Rücktests:
 
 ```csharp
 AlertLog(string message);

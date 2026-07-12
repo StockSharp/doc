@@ -46,7 +46,7 @@ var security = new Security
 // 测试投资组合
 var portfolio = new Portfolio
 {
-	Name = "test account",
+	Name = "测试账户",
 	BeginValue = 1000000,
 };
 ```

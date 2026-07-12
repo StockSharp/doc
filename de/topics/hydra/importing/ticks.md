@@ -26,7 +26,7 @@ Um Trades zu importieren, wählen Sie die Registerkarte **Importieren \=\> Ticks
    - Für das Feld {TradeId} wählen Sie im Fenster **S#-Feld** das Feld **Kennung** - die Trade-Kennung oder Trade-Nummer. Wir weisen ihm den Wert 4 zu.
    - Für das Feld {TradePrice} wählen Sie das Feld **Preis** - den Trade-Preis aus dem Fenster **S#-Feld**. Wir weisen ihm den Wert 5 zu.
    - Für das Feld {TradeVolume} wählen Sie im Fenster **S#-Feld** das Feld **Volumen** - das Trade-Volumen. Wir weisen ihm den Wert 6 zu.
-   - Für das Feld {OriginSide} wählen Sie im Fenster **S#-Feld** das Feld **Initiator** - den Trade-Initiator (Verkäufer oder Käufer). Wir weisen ihm den Wert 7 zu.
+   - Für das Feld {OriginSide} wählen Sie im Fenster **S#-Feld** das Feld **Initiator** - den Handelsinitiator (Verkäufer oder Käufer). Wir weisen ihm den Wert 7 zu.
    - Das Fenster zur Feldeinstellung sieht wie folgt aus:![Hydra Import Trade-Eigenschaften](../../../images/hydra_import_prop_trade.png)
 
    Der Benutzer kann eine große Anzahl von Eigenschaften für die heruntergeladenen Daten konfigurieren. Auf Basis der Vorlage der importierten Datei müssen Sie die Eigenschaft angeben und ihr die erforderliche Nummer in der Reihenfolge zuweisen.

@@ -40,7 +40,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("没有交易品种。");
 				return Task.CompletedTask;
 			}
 
@@ -55,7 +55,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("没有数据。");
 				return Task.CompletedTask;
 			}
 
@@ -65,13 +65,13 @@ namespace StockSharp.Algo.Analytics
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
 
 			// 将计算结果放入表格
-			var grid = panel.CreateGrid("Time", "Volume");
+			var grid = panel.CreateGrid("时间", "成交量");
 
 			foreach (var row in rows)
 				grid.SetRow(row.Key, row.Value);
 
 			// 按成交量列降序排序
-			grid.SetSort("Volume", false);
+			grid.SetSort("成交量", false);
 
 			return Task.CompletedTask;
 		}
@@ -116,7 +116,7 @@ class time_volume_script(IAnalyticsScript):
 	):
 		# 检查是否 没有交易品种
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("没有交易品种。")
 			return Task.CompletedTask
 
 		# 脚本只能处理 1 个工具
@@ -135,7 +135,7 @@ class time_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("没有数据。")
 			return Task.CompletedTask
 
 		# 按开盘时间对 K线分组（按小时截断）并汇总成交量
@@ -147,13 +147,13 @@ class time_volume_script(IAnalyticsScript):
 			rows[truncated] = rows.get(truncated, 0) + candle.TotalVolume
 
 		# 将计算结果放入表格
-		grid = panel.CreateGrid("Time", "Volume")
+		grid = panel.CreateGrid("时间", "成交量")
 
 		for key, value in rows.items():
 			grid.SetRow(key, value)
 
 		# 按 Volume 列降序排序
-		grid.SetSort("Volume", False)
+		grid.SetSort("成交量", False)
 
 		return Task.CompletedTask
 

@@ -4,11 +4,11 @@ Para adicionar uma estratégia à **Negociação ao vivo**, no [Painel de esquem
 
 ![Designer Negociação ao vivo 01](../../../images/designer_live_trade_01.png)
 
-Também pode adicionar uma estratégia à Live trade clicando no botão ![Designer Negociação ao vivo 00](../../../images/designer_live_trade_00.png) **Ao vivo** no separador **Teste histórico**.
+Também pode adicionar uma estratégia à negociação ao vivo clicando no botão ![Designer Negociação ao vivo 00](../../../images/designer_live_trade_00.png) **Ao vivo** no separador **Teste histórico**.
 
 ![Designer Negociação ao vivo 02](../../../images/designer_live_trade_02.png)
 
-A pasta Trade contém as estratégias adicionadas para execução em Live-trade. As estratégias em execução são marcadas com o sinal ![Designer Painel de circuitos 02](../../../images/designer_panel_circuits_02.png), e as estratégias paradas com o sinal ![Designer Painel de circuitos 03](../../../images/designer_panel_circuits_03.png).
+A pasta **Ao vivo** contém as estratégias adicionadas para execução em negociação ao vivo. As estratégias em execução são marcadas com o sinal ![Designer Painel de circuitos 02](../../../images/designer_panel_circuits_02.png), e as estratégias paradas com o sinal ![Designer Painel de circuitos 03](../../../images/designer_panel_circuits_03.png).
 
 ## Conteúdo recomendado
 

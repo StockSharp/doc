@@ -7,8 +7,8 @@ El siguiente código muestra cómo inicializar [HitBtcMessageAdapter](xref:Stock
 			...				
 			var messageAdapter = new HitBtcMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Su clave API>".To<SecureString>(),
+				Secret = "<Su secreto API>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...	

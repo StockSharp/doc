@@ -14,7 +14,7 @@ Der Disparitätsindex ist nützlich für:
 - Identifizierung extremer Preisabweichungen vom Mittelwert
 - Erkennen möglicher Umkehrpunkte
 - Messung der Stärke des aktuellen Trends
-- Erstellen von Handelsstrategien basierend auf der Mean-Reversion
+- Erstellen von Handelsstrategien basierend auf der Rückkehr zum Mittelwert
 
 ## Parameter
 
@@ -57,7 +57,7 @@ Der Disparitätsindex kann wie folgt interpretiert werden:
    - Durchweg negative DPI-Werte deuten auf einen starken Abwärtstrend hin
    - Schwankungen um Null können auf einen Seitwärtstrend oder eine Konsolidierung hinweisen
 
-5. **Mean-Reversion-Strategien**:
+5. **Strategien zur Rückkehr zum Mittelwert**:
    - Extreme DPI-Werte können verwendet werden, um Positionen gegen die aktuelle Preisbewegung zu eröffnen und eine Rückkehr zum Mittelwert zu erwarten
 
 ![DPI Diagramm](../../../../images/indicator_disparity_index.png)

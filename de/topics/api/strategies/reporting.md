@@ -26,7 +26,7 @@ Die Schnittstelle `IReportSource` stellt alle Daten bereit, die zum Erzeugen ein
 | `StatisticParameters` | `IEnumerable<(string, object)>` | Statistikparameter |
 | `Orders` | `IEnumerable<ReportOrder>` | Orders |
 | `OwnTrades` | `IEnumerable<ReportTrade>` | Eigene Trades |
-| `Positions` | `IEnumerable<ReportPosition>` | Positions-Round-Trips |
+| `Positions` | `IEnumerable<ReportPosition>` | Positionszyklen |
 
 Vor dem Lesen der Daten wird die Methode `Prepare()` aufgerufen, um den internen Zustand der Quelle zu synchronisieren.
 
@@ -78,18 +78,18 @@ Während der Aggregation werden Orders und Trades nach Zeitintervall, Instrument
 
 ## PositionLifecycleTracker
 
-`PositionLifecycleTracker` verfolgt den Lebenszyklus von Positionen und erzeugt Round-Trips, also Datensätze über Positionsöffnung und -schließung.
+`PositionLifecycleTracker` verfolgt den Lebenszyklus von Positionen und erzeugt Positionszyklen, also Datensätze über Positionsöffnung und -schließung.
 
-Ein Round-Trip wird aufgezeichnet, wenn:
+Ein Positionszyklus wird aufgezeichnet, wenn:
 - Eine Position vollständig geschlossen wird, also der Wert null wird
 - Eine Positionsumkehr stattfindet, also ein Vorzeichenwechsel
 
-In der Klasse `Strategy` ist der Tracker automatisch integriert: abgeschlossene Round-Trips werden über das Ereignis `RoundTripClosed` zu `ReportSource` hinzugefügt.
+In der Klasse `Strategy` ist der Tracker automatisch integriert: abgeschlossene Positionszyklen werden über das Ereignis `RoundTripClosed` zu `ReportSource` hinzugefügt.
 
 ```csharp
 var tracker = new PositionLifecycleTracker();
 
-// Ereignis beim Schließen eines Round-Trips
+// Ereignis beim Schließen eines Positionszyklus
 tracker.RoundTripClosed += roundTrip =>
 {
     Console.WriteLine($"Position geschlossen: {roundTrip.SecurityId}, " +
@@ -101,7 +101,7 @@ tracker.RoundTripClosed += roundTrip =>
 // Positionenaktualisierung verarbeiten
 tracker.ProcessPosition(position);
 
-// Zugriff auf die Round-Trip-Historie
+// Zugriff auf die Positionszyklus-Historie
 IReadOnlyList<ReportPosition> history = tracker.History;
 ```
 
@@ -206,4 +206,4 @@ public class ReportingStrategy : Strategy
 }
 ```
 
-In diesem Beispiel erstellt die Strategie beim Stoppen automatisch einen CSV-Bericht. Der Bericht enthält Strategieparameter, Statistiken, Orders, Trades und Positions-Round-Trips.
+In diesem Beispiel erstellt die Strategie beim Stoppen automatisch einen CSV-Bericht. Der Bericht enthält Strategieparameter, Statistiken, Orders, Trades und Positionszyklen.

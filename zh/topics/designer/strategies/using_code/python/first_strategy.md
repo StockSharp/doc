@@ -169,7 +169,7 @@ def OnProcess(self, candle, longValue, shortValue):
 ```python
 def CreateClone(self):
 	"""
-	!! 必需!! 创建新的策略实例。
+	!! 必需 !! 创建新的策略实例。
 	"""
 	return sma_strategy()
 ```

@@ -4,15 +4,15 @@
 
 Der Würfel wird verwendet, um komplexe Objekte in einfache Datentypen umzuwandeln. So können Sie beispielsweise den Wert des Preisschritts für ein Instrument abrufen.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Beliebige Daten** - ein bestimmter Typ komplexer Objekte, die empfangen werden.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Beliebige Daten** - der Wert der ausgewählten Eigenschaft für das empfangene Objekt.
 

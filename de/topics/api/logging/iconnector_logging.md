@@ -1,8 +1,8 @@
-# IConnector-Logging
+# IConnector-Protokollierung
 
 Die Objekte [IConnector](xref:StockSharp.BusinessEntities.IConnector) implementieren ähnlich wie [Strategien](strategy_logging.md) ebenfalls das Interface [ILogSource](xref:Ecng.Logging.ILogSource). Daher können Sie von einem [IConnector](xref:StockSharp.BusinessEntities.IConnector)-Objekt über den [LogManager](xref:Ecng.Logging.LogManager) Nachrichten mit denselben Mitteln empfangen, die auch für Strategien verfügbar sind.
 
-## Beispiel für IConnector-Logging
+## Beispiel für IConnector-Protokollierung
 
 1. Zuerst müssen Sie einen Logmanager erstellen:
 
@@ -14,7 +14,7 @@ Die Objekte [IConnector](xref:StockSharp.BusinessEntities.IConnector) implementi
 
 
    ```
-2. Danach müssen Sie einen Datei-Logger erstellen und ihn zu [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners) hinzufügen:
+2. Danach müssen Sie einen Datei-Protokollierer erstellen und ihn zu [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners) hinzufügen:
 
    ```cs
    _logManager.Listeners.Add(new FileLogListener());

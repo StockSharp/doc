@@ -1,6 +1,6 @@
 # Oberfläche
 
-Nachdem eine Strategie dem Ordner **Live-Handel** hinzugefügt wurde, öffnet ein Doppelklick auf die hinzugefügte Strategie einen Tab mit dem Titel "Live [Strategiename]". Beim Wechsel zu diesem Tab wird im **Menüband** automatisch der Tab **Live-Handel** geöffnet. Im Tab **Live-Handel** können Sie das Instrument und das Portfolio angeben, mit denen die Strategie arbeiten soll. Durch Drücken der Schaltfläche **Starten** starten Sie den Live-Handel für die Strategie; durch Drücken der Schaltfläche **Stoppen** halten Sie ihn an.
+Nachdem eine Strategie dem Ordner **Live-Handel** hinzugefügt wurde, öffnet ein Doppelklick auf die hinzugefügte Strategie einen Tab mit dem Titel "Live-Handel [Strategiename]". Beim Wechsel zu diesem Tab wird im **Menüband** automatisch der Tab **Live-Handel** geöffnet. Im Tab **Live-Handel** können Sie das Instrument und das Portfolio angeben, mit denen die Strategie arbeiten soll. Durch Drücken der Schaltfläche **Starten** starten Sie den Live-Handel für die Strategie; durch Drücken der Schaltfläche **Stoppen** halten Sie ihn an.
 
 ![Designer Live-Handel-Oberfläche 00](../../../images/designer_interface_live_trade_00.png)
 
@@ -14,7 +14,7 @@ Das Hinzufügen einer Strategie zu **Live-Handel** kopiert sie aus dem ursprüng
 - **Nein** bedeutet, den Unterschied zu ignorieren und die **Live-Handel**-Kopie ohne Anwendung von Änderungen zu starten.
 - **Abbrechen** bedeutet, nichts zu starten.
 
-Änderungen in der **Live-Handel**-Kopie sollten minimal sein und auf Testing sowie die anschließende Übertragung in das Original abzielen. Andernfalls besteht das Risiko, Änderungen zu verlieren, wenn die **Live-Handel**-Kopie auf die Version des Originals aktualisiert wird.
+Änderungen in der **Live-Handel**-Kopie sollten minimal sein und auf Tests sowie die anschließende Übertragung in das Original abzielen. Andernfalls besteht das Risiko, Änderungen zu verlieren, wenn die **Live-Handel**-Kopie auf die Version des Originals aktualisiert wird.
 
 ## Siehe auch
 

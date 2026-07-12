@@ -84,7 +84,7 @@ public class MyTradesWindow
 		
 		_connector = connector;
 		
-		// 订阅 own trade 接收事件
+		// 订阅自有成交接收事件
 		_connector.OwnTradeReceived += OnOwnTradeReceived;
 		
 		// 创建交易数据订阅
@@ -94,10 +94,10 @@ public class MyTradesWindow
 		_connector.Subscribe(myTradesSubscription);
 	}
 	
-	// own trade 接收事件处理器
+	// 自有成交接收事件处理器
 	private void OnOwnTradeReceived(Subscription subscription, MyTrade myTrade)
 	{
-		// 在用户界面线程中将 own trade 添加到 TradeGrid
+		// 在用户界面线程中将自有成交添加到 TradeGrid
 		this.GuiAsync(() => TradeGrid.Trades.Add(myTrade));
 	}
 }

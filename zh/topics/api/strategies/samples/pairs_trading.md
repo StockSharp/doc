@@ -57,7 +57,7 @@ protected override void OnStarted2(DateTime time)
 	_lastPrice1 = null;
 	_lastPrice2 = null;
 
-	// 订阅第一个工具的K线
+	// 订阅第一个交易品种的K线
 	SubscribeCandles(CandleType, security: sec1)
 		.Bind(c =>
 		{
@@ -68,7 +68,7 @@ protected override void OnStarted2(DateTime time)
 		})
 		.Start();
 
-	// 订阅第二个工具的K线并处理价差
+	// 订阅第二个交易品种的K线并处理价差
 	SubscribeCandles(CandleType, security: sec2)
 		.Bind(c =>
 		{
@@ -116,12 +116,12 @@ private void ProcessSpread(decimal price1, decimal price2,
 	// 计算 Z-Score：以标准差为单位的价差偏离均值程度
 	var zScore = (spread - mean) / dev;
 
-	// 价差过高：卖出第一个工具，买入第二个工具
+	// 价差过高：卖出第一个交易品种，买入第二个交易品种
 	if (zScore > EntryThreshold && Position >= 0)
 	{
 		SellMarket(Volume + Math.Abs(Position));
 	}
-	// 价差过低：买入第一个工具，卖出第二个工具
+	// 价差过低：买入第一个交易品种，卖出第二个交易品种
 	else if (zScore < -EntryThreshold && Position <= 0)
 	{
 		BuyMarket(Volume + Math.Abs(Position));

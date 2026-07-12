@@ -81,7 +81,7 @@ public override IndicatorMeasures Measure => IndicatorMeasures.Percent;
 
 このプロパティは、チャート上でインジケーターを正しく表示するために非常に重要です。異なる次元を持つ複数のインジケーターが同じパネルに重ねて表示される場合、`Measure` タイプが異なるインジケーターには個別の Y 軸が作成されます。これにより、一方の値が数千単位（例: 価格）で、もう一方が単位の小数（例: オシレーター）で測定される場合でも、すべてのインジケーターをそれぞれ自然なスケールで視覚的に表示できます。
 
-### Save と Load
+### 保存と読み込み
 
 [Save](xref:StockSharp.Algo.Indicators.BaseIndicator.Save(Ecng.Serialization.SettingsStorage)) および [Load](xref:StockSharp.Algo.Indicators.BaseIndicator.Load(Ecng.Serialization.SettingsStorage)) メソッドは、インジケーター設定の保存と読み込みに必要です。
 
@@ -379,8 +379,8 @@ public class PercentageVolumeOscillatorValue : ComplexIndicatorValue<PercentageV
 	/// <summary>
 	/// <see cref="PercentageVolumeOscillatorValue"/> クラスの新しいインスタンスを初期化します。
 	/// </summary>
-	/// <param name="indicator">Indicator.</param>
-	/// <param name="time">Value time.</param>
+	/// <param name="indicator">インジケーター。</param>
+	/// <param name="time">値の時刻。</param>
 	public PercentageVolumeOscillatorValue(PercentageVolumeOscillator indicator, DateTimeOffset time)
 			: base(indicator, time)
 	{

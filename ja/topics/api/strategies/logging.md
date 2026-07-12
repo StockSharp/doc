@@ -174,7 +174,7 @@ protected override void OnStopped()
 protected override void OnNewMyTrade(MyTrade trade)
 {
 	LogInfo("{0} {1} {2} 価格 {3}。数量: {4}",
-		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
+		trade.Order.Direction == Sides.Buy ? "買い" : "売り",
 		trade.Order.Security.Code,
 		trade.Order.Type,
 		trade.Trade.Price,

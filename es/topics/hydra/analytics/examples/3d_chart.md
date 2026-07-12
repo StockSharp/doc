@@ -51,7 +51,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("No hay instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 
 				if (dates.Length == 0)
 				{
-					logs.LogWarning("no data");
+					logs.LogWarning("No hay datos.");
 					return Task.CompletedTask;
 				}
 
@@ -97,7 +97,7 @@ namespace StockSharp.Algo.Analytics
 					z[i, pair.Key] = (double)pair.Value;
 			}
 
-			panel.Draw3D(x, y, z, "Instruments", "Hours", "Volume");
+			panel.Draw3D(x, y, z, "Instrumentos", "Horas", "Volumen");
 
 			return Task.CompletedTask;
 		}
@@ -141,7 +141,7 @@ class chart3d_script(IAnalyticsScript):
 	):
 		# Comprobar si no hay instrumentos
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("No hay instrumentos.")
 			return Task.CompletedTask
 
 		x = []  # Etiquetas X para instrumentos
@@ -175,7 +175,7 @@ class chart3d_script(IAnalyticsScript):
 			dates = get_dates(candle_storage, from_date, to_date)
 
 			if len(dates) == 0:
-				logs.LogWarning("no data")
+				logs.LogWarning("No hay datos.")
 				return Task.CompletedTask
 
 			# Agrupar velas por hora de apertura (truncada a la hora más cercana) y sumar volúmenes
@@ -191,7 +191,7 @@ class chart3d_script(IAnalyticsScript):
 					z[i][hour] = float(volume)
 
 		# Dibujar el gráfico 3D usando panel
-		panel.Draw3D(x, y, nx.to2darray(z), "Instruments", "Hours", "Volume")
+		panel.Draw3D(x, y, nx.to2darray(z), "Instrumentos", "Horas", "Volumen")
 
 		return Task.CompletedTask
 

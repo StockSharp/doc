@@ -29,12 +29,12 @@ El cálculo del indicador Aroon se basa en determinar el tiempo (número de peri
 
 1. Aroon alcista se calcula mediante la fórmula:
    ```
-   Aroon alcista = ((Length - Periods since high) / Length) * 100
+   Aroon alcista = ((Length - Periodos desde el máximo) / Length) * 100
    ```
 
 2. Aroon bajista se calcula mediante la fórmula:
    ```
-   Aroon bajista = ((Length - Periods since low) / Length) * 100
+   Aroon bajista = ((Length - Periodos desde el mínimo) / Length) * 100
    ```
 
 donde:

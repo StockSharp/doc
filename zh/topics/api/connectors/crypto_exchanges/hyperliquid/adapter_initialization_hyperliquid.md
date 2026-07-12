@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new HyperliquidMessageAdapter(Connector.TransactionIdGenerator)
 {
-	WalletAddress = "<Your Wallet Address>",
-	PrivateKey = "<Your Private Key>".To<SecureString>(),
+	WalletAddress = "<您的钱包地址>",
+	PrivateKey = "<您的私钥>".To<SecureString>(),
 	Section = HyperliquidSections.Derivatives,
 	IsTestnet = false,
 };

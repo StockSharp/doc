@@ -64,7 +64,7 @@ var order = new Order
 	Type = OrderTypes.Limit,
 	Price = price,
 	Volume = volume,
-	Comment = "Custom order"
+	Comment = "Ordem personalizada"
 };
 
 // Registar a ordem

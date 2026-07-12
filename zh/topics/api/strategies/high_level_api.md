@@ -173,7 +173,7 @@ if (area != null)
 	DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
 	DrawIndicator(area, longSma);
 	
-	// 绘制 own trades
+	// 绘制自有成交
 	DrawOwnTrades(area);
 	
 	// 绘制订单
@@ -291,7 +291,7 @@ DrawIndicator(secondArea, rsi);
 为了保护未平仓持仓，StockSharp 提供了高级 [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) 方法：
 
 ```cs
-// 使用 Take Profit 和 Stop Loss 水平启动仓位保护
+// 使用止盈和止损水平启动持仓保护
 StartProtection(TakeValue, StopValue);
 ```
 

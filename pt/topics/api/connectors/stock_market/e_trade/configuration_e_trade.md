@@ -6,7 +6,7 @@ O mecanismo de interação é apresentado nesta figura:
 
 ![Captura de tela de Configuração E\TRADE](../../../../../images/etrade.png)
 
-O [E\*TRADE](../e_trade.md) utiliza o protocolo de autorização OAuth 1.0a, que requer login e password através do browser no site [E\*TRADE](https://etrade.com/). A sequência completa do procedimento de autorização é apresentada na figura seguinte:
+O [E\*TRADE](../e_trade.md) utiliza o protocolo de autorização OAuth 1.0a, que requer nome de utilizador e palavra-passe através do navegador no site [E\*TRADE](https://etrade.com/). A sequência completa do procedimento de autorização é apresentada na figura seguinte:
 
 ![E\*TRADE autorização](../../../../../images/etrade_autoriazation.png)
 

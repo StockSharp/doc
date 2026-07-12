@@ -55,10 +55,10 @@ var importer = new CsvImporter(
 await using var stream = File.OpenRead("trades.csv");
 var (count, lastTime) = await importer.Import(
     stream,
-    p => Console.WriteLine($"Progress: {p}%"),
+    p => Console.WriteLine($"Progreso: {p}%"),
     token);
 
-Console.WriteLine($"Imported {count} records, last: {lastTime}");
+Console.WriteLine($"{count} registros importados, último: {lastTime}");
 ```
 
 ## FieldMapping — descripciones de campos
@@ -99,7 +99,7 @@ La clase estática [FieldMappingRegistry](xref:StockSharp.Algo.Import.FieldMappi
 
 - **CreateFields(DataType)** — devuelve una lista de [FieldMapping](xref:StockSharp.Algo.Import.FieldMapping) para el tipo de datos especificado.
 
-Tipos de datos admitidos: ticks, velas, libros de órdenes, Level1, order log, transacciones, instrumentos, noticias y posiciones.
+Tipos de datos admitidos: ticks, velas, libros de órdenes, Level1, registro de órdenes, transacciones, instrumentos, noticias y posiciones.
 
 ## ImportSettings — configuración de importación
 

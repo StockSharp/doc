@@ -10,4 +10,4 @@
 
 - Lanzamiento de estrategias desde código C#, esquemas de [Designer](designer.md) o ensamblados DLL preparados.
 
-- Ejecución de estrategias en modo de trading real o en backtesting sobre datos históricos.
+- Ejecución de estrategias en modo de trading real o en pruebas históricas con datos históricos.

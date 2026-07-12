@@ -60,11 +60,11 @@ StockSharp wird über NuGet verteilt. Unten finden Sie den vollständigen Paketk
 | [StockSharp.Algo.Strategies](https://www.nuget.org/packages/StockSharp.Algo.Strategies/) | Strategie-Framework - Basisklasse Strategy, Positionen, PnL |
 | [StockSharp.Algo.Indicators](https://www.nuget.org/packages/StockSharp.Algo.Indicators/) | 100+ technische Indikatoren (SMA, EMA, RSI, MACD, Bollinger usw.) |
 
-### Testing
+### Tests
 
 | Paket | Beschreibung |
 |-------|--------------|
-| [StockSharp.Algo.Testing](https://www.nuget.org/packages/StockSharp.Algo.Testing/) | Backtesting auf historischen Daten, Trade-Emulation |
+| [StockSharp.Algo.Testing](https://www.nuget.org/packages/StockSharp.Algo.Testing/) | Rücktests auf historischen Daten, Trade-Emulation |
 
 ### Speicherung und Daten
 
@@ -266,7 +266,7 @@ dotnet restore
 </Project>
 ```
 
-### Erweitert (Strategie mit Indikatoren und Testing)
+### Erweitert (Strategie mit Indikatoren und Tests)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

@@ -52,7 +52,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Нет инструментов.");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// отрисовать серии на графике
-				candleChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values);
+				candleChart.Append($"{security} (закрытие)", candlesSeries.Keys, candlesSeries.Values);
 				indicatorChart.Append($"{security} (ROC)", indicatorSeries.Keys, indicatorSeries.Values);
 			}
 
@@ -117,7 +117,7 @@ from indicator_extensions import *
 class indicator_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Нет инструментов.")
 			return Task.CompletedTask
 
 		# создание двух панелей для свечей и серии индикатора
@@ -151,7 +151,7 @@ class indicator_script(IAnalyticsScript):
 
 			# отрисовать серии на графике
 			candle_chart.Append(
-				f"{security} (close)",
+				f"{security} (закрытие)",
 				list(candles_series.keys()),
 				list(candles_series.values())
 			)

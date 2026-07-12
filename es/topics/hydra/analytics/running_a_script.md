@@ -1,6 +1,6 @@
 # Ejecución de un script
 
-Para crear un nuevo script analítico, seleccione la pestaña **Analytics** en el panel de fuentes de datos de la ventana principal y elija la plantilla deseada en el menú desplegable para un inicio rápido:
+Para crear un nuevo script analítico, seleccione la pestaña **Analítica** en el panel de fuentes de datos de la ventana principal y elija la plantilla deseada en el menú desplegable para un inicio rápido:
 
 ![Ejecución de un script 00](../../../images/hydra_analytics_main_00.png)
 

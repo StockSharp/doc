@@ -15,8 +15,8 @@ var connector = new Connector();
 // Binance に接続するためのアダプターを追加します
 var messageAdapter = new BinanceMessageAdapter(connector.TransactionIdGenerator)
 {
-	Key = "<Your API Key>",
-	Secret = "<Your Secret Key>",
+	Key = "<APIキー>",
+	Secret = "<シークレットキー>",
 };
 connector.Adapter.InnerAdapters.Add(messageAdapter);
 

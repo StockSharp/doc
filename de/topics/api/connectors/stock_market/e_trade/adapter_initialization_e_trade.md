@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...
 var messageAdapter = new ETradeMessageAdapter(Connector.TransactionIdGenerator)
 {
-	ConsumerSecret = "<Your Secret>".To<SecureString>(),
-	ConsumerKey = "<Your Key>",
+	ConsumerSecret = "<Ihr Geheimnis>".To<SecureString>(),
+	ConsumerKey = "<Ihr Schlüssel>",
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ...

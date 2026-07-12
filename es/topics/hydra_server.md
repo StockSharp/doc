@@ -33,7 +33,7 @@ El programa tiene un archivo de configuración `appsettings.json`:
 ```
 
 - **WebApiAddress** - dirección de StockSharp WebAPI. Se usa para la administración mediante [Telegram](telegram_services.md).
-- **LogLevel** - nivel de logging.
+- **LogLevel** - nivel de registro.
 - **AutoDownload** - indica si se debe habilitar la descarga automática de fuentes al iniciar.
 - **CompanyPath** - si se usa el programa como Windows Service, debe establecer la ruta como "C:\\Users\\%user_name%\\Documents\\StockSharp".
 - **AppDataPath** - si se mueve el directorio de configuración de [Hydra](hydra.md), debe especificarse una nueva ruta a la configuración.

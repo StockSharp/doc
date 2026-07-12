@@ -60,5 +60,5 @@ protected override void OnStarted2(DateTime time)
 
 - Demuestra el uso del método `Until()` para limitar la ejecución de reglas
 - Usa suscripción a operaciones y libros de órdenes
-- Muestra un ejemplo de logging de información sobre el libro de órdenes y el estado del contador mediante el método `LogInfo`
+- Muestra un ejemplo de registro de información sobre el libro de órdenes y el estado del contador mediante el método `LogInfo`
 - Ilustra cómo limitar el número de ejecuciones de una regla en función de una condición específica

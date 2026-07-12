@@ -82,7 +82,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 	// Ereignis zum Empfang von Kerzen abonnieren
 	_connector.CandleReceived += Connector_CandleReceived;
 
-	// Connect
+	// Verbinden
 	_connector.Connect();
 }
 ```
@@ -338,10 +338,10 @@ private void ExtendedCandleProcessing(Subscription subscription, ICandleMessage 
 	// Kerze im Diagramm zeichnen
 	Chart.Draw(_candleElement, candle);
 
-	// Informationen zur Kerze in Logs ausgeben
+	// Informationen zur Kerze in Protokolle ausgeben
 	this.GuiAsync(() =>
 	{
-		var status = subscription.State == SubscriptionStates.Online ? "Real-time" : "History";
+		var status = subscription.State == SubscriptionStates.Online ? "Echtzeit" : "Historie";
 		LogControl.LogMessage($"{status}: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice}");
 	});
 }

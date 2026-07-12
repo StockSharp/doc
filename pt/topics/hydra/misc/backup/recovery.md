@@ -2,7 +2,7 @@
 
 Pode restaurar os dados do armazenamento de duas formas:
 
-- Descarregar os objetos armazenados a partir da consola da AWS. Para o fazer, clique com o botão direito do rato no objeto e selecione **Descarregar** no menu de contexto.![download Aws3](../../../../images/aws3_download.png)
+- Descarregar os objetos armazenados a partir da consola da AWS. Para o fazer, clique com o botão direito do rato no objeto e selecione **Descarregar** no menu de contexto.![Transferência AWS S3](../../../../images/aws3_download.png)
 
   > [!TIP]
   > Este método permite descarregar apenas um objeto (ficheiro) de cada vez.

@@ -1,10 +1,10 @@
-# High-Level-API in Strategien
+# API auf höherer Ebene in Strategien
 
-StockSharp stellt eine Reihe von High-Level-APIs bereit, die die Arbeit mit häufigen Aufgaben in Handelsstrategien vereinfachen. Diese Schnittstellen ermöglichen saubereren Code, der sich auf die Handelslogik statt auf technische Details konzentriert.
+StockSharp stellt eine Reihe von APIs auf höherer Ebene bereit, die die Arbeit mit häufigen Aufgaben in Handelsstrategien vereinfachen. Diese Schnittstellen ermöglichen saubereren Code, der sich auf die Handelslogik statt auf technische Details konzentriert.
 
 ## Vereinfachte Abonnementverwaltung
 
-High-Level-Methoden für die Arbeit mit Abonnements verbergen die Komplexität der Verwaltung des Abonnementlebenszyklus und der Datenverarbeitung.
+Methoden auf höherer Ebene für die Arbeit mit Abonnements verbergen die Komplexität der Verwaltung des Abonnementlebenszyklus und der Datenverarbeitung.
 
 ### SubscribeCandles-Methode
 
@@ -19,7 +19,7 @@ Diese Methode gibt ein Objekt vom Typ [ISubscriptionHandler\<ICandleMessage\>](x
 
 ### Automatische Bindung von Indikatoren an ein Abonnement
 
-Die High-Level-API erleichtert das Binden von Indikatoren an ein Datenabonnement:
+Die API auf höherer Ebene erleichtert das Binden von Indikatoren an ein Datenabonnement:
 
 ```cs
 var longSma = new SMA { Length = Long };
@@ -154,7 +154,7 @@ Dies vereinfacht den Code erheblich und macht ihn besser lesbar, da der Entwickl
 
 ### Automatische Visualisierung
 
-Die High-Level-API stellt einfache Methoden zum Binden von Abonnements und Indikatoren an Chartelemente bereit:
+Die API auf höherer Ebene stellt einfache Methoden zum Binden von Abonnements und Indikatoren an Chartelemente bereit:
 
 ```cs
 var area = CreateChartArea();
@@ -271,7 +271,7 @@ DrawIndicator(secondArea, rsi);
 
 Die Aufteilung des Charts in Bereiche ermöglicht eine anschaulichere Darstellung unterschiedlicher Datentypen. Indikatoren mit einem anderen Wertebereich als der Preis, beispielsweise RSI oder Stochastic, werden besser in separaten Bereichen angezeigt.
 
-Vorteile der High-Level-Visualisierungsmethoden:
+Vorteile der Visualisierungsmethoden auf höherer Ebene:
 - Keine manuelle Erstellung von `ChartDrawData`-Objekten erforderlich
 - Keine manuelle Verwaltung der Datengruppierung nach Zeit erforderlich
 - Kein Aufruf von `chart.Draw()` zur Aktualisierung des Charts erforderlich
@@ -284,7 +284,7 @@ Das System aktualisiert den Chart automatisch, wenn neue Daten empfangen werden,
 
 ### StartProtection-Methode
 
-Zum Schutz offener Positionen stellt StockSharp die High-Level-Methode [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) bereit:
+Zum Schutz offener Positionen stellt StockSharp die Methode [StartProtection](xref:StockSharp.Algo.Strategies.Strategy.StartProtection(StockSharp.Messages.Unit,StockSharp.Messages.Unit,System.Boolean,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Boolean)) auf höherer Ebene bereit:
 
 ```cs
 // Positionenschutz mit Take-Profit- und Stop-Loss-Niveaus starten
@@ -309,9 +309,9 @@ StartProtection(
 );
 ```
 
-## Vorteile der High-Level-API
+## Vorteile der API auf höherer Ebene
 
-Die High-Level-API in StockSharp-Strategien bietet die folgenden Vorteile:
+Die API auf höherer Ebene in StockSharp-Strategien bietet die folgenden Vorteile:
 
 1. **Reduzierter Codeumfang** - häufige Aufgaben erfordern weniger Codezeilen.
 
@@ -323,9 +323,9 @@ Die High-Level-API in StockSharp-Strategien bietet die folgenden Vorteile:
 
 5. **Arbeit mit einfachen Datentypen** - statt mit komplexen Objekten können Sie mit einfachen Datentypen arbeiten, z. B. `decimal`.
 
-## Beispielstrategie mit High-Level-API
+## Beispielstrategie mit API auf höherer Ebene
 
-Unten sehen Sie ein vollständiges Beispiel einer Strategie, das die Verwendung der High-Level-API demonstriert:
+Unten sehen Sie ein vollständiges Beispiel einer Strategie, das die Verwendung der API auf höherer Ebene demonstriert:
 
 ```cs
 public class SmaStrategy : Strategy
@@ -440,7 +440,7 @@ public class SmaStrategy : Strategy
 
 ## Fazit
 
-Die High-Level-API in StockSharp vereinfacht die Entwicklung von Handelsstrategien erheblich, da sich Entwickler auf die Handelslogik statt auf technische Details konzentrieren können. Sie ist besonders nützlich für typische Anwendungsfälle, in denen keine Feinabstimmung der Datenverarbeitung oder Visualisierung erforderlich ist.
+Die API auf höherer Ebene in StockSharp vereinfacht die Entwicklung von Handelsstrategien erheblich, da sich Entwickler auf die Handelslogik statt auf technische Details konzentrieren können. Sie ist besonders nützlich für typische Anwendungsfälle, in denen keine Feinabstimmung der Datenverarbeitung oder Visualisierung erforderlich ist.
 
-In Kombination mit dem Strategieparametersystem, dem Ereignismodell und den Mechanismen zum Positionsschutz macht die High-Level-API StockSharp zu einem leistungsfähigen und bequemen Werkzeug für algorithmischen Handel, geeignet sowohl für Einsteiger als auch für erfahrene Entwickler.
+In Kombination mit dem Strategieparametersystem, dem Ereignismodell und den Mechanismen zum Positionsschutz macht die API auf höherer Ebene StockSharp zu einem leistungsfähigen und bequemen Werkzeug für algorithmischen Handel, geeignet sowohl für Einsteiger als auch für erfahrene Entwickler.
 

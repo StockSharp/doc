@@ -6,11 +6,11 @@
 
 O cubo é usado para obter um livro de ordens esparso para o instrumento especificado.
 
-### Sockets de entrada
+### Conectores de entrada
 
 - Livro de ordens - o livro de ordens que tem de ser rarefeito.
 
-### Sockets de saída
+### Conectores de saída
 
 - Livro de ordens - o livro de ordens esparso.
 

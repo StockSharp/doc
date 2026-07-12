@@ -31,8 +31,8 @@ StockSharp API 提供通过内置订阅机制接收订单信息的能力。与�
 默认情况下，[Connector](xref:StockSharp.Algo.Connector) 在连接时自动创建交易信息的订阅 ([SubscriptionsOnConnect](xref:StockSharp.Algo.Connector.SubscriptionsOnConnect))。这包括以下订阅：
 
 - 订单信息
-- 贸易信息
-- 位置信息
+- 成交信息
+- 持仓信息
 - 基本交易品种查询
 
 处理订单接收事件的示例：
@@ -43,7 +43,7 @@ private void InitConnector()
 	// 订阅订单接收事件
 	Connector.OrderReceived += OnOrderReceived;
 	
-	// 订阅 own trade 接收事件
+	// 订阅自有成交接收事件
 	Connector.OwnTradeReceived += OnOwnTradeReceived;
 	
 	// 订阅订单注册失败事件

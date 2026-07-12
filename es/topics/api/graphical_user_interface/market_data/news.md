@@ -88,11 +88,11 @@ private void OnFilteredNewsReceived(Subscription subscription, News news)
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 	
 	// Mostrar información de la noticia
-	Console.WriteLine($"News: {news.Headline}");
-	Console.WriteLine($"Source: {news.Source}");
-	Console.WriteLine($"Time: {news.ServerTime}");
+	Console.WriteLine($"Noticia: {news.Headline}");
+	Console.WriteLine($"Fuente: {news.Source}");
+	Console.WriteLine($"Hora: {news.ServerTime}");
 	if (!string.IsNullOrEmpty(news.Story))
-		Console.WriteLine($"Text: {news.Story}");
+		Console.WriteLine($"Texto: {news.Story}");
 }
 ```
 
@@ -118,9 +118,8 @@ public void FilterNewsByKeywords(IEnumerable<string> keywords)
 			this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 			
 			// Mostrar notificación
-			ShowNotification($"New news on topic: {news.Headline}");
+			ShowNotification($"Nueva noticia sobre el tema: {news.Headline}");
 		}
 	};
 }
 ```
-

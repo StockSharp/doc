@@ -4,15 +4,15 @@
 
 Este bloco é usado para criar um modelo de precificação de opções.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Opções** - os strikes para os quais o modelo tem de ser criado.
 
-### Sockets de saída
+### Conectores de saída
 
-Sockets de saída
+Conectores de saída
 
 - **Modelo** - o modelo de precificação (por exemplo, Black-Scholes).
 
@@ -20,7 +20,7 @@ Sockets de saída
 
 Parâmetros
 
-- **Modelo Black** - uma flag que indica se deve ser criado um modelo Black-Scholes.
+- **Modelo Black** - um sinalizador que indica se deve ser criado um modelo Black-Scholes.
 
 ![Designer cesto Black-Scholes 01](../../../../../../images/designer_black_basket_01.png)
 

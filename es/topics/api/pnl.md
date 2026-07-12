@@ -62,7 +62,7 @@ Por ejemplo, si la posición era +2 y llegó un trade de -5 contratos, entonces 
 | `UseTick` | `true` | Usar tick trades. |
 | `UseOrderBook` | `false` | Usar libro de órdenes (mejor bid/ask). |
 | `UseLevel1` | `false` | Usar datos Level1. |
-| `UseOrderLog` | `false` | Usar order log. |
+| `UseOrderLog` | `false` | Usar registro de órdenes. |
 | `UseCandles` | `true` | Usar velas (precio de cierre). |
 
 ## Integración mediante adaptador

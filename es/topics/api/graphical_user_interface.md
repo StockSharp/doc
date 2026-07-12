@@ -8,7 +8,7 @@
 
 - buscar y seleccionar datos (instrumentos, portafolios, direcciones);
 - crear órdenes;
-- mostrar información bursátil y de otro tipo (operaciones, órdenes, transacciones, libros de órdenes, logs, etc.);
+- mostrar información bursátil y de otro tipo (operaciones, órdenes, transacciones, libros de órdenes, registros, etc.);
 - construir gráficos.
 
 Para acceder a los controles gráficos de [S#](../api.md) en el código XAML, debe definir los alias para el espacio de nombres correspondiente y usar estos alias en el código XAML. El siguiente ejemplo muestra cómo hacerlo:
@@ -27,4 +27,3 @@ Para acceder a los controles gráficos de [S#](../api.md) en el código XAML, de
 </Window>
 	
 ```
-

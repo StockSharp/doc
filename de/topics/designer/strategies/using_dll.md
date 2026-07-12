@@ -41,6 +41,6 @@ Wenn die Strategie Charting-Schnittstellen verwendet, binden Sie das NuGet-Paket
 
 ![Designer DLL-Strategie erstellen 01](../../../images/designer_creation_strategy_dll_01.png)
 
-3. Das Starten der Strategie im [Backtest](../backtesting/user_interface.md), im [Live-Betrieb](../live_execution/getting_started.md) und andere Operationen funktionieren ähnlich wie bei einer Strategie aus Diagrammen und Code:
+3. Das Starten der Strategie im [Rücktest](../backtesting/user_interface.md), im [Live-Betrieb](../live_execution/getting_started.md) und andere Operationen funktionieren ähnlich wie bei einer Strategie aus Diagrammen und Code:
 
 ![Designer DLL-Strategie erstellen 02](../../../images/designer_creation_strategy_dll_02.png)

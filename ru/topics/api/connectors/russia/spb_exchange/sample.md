@@ -7,8 +7,8 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new SpbExMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Login = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
+	Login = "<Ваш логин>",
+	Password = "<Ваш пароль>".To<SecureString>(),
 	Config = SpbExAddressConfig.Game,
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);

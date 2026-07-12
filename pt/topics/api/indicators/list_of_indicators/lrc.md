@@ -8,5 +8,4 @@ Para utilizar o indicador, deve usar a classe [LinearReg](xref:StockSharp.Algo.I
 
 ## Conteúdo recomendado
 
-[Registo de logs](../../logging.md)
-
+[Registo](../../logging.md)

@@ -9,7 +9,7 @@ Liste der Komponenten, die mit Quellcode verfügbar sind:
 - Allgemeine Klassen zum Erstellen eigener Verbindungen.
 - Format des Marktdatenspeichers.
 - Handelssimulator.
-- Historischer Simulator (Backtester).
+- Historischer Simulator (Rücktester).
 - Indikatoren der technischen Analyse (mehr als 70).
 - Algorithmen zur Berechnung von Gewinn/Verlust, Slippage und Verzögerung.
 - Algorithmen zum Erstellen von Kerzen beliebiger Zeitrahmen sowie nicht zeitbasierter Kerzen (Tick, Range usw.).

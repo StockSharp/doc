@@ -11,7 +11,7 @@ O formato binário é o principal formato de armazenamento de dados de alto dese
 - **Compactação** -- os dados são serializados em forma binária com compressão, garantindo tamanhos de ficheiro mínimos.
 - **Desempenho** -- a leitura e a escrita são significativamente mais rápidas em comparação com formatos de texto.
 - **Metadados** -- a classe `BinaryMetaInfo` armazena informação auxiliar: primeiros e últimos preços, valores fracionários e carimbos de data/hora. Isto permite obter rapidamente informação geral sobre os dados sem ler o ficheiro completo.
-- **Arquitetura preparada para compressão** -- o formato foi concebido de raiz para compressão eficiente em streaming.
+- **Arquitetura preparada para compressão** -- o formato foi concebido de raiz para compressão eficiente em fluxo contínuo.
 
 Os ficheiros binários têm a extensão `.bin`.
 

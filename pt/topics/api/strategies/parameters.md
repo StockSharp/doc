@@ -213,7 +213,7 @@ public class SmaStrategy : Strategy
 
 	public SmaStrategy()
 	{
-		base.Name = "SMA strategy";
+		base.Name = "Estratégia SMA";
 
 		Param("TypeId", GetType().GetTypeName(false)).SetHidden();
 		_longSmaLength = Param(nameof(LongSmaLength), 80)

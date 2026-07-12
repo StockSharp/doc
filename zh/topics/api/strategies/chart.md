@@ -491,5 +491,5 @@ public class SmaStrategy : Strategy
 
 ## 另请参阅
 
-- [战略中的指标](indicators.md)
+- [策略中的指标](indicators.md)
 - [策略中的交易操作](trading_operations.md)

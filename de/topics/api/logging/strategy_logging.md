@@ -1,4 +1,4 @@
-# Strategie-Logging
+# Strategieprotokollierung
 
 Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementiert das Interface [ILogSource](xref:Ecng.Logging.ILogSource). Daher können Strategien an [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources) übergeben werden, und alle ihre Nachrichten gelangen automatisch zu [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners).
 
@@ -6,14 +6,14 @@ Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementiert da
 
 [Handelsstrategien](../strategies.md)
 
-## Logging in eine Testdatei
+## Protokollierung in eine Testdatei
 
 1. Zuerst müssen Sie den speziellen Manager erstellen:
 
    ```cs
    var logManager = new LogManager();
    ```
-2. Danach müssen Sie einen Datei-Logger erstellen, ihm den Dateinamen übergeben und ihn zu [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners) hinzufügen:
+2. Danach müssen Sie einen Datei-Protokollierer erstellen, ihm den Dateinamen übergeben und ihn zu [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners) hinzufügen:
 
    ```cs
    var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
@@ -24,7 +24,7 @@ Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementiert da
    ```cs
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-4. Nach dem Hinzufügen der Strategie zum Logging-Manager werden alle ihre Nachrichten in die Datei geschrieben.
+4. Nach dem Hinzufügen der Strategie zum Protokollierungsmanager werden alle ihre Nachrichten in die Datei geschrieben.
 
 ## Soundwiedergabe
 
@@ -44,7 +44,7 @@ Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementiert da
 
 ## E-Mail-Versand
 
-1. Erstellen Sie den Logger und übergeben Sie ihm die Parameter für die versendeten Nachrichten:
+1. Erstellen Sie den Protokollierer und übergeben Sie ihm die Parameter für die versendeten Nachrichten:
 
    ```cs
    var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.com");
@@ -58,7 +58,7 @@ Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementiert da
    emailListener.Filters.Add(msg => msg.Level == LogLevels.Warning);
    ```
 
-## Logging in das LogWindow
+## Protokollierung im LogWindow
 
 1. Erstellen des [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)-Loggers:
 
@@ -68,9 +68,9 @@ Die Klasse [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementiert da
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. So sieht das Logfenster während der Arbeit der Strategie aus: ![Strategie-Logging Bildschirmfoto](../../../images/strategy_logging.png)
+2. So sieht das Logfenster während der Arbeit der Strategie aus: ![Strategieprotokollierung Bildschirmfoto](../../../images/strategy_logging.png)
 
 ## Empfohlene Inhalte
 
-[Visuelle Logging-Komponenten](../graphical_user_interface/logging.md)
+[Visuelle Protokollierungskomponenten](../graphical_user_interface/logging.md)
 

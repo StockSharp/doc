@@ -49,10 +49,10 @@
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		_testSource.AddInfoLog("{0} (source)!!!".Put(level));
+		_testSource.AddInfoLog("{0} (источник)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		_testSource.AddWarningLog("Warning (source)!!!");
+		_testSource.AddWarningLog("Предупреждение (источник)!!!");
    		break;
    	case LogLevels.Error:
 		_testSource.AddErrorLog("Ошибка (источник)!!!");
@@ -71,13 +71,13 @@
    	case LogLevels.Debug:
    	case LogLevels.Info:
    	case LogLevels.Off:
-   		Trace.TraceInformation("{0} (trace)!!!".Put(level));
+		Trace.TraceInformation("{0} (трассировка)!!!".Put(level));
    		break;
    	case LogLevels.Warning:
-   		Trace.TraceWarning("Warning (trace)!!!");
+		Trace.TraceWarning("Предупреждение (трассировка)!!!");
    		break;
    	case LogLevels.Error:
-   		Trace.TraceError("Error (trace)!!!");
+		Trace.TraceError("Ошибка (трассировка)!!!");
    		break;
    	default:
    		throw new ArgumentOutOfRangeException();

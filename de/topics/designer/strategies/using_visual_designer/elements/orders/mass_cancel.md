@@ -4,17 +4,17 @@
 
 Dieser Block wird verwendet, um alle Orders für ein Instrument zu stornieren.
 
-### Eingehende Sockets
+### Eingehende Anschlüsse
 
-Eingehende Sockets
+Eingehende Anschlüsse
 
 - **Auslöser** - das Signal, das bestimmt, wann Orders storniert werden müssen.
 - **Portfolio** - das Portfolio, für das alle Orders storniert werden sollen.
 - **Handelsinstrument** - das Instrument, für das alle Orders storniert werden sollen.
 
-### Ausgehende Sockets
+### Ausgehende Anschlüsse
 
-Ausgehende Sockets
+Ausgehende Anschlüsse
 
 - **Ergebnis** - ein Flag, das den Erfolg des Vorgangs signalisiert.
 

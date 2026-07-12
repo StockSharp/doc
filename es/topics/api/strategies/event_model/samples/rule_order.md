@@ -96,6 +96,6 @@ protected override void OnStarted2(DateTime time)
 
 - Demuestra la creación de reglas para procesar eventos de registro de órdenes
 - Usa el mecanismo de reglas mutuamente excluyentes (`Exclusive`)
-- Muestra un ejemplo de logging de información sobre eventos de órdenes mediante el método `LogInfo`
+- Muestra un ejemplo de registro de información sobre eventos de órdenes mediante el método `LogInfo`
 - Ilustra el uso de `Once()` para limitar la activación de reglas
 - Crea órdenes con volúmenes diferentes para demostrar varios escenarios (registro correcto y error de registro)

@@ -22,7 +22,7 @@ Para importar velas, selecione o item **Importar \=\> Velas** no menu principal 
 2. Configure os parâmetros de importação para os campos [S#](../../api.md).
    - **campo S#** - valor do campo S# (**Instrumento**, **Mercado**, etc.).
    - **Associações** - corresponder o valor da coluna no ficheiro ao tipo StockSharp (se necessário).
-   - **Formato** - formato dos dados. Normalmente usado ao importar valores de data e hora (consulte [Trades](ticks.md)).
+   - **Formato** - formato dos dados. Normalmente usado ao importar valores de data e hora (consulte [importação de transações](ticks.md)).
    - **Usar** - indica se os dados devem ser usados durante a importação.
    - **Ordem dos campos** - sequência em que estão dispostas as colunas de propriedades do item importado.
 
@@ -43,7 +43,7 @@ Para importar velas, selecione o item **Importar \=\> Velas** no menu principal 
      > Em programação, o número ordinal do primeiro elemento é sempre 0
 
      O valor **Mercado** corresponde a **{SecurityId.BoardCode}** com o número de sequência **1**. E assim sucessivamente.
-   - **Por predefinição** - valor predefinido do campo. Por exemplo, pode ser usado para valores de campo repetidos (**Instrumento** ou **Mercado** ao importar transações, livros de ordens, etc.; consulte [Trades](ticks.md)), se a informação correspondente não estiver no ficheiro de dados.
+   - **Por predefinição** - valor predefinido do campo. Por exemplo, pode ser usado para valores de campo repetidos (**Instrumento** ou **Mercado** ao importar transações, livros de ordens, etc.; consulte [importação de transações](ticks.md)), se a informação correspondente não estiver no ficheiro de dados.
    - **Zero** - em alguns casos, ao guardar dados, algumas propriedades podem ser guardadas como "0", o que é um erro. Por exemplo, o valor do preço, por vários motivos, pode ser igual a 0, o que não é aceitável e, no futuro, levará a uma leitura incorreta. Isto pode causar o funcionamento incorreto das estratégias que trabalham com esses dados e, consequentemente, um resultado errado. Ao assinalar a caixa, o utilizador especifica que os dados nesta secção, se forem iguais a 0, são escritos como vazios, ou seja, como ausentes. Durante o trabalho posterior, por exemplo em testes, o utilizador verá um erro de ausência de dados, que indicará uma importação incorreta. Na prática, isto protege o utilizador contra dados "danificados", permitindo um trabalho mais correto.
 
    O utilizador pode configurar um grande número de propriedades para os dados transferidos. Com base no modelo do ficheiro importado, é necessário especificar a propriedade e atribuir-lhe o número necessário na sequência.

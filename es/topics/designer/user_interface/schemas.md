@@ -20,4 +20,4 @@ Para abrir el panel **Esquemas**, debe hacer clic en el botón **Esquemas** de l
 
 ## Véase también
 
-[Panel de logs](logs.md)
+[Panel de registros](logs.md)

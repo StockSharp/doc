@@ -36,7 +36,7 @@ La tarea convierte datos bursátiles. Por ejemplo, de registros de órdenes a ti
 **Registro**
 
 - **Identificador** - identificador.
-- **Nivel de registro** - nivel de logging.
+- **Nivel de registro** - nivel de registro.
 
 Consideremos un ejemplo de conversión de datos.
 

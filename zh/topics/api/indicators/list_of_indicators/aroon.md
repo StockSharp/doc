@@ -29,12 +29,12 @@ Aroon 指标的计算基于确定自达到指定周期内的最高价和最低�
 
 1. Aroon 上升指标的计算公式如下：
    ```
-   Aroon 上升线 = ((Length - Periods since high) / Length) * 100
+   Aroon 上升线 = ((Length - 距最高价的周期数) / Length) * 100
    ```
 
 2. Aroon下跌是使用以下公式计算的：
    ```
-   Aroon 下降线 = ((Length - Periods since low) / Length) * 100
+   Aroon 下降线 = ((Length - 距最低价的周期数) / Length) * 100
    ```
 
 其中：

@@ -99,7 +99,7 @@ sideField.Values.Add(new FieldMappingValue
 
 - **CreateFields(DataType)** — 返回指定数据类型的 [FieldMapping](xref:StockSharp.Algo.Import.FieldMapping) 列表。
 
-支持的数据类型：ticks（逐笔成交）、candles（K线）、order books（订单簿）、Level1（Level1 数据）、order log（订单日志）、transactions（交易）、instruments（交易品种）、news（新闻）和 positions（持仓）。
+支持的数据类型：逐笔成交、K线、订单簿、Level1、订单日志、交易、交易品种、新闻和持仓。
 
 ## 导入设置 — 导入设置
 

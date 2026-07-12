@@ -33,7 +33,7 @@ Alle Blöcke enthalten einen Satz vordefinierter Eigenschaften, die im Modus *Er
 - **Name** – der Name des Elements, der im Designer angezeigt wird.
 - **Protokollierungsstufe** – die Protokollierungsstufe für dieses Element.
 - **Parameter** – Parameter des Elements in übergeordneten Elementen anzeigen.
-- **Anschlüsse** – Sockets des Elements in übergeordneten Elementen anzeigen.
+- **Anschlüsse** – Anschlüsse des Elements in übergeordneten Elementen anzeigen.
 
 Ausführliche Informationen zu den Eigenschaften jedes Blocks finden Sie im Abschnitt [Beschreibung der Blöcke](elements.md).
 

@@ -7,8 +7,8 @@
 			...				
 			var messageAdapter = new CoinHubMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ваш API-ключ>".To<SecureString>(),
+				Secret = "<Ваш API-секрет>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...	

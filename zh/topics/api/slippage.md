@@ -54,7 +54,7 @@
 
 [SlippageMessageAdapter](xref:StockSharp.Algo.Slippage.SlippageMessageAdapter) 类封装了一个内部适配器，并自动为所有交易计算滑点。
 
-## 与战略的整合
+## 与策略的集成
 
 该策略 ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) 暴露了 `Slippage` 属性，用于跟踪整体滑点。
 

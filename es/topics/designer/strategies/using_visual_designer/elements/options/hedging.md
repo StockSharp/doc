@@ -4,9 +4,9 @@
 
 El cubo se usa para cubrir posiciones en opciones.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Modelo** – modelo de cálculo (por ejemplo, Black-Scholes).
 - **Instrumento** – instrumento, el activo subyacente.
@@ -14,9 +14,9 @@ Sockets de entrada
 - **Posición por activo subyacente** – posición por el activo subyacente.
 - **Indicador** – señal (bandera) que inicia el proceso de cobertura.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Orden** – orden registrada que puede usarse para obtener sus operaciones usando el elemento **Operaciones por orden** y mostrarlas en el gráfico usando el cubo **Panel de gráfico**.
 

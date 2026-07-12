@@ -174,7 +174,7 @@ protected override void OnStopped()
 protected override void OnOwnTradeReceived(MyTrade trade)
 {
 	LogInfo("{0} {1} {2} 价格 {3}。数量: {4}",
-		trade.Order.Direction == Sides.Buy ? "Bought" : "Sold",
+		trade.Order.Direction == Sides.Buy ? "买入" : "卖出",
 		trade.Order.Security.Code,
 		trade.Order.Type,
 		trade.Trade.Price,

@@ -47,8 +47,8 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 // Добавляем адаптер для подключения к Binance
 connector.AddAdapter<BinanceMessageAdapter>(a => 
 {
-	a.Key = "<Your API Key>";
-	a.Secret = "<Your Secret Key>";
+	a.Key = "<Ваш API-ключ>";
+	a.Secret = "<Ваш секретный ключ>";
 });
 
 // Добавляем RSS для новостей

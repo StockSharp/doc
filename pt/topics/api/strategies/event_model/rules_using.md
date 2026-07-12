@@ -261,7 +261,7 @@ Subscribe(mdSub);
 // Assinatura de dados do livro de ofertas
 var mdSub = new Subscription(DataType.MarketDepth, Security);
 
-// Counter
+// Contador
 var i = 0;
 
 // Criar regra que processa livros de ofertas até i chegar a 10

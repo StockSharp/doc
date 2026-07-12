@@ -207,7 +207,7 @@ protected override void OnStopped()
 	// 不要这样做
 	File.WriteAllText("results.txt", $"PnL: {PnL}");
 	
-	// or this
+	// 或者这样
 	using (var connection = new SqlConnection("..."))
 	{
 		// ...

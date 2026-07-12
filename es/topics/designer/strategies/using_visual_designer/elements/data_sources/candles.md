@@ -4,15 +4,15 @@
 
 Este bloque se usa para construir velas para un instrumento especificado.
 
-### Sockets de entrada
+### Conectores de entrada
 
-Sockets de entrada
+Conectores de entrada
 
 - **Instrumento** – instrumento para el que deben construirse las velas con los parámetros dados.
 
-### Sockets de salida
+### Conectores de salida
 
-Sockets de salida
+Conectores de salida
 
 - **Velas** – velas construidas.
 

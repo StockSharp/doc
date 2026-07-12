@@ -40,7 +40,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("No hay instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -55,7 +55,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("No hay datos.");
 				return Task.CompletedTask;
 			}
 
@@ -65,13 +65,13 @@ namespace StockSharp.Algo.Analytics
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
 
 			// colocar nuestros cálculos en la tabla
-			var grid = panel.CreateGrid("Time", "Volume");
+			var grid = panel.CreateGrid("Hora", "Volumen");
 
 			foreach (var row in rows)
 				grid.SetRow(row.Key, row.Value);
 
 			// ordenar por columna Volume (descendente)
-			grid.SetSort("Volume", false);
+			grid.SetSort("Volumen", false);
 
 			return Task.CompletedTask;
 		}
@@ -116,7 +116,7 @@ class time_volume_script(IAnalyticsScript):
 	):
 		# Comprobar si no hay instrumentos
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("No hay instrumentos.")
 			return Task.CompletedTask
 
 		# El script puede procesar solo 1 instrumento
@@ -135,7 +135,7 @@ class time_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("No hay datos.")
 			return Task.CompletedTask
 
 		# Agrupar velas por hora de apertura (truncado horario) y sumar sus volúmenes
@@ -147,13 +147,13 @@ class time_volume_script(IAnalyticsScript):
 			rows[truncated] = rows.get(truncated, 0) + candle.TotalVolume
 
 		# Colocar nuestros cálculos en la tabla
-		grid = panel.CreateGrid("Time", "Volume")
+		grid = panel.CreateGrid("Hora", "Volumen")
 
 		for key, value in rows.items():
 			grid.SetRow(key, value)
 
 		# Ordenar por la columna Volume en orden descendente
-		grid.SetSort("Volume", False)
+		grid.SetSort("Volumen", False)
 
 		return Task.CompletedTask
 

@@ -30,7 +30,7 @@ In [Terminal](../terminal.md) werden Patterns wie jeder andere Indikator zum Cha
 
 ### In der StockSharp API
 
-Bei Verwendung von [S#](../api.md) (oder beim Erstellen von [Strategien aus Code](../designer/strategies/using_code.md) in Designer) erfolgt die Arbeit mit Patterns wie bei jedem anderen Indikator. Verwendungsbeispiel:
+Bei Verwendung von [S#](../api.md) (oder beim Erstellen von [Strategien aus Code](../designer/strategies/using_code.md) im Designer) erfolgt die Arbeit mit Patterns wie bei jedem anderen Indikator. Verwendungsbeispiel:
 
 ```cs
 // Erstellen eines Pattern-Indikators

@@ -45,7 +45,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("No hay instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -60,7 +60,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("No hay datos.");
 				return Task.CompletedTask;
 			}
 
@@ -115,7 +115,7 @@ class price_volume_script(IAnalyticsScript):
 	):
 		# Comprobar si no hay instrumentos
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("No hay instrumentos.")
 			return Task.CompletedTask
 
 		# El script puede procesar solo 1 instrumento
@@ -134,7 +134,7 @@ class price_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("No hay datos.")
 			return Task.CompletedTask
 
 		# Agrupar velas por precio medio y sumar sus volúmenes

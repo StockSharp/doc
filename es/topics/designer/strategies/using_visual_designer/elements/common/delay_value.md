@@ -4,12 +4,12 @@
 
 Este componente se usa para retrasar la transmisión de un valor durante un número especificado de iteraciones.
 
-## Sockets de entrada
+## Conectores de entrada
 
 - **Activador** – señal (cualquier valor excepto `False`) que inicializa el contador interno para iniciar la cuenta atrás del retraso.
-- **Entrada** - cualquier valor entrante (excepto [velas no finalizadas](../data_sources/candles.md) o [valores de indicador no finales](indicator.md)) que disminuye el contador interno. Cuando el contador llega a cero, se desactiva y el socket de salida se activa. Si el contador no fue activado por **Activador**, los valores entrantes se ignoran.
+- **Entrada** - cualquier valor entrante (excepto [velas no finalizadas](../data_sources/candles.md) o [valores de indicador no finales](indicator.md)) que disminuye el contador interno. Cuando el contador llega a cero, se desactiva y el conector de salida se activa. Si el contador no fue activado por **Activador**, los valores entrantes se ignoran.
 
-## Sockets de salida
+## Conectores de salida
 
 - **Señal** – emite una señal cuando el contador llega a cero, indicando el final del retraso.
 

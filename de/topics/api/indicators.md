@@ -72,7 +72,7 @@
    ```
 
    Dieser Ansatz hat folgende Vorteile:
-   - Er entspricht dem Streaming-Modell der Datenverarbeitung (empfangen -> verarbeiten -> Ergebnis verwenden)
+   - Er entspricht dem Datenstrommodell der Verarbeitung (empfangen -> verarbeiten -> Ergebnis verwenden)
    - Er ist effizienter, da wiederholte Zugriffe auf den Container der akkumulierten Werte vermieden werden
    - Er beseitigt potenzielle Synchronisationsprobleme zwischen dem Aufruf von Process und nachfolgenden GetCurrentValue-Aufrufen
 
@@ -91,11 +91,11 @@
    var isShortLessThenLong = _shortSma.GetCurrentValue() < _longSma.GetCurrentValue();
    ```
 
-   Bei diesem Ansatz erfolgt ein zusätzlicher Zugriff auf den Container historischer Indikatorwerte. Das führt zu Verzögerungen und stört das Streaming-Modell der Datenverarbeitung.
+   Bei diesem Ansatz erfolgt ein zusätzlicher Zugriff auf den Container historischer Indikatorwerte. Das führt zu Verzögerungen und stört das Datenstrommodell der Verarbeitung.
 
 6. Alle Indikatoren besitzen die Eigenschaft [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), die angibt, ob der Indikator einsatzbereit ist. Der Indikator [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) besitzt beispielsweise eine Periode. Solange der Indikator nicht eine Anzahl von Candles verarbeitet hat, die der Indikatorperiode entspricht, gilt er als nicht einsatzbereit. Die Eigenschaft [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) ist dann `false`.
 
-## Beispiel einer vollständigen Moving-Average-Strategie
+## Beispiel einer vollständigen Strategie mit gleitendem Durchschnitt
 
 Unten sehen Sie ein Beispiel einer Strategie, die Indikatoren korrekt verwendet, Candles verarbeitet und die Ergebnisse der Process-Methode nutzt:
 
@@ -117,7 +117,7 @@ public class SmaStrategy : Strategy
 
 	public SmaStrategy()
 	{
-		base.Name = "SMA strategy";
+		base.Name = "SMA-Strategie";
 
 		// Strategieparameter initialisieren
 		_longSmaLength = Param(nameof(LongSmaLength), 80);
@@ -200,5 +200,5 @@ public class SmaStrategy : Strategy
 }
 ```
 
-Dieses Beispiel zeigt den korrekten Ansatz zur Arbeit mit Indikatoren im Streaming-Modell von StockSharp.
+Dieses Beispiel zeigt den korrekten Ansatz zur Arbeit mit Indikatoren im Datenstrommodell von StockSharp.
 

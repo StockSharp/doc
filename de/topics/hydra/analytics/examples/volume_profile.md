@@ -1,6 +1,6 @@
 # Volumenprofil
 
-Das Skript "Volumenprofil" dient als Werkzeug zur Analyse der Verteilung des Handelsvolumens über Preisniveaus in einem ausgewählten Zeitraum. Es ermöglicht Tradern und quantitativen Analysten, zu visualisieren und zu untersuchen, wo die wichtigste Handelsaktivitat bezogen auf Preisniveaus konzentriert war.
+Das Skript "Volumenprofil" dient als Werkzeug zur Analyse der Verteilung des Handelsvolumens über Preisniveaus in einem ausgewählten Zeitraum. Es ermöglicht Tradern und quantitativen Analysten, zu visualisieren und zu untersuchen, wo die wichtigste Handelsaktivität bezogen auf Preisniveaus konzentriert war.
 
 ![Volumenprofil](../../../../images/hydra_analytics_volume_profile.png)
 
@@ -12,9 +12,9 @@ Das Skript aggregiert Transaktionsdaten, um ein Profil zu bilden, das die ausgef
 
 Die Analyse des Volumenprofils hilft beim Erkennen wichtiger Nachfrage- und Angebotszonen und kann für Folgendes genutzt werden:
 
-- Identifikation von Unterstutzungs- und Widerstandsniveaus, an denen das Instrument erhebliches Interesse von Marktteilnehmern findet.
-- Einschatzung der Starke des aktuellen Trends oder einer möglichen Abschwachung anhand der Anderung der Volumenverteilung.
-- Planung von Marktein- und -ausstiegen unter Berucksichtigung von Niveaus mit maximal angesammelter Liquiditat.
+- Identifikation von Unterstützungs- und Widerstandsniveaus, an denen das Instrument erhebliches Interesse von Marktteilnehmern findet.
+- Einschätzung der Stärke des aktuellen Trends oder einer möglichen Abschwächung anhand der Änderung der Volumenverteilung.
+- Planung von Marktein- und -ausstiegen unter Berücksichtigung von Niveaus mit maximal angesammelter Liquidität.
 
 ## Anwendung im Handel und in der quantitativen Analyse
 
@@ -26,10 +26,10 @@ Die Analyse des Volumenprofils hilft beim Erkennen wichtiger Nachfrage- und Ange
 Das Skript "Volumenprofil" führt die folgenden Schritte aus:
 
 1. **Datenerfassung**: Das Skript aggregiert Transaktionsdaten für den angegebenen Zeitraum.
-2. **Profilbildung**: Auf Grundlage der gesammelten Daten erstellt das Skript ein Volumenprofil, das die Handelsaktivitat auf jedem Preisniveau widerspiegelt.
+2. **Profilbildung**: Auf Grundlage der gesammelten Daten erstellt das Skript ein Volumenprofil, das die Handelsaktivität auf jedem Preisniveau widerspiegelt.
 3. **Visualisierung**: Die Ergebnisse der Skriptausführung werden als Chart oder Histogramm visualisiert, wobei jeder Balken einem bestimmten Preisniveau und dessen Handelsvolumen entspricht.
 
-Die Verwendung des Skripts "Volumenprofil" innerhalb der StockSharp-Plattform ermöglicht eine umfassende Marktanalyse, den Aufbau fundierter Handelshypothesen und eine Verbesserung der Qualitat getroffener Handelsentscheidungen.
+Die Verwendung des Skripts "Volumenprofil" innerhalb der StockSharp-Plattform ermöglicht eine umfassende Marktanalyse, den Aufbau fundierter Handelshypothesen und eine Verbesserung der Qualität getroffener Handelsentscheidungen.
 
 ## Skriptcode in C#
 
@@ -45,7 +45,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Keine Instrumente.");
 				return Task.CompletedTask;
 			}
 
@@ -60,7 +60,7 @@ namespace StockSharp.Algo.Analytics
 
 			if (dates.Length == 0)
 			{
-				logs.LogWarning("no data");
+				logs.LogWarning("Keine Daten.");
 				return Task.CompletedTask;
 			}
 
@@ -85,7 +85,7 @@ namespace StockSharp.Algo.Analytics
 ```python
 import clr
 
-# .NET-Referenzen hinzufugen
+# .NET-Referenzen hinzufügen
 clr.AddReference("StockSharp.Messages")
 clr.AddReference("StockSharp.Algo.Analytics")
 clr.AddReference("Ecng.Drawing")
@@ -113,9 +113,9 @@ class price_volume_script(IAnalyticsScript):
 		data_type,
 		cancellation_token
 	):
-		# Prufen, ob keine Instrumente vorhanden sind
+		# Prüfen, ob keine Instrumente vorhanden sind
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Keine Instrumente.")
 			return Task.CompletedTask
 
 		# Skript kann nur 1 Instrument verarbeiten
@@ -134,7 +134,7 @@ class price_volume_script(IAnalyticsScript):
 		dates = get_dates(candle_storage, from_date, to_date)
 
 		if len(dates) == 0:
-			logs.LogWarning("no data")
+			logs.LogWarning("Keine Daten.")
 			return Task.CompletedTask
 
 		# Kerzen nach mittlerem Preis gruppieren und ihre Volumina summieren

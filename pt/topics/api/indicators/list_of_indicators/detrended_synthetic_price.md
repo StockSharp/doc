@@ -66,7 +66,7 @@ O indicador DSP oscila em torno da linha zero e pode ser interpretado da seguint
    - Divergência baixista: o preço forma um novo máximo, enquanto o DSP forma um máximo mais baixo
 
 5. **Formação de padrões**:
-   - Padrões técnicos (head and shoulders, double bottom, etc.) podem formar-se no gráfico do DSP, fornecendo potencialmente sinais adicionais de trading
+   - Padrões técnicos (cabeça e ombros, fundo duplo, etc.) podem formar-se no gráfico do DSP, fornecendo potencialmente sinais adicionais de trading
 
 ![Gráfico do indicador DSP](../../../../images/indicator_detrended_synthetic_price.png)
 

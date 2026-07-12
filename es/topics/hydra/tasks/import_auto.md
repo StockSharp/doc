@@ -31,7 +31,7 @@ Para cada instrumento, puede especificar las siguientes propiedades de importaci
 
 **General**
 
-- **Encabezado** - Converter.
+- **Encabezado** - título de la tarea.
 - **Horario de trabajo** - configuración del horario de trabajo del mercado. ![Hydra tareas de copia de seguridad](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operación** - intervalo de operación.
 - **Directorio de datos** - directorio de datos desde el que se recibirán los datos para la conversión.
@@ -42,4 +42,4 @@ Para cada instrumento, puede especificar las siguientes propiedades de importaci
 **Registro**
 
 - **Identificador** - identificador.
-- **Nivel de registro** - nivel de logging.
+- **Nivel de registro** - nivel de registro.

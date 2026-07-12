@@ -4,11 +4,11 @@
 
 El cubo se usa para obtener el libro de órdenes del instrumento especificado.
 
-### Sockets de entrada
+### Conectores de entrada
 
 - **Instrumento** - instrumento para el que necesita obtener un libro de órdenes.
 
-### Sockets de salida
+### Conectores de salida
 
 - **Libro de órdenes** - cambios del libro de órdenes desde el momento en que se suscribe a la recepción de datos (entrada del instrumento en la entrada del elemento).
 

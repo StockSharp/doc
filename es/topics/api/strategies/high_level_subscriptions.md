@@ -70,7 +70,7 @@ Si no se especifica el parámetro `security`, se usa el `Security` de la estrate
 
 El objeto `ISubscriptionHandler<T>` proporciona los siguientes métodos:
 
-### Start / Stop
+### Inicio / parada
 
 Inicio y parada de la suscripción:
 

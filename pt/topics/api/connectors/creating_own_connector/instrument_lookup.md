@@ -7,7 +7,7 @@ Ao criar seu próprio adaptador para trabalhar com uma exchange, você precisa i
 O método **SecurityLookupAsync** geralmente executa as seguintes ações:
 
 1. Recupera a lista de tipos de instrumentos suportados a partir da mensagem de entrada.
-2. Solicita a lista de instrumentos da exchange via API.
+2. Solicita a lista de instrumentos da bolsa via API.
 3. Para cada instrumento recebido, cria uma mensagem [SecurityMessage](xref:StockSharp.Messages.SecurityMessage), preenchendo-a com os dados do instrumento.
 4. Verifica se o instrumento corresponde aos critérios de busca.
 5. Envia a mensagem [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) criada através do método **SendOutMessageAsync**.

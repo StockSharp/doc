@@ -88,11 +88,11 @@ private void OnFilteredNewsReceived(Subscription subscription, News news)
 	this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 	
 	// 输出新闻信息
-	Console.WriteLine($"News: {news.Headline}");
-	Console.WriteLine($"Source: {news.Source}");
-	Console.WriteLine($"Time: {news.ServerTime}");
+	Console.WriteLine($"新闻: {news.Headline}");
+	Console.WriteLine($"来源: {news.Source}");
+	Console.WriteLine($"时间: {news.ServerTime}");
 	if (!string.IsNullOrEmpty(news.Story))
-		Console.WriteLine($"Text: {news.Story}");
+		Console.WriteLine($"正文: {news.Story}");
 }
 ```
 
@@ -118,7 +118,7 @@ public void FilterNewsByKeywords(IEnumerable<string> keywords)
 			this.GuiAsync(() => _newsWindow.NewsPanel.NewsGrid.News.Add(news));
 			
 			// 显示通知
-			ShowNotification($"New news on topic: {news.Headline}");
+			ShowNotification($"主题有新新闻: {news.Headline}");
 		}
 	};
 }

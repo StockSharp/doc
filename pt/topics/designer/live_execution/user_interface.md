@@ -1,6 +1,6 @@
 # Interface
 
-Depois de adicionar uma estratégia à pasta **Ao vivo**, ao fazer duplo clique na estratégia adicionada, abre-se um separador intitulado "Live [Strategy Name]". Ao navegar para este separador, o separador **Ao vivo** abre-se automaticamente no **Faixa de opções**. No separador **Ao vivo**, pode especificar o instrumento e o portefólio com os quais a estratégia irá trabalhar. Ao premir o botão **Iniciar**, inicia a live trading para a estratégia; ao premir o botão **Parar**, interrompe-a.
+Depois de adicionar uma estratégia à pasta **Ao vivo**, ao fazer duplo clique na estratégia adicionada, abre-se um separador intitulado "Ao vivo [Nome da estratégia]". Ao navegar para este separador, o separador **Ao vivo** abre-se automaticamente na **Faixa de opções**. No separador **Ao vivo**, pode especificar o instrumento e o portefólio com os quais a estratégia irá trabalhar. Ao premir o botão **Iniciar**, inicia a negociação ao vivo para a estratégia; ao premir o botão **Parar**, interrompe-a.
 
 ![Designer Interface de negociação ao vivo 00](../../../images/designer_interface_live_trade_00.png)
 

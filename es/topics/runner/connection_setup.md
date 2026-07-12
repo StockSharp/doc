@@ -11,7 +11,7 @@ Aparecerá un menú:
 
 ![Configuración de conexión 1 (1)](../../images/runner_setup_1.png)
 
-Al seleccionar el elemento Connections, el programa entrará en el modo de configuración del conector:
+Al seleccionar el elemento Conexiones, el programa entrará en el modo de configuración del conector:
 
 ![Configuración de conexión 2 (1)](../../images/runner_setup_2.png)
 

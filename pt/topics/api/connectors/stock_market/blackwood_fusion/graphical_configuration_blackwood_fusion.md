@@ -9,7 +9,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **Dados de mercado** - Endereço do servidor de dados de mercado.
 - **Histórico** - Endereço do servidor de dados históricos.
 - **Transações** - Endereço do servidor de execução de transações.
-- **Caminho para logs** - Caminho para o diretório onde será criado o ficheiro BWOrders.Log.
+- **Caminho para registos** - Caminho para o diretório onde será criado o ficheiro BWOrders.Log.
 - **Substituir** - Substituir o ficheiro dll a partir dos recursos. Ativado por predefinição.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para monitorizar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - Mecanismo para monitorizar as ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))

@@ -4,11 +4,11 @@
 
 Der Würfel wird verwendet, um gleichartige Daten aus verschiedenen Würfeln in einem Ausgangsparameter zusammenzuführen und an ein anderes Element weiterzugeben oder um empfangene Daten auf mehrere Elemente aufzuteilen.
 
-## Eingehende Sockets
+## Eingehende Anschlüsse
 
 - **Beliebige Daten** - gibt den Typ der empfangenen und weitergegebenen Daten an.
 
-## Ausgehende Sockets
+## Ausgehende Anschlüsse
 
 - **Beliebige Daten** - gibt den Typ der empfangenen und weitergegebenen Daten an.
 

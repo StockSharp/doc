@@ -20,7 +20,7 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 - **Proveedor** - configuración del proveedor.
 - **Servidor** - dirección del servidor o ruta a la base de datos.
 - **Base de datos** - nombre de la base de datos. No se usa para SQLite.
-- **Inicio de sesión** - login para acceder a la base de datos. No se usa para acceso anónimo.
+- **Inicio de sesión** - inicio de sesión para acceder a la base de datos. No se usa para acceso anónimo.
 - **Contraseña** - contraseña para acceder a la base de datos. No se usa para acceso anónimo.
 - **Windows** - usar la cuenta actual de Windows para conectarse a la base de datos.
 - **Conexión** - cadena de conexión preparada.
@@ -30,7 +30,7 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 
 **General**
 
-- **Encabezado** - Converter.
+- **Encabezado** - título de la tarea.
 - **Horario de trabajo** - configuración del horario de trabajo del mercado. ![Hydra tareas de copia de seguridad](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operación** - intervalo de operación.
 - **Directorio de datos** - directorio de datos desde el que se recibirán los datos para la conversión.
@@ -51,12 +51,12 @@ La tarea exporta datos bursátiles a varios formatos: Excel, xml, sql, bin, Json
 - **Desfase temporal** - desplazamiento de tiempo en días.
 - **Directorio de exportación** - directorio donde se exportarán los datos.
 - **Formato** - formato de datos.
-- **Split** - tipo de división.
+- **División** - tipo de división.
 
 **Registro**
 
 - **Identificador** - identificador.
-- **Nivel de registro** - nivel de logging.
+- **Nivel de registro** - nivel de registro.
 
 Consideremos un ejemplo de exportación automática:
 

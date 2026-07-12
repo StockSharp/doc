@@ -1,6 +1,6 @@
 # Indicadores
 
-O script "Indicator" destina-se a demonstrar o trabalho com indicadores de análise técnica na plataforma StockSharp. Permite aos utilizadores carregar dados históricos, aplicar-lhes vários indicadores e apresentar os resultados num gráfico. Esta abordagem ajuda na análise das tendências do mercado e na tomada de decisões de negociação informadas.
+O script "Indicador" destina-se a demonstrar o trabalho com indicadores de análise técnica na plataforma StockSharp. Permite aos utilizadores carregar dados históricos, aplicar-lhes vários indicadores e apresentar os resultados num gráfico. Esta abordagem ajuda na análise das tendências do mercado e na tomada de decisões de negociação informadas.
 
 ![Indicadores](../../../../images/hydra_analytics_indicator.png)
 
@@ -32,11 +32,11 @@ A utilização de indicadores de análise técnica através deste script permite
 
 Para trabalhar com o script, é necessário executar os seguintes passos:
 
-1. **Selecionar um instrumento e período**: Determinar securities e o intervalo temporal para análise.
+1. **Selecionar um instrumento e período**: Determinar os instrumentos e o intervalo temporal para análise.
 2. **Aplicar indicadores**: Escolher e definir parâmetros para os indicadores a aplicar aos dados.
 3. **Apresentar resultados**: Visualizar dados históricos e indicadores num gráfico para análise.
 
-O script "Indicator" fornece uma ferramenta poderosa para análise aprofundada dos mercados financeiros, permitindo que traders e analistas usem estes indicadores para desenvolver estratégias de negociação eficazes.
+O script "Indicador" fornece uma ferramenta poderosa para análise aprofundada dos mercados financeiros, permitindo que traders e analistas usem estes indicadores para desenvolver estratégias de negociação eficazes.
 
 ## Código do Script em C#
 
@@ -52,7 +52,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("Sem instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -83,7 +83,7 @@ namespace StockSharp.Algo.Analytics
 				}
 
 				// desenhar séries no gráfico
-				candleChart.Append($"{security} (close)", candlesSeries.Keys, candlesSeries.Values);
+				candleChart.Append($"{security} (fecho)", candlesSeries.Keys, candlesSeries.Values);
 				indicatorChart.Append($"{security} (ROC)", indicatorSeries.Keys, indicatorSeries.Values);
 			}
 
@@ -117,7 +117,7 @@ from indicator_extensions import *
 class indicator_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("Sem instrumentos.")
 			return Task.CompletedTask
 
 		# criar 2 painéis para candles e séries de indicadores
@@ -151,7 +151,7 @@ class indicator_script(IAnalyticsScript):
 
 			# desenhar séries no gráfico
 			candle_chart.Append(
-				f"{security} (close)",
+				f"{security} (fecho)",
 				list(candles_series.keys()),
 				list(candles_series.values())
 			)

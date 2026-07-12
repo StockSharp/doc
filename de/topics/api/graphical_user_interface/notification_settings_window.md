@@ -4,7 +4,7 @@
 
 ![Fenster für Benachrichtigungseinstellungen Bildschirmfoto](../../../images/api_gui_alertwindow.png)
 
-Sie können Benachrichtigungen über Änderungen der folgenden Datentypen konfigurieren: Portfolio, Clientcode, Broker, Verwahrstelle, Serverzeit, Transaktion, Datentyp, Stornierung, Order-ID, Order-ID (String), Order-ID (Plattform), Derivat, Derivat (String), Preis, Volumen (Order), Volumen (Trade), sichtbares Volumen, Richtung, Saldo, Ordertyp, Status, Kommentar, Ordernachricht, Systemorder, Ablaufzeit der Order, Ausführungsbedingung, Preis, Trade-Initiator, Open Interest, Fehler, Bedingung, Aufwärtstrend, Kommission, Verzögerung, Slippage, Kennung (Benutzer), Währung, P\/L, Position, Market Maker.
+Sie können Benachrichtigungen über Änderungen der folgenden Datentypen konfigurieren: Portfolio, Clientcode, Broker, Verwahrstelle, Serverzeit, Transaktion, Datentyp, Stornierung, Order-ID, Order-ID (String), Order-ID (Plattform), Derivat, Derivat (String), Preis, Volumen (Order), Volumen (Trade), sichtbares Volumen, Richtung, Saldo, Ordertyp, Status, Kommentar, Ordernachricht, Systemorder, Ablaufzeit der Order, Ausführungsbedingung, Preis, Handelsinitiator, offenes Interesse, Fehler, Bedingung, Aufwärtstrend, Kommission, Verzögerung, Slippage, Kennung (Benutzer), Währung, P\/L, Position, Marktmacher.
 
 Benachrichtigungen können folgende Formen haben:
 

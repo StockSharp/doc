@@ -1,6 +1,6 @@
 # Normalización del precio de cierre
 
-El script "Closing Price Normalization" está diseñado para estandarizar los precios de cierre de instrumentos financieros, permitiendo comparar y analizar distintos activos en una escala unificada. Esto es especialmente útil al comparar instrumentos con distintos costes y volatilidad.
+El script "Normalización del precio de cierre" está diseñado para estandarizar los precios de cierre de instrumentos financieros, permitiendo comparar y analizar distintos activos en una escala unificada. Esto es especialmente útil al comparar instrumentos con distintos costes y volatilidad.
 
 ![Normalización del precio de cierre](../../../../images/hydra_analytics_normalize.png)
 
@@ -30,7 +30,7 @@ El proceso de normalización normalmente incluye los siguientes pasos:
 2. **Procesamiento de datos**: aplicar el método elegido a los precios de cierre de cada instrumento.
 3. **Análisis de resultados**: usar datos normalizados para análisis posterior y comparación de instrumentos.
 
-El script "Closing Price Normalization" es una herramienta crucial para preparar datos para trading y análisis cuantitativo, permitiendo a traders y analistas comparar y evaluar con mayor precisión activos financieros dentro de distintas estrategias e investigaciones.
+El script "Normalización del precio de cierre" es una herramienta crucial para preparar datos para trading y análisis cuantitativo, permitiendo a traders y analistas comparar y evaluar con mayor precisión activos financieros dentro de distintas estrategias e investigaciones.
 
 ## Código del script en C#
 
@@ -46,7 +46,7 @@ namespace StockSharp.Algo.Analytics
 		{
 			if (securities.Length == 0)
 			{
-				logs.LogWarning("No instruments.");
+				logs.LogWarning("No hay instrumentos.");
 				return Task.CompletedTask;
 			}
 
@@ -106,7 +106,7 @@ from indicator_extensions import *
 class normalize_price_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
-			logs.LogWarning("No instruments.")
+			logs.LogWarning("No hay instrumentos.")
 			return Task.CompletedTask
 
 		chart = create_chart(panel, datetime, float)

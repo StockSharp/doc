@@ -82,7 +82,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 	// Suscribirse al evento de recepción de velas
 	_connector.CandleReceived += Connector_CandleReceived;
 
-	// Connect
+	// Conectar
 	_connector.Connect();
 }
 ```
@@ -338,10 +338,10 @@ private void ExtendedCandleProcessing(Subscription subscription, ICandleMessage 
 	// Dibujar la vela en el gráfico
 	Chart.Draw(_candleElement, candle);
 
-	// Enviar información de la vela a los logs
+	// Enviar información de la vela a los registros
 	this.GuiAsync(() =>
 	{
-		var status = subscription.State == SubscriptionStates.Online ? "Real-time" : "History";
+		var status = subscription.State == SubscriptionStates.Online ? "Tiempo real" : "Historial";
 		LogControl.LogMessage($"{status}: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice}");
 	});
 }

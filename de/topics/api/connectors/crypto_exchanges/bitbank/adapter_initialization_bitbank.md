@@ -7,8 +7,8 @@ Der folgende Code zeigt, wie man den [BitbankMessageAdapter](xref:StockSharp.Bit
 			...
 			var messageAdapter = new BitbankMessageAdapter(Connector.TransactionIdGenerator)
 			{
-				Key = "<Your API Key>".To<SecureString>(),
-				Secret = "<Your API Secret>".To<SecureString>(),
+				Key = "<Ihr API-Schlüssel>".To<SecureString>(),
+				Secret = "<Ihr API-Geheimnis>".To<SecureString>(),
 			};
 			Connector.Adapter.InnerAdapters.Add(messageAdapter);
 			...

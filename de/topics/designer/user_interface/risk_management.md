@@ -1,6 +1,6 @@
 # Risikomanagement
 
-In den Panels [Backtesting-Einstellungen](components/backtesting_settings.md) und [Live-Einstellungen](components/live_settings.md) können Sie die Einstellungen für die Risikokontrolle festlegen.
+In den Panels [Rücktest-Einstellungen](components/backtesting_settings.md) und [Live-Einstellungen](components/live_settings.md) können Sie die Einstellungen für die Risikokontrolle festlegen.
 
 Im Fenster Risiken müssen Sie eine **Risikoregel** auswählen, die Auslösebedingung für die **Risikoregel** konfigurieren und die Aktion (Positionen schließen, Handel stoppen, Aufträge stornieren) festlegen, die ausgeführt wird, wenn die Bedingung der **Risikoregel** eintritt.
 
@@ -8,20 +8,20 @@ Es ist möglich, mehrere Risikoregeln desselben Typs mit unterschiedlichen Aktio
 
 ![Designer Risikoregel](../../../images/designer_risk_rule.png)
 
-### Liste der Risk Rules
+### Liste der Risikoregeln
 
-Liste der Risk Rules
+Liste der Risikoregeln
 
-- **P/L** - eine Risikoregel, die die Hohe von Gewinn/Verlust uberwacht.
-- **Position** - eine Risikoregel, die die Positionsgrosse uberwacht.
-- **Position (Zeit)** - eine Risikoregel, die die Lebensdauer einer Position uberwacht.
-- **Provision** - eine Risikoregel, die die Hohe der Kommission uberwacht.
-- **Slippage** - eine Risikoregel, die die Hohe des Slippage uberwacht.
-- **Auftragspreis** - eine Risikoregel, die den Preis einer Order uberwacht.
-- **Auftragsvolumen** - eine Risikoregel, die das Volumen einer Order uberwacht.
-- **Auftrag (Frequenz)** - eine Risikoregel, die die Haufigkeit der Orderplatzierung uberwacht.
-- **Fehler bei Registrierung/Stornierung der Order** - eine Risikoregel, die die Anzahl der Fehler bei Registrierung/Stornierung von Orders uberwacht.
-- **Ausführungspreis** - eine Risikoregel, die den Preis eines Trades uberwacht.
-- **Ausführung (Volumen)** - eine Risikoregel, die das Volumen eines Trades uberwacht.
-- **Ausführung (Frequenz)** - eine Risikoregel, die die Haufigkeit der Ausführung von Trades uberwacht.
-- **Fehler** - eine Risikoregel, die die Anzahl beliebiger Fehler uberwacht.
+- **P/L** - eine Risikoregel, die die Höhe von Gewinn/Verlust überwacht.
+- **Position** - eine Risikoregel, die die Positionsgröße überwacht.
+- **Position (Zeit)** - eine Risikoregel, die die Lebensdauer einer Position überwacht.
+- **Provision** - eine Risikoregel, die die Höhe der Kommission überwacht.
+- **Slippage** - eine Risikoregel, die die Höhe des Slippage überwacht.
+- **Auftragspreis** - eine Risikoregel, die den Preis einer Order überwacht.
+- **Auftragsvolumen** - eine Risikoregel, die das Volumen einer Order überwacht.
+- **Auftrag (Frequenz)** - eine Risikoregel, die die Häufigkeit der Orderplatzierung überwacht.
+- **Fehler bei Registrierung/Stornierung der Order** - eine Risikoregel, die die Anzahl der Fehler bei Registrierung/Stornierung von Orders überwacht.
+- **Ausführungspreis** - eine Risikoregel, die den Preis eines Trades überwacht.
+- **Ausführung (Volumen)** - eine Risikoregel, die das Volumen eines Trades überwacht.
+- **Ausführung (Frequenz)** - eine Risikoregel, die die Häufigkeit der Ausführung von Trades überwacht.
+- **Fehler** - eine Risikoregel, die die Anzahl beliebiger Fehler überwacht.

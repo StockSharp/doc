@@ -7,7 +7,7 @@ Connector Connector = new Connector();
 ...				
 var messageAdapter = new PolygonIOMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Token = "<Your Token>".To<SecureString>(),
+	Token = "<Ваш токен>".To<SecureString>(),
 	ConnectionType = PolygonIOConnectionTypes.History, // подключение через REST к истории торгов
 };
 Connector.Adapter.InnerAdapters.Add(messageAdapter);

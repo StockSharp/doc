@@ -6,7 +6,7 @@ Visual Studio 支持使用调试器附加到正在运行的进程。有关该功
 
 ![Designer 创建 DLL 策略 01](../../../../images/designer_creation_strategy_dll_01.png)
 
-2. 在 Visual Studio 中选择 **Debug -> Attach to Process**。
+2. 在 Visual Studio 中选择 **调试 -> 附加到进程**。
 
 ![Designer 使用 Visual Studio 调试 DLL 方块 00](../../../../images/designer_debugging_dll_using_visual_studio_00.png)
 
@@ -18,13 +18,13 @@ Visual Studio 支持使用调试器附加到正在运行的进程。有关该功
 
 4. 必须确保 **附加到** 字段指定了正确的待调试代码类型。默认的 **自动** 参数会尝试自动判断代码类型，但判断结果并不总是正确。要手动设置代码类型，请执行以下步骤：
 
-- 在 Attach to 字段中单击 **选择**。
+- 在 **附加到** 字段中单击 **选择**。
 - 在 **选择代码类型** 对话框中选择 **调试这些代码类型**，然后选择需要调试的类型。
 - 单击 OK。
 
 ![Designer 使用 Visual Studio 调试 DLL 方块 02](../../../../images/designer_debugging_dll_using_visual_studio_02.png)
 
-5. 单击 Attach 按钮。
+5. 单击 **附加** 按钮。
 
 6. 在 Visual Studio 代码中设置断点。如果 Studio 已进入调试模式，且断点显示为红色实心图标 ![Designer 使用 Visual Studio 调试 DLL 方块 03](../../../../images/designer_debugging_dll_using_visual_studio_03.png)，表示已加载正确版本的 DLL。如果断点显示为红色空心图标 ![Designer 使用 Visual Studio 调试 DLL 方块 04](../../../../images/designer_debugging_dll_using_visual_studio_04.png)，则表示加载了错误版本的 DLL。
 

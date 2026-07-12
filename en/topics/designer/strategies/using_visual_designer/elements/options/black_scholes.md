@@ -1,6 +1,6 @@
 # Black-Scholes
 
-![Designer Black Sols 00](../../../../../../images/designer_black_scholes_00.png)
+![Black-Scholes option model block in Designer](../../../../../../images/designer_black_scholes_00.png)
 
 This block is used to create an option pricing model.
 
