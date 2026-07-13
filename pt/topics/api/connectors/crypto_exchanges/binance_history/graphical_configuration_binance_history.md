@@ -4,4 +4,4 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da co
 
 ![Configurações da API GUI Binance History](../../../../../images/api_gui_settings_binancehistory.png)
 
-- **Verificar datas** - Valida as datas solicitadas antes de enviar os pedidos de download.
+- **Verificar datas** - Valida as datas solicitadas antes de enviar os pedidos de transferência.

@@ -1,6 +1,6 @@
-# Painel de log
+# Painel de registo
 
-[LogControl](xref:StockSharp.Xaml.LogControl) - a tabela para apresentar mensagens de log. Os botões da barra de ferramentas permitem filtrar mensagens com diferentes níveis de registo.
+[LogControl](xref:StockSharp.Xaml.LogControl) - a tabela para apresentar mensagens de registo. Os botões da barra de ferramentas permitem filtrar mensagens com diferentes níveis de registo.
 
 ## LogControl
 
@@ -23,7 +23,7 @@ Código de exemplo
 ```cs
 // criar nova instância de LogManager
 _logManager = new LogManager();
-// adicionar .NET tracing como fonte de log.
+// adicionar .NET tracing como fonte de registo.
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
 // adicionar LogControl como ouvinte de registo.
 _logManager.Listeners.Add(new GuiLogListener(LogControl));

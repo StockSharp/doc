@@ -14,7 +14,7 @@ StockSharp suporta os seguintes níveis de registo (listados por ordem crescente
 
 ## Métodos de registo na estratégia
 
-A estratégia fornece os seguintes métodos para escrever mensagens no log:
+A estratégia fornece os seguintes métodos para escrever mensagens no registo:
 
 ### LogVerbose
 
@@ -110,10 +110,10 @@ catch (Exception ex)
 
 ## Configurar o nível de registo
 
-A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contém uma propriedade [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) que determina que mensagens serão escritas no log:
+A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contém uma propriedade [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) que determina que mensagens serão escritas no registo:
 
 ```cs
-// Definir o nível de log da estratégia
+// Definir o nível de registo da estratégia
 strategy.LogLevel = LogLevels.Info;
 ```
 
@@ -131,7 +131,7 @@ public class SmaStrategy : Strategy
 	public SmaStrategy()
 	{
 		_logLevel = Param(nameof(LogLevel), LogLevels.Info)
-					.SetDisplay("Nível de log", "Nível de detalhe das mensagens de log", "Configurações de log");
+					.SetDisplay("Nível de registo", "Nível de detalhe das mensagens de registo", "Configurações de registo");
 	}
 
 	public override LogLevels LogLevel
@@ -212,16 +212,16 @@ var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.c
 emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
 logManager.Listeners.Add(emailListener);
 
-// Adicionar a estratégia como fonte de log
+// Adicionar a estratégia como fonte de registo
 logManager.Sources.Add(strategy);
 ```
 
 ## Visualizar registos
 
-As mensagens escritas no log da estratégia podem ser visualizadas:
+As mensagens escritas no registo da estratégia podem ser visualizadas:
 
 1. No programa [Designer](../../designer.md), no painel "Registos"
-2. Em ficheiros de log, se [FileLogListener](xref:Ecng.Logging.FileLogListener) estiver configurado
+2. Em ficheiros de registo, se [FileLogListener](xref:Ecng.Logging.FileLogListener) estiver configurado
 3. Na interface de utilizador através de [LogControl](xref:StockSharp.Xaml.LogControl), se [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) for usado
 
 ## Ver Também

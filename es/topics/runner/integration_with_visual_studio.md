@@ -4,7 +4,7 @@
 
 Para configurar el proceso de depuración, deben realizarse los siguientes pasos:
 
-1. Haga clic derecho en el proyecto de estrategia de trading y seleccione **Propiedades** en el menú contextual:
+1. Haga clic derecho en el proyecto de estrategia de negociación y seleccione **Propiedades** en el menú contextual:
 
 ![Integración con Visual Studio 00](../../images/runner_debug_00.png)
 
@@ -26,10 +26,10 @@ l -s "$(TargetPath)" -c "C:\StockSharp\Runner\Data\connection.json" --sec BTCUSD
 
 $(TargetPath) - es una macro especial de **Visual Studio** que se sustituye automáticamente por la ruta a la DLL compilada con la estrategia durante el inicio de depuración.
 
-4. Cierre la ventana de configuración del proyecto e inicie la depuración del proyecto (por ejemplo, mediante F5). Aparecerá la ventana del programa **Runner**, mostrando el proceso de conexión de trading:
+4. Cierre la ventana de configuración del proyecto e inicie la depuración del proyecto (por ejemplo, mediante F5). Aparecerá la ventana del programa **Runner**, mostrando el proceso de conexión de negociación:
 
 ![Integración con Visual Studio 03](../../images/runner_debug_03.png)
 
-5. Al establecer puntos de interrupción, la ejecución del programa se detendrá al alcanzarlos. Por ejemplo, para depurar la lógica de trading cuando aparece una nueva vela:
+5. Al establecer puntos de interrupción, la ejecución del programa se detendrá al alcanzarlos. Por ejemplo, para depurar la lógica de negociación cuando aparece una nueva vela:
 
 ![Integración con Visual Studio 04](../../images/runner_debug_04.png)

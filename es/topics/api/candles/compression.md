@@ -73,7 +73,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 }
 
 // Este método muestra varias formas de construir velas según el tipo de datos fuente.
-// Admite la construcción desde ticks, log de órdenes, spreads y otras fuentes.
+// Admite la construcción desde ticks, registro de órdenes, spreads y otras fuentes.
 ```
 
 ## Características adicionales
@@ -106,9 +106,9 @@ switch (type)
 	// ... (otros casos)
 }
 
-// Este código muestra cómo construir velas desde distintas fuentes de datos: ticks, log de órdenes, spreads, datos Level1 e incluso velas de marcos temporales menores.
+// Este código muestra cómo construir velas desde distintas fuentes de datos: ticks, registro de órdenes, spreads, datos Level1 e incluso velas de marcos temporales menores.
 ```
 
 ## Conclusión
 
-Los métodos de compresión de datos en la API proporcionan herramientas flexibles para trabajar con datos de mercado. Permiten la conversión eficiente de datos de ticks y datos de spread en velas de varios tipos e intervalos de tiempo, lo cual es particularmente útil para el análisis de mercado y el desarrollo de estrategias de trading.
+Los métodos de compresión de datos en la API proporcionan herramientas flexibles para trabajar con datos de mercado. Permiten la conversión eficiente de datos de ticks y datos de spread en velas de varios tipos e intervalos de tiempo, lo cual es particularmente útil para el análisis de mercado y el desarrollo de estrategias de negociación.

@@ -9,7 +9,7 @@ Vela preta (vela baixista) é um padrão clássico de velas que se forma quando 
 - Indica a predominância dos vendedores sobre os compradores.
 - O tamanho do corpo da vela mostra a força do movimento baixista.
 
-![Padrão de candle preto](../../../images/blackcandlepattern.png)
+![Padrão de vela preto](../../../images/blackcandlepattern.png)
 
 ### Interpretação
 

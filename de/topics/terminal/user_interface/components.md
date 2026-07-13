@@ -9,7 +9,7 @@ Beim Handeln kann es erforderlich sein, den Prozess vollständig zu kontrolliere
 - [Kaufen/Verkaufen](components/buy_sell.md) - ist eine Panelgruppe, die die besten Preisinformationen für die ausgewählten Instrumente anzeigt und es ermöglicht, das benötigte Volumen für die ausgewählten Instrumente zu kaufen oder zu verkaufen.
 - [Orderbuch](components/order_book.md) - ist eine Tabelle mit Limit-Orders für Kauf und Verkauf.
 - [Chart](components/chart.md) - ermöglicht das Zeichnen von Kerzen und Indikatoren für das ausgewählte Instrument.
-- [P&L-Kurve](../../designer/user_interface/components/pnl_equity.md) - ist ein Chart für Profit/Loss (unrealisiert), Profit/Loss (realisiert) und Kommission.
+- [P&L-Kurve](../../designer/user_interface/components/pnl_equity.md) - ist ein Chart für Gewinn/Verlust (unrealisiert), Gewinn/Verlust (realisiert) und Kommission.
 - [Ausführungen](../../designer/user_interface/components/trades.md) - ist eine Tabelle mit Ausführungen, die vollständige Informationen über alle Ausführungen der Strategie anzeigt.
 - [Aufträge](../../designer/user_interface/components/orders.md) - ist eine Tabelle mit Aufträgen, die vollständige Informationen über alle Aufträge der Strategie anzeigt.
 - [Bedingte Orders](components/conditional_orders.md) - ist eine Tabelle mit bedingten Orders, die vollständige Informationen über alle bedingten Orders der Strategie anzeigt.

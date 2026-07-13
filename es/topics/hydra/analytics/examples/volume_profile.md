@@ -1,6 +1,6 @@
 # Perfil de volumen
 
-El script "Perfil de volumen" sirve como herramienta para analizar la distribución del volumen de trading por niveles de precio durante un período seleccionado. Permite a traders y analistas cuantitativos visualizar y examinar dónde se concentró la principal actividad de trading en términos de niveles de precio.
+El script "Perfil de volumen" sirve como herramienta para analizar la distribución del volumen de negociación por niveles de precio durante un período seleccionado. Permite a operadores y analistas cuantitativos visualizar y examinar dónde se concentró la principal actividad de negociación en términos de niveles de precio.
 
 ![Perfil de volumen](../../../../images/hydra_analytics_volume_profile.png)
 
@@ -16,9 +16,9 @@ El análisis del perfil de volumen ayuda a identificar zonas clave de demanda y 
 - Evaluar la fuerza de la tendencia actual o su posible debilitamiento, basándose en el cambio de distribución de volumen.
 - Planificar puntos de entrada y salida del mercado, considerando niveles con máxima liquidez acumulada.
 
-## Aplicación en trading y análisis cuantitativo
+## Aplicación en negociación y análisis cuantitativo
 
-- **Trading**: el perfil de volumen puede usarse para desarrollar estrategias basadas en análisis de volumen, proporcionando una vista clara de dónde se producen las principales operaciones de trading.
+- **Negociación**: el perfil de volumen puede usarse para desarrollar estrategias basadas en análisis de volumen, proporcionando una vista clara de dónde se producen las principales operaciones de negociación.
 - **Análisis cuantitativo**: los datos sobre distribución de volumen pueden servir como entrada para modelos cuantitativos que predicen la probabilidad de movimientos de precio basándose en el volumen acumulado en un nivel.
 
 ## Implementación del script
@@ -26,10 +26,10 @@ El análisis del perfil de volumen ayuda a identificar zonas clave de demanda y 
 El script "Perfil de volumen" realiza los siguientes pasos:
 
 1. **Recopilación de datos**: el script agrega datos de transacciones para el período especificado.
-2. **Formación del perfil**: con base en los datos recopilados, el script forma un perfil de volumen que refleja la actividad de trading en cada nivel de precio.
-3. **Visualización**: los resultados del script se visualizan como gráfico o histograma, donde cada barra corresponde a un nivel de precio específico y su volumen de trading.
+2. **Formación del perfil**: con base en los datos recopilados, el script forma un perfil de volumen que refleja la actividad de negociación en cada nivel de precio.
+3. **Visualización**: los resultados del script se visualizan como gráfico o histograma, donde cada barra corresponde a un nivel de precio específico y su volumen de negociación.
 
-Usar el script "Perfil de volumen" dentro de la plataforma StockSharp permite realizar un análisis de mercado integral, construir hipótesis de trading fundamentadas y mejorar la calidad de las decisiones de trading tomadas.
+Usar el script "Perfil de volumen" dentro de la plataforma StockSharp permite realizar un análisis de mercado integral, construir hipótesis de negociación fundamentadas y mejorar la calidad de las decisiones de negociación tomadas.
 
 ## Código del script en C#
 

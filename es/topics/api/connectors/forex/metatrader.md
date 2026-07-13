@@ -27,8 +27,8 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
    > [!TIP]
    > - Si la ruta no puede determinarse automáticamente, debe seleccionarla manualmente mediante búsqueda de directorios *C:\\Users\\%su_usuario%\\AppData\\Roaming\\MetaQuotes\\Terminal\\%muchas_letras_y_numeros%\\MQL4\\Experts\\* (para MT5, la ruta incluirá MQL5).
 
-5. Complete la instalación y espere a que finalice. Al final de la instalación, [Installer](../../../installer.md) advertirá que ahora debe configurar el terminal. Para ello, inicie el terminal MT y conéctese al trading.
-6. En el menú Herramientas -> Opciones, seleccione la pestaña **Asesores expertos** y asegúrese de que el permiso para trading con DLL externas (**Permitir importaciones de DLL**) esté habilitado:![Captura de MetaTrader 1](../../../../images/mt_1.png)
+5. Complete la instalación y espere a que finalice. Al final de la instalación, [Installer](../../../installer.md) advertirá que ahora debe configurar el terminal. Para ello, inicie el terminal MT y conéctese a la negociación.
+6. En el menú Herramientas -> Opciones, seleccione la pestaña **Asesores expertos** y asegúrese de que el permiso para la negociación con DLL externas (**Permitir importaciones de DLL**) esté habilitado:![Captura de MetaTrader 1](../../../../images/mt_1.png)
 7. Si el terminal estaba ejecutándose durante la instalación del conector (paso 2), debe actualizar la lista de expertos haciendo clic derecho en Expertos y seleccionando **Actualizar** en el menú:
 
    ![Captura de MetaTrader 2](../../../../images/mt_2.png)
@@ -43,7 +43,7 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
     ![Captura de MetaTrader 4](../../../../images/mt_4.png)
 
     Además, en la ventana de registro del experto debe aparecer información sobre el inicio correcto del script y el número de instrumentos.
-11. Si no se obtiene la licencia MT4 o MT5, aparecerá en el log una línea similar a la siguiente:
+11. Si no se obtiene la licencia MT4 o MT5, aparecerá en el registro una línea similar a la siguiente:
 
     ![Captura de MetaTrader 5](../../../../images/mt_5.png)
 
@@ -56,7 +56,7 @@ Ambos conectores se usan de la misma manera, por lo que a continuación se descr
     El login y la contraseña se dejan vacíos en caso de autorización anónima (elemento anterior). Si se conecta a MT con varios robots, debe proporcionarse un login único para identificar las distintas conexiones.
 
     > [!TIP]
-    > - El script debe iniciarse antes de conectar StockSharp a MetaTrader y mantenerse en ejecución mientras se necesite esta conexión.  
+    > - El script debe iniciarse antes de conectar StockSharp a MetaTrader y mantenerse en ejecución mientras se necesite esta conexión.
     > - Para ver velas históricas en StockSharp, deben descargarse desde el servidor MetaTrader. Lea cómo hacerlo en la documentación de MetaTrader.
 
     En caso de una conexión correcta, el ejemplo debe mostrar una lista de instrumentos y cuentas:

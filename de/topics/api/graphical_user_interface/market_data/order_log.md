@@ -40,17 +40,17 @@ public class OrderLogWindow
 		// Empfangsereignis für Orderprotokolleinträge abonnieren
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 
-		// Subscription auf das Orderprotokoll erstellen
+		// Abonnement für das Orderprotokoll erstellen
 		_orderLogSubscription = new Subscription(DataType.OrderLog, security);
 
-		// Subscription starten
+		// Abonnement starten
 		_connector.Subscribe(_orderLogSubscription);
 	}
 
 	// Handler für das Empfangsereignis von Orderprotokolleinträgen
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
-		// Prüfen, ob der Logeintrag zu unserer Subscription gehört
+		// Prüfen, ob der Logeintrag zu unserem Abonnement gehört
 		if (subscription != _orderLogSubscription)
 			return;
 
@@ -74,10 +74,10 @@ public class OrderLogWindow
 ### Orderprotokoll filtern
 
 ```cs
-// Subscription auf das Orderprotokoll mit Filterung erstellen
+// Abonnement für das Orderprotokoll mit Filterung erstellen
 public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 {
-	// Subscription auf das Orderprotokoll erstellen
+	// Abonnement für das Orderprotokoll erstellen
 	var orderLogSubscription = new Subscription(DataType.OrderLog, security)
 	{
 		MarketData =
@@ -91,14 +91,14 @@ public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 	// Empfangsereignis für Orderprotokolleinträge abonnieren
 	_connector.OrderLogItemReceived += OnFilteredOrderLogItemReceived;
 
-	// Subscription starten
+	// Abonnement starten
 	_connector.Subscribe(orderLogSubscription);
 }
 
 // Handler für das Empfangsereignis von Orderprotokolleinträgen mit Filterung
 private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 {
-	// Subscription-Typ prüfen
+	// Abonnementtyp prüfen
 	if (subscription.DataType != DataType.OrderLog)
 		return;
 
@@ -143,10 +143,10 @@ public class OrderLogAnalyzer
 		// Empfangsereignis für Orderprotokolleinträge abonnieren
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 
-		// Subscription auf das Orderprotokoll erstellen
+		// Abonnement für das Orderprotokoll erstellen
 		var subscription = new Subscription(DataType.OrderLog, security);
 
-		// Subscription starten
+		// Abonnement starten
 		_connector.Subscribe(subscription);
 	}
 

@@ -1,6 +1,6 @@
 # Velas más grandes
 
-El script "Velas más grandes" está diseñado para identificar velas con el volumen máximo y la mayor longitud de cuerpo en los gráficos de instrumentos financieros seleccionados durante un período dado. Esta herramienta permite a traders y analistas identificar eventos de mercado significativos y la reacción de los participantes del mercado.
+El script "Velas más grandes" está diseñado para identificar velas con el volumen máximo y la mayor longitud de cuerpo en los gráficos de instrumentos financieros seleccionados durante un período dado. Esta herramienta permite a operadores y analistas identificar eventos de mercado significativos y la reacción de los participantes del mercado.
 
 ![Velas más grandes](../../../../images/hydra_analytics_big_candle.png)
 
@@ -9,7 +9,7 @@ El script "Velas más grandes" está diseñado para identificar velas con el vol
 El script analiza un conjunto de instrumentos especificados, busca entre ellos velas con el mayor volumen y longitud de cuerpo, y muestra estos datos en dos gráficos:
 
 - **Gráfico de longitud del cuerpo de la vela**: muestra velas con la mayor diferencia entre precio de apertura y cierre.
-- **Gráfico de volumen de trading**: muestra velas con el volumen máximo de trading durante la existencia de la vela.
+- **Gráfico de volumen de negociación**: muestra velas con el volumen máximo de negociación durante la existencia de la vela.
 
 ## Flujo de trabajo
 
@@ -19,7 +19,7 @@ El script analiza un conjunto de instrumentos especificados, busca entre ellos v
 
 ## Aplicación
 
-- **Análisis de actividad del mercado**: ayuda a determinar momentos de mayor actividad de traders y posibles reversos del mercado.
+- **Análisis de actividad del mercado**: ayuda a determinar momentos de mayor actividad de operadores y posibles reversos del mercado.
 - **Identificación de niveles clave**: las velas con volumen y longitud de cuerpo significativos a menudo se forman alrededor de niveles clave de soporte y resistencia.
 - **Planificación estratégica**: la información sobre las velas más grandes puede usarse para planificar puntos de entrada y salida del mercado, considerando la posible volatilidad.
 

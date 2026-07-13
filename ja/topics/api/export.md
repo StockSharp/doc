@@ -6,7 +6,7 @@
 
 抽象基底クラス [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter) は、すべてのエクスポーターに共通する契約を定義します。
 
-- **DataType** - エクスポートされるデータの種類（ティック、キャンドル、オーダーブックなど）。
+- **DataType** - エクスポートされるデータの種類（ティック、ローソク足、オーダーブックなど）。
 - **Encoding** - エンコーディング（既定では UTF-8）。
 - **Export\<T\>(IAsyncEnumerable\<T\>, CancellationToken)** - メインのエクスポートメソッド。`Task<(int count, DateTime? lastTime)>` を返します。これはエクスポートされたレコード数と最後のレコードの時刻です。
 
@@ -110,7 +110,7 @@ await exporter.Export(tickMessages, token);
 
 - **TemplateTxtTick** - ティックデータ用テンプレート。
 - **TemplateTxtDepth** - オーダーブック用テンプレート。
-- **TemplateTxtCandle** - キャンドル用テンプレート。
+- **TemplateTxtCandle** - ローソク足用テンプレート。
 - **TemplateTxtLevel1** - Level1 データ用テンプレート。
 - **TemplateTxtOrderLog** - 注文ログ用テンプレート。
 - **TemplateTxtTransaction** - トランザクション用テンプレート。

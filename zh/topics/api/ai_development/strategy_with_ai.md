@@ -208,8 +208,8 @@ public class SmaCrossStrategy : Strategy
 - 通过 Subscribe 订阅订单簿（MarketDepth）
 - 分析买卖盘不平衡
 - 在强不平衡（> 3:1）时入场
-- 快速止盈退出（5 个 tick）
-- 止损：3 个 tick
+- 快速止盈退出（5 个跳动点）
+- 止损：3 个跳动点
 - 同一时间最多 1 个持仓
 ```
 

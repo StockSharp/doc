@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-StockSharp proporciona un sistema de generación de informes para resultados de trading de estrategias. El sistema se basa en dos componentes clave:
+StockSharp proporciona un sistema de generación de informes para resultados de negociación de estrategias. El sistema se basa en dos componentes clave:
 
 - **`IReportSource`** -- una interfaz que describe la fuente de datos para el informe (parámetros de estrategia, órdenes, operaciones, posiciones, estadísticas).
 - **`IReportGenerator`** -- una interfaz de generador de informes que admite varios formatos (CSV, JSON, XML, Excel).
@@ -20,7 +20,7 @@ La interfaz `IReportSource` proporciona todos los datos necesarios para generar 
 | `Commission` | `decimal?` | Comisión total |
 | `Position` | `decimal` | Posición actual |
 | `PnL` | `decimal` | Beneficio/pérdida total |
-| `Slippage` | `decimal?` | Slippage total |
+| `Slippage` | `decimal?` | Deslizamiento total |
 | `Latency` | `TimeSpan?` | Latencia total |
 | `Parameters` | `IEnumerable<(string, object)>` | Parámetros de estrategia |
 | `StatisticParameters` | `IEnumerable<(string, object)>` | Parámetros estadísticos |
@@ -190,7 +190,7 @@ public class ReportingStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Lógica de trading...
+        // Lógica de negociación...
     }
 
     protected override void OnStopped()

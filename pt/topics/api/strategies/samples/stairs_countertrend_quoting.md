@@ -1,8 +1,8 @@
-# Estratégia Contra a Tendência com Quoting
+# Estratégia Contra a Tendência com Cotação
 
 ## Visão Geral
 
-`StairsCountertrendStrategy` é uma estratégia de negociação contra a tendência que abre posições contra uma tendência estabelecida de um comprimento específico, utilizando um mecanismo de quoting para uma entrada no mercado mais precisa.
+`StairsCountertrendStrategy` é uma estratégia de negociação contra a tendência que abre posições contra uma tendência estabelecida de um comprimento específico, utilizando um mecanismo de cotação para uma entrada no mercado mais precisa.
 
 ## Componentes Principais
 
@@ -59,7 +59,7 @@ protected override void OnStarted2(DateTime time)
 
 ## Processamento de Velas
 
-O método `ProcessCandle` é chamado para cada vela concluída e implementa a lógica de deteção da tendência e gestão do processador de quoting:
+O método `ProcessCandle` é chamado para cada vela concluída e implementa a lógica de deteção da tendência e gestão do processador de cotação:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -103,46 +103,46 @@ private void ProcessCandle(ICandleMessage candle)
 		}
 	}
 
-	// Criar novo processador de quoting quando necessário
+	// Criar novo processador de cotação quando necessário
 	if (_quotingProcessor == null && IsFormedAndOnlineAndAllowTrading())
 	{
 		if (_bullLength >= Length && Position >= 0)
 		{
 			// Tendência de alta - abrir posição curta
 			CreateQuotingProcessor(Sides.Sell);
-			this.AddInfoLog($"A iniciar cotação de venda após {_bullLength} candles de alta");
+			this.AddInfoLog($"A iniciar cotação de venda após {_bullLength} velas de alta");
 		}
 		else if (_bearLength >= Length && Position <= 0)
 		{
 			// Tendência de baixa - abrir posição longa
 			CreateQuotingProcessor(Sides.Buy);
-			this.AddInfoLog($"A iniciar cotação de compra após {_bearLength} candles de baixa");
+			this.AddInfoLog($"A iniciar cotação de compra após {_bearLength} velas de baixa");
 		}
 	}
 }
 ```
 
-## Criar Processador de Quoting
+## Criar Processador de Cotação
 
-O método `CreateQuotingProcessor` cria um processador de quoting com a direção especificada:
+O método `CreateQuotingProcessor` cria um processador de cotação com a direção especificada:
 
 ```cs
 private void CreateQuotingProcessor(Sides side)
 {
-	// Criar comportamento para quoting de mercado
+	// Criar comportamento para cotação de mercado
 	var behavior = new MarketQuotingBehavior(
 		0, // Sem desvio de preço
 		new Unit(0.1m, UnitTypes.Percent), // Usar 0,1% como desvio mínimo
 		MarketPriceTypes.Following // Seguir preço de mercado
 	);
 
-	// Criar processador de quoting
+	// Criar processador de cotação
 	_quotingProcessor = new(
 		behavior,
 		Security,
 		Portfolio,
 		side,
-		Volume, // Volume de quoting
+		Volume, // Volume de cotação
 		Volume, // Volume máximo da ordem
 		TimeSpan.Zero, // Sem tempo limite
 		this, // Strategy implementa ISubscriptionProvider
@@ -183,15 +183,15 @@ private void CreateQuotingProcessor(Sides side)
 
 - **Sinal de venda**: `Length` velas de alta consecutivas (preço de fecho acima do preço de abertura) quando não existe posição curta
 - **Sinal de compra**: `Length` velas de baixa consecutivas (preço de fecho abaixo do preço de abertura) quando não existe posição longa
-- O processador de quoting é usado para entrada no mercado, seguindo o preço de mercado
+- O processador de cotação é usado para entrada no mercado, seguindo o preço de mercado
 
 ## Funcionalidades
 
 - A estratégia determina automaticamente os instrumentos com que trabalhar através do método `GetWorkingSecurities()`
 - A estratégia trabalha apenas com velas concluídas
-- O quoting é usado em vez de ordens de mercado para uma entrada no mercado mais eficiente
+- A cotação é usada em vez de ordens de mercado para uma entrada no mercado mais eficiente
 - A estratégia aplica uma abordagem contra a tendência, abrindo posições contra a tendência estabelecida
 - É implementado registo detalhado dos principais eventos para depuração
-- O processador de quoting é automaticamente limpo quando a direção da tendência muda ou quando os objetivos são atingidos
+- O processador de cotação é automaticamente limpo quando a direção da tendência muda ou quando os objetivos são atingidos
 - A visualização de velas e transações no gráfico é suportada
 - A otimização do parâmetro de comprimento da sequência é implementada para configuração da estratégia

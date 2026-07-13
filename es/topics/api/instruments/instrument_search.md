@@ -41,7 +41,7 @@ El mensaje [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessag
   - **BoardCode** — código de la plaza bursátil (por ejemplo, [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
 - **SecurityType** — tipo de instrumento ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future), etc.)
 - **SecurityTypes** — array de tipos de instrumentos para búsqueda avanzada
-- **Currency** — divisa de trading del instrumento
+- **Currency** — divisa de negociación del instrumento
 - **ExpiryDate** — fecha de vencimiento (para derivados)
 - **Strike** — precio strike (para opciones)
 - **OptionType** — tipo de opción (para opciones)
@@ -58,9 +58,9 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
-		
+
 	Console.WriteLine($"Instrumento encontrado: {security.Id} - {security.Name}, Tipo: {security.Type}");
-	
+
 	// Aquí puede agregar el instrumento a una colección o realizar otras acciones
 	Securities.Add(security);
 }
@@ -70,7 +70,7 @@ private void OnSubscriptionFinished(Subscription subscription)
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
-		
+
 	Console.WriteLine($"Búsqueda completada. Instrumentos encontrados: {Securities.Count}");
 }
 
@@ -79,7 +79,7 @@ private void OnSubscriptionFailed(Subscription subscription, Exception error, bo
 {
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
-		
+
 	Console.WriteLine($"Error al buscar instrumentos: {error.Message}");
 }
 
@@ -111,63 +111,63 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		SecurityType = securityType,
 		TransactionId = Connector.TransactionIdGenerator.GetNextId()
 	};
-	
+
 	// Crear una suscripción
 	var subscription = new Subscription(lookupMessage);
-	
+
 	// Limpiar la colección para los resultados de búsqueda
 	_searchResults.Clear();
-	
+
 	// Colección temporal para acumular resultados
 	var foundSecurities = new List<Security>();
-	
+
 	// Suscripción para recibir instrumentos
 	void OnSecurityReceived(Subscription sub, Security security)
 	{
 		if (sub != subscription)
 			return;
-			
+
 		// Agregar el instrumento encontrado a la colección
 		foundSecurities.Add(security);
 		Console.WriteLine($"Encontrado: {security.Id}, {security.Name}");
 	}
-	
+
 	// Suscripción para finalización de búsqueda
 	void OnSubscriptionFinished(Subscription sub)
 	{
 		if (sub != subscription)
 			return;
-			
+
 		// Copiar los resultados a la colección principal
 		_searchResults.AddRange(foundSecurities);
-		
+
 		Console.WriteLine($"Búsqueda completada. Instrumentos encontrados: {foundSecurities.Count}");
-		
+
 		// Cancelar suscripción a eventos
 		Connector.SecurityReceived -= OnSecurityReceived;
 		Connector.SubscriptionFinished -= OnSubscriptionFinished;
 		Connector.SubscriptionFailed -= OnSubscriptionFailed;
 	}
-	
+
 	// Manejo de errores de suscripción
 	void OnSubscriptionFailed(Subscription sub, Exception error, bool isSubscribe)
 	{
 		if (sub != subscription)
 			return;
-			
+
 		Console.WriteLine($"Error al buscar instrumentos: {error.Message}");
-		
+
 		// Cancelar suscripción a eventos
 		Connector.SecurityReceived -= OnSecurityReceived;
 		Connector.SubscriptionFinished -= OnSubscriptionFinished;
 		Connector.SubscriptionFailed -= OnSubscriptionFailed;
 	}
-	
+
 	// Suscribirse a eventos
 	Connector.SecurityReceived += OnSecurityReceived;
 	Connector.SubscriptionFinished += OnSubscriptionFinished;
 	Connector.SubscriptionFailed += OnSubscriptionFailed;
-	
+
 	// Enviar la solicitud de búsqueda
 	Connector.Subscribe(subscription);
 }
@@ -182,13 +182,13 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 {
 	// Obtener criterios de búsqueda del campo de texto
 	var searchText = SearchTextBox.Text;
-	
+
 	if (string.IsNullOrWhiteSpace(searchText))
 	{
 		MessageBox.Show("Introduzca un criterio de búsqueda");
 		return;
 	}
-	
+
 	// Crear y enviar una suscripción de búsqueda
 	var lookupMessage = new SecurityLookupMessage
 	{
@@ -196,12 +196,12 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 		// Si se selecciona un tipo en la interfaz
 		SecurityType = SecurityTypeComboBox.SelectedItem as SecurityTypes?
 	};
-	
+
 	var subscription = new Subscription(lookupMessage);
-	
+
 	// Aquí puede mostrar un indicador de carga
 	LoadingIndicator.Visibility = Visibility.Visible;
-	
+
 	// Enviar la solicitud
 	Connector.Subscribe(subscription);
 }
@@ -219,7 +219,7 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 		// Especificar la capacidad de buscar todos los instrumentos
 		// (si el conector admite esta función)
 		ShowAllOption = Connector.Adapter.IsSupportSecuritiesLookupAll(),
-		
+
 		// Establecer criterios de búsqueda iniciales
 		CriteriaMessage = new SecurityLookupMessage
 		{
@@ -227,7 +227,7 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 			SecurityType = SecurityTypes.Stock
 		}
 	};
-	
+
 	// Mostrar la ventana como diálogo modal
 	if (lookupWindow.ShowModal(this))
 	{
@@ -239,4 +239,4 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 
 ## Conclusión
 
-El mecanismo de suscripciones en StockSharp proporciona una forma unificada de obtener datos, incluida la búsqueda de instrumentos. Esto permite usar el mismo enfoque para trabajar con distintos conectores y tipos de datos, lo que simplifica de forma significativa el desarrollo de aplicaciones de trading.
+El mecanismo de suscripciones en StockSharp proporciona una forma unificada de obtener datos, incluida la búsqueda de instrumentos. Esto permite usar el mismo enfoque para trabajar con distintos conectores y tipos de datos, lo que simplifica de forma significativa el desarrollo de aplicaciones de negociación.

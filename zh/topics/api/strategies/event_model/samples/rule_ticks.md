@@ -61,4 +61,4 @@ protected override void OnStarted2(DateTime time)
 - 使用 `WhenLastTradePriceMore` 和 `WhenLastTradePriceLess` 进行价格分析
 - 显示使用 `LogInfo` 方法记录交易信息的示例
 - 说明如何使用 `Once()` 来限制规则触发
-- 将 tick 参数传递给事件处理程序（与文档中的示例不同）
+- 将逐笔成交参数传递给事件处理程序（与文档中的示例不同）

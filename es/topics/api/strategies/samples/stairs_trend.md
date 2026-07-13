@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-`StairsTrendStrategy` es una estrategia de trading basada en el análisis de velas consecutivas para determinar una tendencia. La estrategia abre posiciones cuando se forma una tendencia sostenida de una longitud específica.
+`StairsTrendStrategy` es una estrategia de negociación basada en el análisis de velas consecutivas para determinar una tendencia. La estrategia abre posiciones cuando se forma una tendencia sostenida de una longitud específica.
 
 ## Componentes principales
 
@@ -11,7 +11,7 @@ public class StairsTrendStrategy : Strategy
 {
 	private readonly StrategyParam<int> _lengthParam;
 	private readonly StrategyParam<DataType> _candleType;
-	
+
 	private int _bullLength;
 	private int _bearLength;
 }
@@ -34,14 +34,14 @@ En el método [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(S
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Restablecer contadores
 	_bullLength = 0;
 	_bearLength = 0;
 
 	// Crear suscripción
 	var subscription = SubscribeCandles(CandleType);
-	
+
 	subscription
 		.Bind(ProcessCandle)
 		.Start();
@@ -58,7 +58,7 @@ protected override void OnStarted2(DateTime time)
 
 ## Procesamiento de velas
 
-El método `ProcessCandle` se llama para cada vela completada e implementa la lógica de trading:
+El método `ProcessCandle` se llama para cada vela completada e implementa la lógica de negociación:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -85,7 +85,7 @@ private void ProcessCandle(ICandleMessage candle)
 		_bearLength++;
 	}
 
-	// Estrategia de tendencia: 
+	// Estrategia de tendencia:
 	// Comprar después de Length velas alcistas consecutivas
 	if (_bullLength >= Length && Position <= 0)
 	{
@@ -99,7 +99,7 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 - **Señal de compra**: `Length` velas alcistas consecutivas (precio de cierre por encima del precio de apertura) cuando no hay posición larga
 - **Señal de venta**: `Length` velas bajistas consecutivas (precio de cierre por debajo del precio de apertura) cuando no hay posición corta

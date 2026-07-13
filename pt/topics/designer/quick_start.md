@@ -4,7 +4,7 @@ No primeiro arranque, o [Designer](../designer.md) abre o diagrama de estratégi
 
 ![Designer Início rápido 01](../../images/designer_quick_start_01.png)
 
-Para o executar em dados históricos, é necessário descarregar os dados no formato correto. Recomendamos usar o [Hydra](../hydra.md), um programa concebido para carregar automaticamente dados de mercado (instrumentos, candles, negócios por tick, livros de ordens e outros dados) a partir de diferentes fontes e guardá-los no armazenamento local. O descarregamento e armazenamento de dados históricos são descritos em detalhe em [Armazenamento de dados de mercado](market_data_storage.md).
+Para o executar em dados históricos, é necessário descarregar os dados no formato correto. Recomendamos usar o [Hydra](../hydra.md), um programa concebido para carregar automaticamente dados de mercado (instrumentos, velas, negócios por tick, livros de ordens e outros dados) a partir de diferentes fontes e guardá-los no armazenamento local. O descarregamento e armazenamento de dados históricos são descritos em detalhe em [Armazenamento de dados de mercado](market_data_storage.md).
 
 Depois de os dados serem descarregados com o [Hydra](../hydra.md), indique a pasta onde o [Hydra](../hydra.md) guardou o histórico no [Designer](../designer.md). Isto é configurado no separador **Teste histórico** -> **Armazenamento**.
 

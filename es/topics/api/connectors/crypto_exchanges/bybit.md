@@ -1,8 +1,8 @@
 # ByBit
 
-**ByBit** - un exchange de trading de criptomonedas.
+**ByBit** - una bolsa de negociación de criptomonedas.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
 
 ## Ver también
 

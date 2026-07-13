@@ -1,4 +1,4 @@
-# One-Candle-Trendstrategie
+# One-Kerze-Trendstrategie
 
 ## Überblick
 

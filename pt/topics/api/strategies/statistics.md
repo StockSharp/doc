@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-A plataforma StockSharp fornece um sistema abrangente para análise estatística de estratégias de negociação, que ajuda os traders a avaliar a eficácia, otimizar parâmetros e tomar decisões informadas. O sistema de estatísticas recolhe e processa dados de vários aspetos da negociação, incluindo ordens, transações, posições e indicadores de lucro/perda.
+A plataforma StockSharp fornece um sistema abrangente para análise estatística de estratégias de negociação, que ajuda os operadores a avaliar a eficácia, otimizar parâmetros e tomar decisões informadas. O sistema de estatísticas recolhe e processa dados de vários aspetos da negociação, incluindo ordens, transações, posições e indicadores de lucro/perda.
 
 ## Objetivo e Benefícios
 
@@ -62,7 +62,7 @@ Os principais valores estatísticos também são representados diretamente como 
 
 - `PnL`: valor de lucro e perda
 - `Commission`: comissão total paga
-- `Slippage`: slippage total
+- `Slippage`: deslizamento total
 - `Latency`: latência média das operações de ordens
 
 ## Visualização
@@ -107,12 +107,12 @@ strategy.Start();
 strategy.PnLChanged += () =>
 {
 	Console.WriteLine($"PnL atual: {strategy.PnL}");
-	
+
 	// Também pode aceder a parâmetros estatísticos individuais
 	var netProfit = statisticManager.Parameters
 		.OfType<NetProfitParameter>()
 		.FirstOrDefault();
-		
+
 	if (netProfit != null)
 	{
 		Console.WriteLine($"Lucro líquido: {netProfit.Value}");
@@ -166,4 +166,4 @@ strategy.StatisticManager.Parameters.Add(new MyCustomParameter());
 
 ## Conclusão
 
-O sistema de análise estatística em StockSharp fornece aos traders ferramentas poderosas para avaliar e otimizar as suas estratégias de negociação. Ao usar estas estatísticas, pode obter informações valiosas sobre o desempenho da sua estratégia, identificar áreas de melhoria e tomar decisões baseadas em dados para melhorar os resultados de negociação.
+O sistema de análise estatística em StockSharp fornece aos operadores ferramentas poderosas para avaliar e otimizar as suas estratégias de negociação. Ao usar estas estatísticas, pode obter informações valiosas sobre o desempenho da sua estratégia, identificar áreas de melhoria e tomar decisões baseadas em dados para melhorar os resultados de negociação.

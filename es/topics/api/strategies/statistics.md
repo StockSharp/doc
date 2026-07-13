@@ -2,11 +2,11 @@
 
 ## Descripción general
 
-La plataforma StockSharp proporciona un sistema completo para el análisis estadístico de estrategias de trading, que ayuda a los traders a evaluar la eficacia, optimizar parámetros y tomar decisiones informadas. El sistema de estadísticas recopila y procesa datos de varios aspectos del trading, incluidas órdenes, operaciones, posiciones e indicadores de beneficios/pérdidas.
+La plataforma StockSharp proporciona un sistema completo para el análisis estadístico de estrategias de negociación, que ayuda a los operadores a evaluar la eficacia, optimizar parámetros y tomar decisiones informadas. El sistema de estadísticas recopila y procesa datos de varios aspectos de la negociación, incluidas órdenes, operaciones, posiciones e indicadores de beneficios/pérdidas.
 
 ## Propósito y beneficios
 
-El análisis estadístico en estrategias de trading cumple varias funciones importantes:
+El análisis estadístico en estrategias de negociación cumple varias funciones importantes:
 
 1. **Medición de rendimiento**: evaluación cuantitativa del éxito de su estrategia mediante métricas como beneficio neto, drawdown máximo y factor de recuperación.
 
@@ -62,7 +62,7 @@ Los valores estadísticos clave también se representan directamente como propie
 
 - `PnL`: valor de beneficios y pérdidas
 - `Commission`: comisión total pagada
-- `Slippage`: slippage total
+- `Slippage`: deslizamiento total
 - `Latency`: latencia media de operación de órdenes
 
 ## Visualización
@@ -107,12 +107,12 @@ strategy.Start();
 strategy.PnLChanged += () =>
 {
 	Console.WriteLine($"PnL actual: {strategy.PnL}");
-	
+
 	// También puede acceder a parámetros estadísticos individuales
 	var netProfit = statisticManager.Parameters
 		.OfType<NetProfitParameter>()
 		.FirstOrDefault();
-		
+
 	if (netProfit != null)
 	{
 		Console.WriteLine($"Beneficio neto: {netProfit.Value}");
@@ -166,4 +166,4 @@ strategy.StatisticManager.Parameters.Add(new MyCustomParameter());
 
 ## Conclusión
 
-El sistema de análisis estadístico en StockSharp proporciona a los traders herramientas potentes para evaluar y optimizar sus estrategias de trading. Al usar estas estadísticas, puede obtener información valiosa sobre el rendimiento de su estrategia, identificar áreas de mejora y tomar decisiones basadas en datos para mejorar sus resultados de trading.
+El sistema de análisis estadístico en StockSharp proporciona a los operadores herramientas potentes para evaluar y optimizar sus estrategias de negociación. Al usar estas estadísticas, puede obtener información valiosa sobre el rendimiento de su estrategia, identificar áreas de mejora y tomar decisiones basadas en datos para mejorar sus resultados de negociación.

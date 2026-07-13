@@ -57,7 +57,7 @@ Erstellen Sie eine Projektregel-Datei im Repository-Root:
 KI kann veraltete Methoden verwenden oder nicht existierende APIs erfinden. Überprüfen Sie immer:
 - Ob der Code kompiliert
 - Ob die verwendeten Klassen und Methoden existieren
-- Ob die Signaturen von Subscriptions und Events korrekt sind
+- Ob die Signaturen von Abonnements und Ereignissen korrekt sind
 - Ob die Fehlerbehandlung korrekt ist
 
 ## Abschnitte

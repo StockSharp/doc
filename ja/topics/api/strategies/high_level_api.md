@@ -96,7 +96,7 @@ private void OnProcessBollinger(ICandleMessage candle, IIndicatorValue value)
 {
 	var typed = (BollingerBandsValue)value;
 
-	// Bollinger band 値を使用
+	// ボリンジャーバンドの値を使用
 	if (candle.ClosePrice >= typed.UpBand && Position >= 0)
 		SellMarket(Volume + Math.Abs(Position));
 	else if (candle.ClosePrice <= typed.LowBand && Position <= 0)

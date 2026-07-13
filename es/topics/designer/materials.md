@@ -10,7 +10,7 @@ En el canal de YouTube de StockSharp puede encontrar vídeos tutoriales que mues
 
 ## Ejemplos de estrategias
 
-La galería de estrategias del sitio web oficial de StockSharp contiene distintas estrategias de trading desarrolladas con "Designer". Estos ejemplos pueden servir como un excelente punto de partida para crear sus propias estrategias.
+La galería de estrategias del sitio web oficial de StockSharp contiene distintas estrategias de negociación desarrolladas con "Designer". Estos ejemplos pueden servir como un excelente punto de partida para crear sus propias estrategias.
 
 - **Galería de estrategias "Designer"**: [Visitar la galería de estrategias](strategy_gallery.md)
 
@@ -26,4 +26,4 @@ Para interactuar con otros usuarios y obtener ayuda rápida sobre el uso de "Des
 
 - **Chat "Designer" en Telegram**: [Unirse al chat](https://t.me/stocksharpchat/361)
 
-Estos recursos proporcionan todo lo necesario para aprender y usar eficazmente el programa "Designer". Recomendamos aprovechar todos los materiales proporcionados para lograr los mejores resultados en trading.
+Estos recursos proporcionan todo lo necesario para aprender y usar eficazmente el programa "Designer". Recomendamos aprovechar todos los materiales proporcionados para lograr los mejores resultados en negociación.

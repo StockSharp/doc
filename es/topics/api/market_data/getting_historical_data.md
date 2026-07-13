@@ -1,12 +1,12 @@
 # Obtención de datos históricos
 
-StockSharp API proporciona mecanismos cómodos para obtener datos históricos, que se pueden usar tanto para probar estrategias de trading como para construir [Indicadores](../indicators.md).
+StockSharp API proporciona mecanismos cómodos para obtener datos históricos, que se pueden usar tanto para probar estrategias de negociación como para construir [Indicadores](../indicators.md).
 
 ## Obtención de datos históricos mediante Connector
 
 ### Configuración de la conexión
 
-Para obtener datos históricos, primero debe configurar una conexión con el sistema de trading:
+Para obtener datos históricos, primero debe configurar una conexión con el sistema de negociación:
 
 ```cs
 // Crear una instancia de Connector

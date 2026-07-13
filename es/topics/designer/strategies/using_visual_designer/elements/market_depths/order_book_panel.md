@@ -9,7 +9,7 @@ El componente [Libro de órdenes](../../../../user_interface/components/order_bo
 ### Conectores de entrada
 
 - **Libro de órdenes** - libro de órdenes que debe mostrarse.
-- **Orden** - orden cuyo volumen debe mostrarse en la columna *Own Volume*.
+- **Orden** - orden cuyo volumen debe mostrarse en la columna *Volumen propio*.
 - **Error de orden** - error de registro o cancelación de una orden, para el que debe mostrarse animación.
 
 ## Véase también

@@ -1,16 +1,16 @@
 # GMMA
 
-**Média móvel múltipla de Guppy (GMMA)** é um indicador técnico desenvolvido por Daryl Guppy que usa dois grupos de médias móveis exponenciais (EMA) para revelar a interação entre traders de curto prazo e investidores de longo prazo.
+**Média móvel múltipla de Guppy (GMMA)** é um indicador técnico desenvolvido por Daryl Guppy que usa dois grupos de médias móveis exponenciais (EMA) para revelar a interação entre operadores de curto prazo e investidores de longo prazo.
 
 Para utilizar o indicador, é necessário usar a classe [GuppyMultipleMovingAverage](xref:StockSharp.Algo.Indicators.GuppyMultipleMovingAverage).
 
 ## Descrição
 
 A média móvel múltipla de Guppy (GMMA) consiste em dois grupos de médias móveis exponenciais (EMA):
-1. **Grupo de curto prazo** (normalmente 3, 5, 8, 10, 12 e 15 períodos) - representa a atividade dos traders de curto prazo
+1. **Grupo de curto prazo** (normalmente 3, 5, 8, 10, 12 e 15 períodos) - representa a atividade dos operadores de curto prazo
 2. **Grupo de longo prazo** (normalmente 30, 35, 40, 45, 50 e 60 períodos) - representa a atividade dos investidores de longo prazo
 
-A GMMA permite visualizar a interação entre estes dois grupos de participantes no mercado e determinar se o mercado está em tendência ou em consolidação. O indicador também ajuda a identificar momentos em que os traders de curto prazo começam a seguir a mesma direção dos investidores de longo prazo, o que frequentemente indica a formação ou o reforço de uma tendência.
+A GMMA permite visualizar a interação entre estes dois grupos de participantes no mercado e determinar se o mercado está em tendência ou em consolidação. O indicador também ajuda a identificar momentos em que os operadores de curto prazo começam a seguir a mesma direção dos investidores de longo prazo, o que frequentemente indica a formação ou o reforço de uma tendência.
 
 A GMMA é particularmente útil para:
 - Determinar a força e direção da tendência atual

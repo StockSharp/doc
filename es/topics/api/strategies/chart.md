@@ -1,6 +1,6 @@
 # Trabajo con gráficos en estrategias
 
-En StockSharp, la clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) proporciona una interfaz cómoda para visualizar actividad de trading en un gráfico. En este artículo veremos cómo acceder a un gráfico desde una estrategia, crear áreas (ChartArea), agregar varios elementos (velas, indicadores, operaciones) y renderizar datos.
+En StockSharp, la clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) proporciona una interfaz cómoda para visualizar actividad de negociación en un gráfico. En este artículo veremos cómo acceder a un gráfico desde una estrategia, crear áreas (ChartArea), agregar varios elementos (velas, indicadores, operaciones) y renderizar datos.
 
 ## Acceso al gráfico
 
@@ -12,10 +12,10 @@ Para acceder al gráfico desde una estrategia, use el método [Strategy.GetChart
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Obtener el gráfico
 	_chart = GetChart();
-	
+
 	// Comprobar disponibilidad del gráfico
 	if (_chart != null)
 	{
@@ -41,7 +41,7 @@ En algunos casos, el gráfico puede establecerse desde fuera. Para ello, use el 
 public void ConfigureVisualization(IChart chart)
 {
 	SetChart(chart);
-	
+
 	if (chart != null)
 	{
 		InitializeChart();
@@ -58,10 +58,10 @@ private void InitializeChart()
 {
 	// Crear el área principal para velas e indicadores
 	_mainArea = CreateChartArea();
-	
+
 	// Crear un área adicional para volumen
 	_volumeArea = CreateChartArea();
-	
+
 	// Configurar áreas y agregar elementos
 	ConfigureChartElements();
 }
@@ -75,13 +75,13 @@ private void InitializeChart()
 	// Limpiar áreas existentes si es necesario
 	foreach (var area in _chart.Areas.ToArray())
 		_chart.RemoveArea(area);
-	
+
 	// Crear el área principal para velas e indicadores
 	_mainArea = _chart.AddArea();
-	
+
 	// Crear un área adicional para volumen
 	_volumeArea = _chart.AddArea();
-	
+
 	// Configurar áreas y agregar elementos
 	ConfigureChartElements();
 }
@@ -100,7 +100,7 @@ private void ConfigureChartElements()
 {
 	// Agregar un elemento de velas al área principal
 	_candleElement = _mainArea.AddCandles();
-	
+
 	// Configurar visualización de velas
 	_candleElement.DrawStyle = ChartCandleDrawStyles.CandleStick; // Velas japonesas
 	_candleElement.AntiAliasing = true; // Suavizado
@@ -237,38 +237,38 @@ private void ProcessCandle(ICandleMessage candle)
 	// Procesar vela en indicadores
 	var smaValue = _sma.Process(candle);
 	var bollingerValue = _bollinger.Process(candle);
-	
+
 	// Si el gráfico no está disponible, omitir dibujo
 	if (_chart == null)
 		return;
-	
+
 	// Crear datos para dibujar
 	var drawData = _chart.CreateData();
-	
+
 	// Agrupar datos por hora de vela
 	var group = drawData.Group(candle.OpenTime);
-	
+
 	// Agregar vela
-	group.Add(_candleElement, 
-		candle.DataType, 
-		candle.SecurityId, 
-		candle.OpenPrice, 
-		candle.HighPrice, 
-		candle.LowPrice, 
-		candle.ClosePrice, 
-		candle.PriceLevels, 
+	group.Add(_candleElement,
+		candle.DataType,
+		candle.SecurityId,
+		candle.OpenPrice,
+		candle.HighPrice,
+		candle.LowPrice,
+		candle.ClosePrice,
+		candle.PriceLevels,
 		candle.State);
-	
+
 	// Agregar valores de indicadores
 	group.Add(_smaElement, smaValue);
-	
+
 	if (bollingerValue != null)
 	{
 		group.Add(_bollingerUpperElement, bollingerValue);
 		group.Add(_bollingerMiddleElement, bollingerValue);
 		group.Add(_bollingerLowerElement, bollingerValue);
 	}
-	
+
 	// Dibujar datos en el gráfico
 	_chart.Draw(drawData);
 }
@@ -306,14 +306,14 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _smaLength;
 	private readonly StrategyParam<int> _bollingerLength;
 	private readonly StrategyParam<decimal> _bollingerDeviation;
-	
+
 	private SimpleMovingAverage _sma;
 	private BollingerBands _bollinger;
-	
+
 	private IChart _chart;
 	private IChartArea _mainArea;
 	private IChartArea _volumeArea;
-	
+
 	private IChartCandleElement _candleElement;
 	private IChartIndicatorElement _smaElement;
 	private IChartIndicatorElement _bollingerUpperElement;
@@ -321,36 +321,36 @@ public class SmaStrategy : Strategy
 	private IChartIndicatorElement _bollingerLowerElement;
 	private IChartOrderElement _ordersElement;
 	private IChartTradeElement _tradesElement;
-	
+
 	public SmaStrategy()
 	{
 		_smaLength = Param(nameof(SmaLength), 20);
 		_bollingerLength = Param(nameof(BollingerLength), 20);
 		_bollingerDeviation = Param(nameof(BollingerDeviation), 2m);
 	}
-	
+
 	public int SmaLength
 	{
 		get => _smaLength.Value;
 		set => _smaLength.Value = value;
 	}
-	
+
 	public int BollingerLength
 	{
 		get => _bollingerLength.Value;
 		set => _bollingerLength.Value = value;
 	}
-	
+
 	public decimal BollingerDeviation
 	{
 		get => _bollingerDeviation.Value;
 		set => _bollingerDeviation.Value = value;
 	}
-	
+
 	protected override void OnStarted2(DateTime time)
 	{
 		base.OnStarted2(time);
-		
+
 		// Crear indicadores
 		_sma = new SimpleMovingAverage { Length = SmaLength };
 		_bollinger = new BollingerBands
@@ -358,49 +358,49 @@ public class SmaStrategy : Strategy
 			Length = BollingerLength,
 			Deviation = BollingerDeviation
 		};
-		
+
 		// Agregar indicadores a la colección de la estrategia
 		Indicators.Add(_sma);
 		Indicators.Add(_bollinger);
-		
+
 		// Obtener el gráfico
 		_chart = GetChart();
-		
+
 		// Inicializar el gráfico si está disponible
 		if (_chart != null)
 		{
 			InitializeChart();
 		}
-		
+
 		// Suscribirse a velas
 		var subscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 			Security);
-		
+
 		subscription
 			.WhenCandlesFinished(this)
 			.Do(ProcessCandle)
 			.Apply(this);
-		
+
 		Subscribe(subscription);
 	}
-	
+
 	private void InitializeChart()
 	{
 		// Limpiar áreas existentes
 		foreach (var area in _chart.Areas.ToArray())
 			_chart.RemoveArea(area);
-		
+
 		// Crear el área principal para velas e indicadores
 		_mainArea = _chart.AddArea();
-		
+
 		// Crear un área adicional para volumen
 		_volumeArea = _chart.AddArea();
-		
+
 		// Configurar elementos del gráfico
 		ConfigureChartElements();
 	}
-	
+
 	private void ConfigureChartElements()
 	{
 		// Agregar un elemento para mostrar velas
@@ -413,83 +413,83 @@ public class SmaStrategy : Strategy
 		_candleElement.DownBorderColor = Color.DarkRed;
 		_candleElement.StrokeThickness = 1;
 		_candleElement.ShowAxisMarker = true;
-		
+
 		// Agregar elementos para indicadores
 		_smaElement = _mainArea.AddIndicator(_sma);
 		_smaElement.Color = Color.Blue;
 		_smaElement.StrokeThickness = 2;
-		
+
 		_bollingerUpperElement = _mainArea.AddIndicator(_bollinger);
 		_bollingerUpperElement.Color = Color.Purple;
 		_bollingerUpperElement.StrokeThickness = 1;
-		
+
 		_bollingerMiddleElement = _mainArea.AddIndicator(_bollinger);
 		_bollingerMiddleElement.Color = Color.Gray;
 		_bollingerMiddleElement.StrokeThickness = 1;
-		
+
 		_bollingerLowerElement = _mainArea.AddIndicator(_bollinger);
 		_bollingerLowerElement.Color = Color.Purple;
 		_bollingerLowerElement.StrokeThickness = 1;
-		
+
 		// Agregar elementos para órdenes y operaciones
 		_ordersElement = DrawOrders(_mainArea);
 		_tradesElement = DrawOwnTrades(_mainArea);
 	}
-	
+
 	private void ProcessCandle(ICandleMessage candle)
 	{
 		// Procesar vela con indicadores
 		var smaValue = _sma.Process(candle);
 		var bollingerValue = _bollinger.Process(candle);
-		
+
 		// Si el gráfico no está disponible, omitir dibujo
 		if (_chart == null)
 			return;
-		
+
 		// Dibujar datos en el gráfico
 		var drawData = _chart.CreateData();
 		var group = drawData.Group(candle.OpenTime);
-		
+
 		// Agregar vela
-		group.Add(_candleElement, 
-			candle.DataType, 
-			candle.SecurityId, 
-			candle.OpenPrice, 
-			candle.HighPrice, 
-			candle.LowPrice, 
-			candle.ClosePrice, 
-			candle.PriceLevels, 
+		group.Add(_candleElement,
+			candle.DataType,
+			candle.SecurityId,
+			candle.OpenPrice,
+			candle.HighPrice,
+			candle.LowPrice,
+			candle.ClosePrice,
+			candle.PriceLevels,
 			candle.State);
-		
+
 		// Agregar valores de indicadores
 		group.Add(_smaElement, smaValue);
-		
+
 		if (bollingerValue != null)
 		{
 			group.Add(_bollingerUpperElement, bollingerValue);
 			group.Add(_bollingerMiddleElement, bollingerValue);
 			group.Add(_bollingerLowerElement, bollingerValue);
 		}
-		
+
 		// Dibujar datos en el gráfico
 		_chart.Draw(drawData);
-		
-		// Lógica de trading
+
+		// Lógica de negociación
 		if (!IsFormed)
 			return;
-			
-		// ... implementación de lógica de trading ...
+
+		// ... implementación de lógica de negociación ...
 	}
 }
 ```
 
 ## Conclusión
 
-Usar gráficos en estrategias StockSharp permite visualizar la actividad de trading, lo que simplifica significativamente el desarrollo, la depuración y la supervisión de estrategias de trading. La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) proporciona muchos métodos para trabajar con gráficos, lo que permite agregar fácilmente distintos elementos y renderizar datos.
+Usar gráficos en estrategias StockSharp permite visualizar la actividad de negociación, lo que simplifica significativamente el desarrollo, la depuración y la supervisión de estrategias de negociación. La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) proporciona muchos métodos para trabajar con gráficos, lo que permite agregar fácilmente distintos elementos y renderizar datos.
 
 Al desarrollar una estrategia con interfaz gráfica, considere siempre que el gráfico puede no estar disponible, por ejemplo, al ejecutarse en modo consola o en pruebas en la nube. Por lo tanto, es importante comprobar el resultado del método [GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) contra `null` y proporcionar un escenario alternativo para que la estrategia funcione sin visualización.
 
 ## Ver también
 
 - [Indicadores en estrategias](indicators.md)
-- [Operaciones de trading en estrategias](trading_operations.md)
+- [Operaciones de negociación en estrategias](trading_operations.md)

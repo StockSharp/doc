@@ -14,9 +14,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Delay** - Carga diferida de instrumentos.
 - **Activo** - Solo instrumentos activos.
 - **ID de grupo** - ID de grupo.
-- **Zona horaria** - Información sobre la zona horaria donde se encuentra el exchange.
+- **Zona horaria** - Información sobre la zona horaria donde se encuentra la bolsa.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
-- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de negociación. ([Configuración de reconexión](../../reconnection_settings.md))
 
 ## Contenido recomendado
 

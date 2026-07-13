@@ -2,13 +2,13 @@
 
 Después de añadir una estrategia a la carpeta **En vivo**, al hacer doble clic en la estrategia añadida se abrirá una pestaña titulada "En vivo [Nombre de la estrategia]". Al navegar a esta pestaña, la pestaña **En vivo** se abrirá automáticamente en la **Cinta**. En la pestaña **En vivo**, puede especificar el instrumento y la cartera con los que trabajará la estrategia. Al pulsar el botón **Iniciar**, se inicia la negociación en vivo para la estrategia; al pulsar el botón **Detener**, se detiene.
 
-![Designer Interfaz de trading en vivo 00](../../../images/designer_interface_live_trade_00.png)
+![Designer Interfaz de negociación en vivo 00](../../../images/designer_interface_live_trade_00.png)
 
-La pestaña de la estrategia contiene el Diseñador de estrategias para esquemas y elementos componentes, similar al descrito en [Diseñador de estrategias](../strategies/using_visual_designer/diagram_panel.md). Además, la pestaña incluye el panel [Propiedades de trading en vivo](../user_interface/components/live_settings.md), que de forma predeterminada está contraído y fijado al lado derecho de la pestaña.
+La pestaña de la estrategia contiene el Diseñador de estrategias para esquemas y elementos componentes, similar al descrito en [Diseñador de estrategias](../strategies/using_visual_designer/diagram_panel.md). Además, la pestaña incluye el panel [Propiedades de negociación en vivo](../user_interface/components/live_settings.md), que de forma predeterminada está contraído y fijado al lado derecho de la pestaña.
 
 Añadir una estrategia a **En vivo** implica copiarla desde el código original (en el caso de usar [esquemas](../strategies/using_visual_designer.md) o [código](../strategies/using_code.md)). Por lo tanto, los cambios en el algoritmo dentro de la copia **En vivo** no afectan al original. Al iniciar la estrategia, si hay una discrepancia entre **En vivo** y el original, se mostrará una advertencia:
 
-![Designer Interfaz de trading en vivo 01](../../../images/designer_interface_live_trade_01.png)
+![Designer Interfaz de negociación en vivo 01](../../../images/designer_interface_live_trade_01.png)
 
 - **Sí** significa aplicar los cambios del original a la copia **en vivo**.
 - **No** significa ignorar la diferencia e iniciar la copia **en vivo** sin aplicar cambios.

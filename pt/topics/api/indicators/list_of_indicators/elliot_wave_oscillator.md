@@ -1,12 +1,12 @@
 # EWO
 
-**oscilador de ondas de Elliott (EWO)** é um indicador técnico baseado na Teoria das Ondas de Elliott que ajuda os traders a determinar a estrutura das ondas e potenciais pontos de inversão do mercado.
+**oscilador de ondas de Elliott (EWO)** é um indicador técnico baseado na Teoria das Ondas de Elliott que ajuda os operadores a determinar a estrutura das ondas e potenciais pontos de inversão do mercado.
 
 Para utilizar o indicador, é necessário usar a classe [ElliotWaveOscillator](xref:StockSharp.Algo.Indicators.ElliotWaveOscillator).
 
 ## Descrição
 
-O oscilador de ondas de Elliott (EWO) foi desenvolvido para ajudar os traders a aplicar a Teoria das Ondas de Elliott na análise de mercado. A Teoria das Ondas de Elliott assume que os mercados se movem em ciclos previsíveis compostos por cinco ondas na direção da tendência (ondas impulsivas) e três ondas contra a tendência (ondas corretivas).
+O oscilador de ondas de Elliott (EWO) foi desenvolvido para ajudar os operadores a aplicar a Teoria das Ondas de Elliott na análise de mercado. A Teoria das Ondas de Elliott assume que os mercados se movem em ciclos previsíveis compostos por cinco ondas na direção da tendência (ondas impulsivas) e três ondas contra a tendência (ondas corretivas).
 
 O EWO baseia-se na diferença entre médias móveis rápida e lenta e foi concebido para identificar ondas impulsivas e corretivas segundo a teoria de Elliott. Ajuda a determinar quando o mercado está numa fase impulsiva ou corretiva e sugere potenciais pontos de inversão.
 

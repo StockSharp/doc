@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [MarketMeannessIndex](xr
 
 ## Descrição
 
-O Índice de adversidade do mercado (MMI) é uma ferramenta que ajuda os traders a determinar a natureza do mercado actual - se está tendencial ou lateral. O nome "Meanness" reflecte a ideia de que o mercado por vezes se comporta de forma "má" ou imprevisível para os traders, especialmente quando está em movimento lateral.
+O Índice de adversidade do mercado (MMI) é uma ferramenta que ajuda os operadores a determinar a natureza do mercado actual - se está tendencial ou lateral. O nome "Meanness" reflecte a ideia de que o mercado por vezes se comporta de forma "má" ou imprevisível para os operadores, especialmente quando está em movimento lateral.
 
 O MMI baseia-se na contagem do número de pares de valores de preço (normalmente preços de fecho) que não seguem um padrão linear simples, e no seu rácio relativamente ao número total de pares analisados. O indicador mede o "caos" ou a "aleatoriedade" do movimento do preço durante um período específico.
 

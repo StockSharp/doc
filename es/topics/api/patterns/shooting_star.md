@@ -16,13 +16,13 @@ Estrella fugaz es un patrón de velas de reversión bajista que se forma en una 
 
 Estrella fugaz se considera una señal fuerte de una posible reversión de una tendencia alcista:
 
-- La larga sombra superior muestra que el precio subió significativamente durante la sesión de trading, pero después los vendedores intervinieron y empujaron el precio hacia abajo.
+- La larga sombra superior muestra que el precio subió significativamente durante la sesión de negociación, pero después los vendedores intervinieron y empujaron el precio hacia abajo.
 - Esto indica el rechazo del mercado a precios más altos y un posible cambio de sentimiento de alcista a bajista.
 - Cuanto más larga sea la sombra superior, más fuerte será la posible señal de reversión.
 - El color del cuerpo de la vela es menos importante, aunque una estrella fugaz negra/roja se considera más bajista que una blanca/verde.
 - El patrón es similar a Martillo invertido, pero se forma en una tendencia alcista y tiene el significado opuesto.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Estrella fugaz proporciona oportunidades para entrar en una posición corta:
 
@@ -30,7 +30,7 @@ Estrella fugaz proporciona oportunidades para entrar en una posición corta:
 - Colocar un nivel de stop-loss por encima del máximo de la estrella fugaz.
 - Establecer un objetivo de beneficio basado en niveles de soporte previos o relación riesgo/beneficio.
 - Combinar con otros indicadores técnicos, como RSI en zona de sobrecompra o MACD con divergencia bajista, para confirmar la reversión de tendencia.
-- Un mayor volumen de trading durante la formación de la estrella fugaz aumenta la fiabilidad de la señal.
+- Un mayor volumen de negociación durante la formación de la estrella fugaz aumenta la fiabilidad de la señal.
 - Señal particularmente fuerte si Estrella fugaz se forma en un nivel de resistencia importante o después de una rápida subida de precio.
 
 ## Véase también

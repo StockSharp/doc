@@ -22,7 +22,7 @@ Die Klasse [GeneticSettings](xref:StockSharp.Algo.Strategies.Optimization.Geneti
 | Eigenschaft | Typ | Standard | Beschreibung |
 |-------------|-----|----------|--------------|
 | `MutationProbability` | decimal | 0.1 | Mutationswahrscheinlichkeit (0-1) |
-| `CrossoverProbability` | decimal | 0.8 | Crossover-Wahrscheinlichkeit (0-1) |
+| `CrossoverProbability` | decimal | 0.8 | Kreuzungswahrscheinlichkeit (0-1) |
 
 ### Genetische Operatoren
 
@@ -30,7 +30,7 @@ Die Klasse [GeneticSettings](xref:StockSharp.Algo.Strategies.Optimization.Geneti
 |-------------|----------|--------------|
 | `Reinsertion` | ElitistReinsertion | Strategie zum Ersetzen von Generationen |
 | `Mutation` | UniformMutation | Mutationsoperator |
-| `Crossover` | OnePointCrossover | Crossover-Operator |
+| `Crossover` | OnePointCrossover | Kreuzungsoperator |
 | `Selection` | TournamentSelection | Selektionsoperator |
 
 ## FitnessFormulaProvider

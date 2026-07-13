@@ -14,10 +14,10 @@ Este bloque se usa para determinar el horario de trabajo de la estrategia. Por e
 - **Hora desde** - hora de inicio del horario de trabajo.
 - **Hora hasta** - hora de fin del horario de trabajo.
 
-El bloque puede usarse para determinar cuándo se realiza trading para varios instrumentos de distintas plataformas de trading.
+El bloque puede usarse para determinar cuándo se realiza negociación para varios instrumentos de distintas plataformas de negociación.
 
 ![Designer tiempo de trabajo 01](../../../../../../images/designer_working_time_01.png)
 
 ## Véase también
 
-[Trading permitido](trade_allow.md)
+[Negociación permitida](trade_allow.md)

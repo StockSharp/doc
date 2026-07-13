@@ -10,7 +10,7 @@ CCI de Woodies es una versión modificada del indicador clásico CCI que incluye
 - La línea principal CCI con un período seleccionado (normalmente 14)
 - Una línea CCI suavizada, que es una media móvil simple de la línea principal CCI
 
-El sistema CCI de Woodies utiliza estas dos líneas, junto con varios niveles clave para generar señales de trading. Los niveles principales incluyen:
+El sistema CCI de Woodies utiliza estas dos líneas, junto con varios niveles clave para generar señales de negociación. Los niveles principales incluyen:
 - +100 y -100 (niveles tradicionales de sobrecompra y sobreventa)
 - +200 y -200 (fuertes condiciones de sobrecompra y sobreventa)
 - Línea cero (importante para la determinación de tendencias)
@@ -42,7 +42,7 @@ El cálculo de CCI de Woodies se realiza en varios pasos:
    Smooth CCI = SMA(CCI, SMALength)
    ```
 
-CCI de Woodies utiliza una combinación de estas dos líneas para crear señales de trading. En el sistema Woodies clásico, el cruce de estas líneas, su interacción con niveles clave y varios patrones forman la base para las decisiones de trading.
+CCI de Woodies utiliza una combinación de estas dos líneas para crear señales de negociación. En el sistema Woodies clásico, el cruce de estas líneas, su interacción con niveles clave y varios patrones forman la base para las decisiones de negociación.
 
 ![Gráfico del indicador WCCI](../../../../images/indicator_woodies_cci.png)
 

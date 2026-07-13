@@ -35,7 +35,7 @@
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. **接続** ボタンの **Click** イベントハンドラーで、コネクターイベントの購読および [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) メソッドの呼び出しと併せて、[Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) イベントを購読します。このイベントハンドラーでは、新しいキャンドルを受信したときにチャートが描画されます。
+3. **接続** ボタンの **Click** イベントハンドラーで、コネクターイベントの購読および [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) メソッドの呼び出しと併せて、[Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) イベントを購読します。このイベントハンドラーでは、新しいローソク足を受信したときにチャートが描画されます。
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -51,14 +51,14 @@
    }
    ```
 
-4. **チャート表示** ボタンのハンドラーで、インジケーターオブジェクト、領域、チャート要素を作成します。要素を領域に追加し、領域をチャートに追加します。チャートウィンドウを開き、キャンドルへのサブスクリプションを開始します。
+4. **チャート表示** ボタンのハンドラーで、インジケーターオブジェクト、領域、チャート要素を作成します。要素を領域に追加し、領域をチャートに追加します。チャートウィンドウを開き、ローソク足へのサブスクリプションを開始します。
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)
    {
        var security = SelectedSecurity;
        
-       // キャンドルへのサブスクリプションを作成
+       // ローソク足へのサブスクリプションを作成
        var subscription = new Subscription(
            DataType.TimeFrame(TimeSpan.FromMinutes(5)),
            security)
@@ -68,7 +68,7 @@
                // 30 日分の履歴データをリクエスト
                From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
                To = DateTime.Now,
-               // 完了したキャンドルのみを取得
+               // 完了したローソク足のみを取得
                IsFinishedOnly = true
            }
        };
@@ -115,12 +115,12 @@
            return wnd;
        }).Show();
        
-       // キャンドルへのサブスクリプションを開始
+       // ローソク足へのサブスクリプションを開始
        _connector.Subscribe(subscription);
    }
    ```
 
-5. [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) イベントハンドラーで、完了した各キャンドルについてキャンドルとインジケーター値を描画します。
+5. [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) イベントハンドラーで、完了した各ローソク足についてローソク足とインジケーター値を描画します。
 
    ```cs
    private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
@@ -129,7 +129,7 @@
        if (wnd == null)
            return;
        
-       // 完了したキャンドルのみを処理
+       // 完了したローソク足のみを処理
        if (candle.State != CandleStates.Finished)
            return;
        
@@ -169,7 +169,7 @@ private void SetupAutoDrawingChart()
 	// 領域をチャートに追加
 	Chart.Areas.Add(area);
 	
-	// キャンドルへのサブスクリプションを作成
+	// ローソク足へのサブスクリプションを作成
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
@@ -188,12 +188,12 @@ private void SetupAutoDrawingChart()
 	// インジケーターを作成
 	var sma = new SimpleMovingAverage { Length = 14 };
 	
-	// インジケーター処理のためにキャンドル受信イベントを購読
+	// インジケーター処理のためにローソク足受信イベントを購読
 	_connector.CandleReceived += (sub, candle) => 
 	{
 		if (sub == subscription && candle.State == CandleStates.Finished)
 		{
-			// キャンドルをインジケーターで処理して値を取得
+			// ローソク足をインジケーターで処理して値を取得
 			var smaValue = sma.Process(candle);
 			
 			// インジケーター値を描画

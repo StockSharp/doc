@@ -8,7 +8,7 @@ Campos principales:
 - **secreto** - secreto API.
 - **Índice de cuenta** - índice de cuenta.
 - **Índice de clave API** - índice de clave API.
-- **Sección** - sección de trading (`Spot` o `Derivatives`).
+- **Sección** - sección de negociación (`Spot` o `Derivatives`).
 - **Demostración** - modo de entorno demo.
 - **Spot REST / Derivatives REST** - endpoints REST.
 - **Spot WS / Derivatives WS** - endpoints WebSocket.

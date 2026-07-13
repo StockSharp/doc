@@ -51,11 +51,11 @@ Der Endpunkt-Gleitende Durchschnitt wird ähnlich wie andere gleitende Durchschn
    - Aufwärts EPMA zeigt einen Aufwärtstrend an
    - Abwärts EPMA zeigt einen Abwärtstrend an
 
-2. **Frequenzweichen mit Price**:
+2. **Kreuzungen mit dem Preis**:
    - Wenn der Preis EPMA von unten nach oben kreuzt, kann dies als bullisches Signal angesehen werden
    - Wenn der Preis EPMA von oben nach unten kreuzt, kann dies als rückläufiges Signal angesehen werden
 
-3. **Mehrere EPMA-Frequenzweichen**:
+3. **Mehrere EPMA-Kreuzungen**:
    - Das Kreuzen eines kurzen EPMA mit einem langen EPMA von unten nach oben kann den Beginn eines Aufwärtstrends anzeigen
    - Das Kreuzen eines kurzen EPMA mit einem langen EPMA von oben nach unten kann auf den Beginn eines Abwärtstrends hinweisen
 

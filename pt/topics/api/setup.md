@@ -49,7 +49,7 @@ StockSharp é distribuído via NuGet. Abaixo está o catálogo completo de pacot
 |---------|-------------|
 | [StockSharp.Messages](https://www.nuget.org/packages/StockSharp.Messages/) | Mensagens e contratos base. Fundação de toda a framework |
 | [StockSharp.BusinessEntities](https://www.nuget.org/packages/StockSharp.BusinessEntities/) | Entidades de negociação: Security, Order, Trade, Portfolio, etc. |
-| [StockSharp.Algo](https://www.nuget.org/packages/StockSharp.Algo/) | Negociação algorítmica core, Connector, subscrições, candles |
+| [StockSharp.Algo](https://www.nuget.org/packages/StockSharp.Algo/) | Núcleo de negociação algorítmica, Connector, subscrições, velas |
 | [StockSharp.Configuration](https://www.nuget.org/packages/StockSharp.Configuration/) | Gestão de configuração, definições de ligação |
 | [StockSharp.Localization](https://www.nuget.org/packages/StockSharp.Localization/) | Sistema de localização (inglês por predefinição) |
 
@@ -335,4 +335,4 @@ dotnet run
 
 ## Exemplos
 
-Exemplos prontos de utilização do StockSharp estão disponíveis no diretório [Samples/](https://github.com/stocksharp/stocksharp/tree/master/Samples) do repositório. Abrangem ligação a bolsas, subscrição de dados, construção de candles, indicadores, estratégias e testes.
+Exemplos prontos de utilização do StockSharp estão disponíveis no [diretório de exemplos](https://github.com/stocksharp/stocksharp/tree/master/Samples) do repositório. Abrangem ligação a bolsas, subscrição de dados, construção de velas, indicadores, estratégias e testes.

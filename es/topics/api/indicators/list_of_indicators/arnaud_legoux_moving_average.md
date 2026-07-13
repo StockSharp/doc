@@ -15,7 +15,7 @@ El indicador ALMA utiliza una distribución normal (gaussiana) como función de 
 ALMA se utiliza para:
 - Determinando la tendencia actual
 - Identificar puntos de reversión
-- Creación de sistemas de trading basados en cruces.
+- Creación de sistemas de negociación basados en cruces.
 
 ## Parámetros
 
@@ -32,7 +32,7 @@ El cálculo de ALMA se produce en varias etapas:
    ```
    m = floor(Offset * (Length - 1))
    s = Length / Sigma
-   
+
    Para cada i de 0 a Length-1:
    w(i) = exp(-((i - m)^2) / (2 * s^2))
    ```
@@ -40,7 +40,7 @@ El cálculo de ALMA se produce en varias etapas:
 2. Normalización de pesos:
    ```
    Sum_of_weights = suma de todos los w(i)
-   
+
    Para cada i de 0 a Length-1:
    w_norm(i) = w(i) / Sum_of_weights
    ```

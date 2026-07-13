@@ -1,6 +1,6 @@
 # Gráfico 3D
 
-El script `Chart3DScript` demuestra la creación de un gráfico 3D para visualizar la distribución de volúmenes de trading por hora para distintos instrumentos financieros. Este método de visualización permite representar claramente la dinámica de negociación e identificar picos de actividad del mercado.
+El script `Chart3DScript` demuestra la creación de un gráfico 3D para visualizar la distribución de volúmenes de negociación por hora para distintos instrumentos financieros. Este método de visualización permite representar claramente la dinámica de negociación e identificar picos de actividad del mercado.
 
 ![Gráfico 3D](../../../../images/hydra_analytics_chart3d.png)
 
@@ -9,22 +9,22 @@ El script `Chart3DScript` demuestra la creación de un gráfico 3D para visualiz
 El script analiza datos de velas para el período especificado, los agrupa por hora y calcula el volumen total negociado para cada hora. Los resultados se presentan en un gráfico 3D, donde los ejes representan:
 
 - **Eje X**: instrumentos financieros.
-- **Eje Y**: horas de la sesión de trading (de 0 a 23).
-- **Eje Z**: volúmenes de trading.
+- **Eje Y**: horas de la sesión de negociación (de 0 a 23).
+- **Eje Z**: volúmenes de negociación.
 
 ## Utilidad de usar un gráfico 3D
 
 ### Análisis de actividad del mercado
 
-El gráfico 3D permite evaluar cuándo se produce la mayor actividad para varios instrumentos simultáneamente. Esto puede ser útil para identificar ventanas óptimas de trading o estudiar el impacto de eventos globales en el mercado.
+El gráfico 3D permite evaluar cuándo se produce la mayor actividad para varios instrumentos simultáneamente. Esto puede ser útil para identificar ventanas óptimas de negociación o estudiar el impacto de eventos globales en el mercado.
 
 ### Comparación de instrumentos
 
-Gracias a la visualización de volúmenes de trading por hora en un espacio tridimensional, los traders pueden comparar instrumentos entre sí por nivel de actividad y horarios de negociación preferidos. Esto puede ayudar a seleccionar los instrumentos más líquidos en determinadas horas o a encontrar instrumentos con patrones de actividad similares para diversificar carteras.
+Gracias a la visualización de volúmenes de negociación por hora en un espacio tridimensional, los operadores pueden comparar instrumentos entre sí por nivel de actividad y horarios de negociación preferidos. Esto puede ayudar a seleccionar los instrumentos más líquidos en determinadas horas o a encontrar instrumentos con patrones de actividad similares para diversificar carteras.
 
 ### Optimización de estrategias
 
-El análisis de la distribución de volúmenes de trading puede servir como base para optimizar estrategias de trading, permitiendo adaptarlas a marcos temporales con la mayor actividad del mercado. Esto es especialmente relevante para trading algorítmico y de alta frecuencia.
+El análisis de la distribución de volúmenes de negociación puede servir como base para optimizar estrategias de negociación, permitiendo adaptarlas a marcos temporales con la mayor actividad del mercado. Esto es especialmente relevante para la negociación algorítmica y de alta frecuencia.
 
 ## Implementación del script
 
@@ -33,7 +33,7 @@ El script realiza las siguientes acciones:
 1. Comprueba la presencia de instrumentos financieros para análisis.
 2. Forma etiquetas para los ejes X (instrumentos) e Y (horas).
 3. Carga y agrupa datos de velas.
-4. Calcula los volúmenes totales de trading por hora y rellena los datos del eje Z.
+4. Calcula los volúmenes totales de negociación por hora y rellena los datos del eje Z.
 5. Dibuja el gráfico 3D usando el método `panel.Draw3D`.
 
 ## Código del script en C#

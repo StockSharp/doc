@@ -12,7 +12,7 @@
 - [MarketEmulatorSettings.InitialOrderId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialOrderId) - 模拟器生成订单标识符时使用的初始编号。
 - [MarketEmulatorSettings.InitialTradeId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialTradeId) - 模拟器生成成交标识符时使用的初始编号。
 - [MarketEmulatorSettings.SpreadSize](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.SpreadSize) - 以价格步长表示的价差大小。从逐笔成交生成订单簿时使用。默认值为 2。
-- [MarketEmulatorSettings.MaxDepth](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MaxDepth) - 从 ticks 生成订单簿时的最大深度。默认值为 5。
+- [MarketEmulatorSettings.MaxDepth](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MaxDepth) - 从逐笔成交生成订单簿时的最大深度。默认值为 5。
 - [MarketEmulatorSettings.PortfolioRecalcInterval](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.PortfolioRecalcInterval) - 投资组合数据重新计算间隔。如果等于 TimeSpan.Zero，则不执行重新计算。
 - [MarketEmulatorSettings.ConvertTime](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.ConvertTime) - 将订单和成交时间戳转换为交易所时间。默认禁用。
 - [MarketEmulatorSettings.TimeZone](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.TimeZone) - 交易所时区信息。

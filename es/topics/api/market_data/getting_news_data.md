@@ -1,9 +1,9 @@
 # Obtención de datos de noticias
 
-StockSharp API permite recibir datos de noticias desde varias fuentes. Las noticias pueden ser una fuente importante de información al tomar decisiones de trading o para el análisis de mercado.
+StockSharp API permite recibir datos de noticias desde varias fuentes. Las noticias pueden ser una fuente importante de información al tomar decisiones de negociación o para el análisis de mercado.
 
 > [!NOTE]
-> Tenga en cuenta que no todas las fuentes de datos proporcionan noticias. Algunos exchanges de criptomonedas, incluido Binance, no tienen un feed de noticias integrado mediante su API. En estos casos, se recomienda usar fuentes de noticias especializadas o feeds RSS.
+> Tenga en cuenta que no todas las fuentes de datos proporcionan noticias. Algunas bolsas de criptomonedas, incluido Binance, no tienen una fuente de noticias integrada mediante su API. En estos casos, se recomienda usar fuentes de noticias especializadas o fuentes RSS.
 
 ## Suscripción a datos de noticias
 
@@ -108,7 +108,7 @@ _connector.Subscribe(historicalNewsSubscription);
 
 ## Conexión a RSS para noticias
 
-Si trabaja con conectores que no proporcionan feeds de noticias (por ejemplo, Binance), puede agregar una fuente de noticias adicional mediante RSS:
+Si trabaja con conectores que no proporcionan fuentes de noticias (por ejemplo, Binance), puede agregar una fuente de noticias adicional mediante RSS:
 
 ```cs
 // Crear una instancia de Connector
@@ -139,7 +139,7 @@ connector.Connect();
 
 ## Notas
 
-- No todos los conectores admiten recibir noticias. Por ejemplo, Binance no proporciona un feed de noticias mediante la API.
+- No todos los conectores admiten recibir noticias. Por ejemplo, Binance no proporciona una fuente de noticias mediante la API.
 - Para noticias del mercado de criptomonedas, se recomienda usar fuentes RSS especializadas.
 - Para noticias relacionadas con instrumentos específicos, puede requerirse configuración adicional de la suscripción.
 - Al trabajar con una interfaz gráfica, recuerde actualizar los elementos de la UI en el hilo de la interfaz de usuario mediante los métodos `GuiAsync` o `GuiSync`.

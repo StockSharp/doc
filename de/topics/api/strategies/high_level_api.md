@@ -295,16 +295,16 @@ Diese Methode richtet automatisch den Schutz für alle offenen Positionen ein:
 - Verfolgt Preisänderungen
 - Erstellt automatisch Orders zum Schließen von Positionen, wenn Take-Profit- oder Stop-Loss-Niveaus erreicht werden
 - Unterstützt verschiedene Arten von Maßeinheiten (absolute Werte, Prozentwerte, Punkte)
-- Kann Trailing Stop für adaptiven Positionsschutz verwenden
+- Kann einen nachgezogenen Stop für adaptiven Positionsschutz verwenden
 
 Beispiel mit zusätzlichen Parametern:
 
 ```cs
-// Schutz mit Trailing Stop und Market-Orders starten
+// Schutz mit nachgezogenem Stop und Market-Orders starten
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
 	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss in Prozent
-	isStopTrailing: true,                         // Trailing Stop aktivieren
+	isStopTrailing: true,                         // nachgezogenen Stop aktivieren
 	useMarketOrders: true                         // Market-Orders verwenden
 );
 ```

@@ -37,7 +37,7 @@ type EmptyIndicator() as this =
 			this.Reset()
 
 	/// <summary>
-	/// Define si el indicador se ha formado (quedó listo para trading).
+	/// Define si el indicador se ha formado (quedó listo para la negociación).
 	/// </summary>
 	override this.CalcIsFormed() = isFormedValue
 

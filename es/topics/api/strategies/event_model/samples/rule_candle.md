@@ -65,7 +65,7 @@ protected override void OnStarted2(DateTime time)
 - La estrategia se suscribe a velas de 5 minutos
 - Cuando cada vela empieza a formarse, se establece una regla
 - La regla se activa cuando el volumen total de la vela supera el 10% (mediante un valor porcentual)
-- Cuando la regla se activa, se agrega al log información sobre la vela y el contador
+- Cuando la regla se activa, se agrega al registro información sobre la vela y el contador
 - Después de la primera activación, la regla deja de funcionar gracias al método `Once()`
 
 ## Características

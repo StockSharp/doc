@@ -2,7 +2,7 @@
 
 ![Designer Apertura de posición 00](../../../../../../images/designer_position_opening_00.png)
 
-El componente "Registro de orden" se usa para colocar órdenes de trading para un instrumento seleccionado.
+El componente "Registro de orden" se usa para colocar órdenes de negociación para un instrumento seleccionado.
 
 ## Conectores de entrada
 
@@ -30,7 +30,7 @@ El componente "Registro de orden" se usa para colocar órdenes de trading para u
 
 ## Configuración de orden condicional
 
-**Orden condicional** – orden con condiciones adicionales que determinan el momento de colocación en el sistema de trading según la situación actual del mercado.
+**Orden condicional** – orden con condiciones adicionales que determinan el momento de colocación en el sistema de negociación según la situación actual del mercado.
 
 ![Captura de Registro de orden](../../../../../../images/designer_conditional_application.png)
 

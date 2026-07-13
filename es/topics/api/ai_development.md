@@ -1,6 +1,6 @@
 # Desarrollo asistido por IA
 
-Las herramientas modernas de IA pueden acelerar significativamente el desarrollo de estrategias de trading y conectores con StockSharp. En lugar de escribir código desde cero, usted describe la tarea en lenguaje natural y la IA genera código funcional utilizando la API actual.
+Las herramientas modernas de IA pueden acelerar significativamente el desarrollo de estrategias de negociación y conectores con StockSharp. En lugar de escribir código desde cero, usted describe la tarea en lenguaje natural y la IA genera código funcional utilizando la API actual.
 
 ## Por qué usar IA
 
@@ -62,5 +62,5 @@ La IA puede usar métodos obsoletos o inventar API inexistentes. Verifique siemp
 
 ## Secciones
 
-- [Escribir una estrategia con IA](ai_development/strategy_with_ai.md) — guía paso a paso para crear una estrategia de trading
+- [Escribir una estrategia con IA](ai_development/strategy_with_ai.md) — guía paso a paso para crear una estrategia de negociación
 - [Escribir un conector con IA](ai_development/connector_with_ai.md) — guía paso a paso para crear un conector de bolsa

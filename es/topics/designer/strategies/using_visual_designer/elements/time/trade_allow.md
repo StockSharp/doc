@@ -1,12 +1,12 @@
-# Trading permitido
+# Negociación permitida
 
-![Captura de Trading permitido](../../../../../../images/designer_tradealloweddiagramelement_00.png)
+![Captura de Negociación permitida](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
 Este bloque se usa para comprobar si actualmente se permite operar. Se comprueban las siguientes condiciones:
 
 - Todas las suscripciones de la estrategia a datos de mercado deben estar en estado [Online](../../../../../api/market_data/subscriptions.md) (recepción de datos en tiempo real).
 - Todos los indicadores deben estar [formados](../../../../../api/indicators.md).
-- En caso de [trading en vivo](../../../../live_execution/getting_started.md), el valor del disparador entrante debe tener una marca de tiempo mayor que la hora de inicio de la estrategia.
+- En caso de [negociación en vivo](../../../../live_execution/getting_started.md), el valor del disparador entrante debe tener una marca de tiempo mayor que la hora de inicio de la estrategia.
 
 ### Conectores de entrada
 
@@ -16,7 +16,7 @@ Este bloque se usa para comprobar si actualmente se permite operar. Se comprueba
 ### Conectores de salida
 
 
-- **Indicador** - bandera que determina si la sesión de trading está activa.
+- **Indicador** - bandera que determina si la sesión de negociación está activa.
 
 ## Véase también
 

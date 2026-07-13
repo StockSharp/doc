@@ -1,6 +1,6 @@
 # Conectores
 
-Para trabajar con exchanges y fuentes de datos en [S#](../api.md), se recomienda utilizar la clase base [Connector](xref:StockSharp.Algo.Connector).
+Para trabajar con bolsas y fuentes de datos en [S#](../api.md), se recomienda utilizar la clase base [Connector](xref:StockSharp.Algo.Connector).
 
 Veamos cómo trabajar con [Connector](xref:StockSharp.Algo.Connector). El código fuente del ejemplo se puede encontrar en el proyecto Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments.
 
@@ -59,7 +59,7 @@ connector.AddAdapter<RssMessageAdapter>(a =>
 
 ```
 
-Puede agregar un número ilimitado de conexiones a un mismo objeto [Connector](xref:StockSharp.Algo.Connector). Por lo tanto, puede conectarse a múltiples exchanges y brokers simultáneamente desde el programa.
+Puede agregar un número ilimitado de conexiones a un mismo objeto [Connector](xref:StockSharp.Algo.Connector). Por lo tanto, puede conectarse a múltiples bolsas y brokers simultáneamente desde el programa.
 
 En el método *InitConnector*, configuramos los manejadores de eventos necesarios para [IConnector](xref:StockSharp.BusinessEntities.IConnector):
 

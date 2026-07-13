@@ -14,7 +14,7 @@ El indicador GAPO es particularmente útil para:
 - Identificar períodos de alta y baja volatilidad
 - Detectar posibles puntos de inversión después de movimientos extremos
 - Ajuste de parámetros para otros indicadores basados en la volatilidad
-- Adaptar las estrategias de trading a las condiciones actuales del mercado.
+- Adaptar las estrategias de negociación a las condiciones actuales del mercado.
 
 ## Parámetros
 
@@ -40,8 +40,8 @@ donde:
 El índice de rango de Gopalakrishnan se puede interpretar de la siguiente manera:
 
 1. **Valores absolutos**:
-   - Los valores High GAPO indican períodos de alta volatilidad
-   - Los valores Low GAPO indican períodos de baja volatilidad
+   - Los valores altos de GAPO indican períodos de alta volatilidad
+   - Los valores bajos de GAPO indican períodos de baja volatilidad
    - Los valores extremadamente altos pueden indicar una posible sobreextensión del mercado y una posible reversión.
 
 2. **Tendencias de GAPO**:
@@ -54,7 +54,7 @@ El índice de rango de Gopalakrishnan se puede interpretar de la siguiente maner
    - Valores por encima del percentil 95 del rango histórico pueden indicar volatilidad extrema
    - Los valores por debajo del percentil 5 del rango histórico pueden indicar una volatilidad inusualmente baja
 
-4. **Estrategias de trading**:
+4. **Estrategias de negociación**:
    - Durante períodos de alta volatilidad (valores altos de GAPO), puede ser apropiado aumentar el límite de pérdidas y el tamaño objetivo de ganancias.
    - Durante períodos de baja volatilidad (valores bajos de GAPO), las estrategias de negociación de rango pueden ser más adecuadas
    - Los valores extremos de GAPO se pueden utilizar como indicadores contrarios para encontrar puntos de inversión

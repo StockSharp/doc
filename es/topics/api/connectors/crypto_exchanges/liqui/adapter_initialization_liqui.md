@@ -1,5 +1,5 @@
 > [!WARNING]
-> Este exchange cerró permanentemente (enero de 2019 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa cerró permanentemente (enero de 2019 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # Inicialización del adaptador Liqui
 

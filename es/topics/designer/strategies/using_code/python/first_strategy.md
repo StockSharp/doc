@@ -125,8 +125,8 @@ self.StartProtection(self.TakeValue, self.StopValue)
 ```python
 def OnProcess(self, candle, longValue, shortValue):
 	"""
-	Procesa cada vela finalizada, registra información y ejecuta la lógica de trading en el cruce de SMA.
-	
+	Procesa cada vela finalizada, registra información y ejecuta la lógica de negociación en el cruce de SMA.
+
 	:param candle: Mensaje de vela procesado.
 		:param longValue: Valor actual de la SMA larga.
 		:param shortValue: Valor actual de la SMA corta.

@@ -1,6 +1,6 @@
 # Sobre o StockSharp
 
-[StockSharp (S#)](https://stocksharp.com/store/) fornece aplicações de negociação **gratuitas** para mercados globais, incluindo ações, futuros, opções, criptomoedas e forex. Você pode negociar manualmente ou executar estratégias automatizadas, desde robôs de negociação convencionais até sistemas HFT (High-Frequency Trading).
+[StockSharp (S#)](https://stocksharp.com/store/) fornece aplicações de negociação **gratuitas** para mercados globais, incluindo ações, futuros, opções, criptomoedas e forex. Você pode negociar manualmente ou executar estratégias automatizadas, desde robôs de negociação convencionais até sistemas HFT (negociação de alta frequência).
 
 **Suporta mais de 90 corretoras, bolsas e fontes de dados:** [Conectores](topics/api/connectors.md).
 
@@ -33,7 +33,7 @@ O [Hydra](topics/hydra.md) baixa automaticamente dados de mercado históricos e 
 
 - Suporta muitas fontes de dados através dos [Conectores](topics/api/connectors.md).
 - Alta taxa de compressão (2 bytes por negociação, 7 bytes por livro de ofertas).
-- Trata qualquer tipo de dado (candles, ticks, livros de ofertas, order-logs, opções, notícias e mais).
+- Trata qualquer tipo de dado (velas, ticks, livros de ofertas, registos de ordens, opções, notícias e mais).
 - Acesso via API aos dados armazenados.
 - Capacidades de exportação para CSV, Excel, XML ou bancos de dados.
 - Funcionalidade de importação de CSV.
@@ -49,7 +49,7 @@ O [Terminal](topics/terminal.md) é uma aplicação de negociação e gráficos 
 
 - Permite negociar diretamente a partir dos gráficos com um clique.
 - Suporta períodos arbitrários.
-- Apresenta vários tipos de candle: Volume, Tick, Range, Renko.
+- Apresenta vários tipos de vela: Volume, Tick, Range, Renko.
 - Inclui gráficos de cluster e box.
 
 ### Shell
@@ -63,7 +63,7 @@ O Shell fornece uma estrutura gráfica pronta que pode ser rapidamente personali
 - Ferramentas de teste de estratégias (estatísticas, equity, relatórios).
 - Salvar e carregar configurações de estratégias.
 - Execução simultânea de estratégias.
-- Informações detalhadas sobre o desempenho das estratégias (ordens, transações, posições, receita, logs, etc.).
+- Informações detalhadas sobre o desempenho das estratégias (ordens, transações, posições, receita, registos, etc.).
 - Lançamentos agendados de estratégias.
 
 ### API
@@ -73,7 +73,7 @@ A [API](topics/api.md) é uma biblioteca C# para desenvolvimento profissional de
 ### Nossos Produtos
 
 - [Designer](topics/designer.md) - Designer universal de estratégias algorítmicas.
-- [Hydra](topics/hydra.md) - Programa de download de dados de mercado.
+- [Hydra](topics/hydra.md) - Programa de transferência de dados de mercado.
 - [API](topics/api.md) - Biblioteca para desenvolvimento de robôs de negociação em [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
 - [Terminal](topics/terminal.md) - Terminal de negociação.
 - [Shell](topics/shell.md) - Estrutura gráfica pronta para estratégias com código-fonte.

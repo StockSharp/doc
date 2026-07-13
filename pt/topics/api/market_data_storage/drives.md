@@ -1,6 +1,6 @@
-# Drives de Armazenamento
+# Unidades de armazenamento
 
-Os drives de armazenamento no StockSharp são responsáveis pela colocação física dos dados de mercado — num disco local ou num servidor remoto. A interface base [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) define o contrato comum para todas as implementações.
+As unidades de armazenamento no StockSharp são responsáveis pela colocação física dos dados de mercado — num disco local ou num servidor remoto. A interface base [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) define o contrato comum para todas as implementações.
 
 ## IMarketDataDrive — Interface Base
 
@@ -9,13 +9,13 @@ A interface [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) f
 - **Path** — caminho para o armazenamento de dados.
 - **GetAvailableSecuritiesAsync()** — obter uma lista de todos os instrumentos disponíveis no armazenamento.
 - **GetAvailableDataTypesAsync()** — obter uma lista de tipos de dados disponíveis para um instrumento específico.
-- **GetStorageDrive()** — obter um drive de armazenamento para um instrumento e tipo de dados específicos.
+- **GetStorageDrive()** — obter uma unidade de armazenamento para um instrumento e tipo de dados específicos.
 - **VerifyAsync()** — verificar a integridade do armazenamento.
 - **LookupSecuritiesAsync()** — pesquisar instrumentos por critérios especificados.
 
 ## LocalMarketDataDrive — Armazenamento Local em Ficheiros
 
-A classe [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) é a implementação principal de drive que armazena dados no disco local no sistema de ficheiros.
+A classe [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) é a implementação principal de unidade que armazena dados no disco local no sistema de ficheiros.
 
 ### Funcionalidades Principais
 
@@ -27,7 +27,7 @@ A classe [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDri
 ### Exemplo de Utilização
 
 ```cs
-// Criar um drive local com um caminho especificado
+// Criar uma unidade local com um caminho especificado
 var localDrive = new LocalMarketDataDrive(Path.Combine(
     Directory.GetCurrentDirectory(), "Storage"));
 
@@ -59,7 +59,7 @@ A classe [RemoteMarketDataDrive](xref:StockSharp.Algo.Storages.RemoteMarketDataD
 ### Exemplo de Utilização
 
 ```cs
-// Criar um drive remoto
+// Criar uma unidade remota
 var remoteDrive = new RemoteMarketDataDrive
 {
     Address = "192.168.1.100:5002".To<EndPoint>(),
@@ -76,30 +76,30 @@ await foreach (var dataType in remoteDrive.GetAvailableDataTypesAsync(secId, Sto
 
 Para mais detalhes sobre o trabalho com armazenamento remoto, consulte a secção [Trabalhar com Armazenamento Remoto](remote.md).
 
-## DriveCache — Gestão de Drives
+## DriveCache — Gestão de unidades
 
-A classe [DriveCache](xref:StockSharp.Algo.Storages.DriveCache) gere uma colecção de drives de armazenamento e fornece cache para reutilização.
+A classe [DriveCache](xref:StockSharp.Algo.Storages.DriveCache) gere uma colecção de unidades de armazenamento e fornece cache para reutilização.
 
 ### Métodos e Propriedades Principais
 
-- **GetDrive(path)** — obter um drive existente por caminho ou criar um novo.
-- **DeleteDrive(drive)** — remover um drive da cache.
+- **GetDrive(path)** — obter uma unidade existente por caminho ou criar uma nova.
+- **DeleteDrive(drive)** — remover uma unidade da cache.
 - **TryDefaultDrive** — o primeiro [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) disponível.
-- **NewDriveCreated** — evento para criação de novo drive.
-- **DriveDeleted** — evento para eliminação de drive.
-- **Changed** — evento para alterações na colecção de drives.
+- **NewDriveCreated** — evento para criação de nova unidade.
+- **DriveDeleted** — evento para eliminação de unidade.
+- **Changed** — evento para alterações na colecção de unidades.
 
-A classe implementa a interface `IPersistable`, que permite guardar e carregar configurações de drives.
+A classe implementa a interface `IPersistable`, que permite guardar e carregar configurações de unidades.
 
 ### Exemplo de Utilização
 
 ```cs
-// Criar uma cache com um drive local predefinido
+// Criar uma cache com uma unidade local predefinida
 var defaultDrive = new LocalMarketDataDrive(Path.Combine(
     Directory.GetCurrentDirectory(), "Storage"));
 var driveCache = new DriveCache(defaultDrive);
 
-// Obter ou criar um drive por caminho
+// Obter ou criar uma unidade por caminho
 var anotherDrive = driveCache.GetDrive(@"D:\MarketData");
 
 // Subscrever eventos

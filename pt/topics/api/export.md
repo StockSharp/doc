@@ -10,7 +10,7 @@ A classe abstrata base [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter) 
 - **Encoding** - codificação (UTF-8 por predefinição).
 - **Export\<T\>(IAsyncEnumerable\<T\>, CancellationToken)** - o método principal de exportação. Devolve `Task<(int count, DateTime? lastTime)>` - o número de registos exportados e a hora do último registo.
 
-O método encaminha automaticamente os dados para manipuladores específicos por tipo para: [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage), [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage), [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) (ticks, log de ordens, transações), [CandleMessage](xref:StockSharp.Messages.CandleMessage), [NewsMessage](xref:StockSharp.Messages.NewsMessage), [SecurityMessage](xref:StockSharp.Messages.SecurityMessage), [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage), [IndicatorValue](xref:StockSharp.Messages.IndicatorValue) e [BoardStateMessage](xref:StockSharp.Messages.BoardStateMessage).
+O método encaminha automaticamente os dados para manipuladores específicos por tipo para: [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage), [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage), [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) (ticks, registo de ordens, transações), [CandleMessage](xref:StockSharp.Messages.CandleMessage), [NewsMessage](xref:StockSharp.Messages.NewsMessage), [SecurityMessage](xref:StockSharp.Messages.SecurityMessage), [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage), [IndicatorValue](xref:StockSharp.Messages.IndicatorValue) e [BoardStateMessage](xref:StockSharp.Messages.BoardStateMessage).
 
 ## Tipos de exportadores
 
@@ -112,7 +112,7 @@ A classe [TemplateTxtRegistry](xref:StockSharp.Algo.Export.TemplateTxtRegistry) 
 - **TemplateTxtDepth** - modelo para livros de ordens.
 - **TemplateTxtCandle** - modelo para velas.
 - **TemplateTxtLevel1** - modelo para dados Level1.
-- **TemplateTxtOrderLog** - modelo para log de ordens.
+- **TemplateTxtOrderLog** - modelo para registo de ordens.
 - **TemplateTxtTransaction** - modelo para transações.
 - **TemplateTxtSecurity** - modelo para instrumentos.
 - **TemplateTxtNews** - modelo para notícias.

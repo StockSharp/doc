@@ -30,7 +30,7 @@ Signal = EMA(PPO, SignalPeriod)
 
 ## Interpretation
 
-- **Signalkreuzungen.** Ein bullisches Signal tritt auf, wenn die PPO-Linie die Signallinie von unten kreuzt; Der entgegengesetzte Crossover deutet auf eine rückläufige Dynamik hin.
+- **Signalkreuzungen.** Ein bullisches Signal tritt auf, wenn die PPO-Linie die Signallinie von unten kreuzt; Die entgegengesetzte Kreuzung deutet auf eine rückläufige Dynamik hin.
 - **Trendbestätigung.** Das Halten über der Signallinie bestätigt einen Aufwärtstrend, während das Bleiben unter der Signallinie einen Abwärtstrend unterstützt.
 - **Divergenzen.** Divergenzen zwischen der Preisbewegung und der PPO-Linie während der Interaktion mit der Signallinie können Umkehrungen vorwegnehmen.
 

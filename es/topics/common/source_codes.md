@@ -8,10 +8,10 @@ Lista de componentes disponibles con código fuente:
 
 - Clases comunes para crear conexiones propias.
 - Formato del almacenamiento de datos de mercado.
-- Simulador de trading.
+- Simulador de negociación.
 - Simulador histórico.
 - Indicadores (más de 70) de análisis técnico.
-- Algoritmos para calcular profit-loss, slippage y delay.
+- Algoritmos para calcular ganancias/pérdidas, deslizamiento y retraso.
 - Algoritmos para construir velas de cualquier marco temporal, así como velas no basadas en tiempo (tick, range, etc.).
 - Registro.
 - Importación y exportación.

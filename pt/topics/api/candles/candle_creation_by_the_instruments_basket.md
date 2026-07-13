@@ -1,8 +1,8 @@
 # Criação de velas pela cesta de instrumentos
 
-Para criar candles para [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) ou [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity), é usado o mesmo mecanismo de assinatura que para instrumentos [Security](xref:StockSharp.BusinessEntities.Security) comuns.
+Para criar velas para [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) ou [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity), é usado o mesmo mecanismo de assinatura que para instrumentos [Security](xref:StockSharp.BusinessEntities.Security) comuns.
 
-Abaixo está um exemplo de criação de candles de 1 minuto para o spread AAPL - MSFT:
+Abaixo está um exemplo de criação de velas de 1 minuto para o spread AAPL - MSFT:
 
 ```cs
 private Connector _connector;
@@ -60,7 +60,7 @@ private void CreateIndexAndSubscribe()
 
 	// Criar assinatura de velas do instrumento de índice
 	_indexSubscription = new Subscription(
-		DataType.TimeFrame(_timeFrame),  // candles de 1 minuto
+		DataType.TimeFrame(_timeFrame),  // velas de 1 minuto
 		_indexInstr)  // Nosso instrumento de índice
 	{
 		MarketData =
@@ -89,7 +89,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	if (subscription != _indexSubscription)
 		return;
 
-	// Se necessário, limitar o processamento apenas a velas concluídas
+	// Se necessário, limitar o processamento apenas às velas concluídas
 	if (candle.State != CandleStates.Finished)
 		return;
 

@@ -26,7 +26,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Verificación de revocación** - Verificación de revocación del certificado.
 - **Verificar certificados remotos** - Verificar certificados remotos.
 - **Nombre del servidor** - Nombre del servidor que utiliza la conexión SSL.
-- **Configuración de reconexión** - Configuración del mecanismo de seguimiento de la conexión con el sistema de trading ([Configuración de reconexión](../../reconnection_settings.md)).
+- **Configuración de reconexión** - Configuración del mecanismo de seguimiento de la conexión con el sistema de negociación ([Configuración de reconexión](../../reconnection_settings.md)).
 - **Intervalo de comprobación** - Intervalo para notificar al servidor que la conexión sigue activa. El valor predeterminado es 1 minuto.
 - **Código de mercado unificado** - Código de bolsa para el instrumento unificado.
 

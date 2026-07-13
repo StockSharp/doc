@@ -61,7 +61,7 @@ var drive = new LocalMarketDataDrive(Paths.FileSystem, @"C:\MarketData");
 
 ### CsvEntityRegistry
 
-Registro de entidades (exchanges, instrumentos, portfolios) en formato CSV:
+Registro de entidades (bolsas, instrumentos, portfolios) en formato CSV:
 
 ```csharp
 using StockSharp.Algo.Storages.Csv;
@@ -73,7 +73,7 @@ var registry = new CsvEntityRegistry(Paths.FileSystem, @"C:\Data", executor);
 
 ### SnapshotRegistry
 
-Registro de snapshots de datos de mercado:
+Registro de instantáneas de datos de mercado:
 
 ```csharp
 using StockSharp.Algo.Storages;

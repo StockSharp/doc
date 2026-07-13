@@ -21,9 +21,9 @@ Libélula Doji se considera una señal potencial de reversión, especialmente en
 - En una tendencia bajista, este patrón tiene implicaciones alcistas y puede anticipar una reversión.
 - En una tendencia alcista, puede señalar una posible corrección.
 
-### Estrategias de trading
+### Estrategias de negociación
 
-Libélula requiere confirmación adicional para tomar decisiones de trading:
+Libélula requiere confirmación adicional para tomar decisiones de negociación:
 
 - Esperar una vela alcista de confirmación en el siguiente período antes de entrar en una posición larga.
 - Colocar un stop-loss por debajo del mínimo de Libélula.

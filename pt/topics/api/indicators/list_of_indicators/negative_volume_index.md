@@ -6,7 +6,7 @@ Para usar o indicador, é necessário usar a classe [NegativeVolumeIndex](xref:S
 
 ## Descrição
 
-O índice de volume negativo (NVI) baseia-se na ideia de que o "smart money" está ativo em dias de baixo volume, enquanto a "multidão" (traders não profissionais) está mais ativa em dias de volume elevado. O NVI só se altera nos dias em que o volume atual é inferior ao volume do dia anterior.
+O índice de volume negativo (NVI) baseia-se na ideia de que o "smart money" está ativo em dias de baixo volume, enquanto a "multidão" (operadores não profissionais) está mais ativa em dias de volume elevado. O NVI só se altera nos dias em que o volume atual é inferior ao volume do dia anterior.
 
 O conceito do indicador sugere que os movimentos de preço com volume reduzido são mais significativos e refletem frequentemente as ações de investidores informados. O NVI procura acompanhar estes movimentos, ignorando alterações de preço em dias com volume aumentado.
 
@@ -67,7 +67,7 @@ O índice de volume negativo pode ser interpretado da seguinte forma:
    - Os sinais do NVI tornam-se mais fiáveis quando confirmados por outros indicadores
 
 7. **Definição de limiares**:
-   - Alguns traders definem níveis de limiar para o NVI (por exemplo, 5% acima ou abaixo da média móvel)
+   - Alguns operadores definem níveis de limiar para o NVI (por exemplo, 5% acima ou abaixo da média móvel)
    - O cruzamento destes limiares pode ser considerado um sinal mais forte do que cruzamentos simples
 
 ![Gráfico do indicador NVI](../../../../images/indicator_negative_volume_index.png)

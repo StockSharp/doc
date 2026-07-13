@@ -73,7 +73,7 @@ var registry = new CsvEntityRegistry(Paths.FileSystem, @"C:\Data", executor);
 
 ### SnapshotRegistry
 
-Registo de snapshots de dados de mercado:
+Registo de instantâneos de dados de mercado:
 
 ```csharp
 using StockSharp.Algo.Storages;
@@ -109,7 +109,7 @@ if (@"C:\config.json".IsConfigExists(fs))
 
 ### CandlePatternFileStorage
 
-Armazenamento de padrões de candles:
+Armazenamento de padrões de velas:
 
 ```csharp
 using StockSharp.Algo.Candles.Patterns;

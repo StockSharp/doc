@@ -1,11 +1,11 @@
 # Autenticação
 
-O componente de autenticação desempenha um papel fundamental para garantir a interação segura com uma série de APIs de exchanges. Ele é responsável por armazenar chaves de API, gerar assinaturas para solicitações e outros aspectos de segurança.
+O componente de autenticação desempenha um papel fundamental para garantir a interação segura com uma série de APIs de bolsas. Ele é responsável por armazenar chaves de API, gerar assinaturas para solicitações e outros aspectos de segurança.
 
 ## Funções Principais
 
 1. Armazenamento de chaves de API (chave pública, chave secreta, frase-passe).
-2. Geração de assinaturas para solicitações de acordo com os requisitos de uma exchange específica.
+2. Geração de assinaturas para solicitações de acordo com os requisitos de uma bolsa específica.
 3. Adição dos cabeçalhos de autenticação necessários às solicitações HTTP.
 
 ## Exemplo de Implementação
@@ -65,6 +65,6 @@ class Authenticator : Disposable
 
 - Use `SecureString` para armazenar dados sensíveis, como chaves e frases-passe.
 - Implemente a interface `IDisposable` para o descarte adequado de recursos, especialmente se primitivas criptográficas forem usadas.
-- Certifique-se de que os métodos de geração de assinatura correspondam à versão mais recente da documentação da API da exchange.
+- Certifique-se de que os métodos de geração de assinatura correspondam à versão mais recente da documentação da API da bolsa.
 
-Com a implementação adequada do componente de autenticação, você garantirá uma interação segura com a exchange e simplificará o processo de autorização de solicitações em outras partes do conector.
+Com a implementação adequada do componente de autenticação, você garantirá uma interação segura com a bolsa e simplificará o processo de autorização de solicitações em outras partes do conector.

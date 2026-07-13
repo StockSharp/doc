@@ -8,7 +8,7 @@ Para usar o indicador, deve ser usada a classe [ChaikinMoneyFlow](xref:StockShar
 
 fluxo monetário de Chaikin (CMF) expande o conceito da linha de acumulação/distribuição (A/D Line), concentrando-se num período de tempo específico. O indicador mede o volume do fluxo monetário expresso como percentagem do volume total durante o período especificado.
 
-CMF ajuda os traders a:
+CMF ajuda os operadores a:
 - Determinar a força da pressão compradora e vendedora
 - Identificar tendências de acumulação (compra) e distribuição (venda)
 - Detetar divergências entre o movimento do preço e o fluxo monetário

@@ -9,7 +9,7 @@ Eine Schritt-für-Schritt-Anleitung zur Erstellung eines Börsen-Connectors für
 Bereiten Sie vor dem Start Folgendes vor:
 - REST/WebSocket-API-Dokumentation der Börse
 - Test-API-Schlüssel (Sandbox/Testnet)
-- Liste der unterstützten Datentypen (Candles, Orderbuch, Ticks, Trades)
+- Liste der unterstützten Datentypen (Kerzen, Orderbuch, Ticks, Trades)
 - Liste der unterstützten Ordertypen (Limit, Market, Stop)
 
 ### 2. Ein Projekt erstellen
@@ -88,7 +88,7 @@ Prompt:
 ```
 Füge dem Adapter Market-Data-Abonnements hinzu:
 
-1. Candles (MarketDataTypes.CandleTimeFrame):
+1. Kerzen (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
    - WebSocket: Kanal kline_{symbol}_{interval} abonnieren
    - Intervallzuordnung: 1m, 5m, 15m, 1h, 4h, 1d
@@ -205,7 +205,7 @@ private string SignRequest(string payload)
 - [ ] `SubscriptionFinishedMessage` wird gesendet
 
 ### Marktdaten
-- [ ] Candles: Verlaufsladen + Abonnement neuer Candles
+- [ ] Kerzen: Verlaufsladen + Abonnement neuer Kerzen
 - [ ] Orderbuch: korrekte Tiefe, Updates
 - [ ] Ticks: korrekte Zeit, Volumen, Richtung
 

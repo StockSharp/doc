@@ -77,7 +77,7 @@ Para mais detalhes sobre trabalhar com ordens, veja a secção [Ordens](../order
 
 Depois de registar uma ordem, é importante acompanhar o seu estado. Numa estratégia, pode:
 
-### 1. Usar Event Handlers
+### 1. Usar manipuladores de eventos
 
 ```cs
 // Subscrever o evento de ordem recebida
@@ -116,7 +116,7 @@ order
 		// Ações após a execução da ordem
 		LogInfo($"Ordem {order.TransactionId} executada");
 		
-		// Por exemplo, colocar uma stop order
+		// Por exemplo, colocar uma ordem stop
 		var stopOrder = SellLimit(price * 0.95, volume);
 	})
 	.Apply(this);
@@ -259,12 +259,12 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Subscrever candles
+	// Subscrever velas
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
 	
-	// Criar uma regra para processar candles
+	// Criar uma regra para processar velas
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)

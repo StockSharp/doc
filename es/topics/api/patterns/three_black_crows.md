@@ -22,7 +22,7 @@ Tres cuervos negros se considera una de las señales más fiables de reversión 
 - Cuerpos de vela relativamente largos con sombras cortas indican control bajista decisivo sobre el mercado.
 - Cuanto más uniformes sean los tamaños de las tres velas, más fuerte será la señal.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Tres cuervos negros proporciona oportunidades fiables para entrar en una posición corta:
 

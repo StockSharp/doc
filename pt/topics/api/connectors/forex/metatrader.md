@@ -43,7 +43,7 @@ Ambos os conectores são utilizados da mesma forma, pelo que abaixo é descrito 
     ![Captura de tela de MetaTrader 4](../../../../images/mt_4.png)
 
     Além disso, na janela de registo do especialista deve aparecer informação sobre o arranque bem-sucedido do script e o número de instrumentos.
-11. Se a licença MT4 ou MT5 não tiver sido obtida, aparecerá no log uma linha semelhante à seguinte:
+11. Se a licença MT4 ou MT5 não tiver sido obtida, aparecerá no registo uma linha semelhante à seguinte:
 
     ![Captura de tela de MetaTrader 5](../../../../images/mt_5.png)
 
@@ -57,7 +57,7 @@ Ambos os conectores são utilizados da mesma forma, pelo que abaixo é descrito 
 
     > [!TIP]
     > - O script deve ser iniciado antes de ligar o StockSharp ao MetaTrader e mantido em execução enquanto esta ligação for necessária.  
-    > - Para ver candles históricos no StockSharp, estes têm de ser descarregados do servidor MetaTrader. Para saber como fazê-lo, leia a documentação do MetaTrader.
+    > - Para ver velas históricos no StockSharp, estes têm de ser descarregados do servidor MetaTrader. Para saber como fazê-lo, leia a documentação do MetaTrader.
 
     Em caso de ligação bem-sucedida, o exemplo deverá mostrar uma lista de instrumentos e contas:
 

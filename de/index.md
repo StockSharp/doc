@@ -1,6 +1,6 @@
 # Über StockSharp
 
-[StockSharp (S#)](https://stocksharp.com/store/) bietet **kostenlose** Handelsanwendungen für globale Märkte, einschließlich Aktien, Futures, Optionen, Kryptowährungen und Forex. Sie können manuell handeln oder automatisierte Strategien ausführen, von herkömmlichen Handelsrobotern bis hin zu HFT-Systemen (High-Frequency Trading).
+[StockSharp (S#)](https://stocksharp.com/store/) bietet **kostenlose** Handelsanwendungen für globale Märkte, einschließlich Aktien, Futures, Optionen, Kryptowährungen und Forex. Sie können manuell handeln oder automatisierte Strategien ausführen, von herkömmlichen Handelsrobotern bis hin zu HFT-Systemen (Hochfrequenzhandel).
 
 **Unterstützt 90+ Broker, Börsen und Datenquellen:** [Konnektoren](topics/api/connectors.md).
 
@@ -33,7 +33,7 @@ S# funktioniert mit jedem Broker, jeder Börse oder Datenquelle, die von den ver
 
 - Unterstützt viele Datenquellen über [Konnektoren](topics/api/connectors.md).
 - Hohes Kompressionsverhältnis (2 Bytes pro Trade, 7 Bytes pro Orderbuch).
-- Verarbeitet jeden Datentyp (Candles, Ticks, Orderbücher, Order-Logs, Optionen, Nachrichten und mehr).
+- Verarbeitet jeden Datentyp (Kerzen, Ticks, Orderbücher, Orderprotokolle, Optionen, Nachrichten und mehr).
 - API-Zugriff auf gespeicherte Daten.
 - Exportfunktionen nach CSV, Excel, XML oder in Datenbanken.
 - CSV-Importfunktion.
@@ -49,7 +49,7 @@ S# funktioniert mit jedem Broker, jeder Börse oder Datenquelle, die von den ver
 
 - Ermöglicht das Handeln direkt aus Charts per Klick.
 - Unterstützt beliebige Zeitrahmen.
-- Bietet verschiedene Candle-Typen: Volume, Tick, Range, Renko.
+- Bietet verschiedene Kerzentypen: Volume, Tick, Range, Renko.
 - Enthält Cluster- und Box-Charts.
 
 ### Shell
@@ -63,7 +63,7 @@ Die Shell bietet ein fertiges grafisches Framework, das schnell an Ihre Bedürfn
 - Tools zum Testen von Strategien (Statistiken, Equity, Berichte).
 - Speichern und Laden von Strategieeinstellungen.
 - Gleichzeitige Ausführung mehrerer Strategien.
-- Detaillierte Einblicke in die Strategieleistung (Orders, Transaktionen, Positionen, Umsatz, Logs usw.).
+- Detaillierte Einblicke in die Strategieleistung (Orders, Transaktionen, Positionen, Umsatz, Protokolle usw.).
 - Geplante Strategiestarts.
 
 ### API

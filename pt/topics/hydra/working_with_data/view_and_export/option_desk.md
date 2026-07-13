@@ -8,6 +8,6 @@ Se não houver histórico, mas existirem dados sobre o spread, pode calcular as 
 
 Para ver o **Sorriso de volatilidade**, é necessário ir ao separador **Sorriso de volatilidade**.
 
-![Hydra smile de volatilidade de opções](../../../../images/hydra_option_smile_of_volatility.png)
+![Hydra sorriso de volatilidade de opções](../../../../images/hydra_option_smile_of_volatility.png)
 
 Os valores calculados podem ser [exportados para o formato necessário](../export_data.md).

@@ -35,7 +35,7 @@ namespace StockSharp.Algo.Analytics
 
 				foreach (var candle in candleStorage.Load(from, to))
 				{
-					// fill series
+					// заполнить серии
 					candlesSeries[candle.OpenTime] = candle.ClosePrice;
 					volsSeries[candle.OpenTime] = candle.TotalVolume;
 				}

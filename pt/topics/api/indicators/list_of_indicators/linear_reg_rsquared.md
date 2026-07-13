@@ -12,7 +12,7 @@ Os valores de R² variam de 0 a 1 (ou de 0% a 100%):
 - Um valor próximo de 1 (100%) indica que os preços se alinham muito bem ao longo da linha de tendência, significando uma tendência forte
 - Um valor próximo de 0 indica ausência de uma tendência linear e é característico de mercados laterais, caóticos ou cíclicos
 
-O indicador ajuda os traders a distinguir entre períodos de tendências fortes e períodos de consolidação ou movimentos laterais, permitindo escolher uma estratégia de negociação adequada.
+O indicador ajuda os operadores a distinguir entre períodos de tendências fortes e períodos de consolidação ou movimentos laterais, permitindo escolher uma estratégia de negociação adequada.
 
 ## Parâmetros
 

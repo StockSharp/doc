@@ -32,7 +32,7 @@ dotnet add package StockSharp.Binance
 
 - フレームワーク: StockSharp 5.x, .NET 10
 - 戦略は Strategy クラスを継承する
-- キャンドルは Connector.Subscribe(subscription) 経由でサブスクライブする
+- ローソク足は Connector.Subscribe(subscription) 経由でサブスクライブする
 - 注文は RegisterOrder(order) 経由で登録する
 - ログ出力: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
 - インジケーター: new で作成し、indicator.Process(candle) を呼び出す
@@ -52,9 +52,9 @@ StockSharp を使用して、次の条件を満たすトレーディング戦略
 - 短期 SMA が長期 SMA を上抜けたら — 買い
 - 短期 SMA が長期 SMA を下抜けたら — 売り
 - ポジションサイズ: 1 lot
-- 5 分足キャンドルを使用する
-- OnStarted() でキャンドルをサブスクライブする
-- サブスクリプションルール経由でキャンドルを処理する
+- 5 分足ローソク足を使用する
+- OnStarted() でローソク足をサブスクライブする
+- サブスクリプションルール経由でローソク足を処理する
 ```
 
 ### ステップ 2: 生成されたコードをレビューする
@@ -161,8 +161,8 @@ public class SmaCrossStrategy : Strategy
 
 - **継承**: クラスが `Strategy` から継承している ✓
 - **パラメーター**: 最適化のために `StrategyParam<T>` を使用している ✓
-- **キャンドルのサブスクリプション**: `Subscribe(new Subscription(...))` 経由 ✓
-- **キャンドル処理**: `WhenCandlesFinished` ルール経由 ✓
+- **ローソク足のサブスクリプション**: `Subscribe(new Subscription(...))` 経由 ✓
+- **ローソク足処理**: `WhenCandlesFinished` ルール経由 ✓
 - **IsFormed チェック**: インジケーターの準備完了を確認している ✓
 - **注文**: `BuyAtMarket` / `SellAtMarket` とともに `RegisterOrder()` 経由 ✓
 - **ポジション**: 注文を出す前に `Position` を確認している ✓

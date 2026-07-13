@@ -316,7 +316,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 }
 ```
 
-## 逐笔成交数据（Ticks）
+## 逐笔成交数据
 
 ### 订阅逐笔成交数据
 

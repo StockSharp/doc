@@ -48,8 +48,8 @@ StockSharp se distribuye mediante NuGet. A continuación se muestra el catálogo
 | Paquete | Descripción |
 |---------|-------------|
 | [StockSharp.Messages](https://www.nuget.org/packages/StockSharp.Messages/) | Mensajes y contratos base. Base de todo el framework |
-| [StockSharp.BusinessEntities](https://www.nuget.org/packages/StockSharp.BusinessEntities/) | Entidades de trading: Security, Order, Trade, Portfolio, etc. |
-| [StockSharp.Algo](https://www.nuget.org/packages/StockSharp.Algo/) | Trading algorítmico core, Connector, suscripciones, velas |
+| [StockSharp.BusinessEntities](https://www.nuget.org/packages/StockSharp.BusinessEntities/) | Entidades de negociación: Security, Order, Trade, Portfolio, etc. |
+| [StockSharp.Algo](https://www.nuget.org/packages/StockSharp.Algo/) | Núcleo de negociación algorítmica, Connector, suscripciones, velas |
 | [StockSharp.Configuration](https://www.nuget.org/packages/StockSharp.Configuration/) | Gestión de configuración, ajustes de conexión |
 | [StockSharp.Localization](https://www.nuget.org/packages/StockSharp.Localization/) | Sistema de localización (inglés por defecto) |
 
@@ -64,7 +64,7 @@ StockSharp se distribuye mediante NuGet. A continuación se muestra el catálogo
 
 | Paquete | Descripción |
 |---------|-------------|
-| [StockSharp.Algo.Testing](https://www.nuget.org/packages/StockSharp.Algo.Testing/) | Pruebas con datos históricos, emulación de trades |
+| [StockSharp.Algo.Testing](https://www.nuget.org/packages/StockSharp.Algo.Testing/) | Pruebas con datos históricos, emulación de operaciones |
 
 ### Almacenamiento y datos
 
@@ -91,11 +91,11 @@ StockSharp se distribuye mediante NuGet. A continuación se muestra el catálogo
 | [StockSharp.Alerts.Interfaces](https://www.nuget.org/packages/StockSharp.Alerts.Interfaces/) | Interfaces del sistema de alertas |
 | [StockSharp.Diagram.Core](https://www.nuget.org/packages/StockSharp.Diagram.Core/) | Núcleo del diseñador visual de estrategias |
 
-### Conectores (exchanges y brokers)
+### Conectores (bolsas y brokers)
 
 Cada conector es un paquete NuGet separado. Conectores principales:
 
-| Paquete | Exchange/Broker |
+| Paquete | Bolsa/Broker |
 |---------|----------------|
 | `StockSharp.Binance` | Binance |
 | `StockSharp.InteractiveBrokers` | Interactive Brokers |
@@ -250,7 +250,7 @@ dotnet restore
 
 ## Estructura de archivo del proyecto (.csproj)
 
-### Mínimo (bot de trading de consola)
+### Mínimo (bot de negociación de consola)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -335,4 +335,4 @@ dotnet run
 
 ## Ejemplos
 
-Los ejemplos preparados de uso de StockSharp están disponibles en el directorio [Samples/](https://github.com/stocksharp/stocksharp/tree/master/Samples) del repositorio. Cubren conexión a exchanges, suscripción a datos, construcción de velas, indicadores, estrategias y pruebas.
+Los ejemplos preparados de uso de StockSharp están disponibles en el [directorio de ejemplos](https://github.com/stocksharp/stocksharp/tree/master/Samples) del repositorio. Cubren conexión a bolsas, suscripción a datos, construcción de velas, indicadores, estrategias y pruebas.

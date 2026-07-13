@@ -10,7 +10,7 @@ Después aparecerá en la lista de estrategias disponibles.
 
 ![Shell ejecutar estrategia de Designer 01](../../images/shell_run_designer_strategy_01.png)
 
-Al seleccionar la estrategia añadida, puede establecer los parámetros necesarios y lanzarla para trading.
+Al seleccionar la estrategia añadida, puede establecer los parámetros necesarios y lanzarla para la negociación.
 
 ![Shell ejecutar estrategia de Designer 02](../../images/shell_run_designer_strategy_02.png)
 

@@ -5,7 +5,7 @@ A aplicação `Installer.Console` é uma versão multiplataforma do StockSharp I
 ## Execução
 
 1. Instale o SDK ou runtime .NET 6 para a sua plataforma.
-2. Descarregue `StockSharp.Installer.Console.zip` a partir da [página de Download](https://stocksharp.com/products/download/).
+2. Descarregue `StockSharp.Installer.Console.zip` a partir da [página de transferência](https://stocksharp.com/products/download/).
 3. Descompacte o arquivo e execute o utilitário a partir da linha de comandos:
    
    ```bash
@@ -26,7 +26,7 @@ A aplicação `Installer.Console` é uma versão multiplataforma do StockSharp I
 - `Installed` - listar os programas instalados.
 - `Sign` - assinar um ficheiro DLL.
 
-O parâmetro opcional `[product]` é o ID do produto na [Store](https://stocksharp.com/store/). Pode encontrar este ID na página do produto, por exemplo na [página do Hydra server](https://stocksharp.com/store/hydra-server/), ou executando `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` especifica o diretório de instalação.
+O parâmetro opcional `[product]` é o ID do produto na [loja](https://stocksharp.com/store/). Pode encontrar este ID na página do produto, por exemplo na [página do Hydra Server](https://stocksharp.com/store/hydra-server/), ou executando `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` especifica o diretório de instalação.
 
 ## Opções
 

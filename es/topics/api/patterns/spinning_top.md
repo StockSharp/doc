@@ -21,11 +21,11 @@ Peonza señala indecisión en el mercado:
 - Dentro de una tendencia bajista, puede indicar agotamiento de la presión bajista.
 - En la parte superior de una tendencia o antes de un nivel de resistencia importante, puede anticipar una reversión.
 
-### Estrategias de trading
+### Estrategias de negociación
 
-Peonza por sí mismo no es una señal de trading fuerte, pero se puede usar en combinación con otros factores:
+Peonza por sí mismo no es una señal de negociación fuerte, pero se puede usar en combinación con otros factores:
 
-- Buscar confirmación adicional de velas posteriores antes de tomar decisiones de trading.
+- Buscar confirmación adicional de velas posteriores antes de tomar decisiones de negociación.
 - Usar como parte de patrones de velas más complejos, como Estrella matinal o Estrella vespertina.
 - Aumentar la atención a movimientos de precio posteriores después de la formación de Peonza en niveles clave de soporte o resistencia.
 - Posible ajuste de stop-losses cuando aparece Peonza después de una tendencia prolongada.

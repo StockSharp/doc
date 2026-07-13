@@ -1,6 +1,6 @@
 # Registro en estrategias
 
-En StockSharp, la clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) hereda de [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver), lo que permite usar herramientas integradas para registrar todas las acciones y eventos que ocurren durante el funcionamiento de una estrategia de trading.
+En StockSharp, la clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) hereda de [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver), lo que permite usar herramientas integradas para registrar todas las acciones y eventos que ocurren durante el funcionamiento de una estrategia de negociación.
 
 ## Niveles de registro
 
@@ -14,7 +14,7 @@ StockSharp admite los siguientes niveles de registro (enumerados en orden de imp
 
 ## Métodos de registro en Strategy
 
-La estrategia proporciona los siguientes métodos para escribir mensajes en el log:
+La estrategia proporciona los siguientes métodos para escribir mensajes en el registro:
 
 ### LogVerbose
 
@@ -110,7 +110,7 @@ catch (Exception ex)
 
 ## Configuración del nivel de registro
 
-La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contiene una propiedad [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) que determina qué mensajes se escribirán en el log:
+La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) contiene una propiedad [LogLevel](xref:Ecng.Logging.ILogSource.LogLevel) que determina qué mensajes se escribirán en el registro:
 
 ```cs
 // Establecer el nivel de registro para la estrategia
@@ -212,16 +212,16 @@ var emailListener = new EmailLogListener("from@stocksharp.com", "to@stocksharp.c
 emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
 logManager.Listeners.Add(emailListener);
 
-// Agregar la estrategia como fuente de log
+// Agregar la estrategia como fuente de registro
 logManager.Sources.Add(strategy);
 ```
 
 ## Visualización de registros
 
-Los mensajes escritos en el log de la estrategia se pueden ver:
+Los mensajes escritos en el registro de la estrategia se pueden ver:
 
 1. En el programa [Designer](../../designer.md), en el panel "Registros"
-2. En archivos de log, si [FileLogListener](xref:Ecng.Logging.FileLogListener) está configurado
+2. En archivos de registro, si [FileLogListener](xref:Ecng.Logging.FileLogListener) está configurado
 3. En la interfaz de usuario mediante [LogControl](xref:StockSharp.Xaml.LogControl), si se usa [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener)
 
 ## Ver también

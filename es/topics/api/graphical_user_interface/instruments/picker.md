@@ -7,7 +7,7 @@ El componente [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) está diseñ
 [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) consta de: 
 
 1. Un campo de texto para introducir el código (o Id) del instrumento. Al introducir texto, la lista se filtra por la subcadena introducida.
-2. El combo box especial [SecurityTypeComboBox](xref:StockSharp.Xaml.SecurityTypeComboBox) para filtrar instrumentos por su tipo.
+2. El cuadro combinado especial [SecurityTypeComboBox](xref:StockSharp.Xaml.SecurityTypeComboBox) para filtrar instrumentos por su tipo.
 3. La tabla [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) para mostrar la lista de instrumentos.
 
 **Propiedades principales**
@@ -58,4 +58,3 @@ private void SecurityPicker_OnSecuritySelected(Security security)
 	Level1.IsEnabled = Depth.IsEnabled = security != null;
 }
 ```
-

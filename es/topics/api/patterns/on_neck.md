@@ -21,7 +21,7 @@ En el cuello se considera una señal de continuación de tendencia bajista:
 - El cierre de la segunda vela al nivel del mínimo de la primera vela indica que los compradores no pudieron superar este nivel de resistencia.
 - Esto señala una probable continuación de la tendencia bajista.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 En el cuello proporciona oportunidades para entrar o reforzar posiciones cortas:
 

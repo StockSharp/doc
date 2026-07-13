@@ -22,7 +22,7 @@
 [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) を取得する必要がある場合の例を考えてみましょう:
 
 1. **カスタム** ローソク足を選択します。
-2. 設定で、Range ローソク足とボリューム 10 を指定します。
+2. 設定で、レンジローソク足とボリューム 10 を指定します。
 3. ソースで、ローソク足を何から構築するかを指定します - **ティック**。![Hydra ローソク足タイプ 00 07](../../../images/hydra_type_candle_00_07.png)
 4. 期間を設定します。
 5. 開始をクリックすると、データのダウンロードが開始されます。![Hydra ローソク足タイプ 00 08](../../../images/hydra_type_candle_00_08.png)

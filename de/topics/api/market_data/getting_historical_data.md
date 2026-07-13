@@ -26,12 +26,12 @@ connector.Connect();
 
 Die Verbindung kann auch über die grafische Oberfläche konfiguriert werden, wie im Abschnitt [Fenster für Verbindungseinstellungen](../graphical_user_interface/connection_settings_window.md) beschrieben.
 
-### Historische Candles abonnieren
+### Historische Kerzen abonnieren
 
-Um historische Candles zu empfangen, müssen Sie ein Abonnement erstellen und die Parameter der angeforderten Daten angeben:
+Um historische Kerzen zu empfangen, müssen Sie ein Abonnement erstellen und die Parameter der angeforderten Daten angeben:
 
 ```cs
-// Abonnement für 5-Minuten-Candles für das ausgewählte Instrument erstellen
+// Abonnement für 5-Minuten-Kerzen für das ausgewählte Instrument erstellen
 var subscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)
@@ -41,25 +41,25 @@ var subscription = new Subscription(
 		// Zeitraum angeben, für den historische Daten abgerufen werden sollen
 		From = DateTime.Now.Subtract(TimeSpan.FromDays(30)),
 		To = DateTime.Now,
-		// Flag setzen, um nur abgeschlossene Candles zu empfangen
+		// Flag setzen, um nur abgeschlossene Kerzen zu empfangen
 		IsFinishedOnly = true
 	}
 };
 
-// Ereignis für empfangene Candles abonnieren
+// Ereignis für empfangene Kerzen abonnieren
 connector.CandleReceived += OnCandleReceived;
 
 // Abonnement starten
 connector.Subscribe(subscription);
 
-// Ereignishandler für den Empfang von Candles
+// Ereignishandler für den Empfang von Kerzen
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Prüfen, dass die Candle zu unserem Abonnement gehört
+	// Prüfen, dass die Kerze zu unserem Abonnement gehört
 	if (subscription != _subscription)
 		return;
 
-	// Empfangene Candle verarbeiten
+	// Empfangene Kerze verarbeiten
 	Console.WriteLine($"Kerze empfangen: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}, V:{candle.TotalVolume}");
 
 	// Für die Anzeige im Chart können Sie verwenden:
@@ -67,9 +67,9 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 }
 ```
 
-### Candles für Charts verwenden
+### Kerzen für Charts verwenden
 
-Die empfangenen Candles können mit den integrierten grafischen Komponenten von StockSharp in einem Chart angezeigt werden:
+Die empfangenen Kerzen können mit den integrierten grafischen Komponenten von StockSharp in einem Chart angezeigt werden:
 
 ```cs
 // Chart-Elemente erstellen und konfigurieren
@@ -81,14 +81,14 @@ var candleElement = new ChartCandleElement();
 chart.AddArea(area);
 chart.AddElement(area, candleElement, subscription);
 
-// Im CandleReceived-Ereignishandler Candles zeichnen
+// Im CandleReceived-Ereignishandler Kerzen zeichnen
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Prüfen, dass die Candle zu unserem Abonnement gehört
+	// Prüfen, dass die Kerze zu unserem Abonnement gehört
 	if (subscription != _subscription)
 		return;
 
-	// Wenn nur abgeschlossene Candles angezeigt werden sollen
+	// Wenn nur abgeschlossene Kerzen angezeigt werden sollen
 	if (candle.State == CandleStates.Finished)
 	{
 		var chartData = new ChartDrawData();

@@ -64,7 +64,7 @@ puntos pivote se puede interpretar de la siguiente manera:
    - Una ruptura de un nivel puede conducir a un movimiento continuo al siguiente nivel
    - Un rebote desde un nivel puede provocar una reversión al alza
 
-4. **Estrategias de trading**:
+4. **Estrategias de negociación**:
    - **Operativa de rebote**: Ingrese una posición al rebotar en un nivel de soporte o resistencia
    - **Operativa de ruptura**: Ingrese una posición después de una ruptura de nivel confirmada
    - **Operativa en rango**: Compre en niveles de soporte y venda en niveles de resistencia

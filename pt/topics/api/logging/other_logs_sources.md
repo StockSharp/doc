@@ -18,7 +18,7 @@ Nos tópicos anteriores, os objectos incorporados nas classes [S#](../../api.md)
    private readonly TestSource _testSource;
    				
    ```
-3. Adicione fontes de log.
+3. Adicione fontes de registo.
 
    ```cs
    _logManager.Sources.Add(_testSource = new TestSource());
@@ -28,7 +28,7 @@ Nos tópicos anteriores, os objectos incorporados nas classes [S#](../../api.md)
 4. Adicione ouvintes de registo.
 
    ```cs
-   // as mensagens de log serão apresentadas no componente GUI
+   // as mensagens de registo serão apresentadas no componente GUI
    _logManager.Listeners.Add(new GuiLogListener(Monitor));
    // também escrever em ficheiros
    _logManager.Listeners.Add(new FileLogListener

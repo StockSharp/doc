@@ -16,7 +16,7 @@ Im Unterschied zum manuellen Erstellen eines `Subscription`-Objekts und zum Aufr
 
 ### SubscribeCandles
 
-Abonniert Candles. Akzeptiert einen Zeitrahmen oder `DataType`:
+Abonniert Kerzen. Akzeptiert einen Zeitrahmen oder `DataType`:
 
 ```csharp
 // Nach Zeitrahmen abonnieren
@@ -25,17 +25,17 @@ ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     bool isFinishedOnly = true,
     Security security = default);
 
-// Nach DataType abonnieren (unterstützt alle Candle-Typen)
+// Nach DataType abonnieren (unterstützt alle Kerzentypen)
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     DataType dt,
     bool isFinishedOnly = true,
     Security security = default);
 
-// Mit einem vorbereiteten Subscription-Objekt abonnieren
+// Mit einem vorbereiteten Abonnementobjekt abonnieren
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(Subscription subscription);
 ```
 
-Der Parameter `isFinishedOnly` ist standardmäßig `true` - der Handler empfängt nur abgeschlossene Candles.
+Der Parameter `isFinishedOnly` ist standardmäßig `true` - der Handler empfängt nur abgeschlossene Kerzen.
 
 ### SubscribeTicks
 

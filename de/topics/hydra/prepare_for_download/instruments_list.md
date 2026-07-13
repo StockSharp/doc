@@ -1,6 +1,6 @@
 # Instrumentenliste
 
-Einrichtung des Instruments für den Download.
+Einrichtung des Instruments zum Herunterladen.
 
 Für eine Reihe von Quellen ist es möglich, Einstellungen für das Herunterladen der erforderlichen Instrumente vorzunehmen.
 

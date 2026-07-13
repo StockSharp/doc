@@ -15,7 +15,7 @@ Die Bärische Kerze signalisiert eine bärische Marktstimmung mit mehreren Merkm
 
 - Ein langer oberer Schatten zeigt, dass Käufer versucht haben, den Preis nach oben zu treiben, Verkäufer jedoch die Kontrolle übernahmen.
 - Ein Schlusskurs unter dem Eröffnungskurs zeigt die Dominanz der Verkäufer am Ende der Periode.
-- Das Verhältnis zwischen Candle-Körper und oberem Schatten zeigt die Stärke der Verkäufer nach dem Test höherer Niveaus.
+- Das Verhältnis zwischen Kerzenkörper und oberem Schatten zeigt die Stärke der Verkäufer nach dem Test höherer Niveaus.
 - In einem Aufwärtstrend kann sie eine mögliche Umkehr oder Korrektur signalisieren.
 - In einem Abwärtstrend bestätigt sie die Stärke des Trends, insbesondere nach einer Erholung.
 
@@ -24,7 +24,7 @@ Die Bärische Kerze signalisiert eine bärische Marktstimmung mit mehreren Merkm
 Bärische Kerze kann in verschiedenen Handelsstrategien verwendet werden:
 
 - Einstieg in eine Short-Position nach Bildung einer bärischen Kerze an einem Widerstandsniveau oder in einer überkauften Zone.
-- Setzen eines Stop-Loss oberhalb des Maximums der Candle, um sich gegen einen weiteren Anstieg zu schützen.
+- Setzen eines Stop-Loss oberhalb des Maximums der Kerze, um sich gegen einen weiteren Anstieg zu schützen.
 - Kombination mit anderen technischen Indikatoren oder Mustern, um die Wahrscheinlichkeit eines erfolgreichen Trades zu erhöhen.
 - Verwendung zur Bestätigung von Abwärtstrendsignalen aus Indikatoren wie MACD oder gleitenden Durchschnitten.
 - Achten Sie auf das Handelsvolumen - hohes Volumen erhöht die Bedeutung des Signals.

@@ -6,8 +6,8 @@ Para apresentar o sorriso de volatilidade, tem de selecionar o ativo subjacente 
 
 Além disso, pode especificar um filtro para a data de expiração exata das opções e filtros para strikes mínimos\/máximos.
 
-![Terminal smile de volatilidade 00](../../../../images/terminal_smile_of_volatility_00.png)
+![Terminal sorriso de volatilidade 00](../../../../images/terminal_smile_of_volatility_00.png)
 
 ## Conteúdo recomendado
 
-[Log de ordens](order_log.md)
+[Registo de ordens](order_log.md)

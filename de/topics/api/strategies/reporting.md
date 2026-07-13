@@ -24,7 +24,7 @@ Die Schnittstelle `IReportSource` stellt alle Daten bereit, die zum Erzeugen ein
 | `Latency` | `TimeSpan?` | Gesamte Latenz |
 | `Parameters` | `IEnumerable<(string, object)>` | Strategieparameter |
 | `StatisticParameters` | `IEnumerable<(string, object)>` | Statistikparameter |
-| `Orders` | `IEnumerable<ReportOrder>` | Orders |
+| `Orders` | `IEnumerable<ReportOrder>` | Aufträge |
 | `OwnTrades` | `IEnumerable<ReportTrade>` | Eigene Trades |
 | `Positions` | `IEnumerable<ReportPosition>` | Positionszyklen |
 

@@ -25,7 +25,7 @@ ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     bool isFinishedOnly = true,
     Security security = default);
 
-// Subscrever por DataType (suporta todos os tipos de candles)
+// Subscrever por DataType (suporta todos os tipos de velas)
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(
     DataType dt,
     bool isFinishedOnly = true,
@@ -35,7 +35,7 @@ ISubscriptionHandler<ICandleMessage> SubscribeCandles(
 ISubscriptionHandler<ICandleMessage> SubscribeCandles(Subscription subscription);
 ```
 
-O parâmetro `isFinishedOnly` é `true` por defeito -- o manipulador recebe apenas candles concluídas.
+O parâmetro `isFinishedOnly` é `true` por defeito -- o manipulador recebe apenas velas concluídas.
 
 ### SubscribeTicks
 

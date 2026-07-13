@@ -1,8 +1,8 @@
-# Modos de trading de estrategias
+# Modos de negociación de estrategias
 
 ## Descripción general
 
-La propiedad `TradingMode` permite restringir la actividad de trading de una estrategia sin detenerla por completo. Esto es útil para la gestión de riesgos: por ejemplo, prohibir la apertura de nuevas posiciones permitiendo solo cerrar las existentes, o bloquear por completo el envío de órdenes.
+La propiedad `TradingMode` permite restringir la actividad de negociación de una estrategia sin detenerla por completo. Esto es útil para la gestión de riesgos: por ejemplo, prohibir la apertura de nuevas posiciones permitiendo solo cerrar las existentes, o bloquear por completo el envío de órdenes.
 
 El modo se establece mediante la enumeración `StrategyTradingModes` y se puede cambiar mientras la estrategia se ejecuta.
 
@@ -10,8 +10,8 @@ El modo se establece mediante la enumeración `StrategyTradingModes` y se puede 
 
 | Valor | Descripción |
 |-------|-------------|
-| `Full` | Acceso completo a trading. Sin restricciones sobre órdenes. Valor predeterminado. |
-| `Disabled` | El trading está completamente prohibido. Todos los intentos de colocación de órdenes serán rechazados. |
+| `Full` | Acceso completo a negociación. Sin restricciones sobre órdenes. Valor predeterminado. |
+| `Disabled` | La negociación está completamente prohibida. Todos los intentos de colocación de órdenes serán rechazados. |
 | `CancelOrdersOnly` | Solo se permite cancelar órdenes. Se prohíben nuevas órdenes y modificaciones de órdenes existentes. |
 | `ReducePositionOnly` | Solo se permiten órdenes que reducen la posición actual. Se prohíbe abrir nuevas posiciones y aumentar las existentes. |
 | `LongOnly` | Solo se permiten posiciones largas. La venta solo se permite para cerrar una posición larga existente (el volumen de venta no puede superar la posición actual). Se prohíbe abrir posiciones cortas. |
@@ -39,10 +39,10 @@ Al intentar registrar una orden, la estrategia comprueba el modo actual:
 
 ## Método IsFormedAndOnlineAndAllowTrading
 
-El método de extensión `IsFormedAndOnlineAndAllowTrading` comprueba que la estrategia esté formada (`IsFormed`), esté en estado online (`IsOnline`) y que el modo de trading permita la acción requerida:
+El método de extensión `IsFormedAndOnlineAndAllowTrading` comprueba que la estrategia esté formada (`IsFormed`), esté en estado online (`IsOnline`) y que el modo de negociación permita la acción requerida:
 
 ```csharp
-// Comprobar permiso para trading completo (predeterminado)
+// Comprobar permiso completo de negociación (predeterminado)
 if (!IsFormedAndOnlineAndAllowTrading())
     return;
 
@@ -57,7 +57,7 @@ if (!IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly))
 
 Lógica de permisos al llamar con un parámetro `required`:
 
-| TradingMode actual \ required | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
+| TradingMode actual \ requerido | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
 |-------------------------------|--------|---------------------|---------------------|
 | `Full` | sí | sí | sí |
 | `Disabled` | no | no | no |
@@ -96,7 +96,7 @@ public class TradingModeStrategy : Strategy
 
     private void ProcessCandle(ICandleMessage candle)
     {
-        // Comprobar que la estrategia esté lista para trading completo
+        // Comprobar que la estrategia esté lista para el modo de negociación completo
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
@@ -119,8 +119,8 @@ strategy.Start();
 // Más tarde -- cambiar al modo de cierre de posiciones
 strategy.TradingMode = StrategyTradingModes.ReducePositionOnly;
 
-// Bloqueo completo del trading
+// Bloqueo completo de la negociación
 strategy.TradingMode = StrategyTradingModes.Disabled;
 ```
 
-En este ejemplo, la estrategia opera inicialmente en modo `LongOnly`, que permite solo compras y cierre de posiciones largas. Cuando cambian las condiciones de mercado, el modo puede cambiarse a `ReducePositionOnly` para un cierre gradual de posiciones, y luego a `Disabled` para detener por completo la actividad de trading.
+En este ejemplo, la estrategia opera inicialmente en modo `LongOnly`, que permite solo compras y cierre de posiciones largas. Cuando cambian las condiciones de mercado, el modo puede cambiarse a `ReducePositionOnly` para un cierre gradual de posiciones, y luego a `Disabled` para detener por completo la actividad de negociación.

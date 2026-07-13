@@ -29,7 +29,7 @@ La versión bajista del patrón es bajista. Muestra que el movimiento alcista de
 3. La segunda vela es una vela negra con un cuerpo pequeño, que abre y cierra dentro del cuerpo de la primera vela.
 4. La tercera vela es una vela negra, que cierra por debajo del cierre de la segunda vela.
 
-Estos patrones son esencialmente patrones harami seguidos por una vela de confirmación, que muchos traders esperan en el caso de haramis.
+Estos patrones son esencialmente patrones harami seguidos por una vela de confirmación, que muchos operadores esperan en el caso de haramis.
 
 ![Captura de Patrón Tres interiores bajistas y Tres interiores alcistas 2](../../../images/indicatorpattern3id.png)
 

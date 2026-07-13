@@ -58,8 +58,8 @@ Keltner-Kanäle kann wie folgt interpretiert werden:
    - Die horizontale Linienbewegung weist auf einen Seitwärtstrend hin
 
 2. **Ausbrüche**:
-   - Ein Ausbruch von Price über das obere Band könnte auf eine starke Aufwärtsdynamik hinweisen
-   - Wenn Price unter das untere Band fällt, kann dies auf eine starke Abwärtsdynamik hinweisen
+   - Ein Ausbruch des Preises über das obere Band könnte auf eine starke Aufwärtsdynamik hinweisen
+   - Wenn der Preis unter das untere Band fällt, kann dies auf eine starke Abwärtsdynamik hinweisen
    - Ausbrüche werden häufig als Einstiegssignale in Richtung des Ausbruchs verwendet
 
 3. **Rückkehr zur Mittellinie**:

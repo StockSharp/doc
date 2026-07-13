@@ -13,7 +13,7 @@ Os canais de Keltner consistem em três linhas:
 
 O indicador foi desenvolvido por Chester Keltner nos anos 1960 e posteriormente modificado por Linda Raschke, que substituiu a média móvel simples (SMA) por uma média móvel exponencial (EMA) e começou a usar o ATR em vez do intervalo máximo-mínimo para calcular a largura do canal.
 
-Os canais de Keltner ajudam os traders a determinar a direcção da tendência e potenciais níveis de suporte e resistência. Também são usados para identificar condições de sobrecompra e sobrevenda quando o preço toca ou rompe a banda superior ou inferior, respectivamente.
+Os canais de Keltner ajudam os operadores a determinar a direcção da tendência e potenciais níveis de suporte e resistência. Também são usados para identificar condições de sobrecompra e sobrevenda quando o preço toca ou rompe a banda superior ou inferior, respectivamente.
 
 ## Parâmetros
 

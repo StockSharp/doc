@@ -247,7 +247,7 @@ Bei der Implementierung der Orderbuch-Funktionalität in Ihrem eigenen Adapter p
 public override bool IsSupportOrderBookIncrements => true;
 ```
 
-Die Eigenschaft `IsSupportOrderBookIncrements` gibt an, ob der Adapter inkrementelle Orderbuch-Updates unterstützt. Wenn diese Eigenschaft auf `true` gesetzt ist, bedeutet dies, dass die Börse bei jeder Änderung partielle Orderbuch-Updates anstelle eines vollständigen Snapshots senden kann.
+Die Eigenschaft `IsSupportOrderBookIncrements` gibt an, ob der Adapter inkrementelle Orderbuch-Updates unterstützt. Wenn diese Eigenschaft auf `true` gesetzt ist, bedeutet dies, dass die Börse bei jeder Änderung partielle Orderbuch-Updates anstelle einer vollständigen Momentaufnahme senden kann.
 
 Das Überschreiben dieser Eigenschaft ermöglicht es StockSharp, die Verarbeitung von Orderbuchdaten zu optimieren. Wenn die Eigenschaft auf `true` gesetzt ist, erwartet das System inkrementelle Updates und behandelt sie korrekt.
 
@@ -308,7 +308,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		Asks = asks.ToArray(),
 		ServerTime = CurrentTime.ConvertToUtc(),
 
-		// Bestimmen, ob dies ein vollständiger Orderbuch-Snapshot oder ein inkrementelles Update ist.
+		// Bestimmen, ob dies eine vollständige Orderbuch-Momentaufnahme oder ein inkrementelles Update ist.
 		// Wenn die Börse immer nur vollständige Orderbücher sendet und keine inkrementellen Updates unterstützt,
 		// dann muss diese Eigenschaft überhaupt nicht gesetzt werden
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,

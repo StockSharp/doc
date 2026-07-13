@@ -32,7 +32,7 @@ Crie um arquivo `CLAUDE.md` (ou `.cursorrules`) na raiz do projeto:
 
 - Plataforma: StockSharp 5.x, .NET 10
 - As estratégias herdam da classe Strategy
-- Subscrever candles via Connector.Subscribe(subscription)
+- Subscrever velas via Connector.Subscribe(subscription)
 - Registar ordens via RegisterOrder(order)
 - Registo: this.AddInfoLog(), this.AddWarningLog(), this.AddErrorLog()
 - Indicadores: criar com new e chamar indicator.Process(candle)
@@ -52,9 +52,9 @@ Crie uma estratégia de negociação com StockSharp que:
 - compre quando a SMA rápida cruza acima da SMA lenta
 - venda quando a SMA rápida cruza abaixo da SMA lenta
 - tamanho da posição: 1 lote
-- use candles de 5 minutos
-- subscreva candles em OnStarted()
-- processe candles via regras de subscrição
+- use velas de 5 minutos
+- subscreva velas em OnStarted()
+- processe velas via regras de subscrição
 ```
 
 ### Passo 2: Revise o Código Gerado
@@ -161,8 +161,8 @@ Percorra esta lista de verificação:
 
 - **Herança**: a classe herda de `Strategy` ✓
 - **Parâmetros**: usa `StrategyParam<T>` para otimização ✓
-- **Assinatura de candles**: via `Subscribe(new Subscription(...))` ✓
-- **Processamento de candles**: via a regra `WhenCandlesFinished` ✓
+- **Assinatura de velas**: via `Subscribe(new Subscription(...))` ✓
+- **Processamento de velas**: via a regra `WhenCandlesFinished` ✓
 - **Verificação de IsFormed**: os indicadores são verificados quanto à prontidão ✓
 - **Ordens**: via `RegisterOrder()` com `BuyAtMarket` / `SellAtMarket` ✓
 - **Posição**: `Position` é verificada antes de enviar ordens ✓

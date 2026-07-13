@@ -63,7 +63,7 @@ El sistema de impulso de Elder se interpreta de la siguiente manera:
    - Señalan una posible desaceleración o cambio de tendencia
    - A menudo aparecen durante períodos de consolidación o antes de un cambio de tendencia.
 
-4. **Estrategias de trading**:
+4. **Estrategias de negociación**:
    - Compre cuando las velas cambien de color de azul a verde
    - Vender cuando las velas cambien de color de azul a rojo.
    - Cierre posiciones largas cuando las velas cambien de color de verde a cualquier otro

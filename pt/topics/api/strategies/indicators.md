@@ -49,7 +49,7 @@ Deve adicionar apenas **indicadores independentes** à coleção [Indicators](xr
 
 ### Regras para Adicionar Indicadores:
 
-1. **Indicadores Independentes** - adicione indicadores que processam diretamente dados de mercado (candles, ticks, etc.):
+1. **Indicadores Independentes** - adicione indicadores que processam diretamente dados de mercado (velas, ticks, etc.):
 
    ```cs
    // Indicadores independentes

@@ -1,11 +1,11 @@
 > [!WARNING]
-> Este exchange ha cerrado permanentemente (~2021 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa ha cerrado permanentemente (~2021 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # BW
 
-**BW** - exchange de criptomonedas.
+**BW** - bolsa de criptomonedas.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
 
 ## Contenido recomendado
 

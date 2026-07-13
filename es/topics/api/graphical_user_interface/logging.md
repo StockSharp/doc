@@ -17,7 +17,7 @@ public MainWindow()
 	InitializeComponent();
 	// vaciado inmediato
 	_logManager.FlushInterval = TimeSpan.FromMilliseconds(1);
-	// establecer origen de log de prueba
+	// establecer origen de registro de prueba
 	_logManager.Sources.Add(_testSource);
 	// establecer origen basado en el sistema .NET Trace
 	_logManager.Sources.Add(new Ecng.Logging.TraceSource());

@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-Las estrategias en StockSharp tienen un sistema de alertas integrado que permite enviar notificaciones de distintos tipos: ventanas popup, señales sonoras, entradas de log y mensajes de Telegram. Las alertas son útiles para informar al trader sobre eventos importantes: entradas en posición, rupturas de niveles, errores y otras señales de trading.
+Las estrategias en StockSharp tienen un sistema de alertas integrado que permite enviar notificaciones de distintos tipos: ventanas popup, señales sonoras, entradas de registro y mensajes de Telegram. Las alertas son útiles para informar al operador sobre eventos importantes: entradas en posición, rupturas de niveles, errores y otras señales de negociación.
 
 Durante las pruebas históricas, las alertas que no sean de tipo `Log` se omiten automáticamente para evitar interferencias durante las pruebas.
 
@@ -14,7 +14,7 @@ La enumeración `AlertNotifications` define los tipos disponibles:
 |------|-------------|
 | `Sound` | Señal sonora |
 | `Popup` | Ventana popup |
-| `Log` | Entrada en archivo de log |
+| `Log` | Entrada en archivo de registro |
 | `Telegram` | Mensaje de Telegram |
 
 ## Métodos
@@ -49,7 +49,7 @@ AlertSound(string message);
 
 ### AlertLog
 
-Envía una notificación al log. Este tipo también funciona durante las pruebas históricas:
+Envía una notificación al registro. Este tipo también funciona durante las pruebas históricas:
 
 ```csharp
 AlertLog(string message);
@@ -135,4 +135,4 @@ public class AlertStrategy : Strategy
 }
 ```
 
-En este ejemplo, la estrategia usa distintos tipos de alerta para distintas situaciones: `AlertPopup` y `AlertSound` para captar inmediatamente la atención del trader, y `Alert` con el tipo `Telegram` para notificación remota.
+En este ejemplo, la estrategia usa distintos tipos de alerta para distintas situaciones: `AlertPopup` y `AlertSound` para captar inmediatamente la atención del operador, y `Alert` con el tipo `Telegram` para notificación remota.

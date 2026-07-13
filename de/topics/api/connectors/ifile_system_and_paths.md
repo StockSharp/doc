@@ -73,7 +73,7 @@ var registry = new CsvEntityRegistry(Paths.FileSystem, @"C:\Data", executor);
 
 ### SnapshotRegistry
 
-Registrierung für Marktdaten-Snapshots:
+Registrierung für Marktdaten-Momentaufnahmen:
 
 ```csharp
 using StockSharp.Algo.Storages;

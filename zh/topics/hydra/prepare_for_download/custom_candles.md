@@ -22,7 +22,7 @@
 下面再看一个需要获取 [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) 的示例：
 
 1. 选择 **自定义** K线。
-2. 在设置中选择 Range K线，并将价格范围设为 10。
+2. 在设置中选择范围K线，并将价格范围设为 10。
 3. 在数据源设置中指定用于构建K线的数据类型：**逐笔成交**。![Hydra K线类型 00 07](../../../images/hydra_type_candle_00_07.png)
 4. 设置下载时间范围。
 5. 单击开始，程序开始下载数据。![Hydra K线类型 00 08](../../../images/hydra_type_candle_00_08.png)

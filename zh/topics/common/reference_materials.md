@@ -13,4 +13,4 @@
 
 - 平台网站 \- [https:\/\/stocksharp.com](https://stocksharp.com/)。
 - 博客 \- [StockSharp Blog](https://stocksharp.com/blog/)。
-- Telegram 聊天 \- [Chat](https://t.me/stocksharpchat/361)。
+- Telegram 聊天 \- [聊天](https://t.me/stocksharpchat/361)。

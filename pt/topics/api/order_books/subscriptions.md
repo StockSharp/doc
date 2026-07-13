@@ -24,7 +24,7 @@ connector.OrderBookReceived += OnOrderBookReceived;
 
 ```cs
 var security = GetSecurity(); // Obter o objeto Security que pretende subscrever
-				
+
 // assinar o livro de ofertas
 var subscription = new Subscription(DataType.MarketDepth, security);
 connector.Subscribe(subscription);
@@ -40,11 +40,11 @@ connector.UnSubscribe(subscription);
 
 ## Esclarecimento Sobre a Receção de Livros de Ofertas
 
-Ao trabalhar com o evento [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived), é importante compreender que os livros de ofertas que chegam através deste evento já estão compilados e prontos a usar. Isto significa que, independentemente do método de transmissão de dados pela fonte - sejam dados diferenciais (apenas alterações no livro de ofertas) ou snapshots completos do livro de ofertas - a plataforma StockSharp processa estes dados de modo que o trader recebe um livro de ofertas completo e atualizado.
+Ao trabalhar com o evento [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived), é importante compreender que os livros de ofertas que chegam através deste evento já estão compilados e prontos a usar. Isto significa que, independentemente do método de transmissão de dados pela fonte - sejam dados diferenciais (apenas alterações no livro de ofertas) ou instantâneos completos do livro de ofertas - a plataforma StockSharp processa estes dados de modo que o operador recebe um livro de ofertas completo e atualizado.
 
-A plataforma integra automaticamente as alterações no livro de ofertas, atualizando o seu conteúdo para o estado atual antes de chamar o evento [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived). Isto simplifica o trabalho com dados, pois os traders não precisam de processar dados diferenciais de forma independente nem compilar o livro de ofertas a partir de snapshots consecutivos. Assim, pode ter a certeza de que os dados recebidos no manipulador de eventos refletem o estado mais recente do livro de ofertas no momento do evento.
+A plataforma integra automaticamente as alterações no livro de ofertas, atualizando o seu conteúdo para o estado atual antes de chamar o evento [Connector.OrderBookReceived](xref:StockSharp.Algo.Connector.OrderBookReceived). Isto simplifica o trabalho com dados, pois os operadores não precisam de processar dados diferenciais de forma independente nem compilar o livro de ofertas a partir de instantâneos consecutivos. Assim, pode ter a certeza de que os dados recebidos no manipulador de eventos refletem o estado mais recente do livro de ofertas no momento do evento.
 
-Isto simplifica significativamente o desenvolvimento de estratégias de negociação e a análise de mercado, pois os traders podem concentrar-se diretamente na lógica das suas estratégias, sem gastar tempo nos aspetos técnicos de compilação e processamento dos dados do livro de ofertas.
+Isto simplifica significativamente o desenvolvimento de estratégias de negociação e a análise de mercado, pois os operadores podem concentrar-se diretamente na lógica das suas estratégias, sem gastar tempo nos aspetos técnicos de compilação e processamento dos dados do livro de ofertas.
 
 ## Exemplo de Utilização
 

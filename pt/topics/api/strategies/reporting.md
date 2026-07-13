@@ -20,7 +20,7 @@ A interface `IReportSource` fornece todos os dados necessários para gerar um re
 | `Commission` | `decimal?` | Comissão total |
 | `Position` | `decimal` | Posição atual |
 | `PnL` | `decimal` | Lucro/perda total |
-| `Slippage` | `decimal?` | Slippage total |
+| `Slippage` | `decimal?` | Deslizamento total |
 | `Latency` | `TimeSpan?` | Latência total |
 | `Parameters` | `IEnumerable<(string, object)>` | Parâmetros da estratégia |
 | `StatisticParameters` | `IEnumerable<(string, object)>` | Parâmetros estatísticos |

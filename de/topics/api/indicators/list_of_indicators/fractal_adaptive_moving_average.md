@@ -57,11 +57,11 @@ FRAMA kann ähnlich wie andere gleitende Durchschnitte interpretiert werden, jed
    - Aufwärts FRAMA zeigt einen Aufwärtstrend an
    - Abwärts FRAMA zeigt einen Abwärtstrend an
 
-2. **Frequenzweichen mit Price**:
+2. **Kreuzungen mit dem Preis**:
    - Wenn der Preis FRAMA von unten nach oben kreuzt, kann dies als bullisches Signal angesehen werden
    - Wenn der Preis FRAMA von oben nach unten kreuzt, kann dies als rückläufiges Signal angesehen werden
 
-3. **Mehrere FRAMA-Frequenzweichen**:
+3. **Mehrere FRAMA-Kreuzungen**:
    - Das Kreuzen eines kurzen FRAMA mit einem langen FRAMA von unten nach oben kann den Beginn eines Aufwärtstrends anzeigen
    - Das Kreuzen eines kurzen FRAMA mit einem langen FRAMA von oben nach unten kann auf den Beginn eines Abwärtstrends hinweisen
 

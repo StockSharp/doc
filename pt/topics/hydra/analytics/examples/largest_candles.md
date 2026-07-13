@@ -1,27 +1,27 @@
 # Maiores velas
 
-O script "Maiores velas" foi concebido para identificar velas com o volume máximo e o maior comprimento de corpo nos gráficos dos instrumentos financeiros selecionados ao longo de um determinado período. Esta ferramenta permite que traders e analistas identifiquem eventos significativos do mercado e a reação dos participantes do mercado.
+O script "Maiores velas" foi concebido para identificar velas com o volume máximo e o maior comprimento de corpo nos gráficos dos instrumentos financeiros selecionados ao longo de um determinado período. Esta ferramenta permite que operadores e analistas identifiquem eventos significativos do mercado e a reação dos participantes do mercado.
 
 ![Maiores velas](../../../../images/hydra_analytics_big_candle.png)
 
 ## Funcionalidades Principais
 
-O script analisa um conjunto de instrumentos especificados, procura entre eles candles com o maior volume e comprimento de corpo, e apresenta estes dados em dois gráficos:
+O script analisa um conjunto de instrumentos especificados, procura entre eles velas com o maior volume e comprimento de corpo, e apresenta estes dados em dois gráficos:
 
-- **Gráfico do Comprimento do Corpo da Candle**: Mostra candles com a maior diferença entre o preço de abertura e o preço de fecho.
-- **Gráfico do Volume de Negociação**: Demonstra candles com o volume máximo de negociação durante o tempo de existência da candle.
+- **Gráfico do Comprimento do Corpo da Vela**: Mostra velas com a maior diferença entre o preço de abertura e o preço de fecho.
+- **Gráfico do Volume de Negociação**: Demonstra velas com o volume máximo de negociação durante o tempo de existência da vela.
 
 ## Fluxo de Trabalho
 
 1. **Seleção de Instrumentos e Período de Análise**: Determina a lista de instrumentos e o intervalo temporal para análise.
-2. **Análise de Dados**: Envolve o carregamento e a análise de dados históricos de candles para identificar candles com os maiores indicadores.
-3. **Visualização dos Resultados**: As candles encontradas são apresentadas em gráficos na interface do painel de analytics.
+2. **Análise de Dados**: Envolve o carregamento e a análise de dados históricos de velas para identificar velas com os maiores indicadores.
+3. **Visualização dos Resultados**: As velas encontradas são apresentadas em gráficos na interface do painel de analytics.
 
 ## Aplicação
 
-- **Análise da Atividade do Mercado**: Ajuda a determinar momentos de maior atividade dos traders e potenciais inversões do mercado.
+- **Análise da Atividade do Mercado**: Ajuda a determinar momentos de maior atividade dos operadores e potenciais inversões do mercado.
 - **Identificação de níveis-chave**: velas com volume e comprimento de corpo significativos formam-se frequentemente em torno de níveis-chave de suporte e resistência.
-- **Planeamento Estratégico**: A informação sobre as maiores candles pode ser usada para planear pontos de entrada e saída do mercado, tendo em conta a volatilidade potencial.
+- **Planeamento Estratégico**: A informação sobre as maiores velas pode ser usada para planear pontos de entrada e saída do mercado, tendo em conta a volatilidade potencial.
 
 ## Código do Script em C#
 
@@ -29,7 +29,7 @@ O script analisa um conjunto de instrumentos especificados, procura entre eles c
 namespace StockSharp.Algo.Analytics
 {
 	/// <summary>
-	/// O script analítico, mostra a maior candle (por volume e por comprimento) para instrumentos especificados.
+	/// O script analítico, mostra a maior vela (por volume e por comprimento) para instrumentos especificados.
 	/// </summary>
 	public class BiggestCandleScript : IAnalyticsScript
 	{
@@ -53,12 +53,12 @@ namespace StockSharp.Algo.Analytics
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
-				// obter o armazenamento de candles
+				// obter o armazenamento de velas
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				var allCandles = candleStorage.Load(from, to).ToArray();
 
-				// a primeira ordenação por volume descendente será a nossa maior candle
+				// a primeira ordenação por volume descendente será a nossa maior vela
 				var bigPriceCandle = allCandles.OrderByDescending(c => c.GetLength()).FirstOrDefault();
 				var bigVolCandle = allCandles.OrderByDescending(c => c.TotalVolume).FirstOrDefault();
 
@@ -98,7 +98,7 @@ from candle_extensions import *
 from chart_extensions import *
 from indicator_extensions import *
 
-# O script analítico, mostra a maior candle (por volume e por comprimento) para instrumentos especificados.
+# O script analítico, mostra a maior vela (por volume e por comprimento) para instrumentos especificados.
 class biggest_candle_script(IAnalyticsScript):
 	def Run(self, logs, panel, securities, from_date, to_date, storage, drive, format, data_type, cancellation_token):
 		if not securities:
@@ -122,12 +122,12 @@ class biggest_candle_script(IAnalyticsScript):
 			if cancellation_token.IsCancellationRequested:
 				break
 
-			# obter o armazenamento de candles
+			# obter o armazenamento de velas
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 			all_candles = load_range(candle_storage, message_type, from_date, to_date)
 
 			if len(all_candles) > 0:
-				# a primeira ordenação por volume descendente será a nossa maior candle
+				# a primeira ordenação por volume descendente será a nossa maior vela
 				big_price_candle = max(all_candles, key=lambda c: get_length(c))
 				big_vol_candle = max(all_candles, key=lambda c: c.TotalVolume)
 

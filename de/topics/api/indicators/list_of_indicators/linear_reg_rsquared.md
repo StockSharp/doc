@@ -38,8 +38,8 @@ Die R-Quadrat der linearen Regression-Berechnung umfasst die folgenden Schritte:
    SSE = Sum((tatsächlicher Preis - prognostizierter Preis)^2)
    ```
    Dabei gilt:
-   - Tatsächlicher Price - tatsächlicher Preis
-   - Vorhergesagter Price – vorhergesagter Preis aus der Regressionsgleichung
+   - Tatsächlicher Preis - tatsächlicher Preis
+   - Vorhergesagter Preis – vorhergesagter Preis aus der Regressionsgleichung
 
 3. Berechnung der Gesamtsumme der Quadrate (SST):
    ```

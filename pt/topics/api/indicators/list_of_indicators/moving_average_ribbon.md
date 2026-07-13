@@ -6,7 +6,7 @@ Para usar o indicador, é necessário usar a classe [MovingAverageRibbon](xref:S
 
 ## Descrição
 
-A faixa de médias móveis (MAR) é um conjunto de várias médias móveis apresentadas num gráfico numa formação de "fita" ou "leque". Este indicador ajuda os traders a visualizar o estado atual da tendência e a sua força de forma mais intuitiva do que usando uma ou duas médias móveis.
+A faixa de médias móveis (MAR) é um conjunto de várias médias móveis apresentadas num gráfico numa formação de "fita" ou "leque". Este indicador ajuda os operadores a visualizar o estado atual da tendência e a sua força de forma mais intuitiva do que usando uma ou duas médias móveis.
 
 O MAR inclui várias médias móveis (normalmente 5 a 10) com períodos progressivamente crescentes. O intervalo entre períodos pode ser uniforme (por exemplo, 10, 20, 30, 40...) ou exponencial (por exemplo, 5, 10, 20, 40...).
 
@@ -71,7 +71,7 @@ A faixa de médias móveis pode ser interpretada da seguinte forma:
    - Quando o preço está abaixo de toda a fita, isto confirma uma forte tendência descendente
    - Quando o preço se move dentro da fita, isto pode indicar um estado de transição ou consolidação
 
-6. **Estratégias de trading**:
+6. **Estratégias de negociação**:
    - Entrar numa posição quando o preço ressalta a partir da extremidade da fita na direção da tendência
    - Sair de uma posição quando as médias móveis começam a cruzar na direção oposta
    - Usar a largura da fita para definir stop-losses e take-profits

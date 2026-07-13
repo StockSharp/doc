@@ -4,7 +4,7 @@ Como exemplo, será considerada a estratégia SMA.
 
 Para executar o teste no histórico, deve selecionar uma estratégia cujo esquema será testado no histórico. A estratégia é selecionada no [Painel de esquemas](../user_interface/schemas.md), na pasta da estratégia, fazendo duplo clique na estratégia pretendida.
 
-Antes do teste, carregue os dados de mercado (instrumentos, candles, tick trades e\/ou livros de ordens). Isto é descrito em [Armazenamento de dados de mercado](../market_data_storage.md).
+Antes do teste, carregue os dados de mercado (instrumentos, velas, transações tick e\/ou livros de ordens). Isto é descrito em [Armazenamento de dados de mercado](../market_data_storage.md).
 
 Ao mudar para o separador com uma estratégia, o separador **Emulação** abre automaticamente no **Faixa de opções**. Defina o período de teste neste separador. No campo de dados de mercado, especifique o armazenamento necessário ([Armazenamento de dados de mercado](../market_data_storage.md)); no campo de instrumento, especifique o instrumento necessário.
 
@@ -17,7 +17,7 @@ No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 5. Livro de ordens - gerado
 6. Profundidade do livro de ordens - 5
 7. Tamanho do spread - 2
-8. Candles com período de 30 s
+8. Velas com período de 30 s
 9. Volume - 100
 
 É necessário configurar os parâmetros selecionados:

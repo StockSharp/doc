@@ -20,14 +20,14 @@ Marubozu blanco se considera una señal alcista fuerte:
 - La aparición de este patrón después de una tendencia bajista puede señalar una reversión.
 - Dentro de una tendencia alcista, confirma la fuerza del movimiento.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Marubozu blanco proporciona una señal más fuerte que una vela blanca normal:
 
 - Oportunidad de entrar en una posición larga después de la formación de un marubozu blanco, especialmente si aparece en un nivel de soporte importante.
 - Usar el precio de cierre del marubozu blanco como nivel de soporte al establecer stop-losses.
 - Combinar con otros indicadores técnicos para confirmar la señal.
-- Prestar atención al volumen de trading: un volumen alto aumenta la importancia de la señal.
+- Prestar atención al volumen de negociación: un volumen alto aumenta la importancia de la señal.
 
 ## Véase también
 

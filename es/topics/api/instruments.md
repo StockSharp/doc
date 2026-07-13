@@ -1,13 +1,13 @@
 # Instrumentos
 
-En StockSharp, los instrumentos financieros se representan mediante la clase [Security](xref:StockSharp.BusinessEntities.Security), que es un elemento fundamental para trabajar con datos de trading. Esta sección describe los principales aspectos del trabajo con instrumentos financieros dentro de la plataforma.
+En StockSharp, los instrumentos financieros se representan mediante la clase [Security](xref:StockSharp.BusinessEntities.Security), que es un elemento fundamental para trabajar con datos de negociación. Esta sección describe los principales aspectos del trabajo con instrumentos financieros dentro de la plataforma.
 
 ## Clase base Security
 
-[Security](xref:StockSharp.BusinessEntities.Security) representa un instrumento financiero negociado en un exchange. Un instrumento puede ser una acción, contrato de futuros, opción, par de divisas, criptomoneda y otros activos. La clase contiene toda la información necesaria para identificar y negociar el instrumento:
+[Security](xref:StockSharp.BusinessEntities.Security) representa un instrumento financiero negociado en una bolsa. Un instrumento puede ser una acción, contrato de futuros, opción, par de divisas, criptomoneda y otros activos. La clase contiene toda la información necesaria para identificar y negociar el instrumento:
 
 - **Información de identificación** - código, ISIN, nombre, clase del instrumento
-- **Parámetros de trading** - paso de precio, tamaño de lote, volumen mínimo
+- **Parámetros de negociación** - paso de precio, tamaño de lote, volumen mínimo
 - **Datos de mercado** - valores actuales de precios, volúmenes, libros de órdenes, etc.
 - **Valores calculados** - parámetros para derivados, cálculo de riesgo, etc.
 
@@ -20,7 +20,7 @@ StockSharp admite el trabajo con todos los principales tipos de instrumentos fin
 - **Futuros** - contratos derivados sobre un activo subyacente
 - **Opciones** - contratos que otorgan el derecho (pero no la obligación) de comprar o vender un activo subyacente
 - **Pares de divisas** - instrumentos para operar en el mercado forex
-- **Criptomonedas** - activos digitales para operar en exchanges de criptomonedas
+- **Criptomonedas** - activos digitales para operar en bolsas de criptomonedas
 - **ETF** - fondos cotizados en bolsa
 - **Índices** - indicadores calculados del estado de un mercado o sector
 
@@ -32,7 +32,7 @@ Además de instrumentos normales, StockSharp implementa clases especiales para t
 - [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) - un índice con coeficientes de ponderación para cada instrumento
 - [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity) - un instrumento continuo para trabajar con una serie de contratos de futuros
 
-Estas clases permiten crear instrumentos compuestos y trabajar con ellos del mismo modo que con instrumentos normales, recibiendo datos de mercado agregados, calculando estadísticas y ejecutando operaciones de trading.
+Estas clases permiten crear instrumentos compuestos y trabajar con ellos del mismo modo que con instrumentos normales, recibiendo datos de mercado agregados, calculando estadísticas y ejecutando operaciones de negociación.
 
 ## Trabajo con información de instrumentos
 
@@ -41,7 +41,7 @@ StockSharp proporciona herramientas potentes para trabajar con información de i
 - **Búsqueda de instrumentos** - por diversos criterios (código, nombre, clase)
 - **Filtrado** - selección de instrumentos según parámetros especificados
 - **Almacenamiento** - guardado de información de instrumentos en almacenamiento local o remoto
-- **Obtención de información del exchange** - carga de información detallada desde el exchange
+- **Obtención de información de la bolsa** - carga de información detallada desde la bolsa
 
 ## Identificación de instrumentos
 

@@ -10,7 +10,7 @@ Para importar velas, seleccione **Importar \=\> Velas** en el menú principal de
    - **Tipo de datos** - tipo de datos importados.
    - **Nombre de archivo** - ruta completa al archivo CSV.
    - **Directorio de datos** - carpeta donde se guardarán los archivos finales de [S#](../../api.md).
-   - **Máscara de archivo** - máscara de archivo que se usa al escanear el directorio. Por ejemplo, candle \_\*.csv.
+   - **Máscara de archivo** - máscara de archivo que se usa al escanear el directorio. Por ejemplo, vela \_\*.csv.
    - **Separador de columnas** - separador de columnas. La tabulación se indica como TAB.
    - **Sangría desde el inicio** - número de líneas desde el inicio del archivo que se omitirán (si contienen metainformación).
    - **Zona horaria** - zona horaria.

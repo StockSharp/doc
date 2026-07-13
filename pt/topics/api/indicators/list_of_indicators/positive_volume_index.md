@@ -6,7 +6,7 @@ Para usar o indicador, é necessário usar a classe [PositiveVolumeIndex](xref:S
 
 ## Descrição
 
-O índice de volume positivo (PVI) baseia-se na ideia de que a "multidão" (traders não profissionais) está mais ativa em dias de volume elevado, enquanto o "smart money" atua em dias de baixo volume. O PVI só se altera nos dias em que o volume atual é superior ao volume do dia anterior.
+O índice de volume positivo (PVI) baseia-se na ideia de que a "multidão" (operadores não profissionais) está mais ativa em dias de volume elevado, enquanto o "smart money" atua em dias de baixo volume. O PVI só se altera nos dias em que o volume atual é superior ao volume do dia anterior.
 
 O indicador sugere que os movimentos de preço com volume aumentado são significativos e refletem frequentemente o sentimento do mercado em massa. O PVI acompanha estes movimentos, ignorando alterações de preço nos dias com volume mais baixo.
 
@@ -67,7 +67,7 @@ O índice de volume positivo pode ser interpretado da seguinte forma:
    - Os sinais do PVI tornam-se mais fiáveis quando confirmados por outros indicadores
 
 7. **Definição de limiares**:
-   - Alguns traders definem níveis de limiar para o PVI (por exemplo, 5% acima ou abaixo da média móvel)
+   - Alguns operadores definem níveis de limiar para o PVI (por exemplo, 5% acima ou abaixo da média móvel)
    - O cruzamento destes limiares pode ser considerado um sinal mais forte do que cruzamentos simples
 
 ![Gráfico do indicador PVI](../../../../images/indicator_positive_volume_index.png)

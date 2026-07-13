@@ -10,7 +10,7 @@ volumen en balance Mean (OBVM) es una modificación del indicador clásico volum
 
 OBVM ayuda a eliminar el ruido presente en el OBV original y hace que las tendencias de flujo volumétrico a largo plazo sean más notorias. Esto es particularmente útil en mercados volátiles o cuando se analizan instrumentos con volúmenes de negociación irregulares.
 
-La principal ventaja de OBVM es su capacidad para generar señales de trading más claras y menos propensas a falsas señales en comparación con el clásico OBV. El indicador también se puede utilizar para identificar cruces entre OBV y su valor medio, brindando oportunidades de trading adicionales.
+La principal ventaja de OBVM es su capacidad para generar señales de negociación más claras y menos propensas a falsas señales en comparación con el clásico OBV. El indicador también se puede utilizar para identificar cruces entre OBV y su valor medio, brindando oportunidades de negociación adicionales.
 
 ## Parámetros
 

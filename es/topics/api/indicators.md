@@ -2,14 +2,14 @@
 
 [S#](../api.md) proporciona más de 140 indicadores de análisis técnico estándar. Esto le permite utilizar indicadores ya preparados en lugar de crearlos desde cero. También puede crear sus propios indicadores basados ​​en los existentes, como se muestra en la sección [Indicador personalizado](indicators/custom_indicator.md). Todas las clases base para trabajar con indicadores, así como los propios indicadores, se encuentran en el espacio de nombres [StockSharp.Algo.Indicators](xref:StockSharp.Algo.Indicators).
 
-## Integración de indicadores en un algoritmo de trading
+## Integración de indicadores en un algoritmo de negociación
 
 1. Primero, necesitas crear un indicador. Un indicador se crea como un objeto .NET normal:
 
    ```cs
    var longSma = new SimpleMovingAverage { Length = 80 };
    var shortSma = new SimpleMovingAverage { Length = 30 };
-   
+
    // Se recomienda agregar indicadores a la colección de estrategias.
    Indicators.Add(longSma);
    Indicators.Add(shortSma);
@@ -23,8 +23,8 @@
        // Procese la vela con indicadores y guarde inmediatamente los resultados.
        var longValue = longSma.Process(candle);
        var shortValue = shortSma.Process(candle);
-       
-       // Utilice los resultados para tomar decisiones de trading
+
+       // Utilice los resultados para tomar decisiones de negociación
        if (shortValue.GetValue<decimal>() > longValue.GetValue<decimal>())
        {
            // señal de compra
@@ -46,24 +46,24 @@
        // Procese la vela con indicadores y guarde inmediatamente los resultados.
        var longValue = _longSma.Process(candle);
        var shortValue = _shortSma.Process(candle);
-       
+
        // dibujar en el gráfico
        DrawCandlesAndIndicators(candle, longValue, shortValue);
-       
-       if (!IsFormedAndOnlineAndAllowTrading()) 
+
+       if (!IsFormedAndOnlineAndAllowTrading())
            return;
-           
+
        // Utilice los valores obtenidos para comparar.
        var isShortLessCurrent = shortValue.GetValue<decimal>() < longValue.GetValue<decimal>();
        var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
-       
+
        // Compruebe si se produjo un cruce
-       if (isShortLessCurrent == isShortLessPrev) 
+       if (isShortLessCurrent == isShortLessPrev)
            return;
-       
+
        var volume = Volume + Math.Abs(Position);
-       
-       // Acciones de trading basadas en la señal.
+
+       // Acciones de negociación basadas en la señal.
        if (isShortLessCurrent)
            SellMarket(volume);
        else
@@ -86,11 +86,11 @@
        _longSma.Process(candle);
        _shortSma.Process(candle);
    }
-   
+
    // Luego intente obtener valores a través de GetCurrentValue()
    var isShortLessThenLong = _shortSma.GetCurrentValue() < _longSma.GetCurrentValue();
    ```
-   
+
    Con este enfoque, hay un acceso adicional al contenedor de valores históricos de los indicadores, lo que introduce retrasos e interrumpe el modelo de transmisión de procesamiento de datos.
 
 6. Todos los indicadores tienen la propiedad [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), que indica si el indicador está listo para su uso. Por ejemplo, el indicador [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) tiene un período y hasta que el indicador procese un número de velas igual al período del indicador, se considerará que el indicador no está listo para su uso. Y la propiedad [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) será falsa.
@@ -143,7 +143,7 @@ public class SmaStrategy : Strategy
 		{
 			InitChart();
 		}
-		
+
 		// Suscríbete a velas
 		var subscription = new Subscription(_series.Value, Security);
 
@@ -160,12 +160,12 @@ public class SmaStrategy : Strategy
 		// Procesa la vela con indicadores y guarda los resultados.
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
-		
+
 		// dibujar en el gráfico
 		DrawCandlesAndIndicators(candle, longValue, shortValue);
-		
+
 		// Consultar condiciones para operar
-		if (!IsFormedAndOnlineAndAllowTrading()) 
+		if (!IsFormedAndOnlineAndAllowTrading())
 			return;
 
 		// Comparar los valores de los indicadores actuales y anteriores
@@ -173,12 +173,12 @@ public class SmaStrategy : Strategy
 		var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
 
 		// comprobar si hay cruce
-		if (isShortLessCurrent == isShortLessPrev) 
+		if (isShortLessCurrent == isShortLessPrev)
 			return;
 
 		var volume = Volume + Math.Abs(Position);
 
-		// Acciones de trading basadas en la señal.
+		// Acciones de negociación basadas en la señal.
 		if (isShortLessCurrent)
 			SellMarket(volume);
 		else

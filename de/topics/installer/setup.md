@@ -1,6 +1,6 @@
 # Erster Start
 
-1. Um den [Installer](../installer.md) zu installieren, öffnen Sie die Seite [Downloadseite](https://stocksharp.com/products/download/):
+1. Um den [Installer](../installer.md) zu installieren, öffnen Sie die [Seite zum Herunterladen](https://stocksharp.com/products/download/):
 
     ![Erster Start Bildschirmfoto](../../images/installer_installation.png)
 

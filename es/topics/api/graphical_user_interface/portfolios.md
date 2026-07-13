@@ -2,8 +2,8 @@
 
 Para trabajar con portafolios, [S#](../../api.md) ofrece los siguientes componentes gráficos:
 
-- Combo box para seleccionar un portafolio - [PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox).
-- Combo box con un botón que abre una ventana con una lista de portafolios - [PortfolioEditor](xref:StockSharp.Xaml.PropertyGrid.PortfolioEditor).
+- Cuadro combinado para seleccionar un portafolio - [PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox).
+- Cuadro combinado con un botón que abre una ventana con una lista de portafolios - [PortfolioEditor](xref:StockSharp.Xaml.PropertyGrid.PortfolioEditor).
 - Ventana de lista de portafolios - [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow).
 - Tabla que muestra información sobre portafolios y posiciones - [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid).
 
@@ -19,4 +19,3 @@ Para trabajar con portafolios, [S#](../../api.md) ofrece los siguientes componen
 [Ventana de selección de portafolios](portfolios/portfolio_picker_window.md)
 
 [Tabla](portfolios/table.md)
-

@@ -31,7 +31,7 @@ Die Klasse [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataD
 var localDrive = new LocalMarketDataDrive(Path.Combine(
     Directory.GetCurrentDirectory(), "Storage"));
 
-// Mit der Storage Registry verwenden
+// Mit StorageRegistry verwenden
 var storageRegistry = new StorageRegistry
 {
     DefaultDrive = localDrive,

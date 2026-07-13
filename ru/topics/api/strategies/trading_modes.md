@@ -57,7 +57,7 @@ if (!IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly))
 
 Логика разрешений при вызове с параметром `required`:
 
-| Текущий TradingMode \ required | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
+| Текущий TradingMode \ требуемый | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
 |-------------------------------|--------|---------------------|---------------------|
 | `Full` | да | да | да |
 | `Disabled` | нет | нет | нет |

@@ -13,7 +13,7 @@ Ao contrário do RSI padrão, que considera apenas a alteração do preço, RSI 
 CRSI é particularmente útil para:
 - Identificar oportunidades de entrada e saída de curto prazo
 - Determinar níveis extremos de sobrecompra e sobrevenda
-- Criar sistemas de trading baseados em reversão à média
+- Criar sistemas de negociação baseados em reversão à média
 - Filtrar sinais de outros indicadores
 
 ## Parâmetros
@@ -63,7 +63,7 @@ RSI de Connors oscila entre 0 e 100, de forma semelhante ao RSI padrão:
   - Divergência altista: o preço forma um novo mínimo, enquanto o CRSI forma um mínimo mais alto
   - Divergência baixista: o preço forma um novo máximo, enquanto o CRSI forma um máximo mais baixo
 
-RSI de Connors funciona melhor em gráficos com períodos diários a semanais e em estratégias de trading orientadas para reversão à média.
+RSI de Connors funciona melhor em gráficos com períodos diários a semanais e em estratégias de negociação orientadas para reversão à média.
 
 ![Gráfico do indicador CRSI](../../../../images/indicator_connors_rsi.png)
 

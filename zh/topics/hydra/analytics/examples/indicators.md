@@ -77,7 +77,7 @@ namespace StockSharp.Algo.Analytics
 
 				foreach (var candle in candleStorage.Load(from, to))
 				{
-					// fill series
+					// 填充序列
 					candlesSeries[candle.OpenTime] = candle.ClosePrice;
 					indicatorSeries[candle.OpenTime] = roc.Process(candle).ToDecimal();
 				}
@@ -145,7 +145,7 @@ class indicator_script(IAnalyticsScript):
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			for candle in load_range(candle_storage, message_type, from_date, to_date):
-				# fill series
+				# 填充序列
 				candles_series[candle.OpenTime] = candle.ClosePrice
 				indicator_series[candle.OpenTime] = to_decimal(process_candle(roc, candle))
 

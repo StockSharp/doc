@@ -1,8 +1,8 @@
 # OKEx History
 
-**OKEx History** - servicio histórico del exchange OKEx.
+**OKEx History** - servicio histórico de la bolsa OKEx.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md).
 
 > [!CAUTION]
 > El conector solo admite el flujo de datos de mercado; las transacciones no están admitidas.

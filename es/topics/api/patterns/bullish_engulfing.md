@@ -23,14 +23,14 @@ Envolvente alcista se considera una de las señales más fiables de reversión d
 - Cuanto mayor sea el tamaño de la segunda vela en comparación con la primera, más fuerte será la señal.
 - Si el patrón se forma en un nivel de soporte o después de una tendencia bajista prolongada, su importancia aumenta.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Envolvente alcista proporciona excelentes oportunidades para entrar en una posición larga:
 
 - Entrar en una posición larga después de la formación del patrón, normalmente en la apertura de la siguiente vela.
 - Colocar un stop-loss por debajo del mínimo de la segunda vela del patrón.
 - El objetivo de beneficio puede establecerse en función de niveles de resistencia previos, relación riesgo/beneficio o usando indicadores técnicos.
-- Un volumen de trading alto durante la formación de la segunda vela aumenta significativamente la fiabilidad de la señal.
+- Un volumen de negociación alto durante la formación de la segunda vela aumenta significativamente la fiabilidad de la señal.
 - Combinar con otros indicadores, como RSI en zona de sobreventa o convergencia de medias móviles, para aumentar la probabilidad de una operación exitosa.
 
 ## Véase también

@@ -11,7 +11,7 @@ Betrachten wir ein Beispiel für eine solche Erstellung. Die Börse **Bitmex** b
 Die Reihenfolge zum Erhalten solcher Kerzen:
 
 1. Wählen Sie **benutzerdefinierte** Kerzen.
-2. In den Einstellungen geben wir **TF** candles und einen Zeitraum von 10 Minuten an.
+2. In den Einstellungen geben wir **TF** Kerzen und einen Zeitraum von 10 Minuten an.
 3. In der Quelle geben wir an, woraus die Kerzen erstellt werden sollen - **Orderprotokoll**. ![Hydra Kerzentyp 00 02](../../../images/hydra_type_candle_00_02.png)
 4. Wir legen den Zeitraum fest. Wie Sie sehen, ist neben dem Kerzennamen der Hinweis **Generiert** erschienen.![Hydra Kerzentyp 00 03](../../../images/hydra_type_candle_00_03.png)
 5. Klicken Sie auf Start, und der Datendownload beginnt.![Hydra Kerzentyp 00 04](../../../images/hydra_type_candle_00_04.png)

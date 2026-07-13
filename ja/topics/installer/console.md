@@ -26,7 +26,7 @@
 - `Installed` - インストール済みプログラムを一覧表示します。
 - `Sign` - DLL ファイルに署名します。
 
-省略可能な `[product]` パラメーターは、[Store](https://stocksharp.com/store/) の製品 ID です。この ID は、製品ページ、たとえば [Hydra サーバーページ](https://stocksharp.com/store/hydra-server/) で確認できます。または、`StockSharp.Installer.Console.exe Products -s hydra` を実行して確認できます。`[dir]` はインストールディレクトリを指定します。
+省略可能な `[product]` パラメーターは、[ストア](https://stocksharp.com/store/) の製品 ID です。この ID は、製品ページ、たとえば [Hydra サーバーページ](https://stocksharp.com/store/hydra-server/) で確認できます。または、`StockSharp.Installer.Console.exe Products -s hydra` を実行して確認できます。`[dir]` はインストールディレクトリを指定します。
 
 ## オプション
 

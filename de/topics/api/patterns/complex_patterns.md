@@ -1,12 +1,12 @@
-# Komplexe Candle-Muster
+# Komplexe Kerzenmuster
 
 ## Überblick
 
-Die Klasse `ComplexCandlePattern` ermöglicht das Erstellen komplexer Candle-Muster, indem mehrere einfache Muster (`ICandlePattern`) zu einem Muster kombiniert werden. Beim Erkennen eines komplexen Musters wird jedes innere Muster nacheinander auf seinem Candle-Segment geprüft. Das Muster gilt nur dann als erkannt, wenn alle inneren Muster übereinstimmen.
+Die Klasse `ComplexCandlePattern` ermöglicht das Erstellen komplexer Kerzenmuster, indem mehrere einfache Muster (`ICandlePattern`) zu einem Muster kombiniert werden. Beim Erkennen eines komplexen Musters wird jedes innere Muster nacheinander auf seinem Kerzensegment geprüft. Das Muster gilt nur dann als erkannt, wenn alle inneren Muster übereinstimmen.
 
 ## ICandlePattern
 
-Das Basisinterface für alle Candle-Muster:
+Das Basisinterface für alle Kerzenmuster:
 
 ```csharp
 public interface ICandlePattern : IPersistable
@@ -14,10 +14,10 @@ public interface ICandlePattern : IPersistable
     // Mustername
     string Name { get; }
 
-    // Anzahl der Candles, die für die Erkennung erforderlich sind
+    // Anzahl der Kerzen, die für die Erkennung erforderlich sind
     int CandlesCount { get; }
 
-    // Prüft, ob das Muster auf den angegebenen Candles erkannt wird
+    // Prüft, ob das Muster auf den angegebenen Kerzen erkannt wird
     bool Recognize(ReadOnlySpan<ICandleMessage> candles);
 }
 ```
@@ -43,29 +43,29 @@ public class ComplexCandlePattern : ICandlePattern
     // Innere Muster
     public IEnumerable<ICandlePattern> Inner { get; }
 
-    // Gesamtzahl der Candles (Summe von CandlesCount für alle inneren Muster)
+    // Gesamtzahl der Kerzen (Summe von CandlesCount für alle inneren Muster)
     public int CandlesCount { get; }
 }
 ```
 
-Beim Aufruf von `Recognize` wird das Candle-Array entsprechend dem jeweiligen `CandlesCount` der inneren Muster in aufeinanderfolgende Segmente aufgeteilt. Wenn mindestens ein inneres Muster nicht übereinstimmt, gibt die Methode `false` zurück.
+Beim Aufruf von `Recognize` wird das Kerzenarray entsprechend dem jeweiligen `CandlesCount` der inneren Muster in aufeinanderfolgende Segmente aufgeteilt. Wenn mindestens ein inneres Muster nicht übereinstimmt, gibt die Methode `false` zurück.
 
 ## Beispiel: Erstellen eines komplexen Musters
 
 ```csharp
 using StockSharp.Algo.Candles.Patterns;
 
-// Komplexes Muster erstellen: zuerst eine bärische Candle, dann bullische Umschließung
+// Komplexes Muster erstellen: zuerst eine bärische Kerze, dann bullische Umschließung
 var complex = new ComplexCandlePattern(
     "Aufwärtsumkehr",
     new ICandlePattern[]
     {
-        CandlePatternRegistry.Black,            // 1 Candle: bärisch
-        CandlePatternRegistry.BullishEngulfing,  // 2 Candles: bullische Umschließung
+        CandlePatternRegistry.Black,            // 1 Kerze: bärisch
+        CandlePatternRegistry.BullishEngulfing,  // 2 Kerzen: bullische Umschließung
     }
 );
 
-// Für die Erkennung sind 3 Candles erforderlich (1 + 2)
+// Für die Erkennung sind 3 Kerzen erforderlich (1 + 2)
 Console.WriteLine($"Benötigte Kerzen: {complex.CandlesCount}"); // 3
 ```
 
@@ -147,7 +147,7 @@ if (provider.TryFind("Mein Muster", out var found))
 
 ## ExpressionCandlePattern
 
-Für die Erstellung formelbasierter Muster wird `ExpressionCandlePattern` verwendet. Jede Candle im Muster wird durch einen Ausdruck `CandleExpressionCondition` beschrieben; dabei stehen die folgenden Variablen zur Verfügung:
+Für die Erstellung formelbasierter Muster wird `ExpressionCandlePattern` verwendet. Jede Kerze im Muster wird durch einen Ausdruck `CandleExpressionCondition` beschrieben; dabei stehen die folgenden Variablen zur Verfügung:
 
 | Variable | Beschreibung |
 |----------|--------------|
@@ -156,11 +156,11 @@ Für die Erstellung formelbasierter Muster wird `ExpressionCandlePattern` verwen
 | `L` | Tiefstkurs |
 | `C` | Schlusskurs |
 | `V` | Volumen |
-| `B` | Candle-Körper |
-| `LEN` | Candle-Länge |
+| `B` | Kerzenkörper |
+| `LEN` | Kerze-Länge |
 | `BS` | Unterer Schatten |
 | `TS` | Oberer Schatten |
 
-Das Präfix `p` verweist auf die vorherige Candle (`pO`, `pC`), `pp` auf die Candle zwei Perioden zurück usw.
+Das Präfix `p` verweist auf die vorherige Kerze (`pO`, `pC`), `pp` auf die Kerze zwei Perioden zurück usw.
 
 Alle integrierten Muster in `CandlePatternRegistry` werden mit `ExpressionCandlePattern` aufgebaut.

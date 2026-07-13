@@ -1,6 +1,6 @@
 # Grabstein-Doji-Doji
 
-Grabstein-Doji ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Schlusskurse, einen langen oberen Schatten und keinen unteren Schatten gekennzeichnet ist. Die Candle ähnelt der Form eines umgedrehten Buchstabens "T", woraus der Name "Grabstein-Doji" abgeleitet wurde.
+Grabstein-Doji ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Schlusskurse, einen langen oberen Schatten und keinen unteren Schatten gekennzeichnet ist. Die Kerze ähnelt der Form eines umgedrehten Buchstabens "T", woraus der Name "Grabstein-Doji" abgeleitet wurde.
 
 ##### Hauptmerkmale:
 
@@ -15,7 +15,7 @@ Grabstein-Doji ist ein Candlestick-Muster, das durch gleiche Eröffnungs- und Sc
 
 Grabstein-Doji Doji gilt als mögliches Umkehrsignal, insbesondere in einem Aufwärtstrend:
 
-- Der länge obere Schatten zeigt, dass Käufer den Markt während eines Großteils der Periode kontrollierten, Verkäufer den Preis anschließend aber wieder auf das Eröffnungsniveau zurückführten.
+- Der lange obere Schatten zeigt, dass Käufer den Markt während eines Großteils der Periode kontrollierten, Verkäufer den Preis anschließend aber wieder auf das Eröffnungsniveau zurückführten.
 - Die Zurückweisung höherer Preise kann das Ende bullischen Momentums signalisieren.
 - Anders als bei einem regulären Sternschnuppe weist die Gleichheit von Eröffnungs- und Schlusskurs (Doji) auf ein ausgeprägteres Kräftegleichgewicht hin.
 - In einem Aufwärtstrend hat dieses Muster bärische Implikationen und kann eine Umkehr ankündigen.
@@ -25,7 +25,7 @@ Grabstein-Doji Doji gilt als mögliches Umkehrsignal, insbesondere in einem Aufw
 
 Grabstein-Doji erfordert zusätzliche Bestätigung für Handelsentscheidungen:
 
-- Warten Sie in der nächsten Periode auf eine bestätigende bärische Candle, bevor Sie in eine Short-Position einsteigen.
+- Warten Sie in der nächsten Periode auf eine bestätigende bärische Kerze, bevor Sie in eine Short-Position einsteigen.
 - Platzieren Sie einen Stop-Loss oberhalb des Maximums des Grabstein-Doji.
 - Verwenden Sie das Muster zusammen mit Widerstandsniveaus oder überkauften Bedingungen in Indikatoren.
 - Achten Sie auf das Volumen - hohes Volumen während der Bildung eines Grabstein-Doji erhöht die Glaubwürdigkeit des Signals.

@@ -14,7 +14,7 @@
 
 ## Следующие шаги
 
-[Логирование Strategy](logging/strategy_logging.md)
+[Логирование стратегии](logging/strategy_logging.md)
 
 [Логирование IConnector](logging/iconnector_logging.md)
 

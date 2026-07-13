@@ -21,9 +21,9 @@ Zusammengesetztes Momentum ist besonders nützlich in volatilen Märkten, wo tra
 Die Zusammengesetztes Momentum-Berechnung umfasst mehrere Phasen und Komponenten:
 
 1. Berechnung der Impulskomponenten:
-   - Price-Änderung im Vergleich zu früheren Perioden
+   - Preisänderung im Vergleich zu früheren Perioden
    - Verhältnis zwischen den jüngsten Höchst- und Tiefstständen
-   - Volume-Analyse zur Begleitung der Preisbewegung
+   - Volumenanalyse zur Begleitung der Preisbewegung
 
 2. Normalisierung jeder Komponente, um sie auf vergleichbare Maßstäbe zu bringen.
 

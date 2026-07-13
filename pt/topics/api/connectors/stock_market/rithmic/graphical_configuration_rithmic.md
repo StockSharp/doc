@@ -20,7 +20,7 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **domínio (nome)** - Nome do domínio.
 - **Licenças** - Endereço do servidor de licenças.
 - **Corretor** - Endereço do corretor.
-- **Log (endereço)** - Endereço do registador.
+- **Registo (endereço)** - Endereço do registador.
 - **Nome de utilizador (hist)** - Nome de utilizador adicional. ID de utilizador utilizado para autenticação com o serviço histórico.
 - **palavra-passe (histórico)** - Palavra-passe adicional. Palavra-passe utilizada para autenticação com o serviço histórico.
 - **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.

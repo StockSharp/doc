@@ -132,7 +132,7 @@ Para cotação de opções, está implementada uma estratégia especial [Volatil
    		// forçar fechamento de todas as estratégias quando o DOM for fechado
    		hedge.Stop();
    	};
-   	// show DOM
+	// mostrar DOM
    	wnd.Show();
    }
    ```

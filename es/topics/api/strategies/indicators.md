@@ -34,11 +34,11 @@ protected override void OnStarted2(DateTime time)
 	// Crear indicadores
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
-	
+
 	// Agregar indicadores a la colección
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
-	
+
 	// ...
 }
 ```
@@ -55,7 +55,7 @@ Debe agregar solo **indicadores independientes** a la colección [Indicators](xr
    // Indicadores independientes
    var sma = new SimpleMovingAverage { Length = 20 };
    var rsi = new RelativeStrengthIndex { Length = 14 };
-   
+
    Indicators.Add(sma);
    Indicators.Add(rsi);
    ```
@@ -66,12 +66,12 @@ Debe agregar solo **indicadores independientes** a la colección [Indicators](xr
    // Cadena de indicadores
    var sma = new SimpleMovingAverage { Length = 20 };
    var stdev = new StandardDeviation { Length = 20 };
-   var bollingerBands = new BollingerBands 
-   { 
+   var bollingerBands = new BollingerBands
+   {
        SmaIndicator = sma,
        DeviationIndicator = stdev
    };
-   
+
    // Agregar solo el primer indicador de la cadena
    Indicators.Add(sma);
    // NO agregue indicadores dependientes de otros indicadores
@@ -91,7 +91,7 @@ Debe agregar solo **indicadores independientes** a la colección [Indicators](xr
        SlowEma = slowEma,
        SignalEma = signalEma
    };
-   
+
    // Agregar indicadores base
    Indicators.Add(fastEma);
    Indicators.Add(slowEma);
@@ -106,34 +106,34 @@ public class SmaStrategy : Strategy
 {
 	private SimpleMovingAverage _longSma;
 	private SimpleMovingAverage _shortSma;
-	
+
 	// ...
-	
+
 	protected override void OnStarted2(DateTime time)
 	{
 		base.OnStarted2(time);
-		
+
 		_longSma = new SimpleMovingAverage { Length = LongSmaLength };
 		_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
-		
+
 		// Agregar indicadores a la colección para seguir su estado
 		Indicators.Add(_longSma);
 		Indicators.Add(_shortSma);
-		
+
 		// ...
 	}
-	
+
 	private void ProcessCandle(ICandleMessage candle)
 	{
 		// Procesar indicadores
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
-		
-		// Comprobar si la estrategia está lista antes de ejecutar la lógica de trading
+
+		// Comprobar si la estrategia está lista antes de ejecutar la lógica de negociación
 		if (!IsFormed)
 			return;
-			
-		// Lógica de trading
+
+		// Lógica de negociación
 		// ...
 	}
 }
@@ -141,7 +141,7 @@ public class SmaStrategy : Strategy
 
 ### Ejemplo usando IsFormedAndOnline
 
-Para comprobar si la estrategia está lista para operar, a menudo se usa el método [IsFormedAndOnlineAndAllowTrading](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)), que combina la comprobación de formación de indicadores, estado online y permiso de trading:
+Para comprobar si la estrategia está lista para operar, a menudo se usa el método [IsFormedAndOnlineAndAllowTrading](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)), que combina la comprobación de formación de indicadores, estado online y permiso de negociación:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -149,12 +149,12 @@ private void ProcessCandle(ICandleMessage candle)
 	// Procesar indicadores
 	var longValue = _longSma.Process(candle);
 	var shortValue = _shortSma.Process(candle);
-	
+
 	// Comprobación integral de preparación de la estrategia
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
-		
-	// Lógica de trading
+
+	// Lógica de negociación
 	// ...
 }
 ```
@@ -170,30 +170,30 @@ public class ComplexStrategy : Strategy
 	private RelativeStrengthIndex _rsi;
 	private BollingerBands _bollinger;
 	private StandardDeviation _stdev;
-	
+
 	protected override void OnStarted2(DateTime time)
 	{
 		base.OnStarted2(time);
-		
+
 		// Crear indicadores
 		_sma = new SimpleMovingAverage { Length = 20 };
 		_rsi = new RelativeStrengthIndex { Length = 14 };
-		
+
 		_stdev = new StandardDeviation { Length = 20 };
-		_bollinger = new BollingerBands 
-		{ 
+		_bollinger = new BollingerBands
+		{
 			SmaIndicator = _sma,
-			DeviationIndicator = _stdev 
+			DeviationIndicator = _stdev
 		};
-		
+
 		// Agregar solo indicadores independientes
 		Indicators.Add(_sma);
 		Indicators.Add(_rsi);
 		// No agregue _stdev ni _bollinger, ya que dependen de _sma
-		
+
 		// ...
 	}
-	
+
 	// ...
 }
 ```
@@ -210,7 +210,7 @@ public override bool IsFormed
 		// Comprobación estándar de indicadores
 		if (!base.IsFormed)
 			return false;
-			
+
 		// Condiciones adicionales de preparación de la estrategia
 		return _customCondition && _additionalCheck;
 	}

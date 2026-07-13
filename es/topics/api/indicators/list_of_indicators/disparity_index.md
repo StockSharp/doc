@@ -14,7 +14,7 @@ El índice de disparidad es útil para:
 - Identificar desviaciones extremas del precio respecto de su media
 - Detectar posibles puntos de reversión
 - Midiendo la fuerza de la tendencia actual
-- Creación de estrategias de trading basadas en la reversión a la media.
+- Creación de estrategias de negociación basadas en la reversión a la media.
 
 ## Parámetros
 

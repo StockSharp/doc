@@ -6,7 +6,7 @@ La función **Analítica** proporciona a los usuarios una herramienta para anali
 
 ## Funciones clave
 
-- **Análisis de datos históricos**: la función de analítica permite cargar, ver y analizar datos históricos de trading en distintos períodos.
+- **Análisis de datos históricos**: la función de analítica permite cargar, ver y analizar datos históricos de negociación en distintos períodos.
 
 - **Visualización de datos**: Hydra ofrece diversas herramientas de visualización de datos, incluidos gráficos y diagramas que ayudan a analizar tendencias e identificar patrones.
 

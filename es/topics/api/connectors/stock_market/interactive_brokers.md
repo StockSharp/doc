@@ -1,12 +1,12 @@
 # Interactive Brokers
 
-**Interactive Brokers** - plataforma de trading para operar activos financieros, incluidos acciones, opciones, futuros, EFP, opciones sobre futuros, forex, bonos y fondos.
+**Interactive Brokers** - plataforma de negociación para operar activos financieros, incluidos acciones, opciones, futuros, EFP, opciones sobre futuros, forex, bonos y fondos.
 
-Antes de escribir robots de trading para esta plataforma, lea los enlaces en [Conectores](../../connectors.md).
+Antes de escribir robots de negociación para esta plataforma, lea los enlaces en [Conectores](../../connectors.md).
 
 ## Configuración de TWS Interactive Brokers
 
-1. Debe permitir conexiones desde otros programas (por ejemplo, el algoritmo de trading en [S#](../../../api.md)). Para ello, abra el menú de configuración "File -\> Global configuration...". Seleccione "Configuration -\> API -\> Settings" en la nueva ventana:
+1. Debe permitir conexiones desde otros programas (por ejemplo, el algoritmo de negociación en [S#](../../../api.md)). Para ello, abra el menú de configuración "File -\> Global configuration...". Seleccione "Configuration -\> API -\> Settings" en la nueva ventana:
 
    ![Configuración de Interactive Brokers](../../../../images/ib_settings.png)
 2. Active el modo "Enable ActiveX and Socket Clients".

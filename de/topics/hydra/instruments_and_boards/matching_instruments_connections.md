@@ -4,7 +4,7 @@ Dasselbe Instrument kann in verschiedenen Handelssystemen unterschiedlich bezeic
 
 Dadurch können Sie die empfangenen Daten organisieren und die Speicherung vereinfachen. Tatsächlich werden alle eingehenden Daten aus verschiedenen Quellen an einem Ort konsolidiert, und zwar nicht nach dem Quellnamen, sondern nach dem Instrumentennamen.
 
-Dies ist auch nützlich, wenn dasselbe Instrument auf verschiedenen Trading Boards oder über unterschiedliche Verbindungen (oder Broker) gehandelt wird. Außerdem können Daten über eine Verbindung empfangen und Trades über eine andere Verbindung ausgeführt werden.
+Dies ist auch nützlich, wenn dasselbe Instrument auf verschiedenen Handelsplätze oder über unterschiedliche Verbindungen (oder Broker) gehandelt wird. Außerdem können Daten über eine Verbindung empfangen und Trades über eine andere Verbindung ausgeführt werden.
 
 Um Instrumente und Verbindungen zuzuordnen, gehen Sie wie folgt vor:
 

@@ -2,7 +2,7 @@
 
 La creación de estrategias desde código está pensada para usuarios que prefieren trabajar con código Python. Estas estrategias, a diferencia de los esquemas, no están limitadas en capacidades y puede implementarse cualquier algoritmo.
 
-El proceso de creación de una estrategia se realiza directamente en [Designer](../../../designer.md) o en un entorno de desarrollo **Python** (los entornos de desarrollo más populares son **Visual Studio** y **JetBrains Rider**), usando la biblioteca para el desarrollo profesional de robots de trading en **Python** y la [API](../../../api.md).
+El proceso de creación de una estrategia se realiza directamente en [Designer](../../../designer.md) o en un entorno de desarrollo **Python** (los entornos de desarrollo más populares son **Visual Studio** y **JetBrains Rider**), usando la biblioteca para el desarrollo profesional de robots de negociación en **Python** y la [API](../../../api.md).
 
 Puede añadir una nueva estrategia haciendo clic en el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y seleccionando **Estrategia**. O haciendo clic con el botón derecho en la carpeta **Estrategias** del panel **Esquemas** y pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
 
@@ -39,4 +39,4 @@ La ejecución de la estrategia en [prueba histórica](../../backtesting/user_int
 > - Imposibilidad de usar ciertos módulos integrados de Python debido a la dependencia de implementaciones específicas de CPython
 > - El rendimiento puede ser inferior al de CPython en algunas operaciones
 >
-> Se recomienda tener en cuenta estas limitaciones al desarrollar estrategias de trading en Python dentro de [Designer](../../../designer.md).
+> Se recomienda tener en cuenta estas limitaciones al desarrollar estrategias de negociación en Python dentro de [Designer](../../../designer.md).

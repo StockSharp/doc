@@ -68,7 +68,7 @@ A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementa a inter
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Esta é a janela de log quando a estratégia está a funcionar: ![Captura de tela de registo de estratégia](../../../images/strategy_logging.png)
+2. Esta é a janela de registo quando a estratégia está a funcionar: ![Captura de tela de registo de estratégia](../../../images/strategy_logging.png)
 
 ## Conteúdo recomendado
 

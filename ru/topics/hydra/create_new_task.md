@@ -205,7 +205,7 @@
 		}
 		private static BackupEntry ToEntry(DirectoryInfo di)
 		{
-			// is a disk
+			// это диск
 			if (di.Parent == null)
 				return null;
 			return new BackupEntry

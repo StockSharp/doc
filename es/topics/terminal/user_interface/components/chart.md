@@ -22,15 +22,15 @@ Las órdenes de venta se registrarán con la combinación de teclas **Ctrl+botó
 
 ![Terminal Panel de gráficos 01](../../../../images/terminal_panel_graphics_01.png)
 
-En la configuración del elemento gráfico, puede establecer el estilo de gráfico requerido: velas japonesas, barras, box chart, perfil de clúster, etc.
+En la configuración del elemento gráfico, puede establecer el estilo de gráfico requerido: velas japonesas, barras, gráfico Box, perfil de clúster, etc.
 
 ![Designer elemento gráfico 04](../../../../images/designer_schedule_04.png)
 
-Para un box chart, las velas también se pueden agrupar; el orden de agrupación se establece en los campos: multiplicador del segundo marco temporal y multiplicador del tercer marco temporal.
+Para un gráfico Box, las velas también se pueden agrupar; el orden de agrupación se establece en los campos: multiplicador del segundo marco temporal y multiplicador del tercer marco temporal.
 
 ![Designer elemento gráfico 05](../../../../images/designer_schedule_05.png)
 
-Sobre el gráfico hay una barra de herramientas donde puede seleccionar auto scroll, auto-zoom, modos de leyenda y otros ajustes generales del gráfico. También puede seleccionar los elementos que se dibujarán en el gráfico: líneas, niveles, punteros, rectángulo, texto.
+Sobre el gráfico hay una barra de herramientas donde puede seleccionar desplazamiento automático, zoom automático, modos de leyenda y otros ajustes generales del gráfico. También puede seleccionar los elementos que se dibujarán en el gráfico: líneas, niveles, punteros, rectángulo, texto.
 
 ![Designer elemento gráfico 03](../../../../images/designer_schedule_03.png)
 

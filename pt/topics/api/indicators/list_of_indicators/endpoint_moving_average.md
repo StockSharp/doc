@@ -8,7 +8,7 @@ Para utilizar o indicador, é necessário usar a classe [EndpointMovingAverage](
 
 A média móvel de ponto final (EPMA) é uma forma especial de média móvel que se concentra nos pontos finais dos dados. Ao contrário das médias móveis padrão, que ponderam uniformemente todos os pontos num determinado período, a EPMA atribui mais peso aos pontos finais, permitindo uma resposta mais rápida às alterações da tendência.
 
-O principal objetivo da EPMA é reduzir o atraso inerente às médias móveis tradicionais, mantendo a capacidade de filtrar o ruído do mercado. Devido à sua metodologia de cálculo, a EPMA reage frequentemente mais depressa às alterações de direção do preço, tornando-se uma ferramenta valiosa para traders que procuram identificar inversões de tendência mais cedo.
+O principal objetivo da EPMA é reduzir o atraso inerente às médias móveis tradicionais, mantendo a capacidade de filtrar o ruído do mercado. Devido à sua metodologia de cálculo, a EPMA reage frequentemente mais depressa às alterações de direção do preço, tornando-se uma ferramenta valiosa para operadores que procuram identificar inversões de tendência mais cedo.
 
 A EPMA é particularmente útil para:
 - Identificação mais precoce de alterações de tendência

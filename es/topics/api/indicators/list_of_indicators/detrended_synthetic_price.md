@@ -6,7 +6,7 @@ Para utilizar el indicador, debe utilizar la clase [DetrendedSyntheticPrice](xre
 
 ## Descripción
 
-El indicador DSP fue desarrollado para eliminar la tendencia a largo plazo de un gráfico de precios, permitiendo a los operadores ver más claramente los ciclos y oscilaciones a corto plazo. Es particularmente útil para identificar oportunidades de trading a corto plazo que pueden estar ocultas por la tendencia dominante.
+El indicador DSP fue desarrollado para eliminar la tendencia a largo plazo de un gráfico de precios, permitiendo a los operadores ver más claramente los ciclos y oscilaciones a corto plazo. Es particularmente útil para identificar oportunidades de negociación a corto plazo que pueden estar ocultas por la tendencia dominante.
 
 La idea principal de DSP es que al eliminar la tendencia de la serie de precios, resulta más fácil identificar los componentes cíclicos del movimiento de precios. Esto hace que el indicador sea especialmente valioso para los operadores especializados en operaciones a corto plazo y que utilizan patrones cíclicos.
 
@@ -14,7 +14,7 @@ DSP es útil para:
 - Identificar ciclos de mercado a corto plazo
 - Determinación de posibles puntos de reversión
 - Detectar divergencias con el precio
-- Crear sistemas de trading basados en la naturaleza cíclica de los mercados.
+- Crear sistemas de negociación basados en la naturaleza cíclica de los mercados.
 
 ## Parámetros
 
@@ -66,7 +66,7 @@ El indicador DSP oscila alrededor de la línea cero y se puede interpretar de la
    - Divergencia bajista: el precio forma un nuevo máximo, mientras que DSP forma un máximo más bajo
 
 5. **Formación de patrones**:
-   - Se pueden formar patrones técnicos (cabeza y hombros, doble fondo, etc.) en el gráfico DSP, lo que podría proporcionar señales de trading adicionales.
+   - Se pueden formar patrones técnicos (cabeza y hombros, doble fondo, etc.) en el gráfico DSP, lo que podría proporcionar señales de negociación adicionales.
 
 ![Gráfico del indicador DSP](../../../../images/indicator_detrended_synthetic_price.png)
 

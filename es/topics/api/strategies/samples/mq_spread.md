@@ -1,8 +1,8 @@
-# Estrategia de quoting de spread
+# Estrategia de cotización de spread
 
 ## Descripción general
 
-`MqSpreadStrategy` es una estrategia que crea un spread en el mercado colocando simultáneamente quotes de compra y venta. Usa dos procesadores de quoting para gestionar órdenes en ambos lados del mercado.
+`MqSpreadStrategy` es una estrategia que crea un spread en el mercado colocando simultáneamente cotizaciones de compra y venta. Usa dos procesadores de cotización para gestionar órdenes en ambos lados del mercado.
 
 ## Componentes principales
 
@@ -22,9 +22,9 @@ public class MqSpreadStrategy : Strategy
 
 La estrategia permite personalizar los siguientes parámetros:
 
-- **PriceType** - tipo de precio de mercado para quoting (predeterminado Following)
+- **PriceType** - tipo de precio de mercado para cotización (predeterminado Following)
 - **PriceOffset** - desplazamiento del precio respecto al precio de mercado
-- **BestPriceOffset** - desviación mínima para actualizar la quote (predeterminado 0.1%)
+- **BestPriceOffset** - desviación mínima para actualizar la cotización (predeterminado 0.1%)
 
 ## Inicialización de la estrategia
 
@@ -35,15 +35,15 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Suscribirse a cambios de tiempo de mercado para actualizar quotes
+	// Suscribirse a cambios de tiempo de mercado para actualizar cotizaciones
 	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
 	Connector_CurrentTimeChanged(new TimeSpan());
 }
 ```
 
-## Gestión de procesadores de quoting
+## Gestión de procesadores de cotización
 
-El método `Connector_CurrentTimeChanged` se llama cuando cambia el tiempo de mercado y gestiona la creación y actualización de procesadores de quoting:
+El método `Connector_CurrentTimeChanged` se llama cuando cambia el tiempo de mercado y gestiona la creación y actualización de procesadores de cotización:
 
 ```cs
 private void Connector_CurrentTimeChanged(TimeSpan obj)
@@ -65,7 +65,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 	_sellProcessor?.Dispose();
 	_sellProcessor = null;
 
-	// Crear comportamientos para quoting de mercado
+	// Crear comportamientos para cotización de mercado
 	var buyBehavior = new MarketQuotingBehavior(
 		PriceOffset,
 		BestPriceOffset,
@@ -92,7 +92,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this, // Strategy implementa ITransactionProvider
 		this, // Strategy implementa ITimeProvider
 		this, // Strategy implementa IMarketDataProvider
-		IsFormedAndOnlineAndAllowTrading, // Comprobar permiso de trading
+		IsFormedAndOnlineAndAllowTrading, // Comprobar permiso de negociación
 		true, // Usar precios del libro de órdenes
 		true  // Usar precio de la última operación si el libro de órdenes está vacío
 	)
@@ -114,7 +114,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this, // Strategy implementa ITransactionProvider
 		this, // Strategy implementa ITimeProvider
 		this, // Strategy implementa IMarketDataProvider
-		IsFormedAndOnlineAndAllowTrading, // Comprobar permiso de trading
+		IsFormedAndOnlineAndAllowTrading, // Comprobar permiso de negociación
 		true, // Usar precios del libro de órdenes
 		true  // Usar precio de la última operación si el libro de órdenes está vacío
 	)
@@ -122,7 +122,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		Parent = this
 	};
 
-	// Registrar creación de nuevos procesadores de quoting
+	// Registrar creación de nuevos procesadores de cotización
 	this.AddInfoLog($"Spread de compra/venta creado en {CurrentTime}");
 
 	// Suscribirse a eventos del procesador de compra para registro
@@ -136,7 +136,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this.AddInfoLog($"Operación de compra ejecutada: {trade.Trade.Volume} a {trade.Trade.Price}");
 
 	_buyProcessor.Finished += isOk => {
-		this.AddInfoLog($"Quoting de compra finalizado correctamente: {isOk}");
+		this.AddInfoLog($"Cotización de compra finalizada correctamente: {isOk}");
 		_buyProcessor?.Dispose();
 		_buyProcessor = null;
 	};
@@ -152,7 +152,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this.AddInfoLog($"Operación de venta ejecutada: {trade.Trade.Volume} a {trade.Trade.Price}");
 
 	_sellProcessor.Finished += isOk => {
-		this.AddInfoLog($"Quoting de venta finalizado correctamente: {isOk}");
+		this.AddInfoLog($"Cotización de venta finalizada correctamente: {isOk}");
 		_sellProcessor?.Dispose();
 		_sellProcessor = null;
 	};
@@ -184,21 +184,21 @@ protected override void OnStopped()
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 - La estrategia responde a cambios del tiempo de mercado
 - Con posición cero y procesadores detenidos, se crean dos procesadores nuevos:
   - Procesador de compra (Buy)
   - Procesador de venta (Sell)
-- Ambos procesadores se configuran con el mismo volumen y usan los mismos ajustes de quoting
+- Ambos procesadores se configuran con el mismo volumen y usan los mismos ajustes de cotización
 - Los procesadores crean un spread en el mercado colocando simultáneamente órdenes de compra y venta
 
 ## Características
 
-- Usa el procesador de quoting moderno [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) con [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior)
+- Usa el procesador de cotización moderno [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) con [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior)
 - Crea un spread en el mercado colocando simultáneamente órdenes de compra y venta
 - Trabaja solo con posición cero, evitando la acumulación de riesgo no deseado
-- Admite configuración de varios parámetros de quoting (tipo de precio, desplazamiento, desviación mínima)
-- Incluye registro detallado de eventos del procesador de quoting
+- Admite configuración de varios parámetros de cotización (tipo de precio, desplazamiento, desviación mínima)
+- Incluye registro detallado de eventos del procesador de cotización
 - Gestiona correctamente los recursos al detener la estrategia y crear nuevos procesadores
 - Admite trabajar con distintos tipos de precios de mercado (Following, Best, Opposite, etc.)

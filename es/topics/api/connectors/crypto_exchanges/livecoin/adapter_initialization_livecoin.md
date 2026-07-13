@@ -1,5 +1,5 @@
 > [!WARNING]
-> Este exchange cerró permanentemente (diciembre de 2020 — hackeo y cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa cerró permanentemente (diciembre de 2020 — hackeo y cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # Inicialización del adaptador Livecoin
 

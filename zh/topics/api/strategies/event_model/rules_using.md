@@ -208,7 +208,7 @@ this.WhenCandlesStarted(subscription)
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
 			{
-	LogInfo($"规则 WhenCandlesStarted 和 WhenTotalVolumeMore candle={candle1}");
+	LogInfo($"规则 WhenCandlesStarted 和 WhenTotalVolumeMore K线={candle1}");
 	LogInfo($"规则 WhenCandlesStarted 和 WhenTotalVolumeMore i={i}");
 			})
 			.Once().Apply(this);

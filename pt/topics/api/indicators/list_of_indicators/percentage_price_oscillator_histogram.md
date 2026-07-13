@@ -1,6 +1,6 @@
 # Histograma do PPO
 
-O **Histograma do PPO (PPOH)** apresenta a distância entre a linha PPO e a sua linha de sinal como um histograma, ajudando os traders a avaliar imediatamente o equilíbrio do momentum.
+O **Histograma do PPO (PPOH)** apresenta a distância entre a linha PPO e a sua linha de sinal como um histograma, ajudando os operadores a avaliar imediatamente o equilíbrio do momentum.
 
 Para usar o indicador, use a classe [PercentagePriceOscillatorHistogram](xref:StockSharp.Algo.Indicators.PercentagePriceOscillatorHistogram).
 
@@ -25,7 +25,7 @@ Valores acima de zero destacam pressão de alta, enquanto valores abaixo de zero
 
 - **Cruzamentos da linha zero.** A passagem acima de zero confirma que a linha PPO cruzou acima da linha de sinal, sugerindo uma mudança de alta. A queda abaixo de zero indica um cruzamento de baixa.
 - **Surtos de momentum.** O crescimento rápido de barras positivas sugere reforço do momentum de alta; barras em contração apontam para enfraquecimento da força e uma possível reversão.
-- **Divergências.** A divergência entre a ação do preço e o histograma pode alertar os traders para potencial esgotamento da tendência antes de este se tornar visível nos gráficos de preço.
+- **Divergências.** A divergência entre a ação do preço e o histograma pode alertar os operadores para potencial esgotamento da tendência antes de este se tornar visível nos gráficos de preço.
 
 ![Gráfico do indicador Histograma do PPO](../../../../images/indicator_percentage_price_oscillator_histogram.png)
 

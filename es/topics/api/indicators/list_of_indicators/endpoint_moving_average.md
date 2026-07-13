@@ -13,7 +13,7 @@ El objetivo principal de EPMA es reducir el retraso inherente a las medias móvi
 EPMA es particularmente útil para:
 - Identificación temprana de cambios de tendencia.
 - Reducir el retraso de la señal
-- Crear sistemas de trading más sensibles
+- Crear sistemas de negociación más sensibles
 - Confirmar señales de otros indicadores con menos demora
 
 ## Parámetros

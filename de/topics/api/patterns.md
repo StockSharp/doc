@@ -47,7 +47,7 @@ var patternIndicator = new CandlePatternIndicator
 // Indikator zur Sammlung hinzufügen
 Indicators.Add(patternIndicator);
 
-// Eine Candle verarbeiten
+// Eine Kerze verarbeiten
 var result = patternIndicator.Process(candle);
 
 // Ergebnis prüfen
@@ -59,7 +59,7 @@ if (result.GetValue<bool>())
 
 ## Format der Pattern-Beschreibung
 
-Beim Bearbeiten eines Patterns stellt jede Zeile eine separate Candle dar. Die oberste Zeile ist die aktuelle Candle; entsprechend ist die zweite Zeile eine Candle zurück, die dritte und die folgenden Zeilen sind minus 2 und weitere Candles.
+Beim Bearbeiten eines Patterns stellt jede Zeile eine separate Kerze dar. Die oberste Zeile ist die aktuelle Kerze; entsprechend ist die zweite Zeile eine Kerze zurück, die dritte und die folgenden Zeilen sind minus 2 und weitere Kerzen.
 
 Der Editor verwendet die folgenden Parameter:
 - O - Eröffnungskurs,
@@ -68,18 +68,18 @@ Der Editor verwendet die folgenden Parameter:
 - C - Schlusskurs,
 - V - Volumen,
 - OI - Open Interest,
-- B - Candle-Körper,
-- LEN - Länge der Candle (vom Hoch bis zum Tief),
-- BS - unterer Schatten der Candle,
-- TS - oberer Schatten der Candle.
+- B - Kerzenkörper,
+- LEN - Länge der Kerze (vom Hoch bis zum Tief),
+- BS - unterer Schatten der Kerze,
+- TS - oberer Schatten der Kerze.
 
 Mit Parametern können die folgenden Indizes (Referenzen) auf die gewünschten Werte verwendet werden. Beispiel für den Schlusskurs:
-- C: Schlusskurs der aktuellen Candle,
-- C1: Schlusskurs der 1. Candle nach der aktuellen Candle,
-- C2: Schlusskurs der 2. Candle nach der aktuellen Candle,
-- pC: Schlusskurs der vorherigen Candle,
-- pC1: Schlusskurs der Candle vor der vorherigen Candle,
-Alle Referenzen müssen innerhalb des Bereichs des aktuellen Patterns liegen. Der Bereich des Patterns 3 Black Crows besteht beispielsweise aus der aktuellen und zwei vorherigen Candles; daher ist ein Verweis auf die dritte vorherige Candle nicht zulässig.
+- C: Schlusskurs der aktuellen Kerze,
+- C1: Schlusskurs der 1. Kerze nach der aktuellen Kerze,
+- C2: Schlusskurs der 2. Kerze nach der aktuellen Kerze,
+- pC: Schlusskurs der vorherigen Kerze,
+- pC1: Schlusskurs der Kerze vor der vorherigen Kerze,
+Alle Referenzen müssen innerhalb des Bereichs des aktuellen Patterns liegen. Der Bereich des Patterns 3 Black Crows besteht beispielsweise aus der aktuellen und zwei vorherigen Kerzen; daher ist ein Verweis auf die dritte vorherige Kerze nicht zulässig.
 
 Für zusätzliche Prüfungen von Parametern in Korrelation wird der Ausdruck && verwendet, der ein logisches UND darstellt.
 

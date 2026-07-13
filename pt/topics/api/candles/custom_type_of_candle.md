@@ -1,10 +1,10 @@
-# Tipo Personalizado de Candle
+# Tipo personalizado de vela
 
-[S#](../../api.md) permite estender as capacidades de construção de candles, oferecendo a possibilidade de trabalhar com tipos de candle personalizados. Isso é útil nos casos em que você precisa trabalhar com candles que atualmente não são suportados pelo [S#](../../api.md). Abaixo está o processo de criação do seu próprio tipo de candle usando o exemplo de Delta-candles (candles formados com base na diferença entre volumes de compra e venda).
+[S#](../../api.md) permite estender as capacidades de construção de velas, oferecendo a possibilidade de trabalhar com tipos de vela personalizados. Isso é útil nos casos em que você precisa trabalhar com velas que atualmente não são suportadas pelo [S#](../../api.md). Abaixo está o processo de criação do seu próprio tipo de vela usando o exemplo de velas Delta (velas formadas com base na diferença entre volumes de compra e venda).
 
-## Implementando Delta-candles
+## Implementando velas Delta
 
-1. Primeiro, você precisa criar seu próprio tipo de mensagem de candle. O tipo deve herdar da classe [CandleMessage](xref:StockSharp.Messages.CandleMessage):
+1. Primeiro, você precisa criar seu próprio tipo de mensagem de vela. O tipo deve herdar da classe [CandleMessage](xref:StockSharp.Messages.CandleMessage):
 
    ```cs
    /// <summary>
@@ -95,19 +95,19 @@
        {
            // Registrar novo tipo de vela no StockSharp
            Extensions.RegisterCandleType<decimal>(
-               typeof(DeltaCandleMessage),      // Tipo de mensagem de candle
+               typeof(DeltaCandleMessage),      // Tipo de mensagem de vela
                DeltaCandleType,                // Tipo de mensagem
                "delta",                        // Nome do arquivo para armazenamento
                str => str.To<decimal>(),       // Conversor de string para parâmetro
                arg => arg.ToString(),          // Conversor de parâmetro para string
                a => a > 0,                     // Validador de parâmetros
-               false                           // Se esses candles podem ser obtidos da fonte (não apenas construídos)
+               false                           // Se essas velas podem ser obtidas da fonte (não apenas construídas)
            );
        }
    }
    ```
 
-3. Em seguida, você precisa criar um construtor de candles para o novo tipo. Para isso, crie uma implementação de [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1):
+3. Em seguida, você precisa criar um construtor de velas para o novo tipo. Para isso, crie uma implementação de [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1):
 
    ```cs
    /// <summary>
@@ -118,7 +118,7 @@
        /// <summary>
        /// Inicializa uma nova instância de <see cref="DeltaCandleBuilder"/>.
        /// </summary>
-       /// <param name="exchangeInfoProvider">Provedor de informações da exchange.</param>
+       /// <param name="exchangeInfoProvider">Provedor de informações da bolsa.</param>
        public DeltaCandleBuilder(IExchangeInfoProvider exchangeInfoProvider)
            : base(exchangeInfoProvider)
        {
@@ -161,7 +161,7 @@
    }
    ```
 
-4. Em seguida, você precisa registrar o construtor de candles em [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider):
+4. Em seguida, você precisa registrar o construtor de velas em [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider):
 
    ```cs
    private Connector _connector;
@@ -173,7 +173,7 @@
    _connector.Adapter.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
    ```
 
-5. Crie uma assinatura para os candles do tipo `DeltaCandleMessage` e solicite dados a partir dela:
+5. Crie uma assinatura para as velas do tipo `DeltaCandleMessage` e solicite dados a partir dela:
 
    ```cs
    // Valor limite de delta
@@ -217,9 +217,9 @@
    _connector.Subscribe(subscription);
    ```
 
-## Usando Delta-candles em Estratégias de Negociação
+## Usando velas Delta em Estratégias de Negociação
 
-Exemplo de uma estratégia simples usando delta-candles:
+Exemplo de uma estratégia simples usando velas Delta:
 
 ```cs
 public class DeltaCandleStrategy : Strategy
@@ -357,16 +357,16 @@ public class DeltaCandleStrategy : Strategy
 }
 ```
 
-## Pontos Importantes ao Criar Tipos de Candle Personalizados
+## Pontos Importantes ao Criar Tipos de Vela Personalizados
 
 1. **Exclusividade de MessageTypes** — certifique-se de que o identificador `MessageTypes` escolhido não entre em conflito com os tipos existentes no StockSharp. Recomenda-se usar valores maiores que 10000 para tipos personalizados.
 
-2. **Registro do Tipo de Candle** — o registro por meio de `Extensions.RegisterCandleType` é necessário para a integração correta com os controles gráficos e o armazenamento de dados do StockSharp. Sem o registro, o tipo de candle funcionará apenas no código, mas não estará disponível na interface do usuário.
+2. **Registo do tipo de vela** — o registo por meio de `Extensions.RegisterCandleType` é necessário para a integração correta com os controlos gráficos e o armazenamento de dados do StockSharp. Sem o registo, o tipo de vela funcionará apenas no código, mas não estará disponível na interface do utilizador.
 
-3. **Parâmetro do Candle** — implemente a propriedade `ArgType` que retorna o tipo do argumento do candle. Isso é usado para a exibição correta dos parâmetros na interface gráfica.
+3. **Parâmetro da vela** — implemente a propriedade `ArgType` que retorna o tipo do argumento da vela. Isso é usado para a exibição correta dos parâmetros na interface gráfica.
 
-4. **Sistema de Arquivos** — o parâmetro `fileName` no método `RegisterCandleType` é usado para salvar os candles no sistema de arquivos quando você usa o armazenamento de dados do StockSharp.
+4. **Sistema de Arquivos** — o parâmetro `fileName` no método `RegisterCandleType` é usado para salvar as velas no sistema de arquivos quando você usa o armazenamento de dados do StockSharp.
 
 5. **Validação de Parâmetros** — o método de validação de parâmetros é usado no StockSharp para verificar a correção dos valores antes de criar uma assinatura.
 
-Assim, criamos um tipo de candle totalmente personalizado que se integra corretamente a todo o ecossistema StockSharp (incluindo a interface do usuário e o armazenamento de dados) e pode ser usado para construir estratégias de negociação baseadas na análise de delta de volume.
+Assim, criamos um tipo de vela totalmente personalizado que se integra corretamente a todo o ecossistema StockSharp (incluindo a interface do usuário e o armazenamento de dados) e pode ser usado para construir estratégias de negociação baseadas na análise de delta de volume.

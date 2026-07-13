@@ -1,6 +1,6 @@
 # Opciones
 
-[S#](../../api.md) incluye varios componentes gráficos para trabajar con opciones. 
+[S#](../../api.md) incluye varios componentes gráficos para trabajar con opciones.
 
 - [OptionDesk](options/option_desk.md) - tablero de opciones.
 - [OptionPositionChart](options/position_chart.md) - gráfico que muestra la posición y las griegas de opciones respecto al activo subyacente.
@@ -9,5 +9,5 @@
 
 [Griegas](../options/greeks.md)
 
-[Trading de volatilidad](../options/volatility_trading.md)
+[Negociación de volatilidad](../options/volatility_trading.md)
 

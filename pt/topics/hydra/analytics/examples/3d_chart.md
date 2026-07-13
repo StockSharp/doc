@@ -6,7 +6,7 @@ O script `Chart3DScript` demonstra a criação de um gráfico 3D para visualizar
 
 ## Descrição do Funcionamento do Script
 
-O script analisa dados de candles para o período especificado, agrupa-os por hora e calcula o volume total de negociação para cada hora. Os resultados são apresentados num gráfico 3D, onde os eixos representam:
+O script analisa dados de velas para o período especificado, agrupa-os por hora e calcula o volume total de negociação para cada hora. Os resultados são apresentados num gráfico 3D, onde os eixos representam:
 
 - **Eixo X**: Instrumentos financeiros.
 - **Eixo Y**: Horas da sessão de negociação (de 0 a 23).
@@ -20,7 +20,7 @@ O gráfico 3D permite avaliar quando ocorre a maior atividade para vários instr
 
 ### Comparação de Instrumentos
 
-Graças à visualização dos volumes de negociação por hora em espaço tridimensional, os traders podem comparar instrumentos entre si em termos de nível de atividade e horários de negociação preferenciais. Isto pode ajudar a selecionar os instrumentos mais líquidos em determinadas horas ou a encontrar instrumentos com padrões de atividade semelhantes para diversificação da carteira.
+Graças à visualização dos volumes de negociação por hora em espaço tridimensional, os operadores podem comparar instrumentos entre si em termos de nível de atividade e horários de negociação preferenciais. Isto pode ajudar a selecionar os instrumentos mais líquidos em determinadas horas ou a encontrar instrumentos com padrões de atividade semelhantes para diversificação da carteira.
 
 ### Otimização da Estratégia
 
@@ -32,7 +32,7 @@ O script executa as seguintes ações:
 
 1. Verificar a presença de instrumentos financeiros para análise.
 2. Formar etiquetas para os eixos X (instrumentos) e Y (horas).
-3. Carregar e agrupar dados de candles.
+3. Carregar e agrupar dados de velas.
 4. Calcular os volumes totais de negociação por hora e preencher os dados do eixo Z.
 5. Desenhar o gráfico 3D usando o método `panel.Draw3D`.
 
@@ -75,7 +75,7 @@ namespace StockSharp.Algo.Analytics
 				// preencher etiquetas X
 				x.Add(security.ToStringId());
 
-				// obter o armazenamento de candles
+				// obter o armazenamento de velas
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				// obter datas disponíveis para o período especificado
@@ -87,7 +87,7 @@ namespace StockSharp.Algo.Analytics
 					return Task.CompletedTask;
 				}
 
-				// agrupar candles pela hora de abertura (apenas a parte da hora) com truncagem de 1 hora
+				// agrupar velas pela hora de abertura (apenas a parte da hora) com truncagem de 1 hora
 				var byHours = candleStorage.Load(from, to)
 					.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
 					.ToDictionary(g => g.Key.Hours, g => g.Sum(c => c.TotalVolume));
@@ -168,7 +168,7 @@ class chart3d_script(IAnalyticsScript):
 			# Preencher etiquetas X com identificadores do instrumento
 			x.append(to_string_id(security))
 
-			# Obter o armazenamento de candles para o instrumento atual
+			# Obter o armazenamento de velas para o instrumento atual
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			# Obter datas disponíveis para o período especificado
@@ -178,7 +178,7 @@ class chart3d_script(IAnalyticsScript):
 				logs.LogWarning("Sem dados.")
 				return Task.CompletedTask
 
-			# Agrupar candles pela hora de abertura (truncada à hora mais próxima) e somar volumes
+			# Agrupar velas pela hora de abertura (truncada à hora mais próxima) e somar volumes
 			candles = load_range(candle_storage, message_type, from_date, to_date)
 			by_hours = {}
 			for candle in candles:

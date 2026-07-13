@@ -1,45 +1,45 @@
-# Snapshot-System
+# Momentaufnahmen-System
 
-Snapshots in StockSharp stellen einen Mechanismus zum Speichern des letzten aktuellen Zustands von Marktdaten dar. Statt die gesamte Historie zu scannen, ermöglichen Snapshots den sofortigen Abruf des aktuellen Level1-Werts, Orderbuchs, der Position oder Transaktion.
+Momentaufnahmen in StockSharp stellen einen Mechanismus zum Speichern des letzten aktuellen Zustands von Marktdaten dar. Statt die gesamte Historie zu scannen, ermöglichen Momentaufnahmen den sofortigen Abruf des aktuellen Level1-Werts, Orderbuchs, der Position oder Transaktion.
 
-## Zweck von Snapshots
+## Zweck von Momentaufnahmen
 
-Bei der Arbeit mit Datenströmen ist es häufig notwendig, den letzten Zustand eines Instruments zu kennen - aktuellen Preis, Orderbuch, offene Position. Ohne Snapshots müsste dafür die gesamte Historie geladen und verarbeitet werden. Das Snapshot-System löst dieses Problem, indem es den letzten Zustand jedes Objekts speichert und Zugriff darauf in minimaler Zeit ermöglicht.
+Bei der Arbeit mit Datenströmen ist es häufig notwendig, den letzten Zustand eines Instruments zu kennen - aktuellen Preis, Orderbuch, offene Position. Ohne Momentaufnahmen müsste dafür die gesamte Historie geladen und verarbeitet werden. Das Momentaufnahmen-System löst dieses Problem, indem es den letzten Zustand jedes Objekts speichert und Zugriff darauf in minimaler Zeit ermöglicht.
 
-## ISnapshotStorage - Interface für Snapshot-Speicher
+## ISnapshotStorage - Interface für Momentaufnahmen-Speicher
 
-Das Interface [ISnapshotStorage](xref:StockSharp.Algo.Storages.ISnapshotStorage) definiert den Basiskontrakt für die Arbeit mit Snapshots. Die typisierte Version `ISnapshotStorage<TKey, TMessage>` stellt folgende Methoden bereit:
+Das Interface [ISnapshotStorage](xref:StockSharp.Algo.Storages.ISnapshotStorage) definiert den Basiskontrakt für die Arbeit mit Momentaufnahmen. Die typisierte Version `ISnapshotStorage<TKey, TMessage>` stellt folgende Methoden bereit:
 
-- **Update(message)** - Snapshot speichern oder aktualisieren. Wenn für den angegebenen Schlüssel bereits ein Snapshot existiert, wird er aktualisiert.
-- **Get(key)** - Snapshot nach Schlüssel abrufen (z. B. nach Instrumentenbezeichner).
-- **GetAll(from, to)** - alle Snapshots für den angegebenen Datumsbereich abrufen.
-- **Clear(key)** - Snapshot für einen bestimmten Schlüssel löschen.
-- **ClearAll()** - alle Snapshots löschen.
+- **Update(message)** - Momentaufnahme speichern oder aktualisieren. Wenn für den angegebenen Schlüssel bereits eine Momentaufnahme existiert, wird sie aktualisiert.
+- **Get(key)** - Momentaufnahme nach Schlüssel abrufen (z. B. nach Instrumentenbezeichner).
+- **GetAll(from, to)** - alle Momentaufnahmen für den angegebenen Datumsbereich abrufen.
+- **Clear(key)** - Momentaufnahme für einen bestimmten Schlüssel löschen.
+- **ClearAll()** - alle Momentaufnahmen löschen.
 
-## ISnapshotSerializer - Snapshot-Serialisierung
+## ISnapshotSerializer - Momentaufnahmen-Serialisierung
 
-Das Interface [ISnapshotSerializer](xref:StockSharp.Algo.Storages.ISnapshotSerializer`2) ist für die Konvertierung von Snapshots in eine Binärdarstellung und zurück verantwortlich:
+Das Interface [ISnapshotSerializer](xref:StockSharp.Algo.Storages.ISnapshotSerializer`2) ist für die Konvertierung von Momentaufnahmen in eine Binärdarstellung und zurück verantwortlich:
 
-- **DataType** - Informationen zum Snapshot-Datentyp.
+- **DataType** - Informationen zum Datentyp der Momentaufnahme.
 - **Version** - Version des Serialisierungsformats.
 - **Serialize(version, message)** - Nachricht in ein Bytearray serialisieren.
 - **Deserialize(version, buffer)** - Bytearray zurück in eine Nachricht deserialisieren.
 - **GetKey(message)** - Schlüssel aus einer Nachricht extrahieren.
-- **Update(message, changes)** - inkrementelle Änderungen auf einen bestehenden Snapshot anwenden.
+- **Update(message, changes)** - inkrementelle Änderungen auf eine bestehende Momentaufnahme anwenden.
 
-## SnapshotRegistry - Snapshot-Registry
+## SnapshotRegistry - Momentaufnahmen-Register
 
-Die Klasse [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) ist die zentrale Komponente für die Snapshot-Verwaltung. Sie implementiert das Interface `ISnapshotRegistry` und koordiniert den Betrieb aller Snapshot-Speicher.
+Die Klasse [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) ist die zentrale Komponente für die Momentaufnahmen-Verwaltung. Sie implementiert das Interface `ISnapshotRegistry` und koordiniert den Betrieb aller Momentaufnahmen-Speicher.
 
 ### Wichtige Eigenschaften
 
-- **Speicherverwaltung** - bietet Zugriff auf Snapshot-Speicher für verschiedene Datentypen.
+- **Speicherverwaltung** - bietet Zugriff auf Momentaufnahmen-Speicher für verschiedene Datentypen.
 - **Periodisches Schreiben** - Änderungen werden alle 10 Sekunden auf den Datenträger geschrieben, wodurch ein Gleichgewicht zwischen Performance und Zuverlässigkeit erreicht wird.
 - **Threadsicherheit** - alle Operationen sind sicher für die Verwendung aus mehreren Threads.
 
 ### Dateiorganisation
 
-Snapshot-Dateien werden unter folgendem Pfad gespeichert:
+Momentaufnahmen-Dateien werden unter folgendem Pfad gespeichert:
 
 ```
 {path}/{yyyy_MM_dd}/{serializer_name}.bin
@@ -49,7 +49,7 @@ Snapshot-Dateien werden unter folgendem Pfad gespeichert:
 
 StockSharp enthält vier Serializer für die wichtigsten Marktdatentypen:
 
-| Serializer | Message Type | Zweck |
+| Serializer | Nachrichtentyp | Zweck |
 |------------|-------------|---------|
 | [Level1BinarySnapshotSerializer](xref:StockSharp.Algo.Storages.Binary.Snapshot.Level1BinarySnapshotSerializer) | `Level1ChangeMessage` | Level1-Daten (Preise, Volumina, Spreads) |
 | [QuotesBinarySnapshotSerializer](xref:StockSharp.Algo.Storages.Binary.Snapshot.QuotesBinarySnapshotSerializer) | `QuoteChangeMessage` | Orderbuch |
@@ -60,21 +60,21 @@ Jeder Serializer unterstützt Formatversionierung und gewährleistet damit Rück
 
 ## Codebeispiel
 
-### Snapshot Registry erstellen
+### Momentaufnahmen-Register erstellen
 
 ```cs
 var snapshotRegistry = new SnapshotRegistry(Path.Combine(
     Directory.GetCurrentDirectory(), "Snapshots"));
 ```
 
-### Arbeiten mit Level1-Snapshots
+### Arbeiten mit Level1-Momentaufnahmen
 
 ```cs
-// Level1-Snapshot-Speicher abrufen
+// Level1-Momentaufnahmen-Speicher abrufen
 var level1Snapshots = snapshotRegistry.GetSnapshotStorage(
     DataType.Level1);
 
-// Snapshot speichern
+// Momentaufnahme speichern
 var level1Msg = new Level1ChangeMessage
 {
     SecurityId = "AAPL@NASDAQ".ToSecurityId(),
@@ -87,10 +87,10 @@ level1Msg.TryAdd(Level1Fields.BestAskPrice, 260.6m);
 level1Snapshots.Update(level1Msg);
 ```
 
-### Snapshot abrufen
+### Momentaufnahme abrufen
 
 ```cs
-// Letzten Snapshot für ein Instrument abrufen
+// Letzte Momentaufnahme für ein Instrument abrufen
 var secId = "AAPL@NASDAQ".ToSecurityId();
 var snapshot = level1Snapshots.Get(secId);
 

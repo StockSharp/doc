@@ -17,7 +17,7 @@ public MainWindow()
 	InitializeComponent();
 	// flush imediato
 	_logManager.FlushInterval = TimeSpan.FromMilliseconds(1);
-	// definir fonte de log de teste
+	// definir fonte de registo de teste
 	_logManager.Sources.Add(_testSource);
 	// definir fonte baseada no sistema .NET Trace
 	_logManager.Sources.Add(new Ecng.Logging.TraceSource());
@@ -36,6 +36,6 @@ public MainWindow()
 
 [Registo](../logging.md)
 
-[Painel de log](logging/log_panel.md)
+[Painel de registo](logging/log_panel.md)
 
-[Painel de log alargado](logging/extended_log_panel.md)
+[Painel de registo alargado](logging/extended_log_panel.md)

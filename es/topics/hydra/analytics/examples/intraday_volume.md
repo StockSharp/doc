@@ -1,30 +1,30 @@
 # Volumen intradía
 
-El script "Volumen intradía" es una herramienta para analizar la distribución del volumen de negociación de valores por horas dentro de una sola sesión de trading. Diseñado para usarse dentro de la plataforma StockSharp, está orientado a traders y analistas cuantitativos que buscan estudiar en profundidad el comportamiento del mercado y optimizar estrategias de trading.
+El script "Volumen intradía" es una herramienta para analizar la distribución del volumen de negociación de valores por horas dentro de una sola sesión de negociación. Diseñado para usarse dentro de la plataforma StockSharp, está orientado a operadores y analistas cuantitativos que buscan estudiar en profundidad el comportamiento del mercado y optimizar estrategias de negociación.
 
 ![Volumen intradía](../../../../images/hydra_analytics_intraday_volume.png)
 
 ## Descripción funcional
 
-El script recopila datos de operaciones para un período seleccionado y los presenta en formato de gráfico, permitiendo visualizar los cambios del volumen de negociación por hora. Esto permite evaluar en qué horas del día se observa una actividad de trading mayor o menor.
+El script recopila datos de operaciones para un período seleccionado y los presenta en formato de gráfico, permitiendo visualizar los cambios del volumen de negociación por hora. Esto permite evaluar en qué horas del día se observa una actividad de negociación mayor o menor.
 
 ## Importancia práctica
 
-- **Para trading**: comprender las horas pico y valle ayuda a identificar los períodos más activos del mercado, lo que influye en decisiones sobre cuándo entrar o salir de posiciones.
+- **para la negociación**: comprender las horas pico y valle ayuda a identificar los períodos más activos del mercado, lo que influye en decisiones sobre cuándo entrar o salir de posiciones.
 - **Para análisis cuantitativo**: los analistas cuantitativos pueden usar datos de volumen intradía para crear modelos matemáticos y algoritmos que predicen el comportamiento del mercado según indicadores de volumen.
 
 ## Distribución horaria
 
-La distribución del volumen de trading por hora arroja luz sobre la dinámica del mercado, destacando los intervalos temporales con la actividad principal. Esto puede indicar cambios en tendencias, niveles de soporte y resistencia, así como posibles momentos de aumento o escasez de liquidez.
+La distribución del volumen de negociación por hora arroja luz sobre la dinámica del mercado, destacando los intervalos temporales con la actividad principal. Esto puede indicar cambios en tendencias, niveles de soporte y resistencia, así como posibles momentos de aumento o escasez de liquidez.
 
 ## Aplicación de datos
 
 El script "Volumen intradía" puede integrarse en un sistema más amplio de análisis de mercado, proporcionando datos que pueden usarse para:
 
-- **Adaptación de estrategias**: ajustar parámetros de algoritmos de trading según niveles de actividad del mercado.
+- **Adaptación de estrategias**: ajustar parámetros de algoritmos de negociación según niveles de actividad del mercado.
 - **Evaluación de riesgos**: calcular la probabilidad de movimientos significativos de precio según la hora del día.
 
-El uso del script "Volumen intradía" dentro de la plataforma de trading StockSharp permite a traders y analistas basar sus decisiones en datos específicos sobre la actividad del mercado y adaptar sus estrategias para ajustarse de forma óptima a las condiciones actuales de trading.
+El uso del script "Volumen intradía" dentro de la plataforma de negociación StockSharp permite a operadores y analistas basar sus decisiones en datos específicos sobre la actividad del mercado y adaptar sus estrategias para ajustarse de forma óptima a las condiciones actuales de negociación.
 
 ## Código del script en C#
 

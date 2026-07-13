@@ -10,7 +10,7 @@ Um Kerzen zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **
    - **Datentyp** - Typ der importierten Daten.
    - **Dateiname** - Vollständiger Pfad zur CSV-Datei.
    - **Datenverzeichnis** - Ordner, in dem die finalen [S#](../../api.md)-Dateien gespeichert werden.
-   - **Dateimaske** - Dateimaske, die beim Scannen des Verzeichnisses verwendet wird. Zum Beispiel candle \_\*.csv.
+   - **Dateimaske** - Dateimaske, die beim Scannen des Verzeichnisses verwendet wird. Zum Beispiel Kerze \_\*.csv.
    - **Spaltentrennzeichen** - Spaltentrennzeichen. Tabulator wird als TAB bezeichnet.
    - **Einzug vom Anfang** - Anzahl der Zeilen am Anfang der Datei, die übersprungen werden sollen (wenn sie Metainformationen enthalten).
    - **Zeitzone** - Zeitzone.

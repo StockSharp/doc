@@ -10,7 +10,7 @@ El oscilador de la media móvil (OMA) representa la diferencia entre una media m
 
 OMA funciona según un principio similar a MACD (convergencia/divergencia de medias móviles), pero de una forma más sencilla, ya que no incluye una línea de señal. El indicador oscila alrededor de la línea cero, donde los valores positivos indican que la media móvil corta está por encima de la media móvil larga (estado alcista), y los valores negativos indican que la media móvil corta está por debajo de la media móvil larga (estado bajista).
 
-La principal fortaleza de OMA radica en su capacidad para identificar cambios en el impulso de la tendencia y generar señales de trading basadas en cruces de línea cero y divergencias de precios.
+La principal fortaleza de OMA radica en su capacidad para identificar cambios en el impulso de la tendencia y generar señales de negociación basadas en cruces de línea cero y divergencias de precios.
 
 ## Parámetros
 

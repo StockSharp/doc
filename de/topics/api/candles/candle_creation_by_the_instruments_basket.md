@@ -1,8 +1,8 @@
-# Candle-Erstellung durch den Instrumentenkorb
+# Kerzenerstellung durch den Instrumentenkorb
 
-Um Candles für [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) oder [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) zu erstellen, wird derselbe Abonnement-Mechanismus verwendet wie für reguläre [Security](xref:StockSharp.BusinessEntities.Security)-Instrumente.
+Um Kerzen für [ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity), [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) oder [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) zu erstellen, wird derselbe Abonnement-Mechanismus verwendet wie für reguläre [Security](xref:StockSharp.BusinessEntities.Security)-Instrumente.
 
-Nachfolgend ein Beispiel für die Erstellung von 1-Minuten-Candles für den AAPL-MSFT-Spread:
+Nachfolgend ein Beispiel für die Erstellung von 1-Minuten-Kerzen für den AAPL-MSFT-Spread:
 
 ```cs
 private Connector _connector;
@@ -114,7 +114,7 @@ private void Unsubscribe()
 
 ## Weitere Anwendungsfälle für Index-Abonnements
 
-### Erstellung eines Abonnements für Index-Candles aus Komponenten-Candles
+### Erstellung eines Abonnements für Index-Kerzen aus Komponenten-Kerzen
 
 ```cs
 // Abonnement zum Erstellen von Indexkerzen aus Komponentenkerzen erstellen
@@ -136,7 +136,7 @@ var indexFromCandlesSubscription = new Subscription(
 _connector.Subscribe(indexFromCandlesSubscription);
 ```
 
-### Erstellung eines Abonnements für Index-Candles aus Orderbüchern
+### Erstellung eines Abonnements für Index-Kerzen aus Orderbüchern
 
 ```cs
 // Abonnement zum Erstellen von Indexkerzen aus Orderbüchern erstellen

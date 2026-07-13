@@ -6,7 +6,7 @@ Campos principales:
 
 - **clave** - clave de la API.
 - **secreto** - secreto de la API.
-- **Sección** - sección de trading (`Spot` o `Derivatives`).
+- **Sección** - sección de negociación (`Spot` o `Derivatives`).
 - **Modo de derivados** - familia de protocolo de derivados.
 - **Demostración** - modo de entorno de demostración.
 - **Spot REST / Derivatives REST** - endpoints REST.

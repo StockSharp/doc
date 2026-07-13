@@ -8,7 +8,7 @@ Para executar um exemplo em **Ao vivo**, irá precisar de:
 
 3. Configurar a ligação ao IB TWS Demo no [Designer](../../designer.md) e ligar.
 
-4. Transferir o histórico para o instrumento necessário. Por exemplo, será usado o instrumento **AAPL@NASDAQ**. A estratégia utilizará candles com um período de 5 segundos e o histórico não será necessário, mas esse histórico será suficiente para demonstrar a possibilidade.
+4. Transferir o histórico para o instrumento necessário. Por exemplo, será usado o instrumento **AAPL@NASDAQ**. A estratégia utilizará velas com um período de 5 segundos e o histórico não será necessário, mas esse histórico será suficiente para demonstrar a possibilidade.
 
 ![Designer Exemplo de negociação ao vivo 00](../../../images/designer_example_of_live_trading_00.png)
 
@@ -20,7 +20,7 @@ No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 - Armazenamento padrão **\\Documents\\StockSharp\\Designer\\Storage**
 - Formato de armazenamento - **CSV**
 - Tipo de dados obtidos do armazenamento - **Tiques**
-- Candles com período de 5 s
+- Velas com período de 5 s
 - Volume - 100
 - Dias de histórico - 2
 

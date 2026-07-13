@@ -47,7 +47,7 @@ _connector.CandleReceived += OnCandleReceived;
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
 	// 这里 subscription 是我们创建的订阅对象
-	// candle — 接收到的 K线
+	// 接收到的 K线
 	
 	// 检查 K线是否属于我们的订阅
 	if (subscription == _candleSubscription)
@@ -296,7 +296,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ### 点数图K线（P&F）
 
 ```cs
-// Point and Figure K线
+// 点数图K线
 var pnfCandleSubscription = new Subscription(
 	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // 指定 P&F 参数
 	security)

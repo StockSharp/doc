@@ -30,7 +30,7 @@ El proceso de normalización normalmente incluye los siguientes pasos:
 2. **Procesamiento de datos**: aplicar el método elegido a los precios de cierre de cada instrumento.
 3. **Análisis de resultados**: usar datos normalizados para análisis posterior y comparación de instrumentos.
 
-El script "Normalización del precio de cierre" es una herramienta crucial para preparar datos para trading y análisis cuantitativo, permitiendo a traders y analistas comparar y evaluar con mayor precisión activos financieros dentro de distintas estrategias e investigaciones.
+El script "Normalización del precio de cierre" es una herramienta crucial para preparar datos para la negociación y análisis cuantitativo, permitiendo a operadores y analistas comparar y evaluar con mayor precisión activos financieros dentro de distintas estrategias e investigaciones.
 
 ## Código del script en C#
 

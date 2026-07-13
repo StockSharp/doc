@@ -335,4 +335,4 @@ dotnet run
 
 ## 例
 
-StockSharp の使用例は、リポジトリの [Samples/](https://github.com/stocksharp/stocksharp/tree/master/Samples) ディレクトリに用意されています。これらは、取引所への接続、データ購読、ローソク足、指標、戦略、テストの構築を網羅しています。
+StockSharp の使用例は、リポジトリの [サンプルディレクトリ](https://github.com/stocksharp/stocksharp/tree/master/Samples) に用意されています。これらは、取引所への接続、データ購読、ローソク足、指標、戦略、テストの構築を網羅しています。

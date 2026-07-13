@@ -7,7 +7,7 @@ Vela altista é um padrão de velas caracterizado por um preço de fecho superio
 - O preço de abertura é inferior ao preço de fecho (O < C).
 - Indica pressão altista no mercado.
 
-![Padrão de candle altista](../../../images/bullishcandlepattern.png)
+![Padrão de vela altista](../../../images/bullishcandlepattern.png)
 
 ### Interpretação
 

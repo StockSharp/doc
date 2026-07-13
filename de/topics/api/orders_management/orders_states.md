@@ -14,7 +14,7 @@ Die StockSharp API bietet die Möglichkeit, Informationen über Orders über den
 | [OrderEditFailReceived](xref:StockSharp.Algo.Connector.OrderEditFailReceived) | Ereignis für Fehler bei der Orderänderung |
 | [OwnTradeReceived](xref:StockSharp.Algo.Connector.OwnTradeReceived) | Ereignis zum Empfang von Informationen über eigene Trades |
 
-## Enum OrderStates
+## OrderStates-Enumeration
 
 Während ihrer Lebensdauer durchläuft eine Order folgende Zustände:
 

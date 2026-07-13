@@ -20,4 +20,4 @@ Lista de tipos de comissão
 - **Instrumento** - a comissão do instrumento.
 - **Instrumento (tipo)** - a comissão do tipo de instrumento.
 - **Volume de negócios** - a comissão pelo volume de negócios.
-- **Mercado** - a comissão do board.
+- **Mercado** - a comissão do mercado.

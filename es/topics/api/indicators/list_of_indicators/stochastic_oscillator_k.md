@@ -14,7 +14,7 @@ El oscilador oscila entre 0 y 100:
 
 - Los valores superiores a 80 suelen indicar un mercado sobrecomprado.
 - Los valores por debajo de 20 indican un mercado sobrevendido.
-- Crossovers de las líneas %K y %D se pueden utilizar como señales de entrada o salida.
+- Los cruces de las líneas %K y %D se pueden utilizar como señales de entrada o salida.
 
 ## Parámetros
 

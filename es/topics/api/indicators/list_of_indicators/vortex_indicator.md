@@ -57,7 +57,7 @@ El cálculo del indicador Vortex se realiza en varios pasos:
    VI- = Sum_VM- / Sum_TR
    ```
 
-El cruce de estas dos líneas genera señales de trading: cuando VI+ sube por encima de VI-, indica una tendencia alcista y, a la inversa, cuando VI- sube por encima de VI+, indica una tendencia bajista.
+El cruce de estas dos líneas genera señales de negociación: cuando VI+ sube por encima de VI-, indica una tendencia alcista y, a la inversa, cuando VI- sube por encima de VI+, indica una tendencia bajista.
 
 ![Gráfico del indicador VI](../../../../images/indicator_vortex_indicator.png)
 

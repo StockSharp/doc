@@ -114,7 +114,7 @@ A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalEl
 //     with get () = false
 ```
 
-Se for descomentada, o método **Processo** será sempre chamado assim que pelo menos um valor chegar (no caso do exemplo, uma candle ou um valor numérico).
+Se for descomentada, o método **Processo** será sempre chamado assim que pelo menos um valor chegar (no caso do exemplo, uma vela ou um valor numérico).
 
 Para adicionar o cubo resultante ao diagrama, é necessário selecionar o cubo criado na paleta, na secção **Elementos próprios**:
 

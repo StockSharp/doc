@@ -22,7 +22,7 @@ Tres soldados blancos se considera una de las señales más fiables de reversió
 - Cuerpos de vela relativamente largos con sombras cortas indican control alcista decisivo sobre el mercado.
 - Cuanto más uniformes sean los tamaños de las tres velas, más fuerte será la señal.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Tres soldados blancos proporciona oportunidades fiables para entrar en una posición larga:
 

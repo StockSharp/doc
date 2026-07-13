@@ -1,11 +1,11 @@
 > [!WARNING]
-> Este exchange cerró permanentemente (diciembre de 2020 — hackeo y cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa cerró permanentemente (diciembre de 2020 — hackeo y cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # Livecoin
 
-**Livecoin** - exchange de criptomonedas.
+**Livecoin** - bolsa de criptomonedas.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md). 
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md).
 
 ## Contenido recomendado
 

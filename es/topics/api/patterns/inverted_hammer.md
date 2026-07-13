@@ -21,7 +21,7 @@ Martillo invertido se considera una señal potencial de reversión de una tenden
 - Este patrón no es tan fuerte como el Martillo clásico y requiere confirmación de velas posteriores.
 - El color del cuerpo es menos importante, aunque un martillo invertido blanco/verde se considera más alcista.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Martillo invertido requiere un enfoque prudente y confirmación:
 
@@ -29,7 +29,7 @@ Martillo invertido requiere un enfoque prudente y confirmación:
 - Colocar un nivel de stop-loss por debajo del mínimo del martillo invertido.
 - Usar un tamaño de posición menor en comparación con patrones de reversión más fiables.
 - Combinar con indicadores de sobreventa como RSI o Stochastic para aumentar la probabilidad de una operación exitosa.
-- Prestar atención al volumen de trading: un volumen alto aumenta la importancia de la señal.
+- Prestar atención al volumen de negociación: un volumen alto aumenta la importancia de la señal.
 
 ## Véase también
 

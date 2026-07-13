@@ -62,7 +62,7 @@ foreach (var ask in orderBook.Asks)
 
 ## Búsqueda de volúmenes en el libro de órdenes
 
-Un algoritmo para buscar volúmenes significativos en el libro de órdenes ayuda a identificar niveles donde se acumulan órdenes grandes. Esto puede indicar el interés de participantes importantes y servir como señal adicional al tomar decisiones de trading.
+Un algoritmo para buscar volúmenes significativos en el libro de órdenes ayuda a identificar niveles donde se acumulan órdenes grandes. Esto puede indicar el interés de participantes importantes y servir como señal adicional al tomar decisiones de negociación.
 
 Algoritmo:
 

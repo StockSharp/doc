@@ -1,8 +1,8 @@
-# Estratégia de Pairs Trading
+# Estratégia de Negociação de Pares
 
 ## Visão Geral
 
-`PairsTradingStrategy` é uma estratégia de pairs trading baseada em arbitragem estatística entre dois instrumentos relacionados. Acompanha o spread entre os preços de dois ativos e abre posições quando o spread se desvia significativamente da média, esperando uma reversão para a média.
+`PairsTradingStrategy` é uma estratégia de negociação de pares baseada em arbitragem estatística entre dois instrumentos relacionados. Acompanha o spread entre os preços de dois ativos e abre posições quando o spread se desvia significativamente da média, esperando uma reversão para a média.
 
 ## Componentes Principais
 
@@ -42,7 +42,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Obter dois instrumentos para pairs trading
+	// Obter dois instrumentos para negociação de pares
 	var securities = GetWorkingSecurities().ToArray();
 	if (securities.Length < 2)
 		throw new InvalidOperationException("Dois instrumentos devem ser especificados.");

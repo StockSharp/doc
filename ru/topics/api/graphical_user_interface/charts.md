@@ -69,6 +69,6 @@
 
 [График эквити](charts/equity_curve_chart.md)
 
-[Графики box chart](charts/box_chart.md)
+[Box-график](charts/box_chart.md)
 
 [Кластеры](charts/cluster_chart.md)

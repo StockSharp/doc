@@ -1,8 +1,8 @@
 # Paradex
 
-**Paradex** - exchange de criptomonedas (DEX).
+**Paradex** - bolsa de criptomonedas (DEX).
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md).
 
 ## Contenido recomendado
 

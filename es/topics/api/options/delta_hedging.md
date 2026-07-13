@@ -1,10 +1,10 @@
 # Cobertura delta
 
-Si desea proteger posiciones mediante estrategias con opciones (por ejemplo, como [Trading de volatilidad](volatility_trading.md)), puede usar la estrategia de cobertura por delta [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy). 
+Si desea proteger posiciones mediante estrategias con opciones (por ejemplo, como [Negociación de volatilidad](volatility_trading.md)), puede usar la estrategia de cobertura por delta [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy).
 
 ## Cobertura delta
 
-1. Como demostración de cómo funciona [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy), se modifica el ejemplo SampleOptionQuoting (para más detalles, véase [Trading de volatilidad](volatility_trading.md)).
+1. Como demostración de cómo funciona [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy), se modifica el ejemplo SampleOptionQuoting (para más detalles, véase [Negociación de volatilidad](volatility_trading.md)).
 2. La estrategia [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) no se inicia, sino que se pasa como estrategia hija a [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy).
 
    ```cs
@@ -31,9 +31,9 @@ Si desea proteger posiciones mediante estrategias con opciones (por ejemplo, com
    hedge.Start();
    ```
 
-   [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) toma como estrategias hijas las estrategias que trabajan por separado en su strike. Así, [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) controla la posición total de todas las estrategias hijas de opciones. 
+   [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) toma como estrategias hijas las estrategias que trabajan por separado en su strike. Así, [DeltaHedgeStrategy](xref:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy) controla la posición total de todas las estrategias hijas de opciones.
 
-3. Finalización de la cobertura delta: 
+3. Finalización de la cobertura delta:
 
    ```none
    hedge.Stop();

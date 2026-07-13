@@ -46,14 +46,14 @@ McGinley-Dynamik kann ähnlich wie andere gleitende Durchschnitte interpretiert 
    - Eine steile MGD-Steigung weist auf einen starken Trend hin
 
 2. **Kreuzungen mit dem Preis**:
-   - Price, das MGD von unten nach oben kreuzt, kann als bullisches Signal angesehen werden
-   - Price, das MGD von oben nach unten kreuzt, kann als rückläufiges Signal angesehen werden
+   - Wenn der Preis MGD von unten nach oben kreuzt, kann dies als bullisches Signal angesehen werden
+   - Wenn der Preis MGD von oben nach unten kreuzt, kann dies als rückläufiges Signal angesehen werden
    - Aufgrund seiner adaptiven Natur bilden sich diese Überkreuzungen typischerweise früher als bei herkömmlichen gleitenden Durchschnitten
 
-3. **Mehrere MGD-Frequenzweichen**:
+3. **Mehrere MGD-Kreuzungen**:
    - Es können mehrere MGDs mit unterschiedlichen Perioden verwendet werden (z. B. MGD(14) und MGD(30))
    - Der kurze MGD, der den langen MGD von unten nach oben kreuzt, kann als Bestätigung des Aufwärtstrends angesehen werden
-   - Short MGD, das Long MGD von oben nach unten kreuzt, kann als Bestätigung des Abwärtstrends angesehen werden
+   - Der kurze MGD, der den langen MGD von oben nach unten kreuzt, kann als Bestätigung des Abwärtstrends angesehen werden
 
 4. **Unterstützungs- und Widerstandsstufen**:
    - MGD dient oft als dynamisches Unterstützungsniveau in einem Aufwärtstrend

@@ -13,7 +13,7 @@ HVR se calcula como la relación entre la volatilidad histórica a corto plazo y
 El indicador es particularmente útil para:
 - Identificar períodos de alta y baja volatilidad
 - Determinación de posibles puntos de inversión de tendencia
-- Adaptar las estrategias de trading a las condiciones actuales del mercado.
+- Adaptar las estrategias de negociación a las condiciones actuales del mercado.
 - Evaluar el riesgo de mercado y establecer tamaños de posición adecuados
 
 ## Parámetros
@@ -28,12 +28,12 @@ El cálculo de ratio de volatilidad histórica implica los siguientes pasos:
 
 1. Calcule la volatilidad histórica a corto plazo:
    ```
-   Volatilidad a corto plazo = Desviación estándar de los rendimientos logarítmicos durante ShortPeriod * Sqrt(Días de trading por año)
+   Volatilidad a corto plazo = Desviación estándar de los rendimientos logarítmicos durante ShortPeriod * Sqrt(Días de negociación por año)
    ```
 
 2. Calcule la volatilidad histórica a largo plazo:
    ```
-   Volatilidad a largo plazo = Desviación estándar de los rendimientos logarítmicos durante LongPeriod * Sqrt(Días de trading por año)
+   Volatilidad a largo plazo = Desviación estándar de los rendimientos logarítmicos durante LongPeriod * Sqrt(Días de negociación por año)
    ```
 
 3. Calcule HVR como la relación entre la volatilidad a corto plazo y la volatilidad a largo plazo:
@@ -65,13 +65,13 @@ El ratio de volatilidad histórica se puede interpretar de la siguiente manera:
    - El aumento de HVR indica un aumento en la volatilidad actual
    - La caída de HVR indica una disminución en la volatilidad actual
 
-4. **Estrategias de trading**:
+4. **Estrategias de negociación**:
    - Cuando HVR es alto, puede ser apropiado utilizar estrategias basadas en rupturas
-   - Cuando HVR es bajo, las estrategias de trading de reversión a la media o de rango pueden ser más adecuadas
+   - Cuando HVR es bajo, las estrategias de negociación de reversión a la media o de rango pueden ser más adecuadas
 
 5. **Gestión del riesgo**:
-   - Los valores High HVR pueden indicar la necesidad de reducir el tamaño de las posiciones debido al aumento de la volatilidad
-   - Los valores Low HVR pueden permitir mayores tamaños de posición debido a la reducción de la volatilidad
+   - Los valores altos de HVR pueden indicar la necesidad de reducir el tamaño de las posiciones debido al aumento de la volatilidad
+   - Los valores bajos de HVR pueden permitir mayores tamaños de posición debido a la reducción de la volatilidad
 
 6. **Reversiones potenciales**:
    - Los valores extremos de HVR a menudo preceden a movimientos de precios significativos

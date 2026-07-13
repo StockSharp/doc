@@ -1,6 +1,6 @@
 # Volume Intradiário
 
-O script "Volume intradiário" é uma ferramenta para analisar a distribuição do volume de negociação dos instrumentos por hora dentro de uma única sessão de negociação. Concebido para utilização na plataforma StockSharp, destina-se a traders e analistas quantitativos que procuram um estudo aprofundado do comportamento do mercado e a otimização de estratégias de negociação.
+O script "Volume intradiário" é uma ferramenta para analisar a distribuição do volume de negociação dos instrumentos por hora dentro de uma única sessão de negociação. Concebido para utilização na plataforma StockSharp, destina-se a operadores e analistas quantitativos que procuram um estudo aprofundado do comportamento do mercado e a otimização de estratégias de negociação.
 
 ![Volume Intradiário](../../../../images/hydra_analytics_intraday_volume.png)
 
@@ -24,7 +24,7 @@ O script "Volume intradiário" pode ser integrado num sistema mais amplo de aná
 - **Adaptação da Estratégia**: Ajustar parâmetros de algoritmos de negociação de acordo com os níveis de atividade do mercado.
 - **Avaliação de Risco**: Calcular a probabilidade de movimentos significativos de preço consoante a hora do dia.
 
-A utilização do script "Volume intradiário" na plataforma de negociação StockSharp permite que traders e analistas baseiem as suas decisões em dados específicos relativos à atividade do mercado e adaptem as suas estratégias para corresponder de forma ótima às condições atuais de negociação.
+A utilização do script "Volume intradiário" na plataforma de negociação StockSharp permite que operadores e analistas baseiem as suas decisões em dados específicos relativos à atividade do mercado e adaptem as suas estratégias para corresponder de forma ótima às condições atuais de negociação.
 
 ## Código do Script em C#
 
@@ -47,7 +47,7 @@ namespace StockSharp.Algo.Analytics
 			// o script pode processar apenas 1 instrumento
 			var security = securities.First();
 
-			// obter o armazenamento de candles
+			// obter o armazenamento de velas
 			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 			// obter datas disponíveis para o período especificado
@@ -59,7 +59,7 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// agrupar candles pela hora de abertura (apenas a parte da hora) com truncagem de 1 hora
+			// agrupar velas pela hora de abertura (apenas a parte da hora) com truncagem de 1 hora
 			var rows = candleStorage.Load(from, to)
 				.GroupBy(c => c.OpenTime.TimeOfDay.Truncate(TimeSpan.FromHours(1)))
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
@@ -128,7 +128,7 @@ class time_volume_script(IAnalyticsScript):
 
 		message_type = data_type.MessageType
 
-		# Obter o armazenamento de candles
+		# Obter o armazenamento de velas
 		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 		# Obter datas disponíveis para o período especificado
@@ -138,7 +138,7 @@ class time_volume_script(IAnalyticsScript):
 			logs.LogWarning("Sem dados.")
 			return Task.CompletedTask
 
-		# Agrupar candles pela hora de abertura (truncagem horária) e somar os seus volumes
+		# Agrupar velas pela hora de abertura (truncagem horária) e somar os seus volumes
 		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows = {}
 		for candle in candles:

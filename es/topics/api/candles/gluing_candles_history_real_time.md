@@ -1,6 +1,6 @@
 # Combinación de velas: historial + tiempo real
 
-Para combinar velas históricas con datos en tiempo real, es necesario inicializar los almacenamientos correspondientes: almacenamiento para objetos de trading [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), almacenamiento para datos de mercado [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) y el registro de almacenamiento de instantáneas [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
+Para combinar velas históricas con datos en tiempo real, es necesario inicializar los almacenamientos correspondientes: almacenamiento para objetos de negociación [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), almacenamiento para datos de mercado [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) y el registro de almacenamiento de instantáneas [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
 
 El proyecto `Samples/Candles/CombineHistoryRealtime` muestra esta configuración en la práctica:
 
@@ -73,7 +73,7 @@ private void Setting_Click(object sender, RoutedEventArgs e)
 	}
 }
 
-// Método para conectarse al sistema de trading
+// Método para conectarse al sistema de negociación
 private void Connect_Click(object sender, RoutedEventArgs e)
 {
 	// Establecer el conector como fuente de datos para seleccionar instrumentos

@@ -22,13 +22,13 @@ Techo de pinzas se considera una señal de una posible reversión de una tendenc
 - El cuerpo más significativo de la segunda vela en comparación con la primera refuerza la señal bajista.
 - El patrón es particularmente significativo si se forma en un nivel de resistencia importante o después de un movimiento alcista prolongado.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Techo de pinzas requiere un enfoque prudente y a menudo confirmación adicional:
 
 - Esperar una vela bajista de confirmación después de la formación del patrón antes de entrar en una posición corta.
 - Colocar un stop-loss ligeramente por encima del máximo común del patrón.
-- Considerar el volumen de trading: la disminución del volumen en la primera vela y el aumento en la segunda y en velas bajistas posteriores refuerza la señal.
+- Considerar el volumen de negociación: la disminución del volumen en la primera vela y el aumento en la segunda y en velas bajistas posteriores refuerza la señal.
 - Combinar con otros indicadores técnicos, como RSI en zona de sobrecompra o divergencia en osciladores.
 - Posible uso para cierre parcial o completo de posiciones largas existentes.
 - Prestar especial atención a los movimientos de precio posteriores: una rápida caída del precio después del patrón confirma su importancia.

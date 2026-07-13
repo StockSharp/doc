@@ -8,7 +8,7 @@ Eine Schritt-für-Schritt-Anleitung zur Erstellung einer StockSharp-Handelsstrat
 
 Wählen Sie eines der verfügbaren Tools:
 - **Claude Code** — `npm install -g @anthropic-ai/claude-code` (erfordert Node.js)
-- **Cursor** — Download von [cursor.com](https://cursor.com)
+- **Cursor** — von [cursor.com](https://cursor.com) herunterladen
 - **GitHub Copilot** — installieren Sie das Plugin für Ihre IDE
 
 ### 2. Ein Projekt erstellen
@@ -54,7 +54,7 @@ Erstelle eine Handelsstrategie mit StockSharp, die:
 - Positionsgröße: 1 Lot
 - 5-Minuten-Kerzen verwendet
 - Kerzen in OnStarted() abonniert
-- Kerzen über Subscription-Regeln verarbeitet
+- Kerzen über Abonnementregeln verarbeitet
 ```
 
 ### Schritt 2: Den generierten Code überprüfen
@@ -161,8 +161,8 @@ Gehen Sie diese Checkliste durch:
 
 - **Vererbung**: Klasse erbt von `Strategy` ✓
 - **Parameter**: verwendet `StrategyParam<T>` für die Optimierung ✓
-- **Candle-Abonnement**: über `Subscribe(new Subscription(...))` ✓
-- **Candle-Verarbeitung**: über die Regel `WhenCandlesFinished` ✓
+- **Kerzenabonnement**: über `Subscribe(new Subscription(...))` ✓
+- **Kerzenverarbeitung**: über die Regel `WhenCandlesFinished` ✓
 - **IsFormed-Prüfung**: Indikatoren werden auf Bereitschaft geprüft ✓
 - **Aufträge**: über `RegisterOrder()` mit `BuyAtMarket` / `SellAtMarket` ✓
 - **Position**: `Position` wird vor dem Platzieren von Aufträgen geprüft ✓
@@ -214,7 +214,7 @@ Erstelle eine Scalping-Strategie mit StockSharp:
 
 ## Häufige Fehler der KI
 
-### 1. Veraltete Events
+### 1. Veraltete Ereignisse
 
 **Falsch** (alte API):
 ```csharp

@@ -1,6 +1,6 @@
 # S# の例
 
-StockSharp API ライブラリの使用例は、GitHub リポジトリの次のパスにあります: [StockSharp Samples](https://github.com/StockSharp/StockSharp/tree/master/Samples/)。
+StockSharp API ライブラリの使用例は、GitHub リポジトリの次のパスにあります: [StockSharp のサンプル](https://github.com/StockSharp/StockSharp/tree/master/Samples/)。
 
 これらの例は、StockSharp API ライブラリのさまざまな機能について、すぐに使えるソリューションとデモを提供します。プラットフォームの使用に素早く慣れるために役立つコード例を見つけることができます。
 

@@ -37,7 +37,7 @@ ISubscriptionHandler<ICandleMessage> SubscribeCandles(Subscription subscription)
 
 `isFinishedOnly` 参数默认值为 `true` -- 处理程序只接收完成的K线。
 
-### 订阅Ticks
+### 订阅逐笔成交
 
 订阅逐笔交易：
 

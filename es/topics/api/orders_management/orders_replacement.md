@@ -1,6 +1,6 @@
 # Reemplazo de órdenes
 
-El reemplazo de órdenes al crear algoritmos de trading es un método más avanzado que cancelarlas y registrarlas de nuevo. Para reemplazar la orden debe llamar al método [Connector.ReRegisterOrder](xref:StockSharp.Algo.Connector.ReRegisterOrder(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) oldOrder, [StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) newOrder **)**.
+El reemplazo de órdenes al crear algoritmos de negociación es un método más avanzado que cancelarlas y registrarlas de nuevo. Para reemplazar la orden debe llamar al método [Connector.ReRegisterOrder](xref:StockSharp.Algo.Connector.ReRegisterOrder(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) oldOrder, [StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) newOrder **)**.
 
 Como resultado del reemplazo de una orden se crea un nuevo objeto [Order](xref:StockSharp.BusinessEntities.Order), que contiene la información de la orden antigua más la parte modificada. Posteriormente, si desea trabajar con la orden modificada (por ejemplo, cancelarla o cambiarla de nuevo), debe usar este nuevo objeto [Order](xref:StockSharp.BusinessEntities.Order).
 

@@ -11,8 +11,8 @@ Lista de componentes disponíveis com código-fonte:
 - Simulador de negociação.
 - Simulador histórico.
 - Indicadores (mais de 70) de análise técnica.
-- Algoritmos para calcular lucro-prejuízo, slippage e atraso.
-- Algoritmos para construir candles de qualquer período, bem como candles não baseados no tempo (tick, range, etc.).
+- Algoritmos para calcular lucro/prejuízo, deslizamento e atraso.
+- Algoritmos para construir velas de qualquer período, bem como velas não baseados no tempo (tick, range, etc.).
 - Registo.
 - Importação e exportação.
 

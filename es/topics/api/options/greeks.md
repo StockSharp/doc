@@ -1,6 +1,6 @@
 # Griegas
 
-La fórmula del [modelo Black–Scholes](https://en.wikipedia.org/wiki/Black–Scholes_model) está implementada en [S#](../../api.md) para calcular las “griegas” básicas: delta, gamma, vega, theta y rho. Las estrategias de [Trading de volatilidad](volatility_trading.md) y [Cobertura delta](delta_hedging.md) se implementan sobre la base de esta fórmula. Además, [S#](../../api.md) permite calcular la prima de la opción y la [IV](https://en.wikipedia.org/wiki/Implied_volatility). 
+La fórmula del [modelo Black–Scholes](https://en.wikipedia.org/wiki/Black–Scholes_model) está implementada en [S#](../../api.md) para calcular las “griegas” básicas: delta, gamma, vega, theta y rho. Las estrategias de [Negociación de volatilidad](volatility_trading.md) y [Cobertura delta](delta_hedging.md) se implementan sobre la base de esta fórmula. Además, [S#](../../api.md) permite calcular la prima de la opción y la [IV](https://en.wikipedia.org/wiki/Implied_volatility).
 
 El siguiente código muestra los métodos de la clase [BlackScholes](xref:StockSharp.Algo.Derivatives.BlackScholes) para calcular las “griegas”.
 

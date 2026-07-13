@@ -17,7 +17,7 @@ ZLEMA se puede utilizar para:
 - Determinar la dirección de la tendencia
 - Encontrar puntos de entrada y salida
 - Identificar niveles de soporte y resistencia.
-- Creación de sistemas de trading basados en cruces.
+- Creación de sistemas de negociación basados en cruces.
 
 ## Parámetros
 

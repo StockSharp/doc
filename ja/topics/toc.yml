@@ -74,9 +74,9 @@
       href: designer/user_interface/ribbon.md
     - name: ワークスペース
       href: designer/user_interface/workspace.md
-    - name: Schemes パネル
+    - name: スキームパネル
       href: designer/user_interface/schemas.md
-    - name: Logs パネル
+    - name: ログパネル
       href: designer/user_interface/logs.md
     - name: ポートフォリオ
       href: designer/user_interface/portfolios.md
@@ -105,7 +105,7 @@
         href: designer/user_interface/components/pnl_equity.md
       - name: バックテスト設定
         href: designer/user_interface/components/backtesting_settings.md
-      - name: Live 設定
+      - name: ライブ設定
         href: designer/user_interface/components/live_settings.md
       - name: ティック約定
         href: designer/user_interface/components/tick_trades.md
@@ -360,7 +360,7 @@
       href: designer/live_execution/user_interface.md
     - name: ストラテジーダッシュボード
       href: designer/live_execution/strategies_dashboard.md
-    - name: Live 実行の例
+    - name: ライブ実行の例
       href: designer/live_execution/live_execution_sample.md
     - name: Designer の外部でストラテジーを実行する
       href: designer/live_execution/running_strategies_outside_of_designer.md
@@ -1653,7 +1653,7 @@
       href: api/market_data_storage/drives.md
     - name: スナップショットシステム
       href: api/market_data_storage/snapshots.md
-  - name: キャンドル
+  - name: ローソク足
     href: api/candles.md
     items:
     - name: チャート
@@ -1702,11 +1702,11 @@
         href: api/indicators/list_of_indicators/balance_of_power.md
       - name: BV
         href: api/indicators/list_of_indicators/balance_volume.md
-      - name: Bear Power
+      - name: ベアパワー
         href: api/indicators/list_of_indicators/bear_power.md
-      - name: Bull Power
+      - name: ブルパワー
         href: api/indicators/list_of_indicators/bull_power.md
-      - name: Bollinger Bands
+      - name: ボリンジャーバンド
         href: api/indicators/list_of_indicators/bollinger_bands.md
       - name: BBP
         href: api/indicators/list_of_indicators/bollinger_percent_b.md
@@ -1754,15 +1754,15 @@
         href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
       - name: EIS
         href: api/indicators/list_of_indicators/elder_impulse_system.md
-      - name: Elder's Force Index
+      - name: エルダー・フォース指数
         href: api/indicators/list_of_indicators/elder_force_index.md
       - name: EWO
         href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
       - name: EPMA
         href: api/indicators/list_of_indicators/endpoint_moving_average.md
-      - name: Envelope
+      - name: エンベロープ
         href: api/indicators/list_of_indicators/envelope.md
-      - name: Elder Ray
+      - name: エルダー・レイ
         href: api/indicators/list_of_indicators/elder_ray.md
       - name: EMA
         href: api/indicators/list_of_indicators/ema.md
@@ -1776,11 +1776,11 @@
         href: api/indicators/list_of_indicators/forecast_oscillator.md
       - name: FRAMA
         href: api/indicators/list_of_indicators/fractal_adaptive_moving_average.md
-      - name: Fractals
+      - name: フラクタル
         href: api/indicators/list_of_indicators/fractals.md
       - name: FDI
         href: api/indicators/list_of_indicators/fractal_dimension.md
-      - name: Gator Oscillator
+      - name: ゲーターオシレーター
         href: api/indicators/list_of_indicators/gator_oscillator.md
       - name: GAPO
         href: api/indicators/list_of_indicators/gopalakrishnan_range_index.md
@@ -1788,7 +1788,7 @@
         href: api/indicators/list_of_indicators/guppy_multiple_moving_average.md
       - name: HO
         href: api/indicators/list_of_indicators/harmonic_oscillator.md
-      - name: Highest
+      - name: 最大値
         href: api/indicators/list_of_indicators/highest.md
       - name: HLI
         href: api/indicators/list_of_indicators/high_low_index.md
@@ -1824,17 +1824,17 @@
         href: api/indicators/list_of_indicators/laguerre_rsi.md
       - name: LRC
         href: api/indicators/list_of_indicators/lrc.md
-      - name: Linear Regression Slope
+      - name: 線形回帰傾き
         href: api/indicators/list_of_indicators/lrs.md
-      - name: Linear Regression Forecast
+      - name: 線形回帰予測
         href: api/indicators/list_of_indicators/linear_regression_forecast.md
       - name: R二乗
         href: api/indicators/list_of_indicators/linear_reg_rsquared.md
-      - name: Lowest
+      - name: 最小値
         href: api/indicators/list_of_indicators/lowest.md
       - name: LP
         href: api/indicators/list_of_indicators/lunar_phase.md
-      - name: Market Facilitation Index
+      - name: 市場促進指数
         href: api/indicators/list_of_indicators/market_facilitation_index.md
       - name: MMI
         href: api/indicators/list_of_indicators/market_meanness_index.md
@@ -1844,19 +1844,19 @@
         href: api/indicators/list_of_indicators/mcclellan_oscillator.md
       - name: MGD
         href: api/indicators/list_of_indicators/mcginley_dynamic.md
-      - name: Mean Deviation
+      - name: 平均偏差
         href: api/indicators/list_of_indicators/mean_deviation.md
-      - name: Moving Median
+      - name: 移動中央値
         href: api/indicators/list_of_indicators/median.md
       - name: 中央値価格
         href: api/indicators/list_of_indicators/median_price.md
-      - name: Momentum
+      - name: モメンタム
         href: api/indicators/list_of_indicators/momentum.md
       - name: MOMA
         href: api/indicators/list_of_indicators/momentum_of_moving_average.md
       - name: MP
         href: api/indicators/list_of_indicators/momentum_pinball.md
-      - name: Money Flow Index
+      - name: マネーフロー指数
         href: api/indicators/list_of_indicators/money_flow_index.md
       - name: MACD
         href: api/indicators/list_of_indicators/macd.md
@@ -1878,15 +1878,15 @@
         href: api/indicators/list_of_indicators/on_balance_volume.md
       - name: OBVM
         href: api/indicators/list_of_indicators/on_balance_volume_mean.md
-      - name: Optimal Tracking
+      - name: 最適追跡
         href: api/indicators/list_of_indicators/optimal_tracking.md
       - name: OMA
         href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
-      - name: Parabolic SAR
+      - name: パラボリック SAR
         href: api/indicators/list_of_indicators/parabolic_sar.md
-      - name: Pass-Through
+      - name: パススルー
         href: api/indicators/list_of_indicators/pass_through.md
-      - name: Peak
+      - name: ピーク
         href: api/indicators/list_of_indicators/peak.md
       - name: PPO
         href: api/indicators/list_of_indicators/percentage_price_oscillator.md
@@ -1898,7 +1898,7 @@
         href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
       - name: PP
         href: api/indicators/list_of_indicators/pivot_points.md
-      - name: Price Channels
+      - name: 価格チャネル
         href: api/indicators/list_of_indicators/price_channels.md
       - name: PVT
         href: api/indicators/list_of_indicators/price_volume_trend.md
@@ -1912,7 +1912,7 @@
         href: api/indicators/list_of_indicators/rainbow_charts.md
       - name: RAVI
         href: api/indicators/list_of_indicators/ravi.md
-      - name: Rank Correlation Index
+      - name: 順位相関指数
         href: api/indicators/list_of_indicators/rank_correlation_index.md
       - name: RoC
         href: api/indicators/list_of_indicators/roc.md
@@ -1924,7 +1924,7 @@
         href: api/indicators/list_of_indicators/rvi.md
       - name: STC
         href: api/indicators/list_of_indicators/schaff_trend_cycle.md
-      - name: Shift
+      - name: シフト
         href: api/indicators/list_of_indicators/shift.md
       - name: SuperTrend
         href: api/indicators/list_of_indicators/supertrend.md
@@ -1932,17 +1932,17 @@
         href: api/indicators/list_of_indicators/sma.md
       - name: SW
         href: api/indicators/list_of_indicators/sine_wave.md
-      - name: Smoothed MA
+      - name: 平滑移動平均
         href: api/indicators/list_of_indicators/smoothed_ma.md
-      - name: Standard Deviation
+      - name: 標準偏差
         href: api/indicators/list_of_indicators/standard_deviation.md
-      - name: Standard Error
+      - name: 標準誤差
         href: api/indicators/list_of_indicators/standard_error.md
       - name: ストキャスティクス・オシレーター %K
         href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
-      - name: Stochastic Oscillator
+      - name: ストキャスティクスオシレーター
         href: api/indicators/list_of_indicators/stochastic_oscillator.md
-      - name: Sum N
+      - name: 合計 N
         href: api/indicators/list_of_indicators/sum_n.md
       - name: T3MA
         href: api/indicators/list_of_indicators/t3_moving_average.md
@@ -1954,11 +1954,11 @@
         href: api/indicators/list_of_indicators/tema.md
       - name: TRIX
         href: api/indicators/list_of_indicators/trix.md
-      - name: Trough
+      - name: 谷
         href: api/indicators/list_of_indicators/trough.md
-      - name: True Range
+      - name: 真の値幅
         href: api/indicators/list_of_indicators/true_range.md
-      - name: True Strength Index
+      - name: 真の強さ指数
         href: api/indicators/list_of_indicators/true_strength_index.md
       - name: TMF
         href: api/indicators/list_of_indicators/twiggs_money_flow.md
@@ -1968,9 +1968,9 @@
         href: api/indicators/list_of_indicators/vhf.md
       - name: VIDYA
         href: api/indicators/list_of_indicators/vidya.md
-      - name: Variable MA
+      - name: 可変移動平均
         href: api/indicators/list_of_indicators/variable_moving_average.md
-      - name: Volume
+      - name: 出来高
         href: api/indicators/list_of_indicators/volume.md
       - name: 出来高プロファイル
         href: api/indicators/list_of_indicators/volume_profile.md
@@ -1984,9 +1984,9 @@
         href: api/indicators/list_of_indicators/wave_trend_oscillator.md
       - name: 加重終値
         href: api/indicators/list_of_indicators/weighted_close_price.md
-      - name: Weighted MA
+      - name: 加重移動平均
         href: api/indicators/list_of_indicators/weighted_ma.md
-      - name: Wilder MA
+      - name: ワイルダー移動平均
         href: api/indicators/list_of_indicators/wilder_ma.md
       - name: WAD
         href: api/indicators/list_of_indicators/williams_accumulation_distribution.md
@@ -2007,67 +2007,67 @@
   - name: パターン
     href: api/patterns.md
     items:
-    - name: 3 Outside Down と 3 Outside Up パターン
+    - name: スリーアウトサイドダウン と スリーアウトサイドアップ パターン
       href: api/patterns/3_outside_down_3_outside_up.md
-    - name: 3 Inside Down と 3 Inside Up パターン
+    - name: スリーインサイドダウン と スリーインサイドアップ パターン
       href: api/patterns/3_inside_down_3_side_up.md
-    - name: 3 Black Crows と 3 White Soldiers パターン
+    - name: 三羽烏 と 三兵 パターン
       href: api/patterns/3_black_crows_3_white_soldiers.md
-    - name: Three White Soldiers パターン
+    - name: 三兵 パターン
       href: api/patterns/three_white_soldiers.md
-    - name: Three Black Crows パターン
+    - name: 三羽烏 パターン
       href: api/patterns/three_black_crows.md
-    - name: On-Neck パターン
+    - name: 入り首線 パターン
       href: api/patterns/on_neck.md
-    - name: Piercing パターン
+    - name: 切り込み線 パターン
       href: api/patterns/piercing.md
-    - name: Bearish Candle パターン
+    - name: 弱気ローソク足 パターン
       href: api/patterns/bearish.md
-    - name: Bearish Engulfing パターン
+    - name: 弱気包み線 パターン
       href: api/patterns/bearish_engulfing.md
-    - name: Bearish Harami パターン
+    - name: 弱気はらみ線 パターン
       href: api/patterns/bearish_harami.md
-    - name: Black Candle パターン
+    - name: 黒いローソク足 パターン
       href: api/patterns/black_candle.md
-    - name: Black Marubozu パターン
+    - name: 黒丸坊主 パターン
       href: api/patterns/black_marubozu.md
-    - name: Bullish Candle パターン
+    - name: 強気ローソク足 パターン
       href: api/patterns/bullish.md
-    - name: Bullish Engulfing パターン
+    - name: 強気包み線 パターン
       href: api/patterns/bullish_engulfing.md
-    - name: Bullish Harami パターン
+    - name: 強気はらみ線 パターン
       href: api/patterns/bullish_harami.md
-    - name: Dragonfly パターン
+    - name: トンボ パターン
       href: api/patterns/dragonfly.md
-    - name: Evening Star パターン
+    - name: 宵の明星 パターン
       href: api/patterns/evening_star.md
-    - name: Falling Three Methods パターン
+    - name: 下落三法 パターン
       href: api/patterns/falling_three_methods.md
-    - name: Flat（中立）Candle パターン
+    - name: フラット（中立）ローソク足パターン
       href: api/patterns/flat_candle.md
-    - name: Gravestone パターン
+    - name: 墓石 パターン
       href: api/patterns/gravestone.md
-    - name: Hammer パターン
+    - name: ハンマー パターン
       href: api/patterns/hammer.md
-    - name: Hanging Man パターン
+    - name: 首吊り線 パターン
       href: api/patterns/hanging_man.md
-    - name: Inverted Hammer パターン
+    - name: 逆ハンマー パターン
       href: api/patterns/inverted_hammer.md
-    - name: Morning Star パターン
+    - name: 明けの明星 パターン
       href: api/patterns/morning_star.md
-    - name: Rising Three Methods パターン
+    - name: 上昇三法 パターン
       href: api/patterns/rising_three_methods.md
-    - name: Shooting Star パターン
+    - name: 流れ星 パターン
       href: api/patterns/shooting_star.md
-    - name: Spinning Top パターン
+    - name: コマ足 パターン
       href: api/patterns/spinning_top.md
-    - name: Tweezer Bottom パターン
+    - name: 毛抜き底 パターン
       href: api/patterns/tweezer_bottom.md
-    - name: Tweezer Top パターン
+    - name: 毛抜き天井 パターン
       href: api/patterns/tweezer_top.md
-    - name: White Candle パターン
+    - name: 白いローソク足 パターン
       href: api/patterns/white_candle.md
-    - name: White Marubozu パターン
+    - name: 白丸坊主 パターン
       href: api/patterns/white_marubozu.md
     - name: 複合ローソク足パターン
       href: api/patterns/complex_patterns.md
@@ -2331,7 +2331,7 @@
         href: api/graphical_user_interface/trading/new_stop_order_creation.md
       - name: 利用可能なマーケットデータのテーブル
         href: api/graphical_user_interface/trading/table_of_available_market_data.md
-      - name: Buy\/Sell パネル
+      - name: 売買パネル
         href: api/graphical_user_interface/trading/buy_sell_panel.md
     - name: ストラテジー
       href: api/graphical_user_interface/strategies.md

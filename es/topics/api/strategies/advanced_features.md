@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-La clase `Strategy` proporciona varias propiedades adicionales para ajustar el comportamiento: comentario automático de órdenes, horario de trading, tasa libre de riesgo para estadísticas, fuente de datos para indicadores y gestión del periodo histórico.
+La clase `Strategy` proporciona varias propiedades adicionales para ajustar el comportamiento: comentario automático de órdenes, horario de negociación, tasa libre de riesgo para estadísticas, fuente de datos para indicadores y gestión del periodo histórico.
 
 ## CommentMode -- comentarios de órdenes
 
@@ -183,7 +183,7 @@ public class AdvancedStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Lógica de trading...
+        // Lógica de negociación...
     }
 }
 ```

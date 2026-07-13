@@ -2,7 +2,7 @@
 
 ## Introducción
 
-StockSharp proporciona una infraestructura potente para crear, probar y ejecutar estrategias de trading. La base para desarrollar estrategias de trading algorítmico es la clase base [Strategy](xref:StockSharp.Algo.Strategies.Strategy), que proporciona un conjunto de funciones y abstracciones estándar para trabajar con datos de mercado, ejecutar operaciones de trading y analizar resultados.
+StockSharp proporciona una infraestructura potente para crear, probar y ejecutar estrategias de negociación. La base para desarrollar estrategias de negociación algorítmica es la clase base [Strategy](xref:StockSharp.Algo.Strategies.Strategy), que proporciona un conjunto de funciones y abstracciones estándar para trabajar con datos de mercado, ejecutar operaciones de negociación y analizar resultados.
 
 ## Navegación
 
@@ -10,9 +10,9 @@ StockSharp proporciona una infraestructura potente para crear, probar y ejecutar
 
 - [Suscripciones a datos de mercado en estrategias](strategies/subscriptions.md) - Guía detallada sobre el uso de suscripciones a datos de mercado en estrategias. Explica cómo crear y configurar suscripciones, gestionar su ciclo de vida y supervisar su estado.
 
-- [Indicadores en estrategias](strategies/indicators.md) - Información sobre el trabajo con indicadores de análisis técnico en estrategias. Cubre la adición de indicadores a una estrategia, el control de su formación y su uso en la lógica de trading.
+- [Indicadores en estrategias](strategies/indicators.md) - Información sobre el trabajo con indicadores de análisis técnico en estrategias. Cubre la adición de indicadores a una estrategia, el control de su formación y su uso en la lógica de negociación.
 
-- [Operaciones de trading en estrategias](strategies/trading_operations.md) - Guía para realizar operaciones de trading en estrategias. Describe métodos para crear y enviar órdenes, cerrar posiciones y supervisar su estado.
+- [Operaciones de negociación en estrategias](strategies/trading_operations.md) - Guía para realizar operaciones de negociación en estrategias. Describe métodos para crear y enviar órdenes, cerrar posiciones y supervisar su estado.
 
 - [Protección de posiciones](strategies/take_profit_and_stop_loss.md) - Descripción de los mecanismos para proteger posiciones abiertas mediante Take Profit y Stop Loss. Examina los enfoques local y de servidor para la protección de posiciones.
 
@@ -24,13 +24,13 @@ StockSharp proporciona una infraestructura potente para crear, probar y ejecutar
 
 - [Compatibilidad de estrategias con plataformas](strategies/compatibility.md) - Recomendaciones para crear estrategias compatibles con distintas plataformas StockSharp: [Designer](../designer.md), [Shell](../shell.md), [Runner](../runner.md) y pruebas en la nube.
 
-- [APIs de alto nivel en estrategias](strategies/high_level_api.md) - Descripción de métodos de alto nivel para simplificar el trabajo con suscripciones, indicadores, gráficos y protección de posiciones. Explica cómo escribir código más limpio centrándose en la lógica de trading.
+- [APIs de alto nivel en estrategias](strategies/high_level_api.md) - Descripción de métodos de alto nivel para simplificar el trabajo con suscripciones, indicadores, gráficos y protección de posiciones. Explica cómo escribir código más limpio centrándose en la lógica de negociación.
 
 - [Trabajo con gráficos en estrategias](strategies/chart.md) - Guía para visualizar datos de estrategia en un gráfico. Explica cómo acceder al gráfico, crear áreas, agregar elementos y renderizar datos.
 
 - [Guardado y carga de ajustes](strategies/settings_saving_and_loading.md) - Descripción del mecanismo para guardar y cargar ajustes de estrategia mediante los métodos [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.Serialization.SettingsStorage)) y [Strategy.Load](xref:StockSharp.Algo.Strategies.Strategy.Load(Ecng.Serialization.SettingsStorage)).
 
-- [Carga de estado](strategies/orders_and_trades_loading.md) - Guía para cargar órdenes y operaciones ejecutadas previamente en una estrategia, por ejemplo, al reiniciar una estrategia durante una sesión de trading.
+- [Carga de estado](strategies/orders_and_trades_loading.md) - Guía para cargar órdenes y operaciones ejecutadas previamente en una estrategia, por ejemplo, al reiniciar una estrategia durante una sesión de negociación.
 
 - [Redondeo de precios](strategies/shrink_price.md) - Guía para redondear correctamente precios en estrategias mediante el método [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)).
 
@@ -48,7 +48,7 @@ Para empezar a desarrollar su propia estrategia, se recomienda:
 
 3. Revisar la sección [Indicadores en estrategias](strategies/indicators.md) para comprender el trabajo con indicadores de análisis técnico.
 
-4. Explorar la sección [Operaciones de trading en estrategias](strategies/trading_operations.md) para comprender los mecanismos de operaciones de trading.
+4. Explorar la sección [Operaciones de negociación en estrategias](strategies/trading_operations.md) para comprender los mecanismos de operaciones de negociación.
 
 5. Examinar la sección [Parámetros de estrategia](strategies/parameters.md) para aprender sobre los mecanismos de configuración de estrategias.
 

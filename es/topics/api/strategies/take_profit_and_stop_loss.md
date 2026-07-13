@@ -104,11 +104,11 @@ private void ActiveProtection((bool isTake, Sides side, decimal price, decimal v
 
 Este método crea y registra una orden para cerrar la posición según los parámetros devueltos por el controlador protector.
 
-## Comparación con stop orders del lado del servidor
+## Comparación con órdenes stop del lado del servidor
 
-### Ventajas de las stop orders del lado del servidor
+### Ventajas de las órdenes stop del lado del servidor
 
-1. Las stop orders (stop loss y take profit) se envían directamente al broker.
+1. Las órdenes stop (stop loss y take profit) se envían directamente al broker.
 2. El broker supervisa de forma independiente el cumplimiento de las condiciones stop.
 3. Cuando se activa un stop, el broker coloca automáticamente una orden de mercado o límite.
 
@@ -118,21 +118,21 @@ Este método crea y registra una orden para cerrar la posición según los pará
 2. **Confidencialidad**: la información sobre niveles stop no se transmite al broker, lo que puede ser importante en algunos mercados.
 3. **Velocidad de reacción**: reacción potencialmente más rápida ante cambios en las condiciones de mercado.
 4. **Adaptabilidad**: posibilidad de ajustar dinámicamente los niveles de protección según datos de mercado o lógica de estrategia.
-5. **Independencia de la implementación del broker/exchange**: el enfoque local funciona igual independientemente de si el broker o exchange admite todos los tipos necesarios de órdenes protectoras.
+5. **Independencia de la implementación del broker/bolsa**: el enfoque local funciona igual independientemente de si el broker o bolsa admite todos los tipos necesarios de órdenes protectoras.
 6. **Pruebas con datos históricos**: posibilidad de probar completamente la estrategia con protección de posiciones sobre datos históricos, lo que es imposible con stops del lado del servidor.
 
 ### Desventajas del enfoque local
 
-1. **Dependencia de la funcionalidad del terminal de trading**: si el terminal se desconecta, la protección no funcionará.
+1. **Dependencia de la funcionalidad del terminal de negociación**: si el terminal se desconecta, la protección no funcionará.
 2. **Carga del sistema**: requiere cálculos constantes en el lado del cliente.
 3. **Retrasos**: posibles retrasos al colocar una orden después de que se activen las condiciones de protección.
 
-### Desventajas de las stop orders del lado del servidor
+### Desventajas de las órdenes stop del lado del servidor
 
-1. **Dependencia de la implementación del broker/exchange**: no todos los brokers o exchanges admiten todos los tipos de órdenes protectoras, lo que puede limitar la funcionalidad de la estrategia.
+1. **Dependencia de la implementación del broker/bolsa**: no todos los brokers o bolsas admiten todos los tipos de órdenes protectoras, lo que puede limitar la funcionalidad de la estrategia.
 2. **Imposibilidad de realizar pruebas completas con datos históricos**: los stops del lado del servidor no se pueden modelar con precisión al probar con datos históricos, lo que dificulta evaluar la eficacia real de la estrategia.
-3. **Flexibilidad limitada**: normalmente solo están disponibles tipos básicos de stop orders, lo que limita las posibilidades de implementar mecanismos protectores complejos.
+3. **Flexibilidad limitada**: normalmente solo están disponibles tipos básicos de órdenes stop, lo que limita las posibilidades de implementar mecanismos protectores complejos.
 
 ## Conclusión
 
-El uso de un controlador protector local en la estrategia SMA permite una gestión eficaz del riesgo de posiciones abiertas. Este enfoque proporciona flexibilidad al configurar parámetros de protección y una reacción rápida a cambios en la situación del mercado, lo cual es crítico para un trading exitoso.
+El uso de un controlador protector local en la estrategia SMA permite una gestión eficaz del riesgo de posiciones abiertas. Este enfoque proporciona flexibilidad al configurar parámetros de protección y una reacción rápida a cambios en la situación del mercado, lo cual es crítico para una negociación exitosa.

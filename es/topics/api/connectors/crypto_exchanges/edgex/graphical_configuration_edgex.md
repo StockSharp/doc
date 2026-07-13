@@ -8,7 +8,7 @@ Campos principales:
 - **secreto** - secreto API.
 - **cuenta de compensación** - valor de la cuenta de compensación.
 - **frase de acceso** - valor de la frase de acceso.
-- **Sección** - sección de trading (`Spot` o `Derivatives`).
+- **Sección** - sección de negociación (`Spot` o `Derivatives`).
 - **Habilitar spot** - habilita la sección spot.
 - **Demostración** - modo de entorno demo.
 - **Spot REST / Derivatives REST** - endpoints REST.

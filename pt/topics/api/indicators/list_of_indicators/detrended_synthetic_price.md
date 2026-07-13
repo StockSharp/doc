@@ -1,20 +1,20 @@
 # DSP
 
-**preço sintético sem tendência (DSP)** é um indicador técnico que remove a tendência geral de uma série de preços, permitindo que os traders se concentrem nas flutuações de preço de curto prazo.
+**preço sintético sem tendência (DSP)** é um indicador técnico que remove a tendência geral de uma série de preços, permitindo que os operadores se concentrem nas flutuações de preço de curto prazo.
 
 Para usar o indicador, deve ser usada a classe [DetrendedSyntheticPrice](xref:StockSharp.Algo.Indicators.DetrendedSyntheticPrice).
 
 ## Descrição
 
-O indicador DSP foi desenvolvido para eliminar a tendência de longo prazo de um gráfico de preços, permitindo aos traders ver com maior clareza ciclos e oscilações de curto prazo. É particularmente útil para identificar oportunidades de trading de curto prazo que podem estar ocultas pela tendência dominante.
+O indicador DSP foi desenvolvido para eliminar a tendência de longo prazo de um gráfico de preços, permitindo aos operadores ver com maior clareza ciclos e oscilações de curto prazo. É particularmente útil para identificar oportunidades de negociação de curto prazo que podem estar ocultas pela tendência dominante.
 
-A ideia principal do DSP é que, ao remover a tendência da série de preços, torna-se mais fácil identificar os componentes cíclicos do movimento do preço. Isto torna o indicador especialmente valioso para traders especializados em trading de curto prazo e que usam padrões cíclicos.
+A ideia principal do DSP é que, ao remover a tendência da série de preços, torna-se mais fácil identificar os componentes cíclicos do movimento do preço. Isto torna o indicador especialmente valioso para operadores especializados em negociação de curto prazo e que usam padrões cíclicos.
 
 DSP é útil para:
 - Identificar ciclos de mercado de curto prazo
 - Determinar potenciais pontos de reversão
 - Detetar divergências com o preço
-- Criar sistemas de trading baseados na natureza cíclica dos mercados
+- Criar sistemas de negociação baseados na natureza cíclica dos mercados
 
 ## Parâmetros
 
@@ -66,7 +66,7 @@ O indicador DSP oscila em torno da linha zero e pode ser interpretado da seguint
    - Divergência baixista: o preço forma um novo máximo, enquanto o DSP forma um máximo mais baixo
 
 5. **Formação de padrões**:
-   - Padrões técnicos (cabeça e ombros, fundo duplo, etc.) podem formar-se no gráfico do DSP, fornecendo potencialmente sinais adicionais de trading
+   - Padrões técnicos (cabeça e ombros, fundo duplo, etc.) podem formar-se no gráfico do DSP, fornecendo potencialmente sinais adicionais de negociação
 
 ![Gráfico do indicador DSP](../../../../images/indicator_detrended_synthetic_price.png)
 

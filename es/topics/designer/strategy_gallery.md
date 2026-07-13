@@ -1,6 +1,6 @@
 # Galería de estrategias
 
-La **Galería de estrategias** ofrece la posibilidad de descargar estrategias de trading listas para usar en su ordenador. Puede abrir la **Galería de estrategias** haciendo clic en el botón **Galería de estrategias** de la pestaña **Común**.
+La **Galería de estrategias** ofrece la posibilidad de descargar estrategias de negociación listas para usar en su ordenador. Puede abrir la **Galería de estrategias** haciendo clic en el botón **Galería de estrategias** de la pestaña **Común**.
 
 Para descargar una estrategia a su ordenador, debe:
 

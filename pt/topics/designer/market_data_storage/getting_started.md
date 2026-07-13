@@ -10,7 +10,7 @@ Armazenamento local - quando todos os dados são guardados no computador local. 
 
 O armazenamento remoto pode estar localizado noutro computador. Para o configurar, especifique o endereço do armazenamento remoto e, se necessário, o login e a palavra-passe.
 
-Pode reproduzir o armazenamento remoto numa máquina local usando o software [Hydra](../../hydra.md) (nome de código Hydra), concebido para o carregamento automático de dados de mercado (instrumentos, candles, tick trades e livros de ordens, etc.) de várias fontes e para os armazenar no armazenamento local. Para isso, coloque o [Hydra](../../hydra.md) em modo de servidor.
+Pode reproduzir o armazenamento remoto numa máquina local usando o software [Hydra](../../hydra.md) (nome de código Hydra), concebido para o carregamento automático de dados de mercado (instrumentos, velas, transações tick e livros de ordens, etc.) de várias fontes e para os armazenar no armazenamento local. Para isso, coloque o [Hydra](../../hydra.md) em modo de servidor.
 
 ![Designer Criação de um repositório de dados históricos 04](../../../images/designer_creating_repository_of_historical_data_04.png)
 

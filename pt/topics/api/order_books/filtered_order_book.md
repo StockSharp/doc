@@ -1,6 +1,6 @@
 # Livro de Ofertas Filtrado
 
-Um livro de ofertas filtrado é uma ferramenta especializada no StockSharp que permite aos traders e às estratégias automatizadas operar no mercado excluindo as suas próprias ordens da análise. Isto é criticamente importante ao utilizar várias estratégias em paralelo, para evitar situações em que uma estratégia começa a "negociar" com outra, sem perceber que o volume no livro de ofertas vem de outro participante de mercado ou é resultado de ações de outra estratégia em execução em paralelo.
+Um livro de ofertas filtrado é uma ferramenta especializada no StockSharp que permite aos operadores e às estratégias automatizadas operar no mercado excluindo as suas próprias ordens da análise. Isto é criticamente importante ao utilizar várias estratégias em paralelo, para evitar situações em que uma estratégia começa a "negociar" com outra, sem perceber que o volume no livro de ofertas vem de outro participante de mercado ou é resultado de ações de outra estratégia em execução em paralelo.
 
 ## Vantagens do Livro de Ofertas Filtrado
 
@@ -32,11 +32,11 @@ A abordagem para trabalhar com o livro de ofertas filtrado usa o mesmo método q
     ```cs
     var subscription = new Subscription(DataType.FilteredMarketDepth, security);
     connector.Subscribe(subscription);
-    
+
     // ou assim
     //var subscription = connector.SubscribeFilteredMarketDepth(security);
     ```
 
 ## Conclusão
 
-Usar o livro de ofertas filtrado no StockSharp fornece aos traders e programadores de estratégias uma ferramenta flexível para análise de mercado, permitindo evitar auto-interações indesejadas entre estratégias executadas em simultâneo e simplificando a tomada de decisões com base nos dados de ordens de mercado.
+Usar o livro de ofertas filtrado no StockSharp fornece aos operadores e programadores de estratégias uma ferramenta flexível para análise de mercado, permitindo evitar auto-interações indesejadas entre estratégias executadas em simultâneo e simplificando a tomada de decisões com base nos dados de ordens de mercado.

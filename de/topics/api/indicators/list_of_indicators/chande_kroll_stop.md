@@ -56,7 +56,7 @@ Die Chande-Kroll-Stop-Berechnung umfasst die folgenden Schritte:
 
 - **unterer Stop** wird für Kaufpositionen verwendet. Fällt der Schlusskurs unter den unteren Stop, kann dies als Signal gewertet werden, eine Kaufposition zu schließen oder eine Verkaufsposition zu eröffnen.
 
-- Das Überqueren der Stopplinien **Price** kann auf eine mögliche Trendumkehr oder den Beginn einer neuen Dynamik hinweisen.
+- Das Kreuzen der Stopplinien durch den Preis kann auf eine mögliche Trendumkehr oder den Beginn einer neuen Dynamik hinweisen.
 
 - **Abrupte Änderungen der Stopplinien** können bei erheblichen Änderungen der Marktvolatilität auftreten.
 

@@ -38,11 +38,11 @@ La estrategia permite personalizar los siguientes parámetros:
 
 - **FutureSecurity** - instrumento de futuros
 - **StockSecurity** - instrumento del activo subyacente
-- **FuturePortfolio** - cartera para trading de futuros
-- **StockPortfolio** - cartera para trading del activo subyacente
+- **FuturePortfolio** - cartera para la negociación de futuros
+- **StockPortfolio** - cartera para la negociación del activo subyacente
 - **StockMultiplicator** - multiplicador del activo subyacente (por ejemplo, tamaño de lote)
-- **FutureVolume** - volumen para trading de futuros
-- **StockVolume** - volumen para trading del activo subyacente
+- **FutureVolume** - volumen para la negociación de futuros
+- **StockVolume** - volumen para la negociación del activo subyacente
 - **ProfitToExit** - umbral de beneficio para salir de la posición
 - **SpreadToGenerateSignal** - umbral de spread para generar señal de entrada
 
@@ -153,7 +153,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 El procesamiento de señales y la toma de decisiones de entrada/salida se implementan en el método `ProcessSignals`:
 

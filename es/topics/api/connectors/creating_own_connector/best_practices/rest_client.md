@@ -1,6 +1,6 @@
 # Cliente REST
 
-Al desarrollar un conector para una serie de exchanges, un componente importante es el cliente HTTP, que proporciona la interacción con la API REST del exchange. En StockSharp, para este propósito, a menudo se crea una clase `HttpClient` al desarrollar un conector, construida sobre la base de la librería RestSharp.
+Al desarrollar un conector para una serie de bolsas, un componente importante es el cliente HTTP, que proporciona la interacción con la API REST de la bolsa. En StockSharp, para este propósito, a menudo se crea una clase `HttpClient` al desarrollar un conector, construida sobre la base de la librería RestSharp.
 
 ## Características de RestSharp
 
@@ -17,7 +17,7 @@ Al desarrollar un conector para una serie de exchanges, un componente importante
 2. **Métodos para diferentes tipos de solicitudes**
   - Por ejemplo, `GetProducts`, `GetCandles`, `GetTrades`
 
-3. **Métodos para trabajar con operaciones de trading**
+3. **Métodos para trabajar con operaciones de negociación**
   - Por ejemplo, `GetOrders`, `RegisterOrder`, `CancelOrder`
 
 4. **Métodos auxiliares**
@@ -44,7 +44,7 @@ class HttpClient : BaseLogReceiver
 		_restClient = new RestClient(options);
 	}
 
-	// Método para obtener una lista de productos (instrumentos) del exchange
+	// Método para obtener una lista de productos (instrumentos) de la bolsa
 	public async Task<IEnumerable<Product>> GetProducts(string type, CancellationToken cancellationToken)
 	{
 		var request = new RestRequest("products", Method.Get)
@@ -108,8 +108,8 @@ class HttpClient : BaseLogReceiver
 
 - Utilice métodos asíncronos para un funcionamiento eficiente de la red.
 - Implemente el manejo de errores y reintentos para conexiones inestables.
-- Tenga en cuenta los límites de tasa de la API del exchange específico.
+- Tenga en cuenta los límites de tasa de la API de la bolsa específica.
 - Utilice los métodos de extensión de RestSharp para simplificar el trabajo con solicitudes y respuestas.
 
-Recuerde que la implementación específica puede diferir según los requisitos y las particularidades de la API de un exchange en particular.
+Recuerde que la implementación específica puede diferir según los requisitos y las particularidades de la API de una bolsa en particular.
 </content>

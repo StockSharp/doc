@@ -15,9 +15,9 @@ Verfügbare Parameter:
 
 - -s - Pfad zur Strategiedatei (mit der Erweiterung cs, json oder dll).
 - -t - (optional) wenn eine dll-Datei ausgewählt ist und die Assembly mehr als eine Strategieklasse enthält, muss über diesen Parameter der erforderliche Typ angegeben werden.
-- -h - Pfad zum Verzeichnis mit historischen Daten. Bei Verwendung des Servermodus [server](../hydra_server.md) kann dies eine Netzwerkadresse sein.
-- --hl - (optional) Login, der im Servermodus [server](../hydra_server.md) verwendet wird.
-- --hp - (optional) Passwort, das im Servermodus [server](../hydra_server.md) verwendet wird.
+- -h - Pfad zum Verzeichnis mit historischen Daten. Bei Verwendung des [Servermodus](../hydra_server.md) kann dies eine Netzwerkadresse sein.
+- --hl - (optional) Login, der im [Servermodus](../hydra_server.md) verwendet wird.
+- --hp - (optional) Passwort, das im [Servermodus](../hydra_server.md) verwendet wird.
 - --hf - Startdatum für den Test im Format YYYYMMDD.
 - --ht - Enddatum für den Test im Format YYYYMMDD.
 - -f - (optional) Speicherformat (Binary oder Csv).

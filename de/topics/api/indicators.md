@@ -20,7 +20,7 @@
    ```cs
    private void ProcessCandle(ICandleMessage candle)
    {
-       // Candle mit Indikatoren verarbeiten und Ergebnisse sofort speichern
+       // Kerze mit Indikatoren verarbeiten und Ergebnisse sofort speichern
        var longValue = longSma.Process(candle);
        var shortValue = shortSma.Process(candle);
 
@@ -33,9 +33,9 @@
    }
    ```
 
-   Ein Indikator akzeptiert [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) als Eingabe. Einige Indikatoren arbeiten mit einer einfachen Zahl, etwa [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage). Andere benötigen eine vollständige Candle, etwa [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice). Deshalb müssen Eingabewerte entweder in [DecimalIndicatorValue](xref:StockSharp.Algo.Indicators.DecimalIndicatorValue) oder in [CandleIndicatorValue](xref:StockSharp.Algo.Indicators.CandleIndicatorValue) umgewandelt werden. Der resultierende Wert des Indikators folgt denselben Regeln wie der Eingabewert.
+   Ein Indikator akzeptiert [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) als Eingabe. Einige Indikatoren arbeiten mit einer einfachen Zahl, etwa [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage). Andere benötigen eine vollständige Kerze, etwa [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice). Deshalb müssen Eingabewerte entweder in [DecimalIndicatorValue](xref:StockSharp.Algo.Indicators.DecimalIndicatorValue) oder in [CandleIndicatorValue](xref:StockSharp.Algo.Indicators.CandleIndicatorValue) umgewandelt werden. Der resultierende Wert des Indikators folgt denselben Regeln wie der Eingabewert.
 
-3. Sowohl der Ergebnis- als auch der Eingabewert des Indikators besitzen die Eigenschaft [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal), die angibt, dass der Wert endgültig ist und sich der Indikator zu diesem Zeitpunkt nicht mehr ändern wird. Der Indikator [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) wird beispielsweise auf Basis des Schlusskurses einer Candle gebildet; im aktuellen Moment ist der endgültige Schlusskurs jedoch unbekannt und verändert sich. In diesem Fall ist der Ergebniswert von [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) `false`. Wenn Sie eine abgeschlossene Candle an den Indikator übergeben, sind sowohl Eingabe- als auch Ergebniswert von [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) `true`.
+3. Sowohl der Ergebnis- als auch der Eingabewert des Indikators besitzen die Eigenschaft [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal), die angibt, dass der Wert endgültig ist und sich der Indikator zu diesem Zeitpunkt nicht mehr ändern wird. Der Indikator [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) wird beispielsweise auf Basis des Schlusskurses einer Kerze gebildet; im aktuellen Moment ist der endgültige Schlusskurs jedoch unbekannt und verändert sich. In diesem Fall ist der Ergebniswert von [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) `false`. Wenn Sie eine abgeschlossene Kerze an den Indikator übergeben, sind sowohl Eingabe- als auch Ergebniswert von [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) `true`.
 
 4. **Empfohlener Ansatz**: Verwenden Sie direkt die Werte, die beim Aufruf der Methode [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)) zurückgegeben werden, anstatt anschließend [GetCurrentValue](xref:StockSharp.Algo.Indicators.IndicatorHelper.GetCurrentValue(StockSharp.Algo.Indicators.IIndicator)) aufzurufen:
 
@@ -43,7 +43,7 @@
    // Beispiel einer Strategie mit zwei gleitenden Durchschnitten
    private void ProcessCandle(ICandleMessage candle)
    {
-       // Candle mit Indikatoren verarbeiten und Ergebnisse sofort speichern
+       // Kerze mit Indikatoren verarbeiten und Ergebnisse sofort speichern
        var longValue = _longSma.Process(candle);
        var shortValue = _shortSma.Process(candle);
 
@@ -82,7 +82,7 @@
    // Suboptimaler Ansatz
    foreach (var candle in candles)
    {
-       // Candle verarbeiten, aber den zurückgegebenen Wert ignorieren
+       // Kerze verarbeiten, aber den zurückgegebenen Wert ignorieren
        _longSma.Process(candle);
        _shortSma.Process(candle);
    }
@@ -93,11 +93,11 @@
 
    Bei diesem Ansatz erfolgt ein zusätzlicher Zugriff auf den Container historischer Indikatorwerte. Das führt zu Verzögerungen und stört das Datenstrommodell der Verarbeitung.
 
-6. Alle Indikatoren besitzen die Eigenschaft [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), die angibt, ob der Indikator einsatzbereit ist. Der Indikator [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) besitzt beispielsweise eine Periode. Solange der Indikator nicht eine Anzahl von Candles verarbeitet hat, die der Indikatorperiode entspricht, gilt er als nicht einsatzbereit. Die Eigenschaft [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) ist dann `false`.
+6. Alle Indikatoren besitzen die Eigenschaft [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), die angibt, ob der Indikator einsatzbereit ist. Der Indikator [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) besitzt beispielsweise eine Periode. Solange der Indikator nicht eine Anzahl von Kerzen verarbeitet hat, die der Indikatorperiode entspricht, gilt er als nicht einsatzbereit. Die Eigenschaft [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) ist dann `false`.
 
 ## Beispiel einer vollständigen Strategie mit gleitendem Durchschnitt
 
-Unten sehen Sie ein Beispiel einer Strategie, die Indikatoren korrekt verwendet, Candles verarbeitet und die Ergebnisse der Process-Methode nutzt:
+Unten sehen Sie ein Beispiel einer Strategie, die Indikatoren korrekt verwendet, Kerzen verarbeitet und die Ergebnisse der Process-Methode nutzt:
 
 ```cs
 public class SmaStrategy : Strategy
@@ -144,7 +144,7 @@ public class SmaStrategy : Strategy
 			InitChart();
 		}
 
-		// Candles abonnieren
+		// Kerzen abonnieren
 		var subscription = new Subscription(_series.Value, Security);
 
 		Connector
@@ -157,7 +157,7 @@ public class SmaStrategy : Strategy
 
 	private void ProcessCandle(ICandleMessage candle)
 	{
-		// Candle mit Indikatoren verarbeiten und Ergebnisse speichern
+		// Kerze mit Indikatoren verarbeiten und Ergebnisse speichern
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
 

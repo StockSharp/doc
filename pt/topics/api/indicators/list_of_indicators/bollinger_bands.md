@@ -9,7 +9,7 @@ Para usar o indicador, deve ser usada a classe [BollingerBands](xref:StockSharp.
 
 Os seguintes parâmetros com as definições correspondentes são usados para calcular bandas de Bollinger:
 - tipo de desvio padrão — normalmente double;
-- período da média móvel — ao critério do trader.
+- período da média móvel — ao critério do operador.
 
 Assim, o indicador é formado por três linhas: central, superior e inferior, cada uma com a sua fórmula:
 

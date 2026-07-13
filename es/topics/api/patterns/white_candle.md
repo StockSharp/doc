@@ -18,16 +18,16 @@ Vela blanca señala presión alcista en el mercado:
 - Cuanto más largo sea el cuerpo de la vela, más fuerte será la presión alcista.
 - Una Vela blanca larga después de una tendencia bajista puede indicar una posible reversión.
 - La presencia de sombras cortas indica que los alcistas controlaron el precio durante todo el período.
-- White Candles consecutivas indican una tendencia alcista estable.
+- Las velas blancas consecutivas indican una tendencia alcista estable.
 
-### Estrategias de trading
+### Estrategias de negociación
 
-Aunque una única Vela blanca normalmente no es una señal de trading independiente, se puede usar como parte de una estrategia más amplia:
+Aunque una única Vela blanca normalmente no es una señal de negociación independiente, se puede usar como parte de una estrategia más amplia:
 
 - Confirmación de una tendencia alcista o reversión después de un movimiento bajista.
-- Buscar White Candles largas en niveles de soporte para posibles posiciones largas.
+- Buscar velas blancas largas en niveles de soporte para posibles posiciones largas.
 - Uso en combinación con otros patrones de velas, por ejemplo, una vela blanca después de una envolvente alcista.
-- Identificación de niveles de resistencia después de una serie de White Candles consecutivas.
+- Identificación de niveles de resistencia después de una serie de velas blancas consecutivas.
 
 ## Véase también
 

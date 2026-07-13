@@ -1,6 +1,6 @@
 # Información sobre carteras y órdenes
 
-Al crear su propio adaptador para trabajar con un exchange, debe implementar métodos para solicitar el estado actual de la cartera y las órdenes. Estos métodos se llaman al recibir los mensajes [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) y [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) respectivamente.
+Al crear su propio adaptador para trabajar con una bolsa, debe implementar métodos para solicitar el estado actual de la cartera y las órdenes. Estos métodos se llaman al recibir los mensajes [PortfolioLookupMessage](xref:StockSharp.Messages.PortfolioLookupMessage) y [OrderStatusMessage](xref:StockSharp.Messages.OrderStatusMessage) respectivamente.
 
 ## Solicitud del estado de la cartera
 
@@ -10,7 +10,7 @@ Para solicitar el estado de la cartera, se implementa el método **PortfolioLook
 2. Comprueba si la solicitud es de suscripción o cancelación de suscripción usando la propiedad [IsSubscribe](xref:StockSharp.Messages.PortfolioLookupMessage.IsSubscribe).
 3. En caso de suscripción:
   - Envía un mensaje [PortfolioMessage](xref:StockSharp.Messages.PortfolioMessage) con información sobre la cartera.
-  - Solicita los saldos actuales de la cuenta desde el exchange.
+  - Solicita los saldos actuales de la cuenta desde la bolsa.
   - Para cada cuenta, crea y envía un mensaje [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage) con información sobre la posición.
 4. Envía un mensaje sobre el resultado de la suscripción usando [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)).
 
@@ -65,7 +65,7 @@ Para solicitar el estado de las órdenes, se implementa el método **OrderStatus
 1. Envía una confirmación de recepción de la solicitud usando [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception)).
 2. Comprueba si la solicitud es de suscripción o cancelación de suscripción usando la propiedad [OrderStatusMessage.IsSubscribe](xref:StockSharp.Messages.OrderStatusMessage.IsSubscribe).
 3. En caso de suscripción:
-  - Solicita la lista de órdenes actuales al exchange.
+  - Solicita la lista de órdenes actuales a la bolsa.
   - Para cada orden, crea y envía un mensaje [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) con información sobre la orden.
   - Si es necesario, configura una suscripción para recibir actualizaciones de órdenes en tiempo real.
 4. Envía un mensaje sobre el resultado de la suscripción usando [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)).

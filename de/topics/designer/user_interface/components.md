@@ -5,7 +5,7 @@ Beim Testen oder Handeln besteht die Notwendigkeit, den Prozess vollständig zu 
 ![Designer Komponenten](../../../images/designer_components.png)
 
 - [Chart](components/chart.md) - stellt einen Candlestick-Chart und/oder Indikatoren dar. Enthält alle [Chart](../strategies/using_visual_designer/elements/common/chart.md)-Würfel, die in der Strategie vorhanden sind.
-- [P/L](components/pnl_equity.md) - stellt einen Chart für Profit/Loss (unrealized), Profit/Loss (realized) und Kommissionen dar.
+- [P/L](components/pnl_equity.md) - stellt einen Chart für Gewinn/Verlust (nicht realisiert), Gewinn/Verlust (realisiert) und Kommissionen dar.
 - [Ausführungen](components/trades.md) - stellt eine Tabelle mit Ausführungen dar, die vollständige Informationen zu allen Ausführungen der Strategie anzeigt.
 - [Aufträge](components/orders.md) - stellt eine Tabelle mit Aufträgen dar, die vollständige Informationen zu allen Aufträgen der Strategie anzeigt.
 - [Positionen](components/positions.md) - stellt eine Tabelle mit Positionen für die Instrumente der Strategie dar.

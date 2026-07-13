@@ -8,10 +8,10 @@
 
 サブスクリプションを扱うには、[Subscription](xref:StockSharp.BusinessEntities.Subscription) クラスを使用する必要があります。さまざまな種類のデータを取得するためにサブスクリプションを使用する例を見てみましょう。
 
-## キャンドルサブスクリプションの例
+## ローソク足サブスクリプションの例
 
 ```cs
-// 5 分足キャンドルのサブスクリプションを作成します
+// 5 分足ローソク足のサブスクリプションを作成します
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
 	// MarketData プロパティを介してサブスクリプションパラメーターを設定します
@@ -24,13 +24,13 @@ var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	}
 };
 
-// 受信したキャンドルを処理します
+// 受信したローソク足を処理します
 _connector.CandleReceived += (sub, candle) =>
 {
 	if (sub != subscription)
 		return;
 
-	// キャンドルを処理します
+	// ローソク足を処理します
 	Console.WriteLine($"ローソク足: {candle.OpenTime} - O:{candle.OpenPrice} H:{candle.HighPrice} L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume}");
 };
 
@@ -97,10 +97,10 @@ _connector.TickTradeReceived += (sub, tick) =>
 _connector.Subscribe(tickSubscription);
 ```
 
-## キャンドル構築モード設定付きサブスクリプションの例
+## ローソク足構築モード設定付きサブスクリプションの例
 
 ```cs
-// ティックから構築される 5 分足キャンドルへのサブスクリプション
+// ティックから構築される 5 分足ローソク足へのサブスクリプション
 var candleSubscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
 	MarketData =

@@ -22,7 +22,7 @@ Principais capacidades da classe `Strategy`:
 
 - [Gestão de Posição Alvo](target_position_management.md) -- gestão declarativa do tamanho da posição através de `SetTargetPosition`
 - [Modos de Negociação](trading_modes.md) -- restrição da atividade de negociação através de `StrategyTradingModes`
-- [Sistema de Alertas](alert_system.md) -- envio de notificações (popup, som, log, Telegram)
+- [Sistema de Alertas](alert_system.md) -- envio de notificações (popup, som, registo, Telegram)
 - [Sistema de Temporizador](timer_system.md) -- execução periódica de ações
 - [Gestão de Risco](risk_management.md) -- regras de gestão de risco
 - [Subscrições de Alto Nível](high_level_subscriptions.md) -- subscrições simplificadas de dados de mercado

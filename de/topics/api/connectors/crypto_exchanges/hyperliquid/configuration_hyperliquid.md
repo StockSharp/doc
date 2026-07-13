@@ -1,6 +1,6 @@
 # Konfiguration Hyperliquid
 
-Für die Arbeit mit dem Connector geben Sie Trading-Anmeldedaten auf Wallet-Ebene an.
+Für die Arbeit mit dem Connector geben Sie Handelsanmeldedaten auf Wallet-Ebene an.
 
 Haupteinstellungen:
 

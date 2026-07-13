@@ -10,8 +10,8 @@ Campos principais:
  - **Expira após** - carimbo de data/hora opcional de expiração da assinatura.
 - **Secção** - secção de negociação (`Spot` ou `Derivatives`).
 - **Rede de teste** - endpoints de testnet.
- - **Endpoint de informação / endpoint de exchange / endpoint WS** - URLs dos endpoints.
-- **Slippage de mercado** - slippage predefinido para ordens de mercado.
+ - **Endpoint de informação / endpoint de bolsa / endpoint WS** - URLs dos endpoints.
+- **Deslizamento de mercado** - deslizamento predefinido para ordens de mercado.
 
 ## Conteúdo recomendado
 

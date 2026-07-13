@@ -9,7 +9,7 @@ Para simplificar el trabajo con operaciones aritméticas sobre valores como porc
   ```csharp
   // crear un valor absoluto
   var absolute = new Unit(30);
-  
+
   // crear un valor porcentual
   var percent = 30.0.Percents();
   ```
@@ -33,13 +33,13 @@ Para simplificar el trabajo con operaciones aritméticas sobre valores como porc
   ```csharp
   // suma de valores
   Console.WriteLine("absolute + percent = " + (absolute + percent));
-  
+
   // multiplicación de valores
   Console.WriteLine("absolute * percent = " + (absolute * percent));
-  
+
   // resta de valores
   Console.WriteLine("absolute - percent = " + (absolute - percent));
-  
+
   // división de valores
   Console.WriteLine("absolute / percent = " + (absolute / percent));
   ```
@@ -67,7 +67,7 @@ Para simplificar el trabajo con operaciones aritméticas sobre valores como porc
   ```csharp
   if (absolute > percent)
       Console.WriteLine("El valor absoluto es mayor que el porcentaje");
-      
+
   if (absolute == percent)
       Console.WriteLine("Los valores son iguales");
   ```
@@ -91,4 +91,4 @@ Para simplificar el trabajo con operaciones aritméticas sobre valores como porc
 - Los valores de tipo [UnitTypes.Limit](xref:StockSharp.Messages.UnitTypes.Limit) no se pueden usar en operaciones aritméticas
 - La comparación entre valores de tipos distintos no siempre es posible
 
-El tipo [Unit](xref:StockSharp.Messages.Unit) proporciona una forma coherente de trabajar con varios tipos de valores en aplicaciones de trading, lo que facilita expresar cálculos relacionados con precio y volumen.
+El tipo [Unit](xref:StockSharp.Messages.Unit) proporciona una forma coherente de trabajar con varios tipos de valores en aplicaciones de negociación, lo que facilita expresar cálculos relacionados con precio y volumen.

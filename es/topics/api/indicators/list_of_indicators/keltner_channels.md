@@ -75,7 +75,7 @@ Los canales de Keltner se pueden interpretar de la siguiente manera:
    - El estrechamiento del canal (disminución de la distancia entre bandas) indica una menor volatilidad, que a menudo precede a un fuerte movimiento de precios.
    - La expansión del canal indica una mayor volatilidad
 
-6. **Estrategias de trading**:
+6. **Estrategias de negociación**:
    - Estrategia "Del borde al centro": abrir una posición cuando el precio toca la banda superior o inferior, apuntando a la línea media
    - Estrategia de ruptura: abrir una posición cuando el precio rompe la banda superior o inferior, esperando un movimiento continuo en la misma dirección
    - Estrategia "Del centro al borde": abrir una posición cuando el precio rebota desde la línea media, apuntando a la banda superior o inferior

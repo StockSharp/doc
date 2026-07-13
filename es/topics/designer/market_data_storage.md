@@ -1,6 +1,6 @@
 # Almacenamiento de datos de mercado
 
-El almacenamiento de datos históricos está diseñado para cargar datos de mercado (instrumentos, velas, operaciones tick y libros de órdenes) desde distintas fuentes y guardarlos en un almacenamiento local o remoto. [Designer](../designer.md) puede usar fuentes tanto de datos históricos como de datos en tiempo real ([Conectores](../api/connectors.md)). Después, la información almacenada queda disponible para su uso por estrategias de trading.
+El almacenamiento de datos históricos está diseñado para cargar datos de mercado (instrumentos, velas, operaciones tick y libros de órdenes) desde distintas fuentes y guardarlos en un almacenamiento local o remoto. [Designer](../designer.md) puede usar fuentes tanto de datos históricos como de datos en tiempo real ([Conectores](../api/connectors.md)). Después, la información almacenada queda disponible para su uso por estrategias de negociación.
 
 Para abrir la pestaña **Datos de mercado**, cambie a la pestaña **Común** y haga clic en el botón **Datos de mercado**. El área **Datos de mercado** está dividida en tres zonas. La zona izquierda contiene la lista de todos los instrumentos recibidos de todas las fuentes que se han conectado alguna vez. Las zonas centrales contienen los instrumentos activos. Con estos instrumentos puede descargar o ver el historial descargado. La zona derecha muestra los datos disponibles para el instrumento seleccionado en la zona central, y también puede descargar datos usando el instrumento seleccionado.
 

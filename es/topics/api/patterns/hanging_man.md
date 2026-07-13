@@ -16,19 +16,19 @@ Hombre colgado es un patrón de velas de reversión bajista que se forma en una 
 
 Hombre colgado se considera una advertencia de un posible final de una tendencia alcista:
 
-- La larga sombra inferior muestra que el precio cayó significativamente durante la sesión de trading, indicando la aparición de vendedores.
+- La larga sombra inferior muestra que el precio cayó significativamente durante la sesión de negociación, indicando la aparición de vendedores.
 - A pesar de que los compradores pudieron empujar el precio de vuelta a la parte superior del rango, el hecho mismo de una caída significativa del precio en una tendencia alcista es una señal de advertencia.
 - El color del cuerpo de la vela es menos importante, aunque un cuerpo negro/rojo se considera más bajista que uno blanco/verde.
 - Cuanto más larga sea la sombra inferior y menor el cuerpo de la vela, más fuerte será la señal.
 - Este patrón requiere confirmación de velas posteriores.
 
-### Estrategias de trading
+### Estrategias de negociación
 
-Hombre colgado normalmente requiere confirmación adicional antes de tomar decisiones de trading:
+Hombre colgado normalmente requiere confirmación adicional antes de tomar decisiones de negociación:
 
 - Esperar una vela bajista de confirmación después de la formación de Hombre colgado antes de entrar en una posición corta.
 - Colocar un stop-loss por encima del máximo de Hombre colgado.
-- Considerar el volumen de trading: un volumen alto durante la formación del patrón y en la vela de confirmación refuerza la señal bajista.
+- Considerar el volumen de negociación: un volumen alto durante la formación del patrón y en la vela de confirmación refuerza la señal bajista.
 - Combinar con otros indicadores técnicos, como RSI en zona de sobrecompra o divergencia en osciladores.
 - Posible uso para cierre parcial de posiciones largas existentes incluso sin abrir una posición corta.
 - Prestar especial atención al patrón si se forma en niveles de resistencia importantes o después de un movimiento alcista prolongado.

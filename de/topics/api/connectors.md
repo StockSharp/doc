@@ -61,7 +61,7 @@ connector.AddAdapter<RssMessageAdapter>(a =>
 
 Sie können einer einzelnen [Connector](xref:StockSharp.Algo.Connector)-Instanz eine unbegrenzte Anzahl von Verbindungen hinzufügen. So können Sie sich gleichzeitig von einem Programm aus mit mehreren Börsen und Brokern verbinden.
 
-In der Methode *InitConnector* legen wir die erforderlichen Event-Handler für [IConnector](xref:StockSharp.BusinessEntities.IConnector) fest:
+In der Methode *InitConnector* legen wir die erforderlichen Ereignishandler für [IConnector](xref:StockSharp.BusinessEntities.IConnector) fest:
 
 ```cs
 private void InitConnector()

@@ -5,7 +5,7 @@
 A diferencia del [modo servidor](hydra/server_mode/settings.md), **Hydra Server** es un programa multiplataforma separado, hecho como aplicación de consola, y puede ejecutarse en servidores Windows o Linux.
 
 > [!TIP]
-> En Windows, Hydra Server puede registrarse como Windows Service e iniciarse automáticamente al arrancar el sistema. Para obtener más información, consulte [Windows service](https://en.wikipedia.org/wiki/Windows_service).
+> En Windows, Hydra Server puede registrarse como servicio de Windows e iniciarse automáticamente al arrancar el sistema. Para obtener más información, consulte [servicio de Windows](https://en.wikipedia.org/wiki/Windows_service).
 
 **Hydra Server** usa la misma configuración que [Hydra](hydra.md). Para la configuración inicial, ejecute primero [Hydra](hydra.md) y después use la configuración creada por Hydra Server.
 
@@ -35,5 +35,5 @@ El programa tiene un archivo de configuración `appsettings.json`:
 - **WebApiAddress** - dirección de StockSharp WebAPI. Se usa para la administración mediante [Telegram](telegram_services.md).
 - **LogLevel** - nivel de registro.
 - **AutoDownload** - indica si se debe habilitar la descarga automática de fuentes al iniciar.
-- **CompanyPath** - si se usa el programa como Windows Service, debe establecer la ruta como "C:\\Users\\%user_name%\\Documents\\StockSharp".
+- **CompanyPath** - si se usa el programa como servicio de Windows, debe establecer la ruta como "C:\\Users\\%user_name%\\Documents\\StockSharp".
 - **AppDataPath** - si se mueve el directorio de configuración de [Hydra](hydra.md), debe especificarse una nueva ruta a la configuración.

@@ -25,7 +25,7 @@ Der Indikator hat die folgenden Parameter:
 
 Die Harmonischer Oszillator-Berechnung umfasst die folgenden Schritte:
 
-1. Vorverarbeitung der Price-Serie (Trendbeseitigung):
+1. Vorverarbeitung der Preisreihe (Trendbeseitigung):
    ```
    Trendbereinigter Preis = Price - SMA(Price, Length)
    ```

@@ -49,7 +49,7 @@ AAPL@NASDAQ 銘柄の 5 分足を生成するには、次の手順を実行し�
 
 生成結果:
 
-![Hydra ローソク足 volume](../../../images/hydra_candles_volume.png)
+![Hydra 出来高ローソク足](../../../images/hydra_candles_volume.png)
 
 ## ローソク足構築用のデータソース
 

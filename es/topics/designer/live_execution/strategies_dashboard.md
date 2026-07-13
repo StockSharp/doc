@@ -13,7 +13,7 @@ El panel **En vivo** es una tabla que muestra todas las estrategias añadidas a 
 - **En línea** indica si todos los indicadores de la estrategia están formados y todas las suscripciones han pasado al [estado](../../api/market_data/subscriptions.md) **En línea**.
 - **Operaciones** permite cambiar las operaciones disponibles. Por ejemplo, prohibir abrir nuevas posiciones o aumentar las existentes.
 - **Posición** muestra la posición actual para el instrumento de la estrategia. Al hacer clic en el botón de cruz se cerrará la posición.
-- Las demás columnas muestran las estadísticas de trading actuales de la estrategia.
+- Las demás columnas muestran las estadísticas de negociación actuales de la estrategia.
 
 Al hacer doble clic en una fila seleccionada, se abrirá el panel con la estrategia.
 

@@ -33,9 +33,9 @@
    }
    ```
 
-   Um indicador aceita [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) como entrada. Alguns indicadores trabalham com um número simples, como [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage). Outros requerem uma candle completa, como [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice). Por isso, os valores de entrada têm de ser convertidos para [DecimalIndicatorValue](xref:StockSharp.Algo.Indicators.DecimalIndicatorValue) ou para [CandleIndicatorValue](xref:StockSharp.Algo.Indicators.CandleIndicatorValue). O valor resultante do indicador segue as mesmas regras do valor de entrada.
+   Um indicador aceita [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) como entrada. Alguns indicadores trabalham com um número simples, como [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage). Outros requerem uma vela completa, como [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice). Por isso, os valores de entrada têm de ser convertidos para [DecimalIndicatorValue](xref:StockSharp.Algo.Indicators.DecimalIndicatorValue) ou para [CandleIndicatorValue](xref:StockSharp.Algo.Indicators.CandleIndicatorValue). O valor resultante do indicador segue as mesmas regras do valor de entrada.
 
-3. Tanto os valores resultantes como os valores de entrada do indicador têm a propriedade [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal), que indica que o valor é final e que o indicador não mudará nesse ponto no tempo. Por exemplo, o indicador [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) é formado com base no preço de fecho da candle, mas no momento atual o preço de fecho final é desconhecido e está a mudar. Neste caso, o valor resultante de [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) será false. Se passar uma candle concluída ao indicador, tanto o valor de entrada como o valor resultante de [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) serão true.
+3. Tanto os valores resultantes como os valores de entrada do indicador têm a propriedade [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal), que indica que o valor é final e que o indicador não mudará nesse ponto no tempo. Por exemplo, o indicador [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) é formado com base no preço de fecho da vela, mas no momento atual o preço de fecho final é desconhecido e está a mudar. Neste caso, o valor resultante de [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) será false. Se passar uma vela concluída ao indicador, tanto o valor de entrada como o valor resultante de [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) serão true.
 
 4. **Abordagem recomendada**: usar diretamente os valores obtidos ao chamar o método [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)), em vez de chamar posteriormente [GetCurrentValue](xref:StockSharp.Algo.Indicators.IndicatorHelper.GetCurrentValue(StockSharp.Algo.Indicators.IIndicator)):
 
@@ -93,11 +93,11 @@
    
    Com esta abordagem, há um acesso adicional ao contentor de valores históricos do indicador, o que introduz atrasos e quebra o modelo de fluxo contínuo do processamento de dados.
 
-6. Todos os indicadores têm a propriedade [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), que indica se o indicador está pronto para uso. Por exemplo, o indicador [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) tem um período e, até o indicador processar um número de candles igual ao período do indicador, será considerado não pronto para uso. E a propriedade [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) será false.
+6. Todos os indicadores têm a propriedade [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed), que indica se o indicador está pronto para uso. Por exemplo, o indicador [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) tem um período e, até o indicador processar um número de velas igual ao período do indicador, será considerado não pronto para uso. E a propriedade [BaseIndicator.IsFormed](xref:StockSharp.Algo.Indicators.BaseIndicator.IsFormed) será false.
 
 ## Exemplo de uma estratégia completa de médias móveis
 
-Abaixo está um exemplo de uma estratégia que usa corretamente indicadores, processando candles e utilizando os resultados do método Process:
+Abaixo está um exemplo de uma estratégia que usa corretamente indicadores, processando velas e utilizando os resultados do método Process:
 
 ```cs
 public class SmaStrategy : Strategy

@@ -1788,7 +1788,7 @@
         href: api/indicators/list_of_indicators/guppy_multiple_moving_average.md
       - name: 谐波振荡器 (HO)
         href: api/indicators/list_of_indicators/harmonic_oscillator.md
-      - name: 最高值 (Highest)
+      - name: 最高
         href: api/indicators/list_of_indicators/highest.md
       - name: 高低指数 (HLI)
         href: api/indicators/list_of_indicators/high_low_index.md
@@ -1828,9 +1828,9 @@
         href: api/indicators/list_of_indicators/lrs.md
       - name: 线性回归预测 (LRF)
         href: api/indicators/list_of_indicators/linear_regression_forecast.md
-      - name: 决定系数 (R-squared)
+      - name: 决定系数
         href: api/indicators/list_of_indicators/linear_reg_rsquared.md
-      - name: 最低值 (Lowest)
+      - name: 最低
         href: api/indicators/list_of_indicators/lowest.md
       - name: 月相指标 (LP)
         href: api/indicators/list_of_indicators/lunar_phase.md
@@ -1844,13 +1844,13 @@
         href: api/indicators/list_of_indicators/mcclellan_oscillator.md
       - name: 麦金利动态 (MGD)
         href: api/indicators/list_of_indicators/mcginley_dynamic.md
-      - name: 平均偏差 (MeanDev)
+      - name: 平均偏差
         href: api/indicators/list_of_indicators/mean_deviation.md
-      - name: 中位数 (Median)
+      - name: 移动中位数
         href: api/indicators/list_of_indicators/median.md
       - name: 中位价格 (MedPr)
         href: api/indicators/list_of_indicators/median_price.md
-      - name: 动量 (Momentum)
+      - name: 动量
         href: api/indicators/list_of_indicators/momentum.md
       - name: 移动平均动量 (MOMA)
         href: api/indicators/list_of_indicators/momentum_of_moving_average.md
@@ -1878,13 +1878,13 @@
         href: api/indicators/list_of_indicators/on_balance_volume.md
       - name: 能量潮均值 (OBVM)
         href: api/indicators/list_of_indicators/on_balance_volume_mean.md
-      - name: 最优追踪滤波器 (OptimalTracking)
+      - name: 最优跟踪
         href: api/indicators/list_of_indicators/optimal_tracking.md
       - name: 移动平均振荡器 (OMA)
         href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
-      - name: 抛物线转向指标 (Parabolic SAR)
+      - name: 抛物线转向点
         href: api/indicators/list_of_indicators/parabolic_sar.md
-      - name: Stub（透传）
+      - name: 直通
         href: api/indicators/list_of_indicators/pass_through.md
       - name: 峰值
         href: api/indicators/list_of_indicators/peak.md
@@ -1934,15 +1934,15 @@
         href: api/indicators/list_of_indicators/sine_wave.md
       - name: 平滑移动平均 (SMMA)
         href: api/indicators/list_of_indicators/smoothed_ma.md
-      - name: 标准差 (Std Dev)
+      - name: 标准差
         href: api/indicators/list_of_indicators/standard_deviation.md
-      - name: 标准误差 (Standard error)
+      - name: 标准误差
         href: api/indicators/list_of_indicators/standard_error.md
-      - name: 随机指标 %K (Stochastic %K)
+      - name: 随机振荡器 %K
         href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
       - name: 随机振荡器
         href: api/indicators/list_of_indicators/stochastic_oscillator.md
-      - name: 最近 N 个值的和 (Sum)
+      - name: 求和 N
         href: api/indicators/list_of_indicators/sum_n.md
       - name: T3 移动平均 (T3MA)
         href: api/indicators/list_of_indicators/t3_moving_average.md
@@ -1962,7 +1962,7 @@
         href: api/indicators/list_of_indicators/true_strength_index.md
       - name: Twiggs 资金流 (TMF)
         href: api/indicators/list_of_indicators/twiggs_money_flow.md
-      - name: 终极振荡器 (UltimateOsc)
+      - name: UO
         href: api/indicators/list_of_indicators/uo.md
       - name: 垂直-水平滤波器 (VHF)
         href: api/indicators/list_of_indicators/vhf.md
@@ -2164,9 +2164,9 @@
         items:
         - name: K线规则
           href: api/strategies/event_model/samples/rule_candle.md
-        - name: Ticks规则
+        - name: 逐笔成交规则
           href: api/strategies/event_model/samples/rule_ticks.md
-        - name: 市场深度与Ticks规则
+        - name: 市场深度与逐笔成交规则
           href: api/strategies/event_model/samples/rule_marketdepth.md
         - name: 订单规则
           href: api/strategies/event_model/samples/rule_order.md

@@ -6,7 +6,7 @@ Para usar o indicador, use a classe [PercentagePriceOscillatorSignal](xref:Stock
 
 ## Descrição
 
-O oscilador percentual de preço (PPO) mede a diferença percentual entre duas médias móveis exponenciais (EMAs). A versão de sinal foca-se em suavizar a linha PPO com uma EMA adicional, ajudando os traders a reagir apenas a mudanças mais persistentes no momentum.
+O oscilador percentual de preço (PPO) mede a diferença percentual entre duas médias móveis exponenciais (EMAs). A versão de sinal foca-se em suavizar a linha PPO com uma EMA adicional, ajudando os operadores a reagir apenas a mudanças mais persistentes no momentum.
 
 O indicador é formado pelos seguintes componentes:
 

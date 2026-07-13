@@ -118,7 +118,7 @@
        /// <summary>
        /// Inicializa una nueva instancia de <see cref="DeltaCandleBuilder"/>.
        /// </summary>
-       /// <param name="exchangeInfoProvider">Proveedor de información del exchange.</param>
+       /// <param name="exchangeInfoProvider">Proveedor de información de la bolsa.</param>
        public DeltaCandleBuilder(IExchangeInfoProvider exchangeInfoProvider)
            : base(exchangeInfoProvider)
        {
@@ -217,7 +217,7 @@
    _connector.Subscribe(subscription);
    ```
 
-## Uso de las velas Delta en estrategias de trading
+## Uso de las velas Delta en estrategias de negociación
 
 Ejemplo de una estrategia simple que utiliza velas delta:
 
@@ -260,7 +260,7 @@ public class DeltaCandleStrategy : Strategy
 			.SetOptimize(500m, 2000m, 100m);
 
 		_volume = Param(nameof(Volume), 1m)
-			.SetDisplay("Volumen de orden", "Volumen para operaciones de trading", "Configuración principal")
+			.SetDisplay("Volumen de orden", "Volumen para operaciones de negociación", "Configuración principal")
 			.SetGreaterThanZero();
 
 		_signalDelta = Param(nameof(SignalDelta), 500m)
@@ -369,4 +369,4 @@ public class DeltaCandleStrategy : Strategy
 
 5. **Validación de parámetros**: el método de validación de parámetros se utiliza en StockSharp para comprobar la corrección de los valores antes de crear una suscripción.
 
-Así, hemos creado un tipo de vela completamente personalizado que se integra correctamente con todo el ecosistema de StockSharp (incluida la interfaz de usuario y el almacenamiento de datos) y que se puede utilizar para construir estrategias de trading basadas en el análisis del delta de volumen.
+Así, hemos creado un tipo de vela completamente personalizado que se integra correctamente con todo el ecosistema de StockSharp (incluida la interfaz de usuario y el almacenamiento de datos) y que se puede utilizar para construir estrategias de negociación basadas en el análisis del delta de volumen.

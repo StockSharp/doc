@@ -49,7 +49,7 @@ El índice de “maldad” del mercado se puede interpretar de la siguiente mane
    - Cuanto más cerca esté MMI de 100, más caótico será el mercado
    - Cuanto más cerca esté MMI de 0, más pronunciada será la tendencia
 
-2. **Aplicación en estrategias de trading**:
+2. **Aplicación en estrategias de negociación**:
    - Cuando MMI es alto (>50), utilice estrategias orientadas al mercado lateral (por ejemplo, operativa en rango u osciladores).
    - Cuando MMI es bajo (<50), utilice estrategias tendenciales (por ejemplo, seguimiento de tendencia)
 

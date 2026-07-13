@@ -41,12 +41,12 @@ O valor resultante é o indicador Fase lunar (LP).
 A interpretação do indicador Fase lunar pode variar, pois é uma ferramenta de análise técnica não convencional. No entanto, existem algumas abordagens comummente aceites:
 
 1. **Potenciais Pontos de Inversão**:
-   - Alguns traders acreditam que luas novas e luas cheias podem coincidir com pontos de inversão do mercado
+   - Alguns operadores acreditam que luas novas e luas cheias podem coincidir com pontos de inversão do mercado
    - Transições entre fases principais também podem ser vistas como potenciais períodos de maior volatilidade
 
 2. **Ciclos de Sentimento do Mercado**:
    - Existe uma teoria de que as fases da lua podem influenciar a psicologia de massas e, consequentemente, o sentimento do mercado
-   - Alguns estudos sugerem que o período de lua cheia pode levar a um comportamento mais emocional e irracional dos traders
+   - Alguns estudos sugerem que o período de lua cheia pode levar a um comportamento mais emocional e irracional dos operadores
 
 3. **Correlação com a Volatilidade**:
    - Alguns estudos mostram que a volatilidade pode ser mais alta durante períodos de lua cheia e lua nova
@@ -56,14 +56,14 @@ A interpretação do indicador Fase lunar pode variar, pois é uma ferramenta de
    - O LP pode ser usado em combinação com a análise de padrões sazonais para identificar potenciais periodicidades do mercado
 
 5. **Filtragem de Sinais**:
-   - Alguns traders usam o LP como filtro adicional para as suas estratégias de negociação
+   - Alguns operadores usam o LP como filtro adicional para as suas estratégias de negociação
    - Por exemplo, podem evitar certos tipos de operações durante fases lunares específicas se as estatísticas históricas mostrarem baixa eficiência
 
 6. **Combinação com Outros Indicadores**:
    - O LP normalmente não é usado como ferramenta autónoma para tomar decisões de negociação
    - Recomenda-se combiná-lo com indicadores técnicos tradicionais para confirmar sinais
 
-Note que não há evidência científica suficiente de influência directa das fases lunares nos mercados financeiros, e muitos traders profissionais abordam estas ferramentas com cepticismo. No entanto, alguns participantes do mercado encontram valor em incluir o LP no seu arsenal analítico.
+Note que não há evidência científica suficiente de influência directa das fases lunares nos mercados financeiros, e muitos operadores profissionais abordam estas ferramentas com cepticismo. No entanto, alguns participantes do mercado encontram valor em incluir o LP no seu arsenal analítico.
 
 ![Gráfico do indicador LP](../../../../images/indicator_lunar_phase.png)
 

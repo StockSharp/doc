@@ -21,7 +21,7 @@ Estrella matinal se considera una señal fuerte de una posible reversión de una
 - Cuanto más profundamente penetre la tercera vela en el cuerpo de la primera, más fuerte será la señal de reversión.
 - Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Estrella doji matinal" y se considera una señal aún más fuerte.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Estrella matinal proporciona buenas oportunidades para entrar en una posición larga:
 

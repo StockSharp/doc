@@ -97,7 +97,7 @@ La clase `ChartDrawScript` procesa específicamente datos de mercado para cada i
 
 El script utiliza estilos como [DrawStyles.DashedLine](xref:Ecng.Drawing.DrawStyles.DashedLine) para el gráfico de líneas y [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram) para el histograma, para distinguir visualmente distintas presentaciones de datos.
 
-Al implementar [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript), la clase `ChartDrawScript` permite integrar un enfoque para ejecutar scripts analíticos personalizables, convirtiéndola en una herramienta versátil para traders y analistas que usan la plataforma StockSharp.
+Al implementar [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript), la clase `ChartDrawScript` permite integrar un enfoque para ejecutar scripts analíticos personalizables, convirtiéndola en una herramienta versátil para operadores y analistas que usan la plataforma StockSharp.
 
 ## Resultado de ejecución
 

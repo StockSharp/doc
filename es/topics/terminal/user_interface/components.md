@@ -1,6 +1,6 @@
 # Componentes
 
-Durante el trading, puede necesitar controlar completamente el proceso. Para control y análisis completos, **Terminal** proporciona componentes gráficos que puede añadir seleccionándolos en el grupo **Componentes** de la **Cinta**:
+Durante la negociación, puede necesitar controlar completamente el proceso. Para control y análisis completos, **Terminal** proporciona componentes gráficos que puede añadir seleccionándolos en el grupo **Componentes** de la **Cinta**:
 
 ![Designer componentes](../../../images/designer_components.png)
 
@@ -9,7 +9,7 @@ Durante el trading, puede necesitar controlar completamente el proceso. Para con
 - [Comprar/Vender](components/buy_sell.md) - grupo de paneles que muestra la mejor información de precio para los instrumentos seleccionados y permite comprar o vender el volumen requerido de esos instrumentos.
 - [Libro de órdenes](components/order_book.md) - tabla de órdenes limitadas de compra y venta.
 - [Gráfico](components/chart.md) - permite dibujar velas e indicadores para el instrumento seleccionado.
-- [Equity P&L](../../designer/user_interface/components/pnl_equity.md) - gráfico de Profit\/Loss (no realizado), Profit\/Loss (realizado) y comisión.
+- [Curva de P&L](../../designer/user_interface/components/pnl_equity.md) - gráfico de ganancias\/pérdidas (no realizadas), ganancias\/pérdidas (realizadas) y comisión.
 - [Operaciones](../../designer/user_interface/components/trades.md) - tabla con operaciones que muestra información completa sobre todas las operaciones de la estrategia.
 - [Órdenes](../../designer/user_interface/components/orders.md) - tabla con órdenes que muestra información completa sobre todas las órdenes de la estrategia.
 - [Órdenes condicionales](components/conditional_orders.md) - tabla con órdenes condicionales que muestra información completa sobre todas las órdenes condicionales de la estrategia.

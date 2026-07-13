@@ -73,7 +73,7 @@ Der EMV-Indikator kann wie folgt interpretiert werden:
    - Anhaltend negative Werte bestätigen einen Abwärtstrend
    - Schwankungen um Null können auf einen Seitwärtstrend oder eine Konsolidierung hinweisen
 
-5. **Volume-Analyse**:
+5. **Volumenanalyse**:
    - Wenn der Preis mit einem positiven EMV steigt, bestätigt dies die Stärke der Aufwärtsbewegung
    - Wenn der Preis mit einem negativen EMV fällt, bestätigt dies die Stärke der Abwärtsbewegung
    - Wenn der Preis bei einem negativen EMV steigt oder bei einem positiven EMV fällt, kann dies auf die Instabilität der aktuellen Bewegung hinweisen

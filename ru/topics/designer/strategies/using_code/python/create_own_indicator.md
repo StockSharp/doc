@@ -22,7 +22,7 @@ class empty_indicator(BaseIndicator):
 	"""
 	Пример индикатора, демонстрирующий сохранение и загрузку параметров.
 
-	Doc https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
+	Документация https://doc.stocksharp.com/topics/designer/strategies/using_code/python/create_own_indicator.html
 	
 	Изменяет входную цену на +20% или -20%.
 	"""

@@ -4,7 +4,7 @@ O mesmo instrumento pode ter nomes diferentes em diferentes sistemas de negocia�
 
 Isto permite organizar os dados recebidos e simplificar o armazenamento. Na prática, todos os dados recebidos de várias fontes serão consolidados num único local, não pelo nome da fonte, mas pelo nome do instrumento.
 
-Isto também é útil ao negociar o mesmo instrumento em diferentes boards de negociação ou através de diferentes ligações (ou brokers). Além disso, permite obter dados de uma ligação e efetuar transações através de outra ligação.
+Isto também é útil ao negociar o mesmo instrumento em diferentes mercados de negociação ou através de diferentes ligações (ou brokers). Além disso, permite obter dados de uma ligação e efetuar transações através de outra ligação.
 
 Para corresponder instrumentos e ligações, deve:
 
@@ -16,7 +16,7 @@ Para corresponder instrumentos e ligações, deve:
 
    Instrumento de ações APPLE.
    - Ligação - **Interactive Brokers**. Clique no botão ![Designer botão Adicionar 00](../../../images/designer_creation_tool_00.png), após o que será adicionada uma nova linha.
-   - Nas colunas **Código do instrumento** e **Código do mercado**, especifique o código do instrumento e o código da board. Nas colunas **Código do instrumento no adaptador** e **Código do mercado no adaptador**, especifique o código do instrumento e o código da board tal como estão especificados no sistema de negociação externo. Clique em **OK** ![Designer mapeamento de instrumentos 01 01](../../../images/designer_security_mapping_01_01.png)
+   - Nas colunas **Código do instrumento** e **Código do mercado**, especifique o código do instrumento e o código do mercado. Nas colunas **Código do instrumento no adaptador** e **Código do mercado no adaptador**, especifique o código do instrumento e o código do mercado tal como estão especificados no sistema de negociação externo. Clique em **OK** ![Designer mapeamento de instrumentos 01 01](../../../images/designer_security_mapping_01_01.png)
    - Repetimos os passos para as ligações **Interactive Brokers** e **CQG Continuum** da mesma forma.
 
    | **Interactive Brokers**                                                           | **CQG Continuum**                                                                 |

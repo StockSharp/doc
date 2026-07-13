@@ -14,7 +14,7 @@ MAC utiliza dos medias móviles con períodos diferentes:
 
 El indicador generalmente se representa como la diferencia entre las medias móviles cortas y largas, lo que permite una fácil identificación del momento de cruce (cuando el valor del indicador cruza la línea cero).
 
-MAC se utiliza ampliamente tanto en estrategias de trading independientes como como parte de sistemas más complejos, como MACD (convergencia/divergencia de medias móviles).
+MAC se utiliza ampliamente tanto en estrategias de negociación independientes como como parte de sistemas más complejos, como MACD (convergencia/divergencia de medias móviles).
 
 ## Parámetros
 
@@ -71,7 +71,7 @@ El indicador de cruce de medias móviles se puede interpretar de la siguiente ma
 
 5. **Combinando con otros indicadores**:
    - MAC se utiliza a menudo en combinación con indicadores de impulso (RSI, estocástico) para confirmar señales
-   - También se puede combinar con indicadores de tendencia y volatilidad para crear sistemas de trading más completos.
+   - También se puede combinar con indicadores de tendencia y volatilidad para crear sistemas de negociación más completos.
 
 6. **Selección de parámetros**:
    - Los períodos más cortos (por ejemplo, 5 y 20) son más sensibles y adecuados para operaciones a corto plazo.

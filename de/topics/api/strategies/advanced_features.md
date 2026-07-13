@@ -8,7 +8,7 @@ Die Klasse `Strategy` stellt mehrere zusätzliche Eigenschaften zur Feinabstimmu
 
 Die Eigenschaft `CommentMode` steuert die automatische Befüllung des Felds `Order.Comment` für alle von der Strategie gesendeten Orders. Dadurch lässt sich erkennen, welche Strategie eine Order erstellt hat; das ist besonders nützlich, wenn mehrere Strategien gleichzeitig auf demselben Konto laufen.
 
-### Enumeration StrategyCommentModes
+### StrategyCommentModes-Enumeration
 
 | Wert | Beschreibung |
 |------|--------------|

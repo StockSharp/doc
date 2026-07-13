@@ -4,12 +4,12 @@
 
 Três corvos negros é um padrão de velas baixista que pode prever uma reversão de uma tendência ascendente.
 
-O padrão Três corvos negros consiste em três velas consecutivas que abriram dentro do corpo da vela anterior e fecharam abaixo da vela anterior. Os traders utilizam frequentemente este indicador em combinação com outros indicadores técnicos ou padrões gráficos como confirmação de uma reversão.
+O padrão Três corvos negros consiste em três velas consecutivas que abriram dentro do corpo da vela anterior e fecharam abaixo da vela anterior. Os operadores utilizam frequentemente este indicador em combinação com outros indicadores técnicos ou padrões gráficos como confirmação de uma reversão.
 
 ##### Características Principais:
 
 - Três corvos negros é um padrão de velas baixista utilizado para prever a reversão da tendência ascendente atual.
-- Os traders utilizam-no juntamente com outros indicadores técnicos, como o Relative Strength Index (RSI).
+- Os operadores utilizam-no juntamente com outros indicadores técnicos, como o Relative Strength Index (RSI).
 - O tamanho das velas e as sombras do padrão podem indicar o risco de reversão para pullback.
 - O padrão oposto a Três corvos negros é Três soldados brancos, que indica uma reversão de tendência descendente.
 

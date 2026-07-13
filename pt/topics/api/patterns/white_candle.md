@@ -9,7 +9,7 @@ Vela branca (vela altista) é um padrão clássico de velas que se forma quando 
 - Indica o predomínio dos compradores sobre os vendedores.
 - O tamanho do corpo da vela mostra a força do movimento altista.
 
-![Padrão de candle branco](../../../images/whitecandlepattern.png)
+![Padrão de vela branco](../../../images/whitecandlepattern.png)
 
 ### Interpretação
 

@@ -2,7 +2,7 @@
 
 La creación de estrategias desde código está pensada para usuarios que prefieren trabajar con código C#. Estas estrategias, a diferencia de los diagramas, no están limitadas en capacidades, y puede describirse cualquier algoritmo.
 
-El proceso de creación de una estrategia se realiza directamente en [Designer](../../../designer.md) o en un entorno de desarrollo **C#** (los más populares son **Visual Studio** y **JetBrains Rider**), usando una biblioteca para el desarrollo profesional de robots de trading en **C#** y la [API](../../../api.md).
+El proceso de creación de una estrategia se realiza directamente en [Designer](../../../designer.md) o en un entorno de desarrollo **C#** (los más populares son **Visual Studio** y **JetBrains Rider**), usando una biblioteca para el desarrollo profesional de robots de negociación en **C#** y la [API](../../../api.md).
 
 Puede añadir una nueva estrategia pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y eligiendo **Estrategia**. O bien haciendo clic con el botón derecho en la carpeta **Estrategias** del panel **Esquema** y pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
 

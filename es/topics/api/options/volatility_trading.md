@@ -1,4 +1,4 @@
-# Trading de volatilidad
+# Negociación de volatilidad
 
 Para la cotización de opciones, se implementa una estrategia especial [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy), que proporciona cotización de volumen dentro del rango de volatilidad especificado.
 
@@ -93,11 +93,11 @@ Para la cotización de opciones, se implementa una estrategia especial [Volatili
    	}
    	else
    		Connector.Disconnect();
-   }            		
-   	  				
+   }
+
    ```
 
-3. Configure la estrategia [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) (rellenando el rango de volatilidad, así como creando la orden mediante la cual se especifican el volumen requerido y la dirección de cotización): 
+3. Configure la estrategia [VolatilityQuotingStrategy](xref:StockSharp.Algo.Strategies.Derivatives.VolatilityQuotingStrategy) (rellenando el rango de volatilidad, así como creando la orden mediante la cual se especifican el volumen requerido y la dirección de cotización):
 
    ```none
    private void StartClick(object sender, RoutedEventArgs e)
@@ -143,7 +143,7 @@ Para la cotización de opciones, se implementa una estrategia especial [Volatili
    hedge.Start();
    ```
 
-5. Para una presentación visual de la volatilidad, el ejemplo muestra cómo puede convertir el libro de órdenes estándar con cotizaciones al libro de órdenes de volatilidad mediante el método [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility(StockSharp.Messages.IOrderBookMessage,StockSharp.BusinessEntities.ISecurityProvider,StockSharp.BusinessEntities.IMarketDataProvider,StockSharp.BusinessEntities.IExchangeInfoProvider,System.DateTimeOffset,System.Decimal,System.Decimal))**(**[StockSharp.Messages.IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) depth, [StockSharp.BusinessEntities.ISecurityProvider](xref:StockSharp.BusinessEntities.ISecurityProvider) securityProvider, [StockSharp.BusinessEntities.IMarketDataProvider](xref:StockSharp.BusinessEntities.IMarketDataProvider) dataProvider, [StockSharp.BusinessEntities.IExchangeInfoProvider](xref:StockSharp.BusinessEntities.IExchangeInfoProvider) exchangeInfoProvider, [System.DateTimeOffset](xref:System.DateTimeOffset) currentTime, [System.Decimal](xref:System.Decimal) riskFree, [System.Decimal](xref:System.Decimal) dividend **)**: 
+5. Para una presentación visual de la volatilidad, el ejemplo muestra cómo puede convertir el libro de órdenes estándar con cotizaciones al libro de órdenes de volatilidad mediante el método [DerivativesHelper.ImpliedVolatility](xref:StockSharp.Algo.Derivatives.DerivativesHelper.ImpliedVolatility(StockSharp.Messages.IOrderBookMessage,StockSharp.BusinessEntities.ISecurityProvider,StockSharp.BusinessEntities.IMarketDataProvider,StockSharp.BusinessEntities.IExchangeInfoProvider,System.DateTimeOffset,System.Decimal,System.Decimal))**(**[StockSharp.Messages.IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) depth, [StockSharp.BusinessEntities.ISecurityProvider](xref:StockSharp.BusinessEntities.ISecurityProvider) securityProvider, [StockSharp.BusinessEntities.IMarketDataProvider](xref:StockSharp.BusinessEntities.IMarketDataProvider) dataProvider, [StockSharp.BusinessEntities.IExchangeInfoProvider](xref:StockSharp.BusinessEntities.IExchangeInfoProvider) exchangeInfoProvider, [System.DateTimeOffset](xref:System.DateTimeOffset) currentTime, [System.Decimal](xref:System.Decimal) riskFree, [System.Decimal](xref:System.Decimal) dividend **)**:
 
    ```cs
    private void OnQuotesChanged()

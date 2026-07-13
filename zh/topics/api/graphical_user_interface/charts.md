@@ -2,7 +2,7 @@
 
 [S#](../../api.md) 提供了便于绘制图表的组件。这些组件集合在命名空间 [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) 中。
 
-图形库的关键概念是 *chart* 的概念。*chart* 是用于构建图表的其他元素的容器。在 [S#](../../api.md) 中有几种类型的 *chart*：
+图形库的关键概念是 *图表* 的概念。*图表* 是用于构建图表的其他元素的容器。在 [S#](../../api.md) 中有几种类型的 *图表*：
 
 - [图表](xref:StockSharp.Xaml.Charting.Chart) - 一个用于显示股票图表的图形组件。
 - [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) - 一个用于显示股票图表的高级图形组件。

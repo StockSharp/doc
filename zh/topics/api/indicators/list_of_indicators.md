@@ -9,7 +9,7 @@
 - [鳄鱼](list_of_indicators/alligator.md) - 鳄鱼，一种使用三条移动平均线来判断市场趋势的顺势指标
 - [AFI](list_of_indicators/approval_flow_index.md) - 批准流指数，根据价格和成交量衡量趋势强度
 - [ALMA](list_of_indicators/arnaud_legoux_moving_average.md) - Arnaud Legoux 移动平均线，一种减少滞后和噪音的移动平均线
-- [Aroon](list_of_indicators/aroon.md) - Aroon 指标，用于确定趋势的强度和方向
+- [阿隆](list_of_indicators/aroon.md) - 阿隆指标，用于确定趋势的强度和方向
 - [阿隆振荡器](list_of_indicators/aroon_oscillator.md) - Aroon 振荡器，显示 Aroon 向上与 Aroon 向下之间的差距
 - [ADX](list_of_indicators/adx.md) - 韦尔斯·威尔德平均方向指数，衡量趋势强度
 - [ATR](list_of_indicators/atr.md) - 平均真实波幅，衡量市场波动性
@@ -19,7 +19,7 @@
 - [BMP](list_of_indicators/balance_of_market_power.md) - 市场力量平衡，比对买入与卖出压力
 - [BOP](list_of_indicators/balance_of_power.md) - 力量平衡，显示买方与卖方的强度
 - [BV](list_of_indicators/balance_volume.md) - 平衡量指标，将成交量与价格变化联系起来
-- [Bollinger](list_of_indicators/bollinger_bands.md) - 布林带，用于衡量波动性并识别超买或超卖状态
+- [布林带](list_of_indicators/bollinger_bands.md) - 布林带，用于衡量波动性并识别超买或超卖状态
 - [BBP](list_of_indicators/bollinger_percent_b.md) - 布林带 %b，显示价格相对于布林带的位置
 - [模式](../patterns.md) - 在图表上识别特定价格模式
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - 重心振荡器，识别潜在的反转点
@@ -39,7 +39,7 @@
 - [DPI](list_of_indicators/disparity_index.md) - 差异指数，衡量价格与移动平均线之间的差异
 - [DC](list_of_indicators/donchian_channels.md) - 唐奇安通道，根据最高点和最低点识别突破水平
 - [DEMA](list_of_indicators/dema.md) - 双指数移动平均线，可减少移动平均计算中的滞后
-- [DeMarker](list_of_indicators/demarker.md) - DeMarker 指标，通过比较连续的高点和低点来评估需求
+- [德马克指标](list_of_indicators/demarker.md) - 德马克指标，通过比较连续的高点和低点来评估需求
 - [DZRSI](list_of_indicators/dynamic_zones_rsi.md) - 动态区间RSI，根据市场状况调整RSI水平
 - [EMV](list_of_indicators/ease_of_movement.md) - 移动易度，将价格变化与交易量联系起来
 - [EFT](list_of_indicators/ehlers_fisher_transform.md) - 埃勒斯-费舍尔变换，将价格标准化以突出极端值
@@ -66,7 +66,7 @@
 - [HVR](list_of_indicators/historical_volatility_ratio.md) - 历史波动率比率，将当前波动性与历史水平进行比较
 - [H](list_of_indicators/hurst_exponent.md) - 赫斯特指数，用于衡量序列的长期记忆
 - [HMA](list_of_indicators/hma.md) - Hull 移动平均线，一种快速且平滑的移动平均线
-- [Ichimoku](list_of_indicators/ichimoku.md) - 一目均衡表，一种用于趋势识别的综合指标
+- [一目均衡表](list_of_indicators/ichimoku.md) - 一目均衡表，一种用于趋势识别的综合指标
 - [III](list_of_indicators/intraday_intensity_index.md) - 日内强弱指数，衡量交易日内的买卖压力
 - [IMI](list_of_indicators/intraday_momentum_index.md) - 日内动量指数，用于识别日内超买和超卖状态
 - [JMA](list_of_indicators/jma.md) - Jurik 移动平均线，一种平滑且响应迅速的移动平均线
@@ -89,9 +89,9 @@
 - [MI](list_of_indicators/mass_index.md) - 量指数，根据范围扩展识别潜在反转
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - 麦克莱伦振荡器，衡量市场广度
 - [MGD](list_of_indicators/mcginley_dynamic.md) - 麦金利动态, 一种响应式移动平均
-- [MeanDev](list_of_indicators/mean_deviation.md) - 平均偏差，度量与平均值的平均偏离
+- [平均偏差](list_of_indicators/mean_deviation.md) - 平均偏差，度量与平均值的平均偏离
 - [移动中位数](list_of_indicators/median.md) - 移动中位数，使用窗口的中位数平滑数据
-- [MedPr](list_of_indicators/median_price.md) - 中位价，计算交易区间的中点
+- [中位数价格](list_of_indicators/median_price.md) - 中位数价格，计算交易区间的中点
 - [动量](list_of_indicators/momentum.md) - 动量，衡量价格变化的速度
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - 移动平均动量，衡量移动平均的动量
 - [MP](list_of_indicators/momentum_pinball.md) - 动量弹球指标，用于识别超买和超卖状况
@@ -106,11 +106,11 @@
 - [NRTR](list_of_indicators/nrtr.md) - Nick Rypock 追踪反转，一种追踪止损指标
 - [OBV](list_of_indicators/on_balance_volume.md) - 能量潮指标 (OBV)，将成交量与价格变化联系起来
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - 平衡交易量均值，OBV 的平滑版本
-- [OptimalTracking](list_of_indicators/optimal_tracking.md) - 由 John Ehlers 发布的最优跟踪滤波器，过滤价格数据以减少噪音
+- [最优跟踪](list_of_indicators/optimal_tracking.md) - 由 John Ehlers 发布的最优跟踪滤波器，过滤价格数据以减少噪音
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - 移动平均振荡器，衡量移动平均线与价格之间的差异
 - [抛物线SAR](list_of_indicators/parabolic_sar.md) - 抛物线SAR趋势指标的实现，用于识别潜在的反转点
-- [Stub](list_of_indicators/pass_through.md) - 一个没有逻辑的指标。用于绘制线条，自定义指标的占位符
-- [Peak](list_of_indicators/peak.md) - 峰值指标，用于识别价格数据中的局部高点
+- [直通](list_of_indicators/pass_through.md) - 一个没有逻辑的指标。用于绘制线条，自定义指标的占位符
+- [峰](list_of_indicators/peak.md) - 峰值指标，用于识别价格数据中的局部高点
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - 百分比价格振荡器，衡量两个移动平均线之间的百分比差异
 - [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - 带信号线的百分比价格振荡器，用EMA平滑PPO
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - 百分比价格振荡器柱状图，绘制PPO与其信号线之间的差值
@@ -138,7 +138,7 @@
 - [标准误差](list_of_indicators/standard_error.md) - 线性回归中的标准误差，衡量预测的准确性
 - [随机指标 %K](list_of_indicators/stochastic_oscillator_k.md) - 随机指标 %K，根据价格在区间内的位置衡量动量
 - [随机振荡器](list_of_indicators/stochastic_oscillator.md) - 随机振荡器，用于识别超买和超卖状况
-- [Sum](list_of_indicators/sum_n.md) - 最近N个值的和，计算最后N个价格的总和
+- [求和 N](list_of_indicators/sum_n.md) - 最近 N 个值的和，计算最后 N 个价格的总和
 - [T3MA](list_of_indicators/t3_moving_average.md) - T3移动平均线，一种平滑且响应迅速的移动平均线
 - [TWAP](list_of_indicators/time_weighted_average_price.md) - 时间加权平均价格，根据时间计算加权平均价格
 - [TP](list_of_indicators/typical_price.md) - 典型价格，高点、低点和收盘价的平均值
@@ -148,7 +148,7 @@
 - [TR](list_of_indicators/true_range.md) - 真正波动幅度，衡量价格变动的实际范围
 - [TSI](list_of_indicators/true_strength_index.md) - 真正强弱指数，应用双重平滑动量分析
 - [TMF](list_of_indicators/twiggs_money_flow.md) - Twiggs 资金流量，衡量买卖压力
-- [UltimateOsc](list_of_indicators/uo.md) - 最终振荡器，结合多个时间框架来衡量动量
+- [UO](list_of_indicators/uo.md) - 终极振荡器，结合多个时间框架来衡量动量
 - [VHF](list_of_indicators/vhf.md) - 垂直-水平滤波器，用于区分趋势市场与震荡市场
 - [VIDYA](list_of_indicators/vidya.md) - 可变指数动态平均，适应市场波动
 - [VMA](list_of_indicators/variable_moving_average.md) - 可变移动平均线，根据波动性调整平滑周期

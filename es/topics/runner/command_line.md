@@ -15,9 +15,9 @@ Parámetros disponibles:
 
 - -s - ruta al archivo de estrategia (con extensión cs, json o dll).
 - -t - (opcional) si se selecciona un archivo dll y el ensamblado contiene más de una clase de estrategia, debe especificar el tipo requerido mediante este parámetro.
-- -h - ruta al directorio con datos históricos. Puede ser una dirección de red en caso de usar modo servidor [server](../hydra_server.md).
-- --hl - (opcional) login, usado en modo servidor [server](../hydra_server.md).
-- --hp - (opcional) contraseña, usada en modo servidor [server](../hydra_server.md).
+- -h - ruta al directorio con datos históricos. Puede ser una dirección de red en caso de usar el [modo servidor](../hydra_server.md).
+- --hl - (opcional) login, usado en [modo servidor](../hydra_server.md).
+- --hp - (opcional) contraseña, usada en [modo servidor](../hydra_server.md).
 - --hf - fecha de inicio para pruebas en formato YYYYMMDD.
 - --ht - fecha de finalización para pruebas en formato YYYYMMDD.
 - -f - (opcional) formato de almacenamiento (Binary o Csv).
@@ -60,7 +60,7 @@ Formato del archivo de parámetros:
 ]
 ```
 
-Inicio de **Runner** para trading real:
+Inicio de **Runner** para la negociación real:
 
 ```cmd
 l -s SmaStrategy.cs -c connector.json --tg telegram.json

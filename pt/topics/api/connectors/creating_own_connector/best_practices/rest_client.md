@@ -1,6 +1,6 @@
 # Cliente REST
 
-Ao desenvolver um conector para diversas exchanges, um componente importante é o cliente HTTP, que fornece a interação com a API REST da exchange. No StockSharp, para esse propósito, uma classe `HttpClient` é frequentemente criada ao desenvolver um conector, construída com base na biblioteca RestSharp.
+Ao desenvolver um conector para diversas bolsas, um componente importante é o cliente HTTP, que fornece a interação com a API REST da bolsa. No StockSharp, para esse propósito, uma classe `HttpClient` é frequentemente criada ao desenvolver um conector, construída com base na biblioteca RestSharp.
 
 ## Recursos do RestSharp
 
@@ -108,7 +108,7 @@ class HttpClient : BaseLogReceiver
 
 - Use métodos assíncronos para uma operação de rede eficiente.
 - Implemente o tratamento de erros e novas tentativas para conexões instáveis.
-- Leve em conta os limites de taxa da API da exchange específica.
+- Leve em conta os limites de taxa da API da bolsa específica.
 - Use os métodos de extensão do RestSharp para simplificar o trabalho com solicitações e respostas.
 
-Lembre-se de que a implementação específica pode variar dependendo dos requisitos e das especificidades da API de uma exchange em particular.
+Lembre-se de que a implementação específica pode variar dependendo dos requisitos e das especificidades da API de uma bolsa em particular.

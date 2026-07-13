@@ -27,7 +27,7 @@ Rayos de Elder hereda la configuración de [ExponentialMovingAverage](xref:Stock
 - La reducción de fuerza alcista ante el aumento de precios o la subida de fuerza bajista ante la caída de precios forman divergencias y advierten sobre reversiones.
 - Los cruces de la línea cero de fuerza alcista o fuerza bajista marcan el cambio en el control del mercado.
 
-Las decisiones de trading se toman analizando el EMA y ambos osciladores simultáneamente. Por ejemplo, una oportunidad de compra aparece cuando
+Las decisiones de negociación se toman analizando el EMA y ambos osciladores simultáneamente. Por ejemplo, una oportunidad de compra aparece cuando
 el EMA está subiendo, el fuerza bajista se recupera de un nuevo mínimo y el fuerza alcista supera el cero.
 
 ![Gráfico del indicador Rayos de Elder](../../../../images/indicator_elder_ray.png)

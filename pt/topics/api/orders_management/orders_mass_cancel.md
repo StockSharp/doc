@@ -16,7 +16,7 @@ Para cancelar todas as ordens para o instrumento especificado:
 _connector.CancelOrders(null, null, null, null, security);
 ```
 
-Para cancelar todas as stop orders longas:
+Para cancelar todas as ordens stop longas:
 
 ```cs
 _connector.CancelOrders(true, null, Sides.Buy, null, null);

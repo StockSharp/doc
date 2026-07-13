@@ -2,7 +2,7 @@
 
 **CoinCap** - proveedor de datos de mercado de datos en tiempo real sobre monedas digitales\/criptomonedas.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
 
 > [!CAUTION]
 > El conector solo admite el flujo de datos de mercado, las transacciones no son compatibles.

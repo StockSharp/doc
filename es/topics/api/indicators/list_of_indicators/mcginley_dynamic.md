@@ -66,7 +66,7 @@ Dinámica de McGinley se puede interpretar de manera similar a otras medias móv
 
 6. **Combinando con otros indicadores**:
    - MGD funciona bien con osciladores (RSI, estocástico)
-   - Puede utilizarse como filtro de tendencias para otros sistemas de trading.
+   - Puede utilizarse como filtro de tendencias para otros sistemas de negociación.
 
 7. **Selección del parámetro de longitud**:
    - Los valores más pequeños de Length (por ejemplo, 8-12) hacen que MGD sea más sensible a los cambios de precios y se adapta al comercio a corto plazo.

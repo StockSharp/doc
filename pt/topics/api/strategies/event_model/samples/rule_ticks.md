@@ -52,7 +52,7 @@ protected override void OnStarted2(DateTime time)
 - Quando o primeiro tick é recebido, é criada uma regra combinada
 - Baseia-se no preço do tick recebido: cria uma regra que é accionada quando o preço se altera em +/- 2
 - A regra é accionada quando o preço do último negócio fica acima de actual + 2 ou abaixo de actual - 2
-- Quando a regra é accionada, a informação sobre o tick é adicionada ao log
+- Quando a regra é accionada, a informação sobre o tick é adicionada ao registo
 - A regra externa é accionada apenas uma vez (`Once()`)
 
 ## Funcionalidades

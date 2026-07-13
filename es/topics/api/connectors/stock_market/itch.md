@@ -2,7 +2,7 @@
 
 **ITCH** - proveedor de datos de mercado en tiempo real para cotizaciones de acciones, Forex, noticias, contratos de futuros, etc.
 
-Antes de comenzar a escribir robots de trading para la plataforma de trading actual, se recomienda leer los enlaces en [Conectores](../../connectors.md). 
+Antes de comenzar a escribir robots de negociación para la plataforma de negociación actual, se recomienda leer los enlaces en [Conectores](../../connectors.md).
 
 > [!TIP]
 > El conector solo admite el flujo de datos de mercado; las transacciones no están admitidas.

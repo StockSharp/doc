@@ -304,7 +304,7 @@ StartProtection(TakeValue, StopValue);
 带有附加参数的示例：
 
 ```cs
-// 使用 trailing stop 和市价订单启动保护
+// 使用跟踪止损和市价订单启动保护
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute), // 止盈
 	stopLoss: new Unit(2, UnitTypes.Percent),     // 百分比止损

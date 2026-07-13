@@ -2,7 +2,7 @@
 
 **DXtrade** - plataforma para operar en mercados Forex.
 
-Antes de comenzar a escribir robots de trading para la plataforma de trading actual, se recomienda familiarizarse con los enlaces proporcionados en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para la plataforma de negociación actual, se recomienda familiarizarse con los enlaces proporcionados en la sección [Conectores](../../connectors.md).
 
 ## Ver también
 

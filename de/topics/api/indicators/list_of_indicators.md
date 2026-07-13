@@ -19,7 +19,7 @@
 - [BMP](list_of_indicators/balance_of_market_power.md) - Indikator BMP, vergleicht Kauf- und Verkaufsdruck
 - [BOP](list_of_indicators/balance_of_power.md) - Indikator BOP, zeigt die Stärke von Käufern gegenüber Verkäufern
 - [BV](list_of_indicators/balance_volume.md) - Indikator BV, verknüpft Volumen mit Preisänderungen
-- [Bollinger](list_of_indicators/bollinger_bands.md) - Indikator Bollinger, misst Volatilität und erkennt überkaufte oder überverkaufte Bedingungen
+- [Bollinger-Bänder](list_of_indicators/bollinger_bands.md) - Indikator Bollinger-Bänder, misst Volatilität und erkennt überkaufte oder überverkaufte Bedingungen
 - [BBP](list_of_indicators/bollinger_percent_b.md) - Indikator BBP, zeigt die Preisposition relativ zu den Bollinger-Bänder
 - [Pattern](../patterns.md) - Indikator Pattern, erkennt bestimmte Kursmuster in Charts
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Indikator CGO, identifiziert mögliche Wendepunkte
@@ -57,7 +57,7 @@
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - Indikator FRAMA, passt sich der Marktvolatilität an
 - [Fraktale](list_of_indicators/fractals.md) - Indikator Fractals, identifiziert mögliche Wendepunkte in Preis-Charts
 - [FDI](list_of_indicators/fractal_dimension.md) - Indikator FDI, misst die Rauheit des Marktes
-- [Gator](list_of_indicators/gator_oscillator.md) - Indikator Gator, misst Konvergenz und Divergenz gleitender Durchschnitte
+- [Gator-Oszillator](list_of_indicators/gator_oscillator.md) - Indikator Gator-Oszillator, misst Konvergenz und Divergenz gleitender Durchschnitte
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - Indikator GAPO, misst die Variabilität von Preisbewegungen
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - Indikator GMMA, nutzt mehrere gleitende Durchschnitte zur Trendidentifikation
 - [HO](list_of_indicators/harmonic_oscillator.md) - Indikator HO, erkennt harmonische Muster in Preisdaten
@@ -89,9 +89,9 @@
 - [MI](list_of_indicators/mass_index.md) - Indikator MI, erkennt mögliche Umkehrungen anhand der Ausweitung der Handelsspanne
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - Indikator MCO, misst die Marktbreite
 - [MGD](list_of_indicators/mcginley_dynamic.md) - Indikator MGD, ein reaktionsfähiger gleitender Durchschnitt
-- [MeanDev](list_of_indicators/mean_deviation.md) - Indikator MeanDev, misst die mittlere Abweichung vom Mittelwert
+- [Mittlere Abweichung](list_of_indicators/mean_deviation.md) - Indikator Mittlere Abweichung, misst die mittlere Abweichung vom Mittelwert
 - [Gleitender Median](list_of_indicators/median.md) - Indikator Gleitender Median, glättet Daten mit dem Median des Fensters
-- [MedPr](list_of_indicators/median_price.md) - Indikator MedPr, berechnet die Mitte der Handelsspanne
+- [Medianpreis](list_of_indicators/median_price.md) - Indikator Medianpreis, berechnet die Mitte der Handelsspanne
 - [Impuls](list_of_indicators/momentum.md) - Indikator Momentum, misst die Geschwindigkeit der Preisänderung
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - Indikator MOMA, misst das Momentum eines gleitenden Durchschnitts
 - [MP](list_of_indicators/momentum_pinball.md) - Indikator MP, erkennt überkaufte und überverkaufte Bedingungen
@@ -103,13 +103,13 @@
 - [MAR](list_of_indicators/moving_average_ribbon.md) - Indikator MAR, nutzt mehrere gleitende Durchschnitte zur Trendvisualisierung
 - [NVI](list_of_indicators/negative_volume_index.md) - Indikator NVI, verfolgt Preisbewegungen an Tagen mit sinkendem Volumen
 - [PVI](list_of_indicators/positive_volume_index.md) - Indikator PVI, verfolgt Preisbewegungen an Tagen mit steigendem Volumen
-- [NRTR](list_of_indicators/nrtr.md) - Indikator NRTR, ein Trailing-Stop-Indikator
+- [NRTR](list_of_indicators/nrtr.md) - Indikator NRTR, ein Indikator für nachgezogene Stops
 - [OBV](list_of_indicators/on_balance_volume.md) - Indikator OBV, verknüpft Volumen mit Preisänderungen
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - Indikator OBVM, eine geglättete Version von OBV
-- [OptimalTracking](list_of_indicators/optimal_tracking.md) - Indikator OptimalTracking, filtert Preisdaten zur Rauschreduzierung
+- [optimale Nachführung](list_of_indicators/optimal_tracking.md) - Indikator optimale Nachführung, filtert Preisdaten zur Rauschreduzierung
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - Indikator OMA, misst die Differenz zwischen gleitendem Durchschnitt und Preis
 - [parabolischer SAR](list_of_indicators/parabolic_sar.md) - Indikator parabolischer SAR, identifiziert mögliche Wendepunkte
-- [Stub](list_of_indicators/pass_through.md) - Ein Indikator ohne Logik. Wird zum Zeichnen von Linien oder als Platzhalter für benutzerdefinierte Indikatoren verwendet
+- [Durchleitung](list_of_indicators/pass_through.md) - Ein Indikator ohne Logik. Wird zum Zeichnen von Linien oder als Platzhalter für benutzerdefinierte Indikatoren verwendet
 - [Spitzenwert](list_of_indicators/peak.md) - Indikator Spitzenwert, identifiziert lokale Hochs in Preisdaten
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - Indikator PPO, misst die prozentuale Differenz zwischen zwei gleitenden Durchschnitten
 - [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - Indikator PPOS, glättet PPO mit einem EMA
@@ -136,7 +136,7 @@
 - [SMMA](list_of_indicators/smoothed_ma.md) - Indikator SMMA, ein gleitender Durchschnitt mit höherer Gewichtung jüngerer Preise
 - [Standardabweichung](list_of_indicators/standard_deviation.md) - Indikator Standardabweichung, misst die Streuung von Preisdaten
 - [Standardfehler](list_of_indicators/standard_error.md) - Indikator Standardfehler, misst die Prognosegenauigkeit
-- [Stochastik %K](list_of_indicators/stochastic_oscillator_k.md) - Indikator Stochastik %K, misst Momentum anhand der Preisposition innerhalb einer Spanne
+- [Stochastischer Oszillator %K](list_of_indicators/stochastic_oscillator_k.md) - Indikator Stochastischer Oszillator %K, misst Momentum anhand der Preisposition innerhalb einer Spanne
 - [Stochastischer Oszillator](list_of_indicators/stochastic_oscillator.md) - Indikator Stochastischer Oszillator, erkennt überkaufte und überverkaufte Bedingungen
 - [Summe N](list_of_indicators/sum_n.md) - Indikator Summe N, berechnet die Summe der letzten N Preise
 - [T3MA](list_of_indicators/t3_moving_average.md) - Indikator T3MA, ein glatter und reaktionsfähiger gleitender Durchschnitt
@@ -148,7 +148,7 @@
 - [TR](list_of_indicators/true_range.md) - Indikator TR, misst die tatsächliche Spanne der Preisbewegung
 - [TSI](list_of_indicators/true_strength_index.md) - Indikator TSI, verwendet doppelt geglättete Momentum-Analyse
 - [TMF](list_of_indicators/twiggs_money_flow.md) - Indikator TMF, misst Kauf- und Verkaufsdruck
-- [UltimateOsc](list_of_indicators/uo.md) - Indikator UltimateOsc, kombiniert mehrere Zeitrahmen zur Messung von Momentum
+- [UO](list_of_indicators/uo.md) - Indikator UO, kombiniert mehrere Zeitrahmen zur Messung von Momentum
 - [VHF](list_of_indicators/vhf.md) - Indikator VHF, unterscheidet Trendmärkte von Seitwärtsmärkten
 - [VIDIA](list_of_indicators/vidya.md) - Indikator VIDIA, passt sich der Marktvolatilität an
 - [VMA](list_of_indicators/variable_moving_average.md) - Indikator VMA, passt sich der Volatilität an

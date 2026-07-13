@@ -52,12 +52,12 @@ var shortSma = new SMA { Length = Short };
 
 // ----------------------------------------
 
-// --- ligar o conjunto de candles e indicadores ----
+// --- ligar o conjunto de velas e indicadores ----
 
 var subscription = SubscribeCandles(CandleType);
 
 subscription
-	// ligar indicadores às candles
+	// ligar indicadores às velas
 	.Bind(longSma, shortSma, OnProcess)
 	// iniciar o processamento
 	.Start();
@@ -94,7 +94,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-	// caso tenhamos subscrito apenas candles não finalizadas
+	// caso tenhamos subscrito apenas velas não finalizadas
 	if (candle.State != CandleStates.Finished)
 		return;
 

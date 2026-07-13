@@ -1,8 +1,8 @@
-# Estrategia de pairs trading
+# Estrategia de negociación por pares
 
 ## Descripción general
 
-`PairsTradingStrategy` es una estrategia de pairs trading basada en arbitraje estadístico entre dos instrumentos relacionados. Sigue el spread entre los precios de dos activos y abre posiciones cuando el spread se desvía significativamente de la media, esperando una reversión a la media.
+`PairsTradingStrategy` es una estrategia de negociación por pares basada en arbitraje estadístico entre dos instrumentos relacionados. Sigue el spread entre los precios de dos activos y abre posiciones cuando el spread se desvía significativamente de la media, esperando una reversión a la media.
 
 ## Componentes principales
 
@@ -42,7 +42,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Obtener dos instrumentos para pairs trading
+	// Obtener dos instrumentos para la negociación por pares
 	var securities = GetWorkingSecurities().ToArray();
 	if (securities.Length < 2)
 		throw new InvalidOperationException("Deben especificarse dos instrumentos.");
@@ -88,7 +88,7 @@ protected override void OnStarted2(DateTime time)
 
 ## Procesamiento de spread
 
-El método `ProcessSpread` calcula el Z-Score del spread y genera señales de trading:
+El método `ProcessSpread` calcula el Z-Score del spread y genera señales de negociación:
 
 ```cs
 private void ProcessSpread(decimal price1, decimal price2,
@@ -134,7 +134,7 @@ private void ProcessSpread(decimal price1, decimal price2,
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 - **Señal de venta**: el Z-Score del spread supera el umbral de entrada (predeterminado 2.0) cuando no hay posición corta
 - **Señal de compra**: el Z-Score del spread cae por debajo del umbral de entrada negativo (predeterminado -2.0) cuando no hay posición larga

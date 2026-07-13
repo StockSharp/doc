@@ -1,12 +1,12 @@
 # Weißer Marubozu
 
-Weißer Marubozu ist ein bullisches Candlestick-Muster, das durch das Fehlen von Schatten an beiden Enden der Candle gekennzeichnet ist. Der Begriff "Marubozu" stammt aus dem Japanischen und bedeutet "kahlköpfig" oder "rasiert", was das Erscheinungsbild der Candle ohne Schatten beschreibt.
+Weißer Marubozu ist ein bullisches Candlestick-Muster, das durch das Fehlen von Schatten an beiden Enden der Kerze gekennzeichnet ist. Der Begriff "Marubozu" stammt aus dem Japanischen und bedeutet "kahlköpfig" oder "rasiert", was das Erscheinungsbild der Kerze ohne Schatten beschreibt.
 
 ##### Hauptmerkmale:
 
 - Der Eröffnungskurs liegt unter dem Schlusskurs (O < C).
-- Der Candle-Körper ist vollständig gefüllt, ohne obere und untere Schatten.
-- Der Eröffnungskurs entspricht dem Tief der Candle, und der Schlusskurs entspricht dem Hoch der Candle.
+- Der Kerzenkörper ist vollständig gefüllt, ohne obere und untere Schatten.
+- Der Eröffnungskurs entspricht dem Tief der Kerze, und der Schlusskurs entspricht dem Hoch der Kerze.
 - Stellt eine starke bullische Bewegung dar, bei der Käufer während der gesamten Periode den Preis kontrollierten.
 
 ![Weißes Marubozu-Muster](../../../images/whitemarubozu.png)
@@ -22,7 +22,7 @@ Weißer Marubozu gilt als starkes bullisches Signal:
 
 ### Handelsstrategien
 
-Weißer Marubozu liefert ein stärkeres Signal als eine reguläre weiße Candle:
+Weißer Marubozu liefert ein stärkeres Signal als eine reguläre weiße Kerze:
 
 - Möglichkeit zum Einstieg in eine Long-Position nach Bildung eines weißen Marubozu, insbesondere wenn er an einem wichtigen Unterstützungsniveau erscheint.
 - Verwendung des Schlusskurses des Weißer Marubozu als Unterstützungsniveau beim Setzen von Stop-Losses.

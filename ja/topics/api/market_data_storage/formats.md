@@ -17,7 +17,7 @@ StockSharp は、[StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) 
 
 ### サポートされるデータ型
 
-バイナリ形式は、主要なすべての市場データ型のシリアライズをサポートします。キャンドル、ティック（取引）、板情報（Level2）、Level1 データ、注文、自己約定です。各型には、その特定データの構造に最適化された専用シリアライザーがあります。
+バイナリ形式は、主要なすべての市場データ型のシリアライズをサポートします。ローソク足、ティック（取引）、板情報（Level2）、Level1 データ、注文、自己約定です。各型には、その特定データの構造に最適化された専用シリアライザーがあります。
 
 ## CSV 形式
 
@@ -55,7 +55,7 @@ CSV ファイルの拡張子は `.csv` です。
 
 拡張子は、バイナリ形式では `.bin`、テキスト形式では `.csv` です。この階層構成により、銘柄と日付による高速なデータ検索が可能になります。
 
-たとえば、2024 年 4 月 1 日の AAPL@NASDAQ 銘柄の 5 分足キャンドルをバイナリ形式で保存する場合、次のようなパスに配置されます。
+たとえば、2024 年 4 月 1 日の AAPL@NASDAQ 銘柄の 5 分足ローソク足をバイナリ形式で保存する場合、次のようなパスに配置されます。
 
 ```
 Storage/S/AAPL@NASDAQ/2024_04_01/candles_5m.bin
@@ -84,13 +84,13 @@ await csvStorage.SaveAsync(candles);
 ```cs
 var storageRegistry = new StorageRegistry();
 
-// バイナリ形式でキャンドルストレージを作成します
+// バイナリ形式でローソク足ストレージを作成します
 var binaryStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId,
     TimeSpan.FromMinutes(5),
     StorageFormats.Binary);
 
-// CSV 形式でキャンドルストレージを作成します
+// CSV 形式でローソク足ストレージを作成します
 var csvStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId,
     TimeSpan.FromMinutes(5),

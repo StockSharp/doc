@@ -75,7 +75,7 @@ Das Paket `StockSharp.Algo.Analytics.CSharp` enthält fertige Skripte:
 
 ## Beispiel: Benutzerdefiniertes Analyseskript
 
-Nachfolgend ein Beispielskript, das Candles für eine Liste von Instrumenten lädt und Schlusskurse in einem Liniendiagramm anzeigt:
+Nachfolgend ein Beispielskript, das Kerzen für eine Liste von Instrumenten lädt und Schlusskurse in einem Liniendiagramm anzeigt:
 
 ```cs
 public class MyAnalyticsScript : IAnalyticsScript

@@ -4,5 +4,4 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 
 ![API-GUI-Einstellungen OKEx History](../../../../../images/api_gui_settings_okex_history.png)
 
-- **Datumsangaben prüfen** - Angeforderte Datumswerte vor dem Senden von Download-Anfragen prüfen.
-
+- **Datumsangaben prüfen** - Angeforderte Datumswerte vor dem Senden von Anfragen zum Herunterladen prüfen.

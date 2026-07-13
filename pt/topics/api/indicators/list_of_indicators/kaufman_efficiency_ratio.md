@@ -69,7 +69,7 @@ O rácio de eficiência de Kaufman pode ser interpretado da seguinte forma:
 
 5. **Adaptação às Condições de Mercado**:
    - O KER permite adaptar estratégias de negociação a condições de mercado em mudança
-   - Os traders podem ajustar dinamicamente parâmetros de outros indicadores com base nos valores do KER
+   - Os operadores podem ajustar dinamicamente parâmetros de outros indicadores com base nos valores do KER
 
 6. **Precursor de Alterações**:
    - Alterações acentuadas do KER antecedem frequentemente novos movimentos de preço

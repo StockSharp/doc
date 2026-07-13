@@ -8,7 +8,7 @@ Para usar o indicador, é necessário usar a classe [BalanceVolume](xref:StockSh
 
 ## Descrição
 
-O indicador volume de balanço (BV) foi concebido para analisar a relação entre a alteração de preço e o volume de negociação. Ajuda os traders a determinar como as alterações de volume correspondem ao movimento do preço, o que pode indicar a força ou fraqueza da tendência atual.
+O indicador volume de balanço (BV) foi concebido para analisar a relação entre a alteração de preço e o volume de negociação. Ajuda os operadores a determinar como as alterações de volume correspondem ao movimento do preço, o que pode indicar a força ou fraqueza da tendência atual.
 
 A ideia principal do BV é que o volume deve confirmar a direção do preço. Se o preço subir com volume crescente, isto indica uma tendência ascendente forte. Pelo contrário, se o preço cair com volume crescente, isto sugere uma tendência descendente forte.
 

@@ -18,21 +18,21 @@ A continuación se muestra el ejemplo SampleOptionQuoting, en el que se usa este
            xmlns:xaml="http://schemas.stocksharp.com/xaml"
            Title="{x:Static loc:LocalizedStrings.XamlStr396}" Height="400" Width="1030">
        <Grid Margin="5,5,5,5">
-       
+
    	    .........................................................
-   	    
+
    	    <xaml:OptionPositionChart x:Name="PosChart" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="6" />
    	</Grid>
    </Window>
-   				
+
    ```
 
 2. En el código C#, cree una conexión y suscríbase a los eventos necesarios.
 
    ```cs
-   ...                 
+   ...
    public readonly Connector Connector = new Connector();
-   ...                 
+   ...
    // suscribirse al evento de conexión correcta
    Connector.Connected += () =>
    {
@@ -95,8 +95,8 @@ A continuación se muestra el ejemplo SampleOptionQuoting, en el que se usa este
 
 3. Al conectar, establezca la configuración inicial del control:
 
-   1. Restablecer el modelo del control [OptionPositionChart.Model](xref:StockSharp.Xaml.Charting.OptionPositionChart.Model); 
-   2. Redibujar el gráfico con los valores iniciales [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**assetPrice [System.Nullable\<System.Decimal\>](xref:System.Nullable`1), currentTime [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1), expiryDate [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) **)**; 
+   1. Restablecer el modelo del control [OptionPositionChart.Model](xref:StockSharp.Xaml.Charting.OptionPositionChart.Model);
+   2. Redibujar el gráfico con los valores iniciales [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**assetPrice [System.Nullable\<System.Decimal\>](xref:System.Nullable`1), currentTime [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1), expiryDate [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) **)**;
    3. Especificar el proveedor de mensajes para datos de mercado e instrumentos.
 
    ```cs
@@ -178,4 +178,4 @@ A continuación se muestra el ejemplo SampleOptionQuoting, en el que se usa este
 
 ## Contenido recomendado
 
-[Trading de volatilidad](../../options/volatility_trading.md)
+[Negociación de volatilidad](../../options/volatility_trading.md)

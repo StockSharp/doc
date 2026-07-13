@@ -1,6 +1,6 @@
 # Suscripciones a datos de mercado en estrategias
 
-En StockSharp, las estrategias usan un mecanismo de suscripción para recibir datos de mercado. Este enfoque es el método principal y recomendado para obtener datos en estrategias de trading.
+En StockSharp, las estrategias usan un mecanismo de suscripción para recibir datos de mercado. Este enfoque es el método principal y recomendado para obtener datos en estrategias de negociación.
 
 ## Fundamentos de las suscripciones
 
@@ -14,21 +14,21 @@ En el método [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(S
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Crear una suscripción para velas de 5 minutos directamente mediante DataType
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
-	
+
 	// Si se requieren parámetros adicionales, puede configurar la suscripción
 	subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
-	
+
 	// Crear una regla para procesar velas entrantes
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
 		.Apply(this);
-	
+
 	// Iniciar la suscripción
 	Connector.Subscribe(subscription);
 }
@@ -67,7 +67,7 @@ private void CheckRefreshOnlineState()
 		nowOnline = _subscriptions.CachedKeys
 			.Where(s => !s.SubscriptionMessage.IsHistoryOnly())
 			.All(s => s.State == SubscriptionStates.Online);
-	
+
 	// Actualizar el estado IsOnline de la estrategia
 	IsOnline = nowOnline;
 }

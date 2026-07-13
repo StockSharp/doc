@@ -1,6 +1,6 @@
 # Gestión de posiciones
 
-StockSharp proporciona un sistema flexible de gestión de posiciones que permite realizar seguimiento del estado actual de las posiciones, calcularlas basándose en órdenes o trades, y mantener un historial de ciclo de vida (apertura, cierre, reversals).
+StockSharp proporciona un sistema flexible de gestión de posiciones que permite realizar seguimiento del estado actual de las posiciones, calcularlas basándose en órdenes u operaciones, y mantener un historial de ciclo de vida (apertura, cierre, reversiones).
 
 ## PositionManager
 
@@ -15,8 +15,8 @@ var state = new PositionManagerState();
 var manager = new PositionManager(byOrders: false, state);
 ```
 
-- `byOrders = true` -- la posición se calcula basándose en cambios del saldo de órdenes. Es adecuado cuando el sistema de trading recibe actualizaciones de estado de órdenes pero no trades individuales.
-- `byOrders = false` -- la posición se calcula basándose en volúmenes de trades (modo recomendado). Proporciona una contabilidad más precisa de las operaciones ejecutadas.
+- `byOrders = true` -- la posición se calcula basándose en cambios del saldo de órdenes. Es adecuado cuando el sistema de negociación recibe actualizaciones de estado de órdenes pero no operaciones individuales.
+- `byOrders = false` -- la posición se calcula basándose en volúmenes de operaciones (modo recomendado). Proporciona una contabilidad más precisa de las operaciones ejecutadas.
 
 ### Procesamiento de mensajes
 
@@ -124,7 +124,7 @@ var posManager = new PositionManager(byOrders: false, new PositionManagerState()
 var posAdapter = new PositionMessageAdapter(innerAdapter, posManager);
 ```
 
-El adaptador intercepta mensajes de ejecución de órdenes y trades, llama a `PositionManager.ProcessMessage` y genera las instancias `PositionChangeMessage` correspondientes para los manejadores superiores.
+El adaptador intercepta mensajes de ejecución de órdenes y operaciones, llama a `PositionManager.ProcessMessage` y genera las instancias `PositionChangeMessage` correspondientes para los manejadores superiores.
 
 ## Posiciones en estrategias
 
@@ -144,11 +144,11 @@ else if (Position < 0)
 ClosePosition();
 ```
 
-Para más detalles sobre operaciones de trading en estrategias, consulte la sección [Operaciones de trading](strategies/trading_operations.md).
+Para más detalles sobre operaciones de negociación en estrategias, consulte la sección [Operaciones de negociación](strategies/trading_operations.md).
 
 ## Véase también
 
-- [Operaciones de trading](strategies/trading_operations.md)
+- [Operaciones de negociación](strategies/trading_operations.md)
 - [Protección de posiciones](strategies/take_profit_and_stop_loss.md)
 - [Gestión de posición objetivo](strategies/target_position_management.md)
 - [Informes](strategies/reporting.md)

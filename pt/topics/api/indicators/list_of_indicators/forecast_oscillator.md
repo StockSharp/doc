@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [ForecastOscillator](xre
 
 ## Descrição
 
-O Oscilador de previsão (FOSC) baseia-se em regressão linear e foi concebido para medir o grau de desvio do preço atual em relação ao seu valor previsto. Ajuda os traders a avaliar quão próximo o preço atual está da tendência esperada ou quanto se desvia dela.
+O Oscilador de previsão (FOSC) baseia-se em regressão linear e foi concebido para medir o grau de desvio do preço atual em relação ao seu valor previsto. Ajuda os operadores a avaliar quão próximo o preço atual está da tendência esperada ou quanto se desvia dela.
 
 O indicador calcula uma linha de tendência usando regressão linear ao longo de um período especificado e depois compara o preço de fecho real com o valor previsto nessa linha. A diferença é expressa em percentagem, tornando o FOSC um oscilador que flutua em torno da linha zero.
 

@@ -335,4 +335,4 @@ dotnet run
 
 ## 例子
 
-StockSharp 的现成用法示例可在仓库的 [Samples/](https://github.com/stocksharp/stocksharp/tree/master/Samples) 目录中找到。它们涵盖了连接交易所、订阅数据、构建K线、指标、策略以及测试。
+StockSharp 的现成用法示例可在仓库的 [示例目录](https://github.com/stocksharp/stocksharp/tree/master/Samples) 中找到。它们涵盖了连接交易所、订阅数据、构建K线、指标、策略以及测试。

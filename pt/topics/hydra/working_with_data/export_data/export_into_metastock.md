@@ -15,7 +15,7 @@ Nesta janela, especifique o modelo de exportação, no qual as chavetas indicam 
 	  				
 ```
 
-No exemplo, o período da candle de cinco minutos é especificado na segunda posição.
+No exemplo, o período da vela de cinco minutos é especificado na segunda posição.
 
 Além disso, a primeira linha (Header) deve ser definida no ficheiro: 
 

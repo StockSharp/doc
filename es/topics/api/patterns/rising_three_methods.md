@@ -23,7 +23,7 @@ Tres métodos ascendentes se considera una señal fiable de continuación de ten
 - Este patrón puede verse como una bandera o pennant en el análisis técnico clásico.
 - Esta secuencia de velas indica que la corrección se usó para acumular posiciones largas antes de continuar el movimiento alcista.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Tres métodos ascendentes proporciona buenas oportunidades para entrar o reforzar posiciones largas:
 

@@ -10,7 +10,7 @@ Podem ser importados os seguintes tipos:
 - [Instrumentos](importing/instruments.md)
 - [Ticks](importing/ticks.md)
 - [Livros de ordens](importing/order_books.md)
-- [Log de ordens](importing/order_log.md)
+- [Registo de ordens](importing/order_log.md)
 - [Level 1](importing/level_1.md)
 - [Notícias](importing/news.md)
 - [Transações](importing/transactions.md)

@@ -61,7 +61,7 @@ Re-registro asíncrono de una orden (cancelación de la antigua y registro de un
 public async ValueTask ReRegisterOrderAsync(Order oldOrder, Order newOrder, CancellationToken cancellationToken = default)
 ```
 
-Se utiliza cuando el exchange no admite la edición de órdenes, pero sí admite el reemplazo atómico. El soporte se puede comprobar mediante `IsOrderReplaceable`:
+Se utiliza cuando la bolsa no admite la edición de órdenes, pero sí admite el reemplazo atómico. El soporte se puede comprobar mediante `IsOrderReplaceable`:
 
 ```cs
 if (connector.IsOrderReplaceable(order) == true)

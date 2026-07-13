@@ -9,7 +9,7 @@ Para todos los productos de [S#](../../../../api.md), la configuración gráfica
 - **frase de acceso** - Frase de contraseña.
 - **Saldo** - Intervalo de verificación de balance. Requerido en caso de acciones de depósito y retiro.
 - **Intervalo de comprobación** - Intervalo de verificación del servidor para rastrear que la conexión esté activa. Por defecto es igual a 1 minuto.
-- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de negociación. ([Configuración de reconexión](../../reconnection_settings.md))
 
 ## Contenido recomendado
 

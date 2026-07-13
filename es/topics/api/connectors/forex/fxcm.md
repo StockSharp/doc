@@ -1,8 +1,8 @@
 # FXCM
 
-**FXCM** - plataforma de trading Forex.
+**FXCM** - plataforma de negociación Forex.
 
-Antes de comenzar a escribir robots de trading para la plataforma de trading actual, se recomienda leer los enlaces en [Conectores](../../connectors.md). 
+Antes de comenzar a escribir robots de negociación para la plataforma de negociación actual, se recomienda leer los enlaces en [Conectores](../../connectors.md).
 
 ## Contenido recomendado
 

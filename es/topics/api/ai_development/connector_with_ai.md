@@ -26,14 +26,14 @@ dotnet add package StockSharp.Algo
 Cree un archivo `CLAUDE.md`:
 
 ```markdown
-# Reglas del proyecto — conector de exchange
+# Reglas del proyecto — conector de bolsa
 
 - Marco de trabajo: StockSharp 5.x, .NET 10
 - El conector se implementa como un MessageAdapter
 - Heredar de AsyncMessageAdapter para async/await
 - Todas las peticiones HTTP mediante HttpClient con CancellationToken
 - Suscripciones WebSocket mediante cliente nativo o ClientWebSocket
-- Mapeo de tipos: tipos del exchange → StockSharp Messages
+- Mapeo de tipos: tipos de la bolsa → StockSharp Messages
 - Gestión de errores: SendOutError() para errores de conexión
 - Todas las cadenas en recursos de localización (o al menos como const)
 ```
@@ -46,8 +46,8 @@ Un conector en StockSharp es un `MessageAdapter` que:
 3. Envía de vuelta mensajes de respuesta (resultados)
 
 ```
-StockSharp Core → [Message] → MessageAdapter → [HTTP/WS] → Exchange
-Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
+StockSharp Core → [Message] → MessageAdapter → [HTTP/WS] → bolsa
+bolsa → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
 ```
 
 ## Ejemplo paso a paso
@@ -57,7 +57,7 @@ Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
 Prompt:
 
 ```
-Cree con StockSharp un MessageAdapter básico para un conector de exchange
+Cree con StockSharp un MessageAdapter básico para un conector de bolsa
 de criptomonedas llamado MyExchange:
 - heredar de AsyncMessageAdapter
 - implementar conexión/desconexión (ConnectMessage, DisconnectMessage)
@@ -88,7 +88,7 @@ Prompt:
 ```
 Añada al adaptador la suscripción a datos de mercado:
 
-1. Candles (MarketDataTypes.CandleTimeFrame):
+1. Velas (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
    - WebSocket: suscribirse al canal kline_{symbol}_{interval}
    - Mapeo de intervalos: 1m, 5m, 15m, 1h, 4h, 1d
@@ -102,12 +102,12 @@ Añada al adaptador la suscripción a datos de mercado:
    - Convertir en ExecutionMessage con ExecutionTypes.Tick
 ```
 
-### Paso 4: Operaciones de trading
+### Paso 4: Operaciones de negociación
 
 Prompt:
 
 ```
-Añada al adaptador soporte para operaciones de trading:
+Añada al adaptador soporte para operaciones de negociación:
 
 1. Registro de orden (OrderRegisterMessage):
    - POST /api/v1/order con parámetros: symbol, side, type, quantity, price
@@ -209,7 +209,7 @@ private string SignRequest(string payload)
 - [ ] Libro de órdenes: profundidad correcta, actualizaciones
 - [ ] Ticks: tiempo, volumen y dirección correctos
 
-### Trading
+### Negociación
 - [ ] Órdenes límite: creación, cancelación
 - [ ] Órdenes de mercado: creación
 - [ ] Actualizaciones del estado de las órdenes
@@ -245,7 +245,7 @@ Añada a mi conector la gestión de límites de frecuencia:
 
 ## Consejos
 
-1. **Empiece solo con lectura** — implemente primero la conexión, los instrumentos y los datos de mercado. Añada las operaciones de trading después de verificar
+1. **Empiece solo con lectura** — implemente primero la conexión, los instrumentos y los datos de mercado. Añada las operaciones de negociación después de verificar
 2. **Use el sandbox** — pruebe en el entorno de prueba de la bolsa
 3. **Tome como referencia conectores existentes** — proporcione a la IA código de un conector existente de StockSharp como referencia
 4. **Registre todo** — los registros detallados son invaluables al depurar un conector

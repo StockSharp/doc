@@ -57,7 +57,7 @@ if (!IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly))
 
 Berechtigungslogik beim Aufruf mit einem `required`-Parameter:
 
-| Aktueller TradingMode \ required | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
+| Aktueller TradingMode \ erforderlich | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
 |-------------------------------|--------|---------------------|---------------------|
 | `Full` | ja | ja | ja |
 | `Disabled` | nein | nein | nein |

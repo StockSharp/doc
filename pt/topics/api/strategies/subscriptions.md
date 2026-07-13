@@ -15,7 +15,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 	
-	// Criar uma subscrição para candles de 5 minutos diretamente através de DataType
+	// Criar uma subscrição para velas de 5 minutos diretamente através de DataType
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
@@ -23,7 +23,7 @@ protected override void OnStarted2(DateTime time)
 	// Se forem necessários parâmetros adicionais, pode configurar a subscrição
 	subscription.From = DateTimeOffset.Now.Subtract(TimeSpan.FromDays(7));
 	
-	// Criar uma regra para processar candles recebidas
+	// Criar uma regra para processar velas recebidas
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
@@ -34,7 +34,7 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-Neste exemplo, é criada uma subscrição para candles de 5 minutos usando um construtor conveniente que aceita `DataType` e `Security`. Se necessário, pode configurar adicionalmente os parâmetros da subscrição, como o período de histórico.
+Neste exemplo, é criada uma subscrição para velas de 5 minutos usando um construtor conveniente que aceita `DataType` e `Security`. Se necessário, pode configurar adicionalmente os parâmetros da subscrição, como o período de histórico.
 
 ## Vantagens das Subscrições em Estratégias
 
@@ -80,7 +80,7 @@ A propriedade [Strategy.IsOnline](xref:StockSharp.Algo.Strategies.Strategy.IsOnl
 Em estratégias, pode usar subscrições para vários tipos de dados de mercado:
 
 ```cs
-// Subscrição de candles
+// Subscrição de velas
 var candleSubscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(1)),
 	Security);
@@ -106,12 +106,12 @@ var level1Subscription = new Subscription(
 Para processar dados recebidos através de uma subscrição, recomenda-se usar [regras](event_model.md):
 
 ```cs
-// Subscrição de candles
+// Subscrição de velas
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), Security);
 
-// Criar uma regra para processar candles recebidas
+// Criar uma regra para processar velas recebidas
 Connector
-	.WhenCandlesFinished(subscription)  // Ativação da regra quando é recebida uma candle concluída
+	.WhenCandlesFinished(subscription)  // Ativação da regra quando é recebida uma vela concluída
 	.Do(ProcessCandle)                   // Chamar o método de processamento
 	.Apply(this);                        // Aplicar a regra à estratégia
 
@@ -119,7 +119,7 @@ Connector
 Connector.Subscribe(subscription);
 ```
 
-No exemplo acima, é criada uma regra que chamará o método `ProcessCandle` quando cada candle concluída for recebida.
+No exemplo acima, é criada uma regra que chamará o método `ProcessCandle` quando cada vela concluída for recebida.
 
 ## Solicitar Dados Históricos
 

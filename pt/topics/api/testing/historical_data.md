@@ -3,14 +3,14 @@
 O teste com dados históricos permite tanto a análise de mercado para encontrar padrões como a [otimização de parâmetros da estratégia](optimization.md). O trabalho principal é realizado pela classe [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector), que obtém os dados armazenados num repositório local através de uma [API](../market_data_storage/api.md) especial. Parâmetros adicionais são descritos na secção [Definições de Teste](extended_settings.md).
 
 O teste pode ser realizado usando vários tipos de dados de mercado:
-- Tick trades ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
+- Transações tick ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - Livros de ordens ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
 - Velas de diferentes períodos
 - [OrderLog](xref:StockSharp.Messages.IOrderLogMessage)
 - [Level1](xref:StockSharp.Messages.Level1ChangeMessage) (melhores preços bid e ask)
 - Combinações de diferentes tipos de dados
 
-Se não existirem livros de ordens guardados para o período de teste, estes podem ser gerados com base nas transações usando [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) ou reconstruídos a partir do log de ordens usando [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder).
+Se não existirem livros de ordens guardados para o período de teste, estes podem ser gerados com base nas transações usando [MarketDepthGenerator](xref:StockSharp.Algo.Testing.MarketDepthGenerator) ou reconstruídos a partir do registo de ordens usando [OrderLogMarketDepthBuilder](xref:StockSharp.Messages.OrderLogMarketDepthBuilder).
 
 Os dados para testes históricos devem ser descarregados e guardados antecipadamente num formato especial [S#](../../api.md). Isto pode ser feito manualmente usando [Conectores](../connectors.md) e a [Storage API](../market_data_storage/api.md), ou configurando e executando a aplicação especial [Hydra](../../hydra.md).
 
@@ -174,7 +174,7 @@ var strategy = new SmaStrategy
 	UnrealizedPnLInterval = ((stopTime - startTime).Ticks / 1000).To<TimeSpan>()
 };
 
-// configurar o tipo de dados usado para construir candles
+// configurar o tipo de dados usado para construir velas
 if (emulationInfo.UseCandle != null)
 {
 	strategy.CandleType = emulationInfo.UseCandle;
@@ -252,7 +252,7 @@ Nas versões mais recentes de [S#](../../api.md), o exemplo de teste histórico 
 - Ticks (transações)
 - Livros de ordens
 - Velas de diferentes períodos
-- Log de ordens
+- Registo de ordens
 - Dados Level1 (melhores preços)
 - Combinações de diferentes tipos de dados
 
@@ -303,14 +303,14 @@ Esta abordagem permite comparar visualmente o desempenho da estratégia ao usar 
 
 ## Estratégia SMA melhorada
 
-A estratégia de média móvel (SMA) foi redesenhada e agora usa uma abordagem mais moderna para a subscrição de dados e o processamento de candles:
+A estratégia de média móvel (SMA) foi redesenhada e agora usa uma abordagem mais moderna para a subscrição de dados e o processamento de velas:
 
 ```csharp
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// criar subscrição de candles do tipo necessário
+	// criar subscrição de velas do tipo necessário
 	var dt = CandleTimeFrame is null
 		? CandleType
 		: DataType.Create(CandleType.MessageType, CandleTimeFrame);
@@ -330,7 +330,7 @@ protected override void OnStarted2(DateTime time)
 	var longSma = new SMA { Length = LongSma };
 	var shortSma = new SMA { Length = ShortSma };
 
-	// subscrever candles e ligá-los aos indicadores
+	// subscrever velas e ligá-los aos indicadores
 	SubscribeCandles(subscription)
 		.Bind(longSma, shortSma, OnProcess)
 		.Start();
@@ -351,14 +351,14 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-O processamento de candles e as decisões de negociação estão agora separados num método dedicado:
+O processamento de velas e as decisões de negociação estão agora separados num método dedicado:
 
 ```csharp
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)
 {
 	LogInfo(LocalizedStrings.SmaNewCandleLog, candle.OpenTime, candle.OpenPrice, candle.HighPrice, candle.LowPrice, candle.ClosePrice, candle.TotalVolume, candle.SecurityId);
 
-	// verificar se o candle está concluído
+	// verificar se a vela está concluído
 	if (candle.State != CandleStates.Finished)
 		return;
 
@@ -377,7 +377,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 		// calcular volume para abertura de posição ou reversão
 		var volume = Position == 0 ? Volume : Position.Abs().Min(Volume) * 2;
 
-		// usar o preço de fecho do candle
+		// usar o preço de fecho da vela
 		var price = candle.ClosePrice;
 
 		if (direction == Sides.Buy)
@@ -396,7 +396,7 @@ Definições alargadas para testes estão disponíveis em [S#](../../api.md), in
 
 - Geração de livros de ordens com parâmetros especificados
 - Definições de comissão
-- Definições de slippage de preço
+- Definições de deslizamento de preço
 - Emulação de atraso de execução
 
 Estas definições são descritas com mais detalhe na secção [Definições de Teste](extended_settings.md).

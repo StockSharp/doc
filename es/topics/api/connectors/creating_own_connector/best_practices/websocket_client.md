@@ -1,6 +1,6 @@
 # Cliente WebSocket
 
-Al desarrollar un conector para una serie de exchanges, un componente importante es el cliente WebSocket, que proporciona la recuperación de datos en tiempo real. En StockSharp, para este propósito, a menudo se crea una clase `SocketClient` al desarrollar un conector, construida sobre la base de `WebSocketClient`.
+Al desarrollar un conector para una serie de bolsas, un componente importante es el cliente WebSocket, que proporciona la recuperación de datos en tiempo real. En StockSharp, para este propósito, a menudo se crea una clase `SocketClient` al desarrollar un conector, construida sobre la base de `WebSocketClient`.
 
 ## Características de WebSocketClient
 
@@ -87,10 +87,10 @@ class SocketClient : BaseLogReceiver
 
 ## Recomendaciones de Implementación
 
-- Adapte la estructura de `SocketClient` al exchange específico, teniendo en cuenta las particularidades de su API.
+- Adapte la estructura de `SocketClient` a la bolsa específica, teniendo en cuenta las particularidades de su API.
 - Utilice métodos asíncronos para un trabajo eficiente con WebSocket.
-- Implemente el manejo de diferentes tipos de mensajes del exchange.
+- Implemente el manejo de diferentes tipos de mensajes de la bolsa.
 - Asegure un manejo adecuado de errores y la reconexión tras la pérdida de la conexión.
 
-Recuerde que la implementación específica puede diferir según los requisitos y las particularidades de la API de un exchange en particular.
+Recuerde que la implementación específica puede diferir según los requisitos y las particularidades de la API de una bolsa en particular.
 </content>

@@ -14,12 +14,12 @@ Los mensajes pueden ser *entrantes* y *salientes*:
 - Mensajes *entrantes* - mensajes que se envían a un sistema externo. Por lo general, son comandos generados por el programa, por ejemplo, el mensaje [ConnectMessage](xref:StockSharp.Messages.ConnectMessage) - un comando que solicita una conexión al servidor.
 - Mensajes *salientes* - mensajes que provienen de un sistema externo. Son mensajes que transmiten información sobre datos de mercado, transacciones, carteras, eventos de conexión, etc. Por ejemplo, el mensaje [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) transmite información sobre los cambios en el libro de órdenes.
 
-El **adaptador de mensajes** desempeña el papel de intermediario entre el sistema de trading y el programa. Para cada tipo de conector, existe una clase adaptadora separada que hereda de la clase abstracta [AsyncMessageAdapter](xref:StockSharp.Messages.AsyncMessageAdapter).
+El **adaptador de mensajes** desempeña el papel de intermediario entre el sistema de negociación y el programa. Para cada tipo de conector, existe una clase adaptadora separada que hereda de la clase abstracta [AsyncMessageAdapter](xref:StockSharp.Messages.AsyncMessageAdapter).
 
 El adaptador realiza dos funciones principales:
 
-1. Convierte los mensajes entrantes en comandos de un sistema de trading específico.
-2. Convierte la información recibida del sistema de trading (conexión, datos de mercado, transacciones, etc.) en mensajes salientes.
+1. Convierte los mensajes entrantes en comandos de un sistema de negociación específico.
+2. Convierte la información recibida del sistema de negociación (conexión, datos de mercado, transacciones, etc.) en mensajes salientes.
 
 A continuación se describe el proceso de creación de su propio adaptador para [Coinbase](https://github.com/StockSharp/StockSharp/tree/master/Connectors/Coinbase) (todos los conectores con código fuente están disponibles en el [repositorio de StockSharp](https://github.com/StockSharp/StockSharp/tree/master/Connectors) y se proporcionan como tutorial).
 
@@ -76,7 +76,7 @@ public CoinbaseMessageAdapter(IdGenerator transactionIdGenerator)
 
 ### 3. Conexión y Desconexión del Adaptador
 
-Para conectar el adaptador al sistema de trading, se llama al método [AsyncMessageAdapter.ConnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ConnectAsync(StockSharp.Messages.ConnectMessage,System.Threading.CancellationToken)). Se le pasa el mensaje entrante [ConnectMessage](xref:StockSharp.Messages.ConnectMessage). Si la conexión se realiza correctamente, el adaptador envía un mensaje saliente [ConnectMessage](xref:StockSharp.Messages.ConnectMessage).
+Para conectar el adaptador al sistema de negociación, se llama al método [AsyncMessageAdapter.ConnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.ConnectAsync(StockSharp.Messages.ConnectMessage,System.Threading.CancellationToken)). Se le pasa el mensaje entrante [ConnectMessage](xref:StockSharp.Messages.ConnectMessage). Si la conexión se realiza correctamente, el adaptador envía un mensaje saliente [ConnectMessage](xref:StockSharp.Messages.ConnectMessage).
 
 ```cs
 public override async ValueTask ConnectAsync(ConnectMessage connectMsg, CancellationToken cancellationToken)
@@ -116,7 +116,7 @@ public override async ValueTask ConnectAsync(ConnectMessage connectMsg, Cancella
 }
 ```
 
-Para desconectar el adaptador del sistema de trading, se llama al método [AsyncMessageAdapter.DisconnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.DisconnectAsync(StockSharp.Messages.DisconnectMessage,System.Threading.CancellationToken)). Si la desconexión se realiza correctamente, el adaptador envía un mensaje saliente [DisconnectMessage](xref:StockSharp.Messages.DisconnectMessage).
+Para desconectar el adaptador del sistema de negociación, se llama al método [AsyncMessageAdapter.DisconnectAsync](xref:StockSharp.Messages.AsyncMessageAdapter.DisconnectAsync(StockSharp.Messages.DisconnectMessage,System.Threading.CancellationToken)). Si la desconexión se realiza correctamente, el adaptador envía un mensaje saliente [DisconnectMessage](xref:StockSharp.Messages.DisconnectMessage).
 
 ```cs
 public override ValueTask DisconnectAsync(DisconnectMessage disconnectMsg, CancellationToken cancellationToken)
@@ -211,14 +211,14 @@ Una vez que el conector está implementado, hay dos opciones para su uso:
    - Solo se consideran los archivos con la extensión **.dll** cuyos nombres comienzan con `StockSharp.`.
    - Cada archivo restante se verifica para asegurarse de que es un ensamblado .NET válido.
    - El ensamblado se carga y se recopilan todos los tipos que implementan `IMessageAdapter`.
-   - Cualquier error encontrado durante el escaneo o la carga se registra en el log y no detiene la búsqueda. Si la carga falla, abra la ventana de log de la aplicación o el archivo de log para ver los detalles del error.
+   - Cualquier error encontrado durante el escaneo o la carga se escribe en el registro y no detiene la búsqueda. Si la carga falla, abra la ventana de registro de la aplicación o el archivo de registro para ver los detalles del error.
 
-Este documento describe los principios generales del funcionamiento del adaptador, su creación y la gestión de la conexión con el sistema de trading. Los siguientes documentos estarán dedicados a la implementación de la funcionalidad del adaptador:
+Este documento describe los principios generales del funcionamiento del adaptador, su creación y la gestión de la conexión con el sistema de negociación. Los siguientes documentos estarán dedicados a la implementación de la funcionalidad del adaptador:
 
 - [Búsqueda de Instrumentos](creating_own_connector/instrument_lookup.md)
 - [Trabajo con Datos de Mercado](creating_own_connector/market_data.md)
 - [Solicitud del Estado Actual de la Cartera y las Órdenes](creating_own_connector/portfolio_and_orders_state.md)
-- [Trabajo con Operaciones de Trading](creating_own_connector/trading_operations.md)
+- [Trabajo con Operaciones de Negociación](creating_own_connector/trading_operations.md)
 - [Almacenamiento de configuraciones](creating_own_connector/settings.md)
 - [Condiciones de Órdenes Extendidas](creating_own_connector/order_extended.md)
 </content>

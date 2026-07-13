@@ -6,7 +6,7 @@ Para mostrar la sonrisa de volatilidad, debe seleccionar el activo subyacente y 
 
 Además, puede especificar un filtro para la fecha exacta de vencimiento de las opciones y filtros para strikes mínimos\/máximos.
 
-![Terminal smile de volatilidad 00](../../../../images/terminal_smile_of_volatility_00.png)
+![Terminal sonrisa de volatilidad 00](../../../../images/terminal_smile_of_volatility_00.png)
 
 ## Contenido recomendado
 

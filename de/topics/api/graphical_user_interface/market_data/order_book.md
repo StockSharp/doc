@@ -44,17 +44,17 @@ public class MarketDepthWindow
 		// Empfangsereignis für Orderbücher abonnieren
 		_connector.OrderBookReceived += OnMarketDepthReceived;
 
-		// Subscription auf das Orderbuch für das ausgewählte Instrument erstellen
+		// Abonnement für das Orderbuch des ausgewählten Instruments erstellen
 		_depthSubscription = new Subscription(DataType.MarketDepth, security);
 
-		// Subscription starten
+		// Abonnement starten
 		_connector.Subscribe(_depthSubscription);
 	}
 
 	// Handler für das Empfangsereignis von Orderbüchern
 	private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage depth)
 	{
-		// Prüfen, ob das Orderbuch zu unserer Subscription gehört
+		// Prüfen, ob das Orderbuch zu unserem Abonnement gehört
 		if (subscription != _depthSubscription)
 			return;
 
@@ -97,11 +97,11 @@ public class MarketDepthWithOrdersWindow
 		_connector.OrderBookReceived += OnMarketDepthReceived;
 		_connector.OrderReceived += OnOrderReceived;
 
-		// Subscription auf das Orderbuch erstellen
+		// Abonnement für das Orderbuch erstellen
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
 
-		// Bei Bedarf eine Subscription auf Orders erstellen
+		// Bei Bedarf ein Abonnement für Aufträge erstellen
 		var ordersSubscription = new Subscription(DataType.Transactions, null);
 		_connector.Subscribe(ordersSubscription);
 	}

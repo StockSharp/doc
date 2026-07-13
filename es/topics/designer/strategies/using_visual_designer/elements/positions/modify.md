@@ -2,7 +2,7 @@
 
 ![Designer Modificar posición 00](../../../../../../images/designer_position_modify_00.png)
 
-El componente "Modificar posición" se usa para cambiar una posición de trading según condiciones especificadas.
+El componente "Modificar posición" se usa para cambiar una posición de negociación según condiciones especificadas.
 
 ## Conectores de entrada
 

@@ -1,8 +1,8 @@
-# Komprimierung von Tick-Daten und Spreads zu Candles
+# Komprimierung von Tick-Daten und Spreads zu Kerzen
 
 ## Einführung
 
-Die API bietet leistungsstarke Werkzeuge zur Komprimierung von Tick-Daten und Spreads (beste Geld-/Briefkurse) zu Candles. Diese Funktionalität ist besonders nützlich für die Analyse historischer Daten oder die Erstellung benutzerdefinierter Indikatoren.
+Die API bietet leistungsstarke Werkzeuge zur Komprimierung von Tick-Daten und Spreads (beste Geld-/Briefkurse) zu Kerzen. Diese Funktionalität ist besonders nützlich für die Analyse historischer Daten oder die Erstellung benutzerdefinierter Indikatoren.
 
 Die wichtigsten Erweiterungsmethoden für die Datenkomprimierung befinden sich in der Klasse `CandleHelper`. Der vollständige Quellcode dieser Klasse ist [auf GitHub verfügbar](https://github.com/StockSharp/StockSharp/blob/master/Algo/Candles/CandleHelper.cs).
 
@@ -10,7 +10,7 @@ Es wird empfohlen, diese Datei zu überprüfen, um ein vollständiges Verständn
 
 ## Komprimierungsmethoden
 
-### Komprimierung von Tick-Daten zu Candles
+### Komprimierung von Tick-Daten zu Kerzen
 
 ```cs
 // Beispiel für die Verwendung von ToCandles für Ticks
@@ -23,7 +23,7 @@ var candles = trades.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvid
 // candleBuilderProvider — Provider, der eine konkrete Kerzen-Builder-Implementierung bereitstellt.
 ```
 
-### Komprimierung von Spread-Daten zu Candles
+### Komprimierung von Spread-Daten zu Kerzen
 
 ```cs
 // Beispiel für die Verwendung von ToCandles für Spread-Daten
@@ -40,9 +40,9 @@ var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderPr
 
 Bei der Komprimierung von Daten können folgende Parameter angegeben werden:
 
-- `series`: Die Candle-Serie, die den Typ und die Parameter der erstellten Candles definiert.
-- `type`: Der Datentyp für die Bildung von Candles (z. B. bester Geldkurs, bester Briefkurs oder Spread-Mitte).
-- `candleBuilderProvider`: Der Provider für den Candle-Builder (optionaler Parameter).
+- `series`: Die Kerzenserie, die den Typ und die Parameter der erstellten Kerzen definiert.
+- `type`: Der Datentyp für die Bildung von Kerzen (z. B. bester Geldkurs, bester Briefkurs oder Spread-Mitte).
+- `candleBuilderProvider`: Der Provider für den Kerzen-Builder (optionaler Parameter).
 
 ## Anwendungsbeispiel
 
@@ -78,9 +78,9 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 
 ## Zusätzliche Funktionen
 
-### Erstellung von Candles aus verschiedenen Quellen
+### Erstellung von Kerzen aus verschiedenen Quellen
 
-Die API ermöglicht die Erstellung von Candles nicht nur aus Ticks und Spreads, sondern auch aus anderen Datenquellen:
+Die API ermöglicht die Erstellung von Kerzen nicht nur aus Ticks und Spreads, sondern auch aus anderen Datenquellen:
 
 ```cs
 // Beispiel für das Erstellen von Kerzen aus verschiedenen Quellen
@@ -111,4 +111,4 @@ switch (type)
 
 ## Fazit
 
-Die Datenkomprimierungsmethoden in der API bieten flexible Werkzeuge für die Arbeit mit Marktdaten. Sie ermöglichen die effiziente Umwandlung von Tick-Daten und Spread-Daten in Candles verschiedener Typen und Zeitintervalle, was besonders nützlich für die Marktanalyse und die Entwicklung von Handelsstrategien ist.
+Die Datenkomprimierungsmethoden in der API bieten flexible Werkzeuge für die Arbeit mit Marktdaten. Sie ermöglichen die effiziente Umwandlung von Tick-Daten und Spread-Daten in Kerzen verschiedener Typen und Zeitintervalle, was besonders nützlich für die Marktanalyse und die Entwicklung von Handelsstrategien ist.

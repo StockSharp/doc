@@ -95,7 +95,7 @@
    	var option = SelectedOption;
    	// создать окно DOM
    	var wnd = new QuotesWindow { Title = option.Name };
-   	// create delta hedge strategy (requires BasketBlackScholes model)
+	// создать стратегию дельта-хеджирования (требуется модель BasketBlackScholes)
    	var hedge = new DeltaHedgeStrategy(PosChart.Model)
    	{
    		Security = option.GetUnderlyingAsset(Connector),
@@ -123,7 +123,7 @@
    		// принудительно закрыть все стратегии при закрытии DOM
    		hedge.Stop();
    	};
-   	// show DOM
+	// показать DOM
    	wnd.Show();
    }
    ```

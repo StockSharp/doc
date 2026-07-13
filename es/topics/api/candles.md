@@ -47,7 +47,7 @@ _connector.CandleReceived += OnCandleReceived;
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
 	// Aquí subscription es el objeto de suscripción que creamos
-	// candle: vela recibida
+	// vela recibida
 
 	// Comprobar si la vela pertenece a nuestra suscripción
 	if (subscription == _candleSubscription)
@@ -296,7 +296,7 @@ _connector.Subscribe(renkoCandleSubscription);
 ### Velas de punto y figura (P&F)
 
 ```cs
-// Velas Point and Figure
+// Velas de punto y figura
 var pnfCandleSubscription = new Subscription(
 	DataType.PnF(new PnfArg { BoxSize = 0.1m, ReversalAmount = 1 }),  // Especificar parámetros P&F
 	security)

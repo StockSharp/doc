@@ -1,5 +1,5 @@
 > [!WARNING]
-> Este exchange ha cerrado permanentemente (~2021 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa ha cerrado permanentemente (~2021 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # Inicialización del adaptador BW
 

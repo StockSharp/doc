@@ -6,8 +6,8 @@ Esta secção descreve as principais definições de [HistoryEmulationConnector]
 
 - [MarketTimeChangedInterval](xref:StockSharp.Algo.Testing.HistoryEmulationConnector.MarketTimeChangedInterval) - intervalo para a chegada do evento de alteração de tempo. Se forem usados geradores de negócios, os negócios serão gerados com esta frequência. A predefinição é 1 minuto.
 - [MarketEmulatorSettings.Latency](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Latency) - valor mínimo de atraso para ordens submetidas. A predefinição é TimeSpan.Zero, o que significa aceitação instantânea das ordens submetidas pela bolsa.
-- [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) - satisfazer ordens se o preço "tocar" no nível (esta suposição é por vezes demasiado "otimista" e deve ser desativada para testes realistas). Se desativada, as ordens limite serão executadas apenas se o preço "passar através delas" por pelo menos 1 passo. Esta opção funciona em todos os modos exceto no modo de log de ordens. Está desativada por predefinição.
-- [MarketEmulatorSettings.CandlePrice](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CandlePrice) - preço da candle usado para execução de ordens: Middle, Open, High, Low ou Close. A predefinição é Middle.
+- [MarketEmulatorSettings.MatchOnTouch](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.MatchOnTouch) - satisfazer ordens se o preço "tocar" no nível (esta suposição é por vezes demasiado "otimista" e deve ser desativada para testes realistas). Se desativada, as ordens limite serão executadas apenas se o preço "passar através delas" por pelo menos 1 passo. Esta opção funciona em todos os modos exceto no modo de registo de ordens. Está desativada por predefinição.
+- [MarketEmulatorSettings.CandlePrice](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.CandlePrice) - preço da vela usado para execução de ordens: Middle, Open, High, Low ou Close. A predefinição é Middle.
 - [MarketEmulatorSettings.Failing](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.Failing) - percentagem de falhas no registo de novas ordens. Os valores variam de 0 (sem falhas) a 100. A predefinição é desativado (0).
 - [MarketEmulatorSettings.InitialOrderId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialOrderId) - número inicial a partir do qual o emulador começa a gerar identificadores de ordens.
 - [MarketEmulatorSettings.InitialTradeId](xref:StockSharp.Algo.Testing.MarketEmulatorSettings.InitialTradeId) - número inicial a partir do qual o emulador começa a gerar identificadores de negócios.
@@ -26,7 +26,7 @@ Esta secção descreve as principais definições de [HistoryEmulationConnector]
 
 ## Subscrições de Dados de Mercado
 
-Para testar corretamente a estratégia, é necessário configurar subscrições para os tipos de dados de mercado necessários. Mesmo que a estratégia seja testada em candles, para uma emulação correta dos negócios é necessária uma subscrição de negócios tick:
+Para testar corretamente a estratégia, é necessário configurar subscrições para os tipos de dados de mercado necessários. Mesmo que a estratégia seja testada em velas, para uma emulação correta dos negócios é necessária uma subscrição de negócios tick:
 
 ```cs
 // Criar uma subscrição de negócios tick
@@ -86,7 +86,7 @@ mdGenerator.MinVolume = 1;
 mdGenerator.MaxVolume = 1;
 ```
 
-- Definições de spread - o spread mínimo gerado é igual a [Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep). Recomenda-se não gerar um spread entre as melhores cotações superior a 5 passos de preço, para que, ao gerar a partir de candles, o spread não se torne demasiado amplo:
+- Definições de spread - o spread mínimo gerado é igual a [Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep). Recomenda-se não gerar um spread entre as melhores cotações superior a 5 passos de preço, para que, ao gerar a partir de velas, o spread não se torne demasiado amplo:
 
 ```cs
 mdGenerator.MinSpreadStepCount = 1;
@@ -108,7 +108,7 @@ connector.EmulationAdapter.Emulator.Settings.MatchOnTouch = false;
 var storage = new StorageRegistry();
 var security = new Security { Id = "AAPL", PriceStep = 0.01m };
 
-// Criar uma subscrição de candles
+// Criar uma subscrição de velas
 var candleSubscription = new Subscription(
 	TimeSpan.FromMinutes(5).TimeFrame(),
 	security)
@@ -159,7 +159,7 @@ connector.Connect();
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Processar candles recebidas
+	// Processar velas recebidas
 	Console.WriteLine($"Vela: {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 }
 

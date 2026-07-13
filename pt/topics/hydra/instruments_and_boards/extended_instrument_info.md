@@ -2,7 +2,7 @@
 
 As fontes de informações alargadas são ficheiros **CSV** localizados na pasta `c:\\Users\\Users\\Documents\\StockSharp\\Hydra\\Extended info\\`. São carregados automaticamente quando o [Hydra](../../hydra.md) inicia.
 
-As informações alargadas podem incluir quaisquer detalhes adicionais sobre um instrumento (por exemplo, país, cidade, board, etc.).
+As informações alargadas podem incluir quaisquer detalhes adicionais sobre um instrumento (por exemplo, país, cidade, mercado, etc.).
 
 Cada fonte de informações alargadas (ficheiro CSV) contém uma lista de instrumentos e as propriedades disponíveis. Para cada fonte, as informações alargadas são únicas.
 

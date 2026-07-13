@@ -29,7 +29,7 @@ Depois disso, clique no botão **Definições** para abrir a janela de definiç�
   6. **DeadSessionCleanupInterval** - após que intervalo de tempo a informação será limpa se a ligação for desligada.
 - **Autorização** - autorização para obter acesso ao servidor Hydra
 - **Número de instrumentos** - o número máximo de instrumentos que podem ser solicitados ao servidor
-- **Velas (dias)** - o número máximo de dias disponíveis para descarregar o histórico de candles
+- **Velas (dias)** - o número máximo de dias disponíveis para descarregar o histórico de velas
 - **Ticks (dias)** - o número máximo de dias disponíveis para descarregar o histórico de dados de ticks
 - **Livros de ordens (dias)** - o número máximo de dias disponíveis para descarregar o histórico de livros de ordens
 - **OL (dias)** - o número máximo de dias disponíveis para descarregar o histórico de dados OL

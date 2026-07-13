@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-La clase `VolumeContinuousSecurity` representa un contrato de futuros continuo donde la transición (rollover) entre contratos ocurre en función del volumen de trading o del interés abierto. Esto difiere de `ExpirationContinuousSecurity`, donde el cambio se realiza según fechas de vencimiento predefinidas.
+La clase `VolumeContinuousSecurity` representa un contrato de futuros continuo donde la transición (rollover) entre contratos ocurre en función del volumen de negociación o del interés abierto. Esto difiere de `ExpirationContinuousSecurity`, donde el cambio se realiza según fechas de vencimiento predefinidas.
 
 Ambas clases heredan de `ContinuousSecurity`, que a su vez hereda de `BasketSecurity`.
 
@@ -15,7 +15,7 @@ Ambas clases heredan de `ContinuousSecurity`, que a su vez hereda de `BasketSecu
 | Previsibilidad | Cambio por calendario | Cambio por condiciones de mercado |
 | Código de cesta | `CE` | `CV` |
 
-`ExpirationContinuousSecurity` requiere especificar manualmente las fechas de transición para cada contrato. `VolumeContinuousSecurity` cambia automáticamente al siguiente contrato cuando su volumen de trading (o interés abierto) supera el umbral especificado.
+`ExpirationContinuousSecurity` requiere especificar manualmente las fechas de transición para cada contrato. `VolumeContinuousSecurity` cambia automáticamente al siguiente contrato cuando su volumen de negociación (o interés abierto) supera el umbral especificado.
 
 ## Propiedades principales
 
@@ -93,7 +93,7 @@ expContinuous.ExpirationJumps.Add(
 `VolumeContinuousSecurity` es adecuado para situaciones en las que:
 
 - Las fechas exactas de rollover no se conocen de antemano
-- Se requiere cambio basado en liquidez (volumen de trading o interés abierto)
+- Se requiere cambio basado en liquidez (volumen de negociación o interés abierto)
 - Se necesita una transición más adaptativa que responda a las condiciones de mercado
 
 `ExpirationContinuousSecurity` es preferible cuando las fechas de vencimiento se conocen de antemano y se requiere un rollover determinista.

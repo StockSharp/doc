@@ -7,4 +7,4 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **clave** - Clave.
 - **secreto** - Secreto.
 - **Demostración** - Modo demo.
-- **Configuración de reconexión** - Parámetros del mecanismo de reconexión con el sistema de trading ([Configuración de reconexión](../../reconnection_settings.md)).
+- **Configuración de reconexión** - Parámetros del mecanismo de reconexión con el sistema de negociación ([Configuración de reconexión](../../reconnection_settings.md)).

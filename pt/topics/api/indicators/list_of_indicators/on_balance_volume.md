@@ -62,7 +62,7 @@ volume em balanço pode ser interpretado da seguinte forma:
 
 6. **Padrões de análise técnica**:
    - Padrões clássicos de análise técnica podem formar-se no gráfico do OBV, como "cabeça e ombros", "duplo fundo", etc.
-   - Estes padrões podem fornecer sinais de trading adicionais
+   - Estes padrões podem fornecer sinais de negociação adicionais
 
 7. **Picos de volume**:
    - Alterações súbitas e acentuadas no OBV podem indicar mudanças significativas no sentimento de mercado

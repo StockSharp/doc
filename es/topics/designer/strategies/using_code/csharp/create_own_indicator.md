@@ -33,7 +33,7 @@ public class EmptyIndicator : BaseIndicator
 	}
 
 	private int _counter;
-	// el indicador formado recibió todas las entradas necesarias para estar disponible para trading
+	// el indicador formado recibió todas las entradas necesarias para estar disponible para la negociación
 	private bool _isFormed;
 
 	protected override bool CalcIsFormed() => _isFormed;

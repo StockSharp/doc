@@ -1,6 +1,6 @@
 # Protocolo FIX
 
-El protocolo **FIX** le permite crear robots de trading que utilizan el protocolo internacional estándar para el acceso a los mercados electrónicos: [FIX](https://en.wikipedia.org/wiki/Financial_Information_eXchange).
+El protocolo **FIX** le permite crear robots de negociación que utilizan el protocolo internacional estándar para el acceso a los mercados electrónicos: [FIX](https://en.wikipedia.org/wiki/Financial_Information_eXchange).
 
 ## Contenido recomendado
 

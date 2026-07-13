@@ -49,7 +49,7 @@ Um Volumenkerzen zu erzeugen:
 
 Ergebnis der Erzeugung:
 
-![Hydra Kerzen volume](../../../images/hydra_candles_volume.png)
+![Hydra Volumenkerzen](../../../images/hydra_candles_volume.png)
 
 ## Datenquellen für die Kerzenerstellung
 

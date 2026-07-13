@@ -67,7 +67,7 @@ public class EmptyIndicator : BaseIndicator
 		return new DecimalIndicatorValue(this, value)
 		{
 			// valor final significa que este valor para a entrada especificada
-			// já não é alterado (por exemplo, para candles que mudam com o último preço)
+			// já não é alterado (por exemplo, para velas que mudam com o último preço)
 			IsFinal = RandomGen.GetBool()
 		};
 	}

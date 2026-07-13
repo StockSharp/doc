@@ -8,10 +8,10 @@
 
 Für die Arbeit mit Abonnements verwenden Sie die Klasse [Subscription](xref:StockSharp.BusinessEntities.Subscription). Betrachten wir Beispiele zur Verwendung von Abonnements zum Abrufen verschiedener Datentypen.
 
-## Beispiel für ein Candle-Abonnement
+## Beispiel für ein Kerze-Abonnement
 
 ```cs
-// Abonnement für 5-Minuten-Candles erstellen
+// Abonnement für 5-Minuten-Kerzen erstellen
 var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
 	// Abonnementparameter über die MarketData-Eigenschaft konfigurieren
@@ -24,7 +24,7 @@ var subscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	}
 };
 
-// Empfangene Candles verarbeiten
+// Empfangene Kerzen verarbeiten
 _connector.CandleReceived += (sub, candle) =>
 {
 	if (sub != subscription)
@@ -97,10 +97,10 @@ _connector.TickTradeReceived += (sub, tick) =>
 _connector.Subscribe(tickSubscription);
 ```
 
-## Beispiel für ein Abonnement mit Konfiguration des Candle-Erstellungsmodus
+## Beispiel für ein Abonnement mit Konfiguration des Kerzenerstellungsmodus
 
 ```cs
-// Abonnement für 5-Minuten-Candles, die aus Ticks erstellt werden
+// Abonnement für 5-Minuten-Kerzen, die aus Ticks erstellt werden
 var candleSubscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinutes(5)), security)
 {
 	MarketData =

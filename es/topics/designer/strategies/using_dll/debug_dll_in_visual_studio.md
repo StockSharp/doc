@@ -33,7 +33,7 @@ Si el proceso se ejecuta bajo otra cuenta de usuario, debe marcar la casilla **M
 ![Designer Depuración de un cubo DLL con Visual Studio 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
 
 > [!WARNING]
-> Cuando el código se detiene bajo el depurador, todos los procesos dentro del programa **Designer** se suspenden. Si el programa está conectado a trading real, en caso de una detención prolongada bajo el depurador se producirán desconexiones.
+> Cuando el código se detiene bajo el depurador, todos los procesos dentro del programa **Designer** se suspenden. Si el programa está conectado a negociación real, en caso de una detención prolongada bajo el depurador se producirán desconexiones.
 
 ## Véase también
 

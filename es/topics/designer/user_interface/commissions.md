@@ -20,4 +20,4 @@ Lista de tipos de comisión
 - **Instrumento** – comisión del instrumento.
 - **Instrumento (tipo)** – comisión del tipo de instrumento.
 - **Volumen de negocio** – comisión por volumen negociado.
-- **Mercado** – comisión del board.
+- **Mercado** – comisión del mercado.

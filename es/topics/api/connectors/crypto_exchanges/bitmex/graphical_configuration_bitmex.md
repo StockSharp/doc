@@ -6,9 +6,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 
 - **clave** - Clave.
 - **secreto** - Secreto.
-- **Demostración** - Conectar al trading de demostración en lugar del servidor de trading real.
+- **Demostración** - Conectar a la negociación de demostración en lugar del servidor de negociación real.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para verificar que la conexión está activa. Por defecto es igual a 1 minuto.
-- **Configuración de reconexión** - Mecanismo para el seguimiento de las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Configuración de reconexión** - Mecanismo para el seguimiento de las conexiones con la configuración del sistema de negociación. ([Configuración de reconexión](../../reconnection_settings.md))
 
 ## Contenido recomendado
 

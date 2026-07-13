@@ -1,6 +1,6 @@
 # Perfil de volume
 
-O script "Perfil de volume" serve como uma ferramenta para analisar a distribuição do volume de negociação por níveis de preço ao longo de um período selecionado. Permite que traders e analistas quantitativos visualizem e examinem onde a principal atividade de negociação esteve concentrada em termos de níveis de preço.
+O script "Perfil de volume" serve como uma ferramenta para analisar a distribuição do volume de negociação por níveis de preço ao longo de um período selecionado. Permite que operadores e analistas quantitativos visualizem e examinem onde a principal atividade de negociação esteve concentrada em termos de níveis de preço.
 
 ![Perfil de volume](../../../../images/hydra_analytics_volume_profile.png)
 
@@ -52,7 +52,7 @@ namespace StockSharp.Algo.Analytics
 			// o script pode processar apenas 1 instrumento
 			var security = securities.First();
 
-			// obter o armazenamento de candles
+			// obter o armazenamento de velas
 			var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 			// obter datas disponíveis para o período especificado
@@ -64,7 +64,7 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// agrupar candles pelo preço médio
+			// agrupar velas pelo preço médio
 			var rows = candleStorage.Load(from, to)
 				.GroupBy(c => c.LowPrice + c.GetLength() / 2)
 				.ToDictionary(g => g.Key, g => g.Sum(c => c.TotalVolume));
@@ -127,7 +127,7 @@ class price_volume_script(IAnalyticsScript):
 
 		message_type = data_type.MessageType
 
-		# Obter o armazenamento de candles
+		# Obter o armazenamento de velas
 		candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 		# Obter datas disponíveis para o período especificado
@@ -137,11 +137,11 @@ class price_volume_script(IAnalyticsScript):
 			logs.LogWarning("Sem dados.")
 			return Task.CompletedTask
 
-		# Agrupar candles pelo preço médio e somar os seus volumes
+		# Agrupar velas pelo preço médio e somar os seus volumes
 		candles = load_range(candle_storage, message_type, from_date, to_date)
 		rows_dict = {}
 		for candle in candles:
-			# Calcular preço médio da candle
+			# Calcular preço médio da vela
 			key = candle.LowPrice + get_length(candle) / 2
 			# Somar volumes para o mesmo nível de preço
 			rows_dict[key] = rows_dict.get(key, 0) + candle.TotalVolume

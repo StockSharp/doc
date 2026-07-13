@@ -14,9 +14,9 @@ Parâmetros disponíveis:
 
 - -s - caminho para o ficheiro da estratégia (com extensão cs, json ou dll).
 - -t - (opcional) se for selecionado um ficheiro dll e o assembly contiver mais do que uma classe de estratégia, é necessário especificar o tipo pretendido através deste parâmetro.
-- -h - caminho para o diretório com dados históricos. Pode ser um endereço de rede no caso de utilização do modo de servidor [server](../hydra_server.md).
-- --hl - (opcional) login, usado no modo de servidor [server](../hydra_server.md).
-- --hp - (opcional) palavra-passe, usada no modo de servidor [server](../hydra_server.md).
+- -h - caminho para o diretório com dados históricos. Pode ser um endereço de rede no caso de utilização do [modo de servidor](../hydra_server.md).
+- --hl - (opcional) login, usado no [modo de servidor](../hydra_server.md).
+- --hp - (opcional) palavra-passe, usada no [modo de servidor](../hydra_server.md).
 - --hf - data inicial para o teste no formato YYYYMMDD.
 - --ht - data final para o teste no formato YYYYMMDD.
 - -f - (opcional) formato de armazenamento (Binary ou Csv).

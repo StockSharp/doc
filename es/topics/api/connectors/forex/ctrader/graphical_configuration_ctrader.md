@@ -16,7 +16,7 @@ Proceso de autorización OAuth:
 
    ![inicio de OAuth](../../../../../images/oauth_start.png)
 
-2. Después de hacer clic en "Iniciar", el usuario será redirigido al sitio web de cTrader para iniciar sesión. En el sitio web de cTrader debe permitir a la aplicación StockSharp el acceso a las operaciones de trading:
+2. Después de hacer clic en "Iniciar", el usuario será redirigido al sitio web de cTrader para iniciar sesión. En el sitio web de cTrader debe permitir a la aplicación StockSharp el acceso a las operaciones de negociación:
 
    ![Inicio de sesión cTrader](../../../../../images/api_gui_settings_ctrader_2.png)
 

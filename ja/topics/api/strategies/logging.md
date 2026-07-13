@@ -220,7 +220,7 @@ logManager.Sources.Add(strategy);
 
 ストラテジーログへ書き込まれたメッセージは、次の場所で表示できます。
 
-1. [Designer](../../designer.md) プログラムの "Logs" パネル
+1. [Designer](../../designer.md) プログラムの "ログ" パネル
 2. [FileLogListener](xref:Ecng.Logging.FileLogListener) が設定されている場合はログファイル
 3. [LogControl](xref:StockSharp.Xaml.LogControl) を通じたユーザーインターフェイス（[GuiLogListener](xref:StockSharp.Xaml.GuiLogListener) が使用されている場合）
 

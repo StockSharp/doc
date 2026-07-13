@@ -10,7 +10,7 @@ volume em balanço Mean (OBVM) é uma modificação do indicador clássico volum
 
 O OBVM ajuda a eliminar o ruído presente no OBV original e torna mais visíveis as tendências de longo prazo do fluxo de volume. Isto é particularmente útil em mercados voláteis ou ao analisar instrumentos com volumes de negociação irregulares.
 
-A principal vantagem do OBVM é a sua capacidade de gerar sinais de trading mais claros e menos propensos a sinais falsos em comparação com o OBV clássico. O indicador também pode ser usado para identificar cruzamentos entre o OBV e o seu valor médio, fornecendo oportunidades de trading adicionais.
+A principal vantagem do OBVM é a sua capacidade de gerar sinais de negociação mais claros e menos propensos a sinais falsos em comparação com o OBV clássico. O indicador também pode ser usado para identificar cruzamentos entre o OBV e o seu valor médio, fornecendo oportunidades de negociação adicionais.
 
 ## Parâmetros
 
@@ -79,7 +79,7 @@ volume em balanço Mean pode ser interpretado da seguinte forma:
 7. **Seleção do parâmetro Length**:
    - Períodos mais curtos (por exemplo, 10-15) tornam o OBVM mais sensível a alterações de curto prazo
    - Períodos mais longos (por exemplo, 30-50) identificam melhor tendências de longo prazo
-   - O período ideal depende do horizonte temporal de trading e das características específicas do instrumento
+   - O período ideal depende do horizonte temporal de negociação e das características específicas do instrumento
 
 ![Gráfico do indicador OBVM](../../../../images/indicator_on_balance_volume_mean.png)
 

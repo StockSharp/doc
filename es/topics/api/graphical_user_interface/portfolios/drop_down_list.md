@@ -1,6 +1,6 @@
 # Lista desplegable
 
-[PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) es un combo box para seleccionar un portafolio.
+[PortfolioComboBox](xref:StockSharp.Xaml.PortfolioComboBox) es un cuadro combinado para seleccionar un portafolio.
 
 ![Captura de Lista desplegable](../../../../images/gui_portfoliocombobox.png)
 
@@ -50,4 +50,3 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 }
 	  				
 ```
-

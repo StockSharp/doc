@@ -1,6 +1,6 @@
 # Compatibilidad de estrategias con plataformas StockSharp
 
-Al desarrollar estrategias de trading en StockSharp, es importante considerar su compatibilidad con varias plataformas: [Designer](../../designer.md), [Shell](../../shell.md), [Runner](../../runner.md) y [pruebas históricas en la nube](../../designer/backtesting/cloud_backtesting.md). Siguiendo las recomendaciones siguientes, creará una estrategia que funciona correctamente en todos los entornos.
+Al desarrollar estrategias de negociación en StockSharp, es importante considerar su compatibilidad con varias plataformas: [Designer](../../designer.md), [Shell](../../shell.md), [Runner](../../runner.md) y [pruebas históricas en la nube](../../designer/backtesting/cloud_backtesting.md). Siguiendo las recomendaciones siguientes, creará una estrategia que funciona correctamente en todos los entornos.
 
 ## Parámetros del constructor de la estrategia
 
@@ -79,10 +79,10 @@ En lugar de acceder directamente a elementos de la interfaz de usuario, use las 
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Obtener el gráfico proporcionado por el entorno de ejecución
 	_chart = GetChart();
-	
+
 	if (_chart != null)
 	{
 		// El gráfico está disponible (por ejemplo, en Designer o Shell)
@@ -122,7 +122,7 @@ Compruebe siempre la disponibilidad del gráfico antes de usarlo:
 private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue longSma, IIndicatorValue shortSma)
 {
 	if (_chart == null) return; // Comprobación importante
-	
+
 	var data = _chart.CreateData();
 	data.Group(candle.OpenTime)
 		.Add(_chartCandleElement, candle)
@@ -146,7 +146,7 @@ private void ProcessCandle(ICandleMessage candle)
 	var longSmaIsFormedPrev = _longSma.IsFormed;
 	var ls = _longSma.Process(candle);
 	var ss = _shortSma.Process(candle);
-	
+
 	// ...
 }
 
@@ -206,13 +206,13 @@ protected override void OnStopped()
 {
 	// NO haga esto
 	File.WriteAllText("results.txt", $"PnL: {PnL}");
-	
+
 	// ni esto
 	using (var connection = new SqlConnection("..."))
 	{
 		// ...
 	}
-	
+
 	base.OnStopped();
 }
 ```
@@ -223,7 +223,7 @@ Para guardar resultados de estrategia, use:
 
 - [Parámetros de estrategia](parameters.md) para ajustes y configuración
 - Mecanismos de almacenamiento integrados en [Designer](../../designer.md) y [Shell](../../shell.md)
-- [Estadísticas](xref:StockSharp.Algo.Statistics.StatisticManager) para recopilar métricas de trading
+- [Estadísticas](xref:StockSharp.Algo.Statistics.StatisticManager) para recopilar métricas de negociación
 
 ### Métodos de guardado y carga
 
@@ -233,7 +233,7 @@ Los métodos [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.
 public override void Save(SettingsStorage settings)
 {
 	base.Save(settings); // Primero guardar parámetros de estrategia
-	
+
 	// Luego guardar datos personalizados
 	settings.SetValue("CustomState", _customState);
 	settings.SetValue("LastSignalTime", _lastSignalTime);
@@ -242,11 +242,11 @@ public override void Save(SettingsStorage settings)
 public override void Load(SettingsStorage settings)
 {
 	base.Load(settings); // Primero cargar parámetros de estrategia
-	
+
 	// Luego cargar datos personalizados
 	if (settings.Contains("CustomState"))
 		_customState = settings.GetValue<string>("CustomState");
-	
+
 	if (settings.Contains("LastSignalTime"))
 		_lastSignalTime = settings.GetValue<DateTimeOffset>("LastSignalTime");
 }
@@ -270,7 +270,7 @@ protected override void OnStarted2(DateTime time)
 
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
-	
+
 	var subscription = new Subscription(Serie, Security);
 
 	// Correcto: uso de reglas para procesar datos
@@ -350,11 +350,11 @@ public class SmaStrategy : Strategy
 		_longSmaLength = Param(nameof(LongSmaLength), 80)
 							.SetDisplay("Longitud de la SMA larga", string.Empty, "Configuración básica")
 							.SetCanOptimize(true);
-							
+
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
 							.SetDisplay("Longitud de la SMA corta", string.Empty, "Configuración básica")
 							.SetCanOptimize(true);
-							
+
 		_series = Param(nameof(Serie), TimeSpan.FromMinutes(15).TimeFrame())
 					.SetDisplay("Serie", string.Empty, "Configuración básica");
 	}
@@ -368,12 +368,12 @@ public class SmaStrategy : Strategy
 
 		Indicators.Add(_shortSma);
 		Indicators.Add(_longSma);
-		
+
 		// Inicializar gráfico si está disponible
 		_chart = GetChart();
 		if (_chart != null)
 			InitChart();
-		
+
 		var subscription = new Subscription(Serie, Security);
 
 		Connector
@@ -388,13 +388,13 @@ public class SmaStrategy : Strategy
 	{
 		_chart.ClearAreas();
 		var area = _chart.AddArea();
-		
+
 		_chartCandleElement = area.AddCandles();
-		
+
 		_longSmaIndicatorElement = area.AddIndicator(_longSma);
 		_longSmaIndicatorElement.Color = System.Drawing.Color.Brown;
 		_longSmaIndicatorElement.DrawStyle = DrawStyles.Line;
-		
+
 		_shortSmaIndicatorElement = area.AddIndicator(_shortSma);
 		_shortSmaIndicatorElement.Color = System.Drawing.Color.Blue;
 		_shortSmaIndicatorElement.DrawStyle = DrawStyles.Line;
@@ -404,7 +404,7 @@ public class SmaStrategy : Strategy
 	{
 		var ls = _longSma.Process(candle);
 		var ss = _shortSma.Process(candle);
-		
+
 		// Dibujar en el gráfico si está disponible
 		if (_chart != null)
 		{
@@ -415,17 +415,17 @@ public class SmaStrategy : Strategy
 				.Add(_shortSmaIndicatorElement, ss);
 			_chart.Draw(data);
 		}
-		
+
 		if (!_longSma.IsFormed)
 			return;
-			
+
 		var isShortLessCurrent = _shortSma.GetCurrentValue() < _longSma.GetCurrentValue();
 		var isShortLessPrev = _shortSma.GetValue(1) < _longSma.GetValue(1);
 
 		if (isShortLessCurrent == isShortLessPrev)
 			return;
-			
-		// Lógica de trading
+
+		// Lógica de negociación
 		var volume = Volume + Math.Abs(Position);
 
 		if (isShortLessCurrent)

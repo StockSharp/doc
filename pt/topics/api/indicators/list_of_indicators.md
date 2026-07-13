@@ -21,7 +21,7 @@
 - [BMP](list_of_indicators/balance_of_market_power.md) - indicador BMP, compara a pressão de compra e venda
 - [BOP](list_of_indicators/balance_of_power.md) - indicador BOP, mostra a força dos compradores face aos vendedores
 - [BV](list_of_indicators/balance_volume.md) - indicador BV, relaciona o volume com alterações de preço
-- [Bollinger](list_of_indicators/bollinger_bands.md) - indicador Bollinger, mede a volatilidade e identifica condições de sobrecompra ou sobrevenda
+- [bandas de Bollinger](list_of_indicators/bollinger_bands.md) - indicador bandas de Bollinger, mede a volatilidade e identifica condições de sobrecompra ou sobrevenda
 - [BBP](list_of_indicators/bollinger_percent_b.md) - indicador BBP, mostra a posição do preço em relação às bandas de Bollinger
 - [Pattern](../patterns.md) - indicador Pattern, reconhece padrões de preço específicos em gráficos
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - indicador CGO, identifica potenciais pontos de reversão
@@ -59,7 +59,7 @@
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - indicador FRAMA, adapta-se à volatilidade do mercado
 - [Fractais](list_of_indicators/fractals.md) - indicador Fractals, identifica potenciais pontos de reversão em gráficos de preço
 - [FDI](list_of_indicators/fractal_dimension.md) - indicador FDI, mede a irregularidade do mercado
-- [Gator](list_of_indicators/gator_oscillator.md) - indicador Gator, mede a convergência e divergência de médias móveis
+- [oscilador Gator](list_of_indicators/gator_oscillator.md) - indicador oscilador Gator, mede a convergência e divergência de médias móveis
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - indicador GAPO, mede a variabilidade dos movimentos de preço
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - indicador GMMA, usa várias médias móveis para identificar tendências
 - [HO](list_of_indicators/harmonic_oscillator.md) - indicador HO, deteta padrões harmónicos em dados de preço
@@ -91,9 +91,9 @@
 - [MI](list_of_indicators/mass_index.md) - indicador MI, identifica potenciais reversões com base na expansão do intervalo
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - indicador MCO, mede a amplitude do mercado
 - [MGD](list_of_indicators/mcginley_dynamic.md) - indicador MGD, uma média móvel responsiva
-- [MeanDev](list_of_indicators/mean_deviation.md) - indicador MeanDev, mede o desvio médio em relação à média
+- [Desvio médio](list_of_indicators/mean_deviation.md) - indicador Desvio médio, mede o desvio médio em relação à média
 - [Mediana móvel](list_of_indicators/median.md) - indicador Mediana móvel, suaviza dados usando a mediana da janela
-- [MedPr](list_of_indicators/median_price.md) - indicador MedPr, calcula o ponto médio do intervalo de negociação
+- [Preço mediano](list_of_indicators/median_price.md) - indicador Preço mediano, calcula o ponto médio do intervalo de negociação
 - [Impulso](list_of_indicators/momentum.md) - indicador Momentum, mede a velocidade da alteração do preço
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - indicador MOMA, mede o momentum de uma média móvel
 - [MP](list_of_indicators/momentum_pinball.md) - indicador MP, identifica condições de sobrecompra e sobrevenda
@@ -105,13 +105,13 @@
 - [MAR](list_of_indicators/moving_average_ribbon.md) - indicador MAR, usa várias médias móveis para visualizar tendências
 - [NVI](list_of_indicators/negative_volume_index.md) - indicador NVI, acompanha movimentos de preço em dias com volume decrescente
 - [PVI](list_of_indicators/positive_volume_index.md) - indicador PVI, acompanha movimentos de preço em dias com volume crescente
-- [NRTR](list_of_indicators/nrtr.md) - indicador NRTR, um indicador de trailing stop
+- [NRTR](list_of_indicators/nrtr.md) - indicador NRTR, um indicador de stop móvel
 - [OBV](list_of_indicators/on_balance_volume.md) - indicador OBV, relaciona volume com alterações de preço
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - indicador OBVM, uma versão suavizada do OBV
-- [OptimalTracking](list_of_indicators/optimal_tracking.md) - indicador OptimalTracking, filtra dados de preço para reduzir ruído
+- [acompanhamento ótimo](list_of_indicators/optimal_tracking.md) - indicador de acompanhamento ótimo, filtra dados de preço para reduzir ruído
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - indicador OMA, mede a diferença entre uma média móvel e o preço
 - [SAR parabólico](list_of_indicators/parabolic_sar.md) - indicador SAR parabólico, identifica potenciais pontos de reversão
-- [Stub](list_of_indicators/pass_through.md) - indicador Stub, um marcador para indicadores personalizados
+- [passagem direta](list_of_indicators/pass_through.md) - indicador sem lógica, usado como marcador para indicadores personalizados
 - [Pico](list_of_indicators/peak.md) - indicador pico, identifica máximos locais nos dados de preço
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - indicador PPO, mede a diferença percentual entre duas médias móveis
 - [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - indicador PPOS, suaviza o PPO com uma EMA
@@ -138,7 +138,7 @@
 - [SMMA](list_of_indicators/smoothed_ma.md) - indicador SMMA, uma média móvel que dá mais peso aos preços recentes
 - [desvio padrão](list_of_indicators/standard_deviation.md) - indicador desvio padrão, mede a dispersão dos dados de preço
 - [erro padrão](list_of_indicators/standard_error.md) - indicador erro padrão, mede a precisão da previsão
-- [Estocástico %K](list_of_indicators/stochastic_oscillator_k.md) - indicador Estocástico %K, mede o momentum com base na posição do preço dentro de um intervalo
+- [Oscilador Estocástico %K](list_of_indicators/stochastic_oscillator_k.md) - indicador Oscilador Estocástico %K, mede o momentum com base na posição do preço dentro de um intervalo
 - [Oscilador estocástico](list_of_indicators/stochastic_oscillator.md) - indicador Oscilador estocástico, identifica condições de sobrecompra e sobrevenda
 - [Soma N](list_of_indicators/sum_n.md) - indicador Soma N, calcula a soma dos últimos N preços
 - [T3MA](list_of_indicators/t3_moving_average.md) - indicador T3MA, uma média móvel suave e responsiva
@@ -150,7 +150,7 @@
 - [TR](list_of_indicators/true_range.md) - indicador TR, mede o intervalo real do movimento do preço
 - [TSI](list_of_indicators/true_strength_index.md) - indicador TSI, aplica análise de momentum duplamente suavizada
 - [TMF](list_of_indicators/twiggs_money_flow.md) - indicador TMF, mede a pressão de compra e venda
-- [UltimateOsc](list_of_indicators/uo.md) - indicador UltimateOsc, combina vários períodos para medir o momentum
+- [UO](list_of_indicators/uo.md) - oscilador definitivo (UO), combina vários períodos para medir o momentum
 - [VHF](list_of_indicators/vhf.md) - indicador VHF, distingue mercados em tendência de mercados laterais
 - [VIDIA](list_of_indicators/vidya.md) - indicador VIDIA, adapta-se à volatilidade do mercado
 - [VMA](list_of_indicators/variable_moving_average.md) - indicador VMA, ajusta-se à volatilidade
@@ -180,4 +180,4 @@ Esta lista inclui indicadores de análise técnica da biblioteca StockSharp. Cad
 - Análise do volume de negociação
 - Identificação de níveis de suporte e resistência
 
-Os indicadores ajudam os traders a tomar decisões informadas através da análise de dados históricos de preço e da identificação de padrões.
+Os indicadores ajudam os operadores a tomar decisões informadas através da análise de dados históricos de preço e da identificação de padrões.

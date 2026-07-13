@@ -26,7 +26,7 @@ La aplicación `Installer.Console` es una versión multiplataforma de StockSharp
 - `Installed` – listar programas instalados.
 - `Sign` – firmar un archivo DLL.
 
-El parámetro opcional `[product]` es el ID del producto en la [Store](https://stocksharp.com/store/). Puede encontrar este ID en la página del producto —por ejemplo, en la [página de Hydra server](https://stocksharp.com/store/hydra-server/)— o ejecutando `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` especifica el directorio de instalación.
+El parámetro opcional `[product]` es el ID del producto en la [tienda](https://stocksharp.com/store/). Puede encontrar este ID en la página del producto —por ejemplo, en la [página de Hydra Server](https://stocksharp.com/store/hydra-server/)— o ejecutando `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` especifica el directorio de instalación.
 
 ## Opciones
 

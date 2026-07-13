@@ -16,7 +16,7 @@
    - 指定所选K线类型所需的参数：
      - 对于 [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage)，选择 **时间周期**。
      - 对于 [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage)，指定 **成交量**。
-     - 对于 [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage)，指定 **Tick 数量**。
+     - 对于 [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage)，指定 **逐笔成交数量**。
      - 对于 [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage)，指定 **区间**。
      - 对于 [RenkoCandleMessage](xref:StockSharp.Messages.RenkoCandleMessage)，指定 **砖块大小**。
      - 对于 [PnFCandleMessage](xref:StockSharp.Messages.PnFCandleMessage)，指定 **P&F 参数**。
@@ -49,7 +49,7 @@
 
 生成结果：
 
-![Hydra K线 volume](../../../images/hydra_candles_volume.png)
+![Hydra 成交量K线](../../../images/hydra_candles_volume.png)
 
 ## 用于构建K线的数据源
 

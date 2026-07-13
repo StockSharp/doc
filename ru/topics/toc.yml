@@ -709,9 +709,9 @@
       - name: QUIK
         href: api/connectors/russia/quik.md
         items:
-        - name: Графическое конфигурирование Quik LUA Market data
+        - name: 'Графическое конфигурирование Quik LUA: рыночные данные'
           href: api/connectors/russia/quik/ui_settings_marketdata.md
-        - name: Графическое конфигурирование Quik LUA Transactions
+        - name: 'Графическое конфигурирование Quik LUA: транзакции'
           href: api/connectors/russia/quik/ui_settings_transactions.md
         - name: Инициализация адаптера Quik Lua
           href: api/connectors/russia/quik/sample.md
@@ -1822,331 +1822,331 @@
     - name: Список индикаторов
       href: api/indicators/list_of_indicators.md
       items:
-      - name: Acceleration / Deceleration Indicator (A/D)
+      - name: Замедления/Ускорения (A/D)
         href: api/indicators/list_of_indicators/a_d.md
-      - name: Accumulation/Distribution Line (ADL)
+      - name: Линия накопления/распределения (ADL)
         href: api/indicators/list_of_indicators/accumulation_distribution_line.md
-      - name: Adaptive Laguerre Filter (ALF)
+      - name: Адаптивный фильтр Лагерра (ALF)
         href: api/indicators/list_of_indicators/adaptive_laguerre_filter.md
-      - name: Adaptive Price Zone (APZ)
+      - name: Адаптивная ценовая зона (APZ)
         href: api/indicators/list_of_indicators/adaptive_price_zone.md
-      - name: Alligator
+      - name: Аллигатор
         href: api/indicators/list_of_indicators/alligator.md
-      - name: Approval Flow Index (AFI)
+      - name: Индекс потока утверждения (AFI)
         href: api/indicators/list_of_indicators/approval_flow_index.md
-      - name: Arnaud Legoux Moving Average (ALMA)
+      - name: Скользящее среднее Арно Легу (ALMA)
         href: api/indicators/list_of_indicators/arnaud_legoux_moving_average.md
-      - name: Aroon Indicator (Aroon)
+      - name: Арун
         href: api/indicators/list_of_indicators/aroon.md
-      - name: Average Directional Index (ADX)
+      - name: Индекс среднего направленного движения Уэллса Уайлдера (ADX)
         href: api/indicators/list_of_indicators/adx.md
-      - name: Average True Range (ATR)
+      - name: Средний истинный диапазон (ATR)
         href: api/indicators/list_of_indicators/atr.md
-      - name: Awesome Oscillator (AO)
+      - name: Чудесный Осциллятор (AO)
         href: api/indicators/list_of_indicators/ao.md
-      - name: Balance of Market Power (BMP)
+      - name: Баланс рыночной силы (BMP)
         href: api/indicators/list_of_indicators/balance_of_market_power.md
-      - name: Balance of Power (BOP)
+      - name: Баланс сил (BOP)
         href: api/indicators/list_of_indicators/balance_of_power.md
-      - name: Balance Volume Indicator (BV)
+      - name: Индикатор объема баланса (BV)
         href: api/indicators/list_of_indicators/balance_volume.md
-      - name: Bear Power
+      - name: Сила продавцов
         href: api/indicators/list_of_indicators/bear_power.md
-      - name: Bull Power
+      - name: Сила покупателей
         href: api/indicators/list_of_indicators/bull_power.md
-      - name: Bollinger Bands (Bollinger)
+      - name: Полосы Боллинджера
         href: api/indicators/list_of_indicators/bollinger_bands.md
-      - name: Bollinger %b (BBP)
+      - name: Процент Боллинджера B (BBP)
         href: api/indicators/list_of_indicators/bollinger_percent_b.md
-      - name: Center of Gravity Oscillator (CGO)
+      - name: Осциллятор центра тяжести (CGO)
         href: api/indicators/list_of_indicators/center_of_gravity_oscillator.md
-      - name: Chaikin Money Flow (CMF)
+      - name: Денежный поток Чайкина (CMF)
         href: api/indicators/list_of_indicators/chaikin_money_flow.md
-      - name: Chaikin Volatility (Chaikin's Volatility)
+      - name: Волатильность Чайкина (CHV)
         href: api/indicators/list_of_indicators/chv.md
-      - name: Chande Kroll Stop (CKS)
+      - name: Стоп Чанде-Кролла (CKS)
         href: api/indicators/list_of_indicators/chande_kroll_stop.md
-      - name: Chande Momentum Oscillator (CMO)
+      - name: Осциллятор моментума Чанде (CMO)
         href: api/indicators/list_of_indicators/cmo.md
-      - name: Choppiness Index (CHOP)
+      - name: Индекс размаха (CHOP)
         href: api/indicators/list_of_indicators/choppiness_index.md
-      - name: Commodity Channel Index (CCI)
+      - name: Индекс товарного канала (CCI)
         href: api/indicators/list_of_indicators/cci.md
-      - name: Composite Momentum (CM)
+      - name: Композитный моментум (CM)
         href: api/indicators/list_of_indicators/composite_momentum.md
-      - name: Connors RSI (CRSI)
+      - name: RSI Коннорса (CRSI)
         href: api/indicators/list_of_indicators/connors_rsi.md
-      - name: Constance Brown Composite Index (CBCI)
+      - name: Композитный индекс Констанс Браун (CBCI)
         href: api/indicators/list_of_indicators/constance_brown_composite_index.md
-      - name: DeMarker
+      - name: Индикатор DeMarker
         href: api/indicators/list_of_indicators/demarker.md
-      - name: Demand Index (DI)
+      - name: Индекс спроса (DI)
         href: api/indicators/list_of_indicators/demand_index.md
-      - name: Detrended Price Oscillator (DPO)
+      - name: Бестрендовый ценовой осциллятор (DPO)
         href: api/indicators/list_of_indicators/dpo.md
-      - name: Detrended Synthetic Price (DSP)
+      - name: Синтетическая цена без тренда (DSP)
         href: api/indicators/list_of_indicators/detrended_synthetic_price.md
-      - name: Directional Movement Index (DMI)
+      - name: Индекс направленного движения (DMI)
         href: api/indicators/list_of_indicators/dmi.md
-      - name: Disparity Index (DPI)
+      - name: Индекс разницы (DPI)
         href: api/indicators/list_of_indicators/disparity_index.md
-      - name: Donchian Channels (DC)
+      - name: Каналы Дончиана (DC)
         href: api/indicators/list_of_indicators/donchian_channels.md
-      - name: Double Exponential Moving Average (DEMA)
+      - name: Двойная экспоненциальная скользящая средняя (DEMA)
         href: api/indicators/list_of_indicators/dema.md
-      - name: Dynamic Zones RSI (DZRSI)
+      - name: Индекс относительной силы в динамических зонах (DZRSI)
         href: api/indicators/list_of_indicators/dynamic_zones_rsi.md
-      - name: Ease of Movement (EMV)
+      - name: Легкость движения (EMV)
         href: api/indicators/list_of_indicators/ease_of_movement.md
-      - name: Ehlers Fisher Transform (EFT)
+      - name: Преобразование Элерса-Фишера (EFT)
         href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
-      - name: Elder Impulse System (EIS)
+      - name: Система старшего импульса (EIS)
         href: api/indicators/list_of_indicators/elder_impulse_system.md
-      - name: Elder's Force Index (EFI)
+      - name: Индекс силы Элдера
         href: api/indicators/list_of_indicators/elder_force_index.md
-      - name: Elliot Wave Oscillator (EWO)
+      - name: Осциллятор волн Эллиота (EWO)
         href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
-      - name: Endpoint Moving Average (EPMA)
+      - name: Конечная скользящая средняя (EPMA)
         href: api/indicators/list_of_indicators/endpoint_moving_average.md
-      - name: Envelope
+      - name: Конверты
         href: api/indicators/list_of_indicators/envelope.md
-      - name: Elder Ray Index
+      - name: Лучи Элдера
         href: api/indicators/list_of_indicators/elder_ray.md
-      - name: Exponential Moving Average (EMA)
+      - name: Экспоненциальное скользящее среднее (EMA)
         href: api/indicators/list_of_indicators/ema.md
-      - name: Fibonacci Retracement (FR)
+      - name: Фибоначчи коррекция (FR)
         href: api/indicators/list_of_indicators/fibonacci_retracement.md
-      - name: Finite Volume Element (FVE)
+      - name: Элемент конечного объема (FVE)
         href: api/indicators/list_of_indicators/finite_volume_element.md
-      - name: Force Index (FI)
+      - name: Индекс силы (FI)
         href: api/indicators/list_of_indicators/force_index.md
-      - name: Forecast Oscillator (FOSC)
+      - name: Прогнозный осциллятор (FOSC)
         href: api/indicators/list_of_indicators/forecast_oscillator.md
-      - name: Fractal Adaptive Moving Average (FRAMA)
+      - name: Фрактальная адаптивная скользящая средняя (FRAMA)
         href: api/indicators/list_of_indicators/fractal_adaptive_moving_average.md
-      - name: Fractals
+      - name: Фракталы
         href: api/indicators/list_of_indicators/fractals.md
-      - name: Fractal Dimension Index (FDI)
+      - name: Индекс фрактальной размерности (FDI)
         href: api/indicators/list_of_indicators/fractal_dimension.md
-      - name: Gator Oscillator (Gator)
+      - name: Осциллятор Gator
         href: api/indicators/list_of_indicators/gator_oscillator.md
-      - name: Gopalakrishnan Range Index (GAPO)
+      - name: Индекс диапазона Гопалакришнана (GAPO)
         href: api/indicators/list_of_indicators/gopalakrishnan_range_index.md
-      - name: Guppy Multiple Moving Average (GMMA)
+      - name: Множественная скользящая средняя Guppy (GMMA)
         href: api/indicators/list_of_indicators/guppy_multiple_moving_average.md
-      - name: Harmonic Oscillator (HO)
+      - name: Гармонический осциллятор (HO)
         href: api/indicators/list_of_indicators/harmonic_oscillator.md
-      - name: Highest Value (Highest)
+      - name: Максимум
         href: api/indicators/list_of_indicators/highest.md
-      - name: High Low Index (HLI)
+      - name: Индекс максимумов и минимумов (HLI)
         href: api/indicators/list_of_indicators/high_low_index.md
-      - name: Historical Volatility Ratio (HVR)
+      - name: Коэффициент исторической волатильности (HVR)
         href: api/indicators/list_of_indicators/historical_volatility_ratio.md
-      - name: Hurst Exponent (H)
+      - name: Экспонента Херста
         href: api/indicators/list_of_indicators/hurst_exponent.md
-      - name: Hull Moving Average (HMA)
+      - name: Скользящая средняя Халла (HMA)
         href: api/indicators/list_of_indicators/hma.md
-      - name: Ichimoku
+      - name: Ишимоку
         href: api/indicators/list_of_indicators/ichimoku.md
-      - name: Intraday Intensity Index (III)
+      - name: Индекс внутридневной интенсивности (III)
         href: api/indicators/list_of_indicators/intraday_intensity_index.md
-      - name: Intraday Momentum Index (IMI)
+      - name: Индикатор внутридневного момента (IMI)
         href: api/indicators/list_of_indicators/intraday_momentum_index.md
-      - name: Jurik Moving Average (JMA)
+      - name: Скользящее среднее Юрика (JMA)
         href: api/indicators/list_of_indicators/jma.md
-      - name: Kase Peak Oscillator (KPO)
+      - name: Осциллятор пика Кейс (KPO)
         href: api/indicators/list_of_indicators/kase_peak_oscillator.md
-      - name: Kaufman Efficiency Ratio (KER)
+      - name: Коэффициент эффективности Кауфмана (KER)
         href: api/indicators/list_of_indicators/kaufman_efficiency_ratio.md
-      - name: Kaufman Adaptive Moving Average (KAMA)
+      - name: Адаптивная скользящая средняя Кауфмана (KAMA)
         href: api/indicators/list_of_indicators/kama.md
-      - name: Kalman Filter (KF)
+      - name: Фильтр Калмана (KF)
         href: api/indicators/list_of_indicators/kalman_filter.md
-      - name: Keltner Channels (KC)
+      - name: Индикатор каналов Келтнера (KC)
         href: api/indicators/list_of_indicators/keltner_channels.md
-      - name: Klinger Volume Oscillator (KVO)
+      - name: Объемный осциллятор Клингера (KVO)
         href: api/indicators/list_of_indicators/klinger_volume_oscillator.md
-      - name: Know Sure Thing (KST)
+      - name: KST
         href: api/indicators/list_of_indicators/kst.md
-      - name: Laguerre RSI (LRSI)
+      - name: RSI Лагерра (LRSI)
         href: api/indicators/list_of_indicators/laguerre_rsi.md
-      - name: Linear Regression (LRC)
+      - name: Кривая линейной регрессии (LRC)
         href: api/indicators/list_of_indicators/lrc.md
-      - name: Linear Regression Gradient (LRS)
+      - name: Наклон линейной регрессии
         href: api/indicators/list_of_indicators/lrs.md
-      - name: Linear Regression Forecast (LRF)
+      - name: Прогноз линейной регрессии
         href: api/indicators/list_of_indicators/linear_regression_forecast.md
-      - name: R-squared
+      - name: R-квадрат
         href: api/indicators/list_of_indicators/linear_reg_rsquared.md
-      - name: Lowest Value (Lowest)
+      - name: Минимум
         href: api/indicators/list_of_indicators/lowest.md
-      - name: Lunar Phase Indicator (LP)
+      - name: Индикатор лунной фазы (LP)
         href: api/indicators/list_of_indicators/lunar_phase.md
-      - name: Market Facilitation Index (MFI)
+      - name: Индекс облегчения рынка
         href: api/indicators/list_of_indicators/market_facilitation_index.md
-      - name: Market Meanness Index (MMI)
+      - name: Индекс злобы рынка (MMI)
         href: api/indicators/list_of_indicators/market_meanness_index.md
-      - name: Mass Index (MI)
+      - name: Индекс массы (MI)
         href: api/indicators/list_of_indicators/mass_index.md
-      - name: McClellan Oscillator (MCO)
+      - name: Осциллятор Макклеллана (MCO)
         href: api/indicators/list_of_indicators/mcclellan_oscillator.md
-      - name: McGinley Dynamic (MGD)
+      - name: Динамическая МакГинли (MGD)
         href: api/indicators/list_of_indicators/mcginley_dynamic.md
-      - name: Mean Deviation (MeanDev)
+      - name: Среднее отклонение
         href: api/indicators/list_of_indicators/mean_deviation.md
-      - name: Median
+      - name: Скользящая медиана
         href: api/indicators/list_of_indicators/median.md
-      - name: Median Price (MedPr)
+      - name: Медианная цена
         href: api/indicators/list_of_indicators/median_price.md
-      - name: Momentum
+      - name: Моментум
         href: api/indicators/list_of_indicators/momentum.md
-      - name: Momentum of Moving Average (MOMA)
+      - name: Импульс скользящей средней (MOMA)
         href: api/indicators/list_of_indicators/momentum_of_moving_average.md
-      - name: Momentum Pinball (MP)
+      - name: Индикатор импульса пинбола (MP)
         href: api/indicators/list_of_indicators/momentum_pinball.md
-      - name: Money Flow Index (MFI)
+      - name: Индекс денежного потока (MFI)
         href: api/indicators/list_of_indicators/money_flow_index.md
-      - name: Moving Average Convergence Divergence (MACD)
+      - name: Схождения-расхождения скользящих средних (MACD)
         href: api/indicators/list_of_indicators/macd.md
-      - name: MACD Histogram
+      - name: MACD гистограмма
         href: api/indicators/list_of_indicators/macd_histogram.md
-      - name: MACD Signal
+      - name: MACD с сигнальной линией
         href: api/indicators/list_of_indicators/macd_with_signal_line.md
-      - name: Moving Average Crossover (MAC)
+      - name: Пересечение скользящих средних (MAC)
         href: api/indicators/list_of_indicators/moving_average_crossover.md
-      - name: Moving Average Ribbon (MAR)
+      - name: Лента скользящих средних (MAR)
         href: api/indicators/list_of_indicators/moving_average_ribbon.md
-      - name: Negative Volume Index (NVI)
+      - name: Индекс отрицательного объема (NVI)
         href: api/indicators/list_of_indicators/negative_volume_index.md
-      - name: Positive Volume Index (PVI)
+      - name: Индекс положительного объёма (PVI)
         href: api/indicators/list_of_indicators/positive_volume_index.md
-      - name: Nick Rypock Trailing Reverse (NRTR)
+      - name: Скользящий разворот Ника Райпока (NRTR)
         href: api/indicators/list_of_indicators/nrtr.md
-      - name: On-Balance Volume (OBV)
+      - name: Балансовый объем (OBV)
         href: api/indicators/list_of_indicators/on_balance_volume.md
-      - name: On Balance Volume Mean (OBVM)
+      - name: Среднее значение объема баланса (OBVM)
         href: api/indicators/list_of_indicators/on_balance_volume_mean.md
-      - name: Optimal Tracking Filter (OptimalTracking)
+      - name: Оптимальное отслеживание
         href: api/indicators/list_of_indicators/optimal_tracking.md
-      - name: Oscillator of Moving Average (OMA)
+      - name: Осциллятор скользящей средней (OMA)
         href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
-      - name: Parabolic SAR
+      - name: Параболический SAR
         href: api/indicators/list_of_indicators/parabolic_sar.md
-      - name: Stub (Pass Through)
+      - name: Сквозной индикатор
         href: api/indicators/list_of_indicators/pass_through.md
-      - name: Peak
+      - name: Пик
         href: api/indicators/list_of_indicators/peak.md
-      - name: Percentage Price Oscillator (PPO)
+      - name: Осциллятор процентной цены (PPO)
         href: api/indicators/list_of_indicators/percentage_price_oscillator.md
-      - name: Percentage Price Oscillator Signal
+      - name: Сигнал осциллятора процентной цены (PPOS)
         href: api/indicators/list_of_indicators/percentage_price_oscillator_signal.md
-      - name: Percentage Price Oscillator Histogram
+      - name: Гистограмма осциллятора процентной цены (PPOH)
         href: api/indicators/list_of_indicators/percentage_price_oscillator_histogram.md
-      - name: Percentage Volume Oscillator (PVO)
+      - name: Осциллятор процентного объема (PVO)
         href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
-      - name: Pivot Points (PP)
+      - name: Точки Пивот (PP)
         href: api/indicators/list_of_indicators/pivot_points.md
-      - name: Price Channels (PC)
+      - name: Ценовые каналы
         href: api/indicators/list_of_indicators/price_channels.md
-      - name: Price Volume Trend (PVT)
+      - name: Тренд цены и объема (PVT)
         href: api/indicators/list_of_indicators/price_volume_trend.md
-      - name: Pretty Good Oscillator (PGO)
+      - name: Довольно хороший осциллятор (PGO)
         href: api/indicators/list_of_indicators/pretty_good_oscillator.md
-      - name: Psychological Line (PSY)
+      - name: Психологическая линия (PSY)
         href: api/indicators/list_of_indicators/psychological_line.md
       - name: QStick
         href: api/indicators/list_of_indicators/qstick.md
-      - name: Rainbow Charts (RC)
+      - name: Радужные графики (RC)
         href: api/indicators/list_of_indicators/rainbow_charts.md
-      - name: Range Action Verification Index (RAVI)
+      - name: Индекс подтверждения движения диапазона (RAVI)
         href: api/indicators/list_of_indicators/ravi.md
-      - name: Rank Correlation Index (RCI)
+      - name: Индекс ранговой корреляции
         href: api/indicators/list_of_indicators/rank_correlation_index.md
-      - name: Rate of Change (ROC)
+      - name: Скорость изменения (ROC)
         href: api/indicators/list_of_indicators/roc.md
-      - name: Relative Momentum Index (RMI)
+      - name: Индекс относительного импульса (RMI)
         href: api/indicators/list_of_indicators/relative_momentum_index.md
-      - name: Relative Strength Index (RSI)
+      - name: Индекс относительной силы (RSI)
         href: api/indicators/list_of_indicators/rsi.md
-      - name: Relative Vigor Index (RVI)
+      - name: Индикатор RVI
         href: api/indicators/list_of_indicators/rvi.md
-      - name: Schaff Trend Cycle (STC)
+      - name: Цикл тренда Шаффа (STC)
         href: api/indicators/list_of_indicators/schaff_trend_cycle.md
-      - name: Shift
+      - name: Сдвиг
         href: api/indicators/list_of_indicators/shift.md
-      - name: SuperTrend
+      - name: Индикатор SuperTrend
         href: api/indicators/list_of_indicators/supertrend.md
-      - name: Simple Moving Average (SMA)
+      - name: Простая скользящая средняя (SMA)
         href: api/indicators/list_of_indicators/sma.md
-      - name: Sine Wave (SW)
+      - name: Синусоида (SW)
         href: api/indicators/list_of_indicators/sine_wave.md
-      - name: Smoothed Moving Average (SMMA)
+      - name: Сглаженная скользящая средняя
         href: api/indicators/list_of_indicators/smoothed_ma.md
-      - name: Standard Deviation (Std Dev)
+      - name: Стандартное отклонение
         href: api/indicators/list_of_indicators/standard_deviation.md
-      - name: Standard Error (Standard error)
+      - name: Стандартная ошибка
         href: api/indicators/list_of_indicators/standard_error.md
-      - name: Stochastic %K (Stochastic %K)
+      - name: Стохастик %K
         href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
-      - name: Stochastic Oscillator
+      - name: Стохастический осциллятор
         href: api/indicators/list_of_indicators/stochastic_oscillator.md
-      - name: Sum of N Last Values (Sum)
+      - name: Сумма N
         href: api/indicators/list_of_indicators/sum_n.md
-      - name: T3 Moving Average (T3MA)
+      - name: Скользящая средняя T3 (T3MA)
         href: api/indicators/list_of_indicators/t3_moving_average.md
-      - name: Time Weighted Average Price (TWAP)
+      - name: Средневзвешенная по времени цена (TWAP)
         href: api/indicators/list_of_indicators/time_weighted_average_price.md
-      - name: Typical Price (TP)
+      - name: Типичная цена
         href: api/indicators/list_of_indicators/typical_price.md
-      - name: Triple Exponential Moving Average (TEMA)
+      - name: Тройная экспоненциальная скользящая средняя (TEMA)
         href: api/indicators/list_of_indicators/tema.md
       - name: TRIX
         href: api/indicators/list_of_indicators/trix.md
-      - name: Trough
+      - name: Впадина
         href: api/indicators/list_of_indicators/trough.md
-      - name: True Range (TR)
+      - name: Истинный диапазон
         href: api/indicators/list_of_indicators/true_range.md
-      - name: True Strength Index (TSI)
+      - name: Индекс истинной силы
         href: api/indicators/list_of_indicators/true_strength_index.md
-      - name: Twiggs Money Flow (TMF)
+      - name: Денежный поток Твиггса (TMF)
         href: api/indicators/list_of_indicators/twiggs_money_flow.md
-      - name: Ultimate Oscillator (UltimateOsc)
+      - name: Окончательный осциллятор (UO)
         href: api/indicators/list_of_indicators/uo.md
-      - name: Vertical-Horizontal Filter (VHF)
+      - name: Вертикально-горизонтальный фильтр (VHF)
         href: api/indicators/list_of_indicators/vhf.md
-      - name: Variable Index Dynamic Average (VIDIA)
+      - name: VIDYA
         href: api/indicators/list_of_indicators/vidya.md
-      - name: Variable Moving Average (VMA)
+      - name: Переменная скользящая средняя
         href: api/indicators/list_of_indicators/variable_moving_average.md
-      - name: Volume
+      - name: Объем
         href: api/indicators/list_of_indicators/volume.md
-      - name: Volume Profile
+      - name: Профиль объема
         href: api/indicators/list_of_indicators/volume_profile.md
-      - name: Volume Weighted Average Price (VWAP)
+      - name: Средневзвешенная по объему цена (VWAP)
         href: api/indicators/list_of_indicators/volume_weighted_average_price.md
-      - name: Volume Weighted Moving Average (VMA)
+      - name: Скользящая средняя, взвешенная по объему
         href: api/indicators/list_of_indicators/volume_weighted_ma.md
-      - name: Vortex Indicator (VI)
+      - name: Индикатор Vortex (VI)
         href: api/indicators/list_of_indicators/vortex_indicator.md
-      - name: Wave Trend Oscillator (WTO)
+      - name: Осциллятор волнового тренда (WTO)
         href: api/indicators/list_of_indicators/wave_trend_oscillator.md
-      - name: Weighted Close Price (WCP)
+      - name: Взвешенная цена закрытия
         href: api/indicators/list_of_indicators/weighted_close_price.md
-      - name: Weighted Moving Average (WMA)
+      - name: Взвешенная скользящая средняя
         href: api/indicators/list_of_indicators/weighted_ma.md
-      - name: Welles Wilder Moving Average (Wilder MA)
+      - name: Скользящая средняя Уайлдера
         href: api/indicators/list_of_indicators/wilder_ma.md
-      - name: Williams Accumulation/Distribution (WAD)
+      - name: Накопление/распределение Вильямса (WAD)
         href: api/indicators/list_of_indicators/williams_accumulation_distribution.md
-      - name: Williams %R (%R)
+      - name: "%R Вильямса"
         href: api/indicators/list_of_indicators/williams_r.md
-      - name: Woodies CCI (WCCI)
+      - name: CCI Вуди (WCCI)
         href: api/indicators/list_of_indicators/woodies_cci.md
-      - name: Zero Lag Exponential Moving Average (ZLEMA)
+      - name: Экспоненциальное скользящее среднее с нулевым запаздыванием (ZLEMA)
         href: api/indicators/list_of_indicators/zero_lag_exponential_moving_average.md
-      - name: ZigZag
+      - name: ЗигЗаг
         href: api/indicators/list_of_indicators/zigzag.md
-      - name: Williams Variable Accumulation Distribution (WVAD)
+      - name: Переменное накопление/распределение Вильямса (WVAD)
         href: api/indicators/list_of_indicators/williams_variable_accumulation_distribution.md
     - name: Собственный индикатор
       href: api/indicators/custom_indicator.md
@@ -2155,67 +2155,67 @@
   - name: Паттерны
     href: api/patterns.md
     items:
-    - name: '3 Outside Down 3 Outside Up (3 Внешний Вниз 3 Внешний Вверх)'
+    - name: Паттерн Три внешних вниз и три внешних вверх
       href: api/patterns/3_outside_down_3_outside_up.md
-    - name: '3 Inside Down and 3 Inside Up (3 Внутренний Вниз и 3 Внутренний Вверх)'
+    - name: Паттерн Три внутренних вниз и три внутренних вверх
       href: api/patterns/3_inside_down_3_side_up.md
-    - name: '3 Black Crows and 3 White Soldiers (3 Черных Вороны и 3 Белых Солдата)'
+    - name: Паттерн Три черные вороны и три белых солдата
       href: api/patterns/3_black_crows_3_white_soldiers.md
-    - name: 'Three White Soldiers (Три Белых Солдата)'
+    - name: Паттерн Три белых солдата
       href: api/patterns/three_white_soldiers.md
-    - name: 'Three Black Crows (Три Черных Вороны)'
+    - name: Паттерн Три черные вороны
       href: api/patterns/three_black_crows.md
-    - name: 'On-Neck (На Шее)'
+    - name: Паттерн На шее
       href: api/patterns/on_neck.md
-    - name: 'Piercing (Пробивающий)'
+    - name: Паттерн Просвет в облаках
       href: api/patterns/piercing.md
-    - name: 'Bearish (Медвежья Свеча)'
+    - name: Паттерн Медвежья свеча
       href: api/patterns/bearish.md
-    - name: 'Bearish Engulfing (Медвежье Поглощение)'
+    - name: Паттерн Медвежье поглощение
       href: api/patterns/bearish_engulfing.md
-    - name: 'Bearish Harami (Медвежий Харами)'
+    - name: Паттерн Медвежий харами
       href: api/patterns/bearish_harami.md
-    - name: 'Black Candle (Черная Свеча)'
+    - name: Паттерн Черная свеча
       href: api/patterns/black_candle.md
-    - name: 'Black Marubozu (Черный Марубозу)'
+    - name: Паттерн Черный марубозу
       href: api/patterns/black_marubozu.md
-    - name: 'Bullish (Бычья Свеча)'
+    - name: Паттерн Бычья свеча
       href: api/patterns/bullish.md
-    - name: 'Bullish Engulfing (Бычье Поглощение)'
+    - name: Паттерн Бычье поглощение
       href: api/patterns/bullish_engulfing.md
-    - name: 'Bullish Harami (Бычий Харами)'
+    - name: Паттерн Бычий харами
       href: api/patterns/bullish_harami.md
-    - name: 'Dragonfly (Стрекоза)'
+    - name: Паттерн Стрекоза
       href: api/patterns/dragonfly.md
-    - name: 'Evening Star (Вечерняя Звезда)'
+    - name: Паттерн Вечерняя звезда
       href: api/patterns/evening_star.md
-    - name: 'Falling Three Methods (Падающие Три Метода)'
+    - name: Паттерн Падающие три метода
       href: api/patterns/falling_three_methods.md
-    - name: 'Flat Candle (Плоская Свеча)'
+    - name: Паттерн Нейтральная свеча
       href: api/patterns/flat_candle.md
-    - name: 'Gravestone (Надгробие)'
+    - name: Паттерн Надгробие
       href: api/patterns/gravestone.md
-    - name: 'Hammer (Молот)'
+    - name: Паттерн Молот
       href: api/patterns/hammer.md
-    - name: 'Hanging Man (Повешенный)'
+    - name: Паттерн Повешенный
       href: api/patterns/hanging_man.md
-    - name: 'Inverted Hammer (Перевернутый Молот)'
+    - name: Паттерн Перевернутый молот
       href: api/patterns/inverted_hammer.md
-    - name: 'Morning Star (Утренняя Звезда)'
+    - name: Паттерн Утренняя звезда
       href: api/patterns/morning_star.md
-    - name: 'Rising Three Methods (Восходящие Три Метода)'
+    - name: Паттерн Восходящие три метода
       href: api/patterns/rising_three_methods.md
-    - name: 'Shooting Star (Падающая Звезда)'
+    - name: Паттерн Падающая звезда
       href: api/patterns/shooting_star.md
-    - name: 'Spinning Top (Волчок)'
+    - name: Паттерн Волчок
       href: api/patterns/spinning_top.md
-    - name: 'Tweezer Bottom (Дно Пинцета)'
+    - name: Паттерн Дно пинцета
       href: api/patterns/tweezer_bottom.md
-    - name: 'Tweezer Top (Вершина Пинцета)'
+    - name: Паттерн Вершина пинцета
       href: api/patterns/tweezer_top.md
-    - name: 'White Candle (Белая Свеча)'
+    - name: Паттерн Белая свеча
       href: api/patterns/white_candle.md
-    - name: 'White Marubozu (Белый Марубозу)'
+    - name: Паттерн Белый марубозу
       href: api/patterns/white_marubozu.md
     - name: Составные паттерны
       href: api/patterns/complex_patterns.md
@@ -2357,12 +2357,12 @@
     href: api/pnl.md
   - name: Проскальзывание
     href: api/slippage.md
-  - name: Задержка (Latency)
+  - name: Измерение задержки
     href: api/latency.md
   - name: Логирование
     href: api/logging.md
     items:
-    - name: Логирование Strategy
+    - name: Логирование стратегии
       href: api/logging/strategy_logging.md
     - name: Логирование IConnector
       href: api/logging/iconnector_logging.md
@@ -2414,7 +2414,7 @@
         href: api/graphical_user_interface/charts/candle_chart_panel.md
       - name: График эквити
         href: api/graphical_user_interface/charts/equity_curve_chart.md
-      - name: Графики box chart
+      - name: Box-график
         href: api/graphical_user_interface/charts/box_chart.md
       - name: Кластеры
         href: api/graphical_user_interface/charts/cluster_chart.md

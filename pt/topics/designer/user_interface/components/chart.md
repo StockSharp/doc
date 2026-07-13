@@ -8,11 +8,11 @@ O canto superior esquerdo de cada gráfico mostra todos os elementos gráficos a
 
 ![Designer elemento gráfico 02](../../../../images/designer_schedule_02.png)
 
-Nas definições do elemento gráfico, pode definir o estilo de gráfico pretendido: velas japonesas, barras, gráfico box, perfil de cluster, etc.
+Nas definições do elemento gráfico, pode definir o estilo de gráfico pretendido: velas japonesas, barras, gráfico Box, perfil de cluster, etc.
 
 ![Designer elemento gráfico 04](../../../../images/designer_schedule_04.png)
 
-Para um gráfico box, as velas podem ser adicionalmente agrupadas; a ordem de agrupamento é definida nos campos: multiplicador do 2.º período, multiplicador do 3.º período.
+Para um gráfico Box, as velas podem ser adicionalmente agrupadas; a ordem de agrupamento é definida nos campos: multiplicador do 2.º período, multiplicador do 3.º período.
 
 ![Designer elemento gráfico 05](../../../../images/designer_schedule_05.png)
 

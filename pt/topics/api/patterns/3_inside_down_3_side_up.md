@@ -29,7 +29,7 @@ A versão descendente do padrão é baixista. Mostra que o movimento ascendente 
 3. A segunda vela é uma vela preta com um corpo pequeno, que abre e fecha dentro do corpo da primeira vela.
 4. A terceira vela é uma vela preta, que fecha abaixo do fecho da segunda vela.
 
-Estes padrões são essencialmente padrões harami seguidos por uma vela de confirmação, pela qual muitos traders aguardam no caso dos haramis.
+Estes padrões são essencialmente padrões harami seguidos por uma vela de confirmação, pela qual muitos operadores aguardam no caso dos haramis.
 
 ![Captura de tela de Padrão Três interiores baixistas e Três interiores altistas 2](../../../images/indicatorpattern3id.png)
 

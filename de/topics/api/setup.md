@@ -49,7 +49,7 @@ StockSharp wird über NuGet verteilt. Unten finden Sie den vollständigen Paketk
 |-------|--------------|
 | [StockSharp.Messages](https://www.nuget.org/packages/StockSharp.Messages/) | Basisnachrichten und Verträge. Fundament des gesamten Frameworks |
 | [StockSharp.BusinessEntities](https://www.nuget.org/packages/StockSharp.BusinessEntities/) | Handelsentitäten: Security, Order, Trade, Portfolio usw. |
-| [StockSharp.Algo](https://www.nuget.org/packages/StockSharp.Algo/) | Algorithmischer Handel im Kern, Connector, Abonnements, Candles |
+| [StockSharp.Algo](https://www.nuget.org/packages/StockSharp.Algo/) | Algorithmischer Handel im Kern, Connector, Abonnements, Kerzen |
 | [StockSharp.Configuration](https://www.nuget.org/packages/StockSharp.Configuration/) | Konfigurationsverwaltung, Verbindungseinstellungen |
 | [StockSharp.Localization](https://www.nuget.org/packages/StockSharp.Localization/) | Lokalisierungssystem (standardmäßig Englisch) |
 
@@ -250,7 +250,7 @@ dotnet restore
 
 ## Projektdateistruktur (.csproj)
 
-### Minimal (Konsolen-Trading-Bot)
+### Minimal (Konsolen-Handelsbot)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -335,4 +335,4 @@ dotnet run
 
 ## Beispiele
 
-Fertige Beispiele für die Verwendung von StockSharp sind im Verzeichnis [Samples/](https://github.com/stocksharp/stocksharp/tree/master/Samples) des Repositorys verfügbar. Sie decken die Verbindung zu Börsen, das Abonnieren von Daten, den Aufbau von Candles, Indikatoren, Strategien und Tests ab.
+Fertige Beispiele für die Verwendung von StockSharp sind im [Beispielverzeichnis](https://github.com/stocksharp/stocksharp/tree/master/Samples) des Repositorys verfügbar. Sie decken die Verbindung zu Börsen, das Abonnieren von Daten, den Aufbau von Kerzen, Indikatoren, Strategien und Tests ab.

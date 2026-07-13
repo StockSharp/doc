@@ -70,7 +70,7 @@ Isto permite ao controlador acompanhar o estado atual da posição e ajustar as 
 
 ### Verificar Condições de Ativação da Proteção
 
-No método que processa novos dados (por exemplo, ao receber uma nova candle), são verificadas as condições para ativar ordens de proteção:
+No método que processa novos dados (por exemplo, ao receber uma nova vela), são verificadas as condições para ativar ordens de proteção:
 
 ```cs
 // Verificar condições de ativação da proteção no método ProcessCandle
@@ -80,11 +80,11 @@ if (info is not null)
 	ActiveProtection(info.Value);
 
 // Este código verifica se uma ordem de proteção precisa de ser ativada com base
-// no preço atual (neste caso, o preço de fecho da candle) e no tempo.
+// no preço atual (neste caso, o preço de fecho da vela) e no tempo.
 // Se as condições forem cumpridas, o método ActiveProtection é chamado.
 ```
 
-Aqui, o preço de fecho da candle é usado como preço atual, mas pode ser qualquer valor de preço relevante (por exemplo, o preço do último negócio ou o spread atual no livro de ordens).
+Aqui, o preço de fecho da vela é usado como preço atual, mas pode ser qualquer valor de preço relevante (por exemplo, o preço do último negócio ou o spread atual no livro de ordens).
 
 ### Ativar uma Ordem de Proteção
 
@@ -104,11 +104,11 @@ private void ActiveProtection((bool isTake, Sides side, decimal price, decimal v
 
 Este método cria e regista uma ordem para fechar a posição de acordo com os parâmetros devolvidos pelo controlador de proteção.
 
-## Comparação com Stop Orders do Lado do Servidor
+## Comparação com Ordens Stop do Lado do Servidor
 
-### Vantagens das Stop Orders do Lado do Servidor
+### Vantagens das Ordens Stop do Lado do Servidor
 
-1. As stop orders (stop loss e take profit) são enviadas diretamente para o broker.
+1. As ordens stop (stop loss e take profit) são enviadas diretamente para o broker.
 2. O broker monitoriza de forma independente o cumprimento das condições de stop.
 3. Quando um stop é acionado, o broker coloca automaticamente uma ordem de mercado ou limite.
 
@@ -127,13 +127,12 @@ Este método cria e regista uma ordem para fechar a posição de acordo com os p
 2. **Carga do sistema**: Requer cálculos constantes no lado do cliente.
 3. **Atrasos**: Possíveis atrasos na colocação de uma ordem depois de as condições de proteção serem acionadas.
 
-### Desvantagens das Stop Orders do Lado do Servidor
+### Desvantagens das Ordens Stop do Lado do Servidor
 
 1. **Dependência da implementação do broker/bolsa**: Nem todos os brokers ou bolsas suportam todos os tipos de ordens de proteção, o que pode limitar a funcionalidade da estratégia.
 2. **Impossibilidade de testar completamente em dados históricos**: Os stops do lado do servidor não podem ser modelados com precisão ao testar em dados históricos, dificultando a avaliação da eficácia real da estratégia.
-3. **Flexibilidade limitada**: Normalmente estão disponíveis apenas tipos básicos de stop orders, limitando as possibilidades de implementar mecanismos de proteção complexos.
+3. **Flexibilidade limitada**: Normalmente estão disponíveis apenas tipos básicos de ordens stop, limitando as possibilidades de implementar mecanismos de proteção complexos.
 
 ## Conclusão
 
 Usar um controlador de proteção local na estratégia SMA permite uma gestão eficaz do risco de posições abertas. Esta abordagem fornece flexibilidade na definição dos parâmetros de proteção e reação rápida a alterações das situações de mercado, o que é crítico para uma negociação bem-sucedida.
-

@@ -10,7 +10,7 @@ Para importar velas, selecione o item **Importar \=\> Velas** no menu principal 
    - **Tipo de dados** - tipo dos dados importados.
    - **Nome do ficheiro** - caminho completo para o ficheiro CSV.
    - **Diretório de dados** - pasta onde serão guardados os ficheiros finais [S#](../../api.md).
-   - **Máscara de ficheiro** - máscara de ficheiro usada ao analisar o diretório. Por exemplo, candle \_\*.csv.
+   - **Máscara de ficheiro** - máscara de ficheiro usada ao analisar o diretório. Por exemplo, vela \_\*.csv.
    - **Separador de colunas** - separador de colunas. A tabulação é indicada por TAB.
    - **Recuo desde o início** - número de linhas desde o início do ficheiro a ignorar (se contiverem metainformação).
    - **Fuso horário** - fuso horário.

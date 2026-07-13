@@ -87,7 +87,7 @@ _emuConnector.Subscribe(new(DataType.Level1, security));
 // Subscrever livros de ordens para o conector real (necessário para emulação)
 _realConnector.Subscribe(new(DataType.MarketDepth, security));
 
-// Subscrever candles
+// Subscrever velas
 _candlesSubscription = new(CandleDataTypeEdit.DataType, security)
 {
 	From = DateTimeOffset.UtcNow - TimeSpan.FromDays(10),
@@ -137,7 +137,7 @@ O exemplo SampleRealTimeEmulation demonstra a capacidade de apresentar simultane
 ![Exemplo de emulação em tempo real](../../../images/sample_realtime_emulation.png)
 
 A interface da aplicação contém os seguintes elementos:
-- Gráficos para apresentar candles e ordens
+- Gráficos para apresentar velas e ordens
 - Tabelas de ordens e transações próprias
 - Livros de ordens reais de mercado e de emulação
 - Controlos para criar e cancelar ordens

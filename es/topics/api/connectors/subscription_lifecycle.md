@@ -18,7 +18,7 @@ Se llama cuando una suscripción se inició correctamente: el adaptador aceptó 
 event Action<Subscription> SubscriptionOnline;
 ```
 
-Se llama cuando la suscripción pasó al modo en tiempo real. Para suscripciones en vivo, esto significa que la sincronización histórica inicial (si existe) finalizó y los datos ahora llegan en tiempo real. Es una señal importante para que las estrategias entiendan que los indicadores están "calentados" y el trading puede comenzar.
+Se llama cuando la suscripción pasó al modo en tiempo real. Para suscripciones en vivo, esto significa que la sincronización histórica inicial (si existe) finalizó y los datos ahora llegan en tiempo real. Es una señal importante para que las estrategias entiendan que los indicadores están "calentados" y la negociación puede comenzar.
 
 ### SubscriptionStopped
 

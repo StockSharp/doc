@@ -2,9 +2,9 @@
 
 ## Descripción general
 
-Cada estrategia en StockSharp tiene un `RiskManager` integrado que permite el control automático de riesgos de trading. Cuando se activa una regla, el gestor puede cerrar posiciones, cancelar órdenes activas o detener por completo el trading de la estrategia.
+Cada estrategia en StockSharp tiene un `RiskManager` integrado que permite el control automático de riesgos de negociación. Cuando se activa una regla, el gestor puede cerrar posiciones, cancelar órdenes activas o detener por completo la negociación de la estrategia.
 
-El gestor de riesgos procesa todos los mensajes de trading que pasan por la estrategia y, cuando se cumplen las condiciones de una regla, realiza automáticamente la acción especificada sin código adicional en la lógica de la estrategia.
+El gestor de riesgos procesa todos los mensajes de negociación que pasan por la estrategia y, cuando se cumplen las condiciones de una regla, realiza automáticamente la acción especificada sin código adicional en la lógica de la estrategia.
 
 ## Propiedades de estrategia
 
@@ -40,7 +40,7 @@ La enumeración `RiskActions` define las acciones posibles:
 | Acción | Descripción |
 |--------|-------------|
 | `ClosePositions` | Cerrar todas las posiciones abiertas con una orden de mercado |
-| `StopTrading` | Bloquear el trading de la estrategia |
+| `StopTrading` | Bloquear la negociación de la estrategia |
 | `CancelOrders` | Cancelar todas las órdenes activas |
 
 Cuando se activa una regla, la estrategia registra una advertencia con el nombre de la regla, sus parámetros y la acción realizada.
@@ -52,7 +52,7 @@ Cuando se activa una regla, la estrategia registra una advertencia con el nombre
 Se activa cuando se alcanza el nivel de P&L especificado. Un valor positivo controla beneficios y uno negativo controla pérdidas:
 
 ```csharp
-// Detener el trading ante una pérdida superior a 5000
+// Detener la negociación ante una pérdida superior a 5000
 new RiskPnLRule
 {
     PnL = -5000m,
@@ -115,9 +115,9 @@ Se activa cuando una posición se ha mantenido durante más tiempo que el establ
 
 Se activa cuando se supera la comisión total.
 
-### RiskSlippageRule -- control de slippage
+### RiskSlippageRule -- control de deslizamiento
 
-Se activa cuando se supera el nivel de slippage.
+Se activa cuando se supera el nivel de deslizamiento.
 
 ### RiskErrorRule -- control de errores
 
@@ -159,7 +159,7 @@ public class RiskAwareStrategy : Strategy
                 Action = RiskActions.ClosePositions
             },
 
-            // Detener el trading cuando la posición supera 500 contratos
+            // Detener la negociación cuando la posición supera 500 contratos
             new RiskPositionSizeRule
             {
                 Position = 500m,
@@ -187,7 +187,7 @@ public class RiskAwareStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Lógica de trading
+        // Lógica de negociación
         if (candle.OpenPrice < candle.ClosePrice && Position <= 0)
             BuyMarket(Volume + Math.Abs(Position));
         else if (candle.OpenPrice > candle.ClosePrice && Position >= 0)
@@ -196,4 +196,4 @@ public class RiskAwareStrategy : Strategy
 }
 ```
 
-En este ejemplo, las reglas de gestión de riesgos se establecen cuando se inicia la estrategia. Cuando se alcanza una pérdida de 10000, las posiciones se cerrarán automáticamente. Cuando el tamaño de posición supera 500 contratos, el trading se bloqueará. Cuando las órdenes se colocan con demasiada frecuencia, las órdenes activas se cancelarán. Todas estas comprobaciones se realizan automáticamente sin código adicional en el método `ProcessCandle`.
+En este ejemplo, las reglas de gestión de riesgos se establecen cuando se inicia la estrategia. Cuando se alcanza una pérdida de 10000, las posiciones se cerrarán automáticamente. Cuando el tamaño de posición supera 500 contratos, la negociación se bloqueará. Cuando las órdenes se colocan con demasiada frecuencia, las órdenes activas se cancelarán. Todas estas comprobaciones se realizan automáticamente sin código adicional en el método `ProcessCandle`.

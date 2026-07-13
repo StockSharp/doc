@@ -1,18 +1,18 @@
 # Datos de Mercado
 
-Al crear su propio adaptador para trabajar con un exchange, necesita implementar métodos para suscribirse a varios tipos de datos de mercado. Estos métodos se llaman cuando se recibe un mensaje [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) y proporcionan **para** recibir y procesar datos del exchange.
+Al crear su propio adaptador para trabajar con una bolsa, necesita implementar métodos para suscribirse a varios tipos de datos de mercado. Estos métodos se llaman cuando se recibe un mensaje [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) y proporcionan **para** recibir y procesar datos de la bolsa.
 
 Esquemáticamente, el algoritmo para procesar una solicitud de suscripción o cancelación de suscripción se ve así:
 
 1. Envía una confirmación de recepción de la solicitud de suscripción utilizando el método [SendSubscriptionReplyAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionReplyAsync(System.Int64,System.Exception)).
 2. Comprueba si la solicitud es una suscripción o una cancelación de suscripción utilizando la propiedad [MarketDataMessage.IsSubscribe](xref:StockSharp.Messages.MarketDataMessage.IsSubscribe).
-3. En caso de suscripción, configura una suscripción para recibir datos en tiempo real a través de WebSocket u otro mecanismo (específico de cada exchange).
-4. En caso de cancelación de suscripción, cancela la suscripción correspondiente (específico de cada exchange).
+3. En caso de suscripción, configura una suscripción para recibir datos en tiempo real a través de WebSocket u otro mecanismo (específico de cada bolsa).
+4. En caso de cancelación de suscripción, cancela la suscripción correspondiente (específico de cada bolsa).
 5. Envía un mensaje sobre el resultado de la suscripción utilizando los métodos [SendSubscriptionResultAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionResultAsync(StockSharp.Messages.ISubscriptionMessage)) o [SendSubscriptionFinishedAsync](xref:StockSharp.Messages.MessageAdapter.SendSubscriptionFinishedAsync(System.Int64,System.Nullable{System.DateTimeOffset})), según el tipo de suscripción y el resultado de la operación.
 
 ## Datos de Velas
 
-Al implementar una suscripción a datos de velas en su propio adaptador, tenga en cuenta cómo trabaja el exchange con este tipo de datos. En Coinbase, se sobrescribieron los siguientes métodos y propiedades:
+Al implementar una suscripción a datos de velas en su propio adaptador, tenga en cuenta cómo trabaja la bolsa con este tipo de datos. En Coinbase, se sobrescribieron los siguientes métodos y propiedades:
 
 ### Marcos Temporales Admitidos
 
@@ -144,7 +144,7 @@ protected override async ValueTask OnTFCandlesSubscriptionAsync(MarketDataMessag
 
 ### Procesamiento de Datos de Velas
 
-Para procesar los datos de velas recibidos del exchange en tiempo real, generalmente se implementa un método con código como en el método **SessionOnCandleReceived**. Este método convierte los datos recibidos en un mensaje [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) y lo envía utilizando el método SendOutMessageAsync.
+Para procesar los datos de velas recibidos de la bolsa en tiempo real, generalmente se implementa un método con código como en el método **SessionOnCandleReceived**. Este método convierte los datos recibidos en un mensaje [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) y lo envía utilizando el método SendOutMessageAsync.
 
 ```cs
 private async ValueTask SessionOnCandleReceived(Ohlc candle, CancellationToken cancellationToken)
@@ -183,7 +183,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 	// Esto informa al sistema de que la solicitud fue recibida y se está procesando
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
-	// Convertir el identificador del instrumento en un símbolo entendido por el exchange
+	// Convertir el identificador del instrumento en un símbolo entendido por la bolsa
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
 	if (mdMsg.IsSubscribe)
@@ -207,7 +207,7 @@ protected override async ValueTask OnLevel1SubscriptionAsync(MarketDataMessage m
 
 ### Procesamiento de Datos de Nivel 1
 
-Para procesar los datos de Nivel 1 recibidos del exchange en tiempo real, generalmente se implementa un método con código como en el ejemplo **SessionOnTickerChanged**. Este método convierte los datos recibidos en un mensaje [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) y lo envía utilizando el método SendOutMessageAsync.
+Para procesar los datos de Nivel 1 recibidos de la bolsa en tiempo real, generalmente se implementa un método con código como en el ejemplo **SessionOnTickerChanged**. Este método convierte los datos recibidos en un mensaje [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage) y lo envía utilizando el método SendOutMessageAsync.
 
 ```cs
 private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken cancellationToken)
@@ -220,7 +220,7 @@ private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken 
 		// Establecer hora de recepción de datos
 		ServerTime = CurrentTime.ConvertToUtc(),
 	}
-	// Añadir varios campos Level1 si están presentes en los datos del exchange
+	// Añadir varios campos Level1 si están presentes en los datos de la bolsa
 	.TryAdd(Level1Fields.LastTradeId, ticker.LastTradeId)
 	.TryAdd(Level1Fields.LastTradePrice, ticker.LastTradePrice?.ToDecimal())
 	.TryAdd(Level1Fields.LastTradeVolume, ticker.LastTradePrice?.ToDecimal())
@@ -241,13 +241,13 @@ private async ValueTask SessionOnTickerChanged(Ticker ticker, CancellationToken 
 
 ### Soporte para Actualizaciones Incrementales del Libro de Órdenes
 
-Al implementar la funcionalidad del libro de órdenes en su propio adaptador, compruebe si el exchange admite actualizaciones incrementales del libro de órdenes. El adaptador de Coinbase sobrescribe la propiedad `IsSupportOrderBookIncrements` para esto:
+Al implementar la funcionalidad del libro de órdenes en su propio adaptador, compruebe si la bolsa admite actualizaciones incrementales del libro de órdenes. El adaptador de Coinbase sobrescribe la propiedad `IsSupportOrderBookIncrements` para esto:
 
 ```cs
 public override bool IsSupportOrderBookIncrements => true;
 ```
 
-La propiedad `IsSupportOrderBookIncrements` indica si el adaptador admite actualizaciones incrementales del libro de órdenes. Establecer esta propiedad en `true` significa que el exchange puede enviar actualizaciones parciales del libro de órdenes en lugar de una instantánea completa con cada cambio.
+La propiedad `IsSupportOrderBookIncrements` indica si el adaptador admite actualizaciones incrementales del libro de órdenes. Establecer esta propiedad en `true` significa que la bolsa puede enviar actualizaciones parciales del libro de órdenes en lugar de una instantánea completa con cada cambio.
 
 Sobrescribir esta propiedad permite que StockSharp optimice el procesamiento de los datos del libro de órdenes. Si la propiedad se establece en `true`, el sistema esperará y manejará correctamente las actualizaciones incrementales.
 
@@ -261,7 +261,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 	// Enviar confirmación de recepción de la solicitud de suscripción
 	await SendSubscriptionReplyAsync(mdMsg.TransactionId, cancellationToken);
 
-	// Convertir el identificador del instrumento en un símbolo entendido por el exchange
+	// Convertir el identificador del instrumento en un símbolo entendido por la bolsa
 	var symbol = mdMsg.SecurityId.ToSymbol();
 
 	if (mdMsg.IsSubscribe)
@@ -284,7 +284,7 @@ protected override async ValueTask OnMarketDepthSubscriptionAsync(MarketDataMess
 
 ### Procesamiento de Datos del Libro de Órdenes
 
-Para procesar los datos del libro de órdenes recibidos del exchange en tiempo real, generalmente se implementa un método con código como en el método **SessionOnOrderBookReceived**. Este método convierte los datos recibidos en un mensaje [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) y lo envía utilizando el método SendOutMessageAsync.
+Para procesar los datos del libro de órdenes recibidos de la bolsa en tiempo real, generalmente se implementa un método con código como en el método **SessionOnOrderBookReceived**. Este método convierte los datos recibidos en un mensaje [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage) y lo envía utilizando el método SendOutMessageAsync.
 
 ```cs
 private async ValueTask SessionOnOrderBookReceived(string type, string symbol, IEnumerable<OrderBookChange> changes, CancellationToken cancellationToken)
@@ -309,7 +309,7 @@ private async ValueTask SessionOnOrderBookReceived(string type, string symbol, I
 		ServerTime = CurrentTime.ConvertToUtc(),
 
 		// Determinar si es una instantánea completa del libro de órdenes o una actualización incremental.
-		// Si el exchange siempre envía solo libros de órdenes completos y no admite incrementalidad,
+		// Si la bolsa siempre envía solo libros de órdenes completos y no admite incrementalidad,
 		// entonces no es necesario establecer esta propiedad
 		State = type == "snapshot" ? QuoteChangeStates.SnapshotComplete : QuoteChangeStates.Increment,
 	}, cancellationToken);
@@ -416,7 +416,7 @@ protected override async ValueTask OnTicksSubscriptionAsync(MarketDataMessage md
 
 ### Procesamiento de Datos de Ticks
 
-Para procesar los datos de ticks recibidos del exchange en tiempo real, generalmente se implementa un método con código como en el método **SessionOnTradeReceived**. Este método convierte los datos recibidos en un mensaje [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) con el tipo [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) y lo envía utilizando el método SendOutMessageAsync.
+Para procesar los datos de ticks recibidos de la bolsa en tiempo real, generalmente se implementa un método con código como en el método **SessionOnTradeReceived**. Este método convierte los datos recibidos en un mensaje [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) con el tipo [DataType.Ticks](xref:StockSharp.Messages.DataType.Ticks) y lo envía utilizando el método SendOutMessageAsync.
 
 ```cs
 private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken cancellationToken)
@@ -459,7 +459,7 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 	{
 		if (!mdMsg.IsHistoryOnly())
 		{
-			// Suscribirse para recibir log de órdenes en tiempo real
+			// Suscribirse para recibir registro de órdenes en tiempo real
 			await _pusherClient.SubscribeOrderLog(symbol, cancellationToken);
 		}
 
@@ -467,17 +467,17 @@ protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage
 		await SendSubscriptionResultAsync(mdMsg, cancellationToken);
 	}
 	else
-		// Cancelar recepción del log de órdenes
+		// Cancelar recepción del registro de órdenes
 		await _pusherClient.UnSubscribeOrderLog(symbol, cancellationToken);
 }
 ```
 
-Al procesar los datos del registro de órdenes recibidos del exchange, generalmente se utiliza un método separado, que convierte los datos recibidos en mensajes [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) con el tipo [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog):
+Al procesar los datos del registro de órdenes recibidos de la bolsa, generalmente se utiliza un método separado, que convierte los datos recibidos en mensajes [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) con el tipo [ExecutionTypes.OrderLog](xref:StockSharp.Messages.ExecutionTypes.OrderLog):
 
 ```cs
 private async ValueTask SessionOnNewOrderLog(string symbol, OrderStates state, Order order, CancellationToken cancellationToken)
 {
-	// Crear y enviar mensaje con información sobre una nueva entrada en el log de órdenes
+	// Crear y enviar mensaje con información sobre una nueva entrada en el registro de órdenes
 	await SendOutMessageAsync(new ExecutionMessage
 	{
 		DataTypeEx = DataType.OrderLog,

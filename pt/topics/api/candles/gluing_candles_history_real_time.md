@@ -1,6 +1,6 @@
 # Combinação de velas: histórico + tempo real
 
-Para combinar candles históricos com dados em tempo real, você precisa inicializar os armazenamentos apropriados: armazenamento para objetos de negociação [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), armazenamento para dados de mercado [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry), e o registro de armazenamento de snapshots [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
+Para combinar velas históricos com dados em tempo real, você precisa inicializar os armazenamentos apropriados: armazenamento para objetos de negociação [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), armazenamento para dados de mercado [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry), e o registo de armazenamento de instantâneos [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
 
 O projeto `Samples/Candles/CombineHistoryRealtime` mostra essa configuração na prática:
 
@@ -53,7 +53,7 @@ public partial class MainWindow
 			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
 		}
 
-		// Definir tipo de dados de candle predefinido (5 minutos)
+		// Definir tipo de dados de vela predefinido (5 minutos)
 		CandleDataTypeEdit.DataType = TimeSpan.FromMinutes(5).TimeFrame();
 	}
 }
@@ -277,7 +277,7 @@ public partial class MainWindow
 1. **Criação de Armazenamentos**:
    - [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry) é usado para armazenar entidades e requer `IFileSystem` e `ChannelExecutor`
    - [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) é configurado com o caminho para o armazenamento
-   - [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) é criado para trabalhar com snapshots e requer `IFileSystem`
+   - [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) é criado para trabalhar com instantâneos e requer `IFileSystem`
 
 2. **Criação da Assinatura**:
    - A classe [Subscription](xref:StockSharp.BusinessEntities.Subscription) é utilizada
@@ -286,10 +286,10 @@ public partial class MainWindow
 
 3. **Exibição no Gráfico**:
    - O método Chart.AddElement é usado para vincular o elemento do gráfico à assinatura
-   - O gráfico é atualizado automaticamente quando novos candles são recebidos
+   - O gráfico é atualizado automaticamente quando novas velas são recebidos
 
 4. **Tratamento de Eventos**:
-   - Assinatura do evento CandleReceived para processar os candles recebidos
+- Assinatura do evento CandleReceived para processar as velas recebidas
    - Cancelamento da assinatura anterior quando o instrumento selecionado muda
 
 ## Recursos Estendidos

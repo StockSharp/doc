@@ -14,7 +14,7 @@ StockSharp API は、組み込みのサブスクリプション メカニズム�
 | [OrderEditFailReceived](xref:StockSharp.Algo.Connector.OrderEditFailReceived) | 注文変更失敗のイベント |
 | [OwnTradeReceived](xref:StockSharp.Algo.Connector.OwnTradeReceived) | 自分の取引に関する情報を受信するためのイベント |
 
-## OrderStates enum
+## OrderStates 列挙型
 
 注文は、その存続期間中に次の状態をたどります。
 

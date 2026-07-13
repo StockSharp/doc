@@ -6,4 +6,4 @@ El componente **Operaciones** es una tabla con operaciones que muestra informaci
 
 ## Contenido recomendado
 
-[Equity P&L](pnl_equity.md)
+[Curva de P&L](pnl_equity.md)

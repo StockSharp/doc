@@ -1,8 +1,8 @@
-# Estrategia de contratendencia con quoting
+# Estrategia de contratendencia con cotización
 
 ## Descripción general
 
-`StairsCountertrendStrategy` es una estrategia de trading de contratendencia que abre posiciones contra una tendencia establecida de una longitud específica, usando un mecanismo de quoting para una entrada más precisa en el mercado.
+`StairsCountertrendStrategy` es una estrategia de negociación de contratendencia que abre posiciones contra una tendencia establecida de una longitud específica, usando un mecanismo de cotización para una entrada más precisa en el mercado.
 
 ## Componentes principales
 
@@ -59,7 +59,7 @@ protected override void OnStarted2(DateTime time)
 
 ## Procesamiento de velas
 
-El método `ProcessCandle` se llama para cada vela completada e implementa la lógica de detección de tendencia y gestión del procesador de quoting:
+El método `ProcessCandle` se llama para cada vela completada e implementa la lógica de detección de tendencia y gestión del procesador de cotización:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -103,46 +103,46 @@ private void ProcessCandle(ICandleMessage candle)
 		}
 	}
 
-	// Crear nuevo procesador de quoting cuando sea necesario
+	// Crear nuevo procesador de cotización cuando sea necesario
 	if (_quotingProcessor == null && IsFormedAndOnlineAndAllowTrading())
 	{
 		if (_bullLength >= Length && Position >= 0)
 		{
 			// Tendencia alcista - abrir posición corta
 			CreateQuotingProcessor(Sides.Sell);
-			this.AddInfoLog($"Iniciando quoting de venta tras {_bullLength} velas alcistas");
+			this.AddInfoLog($"Iniciando cotización de venta tras {_bullLength} velas alcistas");
 		}
 		else if (_bearLength >= Length && Position <= 0)
 		{
 			// Tendencia bajista - abrir posición larga
 			CreateQuotingProcessor(Sides.Buy);
-			this.AddInfoLog($"Iniciando quoting de compra tras {_bearLength} velas bajistas");
+			this.AddInfoLog($"Iniciando cotización de compra tras {_bearLength} velas bajistas");
 		}
 	}
 }
 ```
 
-## Crear procesador de quoting
+## Crear procesador de cotización
 
-El método `CreateQuotingProcessor` crea un procesador de quoting con la dirección especificada:
+El método `CreateQuotingProcessor` crea un procesador de cotización con la dirección especificada:
 
 ```cs
 private void CreateQuotingProcessor(Sides side)
 {
-	// Crear comportamiento para quoting de mercado
+	// Crear comportamiento para cotización de mercado
 	var behavior = new MarketQuotingBehavior(
 		0, // Sin desplazamiento de precio
 		new Unit(0.1m, UnitTypes.Percent), // Usar 0.1% como desviación mínima
 		MarketPriceTypes.Following // Seguir el precio de mercado
 	);
 
-	// Crear procesador de quoting
+	// Crear procesador de cotización
 	_quotingProcessor = new(
 		behavior,
 		Security,
 		Portfolio,
 		side,
-		Volume, // Volumen de quoting
+		Volume, // Volumen de cotización
 		Volume, // Volumen máximo de orden
 		TimeSpan.Zero, // Sin timeout
 		this, // Strategy implementa ISubscriptionProvider
@@ -150,7 +150,7 @@ private void CreateQuotingProcessor(Sides side)
 		this, // Strategy implementa ITransactionProvider
 		this, // Strategy implementa ITimeProvider
 		this, // Strategy implementa IMarketDataProvider
-		IsFormedAndOnlineAndAllowTrading, // Comprobar permiso de trading
+		IsFormedAndOnlineAndAllowTrading, // Comprobar permiso de negociación
 		true, // Usar precios del libro de órdenes
 		true // Usar precio de la última operación si el libro de órdenes está vacío
 	)
@@ -179,19 +179,19 @@ private void CreateQuotingProcessor(Sides side)
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 - **Señal de venta**: `Length` velas alcistas consecutivas (precio de cierre por encima del precio de apertura) cuando no hay posición corta
 - **Señal de compra**: `Length` velas bajistas consecutivas (precio de cierre por debajo del precio de apertura) cuando no hay posición larga
-- Se usa un procesador de quoting para la entrada al mercado, siguiendo el precio de mercado
+- Se usa un procesador de cotización para la entrada al mercado, siguiendo el precio de mercado
 
 ## Características
 
 - La estrategia determina automáticamente los instrumentos con los que trabajar mediante el método `GetWorkingSecurities()`
 - La estrategia solo trabaja con velas completadas
-- Se usa quoting en lugar de órdenes de mercado para una entrada al mercado más eficiente
+- Se usa cotización en lugar de órdenes de mercado para una entrada al mercado más eficiente
 - La estrategia aplica un enfoque de contratendencia, abriendo posiciones contra la tendencia establecida
 - Se implementa registro detallado de los eventos principales para depuración
-- El procesador de quoting se limpia automáticamente cuando cambia la dirección de tendencia o se alcanzan objetivos
+- El procesador de cotización se limpia automáticamente cuando cambia la dirección de tendencia o se alcanzan objetivos
 - Se admite visualización de velas y operaciones en el gráfico
 - Se implementa optimización del parámetro de longitud de secuencia para la configuración de la estrategia

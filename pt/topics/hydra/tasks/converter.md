@@ -1,6 +1,6 @@
 # Conversor
 
-A tarefa converte dados da bolsa. Por exemplo, de registos de ordens para ticks ou de ticks para candles, etc.
+A tarefa converte dados da bolsa. Por exemplo, de registos de ordens para ticks ou de ticks para velas, etc.
 
 ![Hydra tarefas de conversão](../../../images/hydra_tasks_converter.png)
 
@@ -17,16 +17,16 @@ A tarefa converte dados da bolsa. Por exemplo, de registos de ordens para ticks 
 
 - **Intervalo** - intervalo de geração dos livros de ordens.
 - **Profundidade** - profundidade máxima da geração dos livros de ordens.
-- **Log de ordens** - como construir livros de ordens a partir do log de ordens.
+- **Registo de ordens** - como construir livros de ordens a partir do registo de ordens.
 
-  Cada bolsa tem o seu próprio formato de **log de ordens**; o programa [Hydra](../../hydra.md) suporta três formatos:
+  Cada bolsa tem o seu próprio formato de **registo de ordens**; o programa [Hydra](../../hydra.md) suporta três formatos:
   - **Por predefinição** - é utilizado na maioria dos casos.
   - **ITCH** - é utilizado para o protocolo ITCH (bolsas: LSE e Nasdaq).
 
 **Geral**
 
 - **Cabeçalho** - Conversor.
-- **Horário de trabalho** - configuração do horário de funcionamento da board. ![Hydra tarefas de cópia de segurança](../../../images/hydra_tasks_backup_desk.png)
+- **Horário de trabalho** - configuração do horário de funcionamento do mercado. ![Hydra tarefas de cópia de segurança](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operação** - o intervalo de funcionamento.
 - **Diretório de dados** - diretório de dados, de onde serão recebidos os dados para conversão.
 - **Formato** - o formato dos dados convertidos: BIN\/CSV.
@@ -41,7 +41,7 @@ A tarefa converte dados da bolsa. Por exemplo, de registos de ordens para ticks 
 Consideremos um exemplo de conversão de dados.
 
 1. Aceda à tarefa **Conversor**. ![Hydra tarefas de conversão 00](../../../images/hydra_tasks_converter_00.png)
-2. Selecione o instrumento e, na janela que aparece, defina o tipo de dados que devemos receber durante a conversão, bem como o tipo de dados a partir do qual devemos converter. Por exemplo, precisa de converter Ticks em candles com um período de 15 minutos.
+2. Selecione o instrumento e, na janela que aparece, defina o tipo de dados que devemos receber durante a conversão, bem como o tipo de dados a partir do qual devemos converter. Por exemplo, precisa de converter Ticks em velas com um período de 15 minutos.
 
    > [!TIP]
 > IMPORTANTE\! O período de dados solicitado deve corresponder ao período disponível para conversão; caso contrário, os dados não serão convertidos. Nas definições, especifique o formato correto dos dados de origem para que corresponda ao formato dos dados que estão a ser convertidos.

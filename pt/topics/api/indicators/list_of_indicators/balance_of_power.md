@@ -10,7 +10,7 @@ Para usar o indicador, é necessário usar a classe [BalanceOfPower](xref:StockS
 
 O indicador Equilíbrio de poder (BOP) apresenta o equilíbrio de forças entre compradores e vendedores no mercado. Baseia-se na suposição de que, numa tendência, compradores (compradores) ou vendedores (vendedores) conseguem controlar o preço ao longo da sessão. Ao comparar a diferença entre os preços de fecho e abertura com todo o intervalo de preço (máximo-mínimo), o indicador permite avaliar quem domina atualmente o mercado.
 
-O BOP ajuda os traders a:
+O BOP ajuda os operadores a:
 - Determinar a direção e a força da tendência atual
 - Identificar potenciais pontos de reversão
 - Detetar divergências entre o preço e o indicador

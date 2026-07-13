@@ -4,11 +4,11 @@
 
 ### Por qué publicar
 
-Compartir su trabajo en Store permite a los desarrolladores llegar a una audiencia más amplia, recopilar feedback y monetizar sus ideas. También hace crecer el ecosistema general y proporciona a otros traders herramientas listas para usar.
+Compartir su trabajo en Store permite a los desarrolladores llegar a una audiencia más amplia, recopilar feedback y monetizar sus ideas. También hace crecer el ecosistema general y proporciona a otros operadores herramientas listas para usar.
 
 ### Carga de contenido
 
-Cualquiera puede publicar su propio robot, estrategia de trading o indicador. La publicación se realiza mediante [Installer](installer.md):
+Cualquiera puede publicar su propio robot, estrategia de negociación o indicador. La publicación se realiza mediante [Installer](installer.md):
 
 1. Prepare el paquete con los archivos de su proyecto.
 2. Abra Installer e inicie sesión.

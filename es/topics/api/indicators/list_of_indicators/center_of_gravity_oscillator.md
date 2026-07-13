@@ -12,7 +12,7 @@ CGO es particularmente útil para:
 - Identificar posibles puntos de reversión antes de que aparezcan en el gráfico de precios.
 - Revelando la fuerza y la debilidad de la tendencia actual
 - Detectar divergencias ocultas entre el precio y el indicador.
-- Creación de sistemas de trading basados en señales líderes.
+- Creación de sistemas de negociación basados en señales líderes.
 
 ## Parámetros
 
@@ -40,13 +40,13 @@ En esta fórmula, cada precio se pondera por su posición en la serie temporal y
 
 - **Extremos del indicador**: Cuando CGO alcanza extremos (máximos o mínimos), esto puede indicar un posible cambio de tendencia.
 
-- **Divergencias**: 
+- **Divergencias**:
   - Divergencia alcista: cuando el precio forma un nuevo mínimo, pero CGO no lo confirma, formando un mínimo más alto.
   - Divergencia bajista: cuando el precio alcanza un nuevo máximo, pero CGO forma un máximo más bajo.
 
 - **Movimiento del indicador**: El movimiento rápido CGO en una dirección puede indicar el comienzo de una nueva tendencia. Si el indicador se mueve lentamente u oscila alrededor de la línea cero, esto puede indicar una consolidación del mercado.
 
-Dado que CGO es un indicador adelantado, sus señales suelen aparecer antes de los cambios correspondientes en el gráfico de precios, lo que brinda a los operadores una ventaja a la hora de tomar decisiones de trading.
+Dado que CGO es un indicador adelantado, sus señales suelen aparecer antes de los cambios correspondientes en el gráfico de precios, lo que brinda a los operadores una ventaja a la hora de tomar decisiones de negociación.
 
 ![Gráfico del indicador CGO](../../../../images/indicator_center_of_gravity_oscillator.png)
 

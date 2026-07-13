@@ -1,11 +1,11 @@
 # RSS
 
-**RSS** — conexión a feeds RSS.
+**RSS** — conexión a fuentes RSS.
 
-Antes de comenzar a escribir robots de trading para la plataforma de trading actual, se recomienda revisar los enlaces en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para la plataforma de negociación actual, se recomienda revisar los enlaces en la sección [Conectores](../../connectors.md).
 
 > [!CAUTION]
-> El conector solo admite feeds de datos de mercado; las transacciones no son compatibles.
+> El conector solo admite fuentes de datos de mercado; las transacciones no son compatibles.
 
 ## Contenido recomendado
 

@@ -1,8 +1,8 @@
-# Estrategia de quoting
+# Estrategia de cotización
 
 ## Descripción general
 
-`MqStrategy` es una estrategia que usa un mecanismo de quoting para gestionar posiciones de mercado. Crea un procesador de quoting basado en la posición actual, lo que le permite responder de forma adaptativa a cambios en las condiciones de mercado.
+`MqStrategy` es una estrategia que usa un mecanismo de cotización para gestionar posiciones de mercado. Crea un procesador de cotización basado en la posición actual, lo que le permite responder de forma adaptativa a cambios en las condiciones de mercado.
 
 ## Componentes principales
 
@@ -21,9 +21,9 @@ public class MqStrategy : Strategy
 
 La estrategia permite personalizar los siguientes parámetros:
 
-- **PriceType** - tipo de precio de mercado para quoting (predeterminado Following)
+- **PriceType** - tipo de precio de mercado para cotización (predeterminado Following)
 - **PriceOffset** - desplazamiento del precio respecto al precio de mercado
-- **BestPriceOffset** - desviación mínima para actualizar la quote (predeterminado 0.1%)
+- **BestPriceOffset** - desviación mínima para actualizar la cotización (predeterminado 0.1%)
 
 ## Inicialización de la estrategia
 
@@ -34,15 +34,15 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// Suscribirse a cambios de tiempo de mercado para actualizar quotes
+	// Suscribirse a cambios de tiempo de mercado para actualizar cotizaciones
 	Connector.CurrentTimeChanged += Connector_CurrentTimeChanged;
 	Connector_CurrentTimeChanged(default);
 }
 ```
 
-## Gestión del procesador de quoting
+## Gestión del procesador de cotización
 
-El método `Connector_CurrentTimeChanged` se llama cuando cambia el tiempo de mercado y gestiona la creación y actualización del procesador de quoting:
+El método `Connector_CurrentTimeChanged` se llama cuando cambia el tiempo de mercado y gestiona la creación y actualización del procesador de cotización:
 
 ```cs
 private void Connector_CurrentTimeChanged(TimeSpan obj)
@@ -55,17 +55,17 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 	_quotingProcessor?.Dispose();
 	_quotingProcessor = null;
 
-	// Determinar el lado de quoting según la posición actual
+	// Determinar el lado de cotización según la posición actual
 	var side = Position <= 0 ? Sides.Buy : Sides.Sell;
 
-	// Crear nuevo comportamiento de quoting
+	// Crear nuevo comportamiento de cotización
 	var behavior = new MarketQuotingBehavior(
 		PriceOffset,
 		BestPriceOffset,
 		PriceType
 	);
 
-	// Calcular volumen de quoting
+	// Calcular volumen de cotización
 	var quotingVolume = Volume + Math.Abs(Position);
 
 	// Crear e inicializar el procesador
@@ -82,7 +82,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this, // Strategy implementa ITransactionProvider
 		this, // Strategy implementa ITimeProvider
 		this, // Strategy implementa IMarketDataProvider
-		IsFormedAndOnlineAndAllowTrading, // Comprobar permiso de trading
+		IsFormedAndOnlineAndAllowTrading, // Comprobar permiso de negociación
 		true, // Usar precios del libro de órdenes
 		true  // Usar precio de la última operación si el libro de órdenes está vacío
 	)
@@ -101,7 +101,7 @@ private void Connector_CurrentTimeChanged(TimeSpan obj)
 		this.AddInfoLog($"Operación ejecutada: {trade.Trade.Volume} a {trade.Trade.Price}");
 
 	_quotingProcessor.Finished += isOk => {
-		this.AddInfoLog($"Quoting finalizado correctamente: {isOk}");
+		this.AddInfoLog($"Cotización finalizada correctamente: {isOk}");
 		_quotingProcessor?.Dispose();
 		_quotingProcessor = null;
 	};
@@ -129,20 +129,20 @@ protected override void OnStopped()
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 - La estrategia responde a cambios del tiempo de mercado
-- La dirección de quoting se determina según la posición actual:
+- La dirección de cotización se determina según la posición actual:
   - Si position <= 0, se crea una cotización de compra
   - Si position > 0, se crea una cotización de venta
-- El volumen de quoting se calcula como el volumen base más el valor absoluto de la posición actual
-- Se usa [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) con [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior) para quoting
+- El volumen de cotización se calcula como el volumen base más el valor absoluto de la posición actual
+- Se usa [QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) con [MarketQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.MarketQuotingBehavior) para cotización
 
 ## Características
 
-- Usa el procesador de quoting moderno en lugar de estrategias de quoting heredadas
-- Responde de forma adaptativa a cambios de posición cambiando la dirección de quoting
-- Admite configuración de varios parámetros de quoting (tipo de precio, desplazamiento, desviación mínima)
-- Incluye registro detallado de eventos del procesador de quoting
+- Usa el procesador de cotización moderno en lugar de estrategias de cotización heredadas
+- Responde de forma adaptativa a cambios de posición cambiando la dirección de cotización
+- Admite configuración de varios parámetros de cotización (tipo de precio, desplazamiento, desviación mínima)
+- Incluye registro detallado de eventos del procesador de cotización
 - Gestiona correctamente los recursos al detener la estrategia y crear nuevos procesadores
 - Admite trabajar con distintos tipos de precios de mercado (Following, Best, Opposite, etc.)

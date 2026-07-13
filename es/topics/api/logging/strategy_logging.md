@@ -1,14 +1,14 @@
 # Registro de estrategias
 
-La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementa la interfaz [ILogSource](xref:Ecng.Logging.ILogSource). Por lo tanto, las estrategias se pueden pasar a [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources), y todos sus mensajes llegarán automáticamente a [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners). 
+La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementa la interfaz [ILogSource](xref:Ecng.Logging.ILogSource). Por lo tanto, las estrategias se pueden pasar a [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources), y todos sus mensajes llegarán automáticamente a [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners).
 
 ## Requisitos previos
 
-[Estrategias de trading](../strategies.md)
+[Estrategias de negociación](../strategies.md)
 
 ## Registro en un archivo de prueba
 
-1. Primero, necesita crear el administrador especial: 
+1. Primero, necesita crear el administrador especial:
 
    ```cs
    var logManager = new LogManager();
@@ -19,7 +19,7 @@ La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementa la inte
    var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
    logManager.Listeners.Add(fileListener);
    ```
-3. Para registrar mensajes, debe agregar una estrategia a [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources): 
+3. Para registrar mensajes, debe agregar una estrategia a [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources):
 
    ```cs
    logManager.Sources.Add(lkohSmaStrategy);
@@ -32,7 +32,7 @@ La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementa la inte
 
    ```cs
    var soundListener = new SoundLogListener("error.mp3");
-   						
+
    logManager.Listeners.Add(soundListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
@@ -51,7 +51,7 @@ La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementa la inte
    logManager.Listeners.Add(emailListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Configure el filtro para el envío de mensajes de los tipos [LogLevels.Error](xref:Ecng.Logging.LogLevels.Error) y [LogLevels.Warning](xref:Ecng.Logging.LogLevels.Warning): 
+2. Configure el filtro para el envío de mensajes de los tipos [LogLevels.Error](xref:Ecng.Logging.LogLevels.Error) y [LogLevels.Warning](xref:Ecng.Logging.LogLevels.Warning):
 
    ```cs
    emailListener.Filters.Add(msg => msg.Level == LogLevels.Error);
@@ -68,7 +68,7 @@ La clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) implementa la inte
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Esta es la ventana de log cuando la estrategia está funcionando: ![Captura de registro de estrategias](../../../images/strategy_logging.png)
+2. Esta es la ventana de registro cuando la estrategia está funcionando: ![Captura de registro de estrategias](../../../images/strategy_logging.png)
 
 ## Contenido recomendado
 

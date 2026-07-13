@@ -19,7 +19,7 @@
 - [BMP](list_of_indicators/balance_of_market_power.md) - インジケーター BMP、買い圧力と売り圧力を比較します
 - [BOP](list_of_indicators/balance_of_power.md) - インジケーター BOP、買い手と売り手の強さを示します
 - [BV](list_of_indicators/balance_volume.md) - インジケーター BV、出来高を価格変化に結び付けます
-- [Bollinger](list_of_indicators/bollinger_bands.md) - インジケーター Bollinger、ボラティリティを測定し、買われ過ぎまたは売られ過ぎの状態を特定します
+- [ボリンジャーバンド](list_of_indicators/bollinger_bands.md) - ボリンジャーバンドインジケーター、ボラティリティを測定し、買われ過ぎまたは売られ過ぎの状態を特定します
 - [BBP](list_of_indicators/bollinger_percent_b.md) - インジケーター BBP、ボリンジャーバンド に対する価格位置を示します
 - [パターン](../patterns.md) - チャート上の特定の価格パターンを認識します
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - インジケーター CGO、潜在的な反転ポイントを特定します
@@ -57,7 +57,7 @@
 - [FRAMA](list_of_indicators/fractal_adaptive_moving_average.md) - インジケーター FRAMA、市場ボラティリティに適応します
 - [フラクタル](list_of_indicators/fractals.md) - インジケーター Fractals、価格チャート上の潜在的な反転ポイントを特定します
 - [FDI](list_of_indicators/fractal_dimension.md) - インジケーター FDI、市場の粗さを測定します
-- [Gator](list_of_indicators/gator_oscillator.md) - インジケーター Gator、移動平均の収束と発散を測定します
+- [ゲーターオシレーター](list_of_indicators/gator_oscillator.md) - ゲーターオシレーターインジケーター、移動平均の収束と発散を測定します
 - [GAPO](list_of_indicators/gopalakrishnan_range_index.md) - インジケーター GAPO、価格変動の変動性を測定します
 - [GMMA](list_of_indicators/guppy_multiple_moving_average.md) - インジケーター GMMA、複数の移動平均を使用してトレンドを特定します
 - [HO](list_of_indicators/harmonic_oscillator.md) - インジケーター HO、価格データ内のハーモニックパターンを検出します
@@ -89,9 +89,9 @@
 - [MI](list_of_indicators/mass_index.md) - インジケーター MI、レンジ拡大に基づいて潜在的な反転を特定します
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - インジケーター MCO、市場の広がりを測定します
 - [MGD](list_of_indicators/mcginley_dynamic.md) - インジケーター MGD、応答性の高い移動平均です
-- [MeanDev](list_of_indicators/mean_deviation.md) - インジケーター MeanDev、平均からの平均偏差を測定します
+- [平均偏差](list_of_indicators/mean_deviation.md) - 平均偏差インジケーター、平均からの平均偏差を測定します
 - [移動中央値](list_of_indicators/median.md) - インジケーター 移動中央値、ウィンドウの中央値を使用してデータを平滑化します
-- [MedPr](list_of_indicators/median_price.md) - インジケーター MedPr、取引レンジの中間点を計算します
+- [中央値価格](list_of_indicators/median_price.md) - 中央値価格インジケーター、取引レンジの中間点を計算します
 - [モメンタム](list_of_indicators/momentum.md) - インジケーター Momentum、価格変化の速度を測定します
 - [MOMA](list_of_indicators/momentum_of_moving_average.md) - インジケーター MOMA、移動平均のモメンタムを測定します
 - [MP](list_of_indicators/momentum_pinball.md) - インジケーター MP、買われ過ぎと売られ過ぎの状態を特定します
@@ -106,10 +106,10 @@
 - [NRTR](list_of_indicators/nrtr.md) - インジケーター NRTR、トレーリングストップインジケーターです
 - [OBV](list_of_indicators/on_balance_volume.md) - インジケーター OBV、出来高を価格変化に結び付けます
 - [OBVM](list_of_indicators/on_balance_volume_mean.md) - インジケーター OBVM、OBV の平滑化版です
-- [OptimalTracking](list_of_indicators/optimal_tracking.md) - John Ehlers によって公開された 最適追跡フィルター。価格データをフィルタリングしてノイズを低減します
+- [最適追跡](list_of_indicators/optimal_tracking.md) - John Ehlers によって公開された最適追跡フィルター。価格データをフィルタリングしてノイズを低減します
 - [OMA](list_of_indicators/oscillator_of_moving_average.md) - インジケーター OMA、移動平均と価格との差を測定します
 - [パラボリック SAR](list_of_indicators/parabolic_sar.md) - パラボリック SAR トレンドインジケーターの実装。潜在的な反転ポイントを特定します
-- [Stub](list_of_indicators/pass_through.md) - ロジックを持たないインジケーターです。線の描画やカスタムインジケーターのプレースホルダーとして使用されます
+- [パススルー](list_of_indicators/pass_through.md) - ロジックを持たないインジケーターです。線の描画やカスタムインジケーターのプレースホルダーとして使用されます
 - [ピーク](list_of_indicators/peak.md) - インジケーター ピーク、価格データ内の局所的な高値を特定します
 - [PPO](list_of_indicators/percentage_price_oscillator.md) - インジケーター PPO、2 本の移動平均間のパーセント差を測定します
 - [PPOS](list_of_indicators/percentage_price_oscillator_signal.md) - シグナルライン付きパーセンテージ価格オシレーター。PPO を EMA で平滑化します
@@ -136,7 +136,7 @@
 - [SMMA](list_of_indicators/smoothed_ma.md) - インジケーター SMMA、直近の価格により大きな重みを与える移動平均です
 - [標準偏差](list_of_indicators/standard_deviation.md) - インジケーター 標準偏差、価格データのばらつきを測定します
 - [標準誤差](list_of_indicators/standard_error.md) - インジケーター 標準誤差、予測精度を測定します
-- [ストキャスティクス %K](list_of_indicators/stochastic_oscillator_k.md) - インジケーター ストキャスティクス %K、レンジ内の価格位置に基づいてモメンタムを測定します
+- [ストキャスティクス・オシレーター %K](list_of_indicators/stochastic_oscillator_k.md) - ストキャスティクス・オシレーター %K インジケーター、レンジ内の価格位置に基づいてモメンタムを測定します
 - [ストキャスティクスオシレーター](list_of_indicators/stochastic_oscillator.md) - インジケーター ストキャスティクスオシレーター、買われ過ぎと売られ過ぎの状態を特定します
 - [合計 N](list_of_indicators/sum_n.md) - インジケーター 合計 N、直近 N 個の価格の合計を計算します
 - [T3MA](list_of_indicators/t3_moving_average.md) - インジケーター T3MA、滑らかで応答性の高い移動平均です
@@ -148,7 +148,7 @@
 - [TR](list_of_indicators/true_range.md) - インジケーター TR、価格変動の実際のレンジを測定します
 - [TSI](list_of_indicators/true_strength_index.md) - インジケーター TSI、二重平滑化モメンタム分析を適用します
 - [TMF](list_of_indicators/twiggs_money_flow.md) - インジケーター TMF、買い圧力と売り圧力を測定します
-- [UltimateOsc](list_of_indicators/uo.md) - インジケーター UltimateOsc、複数のタイムフレームを組み合わせてモメンタムを測定します
+- [UO](list_of_indicators/uo.md) - アルティメット・オシレーター (UO) は、複数のタイムフレームを組み合わせてモメンタムを測定します
 - [VHF](list_of_indicators/vhf.md) - インジケーター VHF、トレンド市場とレンジ市場を区別します
 - [VIDIA](list_of_indicators/vidya.md) - インジケーター VIDIA、市場ボラティリティに適応します
 - [VMA](list_of_indicators/variable_moving_average.md) - インジケーター VMA、ボラティリティに合わせて調整します

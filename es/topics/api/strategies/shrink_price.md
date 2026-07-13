@@ -2,7 +2,7 @@
 
 ## Introducción
 
-El método [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) en StockSharp es una herramienta esencial para redondear correctamente los precios según los requisitos del mercado. Esto garantiza que las órdenes enviadas cumplan las reglas del exchange o broker.
+El método [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) en StockSharp es una herramienta esencial para redondear correctamente los precios según los requisitos del mercado. Esto garantiza que las órdenes enviadas cumplan las reglas de la bolsa o broker.
 
 ## Propósito
 
@@ -13,8 +13,8 @@ El objetivo principal de [ShrinkPrice](xref:StockSharp.BusinessEntities.Entities
 ## Importancia del uso
 
 Usar [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) es crucial para:
-- Evitar el rechazo de órdenes por parte del exchange o broker debido a precios incorrectos
-- Garantizar precisión en cálculos y operaciones de trading
+- Evitar el rechazo de órdenes por parte de la bolsa o broker debido a precios incorrectos
+- Garantizar precisión en cálculos y operaciones de negociación
 - Cumplir las reglas y restricciones de mercados o instrumentos específicos
 
 ## Principio de funcionamiento
@@ -72,4 +72,4 @@ Console.WriteLine($"Precio de la orden: {order.Price}");
 
 ## Conclusión
 
-El uso correcto de [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) ayuda a evitar errores al colocar órdenes y garantiza que los algoritmos de trading funcionen correctamente según los requisitos del mercado.
+El uso correcto de [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) ayuda a evitar errores al colocar órdenes y garantiza que los algoritmos de negociación funcionen correctamente según los requisitos del mercado.

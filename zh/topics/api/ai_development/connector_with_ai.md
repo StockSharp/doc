@@ -90,7 +90,7 @@ Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
 ```
 为适配器添加市场数据订阅：
 
-1. Candles (MarketDataTypes.CandleTimeFrame):
+1. K线 (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
    - WebSocket：订阅 kline_{symbol}_{interval} 频道
    - 周期间隔映射：1m、5m、15m、1h、4h、1d
@@ -99,7 +99,7 @@ Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
    - WebSocket：订阅 depth_{symbol} 频道
    - 将 bids/asks 解析为 QuoteChangeMessage
 
-3. Ticks (MarketDataTypes.Trades):
+3. 逐笔成交 (MarketDataTypes.Trades):
    - WebSocket：订阅 trades_{symbol} 频道
    - 解析为带有 ExecutionTypes.Tick 的 ExecutionMessage
 ```

@@ -1,6 +1,6 @@
 # Identificador de instrumento
 
-En [S#](../../api.md), los instrumentos de distintas fuentes usan un [Security.Id](xref:StockSharp.BusinessEntities.Security.Id) unificado. Esto mantiene el código del algoritmo de trading independiente del tipo de conexión, como [OpenECry](../connectors/stock_market/openecry.md), [Rithmic](../connectors/stock_market/rithmic.md) o [Interactive Brokers](../connectors/stock_market/interactive_brokers.md).
+En [S#](../../api.md), los instrumentos de distintas fuentes usan un [Security.Id](xref:StockSharp.BusinessEntities.Security.Id) unificado. Esto mantiene el código del algoritmo de negociación independiente del tipo de conexión, como [OpenECry](../connectors/stock_market/openecry.md), [Rithmic](../connectors/stock_market/rithmic.md) o [Interactive Brokers](../connectors/stock_market/interactive_brokers.md).
 
 Los identificadores de instrumentos usan la siguiente sintaxis: **\[código del instrumento\]@\[código de plaza\]**. Para las acciones de Apple Inc., el identificador es **AAPL@NASDAQ**. Para derivados, el código de plaza es la plaza en la que se negocia el contrato. Por ejemplo, el contrato de futuros de junio sobre el índice ES se puede identificar como **ESM5@NYSE**.
 

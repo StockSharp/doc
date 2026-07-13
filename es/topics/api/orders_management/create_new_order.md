@@ -1,8 +1,8 @@
 # Crear nueva orden
 
-Para crear una nueva orden, debe crear un objeto [Order](xref:StockSharp.BusinessEntities.Order) que contiene información sobre la orden y registrarlo en el exchange. Además, si desea trabajar con la orden (por ejemplo, cancelarla o cambiarla), debe usar este objeto [Order](xref:StockSharp.BusinessEntities.Order). Para registrar órdenes en el exchange, use el método [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**, que envía la orden al servidor.
+Para crear una nueva orden, debe crear un objeto [Order](xref:StockSharp.BusinessEntities.Order) que contiene información sobre la orden y registrarlo en la bolsa. Además, si desea trabajar con la orden (por ejemplo, cancelarla o cambiarla), debe usar este objeto [Order](xref:StockSharp.BusinessEntities.Order). Para registrar órdenes en la bolsa, use el método [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**, que envía la orden al servidor.
 
-El siguiente ejemplo muestra la creación de una orden y su registro en el exchange:
+El siguiente ejemplo muestra la creación de una orden y su registro en la bolsa:
 
 ```cs
 	var order = new Order

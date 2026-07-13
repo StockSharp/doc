@@ -1,11 +1,11 @@
 # Autenticación
 
-El componente de autenticación desempeña un papel clave para garantizar la interacción segura con una serie de API de exchanges. Es responsable de almacenar las claves de API, generar firmas para las solicitudes y otros aspectos de seguridad.
+El componente de autenticación desempeña un papel clave para garantizar la interacción segura con una serie de API de bolsas. Es responsable de almacenar las claves de API, generar firmas para las solicitudes y otros aspectos de seguridad.
 
 ## Funciones Principales
 
 1. Almacenamiento de claves de API (clave pública, clave secreta, frase de acceso).
-2. Generación de firmas para solicitudes de acuerdo con los requisitos de un exchange específico.
+2. Generación de firmas para solicitudes de acuerdo con los requisitos de una bolsa específica.
 3. Adición de los encabezados de autenticación necesarios a las solicitudes HTTP.
 
 ## Ejemplo de Implementación
@@ -44,7 +44,7 @@ class Authenticator : Disposable
 	// Clave secreta de API
 	public SecureString Secret { get; }
 
-	// Frase de acceso (si el exchange la requiere)
+	// Frase de acceso (si la bolsa la requiere)
 	public SecureString Passphrase { get; }
 
 	// Método para crear una firma de solicitud
@@ -65,7 +65,7 @@ class Authenticator : Disposable
 
 - Utilice `SecureString` para almacenar datos sensibles, como claves y frases de acceso.
 - Implemente la interfaz `IDisposable` para una correcta liberación de recursos, especialmente si se utilizan primitivas criptográficas.
-- Asegúrese de que los métodos de generación de firmas correspondan a la última versión de la documentación de la API del exchange.
+- Asegúrese de que los métodos de generación de firmas correspondan a la última versión de la documentación de la API de la bolsa.
 
-Con una implementación adecuada del componente de autenticación, garantizará una interacción segura con el exchange y simplificará el proceso de autorización de solicitudes en otras partes del conector.
+Con una implementación adecuada del componente de autenticación, garantizará una interacción segura con la bolsa y simplificará el proceso de autorización de solicitudes en otras partes del conector.
 </content>

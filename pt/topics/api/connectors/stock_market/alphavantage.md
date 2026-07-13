@@ -5,7 +5,7 @@
 Antes de começar a escrever robôs de negociação para a plataforma de negociação atual, recomenda-se ler os links em [Conectores](../../connectors.md).
 
 > [!CAUTION]
-> O conector suporta apenas feed de dados de mercado; transações não são suportadas.
+> O conector suporta apenas a fonte de dados de mercado; transações não são suportadas.
 
 ## Ver também
 

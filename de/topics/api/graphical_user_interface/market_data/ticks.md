@@ -40,17 +40,17 @@ public class TradesWindow
 		// Empfangsereignis für Tick-Trades abonnieren
 		_connector.TickTradeReceived += OnTickReceived;
 
-		// Subscription auf Tick-Trades erstellen
+		// Abonnement für Tick-Trades erstellen
 		_tickSubscription = new Subscription(DataType.Ticks, security);
 
-		// Subscription starten
+		// Abonnement starten
 		_connector.Subscribe(_tickSubscription);
 	}
 
 	// Handler für das Empfangsereignis von Tick-Trades
 	private void OnTickReceived(Subscription subscription, ITickTradeMessage tick)
 	{
-		// Prüfen, ob der Trade zu unserer Subscription gehört
+		// Prüfen, ob der Trade zu unserem Abonnement gehört
 		if (subscription != _tickSubscription)
 			return;
 
@@ -87,10 +87,10 @@ public class MyTradesWindow
 		// Empfangsereignis für eigene Trades abonnieren
 		_connector.OwnTradeReceived += OnOwnTradeReceived;
 
-		// Subscription auf Transaktionsdaten erstellen
+		// Abonnement für Transaktionsdaten erstellen
 		var myTradesSubscription = new Subscription(DataType.Transactions, null);
 
-		// Subscription starten
+		// Abonnement starten
 		_connector.Subscribe(myTradesSubscription);
 	}
 
@@ -112,7 +112,7 @@ public void LoadHistoricalTicks(Security security, DateTime from, DateTime to)
 	// Aktuelle Trades löschen
 	TradeGrid.Trades.Clear();
 
-	// Subscription auf historische Tick-Trades erstellen
+	// Abonnement für historische Tick-Trades erstellen
 	var historySubscription = new Subscription(DataType.Ticks, security)
 	{
 		MarketData =
@@ -126,7 +126,7 @@ public void LoadHistoricalTicks(Security security, DateTime from, DateTime to)
 	// Empfangsereignis für Tick-Trades abonnieren
 	_connector.TickTradeReceived += OnHistoricalTickReceived;
 
-	// Subscription starten
+	// Abonnement starten
 	_connector.Subscribe(historySubscription);
 }
 

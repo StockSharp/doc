@@ -97,7 +97,7 @@ _connector.OrderBookReceived += (subscription, depth) =>
 // ローソク足受信イベント
 _connector.CandleReceived += (subscription, candle) =>
 {
-	Console.WriteLine($"キャンドルを受信: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
+	Console.WriteLine($"ローソク足を受信: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
 };
 
 // 接続エラーイベント
@@ -155,7 +155,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 		
-	Console.WriteLine($"過去キャンドル: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
+	Console.WriteLine($"過去ローソク足: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 	
 	// 受信したローソク足を処理します。たとえば、ローカルストレージへ保存
 	// または分析/可視化に使用します

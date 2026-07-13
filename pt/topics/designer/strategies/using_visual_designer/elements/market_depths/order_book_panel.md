@@ -9,7 +9,7 @@ O componente [Livro de ordens](../../../../user_interface/components/order_book.
 ### Conectores de entrada
 
 - **Livro de ofertas** - o livro de ordens que tem de ser apresentado.
-- **Ordem** - uma ordem, cujo volume tem de ser apresentado na coluna *Own Volume*.
+- **Ordem** - uma ordem, cujo volume tem de ser apresentado na coluna *Volume próprio*.
 - **Erro de ordem** - um erro no registo ou cancelamento de uma ordem, para o qual é necessário mostrar uma animação.
 
 ## Ver também

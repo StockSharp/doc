@@ -21,13 +21,13 @@ Harami bajista señala un posible final de una tendencia alcista:
 - Si la segunda vela es un doji (con un cuerpo muy pequeño), el patrón se llama "Cruz harami" y se considera una señal más fuerte de incertidumbre.
 - Este patrón suele considerarse una señal más débil en comparación con Envolvente bajista, pero puede ser un indicador más temprano de una posible reversión.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Harami bajista normalmente requiere confirmación adicional para entrar en posición:
 
 - Esperar una vela bajista de confirmación después de la formación del patrón antes de entrar en una posición corta.
 - Colocar un stop-loss por encima del máximo del patrón o del máximo de la primera vela.
-- Usar el volumen de trading como confirmación adicional: la disminución del volumen en la segunda vela y su aumento en las velas bajistas posteriores refuerza la señal.
+- Usar el volumen de negociación como confirmación adicional: la disminución del volumen en la segunda vela y su aumento en las velas bajistas posteriores refuerza la señal.
 - Combinar con otros indicadores técnicos, como RSI en zona de sobrecompra o divergencia de oscilador.
 - Considerar el patrón en niveles de resistencia o zonas de sobrecompra para aumentar la probabilidad de una operación exitosa.
 - Posible uso para cerrar posiciones largas existentes, incluso si la señal no es lo suficientemente fuerte para abrir posiciones cortas.

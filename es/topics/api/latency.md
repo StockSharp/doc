@@ -1,6 +1,6 @@
 # Medición de latencia
 
-[S#](../api.md) mide la latencia de registro y cancelación de órdenes mediante [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager). El administrador determina cuánto tiempo pasa entre el envío de una orden y la recepción de la confirmación del exchange.
+[S#](../api.md) mide la latencia de registro y cancelación de órdenes mediante [LatencyManager](xref:StockSharp.Algo.Latency.LatencyManager). El administrador determina cuánto tiempo pasa entre el envío de una orden y la recepción de la confirmación de la bolsa.
 
 ## Interfaz ILatencyManager
 

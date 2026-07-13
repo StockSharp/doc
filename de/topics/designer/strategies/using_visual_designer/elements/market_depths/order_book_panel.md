@@ -9,7 +9,7 @@ Die Komponente [Orderbuch](../../../../user_interface/components/order_book.md) 
 ### Eingehende Anschlüsse
 
 - **Orderbuch** - das Orderbuch, das angezeigt werden soll.
-- **Auftrag** - eine Order, deren Volumen in der Spalte *Own Volume* angezeigt werden soll.
+- **Auftrag** - eine Order, deren Volumen in der Spalte *Eigenes Volumen* angezeigt werden soll.
 - **Auftragsfehler** - ein Fehler bei der Registrierung oder Stornierung einer Order, für den eine Animation angezeigt werden soll.
 
 ## Siehe auch

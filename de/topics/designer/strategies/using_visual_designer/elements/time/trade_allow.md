@@ -5,7 +5,7 @@
 Dieser Block wird verwendet, um zu prüfen, ob der Handel aktuell erlaubt ist. Die folgenden Bedingungen werden geprüft:
 
 - Alle Strategie-Abonnements für Marktdaten müssen sich im Zustand [Online](../../../../../api/market_data/subscriptions.md) befinden (Empfang von Echtzeitdaten).
-- Alle Indikatoren müssen [formed](../../../../../api/indicators.md) sein.
+- Alle Indikatoren müssen [gebildet](../../../../../api/indicators.md) sein.
 - Bei [Live-Handel](../../../../live_execution/getting_started.md) muss der eingehende Triggerwert einen Zeitstempel haben, der größer ist als die Startzeit der Strategie.
 
 ### Eingehende Anschlüsse

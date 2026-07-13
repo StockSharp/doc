@@ -1,6 +1,6 @@
 # Configuración de pruebas históricas
 
-El panel **Propiedades** está minimizado de forma predeterminada en el lado derecho de la pestaña de estrategia. Este panel es una tabla de propiedades de emulación o trading en vivo. Cuando selecciona una propiedad concreta, aparece una descripción detallada de esta propiedad en la parte inferior de la tabla. Todas las propiedades están agrupadas:
+El panel **Propiedades** está minimizado de forma predeterminada en el lado derecho de la pestaña de estrategia. Este panel es una tabla de propiedades de emulación o negociación en vivo. Cuando selecciona una propiedad concreta, aparece una descripción detallada de esta propiedad en la parte inferior de la tabla. Todas las propiedades están agrupadas:
 
 ![Designer Propiedades de emulación 00](../../../../images/designer_properties_emulation_00.png)
 
@@ -23,7 +23,7 @@ El panel **Propiedades** está minimizado de forma predeterminada en el lado der
 - **Porcentaje de errores** – valor porcentual del error al registrar nuevas órdenes. El valor puede ser de 0 (no habrá errores) a 100.
 - **Latencia** – valor mínimo de latencia de la orden registrada.
 - **Nuevo registro** – si se admite el nuevo registro de órdenes como una sola operación.
-- **Periodo de búfer** – enviar respuestas en un único paquete por intervalos. Se emulan la latencia de red y la operación en búfer del núcleo del exchange.
+- **Periodo de búfer** – enviar respuestas en un único paquete por intervalos. Se emulan la latencia de red y la operación en búfer del núcleo de la bolsa.
 - **ID de orden** – número desde el que el emulador generará identificadores de órdenes.
 - **ID de operación** – número desde el que el emulador generará identificadores de operaciones.
 - **Transacción** – número desde el que el emulador generará identificadores de transacciones de órdenes.
@@ -31,8 +31,8 @@ El panel **Propiedades** está minimizado de forma predeterminada en el lado der
 - **Profundidad del libro** – profundidad máxima del libro de órdenes que se generará a partir de ticks.
 - **Número de pasos de volumen** – número de pasos de volumen por los que la orden es mayor que la operación tick. Se usa para pruebas con operaciones tick.
 - **Intervalo de carteras** – intervalo de recálculo de cartera. Si el intervalo es cero, no se realiza recálculo.
-- **Cambiar hora** – cambiar la hora de órdenes y operaciones a hora del exchange.
-- **Zona horaria** – información sobre la zona horaria donde se encuentra el exchange.
+- **Cambiar hora** – cambiar la hora de órdenes y operaciones a hora de la bolsa.
+- **Zona horaria** – información sobre la zona horaria donde se encuentra la bolsa.
 - **Desplazamiento de precio** – desplazamiento de precio desde la última operación, que especifica los límites de precios máximo y mínimo para la siguiente sesión.
 - **Añadir volumen extra** – añadir volumen extra al libro de órdenes al registrar órdenes de gran volumen.
 - **[Comisiones](../commissions.md)** – comisión (corretaje, bolsa, etc.).

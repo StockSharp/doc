@@ -1,11 +1,11 @@
 > [!WARNING]
-> Este exchange cerró permanentemente (julio de 2017 — incautación). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa cerró permanentemente (julio de 2017 — incautación). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # WEX (BTC-e)
 
-**BTC-E** - exchange de criptomonedas.
+**BTC-E** - bolsa de criptomonedas.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md). 
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md).
 
 ## Contenido recomendado
 

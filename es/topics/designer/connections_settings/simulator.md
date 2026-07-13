@@ -22,7 +22,7 @@
 - **Porcentaje de errores** - valor porcentual del error al registrar nuevas órdenes. El valor puede ir de 0 (sin errores) a 100.
 - **Latencia** - valor mínimo de retraso para órdenes registradas.
 - **Nuevo registro** - indica si se admite el nuevo registro de órdenes en forma de una única operación.
-- **Periodo de búfer** - enviar respuestas por lotes en un único paquete. Se emulan el retraso de red y el trabajo en búfer del núcleo del exchange.
+- **Periodo de búfer** - enviar respuestas por lotes en un único paquete. Se emulan el retraso de red y el trabajo en búfer del núcleo de la bolsa.
 - **ID de orden** - número a partir del cual el emulador generará identificadores de órdenes.
 - **ID de operación** - número a partir del cual el emulador generará identificadores de operaciones.
 - **Transacción** - número a partir del cual el emulador generará identificadores de transacciones de órdenes.
@@ -30,8 +30,8 @@
 - **Profundidad del libro** - profundidad máxima del libro de órdenes que se generará a partir de ticks.
 - **Número de pasos de volumen** - número de pasos de volumen por los que la orden es mayor que la operación tick. Se usa al probar operaciones tick.
 - **Intervalo de carteras** - intervalo de recálculo de cartera. Si el intervalo es igual a cero, no se realiza el recálculo.
-- **Cambiar hora** - cambiar la hora de órdenes y operaciones por la hora del exchange.
-- **Zona horaria** - información sobre la zona horaria del exchange.
+- **Cambiar hora** - cambiar la hora de órdenes y operaciones por la hora de la bolsa.
+- **Zona horaria** - información sobre la zona horaria de la bolsa.
 - **Desplazamiento de precio** - desplazamiento de precio desde la última operación, que determina los límites de precios máximo y mínimo para la siguiente sesión.
 - **Añadir volumen extra** - añadir volumen extra al libro de órdenes al registrar órdenes de gran volumen.
 

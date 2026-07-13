@@ -1,18 +1,18 @@
-# Medição de Slippage
+# Medição de Deslizamento
 
-[S#](../api.md) calcula o slippage através do [SlippageManager](xref:StockSharp.Algo.Slippage.SlippageManager). Slippage é a diferença entre o preço de execução esperado de uma ordem e o preço real do negócio.
+[S#](../api.md) calcula o deslizamento através do [SlippageManager](xref:StockSharp.Algo.Slippage.SlippageManager). O deslizamento é a diferença entre o preço de execução esperado de uma ordem e o preço real do negócio.
 
 ## Interface ISlippageManager
 
 A interface [ISlippageManager](xref:StockSharp.Algo.Slippage.ISlippageManager) define o contrato base:
 
-- **Slippage** - slippage total acumulado (decimal).
+- **Slippage** - deslizamento total acumulado (decimal).
 - **Reset()** - reinicia o estado do gestor.
-- **ProcessMessage(Message)** - processa uma mensagem; devolve o slippage para a execução indicada ou `null`.
+- **ProcessMessage(Message)** - processa uma mensagem; devolve o deslizamento para a execução indicada ou `null`.
 
 ## Como Funciona
 
-O gestor de slippage funciona em três etapas:
+O gestor de deslizamento funciona em três etapas:
 
 ### 1. Atualizar Preços de Mercado
 
@@ -25,14 +25,14 @@ Quando é recebida uma [OrderRegisterMessage](xref:StockSharp.Messages.OrderRegi
 - Para uma compra (`Buy`), é usado o melhor ask.
 - Para uma venda (`Sell`), é usado o melhor bid.
 
-### 3. Calcular Slippage
+### 3. Calcular Deslizamento
 
-Quando é recebida uma [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) com um negócio, o gestor calcula o slippage:
+Quando é recebida uma [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) com um negócio, o gestor calcula o deslizamento:
 
 - Para uma compra: `(TradePrice - PlannedPrice) * TradeVolume`
 - Para uma venda: `(PlannedPrice - TradePrice) * TradeVolume`
 
-Um valor positivo significa slippage desfavorável (preço pior do que o esperado), enquanto um valor negativo significa slippage favorável (preço melhor do que o esperado).
+Um valor positivo significa deslizamento desfavorável (preço pior do que o esperado), enquanto um valor negativo significa deslizamento favorável (preço melhor do que o esperado).
 
 ## Estado: ISlippageManagerState
 
@@ -40,7 +40,7 @@ A interface [ISlippageManagerState](xref:StockSharp.Algo.Slippage.ISlippageManag
 
 - Melhores preços bid/ask para cada instrumento ([SecurityId](xref:StockSharp.Messages.SecurityId)).
 - Preços planeados e direções para cada transação (`TransactionId`).
-- Slippage total acumulado.
+- Deslizamento total acumulado.
 
 A implementação predefinida é [SlippageManagerState](xref:StockSharp.Algo.Slippage.SlippageManagerState).
 
@@ -48,15 +48,15 @@ A implementação predefinida é [SlippageManagerState](xref:StockSharp.Algo.Sli
 
 | Propriedade | Predefinição | Descrição |
 |----------|:-------:|-------------|
-| `CalculateNegative` | `true` | Contabilizar slippage favorável. Se `false`, os valores negativos são substituídos por zero. |
+| `CalculateNegative` | `true` | Contabilizar deslizamento favorável. Se `false`, os valores negativos são substituídos por zero. |
 
 ## Integração via adaptador
 
-A classe [SlippageMessageAdapter](xref:StockSharp.Algo.Slippage.SlippageMessageAdapter) envolve um adapter interno e calcula automaticamente o slippage para todos os negócios.
+A classe [SlippageMessageAdapter](xref:StockSharp.Algo.Slippage.SlippageMessageAdapter) envolve um adaptador interno e calcula automaticamente o deslizamento para todos os negócios.
 
 ## Integração com Estratégia
 
-A estratégia ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) expõe a propriedade `Slippage` para acompanhar o slippage global.
+A estratégia ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) expõe a propriedade `Slippage` para acompanhar o deslizamento global.
 
 ## Exemplo de Utilização
 
@@ -64,7 +64,7 @@ A estratégia ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) expõe a pr
 // Criar gerenciador com armazenamento de estado
 var manager = new SlippageManager(new SlippageManagerState());
 
-// Considerar apenas slippage desfavorável
+// Considerar apenas deslizamento desfavorável
 manager.CalculateNegative = false;
 
 // Processar dados de mercado (atualizar melhores preços)
@@ -74,20 +74,20 @@ manager.ProcessMessage(quoteChangeMsg);
 // Processar registo de ordem (guardar o preço planeado)
 manager.ProcessMessage(orderRegisterMsg);
 
-// Processar uma negociação (calcular slippage)
+// Processar uma negociação (calcular deslizamento)
 decimal? slippage = manager.ProcessMessage(executionMsg);
 if (slippage != null)
 {
-    Console.WriteLine($"Slippage: {slippage.Value}");
+    Console.WriteLine($"Deslizamento: {slippage.Value}");
 }
 
-// Slippage acumulado total
-Console.WriteLine($"Slippage total: {manager.Slippage}");
+// Deslizamento acumulado total
+Console.WriteLine($"Deslizamento total: {manager.Slippage}");
 ```
 
 ## Reiniciar o Estado
 
-O método `Reset()` limpa completamente o estado interno: melhores preços, preços planeados e slippage acumulado:
+O método `Reset()` limpa completamente o estado interno: melhores preços, preços planeados e deslizamento acumulado:
 
 ```cs
 manager.Reset();

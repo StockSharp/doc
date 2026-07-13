@@ -1,6 +1,6 @@
 # Panel de control
 
-Servicio para gestionar estrategias y robots de trading mediante un bot de Telegram.
+Servicio para gestionar estrategias y robots de negociación mediante un bot de Telegram.
 
 Para la configuración, complete previamente el [proceso de autorización del bot](authorization.md).
 

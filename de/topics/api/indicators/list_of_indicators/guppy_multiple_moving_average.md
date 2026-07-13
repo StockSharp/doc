@@ -76,7 +76,7 @@ Bei der GMMA-Interpretation werden sowohl einzelne Gruppen als auch deren Intera
 
 7. **Frühzeitige Umkehrwarnung**:
    - Kurzfristige Durchschnittswerte ändern zuerst die Richtung, dann beginnen sich Änderungen in den langfristigen Durchschnittswerten zu zeigen
-   - Crossover zwischen Gruppen kann als Bestätigung einer Trendumkehr dienen
+   - Kreuzungen zwischen Gruppen können als Bestätigung einer Trendumkehr dienen
 
 ![GMMA Diagramm](../../../../images/indicator_guppy_multiple_moving_average.png)
 

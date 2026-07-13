@@ -37,7 +37,7 @@
   {
       protected override void OnStarted2(DateTime time)
       {
-          // Abonnement für Candles
+          // Abonnement für Kerzen
           var candleSubscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
           this
               .WhenCandlesStarted(candleSubscription)
@@ -103,10 +103,10 @@
 
 - **Kombinieren von Regeln mit der Bedingung [MarketRuleHelper.Or](xref:StockSharp.Algo.MarketRuleHelper.Or(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) rules **)** / [MarketRuleHelper.And](xref:StockSharp.Algo.MarketRuleHelper.And(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) rules **)**.**
 
-  Wenn die Zeit abläuft **ODER** eine Candle schließt:
+  Wenn die Zeit abläuft **ODER** eine Kerze schließt:
 
   ```cs
-  // Abonnement für Candles erstellen
+  // Abonnement für Kerzen erstellen
   var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
   var timeInterval = TimeSpan.FromMilliseconds(5000);
 
@@ -124,7 +124,7 @@
   Oder in diesem Format:
 
   ```cs
-  // Abonnement für Candles erstellen
+  // Abonnement für Kerzen erstellen
   var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
   var timeInterval = TimeSpan.FromMilliseconds(5000);
 
@@ -187,17 +187,17 @@
 
 ## Beispiele für die Verwendung von Regeln
 
-### Regeln auf Candles
+### Regeln auf Kerzen
 
 ```cs
-// Abonnement für 5-Minuten-Candles erstellen
+// Abonnement für 5-Minuten-Kerzen erstellen
 var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security);
 
-// Variable zum Zählen von Candles
+// Variable zum Zählen von Kerzen
 var i = 0;
 var diff = "10%".ToUnit();
 
-// Regel, die aktiviert wird, wenn eine neue Candle startet
+// Regel, die aktiviert wird, wenn eine neue Kerze startet
 this.WhenCandlesStarted(subscription)
 	.Do((candle) =>
 	{
@@ -208,7 +208,7 @@ this.WhenCandlesStarted(subscription)
 			.WhenTotalVolumeMore(candle, diff)
 			.Do((candle1) =>
 			{
-	LogInfo($"Regel WhenCandlesStarted und WhenTotalVolumeMore candle={candle1}");
+	LogInfo($"Regel WhenCandlesStarted und WhenTotalVolumeMore Kerze={candle1}");
 	LogInfo($"Regel WhenCandlesStarted und WhenTotalVolumeMore i={i}");
 			})
 			.Once().Apply(this);

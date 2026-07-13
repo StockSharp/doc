@@ -21,9 +21,9 @@ Lápida Doji se considera una señal potencial de reversión, especialmente en u
 - En una tendencia alcista, este patrón tiene implicaciones bajistas y puede anticipar una reversión.
 - En una tendencia bajista, puede indicar resistencia temporal o continuación de la tendencia.
 
-### Estrategias de trading
+### Estrategias de negociación
 
-Lápida requiere confirmación adicional para tomar decisiones de trading:
+Lápida requiere confirmación adicional para tomar decisiones de negociación:
 
 - Esperar una vela bajista de confirmación en el siguiente período antes de entrar en una posición corta.
 - Colocar un stop-loss por encima del máximo de Lápida.

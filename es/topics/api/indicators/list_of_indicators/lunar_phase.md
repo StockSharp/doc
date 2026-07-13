@@ -56,14 +56,14 @@ La interpretación del indicador Fase lunar puede variar, ya que es una herramie
    - LP se puede utilizar en combinación con el análisis de patrones estacionales para identificar posibles periodicidades del mercado.
 
 5. **Filtrado de señal**:
-   - Algunos traders utilizan LP como filtro adicional para sus estrategias de trading.
+   - Algunos operadores utilizan LP como filtro adicional para sus estrategias de negociación.
    - Por ejemplo, pueden evitar ciertos tipos de operaciones durante fases lunares específicas si las estadísticas históricas muestran una baja eficiencia.
 
 6. **Combinando con otros indicadores**:
-   - LP normalmente no se utiliza como herramienta independiente para tomar decisiones de trading.
+   - LP normalmente no se utiliza como herramienta independiente para tomar decisiones de negociación.
    - Se recomienda combinarlo con indicadores técnicos tradicionales para confirmar señales.
 
-Tenga en cuenta que no hay pruebas científicas suficientes de la influencia directa de la fase lunar en los mercados financieros, y muchos traders profesionales abordan estas herramientas con escepticismo. Sin embargo, algunos participantes del mercado consideran valioso incluir LP en su arsenal analítico.
+Tenga en cuenta que no hay pruebas científicas suficientes de la influencia directa de la fase lunar en los mercados financieros, y muchos operadores profesionales abordan estas herramientas con escepticismo. Sin embargo, algunos participantes del mercado consideran valioso incluir LP en su arsenal analítico.
 
 ![Gráfico del indicador LP](../../../../images/indicator_lunar_phase.png)
 

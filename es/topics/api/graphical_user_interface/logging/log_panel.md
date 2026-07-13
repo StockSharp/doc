@@ -1,6 +1,6 @@
 # Panel de registros
 
-[LogControl](xref:StockSharp.Xaml.LogControl) - tabla para mostrar los mensajes de log. Los botones de la barra de herramientas permiten filtrar mensajes con distintos niveles de registro.
+[LogControl](xref:StockSharp.Xaml.LogControl) - tabla para mostrar los mensajes de registro. Los botones de la barra de herramientas permiten filtrar mensajes con distintos niveles de registro.
 
 ## LogControl
 
@@ -23,7 +23,7 @@ Código de ejemplo
 ```cs
 // crear una nueva instancia de LogManager
 _logManager = new LogManager();
-// agregar .NET tracing como fuente de log.
+// agregar .NET tracing como fuente de registro.
 _logManager.Sources.Add(new Ecng.Logging.TraceSource());
 // agregar LogControl como receptor de registro.
 _logManager.Listeners.Add(new GuiLogListener(LogControl));

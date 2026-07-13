@@ -77,7 +77,7 @@ _connector.OrderBookReceived += (sub, depth) =>
 _connector.Subscribe(depthSubscription);
 ```
 
-## Tick交易订阅示例
+## 逐笔成交订阅示例
 
 ```cs
 // 为所选交易品种创建 tick 成交订阅

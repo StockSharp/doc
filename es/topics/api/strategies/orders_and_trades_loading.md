@@ -1,6 +1,6 @@
 # Carga de órdenes y operaciones
 
-Al iniciar una estrategia, puede ser necesario cargar órdenes y operaciones ejecutadas previamente (por ejemplo, cuando un robot se reinició durante una sesión de trading o cuando las órdenes y operaciones se trasladan durante la noche). Para ello, debe:
+Al iniciar una estrategia, puede ser necesario cargar órdenes y operaciones ejecutadas previamente (por ejemplo, cuando un robot se reinició durante una sesión de negociación o cuando las órdenes y operaciones se trasladan durante la noche). Para ello, debe:
 
 1. Cargar los IDs de transacción de órdenes guardadas anteriormente (por ejemplo, desde un archivo).
 2. Suscribirse al evento `OrderReceived` para registrar nuevos IDs de transacción para sesiones futuras.

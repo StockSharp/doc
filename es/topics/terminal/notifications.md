@@ -2,7 +2,7 @@
 
 Las notificaciones son un sistema para avisar al usuario sobre un evento especificado previamente que ocurre.
 
-Las notificaciones pueden especificarse para una amplia gama de eventos de trading para los siguientes objetos: cartera, posición, Level 1, noticias. Por ejemplo, superar un valor determinado del precio medio ponderado de una posición o la aparición de una noticia con un título específico.
+Las notificaciones pueden especificarse para una amplia gama de eventos de negociación para los siguientes objetos: cartera, posición, Level 1, noticias. Por ejemplo, superar un valor determinado del precio medio ponderado de una posición o la aparición de una noticia con un título específico.
 
 Las notificaciones pueden tener las siguientes formas:
 

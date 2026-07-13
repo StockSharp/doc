@@ -1,8 +1,8 @@
-# Modo dump
+# Modo de despejo
 
-O conector FAST está disponível em modo dump. Nesse caso, os dados não vêm de uma conexão de rede real, mas dos arquivos acumulados pelo aplicativo [UDP Dumper](../../../../udp_dumper.md).
+O conector FAST está disponível em modo de despejo. Nesse caso, os dados não vêm de uma conexão de rede real, mas dos arquivos acumulados pelo aplicativo [UDP Dumper](../../../../udp_dumper.md).
 
-Para ativar o modo dump, passe os arquivos por meio do método de dump [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** antes de conectar:
+Para ativar o modo de despejo, passe os arquivos por meio do método de despejo [IFastDialect.Dump](xref:StockSharp.Fix.Dialects.IFastDialect.Dump(System.Collections.Generic.IDictionary{Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable{System.IO.Stream}}))**(**[System.Collections.Generic.IDictionary\<Ecng.Net.MulticastSourceAddress,System.Collections.Generic.IEnumerable\<System.IO.Stream\>\>](xref:System.Collections.Generic.IDictionary`2) dumpFiles **)** antes de conectar:
 
 ```cs
 // ... inicialização do conector

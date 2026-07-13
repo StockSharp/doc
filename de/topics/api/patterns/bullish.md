@@ -15,7 +15,7 @@ Die Bullische Kerze signalisiert eine bullische Marktstimmung mit mehreren Merkm
 
 - Ein langer unterer Schatten zeigt, dass Verkäufer versucht haben, den Preis nach unten zu drücken, Käufer jedoch die Kontrolle übernahmen.
 - Ein Schlusskurs über dem Eröffnungskurs zeigt die Dominanz der Käufer am Ende der Periode.
-- Das Verhältnis zwischen Candle-Körper und unterem Schatten zeigt die Stärke der Käufer nach dem Test niedrigerer Niveaus.
+- Das Verhältnis zwischen Kerzenkörper und unterem Schatten zeigt die Stärke der Käufer nach dem Test niedrigerer Niveaus.
 - In einem Abwärtstrend kann sie eine mögliche Umkehr signalisieren.
 - In einem Aufwärtstrend bestätigt sie die Stärke des Trends, insbesondere nach einer Korrektur.
 
@@ -24,7 +24,7 @@ Die Bullische Kerze signalisiert eine bullische Marktstimmung mit mehreren Merkm
 Bullische Kerze kann in verschiedenen Handelsstrategien verwendet werden:
 
 - Einstieg in eine Long-Position nach Bildung einer bullischen Kerze an einem Unterstützungsniveau oder in einer überverkauften Zone.
-- Setzen eines Stop-Loss unterhalb des Minimums der Candle, um sich gegen einen weiteren Rückgang zu schützen.
+- Setzen eines Stop-Loss unterhalb des Minimums der Kerze, um sich gegen einen weiteren Rückgang zu schützen.
 - Kombination mit anderen technischen Indikatoren oder Mustern, um die Wahrscheinlichkeit eines erfolgreichen Trades zu erhöhen.
 - Verwendung zur Bestätigung von Aufwärtstrendsignalen aus Indikatoren wie MACD oder gleitenden Durchschnitten.
 - Achten Sie auf das Handelsvolumen - hohes Volumen erhöht die Bedeutung des Signals.

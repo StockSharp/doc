@@ -11,7 +11,7 @@ TWAP es uno de los algoritmos de ejecución de órdenes más comunes que divide 
 Aplicaciones principales de TWAP:
 - Precio de referencia para evaluar la calidad de ejecución de órdenes
 - Algoritmo de ejecución para minimizar el impacto en el mercado.
-- Herramienta para análisis de mercado y toma de decisiones de trading.
+- Herramienta para análisis de mercado y toma de decisiones de negociación.
 
 A diferencia de VWAP (precio medio ponderado por volumen), TWAP no considera los volúmenes de negociación, centrándose exclusivamente en el aspecto temporal.
 

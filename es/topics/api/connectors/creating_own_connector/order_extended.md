@@ -1,6 +1,6 @@
 # Condiciones de orden extendidas
 
-Al trabajar con algunos exchanges o sistemas de negociación, los campos estándar para registrar una orden pueden no ser suficientes. Por ejemplo, cuando se requiere:
+Al trabajar con algunas bolsas o sistemas de negociación, los campos estándar para registrar una orden pueden no ser suficientes. Por ejemplo, cuando se requiere:
 
 1. Al registrar [órdenes stop](../../orders_management/create_new_stop_order.md).
 2. Cuando se necesita especificar propiedades adicionales para establecer reglas de orden personalizadas.
@@ -102,7 +102,7 @@ public class CoinbaseOrderCondition : BaseWithdrawOrderCondition, IStopLossOrder
 
 ## Uso en el adaptador
 
-Al desarrollar su propio adaptador, puede crear su propia clase de condiciones de orden heredándola de `OrderCondition` o de una de sus clases derivadas e implementando las interfaces necesarias. Esto le permitirá agregar soporte para parámetros específicos de su exchange.
+Al desarrollar su propio adaptador, puede crear su propia clase de condiciones de orden heredándola de `OrderCondition` o de una de sus clases derivadas e implementando las interfaces necesarias. Esto le permitirá agregar soporte para parámetros específicos de su bolsa.
 
 Para especificar el tipo de condición de orden admitida por el adaptador, se utiliza el atributo [OrderConditionAttribute](xref:StockSharp.Messages.OrderConditionAttribute).
 
@@ -111,4 +111,4 @@ Para especificar el tipo de condición de orden admitida por el adaptador, se ut
 public partial class CoinbaseMessageAdapter
 ```
 
-Este enfoque proporciona flexibilidad al trabajar con varios exchanges y sus requisitos únicos para los parámetros de orden, manteniendo al mismo tiempo la uniformidad dentro de la arquitectura de StockSharp.
+Este enfoque proporciona flexibilidad al trabajar con varias bolsas y sus requisitos únicos para los parámetros de orden, manteniendo al mismo tiempo la uniformidad dentro de la arquitectura de StockSharp.

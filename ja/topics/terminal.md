@@ -9,11 +9,10 @@
 1. **多数のデータソースをサポート:** [コネクター](api/connectors.md)。
 2. **チャートからの取引**。
 3. **カスタム時間足**。
-4. **Volume、Tick、Range、PnF、Renko ローソク足**。
+4. **出来高、ティック、レンジ、PnF、Renko ローソク足**。
 5. **クラスターおよびボックスチャート**。
 6. **複数の市場:** 株式、先物、Forex、暗号資産。
 
 ## 推奨コンテンツ
 
 [Terminal のインストール](terminal/installing_terminal.md)
-

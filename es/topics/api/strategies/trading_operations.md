@@ -1,6 +1,6 @@
-# Operaciones de trading en estrategias
+# Operaciones de negociación en estrategias
 
-En StockSharp, la clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) proporciona varios métodos para trabajar con órdenes, lo que facilita la implementación de estrategias de trading.
+En StockSharp, la clase [Strategy](xref:StockSharp.Algo.Strategies.Strategy) proporciona varios métodos para trabajar con órdenes, lo que facilita la implementación de estrategias de negociación.
 
 ## Métodos de colocación de órdenes
 
@@ -30,7 +30,7 @@ ClosePosition();
 Estos métodos proporcionan máxima simplicidad y legibilidad del código. Automáticamente:
 - Crean un objeto de orden con los parámetros especificados
 - Rellenan los campos necesarios (instrumento, cartera, etc.)
-- Registran la orden en el sistema de trading
+- Registran la orden en el sistema de negociación
 
 ### 2. Uso de CreateOrder + RegisterOrder
 
@@ -115,7 +115,7 @@ order
 	.Do(() => {
 		// Acciones después de la ejecución de la orden
 		LogInfo($"Orden {order.TransactionId} ejecutada");
-		
+
 		// Por ejemplo, colocar una orden stop
 		var stopOrder = SellLimit(price * 0.95, volume);
 	})
@@ -155,7 +155,7 @@ StartProtection(
 
 ## Estado de la estrategia antes de operar
 
-Antes de ejecutar operaciones de trading, es importante asegurarse de que la estrategia esté en el estado correcto. StockSharp proporciona varias propiedades y métodos para comprobar la preparación de la estrategia:
+Antes de ejecutar operaciones de negociación, es importante asegurarse de que la estrategia esté en el estado correcto. StockSharp proporciona varias propiedades y métodos para comprobar la preparación de la estrategia:
 
 ### Propiedad IsFormed
 
@@ -171,10 +171,10 @@ Puede encontrar más detalles sobre suscripciones a datos de mercado en estrateg
 
 ### Propiedad TradingMode
 
-La propiedad [TradingMode](xref:StockSharp.Algo.Strategies.Strategy.TradingMode) define el modo de trading para la estrategia. Valores posibles:
+La propiedad [TradingMode](xref:StockSharp.Algo.Strategies.Strategy.TradingMode) define el modo de negociación para la estrategia. Valores posibles:
 
-- [StrategyTradingModes.Full](xref:StockSharp.Algo.Strategies.StrategyTradingModes.Full) - todas las operaciones de trading están permitidas (modo predeterminado)
-- [StrategyTradingModes.Disabled](xref:StockSharp.Algo.Strategies.StrategyTradingModes.Disabled) - el trading está completamente deshabilitado
+- [StrategyTradingModes.Full](xref:StockSharp.Algo.Strategies.StrategyTradingModes.Full) - todas las operaciones de negociación están permitidas (modo predeterminado)
+- [StrategyTradingModes.Disabled](xref:StockSharp.Algo.Strategies.StrategyTradingModes.Disabled) - la negociación está completamente deshabilitada
 - [StrategyTradingModes.CancelOrdersOnly](xref:StockSharp.Algo.Strategies.StrategyTradingModes.CancelOrdersOnly) - solo se permite cancelar órdenes
 - [StrategyTradingModes.ReducePositionOnly](xref:StockSharp.Algo.Strategies.StrategyTradingModes.ReducePositionOnly) - solo se permiten operaciones de reducción de posición
 
@@ -184,7 +184,7 @@ Esta propiedad se puede configurar mediante parámetros de estrategia:
 public SmaStrategy()
 {
 	_tradingMode = Param(nameof(TradingMode), StrategyTradingModes.Full)
-					.SetDisplay("Modo de trading", "Operaciones de trading permitidas", "Ajustes básicos");
+					.SetDisplay("Modo de negociación", "Operaciones de negociación permitidas", "Ajustes básicos");
 }
 ```
 
@@ -194,7 +194,7 @@ Para comprobar cómodamente si la estrategia está lista para operar, StockSharp
 
 - [IsFormedAndOnline()](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnline) - comprueba que la estrategia esté en el estado `IsFormed = true` e `IsOnline = true`
 
-- [IsFormedAndOnlineAndAllowTrading(StrategyTradingModes)](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - comprueba que la estrategia esté formada, esté en modo online y tenga los permisos de trading necesarios
+- [IsFormedAndOnlineAndAllowTrading(StrategyTradingModes)](xref:StockSharp.Algo.Strategies.Strategy.IsFormedAndOnlineAndAllowTrading(StockSharp.Algo.Strategies.StrategyTradingModes)) - comprueba que la estrategia esté formada, esté en modo online y tenga los permisos de negociación necesarios
 
 El método `IsFormedAndOnlineAndAllowTrading` acepta un parámetro opcional `required` de tipo [StrategyTradingModes](xref:StockSharp.Algo.Strategies.StrategyTradingModes):
 
@@ -202,18 +202,18 @@ El método `IsFormedAndOnlineAndAllowTrading` acepta un parámetro opcional `req
 public bool IsFormedAndOnlineAndAllowTrading(StrategyTradingModes required = StrategyTradingModes.Full)
 ```
 
-Este parámetro permite especificar el nivel mínimo de permisos de trading requerido para una operación concreta:
+Este parámetro permite especificar el nivel mínimo de permisos de negociación requerido para una operación concreta:
 
-1. **StrategyTradingModes.Full** (valor predeterminado) - devuelve `true` solo si la estrategia está en modo de trading completo (`TradingMode = StrategyTradingModes.Full`). Se usa para operaciones que pueden aumentar una posición.
+1. **StrategyTradingModes.Full** (valor predeterminado) - devuelve `true` solo si la estrategia está en modo de negociación completo (`TradingMode = StrategyTradingModes.Full`). Se usa para operaciones que pueden aumentar una posición.
 
-2. **StrategyTradingModes.ReducePositionOnly** - devuelve `true` si la estrategia está en modo de trading completo o solo en modo de reducción de posición. Se usa para operaciones de cierre total o parcial de posición.
+2. **StrategyTradingModes.ReducePositionOnly** - devuelve `true` si la estrategia está en modo de negociación completo o solo en modo de reducción de posición. Se usa para operaciones de cierre total o parcial de posición.
 
-3. **StrategyTradingModes.CancelOrdersOnly** - devuelve `true` con cualquier modo de trading activo (excepto `Disabled`). Se usa para operaciones de cancelación de órdenes.
+3. **StrategyTradingModes.CancelOrdersOnly** - devuelve `true` con cualquier modo de negociación activo (excepto `Disabled`). Se usa para operaciones de cancelación de órdenes.
 
-Esto permite permitir o prohibir selectivamente varias operaciones de trading según el modo de trading actual:
+Esto permite permitir o prohibir selectivamente varias operaciones de negociación según el modo de negociación actual:
 
 ```cs
-// Para colocar una nueva orden que aumente una posición, se requiere modo de trading completo
+// Para colocar una nueva orden que aumente una posición, se requiere modo de negociación completo
 if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.Full))
 {
 	// Podemos colocar cualquier orden
@@ -233,24 +233,24 @@ else if (IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.CancelOrdersOnly)
 }
 ```
 
-Así, este método permite implementar un mecanismo seguro de control de acceso para funciones de trading, donde las operaciones más críticas (como abrir nuevas posiciones) requieren un nivel de permisos más alto, y las menos críticas (cancelar órdenes) se realizan incluso en un modo de trading limitado.
+Así, este método permite implementar un mecanismo seguro de control de acceso para funciones de negociación, donde las operaciones más críticas (como abrir nuevas posiciones) requieren un nivel de permisos más alto, y las menos críticas (cancelar órdenes) se realizan incluso en un modo de negociación limitado.
 
-Es una buena práctica usar estos métodos antes de realizar operaciones de trading:
+Es una buena práctica usar estos métodos antes de realizar operaciones de negociación:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
 {
 	// Comprobar si la estrategia está formada y en modo online,
-	// y si el trading está permitido
+	// y si la negociación está permitida
 	if (!IsFormedAndOnlineAndAllowTrading())
 		return;
-	
-	// Lógica de trading
+
+	// Lógica de negociación
 	// ...
 }
 ```
 
-## Ejemplo de operaciones de trading
+## Ejemplo de operaciones de negociación
 
 A continuación se muestra un ejemplo que demuestra distintas formas de colocar órdenes en una estrategia y manejar su ejecución:
 
@@ -258,18 +258,18 @@ A continuación se muestra un ejemplo que demuestra distintas formas de colocar 
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
-	
+
 	// Suscribirse a velas
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		Security);
-	
+
 	// Crear una regla para procesar velas
 	Connector
 		.WhenCandlesFinished(subscription)
 		.Do(ProcessCandle)
 		.Apply(this);
-	
+
 	Connector.Subscribe(subscription);
 }
 
@@ -278,13 +278,13 @@ private void ProcessCandle(ICandleMessage candle)
 	// Comprobar si la estrategia está lista para operar
 	if (!this.IsFormedAndOnlineAndAllowTrading())
 		return;
-	
-	// Ejemplo de lógica de trading basada en el precio de cierre
+
+	// Ejemplo de lógica de negociación basada en el precio de cierre
 	if (candle.ClosePrice > _previousClose * 1.01)
 	{
 		// Opción 1: usar un método de alto nivel
 		var order = BuyLimit(candle.ClosePrice, Volume);
-		
+
 		// Crear una regla para manejar la ejecución de la orden
 		order
 			.WhenMatched(this)
@@ -302,7 +302,7 @@ private void ProcessCandle(ICandleMessage candle)
 		// Opción 2: creación y registro separados
 		var order = CreateOrder(Sides.Sell, candle.ClosePrice, Volume);
 		RegisterOrder(order);
-		
+
 		// Forma alternativa de manejo mediante el evento
 		OrderReceived += (o) => {
 			if (o == order && o.State == OrderStates.Done)
@@ -311,7 +311,7 @@ private void ProcessCandle(ICandleMessage candle)
 			}
 		};
 	}
-	
+
 	_previousClose = candle.ClosePrice;
 }
 ```

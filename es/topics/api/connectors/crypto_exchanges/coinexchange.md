@@ -5,10 +5,10 @@
 
 **CoinExchange** - proveedor de datos de mercado de criptomonedas en tiempo real.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
 
 > [!CAUTION]
-> El conector solo soporta el feed de datos de mercado, las transacciones no están soportadas.
+> El conector solo admite la fuente de datos de mercado; las transacciones no son compatibles.
 
 ## Contenido recomendado
 

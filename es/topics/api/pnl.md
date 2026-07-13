@@ -1,6 +1,6 @@
 # Gestión de pérdidas y ganancias
 
-[S#](../api.md) implementa el cálculo de pérdidas y ganancias (PnL) mediante [PnLManager](xref:StockSharp.Algo.PnL.PnLManager). El administrador procesa un flujo de mensajes (trades, datos de mercado) y calcula el beneficio realizado y no realizado.
+[S#](../api.md) implementa el cálculo de pérdidas y ganancias (PnL) mediante [PnLManager](xref:StockSharp.Algo.PnL.PnLManager). El administrador procesa un flujo de mensajes (operaciones, datos de mercado) y calcula el beneficio realizado y no realizado.
 
 ## Interfaz IPnLManager
 
@@ -24,11 +24,11 @@ PnLManager
 
 - [PnLManager](xref:StockSharp.Algo.PnL.PnLManager) — nivel superior, gestiona un diccionario de administradores de carteras.
 - [PortfolioPnLManager](xref:StockSharp.Algo.PnL.PortfolioPnLManager) — administrador PnL para una cartera específica, gestiona colas por instrumento.
-- [PnLQueue](xref:StockSharp.Algo.PnL.PnLQueue) — cola FIFO para emparejar trades en un único instrumento.
+- [PnLQueue](xref:StockSharp.Algo.PnL.PnLQueue) — cola FIFO para emparejar operaciones en un único instrumento.
 
 ### PnLQueue — Cola de cálculo
 
-[PnLQueue](xref:StockSharp.Algo.PnL.PnLQueue) es responsable de emparejar trades de apertura y cierre:
+[PnLQueue](xref:StockSharp.Algo.PnL.PnLQueue) es responsable de emparejar operaciones de apertura y cierre:
 
 - **PriceStep** — paso de precio del instrumento.
 - **StepPrice** — coste del paso de precio (para futuros).
@@ -43,15 +43,15 @@ Multiplier = (StepPrice / PriceStep) * Leverage * LotMultiplier
 
 Para acciones normales (donde `StepPrice` no está establecido), el multiplicador es igual a `1 * Leverage * LotMultiplier`.
 
-## PnLInfo — Resultado del procesamiento de trades
+## PnLInfo — Resultado del procesamiento de operaciones
 
 La clase [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) contiene el resultado de cerrar una posición:
 
-- **ServerTime** — hora del trade.
+- **ServerTime** — hora de la operación.
 - **ClosedVolume** — volumen de la posición cerrada.
-- **PnL** — beneficio realizado de este trade.
+- **PnL** — beneficio realizado de esta operación.
 
-Por ejemplo, si la posición era +2 y llegó un trade de -5 contratos, entonces `ClosedVolume = 2` (se cerraron 2 contratos de la posición).
+Por ejemplo, si la posición era +2 y llegó una operación de -5 contratos, entonces `ClosedVolume = 2` (se cerraron 2 contratos de la posición).
 
 ## Configuración de fuentes de datos
 
@@ -59,7 +59,7 @@ Por ejemplo, si la posición era +2 y llegó un trade de -5 contratos, entonces 
 
 | Propiedad | Predeterminado | Descripción |
 |----------|:-------:|-------------|
-| `UseTick` | `true` | Usar tick trades. |
+| `UseTick` | `true` | Usar operaciones tick. |
 | `UseOrderBook` | `false` | Usar libro de órdenes (mejor bid/ask). |
 | `UseLevel1` | `false` | Usar datos Level1. |
 | `UseOrderLog` | `false` | Usar registro de órdenes. |

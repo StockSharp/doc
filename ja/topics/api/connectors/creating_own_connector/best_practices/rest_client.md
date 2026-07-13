@@ -55,7 +55,7 @@ class HttpClient : BaseLogReceiver
 		return response.Data;
 	}
 
-	// 履歴キャンドルを取得するメソッド
+	// 履歴ローソク足を取得するメソッド
 	public async Task<IEnumerable<Candle>> GetCandles(string symbol, long start, long end, string granularity, CancellationToken cancellationToken)
 	{
 		var request = new RestRequest($"products/{symbol}/candles", Method.Get)

@@ -40,9 +40,9 @@ var candles = depths.ToCandles(mdMsg, Level1Fields.SpreadMiddle, candleBuilderPr
 
 Ao comprimir dados, os seguintes parâmetros podem ser especificados:
 
-- `series`: A série de candles que define o tipo e os parâmetros dos candles criados.
-- `type`: O tipo de dado para formar os candles (por exemplo, melhor compra, melhor venda ou meio do spread).
-- `candleBuilderProvider`: O provedor para o construtor de candles (parâmetro opcional).
+- `series`: A série de velas que define o tipo e os parâmetros das velas criadas.
+- `type`: O tipo de dado para formar as velas (por exemplo, melhor compra, melhor venda ou meio do spread).
+- `candleBuilderProvider`: O provedor para o construtor de velas (parâmetro opcional).
 
 ## Exemplo de Uso
 
@@ -60,7 +60,7 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 					.ToCandles(mdMsg, candleBuilderProvider: candleBuilderProvider);
 
 		case BuildTypes.OrderLog:
-			// ... (código para construir candles a partir do log de ordens)
+			// ... (código para construir velas a partir do registo de ordens)
 
 		case BuildTypes.Depths:
 			return StorageRegistry
@@ -73,14 +73,14 @@ private IEnumerable<CandleMessage> InternalGetCandles(SecurityId securityId, Dat
 }
 
 // Este método demonstra várias formas de construir velas dependendo do tipo dos dados de origem.
-// Suporta construção a partir de ticks, log de ordens, spreads e outras fontes.
+// Suporta construção a partir de ticks, registo de ordens, spreads e outras fontes.
 ```
 
 ## Recursos Adicionais
 
 ### Construção de velas a partir de diversas fontes
 
-A API permite construir candles não apenas a partir de ticks e spreads, mas também de outras fontes de dados:
+A API permite construir velas não apenas a partir de ticks e spreads, mas também de outras fontes de dados:
 
 ```cs
 // Exemplo de construção de velas a partir de várias fontes
@@ -90,7 +90,7 @@ switch (type)
 		// ... (código para ticks)
 
 	case BuildTypes.OrderLog:
-		// ... (código para log de ordens)
+		// ... (código para registo de ordens)
 
 	case BuildTypes.Depths:
 		// ... (código para spreads)
@@ -106,9 +106,9 @@ switch (type)
 	// ... (outros casos)
 }
 
-// Este código mostra como construir velas a partir de diferentes fontes de dados: ticks, log de ordens, spreads, dados Level1 e até velas de períodos menores.
+// Este código mostra como construir velas a partir de diferentes fontes de dados: ticks, registo de ordens, spreads, dados Level1 e até velas de períodos menores.
 ```
 
 ## Conclusão
 
-Os métodos de compressão de dados na API fornecem ferramentas flexíveis para trabalhar com dados de mercado. Eles permitem a conversão eficiente de dados de tick e dados de spread em candles de vários tipos e intervalos de tempo, o que é particularmente útil para análise de mercado e desenvolvimento de estratégias de negociação.
+Os métodos de compressão de dados na API fornecem ferramentas flexíveis para trabalhar com dados de mercado. Eles permitem a conversão eficiente de dados de tick e dados de spread em velas de vários tipos e intervalos de tempo, o que é particularmente útil para análise de mercado e desenvolvimento de estratégias de negociação.

@@ -4,7 +4,7 @@ Na primeira execução, aparece a seguinte janela para selecionar fontes de dado
 
 ![Hydra adicionar fonte](../../images/hydra_source_add.png)
 
-Na janela, assinale as fontes necessárias. Pode utilizar filtros por região, board, tipo de dados, pagamento, em tempo real ou não. Quando a seleção estiver concluída, clique em **OK**. Em seguida, o programa irá propor a ativação dos utilitários. Para obter mais detalhes sobre o trabalho com utilitários, consulte a secção [Utilitários](tasks.md). Clique em **OK**.
+Na janela, assinale as fontes necessárias. Pode utilizar filtros por região, mercado, tipo de dados, pagamento, em tempo real ou não. Quando a seleção estiver concluída, clique em **OK**. Em seguida, o programa irá propor a ativação dos utilitários. Para obter mais detalhes sobre o trabalho com utilitários, consulte a secção [Utilitários](tasks.md). Clique em **OK**.
 
 ![Captura de tela de Primeiro arranque 1](../../images/hydra_first_started_utilities00.png)
 
@@ -64,7 +64,7 @@ Por exemplo, transfira o instrumento AAPL@NASDAQ a partir de uma fonte de dados 
      Vamos definir o período para o qual é necessário transferir os dados de mercado.![Hydra Início rápido 02 01](../../images/hydra_quick_start_02_01.png)
    - Especificar a partir de que dados serão construídos os dados de mercado. Se este parâmetro não for especificado, serão recebidas as velas disponíveis na fonte. Se o utilizador especificar o tipo de dados de mercado, as velas serão construídas a partir do tipo de dados de mercado especificado. Por exemplo, as velas podem ser construídas a partir do preço da última transação, do spread do livro de ordens (normalmente para o mercado Forex), da volatilidade ou do melhor preço.
 
-     Esta função é conveniente se a fonte não permitir receber dados para construir velas. Neste caso, as velas são construídas com base nos valores médios dos dados.![Hydra tipo de construção de candle](../../images/hydra_candle_build_type.png)
+     Esta função é conveniente se a fonte não permitir receber dados para construir velas. Neste caso, as velas são construídas com base nos valores médios dos dados.![Hydra tipo de construção de vela](../../images/hydra_candle_build_type.png)
 
      O utilizador também tem a possibilidade de selecionar um [tipo personalizado](prepare_for_download/custom_candles.md) de velas para personalizar os dados recebidos.
    - Depois de selecionar um instrumento, o tipo de dados de mercado e definir o período, deve clicar no botão **Iniciar**. Depois disso, a transferência dos dados de mercado será iniciada.

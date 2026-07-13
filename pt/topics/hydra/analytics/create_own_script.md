@@ -30,7 +30,7 @@ namespace StockSharp.Algo.Analytics
 				var candlesSeries = new Dictionary<DateTimeOffset, decimal>();
 				var volsSeries = new Dictionary<DateTimeOffset, decimal>();
 
-				// obter o armazenamento de candles
+				// obter o armazenamento de velas
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				foreach (var candle in candleStorage.Load(from, to))
@@ -74,7 +74,7 @@ O método [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Logging
 - `storage`: Uma instância de [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) que permite aceder ao armazenamento de dados de mercado.
 - `drive`: Representa [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) para especificar a localização do armazenamento de dados de mercado.
 - `format`: Um valor [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) que indica o formato dos dados de mercado.
-- `dataType`: [DataType](xref:StockSharp.Messages.DataType) que descreve o tipo de dados de mercado solicitado e os seus parâmetros (por exemplo, o período temporal da candle).
+- `dataType`: [DataType](xref:StockSharp.Messages.DataType) que descreve o tipo de dados de mercado solicitado e os seus parâmetros (por exemplo, o período temporal da vela).
 - `cancellationToken`: [CancellationToken](xref:System.Threading.CancellationToken) que monitoriza pedidos de cancelamento.
 
 #### Devolve:
@@ -90,14 +90,14 @@ A classe `ChartDrawScript` processa especificamente dados de mercado para cada i
 1. Verificar a presença de instrumentos a processar. Se nenhum estiver disponível, registar um aviso e concluir a tarefa.
 2. Criar um gráfico de linhas e um histograma usando o método [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart``2).
 3. Iterar por cada instrumento e verificar pedidos de cancelamento.
-4. Obter o armazenamento de candles usando o método `storage.GetCandleMessageStorage`.
-5. Carregar dados de candles dentro do intervalo de datas especificado.
+4. Obter o armazenamento de velas usando o método `storage.GetCandleMessageStorage`.
+5. Carregar dados de velas dentro do intervalo de datas especificado.
 6. Preencher dicionários com dados de séries temporais de abertura, preços de fecho correspondentes e volumes totais.
 7. Desenhar os dados das séries nos gráficos usando os métodos `lineChart.Append` e `histogramChart.Append`.
 
 O script utiliza estilos, como [DrawStyles.DashedLine](xref:Ecng.Drawing.DrawStyles.DashedLine) para o gráfico de linhas e [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram) para o histograma, para distinguir visualmente diferentes apresentações de dados.
 
-Ao implementar [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript), a classe `ChartDrawScript` permite integrar uma abordagem para executar scripts analíticos personalizáveis, tornando-a uma ferramenta versátil para traders e analistas que utilizam a plataforma StockSharp.
+Ao implementar [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript), a classe `ChartDrawScript` permite integrar uma abordagem para executar scripts analíticos personalizáveis, tornando-a uma ferramenta versátil para operadores e analistas que utilizam a plataforma StockSharp.
 
 ## Resultado da Execução
 

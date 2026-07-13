@@ -69,7 +69,7 @@ var connector = new HistoryEmulationConnector(
 				// De forma predeterminada está desactivado; el precio debe atravesar el precio de la orden limitada
 				// (modo de prueba más estricto)
 				MatchOnTouch = false,
-				
+
 				// comisión para operaciones
 				CommissionRules = new ICommissionRule[]
 				{
@@ -106,15 +106,15 @@ connector.SecurityReceived += (subscr, s) =>
 {
 	if (s != security)
 		return;
-		
+
 	// rellenar valores Level1
 	connector.EmulationAdapter.SendInMessage(level1Info);
-	
+
 	// suscribirse a los datos necesarios según la configuración de pruebas
 	if (emulationInfo.UseMarketDepth)
 	{
 		connector.Subscribe(new(DataType.MarketDepth, security));
-		
+
 		// si necesitamos generar libros de órdenes
 		if (generateDepths || emulationInfo.UseCandle != null)
 		{
@@ -133,25 +133,25 @@ connector.SecurityReceived += (subscr, s) =>
 			});
 		}
 	}
-	
+
 	if (emulationInfo.UseOrderLog)
 	{
 		connector.Subscribe(new(DataType.OrderLog, security));
 	}
-	
+
 	if (emulationInfo.UseTicks)
 	{
 		connector.Subscribe(new(DataType.Ticks, security));
 	}
-	
+
 	if (emulationInfo.UseLevel1)
 	{
 		connector.Subscribe(new(DataType.Level1, security));
 	}
-	
+
 	// iniciar la estrategia antes de que comience la emulación
 	strategy.Start();
-	
+
 	// iniciar la carga de datos históricos
 	connector.Start();
 };
@@ -160,7 +160,7 @@ connector.SecurityReceived += (subscr, s) =>
 ### 5. Crear y configurar la estrategia
 
 ```csharp
-// crear una estrategia de trading basada en medias móviles con períodos 80 y 10
+// crear una estrategia de negociación basada en medias móviles con períodos 80 y 10
 var strategy = new SmaStrategy
 {
 	LongSma = 80,
@@ -178,7 +178,7 @@ var strategy = new SmaStrategy
 if (emulationInfo.UseCandle != null)
 {
 	strategy.CandleType = emulationInfo.UseCandle;
-	
+
 	if (strategy.CandleType != TimeSpan.FromMinutes(1).TimeFrame())
 	{
 		strategy.BuildFrom = TimeSpan.FromMinutes(1).TimeFrame();
@@ -294,7 +294,7 @@ _settings = new[]
 		TicksAndDepthsEquity,
 		TicksAndDepthsPosition
 	),
-	
+
 	// otras combinaciones de tipos de datos
 };
 ```
@@ -351,7 +351,7 @@ protected override void OnStarted2(DateTime time)
 }
 ```
 
-El procesamiento de velas y las decisiones de trading ahora están separados en un método dedicado:
+El procesamiento de velas y las decisiones de negociación ahora están separados en un método dedicado:
 
 ```csharp
 private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortValue)

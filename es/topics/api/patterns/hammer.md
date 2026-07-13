@@ -21,7 +21,7 @@ Martillo se considera una señal fuerte de una posible reversión de una tendenc
 - Cuanto más larga sea la sombra inferior, más fuerte será la posible señal de reversión.
 - El color del cuerpo de la vela es menos importante, aunque un martillo blanco/verde se considera más alcista que uno negro/rojo.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Martillo proporciona oportunidades para entrar en una posición larga:
 
@@ -29,7 +29,7 @@ Martillo proporciona oportunidades para entrar en una posición larga:
 - Colocar un nivel de stop-loss por debajo del mínimo del martillo.
 - Establecer un objetivo de beneficio basado en niveles de resistencia previos o relación riesgo/beneficio.
 - Combinar con otros indicadores técnicos, como RSI o MACD, para confirmar la reversión de tendencia.
-- Un mayor volumen de trading durante la formación del martillo aumenta la fiabilidad de la señal.
+- Un mayor volumen de negociación durante la formación del martillo aumenta la fiabilidad de la señal.
 
 ## Véase también
 

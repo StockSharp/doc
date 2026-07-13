@@ -26,7 +26,7 @@
   }
   ```
 
-  Ahora, cuando se produzca el evento (la orden se registre en el exchange), se llamará a la acción especificada mediante el método [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)**.
+  Ahora, cuando se produzca el evento (la orden se registre en la bolsa), se llamará a la acción especificada mediante el método [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)**.
 
   Al final de la formación de la regla, se llama al método [MarketRuleHelper.Apply](xref:StockSharp.Algo.MarketRuleHelper.Apply(StockSharp.Algo.IMarketRule))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule **)**. Hasta que se llame a este método para la regla, esta permanece inactiva (no se llamará al controlador de [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)**).
   

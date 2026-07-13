@@ -13,19 +13,19 @@ Vela plana (neutral) es un patrón de velas que se forma cuando los precios de a
 
 ### Interpretación
 
-Una Flat Candle por sí misma no proporciona una señal clara sobre la dirección del mercado, pero puede ser útil en el contexto de velas anteriores y de la tendencia general:
+Una vela plana por sí misma no proporciona una señal clara sobre la dirección del mercado, pero puede ser útil en el contexto de velas anteriores y de la tendencia general:
 
-- Después de un fuerte movimiento alcista o bajista, una Flat Candle puede señalar debilitamiento del impulso y posible reversión.
-- Durante un movimiento lateral, una Flat Candle confirma la continuación de la consolidación.
+- Después de un fuerte movimiento alcista o bajista, una vela plana puede señalar debilitamiento del impulso y posible reversión.
+- Durante un movimiento lateral, una vela plana confirma la continuación de la consolidación.
 - El tamaño de las sombras puede proporcionar información adicional sobre el sentimiento del mercado: sombras largas indican intentos rechazados de movimiento de precio, mientras que sombras cortas indican baja volatilidad.
 
-### Estrategias de trading
+### Estrategias de negociación
 
-Las Flat Candles rara vez se usan como señales independientes de entrada en posición, pero pueden ayudar a tomar decisiones de trading:
+Las velas planas rara vez se usan como señales independientes de entrada en posición, pero pueden ayudar a tomar decisiones de negociación:
 
 - Buscar confirmación de velas posteriores u otros indicadores técnicos antes de realizar una operación.
-- Usar Flat Candles para identificar niveles de soporte o resistencia en combinación con otros métodos de análisis.
-- Aumentar el tamaño del stop-loss o tomar beneficios si aparecen Flat Candles en una tendencia, lo que puede indicar debilitamiento del movimiento.
+- Usar velas planas para identificar niveles de soporte o resistencia en combinación con otros métodos de análisis.
+- Aumentar el tamaño del stop-loss o tomar beneficios si aparecen velas planas en una tendencia, lo que puede indicar debilitamiento del movimiento.
 
 ## Véase también
 

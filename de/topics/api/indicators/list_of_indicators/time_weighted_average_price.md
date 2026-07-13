@@ -27,7 +27,7 @@ wobei gilt:
 - P1, P2, ..., Pn - Preise zu aufeinanderfolgenden Zeitpunkten
 - n - Anzahl der Zeitintervalle
 
-In der praktischen Umsetzung werden am häufigsten typische Preise für jede Periode (Candle) verwendet:
+In der praktischen Umsetzung werden am häufigsten typische Preise für jede Periode (Kerze) verwendet:
 
 ```
 Typischer Preis = (High + Low + Close) / 3

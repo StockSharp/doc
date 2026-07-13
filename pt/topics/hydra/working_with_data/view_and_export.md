@@ -2,7 +2,7 @@
 
 Os dados recebidos pelo [Hydra](../../hydra.md) podem ser visualizados em painéis especiais.
 
-Para isso, no separador **Comum**, clique num dos seguintes botões: [Ticks](view_and_export/ticks.md), [Livros de ordens](view_and_export/order_books.md), [Geração de velas](candles_generation.md), [Log de ordens](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [Notícias](view_and_export/news.md), [Transações](view_and_export/transactions.md), [Painel de opções](view_and_export/option_desk.md), [Indicadores](view_and_export/indicators.md), [Posições](view_and_export/positions.md).
+Para isso, no separador **Comum**, clique num dos seguintes botões: [Ticks](view_and_export/ticks.md), [Livros de ordens](view_and_export/order_books.md), [Geração de velas](candles_generation.md), [Registo de ordens](view_and_export/order_log.md), [Level 1](view_and_export/level_1_.md), [Notícias](view_and_export/news.md), [Transações](view_and_export/transactions.md), [Painel de opções](view_and_export/option_desk.md), [Indicadores](view_and_export/indicators.md), [Posições](view_and_export/positions.md).
 
 Ou clique com o botão direito do rato no tipo de dados necessário, como mostrado na figura, ou faça duplo clique no tipo de dados necessário.
 
@@ -19,7 +19,7 @@ Cada painel contém uma interface geral das definições, como se segue:
   é necessário aumentar o limite de dados descarregados.
 - Se os dados tiverem sido recebidos de origens cujo fuso horário não corresponda ao fuso horário atual, pode ajustar o fuso horário. Depois da construção, os dados serão mostrados no fuso selecionado pelo utilizador. ![Captura de tela de Visualizar e exportar 3](../../../images/hydra_tz.png)
 - Como várias origens não oferecem a possibilidade de descarregar alguns dados, o programa disponibiliza o campo [Construir a partir de](any_market_data_types.md). Usando este campo, o utilizador pode construir dados de mercado a partir de outro tipo de dados de mercado. A mesma função pode ser usada para construir dados de mercado sem descarregamento adicional, usando como base dados já existentes.
-- Depois de selecionar os parâmetros acima, deve clicar no botão ![Hydra botão Procurar](../../../images/hydra_find.png).![Hydra candles por período](../../../images/hydra_candles_tf.png)
+- Depois de selecionar os parâmetros acima, deve clicar no botão ![Hydra botão Procurar](../../../images/hydra_find.png).![Hydra velas por período](../../../images/hydra_candles_tf.png)
 
 Usando o menu de contexto, pode configurar vários parâmetros da tabela de valores de dados de mercado: agrupamento de linhas, colunas disponíveis, formato de apresentação, etc.
 

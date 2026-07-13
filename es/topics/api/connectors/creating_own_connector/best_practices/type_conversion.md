@@ -1,12 +1,12 @@
 # Conversión de Tipos
 
-El componente de conversión de tipos desempeña un papel importante para garantizar la compatibilidad entre los tipos de datos utilizados en StockSharp y los formatos específicos de un exchange en particular.
+El componente de conversión de tipos desempeña un papel importante para garantizar la compatibilidad entre los tipos de datos utilizados en StockSharp y los formatos específicos de una bolsa en particular.
 
 ## Funciones Principales
 
-1. Conversión de los tipos de StockSharp (por ejemplo, [Sides](xref:StockSharp.Messages.Sides), [OrderTypes](xref:StockSharp.Messages.OrderTypes), [TimeInForce](xref:StockSharp.Messages.TimeInForce)) a las representaciones de cadena utilizadas por el exchange.
-2. Conversión inversa de los datos recibidos del exchange a los tipos de StockSharp.
-3. Conversión de identificadores de instrumentos entre los formatos de StockSharp y del exchange.
+1. Conversión de los tipos de StockSharp (por ejemplo, [Sides](xref:StockSharp.Messages.Sides), [OrderTypes](xref:StockSharp.Messages.OrderTypes), [TimeInForce](xref:StockSharp.Messages.TimeInForce)) a las representaciones de cadena utilizadas por la bolsa.
+2. Conversión inversa de los datos recibidos de la bolsa a los tipos de StockSharp.
+3. Conversión de identificadores de instrumentos entre los formatos de StockSharp y de la bolsa.
 4. Conversión de formatos de hora y marcos temporales.
 
 ## Ejemplo de Implementación
@@ -16,7 +16,7 @@ A continuación se muestra un ejemplo de una clase con métodos de extensión pa
 ```cs
 static class Extensions
 {
-	// Convertir el lado de la orden de StockSharp a la representación de cadena del exchange
+	// Convertir el lado de la orden de StockSharp a la representación de cadena de la bolsa
 	public static string ToNative(this Sides side)
 	{
 		return side switch
@@ -27,7 +27,7 @@ static class Extensions
 		};
 	}
 
-	// Convertir la representación de cadena del lado de la orden del exchange al tipo de StockSharp
+	// Convertir la representación de cadena del lado de la orden de la bolsa al tipo de StockSharp
 	public static Sides ToSide(this string side)
 		=> side?.ToLowerInvariant() switch
 		{
@@ -36,7 +36,7 @@ static class Extensions
 			_ => throw new ArgumentOutOfRangeException(nameof(side), side, LocalizedStrings.InvalidValue),
 		};
 
-	// Convertir el tipo de orden de StockSharp a la representación de cadena del exchange
+	// Convertir el tipo de orden de StockSharp a la representación de cadena de la bolsa
 	public static string ToNative(this OrderTypes? type)
 	{
 		return type switch
@@ -49,7 +49,7 @@ static class Extensions
 		};
 	}
 
-	// Convertir la representación de cadena del tipo de orden del exchange al tipo de StockSharp
+	// Convertir la representación de cadena del tipo de orden de la bolsa al tipo de StockSharp
 	public static OrderTypes ToOrderType(this string type)
 		=> type?.ToLowerInvariant() switch
 		{

@@ -1,6 +1,6 @@
 # Livro de ordens esparso
 
-Um livro de ofertas esparso é uma apresentação do livro de ofertas que mostra todos os níveis de preço possíveis, incluindo aqueles que não têm ordens ativas no momento. Esta abordagem permite aos traders avaliar visualmente os "intervalos" entre ordens, ou seja, níveis de preço onde não existem ordens de compra ou venda, oferecendo uma perspetiva sobre potenciais níveis de resistência ou suporte.
+Um livro de ofertas esparso é uma apresentação do livro de ofertas que mostra todos os níveis de preço possíveis, incluindo aqueles que não têm ordens ativas no momento. Esta abordagem permite aos operadores avaliar visualmente os "intervalos" entre ordens, ou seja, níveis de preço onde não existem ordens de compra ou venda, oferecendo uma perspetiva sobre potenciais níveis de resistência ou suporte.
 
 ## Porquê Usar um Livro de Ofertas Esparso
 

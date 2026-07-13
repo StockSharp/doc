@@ -24,7 +24,7 @@ Después de conectarse, en la pestaña [Común](user_interface/common.md), puede
 
 ![Shell Inicio rápido 02](../../images/shell_quick_start_02.png)
 
-Vaya a la pestaña Tiempo real y haga clic en el botón **Añadir** ![Designer botón Añadir 00](../../images/designer_creation_tool_00.png) para añadir una estrategia para trading.
+Vaya a la pestaña Tiempo real y haga clic en el botón **Añadir** ![Designer botón Añadir 00](../../images/designer_creation_tool_00.png) para añadir una estrategia para la negociación.
 
 ![Shell Inicio rápido 03](../../images/shell_quick_start_03.png)
 

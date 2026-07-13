@@ -20,7 +20,7 @@ Un filtro mediano ordena los precios dentro de la ventana móvil y selecciona el
 ## Uso
 
 - Aplique el Mediana móvil como alternativa a las medias móviles cuando los datos de precios contengan ruido significativo.
-- Crossovers entre el precio y la mediana pueden tratarse como señales de cambio de tendencia.
+- Los cruces entre el precio y la mediana pueden tratarse como señales de cambio de tendencia.
 - Combine la mediana con otros filtros para extraer tendencias manteniendo importantes saltos de precios.
 
 ![Gráfico del indicador Mediana móvil](../../../../images/indicator_median.png)

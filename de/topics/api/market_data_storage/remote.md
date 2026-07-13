@@ -29,7 +29,7 @@ Vor dem Laden von Marktdaten müssen Sie Informationen über verfügbare Instrum
 var exchangeInfoProvider = new InMemoryExchangeInfoProvider();
 remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Securities,
 	s => securityStorage.Save(s.ToSecurity(exchangeInfoProvider), false), () => false,
-	(c, t) => Console.WriteLine($"Downloaded [{c}]/[{t}]"));
+	(c, t) => Console.WriteLine($"Heruntergeladen [{c}]/[{t}]"));
 
 var securities = securityStorage.LookupAll();
 

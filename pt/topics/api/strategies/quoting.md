@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Um algoritmo de cotação é um mecanismo que permite colocar e atualizar automaticamente ordens no mercado com o objetivo de obter o melhor preço de execução. Em vez de colocar ordens de mercado agressivas, a cotação utiliza ordens limitadas, o que ajuda a minimizar o slippage e a reduzir os custos de negociação.
+Um algoritmo de cotação é um mecanismo que permite colocar e atualizar automaticamente ordens no mercado com o objetivo de obter o melhor preço de execução. Em vez de colocar ordens de mercado agressivas, a cotação utiliza ordens limitadas, o que ajuda a minimizar o deslizamento e a reduzir os custos de negociação.
 
 ## Componentes Principais
 
@@ -118,7 +118,7 @@ protected override void OnStopped()
 
 ## Vantagens da Utilização
 
-1. **Slippage Reduzido** — a cotação ajuda a obter um melhor preço de execução em comparação com ordens de mercado.
+1. **Deslizamento Reduzido** — a cotação ajuda a obter um melhor preço de execução em comparação com ordens de mercado.
 
 2. **Flexibilidade de Configuração** — vários comportamentos de cotação para diferentes situações de mercado.
 

@@ -4,12 +4,12 @@ Um guia passo a passo para criar um conector de bolsa para o StockSharp usando f
 
 ## Preparação
 
-### 1. Estude a API da Bolsa
+### 1. Estude a API da bolsa
 
 Antes de começar, prepare:
 - Documentação da API REST/WebSocket da bolsa
 - Chaves de API de teste (sandbox/testnet)
-- Lista de tipos de dados suportados (candles, livro de ofertas, ticks, negociações)
+- Lista de tipos de dados suportados (velas, livro de ofertas, ticks, negociações)
 - Lista de tipos de ordem suportados (limit, market, stop)
 
 ### 2. Crie um Projeto
@@ -26,7 +26,7 @@ dotnet add package StockSharp.Algo
 Crie um arquivo `CLAUDE.md`:
 
 ```markdown
-# Regras do projeto — conector de exchange
+# Regras do projeto — conector de bolsa
 
 - Plataforma: StockSharp 5.x, .NET 10
 - O conector é implementado como um MessageAdapter
@@ -46,8 +46,8 @@ Um conector no StockSharp é um `MessageAdapter` que:
 3. Envia de volta mensagens de resposta (resultados)
 
 ```
-StockSharp Core → [Message] → MessageAdapter → [HTTP/WS] → Exchange
-Exchange → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
+StockSharp Core → [Message] → MessageAdapter → [HTTP/WS] → bolsa
+bolsa → [HTTP/WS] → MessageAdapter → [Message] → StockSharp Core
 ```
 
 ## Exemplo Passo a Passo
@@ -88,7 +88,7 @@ Prompt:
 ```
 Adicione ao adaptador a subscrição de dados de mercado:
 
-1. Candles (MarketDataTypes.CandleTimeFrame):
+1. Velas (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
    - WebSocket: subscrever o canal kline_{symbol}_{interval}
    - Mapeamento de intervalos: 1m, 5m, 15m, 1h, 4h, 1d
@@ -205,7 +205,7 @@ private string SignRequest(string payload)
 - [ ] `SubscriptionFinishedMessage` é enviada
 
 ### Dados de Mercado
-- [ ] Candles: carregamento de histórico + assinatura de novos
+- [ ] Velas: carregamento de histórico + assinatura de novos
 - [ ] Livro de ofertas: profundidade correta, atualizações
 - [ ] Ticks: horário, volume e direção corretos
 

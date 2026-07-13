@@ -10,7 +10,7 @@ El indicador indicador KST (KST) es un oscilador desarrollado por Martin Pring p
 
 KST se basa en la teoría de que los ciclos de mercado de diferentes duraciones influyen colectivamente en el movimiento de precios. Al combinar ROC de diferentes períodos, KST tiene como objetivo identificar tendencias cíclicas a largo plazo y determinar posibles puntos de reversión.
 
-El indicador suele ir acompañado de una línea de señal (media móvil de KST) y sus cruces se pueden utilizar para generar señales de trading.
+El indicador suele ir acompañado de una línea de señal (media móvil de KST) y sus cruces se pueden utilizar para generar señales de negociación.
 
 ## Cálculo
 

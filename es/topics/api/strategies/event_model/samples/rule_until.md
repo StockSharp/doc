@@ -51,8 +51,8 @@ protected override void OnStarted2(DateTime time)
 - Se crea una regla que se activa cada vez que se reciben datos del libro de órdenes
 - Cuando la regla se activa:
   - El contador `i` se incrementa
-  - La información sobre los mejores precios bid y ask se agrega al log
-  - El valor actual del contador `i` se agrega al log
+  - La información sobre los mejores precios bid y ask se agrega al registro
+  - El valor actual del contador `i` se agrega al registro
 - La regla se ejecuta hasta que el valor del contador `i` alcanza o supera 10
 - Después de que se cumple la condición, la regla deja de funcionar automáticamente
 

@@ -31,7 +31,7 @@ Para configurar:
 
    ![Confirmación de activación del canal en Telegram](../../images/telegramchannelactivated.png)
 
-El canal que ha creado ya está disponible para sus estrategias y robots de trading:
+El canal que ha creado ya está disponible para sus estrategias y robots de negociación:
 
   - Al usar [Designer](../designer.md), haga clic en la lista de canales en el panel superior:
 

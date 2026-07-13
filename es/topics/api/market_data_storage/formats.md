@@ -17,7 +17,7 @@ Los archivos binarios tienen la extensión `.bin`.
 
 ### Tipos de datos admitidos
 
-El formato binario admite la serialización de todos los tipos principales de datos de mercado: velas, ticks (trades), libros de órdenes (Level2), datos Level1, órdenes y trades propios. Cada tipo tiene un serializador especializado optimizado para la estructura de los datos concretos.
+El formato binario admite la serialización de todos los tipos principales de datos de mercado: velas, ticks (operaciones), libros de órdenes (Level2), datos Level1, órdenes y operaciones propias. Cada tipo tiene un serializador especializado optimizado para la estructura de los datos concretos.
 
 ## Formato CSV
 

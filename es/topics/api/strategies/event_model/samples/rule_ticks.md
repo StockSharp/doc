@@ -52,7 +52,7 @@ protected override void OnStarted2(DateTime time)
 - Cuando se recibe el primer tick, se crea una regla combinada
 - Se basa en el precio del tick recibido: crea una regla que se activa cuando el precio cambia en +/- 2
 - La regla se activa cuando el precio de la última operación supera el actual + 2 o queda por debajo del actual - 2
-- Cuando la regla se activa, se agrega al log información sobre el tick
+- Cuando la regla se activa, se agrega al registro información sobre el tick
 - La regla externa se activa solo una vez (`Once()`)
 
 ## Características

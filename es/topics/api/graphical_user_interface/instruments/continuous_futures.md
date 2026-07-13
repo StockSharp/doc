@@ -6,7 +6,7 @@
 
 Este componente incluye: 
 
-- Campo de texto especial [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox), que genera un instrumento *continuo* con la entrada de Id - \[Code\]@\[Board\]. 
+- Campo de texto especial [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox), que genera un instrumento *continuo* con la entrada de Id - \[Código\]@\[Mercado\].
 - El componente [SecurityJumpsEditor](xref:StockSharp.Xaml.SecurityJumpsEditor) es un DataGrid especial para trabajar con instrumentos que forman parte de un instrumento *continuo*. Los instrumentos se envuelven en la clase [SecurityJump](xref:StockSharp.Xaml.SecurityJump), que tiene dos propiedades: [SecurityJump.Security](xref:StockSharp.Xaml.SecurityJump.Security) y [SecurityJump.Date](xref:StockSharp.Xaml.SecurityJump.Date) (roll forward). Los instrumentos agregados se almacenan en la lista [SecurityJumpsEditor.Jumps](xref:StockSharp.Xaml.SecurityJumpsEditor.Jumps). El componente tiene la función [SecurityJumpsEditor.Validate](xref:StockSharp.Xaml.SecurityJumpsEditor.Validate) para comprobar la corrección de los instrumentos del componente. 
 - Botones para agregar\/eliminar instrumentos. 
 - El botón **Auto** permite crear automáticamente un instrumento *continuo*. 

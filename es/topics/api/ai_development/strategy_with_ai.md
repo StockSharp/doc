@@ -1,6 +1,6 @@
 # Escribir una estrategia con IA
 
-Una guía paso a paso para crear una estrategia de trading de StockSharp usando herramientas de IA.
+Una guía paso a paso para crear una estrategia de negociación de StockSharp usando herramientas de IA.
 
 ## Preparación
 
@@ -46,7 +46,7 @@ Cree un archivo `CLAUDE.md` (o `.cursorrules`) en la raíz del proyecto:
 Ejemplo de prompt:
 
 ```
-Cree una estrategia de trading con StockSharp que:
+Cree una estrategia de negociación con StockSharp que:
 - herede de Strategy
 - use dos medias móviles simples (SMA): rápida (periodo 10) y lenta (periodo 30)
 - compre cuando la SMA rápida cruza por encima de la SMA lenta

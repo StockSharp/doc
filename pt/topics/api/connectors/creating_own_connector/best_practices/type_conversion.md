@@ -1,12 +1,12 @@
 # Conversão de Tipos
 
-O componente de conversão de tipos desempenha um papel importante para garantir a compatibilidade entre os tipos de dados usados no StockSharp e os formatos específicos de uma determinada exchange.
+O componente de conversão de tipos desempenha um papel importante para garantir a compatibilidade entre os tipos de dados usados no StockSharp e os formatos específicos de uma determinada bolsa.
 
 ## Funções Principais
 
-1. Conversão dos tipos do StockSharp (por exemplo, [Sides](xref:StockSharp.Messages.Sides), [OrderTypes](xref:StockSharp.Messages.OrderTypes), [TimeInForce](xref:StockSharp.Messages.TimeInForce)) para representações de string usadas pela exchange.
-2. Conversão reversa dos dados recebidos da exchange para os tipos do StockSharp.
-3. Conversão de identificadores de instrumentos entre os formatos do StockSharp e da exchange.
+1. Conversão dos tipos do StockSharp (por exemplo, [Sides](xref:StockSharp.Messages.Sides), [OrderTypes](xref:StockSharp.Messages.OrderTypes), [TimeInForce](xref:StockSharp.Messages.TimeInForce)) para representações de string usadas pela bolsa.
+2. Conversão reversa dos dados recebidos da bolsa para os tipos do StockSharp.
+3. Conversão de identificadores de instrumentos entre os formatos do StockSharp e da bolsa.
 4. Conversão de formatos de tempo e períodos.
 
 ## Exemplo de Implementação

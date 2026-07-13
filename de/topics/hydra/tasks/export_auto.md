@@ -62,7 +62,7 @@ Betrachten wir ein Beispiel für den automatischen Export:
 
 1. Wählen Sie ein Instrument aus.
 2. Richten Sie die Marktdaten ein, die exportiert werden müssen.![Hydra Aufgaben Export 00](../../../images/hydra_tasks_export_00.png)
-3. Legen Sie den Exportzeitraum fest. Wenn der Download von Marktdaten in Echtzeit konfiguriert ist, können Sie das Enddatum des Zeitraums weglassen. In diesem Fall werden die Daten gemäß dem Arbeitsintervall (Datenaktualisierung) in Echtzeit exportiert. ![Hydra Aufgaben Export 01](../../../images/hydra_tasks_export_01.png)
+3. Legen Sie den Exportzeitraum fest. Wenn das Herunterladen von Marktdaten in Echtzeit konfiguriert ist, können Sie das Enddatum des Zeitraums weglassen. In diesem Fall werden die Daten gemäß dem Arbeitsintervall (Datenaktualisierung) in Echtzeit exportiert. ![Hydra Aufgaben Export 01](../../../images/hydra_tasks_export_01.png)
 4. Richten Sie Verzeichnisse, Ausführungsintervall, Datentyp und Datenformat ein.
 5. Starten Sie den Export.![Hydra Aufgaben Export 02](../../../images/hydra_tasks_export_02.png)
 

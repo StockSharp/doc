@@ -22,11 +22,11 @@ As ordens de venda serão registadas pela combinação de teclas **Ctrl+botão d
 
 ![Terminal Painel de gráficos 01](../../../../images/terminal_panel_graphics_01.png)
 
-Nas definições do elemento gráfico, pode definir o estilo de gráfico necessário: velas japonesas, barras, gráfico box, perfil de clusters, etc.
+Nas definições do elemento gráfico, pode definir o estilo de gráfico necessário: velas japonesas, barras, gráfico Box, perfil de clusters, etc.
 
 ![Designer elemento gráfico 04](../../../../images/designer_schedule_04.png)
 
-Para um gráfico box, as velas também podem ser agrupadas; a ordem de agrupamento é definida nos campos: multiplicador do 2.º período e multiplicador do 3.º período.
+Para um gráfico Box, as velas também podem ser agrupadas; a ordem de agrupamento é definida nos campos: multiplicador do 2.º período e multiplicador do 3.º período.
 
 ![Designer elemento gráfico 05](../../../../images/designer_schedule_05.png)
 

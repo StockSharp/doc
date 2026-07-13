@@ -1,14 +1,14 @@
-# Log de órdenes
+# Registro de órdenes
 
-![Captura de Log de órdenes](../../../../images/gui_orderlog.png)
+![Captura de Registro de órdenes](../../../../images/gui_orderlog.png)
 
-[OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - componente gráfico para mostrar el log de órdenes ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)).
+[OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - componente gráfico para mostrar el registro de órdenes ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)).
 
 **Propiedades y métodos principales**
 
-- [OrderLogGrid.LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) - lista de elementos del log de órdenes.
-- [OrderLogGrid.SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) - elemento seleccionado del log de órdenes.
-- [OrderLogGrid.SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) - elementos seleccionados del log de órdenes.
+- [OrderLogGrid.LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) - lista de elementos del registro de órdenes.
+- [OrderLogGrid.SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) - elemento seleccionado del registro de órdenes.
+- [OrderLogGrid.SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) - elementos seleccionados del registro de órdenes.
 
 A continuación se muestran fragmentos de código que demuestran su uso:
 
@@ -37,20 +37,20 @@ public class OrderLogWindow
 		_connector = connector;
 		_security = security;
 		
-		// Suscribirse al evento de recepción de elementos del log de órdenes
+		// Suscribirse al evento de recepción de elementos del registro de órdenes
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 		
-		// Crear una suscripción al log de órdenes
+		// Crear una suscripción al registro de órdenes
 		_orderLogSubscription = new Subscription(DataType.OrderLog, security);
 		
 		// Iniciar suscripción
 		_connector.Subscribe(_orderLogSubscription);
 	}
 	
-	// Manejador del evento de recepción de elementos del log de órdenes
+	// Manejador del evento de recepción de elementos del registro de órdenes
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
-		// Comprobar si el elemento de log pertenece a nuestra suscripción
+		// Comprobar si el elemento del registro pertenece a nuestra suscripción
 		if (subscription != _orderLogSubscription)
 			return;
 			
@@ -71,13 +71,13 @@ public class OrderLogWindow
 }
 ```
 
-### Filtrado del log de órdenes
+### Filtrado del registro de órdenes
 
 ```cs
-// Crear una suscripción al log de órdenes con filtrado
+// Crear una suscripción al registro de órdenes con filtrado
 public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 {
-	// Crear una suscripción al log de órdenes
+	// Crear una suscripción al registro de órdenes
 	var orderLogSubscription = new Subscription(DataType.OrderLog, security)
 	{
 		MarketData =
@@ -88,14 +88,14 @@ public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 		}
 	};
 	
-	// Suscribirse al evento de recepción de elementos del log de órdenes
+	// Suscribirse al evento de recepción de elementos del registro de órdenes
 	_connector.OrderLogItemReceived += OnFilteredOrderLogItemReceived;
 	
 	// Iniciar suscripción
 	_connector.Subscribe(orderLogSubscription);
 }
 
-// Manejador del evento de recepción de elementos del log de órdenes con filtrado
+// Manejador del evento de recepción de elementos del registro de órdenes con filtrado
 private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 {
 	// Comprobar tipo de suscripción
@@ -118,10 +118,10 @@ private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogI
 }
 ```
 
-### Análisis de la dinámica del log de órdenes
+### Análisis de la dinámica del registro de órdenes
 
 ```cs
-// Clase para analizar la dinámica del log de órdenes
+// Clase para analizar la dinámica del registro de órdenes
 public class OrderLogAnalyzer
 {
 	private readonly Connector _connector;
@@ -140,23 +140,23 @@ public class OrderLogAnalyzer
 		_security = security;
 		_orderLogGrid = orderLogGrid;
 		
-		// Suscribirse al evento de recepción de elementos del log de órdenes
+		// Suscribirse al evento de recepción de elementos del registro de órdenes
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 		
-		// Crear una suscripción al log de órdenes
+		// Crear una suscripción al registro de órdenes
 		var subscription = new Subscription(DataType.OrderLog, security);
 		
 		// Iniciar suscripción
 		_connector.Subscribe(subscription);
 	}
 	
-	// Manejador del evento de recepción de elementos del log de órdenes
+	// Manejador del evento de recepción de elementos del registro de órdenes
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
 		if (item.SecurityId != _security.ToSecurityId())
 			return;
 			
-		// Analizar el elemento del log de órdenes
+		// Analizar el elemento del registro de órdenes
 		if (item.Side == Sides.Buy)
 		{
 			_buyCount++;
@@ -197,4 +197,3 @@ public class OrderLogAnalyzer
 	}
 }
 ```
-

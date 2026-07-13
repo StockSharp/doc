@@ -1,10 +1,10 @@
-# Benutzerdefinierter Candle-Typ
+# Benutzerdefinierter Kerzentyp
 
-[S#](../../api.md) ermöglicht die Erweiterung der Candle-Erstellungsfunktionen durch die Möglichkeit, mit benutzerdefinierten Candle-Typen zu arbeiten. Dies ist nützlich in Fällen, in denen Sie mit Candles arbeiten müssen, die derzeit nicht von [S#](../../api.md) unterstützt werden. Nachfolgend wird der Prozess der Erstellung eines eigenen Candle-Typs am Beispiel von Delta-Candles beschrieben (Candles, die auf der Grundlage der Differenz zwischen Kauf- und Verkaufsvolumen gebildet werden).
+[S#](../../api.md) ermöglicht die Erweiterung der Kerzenerstellungsfunktionen durch die Möglichkeit, mit benutzerdefinierten Kerzentypen zu arbeiten. Dies ist nützlich in Fällen, in denen Sie mit Kerzen arbeiten müssen, die derzeit nicht von [S#](../../api.md) unterstützt werden. Nachfolgend wird der Prozess der Erstellung eines eigenen Kerzentyps am Beispiel von Delta-Kerzen beschrieben (Kerzen, die auf der Grundlage der Differenz zwischen Kauf- und Verkaufsvolumen gebildet werden).
 
-## Implementierung von Delta-Candles
+## Implementierung von Delta-Kerzen
 
-1. Zunächst müssen Sie Ihren eigenen Candle-Message-Typ erstellen. Der Typ muss von der Klasse [CandleMessage](xref:StockSharp.Messages.CandleMessage) erben:
+1. Zunächst müssen Sie Ihren eigenen Kerzen-Message-Typ erstellen. Der Typ muss von der Klasse [CandleMessage](xref:StockSharp.Messages.CandleMessage) erben:
 
    ```cs
    /// <summary>
@@ -107,7 +107,7 @@
    }
    ```
 
-3. Als Nächstes müssen Sie einen Candle-Builder für den neuen Typ erstellen. Erstellen Sie dazu eine Implementierung von [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1):
+3. Als Nächstes müssen Sie einen Kerzen-Builder für den neuen Typ erstellen. Erstellen Sie dazu eine Implementierung von [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1):
 
    ```cs
    /// <summary>
@@ -161,7 +161,7 @@
    }
    ```
 
-4. Dann müssen Sie den Candle-Builder in [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider) registrieren:
+4. Dann müssen Sie den Kerzen-Builder in [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider) registrieren:
 
    ```cs
    private Connector _connector;
@@ -173,7 +173,7 @@
    _connector.Adapter.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
    ```
 
-5. Erstellen Sie ein Abonnement für Candles vom Typ `DeltaCandleMessage` und fordern Sie Daten dafür an:
+5. Erstellen Sie ein Abonnement für Kerzen vom Typ `DeltaCandleMessage` und fordern Sie Daten dafür an:
 
    ```cs
    // Delta-Schwellenwert
@@ -217,9 +217,9 @@
    _connector.Subscribe(subscription);
    ```
 
-## Verwendung von Delta-Candles in Handelsstrategien
+## Verwendung von Delta-Kerzen in Handelsstrategien
 
-Beispiel einer einfachen Strategie mit Delta-Candles:
+Beispiel einer einfachen Strategie mit Delta-Kerzen:
 
 ```cs
 public class DeltaCandleStrategy : Strategy
@@ -357,16 +357,16 @@ public class DeltaCandleStrategy : Strategy
 }
 ```
 
-## Wichtige Punkte bei der Erstellung benutzerdefinierter Candle-Typen
+## Wichtige Punkte bei der Erstellung benutzerdefinierter Kerzentypen
 
 1. **Eindeutigkeit von MessageTypes** — stellen Sie sicher, dass der von Ihnen gewählte `MessageTypes`-Bezeichner nicht mit vorhandenen Typen in StockSharp in Konflikt steht. Es wird empfohlen, für benutzerdefinierte Typen Werte größer als 10000 zu verwenden.
 
-2. **Registrierung des Candle-Typs** — die Registrierung über `Extensions.RegisterCandleType` ist für die korrekte Integration mit den grafischen Steuerelementen und dem Datenspeicher von StockSharp erforderlich. Ohne Registrierung funktioniert der Candle-Typ nur im Code, ist aber nicht in der Benutzeroberfläche verfügbar.
+2. **Registrierung des Kerzentyps** — die Registrierung über `Extensions.RegisterCandleType` ist für die korrekte Integration mit den grafischen Steuerelementen und dem Datenspeicher von StockSharp erforderlich. Ohne Registrierung funktioniert der Kerzentyp nur im Code, ist aber nicht in der Benutzeroberfläche verfügbar.
 
-3. **Candle-Parameter** — implementieren Sie die Eigenschaft `ArgType`, die den Typ des Candle-Arguments zurückgibt. Dies wird für die korrekte Anzeige von Parametern in der grafischen Benutzeroberfläche verwendet.
+3. **Kerzenparameter** — implementieren Sie die Eigenschaft `ArgType`, die den Typ des Kerzenarguments zurückgibt. Dies wird für die korrekte Anzeige von Parametern in der grafischen Benutzeroberfläche verwendet.
 
-4. **Dateisystem** — der Parameter `fileName` in der Methode `RegisterCandleType` wird verwendet, um Candles im Dateisystem zu speichern, wenn Sie den StockSharp-Datenspeicher verwenden.
+4. **Dateisystem** — der Parameter `fileName` in der Methode `RegisterCandleType` wird verwendet, um Kerzen im Dateisystem zu speichern, wenn Sie den StockSharp-Datenspeicher verwenden.
 
 5. **Parametervalidierung** — die Methode zur Parametervalidierung wird in StockSharp verwendet, um die Korrektheit der Werte vor der Erstellung eines Abonnements zu überprüfen.
 
-Somit haben wir einen vollständig benutzerdefinierten Candle-Typ erstellt, der ordnungsgemäß in das gesamte StockSharp-Ökosystem (einschließlich der Benutzeroberfläche und des Datenspeichers) integriert ist und zur Erstellung von Handelsstrategien basierend auf der Analyse des Volumendeltas verwendet werden kann.
+Somit haben wir einen vollständig benutzerdefinierten Kerzentyp erstellt, der ordnungsgemäß in das gesamte StockSharp-Ökosystem (einschließlich der Benutzeroberfläche und des Datenspeichers) integriert ist und zur Erstellung von Handelsstrategien basierend auf der Analyse des Volumendeltas verwendet werden kann.

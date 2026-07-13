@@ -36,7 +36,7 @@ Para trabalhar com o script, é necessário executar os seguintes passos:
 2. **Aplicar indicadores**: Escolher e definir parâmetros para os indicadores a aplicar aos dados.
 3. **Apresentar resultados**: Visualizar dados históricos e indicadores num gráfico para análise.
 
-O script "Indicador" fornece uma ferramenta poderosa para análise aprofundada dos mercados financeiros, permitindo que traders e analistas usem estes indicadores para desenvolver estratégias de negociação eficazes.
+O script "Indicador" fornece uma ferramenta poderosa para análise aprofundada dos mercados financeiros, permitindo que operadores e analistas usem estes indicadores para desenvolver estratégias de negociação eficazes.
 
 ## Código do Script em C#
 
@@ -56,7 +56,7 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// criar 2 painéis para candles e séries de indicadores
+			// criar 2 painéis para velas e séries de indicadores
 			var candleChart = panel.CreateChart<DateTimeOffset, decimal>();
 			var indicatorChart = panel.CreateChart<DateTimeOffset, decimal>();
 
@@ -72,7 +72,7 @@ namespace StockSharp.Algo.Analytics
 				// criar ROC
 				var roc = new RateOfChange();
 
-				// obter o armazenamento de candles
+				// obter o armazenamento de velas
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				foreach (var candle in candleStorage.Load(from, to))
@@ -120,7 +120,7 @@ class indicator_script(IAnalyticsScript):
 			logs.LogWarning("Sem instrumentos.")
 			return Task.CompletedTask
 
-		# criar 2 painéis para candles e séries de indicadores
+		# criar 2 painéis para velas e séries de indicadores
 		candle_chart = create_chart(panel, datetime, float)
 		indicator_chart = create_chart(panel, datetime, float)
 
@@ -141,7 +141,7 @@ class indicator_script(IAnalyticsScript):
 			# criar ROC
 			roc = ROC()
 
-			# obter o armazenamento de candles
+			# obter o armazenamento de velas
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			for candle in load_range(candle_storage, message_type, from_date, to_date):

@@ -1,8 +1,8 @@
-# Referencia de quoting
+# Referencia de cotización
 
 ## Descripción general
 
-Esta sección contiene una referencia completa de la arquitectura y los componentes del sistema de quoting en StockSharp. Se describen todos los comportamientos de quoting, tipos de acción e interfaces disponibles. Para una introducción básica, consulte [Algoritmo de quoting](quoting.md).
+Esta sección contiene una referencia completa de la arquitectura y los componentes del sistema de cotización en StockSharp. Se describen todos los comportamientos de cotización, tipos de acción e interfaces disponibles. Para una introducción básica, consulte [Algoritmo de cotización](quoting.md).
 
 ## Arquitectura
 
@@ -12,15 +12,15 @@ La clase [QuotingStrategy](xref:StockSharp.Algo.Strategies.Quoting.QuotingStrate
 
 Parámetros principales de la clase obsoleta:
 
-- `QuotingSide` -- dirección de quoting (compra/venta)
-- `QuotingVolume` -- volumen de quoting
+- `QuotingSide` -- dirección de cotización (compra/venta)
+- `QuotingVolume` -- volumen de cotización
 - `TimeOut` -- timeout de ejecución
 - `UseBidAsk` -- usar precios del libro de órdenes
 - `UseLastTradePrice` -- usar precio de la última operación
 
 ### QuotingEngine
 
-[QuotingEngine](xref:StockSharp.Algo.Strategies.Quoting.QuotingEngine) -- núcleo funcional del sistema de quoting. Calcula volumen restante y timeouts, y devuelve recomendaciones de acción sin efectos secundarios.
+[QuotingEngine](xref:StockSharp.Algo.Strategies.Quoting.QuotingEngine) -- núcleo funcional del sistema de cotización. Calcula volumen restante y timeouts, y devuelve recomendaciones de acción sin efectos secundarios.
 
 ### QuotingBehaviorAlgo
 
@@ -32,13 +32,13 @@ Métodos principales:
 |--------|-------------|
 | `UpdateMarketData(time, price, volume)` | Actualizar datos de mercado |
 | `UpdateOrderBook(depth)` | Actualizar libro de órdenes |
-| `GetNextAction()` | Obtener la siguiente acción de quoting |
+| `GetNextAction()` | Obtener la siguiente acción de cotización |
 
 Admite modos VWAP y TWAP.
 
 ### QuotingProcessor
 
-[QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) -- procesador principal para ejecutar quoting dentro de una estrategia. Gestiona el ciclo de vida de órdenes: colocación, modificación, cancelación.
+[QuotingProcessor](xref:StockSharp.Algo.Strategies.Quoting.QuotingProcessor) -- procesador principal para ejecutar cotización dentro de una estrategia. Gestiona el ciclo de vida de órdenes: colocación, modificación, cancelación.
 
 ## Tipos QuotingAction
 
@@ -50,11 +50,11 @@ El procesador devuelve acciones de tipo [QuotingAction](xref:StockSharp.Algo.Str
 | `PlaceOrder(price, volume)` | Colocar una nueva orden |
 | `ModifyOrder(price, volume)` | Modificar una orden existente |
 | `CancelOrder()` | Cancelar la orden |
-| `Finish(success, reason)` | Finalizar quoting |
+| `Finish(success, reason)` | Finalizar cotización |
 
-## Comportamientos de quoting
+## Comportamientos de cotización
 
-StockSharp proporciona 10 tipos de comportamientos de quoting, cada uno implementando la interfaz [IQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.IQuotingBehavior):
+StockSharp proporciona 10 tipos de comportamientos de cotización, cada uno implementando la interfaz [IQuotingBehavior](xref:StockSharp.Algo.Strategies.Quoting.IQuotingBehavior):
 
 | # | Clase | Descripción | Parámetros clave |
 |---|-------|-------------|------------------|
@@ -109,7 +109,7 @@ Devuelve `null` si no se necesita actualización, o el nuevo precio para colocar
 
 ## Ejemplos de uso
 
-### Quoting de mercado con desplazamiento
+### Cotización de mercado con desplazamiento
 
 ```cs
 var behavior = new MarketQuotingBehavior
@@ -120,7 +120,7 @@ var behavior = new MarketQuotingBehavior
 };
 ```
 
-### Quoting VWAP
+### Cotización VWAP
 
 ```cs
 var behavior = new VWAPQuotingBehavior
@@ -129,7 +129,7 @@ var behavior = new VWAPQuotingBehavior
 };
 ```
 
-### Quoting de volatilidad de opciones
+### Cotización de volatilidad de opciones
 
 ```cs
 var behavior = new VolatilityQuotingBehavior
@@ -142,7 +142,7 @@ var behavior = new VolatilityQuotingBehavior
 ### Ejemplo completo con procesador
 
 ```cs
-// Elegir el comportamiento de quoting
+// Elegir el comportamiento de cotización
 var behavior = new BestByPriceQuotingBehavior
 {
 	BestPriceOffset = new Unit(0.01m),
@@ -171,7 +171,7 @@ var processor = new QuotingProcessor(
 
 processor.Finished += isOk =>
 {
-	this.AddInfoLog($"Quoting finalizado: {isOk}");
+	this.AddInfoLog($"Cotización finalizada: {isOk}");
 	processor?.Dispose();
 };
 
@@ -180,6 +180,6 @@ processor.Start();
 
 ## Ver también
 
-- [Algoritmo de quoting](quoting.md)
-- [Estrategia de quoting](samples/mq.md)
-- [Quoting de volatilidad](../options/volatility_trading.md)
+- [Algoritmo de cotización](quoting.md)
+- [Estrategia de cotización](samples/mq.md)
+- [Cotización de volatilidad](../options/volatility_trading.md)

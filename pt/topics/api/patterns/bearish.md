@@ -7,7 +7,7 @@ Vela baixista é um padrão de velas caracterizado por um preço de fecho inferi
 - O preço de abertura é superior ao preço de fecho (O > C).
 - Indica pressão baixista no mercado.
 
-![Padrão de candle baixista](../../../images/bearishcandlepattern.png)
+![Padrão de vela baixista](../../../images/bearishcandlepattern.png)
 
 ### Interpretação
 

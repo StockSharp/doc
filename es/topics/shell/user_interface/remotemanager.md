@@ -30,7 +30,7 @@ Al conectarse, todas las estrategias existentes en el servidor Shell estarán di
 
 ![Shell administrador remoto 06](../../../images/shell_remotemanager_06.png)
 
-Al hacer clic en el botón Añadir, puede añadir otra estrategia para trading.
+Al hacer clic en el botón Añadir, puede añadir otra estrategia para la negociación.
 
 ![Shell administrador remoto 07](../../../images/shell_remotemanager_07.png)
 
@@ -58,7 +58,7 @@ Para establecer su comando en la estrategia, debe sobrescribir el método [Strat
 
 ```cs
 public virtual void ApplyCommand(CommandMessage cmdMsg)
-		
+
 ```
 
 La clase base [Strategy](xref:StockSharp.Algo.Strategies.Strategy) solo controla el inicio y la detención de la estrategia.

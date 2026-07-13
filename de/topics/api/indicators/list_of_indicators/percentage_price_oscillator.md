@@ -82,7 +82,7 @@ Der PPO kann wie folgt interpretiert werden:
    - Höhere PPO-Werte für ein Instrument im Vergleich zu einem anderen können auf eine stärkere relative Dynamik hinweisen
 
 7. **Signalfilterung**:
-   - Signalleitungs-Crossover-Signale sind zuverlässiger, wenn PPO mit dem Haupttrend übereinstimmt
+   - Signallinien-Kreuzungssignale sind zuverlässiger, wenn PPO mit dem Haupttrend übereinstimmt
    - Beispielsweise sind bullische Signale zuverlässiger, wenn PPO positiv ist, und bärische Signale sind zuverlässiger, wenn PPO negativ ist
 
 ![PPO Diagramm](../../../../images/indicator_percentage_price_oscillator.png)

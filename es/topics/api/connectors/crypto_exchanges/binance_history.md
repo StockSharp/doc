@@ -1,8 +1,8 @@
 # Binance History
 
-**Binance History** - servicio histórico del exchange Binance.
+**Binance History** - servicio histórico de la bolsa Binance.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de negociación, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
 
 > [!CAUTION]
 > El conector solo admite el flujo de datos de mercado; las transacciones no son compatibles.

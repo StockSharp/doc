@@ -1,10 +1,10 @@
 # Crear nueva orden stop
 
-Para crear una nueva orden stop, necesita crear un objeto [Order](xref:StockSharp.BusinessEntities.Order) que contiene información sobre la orden y registrarlo en el exchange.
+Para crear una nueva orden stop, necesita crear un objeto [Order](xref:StockSharp.BusinessEntities.Order) que contiene información sobre la orden y registrarlo en la bolsa.
 
 A diferencia de una orden normal, para una orden stop debe especificar la propiedad [Order.Type](xref:StockSharp.BusinessEntities.Order.Type) como [OrderTypes.Conditional](xref:StockSharp.Messages.OrderTypes.Conditional) y establecer la propiedad [Order.Condition](xref:StockSharp.BusinessEntities.Order.Condition) con las condiciones de orden necesarias.
 
-Además, si necesita trabajar con la orden (por ejemplo, cancelarla o cambiarla), debe usar este objeto [Order](xref:StockSharp.BusinessEntities.Order). Para registrar órdenes en el exchange, se proporciona el método [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**, que envía una orden al servidor.
+Además, si necesita trabajar con la orden (por ejemplo, cancelarla o cambiarla), debe usar este objeto [Order](xref:StockSharp.BusinessEntities.Order). Para registrar órdenes en la bolsa, se proporciona el método [Connector.RegisterOrder](xref:StockSharp.Algo.Connector.RegisterOrder(StockSharp.BusinessEntities.Order))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order **)**, que envía una orden al servidor.
 
 ```cs
 Connector Connector = new Connector();		

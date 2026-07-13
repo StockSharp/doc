@@ -24,7 +24,7 @@ Utilice la clase [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengt
 
 - **TSI > 0** — impulso alcista.
 - **TSI < 0** — impulso bajista.
-- **Cruces de línea de señal** proporciona entradas de trading.
+- **Cruces de línea de señal** proporciona entradas de negociación.
 - **Divergencias** entre TSI y el precio advierten sobre posibles reversiones.
 
 Debido al doble suavizado y normalización, el indicador filtra el ruido pero sigue respondiendo en comparación con los simples.

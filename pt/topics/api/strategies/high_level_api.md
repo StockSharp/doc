@@ -125,9 +125,9 @@ O método [BindEx](xref:StockSharp.Algo.Strategies.ISubscriptionHandler`1.BindEx
 
 Converta o valor para o **tipo de valor** dedicado do indicador para trabalhar com os seus campos individuais.
 
-### O método `Bind` estabelece uma ligação entre dados de subscrição e indicadores. Quando uma nova candle é recebida:
+### O método `Bind` estabelece uma ligação entre dados de subscrição e indicadores. Quando uma nova vela é recebida:
 
-1. A candle é enviada automaticamente para processamento pelos indicadores
+1. A vela é enviada automaticamente para processamento pelos indicadores
 2. Os resultados do processamento são passados ao manipulador especificado (no exemplo, o método `OnProcess`)
 3. Todo o código de sincronização e gestão de estado fica oculto ao programador
 
@@ -146,7 +146,7 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 ```
 
 Isto simplifica significativamente o código e torna-o mais legível, pois o programador não precisa de:
-- Tratar manualmente o evento de receção de uma candle
+- Tratar manualmente o evento de receção de uma vela
 - Passar dados manualmente para indicadores
 - Extrair valores dos resultados dos indicadores
 
@@ -179,7 +179,7 @@ if (area != null)
 
 #### Método DrawCandles
 
-O método [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.BusinessEntities.Subscription)) liga automaticamente uma subscrição de candles a um elemento de apresentação de candles no gráfico:
+O método [DrawCandles](xref:StockSharp.Algo.Strategies.Strategy.DrawCandles(StockSharp.Charting.IChartArea,StockSharp.BusinessEntities.Subscription)) liga automaticamente uma subscrição de velas a um elemento de apresentação de velas no gráfico:
 
 ```cs
 // Criar elemento gráfico para exibir velas
@@ -295,12 +295,12 @@ Este método configura automaticamente a proteção para todas as posições abe
 - Acompanha alterações de preço
 - Cria automaticamente ordens para fechar posições quando os níveis de Take Profit ou Stop Loss são atingidos
 - Suporta vários tipos de unidades de medida (valores absolutos, percentagens, pontos)
-- Pode usar trailing stop para proteção adaptativa de posições
+- Pode usar stop móvel para proteção adaptativa de posições
 
 Exemplo com parâmetros adicionais:
 
 ```cs
-// Iniciar proteção com trailing stop e ordens de mercado
+// Iniciar proteção com stop móvel e ordens de mercado
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
 	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss em porcentagem

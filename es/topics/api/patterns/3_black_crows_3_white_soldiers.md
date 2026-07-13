@@ -4,12 +4,12 @@
 
 Tres cuervos negros es un patrón de velas bajista que puede predecir una reversión de una tendencia ascendente.
 
-El patrón Tres cuervos negros consta de tres velas consecutivas que abrieron dentro del cuerpo de la vela anterior y cerraron por debajo de la vela anterior. Los traders suelen usar este indicador en combinación con otros indicadores técnicos o patrones gráficos como confirmación de una reversión.
+El patrón Tres cuervos negros consta de tres velas consecutivas que abrieron dentro del cuerpo de la vela anterior y cerraron por debajo de la vela anterior. Los operadores suelen usar este indicador en combinación con otros indicadores técnicos o patrones gráficos como confirmación de una reversión.
 
 ##### Características clave:
 
 - Tres cuervos negros es un patrón de velas bajista usado para pronosticar la reversión de la tendencia alcista actual.
-- Los traders lo usan junto con otros indicadores técnicos, como el Relative Strength Index (RSI).
+- Los operadores lo usan junto con otros indicadores técnicos, como el Relative Strength Index (RSI).
 - El tamaño de las velas y sus sombras pueden indicar el riesgo de que la reversión pase a ser un retroceso.
 - El patrón opuesto a Tres cuervos negros es Tres soldados blancos, que indica una reversión de tendencia bajista.
 

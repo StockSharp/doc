@@ -10,7 +10,7 @@ Para usar o indicador, é necessário usar a classe [AdaptiveLaguerreFilter](xre
 
 O filtro adaptativo de Laguerre é uma ferramenta avançada de filtragem de ruído de mercado. Fornece uma representação mais suave do movimento do preço, mantendo uma resposta rápida a alterações reais de tendência. Este filtro é especialmente útil para reduzir o atraso frequentemente encontrado nos indicadores tradicionais de suavização.
 
-A principal vantagem do ALF face às médias móveis clássicas está na sua capacidade de separar de forma mais eficaz o ruído de mercado dos movimentos genuínos do preço, tornando-o uma ferramenta valiosa para traders que procuram reduzir sinais falsos.
+A principal vantagem do ALF face às médias móveis clássicas está na sua capacidade de separar de forma mais eficaz o ruído de mercado dos movimentos genuínos do preço, tornando-o uma ferramenta valiosa para operadores que procuram reduzir sinais falsos.
 
 ## Parâmetros
 

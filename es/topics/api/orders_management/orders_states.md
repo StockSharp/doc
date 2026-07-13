@@ -12,26 +12,26 @@ StockSharp API proporciona la posibilidad de recibir información sobre órdenes
 | [OrderRegisterFailReceived](xref:StockSharp.Algo.Connector.OrderRegisterFailReceived) | Evento de fallo de registro de orden |
 | [OrderCancelFailReceived](xref:StockSharp.Algo.Connector.OrderCancelFailReceived) | Evento de fallo de cancelación de orden |
 | [OrderEditFailReceived](xref:StockSharp.Algo.Connector.OrderEditFailReceived) | Evento de fallo de modificación de orden |
-| [OwnTradeReceived](xref:StockSharp.Algo.Connector.OwnTradeReceived) | Evento para recibir información sobre trades propios |
+| [OwnTradeReceived](xref:StockSharp.Algo.Connector.OwnTradeReceived) | Evento para recibir información sobre operaciones propias |
 
-## Enum OrderStates
+## Enumeración OrderStates
 
 Durante su vida, una orden pasa por los siguientes estados:
 
 ![Captura de Estados de órdenes](../../../images/orderstates.png)
 
-- [OrderStates.None](xref:StockSharp.Messages.OrderStates.None) - la orden se ha creado en el algoritmo de trading pero aún no se ha enviado para registro.
-- [OrderStates.Pending](xref:StockSharp.Messages.OrderStates.Pending) - la orden se ha enviado para registro ([RegisterOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder(StockSharp.BusinessEntities.Order)). El sistema está esperando confirmación de su aceptación por parte del exchange. Si la aceptación es correcta, se desencadenará el evento [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived) y la orden pasará al estado [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active). También se inicializarán las propiedades [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) y [Order.ServerTime](xref:StockSharp.BusinessEntities.Order.ServerTime). Si la orden se rechaza, se desencadenará el evento [OrderRegisterFailReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderRegisterFailReceived) con una descripción del error, y la orden pasará al estado [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed).
-- [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active) - la orden está activa en el exchange. Dicha orden permanecerá activa hasta que se ejecute todo su volumen [Order.Volume](xref:StockSharp.BusinessEntities.Order.Volume) o se cancele forzosamente mediante [CancelOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.CancelOrder(StockSharp.BusinessEntities.Order)). Si la orden se ejecuta parcialmente, se desencadenan los eventos [OwnTradeReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OwnTradeReceived) sobre nuevos trades de la orden colocada, así como el evento [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived), que pasa una notificación sobre el cambio del saldo de la orden [Order.Balance](xref:StockSharp.BusinessEntities.Order.Balance). Este último evento también se desencadenará en caso de cancelación de la orden.
-- [OrderStates.Done](xref:StockSharp.Messages.OrderStates.Done) - la orden ya no está activa en el exchange (se ejecutó completamente o se canceló).
-- [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed) - la orden no fue aceptada por el exchange (o por un sistema intermedio, como la parte servidor de la plataforma de trading) por alguna razón.
+- [OrderStates.None](xref:StockSharp.Messages.OrderStates.None) - la orden se ha creado en el algoritmo de negociación pero aún no se ha enviado para registro.
+- [OrderStates.Pending](xref:StockSharp.Messages.OrderStates.Pending) - la orden se ha enviado para registro ([RegisterOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.RegisterOrder(StockSharp.BusinessEntities.Order)). El sistema está esperando confirmación de su aceptación por parte de la bolsa. Si la aceptación es correcta, se desencadenará el evento [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived) y la orden pasará al estado [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active). También se inicializarán las propiedades [Order.Id](xref:StockSharp.BusinessEntities.Order.Id) y [Order.ServerTime](xref:StockSharp.BusinessEntities.Order.ServerTime). Si la orden se rechaza, se desencadenará el evento [OrderRegisterFailReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderRegisterFailReceived) con una descripción del error, y la orden pasará al estado [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed).
+- [OrderStates.Active](xref:StockSharp.Messages.OrderStates.Active) - la orden está activa en la bolsa. Dicha orden permanecerá activa hasta que se ejecute todo su volumen [Order.Volume](xref:StockSharp.BusinessEntities.Order.Volume) o se cancele forzosamente mediante [CancelOrder](xref:StockSharp.BusinessEntities.ITransactionProvider.CancelOrder(StockSharp.BusinessEntities.Order)). Si la orden se ejecuta parcialmente, se desencadenan los eventos [OwnTradeReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OwnTradeReceived) sobre nuevas operaciones de la orden colocada, así como el evento [OrderReceived](xref:StockSharp.BusinessEntities.ISubscriptionProvider.OrderReceived), que pasa una notificación sobre el cambio del saldo de la orden [Order.Balance](xref:StockSharp.BusinessEntities.Order.Balance). Este último evento también se desencadenará en caso de cancelación de la orden.
+- [OrderStates.Done](xref:StockSharp.Messages.OrderStates.Done) - la orden ya no está activa en la bolsa (se ejecutó completamente o se canceló).
+- [OrderStates.Failed](xref:StockSharp.Messages.OrderStates.Failed) - la orden no fue aceptada por la bolsa (o por un sistema intermedio, como la parte servidor de la plataforma de negociación) por alguna razón.
 
 ## Suscripciones automáticas
 
 De forma predeterminada, [Connector](xref:StockSharp.Algo.Connector) crea automáticamente suscripciones para información transaccional al conectarse ([SubscriptionsOnConnect](xref:StockSharp.Algo.Connector.SubscriptionsOnConnect)). Esto incluye suscripciones a:
 
 - Información de órdenes
-- Información de trades
+- Información de operaciones
 - Información de posiciones
 - Búsqueda básica de instrumentos
 
@@ -42,10 +42,10 @@ private void InitConnector()
 {
 	// Suscribirse al evento de recepción de órdenes
 	Connector.OrderReceived += OnOrderReceived;
-	
-	// Suscribirse al evento de recepción de trades propios
+
+	// Suscribirse al evento de recepción de operaciones propias
 	Connector.OwnTradeReceived += OnOwnTradeReceived;
-	
+
 	// Suscribirse al evento de fallo de registro de orden
 	Connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 }
@@ -54,7 +54,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 {
 	// Procesar la orden recibida
 	_ordersWindow.OrderGrid.Orders.TryAdd(order);
-	
+
 	// ¡Importante! Comprobar si la orden pertenece a la suscripción actual
 	// para evitar procesamiento duplicado
 	if (subscription == _myOrdersSubscription)
@@ -125,13 +125,13 @@ private void RequestOrdersForDifferentPortfolios()
 {
 	// Suscripción para órdenes de la primera cartera
 	_portfolio1OrdersSubscription = new Subscription(DataType.Transactions, _portfolio1);
-	
+
 	// Suscripción para órdenes de la segunda cartera
 	_portfolio2OrdersSubscription = new Subscription(DataType.Transactions, _portfolio2);
-	
+
 	// Manejador común para recibir órdenes
 	Connector.OrderReceived += OnMultipleSubscriptionOrderReceived;
-	
+
 	// Iniciar suscripciones
 	Connector.Subscribe(_portfolio1OrdersSubscription);
 	Connector.Subscribe(_portfolio2OrdersSubscription);
@@ -156,7 +156,7 @@ private void OnMultipleSubscriptionOrderReceived(Subscription subscription, Orde
 
 ## Naturaleza asíncrona de las transacciones
 
-El envío de transacciones (registro, reemplazo o cancelación de órdenes) se realiza de forma asíncrona. Esto permite que el programa de trading no espere la confirmación del exchange, sino que continúe trabajando, lo que acelera la reacción ante cambios en la situación de mercado.
+El envío de transacciones (registro, reemplazo o cancelación de órdenes) se realiza de forma asíncrona. Esto permite que el programa de negociación no espere la confirmación de la bolsa, sino que continúe trabajando, lo que acelera la reacción ante cambios en la situación de mercado.
 
 Para realizar seguimiento del estado de una orden, debe suscribirse a los eventos correspondientes:
 - [OrderReceived](xref:StockSharp.Algo.Connector.OrderReceived) para recibir actualizaciones de estado de orden

@@ -41,12 +41,12 @@ A continuación se muestra un ejemplo de construcción de un gráfico usando el 
    private void ConnectClick(object sender, RoutedEventArgs e)
    {
        _connector.CandleReceived += OnCandleReceived;
-       
+
        // Suscribirse a otros eventos necesarios
        _connector.Connected += () => this.GuiAsync(() => { /* Procesar conexión */ });
        _connector.Disconnected += () => this.GuiAsync(() => { /* Procesar desconexión */ });
-       
-       // Conectarse al sistema de trading
+
+       // Conectarse al sistema de negociación
        _connector.Connect();
    }
    ```
@@ -57,13 +57,13 @@ A continuación se muestra un ejemplo de construcción de un gráfico usando el 
    private void ShowChartClick(object sender, RoutedEventArgs e)
    {
        var security = SelectedSecurity;
-       
+
        // Crear una suscripción a velas
        var subscription = new Subscription(
            DataType.TimeFrame(TimeSpan.FromMinutes(5)),
            security)
        {
-           MarketData = 
+           MarketData =
            {
                // Solicitar datos históricos de 30 días
                From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
@@ -72,7 +72,7 @@ A continuación se muestra un ejemplo de construcción de un gráfico usando el 
                IsFinishedOnly = true
            }
        };
-       
+
        // Crear una ventana de gráfico
        _chartWindows.SafeAdd(subscription, key =>
        {
@@ -81,40 +81,40 @@ A continuación se muestra un ejemplo de construcción de un gráfico usando el 
                Title = $"{security.Code} {TimeSpan.FromMinutes(5)}"
            };
            wnd.MakeHideable();
-           
+
            // Inicializar indicadores
            _sma = new SimpleMovingAverage() { Length = 11 };
            _macd = new MovingAverageConvergenceDivergence();
-           
+
            // Inicializar elementos del gráfico
            _smaChartElement = new ChartIndicatorElement();
            _macdChartElement = new ChartIndicatorElement();
            _candlesElem = new ChartCandleElement();
-           
+
            // Establecer el estilo de visualización de MACD como histograma
            _macdChartElement.DrawStyle = DrawStyles.Histogram;
-           
+
            // Inicializar áreas del gráfico
            _candlesArea = new ChartArea();
            _indicatorsArea = new ChartArea();
-           
+
            // Agregar áreas al gráfico
            wnd.Chart.Areas.Add(_candlesArea);
            wnd.Chart.Areas.Add(_indicatorsArea);
-           
+
            // Agregar elementos a las áreas
            _candlesArea.Elements.Add(_candlesElem);
            _candlesArea.Elements.Add(_smaChartElement);
            _indicatorsArea.Elements.Add(_macdChartElement);
-           
+
            // Vincular elementos del gráfico con la suscripción para dibujo automático
            wnd.Chart.AddElement(_candlesArea, _candlesElem, subscription);
            wnd.Chart.AddElement(_candlesArea, _smaChartElement, subscription);
            wnd.Chart.AddElement(_indicatorsArea, _macdChartElement, subscription);
-           
+
            return wnd;
        }).Show();
-       
+
        // Iniciar la suscripción a velas
        _connector.Subscribe(subscription);
    }
@@ -128,15 +128,15 @@ A continuación se muestra un ejemplo de construcción de un gráfico usando el 
        var wnd = _chartWindows.TryGetValue(subscription);
        if (wnd == null)
            return;
-       
+
        // Procesar solo velas finalizadas
        if (candle.State != CandleStates.Finished)
            return;
-       
+
        // Calcular valores de indicadores
        var smaValue = _sma.Process(candle);
        var macdValue = _macd.Process(candle);
-       
+
        // Crear datos para dibujar
        var data = new ChartDrawData();
        data
@@ -144,7 +144,7 @@ A continuación se muestra un ejemplo de construcción de un gráfico usando el 
                .Add(_candlesElem, candle)
                .Add(_smaChartElement, smaValue)
                .Add(_macdChartElement, macdValue);
-       
+
        // Dibujar datos en el gráfico en el hilo de la interfaz de usuario
        this.GuiAsync(() => wnd.Chart.Draw(data));
    }
@@ -158,54 +158,54 @@ A partir de las últimas versiones de StockSharp, es posible configurar el dibuj
 private void SetupAutoDrawingChart()
 {
 	var security = SelectedSecurity;
-	
+
 	// Crear elementos del gráfico
 	var candleElement = new ChartCandleElement();
 	var smaElement = new ChartIndicatorElement { Title = "SMA" };
-	
+
 	// Crear áreas del gráfico
 	var area = new ChartArea();
-	
+
 	// Agregar área al gráfico
 	Chart.Areas.Add(area);
-	
+
 	// Crear una suscripción a velas
 	var subscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
 	{
-		MarketData = 
+		MarketData =
 		{
 			From = DateTime.Today.Subtract(TimeSpan.FromDays(30)),
 			To = DateTime.Now
 		}
 	};
-	
+
 	// Vincular elementos al área del gráfico y a la suscripción
 	Chart.AddElement(area, candleElement, subscription);
 	Chart.AddElement(area, smaElement, subscription);
-	
+
 	// Crear un indicador
 	var sma = new SimpleMovingAverage { Length = 14 };
-	
+
 	// Suscribirse al evento de recepción de velas para procesar el indicador
-	_connector.CandleReceived += (sub, candle) => 
+	_connector.CandleReceived += (sub, candle) =>
 	{
 		if (sub == subscription && candle.State == CandleStates.Finished)
 		{
 			// Procesar la vela con el indicador y obtener el valor
 			var smaValue = sma.Process(candle);
-			
+
 			// Dibujar el valor del indicador
 			var data = new ChartDrawData();
 			data
 				.Group(candle.OpenTime)
 					.Add(smaElement, smaValue);
-			
+
 			this.GuiAsync(() => Chart.Draw(data));
 		}
 	};
-	
+
 	// Iniciar suscripción
 	_connector.Subscribe(subscription);
 }
@@ -225,27 +225,27 @@ _candlesArea.Elements.Add(orderElement);
 _candlesArea.Elements.Add(tradeElement);
 
 // Suscribirse a eventos de recepción de órdenes y operaciones
-_connector.OrderReceived += (sub, order) => 
+_connector.OrderReceived += (sub, order) =>
 {
 	if (order.Security != _security)
 		return;
-	
+
 	// Dibujar la orden en el gráfico
 	var data = new ChartDrawData();
 	data.Group(order.Time).Add(orderElement, order);
-	
+
 	this.GuiAsync(() => Chart.Draw(data));
 };
 
-_connector.OwnTradeReceived += (sub, trade) => 
+_connector.OwnTradeReceived += (sub, trade) =>
 {
 	if (trade.Order.Security != _security)
 		return;
-	
+
 	// Dibujar la operación en el gráfico
 	var data = new ChartDrawData();
 	data.Group(trade.Time).Add(tradeElement, trade);
-	
+
 	this.GuiAsync(() => Chart.Draw(data));
 };
 ```

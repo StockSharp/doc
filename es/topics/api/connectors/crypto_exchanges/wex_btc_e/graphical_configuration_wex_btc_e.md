@@ -1,5 +1,5 @@
 > [!WARNING]
-> Este exchange cerró permanentemente (julio de 2017 — incautación). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa cerró permanentemente (julio de 2017 — incautación). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # Configuración gráfica WEX (BTC-e)
 
@@ -12,7 +12,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **dominio (dirección)** - Dirección de dominio.
 - **Saldo** - Intervalo de comprobación del balance. Necesario en caso de operaciones de depósito y retiro.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
-- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de negociación. ([Configuración de reconexión](../../reconnection_settings.md))
 
 ## Contenido recomendado
 

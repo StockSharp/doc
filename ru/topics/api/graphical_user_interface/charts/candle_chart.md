@@ -35,7 +35,7 @@
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. В обработчике события **Click** кнопки **Connect**, наряду с подпиской на события коннектора и вызовом метода [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), подписываемся на событие [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). В обработчике этого события при получении новой свечи будет выполняться отрисовка графика. 
+3. В обработчике события **Click** кнопки **Подключить**, наряду с подпиской на события коннектора и вызовом метода [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), подписываемся на событие [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). В обработчике этого события при получении новой свечи будет выполняться отрисовка графика.
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@
    }
    ```
 
-4. В обработчике кнопки **ShowChart** создаем объекты индикаторов, областей и элементов графика. Добавляем элементы к областям, а области к чарту. Открываем окно графика и запускаем подписку на свечи. 
+4. В обработчике кнопки **Показать график** создаем объекты индикаторов, областей и элементов графика. Добавляем элементы к областям, а области к чарту. Открываем окно графика и запускаем подписку на свечи.
 
    ```cs
    private void ShowChartClick(object sender, RoutedEventArgs e)

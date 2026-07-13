@@ -1,6 +1,6 @@
 # Acerca de StockSharp
 
-[StockSharp (S#)](https://stocksharp.com/store/) ofrece aplicaciones de trading **gratuitas** para los mercados globales, incluyendo acciones, futuros, opciones, criptomonedas y forex. Puede operar manualmente o ejecutar estrategias automatizadas, desde robots de trading convencionales hasta sistemas HFT (High-Frequency Trading).
+[StockSharp (S#)](https://stocksharp.com/store/) ofrece aplicaciones de negociación **gratuitas** para los mercados globales, incluyendo acciones, futuros, opciones, criptomonedas y forex. Puede operar manualmente o ejecutar estrategias automatizadas, desde robots de negociación convencionales hasta sistemas HFT (negociación de alta frecuencia).
 
 **Compatible con más de 90 brokers, bolsas y fuentes de datos:** [Conectores](topics/api/connectors.md).
 
@@ -13,13 +13,13 @@ S# funciona con cualquier broker, bolsa o fuente de datos compatible con los con
 
 ![Captura de Acerca de StockSharp 1](images/stocksharptitle_0.png)
 
-[Designer](topics/designer.md) es una aplicación universal para crear estrategias de trading algorítmico:
+[Designer](topics/designer.md) es una aplicación universal para crear estrategias de negociación algorítmica:
 
 - Diseñador visual de estrategias con edición mediante el ratón.
 - Editor de [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) integrado.
 - Creación sencilla de indicadores personalizados.
 - Depurador integrado.
-- Conexiones a múltiples bolsas, plataformas de trading y brokers.
+- Conexiones a múltiples bolsas, plataformas de negociación y brokers.
 - Compatibilidad con los mercados globales.
 - Posibilidad de compartir esquemas de estrategias con su equipo.
 
@@ -33,7 +33,7 @@ S# funciona con cualquier broker, bolsa o fuente de datos compatible con los con
 
 - Compatible con numerosas fuentes de datos a través de [Conectores](topics/api/connectors.md).
 - Alta tasa de compresión (2 bytes por operación, 7 bytes por libro de órdenes).
-- Maneja cualquier tipo de datos (velas, ticks, libros de órdenes, order-logs, opciones, noticias y más).
+- Maneja cualquier tipo de datos (velas, ticks, libros de órdenes, registros de órdenes, opciones, noticias y más).
 - Acceso mediante API a los datos almacenados.
 - Capacidades de exportación a CSV, Excel, XML o bases de datos.
 - Funcionalidad de importación de CSV.
@@ -45,7 +45,7 @@ S# funciona con cualquier broker, bolsa o fuente de datos compatible con los con
 
 ![Terminal vista principal 00](images/terminal_main_00.png)
 
-[Terminal](topics/terminal.md) es una aplicación de trading y gráficos (terminal de trading):
+[Terminal](topics/terminal.md) es una aplicación de negociación y gráficos (terminal de negociación):
 
 - Permite operar directamente desde los gráficos con un clic.
 - Admite marcos temporales arbitrarios.
@@ -63,21 +63,21 @@ Shell proporciona un marco gráfico ya preparado que puede personalizarse rápid
 - Herramientas de prueba de estrategias (estadísticas, equity, informes).
 - Guardado y carga de la configuración de estrategias.
 - Ejecución simultánea de estrategias.
-- Información detallada sobre el rendimiento de las estrategias (órdenes, transacciones, posiciones, ingresos, logs, etc.).
+- Información detallada sobre el rendimiento de las estrategias (órdenes, transacciones, posiciones, ingresos, registros, etc.).
 - Lanzamiento programado de estrategias.
 
 ### API
 
-[API](topics/api.md) es una biblioteca en C# para el desarrollo profesional de robots de trading y sistemas de trading algorítmico.
+[API](topics/api.md) es una biblioteca en C# para el desarrollo profesional de robots de negociación y sistemas de negociación algorítmica.
 
 ### Nuestros productos
 
 - [Designer](topics/designer.md) - Diseñador universal de estrategias algorítmicas.
 - [Hydra](topics/hydra.md) - Programa de descarga de datos de mercado.
-- [API](topics/api.md) - Biblioteca para desarrollar robots de trading en [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
-- [Terminal](topics/terminal.md) - Terminal de trading.
+- [API](topics/api.md) - Biblioteca para desarrollar robots de negociación en [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
+- [Terminal](topics/terminal.md) - Terminal de negociación.
 - [Shell](topics/shell.md) - Marco gráfico ya preparado para estrategias con código fuente.
-- [MATLAB](topics/matlab.md) - Integración de MATLAB con sistemas de trading. Opere desde scripts de MATLAB.
+- [MATLAB](topics/matlab.md) - Integración de MATLAB con sistemas de negociación. Opere desde scripts de MATLAB.
 
 [Descargar](https://stocksharp.com/products/download/)
 

@@ -64,7 +64,7 @@ protected override void OnStarted2(DateTime time)
 
 ## Procesamiento de velas
 
-El método `ProcessCandle` se llama para cada vela completada e implementa la lógica de trading:
+El método `ProcessCandle` se llama para cada vela completada e implementa la lógica de negociación:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue)
@@ -79,7 +79,7 @@ private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue
 
 	var typed = (BollingerBandsValue)bollingerValue;
 
-	// Lógica de trading:
+	// Lógica de negociación:
 	// Vender cuando el precio toca la banda inferior (solo cuando no existe posición)
 	if (candle.ClosePrice <= typed.LowBand && Position == 0)
 	{
@@ -93,7 +93,7 @@ private void ProcessCandle(ICandleMessage candle, IIndicatorValue bollingerValue
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 - **Señal de venta**: el precio de cierre de la vela alcanza o cae por debajo de la banda inferior de Bollinger cuando no hay posición abierta
 - **Señal de compra** (cierre de posición corta): el precio de cierre de la vela alcanza o supera la línea media de Bollinger cuando hay una posición corta

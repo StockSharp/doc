@@ -8,9 +8,9 @@ Para usar o indicador, é necessário usar a classe [PivotPoints](xref:StockShar
 
 pontos pivô (pontos pivô) são um dos métodos mais antigos e mais usados para identificar níveis-chave do mercado. O indicador calcula o ponto pivô central (PP) e vários níveis de suporte (S1, S2, S3) e resistência (R1, R2, R3) com base nos dados do período anterior.
 
-Originalmente, os pontos pivô eram usados por traders nos pregões das bolsas para determinar níveis-chave para o dia de negociação atual com base nos dados do dia anterior. Hoje, este método foi adaptado a vários períodos - desde intradiário até mensal.
+Originalmente, os pontos pivô eram usados por operadores nos pregões das bolsas para determinar níveis-chave para o dia de negociação atual com base nos dados do dia anterior. Hoje, este método foi adaptado a vários períodos - desde intradiário até mensal.
 
-A ideia principal dos pontos pivô é que o mercado tende a reagir a estes níveis pré-calculados, usando-os como pontos de reversão ou zonas onde pode ocorrer consolidação. Os traders usam estes níveis para tomar decisões sobre entrada e saída do mercado, bem como para definir níveis-alvo e stop-losses.
+A ideia principal dos pontos pivô é que o mercado tende a reagir a estes níveis pré-calculados, usando-os como pontos de reversão ou zonas onde pode ocorrer consolidação. Os operadores usam estes níveis para tomar decisões sobre entrada e saída do mercado, bem como para definir níveis-alvo e stop-losses.
 
 ## Cálculo
 
@@ -64,7 +64,7 @@ pontos pivô podem ser interpretados da seguinte forma:
    - Uma rutura de um nível pode levar à continuação do movimento até ao nível seguinte
    - Um ressalto a partir de um nível pode levar a uma reversão ascendente
 
-4. **Estratégias de trading**:
+4. **Estratégias de negociação**:
    - **Negociação por ressalto**: Entrar numa posição quando há ressalto a partir de um nível de suporte ou resistência
    - **Negociação de rutura**: Entrar numa posição após uma rutura confirmada de um nível
    - **Negociação em intervalo**: Comprar em níveis de suporte e vender em níveis de resistência
@@ -79,7 +79,7 @@ pontos pivô podem ser interpretados da seguinte forma:
    - pontos pivô diários são calculados com base no dia de negociação anterior
    - pontos pivô semanais são calculados com base na semana anterior
    - pontos pivô mensais são calculados com base no mês anterior
-   - A seleção do período depende do estilo de trading e do horizonte temporal
+   - A seleção do período depende do estilo de negociação e do horizonte temporal
 
 ![Gráfico do indicador PP](../../../../images/indicator_pivot_points.png)
 

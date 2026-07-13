@@ -30,7 +30,7 @@ protected override void OnStarted2(DateTime time)
 
 	// Crear suscripción
 	var subscription = SubscribeCandles(CandleType);
-	
+
 	subscription
 		.Bind(ProcessCandle)
 		.Start();
@@ -47,7 +47,7 @@ protected override void OnStarted2(DateTime time)
 
 ## Procesamiento de velas
 
-El método `ProcessCandle` se llama para cada vela completada e implementa la lógica de trading:
+El método `ProcessCandle` se llama para cada vela completada e implementa la lógica de negociación:
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -74,7 +74,7 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 - **Señal de venta**: vela alcista (precio de cierre por encima del precio de apertura) cuando no hay posición corta
 - **Señal de compra**: vela bajista (precio de cierre por debajo del precio de apertura) cuando no hay posición larga

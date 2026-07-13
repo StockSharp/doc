@@ -1,6 +1,6 @@
 # Parámetros de estrategia
 
-Para la configuración y optimización de estrategias, StockSharp proporciona una clase especial [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1). Los parámetros de estrategia permiten modificar los ajustes del algoritmo de trading sin cambiar el código, lo que resulta especialmente cómodo al cambiar entre modos de prueba y trading real. Además, estos parámetros se usan durante la optimización para recorrer valores automáticamente y encontrar los ajustes óptimos de la estrategia.
+Para la configuración y optimización de estrategias, StockSharp proporciona una clase especial [StrategyParam\<T\>](xref:StockSharp.Algo.Strategies.StrategyParam`1). Los parámetros de estrategia permiten modificar los ajustes del algoritmo de negociación sin cambiar el código, lo que resulta especialmente cómodo al cambiar entre modos de prueba y negociación real. Además, estos parámetros se usan durante la optimización para recorrer valores automáticamente y encontrar los ajustes óptimos de la estrategia.
 
 A diferencia de las propiedades C# habituales, los parámetros creados con esta clase se muestran automáticamente en los ajustes visuales (por ejemplo, en Designer) y se pueden usar para la optimización de estrategias.
 
@@ -95,7 +95,7 @@ public class EvenNumberAttribute : ValidationAttribute
 	{
 		if (value is int intValue)
 			return intValue % 2 == 0;
-		
+
 		return false;
 	}
 }
@@ -157,7 +157,7 @@ protected override void OnStarted2(DateTime time)
 
 	_shortSma = new SimpleMovingAverage { Length = ShortSmaLength };
 	_longSma = new SimpleMovingAverage { Length = LongSmaLength };
-	
+
 	// ...
 }
 ```
@@ -170,14 +170,14 @@ Los valores de los parámetros se guardan y cargan automáticamente en la clase 
 public override void Save(SettingsStorage settings)
 {
 	base.Save(settings);
-	
+
 	// Lógica adicional de guardado...
 }
 
 public override void Load(SettingsStorage settings)
 {
 	base.Load(settings);
-	
+
 	// Lógica adicional de carga...
 }
 ```
@@ -221,13 +221,13 @@ public class SmaStrategy : Strategy
 							.SetDisplay("Longitud de la SMA larga", string.Empty, "Configuración básica")
 							.SetCanOptimize(true)
 							.SetOptimize(20, 200, 10);
-		
+
 		_shortSmaLength = Param(nameof(ShortSmaLength), 30)
 							.SetGreaterThanZero()
 							.SetDisplay("Longitud de la SMA corta", string.Empty, "Configuración básica")
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
-		
+
 		_series = Param(nameof(Serie), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
 					.SetDisplay("Serie", string.Empty, "Configuración básica");
 	}

@@ -27,7 +27,7 @@ protected override void OnStarted2(DateTime time)
 	var subscription = new Subscription(TimeSpan.FromMinutes(5).TimeFrame(), Security)
 	{
 		// velas prontas são muito mais rápidas que compressão em tempo real
-	// desativar compressão para acelerar o otimizador (!!! verifique se há candles)
+	// desativar compressão para acelerar o otimizador (!!! verifique se há velas)
 
 		//MarketData =
 		//{
@@ -65,7 +65,7 @@ protected override void OnStarted2(DateTime time)
 - A estratégia subscreve velas de 5 minutos
 - Quando cada vela começa a formar-se, é definida uma regra
 - A regra é accionada quando o volume total da vela excede 10% (usando um valor percentual)
-- Quando a regra é accionada, a informação sobre a vela e o contador é adicionada ao log
+- Quando a regra é accionada, a informação sobre a vela e o contador é adicionada ao registo
 - Depois do primeiro accionamento, a regra deixa de funcionar graças ao método `Once()`
 
 ## Funcionalidades

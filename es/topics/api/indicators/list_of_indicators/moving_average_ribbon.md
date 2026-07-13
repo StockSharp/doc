@@ -71,7 +71,7 @@ La cinta de medias móviles se puede interpretar de la siguiente manera:
    - Cuando el precio está por debajo de toda la cinta, esto confirma una fuerte tendencia a la baja.
    - Cuando el precio se mueve dentro de la cinta, esto puede indicar un estado de transición o consolidación.
 
-6. **Estrategias de trading**:
+6. **Estrategias de negociación**:
    - Ingrese una posición cuando el precio rebote desde el borde de la cinta en la dirección de la tendencia.
    - Salga de una posición cuando las medias móviles comiencen a cruzarse en la dirección opuesta.
    - Utilice el ancho de la cinta para establecer límites de pérdidas y toma de ganancias

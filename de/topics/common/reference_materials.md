@@ -13,5 +13,4 @@
 
 - Plattform-Website - [https:\/\/stocksharp.com](https://stocksharp.com/).
 - Blog - [StockSharp Blog](https://stocksharp.com/blog/).
-- Telegram-Chat - [Chat](https://t.me/stocksharpchat/361).
-
+- Telegram-Chat - [Chat öffnen](https://t.me/stocksharpchat/361).

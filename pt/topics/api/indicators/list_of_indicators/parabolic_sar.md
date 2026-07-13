@@ -5,7 +5,7 @@
 Para usar o indicador, deve ser usada a classe [ParabolicSar](xref:StockSharp.Algo.Indicators.ParabolicSar).
 ##### Cálculo do indicador
 
-O preço do ponto do indicador (SAR) para o período seguinte (candle) é calculado usando as seguintes fórmulas:
+O preço do ponto do indicador (SAR) para o período seguinte (vela) é calculado usando as seguintes fórmulas:
 
 SAR(n+1) = SAR(n) + a * (high - SAR(n)), para uma tendência ascendente;
 SAR(n+1) = SAR(n) + a * (low - SAR(n)), para uma tendência descendente, onde:

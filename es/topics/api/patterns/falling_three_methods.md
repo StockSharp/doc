@@ -23,7 +23,7 @@ Tres métodos descendentes se considera una señal fiable de continuación de te
 - Este patrón puede verse como una bandera o pennant en el análisis técnico clásico.
 - Esta secuencia de velas indica que la corrección se usó para acumular posiciones cortas antes de continuar el movimiento bajista.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Tres métodos descendentes proporciona buenas oportunidades para entrar o reforzar posiciones cortas:
 

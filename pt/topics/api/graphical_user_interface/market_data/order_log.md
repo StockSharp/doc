@@ -1,14 +1,14 @@
-# Log de ordens
+# Registo de ordens
 
-![Captura de tela de Log de ordens](../../../../images/gui_orderlog.png)
+![Captura de tela de Registo de ordens](../../../../images/gui_orderlog.png)
 
-[OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - um componente gráfico para apresentar o log de ordens ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)).
+[OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - um componente gráfico para apresentar o registo de ordens ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)).
 
 **Propriedades e métodos principais**
 
-- [OrderLogGrid.LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) - lista de itens do log de ordens.
-- [OrderLogGrid.SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) - item do log de ordens selecionado.
-- [OrderLogGrid.SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) - itens do log de ordens selecionados.
+- [OrderLogGrid.LogItems](xref:StockSharp.Xaml.OrderLogGrid.LogItems) - lista de itens do registo de ordens.
+- [OrderLogGrid.SelectedLogItem](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItem) - item do registo de ordens selecionado.
+- [OrderLogGrid.SelectedLogItems](xref:StockSharp.Xaml.OrderLogGrid.SelectedLogItems) - itens do registo de ordens selecionados.
 
 Abaixo encontram-se fragmentos de código que demonstram a sua utilização:
 
@@ -37,20 +37,20 @@ public class OrderLogWindow
 		_connector = connector;
 		_security = security;
 		
-		// Assinar o evento de recebimento de item do log de ordens
+		// Assinar o evento de recebimento de item do registo de ordens
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 		
-		// Criar uma assinatura para o log de ordens
+		// Criar uma assinatura para o registo de ordens
 		_orderLogSubscription = new Subscription(DataType.OrderLog, security);
 		
 		// Iniciar assinatura
 		_connector.Subscribe(_orderLogSubscription);
 	}
 	
-	// Manipulador do evento de recebimento de item do log de ordens
+	// Manipulador do evento de recebimento de item do registo de ordens
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
-		// Verificar se o item do log pertence à nossa assinatura
+		// Verificar se o item do registo pertence à nossa assinatura
 		if (subscription != _orderLogSubscription)
 			return;
 			
@@ -71,13 +71,13 @@ public class OrderLogWindow
 }
 ```
 
-### Filtragem do log de ordens
+### Filtragem do registo de ordens
 
 ```cs
-// Criar assinatura do log de ordens com filtragem
+// Criar assinatura do registo de ordens com filtragem
 public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 {
-	// Criar uma assinatura para o log de ordens
+	// Criar uma assinatura para o registo de ordens
 	var orderLogSubscription = new Subscription(DataType.OrderLog, security)
 	{
 		MarketData =
@@ -88,14 +88,14 @@ public void SubscribeOrderLog(Security security, DateTime from, DateTime to)
 		}
 	};
 	
-	// Assinar o evento de recebimento de item do log de ordens
+	// Assinar o evento de recebimento de item do registo de ordens
 	_connector.OrderLogItemReceived += OnFilteredOrderLogItemReceived;
 	
 	// Iniciar assinatura
 	_connector.Subscribe(orderLogSubscription);
 }
 
-// Manipulador do evento de recebimento do log de ordens com filtragem
+// Manipulador do evento de recebimento do registo de ordens com filtragem
 private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 {
 	// Verificar tipo de assinatura
@@ -118,10 +118,10 @@ private void OnFilteredOrderLogItemReceived(Subscription subscription, OrderLogI
 }
 ```
 
-### Análise da dinâmica do log de ordens
+### Análise da dinâmica do registo de ordens
 
 ```cs
-	// Classe para analisar a dinâmica do log de ordens
+	// Classe para analisar a dinâmica do registo de ordens
 public class OrderLogAnalyzer
 {
 	private readonly Connector _connector;
@@ -140,23 +140,23 @@ public class OrderLogAnalyzer
 		_security = security;
 		_orderLogGrid = orderLogGrid;
 		
-		// Assinar o evento de recebimento de item do log de ordens
+		// Assinar o evento de recebimento de item do registo de ordens
 		_connector.OrderLogItemReceived += OnOrderLogItemReceived;
 		
-		// Criar uma assinatura para o log de ordens
+		// Criar uma assinatura para o registo de ordens
 		var subscription = new Subscription(DataType.OrderLog, security);
 		
 		// Iniciar assinatura
 		_connector.Subscribe(subscription);
 	}
 	
-	// Manipulador do evento de recebimento de item do log de ordens
+	// Manipulador do evento de recebimento de item do registo de ordens
 	private void OnOrderLogItemReceived(Subscription subscription, OrderLogItem item)
 	{
 		if (item.SecurityId != _security.ToSecurityId())
 			return;
 			
-		// Analisar item do log de ordens
+		// Analisar item do registo de ordens
 		if (item.Side == Sides.Buy)
 		{
 			_buyCount++;

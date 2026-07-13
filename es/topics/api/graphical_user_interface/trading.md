@@ -1,6 +1,6 @@
 # Operaciones
 
-Esta sección presenta los componentes asociados con las transacciones de trading propias: órdenes ([OrderGrid](xref:StockSharp.Xaml.OrderGrid), [OrderWindow](xref:StockSharp.Xaml.OrderWindow)), órdenes condicionales ([OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow)) y operaciones propias ([MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid)).
+Esta sección presenta los componentes asociados con las transacciones de negociación propias: órdenes ([OrderGrid](xref:StockSharp.Xaml.OrderGrid), [OrderWindow](xref:StockSharp.Xaml.OrderWindow)), órdenes condicionales ([OrderConditionalWindow](xref:StockSharp.Xaml.OrderConditionalWindow)) y operaciones propias ([MyTradeGrid](xref:StockSharp.Xaml.MyTradeGrid)).
 
 ## Contenido recomendado
 

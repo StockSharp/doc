@@ -14,7 +14,7 @@ Los patrones se dividen convencionalmente en:
 
 ### En Designer
 
-[Designer](../designer.md) tiene patrones de velas predefinidos integrados que se pueden usar en su estrategia de trading. Los patrones se llaman mediante el cubo [Indicador](../designer/strategies/using_visual_designer/elements/common/indicator.md), con la selección posterior del valor correspondiente. El propio patrón se selecciona de la lista desplegable en la ventana de la derecha.
+[Designer](../designer.md) tiene patrones de velas predefinidos integrados que se pueden usar en su estrategia de negociación. Los patrones se llaman mediante el cubo [Indicador](../designer/strategies/using_visual_designer/elements/common/indicator.md), con la selección posterior del valor correspondiente. El propio patrón se selecciona de la lista desplegable en la ventana de la derecha.
 
 ![Patrones comunes](../../images/indicatorpatterncommon00.png)
 

@@ -4,7 +4,7 @@ A **Store** é o nosso marketplace e montra para produtos criados pela empresa e
 
 ### Porquê publicar
 
-Partilhar o seu trabalho na Store permite aos programadores alcançar um público mais vasto, recolher feedback e rentabilizar as suas ideias. Também faz crescer o ecossistema global e fornece a outros traders ferramentas prontas a utilizar.
+Partilhar o seu trabalho na Store permite aos programadores alcançar um público mais vasto, recolher feedback e rentabilizar as suas ideias. Também faz crescer o ecossistema global e fornece a outros operadores ferramentas prontas a utilizar.
 
 ### Carregar conteúdo
 

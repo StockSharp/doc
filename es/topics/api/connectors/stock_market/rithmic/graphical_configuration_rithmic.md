@@ -7,7 +7,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **usuario** - Usuario.
 - **contraseña** - Contraseña.
 - **certificado** - Ruta al archivo de certificado necesario para conectarse al sistema Rithmic.
-- **Archivo de registro** - Ruta al archivo de log.
+- **Archivo de registro** - Ruta al archivo de registro.
 - **Tipo de servidor** - Tipo de servidor.
 - **Punto (administración)** - Punto de conexión para funciones administrativas (inicialización\/desinicialización).
 - **Punto (datos)** - Punto de conexión a datos de mercado.
@@ -24,7 +24,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **Nombre de usuario (hist)** - Usuario adicional. ID de usuario usado para autenticarse con servicio histórico.
 - **contraseña (historial)** - Contraseña adicional. Contraseña usada para autenticarse con servicio histórico
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
-- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de trading. ([Configuración de reconexión](../../reconnection_settings.md))
+- **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de negociación. ([Configuración de reconexión](../../reconnection_settings.md))
 
 ## Contenido recomendado
 

@@ -78,9 +78,9 @@ private void OrderGrid_OnOrderReRegistering(Order order)
 
 ```
 
-## Arbeiten mit Aufträgen über Subscriptions
+## Arbeiten mit Aufträgen über Abonnements
 
-Der moderne Ansatz für die Arbeit mit Aufträgen verwendet Subscriptions:
+Der moderne Ansatz für die Arbeit mit Aufträgen verwendet Abonnements:
 
 ```cs
 // Ereignis für empfangene Aufträge abonnieren
@@ -89,7 +89,7 @@ _connector.OrderReceived += OnOrderReceived;
 // Handler für empfangene Aufträge
 private void OnOrderReceived(Subscription subscription, Order order)
 {
-	// Prüfen, ob die Order zu der für uns relevanten Subscription gehört
+	// Prüfen, ob die Order zum für uns relevanten Abonnement gehört
 	if (subscription == _ordersSubscription)
 	{
 		// Auftrag zur Tabelle hinzufügen

@@ -1,6 +1,6 @@
 # Exemplos S#
 
-Exemplos de utilização da biblioteca da API StockSharp podem ser encontrados no nosso repositório GitHub no seguinte caminho: [StockSharp Samples](https://github.com/StockSharp/StockSharp/tree/master/Samples/).
+Exemplos de utilização da biblioteca da API StockSharp podem ser encontrados no nosso repositório GitHub no seguinte caminho: [exemplos do StockSharp](https://github.com/StockSharp/StockSharp/tree/master/Samples/).
 
 Estes exemplos fornecem soluções prontas e demonstrações de várias capacidades da biblioteca da API StockSharp. Encontrará exemplos de código úteis que o ajudarão a familiarizar-se rapidamente com a utilização da nossa plataforma.
 

@@ -1,6 +1,6 @@
 # Configuración Ligther
 
-Para trabajar con el conector, genere **clave API** y **secreto** en la cuenta del exchange y especifíquelos en la configuración de conexión.
+Para trabajar con el conector, genere **clave API** y **secreto** en la cuenta de la bolsa y especifíquelos en la configuración de conexión.
 
 Configuración principal:
 

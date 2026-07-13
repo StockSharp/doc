@@ -4,7 +4,7 @@
 
 ```cs
 /// <summary>
-/// Simple moving average.
+/// Простая скользящая средняя.
 /// </summary>
 [Display(
 	ResourceType = typeof(LocalizedStrings),
@@ -149,7 +149,7 @@ public class ChaikinVolatility : BaseIndicator
 	public ExponentialMovingAverage Ema { get; }
 
 	/// <summary>
-	/// Rate of change.
+	/// Скорость изменения.
 	/// </summary>
 	[TypeConverter(typeof(ExpandableObjectConverter))]
 	[Display(
@@ -299,24 +299,24 @@ public class AverageDirectionalIndex : BaseComplexIndicator<IAverageDirectionalI
 public interface IAverageDirectionalIndexValue : IComplexIndicatorValue
 {
 	/// <summary>
-	/// Gets the <see cref="AverageDirectionalIndex.Dx"/> value.
+	/// Получает значение <see cref="AverageDirectionalIndex.Dx"/>.
 	/// </summary>
 	IDirectionalIndexValue Dx { get; }
 
 	/// <summary>
-	/// Gets the <see cref="AverageDirectionalIndex.MovingAverage"/> value.
+	/// Получает значение <see cref="AverageDirectionalIndex.MovingAverage"/>.
 	/// </summary>
 	IIndicatorValue MovingAverageValue { get; }
 
 	/// <summary>
-	/// Gets the <see cref="AverageDirectionalIndex.MovingAverage"/> value.
+	/// Получает значение <see cref="AverageDirectionalIndex.MovingAverage"/>.
 	/// </summary>
 	[Browsable(false)]
 	decimal? MovingAverage { get; }
 }
 
 /// <summary>
-/// AverageDirectionalIndex indicator value implementation.
+/// Реализация значения индикатора AverageDirectionalIndex.
 /// </summary>
 public class AverageDirectionalIndexValue(AverageDirectionalIndex indicator, DateTime time)
 	: ComplexIndicatorValue<AverageDirectionalIndex>(indicator, time), IAverageDirectionalIndexValue

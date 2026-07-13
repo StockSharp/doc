@@ -20,14 +20,14 @@ Marubozu negro se considera una señal bajista fuerte:
 - La aparición de este patrón después de una tendencia alcista puede señalar una reversión.
 - Dentro de una tendencia bajista, confirma la fuerza del movimiento.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Marubozu negro proporciona una señal más fuerte que una vela negra normal:
 
 - Oportunidad de entrar en una posición corta después de la formación de un marubozu negro, especialmente si aparece en un nivel de resistencia importante.
 - Usar el precio de cierre del marubozu negro como nivel de resistencia al establecer stop-losses.
 - Combinar con otros indicadores técnicos para confirmar la señal.
-- Prestar atención al volumen de trading: un volumen alto aumenta la importancia de la señal.
+- Prestar atención al volumen de negociación: un volumen alto aumenta la importancia de la señal.
 
 ## Véase también
 

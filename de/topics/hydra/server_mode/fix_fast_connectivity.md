@@ -39,7 +39,7 @@ _connector.Connected += () =>
 {
 	Console.WriteLine("Verbindung hergestellt");
 
-	// Subscription zur Instrumentensuche erstellen
+	// Abonnement zur Instrumentensuche erstellen
 	var lookupSubscription = new Subscription(DataType.Securities);
 	_connector.Subscribe(lookupSubscription);
 };
@@ -63,11 +63,11 @@ _connector.SecurityReceived += (subscription, security) =>
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
 
-		// Tick-Trades-Subscription
+		// Tick-Trade-Abonnement
 		var tradesSubscription = new Subscription(DataType.Ticks, security);
 		_connector.Subscribe(tradesSubscription);
 
-		// Kerzen-Subscription
+		// Kerzen-Abonnement
 		var candleSubscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 			security)
@@ -112,7 +112,7 @@ _connector.Error += error =>
 	Console.WriteLine($"Fehler: {error.Message}");
 };
 
-// Fehlerereignis bei Marktdaten-Subscription
+// Fehlerereignis bei Marktdaten-Abonnement
 _connector.SubscriptionFailed += (subscription, error) =>
 {
 	Console.WriteLine($"Abonnementfehler {subscription.DataType} für {subscription.SecurityId}: {error}");
@@ -130,7 +130,7 @@ Hydra stellt im Servermodus Zugriff auf verschiedene Datentypen bereit. Betracht
 // Historische Kerzen abrufen
 private void RequestHistoricalCandles(Security security, DateTime from, DateTime to)
 {
-	// Subscription für historische Kerzen erstellen
+	// Abonnement für historische Kerzen erstellen
 	var candleSubscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
@@ -145,13 +145,13 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 	// Abonnieren, um empfangene Kerzen zu verarbeiten
 	_connector.CandleReceived += OnCandleReceived;
 
-	// Subscription starten
+	// Abonnement starten
 	_connector.Subscribe(candleSubscription);
 }
 
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Prüfen, ob die Kerze zu unserer Subscription gehört
+	// Prüfen, ob die Kerze zu unserem Abonnement gehört
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 
@@ -168,7 +168,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 // Verbindung korrekt schließen
 private void DisconnectFromServer()
 {
-	// Von allen Subscriptions abmelden
+	// Von allen Abonnements abmelden
 	foreach (var subscription in _connector.Subscriptions.ToArray())
 	{
 		_connector.UnSubscribe(subscription);

@@ -1,11 +1,11 @@
 > [!WARNING]
-> Este exchange cerró permanentemente (~2023 — efectivamente inactivo). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa cerró permanentemente (~2023 — efectivamente inactivo). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # Yobit
 
-**YoBit** - exchange de criptomonedas.
+**YoBit** - bolsa de criptomonedas.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md). 
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, recomendamos leer los enlaces de la sección [Conectores](../../connectors.md).
 
 ## Contenido recomendado
 

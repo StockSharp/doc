@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [RelativeMomentumIndex](
 
 ## Descrição
 
-O índice de momentum relativo (RMI) melhora o RSI clássico ao adicionar um parâmetro de período de momentum. Isto permite aos traders ajustar a sensibilidade do indicador sem alterar o período principal de cálculo.
+O índice de momentum relativo (RMI) melhora o RSI clássico ao adicionar um parâmetro de período de momentum. Isto permite aos operadores ajustar a sensibilidade do indicador sem alterar o período principal de cálculo.
 
 Tal como o RSI, o RMI oscila entre 0 e 100:
 - Valores acima de 70 indicam normalmente um mercado em sobrecompra

@@ -41,7 +41,7 @@ private void InitializeChart()
 // Methode zum Abonnieren von Kerzen
 private void SubscribeToCandles()
 {
-	// Subscription auf Kerzen mit dem angegebenen Zeitrahmen erstellen
+	// Abonnement für Kerzen mit dem angegebenen Zeitrahmen erstellen
 	_candleSubscription = new Subscription(
 		DataType.TimeFrame(_timeFrame),
 		_security)
@@ -56,14 +56,14 @@ private void SubscribeToCandles()
 		}
 	};
 
-	// Subscription starten
+	// Abonnement starten
 	_connector.Subscribe(_candleSubscription);
 }
 
 // Handler für das Kerzenempfangsereignis
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Prüfen, ob die Kerze zu unserer Subscription gehört
+	// Prüfen, ob die Kerze zu unserem Abonnement gehört
 	if (subscription != _candleSubscription)
 		return;
 
@@ -151,7 +151,7 @@ private void InitializeChartWithMultipleIndicators()
 	// Ereignis für den Kerzenempfang abonnieren
 	_connector.CandleReceived += OnCandleReceivedMultipleIndicators;
 
-	// Subscription auf Kerzen erstellen
+	// Abonnement für Kerzen erstellen
 	_candleSubscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		_security)
@@ -164,14 +164,14 @@ private void InitializeChartWithMultipleIndicators()
 		}
 	};
 
-	// Subscription starten
+	// Abonnement starten
 	_connector.Subscribe(_candleSubscription);
 }
 
 // Handler für das Kerzenempfangsereignis bei mehreren Indikatoren
 private void OnCandleReceivedMultipleIndicators(Subscription subscription, ICandleMessage candle)
 {
-	// Prüfen, ob die Kerze zu unserer Subscription gehört
+	// Prüfen, ob die Kerze zu unserem Abonnement gehört
 	if (subscription != _candleSubscription)
 		return;
 

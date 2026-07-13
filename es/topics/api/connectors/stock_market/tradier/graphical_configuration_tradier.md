@@ -22,7 +22,7 @@ Proceso de autorización OAuth:
 
    ![Inicio de sesión Tradier](../../../../../images/api_gui_settings_tradier_2.png)
 
-3. En el sitio web de Tradier, debe permitir a la aplicación StockSharp el acceso a operaciones de trading:
+3. En el sitio web de Tradier, debe permitir a la aplicación StockSharp el acceso a operaciones de negociación:
 
    ![Permisos de Tradier](../../../../../images/api_gui_settings_tradier_3.png)
 

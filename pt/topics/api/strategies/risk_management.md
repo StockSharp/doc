@@ -115,9 +115,9 @@ Aciona quando uma posição foi mantida durante mais tempo do que o estabelecido
 
 Aciona quando a comissão total é excedida.
 
-### RiskSlippageRule -- controlo do slippage
+### RiskSlippageRule -- controlo do deslizamento
 
-Aciona quando o nível de slippage é excedido.
+Aciona quando o nível de deslizamento é excedido.
 
 ### RiskErrorRule -- controlo de erros
 

@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-La clase `Strategy` es la clase base para crear estrategias de trading en StockSharp. Proporciona un conjunto completo de herramientas para suscribirse a datos de mercado, gestionar órdenes y posiciones, calcular estadísticas y generar informes.
+La clase `Strategy` es la clase base para crear estrategias de negociación en StockSharp. Proporciona un conjunto completo de herramientas para suscribirse a datos de mercado, gestionar órdenes y posiciones, calcular estadísticas y generar informes.
 
 Capacidades clave de la clase `Strategy`:
 
@@ -21,12 +21,12 @@ Capacidades clave de la clase `Strategy`:
 ## Secciones de documentación
 
 - [Gestión de posición objetivo](target_position_management.md) -- gestión declarativa del tamaño de posición mediante `SetTargetPosition`
-- [Modos de trading](trading_modes.md) -- restricción de actividad de trading mediante `StrategyTradingModes`
-- [Sistema de alertas](alert_system.md) -- envío de notificaciones (popup, sonido, log, Telegram)
+- [Modos de negociación](trading_modes.md) -- restricción de actividad de negociación mediante `StrategyTradingModes`
+- [Sistema de alertas](alert_system.md) -- envío de notificaciones (popup, sonido, registro, Telegram)
 - [Sistema de temporizadores](timer_system.md) -- ejecución periódica de acciones
 - [Gestión de riesgos](risk_management.md) -- reglas de gestión de riesgos
 - [Suscripciones de alto nivel](high_level_subscriptions.md) -- suscripciones simplificadas a datos de mercado
-- [Informes de estrategia](reporting.md) -- generación de informes de resultados de trading
+- [Informes de estrategia](reporting.md) -- generación de informes de resultados de negociación
 - [Funciones avanzadas](advanced_features.md) -- comentarios de órdenes, horarios, tasa libre de riesgo, fuente de indicadores
 
 ## Estrategia mínima
@@ -63,7 +63,7 @@ public class MyStrategy : Strategy
         if (!IsFormedAndOnlineAndAllowTrading())
             return;
 
-        // Lógica de trading
+        // Lógica de negociación
     }
 }
 ```

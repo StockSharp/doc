@@ -362,16 +362,16 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 	if (candle.State != CandleStates.Finished)
 		return;
 
-	// Indikator-Crossover analysieren
+	// Indikatorkreuzung analysieren
 	var isShortLessThenLong = shortValue < longValue;
 
 	if (_isShortLessThenLong == null)
 	{
 		_isShortLessThenLong = isShortLessThenLong;
 	}
-	else if (_isShortLessThenLong != isShortLessThenLong) // Crossover ist aufgetreten
+	else if (_isShortLessThenLong != isShortLessThenLong) // Kreuzung ist aufgetreten
 	{
-		// Wenn short kleiner als long ist - verkaufen, sonst kaufen
+		// Wenn der kurze Wert kleiner als der lange ist - verkaufen, sonst kaufen
 		var direction = isShortLessThenLong ? Sides.Sell : Sides.Buy;
 
 		// Volumen zum Öffnen der Position oder für die Umkehr berechnen

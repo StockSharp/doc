@@ -1,6 +1,6 @@
-# Verbindung von Candles: Historie + Echtzeit
+# Verbindung von Kerzen: Historie + Echtzeit
 
-Um historische Candles mit Echtzeitdaten zu kombinieren, müssen Sie die entsprechenden Speicher initialisieren: Speicher für Handelsobjekte [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), Speicher für Marktdaten [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) und Snapshot-Speicherregister [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
+Um historische Kerzen mit Echtzeitdaten zu kombinieren, müssen Sie die entsprechenden Speicher initialisieren: Speicher für Handelsobjekte [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), Speicher für Marktdaten [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) und Momentaufnahmen-Speicherregister [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
 
 Das Projekt `Samples/Candles/CombineHistoryRealtime` zeigt diese Einrichtung in der Praxis:
 
@@ -87,7 +87,7 @@ private void Connect_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## Verarbeitung von Candles und Anzeige im Chart
+## Verarbeitung von Kerzen und Anzeige im Chart
 
 ```cs
 // Handler für das Kerzenempfangsereignis
@@ -98,7 +98,7 @@ private void Connector_CandleReceived(Subscription subscription, ICandleMessage 
 }
 ```
 
-## Erstellung eines Candle-Abonnements
+## Erstellung eines Kerze-Abonnements
 
 ```cs
 // Methode, die bei Auswahl eines Instruments aufgerufen wird
@@ -277,7 +277,7 @@ public partial class MainWindow
 1. **Erstellung von Speichern**:
    - [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry) wird zum Speichern von Entitäten verwendet und benötigt `IFileSystem` und `ChannelExecutor`
    - [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) wird mit dem Pfad zum Speicher konfiguriert
-   - [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) wird für die Arbeit mit Snapshots erstellt und benötigt `IFileSystem`
+   - [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry) wird für die Arbeit mit Momentaufnahmen erstellt und benötigt `IFileSystem`
 
 2. **Erstellung des Abonnements**:
    - Die Klasse [Subscription](xref:StockSharp.BusinessEntities.Subscription) wird verwendet
@@ -286,10 +286,10 @@ public partial class MainWindow
 
 3. **Chart-Anzeige**:
    - Die Methode Chart.AddElement wird verwendet, um das Chart-Element mit dem Abonnement zu verknüpfen
-   - Das Chart wird automatisch aktualisiert, wenn neue Candles empfangen werden
+   - Das Chart wird automatisch aktualisiert, wenn neue Kerzen empfangen werden
 
 4. **Ereignisbehandlung**:
-   - Abonnement des Ereignisses CandleReceived zur Verarbeitung empfangener Candles
+   - Abonnement des Ereignisses CandleReceived zur Verarbeitung empfangener Kerzen
    - Kündigung des vorherigen Abonnements, wenn das ausgewählte Instrument geändert wird
 
 ## Erweiterte Funktionen
@@ -329,7 +329,7 @@ private void SetHistoryPeriod(int days)
 }
 ```
 
-### Zusätzliche Candle-Verarbeitung
+### Zusätzliche Kerze-Verarbeitung
 
 ```cs
 // Erweiterte Kerzenverarbeitung mit Informationsausgabe

@@ -1,6 +1,6 @@
 # Indicadores
 
-El script "Indicador" está destinado a demostrar el trabajo con indicadores de análisis técnico dentro de la plataforma StockSharp. Permite cargar datos históricos, aplicarles distintos indicadores y mostrar los resultados en un gráfico. Este enfoque ayuda a analizar tendencias del mercado y tomar decisiones de trading informadas.
+El script "Indicador" está destinado a demostrar el trabajo con indicadores de análisis técnico dentro de la plataforma StockSharp. Permite cargar datos históricos, aplicarles distintos indicadores y mostrar los resultados en un gráfico. Este enfoque ayuda a analizar tendencias del mercado y tomar decisiones de negociación informadas.
 
 ![Indicadores](../../../../images/hydra_analytics_indicator.png)
 
@@ -20,7 +20,7 @@ El script puede trabajar con una amplia gama de indicadores, incluidos entre otr
 - **Índice de fuerza relativa (RSI)**: evalúa la magnitud y velocidad de los cambios de precio, ayudando a identificar condiciones de sobrecompra o sobreventa.
 - **Bandas de Bollinger (BB)**: muestran el rango y la volatilidad de precios, basándose en medias móviles y desviaciones estándar.
 
-## Aplicación en trading y análisis
+## Aplicación en negociación y análisis
 
 El uso de indicadores de análisis técnico mediante este script permite:
 
@@ -36,7 +36,7 @@ Para trabajar con el script, deben realizarse los siguientes pasos:
 2. **Aplicar indicadores**: elegir y configurar parámetros para los indicadores que se aplicarán a los datos.
 3. **Mostrar resultados**: visualizar datos históricos e indicadores en un gráfico para su análisis.
 
-El script "Indicador" proporciona una herramienta potente para el análisis profundo de mercados financieros, permitiendo a traders y analistas usar estos indicadores para desarrollar estrategias de trading eficaces.
+El script "Indicador" proporciona una herramienta potente para el análisis profundo de mercados financieros, permitiendo a operadores y analistas usar estos indicadores para desarrollar estrategias de negociación eficaces.
 
 ## Código del script en C#
 

@@ -1,12 +1,12 @@
 # Gráfico
 
-Para exibição gráfica de candles, você pode usar o componente especial [Chart](xref:StockSharp.Xaml.Charting.Chart) (veja [Componentes para construção de gráficos](../graphical_user_interface/charts.md)), que renderiza candles da seguinte forma:
+Para exibição gráfica de velas, você pode usar o componente especial [Chart](xref:StockSharp.Xaml.Charting.Chart) (veja [Componentes para construção de gráficos](../graphical_user_interface/charts.md)), que renderiza velas da seguinte forma:
 
 ![Exemplo de gráfico de velas](../../../images/sample_candleschart.png)
 
 ## Abordagem básica para exibir velas
 
-Existem duas abordagens para exibir candles em um gráfico. A primeira abordagem é o desenho manual dos candles ao receber dados:
+Existem duas abordagens para exibir velas em um gráfico. A primeira abordagem é o desenho manual das velas ao receber dados:
 
 ```cs
 // CandlesChart - StockSharp.Xaml.Chart
@@ -100,7 +100,7 @@ private void InitializeChartWithAutoBinding()
 
 ## Trabalhando com Indicadores
 
-Para exibir indicadores no gráfico junto com os candles, são usados elementos do tipo [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement):
+Para exibir indicadores no gráfico junto com as velas, são usados elementos do tipo [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement):
 
 ```cs
 // Adicionar indicador ao gráfico
@@ -366,7 +366,7 @@ private void ClearChart()
 }
 ```
 
-Um exemplo de exibição de candles em um gráfico é fornecido na seção [Velas](../candles.md).
+Um exemplo de exibição de velas em um gráfico é fornecido na seção [Velas](../candles.md).
 
 ## Veja também
 

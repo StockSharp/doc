@@ -30,7 +30,7 @@ O processo de normalização inclui normalmente os seguintes passos:
 2. **Processamento de Dados**: Aplicar o método de normalização escolhido aos preços de fecho de cada instrumento.
 3. **Análise dos Resultados**: Usar dados normalizados para posterior análise e comparação de instrumentos.
 
-O script "Normalização do Preço de Fecho" é uma ferramenta crucial para preparar dados para negociação e análise quantitativa, permitindo que traders e analistas comparem e avaliem ativos financeiros com maior precisão em várias estratégias e estudos.
+O script "Normalização do Preço de Fecho" é uma ferramenta crucial para preparar dados para negociação e análise quantitativa, permitindo que operadores e analistas comparem e avaliem ativos financeiros com maior precisão em várias estratégias e estudos.
 
 ## Código do Script em C#
 
@@ -60,7 +60,7 @@ namespace StockSharp.Algo.Analytics
 
 				var series = new Dictionary<DateTimeOffset, decimal>();
 
-				// obter o armazenamento de candles
+				// obter o armazenamento de velas
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				decimal? firstClose = null;
@@ -124,7 +124,7 @@ class normalize_price_script(IAnalyticsScript):
 
 			series = {}
 
-			# obter o armazenamento de candles
+			# obter o armazenamento de velas
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			first_close = None

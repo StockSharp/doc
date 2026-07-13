@@ -17,7 +17,7 @@ Os ficheiros binários têm a extensão `.bin`.
 
 ### Tipos de Dados Suportados
 
-O formato binário suporta a serialização de todos os principais tipos de dados de mercado: candles, ticks (negócios), livros de ofertas (Level2), dados Level1, ordens e negócios próprios. Cada tipo tem um serializador especializado otimizado para a estrutura dos dados específicos.
+O formato binário suporta a serialização de todos os principais tipos de dados de mercado: velas, ticks (negócios), livros de ofertas (Level2), dados Level1, ordens e negócios próprios. Cada tipo tem um serializador especializado otimizado para a estrutura dos dados específicos.
 
 ## Formato CSV
 
@@ -55,7 +55,7 @@ Os dados em disco são organizados de acordo com a seguinte estrutura de caminho
 
 Em que a extensão é `.bin` para o formato binário ou `.csv` para o formato de texto. Esta organização hierárquica garante uma pesquisa rápida dos dados por instrumento e data.
 
-Por exemplo, candles de 5 minutos para o instrumento AAPL@NASDAQ em 1 de abril de 2024, no formato binário, ficariam localizados num caminho como:
+Por exemplo, velas de 5 minutos para o instrumento AAPL@NASDAQ em 1 de abril de 2024, no formato binário, ficariam localizados num caminho como:
 
 ```
 Storage/S/AAPL@NASDAQ/2024_04_01/candles_5m.bin

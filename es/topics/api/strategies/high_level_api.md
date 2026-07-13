@@ -1,6 +1,6 @@
 # API de alto nivel en estrategias
 
-StockSharp proporciona un conjunto de APIs de alto nivel para simplificar el trabajo con tareas comunes en estrategias de trading. Estas interfaces permiten escribir código más limpio, centrado en la lógica de trading en lugar de detalles técnicos.
+StockSharp proporciona un conjunto de APIs de alto nivel para simplificar el trabajo con tareas comunes en estrategias de negociación. Estas interfaces permiten escribir código más limpio, centrado en la lógica de negociación en lugar de detalles técnicos.
 
 ## Gestión simplificada de suscripciones
 
@@ -61,7 +61,7 @@ private void OnProcessWithRawValue(ICandleMessage candle, IIndicatorValue value)
 	{
 		// Para indicadores que devuelven valores booleanos
 		var boolValue = value.GetValue<bool>();
-		
+
 		// U otros tipos de datos específicos de un indicador concreto
 		// ...
 	}
@@ -80,10 +80,10 @@ Para indicadores complejos que contienen varios indicadores internos (por ejempl
 
 ```cs
 // Crear un indicador complejo
-var bollinger = new BollingerBands 
-{ 
-	Length = 20, 
-	Deviation = 2 
+var bollinger = new BollingerBands
+{
+	Length = 20,
+	Deviation = 2
 };
 
 // Vincular el indicador complejo a una suscripción
@@ -138,8 +138,8 @@ private void OnProcess(ICandleMessage candle, decimal longValue, decimal shortVa
 {
 	// Trabajar directamente con valores de indicador listos
 	var isShortLessThenLong = shortValue < longValue;
-	
-	// La lógica de trading usa valores numéricos limpios
+
+	// La lógica de negociación usa valores numéricos limpios
 	// sin necesidad de extraerlos de IIndicatorValue
 	// ...
 }
@@ -168,10 +168,10 @@ if (area != null)
 	// Dibujo de indicadores con personalización de color
 	DrawIndicator(area, shortSma, System.Drawing.Color.Coral);
 	DrawIndicator(area, longSma);
-	
+
 	// Dibujo de operaciones propias
 	DrawOwnTrades(area);
-	
+
 	// Dibujo de órdenes
 	DrawOrders(area);
 }
@@ -206,8 +206,8 @@ IChartIndicatorElement rsiFast = DrawIndicator(area, rsi, System.Drawing.Color.R
 
 // Adición de un indicador con colores primario y secundario especificados
 IChartIndicatorElement bollingerElem = DrawIndicator(
-	area, 
-	bollinger, 
+	area,
+	bollinger,
 	System.Drawing.Color.Blue,    // Color primario
 	System.Drawing.Color.Gray     // Color secundario (para la segunda línea)
 );
@@ -295,16 +295,16 @@ Este método configura automáticamente la protección de todas las posiciones a
 - Sigue cambios de precio
 - Crea automáticamente órdenes para cerrar posiciones cuando se alcanzan niveles Take Profit o Stop Loss
 - Admite varios tipos de unidades de medida (valores absolutos, porcentajes, puntos)
-- Puede usar trailing stop para protección adaptativa de posiciones
+- Puede usar un stop dinámico para protección adaptativa de posiciones
 
 Ejemplo con parámetros adicionales:
 
 ```cs
-// Iniciar protección con trailing stop y órdenes de mercado
+// Iniciar protección con stop dinámico y órdenes de mercado
 StartProtection(
 	takeProfit: new Unit(50, UnitTypes.Absolute), // Take Profit
 	stopLoss: new Unit(2, UnitTypes.Percent),     // Stop Loss en porcentaje
-	isStopTrailing: true,                         // Activar trailing stop
+	isStopTrailing: true,                         // Activar stop dinámico
 	useMarketOrders: true                         // Usar órdenes de mercado
 );
 ```
@@ -315,7 +315,7 @@ La API de alto nivel en estrategias StockSharp proporciona las siguientes ventaj
 
 1. **Reducción de volumen de código** - realizar tareas comunes requiere menos líneas de código
 
-2. **Separación de responsabilidades** - la lógica de trading se separa de los detalles técnicos de procesamiento de datos y visualización
+2. **Separación de responsabilidades** - la lógica de negociación se separa de los detalles técnicos de procesamiento de datos y visualización
 
 3. **Mejor legibilidad** - el código se vuelve más comprensible y expresivo, centrado en la lógica de negocio
 
@@ -410,7 +410,7 @@ public class SmaStrategy : Strategy
 		if (candle.State != CandleStates.Finished)
 			return;
 
-		// Lógica de trading basada en cruce de indicadores
+		// Lógica de negociación basada en cruce de indicadores
 		var isShortLessThenLong = shortValue < longValue;
 
 		if (_isShortLessThenLong == null)
@@ -440,6 +440,6 @@ public class SmaStrategy : Strategy
 
 ## Conclusión
 
-La API de alto nivel en StockSharp simplifica significativamente el desarrollo de estrategias de trading, permitiendo a los desarrolladores centrarse en la lógica de trading en lugar de detalles técnicos. Es especialmente útil para casos de uso típicos donde no se requiere ajuste fino del procesamiento de datos o la visualización.
+La API de alto nivel en StockSharp simplifica significativamente el desarrollo de estrategias de negociación, permitiendo a los desarrolladores centrarse en la lógica de negociación en lugar de detalles técnicos. Es especialmente útil para casos de uso típicos donde no se requiere ajuste fino del procesamiento de datos o la visualización.
 
-Combinada con el sistema de parámetros de estrategia, el modelo de eventos y los mecanismos de protección de posiciones, la API de alto nivel convierte a StockSharp en una herramienta potente y cómoda para trading algorítmico, adecuada tanto para principiantes como para desarrolladores experimentados.
+Combinada con el sistema de parámetros de estrategia, el modelo de eventos y los mecanismos de protección de posiciones, la API de alto nivel convierte a StockSharp en una herramienta potente y cómoda para la negociación algorítmica, adecuada tanto para principiantes como para desarrolladores experimentados.

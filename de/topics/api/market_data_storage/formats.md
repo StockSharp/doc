@@ -17,7 +17,7 @@ Binärdateien haben die Erweiterung `.bin`.
 
 ### Unterstützte Datentypen
 
-Das Binärformat unterstützt die Serialisierung aller wichtigen Marktdatentypen: Candles, Ticks (Trades), Orderbücher (Level2), Level1-Daten, Orders und eigene Trades. Jeder Typ besitzt einen spezialisierten Serializer, der für die Struktur der jeweiligen Daten optimiert ist.
+Das Binärformat unterstützt die Serialisierung aller wichtigen Marktdatentypen: Kerzen, Ticks (Trades), Orderbücher (Level2), Level1-Daten, Orders und eigene Trades. Jeder Typ besitzt einen spezialisierten Serializer, der für die Struktur der jeweiligen Daten optimiert ist.
 
 ## CSV-Format
 
@@ -55,7 +55,7 @@ Daten werden auf dem Datenträger gemäß folgender Pfadstruktur organisiert:
 
 Die Erweiterung ist `.bin` für das Binärformat oder `.csv` für das Textformat. Diese hierarchische Organisation ermöglicht eine schnelle Datensuche nach Instrument und Datum.
 
-Zum Beispiel würden 5-Minuten-Candles für das Instrument AAPL@NASDAQ am 1. April 2024 im Binärformat unter einem Pfad wie diesem liegen:
+Zum Beispiel würden 5-Minuten-Kerzen für das Instrument AAPL@NASDAQ am 1. April 2024 im Binärformat unter einem Pfad wie diesem liegen:
 
 ```
 Storage/S/AAPL@NASDAQ/2024_04_01/candles_5m.bin
@@ -84,13 +84,13 @@ Das Format wird beim Erstellen eines Speichers über [StorageRegistry](xref:Stoc
 ```cs
 var storageRegistry = new StorageRegistry();
 
-// Candle-Speicher im Binärformat erstellen
+// Kerzenspeicher im Binärformat erstellen
 var binaryStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId,
     TimeSpan.FromMinutes(5),
     StorageFormats.Binary);
 
-// Candle-Speicher im CSV-Format erstellen
+// Kerzenspeicher im CSV-Format erstellen
 var csvStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId,
     TimeSpan.FromMinutes(5),

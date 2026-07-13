@@ -16,7 +16,7 @@ Principales ventajas de T3MA:
 T3MA se puede utilizar para:
 - Determinar la dirección de la tendencia
 - Encontrar puntos de entrada y salida cuando el precio cruza la línea del indicador
-- Creación de sistemas de trading basados en cruces de múltiples T3MA con diferentes períodos
+- Creación de sistemas de negociación basados en cruces de múltiples T3MA con diferentes períodos
 
 ## Parámetros
 
@@ -43,7 +43,7 @@ El cálculo de la media móvil T3 se realiza en varios pasos:
    c2 = 3 * VolumeFactor^2 + 3 * VolumeFactor^3
    c3 = -6 * VolumeFactor^2 - 3 * VolumeFactor - 3 * VolumeFactor^3
    c4 = 1 + 3 * VolumeFactor + VolumeFactor^3 + 3 * VolumeFactor^2
-   
+
    T3 = c1 * EMA6 + c2 * EMA5 + c3 * EMA4 + c4 * EMA3
    ```
 

@@ -4,7 +4,7 @@ O [S#](../api.md) fornece uma ampla gama de funcionalidades para a gestão efici
 
 ## Funcionalidades Principais
 
-- **Criação de ordens** - formação de vários tipos de ordens de negociação (mercado, limite, stop orders, etc.)
+- **Criação de ordens** - formação de vários tipos de ordens de negociação (mercado, limite, ordens stop, etc.)
 - **Acompanhamento de estado** - receção de informação atualizada sobre o estado atual das ordens
 - **Gestão de ordens** - cancelamento, modificação e substituição de ordens existentes
 - **Processamento de eventos** - resposta a eventos de registo, execução e cancelamento de ordens
@@ -33,7 +33,7 @@ O mecanismo de gestão de ordens está estreitamente integrado com componentes p
 
 [Criar uma Nova Ordem](orders_management/create_new_order.md)
 
-[Criar uma Nova Stop Order](orders_management/create_new_stop_order.md)
+[Criar uma Nova Ordem Stop](orders_management/create_new_stop_order.md)
 
 [Estados da Ordem](orders_management/orders_states.md)
 

@@ -285,10 +285,10 @@ optimizer.EmulationSettings.MaxIterations = 100;
 | `GenerationsMax` | Maximale Anzahl von Generationen (0 = unbegrenzt) | 20 |
 | `GenerationsStagnation` | Nach N stagnierenden Generationen stoppen (0 = deaktiviert) | 5 |
 | `MutationProbability` | Mutationswahrscheinlichkeit (0..1) | 0.1 |
-| `CrossoverProbability` | Crossover-Wahrscheinlichkeit (0..1) | 0.75 |
+| `CrossoverProbability` | Kreuzungswahrscheinlichkeit (0..1) | 0.75 |
 | `Fitness` | Formel der Fitness-Funktion | `"PnL"` |
 | `Selection` | Selektionsoperator | `TournamentSelection` |
-| `Crossover` | Crossover-Operator | `OnePointCrossover` |
+| `Crossover` | Kreuzungsoperator | `OnePointCrossover` |
 | `Mutation` | Mutationsoperator | `UniformMutation` |
 | `Reinsertion` | Strategie zum Ersetzen von Generationen | `ElitistReinsertion` |
 

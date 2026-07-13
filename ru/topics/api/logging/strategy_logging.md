@@ -1,4 +1,4 @@
-# Логирование Strategy
+# Логирование стратегии
 
 Класс [Strategy](xref:StockSharp.Algo.Strategies.Strategy) реализует интерфейс [ILogSource](xref:Ecng.Logging.ILogSource). Поэтому стратегии можно передавать в [LogManager.Sources](xref:Ecng.Logging.LogManager.Sources), и все ее сообщения будут автоматически попадать в [LogManager.Listeners](xref:Ecng.Logging.LogManager.Listeners). 
 
@@ -68,7 +68,7 @@
    logManager.Listeners.Add(guiListener);
    logManager.Sources.Add(lkohSmaStrategy);
    ```
-2. Вот как выглядит окно логов при работе стратегии: ![Снимок экрана: Логирование Strategy](../../../images/strategy_logging.png)
+2. Вот как выглядит окно логов при работе стратегии: ![Снимок экрана: Логирование стратегии](../../../images/strategy_logging.png)
 
 ## См. также
 

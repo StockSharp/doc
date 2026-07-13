@@ -8,7 +8,7 @@ Para utilizar o indicador, é necessário usar a classe [HarmonicOscillator](xre
 
 O oscilador harmônico (HO) é um indicador desenvolvido para identificar a periodicidade e a natureza cíclica dos movimentos de preço do mercado. Baseia-se no princípio de que muitos movimentos de preço contêm componentes harmónicas (periódicas) que podem ser isoladas e usadas para prever movimentos futuros do preço.
 
-O indicador aplica métodos de análise espectral para decompor a série de preços em componentes harmónicas, destacando os ciclos dominantes. Em seguida, apresenta estas componentes cíclicas como um oscilador que ajuda os traders a determinar quando o preço pode atingir máximos ou mínimos locais dentro dos ciclos identificados.
+O indicador aplica métodos de análise espectral para decompor a série de preços em componentes harmónicas, destacando os ciclos dominantes. Em seguida, apresenta estas componentes cíclicas como um oscilador que ajuda os operadores a determinar quando o preço pode atingir máximos ou mínimos locais dentro dos ciclos identificados.
 
 O HO é particularmente útil para:
 - Determinar a natureza cíclica do mercado

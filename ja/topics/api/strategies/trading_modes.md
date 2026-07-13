@@ -57,7 +57,7 @@ if (!IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly))
 
 `required` パラメーターを指定して呼び出した場合の許可ロジック:
 
-| 現在の TradingMode \ required | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
+| 現在の TradingMode \ 必須 | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
 |-------------------------------|--------|---------------------|---------------------|
 | `Full` | はい | はい | はい |
 | `Disabled` | いいえ | いいえ | いいえ |

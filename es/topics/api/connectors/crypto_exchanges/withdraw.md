@@ -1,6 +1,6 @@
 # Retiro
 
-Para retirar fondos del exchange de criptomonedas, debe crear una orden de retiro y registrarla en el conector como una orden normal. Por ejemplo, para el exchange [Binance](binance.md), el código de solicitud de retiro tendrá este aspecto:
+Para retirar fondos de la bolsa de criptomonedas, debe crear una orden de retiro y registrarla en el conector como una orden normal. Por ejemplo, para la bolsa [Binance](binance.md), el código de solicitud de retiro tendrá este aspecto:
 
 ```cs
 Connector Connector = new Connector();		

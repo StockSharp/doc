@@ -23,13 +23,13 @@ Envolvente bajista se considera una de las señales más fiables de reversión d
 - Cuanto mayor sea el tamaño de la segunda vela en comparación con la primera, más fuerte será la señal.
 - Si el patrón se forma en un nivel de resistencia o después de una tendencia alcista prolongada, su importancia aumenta.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Envolvente bajista proporciona excelentes oportunidades para entrar en una posición corta:
 
 - Entrar en una posición corta después de la formación del patrón, normalmente en la apertura de la siguiente vela.
 - Colocar un stop-loss por encima del máximo de la segunda vela del patrón.
 - El objetivo de beneficio puede establecerse en función de niveles de soporte previos, relación riesgo/beneficio o usando indicadores técnicos.
-- Un volumen de trading alto durante la formación de la segunda vela aumenta significativamente la fiabilidad de la señal.
+- Un volumen de negociación alto durante la formación de la segunda vela aumenta significativamente la fiabilidad de la señal.
 - Combinar con otros indicadores, como RSI en zona de sobrecompra o divergencia en osciladores, para aumentar la probabilidad de una operación exitosa.
 - También se puede usar como señal para cerrar posiciones largas existentes.

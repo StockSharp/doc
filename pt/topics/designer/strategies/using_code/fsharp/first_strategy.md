@@ -12,10 +12,10 @@ Esta secção não descreve construções da linguagem F# (nem a [Strategy](../.
 ```fsharp
 // --- Parâmetros da estratégia: CandleType, Long, Short, TakeValue, StopValue ---
 
-// Parâmetro para o tipo de candle
+// Parâmetro para o tipo de vela
 let candleTypeParam =
 	this.Param<DataType>(nameof(this.CandleType), DataType.TimeFrame(TimeSpan.FromMinutes 1.0))
-		.SetDisplay("Tipo de candle", "Tipo de candle para cálculo da estratégia.", "Configurações gerais")
+		.SetDisplay("Tipo de vela", "Tipo de vela para cálculo da estratégia.", "Configurações gerais")
 
 // Parâmetro para a SMA longa
 let longParam =
@@ -38,7 +38,7 @@ let mutable isShortLessThenLong : bool option = None
 
 // --------------------- Propriedades públicas ---------------------
 
-/// <summary>O tipo de candle usado pela estratégia.</summary>
+/// <summary>O tipo de vela usado pela estratégia.</summary>
 member this.CandleType
 	with get () = candleTypeParam.Value
 	and set value = candleTypeParam.Value <- value
@@ -77,7 +77,7 @@ let shortSma = SMA()
 shortSma.Length <- this.Short
 // ---------------------------------------
 
-// ------ Subscrever o fluxo de candles e ligar indicadores ------
+// ------ Subscrever o fluxo de velas e ligar indicadores ------
 let subscription = this.SubscribeCandles(this.CandleType)
 
 // Ligar os nossos indicadores à subscrição e atribuir a função de processamento
@@ -94,7 +94,7 @@ let area = this.CreateChartArea()
 
 // area pode ser null caso não exista GUI (por exemplo, Runner ou aplicação de consola)
 if not (isNull area) then
-	// Desenhar candles
+	// Desenhar velas
 	this.DrawCandles(area, subscription) |> ignore
 
 	// Desenhar indicadores
@@ -120,7 +120,7 @@ member private this.OnProcess
 		longValue: decimal,
 		shortValue: decimal
 	) =
-	// Registar informações da candle
+	// Registar informações da vela
 	this.LogInfo(
 		LocalizedStrings.SmaNewCandleLog,
 		candle.OpenTime,
@@ -132,7 +132,7 @@ member private this.OnProcess
 		candle.SecurityId
 	)
 
-	// Ignorar se a candle não estiver finalizada
+	// Ignorar se a vela não estiver finalizada
 	if candle.State <> CandleStates.Finished then
 		()
 	else

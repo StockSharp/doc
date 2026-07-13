@@ -23,13 +23,13 @@ Suelo de pinzas se considera una señal de una posible reversión de una tendenc
 - La ausencia de sombra inferior en la segunda vela con una larga sombra superior indica fuerte presión alcista desde el nivel mínimo.
 - El patrón es particularmente significativo si se forma en un nivel de soporte importante o después de un movimiento bajista prolongado.
 
-### Estrategias de trading
+### Estrategias de negociación
 
 Suelo de pinzas requiere un enfoque prudente y a menudo confirmación adicional:
 
 - Esperar una vela alcista de confirmación después de la formación del patrón antes de entrar en una posición larga.
 - Colocar un stop-loss ligeramente por debajo del mínimo común del patrón.
-- Considerar el volumen de trading: la disminución del volumen en la primera vela y el aumento en la segunda y en velas alcistas posteriores refuerza la señal.
+- Considerar el volumen de negociación: la disminución del volumen en la primera vela y el aumento en la segunda y en velas alcistas posteriores refuerza la señal.
 - Combinar con otros indicadores técnicos, como RSI en zona de sobreventa o divergencia alcista en osciladores.
 - Posible uso para cierre parcial o completo de posiciones cortas existentes.
 - Prestar especial atención a los movimientos de precio posteriores: un rápido crecimiento del precio después del patrón confirma su importancia.

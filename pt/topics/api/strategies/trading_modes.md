@@ -57,7 +57,7 @@ if (!IsFormedAndOnlineAndAllowTrading(StrategyTradingModes.ReducePositionOnly))
 
 Lógica de permissões quando chamado com um parâmetro `required`:
 
-| TradingMode atual \ required | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
+| TradingMode atual \ necessário | `Full` | `CancelOrdersOnly` | `ReducePositionOnly` |
 |------------------------------|--------|--------------------|----------------------|
 | `Full` | sim | sim | sim |
 | `Disabled` | não | não | não |

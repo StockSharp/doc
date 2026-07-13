@@ -24,11 +24,11 @@
     items:
       - name: Primeros pasos
         href: designer/videos/beginning.md
-      - name: Constructor de estrategias de trading
+      - name: Constructor de estrategias de negociación
         href: designer/videos/constructor.md
       - name: Matemáticas de lógica de variables
         href: designer/videos/variable_math.md
-      - name: Depurador de estrategias de trading
+      - name: Depurador de estrategias de negociación
         href: designer/videos/debugger.md
       - name: Protección de posiciones
         href: designer/videos/protect_position.md
@@ -42,9 +42,9 @@
         href: designer/videos/time.md
       - name: Conexión de Designer a Hydra
         href: designer/videos/connect_hydra.md
-      - name: Optimización de estrategias de trading
+      - name: Optimización de estrategias de negociación
         href: designer/videos/optimization.md
-      - name: Trading en vivo
+      - name: Negociación en vivo
         href: designer/videos/live_trading.md
       - name: Cubos compuestos
         href: designer/videos/complex_elements.md
@@ -56,9 +56,9 @@
         href: designer/videos/strategy_max_volume.md
       - name: Índices financieros
         href: designer/videos/financial_index.md
-      - name: Trading de pares
+      - name: Negociación de pares
         href: designer/videos/pair_trading.md
-      - name: Índices y pair trading
+      - name: Índices y negociación de pares
         href: designer/videos/index_pair_trading.md
   - name: Recursos para el aprendizaje
     href: designer/materials.md
@@ -74,13 +74,13 @@
       href: designer/user_interface/ribbon.md
     - name: Espacio de trabajo
       href: designer/user_interface/workspace.md
-    - name: Panel Schemes
+    - name: Panel Esquemas
       href: designer/user_interface/schemas.md
-    - name: Panel de logs
+    - name: Panel de registros
       href: designer/user_interface/logs.md
     - name: Carteras
       href: designer/user_interface/portfolios.md
-    - name: Boards de negociación
+    - name: Mercados de negociación
       href: designer/user_interface/boards.md
     - name: Gestión de riesgos
       href: designer/user_interface/risk_management.md
@@ -101,11 +101,11 @@
         href: designer/user_interface/components/positions.md
       - name: Estadísticas
         href: designer/user_interface/components/statistics.md
-      - name: "Equity P&L"
+      - name: "Curva de P&L"
         href: designer/user_interface/components/pnl_equity.md
-      - name: Configuración de backtesting
+      - name: Configuración de pruebas históricas
         href: designer/user_interface/components/backtesting_settings.md
-      - name: Configuración live
+      - name: Configuración en vivo
         href: designer/user_interface/components/live_settings.md
       - name: Operaciones tick
         href: designer/user_interface/components/tick_trades.md
@@ -165,7 +165,7 @@
           items:
           - name: Horario de trabajo
             href: designer/strategies/using_visual_designer/elements/time/working_time.md
-          - name: Trading permitido
+          - name: Negociación permitida
             href: designer/strategies/using_visual_designer/elements/time/trade_allow.md
           - name: Hora actual
             href: designer/strategies/using_visual_designer/elements/time/current_time.md
@@ -302,7 +302,7 @@
       href: designer/indicators/indicators.md
     - name: Crear su propio indicador
       href: designer/indicators/creating_your_own_indicator.md
-  - name: Backtesting
+  - name: Pruebas históricas
     items:
     - name: Interfaz de usuario
       href: designer/backtesting/user_interface.md
@@ -434,7 +434,7 @@
         href: terminal/user_interface/components/conditional_orders.md
       - name: Posiciones
         href: terminal/user_interface/components/positions.md
-      - name: Feed de operaciones
+      - name: Flujo de operaciones
         href: terminal/user_interface/components/trades_feed.md
       - name: Noticias
         href: terminal/user_interface/components/news.md
@@ -493,11 +493,11 @@
       href: hydra/videos/indicators.md
     - name: Analítica
       href: hydra/videos/analytics.md
-    - name: Tarea Import
+    - name: Tarea de importación
       href: hydra/videos/import_task.md
-    - name: Tarea Export
+    - name: Tarea de exportación
       href: hydra/videos/export_task.md
-    - name: Tarea Converter
+    - name: Tarea del convertidor
       href: hydra/videos/converter_task.md
   - name: Instalación de Hydra
     href: hydra/installing_hydra.md
@@ -933,7 +933,7 @@
           href: api/connectors/forex/oanda/graphical_configuration_oanda.md
         - name: Inicialización del adaptador Oanda
           href: api/connectors/forex/oanda/adapter_initialization_oanda.md
-    - name: Exchanges de criptomonedas
+    - name: Bolsas de criptomonedas
       items:
       - name: Bibox
         href: api/connectors/crypto_exchanges/bibox.md
@@ -1569,7 +1569,7 @@
         href: api/connectors/creating_own_connector/market_data.md
       - name: Información sobre carteras y órdenes
         href: api/connectors/creating_own_connector/portfolio_and_orders_state.md
-      - name: Operaciones de trading
+      - name: Operaciones de negociación
         href: api/connectors/creating_own_connector/trading_operations.md
       - name: Almacenamiento de configuraciones
         href: api/connectors/creating_own_connector/settings.md
@@ -1651,7 +1651,7 @@
       href: api/market_data_storage/formats.md
     - name: Unidades de almacenamiento
       href: api/market_data_storage/drives.md
-    - name: Sistema de snapshots
+    - name: Sistema de instantáneas
       href: api/market_data_storage/snapshots.md
   - name: Velas
     href: api/candles.md
@@ -1702,11 +1702,11 @@
         href: api/indicators/list_of_indicators/balance_of_power.md
       - name: BV
         href: api/indicators/list_of_indicators/balance_volume.md
-      - name: Bear Power
+      - name: fuerza bajista
         href: api/indicators/list_of_indicators/bear_power.md
-      - name: Bull Power
+      - name: fuerza alcista
         href: api/indicators/list_of_indicators/bull_power.md
-      - name: Bollinger Bands
+      - name: bandas de Bollinger
         href: api/indicators/list_of_indicators/bollinger_bands.md
       - name: BBP
         href: api/indicators/list_of_indicators/bollinger_percent_b.md
@@ -1754,15 +1754,15 @@
         href: api/indicators/list_of_indicators/ehlers_fisher_transform.md
       - name: EIS
         href: api/indicators/list_of_indicators/elder_impulse_system.md
-      - name: "Elder's Force Index"
+      - name: Índice de fuerza de Elder
         href: api/indicators/list_of_indicators/elder_force_index.md
       - name: EWO
         href: api/indicators/list_of_indicators/elliot_wave_oscillator.md
       - name: EPMA
         href: api/indicators/list_of_indicators/endpoint_moving_average.md
-      - name: Envelope
+      - name: Envolvente
         href: api/indicators/list_of_indicators/envelope.md
-      - name: Elder Ray
+      - name: Rayos de Elder
         href: api/indicators/list_of_indicators/elder_ray.md
       - name: EMA
         href: api/indicators/list_of_indicators/ema.md
@@ -1776,11 +1776,11 @@
         href: api/indicators/list_of_indicators/forecast_oscillator.md
       - name: FRAMA
         href: api/indicators/list_of_indicators/fractal_adaptive_moving_average.md
-      - name: Fractals
+      - name: Fractales
         href: api/indicators/list_of_indicators/fractals.md
       - name: FDI
         href: api/indicators/list_of_indicators/fractal_dimension.md
-      - name: Gator Oscillator
+      - name: oscilador Gator
         href: api/indicators/list_of_indicators/gator_oscillator.md
       - name: GAPO
         href: api/indicators/list_of_indicators/gopalakrishnan_range_index.md
@@ -1788,7 +1788,7 @@
         href: api/indicators/list_of_indicators/guppy_multiple_moving_average.md
       - name: HO
         href: api/indicators/list_of_indicators/harmonic_oscillator.md
-      - name: Highest
+      - name: Valor máximo
         href: api/indicators/list_of_indicators/highest.md
       - name: HLI
         href: api/indicators/list_of_indicators/high_low_index.md
@@ -1824,17 +1824,17 @@
         href: api/indicators/list_of_indicators/laguerre_rsi.md
       - name: LRC
         href: api/indicators/list_of_indicators/lrc.md
-      - name: Linear Regression Slope
+      - name: pendiente de regresión lineal
         href: api/indicators/list_of_indicators/lrs.md
-      - name: Linear Regression Forecast
+      - name: Pronóstico de regresión lineal
         href: api/indicators/list_of_indicators/linear_regression_forecast.md
       - name: R cuadrado
         href: api/indicators/list_of_indicators/linear_reg_rsquared.md
-      - name: Lowest
+      - name: Valor mínimo
         href: api/indicators/list_of_indicators/lowest.md
       - name: LP
         href: api/indicators/list_of_indicators/lunar_phase.md
-      - name: Market Facilitation Index
+      - name: Índice de facilitación del mercado
         href: api/indicators/list_of_indicators/market_facilitation_index.md
       - name: MMI
         href: api/indicators/list_of_indicators/market_meanness_index.md
@@ -1844,19 +1844,19 @@
         href: api/indicators/list_of_indicators/mcclellan_oscillator.md
       - name: MGD
         href: api/indicators/list_of_indicators/mcginley_dynamic.md
-      - name: Mean Deviation
+      - name: Desviación media
         href: api/indicators/list_of_indicators/mean_deviation.md
-      - name: Moving Median
+      - name: Mediana móvil
         href: api/indicators/list_of_indicators/median.md
       - name: Precio mediano
         href: api/indicators/list_of_indicators/median_price.md
-      - name: Momentum
+      - name: Impulso
         href: api/indicators/list_of_indicators/momentum.md
       - name: MOMA
         href: api/indicators/list_of_indicators/momentum_of_moving_average.md
       - name: MP
         href: api/indicators/list_of_indicators/momentum_pinball.md
-      - name: Money Flow Index
+      - name: Índice de flujo de dinero
         href: api/indicators/list_of_indicators/money_flow_index.md
       - name: MACD
         href: api/indicators/list_of_indicators/macd.md
@@ -1878,15 +1878,15 @@
         href: api/indicators/list_of_indicators/on_balance_volume.md
       - name: OBVM
         href: api/indicators/list_of_indicators/on_balance_volume_mean.md
-      - name: Optimal Tracking
+      - name: seguimiento óptimo
         href: api/indicators/list_of_indicators/optimal_tracking.md
       - name: OMA
         href: api/indicators/list_of_indicators/oscillator_of_moving_average.md
-      - name: Parabolic SAR
+      - name: SAR parabólico
         href: api/indicators/list_of_indicators/parabolic_sar.md
-      - name: Pass-Through
+      - name: transferencia directa
         href: api/indicators/list_of_indicators/pass_through.md
-      - name: Peak
+      - name: Pico
         href: api/indicators/list_of_indicators/peak.md
       - name: PPO
         href: api/indicators/list_of_indicators/percentage_price_oscillator.md
@@ -1898,7 +1898,7 @@
         href: api/indicators/list_of_indicators/percentage_volume_oscillator.md
       - name: PP
         href: api/indicators/list_of_indicators/pivot_points.md
-      - name: Price Channels
+      - name: canales de precio
         href: api/indicators/list_of_indicators/price_channels.md
       - name: PVT
         href: api/indicators/list_of_indicators/price_volume_trend.md
@@ -1912,7 +1912,7 @@
         href: api/indicators/list_of_indicators/rainbow_charts.md
       - name: RAVI
         href: api/indicators/list_of_indicators/ravi.md
-      - name: Rank Correlation Index
+      - name: índice de correlación de rangos
         href: api/indicators/list_of_indicators/rank_correlation_index.md
       - name: RoC
         href: api/indicators/list_of_indicators/roc.md
@@ -1924,7 +1924,7 @@
         href: api/indicators/list_of_indicators/rvi.md
       - name: STC
         href: api/indicators/list_of_indicators/schaff_trend_cycle.md
-      - name: Shift
+      - name: Desplazamiento
         href: api/indicators/list_of_indicators/shift.md
       - name: SuperTrend
         href: api/indicators/list_of_indicators/supertrend.md
@@ -1932,17 +1932,17 @@
         href: api/indicators/list_of_indicators/sma.md
       - name: SW
         href: api/indicators/list_of_indicators/sine_wave.md
-      - name: Smoothed MA
+      - name: media móvil suavizada
         href: api/indicators/list_of_indicators/smoothed_ma.md
-      - name: Standard Deviation
+      - name: Desviación estándar
         href: api/indicators/list_of_indicators/standard_deviation.md
-      - name: Standard Error
+      - name: Error estándar
         href: api/indicators/list_of_indicators/standard_error.md
-      - name: "Stochastic Oscillator %K"
+      - name: Oscilador estocástico %K
         href: api/indicators/list_of_indicators/stochastic_oscillator_k.md
-      - name: Stochastic Oscillator
+      - name: Oscilador estocástico
         href: api/indicators/list_of_indicators/stochastic_oscillator.md
-      - name: Sum N
+      - name: Suma N
         href: api/indicators/list_of_indicators/sum_n.md
       - name: T3MA
         href: api/indicators/list_of_indicators/t3_moving_average.md
@@ -1954,11 +1954,11 @@
         href: api/indicators/list_of_indicators/tema.md
       - name: TRIX
         href: api/indicators/list_of_indicators/trix.md
-      - name: Trough
+      - name: Valle
         href: api/indicators/list_of_indicators/trough.md
-      - name: True Range
+      - name: Rango verdadero
         href: api/indicators/list_of_indicators/true_range.md
-      - name: True Strength Index
+      - name: índice de fuerza verdadera
         href: api/indicators/list_of_indicators/true_strength_index.md
       - name: TMF
         href: api/indicators/list_of_indicators/twiggs_money_flow.md
@@ -1968,9 +1968,9 @@
         href: api/indicators/list_of_indicators/vhf.md
       - name: VIDYA
         href: api/indicators/list_of_indicators/vidya.md
-      - name: Variable MA
+      - name: media móvil variable
         href: api/indicators/list_of_indicators/variable_moving_average.md
-      - name: Volume
+      - name: Volumen
         href: api/indicators/list_of_indicators/volume.md
       - name: Perfil de volumen
         href: api/indicators/list_of_indicators/volume_profile.md
@@ -1984,9 +1984,9 @@
         href: api/indicators/list_of_indicators/wave_trend_oscillator.md
       - name: Precio de cierre ponderado
         href: api/indicators/list_of_indicators/weighted_close_price.md
-      - name: Weighted MA
+      - name: media móvil ponderada
         href: api/indicators/list_of_indicators/weighted_ma.md
-      - name: Wilder MA
+      - name: media móvil de Wilder
         href: api/indicators/list_of_indicators/wilder_ma.md
       - name: WAD
         href: api/indicators/list_of_indicators/williams_accumulation_distribution.md
@@ -2007,67 +2007,67 @@
   - name: Patrones
     href: api/patterns.md
     items:
-    - name: Patrón 3 Outside Down y 3 Outside Up
+    - name: Patrón Tres exteriores bajistas y Tres exteriores alcistas
       href: api/patterns/3_outside_down_3_outside_up.md
-    - name: Patrón 3 Inside Down y 3 Inside Up
+    - name: Patrón Tres interiores bajistas y Tres interiores alcistas
       href: api/patterns/3_inside_down_3_side_up.md
-    - name: Patrón 3 Black Crows y 3 White Soldiers
+    - name: Patrón Tres cuervos negros y Tres soldados blancos
       href: api/patterns/3_black_crows_3_white_soldiers.md
-    - name: Patrón Three White Soldiers
+    - name: Patrón Tres soldados blancos
       href: api/patterns/three_white_soldiers.md
-    - name: Patrón Three Black Crows
+    - name: Patrón Tres cuervos negros
       href: api/patterns/three_black_crows.md
-    - name: Patrón On-Neck
+    - name: Patrón En el cuello
       href: api/patterns/on_neck.md
-    - name: Patrón Piercing
+    - name: Patrón Penetrante
       href: api/patterns/piercing.md
-    - name: Patrón Bearish Candle
+    - name: Patrón Vela bajista
       href: api/patterns/bearish.md
-    - name: Patrón Bearish Engulfing
+    - name: Patrón Envolvente bajista
       href: api/patterns/bearish_engulfing.md
-    - name: Patrón Bearish Harami
+    - name: Patrón Harami bajista
       href: api/patterns/bearish_harami.md
-    - name: Patrón Black Candle
+    - name: Patrón Vela negra
       href: api/patterns/black_candle.md
-    - name: Patrón Black Marubozu
+    - name: Patrón Marubozu negro
       href: api/patterns/black_marubozu.md
-    - name: Patrón Bullish Candle
+    - name: Patrón Vela alcista
       href: api/patterns/bullish.md
-    - name: Patrón Bullish Engulfing
+    - name: Patrón Envolvente alcista
       href: api/patterns/bullish_engulfing.md
-    - name: Patrón Bullish Harami
+    - name: Patrón Harami alcista
       href: api/patterns/bullish_harami.md
-    - name: Patrón Dragonfly
+    - name: Patrón Libélula
       href: api/patterns/dragonfly.md
-    - name: Patrón Evening Star
+    - name: Patrón Estrella vespertina
       href: api/patterns/evening_star.md
-    - name: Patrón Falling Three Methods
+    - name: Patrón Tres métodos descendentes
       href: api/patterns/falling_three_methods.md
-    - name: Patrón Flat (Neutral) Candle
+    - name: Patrón Vela plana (neutral)
       href: api/patterns/flat_candle.md
-    - name: Patrón Gravestone
+    - name: Patrón Lápida
       href: api/patterns/gravestone.md
-    - name: Patrón Hammer
+    - name: Patrón Martillo
       href: api/patterns/hammer.md
-    - name: Patrón Hanging Man
+    - name: Patrón Hombre colgado
       href: api/patterns/hanging_man.md
-    - name: Patrón Inverted Hammer
+    - name: Patrón Martillo invertido
       href: api/patterns/inverted_hammer.md
-    - name: Patrón Morning Star
+    - name: Patrón Estrella matinal
       href: api/patterns/morning_star.md
-    - name: Patrón Rising Three Methods
+    - name: Patrón Tres métodos ascendentes
       href: api/patterns/rising_three_methods.md
-    - name: Patrón Shooting Star
+    - name: Patrón Estrella fugaz
       href: api/patterns/shooting_star.md
-    - name: Patrón Spinning Top
+    - name: Patrón Peonza
       href: api/patterns/spinning_top.md
-    - name: Patrón Tweezer Bottom
+    - name: Patrón Suelo de pinzas
       href: api/patterns/tweezer_bottom.md
-    - name: Patrón Tweezer Top
+    - name: Patrón Techo de pinzas
       href: api/patterns/tweezer_top.md
-    - name: Patrón White Candle
+    - name: Patrón Vela blanca
       href: api/patterns/white_candle.md
-    - name: Patrón White Marubozu
+    - name: Patrón Marubozu blanco
       href: api/patterns/white_marubozu.md
     - name: Patrones de velas complejos
       href: api/patterns/complex_patterns.md
@@ -2097,13 +2097,13 @@
       href: api/strategies/subscriptions.md
     - name: Indicadores en estrategias
       href: api/strategies/indicators.md
-    - name: Operaciones de trading en estrategias
+    - name: Operaciones de negociación en estrategias
       href: api/strategies/trading_operations.md
     - name: Protección de posiciones
       href: api/strategies/take_profit_and_stop_loss.md
     - name: Parámetros de estrategia
       href: api/strategies/parameters.md
-    - name: Logging en estrategias
+    - name: Registro en estrategias
       href: api/strategies/logging.md
     - name: Compatibilidad de estrategias con plataformas StockSharp
       href: api/strategies/compatibility.md
@@ -2121,7 +2121,7 @@
       href: api/strategies/shrink_price.md
     - name: Tipo Unit
       href: api/strategies/unit_type.md
-    - name: Algoritmo de quoting
+    - name: Algoritmo de cotización
       href: api/strategies/quoting.md
     - name: Instrumentos de trabajo
       href: api/strategies/working_securities.md
@@ -2139,7 +2139,7 @@
       href: api/strategies/risk_management.md
     - name: Informes de estrategia
       href: api/strategies/reporting.md
-    - name: Modos de trading de estrategias
+    - name: Modos de negociación de estrategias
       href: api/strategies/trading_modes.md
     - name: Funciones avanzadas de estrategia
       href: api/strategies/advanced_features.md
@@ -2147,7 +2147,7 @@
       href: api/strategies/statistics_reference.md
     - name: Optimización avanzada
       href: api/strategies/optimization_advanced.md
-    - name: Referencia de quoting
+    - name: Referencia de cotización
       href: api/strategies/quoting_reference.md
     - name: Modelo de eventos
       href: api/strategies/event_model.md
@@ -2193,13 +2193,13 @@
         href: api/strategies/samples/stairs_countertrend_one_candle.md
       - name: Estrategia Stairs de contratendencia
         href: api/strategies/samples/stairs_countertrend.md
-      - name: Estrategia de contratendencia con quoting
+      - name: Estrategia de contratendencia con cotización
         href: api/strategies/samples/stairs_countertrend_quoting.md
-      - name: Estrategia de quoting
+      - name: Estrategia de cotización
         href: api/strategies/samples/mq.md
-      - name: Estrategia de quoting de spread
+      - name: Estrategia de cotización de spread
         href: api/strategies/samples/mq_spread.md
-      - name: Estrategia de pairs trading
+      - name: Estrategia de negociación por pares
         href: api/strategies/samples/pairs_trading.md
       - name: Estrategia multi-timeframe
         href: api/strategies/samples/multi_timeframe.md
@@ -2207,18 +2207,18 @@
     href: api/commissions.md
   - name: Gestión de pérdidas y ganancias
     href: api/pnl.md
-  - name: Medición de slippage
+  - name: Medición de deslizamiento
     href: api/slippage.md
   - name: Medición de latencia
     href: api/latency.md
-  - name: Registro de logs
+  - name: Registro
     href: api/logging.md
     items:
-    - name: Logging de estrategias
+    - name: Registro de estrategias
       href: api/logging/strategy_logging.md
-    - name: Logging de IConnector
+    - name: Registro de IConnector
       href: api/logging/iconnector_logging.md
-    - name: Otras fuentes de logs
+    - name: Otras fuentes de registro
       href: api/logging/other_logs_sources.md
     - name: Monitorización visual
       href: api/logging/visual_monitoring.md
@@ -2229,13 +2229,13 @@
     items:
     - name: Griegas
       href: api/options/greeks.md
-    - name: Trading de volatilidad
+    - name: Negociación de volatilidad
       href: api/options/volatility_trading.md
     - name: Cobertura delta
       href: api/options/delta_hedging.md
     - name: Componentes gráficos
       href: api/options/graphic_components.md
-  - name: Backtesting\/Emulación
+  - name: Pruebas históricas\/Emulación
     href: api/testing.md
     items:
     - name: Datos históricos
@@ -2274,12 +2274,12 @@
         href: api/graphical_user_interface/charts/registering_of_orders_from_the_chart.md
       - name: Anotaciones
         href: api/graphical_user_interface/charts/annotations.md
-    - name: Registro de logs
+    - name: Registro
       href: api/graphical_user_interface/logging.md
       items:
-      - name: Panel de logs
+      - name: Panel de registros
         href: api/graphical_user_interface/logging/log_panel.md
-      - name: Panel de logs extendido
+      - name: Panel de registros extendido
         href: api/graphical_user_interface/logging/extended_log_panel.md
     - name: Portafolios
       href: api/graphical_user_interface/portfolios.md
@@ -2314,7 +2314,7 @@
         href: api/graphical_user_interface/market_data/level1.md
       - name: Libro de órdenes
         href: api/graphical_user_interface/market_data/order_book.md
-      - name: Log de órdenes
+      - name: Registro de órdenes
         href: api/graphical_user_interface/market_data/order_log.md
       - name: Noticias
         href: api/graphical_user_interface/market_data/news.md
@@ -2331,7 +2331,7 @@
         href: api/graphical_user_interface/trading/new_stop_order_creation.md
       - name: Tabla de datos de mercado disponibles
         href: api/graphical_user_interface/trading/table_of_available_market_data.md
-      - name: Panel Buy\/Sell
+      - name: Panel Comprar\/Vender
         href: api/graphical_user_interface/trading/buy_sell_panel.md
     - name: Estrategias
       href: api/graphical_user_interface/strategies.md

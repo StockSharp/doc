@@ -61,7 +61,7 @@ R-Squared en regresión lineal se puede interpretar de la siguiente manera:
    - Valores entre 0,3 y 0,7 (30-70%) indican una tendencia moderada
    - Los valores inferiores a 0,3 (30%) indican una tendencia débil o ninguna tendencia
 
-2. **Selección de estrategia de trading**:
+2. **Selección de estrategia de negociación**:
    - Con valores R² altos (tendencia fuerte), las estrategias de seguimiento de tendencias son efectivas
    - Con valores bajos de R² (movimiento lateral), las estrategias de negociación de rango son efectivas
 

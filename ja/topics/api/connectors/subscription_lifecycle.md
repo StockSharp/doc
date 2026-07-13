@@ -44,7 +44,7 @@ event Action<Subscription, Exception, bool> SubscriptionFailed;
 
 1. `Subscribe(subscription)` を呼び出す
 2. `SubscriptionStarted` -- サブスクリプションが受け付けられた
-3. データが到着する（キャンドル、オーダーブック、約定など）
+3. データが到着する（ローソク足、オーダーブック、約定など）
 4. `SubscriptionOnline` -- リアルタイムモードへ移行
 5. リアルタイムでデータ到着が継続する
 6. `UnSubscribe(subscription)` を呼び出す、または接続断

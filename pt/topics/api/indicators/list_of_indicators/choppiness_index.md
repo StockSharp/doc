@@ -6,14 +6,14 @@ Para usar o indicador, deve ser usada a classe [ChoppinessIndex](xref:StockSharp
 
 ## Descrição
 
-O índice de lateralidade (CHOP) foi criado para avaliar quantitativamente a volatilidade e determinar a natureza do movimento do mercado. Ao contrário de muitos outros indicadores, o CHOP não se destina a identificar a direção da tendência nem a gerar sinais de compra ou venda. Em vez disso, ajuda os traders a determinar se o mercado está em consolidação (movimento lateral) ou numa tendência direcional.
+O índice de lateralidade (CHOP) foi criado para avaliar quantitativamente a volatilidade e determinar a natureza do movimento do mercado. Ao contrário de muitos outros indicadores, o CHOP não se destina a identificar a direção da tendência nem a gerar sinais de compra ou venda. Em vez disso, ajuda os operadores a determinar se o mercado está em consolidação (movimento lateral) ou numa tendência direcional.
 
 O indicador CHOP oscila entre 0 e 100:
 - Valores mais próximos de 100 indicam forte consolidação (irregularidade elevada)
 - Valores mais próximos de 0 indicam uma forte tendência direcional (irregularidade baixa)
 
 CHOP é particularmente útil para:
-- Determinar uma estratégia de trading adequada com base no caráter do mercado
+- Determinar uma estratégia de negociação adequada com base no caráter do mercado
 - Identificar transições de movimento lateral para tendência e vice-versa
 - Confirmar ou refutar sinais de outros indicadores
 - Evitar sinais falsos durante a consolidação
@@ -50,7 +50,7 @@ Onde:
 
 ## Interpretação
 
-- **Valores elevados de CHOP (acima de 60-70)** indicam que o mercado está em movimento lateral (consolidação). Durante este período, é melhor evitar estratégias de tendência e considerar estratégias de trading em intervalo.
+- **Valores elevados de CHOP (acima de 60-70)** indicam que o mercado está em movimento lateral (consolidação). Durante este período, é melhor evitar estratégias de tendência e considerar estratégias de negociação em intervalo.
 
 - **Valores baixos de CHOP (abaixo de 30-40)** indicam uma forte tendência direcional. Este é um bom momento para usar estratégias de tendência e seguir o movimento do preço.
 

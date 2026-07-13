@@ -2,10 +2,10 @@
 
 **DukasCopy** - el proveedor de datos históricos ofrece una variedad de instrumentos financieros (por ejemplo, Forex, materias primas e índices).
 
-Antes de comenzar a escribir robots de trading para la plataforma de trading actual, se recomienda leer los enlaces en [Conectores](../../connectors.md). 
+Antes de comenzar a escribir robots de negociación para la plataforma de negociación actual, se recomienda leer los enlaces en [Conectores](../../connectors.md).
 
 > [!CAUTION]
-> El conector solo admite el flujo de datos de mercado; las transacciones no están admitidas. 
+> El conector solo admite el flujo de datos de mercado; las transacciones no están admitidas.
 
 ## Contenido recomendado
 

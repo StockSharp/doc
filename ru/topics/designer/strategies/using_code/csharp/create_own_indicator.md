@@ -14,9 +14,9 @@
 /// 
 /// Изменяет входную цену на +20% или -20%.
 /// 
-/// See more examples https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
+/// Другие примеры см. https://github.com/StockSharp/StockSharp/tree/master/Algo/Indicators
 /// 
-/// Doc https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
+/// Документация https://doc.stocksharp.com/topics/Designer_Creating_indicator_from_source_code.html
 /// </summary>
 public class EmptyIndicator : BaseIndicator
 {

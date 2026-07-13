@@ -53,7 +53,7 @@ public override async ValueTask RegisterOrderAsync(OrderRegisterMessage regMsg, 
 	var isMarket = regMsg.OrderType == OrderTypes.Market;
 	var price = isMarket ? (decimal?)null : regMsg.Price;
 
-	// Enviar ordem para a exchange
+	// Enviar ordem para a bolsa
 	var result = await _restClient.RegisterOrder(
 		regMsg.TransactionId.To<string>(), regMsg.SecurityId.ToSymbol(),
 		regMsg.OrderType.ToNative(), regMsg.Side.ToNative(), price,
@@ -99,7 +99,7 @@ public override async ValueTask ReplaceOrderAsync(OrderReplaceMessage replaceMsg
 		cancellationToken);
 
 	// Observação: o processamento do resultado da substituição da ordem geralmente ocorre
-	// em um método separado chamado ao receber uma atualização da exchange
+	// em um método separado chamado ao receber uma atualização da bolsa
 }
 ```
 
@@ -136,7 +136,7 @@ public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, C
 	await _restClient.CancelOrder(cancelMsg.OrderStringId, cancellationToken);
 
 	// Observação: o processamento do resultado do cancelamento da ordem geralmente ocorre
-	// em um método separado chamado ao receber uma atualização da exchange
+	// em um método separado chamado ao receber uma atualização da bolsa
 }
 ```
 

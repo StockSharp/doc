@@ -14,7 +14,7 @@ StockSharp API предоставляет возможность получат�
 | [OrderEditFailReceived](xref:StockSharp.Algo.Connector.OrderEditFailReceived) | Событие ошибки редактирования заявки |
 | [OwnTradeReceived](xref:StockSharp.Algo.Connector.OwnTradeReceived) | Событие получения информации о собственной сделке |
 
-## OrderStates enum
+## Перечисление OrderStates
 
 Заявка во время своей жизни проходит следующие состояния:
 

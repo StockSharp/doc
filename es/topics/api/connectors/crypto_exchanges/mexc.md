@@ -1,8 +1,8 @@
 # MEXC
 
-**MEXC** es un exchange de trading de criptomonedas.
+**MEXC** es una bolsa de negociación de criptomonedas.
 
-Antes de comenzar a escribir robots de trading para la plataforma de trading actual, se recomienda familiarizarse con los enlaces proporcionados en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para la plataforma de negociación actual, se recomienda familiarizarse con los enlaces proporcionados en la sección [Conectores](../../connectors.md).
 
 ## Ver también
 

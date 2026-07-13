@@ -2,7 +2,7 @@
 
 ## Descripción general
 
-`MultiTimeframeStrategy` es una estrategia que usa dos marcos temporales para tomar decisiones de trading. Las velas horarias determinan la dirección de la tendencia mediante cruces de medias móviles, mientras que las velas de 5 minutos con el indicador [RelativeStrengthIndex](xref:StockSharp.Algo.Indicators.RelativeStrengthIndex) se usan para una entrada precisa en la dirección de la tendencia.
+`MultiTimeframeStrategy` es una estrategia que usa dos marcos temporales para tomar decisiones de negociación. Las velas horarias determinan la dirección de la tendencia mediante cruces de medias móviles, mientras que las velas de 5 minutos con el indicador [RelativeStrengthIndex](xref:StockSharp.Algo.Indicators.RelativeStrengthIndex) se usan para una entrada precisa en la dirección de la tendencia.
 
 ## Componentes principales
 
@@ -117,7 +117,7 @@ private void ProcessEntryCandle(ICandleMessage candle, decimal rsiValue)
 }
 ```
 
-## Lógica de trading
+## Lógica de negociación
 
 - **Detección de tendencia**: SMA rápida por encima de SMA lenta en el gráfico horario indica tendencia alcista; por debajo indica tendencia bajista
 - **Señal de compra**: tendencia alcista en el gráfico horario y RSI < 30 en el gráfico de 5 minutos cuando no hay posición larga

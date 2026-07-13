@@ -16,7 +16,7 @@ A seguir descreve-se como criar e configurar uma tarefa de cópia de segurança.
 
    **Geral**
    - **Cabeçalho** - título da tarefa.
-   - **Horário de trabalho** - configuração do horário de funcionamento da board. ![Hydra tarefas de cópia de segurança](../../../../images/hydra_tasks_backup_desk.png)
+   - **Horário de trabalho** - configuração do horário de funcionamento do mercado. ![Hydra tarefas de cópia de segurança](../../../../images/hydra_tasks_backup_desk.png)
    - **Intervalo de operação** - o intervalo de operação.
    - **Diretório de dados** - diretório de dados, a partir do qual serão recebidos os dados para conversão.
    - **Formato** - o formato dos dados convertidos: BIN\/CSV.

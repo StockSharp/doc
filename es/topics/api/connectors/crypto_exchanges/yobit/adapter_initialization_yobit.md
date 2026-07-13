@@ -1,5 +1,5 @@
 > [!WARNING]
-> Este exchange cerró permanentemente (~2023 — efectivamente inactivo). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> esta bolsa cerró permanentemente (~2023 — efectivamente inactivo). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
 
 # Inicialización del adaptador Yobit
 

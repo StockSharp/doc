@@ -19,15 +19,15 @@ Vela alcista señala un sentimiento de mercado alcista con varias característic
 - En una tendencia bajista, puede señalar una posible reversión.
 - En una tendencia alcista, confirma la fuerza de la tendencia, especialmente después de una corrección.
 
-### Estrategias de trading
+### Estrategias de negociación
 
-Vela alcista se puede usar en varias estrategias de trading:
+Vela alcista se puede usar en varias estrategias de negociación:
 
 - Entrar en una posición larga después de la formación de una vela alcista en un nivel de soporte o en una zona de sobreventa.
 - Colocar un stop-loss por debajo del mínimo de la vela para protegerse contra una caída adicional.
 - Combinar con otros indicadores técnicos o patrones para aumentar la probabilidad de una operación exitosa.
 - Usar para confirmar señales de tendencia alcista de indicadores como MACD o medias móviles.
-- Prestar atención al volumen de trading: un volumen alto aumenta la importancia de la señal.
+- Prestar atención al volumen de negociación: un volumen alto aumenta la importancia de la señal.
 
 ## Véase también
 

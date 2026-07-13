@@ -1,10 +1,10 @@
 # Libro de órdenes filtrado
 
-Un libro de órdenes filtrado es una herramienta especializada en StockSharp que permite a traders y estrategias automatizadas operar en el mercado excluyendo sus propias órdenes de la consideración. Esto es críticamente importante al usar varias estrategias en paralelo para evitar situaciones en las que una estrategia empieza a "operar" con otra, sin darse cuenta de que el volumen en el libro de órdenes proviene de otro participante del mercado o es el resultado de acciones de otra estrategia ejecutándose en paralelo.
+Un libro de órdenes filtrado es una herramienta especializada en StockSharp que permite a operadores y estrategias automatizadas operar en el mercado excluyendo sus propias órdenes de la consideración. Esto es críticamente importante al usar varias estrategias en paralelo para evitar situaciones en las que una estrategia empieza a "operar" con otra, sin darse cuenta de que el volumen en el libro de órdenes proviene de otro participante del mercado o es el resultado de acciones de otra estrategia ejecutándose en paralelo.
 
 ## Ventajas del libro de órdenes filtrado
 
-- **Evitar self-trading:** Las estrategias no ejecutarán órdenes contra sí mismas ni entre sí cuando se ejecuten en paralelo.
+- **Evitar autonegociación:** Las estrategias no ejecutarán órdenes contra sí mismas ni entre sí cuando se ejecuten en paralelo.
 - **Pureza del análisis:** Permite a las estrategias analizar condiciones de mercado basándose únicamente en órdenes externas, sin distorsiones causadas por sus propias órdenes.
 - **Eficiencia de ejecución:** Ayuda a mejorar la calidad de ejecución de órdenes minimizando el impacto de las órdenes propias sobre el precio de mercado.
 
@@ -32,11 +32,11 @@ El enfoque para trabajar con el libro de órdenes filtrado usa el mismo método 
     ```cs
     var subscription = new Subscription(DataType.FilteredMarketDepth, security);
     connector.Subscribe(subscription);
-    
+
     // o así
     //var subscription = connector.SubscribeFilteredMarketDepth(security);
     ```
 
 ## Conclusión
 
-El uso del libro de órdenes filtrado en StockSharp proporciona a traders y desarrolladores de estrategias una herramienta flexible para análisis de mercado, permitiéndoles evitar la autointeracción no deseada entre estrategias ejecutadas simultáneamente y simplificando la toma de decisiones basada en datos de órdenes del mercado.
+El uso del libro de órdenes filtrado en StockSharp proporciona a operadores y desarrolladores de estrategias una herramienta flexible para análisis de mercado, permitiéndoles evitar la autointeracción no deseada entre estrategias ejecutadas simultáneamente y simplificando la toma de decisiones basada en datos de órdenes del mercado.

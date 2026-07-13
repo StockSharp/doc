@@ -75,7 +75,7 @@ void Append(string title, IEnumerable<X> xValues, IEnumerable<Y> yValues,
 
 ## 例: カスタム分析スクリプト
 
-以下は、銘柄一覧のキャンドルを読み込み、終値を折れ線チャートに表示するスクリプト例です:
+以下は、銘柄一覧のローソク足を読み込み、終値を折れ線チャートに表示するスクリプト例です:
 
 ```cs
 public class MyAnalyticsScript : IAnalyticsScript
@@ -91,7 +91,7 @@ public class MyAnalyticsScript : IAnalyticsScript
 
         foreach (var secId in securities)
         {
-            // キャンドルストレージを取得
+            // ローソク足ストレージを取得
             var candleStorage = storage.GetCandleMessageStorage(
                 secId, dataType, drive, format);
 

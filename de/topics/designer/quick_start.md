@@ -4,7 +4,7 @@ Beim ersten Start öffnet [Designer](../designer.md) das vorkonfigurierte Strate
 
 ![Designer Schnellstart 01](../../images/designer_quick_start_01.png)
 
-Um es auf historischen Daten auszuführen, müssen Sie die Daten im richtigen Format herunterladen. Wir empfehlen [Hydra](../hydra.md), ein Programm zum automatischen Laden von Marktdaten (Instrumente, Kerzen, Tick-Trades, Orderbücher und andere Daten) aus verschiedenen Quellen und zum Speichern dieser Daten im lokalen Speicher. Der Download und die Speicherung historischer Daten werden ausführlich im Abschnitt [Marktdatenspeicher](market_data_storage.md) beschrieben.
+Um es auf historischen Daten auszuführen, müssen Sie die Daten im richtigen Format herunterladen. Wir empfehlen [Hydra](../hydra.md), ein Programm zum automatischen Laden von Marktdaten (Instrumente, Kerzen, Tick-Trades, Orderbücher und andere Daten) aus verschiedenen Quellen und zum Speichern dieser Daten im lokalen Speicher. Das Herunterladen und Speichern historischer Daten wird ausführlich im Abschnitt [Marktdatenspeicher](market_data_storage.md) beschrieben.
 
 Nachdem die Daten mit [Hydra](../hydra.md) heruntergeladen wurden, geben Sie im [Designer](../designer.md) das Verzeichnis an, in dem [Hydra](../hydra.md) die Historie gespeichert hat. Dies wird im Tab **Rücktest** -> **Speicher** konfiguriert.
 

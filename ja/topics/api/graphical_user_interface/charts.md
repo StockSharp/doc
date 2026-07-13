@@ -2,7 +2,7 @@
 
 [S#](../../api.md) は、チャート作成のための便利なコンポーネントを提供します。これらのコンポーネントは [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) 名前空間にまとめられています。
 
-グラフィックスライブラリにおける重要な概念は、*chart* という考え方です。*chart* は、チャートを構築する際に使用される他の要素のコンテナーです。[S#](../../api.md) には、いくつかの種類の *charts* があります。
+グラフィックスライブラリにおける重要な概念は、*チャート* という考え方です。*チャート* は、チャートを構築する際に使用される他の要素のコンテナーです。[S#](../../api.md) には、いくつかの種類の *チャート* があります。
 
 - [Chart](xref:StockSharp.Xaml.Charting.Chart) - 株価チャートを表示するためのグラフィカルコンポーネント。
 - [ChartPanel](xref:StockSharp.Xaml.Charting.ChartPanel) - 株価チャートを表示するための高度なグラフィカルコンポーネント。
@@ -21,7 +21,7 @@
 
 ## IChart
 
-[IChart](xref:StockSharp.Charting.IChart) は、すべての種類のチャートの基本インターフェイスです。このインターフェイスには、「子」要素を追加および削除するためのメソッド、コンポーネントの外観と描画方法をカスタマイズするためのプロパティ、そしてチャート自体を描画するためのメソッドが含まれます。*chart* は、描画用に複数の領域（[IChartArea](xref:StockSharp.Charting.IChartArea)）を含むことができます（図を参照）。[Chart](xref:StockSharp.Xaml.Charting.Chart) には、*OverView* プレビュー領域も含まれます（図を参照）。この領域では、スライダーを使用してチャートの表示範囲を選択できます。さらに、[IChartArea](xref:StockSharp.Charting.IChartArea)、X 軸、およびマウスホイールのドラッグを使用して、チャートをスクロールおよびズームできます。
+[IChart](xref:StockSharp.Charting.IChart) は、すべての種類のチャートの基本インターフェイスです。このインターフェイスには、「子」要素を追加および削除するためのメソッド、コンポーネントの外観と描画方法をカスタマイズするためのプロパティ、そしてチャート自体を描画するためのメソッドが含まれます。*チャート* は、描画用に複数の領域（[IChartArea](xref:StockSharp.Charting.IChartArea)）を含むことができます（図を参照）。[Chart](xref:StockSharp.Xaml.Charting.Chart) には、*OverView* プレビュー領域も含まれます（図を参照）。この領域では、スライダーを使用してチャートの表示範囲を選択できます。さらに、[IChartArea](xref:StockSharp.Charting.IChartArea)、X 軸、およびマウスホイールのドラッグを使用して、チャートをスクロールおよびズームできます。
 
 **[IChart](xref:StockSharp.Charting.IChart) の主要なプロパティとメソッド**
 
@@ -42,7 +42,7 @@
 
 ## IChartArea
 
-[IChartArea](xref:StockSharp.Charting.IChartArea) - チャート描画領域です。チャート上に描画される [IChartElement](xref:StockSharp.Charting.IChartElement)（インジケーター、キャンドルなど）と、チャート軸（[IChartAxis](xref:StockSharp.Charting.IChartAxis)）のコンテナーとして機能します。
+[IChartArea](xref:StockSharp.Charting.IChartArea) - チャート描画領域です。チャート上に描画される [IChartElement](xref:StockSharp.Charting.IChartElement)（インジケーター、ローソク足など）と、チャート軸（[IChartAxis](xref:StockSharp.Charting.IChartAxis)）のコンテナーとして機能します。
 
 **[IChartArea](xref:StockSharp.Charting.IChartArea) の主要なプロパティ**
 
@@ -54,12 +54,12 @@
 
 チャートに表示されるすべての要素は、[IChartElement](xref:StockSharp.Charting.IChartElement) インターフェイスを実装する必要があります。[S#](../../api.md) では、次のクラスがこのインターフェイスを実装しています。
 
-- [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) - キャンドルを表示するための要素。
+- [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) - ローソク足を表示するための要素。
 - [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) - インジケーターを表示するための要素。
 - [ChartOrderElement](xref:StockSharp.Xaml.Charting.ChartOrderElement) - 注文を表示するための要素。
 - [ChartTradeElement](xref:StockSharp.Xaml.Charting.ChartTradeElement) - 約定を表示するための要素。
 
-視覚要素のクラスには、チャートの外観を調整するための複数のプロパティがあります。色、線の太さ、要素のスタイルを調整できます。たとえば、[IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle) プロパティを使用すると、キャンドルの外観（キャンドルまたはバー）を変更できます。[ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle) プロパティを使用すると、インジケーター線のスタイルを設定できます。インジケーターをヒストグラムとして表示するには、[DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram) 値を使用します。[ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) および [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) プロパティでは、チャートの軸上のマーカー（図を参照）の表示をオン/オフできます。
+視覚要素のクラスには、チャートの外観を調整するための複数のプロパティがあります。色、線の太さ、要素のスタイルを調整できます。たとえば、[IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle) プロパティを使用すると、ローソク足の外観（ローソク足またはバー）を変更できます。[ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle) プロパティを使用すると、インジケーター線のスタイルを設定できます。インジケーターをヒストグラムとして表示するには、[DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram) 値を使用します。[ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) および [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) プロパティでは、チャートの軸上のマーカー（図を参照）の表示をオン/オフできます。
 
 ## 関連項目
 

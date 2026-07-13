@@ -77,10 +77,10 @@ _connector.OrderBookReceived += (sub, depth) =>
 _connector.Subscribe(depthSubscription);
 ```
 
-## Ejemplo de suscripción a tick trades
+## Ejemplo de suscripción a operaciones tick
 
 ```cs
-// Crear una suscripción a tick trades del instrumento seleccionado
+// Crear una suscripción a operaciones tick del instrumento seleccionado
 var tickSubscription = new Subscription(DataType.Ticks, security);
 
 // Procesamiento de ticks recibidos

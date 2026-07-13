@@ -9,7 +9,7 @@ AI ツールを使用して StockSharp 向けの取引所コネクタを作成�
 開始する前に、以下を準備します:
 - 取引所の REST/WebSocket API ドキュメント
 - テスト用 API キー (sandbox/testnet)
-- サポートされるデータ型の一覧 (キャンドル、板情報、ティック、約定)
+- サポートされるデータ型の一覧 (ローソク足、板情報、ティック、約定)
 - サポートされる注文タイプの一覧 (limit、market、stop)
 
 ### 2. プロジェクトを作成する
@@ -61,7 +61,7 @@ StockSharp を使用して、MyExchange という暗号資産取引所コネク�
 基本的な MessageAdapter を作成してください:
 - AsyncMessageAdapter を継承する
 - 接続/切断 (ConnectMessage, DisconnectMessage) を実装する
-- 設定を追加する: ApiKey, Secret, demo mode
+- 設定を追加する: ApiKey, Secret, デモモード
 - REST API には HttpClient を使用する
 - ベース API URL: https://api.myexchange.com/v1
 ```
@@ -88,7 +88,7 @@ StockSharp を使用して、MyExchange という暗号資産取引所コネク�
 ```
 アダプターにマーケットデータサブスクリプションを追加してください:
 
-1. キャンドル (MarketDataTypes.CandleTimeFrame):
+1. ローソク足 (MarketDataTypes.CandleTimeFrame):
    - REST: GET /api/v1/klines?symbol={}&interval={}&limit=1000
    - WebSocket: kline_{symbol}_{interval} チャンネルをサブスクライブする
    - 間隔マッピング: 1m, 5m, 15m, 1h, 4h, 1d
@@ -205,7 +205,7 @@ private string SignRequest(string payload)
 - [ ] `SubscriptionFinishedMessage` が送信される
 
 ### マーケットデータ
-- [ ] キャンドル: 履歴読み込み + 新規キャンドルのサブスクリプション
+- [ ] ローソク足: 履歴読み込み + 新規ローソク足のサブスクリプション
 - [ ] 板情報: 正しい深度、更新
 - [ ] ティック: 正しい時刻、出来高、方向
 

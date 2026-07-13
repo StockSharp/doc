@@ -70,7 +70,7 @@ namespace StockSharp.Algo.Analytics
 				if (cancellationToken.IsCancellationRequested)
 					break;
 
-				// obter o armazenamento de candles
+				// obter o armazenamento de velas
 				var candleStorage = storage.GetCandleMessageStorage(security, dataType, drive, format);
 
 				// obter preços de fecho
@@ -164,7 +164,7 @@ class pearson_correlation_script(IAnalyticsScript):
 			if cancellation_token.IsCancellationRequested:
 				break
 
-			# obter o armazenamento de candles
+			# obter o armazenamento de velas
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			# obter preços de fecho

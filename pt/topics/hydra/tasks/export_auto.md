@@ -31,7 +31,7 @@ A tarefa exporta dados da bolsa para vários formatos: Excel, xml, sql, bin, Jso
 **Geral**
 
 - **Cabeçalho** - título da tarefa.
-- **Horário de trabalho** - configuração do horário de funcionamento da board. ![Hydra tarefas de cópia de segurança](../../../images/hydra_tasks_backup_desk.png)
+- **Horário de trabalho** - configuração do horário de funcionamento do mercado. ![Hydra tarefas de cópia de segurança](../../../images/hydra_tasks_backup_desk.png)
 - **Intervalo de operação** - o intervalo de funcionamento.
 - **Diretório de dados** - diretório de dados, de onde serão recebidos os dados para conversão.
 - **Formato** - o formato dos dados convertidos: BIN\/CSV.

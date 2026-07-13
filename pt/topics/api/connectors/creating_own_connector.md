@@ -211,7 +211,7 @@ Assim que o conector estiver implementado, existem duas opções para usá-lo:
    - Somente arquivos com a extensão **.dll** cujos nomes comecem com `StockSharp.` são considerados.
    - Cada arquivo restante é verificado para garantir que seja um assembly .NET válido.
    - O assembly é carregado e todos os tipos que implementam `IMessageAdapter` são coletados.
-   - Quaisquer erros encontrados durante a verificação ou o carregamento são gravados no log e não interrompem a busca. Se o carregamento falhar, abra a janela de log da aplicação ou o arquivo de log para ver os detalhes do erro.
+   - Quaisquer erros encontrados durante a verificação ou o carregamento são gravados no registo e não interrompem a busca. Se o carregamento falhar, abra a janela de registo da aplicação ou o arquivo de registo para ver os detalhes do erro.
 
 Este documento descreve os princípios gerais de funcionamento do adaptador, sua criação e o gerenciamento da conexão com o sistema de negociação. Os documentos a seguir serão dedicados à implementação da funcionalidade do adaptador:
 

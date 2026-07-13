@@ -29,14 +29,14 @@ var storageRegistry = new StorageRegistry()
 
 [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry) を通じて、目的の時間範囲に対するさまざまな種類の市場データにアクセスできます。このために使用されるメソッドは次のとおりです。
 
-- [StorageRegistry.GetTimeFrameCandleMessageStorage](xref:StockSharp.Algo.Storages.StorageHelper.GetTimeFrameCandleMessageStorage(StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Messages.SecurityId,System.TimeSpan,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats)) はキャンドル用です
+- [StorageRegistry.GetTimeFrameCandleMessageStorage](xref:StockSharp.Algo.Storages.StorageHelper.GetTimeFrameCandleMessageStorage(StockSharp.Algo.Storages.IStorageRegistry,StockSharp.Messages.SecurityId,System.TimeSpan,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats)) はローソク足用です
 - [StorageRegistry.GetTickMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetTickMessageStorage(StockSharp.Messages.SecurityId,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats)) はティック用です
 - [StorageRegistry.GetQuoteMessageStorage](xref:StockSharp.Algo.Storages.StorageRegistry.GetQuoteMessageStorage(StockSharp.Messages.SecurityId,StockSharp.Algo.Storages.IMarketDataDrive,StockSharp.Algo.Storages.StorageFormats,System.Boolean)) は板情報用です
 
 これらの各メソッドは対応するストレージを返し、開始日と終了日を指定して `LoadAsync` メソッドを使用することで、そこからデータを読み込めます。
 
 ```cs
-// キャンドルを取得します
+// ローソク足を取得します
 var securityId = "AAPL@NASDAQ".ToSecurityId();
 var candleStorage = storageRegistry.GetTimeFrameCandleMessageStorage(securityId, TimeSpan.FromMinutes(1), StorageFormats.Binary);
 var candles = candleStorage.LoadAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
@@ -74,7 +74,7 @@ await foreach (var marketDepth in marketDepths)
 既存のストレージに新しいデータを保存するには、対応するストレージの `SaveAsync` メソッドを使用します。これにより、ヒストリカルデータに新しい値を追加できます。
 
 ```cs
-// 新しいキャンドルを保存します
+// 新しいローソク足を保存します
 var newCandles = new List<CandleMessage>
 {
 	// ここで新しい CandleMessage オブジェクトを作成します
@@ -105,7 +105,7 @@ await marketDepthStorage.SaveAsync(newMarketDepths);
 特定期間のデータを削除するには、対応するストレージの `DeleteAsync` メソッドを使用します。サンプルパッケージからデータを削除するときは注意してください。
 
 ```cs
-// 指定した期間のキャンドルを削除します
+// 指定した期間のローソク足を削除します
 await candleStorage.DeleteAsync(new DateTime(2020, 4, 1), new DateTime(2020, 4, 2));
 ```
 

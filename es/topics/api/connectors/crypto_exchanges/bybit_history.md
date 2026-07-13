@@ -1,8 +1,8 @@
 # Bybit History
 
-**Bybit History** - servicio histórico del exchange Bybit.
+**Bybit History** - servicio histórico de la bolsa Bybit.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
 
 > [!CAUTION]
 > El conector solo admite el flujo de datos de mercado, las transacciones no son compatibles.

@@ -79,7 +79,7 @@ foreach (var dateTime in dates)
 
 ## Uso de datos para pruebas
 
-Los datos cargados y guardados localmente se pueden usar para probar estrategias de trading con [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector).
+Los datos cargados y guardados localmente se pueden usar para probar estrategias de negociación con [HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector).
 
 ```cs
 // Uso de HistoryEmulationConnector
@@ -102,4 +102,4 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 
 ## Conclusión
 
-La funcionalidad de almacenamiento remoto de datos de mercado de la API proporciona capacidades flexibles para obtener y usar datos históricos. Esto permite realizar pruebas eficientes de estrategias de trading y análisis de mercado usando amplios conjuntos de datos disponibles mediante el [servidor Hydra](../../hydra_server.md).
+La funcionalidad de almacenamiento remoto de datos de mercado de la API proporciona capacidades flexibles para obtener y usar datos históricos. Esto permite realizar pruebas eficientes de estrategias de negociación y análisis de mercado usando amplios conjuntos de datos disponibles mediante el [servidor Hydra](../../hydra_server.md).

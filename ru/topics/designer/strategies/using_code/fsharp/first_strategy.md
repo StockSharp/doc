@@ -152,7 +152,7 @@ member private this.OnProcess
 					Sides.Buy
 
 			// Рассчитать объём для открытия новой позиции или разворота
-			// If there is no position, use Volume; otherwise, double
+			// Если позиции нет, используем Volume, иначе удваиваем
 			// минимум из абсолютного размера позиции и Volume
 			let vol =
 				if this.Position = 0m then

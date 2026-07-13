@@ -28,7 +28,7 @@ En los temas anteriores, los objetos integrados en las clases de [S#](../../api.
 4. Agregue receptores de registro.
 
    ```cs
-   // los mensajes de log se mostrarán en el componente GUI
+   // los mensajes de registro se mostrarán en el componente GUI
    _logManager.Listeners.Add(new GuiLogListener(Monitor));
    // también se escriben en archivos
    _logManager.Listeners.Add(new FileLogListener

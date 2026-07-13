@@ -1,12 +1,12 @@
 # Chart
 
-Für die grafische Darstellung von Candles können Sie die spezielle Komponente [Chart](xref:StockSharp.Xaml.Charting.Chart) verwenden (siehe [Komponenten für die Chart-Erstellung](../graphical_user_interface/charts.md)), die Candles wie folgt darstellt:
+Für die grafische Darstellung von Kerzen können Sie die spezielle Komponente [Chart](xref:StockSharp.Xaml.Charting.Chart) verwenden (siehe [Komponenten für die Chart-Erstellung](../graphical_user_interface/charts.md)), die Kerzen wie folgt darstellt:
 
 ![Beispiel Kerzenchart](../../../images/sample_candleschart.png)
 
-## Grundlegender Ansatz zur Anzeige von Candles
+## Grundlegender Ansatz zur Anzeige von Kerzen
 
-Es gibt zwei Ansätze zur Anzeige von Candles in einem Chart. Der erste Ansatz ist das manuelle Zeichnen von Candles beim Empfang von Daten:
+Es gibt zwei Ansätze zur Anzeige von Kerzen in einem Chart. Der erste Ansatz ist das manuelle Zeichnen von Kerzen beim Empfang von Daten:
 
 ```cs
 // CandlesChart - StockSharp.Xaml.Chart
@@ -100,7 +100,7 @@ private void InitializeChartWithAutoBinding()
 
 ## Arbeiten mit Indikatoren
 
-Um Indikatoren zusammen mit Candles im Chart anzuzeigen, werden Elemente vom Typ [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) verwendet:
+Um Indikatoren zusammen mit Kerzen im Chart anzuzeigen, werden Elemente vom Typ [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) verwendet:
 
 ```cs
 // Indikator zum Diagramm hinzufügen
@@ -366,7 +366,7 @@ private void ClearChart()
 }
 ```
 
-Ein Beispiel für die Anzeige von Candles in einem Chart finden Sie im Abschnitt [Kerzen](../candles.md).
+Ein Beispiel für die Anzeige von Kerzen in einem Chart finden Sie im Abschnitt [Kerzen](../candles.md).
 
 ## Siehe auch
 

@@ -49,7 +49,7 @@ Para generar velas por volumen:
 
 Resultado de la generación:
 
-![Hydra velas volume](../../../images/hydra_candles_volume.png)
+![Hydra velas de volumen](../../../images/hydra_candles_volume.png)
 
 ## Fuentes de datos para construir velas
 

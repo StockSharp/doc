@@ -67,7 +67,7 @@ _connector.SecurityReceived += (subscription, security) =>
 		var tradesSubscription = new Subscription(DataType.Ticks, security);
 		_connector.Subscribe(tradesSubscription);
 		
-		// Subscrição de candles
+		// Subscrição de velas
 		var candleSubscription = new Subscription(
 			DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 			security)
@@ -94,7 +94,7 @@ _connector.OrderBookReceived += (subscription, depth) =>
 	Console.WriteLine($"Livro de ofertas recebido: {depth.SecurityId}, melhor bid: {depth.BestBid()?.Price}, melhor ask: {depth.BestAsk()?.Price}");
 };
 
-// Evento de candle recebido
+// Evento de vela recebida
 _connector.CandleReceived += (subscription, candle) =>
 {
 	Console.WriteLine($"Vela recebida: {candle.SecurityId}, {candle.OpenTime}, O:{candle.OpenPrice}, H:{candle.HighPrice}, L:{candle.LowPrice}, C:{candle.ClosePrice}");
@@ -127,10 +127,10 @@ _connector.Connect();
 O Hydra em modo de servidor fornece acesso a vários tipos de dados. Vejamos exemplos de obtenção de dados históricos:
 
 ```cs
-// Obter candles históricos
+// Obter velas históricas
 private void RequestHistoricalCandles(Security security, DateTime from, DateTime to)
 {
-	// Criar uma subscrição para candles históricos
+	// Criar uma subscrição para velas históricos
 	var candleSubscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
@@ -142,7 +142,7 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 		}
 	};
 	
-	// Subscrever para processar candles recebidos
+	// Subscrever para processar velas recebidos
 	_connector.CandleReceived += OnCandleReceived;
 	
 	// Iniciar a subscrição
@@ -151,13 +151,13 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 {
-	// Verificar se o candle pertence à nossa subscrição
+	// Verificar se a vela pertence à nossa subscrição
 	if (subscription.DataType != DataType.TimeFrame(TimeSpan.FromMinutes(5)))
 		return;
 		
 	Console.WriteLine($"Vela histórica: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 	
-	// Processar os candles recebidos, por exemplo, guardar no armazenamento local
+	// Processar os velas recebidas, por exemplo, guardar no armazenamento local
 	// ou utilizar para análise/visualização
 }
 ```

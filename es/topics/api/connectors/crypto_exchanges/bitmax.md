@@ -3,9 +3,9 @@
 
 # BitMax
 
-**BitMax** - exchange de criptomonedas.
+**BitMax** - bolsa de criptomonedas.
 
-Antes de comenzar a escribir robots de trading para esta plataforma de trading, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
+Antes de comenzar a escribir robots de negociación para esta plataforma de negociación, le recomendamos leer los enlaces en la sección [Conectores](../../connectors.md).
 
 ## Contenido recomendado
 

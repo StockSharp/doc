@@ -75,7 +75,7 @@ O pacote `StockSharp.Algo.Analytics.CSharp` inclui scripts prontos:
 
 ## Exemplo: Script de Análise Personalizado
 
-Abaixo está um exemplo de script que carrega candles para uma lista de instrumentos e exibe os preços de fechamento em um gráfico de linha:
+Abaixo está um exemplo de script que carrega velas para uma lista de instrumentos e exibe os preços de fechamento em um gráfico de linha:
 
 ```cs
 public class MyAnalyticsScript : IAnalyticsScript
@@ -130,7 +130,7 @@ public class VolumeTableScript : IAnalyticsScript
         StorageFormats format, DataType dataType,
         CancellationToken cancellationToken)
     {
-        var grid = panel.CreateGrid("Instrument", "Total de candles",
+        var grid = panel.CreateGrid("Instrument", "Total de velas",
             "Volume total", "Volume médio");
         grid.SetSort("Volume total", false);
 

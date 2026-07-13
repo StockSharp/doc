@@ -19,7 +19,7 @@ Los datos del libro de órdenes se usan para:
 
 - Identificar niveles de precio con volúmenes máximos de órdenes, que pueden indicar posibles niveles de soporte o resistencia.
 - Evaluar la liquidez de mercado de un instrumento.
-- Desarrollar estrategias de trading basadas en el análisis de cambios en el libro de órdenes.
+- Desarrollar estrategias de negociación basadas en el análisis de cambios en el libro de órdenes.
 
 ## Recuperación de datos
 

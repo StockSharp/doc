@@ -62,7 +62,7 @@ volumen en balance se puede interpretar de la siguiente manera:
 
 6. **Patrones de análisis técnico**:
    - En el gráfico OBV se pueden formar patrones de análisis técnico clásicos, como "cabeza y hombros", "doble fondo", etc.
-   - Estos patrones pueden proporcionar señales de trading adicionales.
+   - Estos patrones pueden proporcionar señales de negociación adicionales.
 
 7. **Picos**:
    - Los cambios bruscos y repentinos en OBV pueden indicar cambios significativos en el sentimiento del mercado

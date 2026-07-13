@@ -51,8 +51,8 @@ protected override void OnStarted2(DateTime time)
 - É criada uma regra que é accionada sempre que são recebidos dados do livro de ordens
 - Quando a regra é accionada:
   - O contador `i` é incrementado
-  - A informação sobre os melhores preços bid e ask é adicionada ao log
-  - O valor actual do contador `i` é adicionado ao log
+  - A informação sobre os melhores preços bid e ask é adicionada ao registo
+  - O valor actual do contador `i` é adicionado ao registo
 - A regra é executada até o valor do contador `i` atingir ou exceder 10
 - Depois de a condição ser cumprida, a regra pára automaticamente de funcionar
 

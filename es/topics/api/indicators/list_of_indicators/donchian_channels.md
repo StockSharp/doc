@@ -65,7 +65,7 @@ canales de Donchian se puede utilizar de varias maneras:
    - La contracción del canal indica una menor volatilidad
 
 5. **Estrategias contratendencias**:
-   - Algunos traders utilizan señales opuestas, esperando que el precio vuelva a la línea media después de alcanzar los bordes del canal.
+   - Algunos operadores utilizan señales opuestas, esperando que el precio vuelva a la línea media después de alcanzar los bordes del canal.
 
 ![Gráfico del indicador DC](../../../../images/indicator_donchian_channels.png)
 

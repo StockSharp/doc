@@ -50,15 +50,15 @@ Si la volatilidad es cero (lo cual es poco probable), KER se establece en cero p
 El ratio de eficiencia de Kaufman se puede interpretar de la siguiente manera:
 
 1. **Niveles de eficiencia**:
-   - Los valores High KER (>0,6) indican una fuerte tendencia
+   - Los valores altos de KER (>0,6) indican una fuerte tendencia
    - Los valores medios de KER (0,3-0,6) indican una tendencia moderada
-   - Los valores Low KER (<0,3) indican un mercado lateral o alta volatilidad
+   - Los valores bajos de KER (<0,3) indican un mercado lateral o alta volatilidad
 
 2. **Cambios de KER**:
    - El crecimiento de KER puede indicar la formación o el fortalecimiento de una tendencia
    - La caída de KER puede indicar un debilitamiento de la tendencia o una transición a un movimiento lateral
 
-3. **Estrategias de trading**:
+3. **Estrategias de negociación**:
    - Durante los períodos de alta eficiencia (alto KER), son preferibles las estrategias de tendencia
    - Durante los períodos de baja eficiencia (bajo KER), son preferibles las estrategias de negociación de rango
 
@@ -68,7 +68,7 @@ El ratio de eficiencia de Kaufman se puede interpretar de la siguiente manera:
    - Las señales del oscilador son más confiables a niveles bajos de KER
 
 5. **Adaptación a las condiciones del mercado**:
-   - KER permite adaptar las estrategias de trading a las condiciones cambiantes del mercado
+   - KER permite adaptar las estrategias de negociación a las condiciones cambiantes del mercado
    - Los operadores pueden ajustar dinámicamente los parámetros de otros indicadores basados en los valores KER
 
 6. **Precursor de cambio**:
