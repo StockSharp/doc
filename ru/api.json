@@ -3366,16 +3366,16 @@
     "summary": "Типы стоп-ордеров."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.HelpPopupPage": {
-    "summary": "Modal help drawer. Wraps a WebView around the Markdig HTML output from HelpService with a minimal CSS skin that honours the active OSAppTheme. Pages opt in by setting BaseViewModel.HelpSlug; the AppShell attaches a \"?\" toolbar icon that pushes this page when the slug is non-empty."
+    "summary": "Модальный справочный ящик. Обертывает WebView вокруг вывода HTML Markdig от HelpService с минимальной CSS-кожей, которая чтит активную OSAppTheme. Страницы выбирают настройку BaseViewModel.HelpSlug; AppShell прикрепляет значок панели инструментов «?», который нажимает эту страницу, когда слизь не пуста."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.HelpToolbarExtensions": {
-    "summary": "Glue between a page's BindingContext ViewModel (a BaseViewModel with an optional HelpSlug) and the global help drawer. Call ContentPage) from ContentPage constructors that want the \"?\" icon — the extension is a no-op when the VM doesn't expose a slug."
+    "summary": "Клей между BindingContext ViewModel страницы (BaseViewModel с дополнительным HelpSlug) и глобальным справочным ящиком. Позвоните ContentPage) от конструкторов ContentPage, которым нужен значок «?» - расширение является нерабочим, когда VM не выставляет слизняк."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.InstrumentPickerPage": {
     "summary": "Модальный выбор инструментов. Размещает InstrumentPickerViewModel и открывается после разрешения задачи виртуальной машины SelectedResult — либо посредством касания строки (положительный результат), либо кнопки «Закрыть» (нуль)."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.OrderHistoryPage": {
-    "summary": "Per-order execution-log page. Reached from the Orders blotter via Shell navigation (OrderHistoryPage?orderId=123); the query string is forwarded to the VM's OrderId property which retriggers LoadCommand."
+    "summary": "Страница журнала выполнения заказа. Получена из блотера заказов через навигацию Shell (OrderHistoryPage? orderId =123); строка запроса перенаправляется в свойство VM OrderId, которое перезапускает LoadCommand."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.TenantSettingsPage": {
     "summary": "Страница хоста для TenantSettingsViewModel. Подключает модальное средство выбора инструментов — виртуальная машина вызывает OpenInstrumentPickerRequested, когда оператор нажимает «Выбрать», и страница разрешает это, отправляя новый InstrumentPickerPage и пересылая результат обратно в виртуальную машину. Панель помощи прикреплена через HelpToolbarExtensions."
@@ -6630,7 +6630,7 @@
     "summary": "Поток FORTS_FORECASTIM_REPL - ​​Прогноз риска после возможной раздвижки. Таблица part_sa_forecast: Прогноз объёма запасов РК."
   },
   "T:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns": {
-    "summary": "Поток FORTS REFDATA REPL: справочная и сессионная информация о фьючерсах. fut instruments table: каталог инструментов."
+    "summary": "FORTS_REFDATA_REPL -:. fut_instruments:."
   },
   "T:StockSharp.Plaza.Metadata.PlazaFutMarginTypeColumns": {
     "summary": "FORTS_REFDATA_REPL - Фьючерсы: справочная и сессионная информация. Таблица fut_margin_type: Типы маржирования."
@@ -6834,7 +6834,7 @@
     "summary": "Поток FORTS_PART_REPL - Информация о средствах и лимитах. Часть таблицы - Средства и лимиты клиентов."
   },
   "T:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns": {
-    "summary": "Поток FORTS PART REPL: информация об участниках и счетах. part sa table: счета участников."
+    "summary": "FORTS_PART_REPL -. part_sa -."
   },
   "T:StockSharp.Plaza.Metadata.PlazaPositionColumns": {
     "summary": "Поток FORTS_POS_REPL - Информация о позициях. Таблица позиций - Позиции клиентов."
@@ -8928,7 +8928,7 @@
     "summary": "Аннотация линейки."
   },
   "T:StockSharp.Xaml.Charting.Ultrachart.UltrachartOverviewExtensions": {
-    "summary": "uses this technique http://stackoverflow.com/questions/10279092/how-to-get-child-by-type-in-wpf-container and this technique http://social.msdn.microsoft.com/Forums/vstudio/en-US/b879f391-f350-4813-b509-b725dc1668b1/how-to-find-datatemplate-generated-element-in-an-itemscontrol?forum=wpf to bind the UltrachartSurface at the first child in an ItemsControl as the ParentSurface on a UltrachartOverview"
+    "summary": "Использует эту технику http://stackoverflow.com/questions/10279092/how-to-get-child-by-type-in-wpf-container и эту технику http://social.msdn.microsoft.com/Forums/vstudio/en-US/b879f391-f350-4813-b509-b725dc1668b1/how-to-find-datatemplate-generated-element-in-an-itemscontrol?forum=wpf для связывания UltrachartSurface у первого ребенка в ItemsControl в качестве ParentSurface на UltrachartOverview."
   },
   "T:StockSharp.Xaml.Charting.UltrachartGroup": {
     "summary": "ItemsControl, который позволяет группировать несколько экземпляров UltrachartSurface для создания многопанельной диаграммы. Используется специально StockCharts, но также применимо и к другим типам диаграмм."
@@ -13818,7 +13818,7 @@
     "summary": "Разделитель, заменяющий первый '.' в пути для инструментов с идентификатором, например .AA-CA@SPBEX. Равен '##DOT##'."
   },
   "F:StockSharp.Algo.Storages.StorageHelper.SecurityQuestionSeparator": {
-    "summary": "The delimiter, replacing '?' in the path for instruments with id like AA-CA?SPB@SPBEX. Is equal to '##QSTN##'."
+    "summary": "Делимитер, заменяющий '?' на пути для инструментов с идентификатором, таким как AA-CA?SPB@SPBEX. Приравнивается к ##QSTN##."
   },
   "F:StockSharp.Algo.Storages.StorageHelper.SecuritySlashSeparator": {
     "summary": "Разделитель, заменяющий '/' в пути для инструментов с идентификатором, например USD/EUR. Равен '__'."
@@ -18717,7 +18717,7 @@
     "summary": "Добавить финансовые инструменты"
   },
   "F:StockSharp.Localization.LocalizedStrings.AddSecuritiesNowKey": {
-    "summary": "At the moment, no instruments are specified for task '{0}'. Add them now (or download if they are not yet exist)?"
+    "summary": "На данный момент для задачи {0} не указаны инструменты. Добавить их сейчас (или скачать, если они еще не существуют)?"
   },
   "F:StockSharp.Localization.LocalizedStrings.AddSecurityKey": {
     "summary": "Добавить финансовый инструмент..."
@@ -20634,7 +20634,7 @@
     "summary": "Конфигурация"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConfirmNewVersionPublishParamsKey": {
-    "summary": "Do you want to publish the new version of \"{0}\"?"
+    "summary": "Хотите опубликовать новую версию {0}?"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConflictResolverTooltipParamsKey": {
     "summary": "Правила разрешения конфликтов в случае, если один и тот же идентификатор пакета был найден в нескольких репозиториях. Правило \\nA состоит из идентификатора пакета и репозитория nuget, разделенных двоеточием. Правило \\nEach должно быть на отдельной строке. Примеры:\\n\\nStockSharp.Terminal:nugetorg\\n*:stocksharp\\n'*' означает другие пакеты.\\nAvailable репозитории nuget: {0}"
@@ -20730,10 +20730,10 @@
     "summary": "Connector"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorMustBeExtraInstalledKey": {
-    "summary": "The connector {0} must be installed as a separate product, and the terminal must be configured as per the instructions. Would you like to select the product {0} for installation?"
+    "summary": "connector {0} должен быть установлен как отдельный продукт, а терминал должен быть настроен в соответствии с инструкциями.Вы хотите выбрать продукт {0} для установки?"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorMustSetupFirstKey": {
-    "summary": "To connect via the connector {0}, you need to configure the terminal itself. Would you like to open a documentation site with instructions?"
+    "summary": "Для подключения через connector {0} необходимо настроить сам терминал. Хотите открыть сайт документации с инструкциями?"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnorsRSIKey": {
     "summary": "Коннорс RSI."
@@ -20757,7 +20757,7 @@
     "summary": "Продолжить"
   },
   "F:StockSharp.Localization.LocalizedStrings.ContinueSubscriptionParamsKey": {
-    "summary": "Continue free subscription with the connector {0}? Changing the connector in the future will not be possible!"
+    "summary": "Продолжить бесплатную подписку на connector {0}?Изменить connector в будущем не получится!"
   },
   "F:StockSharp.Localization.LocalizedStrings.ContinuousSecurityDescKey": {
     "summary": "Непрерывный финансовый инструмент (обычно фьючерсный контракт), содержащий финансовые инструменты с истекающим сроком действия."
@@ -21147,7 +21147,7 @@
     "summary": "Размер передаваемого пакета данных. По умолчанию равно 50 элементам. Используется при экспорте через SQL."
   },
   "F:StockSharp.Localization.LocalizedStrings.DatabaseCorruptedResetConfigKey": {
-    "summary": "The database is corrupted and can not continue. Do you want to reset all settings?"
+    "summary": "База данных повреждена и не может продолжаться. Хотите сбросить все настройки?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DatabaseDescriptionKey": {
     "summary": "Имя базы данных. Не используется в SQLite."
@@ -21570,7 +21570,7 @@
     "summary": "Не обновлять"
   },
   "F:StockSharp.Localization.LocalizedStrings.DoYouHaveQuestionsOrSuggestionsKey": {
-    "summary": "Do you have any questions or suggestions? Contact us now!"
+    "summary": "У вас есть вопросы или предложения? Свяжитесь с нами сейчас!"
   },
   "F:StockSharp.Localization.LocalizedStrings.DocumentationKey": {
     "summary": "Документация"
@@ -21630,7 +21630,7 @@
     "summary": "Нисходящий тренд"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadHistoricalMarketDataQuestionKey": {
-    "summary": "Download historical market data?"
+    "summary": "Скачайте исторические данные рынка?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadKey": {
     "summary": "Скачать"
@@ -21645,7 +21645,7 @@
     "summary": "Скачать финансовые инструменты"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadUpdatesKey": {
-    "summary": "New version of the application available. Download updates?"
+    "summary": "Новая версия приложения доступна. Загрузить обновления?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadingCandlesKey": {
     "summary": "Качаем свечи..."
@@ -21882,7 +21882,7 @@
     "summary": "Включить стоп-аут"
   },
   "F:StockSharp.Localization.LocalizedStrings.EnableTaskNowKey": {
-    "summary": "Enable task '{0}' now (the task will go into the active mode)?"
+    "summary": "Включить задачу {0} сейчас (задание перейдет в активный режим)?"
   },
   "F:StockSharp.Localization.LocalizedStrings.EnabledKey": {
     "summary": "Включено"
@@ -23196,7 +23196,7 @@
     "summary": "Идентификаторы"
   },
   "F:StockSharp.Localization.LocalizedStrings.IfYouHaveAnyQuestionsKey": {
-    "summary": "If you have any questions, you can always ask them through the suggestions form. Ask now?"
+    "summary": "Если у вас есть какие-либо вопросы, вы всегда можете задать их через форму предложений. Спроси сейчас?"
   },
   "F:StockSharp.Localization.LocalizedStrings.IgnoreErrorsDescKey": {
     "summary": "Игнорировать ошибки вычислений (например, арифметические переполнения)."
@@ -23526,7 +23526,7 @@
     "summary": "Доступно"
   },
   "F:StockSharp.Localization.LocalizedStrings.InstallerNotStartedKey": {
-    "summary": "The installer is not running. Would you like to launch it?"
+    "summary": "Установщик не работает. Хотите запустить его?"
   },
   "F:StockSharp.Localization.LocalizedStrings.InstallerPluginUpdatesAvailableKey": {
     "summary": "Доступны обновления плагина"
@@ -23667,7 +23667,7 @@
     "summary": "в 64-битном режиме"
   },
   "F:StockSharp.Localization.LocalizedStrings.IsActionOrderCancellationKey": {
-    "summary": "Is the action an order cancellation?"
+    "summary": "Является ли действие отменой приказа?"
   },
   "F:StockSharp.Localization.LocalizedStrings.IsControlConnectionLostKey": {
     "summary": "Потеряно управляющее соединение."
@@ -24258,7 +24258,7 @@
     "summary": "Обмены нагрузки"
   },
   "F:StockSharp.Localization.LocalizedStrings.LoadHistoryDataQuestionKey": {
-    "summary": "Open the window to download historical data?"
+    "summary": "Откройте окно для загрузки исторических данных."
   },
   "F:StockSharp.Localization.LocalizedStrings.LoadKey": {
     "summary": "Загрузить"
@@ -25605,7 +25605,7 @@
     "summary": "Не строить"
   },
   "F:StockSharp.Localization.LocalizedStrings.NotCompatibleStrategyKey": {
-    "summary": "Selected strategy is not compatible with Designer. You can continue subscribing, but then download separately from web site. Continue subscription?"
+    "summary": "Выбранная стратегия не совместима с Designer. Можно продолжить подписку, но потом скачать отдельно с сайта. Продолжать подписку?"
   },
   "F:StockSharp.Localization.LocalizedStrings.NotCompleteRegisteredKey": {
     "summary": "Регистрация не завершена."
@@ -25665,7 +25665,7 @@
     "summary": "Стратегия {0} не подписана."
   },
   "F:StockSharp.Localization.LocalizedStrings.NotSupportSecurityDownloadKey": {
-    "summary": "The source does not support automatically instruments downloading. Manually create an instrument?"
+    "summary": "Источник не поддерживает автоматическую загрузку инструментов. Создать инструмент вручную?"
   },
   "F:StockSharp.Localization.LocalizedStrings.NotSupportTimeframeKey": {
     "summary": "{0} не поддерживает таймфрейм, равный {1}."
@@ -27873,7 +27873,7 @@
     "summary": "Удалите папку данных приложения, включая все загруженные данные и настройки."
   },
   "F:StockSharp.Localization.LocalizedStrings.RemoveDriveQuestionKey": {
-    "summary": "Remove selected storage?"
+    "summary": "Удалить выбранное хранилище?"
   },
   "F:StockSharp.Localization.LocalizedStrings.RemoveNotSupportedKey": {
     "summary": "Удаление не поддерживается. Вместо этого используйте Clear()."
@@ -28443,7 +28443,7 @@
     "summary": "Финансовый инструмент используется в действующей стратегии."
   },
   "F:StockSharp.Localization.LocalizedStrings.SecurityIsUsedInSomeStrategiesKey": {
-    "summary": "The security is used in some strategies. Remove anyway?"
+    "summary": "Финансовый инструмент используется в некоторых стратегиях. Удалить в любом случае?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SecurityKey": {
     "summary": "финансовый инструмент"
@@ -28626,7 +28626,7 @@
     "summary": "Отправлять журналы"
   },
   "F:StockSharp.Localization.LocalizedStrings.SendLogsNowQuestionKey": {
-    "summary": "There are errors in the application logs, help us to improve the program by sending your logs. Send now?"
+    "summary": "В журналах приложений есть ошибки, помогите нам улучшить программу, отправив свои журналы. Отправить сейчас?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SendOnlyFinalKey": {
     "summary": "Отправляйте только окончательные значения."
@@ -28776,7 +28776,7 @@
     "summary": "Настройки ОК."
   },
   "F:StockSharp.Localization.LocalizedStrings.SettingsWillBeResetContinueKey": {
-    "summary": "Settings for {0} will be reset. This operation is irreversible and all data will be deleted. Are you sure you want to continue?"
+    "summary": "Настройки для {0} будут сброшены. Эта операция необратима и все данные будут удалены. Вы уверены, что хотите продолжить?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SettlementDateForSecurityKey": {
     "summary": "Дата расчета по финансовому инструменту (для деривативов и облигаций)."
@@ -28797,7 +28797,7 @@
     "summary": "Тип расчета, когда срок действия инструмента истек."
   },
   "F:StockSharp.Localization.LocalizedStrings.SetupStockSharpConnectionFirstTimeKey": {
-    "summary": "You are running the application the first time. Would you like establish a connection with our simulation server and start trading now?"
+    "summary": "Вы запускаете приложение в первый раз. Вы хотите установить соединение с нашим сервером моделирования и начать торговать сейчас?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SetupTaskNowKey": {
     "summary": "Set up task '{0}' now?"
@@ -29520,7 +29520,7 @@
     "summary": "Стоп в секундах, сколько держать открытую позицию"
   },
   "F:StockSharp.Localization.LocalizedStrings.StopStrategyOnTabClosingKey": {
-    "summary": "To close the tab {0} strategy must be stopped. Stop strategy?"
+    "summary": "Для закрытия вкладки {0} необходимо остановить стратегию. Остановить стратегию?"
   },
   "F:StockSharp.Localization.LocalizedStrings.StopTradingKey": {
     "summary": "Остановить торговлю"
@@ -29580,7 +29580,7 @@
     "summary": "Стратегия добавлена"
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyAlreadyPublishedKey": {
-    "summary": "Strategy was published. Update?"
+    "summary": "Стратегия опубликована. Обновление?"
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyAlreadyStoppedKey": {
     "summary": "Стратегия {0} уже остановлена и не может быть переведена в состояние {1}."
@@ -29658,7 +29658,7 @@
     "summary": "Операционный объем."
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyWasChangedParamsKey": {
-    "summary": "Strategy {0} was changed. Update?"
+    "summary": "Стратегия {0} была изменена. Обновление?"
   },
   "F:StockSharp.Localization.LocalizedStrings.StreakKey": {
     "summary": "Полоса"
@@ -30006,7 +30006,7 @@
     "summary": "{0} настройки задачи"
   },
   "F:StockSharp.Localization.LocalizedStrings.TasksAllInstrumentsKey": {
-    "summary": "Tasks '{0}' are running for all instruments. Often these are incorrect settings. It is recommended to set specific instruments for each task. Do you want to continue as is or stop the launch?"
+    "summary": "Задачи {0} выполняются для всех приборов. Часто это неправильные настройки. Рекомендуется устанавливать конкретные приборы для каждой задачи. Хотите продолжить как есть или остановить запуск?"
   },
   "F:StockSharp.Localization.LocalizedStrings.TasksHasSameDirectoriesKey": {
     "summary": "Задачи «{0}» имеют тот же рабочий каталог «{1}»."
@@ -30693,7 +30693,7 @@
     "summary": "Тунис БВМТ"
   },
   "F:StockSharp.Localization.LocalizedStrings.TurnOnServerModeKey": {
-    "summary": "Turn on Hydra into server mode to allow other application get downloaded market data?"
+    "summary": "Включить Hydra в режим сервера, чтобы другие приложения могли загружать рыночные данные?"
   },
   "F:StockSharp.Localization.LocalizedStrings.TurnoverCommissionKey": {
     "summary": "Комиссия с оборота"
@@ -30945,7 +30945,7 @@
     "summary": "Цвет верхней линии."
   },
   "F:StockSharp.Localization.LocalizedStrings.UpTrendDescKey": {
-    "summary": "Is the tick trending upward or downward in price?"
+    "summary": "Тенденция клеща вверх или вниз в цене?"
   },
   "F:StockSharp.Localization.LocalizedStrings.UpTrendKey": {
     "summary": "Восходящий тренд"
@@ -50967,7 +50967,7 @@
     "summary": "Получает первую кисть, найденную на рисунке DrawingImage."
   },
   "M:Ecng.Xaml.XamlHelper.GetDialogResult(System.Windows.DependencyObject)": {
-    "summary": "Boilerplate attached property \"bool? DialogResult\" used to set Window.DialogResult from a Button."
+    "summary": "Свойство \"bool?\" DialogResult использовалось для установки Window.DialogResult из кнопки."
   },
   "M:Ecng.Xaml.XamlHelper.GetImage(System.String,System.Windows.Media.SolidColorBrush,System.Windows.Media.SolidColorBrush)": {
     "summary": "Получает тематический значок SVG/Vector, цвет которого изменяется с помощью указанных кистей заливки и обводки."
@@ -74595,7 +74595,7 @@
     "summary": "Инициализирует новый экземпляр BitmexOrderCondition."
   },
   "M:StockSharp.Broker.Maui.Backoffice.Pages.HelpToolbarExtensions.AttachHelpToolbar(Microsoft.Maui.Controls.ContentPage)": {
-    "summary": "Adds a \"?\" ToolbarItem bound to the page's VM HelpSlug. Clicking it pushes HelpPopupPage modally. The toolbar item is left in place even if the slug changes later — the click handler reads the latest value on-the-fly so dynamic VMs still get the right doc."
+    "summary": "Добавляет \"?\" ToolbarItem, привязанный к VM HelpSlug страницы. Нажатие на него толкает HelpPopupPage модально. Пункт панели инструментов остается на месте, даже если слизняк изменяется позже - обработчик кликов считывает последнее значение на лету, поэтому динамические виртуальные машины все еще получают правильный документ."
   },
   "M:StockSharp.Broker.Maui.Backoffice.Pages.InstrumentPickerPage.AwaitSelectionAsync": {
     "summary": "Удобный помощник для вызывающего абонента (TenantSettingsPage): модально отправляет этот сборщик и возвращает выбор или значение null, если оператор отклонил его. Вызывающему абоненту не нужно запоминать шаблон TaskCompletionSource виртуальной машины."
@@ -84453,7 +84453,7 @@
     }
   },
   "M:StockSharp.InteractiveBrokers.InteractiveBrokersMessageAdapter.RequestSoftDollarTiers(System.Int64,System.Threading.CancellationToken)": {
-    "summary": "Requests pre-defined Soft Dollar Tiers. This is only supported for registered professional advisors and hedge and mutual funds who have configured Soft Dollar Tiers in Account Management. Refer to: https://www.interactivebrokers.com/en/software/am/am/manageaccount/requestsoftdollars.htm?Highlight=soft%20dollar%20tier"
+    "summary": "Запросы предварительно определенных уровней Soft Dollar Tiers. Это поддерживается только для зарегистрированных профессиональных консультантов и хедж-фондов, которые настроили уровни Soft Dollar Tiers в управлении счетами. См.: https://www.interactivebrokers.com/en/software/am/am/manageaccount/requestsoftdollars.htm?Highlight=soft%20dollar%20tier"
   },
   "M:StockSharp.InteractiveBrokers.InteractiveBrokersMessageAdapter.RequestTickByTickData(System.Int64,StockSharp.Messages.SecurityMessage,StockSharp.Messages.Level1Fields,System.Int32,System.Boolean,System.Threading.CancellationToken)": {
     "summary": "Запрашивает потиковые данные.",
@@ -107287,7 +107287,7 @@
     "summary": "Учитывая абсолютную ось Мин и Макс, возвращает экземпляр TickRange, содержащий разумные значения MinorDelta и MajorDelta"
   },
   "M:StockSharp.Xaml.Charting.Numerics.PointResamplerBase.ReducePointUnevenImpl(StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{System.Double},StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{System.Double},StockSharp.Xaml.Charting.Model.DataSeries.Point2DSeries,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Boolean)": {
-    "summary": "This needs to be implemented for each supported pair of TX,TY. Maybe use T4 templates? For optimal performance, this method should be implemented in C++/ASM and not just the GetMinMaxValuesForPixel method (this avoid per-pixel unmanaged call transitions). However, that would also require that reducedPoints is passed as pre-allocated buffer and not as a Point2DSeries. NaN handling makes it a bit difficult to pre-allocate though (since NaNs can cause multiple lines per pixel)."
+    "summary": "Это необходимо реализовать для каждой поддерживаемой пары TX,TY. Возможно, использовать шаблоны T4? Для оптимальной производительности этот метод должен быть реализован в C++/ASM, а не только в методе GetMinMaxValuesForPixel (это позволяет избежать неуправляемых переходов вызовов на пиксель). Однако это также потребует, чтобы reducedPoints был передан в качестве предварительно распределенного буфера, а не в качестве Point2DSeries. Обработка NaN немного затрудняет предварительное распределение (поскольку NaNs может вызывать несколько линий на пиксель)."
   },
   "M:StockSharp.Xaml.Charting.Numerics.PointResamplerBase.ReducePointUnevenImpl``2(StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{``0},StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{``1},StockSharp.Xaml.Charting.Model.DataSeries.Point2DSeries,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Boolean)": {
     "summary": "Общая реализация, в которой был получен непроверенный список для значений x и y."
@@ -110237,16 +110237,16 @@
     }
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighQualityRasterizer.Agg.VertexSource.PathStorage.curve3(System.Double,System.Double)": {
-    "summary": "Draws a quadratic Bйzier curve from the current point to (x,y). The control point is assumed to be the reflection of the control point on the previous command relative to the current point. (If there is no previous command or if the previous command was not a curve, assume the control point is coincident with the current point.)"
+    "summary": "Нарисует квадратичную кривую Безье от точки тока до (x,y). Предполагается, что точка управления является отражением точки управления на предыдущей команде относительно текущей точки. (Если нет предыдущей команды или если предыдущая команда не была кривой, предположим, что точка управления совпадает с текущей точкой.)"
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighQualityRasterizer.Agg.VertexSource.PathStorage.curve3(System.Double,System.Double,System.Double,System.Double)": {
-    "summary": "Draws a quadratic Bйzier curve from the current point to (x,y) using (xControl,yControl) as the control point."
+    "summary": "Нарисует квадратичную кривую Безье от текущей точки до (x,y) с использованием (xControl, yControl) в качестве контрольной точки."
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighQualityRasterizer.Agg.VertexSource.PathStorage.curve3_rel(System.Double,System.Double)": {
-    "summary": "Draws a quadratic Bйzier curve from the current point to (x,y). The control point is assumed to be the reflection of the control point on the previous command relative to the current point. (If there is no previous command or if the previous command was not a curve, assume the control point is coincident with the current point.)"
+    "summary": "Нарисует квадратичную кривую Безье от точки тока до (x,y). Предполагается, что точка управления является отражением точки управления на предыдущей команде относительно текущей точки. (Если нет предыдущей команды или если предыдущая команда не была кривой, предположим, что точка управления совпадает с текущей точкой.)"
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighQualityRasterizer.Agg.VertexSource.PathStorage.curve3_rel(System.Double,System.Double,System.Double,System.Double)": {
-    "summary": "Draws a quadratic Bйzier curve from the current point to (x,y) using (xControl,yControl) as the control point."
+    "summary": "Нарисует квадратичную кривую Безье от текущей точки до (x,y) с использованием (xControl, yControl) в качестве контрольной точки."
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighQualityRasterizer.HighQualityRenderSurface.#ctor": {
     "summary": "Инициирует новый экземпляр класса HighQualityRenderSurface."
@@ -110430,7 +110430,7 @@
     "returns": "список из двух точек в результирующей вырезанной линии, или ноль"
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighSpeedRasterizer.WBX.WriteableBitmapExtensions.ComputeBezierPoints(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,StockSharp.Xaml.Charting.Rendering.HighSpeedRasterizer.WBX.BitmapContext,System.Int32,System.Int32)": {
-    "summary": "Draws a filled, cubic Beziйr spline defined by start, end and two control points.",
+    "summary": "Нарисует заполненную кубическую сплину Безье, определенную стартом, концом и двумя контрольными точками.",
     "params": {
       "x1": "X-координата начальной точки.",
       "y1": "Координата Y начальной точки.",
@@ -110823,7 +110823,7 @@
     }
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighSpeedRasterizer.WBX.WriteableBitmapExtensions.FillBeziers(System.Windows.Media.Imaging.WriteableBitmap,System.Int32[],System.Int32)": {
-    "summary": "Draws a series of filled, cubic Beziйr splines each defined by start, end and two control points. The ending point of the previous curve is used as starting point for the next. Therfore the inital curve needs four points and the subsequent 3 (2 control and 1 end point).",
+    "summary": "Нарисует ряд заполненных кубических сплин Безье, каждая из которых определяется стартом, концом и двумя контрольными точками. В качестве отправной точки для следующей используется конечная точка предыдущей кривой. Для этого начальной кривой требуется четыре точки и последующая 3 (2 контрольная и 1 конечная точка).",
     "params": {
       "bmp": "WriteableBitmap.",
       "points": "Точки для кривой в парах x и y, поэтому массив интерпретируется как (x1, y1, cx1, cy1, cx2, cy2, x2, y2, cx3, cx4..., xn, yn).",
@@ -110831,7 +110831,7 @@
     }
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighSpeedRasterizer.WBX.WriteableBitmapExtensions.FillBeziers(System.Windows.Media.Imaging.WriteableBitmap,System.Int32[],System.Windows.Media.Color)": {
-    "summary": "Draws a series of filled, cubic Beziйr splines each defined by start, end and two control points. The ending point of the previous curve is used as starting point for the next. Therfore the inital curve needs four points and the subsequent 3 (2 control and 1 end point).",
+    "summary": "Нарисует ряд заполненных кубических сплин Безье, каждая из которых определяется стартом, концом и двумя контрольными точками. В качестве отправной точки для следующей используется конечная точка предыдущей кривой. Для этого начальной кривой требуется четыре точки и последующая 3 (2 контрольная и 1 конечная точка).",
     "params": {
       "bmp": "WriteableBitmap.",
       "points": "Точки для кривой в парах x и y, поэтому массив интерпретируется как (x1, y1, cx1, cy1, cx2, cy2, x2, y2, cx3, cx4..., xn, yn).",
@@ -111928,10 +111928,10 @@
     }
   },
   "M:StockSharp.Xaml.Charting.ToggleButtonExtensions.GetGroupName(System.Windows.Controls.Primitives.ToggleButton)": {
-    "summary": "Получает GroupName Attached Property"
+    "summary": "Получить собственность GroupName"
   },
   "M:StockSharp.Xaml.Charting.ToggleButtonExtensions.SetGroupName(System.Windows.Controls.Primitives.ToggleButton,System.String)": {
-    "summary": "Устанавливает GroupName Attached Property"
+    "summary": "Устанавливает GroupName присоединенное свойство"
   },
   "M:StockSharp.Xaml.Charting.TransactionSeriesInfo.#ctor(StockSharp.Xaml.Charting.Visuals.RenderableSeries.IRenderableSeries,StockSharp.Xaml.Charting.Visuals.RenderableSeries.HitTestInfo)": {
     "summary": "Инициирует новый экземпляр класса TimeframeSegmentSeriesInfo.",
@@ -112829,7 +112829,7 @@
     "summary": "Преобразует значения данных в пиксельные координаты",
     "returns": "Пиксельные координаты",
     "params": {
-      "xDataValue": "X data-value, e.g. value of X1 or X2",
+      "xDataValue": "X-значение данных, e.g, значение X1 или X2",
       "yDataValue": "Значение данных Y, e.g, значение Y1 или Y2",
       "canvas": "AnnotationCanvas",
       "xCoordCalc": "Текущий X ICoordinateCalculator действителен для текущего пропуска рендеринга",
@@ -117797,7 +117797,7 @@
     }
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.LinkPanel.GetFromArrow(System.Windows.DependencyObject)": {
-    "summary": "Gets the Arrowhead on a Path, at the FromNode end.",
+    "summary": "Получает Стрелаголову на Пути, на конце FromNode.",
     "returns": "Значение по умолчанию - Нет, то есть на элементе нет Arrowhead.",
     "params": {
       "d": "Детский элемент LinkPanel"
@@ -117835,7 +117835,7 @@
     }
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.LinkPanel.GetToArrow(System.Windows.DependencyObject)": {
-    "summary": "Gets the Arrowhead on a Path, at the ToNode end.",
+    "summary": "Получает Стрелаголову на Пути, на конце ToNode.",
     "returns": "Значение по умолчанию - Нет, то есть на элементе нет Arrowhead.",
     "params": {
       "d": "Детский элемент LinkPanel"
@@ -135374,10 +135374,10 @@
     "summary": "Выравнивание вертикальных линий."
   },
   "P:StockSharp.Charting.IAnnotationData.X1": {
-    "summary": "X1 coordinate for annotation drawing. DateTime for coordinate mode Absolute or RelativeY Double other."
+    "summary": "Координаты X1 для аннотационного рисунка. DateTime для режима координат Absolute или RelativeY. Двойной в противном случае."
   },
   "P:StockSharp.Charting.IAnnotationData.X2": {
-    "summary": "X2 coordinate for annotation drawing. DateTime for coordinate mode Absolute or RelativeY. Double other."
+    "summary": "Координаты X2 для аннотационного рисунка. DateTime для режима координат Absolute или RelativeY. Двойной в противном случае."
   },
   "P:StockSharp.Charting.IAnnotationData.Y1": {
     "summary": "Y1 координата для рисунка аннотации. Decimal для режима координат Absolute или RelativeX. Double other."
@@ -135950,7 +135950,7 @@
     "summary": "Идентификатор цели."
   },
   "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Address": {
-    "summary": "WebSocket server address (e.g. ws://localhost:20000/ws)."
+    "summary": "Адрес сервера WebSocket (e.g. ws://localhost:20000/ws)."
   },
   "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportOrderBookIncrements": {
     "summary": "Адаптер переводит книги с дополнительными заказами."
@@ -138134,7 +138134,7 @@
     "summary": "Отличительный параметр для IBKR Algo Orders 1 = true 0 = false NewOrder Single (IBKR ALGO Orders)."
   },
   "P:StockSharp.Fix.Dialects.InteractiveBrokersFixOrderCondition.ForceOnlyRTH": {
-    "summary": "1=ForceOnlyRTH - ON New Order Single."
+    "summary": "1= ForceOnlyRTH - это ON New Order Single."
   },
   "P:StockSharp.Fix.Dialects.InteractiveBrokersFixOrderCondition.HedgeRatio": {
     "summary": "Используется в парной торговле 6666 = Ставка, используемая для вычисления размера детского заказа Пример: 1.8 (размер родительского заказа = 100, 180 будет использоваться для ребенка) Новый заказ Одиночный."
@@ -141378,7 +141378,7 @@
     "summary": "Добавить финансовые инструменты"
   },
   "P:StockSharp.Localization.LocalizedStrings.AddSecuritiesNow": {
-    "summary": "At the moment, no instruments are specified for task '{0}'. Add them now (or download if they are not yet exist)?"
+    "summary": "На данный момент для задачи {0} не указаны инструменты. Добавить их сейчас (или скачать, если они еще не существуют)?"
   },
   "P:StockSharp.Localization.LocalizedStrings.AddSecurity": {
     "summary": "Добавить финансовый инструмент..."
@@ -143295,7 +143295,7 @@
     "summary": "Конфигурация недействительна."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConfirmNewVersionPublishParams": {
-    "summary": "Do you want to publish the new version of \"{0}\"?"
+    "summary": "Хотите опубликовать новую версию {0}?"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConflictResolverTooltipParams": {
     "summary": "Правила разрешения конфликтов в случае, если один и тот же идентификатор пакета был найден в нескольких репозиториях. Правило \\nA состоит из идентификатора пакета и репозитория nuget, разделенных двоеточием. Правило \\nEach должно быть на отдельной строке. Примеры:\\n\\nStockSharp.Terminal:nugetorg\\n*:stocksharp\\n'*' означает другие пакеты.\\nAvailable репозитории nuget: {0}"
@@ -143391,10 +143391,10 @@
     "summary": "Connector является только заглушкой. Пожалуйста, посетите https://stocksharp.com/pricing/, чтобы получить дополнительную информацию."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorMustBeExtraInstalled": {
-    "summary": "The connector {0} must be installed as a separate product, and the terminal must be configured as per the instructions. Would you like to select the product {0} for installation?"
+    "summary": "connector {0} должен быть установлен как отдельный продукт, а терминал должен быть настроен в соответствии с инструкциями.Вы хотите выбрать продукт {0} для установки?"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorMustSetupFirst": {
-    "summary": "To connect via the connector {0}, you need to configure the terminal itself. Would you like to open a documentation site with instructions?"
+    "summary": "Для подключения через connector {0} необходимо настроить сам терминал. Хотите открыть сайт документации с инструкциями?"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnorsRSI": {
     "summary": "Коннорс RSI."
@@ -143418,7 +143418,7 @@
     "summary": "Продолжение"
   },
   "P:StockSharp.Localization.LocalizedStrings.ContinueSubscriptionParams": {
-    "summary": "Continue free subscription with the connector {0}? Changing the connector in the future will not be possible!"
+    "summary": "Продолжить бесплатную подписку на connector {0}?Изменить connector в будущем не получится!"
   },
   "P:StockSharp.Localization.LocalizedStrings.ContinuousSecurity": {
     "summary": "Непрерывный финансовый инструмент"
@@ -143814,7 +143814,7 @@
     "summary": "Размер передаваемого пакета данных. По умолчанию равно 50 элементам. Используется при экспорте через SQL."
   },
   "P:StockSharp.Localization.LocalizedStrings.DatabaseCorruptedResetConfig": {
-    "summary": "The database is corrupted and can not continue. Do you want to reset all settings?"
+    "summary": "База данных повреждена и не может продолжаться. Хотите сбросить все настройки?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DatabaseDescription": {
     "summary": "Имя базы данных. Не используется в SQLite."
@@ -144234,7 +144234,7 @@
     "summary": "Не обновлять"
   },
   "P:StockSharp.Localization.LocalizedStrings.DoYouHaveQuestionsOrSuggestions": {
-    "summary": "Do you have any questions or suggestions? Contact us now!"
+    "summary": "У вас есть вопросы или предложения? Свяжитесь с нами сейчас!"
   },
   "P:StockSharp.Localization.LocalizedStrings.Documentation": {
     "summary": "Документация"
@@ -144297,7 +144297,7 @@
     "summary": "Скачать"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadHistoricalMarketDataQuestion": {
-    "summary": "Download historical market data?"
+    "summary": "Скачайте исторические данные рынка?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadNews": {
     "summary": "Скачать новости."
@@ -144309,7 +144309,7 @@
     "summary": "Следует ли загружать весь набор финансовых инструментов из архива сайта IQFeed."
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadUpdates": {
-    "summary": "New version of the application available. Download updates?"
+    "summary": "Новая версия приложения доступна. Загрузить обновления?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadingCandles": {
     "summary": "Качаем свечи..."
@@ -144543,7 +144543,7 @@
     "summary": "Включите автоматическую ликвидацию позиции, когда уровень маржи падает ниже порога стоп-аута."
   },
   "P:StockSharp.Localization.LocalizedStrings.EnableTaskNow": {
-    "summary": "Enable task '{0}' now (the task will go into the active mode)?"
+    "summary": "Включить задачу {0} сейчас (задание перейдет в активный режим)?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Enabled": {
     "summary": "Включено"
@@ -145857,7 +145857,7 @@
     "summary": "Идентификаторы «{0}» и «{1}» одинаковы."
   },
   "P:StockSharp.Localization.LocalizedStrings.IfYouHaveAnyQuestions": {
-    "summary": "If you have any questions, you can always ask them through the suggestions form. Ask now?"
+    "summary": "Если у вас есть какие-либо вопросы, вы всегда можете задать их через форму предложений. Спроси сейчас?"
   },
   "P:StockSharp.Localization.LocalizedStrings.IgnoreErrors": {
     "summary": "Игнорировать ошибки"
@@ -146190,7 +146190,7 @@
     "summary": "Доступно"
   },
   "P:StockSharp.Localization.LocalizedStrings.InstallerNotStarted": {
-    "summary": "The installer is not running. Would you like to launch it?"
+    "summary": "Установщик не работает. Хотите запустить его?"
   },
   "P:StockSharp.Localization.LocalizedStrings.InstallerPluginUpdatesAvailable": {
     "summary": "Доступны обновления плагина"
@@ -146331,7 +146331,7 @@
     "summary": "в 64-битном режиме"
   },
   "P:StockSharp.Localization.LocalizedStrings.IsActionOrderCancellation": {
-    "summary": "Is the action an order cancellation?"
+    "summary": "Является ли действие отменой приказа?"
   },
   "P:StockSharp.Localization.LocalizedStrings.IsControlConnectionLost": {
     "summary": "Потеряно управляющее соединение."
@@ -146928,7 +146928,7 @@
     "summary": "Обмены нагрузки"
   },
   "P:StockSharp.Localization.LocalizedStrings.LoadHistoryDataQuestion": {
-    "summary": "Open the window to download historical data?"
+    "summary": "Откройте окно для загрузки исторических данных."
   },
   "P:StockSharp.Localization.LocalizedStrings.LoadLayout": {
     "summary": "Загрузить макет..."
@@ -148272,7 +148272,7 @@
     "summary": "Не строить"
   },
   "P:StockSharp.Localization.LocalizedStrings.NotCompatibleStrategy": {
-    "summary": "Selected strategy is not compatible with Designer. You can continue subscribing, but then download separately from web site. Continue subscription?"
+    "summary": "Выбранная стратегия не совместима с Designer. Можно продолжить подписку, но потом скачать отдельно с сайта. Продолжать подписку?"
   },
   "P:StockSharp.Localization.LocalizedStrings.NotCompleteRegistered": {
     "summary": "Регистрация не завершена."
@@ -148332,7 +148332,7 @@
     "summary": "Стратегия {0} не подписана."
   },
   "P:StockSharp.Localization.LocalizedStrings.NotSupportSecurityDownload": {
-    "summary": "The source does not support automatically instruments downloading. Manually create an instrument?"
+    "summary": "Источник не поддерживает автоматическую загрузку инструментов. Создать инструмент вручную?"
   },
   "P:StockSharp.Localization.LocalizedStrings.NotSupportTimeframe": {
     "summary": "{0} не поддерживает таймфрейм, равный {1}."
@@ -150540,7 +150540,7 @@
     "summary": "Удалите папку данных приложения, включая все загруженные данные и настройки."
   },
   "P:StockSharp.Localization.LocalizedStrings.RemoveDriveQuestion": {
-    "summary": "Remove selected storage?"
+    "summary": "Удалить выбранное хранилище?"
   },
   "P:StockSharp.Localization.LocalizedStrings.RemoveNotSupported": {
     "summary": "Удаление не поддерживается. Вместо этого используйте Clear()."
@@ -151110,7 +151110,7 @@
     "summary": "Финансовый инструмент используется в действующей стратегии."
   },
   "P:StockSharp.Localization.LocalizedStrings.SecurityIsUsedInSomeStrategies": {
-    "summary": "The security is used in some strategies. Remove anyway?"
+    "summary": "Финансовый инструмент используется в некоторых стратегиях. Удалить в любом случае?"
   },
   "P:StockSharp.Localization.LocalizedStrings.SecurityMapping": {
     "summary": "Финансовый инструмент Картирование"
@@ -151290,7 +151290,7 @@
     "summary": "Отправлять журналы"
   },
   "P:StockSharp.Localization.LocalizedStrings.SendLogsNowQuestion": {
-    "summary": "There are errors in the application logs, help us to improve the program by sending your logs. Send now?"
+    "summary": "В журналах приложений есть ошибки, помогите нам улучшить программу, отправив свои журналы. Отправить сейчас?"
   },
   "P:StockSharp.Localization.LocalizedStrings.SendOnlyFinal": {
     "summary": "Отправляйте только окончательные значения."
@@ -151440,7 +151440,7 @@
     "summary": "Настройки ОК."
   },
   "P:StockSharp.Localization.LocalizedStrings.SettingsWillBeResetContinue": {
-    "summary": "Settings for {0} will be reset. This operation is irreversible and all data will be deleted. Are you sure you want to continue?"
+    "summary": "Настройки для {0} будут сброшены. Эта операция необратима и все данные будут удалены. Вы уверены, что хотите продолжить?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Settlement": {
     "summary": "Поселение"
@@ -151461,7 +151461,7 @@
     "summary": "Тип расчета, когда срок действия инструмента истек."
   },
   "P:StockSharp.Localization.LocalizedStrings.SetupStockSharpConnectionFirstTime": {
-    "summary": "You are running the application the first time. Would you like establish a connection with our simulation server and start trading now?"
+    "summary": "Вы запускаете приложение в первый раз. Вы хотите установить соединение с нашим сервером моделирования и начать торговать сейчас?"
   },
   "P:StockSharp.Localization.LocalizedStrings.SetupTaskNow": {
     "summary": "Set up task '{0}' now?"
@@ -152184,7 +152184,7 @@
     "summary": "Стоп в секундах, сколько держать открытую позицию"
   },
   "P:StockSharp.Localization.LocalizedStrings.StopStrategyOnTabClosing": {
-    "summary": "To close the tab {0} strategy must be stopped. Stop strategy?"
+    "summary": "Для закрытия вкладки {0} необходимо остановить стратегию. Остановить стратегию?"
   },
   "P:StockSharp.Localization.LocalizedStrings.StopTrading": {
     "summary": "Остановить торговлю"
@@ -152247,7 +152247,7 @@
     "summary": "Стратегия добавлена"
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyAlreadyPublished": {
-    "summary": "Strategy was published. Update?"
+    "summary": "Стратегия опубликована. Обновление?"
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyAlreadyStopped": {
     "summary": "Стратегия {0} уже остановлена и не может быть переведена в состояние {1}."
@@ -152322,7 +152322,7 @@
     "summary": "Операционный объем."
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyWasChangedParams": {
-    "summary": "Strategy {0} was changed. Update?"
+    "summary": "Стратегия {0} была изменена. Обновление?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Streak": {
     "summary": "Полоса"
@@ -152673,7 +152673,7 @@
     "summary": "Задачи"
   },
   "P:StockSharp.Localization.LocalizedStrings.TasksAllInstruments": {
-    "summary": "Tasks '{0}' are running for all instruments. Often these are incorrect settings. It is recommended to set specific instruments for each task. Do you want to continue as is or stop the launch?"
+    "summary": "Задачи {0} выполняются для всех приборов. Часто это неправильные настройки. Рекомендуется устанавливать конкретные приборы для каждой задачи. Хотите продолжить как есть или остановить запуск?"
   },
   "P:StockSharp.Localization.LocalizedStrings.TasksHasSameDirectories": {
     "summary": "Задачи «{0}» имеют тот же рабочий каталог «{1}»."
@@ -153357,7 +153357,7 @@
     "summary": "Тунис БВМТ"
   },
   "P:StockSharp.Localization.LocalizedStrings.TurnOnServerMode": {
-    "summary": "Turn on Hydra into server mode to allow other application get downloaded market data?"
+    "summary": "Включить Hydra в режим сервера, чтобы другие приложения могли загружать рыночные данные?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Turnover": {
     "summary": "Оборот"
@@ -153612,7 +153612,7 @@
     "summary": "Восходящий тренд"
   },
   "P:StockSharp.Localization.LocalizedStrings.UpTrendDesc": {
-    "summary": "Is the tick trending upward or downward in price?"
+    "summary": "Тенденция клеща вверх или вниз в цене?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Upbit": {
     "summary": "Апбит"
@@ -155133,7 +155133,7 @@
     "summary": "Фильтрированная глубина рынка."
   },
   "P:StockSharp.Messages.DataType.IsCandleSource": {
-    "summary": "Is the data type can be used as candles compression source."
+    "summary": "Можно ли использовать тип данных в качестве источника сжатия свечей?"
   },
   "P:StockSharp.Messages.DataType.IsCandles": {
     "summary": "Определяет, является ли MessageType производным от CandleMessage."
@@ -163551,7 +163551,7 @@
     "summary": "Возвращает кэшированный экземпляр ResourceManager, используемый этим классом."
   },
   "P:StockSharp.MoexLchi.Properties.Resources.lci_2012_names": {
-    "summary": "Looks up a localized string similar to 0106194545 018854 02121965 03101201 05guzel 08081993K 09021809 100_kg_S 11111OG 123 128stock 13031951 131510 1349967805 1365sfhk 138959 13БК201 146889 147990 155555 1566 1645@rey 169 SNZ 170355 1853 19031972 1968gv1968 1969April_JL 19811981SV 1984kin 1992 1V3CxD 20112205AL 2310 251abc 276787Grand 27727 29051983 29101929 3046 3083523 31615 32303 32305 33296 3615301 3912800265 4028R 40EW2 40FB7 40FT7 41 420745 42step 4444 44ghr77kc 45_region 47135 471D [rest of string was truncated]\";."
+    "summary": "Выглядит локализованная строка, похожая на 0106194545 018854 02121965 05guzel 08021201K 09021809 100 kg S 11111OG 123 128stock 13031951 131510 1365sfhk 138959 13BK201 146890 155555 1566 1645@rey 169 SNZ 170355 1853 19031972 1969gv1984kin 1992 1V3CxD 20112205AL 231abc 276787Grand 27727 3083523 31615 32303 4012305 40FB7 40FT7 42step 4444 44ghr77kc 45 region 47135 471D [остальная строка была усечена]\";"
   },
   "P:StockSharp.Oanda.Native.Communications.OrderCreateResponse.OrderCreateTransaction": {
     "summary": "Сделка, создавшая Заказ, указанный в запросе."
@@ -164705,7 +164705,7 @@
     "summary": "Временная метка компонента."
   },
   "P:StockSharp.Server.Fix.FixServer.Converter": {
-    "summary": "Message converter for FIX ↔ StockSharp message conversion."
+    "summary": "Преобразователь сообщений для преобразования сообщений FIX? StockSharp."
   },
   "P:StockSharp.Server.Fix.FixServer.FixServerSubscription.IsStub": {
     "summary": "Использует ли эта подписка сообщение с заглушками (плацедератором), указывающее, что у нее нет реального типа данных подписки."
@@ -167234,10 +167234,10 @@
     "summary": "Выравнивание вертикальных линий."
   },
   "P:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData.X1": {
-    "summary": "X1 coordinate for annotation drawing. DateTime for coordinate mode Absolute or RelativeY Double other."
+    "summary": "Координаты X1 для аннотационного рисунка. DateTime для режима координат Absolute или RelativeY. Двойной в противном случае."
   },
   "P:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData.X2": {
-    "summary": "X2 coordinate for annotation drawing. DateTime for coordinate mode Absolute or RelativeY. Double other."
+    "summary": "Координаты X2 для аннотационного рисунка. DateTime для режима координат Absolute или RelativeY. Двойной в противном случае."
   },
   "P:StockSharp.Xaml.Charting.ChartDrawData.AnnotationData.Y1": {
     "summary": "Y1 координата для рисунка аннотации. Decimal для режима координат Absolute или RelativeX. Double other."
@@ -176751,7 +176751,7 @@
     "summary": "Размер бонуса, внесенного/выведенного менеджером."
   },
   "P:StockSharp.cTrader.Native.Model.ProtoOABonusDepositWithdraw.MoneyDigits": {
-    "summary": "Specifies the exponent of the monetary values. E.g. moneyDigits = 8 must be interpret as business value multiplied by 10^8, then real balance would be 10053099944 / 10^8 = 100.53099944. Affects managerBonus, managerDelta, ibBonus, ibDelta."
+    "summary": "Указывается показатель денежных величин. E.g. moneyDigits = 8 следует интерпретировать как бизнес-стоимость, умноженную на 10^8, тогда реальный баланс будет 10053099944 / 10^8 = 100.53099944. Влияет на managerBonus, managerDelta, ibBonus, ibDelta."
   },
   "P:StockSharp.cTrader.Native.Model.ProtoOABonusDepositWithdraw.OperationType": {
     "summary": "Тип операции. Депозит/Вывод."

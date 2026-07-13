@@ -3366,19 +3366,19 @@
     "summary": "Pare os tipos de pedidos."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.HelpPopupPage": {
-    "summary": "Modal help drawer. Wraps a WebView around the Markdig HTML output from HelpService with a minimal CSS skin that honours the active OSAppTheme. Pages opt in by setting BaseViewModel.HelpSlug; the AppShell attaches a \"?\" toolbar icon that pushes this page when the slug is non-empty."
+    "summary": "Gaveta de ajuda modal. Envolve um WebView em torno da saída HTML Markdig do HelpService com uma pele CSS mínima que honra o OSAppTheme ativo. Páginas optem por configurar o BaseViewModel.HelpSlug; o AppShell atribui um ícone de barra de ferramentas \"?\" que empurra esta página quando o slug não estiver vazio."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.HelpToolbarExtensions": {
-    "summary": "Glue between a page's BindingContext ViewModel (a BaseViewModel with an optional HelpSlug) and the global help drawer. Call ContentPage) from ContentPage constructors that want the \"?\" icon — the extension is a no-op when the VM doesn't expose a slug."
+    "summary": "Cola entre BindingContext ViewModel (um BaseViewModel com um HelpSlug opcional) e a gaveta de ajuda global. Chame ContentPage) de construtores ContentPage que querem o ícone \"?\" — a extensão é um no-op quando a VM não expõe uma lesma."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.InstrumentPickerPage": {
     "summary": "Selector de instrumentos modal. Hosts InstrumentPickerViewModel e aparece quando a tarefa SelectedResult resolve -- através de uma linha (resultado positivo) ou do botão Fechar (null)."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.OrderHistoryPage": {
-    "summary": "Per-order execution-log page. Reached from the Orders blotter via Shell navigation (OrderHistoryPage?orderId=123); the query string is forwarded to the VM's OrderId property which retriggers LoadCommand."
+    "summary": "Página de execução-log por ordem. Alcançado do Blotter de Ordens via navegação de Shell (OrderHistoryPage? orderId =123); o texto de consulta é encaminhado para a propriedade OrderId da VM que religa LoadCommand."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.TenantSettingsPage": {
-    "summary": "Host page for TenantSettingsViewModel. Wires the modal instrument picker — the VM raises OpenInstrumentPickerRequested when the operator taps \"Pick\", and the page resolves it by pushing a fresh InstrumentPickerPage and forwarding the result back into the VM. Help drawer is attached via HelpToolbarExtensions."
+    "summary": "Página de host para TenantSettingsViewModel. Fios do seletor de instrumentos modal - a VM levanta OpenInstrumentPickerRequested quando o operador toca em \"Pick\", e a página resolve-o empurrando um InstrumentPickerPage fresco e encaminhando o resultado de volta para a VM. A gaveta de ajuda é anexada via HelpToolbarExtensions."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Resource": {
     "summary": "Classe Android Resource Designer. Expo a montagem do designer Android Resource no espaço de nomes do projeto."
@@ -3405,7 +3405,7 @@
     "summary": "Classe Android Resource Designer. Expo a montagem do designer Android Resource no espaço de nomes do projeto."
   },
   "T:StockSharp.Broker.Maui.Designer.Services.MauiCloudService": {
-    "summary": "Talks to the StockSharp Web API via IApiServiceProvider — same registry that WPF Designer's CloudTaskService uses (WebApiServicesRegistry), here driven through the cross-platform IApiServiceProvider abstraction so it works on MAUI's Android/iOS/Windows TFMs without pulling in the full Ecng.Nuget stack."
+    "summary": "Fala com a API da Web StockSharp via IApiServiceProvider — mesmo registro que o CloudTaskService do WPF Designer usa (WebApiServicesRegistry), aqui conduzido através da abstração IApiServiceProvider multiplataforma para que funcione no Android/iOS /Windows TFMs da MAUI sem puxar a pilha completa Ecng.Nuget."
   },
   "T:StockSharp.Broker.Maui.Designer.Services.MauiCompilationService": {
     "summary": "Gateway de compilação em nuvem para o MAUI Designer — envia uma estratégia para a API StockSharp Web via IApiServiceProvider e superficie o resultado de construção do servidor para a UI via CompilationCompleted@."
@@ -3930,10 +3930,10 @@
     "summary": "O elemento diagrama para atrasar o sinal para o número especificado de valores de entrada."
   },
   "T:StockSharp.Diagram.Elements.DummyChartDiagramElement": {
-    "summary": "ChartDiagramElement dummy implementation."
+    "summary": "ChartDiagramElement implementação dummy."
   },
   "T:StockSharp.Diagram.Elements.DummyChartDiagramElement.DummyChartIndicatorElementWrapper": {
-    "summary": "IChartIndicatorElementWrapper dummy implementation."
+    "summary": "IChartIndicatorElementWrapper implementação dummy."
   },
   "T:StockSharp.Diagram.Elements.FinalValueDiagramElement": {
     "summary": "O elemento diagrama para enviar o valor final (Terminado ou IsFinal)."
@@ -4710,7 +4710,7 @@
     "summary": "IQFeed instrumentos financeiros CSV analisador de arquivos."
   },
   "T:StockSharp.Imex.Dialects.Trade.TradeImexLastSeqStore": {
-    "summary": "Persistis por conexão os números de sequência recebidos pela última vez através do Forwarder reiniciam. Sem persistência, cada processo de Forwarder inicia com _lastSeqNum=0, envia ResendRequest{FromSeq=1}, e as respostas IMEX reproduzindo toda a sessão — dezenas de segundos de história que bloqueiam OrdersForwardingModule o barramento de mensagem mono-threaded e param todos os clientes simultâneos OrderRegister. Disposição de armazenamento: um único arquivo JSON sob a pasta de dados do Forwarder: {Data}@/imex_trade_lastseq.json @ @{ \"login@host:port\": 12345, ... }Multiple TradeImexDialect instâncias no mesmo processo compartilham o arquivo através de uma fechadura estática e leitura- modifi- write o dicionário. Se o arquivo estiver faltando ou corrompido, a loja retorna 0 — degradação graciosa corresponde ao comportamento pré-persistência (uma repetição completa na primeira inicialização, nenhuma pior)."
+    "summary": "Persistis per- connection received sequence numbers across Forwarder reiniciou. Sem persistência, cada processo de Forwarder inicia com _lastSeqNum =0, envia ResendRequest {FromSeq=1}, e respostas IMEX replaying the inteira sessão - dezenas de segundos de história que bloqueiam barramento de mensagens com um único fio OrdersForwardingModule e param todos os clientes concorrentes OrderRegister. Disposição de armazenamento: um único arquivo JSON sob o diretório de dados do Forwarder: {Data} / imex_trade_lastseq.json {\"login@host:port\": 12345,...} Várias instâncias TradeImexDialect no mesmo processo compartilham o arquivo através de uma trava estática e leitura-morte-escrever o dicionário. Se o arquivo estiver faltando ou corromper a loja retorna 0 - degradação graciosa corresponde ao comportamento de pré-persistência (uma repetição completa na primeira inicialização, não pior)."
   },
   "T:StockSharp.Imex.ImexInstrumentMetadata": {
     "summary": "A visão de análise do resultado diário do instrumento de troca de IMEX (https://storage.imexchange.tech/TS/instr-{date}.json). Mantém os três mapas derivados que os consumidores se preocupam com: - InstrumentLots: per-trading-instrument lote multiplicador (unidades de subjacentes por 1 contrato de fio). Usado por TradeImexDialect para escala OrderRegister.Volume/ VisibleVolumepara baixo para quantidades de fio e escala AddReport/ deal.Amount para cima para framework Volume / TradeVolume@ - SpotInfoByBalance@: per- clareamento@ date posições por lote, (b) agrega-os sob o modelo de re-equilíbrio (instrument-lot, subjacente TradeImexDialect@TradeImexDialect). Usado por InstrumentLots0@ (a) escala por cada um dos campos de dados de dados@S."
@@ -7671,7 +7671,7 @@
     "summary": "Condição de parada-perda criada a partir de campos WS JSON (stopPrice, limitPrice)."
   },
   "T:StockSharp.Ws.WsSubscribeCommand": {
-    "summary": "DTO fio para o \"tipo\": \"assinalar\" comando. Uma forma JSON única cobre três distintas StockSharpprocura/assinalar mensagens, escolhidas pelo DataType campo: \"Transações\" → OrderStatusMessage, \"PositionChanges\" → PortfolioLookupMessage, qualquer outra coisa → MarketDataMessage @ @ com IsSubscribe = true. Nem todas as propriedades são significativas em cada ramo - o DTO apenas carrega-los todos e ToMessage escolhe o subconjunto certo."
+    "summary": "DTO fio para o \"tipo\": \"assinalar\". Uma única forma JSON cobre três mensagens de procura/assinatura StockSharp distintas, escolhidas pelo campo DataType: \"Transações\" → OrderStatusMessage, \" PositionChanges \" → PortfolioLookupMessage, qualquer outra coisa → MarketDataMessage com IsSubscribe = true. Nem toda propriedade é significativa em cada ramo — o DTO apenas carrega todos eles e ToMessage escolhe o subconjunto certo."
   },
   "T:StockSharp.Ws.WsSubscriptionFinished": {
     "summary": "DTO de fio para SubscriptionFinishedMessage — servidor→cliente. Opcional nextFrom dicas onde um cliente de paging deve retomar."
@@ -7992,7 +7992,7 @@
     "summary": "O VerticalSliceModifier fornece desenho de fatias verticais com base na coleção de VerticalLineAnnotation Add a UltrachartSurface e conjunto VerticalLines@ colection para permitir este comportamento"
   },
   "T:StockSharp.Xaml.Charting.ChartModifiers.VerticalSliceModifierBase": {
-    "summary": "O VerticalSliceModifierBase faz parte da ChartModifier API, que fornece fatias verticais em IRenderableSeries e uma dica com modelos para o rato para se ligar a uma DataContext@ personalizada, fornecida pela saída da operação Hit-Test em IRenderableSeries @ @ @"
+    "summary": "O VerticalSliceModifierBase faz parte da API ChartModifier, que fornece fatias verticais no IRenderableSeries e uma dica com modelo para o mouse para se ligar a um DataContext personalizado, fornecido pela saída da operação Hit-Test em um IRenderableSeries"
   },
   "T:StockSharp.Xaml.Charting.ChartModifiers.XAxisDragModifier": {
     "summary": "O XAxisDragModifier fornece um arrastar do rato para escalar os X- Eixos. Este comportamento escala o eixo numa direcção diferente, dependendo da metade do eixo que o utilizador inicia a operação em Adicionar a UltrachartSurface e definir IsEnabled para permitir este comportamento"
@@ -8196,7 +8196,7 @@
     "summary": "Interface de parâmetros para o gráfico 3D."
   },
   "T:StockSharp.Xaml.Charting.IChartSeriesViewModel": {
-    "summary": "Define a interface para ChartSeriesViewModel, um modelo de visualização para um par de séries de dados único, que é usado na nova API UltrachartSurface Mvvm. Para usar, veja a propriedade SeriesSource e os exemplos de Mvvm no pacote de exemplos. Você pode vincular SeriesSource@ a uma coleção de IChartSeriesViewModel@ e Ultrachart irá associar automaticamente as instâncias BaseRenderableSeriese IDataSeries @ @"
+    "summary": "Define a interface para uma API ChartSeriesViewModel, um modelo de visualização para um único par de séries de dados, que é usado na nova API UltrachartSurface Mvvm. Para usar, veja a propriedade SeriesSource e os exemplos Mvm no pacote de exemplos. Você pode vincular SeriesSource a uma coleção de IChartSeriesViewModel e Ultrachart automaticamente associará as instâncias BaseRenderableSeries e IDataSeries"
   },
   "T:StockSharp.Xaml.Charting.IChildPane": {
     "summary": "A interface para um painel infantil em um UltrachartGroup controle, que exibe 1..Muitos UltrachartSurfacecontroles em um grupo de gráfico vertical. Destinado especificamente para gráficos de estoque. Derivar desta interface ao criar um ViewModel @ que formará a base de um Painel Infantil em um aplicativo de gráfico de estoque multi-paneado"
@@ -8817,7 +8817,7 @@
     "summary": "Constantes de enumeração para definir o tipo de evento possível durante a rolagem de UltrachartScrollbar"
   },
   "T:StockSharp.Xaml.Charting.SeriesInfo": {
-    "summary": "Fornece um ViewModel contendo informações sobre uma série, como nome, valor, cor. SeriesInfo tipos são produzidos pelo RolloverModifier, CursorModifier e LegendModifier. São consumidos pelo UltrachartLegend e podem ser consumidos por um ItemsControlpersonalizado a vincular à colecção de SeriesInfo@. Veja o conjunto de exemplos, especificamente RolloverModifier, @ @ @ @ @ SciTrader@ e Legendas exemplos para mais informações"
+    "summary": "Fornece um ViewModel contendo informações sobre uma série, como nome, valor, cor. SeriesInfo tipos são produzidos pelos RolloverModifier, CursorModifier e LegendModifier. Eles são consumidos pelo UltrachartLegend e podem ser consumidos por um personalizado ItemsControl ligação à coleção de SeriesInfo. Veja o conjunto de exemplos, especificamente RolloverModifier, SciTrader e Legends exemplos para mais informações"
   },
   "T:StockSharp.Xaml.Charting.SeriesInfoTemplateSelector": {
     "summary": "Fornece classe para escolher a classe apropriada DataTemplate de acordo com um Tipo de SeriesInfo"
@@ -8907,7 +8907,7 @@
     "summary": "Fornece uma ViewModel contendo informações sobre Transaction series"
   },
   "T:StockSharp.Xaml.Charting.UltraStockChart": {
-    "summary": "Fornece uma superfície de controlo de Gráfico de Estoque de alto desempenho com uma área de RenderSurfaceBase viewport. Tem o modelo de incluir uma CategoryDateTimeAxis como XAxis e NumericAxis @ como YAxis. A UltraStockChart pode ter uma fonte de dados IDataSeries@ para cada IRenderableSeries, ou usar a nova API MVVM (veja a propriedade SeriesSource @ @ @ @)"
+    "summary": "Fornece uma superfície de controle de gráfico de estoque de alto desempenho com uma viewport RenderSurfaceBase. Tem o modelo de incluir uma fonte de dados CategoryDateTimeAxis como XAxis e NumericAxis como YAxis. O UltraStockChart pode ter uma fonte de dados IDataSeries para cada IRenderableSeries, ou usar a nova API MVM (veja a propriedade SeriesSource)"
   },
   "T:StockSharp.Xaml.Charting.Ultrachart.AreaAxesToBorderColorConverter": {
     "summary": "Mostrar contorno vermelho em torno do elemento legenda se um ou ambos os eixos não forem definidos."
@@ -8928,7 +8928,7 @@
     "summary": "Anotação de governantes."
   },
   "T:StockSharp.Xaml.Charting.Ultrachart.UltrachartOverviewExtensions": {
-    "summary": "uses this technique http://stackoverflow.com/questions/10279092/how-to-get-child-by-type-in-wpf-container and this technique http://social.msdn.microsoft.com/Forums/vstudio/en-US/b879f391-f350-4813-b509-b725dc1668b1/how-to-find-datatemplate-generated-element-in-an-itemscontrol?forum=wpf to bind the UltrachartSurface at the first child in an ItemsControl as the ParentSurface on a UltrachartOverview"
+    "summary": "utiliza esta técnica http://stackoverflow.com/questions/10279092/how-to-get-child-by-type-in-wpf-container e esta técnica http://social.msdn.microsoft.com/Forums/vstudio/en-US/b879f391-f350-4813-b509-b725dc1668b1/how-to-find-datatemplate-generated-element-in-an-itemscontrol?forum=wpf para ligar o UltrachartSurface na primeira criança em um ItemsControl como o ParentSurface em um UltrachartOverview"
   },
   "T:StockSharp.Xaml.Charting.UltrachartGroup": {
     "summary": "Um ItemsControl que permite agrupar várias instâncias UltrachartSurface para criar um gráfico multi- painel. Usado especificamente por StockCharts mas também aplicável a outros tipos de gráficos"
@@ -13818,7 +13818,7 @@
     "summary": "O delimitador, substituindo o primeiro '.' no caminho para instrumentos com id como .AA-CA@SPBEX. É igual a '##DOT##'."
   },
   "F:StockSharp.Algo.Storages.StorageHelper.SecurityQuestionSeparator": {
-    "summary": "The delimiter, replacing '?' in the path for instruments with id like AA-CA?SPB@SPBEX. Is equal to '##QSTN##'."
+    "summary": "O delimitador, substituindo '?' no caminho para instrumentos com id como AA-CA?SPB@SPBEX. É igual a '##QSTN##'."
   },
   "F:StockSharp.Algo.Storages.StorageHelper.SecuritySlashSeparator": {
     "summary": "O delimitador, substituindo '/' no caminho para instrumentos com ID como USD/EUR. É igual a '__'."
@@ -18717,7 +18717,7 @@
     "summary": "Adicionar instrumentos financeiros"
   },
   "F:StockSharp.Localization.LocalizedStrings.AddSecuritiesNowKey": {
-    "summary": "At the moment, no instruments are specified for task '{0}'. Add them now (or download if they are not yet exist)?"
+    "summary": "No momento, não são especificados instrumentos para a tarefa ' {0}'. Adicione- os agora (ou baixe se ainda não existirem)?"
   },
   "F:StockSharp.Localization.LocalizedStrings.AddSecurityKey": {
     "summary": "Adicionar instrumento financeiro..."
@@ -20634,7 +20634,7 @@
     "summary": "Configuração"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConfirmNewVersionPublishParamsKey": {
-    "summary": "Do you want to publish the new version of \"{0}\"?"
+    "summary": "Você quer publicar a nova versão de \" {0}\"?"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConflictResolverTooltipParamsKey": {
     "summary": "Regras para resolução de conflitos no caso de o mesmo ID do pacote ter sido encontrado em vários repositórios.\\nA rule consiste em um repositório de pacotes e nugget separados por um colon.\\nEach rule deve estar na sua própria linha. Exemplos:\\n\\nStockSharp.Terminal:nugetorg\\n*:stocksharp\\n'*' significa outros pacotes.\\nAvailablenuget repos: {0} @"
@@ -20730,10 +20730,10 @@
     "summary": "Connector"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorMustBeExtraInstalledKey": {
-    "summary": "The connector {0} must be installed as a separate product, and the terminal must be configured as per the instructions. Would you like to select the product {0} for installation?"
+    "summary": "O connector {0} deve ser instalado como um produto separado, e o terminal deve ser configurado de acordo com as instruções. Você gostaria de selecionar o produto {0} para instalação?"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorMustSetupFirstKey": {
-    "summary": "To connect via the connector {0}, you need to configure the terminal itself. Would you like to open a documentation site with instructions?"
+    "summary": "Para se conectar através do connector {0}, você precisa configurar o próprio terminal. Você gostaria de abrir um site de documentação com instruções?"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnorsRSIKey": {
     "summary": "Connors RSI."
@@ -20757,7 +20757,7 @@
     "summary": "Continuar"
   },
   "F:StockSharp.Localization.LocalizedStrings.ContinueSubscriptionParamsKey": {
-    "summary": "Continue free subscription with the connector {0}? Changing the connector in the future will not be possible!"
+    "summary": "Continuar assinatura gratuita com o connector {0}? Mudar o connector no futuro não será possível!"
   },
   "F:StockSharp.Localization.LocalizedStrings.ContinuousSecurityDescKey": {
     "summary": "Instrumento financeiro contínuo (geralmente, um contrato de futuros), contendo instrumentos financeiros expirable."
@@ -21147,7 +21147,7 @@
     "summary": "Tamanho do pacote de dados transmitido. Por padrão igual a 50 elementos. Usado ao exportar através do SQL."
   },
   "F:StockSharp.Localization.LocalizedStrings.DatabaseCorruptedResetConfigKey": {
-    "summary": "The database is corrupted and can not continue. Do you want to reset all settings?"
+    "summary": "A base de dados está corrompida e não pode continuar. Deseja reiniciar todas as configurações?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DatabaseDescriptionKey": {
     "summary": "Nome da base de dados. Não é usado no SQLite."
@@ -21570,7 +21570,7 @@
     "summary": "Não atualizar"
   },
   "F:StockSharp.Localization.LocalizedStrings.DoYouHaveQuestionsOrSuggestionsKey": {
-    "summary": "Do you have any questions or suggestions? Contact us now!"
+    "summary": "Tem alguma pergunta ou sugestão? Contacte-nos agora!"
   },
   "F:StockSharp.Localization.LocalizedStrings.DocumentationKey": {
     "summary": "Documentação"
@@ -21630,7 +21630,7 @@
     "summary": "Tendência de Down"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadHistoricalMarketDataQuestionKey": {
-    "summary": "Download historical market data?"
+    "summary": "Baixar dados históricos do mercado?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadKey": {
     "summary": "Transferir"
@@ -21645,7 +21645,7 @@
     "summary": "Baixar instrumentos financeiros"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadUpdatesKey": {
-    "summary": "New version of the application available. Download updates?"
+    "summary": "Nova versão do aplicativo disponível. Baixe atualizações?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadingCandlesKey": {
     "summary": "A transferir velas..."
@@ -21882,7 +21882,7 @@
     "summary": "Activar a paragem"
   },
   "F:StockSharp.Localization.LocalizedStrings.EnableTaskNowKey": {
-    "summary": "Enable task '{0}' now (the task will go into the active mode)?"
+    "summary": "Activar a tarefa ' {0}' agora (a tarefa irá para o modo activo)?"
   },
   "F:StockSharp.Localization.LocalizedStrings.EnabledKey": {
     "summary": "Activado"
@@ -23196,7 +23196,7 @@
     "summary": "Identificadores"
   },
   "F:StockSharp.Localization.LocalizedStrings.IfYouHaveAnyQuestionsKey": {
-    "summary": "If you have any questions, you can always ask them through the suggestions form. Ask now?"
+    "summary": "Se você tiver alguma dúvida, você sempre pode perguntar-lhes através do formulário de sugestões. Pergunte agora?"
   },
   "F:StockSharp.Localization.LocalizedStrings.IgnoreErrorsDescKey": {
     "summary": "Ignorar erros de cálculo (como transbordamentos de aritmética)."
@@ -23526,7 +23526,7 @@
     "summary": "Disponível"
   },
   "F:StockSharp.Localization.LocalizedStrings.InstallerNotStartedKey": {
-    "summary": "The installer is not running. Would you like to launch it?"
+    "summary": "O instalador não está em execução. Deseja lançá- lo?"
   },
   "F:StockSharp.Localization.LocalizedStrings.InstallerPluginUpdatesAvailableKey": {
     "summary": "Atualizações de plug- in disponíveis"
@@ -23667,7 +23667,7 @@
     "summary": "em modo 64-bit"
   },
   "F:StockSharp.Localization.LocalizedStrings.IsActionOrderCancellationKey": {
-    "summary": "Is the action an order cancellation?"
+    "summary": "A ação é um cancelamento de pedido?"
   },
   "F:StockSharp.Localization.LocalizedStrings.IsControlConnectionLostKey": {
     "summary": "Ligação de controlo perdida."
@@ -24258,7 +24258,7 @@
     "summary": "Trocas de carga"
   },
   "F:StockSharp.Localization.LocalizedStrings.LoadHistoryDataQuestionKey": {
-    "summary": "Open the window to download historical data?"
+    "summary": "Abrir a janela para transferir dados históricos?"
   },
   "F:StockSharp.Localization.LocalizedStrings.LoadKey": {
     "summary": "Carregar"
@@ -24378,7 +24378,7 @@
     "summary": "O login não é especificado."
   },
   "F:StockSharp.Localization.LocalizedStrings.LoginServerInterfaceKey": {
-    "summary": "Login = {0} Server = {1} Interface = {2}"
+    "summary": "Login = Servidor {0} = Interface {1} = {2}"
   },
   "F:StockSharp.Localization.LocalizedStrings.LogoKey": {
     "summary": "Logotipo"
@@ -25605,7 +25605,7 @@
     "summary": "Não compilar"
   },
   "F:StockSharp.Localization.LocalizedStrings.NotCompatibleStrategyKey": {
-    "summary": "Selected strategy is not compatible with Designer. You can continue subscribing, but then download separately from web site. Continue subscription?"
+    "summary": "A estratégia selecionada não é compatível com o Designer. Você pode continuar assinando, mas então baixar separadamente do site. Continuar a assinatura?"
   },
   "F:StockSharp.Localization.LocalizedStrings.NotCompleteRegisteredKey": {
     "summary": "O registro não foi concluído."
@@ -25665,7 +25665,7 @@
     "summary": "Estratégia {0} não tem subscrito."
   },
   "F:StockSharp.Localization.LocalizedStrings.NotSupportSecurityDownloadKey": {
-    "summary": "The source does not support automatically instruments downloading. Manually create an instrument?"
+    "summary": "A fonte não suporta automaticamente a transferência de instrumentos. Crie manualmente um instrumento?"
   },
   "F:StockSharp.Localization.LocalizedStrings.NotSupportTimeframeKey": {
     "summary": "{0} não suporta prazos iguais a {1}."
@@ -27873,7 +27873,7 @@
     "summary": "Remova a pasta de dados da aplicação, incluindo todos os dados e configurações baixados."
   },
   "F:StockSharp.Localization.LocalizedStrings.RemoveDriveQuestionKey": {
-    "summary": "Remove selected storage?"
+    "summary": "Remover o armazenamento seleccionado?"
   },
   "F:StockSharp.Localization.LocalizedStrings.RemoveNotSupportedKey": {
     "summary": "A remoção não é suportada. Use Clear () em vez disso."
@@ -28443,7 +28443,7 @@
     "summary": "O instrumento financeiro é utilizado na estratégia de execução."
   },
   "F:StockSharp.Localization.LocalizedStrings.SecurityIsUsedInSomeStrategiesKey": {
-    "summary": "The security is used in some strategies. Remove anyway?"
+    "summary": "O instrumento financeiro é utilizado em algumas estratégias. Remova de qualquer maneira?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SecurityKey": {
     "summary": "instrumento financeiro"
@@ -28626,7 +28626,7 @@
     "summary": "Enviar os registos"
   },
   "F:StockSharp.Localization.LocalizedStrings.SendLogsNowQuestionKey": {
-    "summary": "There are errors in the application logs, help us to improve the program by sending your logs. Send now?"
+    "summary": "Existem erros nos registros de aplicativos, nos ajude a melhorar o programa enviando seus registros. Envie agora?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SendOnlyFinalKey": {
     "summary": "Envie apenas os valores finais."
@@ -28680,7 +28680,7 @@
     "summary": "Configuração do servidor"
   },
   "F:StockSharp.Localization.LocalizedStrings.ServerConfigPathKey": {
-    "summary": "SmartCOM 3.x server part configuration settings"
+    "summary": "Configuração da parte do servidor SmartCOM 3.x"
   },
   "F:StockSharp.Localization.LocalizedStrings.ServerDescriptionKey": {
     "summary": "Endereço de rede ou localização para o ficheiro."
@@ -28776,7 +28776,7 @@
     "summary": "- Sim."
   },
   "F:StockSharp.Localization.LocalizedStrings.SettingsWillBeResetContinueKey": {
-    "summary": "Settings for {0} will be reset. This operation is irreversible and all data will be deleted. Are you sure you want to continue?"
+    "summary": "A configuração do {0} será reiniciada. Esta operação é irreversível e todos os dados serão excluídos. Tem a certeza de que deseja continuar?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SettlementDateForSecurityKey": {
     "summary": "Data de liquidação do instrumento financeiro (para os derivados e obrigações)."
@@ -28797,7 +28797,7 @@
     "summary": "Tipo de liquidação quando o instrumento expirava."
   },
   "F:StockSharp.Localization.LocalizedStrings.SetupStockSharpConnectionFirstTimeKey": {
-    "summary": "You are running the application the first time. Would you like establish a connection with our simulation server and start trading now?"
+    "summary": "Você está executando a aplicação pela primeira vez. Você gostaria de estabelecer uma conexão com nosso servidor de simulação e começar a negociar agora?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SetupTaskNowKey": {
     "summary": "Set up task '{0}' now?"
@@ -29520,7 +29520,7 @@
     "summary": "Parar em segundos quanto para manter a posição aberta"
   },
   "F:StockSharp.Localization.LocalizedStrings.StopStrategyOnTabClosingKey": {
-    "summary": "To close the tab {0} strategy must be stopped. Stop strategy?"
+    "summary": "Para fechar a aba {0} a estratégia deve ser interrompida."
   },
   "F:StockSharp.Localization.LocalizedStrings.StopTradingKey": {
     "summary": "Parar a negociação"
@@ -29580,7 +29580,7 @@
     "summary": "Estratégia adicionada"
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyAlreadyPublishedKey": {
-    "summary": "Strategy was published. Update?"
+    "summary": "A estratégia foi publicada. Atualização?"
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyAlreadyStoppedKey": {
     "summary": "Estratégia {0} já está parada, e não pode ser transferida para o estado {1}."
@@ -29658,7 +29658,7 @@
     "summary": "Volume operacional."
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyWasChangedParamsKey": {
-    "summary": "Strategy {0} was changed. Update?"
+    "summary": "Estratégia {0} foi alterada. Actualização?"
   },
   "F:StockSharp.Localization.LocalizedStrings.StreakKey": {
     "summary": "Streak"
@@ -30006,7 +30006,7 @@
     "summary": "{0} Tarefas"
   },
   "F:StockSharp.Localization.LocalizedStrings.TasksAllInstrumentsKey": {
-    "summary": "Tasks '{0}' are running for all instruments. Often these are incorrect settings. It is recommended to set specific instruments for each task. Do you want to continue as is or stop the launch?"
+    "summary": "As tarefas '{0}' estão em execução para todos os instrumentos. Muitas vezes, estas são configurações incorretas. Recomenda- se definir instrumentos específicos para cada tarefa. Deseja continuar como está ou parar o lançamento?"
   },
   "F:StockSharp.Localization.LocalizedStrings.TasksHasSameDirectoriesKey": {
     "summary": "As tarefas '{0}' têm a mesma pasta de trabalho '{1}'."
@@ -30693,7 +30693,7 @@
     "summary": "Tunis BVMT"
   },
   "F:StockSharp.Localization.LocalizedStrings.TurnOnServerModeKey": {
-    "summary": "Turn on Hydra into server mode to allow other application get downloaded market data?"
+    "summary": "Ligue a Hydra para o modo servidor para permitir que outras aplicações obtenham dados de mercado?"
   },
   "F:StockSharp.Localization.LocalizedStrings.TurnoverCommissionKey": {
     "summary": "Comissão de Volume de negócios"
@@ -30945,7 +30945,7 @@
     "summary": "Cor da linha para cima."
   },
   "F:StockSharp.Localization.LocalizedStrings.UpTrendDescKey": {
-    "summary": "Is the tick trending upward or downward in price?"
+    "summary": "O tique está a subir ou a descer no preço?"
   },
   "F:StockSharp.Localization.LocalizedStrings.UpTrendKey": {
     "summary": "Tendência de Subir"
@@ -50635,14 +50635,14 @@
     "summary": "InitializeComponent"
   },
   "M:Ecng.Xaml.HighlightingTextBlock.OnHighlightBrushPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)": {
-    "summary": "HighlightBrushProperty property changed handler.",
+    "summary": "O manipulador alterado da propriedade HighlightBrushProperty.",
     "params": {
       "d": "HighlightingTextBlock que mudou a sua HighlightBrush.",
       "e": "Argumentos de eventos."
     }
   },
   "M:Ecng.Xaml.HighlightingTextBlock.OnHighlightFontWeightPropertyChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)": {
-    "summary": "HighlightFontWeightProperty property changed handler.",
+    "summary": "O manipulador alterado da propriedade HighlightFontWeightProperty.",
     "params": {
       "d": "HighlightingTextBlock que mudou a sua HighlightFontWeight.",
       "e": "Argumentos de eventos."
@@ -50967,7 +50967,7 @@
     "summary": "Obtém o primeiro pincel encontrado no desenho DrawingImage."
   },
   "M:Ecng.Xaml.XamlHelper.GetDialogResult(System.Windows.DependencyObject)": {
-    "summary": "Boilerplate attached property \"bool? DialogResult\" used to set Window.DialogResult from a Button."
+    "summary": "Caldeira anexada propriedade \"bool? DialogResult\" usado para definir Window.DialogResult de um botão."
   },
   "M:Ecng.Xaml.XamlHelper.GetImage(System.String,System.Windows.Media.SolidColorBrush,System.Windows.Media.SolidColorBrush)": {
     "summary": "Obtém um ícone temático SVG/Vector recolorido com as escovas de preenchimento e traço especificadas."
@@ -74595,7 +74595,7 @@
     "summary": "Inicializa uma nova instância do BitmexOrderCondition."
   },
   "M:StockSharp.Broker.Maui.Backoffice.Pages.HelpToolbarExtensions.AttachHelpToolbar(Microsoft.Maui.Controls.ContentPage)": {
-    "summary": "Adds a \"?\" ToolbarItem bound to the page's VM HelpSlug. Clicking it pushes HelpPopupPage modally. The toolbar item is left in place even if the slug changes later — the click handler reads the latest value on-the-fly so dynamic VMs still get the right doc."
+    "summary": "Adiciona um \"?\" ToolbarItem ligado à página VM HelpSlug. Clicando nele, empurra o HelpPopupPage de forma modal. O item da barra de ferramentas fica no lugar mesmo que a lesma mude mais tarde — o manipulador de cliques lê o último valor em tempo real, então as VMs dinâmicas ainda obtêm o documento certo."
   },
   "M:StockSharp.Broker.Maui.Backoffice.Pages.InstrumentPickerPage.AwaitSelectionAsync": {
     "summary": "Ajudante de conveniência para o chamador (TenantSettingsPage): empurra este selecionador de forma modal e retorna a seleção, ou nulo quando o operador o descartou. O chamador não precisa se lembrar do padrão TaskCompletionSource da VM."
@@ -84453,7 +84453,7 @@
     }
   },
   "M:StockSharp.InteractiveBrokers.InteractiveBrokersMessageAdapter.RequestSoftDollarTiers(System.Int64,System.Threading.CancellationToken)": {
-    "summary": "Requests pre-defined Soft Dollar Tiers. This is only supported for registered professional advisors and hedge and mutual funds who have configured Soft Dollar Tiers in Account Management. Refer to: https://www.interactivebrokers.com/en/software/am/am/manageaccount/requestsoftdollars.htm?Highlight=soft%20dollar%20tier"
+    "summary": "Solicita níveis pré-definidos de Dólares Macio. Isto só é suportado para consultores profissionais registrados e fundos de hedge e mútuos que configuraram os níveis de Dólares Macio na Gestão de Contas."
   },
   "M:StockSharp.InteractiveBrokers.InteractiveBrokersMessageAdapter.RequestTickByTickData(System.Int64,StockSharp.Messages.SecurityMessage,StockSharp.Messages.Level1Fields,System.Int32,System.Boolean,System.Threading.CancellationToken)": {
     "summary": "Solicita dados tick-by-tick.",
@@ -99766,22 +99766,22 @@
     "summary": "Escreve FixHistoryStart para o formato binário SBE."
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteLevel1Change(StockSharp.Messages.SecurityId,System.String,StockSharp.Messages.DataType,System.DateTime,System.Collections.Generic.IDictionary{StockSharp.Messages.Level1Fields,System.Object},System.Span{System.Byte})": {
-    "summary": "Write a Level1Change SBE message with typed key-value pairs. Layout: [Header][VarString symbol][VarString boardCode][VarString mdReqId] [NullableChar buildFromType][VarString buildFromArg] [NullableDateTime serverTime] [Group changes: uint16 count, each: int32 fieldId + byte valueType + typed value]"
+    "summary": "Escreva uma mensagem de nível1Alterar SBE com pares de valores chave digitados. Disposição: [Cabeça][VarString símbolo][VarString boardCode][VarString mdReqId] [NullableChar buildFromType][VarString buildFromArg] [NullableDateTime VarString0TOKEN] [Alterações do grupo: contagem uint16, cada: contagem int32 VarString1TOKEN + byte VarString2TOKEN + valor dactilografado]"
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteLogonResponse(StockSharp.Fix.Native.FixLogonResponse,System.Span{System.Byte})": {
     "summary": "Escreve FixLogonResponse para o formato binário SBE."
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteMarketDataIncrementalRefresh(StockSharp.Fix.Native.FixMarketDataIncrementalRefresh,System.Span{System.Byte})": {
-    "summary": "Escreva uma mensagem MarketDataIncrementalRefresh SBE. Disposição: [Cabeça][VarString symbol][VarString securityExchange][VarString mdReqId] [NullableChar buildFromType@][VarString @ @ buildFromArg] [Entradas em grupo: contagem de uint16, cada: campos MDEntry]"
+    "summary": "Escreva uma mensagem MarketDataIncrementalRefresh SBE. Disposição: [Cabeça][VarString símbolo][VarString securityExchange][VarString mdReqId] [NullableChar buildFromType] [VarString buildFromArg] [Entradas do grupo: contagem de uint16, cada: campos de MDEntry]"
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteMarketDataRequest(StockSharp.Fix.Native.FixMarketDataRequest,System.Span{System.Byte})": {
-    "summary": "Write a MarketDataRequest SBE message. Layout: [Header][NullableChar subscriptionRequestType][NullableInt32 marketDepth] [NullableDateTime fromDate][NullableDateTime toDate] [NullableBool allowBuildFromSmallerTimeFrame][NullableBool isCalcVolumeProfile] [NullableBool isFinishedOnly][NullableBool isRegularTradingHours] [NullableInt32 buildMode][NullableChar buildFrom][NullableChar buildField] [NullableInt64 skip][NullableInt64 count] [FixId mdReqId][FixId mdResponseId] [Group mdEntryTypes: uint16 count, each: NullableChar type + VarString arg] [Group securityIds: uint16 count, each: VarString secCode + VarString boardCode + VarString secType] [Group fields: uint16 count, each: Int32 field]"
+    "summary": "NullableChar subscriptionRequestType SBE message. Layout: [Header][NullableChar subscriptionRequestType] [NullableInt32 marketDepth] [NullableDateTime fromDate] [NullableDateTime toDate] [NullableBool NullableChar0TOKEN] [NullableChar7TOKEN NullableChar8TOKEN] [NullableChar9TOKEN S2NullableChar3TOKEN subscriptionRequestTypesubscriptionRequestTypeNullableChar7TOKEN subscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypeS2NullableChar9TOKEN subscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypesubscriptionRequestTypeS"
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteMarketDataRequestReject(StockSharp.Fix.Native.FixMarketDataRequestReject,System.Span{System.Byte})": {
     "summary": "Escreve FixMarketDataRequestReject para o formato binário SBE."
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteMarketDataSnapshotFullRefresh(StockSharp.Fix.Native.FixMarketDataSnapshotFullRefresh,System.Span{System.Byte})": {
-    "summary": "Escreva uma mensagem MarketDataSnapshotFullRefresh SBE. Disposição: [Cabeça][VarString symbol][VarString boardCode][VarString mdReqId] [NullableChar buildFromType@][VarString @ @ buildFromArg] [Entradas em grupo: contagem de uint16, cada: campos MDEntry]"
+    "summary": "Escreva uma mensagem MarketDataSnapshotFullRefresh SBE. Disposição: [Cabeça][VarString símbolo][VarString boardCode][VarString mdReqId] [NullableChar buildFromType] [VarString buildFromArg] [Entradas do grupo: contagem de uint16, cada: campos de MDEntry]"
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteNewOrderSingle(StockSharp.Fix.Native.FixNewOrderSingle,System.Span{System.Byte})": {
     "summary": "Escreve FixNewOrderSingle para o formato binário SBE."
@@ -107132,7 +107132,7 @@
     }
   },
   "M:StockSharp.Xaml.Charting.Numerics.CoordinateCalculators.ICoordinateCalculator`1.TranslateBy(System.Double,System.Double,StockSharp.Xaml.Charting.IRange)": {
-    "summary": "Translates the min and max of the input range, multiplies them by the specified , . Specific implementations of ICoordinateCalculator such as DoubleCoordinateCalculator, LogarithmicDoubleCoordinateCalculator and CategoryCoordinateCalculator will treat this differently",
+    "summary": "Traduz o min e max da faixa de entrada, multiplica-los pelo especificado,. Implementações específicas de ICoordinateCalculator como DoubleCoordinateCalculator, LogarithmicDoubleCoordinateCalculator e CategoryCoordinateCalculator tratarão isso de forma diferente",
     "params": {
       "inputRange": "A entrada de Intervalo para traduzir",
       "minFraction": "O multiplicador de início de gama",
@@ -107287,7 +107287,7 @@
     "summary": "Dado um absoluto Axis Min e Max, retorna uma instância TickRange contendo valores sensíveis MinorDelta@ e MajorDelta@"
   },
   "M:StockSharp.Xaml.Charting.Numerics.PointResamplerBase.ReducePointUnevenImpl(StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{System.Double},StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{System.Double},StockSharp.Xaml.Charting.Model.DataSeries.Point2DSeries,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Boolean)": {
-    "summary": "This needs to be implemented for each supported pair of TX,TY. Maybe use T4 templates? For optimal performance, this method should be implemented in C++/ASM and not just the GetMinMaxValuesForPixel method (this avoid per-pixel unmanaged call transitions). However, that would also require that reducedPoints is passed as pre-allocated buffer and not as a Point2DSeries. NaN handling makes it a bit difficult to pre-allocate though (since NaNs can cause multiple lines per pixel)."
+    "summary": "Isto precisa ser implementado para cada par suportado de TX,TY. Talvez usar modelos T4? Para um desempenho ideal, este método deve ser implementado em C++/ASM e não apenas o método GetMinMaxValuesForPixel (isto evita transições de chamadas não geridas por pixels). Contudo, isso também exigiria que o reducedPoints seja passado como buffer pré-alocado e não como um Point2Dseries. O manuseio do NaN torna um pouco difícil pré-alocar (desde que o NaNs possa causar várias linhas por pixel)."
   },
   "M:StockSharp.Xaml.Charting.Numerics.PointResamplerBase.ReducePointUnevenImpl``2(StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{``0},StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{``1},StockSharp.Xaml.Charting.Model.DataSeries.Point2DSeries,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Boolean)": {
     "summary": "Implementação genérica onde uma lista não verificada foi obtida para os valores de x e y."
@@ -107635,7 +107635,7 @@
     "summary": "Realiza a União de duas instâncias do IRange, retornando uma nova"
   },
   "M:StockSharp.Xaml.Charting.Range`1.Union(StockSharp.Xaml.Charting.IRange{`0})": {
-    "summary": "Performs a Union logical operation between two ranges. The returned IRange has Min = Math.Min(range1.min, range2.min) and Max = Math.Max(range1.Max, range2.Max)",
+    "summary": "Realiza uma operação lógica da União entre dois intervalos. O IRage retornado tem Min = Math.Min (range1.min, range2.min) e Max = Math.Max (range1.Max, range2.Max)",
     "returns": "O resultado da gama",
     "params": {
       "range": "O intervalo de entrada para a união com este intervalo"
@@ -115068,7 +115068,7 @@
     "summary": "Quando substituído em classes derivadas, retorna a largura de uma única barra, que é definida pela coordenada passada"
   },
   "M:StockSharp.Xaml.Charting.Visuals.RenderableSeries.BaseRenderableSeries.GetSeriesInfo(StockSharp.Xaml.Charting.Visuals.RenderableSeries.HitTestInfo)": {
-    "summary": "Converts the result of a Hit-Test operation (HitTestInfo) to a SeriesInfo class, which may be used as a ViewModel when outputting series values as bindings. SeriesInfo is used by the RolloverModifier, CursorModifier and UltrachartLegend classes"
+    "summary": "Converte o resultado de uma operação Hit-Test (HitTestInfo) para uma classe SeriesInfo, que pode ser usada como ViewModel quando os valores da série de saída são como ligações. SeriesInfo é usado pelas classes RolloverModifier, CursorModifier e UltrachartLegend"
   },
   "M:StockSharp.Xaml.Charting.Visuals.RenderableSeries.BaseRenderableSeries.GetXRange": {
     "summary": "Retorna o intervalo de dados da direção de IDataSeries na direção X"
@@ -115275,7 +115275,7 @@
     "summary": "Obtém um valor indicando se este BaseRenderableSeries é válido para desenho."
   },
   "M:StockSharp.Xaml.Charting.Visuals.RenderableSeries.FastBoxPlotRenderableSeries.GetSeriesInfo(StockSharp.Xaml.Charting.Visuals.RenderableSeries.HitTestInfo)": {
-    "summary": "Converts the result of a Hit-Test operation (HitTestInfo) to a SeriesInfo struct, which may be used as a ViewModel when outputting series values as bindings. SeriesInfo is used by the RolloverModifier, CursorModifier and UltrachartLegend classes"
+    "summary": "Converte o resultado de uma operação de teste de sucesso (HitTestInfo) para uma estrutura SeriesInfo, que pode ser usada como ViewModel quando os valores da série de saída são como ligações. SeriesInfo é usado pelas classes RolloverModifier, CursorModifier e UltrachartLegend"
   },
   "M:StockSharp.Xaml.Charting.Visuals.RenderableSeries.FastBoxPlotRenderableSeries.InternalDraw(StockSharp.Xaml.Charting.Rendering.Common.IRenderContext2D,StockSharp.Xaml.Charting.Visuals.RenderableSeries.IRenderPassData)": {
     "summary": "Desenha a série usando o IRenderContext2D e o IRenderPassData passado",
@@ -119244,11 +119244,11 @@
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.Model.ModelChangedEventArgs.GetParam(System.Boolean)": {
     "summary": "Este é um método conveniente para obter o valor do parâmetro certo, dependendo do valor de .",
-    "returns": "OldParam @ @ ou NewParam @"
+    "returns": "OldParam ou NewParam"
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.Model.ModelChangedEventArgs.GetValue(System.Boolean)": {
     "summary": "Este é um método conveniente para obter o valor certo, dependendo do valor de .",
-    "returns": "OldValue @ @ ou NewValue @"
+    "returns": "OldValue ou NewValue"
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.Model.ModelChangedEventArgs.Redo": {
     "summary": "Re-performance a mudança do documento após um Desfazer chamando Boolean)."
@@ -120871,7 +120871,7 @@
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.PartManager.FindTemplateForLink(System.Object,StockSharp.Xaml.Diagram.GXDiagram.Model.IDiagramModel,System.String)": {
     "summary": "Dada uma categoria e os dados de link, encontrar um DataTemplate para usar na criação do Link.",
-    "returns": "a DataTemplate taken from either LinkTemplate or LinkTemplateDictionary, or null if no template is found"
+    "returns": "um DataTemplate retirado de LinkTemplate ou LinkTemplateDictionary, ou nulo se não for encontrado nenhum modelo"
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.PartManager.FindTemplateForNode(System.Object,StockSharp.Xaml.Diagram.GXDiagram.Model.IDiagramModel,System.Boolean,System.Boolean,System.String)": {
     "summary": "Dada uma categoria e os dados do nó, encontrar um DataTemplate para usar na fabricação do Node ou Grupo.",
@@ -141378,7 +141378,7 @@
     "summary": "Adicionar instrumentos financeiros"
   },
   "P:StockSharp.Localization.LocalizedStrings.AddSecuritiesNow": {
-    "summary": "At the moment, no instruments are specified for task '{0}'. Add them now (or download if they are not yet exist)?"
+    "summary": "No momento, não são especificados instrumentos para a tarefa ' {0}'. Adicione- os agora (ou baixe se ainda não existirem)?"
   },
   "P:StockSharp.Localization.LocalizedStrings.AddSecurity": {
     "summary": "Adicionar instrumento financeiro..."
@@ -143295,7 +143295,7 @@
     "summary": "A configuração é inválida."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConfirmNewVersionPublishParams": {
-    "summary": "Do you want to publish the new version of \"{0}\"?"
+    "summary": "Você quer publicar a nova versão de \" {0}\"?"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConflictResolverTooltipParams": {
     "summary": "Regras para resolução de conflitos no caso de o mesmo ID do pacote ter sido encontrado em vários repositórios.\\nA rule consiste em um repositório de pacotes e nugget separados por um colon.\\nEach rule deve estar na sua própria linha. Exemplos:\\n\\nStockSharp.Terminal:nugetorg\\n*:stocksharp\\n'*' significa outros pacotes.\\nAvailablenuget repos: {0} @"
@@ -143391,10 +143391,10 @@
     "summary": "Connector é apenas stub. Por favor, visite https://stocksharp.com/pricing/ para obter mais informações."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorMustBeExtraInstalled": {
-    "summary": "The connector {0} must be installed as a separate product, and the terminal must be configured as per the instructions. Would you like to select the product {0} for installation?"
+    "summary": "O connector {0} deve ser instalado como um produto separado, e o terminal deve ser configurado de acordo com as instruções. Você gostaria de selecionar o produto {0} para instalação?"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorMustSetupFirst": {
-    "summary": "To connect via the connector {0}, you need to configure the terminal itself. Would you like to open a documentation site with instructions?"
+    "summary": "Para se conectar através do connector {0}, você precisa configurar o próprio terminal. Você gostaria de abrir um site de documentação com instruções?"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnorsRSI": {
     "summary": "Connors RSI."
@@ -143418,7 +143418,7 @@
     "summary": "Continuar"
   },
   "P:StockSharp.Localization.LocalizedStrings.ContinueSubscriptionParams": {
-    "summary": "Continue free subscription with the connector {0}? Changing the connector in the future will not be possible!"
+    "summary": "Continuar assinatura gratuita com o connector {0}? Mudar o connector no futuro não será possível!"
   },
   "P:StockSharp.Localization.LocalizedStrings.ContinuousSecurity": {
     "summary": "Instrumento financeiro contínuo"
@@ -143814,7 +143814,7 @@
     "summary": "Tamanho do pacote de dados transmitido. Por padrão igual a 50 elementos. Usado ao exportar através do SQL."
   },
   "P:StockSharp.Localization.LocalizedStrings.DatabaseCorruptedResetConfig": {
-    "summary": "The database is corrupted and can not continue. Do you want to reset all settings?"
+    "summary": "A base de dados está corrompida e não pode continuar. Deseja reiniciar todas as configurações?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DatabaseDescription": {
     "summary": "Nome da base de dados. Não é usado no SQLite."
@@ -144234,7 +144234,7 @@
     "summary": "Não atualizar"
   },
   "P:StockSharp.Localization.LocalizedStrings.DoYouHaveQuestionsOrSuggestions": {
-    "summary": "Do you have any questions or suggestions? Contact us now!"
+    "summary": "Tem alguma pergunta ou sugestão? Contacte-nos agora!"
   },
   "P:StockSharp.Localization.LocalizedStrings.Documentation": {
     "summary": "Documentação"
@@ -144297,7 +144297,7 @@
     "summary": "Transferir"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadHistoricalMarketDataQuestion": {
-    "summary": "Download historical market data?"
+    "summary": "Baixar dados históricos do mercado?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadNews": {
     "summary": "Baixe as notícias."
@@ -144309,7 +144309,7 @@
     "summary": "Caso todo o conjunto de instrumentos financeiros seja carregado do arquivo do site do IQFeed."
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadUpdates": {
-    "summary": "New version of the application available. Download updates?"
+    "summary": "Nova versão do aplicativo disponível. Baixe atualizações?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadingCandles": {
     "summary": "A transferir velas..."
@@ -144543,7 +144543,7 @@
     "summary": "Activar a liquidação automática da posição quando o nível da margem for inferior ao limiar de paragem."
   },
   "P:StockSharp.Localization.LocalizedStrings.EnableTaskNow": {
-    "summary": "Enable task '{0}' now (the task will go into the active mode)?"
+    "summary": "Activar a tarefa ' {0}' agora (a tarefa irá para o modo activo)?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Enabled": {
     "summary": "Activado"
@@ -145857,7 +145857,7 @@
     "summary": "Os identificadores '{0}' e '{1}' são os mesmos."
   },
   "P:StockSharp.Localization.LocalizedStrings.IfYouHaveAnyQuestions": {
-    "summary": "If you have any questions, you can always ask them through the suggestions form. Ask now?"
+    "summary": "Se você tiver alguma dúvida, você sempre pode perguntar-lhes através do formulário de sugestões. Pergunte agora?"
   },
   "P:StockSharp.Localization.LocalizedStrings.IgnoreErrors": {
     "summary": "Ignorar erros"
@@ -146190,7 +146190,7 @@
     "summary": "Disponível"
   },
   "P:StockSharp.Localization.LocalizedStrings.InstallerNotStarted": {
-    "summary": "The installer is not running. Would you like to launch it?"
+    "summary": "O instalador não está em execução. Deseja lançá- lo?"
   },
   "P:StockSharp.Localization.LocalizedStrings.InstallerPluginUpdatesAvailable": {
     "summary": "Atualizações de plug- in disponíveis"
@@ -146331,7 +146331,7 @@
     "summary": "em modo 64-bit"
   },
   "P:StockSharp.Localization.LocalizedStrings.IsActionOrderCancellation": {
-    "summary": "Is the action an order cancellation?"
+    "summary": "A ação é um cancelamento de pedido?"
   },
   "P:StockSharp.Localization.LocalizedStrings.IsControlConnectionLost": {
     "summary": "Ligação de controlo perdida."
@@ -146928,7 +146928,7 @@
     "summary": "Trocas de carga"
   },
   "P:StockSharp.Localization.LocalizedStrings.LoadHistoryDataQuestion": {
-    "summary": "Open the window to download historical data?"
+    "summary": "Abrir a janela para transferir dados históricos?"
   },
   "P:StockSharp.Localization.LocalizedStrings.LoadLayout": {
     "summary": "Carregar a disposição..."
@@ -147045,7 +147045,7 @@
     "summary": "O login não é especificado."
   },
   "P:StockSharp.Localization.LocalizedStrings.LoginServerInterface": {
-    "summary": "Login = {0} Server = {1} Interface = {2}"
+    "summary": "Login = Servidor {0} = Interface {1} = {2}"
   },
   "P:StockSharp.Localization.LocalizedStrings.Logo": {
     "summary": "Logotipo"
@@ -148272,7 +148272,7 @@
     "summary": "Não compilar"
   },
   "P:StockSharp.Localization.LocalizedStrings.NotCompatibleStrategy": {
-    "summary": "Selected strategy is not compatible with Designer. You can continue subscribing, but then download separately from web site. Continue subscription?"
+    "summary": "A estratégia selecionada não é compatível com o Designer. Você pode continuar assinando, mas então baixar separadamente do site. Continuar a assinatura?"
   },
   "P:StockSharp.Localization.LocalizedStrings.NotCompleteRegistered": {
     "summary": "O registro não foi concluído."
@@ -148332,7 +148332,7 @@
     "summary": "Estratégia {0} não tem subscrito."
   },
   "P:StockSharp.Localization.LocalizedStrings.NotSupportSecurityDownload": {
-    "summary": "The source does not support automatically instruments downloading. Manually create an instrument?"
+    "summary": "A fonte não suporta automaticamente a transferência de instrumentos. Crie manualmente um instrumento?"
   },
   "P:StockSharp.Localization.LocalizedStrings.NotSupportTimeframe": {
     "summary": "{0} não suporta prazos iguais a {1}."
@@ -150540,7 +150540,7 @@
     "summary": "Remova a pasta de dados da aplicação, incluindo todos os dados e configurações baixados."
   },
   "P:StockSharp.Localization.LocalizedStrings.RemoveDriveQuestion": {
-    "summary": "Remove selected storage?"
+    "summary": "Remover o armazenamento seleccionado?"
   },
   "P:StockSharp.Localization.LocalizedStrings.RemoveNotSupported": {
     "summary": "A remoção não é suportada. Use Clear () em vez disso."
@@ -151110,7 +151110,7 @@
     "summary": "O instrumento financeiro é utilizado na estratégia de execução."
   },
   "P:StockSharp.Localization.LocalizedStrings.SecurityIsUsedInSomeStrategies": {
-    "summary": "The security is used in some strategies. Remove anyway?"
+    "summary": "O instrumento financeiro é utilizado em algumas estratégias. Remova de qualquer maneira?"
   },
   "P:StockSharp.Localization.LocalizedStrings.SecurityMapping": {
     "summary": "Instrumentos financeiros Mapeamento"
@@ -151290,7 +151290,7 @@
     "summary": "Enviar os registos"
   },
   "P:StockSharp.Localization.LocalizedStrings.SendLogsNowQuestion": {
-    "summary": "There are errors in the application logs, help us to improve the program by sending your logs. Send now?"
+    "summary": "Existem erros nos registros de aplicativos, nos ajude a melhorar o programa enviando seus registros. Envie agora?"
   },
   "P:StockSharp.Localization.LocalizedStrings.SendOnlyFinal": {
     "summary": "Envie apenas os valores finais."
@@ -151347,7 +151347,7 @@
     "summary": "Configuração do servidor"
   },
   "P:StockSharp.Localization.LocalizedStrings.ServerConfigPath": {
-    "summary": "SmartCOM 3.x server part configuration settings"
+    "summary": "Configuração da parte do servidor SmartCOM 3.x"
   },
   "P:StockSharp.Localization.LocalizedStrings.ServerDescription": {
     "summary": "Endereço de rede ou localização para o ficheiro."
@@ -151440,7 +151440,7 @@
     "summary": "- Sim."
   },
   "P:StockSharp.Localization.LocalizedStrings.SettingsWillBeResetContinue": {
-    "summary": "Settings for {0} will be reset. This operation is irreversible and all data will be deleted. Are you sure you want to continue?"
+    "summary": "A configuração do {0} será reiniciada. Esta operação é irreversível e todos os dados serão excluídos. Tem a certeza de que deseja continuar?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Settlement": {
     "summary": "Liquidação"
@@ -151461,7 +151461,7 @@
     "summary": "Tipo de liquidação quando o instrumento expirava."
   },
   "P:StockSharp.Localization.LocalizedStrings.SetupStockSharpConnectionFirstTime": {
-    "summary": "You are running the application the first time. Would you like establish a connection with our simulation server and start trading now?"
+    "summary": "Você está executando a aplicação pela primeira vez. Você gostaria de estabelecer uma conexão com nosso servidor de simulação e começar a negociar agora?"
   },
   "P:StockSharp.Localization.LocalizedStrings.SetupTaskNow": {
     "summary": "Set up task '{0}' now?"
@@ -152184,7 +152184,7 @@
     "summary": "Parar em segundos quanto para manter a posição aberta"
   },
   "P:StockSharp.Localization.LocalizedStrings.StopStrategyOnTabClosing": {
-    "summary": "To close the tab {0} strategy must be stopped. Stop strategy?"
+    "summary": "Para fechar a aba {0} a estratégia deve ser interrompida."
   },
   "P:StockSharp.Localization.LocalizedStrings.StopTrading": {
     "summary": "Parar a negociação"
@@ -152247,7 +152247,7 @@
     "summary": "Estratégia adicionada"
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyAlreadyPublished": {
-    "summary": "Strategy was published. Update?"
+    "summary": "A estratégia foi publicada. Atualização?"
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyAlreadyStopped": {
     "summary": "Estratégia {0} já está parada, e não pode ser transferida para o estado {1}."
@@ -152322,7 +152322,7 @@
     "summary": "Volume operacional."
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyWasChangedParams": {
-    "summary": "Strategy {0} was changed. Update?"
+    "summary": "Estratégia {0} foi alterada. Actualização?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Streak": {
     "summary": "Streak"
@@ -152673,7 +152673,7 @@
     "summary": "Tarefas"
   },
   "P:StockSharp.Localization.LocalizedStrings.TasksAllInstruments": {
-    "summary": "Tasks '{0}' are running for all instruments. Often these are incorrect settings. It is recommended to set specific instruments for each task. Do you want to continue as is or stop the launch?"
+    "summary": "As tarefas '{0}' estão em execução para todos os instrumentos. Muitas vezes, estas são configurações incorretas. Recomenda- se definir instrumentos específicos para cada tarefa. Deseja continuar como está ou parar o lançamento?"
   },
   "P:StockSharp.Localization.LocalizedStrings.TasksHasSameDirectories": {
     "summary": "As tarefas '{0}' têm a mesma pasta de trabalho '{1}'."
@@ -153357,7 +153357,7 @@
     "summary": "Tunis BVMT"
   },
   "P:StockSharp.Localization.LocalizedStrings.TurnOnServerMode": {
-    "summary": "Turn on Hydra into server mode to allow other application get downloaded market data?"
+    "summary": "Ligue a Hydra para o modo servidor para permitir que outras aplicações obtenham dados de mercado?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Turnover": {
     "summary": "Volume de negócios"
@@ -153612,7 +153612,7 @@
     "summary": "Tendência de Subir"
   },
   "P:StockSharp.Localization.LocalizedStrings.UpTrendDesc": {
-    "summary": "Is the tick trending upward or downward in price?"
+    "summary": "O tique está a subir ou a descer no preço?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Upbit": {
     "summary": "Upbit"
@@ -167427,7 +167427,7 @@
     "summary": "Obtém ou define um valor, indica se o modificador atual lida com eventos que já foram marcados como manipulados"
   },
   "P:StockSharp.Xaml.Charting.ChartModifiers.ChartModifierBase.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.ChartModifiers.CursorModifier.AxisInfo": {
     "summary": "Fornece uma coleção de AxisInfo structs, que pode ser ligada a dados na interface definida pelo modelo de AxisLabelTemplate Control"
@@ -167472,7 +167472,7 @@
     "summary": "Se for verdadeiro, este IChartModifier pode receber eventos tratados. Os modificadores de gráfico funcionam de forma semelhante aos manipuladores de eventos do rato em WPF e Silverlight. Se um modificador aumentar ainda mais a pilha recebe um evento e trata dele, os modificadores subsequentes não recebem o evento. Esta propriedade substitui este comportamento."
   },
   "P:StockSharp.Xaml.Charting.ChartModifiers.IChartModifierBase.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.ChartModifiers.InspectSeriesModifierBase.SeriesData": {
     "summary": "Obtém ou define o ChartDataObject que pode estar ligado a, para fornecer feedback ao usuário de atualizações de cursores"
@@ -168006,7 +168006,7 @@
     "summary": "Retorna Verdadeiro quando ViewportManagerBase tem o UltrachartSurface anexado."
   },
   "P:StockSharp.Xaml.Charting.IViewportManager.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.IWpfChart.Subscriptions": {
     "summary": "Assinaturas."
@@ -169980,7 +169980,7 @@
     "summary": "Obtém um valor indicando se as actualizações do alvo estão suspensas"
   },
   "P:StockSharp.Xaml.Charting.ViewportManagerBase.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.VisibleRangeChangedEventArgs.IsAnimating": {
     "summary": "Obtém o valor, indicando se a notificação atual foi causada por animação"
@@ -169998,7 +169998,7 @@
     "summary": "Obtém ou define o pai UltrachartSurface para executar operações"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Annotations.AdornerBase.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Annotations.AnchorPointAnnotation.HorizontalAnchorPoint": {
     "summary": "Obtém ou define a HorizontalAnchorPoint. O valor da esquerda significa que a coordenada X1, Y1 da anotação está na horizontal esquerda. O valor do centro significa que a coordenada X1, Y1 da anotação está no centro horizontalmente. O valor da direita significa que a coordenada X1, Y1 da anotação está na horizontal direita."
@@ -170385,7 +170385,7 @@
     "summary": "Obtém se o eixo atual é um X-Axis ou não"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Axes.AxisBase.LabelProvider": {
-    "summary": "Obtém ou define uma instância ILabelProvider, que pode ser usada para substituir programáticamente a formatação das etiquetas de texto e cursor. Para exemplos, veja DefaultLabelProvider@ e TradeChartAxisLabelProvider@ @"
+    "summary": "Obtém ou define uma instância ILabelProvider, que pode ser usada para substituir programáticamente a formatação das etiquetas de texto e cursor. Para exemplos, veja o DefaultLabelProvider e o TradeChartAxisLabelProvider"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Axes.AxisBase.MajorDelta": {
     "summary": "Obtém ou define o Delta Maior"
@@ -170436,7 +170436,7 @@
     "summary": "Obtém ou define o Eixo ScrollBar"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Axes.AxisBase.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Axes.AxisBase.StockSharp#Xaml#Charting#Visuals#Axes#IAxis#IsXAxis": {
     "summary": "Obtém se o eixo atual é um X-Axis ou não"
@@ -170610,7 +170610,7 @@
     "summary": "Obtém se este eixo é um X-Axis ou não"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Axes.IAxis.LabelProvider": {
-    "summary": "Obtém ou define uma instância ILabelProvider, que pode ser usada para substituir programáticamente a formatação das etiquetas de texto e cursor. Para exemplos, veja NumericLabelProvider@ e TradeChartAxisLabelProvider@ @"
+    "summary": "Obtém ou define uma instância ILabelProvider, que pode ser usada para substituir programáticamente a formatação das etiquetas de texto e cursor. Para exemplos, veja o NumericLabelProvider e o TradeChartAxisLabelProvider"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Axes.IAxis.MajorGridLineStyle": {
     "summary": "Obtém ou define o Estilo de Linha da Grelha Maior (TargetType Line), aplicado a todas as linhas de grade principais desenhadas por este eixo"
@@ -170643,7 +170643,7 @@
     "summary": "Obtém ou define o ParentSurface que este Eixo está associado"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Axes.IAxis.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.Visuals.Axes.IAxis.TextFormatting": {
     "summary": "Obtém ou define a string de formatação de texto para as etiquetas de marcação de eixo neste eixo"
@@ -170872,7 +170872,7 @@
     "summary": "Obtém ou define a implementação RenderSurface que esta UltrachartSurfaceBaseusa. A implementação padrão para UltrachartSurface é uma HighSpeedRenderSurface@, no entanto Ultrachart suporta superfícies renderizadas adicionais, fornecendo software de alta qualidade e renderizadores de hardware de alta velocidade acelerados ou 3D."
   },
   "P:StockSharp.Xaml.Charting.Visuals.IUltrachartSurfaceBase.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.Visuals.IUltrachartSurfaceBase.SyncRoot": {
     "summary": "Um objeto de sincronização que está bloqueado durante uma passagem de renderização. Se você bloquear este Ultrachart não renderizará e será bloqueado no tópico UI até que o bloqueio seja lançado. Isto é usado internamente por DataSeries para bloquear o UltrachartSurface quando as atualizações em massa forem feitas."
@@ -171034,7 +171034,7 @@
     "summary": "Obtém ou define o SeriesColor."
   },
   "P:StockSharp.Xaml.Charting.Visuals.RenderableSeries.BaseRenderableSeries.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.Visuals.RenderableSeries.BaseRenderableSeries.StrokeThickness": {
     "summary": "Obtém ou define o StrokeThickness da linha."
@@ -171311,7 +171311,7 @@
     "summary": "Obtém ou define o ID dos Y-Axis em que esta série passível de ser dimensionada"
   },
   "P:StockSharp.Xaml.Charting.Visuals.RenderableSeries.IRenderableSeriesBase.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.Visuals.RenderableSeries.IStackedColumnRenderableSeries.DataPointWidth": {
     "summary": "Obtém ou define o valor entre 0.0 e 1.0 indicando quanto do espaço disponível cada coluna ocupa."
@@ -171630,7 +171630,7 @@
     "summary": "Obtém a Grade Raiz que hospeda o Ultrachart RenderSurface, GridLinesPanel, X- Axis e Y- Eixos (esquerda e direita)"
   },
   "P:StockSharp.Xaml.Charting.Visuals.UltrachartSurfaceBase.Services": {
-    "summary": "Gets the ServiceContainer which provides access to services throughout Ultrachart. ServiceContainers are created one per UltrachartSurface instance, and shared between peripheral components such as AxisBase, BaseRenderableSeries, ChartModifierBase instances. For a full list of available services, see the remarks on ServiceContainer"
+    "summary": "Obtém o ServiceContainer que fornece acesso a serviços ao longo de Ultrachart. ServiceContainers são criados uma por instância UltrachartSurface, e compartilhados entre componentes periféricos, como AxisBase, BaseRenderableSeries, ChartModifierBase instâncias. Para uma lista completa de serviços disponíveis, consulte as observações sobre ServiceContainer"
   },
   "P:StockSharp.Xaml.Charting.Visuals.UltrachartSurfaceBase.SyncRoot": {
     "summary": "Um objeto de sincronização que está bloqueado durante uma passagem de renderização. Se você bloquear este Ultrachart não renderizará e será bloqueado no tópico UI até que o bloqueio seja lançado. Isto é usado internamente por DataSeries para bloquear o UltrachartSurface quando as atualizações em massa forem feitas."
@@ -178059,10 +178059,10 @@
     "summary": "ID da posição vinculada à ordem (e.g. fim, ordem que aumenta o volume de uma posição específica, etc.)."
   },
   "P:StockSharp.cTrader.Native.Model.ProtoOAOrder.RelativeStopLoss": {
-    "summary": "Relative stopLoss that can be specified instead of absolute as one. Specified in 1/100_000 of unit of a price. For BUY stopLoss = entryPrice - relativeStopLoss, for SELL stopLoss = entryPrice + relativeStopLoss."
+    "summary": "stopLoss relativo que pode ser especificado em vez de absoluto como um. Especificado em 1/100 000 de unidade de um preço. Para BUY stopLoss = entryPrice - relativeStopLoss, para SELL stopLoss = entryPrice + relativeStopLoss."
   },
   "P:StockSharp.cTrader.Native.Model.ProtoOAOrder.RelativeTakeProfit": {
-    "summary": "Relativo takeProfit que pode ser especificado em vez de absoluto. Especificado em 1/100 000 de unidade de um preço. ForBUYtakeProfit = entryPrice @ @ @ @relativeTakeProfit, para SELL takeProfit = entryPrice@ - relativeTakeProfit@."
+    "summary": "takeProfit relativo que pode ser especificado em vez de absoluto. Especificado em 1/100 000 de unidade de um preço. ForBUY takeProfit = entryPrice + relativeTakeProfit, para vender takeProfit = entryPrice - relativeTakeProfit."
   },
   "P:StockSharp.cTrader.Native.Model.ProtoOAOrder.SlippageInPoints": {
     "summary": "Usado para o Market Range e STOP_LIMIT ordens para especificar faixa de preço foram ordem pode ser executada."

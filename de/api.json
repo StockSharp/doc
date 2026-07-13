@@ -3366,16 +3366,16 @@
     "summary": "Auftragstypen stoppen."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.HelpPopupPage": {
-    "summary": "Modal help drawer. Wraps a WebView around the Markdig HTML output from HelpService with a minimal CSS skin that honours the active OSAppTheme. Pages opt in by setting BaseViewModel.HelpSlug; the AppShell attaches a \"?\" toolbar icon that pushes this page when the slug is non-empty."
+    "summary": "Modale Hilfeschublade. Umwickelt einen WebView um den Markdig HTML-Ausgang von HelpService mit einem minimalen CSS-Skin, der den aktiven OSAppTheme ehrt. Seiten entscheiden sich, indem sie BaseViewModel.HelpSlug setzen; der AppShell fügt ein Symbol \"?\" an, das diese Seite drückt, wenn die Schnecke nicht leer ist."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.HelpToolbarExtensions": {
-    "summary": "Glue between a page's BindingContext ViewModel (a BaseViewModel with an optional HelpSlug) and the global help drawer. Call ContentPage) from ContentPage constructors that want the \"?\" icon — the extension is a no-op when the VM doesn't expose a slug."
+    "summary": "Kleben Sie zwischen dem BindingContext ViewModel einer Seite (ein BaseViewModel mit optionalem HelpSlug) und der globalen Hilfe-Schublade. Rufen Sie ContentPage an. Von ContentPage-Konstruktoren, die das \"?\"-Symbol wollen - die Erweiterung ist ein No-Op, wenn die VM keinen Slug freigibt."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.InstrumentPickerPage": {
     "summary": "Modaler Instrumentenwähler. Hostet InstrumentPickerViewModel und schaltet sich selbst ein, sobald die Aufgabe der VM SelectedResult gelöst ist - entweder durch einen Zeilentipp (positives Ergebnis) oder den Schließen-Button (Null)."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.OrderHistoryPage": {
-    "summary": "Per-order execution-log page. Reached from the Orders blotter via Shell navigation (OrderHistoryPage?orderId=123); the query string is forwarded to the VM's OrderId property which retriggers LoadCommand."
+    "summary": "Per-Order-Ausführungs-Log-Seite. Erreicht vom Orders-Blotter über Shell-Navigation (OrderHistoryPage? orderId = 123); die Abfragezeichenfolge wird an die VM-Eigenschaft OrderId weitergeleitet, die LoadCommand neu auslöst."
   },
   "T:StockSharp.Broker.Maui.Backoffice.Pages.TenantSettingsPage": {
     "summary": "Hostseite für TenantSettingsViewModel. Wires die modale Instrumentenauswahl - die VM hebt OpenInstrumentPickerRequested, wenn der Bediener auf \"Pick\" tippt, und die Seite löst sie auf, indem sie ein neues InstrumentPickerPage drückt und das Ergebnis zurück in die VM weiterleitet. Hilfeschublade wird über HelpToolbarExtensions angehängt."
@@ -3399,7 +3399,7 @@
     "summary": "Helfer für DiagramPage: Zieht die CompositionDiagramElement aus der LastObject einer IConfiguration. Lebt in einer eigenen Nicht-MAUI-Datei, so dass das Broker.Maui.Designer.Tests-Projekt sie über <Compile Include=\"...\" Link=\"...\"/> kompilieren kann, genauso wie es MauiCloudServicelinkt."
   },
   "T:StockSharp.Broker.Maui.Designer.Pages.DiagramPage": {
-    "summary": "MAUI Designer-Diagramm-Registerkarte. Rendert das Strategiediagramm der derzeit aktiven Konfiguration über Xaml.Diagram.Maui s GraphicsView + DiagramCanvasDrawable, verdrahtet mit DiagramEditorViewModel s2S4 @ @ so dass die Canvas aktualisiert, wenn der Benutzer zwischen den Konfigurationen wechselt oder Änderungen im Quellcode-Panel speichert."
+    "summary": "MAUI Designer's Diagramm Registerkarte. Rendert das Strategiediagramm der aktuell aktiven Konfiguration über Xaml.Diagram.Maui's GraphicsView + DiagramCanvasDrawable, verdrahtet mit DiagramEditorViewModel's Konfiguration über LastObjectChanged, so dass die Canvas aktualisiert wird, wenn der Benutzer zwischen den Konfigurationen wechselt oder Änderungen im Quellcode-Panel speichert."
   },
   "T:StockSharp.Broker.Maui.Designer.Resource": {
     "summary": "Android Resource Designer Klasse. Zeigt die Android Resource Designer Assembly im Projekt Namespace."
@@ -3816,7 +3816,7 @@
     "summary": "CryBroSBE Message Adapter — client-Seite connector zu SbeServer via SBE-Protokoll."
   },
   "T:StockSharp.CryBro.WS.CryBroWSMessageAdapter": {
-    "summary": "Nachrichtenadapter für CryBroWS WebSocket @ @ Gate - verbindet sich mit WsGate und übersetzt StockSharp Nachrichten zu / von WsRelay JSON Protokoll."
+    "summary": "Nachrichtenadapter für CryBroWS WebSocket-Gatter — verbindet sich mit WsGate und übersetzt StockSharp-Nachrichten zu/von WsRelay JSON Protokoll."
   },
   "T:StockSharp.CryBro.WS.CryBroWSOrderCondition": {
     "summary": "Bedingung der bedingten Ordnung für CryBro WS connector. Tragt sowohl den Stop-Flave (Stop-Loss / Take-Profit) als auch den Algorithmus-Execution-Flave (TWAP / VWAP / Iceberg / NBBO) und wird von AlgoKind auseinander genommen: Wenn er null ist, ist die Reihenfolge ein einfacher Stop, ansonsten ist es ein Algo-Elternteil, der Router leitet zum Algo-Server weiter."
@@ -5751,7 +5751,7 @@
     "summary": "Bedingungen für Micex-spezifische Anwendungen."
   },
   "T:StockSharp.Micex.MicexStructureMessage": {
-    "summary": "Nachricht der Datenstrukturanforderung InterfaceDesc @ @."
+    "summary": "Сообщение запроса структуры данных InterfaceDesc."
   },
   "T:StockSharp.Micex.Native.AcceptDeclines": {
     "summary": "Bestätigung."
@@ -6669,7 +6669,7 @@
     "summary": "Stream FORTS_MM_REPL - Informationen über die Verbindlichkeiten von MM. Tabelle opt_MM_info: Optionsverpflichtungen von MM."
   },
   "T:StockSharp.Plaza.Metadata.PlazaMarketMakingRuleColumns": {
-    "summary": "Spalten der Tabelle mit Werkzeugen für die Neuberechnung des zentralen Streiks FORTS_MM_REPL - Tabelle cs_mm_rule @ @."
+    "summary": "Колонки таблицы с инструментами для пересчета центрального страйка FORTS_MM_REPL - таблица cs_mm_rule."
   },
   "T:StockSharp.Plaza.Metadata.PlazaMcxBcMessagesColumns": {
     "summary": "Spalten der Tabelle mit Nachrichten. MCXSPOT_INFO_REPL - BCMESSAGES-Tabelle. MCXCC_INFO_REPL - BCMESSAGES-Tabelle."
@@ -7293,7 +7293,7 @@
     "summary": "Komponentenformat CommonEntry: 10 Bytes Größe"
   },
   "T:StockSharp.SpbEx.Protocol.CounterDeclineMsg": {
-    "summary": "Der Client hat die Möglichkeit, die Gegenadressenanforderung abzulehnen. Senden Sie dazu eine Anfrage CounterDecline @ an das Handelsplattform-Gateway, das die Felder enthalten sollte: die Client-Order-Kennung clorder_id, die Absender-ID der Adressauftragsbestätigung initiator_party, die ID des Adressauftragsbelegs ctrparty_id und den Code für die Adressauftragsbestellung match_ref. Nach der Bearbeitung der Anfrage wird die Handelsplattform entweder durch Senden von RejectReportablehnen oder die Rücknahme der Bestellung durch die Nachricht bestätigen initiator_partyS @ @ @ @ @ @"
+    "summary": "Клиент имеет возможность встресную адресбходимо направить в шлюз торговой платфорое содержать поля коентский идентификатор поручения адресного поручения адресного поручения адресного поручения адресного поручения адресного поручения запроса торговая платфоровае пла"
   },
   "T:StockSharp.SpbEx.Protocol.CounterDeclineReportMsg": {
     "summary": "Wenn ein Gegenadressauftrag erfolgreich abgelehnt wird, sendet die Handelsplattform einen Ablehnungsbericht an den Kunden CounterDeclineReport Der Bericht enthält die Hauptparameter des Auftrags, die Auftragskennungen in den Feldern order_id und clorder_id sowie die Absender- und Empfängerkennungen des Adressauftrags in den Feldern initiator_partyund ctrparty_id"
@@ -8928,13 +8928,13 @@
     "summary": "Lineal Annotation."
   },
   "T:StockSharp.Xaml.Charting.Ultrachart.UltrachartOverviewExtensions": {
-    "summary": "uses this technique http://stackoverflow.com/questions/10279092/how-to-get-child-by-type-in-wpf-container and this technique http://social.msdn.microsoft.com/Forums/vstudio/en-US/b879f391-f350-4813-b509-b725dc1668b1/how-to-find-datatemplate-generated-element-in-an-itemscontrol?forum=wpf to bind the UltrachartSurface at the first child in an ItemsControl as the ParentSurface on a UltrachartOverview"
+    "summary": "verwendet diese Technik http://stackoverflow.com/questions/10279092/how-to-get-child-by-type-in-wpf-container und diese Technik http://social.msdn.microsoft.com/Forums/vstudio/en-US/b879f391-f350-4813-b509-b725dc1668b1/how-to-find-datatemplate-generated-element-in-an-itemscontrol?forum=wpf, um das UltrachartSurface beim ersten Kind in einem ItemsControl als das ParentSurface auf einem UltrachartOverview zu binden"
   },
   "T:StockSharp.Xaml.Charting.UltrachartGroup": {
     "summary": "Ein ItemsControl, das es ermöglicht, mehrere UltrachartSurface-Instanzen zu gruppieren, um ein Multi-Paned-Diagramm zu erstellen. Speziell von StockCharts, aber auch für andere Diagrammtypen verwendet."
   },
   "T:StockSharp.Xaml.Charting.UltrachartGroupPane": {
-    "summary": "An ItemPane for the UltrachartGroup control. Wraps your custom UIElement (provided by UltrachartGroup ItemTemplate property)"
+    "summary": "Ein ItemPane für die UltrachartGroup Steuerung. Umhüllt Ihr benutzerdefiniertes UIElement (bereitgestellt von der UltrachartGroup ItemTemplate Eigenschaft)"
   },
   "T:StockSharp.Xaml.Charting.UltrachartRenderedMessage": {
     "summary": "Veröffentlicht von UltrachartSurface unmittelbar vor dem Ende eines Renderpasses"
@@ -9354,7 +9354,7 @@
     "summary": "Enumeration Constants, um zu definieren, wie double.NaN in der"
   },
   "T:StockSharp.Xaml.Charting.Visuals.RenderableSeries.LinesPathContextFactory": {
-    "summary": "Ermöglicht die Überbrückung von IRenderContext2D DrawLines @ @ mit IPathDrawingContext und FastLinesHelper, so dass wir schnell optimierten Code für die Iteration über IPointSeries und das Zeichnen von Linien wiederverwenden können"
+    "summary": "Ermöglicht die Überbrückung von IRenderContext2D DrawLines mit IPathDrawingContext und FastLinesHelper, so dass wir schnell optimierten Code für die Iteration über IPointSeries und Zeichnungslinien wiederverwenden können."
   },
   "T:StockSharp.Xaml.Charting.Visuals.RenderableSeries.MountainAreaPathContextFactory": {
     "summary": "Ermöglicht die Überbrückung von IRenderContext2D und FastLinesHelper, so dass wir schnell optimierten Code für die Iteration über IPointSeries und das Zeichnen von Berggebieten wiederverwenden können."
@@ -13818,7 +13818,7 @@
     "summary": "Der Trennzeichen, das erste '.' im Pfad für Instrumente mit id wie .AA-CA@SPBEX ersetzt. Ist gleich '##DOT##'."
   },
   "F:StockSharp.Algo.Storages.StorageHelper.SecurityQuestionSeparator": {
-    "summary": "The delimiter, replacing '?' in the path for instruments with id like AA-CA?SPB@SPBEX. Is equal to '##QSTN##'."
+    "summary": "Der Trennzeichen, das '?' im Pfad für Instrumente mit id wie AA-CA?SPB@SPBEX ersetzt. Ist gleich '##QSTN##'."
   },
   "F:StockSharp.Algo.Storages.StorageHelper.SecuritySlashSeparator": {
     "summary": "Der Trennzeichen, ersetzt '/' im Pfad für Instrumente mit ID wie USD/EUR. Ist gleich '__'."
@@ -17442,7 +17442,7 @@
     "summary": "IB Warrant Imp Vol Compete Tick."
   },
   "F:StockSharp.InteractiveBrokers.GenericFieldTypes.IndexFuturePremium": {
-    "summary": "Index Future Premium Returns TickType.IndexFuturePremium."
+    "summary": "Index Future Premium gibt TickType.IndexFuturePremium zurück."
   },
   "F:StockSharp.InteractiveBrokers.GenericFieldTypes.Inventory": {
     "summary": "Bestandsart."
@@ -18717,7 +18717,7 @@
     "summary": "Hinzufügen von Finanzinstrumenten"
   },
   "F:StockSharp.Localization.LocalizedStrings.AddSecuritiesNowKey": {
-    "summary": "At the moment, no instruments are specified for task '{0}'. Add them now (or download if they are not yet exist)?"
+    "summary": "Derzeit sind keine Instrumente für die Aufgabe '{0}' angegeben. Fügen Sie sie jetzt hinzu (oder laden Sie sie herunter, wenn sie noch nicht vorhanden sind)?"
   },
   "F:StockSharp.Localization.LocalizedStrings.AddSecurityKey": {
     "summary": "Hinzufügen von Finanzinstrumenten..."
@@ -20634,7 +20634,7 @@
     "summary": "Konfiguration"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConfirmNewVersionPublishParamsKey": {
-    "summary": "Do you want to publish the new version of \"{0}\"?"
+    "summary": "Möchten Sie die neue Version von \"{0}\" veröffentlichen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConflictResolverTooltipParamsKey": {
     "summary": "Regeln für die Konfliktlösung, falls dieselbe Paket-ID in mehreren Repositories gefunden wurde. nA Regel besteht aus einer Paket-ID und einem Nuget-Repository, das durch einen Doppelpunkt getrennt ist. nEach Regel muss auf seiner eigenen Linie sein. Beispiele: \\n \\nStockSharp.Terminal:nugetorg \\n *:stocksharp \\n ' * ' bedeutet andere Pakete. \\nAvailable nuget repos: {0} @"
@@ -20730,10 +20730,10 @@
     "summary": "Connector"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorMustBeExtraInstalledKey": {
-    "summary": "The connector {0} must be installed as a separate product, and the terminal must be configured as per the instructions. Would you like to select the product {0} for installation?"
+    "summary": "Der connector {0} muss als separates Produkt installiert werden, und das Terminal muss gemäß den Anweisungen konfiguriert werden. Möchten Sie das Produkt {0} für die Installation auswählen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorMustSetupFirstKey": {
-    "summary": "To connect via the connector {0}, you need to configure the terminal itself. Would you like to open a documentation site with instructions?"
+    "summary": "Um sich über das connector {0} zu verbinden, müssen Sie das Terminal selbst konfigurieren."
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnorsRSIKey": {
     "summary": "Connors RSI."
@@ -20757,7 +20757,7 @@
     "summary": "Weiterfahren"
   },
   "F:StockSharp.Localization.LocalizedStrings.ContinueSubscriptionParamsKey": {
-    "summary": "Continue free subscription with the connector {0}? Changing the connector in the future will not be possible!"
+    "summary": "Weiter kostenloses Abonnement mit dem connector {0}? Wechseln des connector in der Zukunft wird nicht möglich sein!"
   },
   "F:StockSharp.Localization.LocalizedStrings.ContinuousSecurityDescKey": {
     "summary": "Kontinuierliche Finanzinstrumente (im Allgemeinen ein Futures-Kontrakt), die auslaufende Finanzinstrumente enthalten."
@@ -21147,7 +21147,7 @@
     "summary": "Übertragene Datenpaketgröße: Standardmäßig gleich 50 Elementen; beim Export über SQL verwendet."
   },
   "F:StockSharp.Localization.LocalizedStrings.DatabaseCorruptedResetConfigKey": {
-    "summary": "The database is corrupted and can not continue. Do you want to reset all settings?"
+    "summary": "Die Datenbank ist beschädigt und kann nicht fortgesetzt werden. Möchten Sie alle Einstellungen zurücksetzen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DatabaseDescriptionKey": {
     "summary": "Name der Datenbank, nicht in SQLite verwendet."
@@ -21570,7 +21570,7 @@
     "summary": "Update nicht"
   },
   "F:StockSharp.Localization.LocalizedStrings.DoYouHaveQuestionsOrSuggestionsKey": {
-    "summary": "Do you have any questions or suggestions? Contact us now!"
+    "summary": "Haben Sie Fragen oder Vorschläge? Kontaktieren Sie uns jetzt!"
   },
   "F:StockSharp.Localization.LocalizedStrings.DocumentationKey": {
     "summary": "Dokumentation"
@@ -21630,7 +21630,7 @@
     "summary": "Abwärtstrend"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadHistoricalMarketDataQuestionKey": {
-    "summary": "Download historical market data?"
+    "summary": "Historische Marktdaten herunterladen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadKey": {
     "summary": "Download"
@@ -21645,7 +21645,7 @@
     "summary": "Download von Finanzinstrumenten"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadUpdatesKey": {
-    "summary": "New version of the application available. Download updates?"
+    "summary": "Neue Version der Anwendung verfügbar. Updates herunterladen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.DownloadingCandlesKey": {
     "summary": "Kerzen herunterladen..."
@@ -21882,7 +21882,7 @@
     "summary": "Stoppen ermöglichen"
   },
   "F:StockSharp.Localization.LocalizedStrings.EnableTaskNowKey": {
-    "summary": "Enable task '{0}' now (the task will go into the active mode)?"
+    "summary": "Aktivieren Sie die Aufgabe '{0}' jetzt (die Aufgabe geht in den aktiven Modus)?"
   },
   "F:StockSharp.Localization.LocalizedStrings.EnabledKey": {
     "summary": "Aktiviert"
@@ -22410,7 +22410,7 @@
     "summary": "Dateimaske"
   },
   "F:StockSharp.Localization.LocalizedStrings.FileNameFormatDescKey": {
-    "summary": "File name format. For ex., 'candles_{Security.Id}_{From:yyyy_MM_dd}_{To:yyyy_MM_dd}.csv'."
+    "summary": "Format des Dateinamens: z. B. \"candles_ {financial instrument.Id} _ {From:yyyy_MM_dd} _ {To:yyyy_MM_dd}.csv\"."
   },
   "F:StockSharp.Localization.LocalizedStrings.FileNameFormatKey": {
     "summary": "Format des Dateinamens"
@@ -23526,7 +23526,7 @@
     "summary": "Verfügbar"
   },
   "F:StockSharp.Localization.LocalizedStrings.InstallerNotStartedKey": {
-    "summary": "The installer is not running. Would you like to launch it?"
+    "summary": "Der Installer läuft nicht. Möchten Sie ihn starten?"
   },
   "F:StockSharp.Localization.LocalizedStrings.InstallerPluginUpdatesAvailableKey": {
     "summary": "Plugin Updates verfügbar"
@@ -23667,7 +23667,7 @@
     "summary": "im 64-Bit-Modus"
   },
   "F:StockSharp.Localization.LocalizedStrings.IsActionOrderCancellationKey": {
-    "summary": "Is the action an order cancellation?"
+    "summary": "Ist die Aktion eine Auftragsstornierung?"
   },
   "F:StockSharp.Localization.LocalizedStrings.IsControlConnectionLostKey": {
     "summary": "Kontrollverbindung verloren."
@@ -24258,7 +24258,7 @@
     "summary": "Lastaustausch"
   },
   "F:StockSharp.Localization.LocalizedStrings.LoadHistoryDataQuestionKey": {
-    "summary": "Open the window to download historical data?"
+    "summary": "Öffnen Sie das Fenster, um historische Daten herunterzuladen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.LoadKey": {
     "summary": "Belastung"
@@ -27873,7 +27873,7 @@
     "summary": "Entfernen Sie den Anwendungsdatenordner, einschließlich aller heruntergeladenen Daten und Einstellungen."
   },
   "F:StockSharp.Localization.LocalizedStrings.RemoveDriveQuestionKey": {
-    "summary": "Remove selected storage?"
+    "summary": "Ausgewählte Speicher entfernen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.RemoveNotSupportedKey": {
     "summary": "Entfernen wird nicht unterstützt. Verwenden Sie stattdessen Clear()."
@@ -28776,7 +28776,7 @@
     "summary": "Einstellungen OK."
   },
   "F:StockSharp.Localization.LocalizedStrings.SettingsWillBeResetContinueKey": {
-    "summary": "Settings for {0} will be reset. This operation is irreversible and all data will be deleted. Are you sure you want to continue?"
+    "summary": "Die Einstellungen für {0} werden zurückgesetzt. Dieser Vorgang ist irreversibel und alle Daten werden gelöscht."
   },
   "F:StockSharp.Localization.LocalizedStrings.SettlementDateForSecurityKey": {
     "summary": "Abwicklungstag für Finanzinstrumente (für Derivate und Anleihen)."
@@ -28797,7 +28797,7 @@
     "summary": "Art der Abwicklung, wenn das Instrument abgelaufen ist."
   },
   "F:StockSharp.Localization.LocalizedStrings.SetupStockSharpConnectionFirstTimeKey": {
-    "summary": "You are running the application the first time. Would you like establish a connection with our simulation server and start trading now?"
+    "summary": "Sie führen die Anwendung zum ersten Mal aus. Möchten Sie eine Verbindung zu unserem Simulationsserver herstellen und jetzt mit dem Handel beginnen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.SetupTaskNowKey": {
     "summary": "Set up task '{0}' now?"
@@ -29550,7 +29550,7 @@
     "summary": "Speicherformat"
   },
   "F:StockSharp.Localization.LocalizedStrings.StorageHasNoDataParamsKey": {
-    "summary": "Der ausgewählte Speicher enthält keine Marktdaten für {0}{1} @ @ von {2} bis {3}."
+    "summary": "Der ausgewählte Speicher enthält keine Marktdaten für {0} {1} von {2} zu {3}."
   },
   "F:StockSharp.Localization.LocalizedStrings.StorageKey": {
     "summary": "Lagerung"
@@ -29580,7 +29580,7 @@
     "summary": "Strategie hinzugefügt"
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyAlreadyPublishedKey": {
-    "summary": "Strategy was published. Update?"
+    "summary": "Strategie wurde veröffentlicht. Update?"
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyAlreadyStoppedKey": {
     "summary": "Die Strategie {0} ist bereits gestoppt und kann nicht in den Zustand {1} übertragen werden."
@@ -29658,7 +29658,7 @@
     "summary": "Betriebsvolumen."
   },
   "F:StockSharp.Localization.LocalizedStrings.StrategyWasChangedParamsKey": {
-    "summary": "Strategy {0} was changed. Update?"
+    "summary": "Strategie {0} wurde geändert. Update?"
   },
   "F:StockSharp.Localization.LocalizedStrings.StreakKey": {
     "summary": "Streak"
@@ -30006,7 +30006,7 @@
     "summary": "{0}Task Settings"
   },
   "F:StockSharp.Localization.LocalizedStrings.TasksAllInstrumentsKey": {
-    "summary": "Tasks '{0}' are running for all instruments. Often these are incorrect settings. It is recommended to set specific instruments for each task. Do you want to continue as is or stop the launch?"
+    "summary": "Die Aufgaben '{0}' laufen für alle Instrumente. Oft sind das falsche Einstellungen. Es wird empfohlen, für jede Aufgabe spezifische Instrumente festzulegen. Möchten Sie so weitermachen wie es ist oder den Start stoppen?"
   },
   "F:StockSharp.Localization.LocalizedStrings.TasksHasSameDirectoriesKey": {
     "summary": "Die Aufgaben '{0}' haben das gleiche Arbeitsverzeichnis '{1}'."
@@ -30693,7 +30693,7 @@
     "summary": "Tunis BVMT"
   },
   "F:StockSharp.Localization.LocalizedStrings.TurnOnServerModeKey": {
-    "summary": "Turn on Hydra into server mode to allow other application get downloaded market data?"
+    "summary": "Schalten Sie Hydra in den Servermodus ein, damit andere Anwendungen Marktdaten herunterladen können?"
   },
   "F:StockSharp.Localization.LocalizedStrings.TurnoverCommissionKey": {
     "summary": "Umsatzkommission"
@@ -30945,7 +30945,7 @@
     "summary": "Up Line Farbe."
   },
   "F:StockSharp.Localization.LocalizedStrings.UpTrendDescKey": {
-    "summary": "Is the tick trending upward or downward in price?"
+    "summary": "Ist der Tick Trend nach oben oder unten im Preis?"
   },
   "F:StockSharp.Localization.LocalizedStrings.UpTrendKey": {
     "summary": "Aufwärtstrend"
@@ -44061,7 +44061,7 @@
     "summary": "Die Eigenschaft Draw Minor Ticks"
   },
   "F:StockSharp.Xaml.Charting.Themes.AxisPanel.IsLabelCullingEnabledProperty": {
-    "summary": "The IsLabelCullingEnabled DependencyProperty"
+    "summary": "Die IsLabelCullingEnabled DependencyProperty"
   },
   "F:StockSharp.Xaml.Charting.Themes.AxisPanel.MajorTickLineStyleProperty": {
     "summary": "Die Haupt Tick Line Style Eigenschaft"
@@ -44472,7 +44472,7 @@
     "summary": "Definiert die IsCenterAxisDependencyProperty"
   },
   "F:StockSharp.Xaml.Charting.Visuals.Axes.AxisBase.IsLabelCullingEnabledProperty": {
-    "summary": "The IsLabelCullingEnabled DependencyProperty"
+    "summary": "Die IsLabelCullingEnabled DependencyProperty"
   },
   "F:StockSharp.Xaml.Charting.Visuals.Axes.AxisBase.IsPrimaryAxisProperty": {
     "summary": "Definiert die IsPrimaryAxisDependencyProperty"
@@ -49665,7 +49665,7 @@
     "summary": "Stop Order: buy is triggered by bid, sell by ask; Stop Loss Order: for buy position is triggered by ask und for sell position by bid."
   },
   "F:StockSharp.cTrader.Native.Model.ProtoOAOrderTriggerMethod.Trade": {
-    "summary": "Stop Order: buy is triggered by ask, sell by bid; Stop Loss Order: for buy position is triggered by bid and for sell position by ask."
+    "summary": "Stop-Order: Kauf wird durch Ask ausgel?st, Verkauf durch Bid; Stop-Loss-Order: bei einer Kaufposition durch Bid und bei einer Verkaufsposition durch Ask ausgel?st."
   },
   "F:StockSharp.cTrader.Native.Model.ProtoOAPosition.CommissionFieldNumber": {
     "summary": "Feldnummer für das Feld \"Kommission\"."
@@ -50967,7 +50967,7 @@
     "summary": "Bekommt den ersten Pinsel in der Zeichnung von DrawingImage."
   },
   "M:Ecng.Xaml.XamlHelper.GetDialogResult(System.Windows.DependencyObject)": {
-    "summary": "Boilerplate attached property \"bool? DialogResult\" used to set Window.DialogResult from a Button."
+    "summary": "Die an Boilerplate angehängte Eigenschaft \"bool? DialogResult\" wurde verwendet, um Window.DialogResult von einem Button aus zu setzen."
   },
   "M:Ecng.Xaml.XamlHelper.GetImage(System.String,System.Windows.Media.SolidColorBrush,System.Windows.Media.SolidColorBrush)": {
     "summary": "Erhaltet ein thematisches SVG/Vector-Symbol, das mit den angegebenen Füll- und Strichbürsten neu gefärbt wird."
@@ -70311,7 +70311,7 @@
   },
   "M:StockSharp.Algo.Strategies.Optimization.GeneticOptimizer.TryConsumeIteration": {
     "summary": "Versuchen Sie, eine Iteration vom Limit zu konsumieren.",
-    "returns": "True if iteration was consumed, false if limit reached."
+    "returns": "Wahr, wenn die Iteration verbraucht wurde, falsch, wenn das Limit erreicht wurde."
   },
   "M:StockSharp.Algo.Strategies.Optimization.IFitnessFormulaProvider.Compile(System.String)": {
     "summary": "Kompilieren Sie eine Fitnessformel-Zeichenfolge in eine Bewertungsfunktion.",
@@ -74595,13 +74595,13 @@
     "summary": "Initialisiert eine neue Instanz von BitmexOrderCondition."
   },
   "M:StockSharp.Broker.Maui.Backoffice.Pages.HelpToolbarExtensions.AttachHelpToolbar(Microsoft.Maui.Controls.ContentPage)": {
-    "summary": "Adds a \"?\" ToolbarItem bound to the page's VM HelpSlug. Clicking it pushes HelpPopupPage modally. The toolbar item is left in place even if the slug changes later — the click handler reads the latest value on-the-fly so dynamic VMs still get the right doc."
+    "summary": "Fügt ein \"?\" ToolbarItem hinzu, das an die Seite VM HelpSlug gebunden ist. Wenn man darauf klickt, drückt HelpPopupPage modal. Das Symbolleistenelement bleibt an Ort und Stelle, auch wenn sich die Slug später ändert — der Klick-Handler liest den neuesten Wert auf dem Flug, so dass dynamische VMs immer noch den richtigen Text erhalten."
   },
   "M:StockSharp.Broker.Maui.Backoffice.Pages.InstrumentPickerPage.AwaitSelectionAsync": {
     "summary": "Komforthilfe für den Anrufer (TenantSettingsPage): drückt diesen Picker modal und gibt die Auswahl zurück oder null, wenn der Bediener sie abgewiesen hat. Der Anrufer muss sich nicht an das TaskCompletionSource-Muster der VM erinnern."
   },
   "M:StockSharp.Broker.Maui.Designer.Pages.DiagramComposition.ExtractComposition(Ecng.Serialization.IPersistable)": {
-    "summary": "Returns the composition for diagram-mode configurations, or null if the LastObject is something else (strategy settings, raw code, etc.) — matches WPF Designer's BaseConfiguration shape where lastObject is CompositionDiagramElement is the diagram-mode branch."
+    "summary": "Gibt die Zusammensetzung für Diagramm-Modus-Konfigurationen zurück oder null, wenn der LastObject etwas anderes ist (Strategieeinstellungen, Rohcode usw.) - entspricht der BaseConfiguration-Form des WPF Designers, wobei lastObject CompositionDiagramElement der Diagramm-Modus-Zweig ist."
   },
   "M:StockSharp.Broker.Maui.Terminal.Services.DevActionWatcher.Start(Microsoft.Maui.Controls.Window,System.String)": {
     "summary": "Starten Sie den Watcher für die gegebene App — die Datei lebt in <repo>/.maui-runtime/maui-{appName}-action.txt mit Diagnoseschwanz unter maui-{appName}-action.log, so dass zwei MAUI-Apps nebeneinander laufen können, ohne einen Trigger zu teilen."
@@ -87656,7 +87656,7 @@
     }
   },
   "M:StockSharp.Messages.Extensions.IsBestBidField(StockSharp.Messages.Level1Fields)": {
-    "summary": "Is the specified Level1Fields is related to best bid.",
+    "summary": "Ist die angegebene Level1Fields mit dem besten Gebot verbunden?",
     "returns": "Prüfergebnis.",
     "params": {
       "field": "Feld."
@@ -87728,7 +87728,7 @@
     }
   },
   "M:StockSharp.Messages.Extensions.IsFinal(StockSharp.Messages.OrderStates)": {
-    "summary": "Is the specified state is final (Done or Failed).",
+    "summary": "Ist der angegebene Zustand endgültig (Done or Failed)?",
     "returns": "Prüfergebnis.",
     "params": {
       "state": "Ordnungsstaat."
@@ -87805,7 +87805,7 @@
     }
   },
   "M:StockSharp.Messages.Extensions.IsMarketData(StockSharp.Messages.IMessageAdapter)": {
-    "summary": "Is the specified adapter support market-data.",
+    "summary": "Ist der angegebene Adapter Marktdaten unterstützen?",
     "returns": "Prüfergebnis.",
     "params": {
       "adapter": "Adapter."
@@ -87940,7 +87940,7 @@
     }
   },
   "M:StockSharp.Messages.Extensions.IsObsolete(StockSharp.Messages.Level1Fields)": {
-    "summary": "Is the specified Level1Fields was obsolete.",
+    "summary": "Ist das angegebene Level1Fields veraltet?",
     "returns": "Wenn veraltet, andernfalls nicht veraltet.",
     "params": {
       "field": "Level1Felder-Wert."
@@ -99196,7 +99196,7 @@
     "summary": "Convert FIX OrderMassCancelRequest to StockSharp OrderGroupCancelMessage."
   },
   "M:StockSharp.Server.Protocol.IMessageConverter.ToMessage(StockSharp.Fix.Native.FixOrderMassStatusRequest)": {
-    "summary": "Convert FIX OrderMassStatusRequest to StockSharp OrderStatusMessage (mass request)."
+    "summary": "Konvertieren von FIX OrderMassStatusRequest in StockSharp OrderStatusMessage (Massenanforderung)."
   },
   "M:StockSharp.Server.Protocol.IMessageConverter.ToMessage(StockSharp.Fix.Native.FixOrderStatusRequest)": {
     "summary": "Convert FIX OrderStatusRequest to StockSharp OrderStatusMessage."
@@ -99217,7 +99217,7 @@
     "summary": "Convert FIX SecurityListRequest to StockSharp SecurityLookupMessage."
   },
   "M:StockSharp.Server.Protocol.IMessageConverter.ToMessage(StockSharp.Fix.Native.FixSecurityListResponse)": {
-    "summary": "Konvertieren Sie FIX SecurityListResponse zu StockSharp SecurityMessage @ @ Sammlung mit Metadaten."
+    "summary": "Konvertieren Sie die FIX SecurityListResponse-Sammlung in die StockSharp SecurityMessage-Sammlung mit Metadaten."
   },
   "M:StockSharp.Server.Protocol.IMessageConverter.ToMessage(StockSharp.Fix.Native.FixSecurityMapping)": {
     "summary": "Convert FIX SecurityMapping to StockSharp SecurityMappingMessage."
@@ -99499,7 +99499,7 @@
     "summary": "Convert FIX OrderMassCancelRequest to StockSharp OrderGroupCancelMessage."
   },
   "M:StockSharp.Server.Protocol.MessageConverter.ToMessage(StockSharp.Fix.Native.FixOrderMassStatusRequest)": {
-    "summary": "Convert FIX OrderMassStatusRequest to StockSharp OrderStatusMessage (mass request)."
+    "summary": "Konvertieren von FIX OrderMassStatusRequest in StockSharp OrderStatusMessage (Massenanforderung)."
   },
   "M:StockSharp.Server.Protocol.MessageConverter.ToMessage(StockSharp.Fix.Native.FixOrderStatusRequest)": {
     "summary": "Convert FIX OrderStatusRequest to StockSharp OrderStatusMessage."
@@ -99520,7 +99520,7 @@
     "summary": "Convert FIX SecurityListRequest to StockSharp SecurityLookupMessage."
   },
   "M:StockSharp.Server.Protocol.MessageConverter.ToMessage(StockSharp.Fix.Native.FixSecurityListResponse)": {
-    "summary": "Konvertieren Sie FIX SecurityListResponse zu StockSharp SecurityMessage @ @ Sammlung mit Metadaten."
+    "summary": "Konvertieren Sie die FIX SecurityListResponse-Sammlung in die StockSharp SecurityMessage-Sammlung mit Metadaten."
   },
   "M:StockSharp.Server.Protocol.MessageConverter.ToMessage(StockSharp.Fix.Native.FixSecurityMapping)": {
     "summary": "Convert FIX SecurityMapping to StockSharp SecurityMappingMessage."
@@ -99766,7 +99766,7 @@
     "summary": "Schreibt FixHistoryStart in das Binärformat SBE."
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteLevel1Change(StockSharp.Messages.SecurityId,System.String,StockSharp.Messages.DataType,System.DateTime,System.Collections.Generic.IDictionary{StockSharp.Messages.Level1Fields,System.Object},System.Span{System.Byte})": {
-    "summary": "Write a Level1Change SBE message with typed key-value pairs. Layout: [Header][VarString symbol][VarString boardCode][VarString mdReqId] [NullableChar buildFromType][VarString buildFromArg] [NullableDateTime serverTime] [Group changes: uint16 count, each: int32 fieldId + byte valueType + typed value]"
+    "summary": "Schreiben Sie eine Level1Change SBE-Nachricht mit getippten Schlüssel-Wert-Paaren. Layout: [Header][VarString-Symbol][VarString mdReqId] [NullableChar buildFromType] [NullableDateTime VarString0TOKEN] [Gruppenänderungen: uint16 Anzahl, jeweils: int32 VarString1TOKEN + Byte VarString2TOKEN + getippter Wert]"
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteLogonResponse(StockSharp.Fix.Native.FixLogonResponse,System.Span{System.Byte})": {
     "summary": "Schreibt FixLogonResponse in das Binärformat SBE."
@@ -99775,7 +99775,7 @@
     "summary": "Schreiben Sie eine MarketDataIncrementalRefreshSBE-Nachricht. Layout: [Header][VarStringSsymbol][VarStringsecurityExchange][VarStringmdReqId] [NullableCharbuildFromType][VarStringbuildFromArg] [Gruppeneinträge: uint16 zählen, jeweils: MDEntry-Felder]"
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteMarketDataRequest(StockSharp.Fix.Native.FixMarketDataRequest,System.Span{System.Byte})": {
-    "summary": "Write a MarketDataRequest SBE message. Layout: [Header][NullableChar subscriptionRequestType][NullableInt32 marketDepth] [NullableDateTime fromDate][NullableDateTime toDate] [NullableBool allowBuildFromSmallerTimeFrame][NullableBool isCalcVolumeProfile] [NullableBool isFinishedOnly][NullableBool isRegularTradingHours] [NullableInt32 buildMode][NullableChar buildFrom][NullableChar buildField] [NullableInt64 skip][NullableInt64 count] [FixId mdReqId][FixId mdResponseId] [Group mdEntryTypes: uint16 count, each: NullableChar type + VarString arg] [Group securityIds: uint16 count, each: VarString secCode + VarString boardCode + VarString secType] [Group fields: uint16 count, each: Int32 field]"
+    "summary": "Layout: [Header][NullableChar subscriptionRequestType][NullableDateTime fromDate][NullableBool NullableChar0TOKEN][NullableChar1TOKEN NullableChar4TOKEN][NullableChar7TOKEN NullableChar8TOKEN][subscriptionRequestType1TOKEN subscriptionRequestType0TOKEN][subscriptionRequestType3TOKEN-Zählung][subscriptionRequestType7TOKEN subscriptionRequestType6TOKEN] [Gruppe subscriptionRequestType9TOKEN: jeweils uint16-Zählung: NullableInt320TOKEN-Typ + NullableInt321TOKEN arg] [Gruppe NullableInt322TOKEN: jeweils uint16-Zählung: NullableInt323TOKEN NullableInt326TOKEN + NullableInt327TOKEN NullableInt328TOKEN] [Gruppenfelder: jeweils uint16-Zählung: NullableInt323TOKEN-Zählung"
   },
   "M:StockSharp.Server.Sbe.SbeRecordSerializer.WriteMarketDataRequestReject(StockSharp.Fix.Native.FixMarketDataRequestReject,System.Span{System.Byte})": {
     "summary": "Schreibt FixMarketDataRequestReject in das Binärformat SBE."
@@ -102061,13 +102061,13 @@
     "summary": "Zählt RenderableSeries auf dem übergeordneten ParentSurface auf und erhält SeriesInfo Objekte in einem bestimmten Punkt"
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.CursorModifier.HandleMasterMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-Event ChartModifierBase MouseMove @ @ zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-ChartModifierBase-MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.CursorModifier.HandleSlaveMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove @ @ Ereignis zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
@@ -102158,7 +102158,7 @@
     "summary": "Zählt RenderableSeries auf dem übergeordneten ParentSurface auf und erhält SeriesInfo Objekte in einem bestimmten Punkt"
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.InspectSeriesModifierBase.HandleMasterMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-Event ChartModifierBase MouseMove @ @ zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-ChartModifierBase-MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
@@ -102167,7 +102167,7 @@
     "summary": "Allgemeine Logik zur Verarbeitung von Mausereignissen"
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.InspectSeriesModifierBase.HandleSlaveMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove @ @ Ereignis zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
@@ -102209,13 +102209,13 @@
     "summary": "Bekommt die SeriesInfo für alle RenderableSeries"
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.LegendModifier.HandleMasterMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-Event ChartModifierBase MouseMove @ @ zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-ChartModifierBase-MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.LegendModifier.HandleSlaveMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove @ @ Ereignis zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
@@ -102514,7 +102514,7 @@
     "summary": "Holen Sie sich Rollover-Marker von SeriesInfo um auf dem Chart zu platzieren"
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.RolloverModifier.HandleMasterMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-Event ChartModifierBase MouseMove @ @ zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-ChartModifierBase-MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
@@ -102565,13 +102565,13 @@
     "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, sollte diese Methode alle Markierungen und Tooltips aus dem ModifierSurface löschen"
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.SeriesSelectionModifier.HandleMasterMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-Event ChartModifierBase MouseMove @ @ zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-ChartModifierBase-MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.SeriesSelectionModifier.HandleSlaveMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove @ @ Ereignis zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
@@ -102663,13 +102663,13 @@
     "summary": "Holt sich die Inklusionsserie oder nicht"
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.TooltipModifier.HandleMasterMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-Event ChartModifierBase MouseMove @ @ zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-ChartModifierBase-MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.TooltipModifier.HandleSlaveMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove @ @ Ereignis zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
@@ -102791,13 +102791,13 @@
     "summary": "Zählt die RenderableSeries auf dem übergeordneten ParentSurface auf und erhält SeriesInfo Objekte in einem bestimmten Punkt"
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.VerticalSliceModifierBase.HandleMasterMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-Event ChartModifierBase MouseMove @ @ zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Master-ChartModifierBase-MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
   },
   "M:StockSharp.Xaml.Charting.ChartModifiers.VerticalSliceModifierBase.HandleSlaveMouseEvent(System.Windows.Point)": {
-    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove @ @ Ereignis zu behandeln",
+    "summary": "Wenn Sie in einer abgeleiteten Klasse überschreiben, werden Sie aufgerufen, um das Slave ChartModifierBase MouseMove-Ereignis zu behandeln",
     "params": {
       "mousePoint": "Der aktuelle Maus-Punkt"
     }
@@ -103550,7 +103550,7 @@
   },
   "M:StockSharp.Xaml.Charting.Common.Extensions.EnumerableExtensions.EnumerateUntilNonGap(System.Collections.Generic.IEnumerator{System.Tuple{System.Windows.Point,System.Windows.Point}})": {
     "params": {
-      "iterator": "muss auf den ersten NaN @ @ Punkt in der Sammlung gesetzt werden"
+      "iterator": "muss auf den ersten NaN-Punkt in der Sammlung gesetzt werden"
     }
   },
   "M:StockSharp.Xaml.Charting.Common.Extensions.EnumerableExtensions.FindIndex(System.Collections.IList,System.Boolean,System.IComparable,StockSharp.Xaml.Charting.Common.Extensions.SearchMode)": {
@@ -107287,7 +107287,7 @@
     "summary": "Wenn eine absolute Achse Min und Max gegeben ist, gibt sie eine TickRange Instanz zurück, die sensible MinorDelta und MajorDelta Werte enthält."
   },
   "M:StockSharp.Xaml.Charting.Numerics.PointResamplerBase.ReducePointUnevenImpl(StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{System.Double},StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{System.Double},StockSharp.Xaml.Charting.Model.DataSeries.Point2DSeries,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Boolean)": {
-    "summary": "This needs to be implemented for each supported pair of TX,TY. Maybe use T4 templates? For optimal performance, this method should be implemented in C++/ASM and not just the GetMinMaxValuesForPixel method (this avoid per-pixel unmanaged call transitions). However, that would also require that reducedPoints is passed as pre-allocated buffer and not as a Point2DSeries. NaN handling makes it a bit difficult to pre-allocate though (since NaNs can cause multiple lines per pixel)."
+    "summary": "Für eine optimale Leistung sollte diese Methode in C++/ASM implementiert werden und nicht nur die GetMinMaxValuesForPixel-Methode (diese Methode vermeidet pro Pixel unmanaged call transitions). Das würde jedoch auch erfordern, dass reducedPoints als vorab zugewiesener Puffer und nicht als Point2DSeries übergeben wird."
   },
   "M:StockSharp.Xaml.Charting.Numerics.PointResamplerBase.ReducePointUnevenImpl``2(StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{``0},StockSharp.Xaml.Charting.Model.DataSeries.UncheckedList{``1},StockSharp.Xaml.Charting.Model.DataSeries.Point2DSeries,System.Int32,System.Int32,System.Double,System.Double,System.Int32,System.Boolean)": {
     "summary": "Generische Implementierung, bei der eine nicht überprüfte Liste für x- und y-Werte abgerufen wurde."
@@ -110603,7 +110603,7 @@
     }
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighSpeedRasterizer.WBX.WriteableBitmapExtensions.DrawEllipseCentered(System.Windows.Media.Imaging.WriteableBitmap,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)": {
-    "summary": "Ein schneller Bresenham-Algorithmus zum Zeichnen von Ellipsen http://homepage.smc.edu/kennedy_john/belipse.pdf verwendet eine andere Parameterdarstellung als DrawEllipse @ @ ().",
+    "summary": "Ein Fast Bresenham Type Algorithm For Drawing Ellipses http://homepage.smc.edu/kennedy_john/belipse.pdf Verwendet eine andere Parameterdarstellung als DrawEllipse ().",
     "params": {
       "bmp": "Die WriteableBitmap.",
       "xc": "Die x-Koordinate des Ellipsenzentrums.",
@@ -110614,7 +110614,7 @@
     }
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighSpeedRasterizer.WBX.WriteableBitmapExtensions.DrawEllipseCentered(System.Windows.Media.Imaging.WriteableBitmap,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Media.Color)": {
-    "summary": "Ein schneller Bresenham-Algorithmus zum Zeichnen von Ellipsen http://homepage.smc.edu/kennedy_john/belipse.pdf verwendet eine andere Parameterdarstellung als DrawEllipse @ @ ().",
+    "summary": "Ein Fast Bresenham Type Algorithm For Drawing Ellipses http://homepage.smc.edu/kennedy_john/belipse.pdf Verwendet eine andere Parameterdarstellung als DrawEllipse ().",
     "params": {
       "bmp": "Die WriteableBitmap.",
       "xc": "Die x-Koordinate des Ellipsenzentrums.",
@@ -110897,7 +110897,7 @@
     }
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighSpeedRasterizer.WBX.WriteableBitmapExtensions.FillEllipseCentered(System.Windows.Media.Imaging.WriteableBitmap,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)": {
-    "summary": "Ein schneller Bresenham-Typ-Algorithmus zum Zeichnen gefüllter Ellipsen http://homepage.smc.edu/kennedy_john/belipse.pdf Verwendet eine andere Parameterdarstellung als DrawEllipse @ @ ().",
+    "summary": "Ein Fast Bresenham Type Algorithmus Für das Zeichnen gefüllter Ellipsen http://homepage.smc.edu/kennedy_john/belipse.pdf Verwendet eine andere Parameterdarstellung als DrawEllipse ().",
     "params": {
       "bmp": "Die WriteableBitmap.",
       "xc": "Die x-Koordinate des Ellipsenzentrums.",
@@ -110908,7 +110908,7 @@
     }
   },
   "M:StockSharp.Xaml.Charting.Rendering.HighSpeedRasterizer.WBX.WriteableBitmapExtensions.FillEllipseCentered(System.Windows.Media.Imaging.WriteableBitmap,System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Media.Color)": {
-    "summary": "Ein schneller Bresenham-Typ-Algorithmus zum Zeichnen gefüllter Ellipsen http://homepage.smc.edu/kennedy_john/belipse.pdf Verwendet eine andere Parameterdarstellung als DrawEllipse @ @ ().",
+    "summary": "Ein Fast Bresenham Type Algorithmus Für das Zeichnen gefüllter Ellipsen http://homepage.smc.edu/kennedy_john/belipse.pdf Verwendet eine andere Parameterdarstellung als DrawEllipse ().",
     "params": {
       "bmp": "Die WriteableBitmap.",
       "xc": "Die x-Koordinate des Ellipsenzentrums.",
@@ -113654,7 +113654,7 @@
     "summary": "Berechnet die Deltas für die Verwendung in diesem Render-Pass"
   },
   "M:StockSharp.Xaml.Charting.Visuals.Axes.CategoryDateTimeAxis.CalculateYRange(StockSharp.Xaml.Charting.RenderPassInfo)": {
-    "summary": "Berechnet den Zoom-to-Fit-Y-Bereich der Achse, berücksichtigt die Daten im Viewport und verwendet einen GrowBy @ @ -Marge",
+    "summary": "Berechnet den Zoom-to-Fit-Y-Range der Achse, berücksichtigt die Daten im Viewport und verwendet einen beliebigen GrowBy-Rand",
     "returns": "Das VisibleRange der Achse",
     "params": {
       "renderPassInfo": "Struct mit Daten für den aktuellen Renderpass"
@@ -113718,7 +113718,7 @@
     "summary": "Asserts der Typ übergeben wird durch die aktuelle Achse Implementierung unterstützt"
   },
   "M:StockSharp.Xaml.Charting.Visuals.Axes.DateTimeAxis.CalculateYRange(StockSharp.Xaml.Charting.RenderPassInfo)": {
-    "summary": "Berechnet den Zoom-to-Fit-Y-Bereich der Achse, berücksichtigt die Daten im Viewport und verwendet einen GrowBy @ @ -Marge",
+    "summary": "Berechnet den Zoom-to-Fit-Y-Range der Achse, berücksichtigt die Daten im Viewport und verwendet einen beliebigen GrowBy-Rand",
     "returns": "Das VisibleRange der Achse",
     "params": {
       "renderPassInfo": "Struct mit Daten für den aktuellen Renderpass"
@@ -114521,7 +114521,7 @@
     "summary": "Berechnet die Deltas für die Verwendung in diesem Render-Pass"
   },
   "M:StockSharp.Xaml.Charting.Visuals.Axes.TimeSpanAxisBase.CalculateYRange(StockSharp.Xaml.Charting.RenderPassInfo)": {
-    "summary": "Berechnet den Zoom-to-Fit-Y-Bereich der Achse, berücksichtigt die Daten im Viewport und verwendet einen GrowBy @ @ -Marge",
+    "summary": "Berechnet den Zoom-to-Fit-Y-Range der Achse, berücksichtigt die Daten im Viewport und verwendet einen beliebigen GrowBy-Rand",
     "returns": "Das VisibleRange der Achse",
     "params": {
       "renderPassInfo": "Struct mit Daten für den aktuellen Renderpass"
@@ -116536,7 +116536,7 @@
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.CommandHandler.CanRedo": {
     "summary": "Dieses überschreibbare Prädikat kontrolliert, ob der Redo-Befehl ausgeführt wird oder nicht.",
-    "returns": "Standardmäßig gibt dies true zurück, wenn das Diagramm nicht IsReadOnly ist, wenn AllowUndo wahr ist und wenn das Modell des Diagramms UndoManager CanRedo @ @ Prädikat wahr ist."
+    "returns": "Standardmäßig wird dies true zurückgegeben, wenn das Diagramm nicht IsReadOnly ist, wenn AllowUndo wahr ist und wenn das Prädikat des Modells des Diagramms UndoManager CanRedo true zurückgibt."
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.CommandHandler.CanSelectAll": {
     "summary": "Dieses überschreibbare Prädikat steuert, ob der Befehl SelectAll ausgeführt wird oder nicht.",
@@ -116548,7 +116548,7 @@
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.CommandHandler.CanUndo": {
     "summary": "Dieses überschreibbare Prädikat kontrolliert, ob der Befehl Undo ausgeführt wird oder nicht.",
-    "returns": "Standardmäßig gibt dies true zurück, wenn das Diagramm nicht IsReadOnly ist, wenn AllowUndo wahr ist und wenn das Modell des Diagramms UndoManager CanUndo @ @ Prädikat wahr ist."
+    "returns": "Standardmäßig wird dies true zurückgegeben, wenn das Diagramm nicht IsReadOnly ist, wenn AllowUndo wahr ist und wenn das Prädikat des Modells des Diagramms UndoManager CanUndo true zurückgibt."
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.CommandHandler.CanUngroup": {
     "summary": "Dieses überschreibbare Prädikat kontrolliert, ob der Befehl Ungroup ausgeführt wird oder nicht.",
@@ -116951,7 +116951,7 @@
     }
   },
   "M:StockSharp.Xaml.Diagram.GXDiagram.DiagramPanel.MakeVisible(System.Windows.Media.Visual,System.Windows.Rect)": {
-    "summary": "Scrollen Sie das Diagramm so, dass sich ein bestimmtes Element () im Viewport befindet. (Implements IScrollInfo @ @)",
+    "summary": "Scrollen Sie das Diagramm so, dass sich ein bestimmtes Element () im Viewport befindet. (Implements IScrollInfo.)",
     "returns": "das Ergebnis des Aufrufs von Rect",
     "params": {
       "rectangle": "Dieser Wert ist normalerweise Rect.Empty, was bedeutet, dass so viel des gesamten visuellen Elements in den Viewport passt."
@@ -132599,7 +132599,7 @@
     "summary": "Der Adapter, empfangende Nachrichten bilden den Speicher IStorageRegistry."
   },
   "P:StockSharp.Algo.Testing.HistoryEmulationConnector.IsFinished": {
-    "summary": "Has the emulator ended its operation due to end of data, or it was interrupted through the Disconnectmethod."
+    "summary": "Hat der Emulator seinen Betrieb wegen des Endes der Daten beendet oder wurde er durch die Disconnect-Methode unterbrochen?"
   },
   "P:StockSharp.Algo.Testing.HistoryEmulationConnector.MarketTimeChangedInterval": {
     "summary": "Das Intervall der Nachricht TimeMessage Generation."
@@ -132932,7 +132932,7 @@
     "summary": "Verbinden Sie sich mit Demo-Handel anstelle von echten Trading-Server."
   },
   "P:StockSharp.Alor.AlorMessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Alor.AlorMessageAdapter.Token": {
     "summary": "Token-Regeln, es ist verbunden mit (zum Beispiel für Regel ISubscriptionProvider) die Bestellung wird ein Token sein)."
@@ -133187,7 +133187,7 @@
     "summary": "Name des Merkmals."
   },
   "P:StockSharp.Bitfinex.BitfinexMessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Bitfinex.BitfinexMessageAdapter.IsSupportOrderBookIncrements": {
     "summary": "Adapter übersetzt inkrementelle Auftragsbücher."
@@ -135128,7 +135128,7 @@
     "summary": "Identifizieren Sie das Finanzinstrument in Nachrichten nach nativer Kennung Native."
   },
   "P:StockSharp.Bvmt.BvmtFixDialect.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Bvmt.BvmtFixDialect.IsSupportTransactionLog": {
     "summary": "Adapter übersetzt Bestellungsänderungen auf Antwort von OrderStatusMessage."
@@ -136040,7 +136040,7 @@
     "summary": "Verbinden Sie sich mit Demo-Handel anstelle von echten Trading-Server."
   },
   "P:StockSharp.Deribit.DeribitMessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Deribit.DeribitMessageAdapter.IsSupportOrderBookIncrements": {
     "summary": "Adapter übersetzt inkrementelle Auftragsbücher."
@@ -137384,7 +137384,7 @@
     "summary": "Adapter benötigt Emulation PositionChangeMessage."
   },
   "P:StockSharp.Fix.Dialects.BaseFixDialect.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Fix.Dialects.BaseFixDialect.IsResetCounter": {
     "summary": "Sollte der Sequenzzähler zurückgesetzt werden."
@@ -137552,7 +137552,7 @@
     "summary": "Adapter benötigt Emulation PositionChangeMessage."
   },
   "P:StockSharp.Fix.Dialects.BaseUdpDialect.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Fix.Dialects.BaseUdpDialect.IsSecurityNewsOnly": {
     "summary": "Adapter liefert Nachrichten zu einem bestimmten Finanzinstrument."
@@ -138260,7 +138260,7 @@
     "summary": "Verwendet in IBKR Volatility Orders Preis Tick Offset in Dezimalform New Order (IBKR Volatility Orders)."
   },
   "P:StockSharp.Fix.Dialects.InteractiveBrokersFixOrderCondition.WhatIf": {
-    "summary": "WhatIf: 6091 = 1 New Order - Single."
+    "summary": "WhatIf: 6091 = 1 Neue Order - Single."
   },
   "P:StockSharp.Fix.Dialects.InteractiveBrokersFixOrderCondition.XCrossClearingAccount": {
     "summary": "ISE Facilitation Order Firm's ClearingAccount (Firma entspricht dem Tag 440) New Order 'Single (nur ISE FOK)."
@@ -138536,7 +138536,7 @@
     "summary": "Adapter benötigt Emulation PositionChangeMessage."
   },
   "P:StockSharp.Fix.FixMessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Fix.FixMessageAdapter.IsResetCounter": {
     "summary": "Sollte der Sequenzzähler zurückgesetzt werden."
@@ -139907,7 +139907,7 @@
     "summary": "Adapter benötigt Emulation PositionChangeMessage."
   },
   "P:StockSharp.Fix.UdpMessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Fix.UdpMessageAdapter.IsSecurityNewsOnly": {
     "summary": "Adapter liefert Nachrichten zu einem bestimmten Finanzinstrument."
@@ -141378,7 +141378,7 @@
     "summary": "Hinzufügen von Finanzinstrumenten"
   },
   "P:StockSharp.Localization.LocalizedStrings.AddSecuritiesNow": {
-    "summary": "At the moment, no instruments are specified for task '{0}'. Add them now (or download if they are not yet exist)?"
+    "summary": "Derzeit sind keine Instrumente für die Aufgabe '{0}' angegeben. Fügen Sie sie jetzt hinzu (oder laden Sie sie herunter, wenn sie noch nicht vorhanden sind)?"
   },
   "P:StockSharp.Localization.LocalizedStrings.AddSecurity": {
     "summary": "Hinzufügen von Finanzinstrumenten..."
@@ -143295,7 +143295,7 @@
     "summary": "Die Konfiguration ist ungültig."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConfirmNewVersionPublishParams": {
-    "summary": "Do you want to publish the new version of \"{0}\"?"
+    "summary": "Möchten Sie die neue Version von \"{0}\" veröffentlichen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConflictResolverTooltipParams": {
     "summary": "Regeln für die Konfliktlösung, falls dieselbe Paket-ID in mehreren Repositories gefunden wurde. nA Regel besteht aus einer Paket-ID und einem Nuget-Repository, das durch einen Doppelpunkt getrennt ist. nEach Regel muss auf seiner eigenen Linie sein. Beispiele: \\n \\nStockSharp.Terminal:nugetorg \\n *:stocksharp \\n ' * ' bedeutet andere Pakete. \\nAvailable nuget repos: {0} @"
@@ -143391,10 +143391,10 @@
     "summary": "Connector ist nur Stub. Bitte besuchen Sie https://stocksharp.com/pricing/ um weitere Informationen zu erhalten."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorMustBeExtraInstalled": {
-    "summary": "The connector {0} must be installed as a separate product, and the terminal must be configured as per the instructions. Would you like to select the product {0} for installation?"
+    "summary": "Der connector {0} muss als separates Produkt installiert werden, und das Terminal muss gemäß den Anweisungen konfiguriert werden. Möchten Sie das Produkt {0} für die Installation auswählen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorMustSetupFirst": {
-    "summary": "To connect via the connector {0}, you need to configure the terminal itself. Would you like to open a documentation site with instructions?"
+    "summary": "Um sich über das connector {0} zu verbinden, müssen Sie das Terminal selbst konfigurieren."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnorsRSI": {
     "summary": "Connors RSI."
@@ -143418,7 +143418,7 @@
     "summary": "Cont-ue"
   },
   "P:StockSharp.Localization.LocalizedStrings.ContinueSubscriptionParams": {
-    "summary": "Continue free subscription with the connector {0}? Changing the connector in the future will not be possible!"
+    "summary": "Weiter kostenloses Abonnement mit dem connector {0}? Wechseln des connector in der Zukunft wird nicht möglich sein!"
   },
   "P:StockSharp.Localization.LocalizedStrings.ContinuousSecurity": {
     "summary": "Kontinuierliches Finanzinstrument"
@@ -143814,7 +143814,7 @@
     "summary": "Übertragene Datenpaketgröße: Standardmäßig gleich 50 Elementen; beim Export über SQL verwendet."
   },
   "P:StockSharp.Localization.LocalizedStrings.DatabaseCorruptedResetConfig": {
-    "summary": "The database is corrupted and can not continue. Do you want to reset all settings?"
+    "summary": "Die Datenbank ist beschädigt und kann nicht fortgesetzt werden. Möchten Sie alle Einstellungen zurücksetzen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DatabaseDescription": {
     "summary": "Name der Datenbank, nicht in SQLite verwendet."
@@ -144234,7 +144234,7 @@
     "summary": "Update nicht"
   },
   "P:StockSharp.Localization.LocalizedStrings.DoYouHaveQuestionsOrSuggestions": {
-    "summary": "Do you have any questions or suggestions? Contact us now!"
+    "summary": "Haben Sie Fragen oder Vorschläge? Kontaktieren Sie uns jetzt!"
   },
   "P:StockSharp.Localization.LocalizedStrings.Documentation": {
     "summary": "Dokumentation"
@@ -144297,7 +144297,7 @@
     "summary": "Download"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadHistoricalMarketDataQuestion": {
-    "summary": "Download historical market data?"
+    "summary": "Historische Marktdaten herunterladen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadNews": {
     "summary": "Download News."
@@ -144309,7 +144309,7 @@
     "summary": "Sollte der gesamte Satz von Finanzinstrumenten aus dem IQFeed-Website-Archiv geladen werden."
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadUpdates": {
-    "summary": "New version of the application available. Download updates?"
+    "summary": "Neue Version der Anwendung verfügbar. Updates herunterladen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.DownloadingCandles": {
     "summary": "Kerzen herunterladen..."
@@ -144543,7 +144543,7 @@
     "summary": "Automatische Positionsliquidation aktivieren, wenn die Margin-Ebene unter die Stop-Out-Schwelle fällt."
   },
   "P:StockSharp.Localization.LocalizedStrings.EnableTaskNow": {
-    "summary": "Enable task '{0}' now (the task will go into the active mode)?"
+    "summary": "Aktivieren Sie die Aufgabe '{0}' jetzt (die Aufgabe geht in den aktiven Modus)?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Enabled": {
     "summary": "Aktiviert"
@@ -145077,7 +145077,7 @@
     "summary": "Format des Dateinamens"
   },
   "P:StockSharp.Localization.LocalizedStrings.FileNameFormatDesc": {
-    "summary": "File name format. For ex., 'candles_{Security.Id}_{From:yyyy_MM_dd}_{To:yyyy_MM_dd}.csv'."
+    "summary": "Format des Dateinamens: z. B. \"candles_ {financial instrument.Id} _ {From:yyyy_MM_dd} _ {To:yyyy_MM_dd}.csv\"."
   },
   "P:StockSharp.Localization.LocalizedStrings.FileNotExist": {
     "summary": "Die Datei '{0}' existiert nicht."
@@ -146190,7 +146190,7 @@
     "summary": "Verfügbar"
   },
   "P:StockSharp.Localization.LocalizedStrings.InstallerNotStarted": {
-    "summary": "The installer is not running. Would you like to launch it?"
+    "summary": "Der Installer läuft nicht. Möchten Sie ihn starten?"
   },
   "P:StockSharp.Localization.LocalizedStrings.InstallerPluginUpdatesAvailable": {
     "summary": "Plugin Updates verfügbar"
@@ -146331,7 +146331,7 @@
     "summary": "im 64-Bit-Modus"
   },
   "P:StockSharp.Localization.LocalizedStrings.IsActionOrderCancellation": {
-    "summary": "Is the action an order cancellation?"
+    "summary": "Ist die Aktion eine Auftragsstornierung?"
   },
   "P:StockSharp.Localization.LocalizedStrings.IsControlConnectionLost": {
     "summary": "Kontrollverbindung verloren."
@@ -146928,7 +146928,7 @@
     "summary": "Lastaustausch"
   },
   "P:StockSharp.Localization.LocalizedStrings.LoadHistoryDataQuestion": {
-    "summary": "Open the window to download historical data?"
+    "summary": "Öffnen Sie das Fenster, um historische Daten herunterzuladen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.LoadLayout": {
     "summary": "Lastverteilung ..."
@@ -150540,7 +150540,7 @@
     "summary": "Entfernen Sie den Anwendungsdatenordner, einschließlich aller heruntergeladenen Daten und Einstellungen."
   },
   "P:StockSharp.Localization.LocalizedStrings.RemoveDriveQuestion": {
-    "summary": "Remove selected storage?"
+    "summary": "Ausgewählte Speicher entfernen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.RemoveNotSupported": {
     "summary": "Entfernen wird nicht unterstützt. Verwenden Sie stattdessen Clear()."
@@ -151440,7 +151440,7 @@
     "summary": "Einstellungen OK."
   },
   "P:StockSharp.Localization.LocalizedStrings.SettingsWillBeResetContinue": {
-    "summary": "Settings for {0} will be reset. This operation is irreversible and all data will be deleted. Are you sure you want to continue?"
+    "summary": "Die Einstellungen für {0} werden zurückgesetzt. Dieser Vorgang ist irreversibel und alle Daten werden gelöscht."
   },
   "P:StockSharp.Localization.LocalizedStrings.Settlement": {
     "summary": "Abrechnung"
@@ -151461,7 +151461,7 @@
     "summary": "Art der Abwicklung, wenn das Instrument abgelaufen ist."
   },
   "P:StockSharp.Localization.LocalizedStrings.SetupStockSharpConnectionFirstTime": {
-    "summary": "You are running the application the first time. Would you like establish a connection with our simulation server and start trading now?"
+    "summary": "Sie führen die Anwendung zum ersten Mal aus. Möchten Sie eine Verbindung zu unserem Simulationsserver herstellen und jetzt mit dem Handel beginnen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.SetupTaskNow": {
     "summary": "Set up task '{0}' now?"
@@ -152217,7 +152217,7 @@
     "summary": "Speicherformat"
   },
   "P:StockSharp.Localization.LocalizedStrings.StorageHasNoDataParams": {
-    "summary": "Der ausgewählte Speicher enthält keine Marktdaten für {0}{1} @ @ von {2} bis {3}."
+    "summary": "Der ausgewählte Speicher enthält keine Marktdaten für {0} {1} von {2} zu {3}."
   },
   "P:StockSharp.Localization.LocalizedStrings.StorageParameters": {
     "summary": "Speicherparameter"
@@ -152247,7 +152247,7 @@
     "summary": "Strategie hinzugefügt"
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyAlreadyPublished": {
-    "summary": "Strategy was published. Update?"
+    "summary": "Strategie wurde veröffentlicht. Update?"
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyAlreadyStopped": {
     "summary": "Die Strategie {0} ist bereits gestoppt und kann nicht in den Zustand {1} übertragen werden."
@@ -152322,7 +152322,7 @@
     "summary": "Betriebsvolumen."
   },
   "P:StockSharp.Localization.LocalizedStrings.StrategyWasChangedParams": {
-    "summary": "Strategy {0} was changed. Update?"
+    "summary": "Strategie {0} wurde geändert. Update?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Streak": {
     "summary": "Streak"
@@ -152673,7 +152673,7 @@
     "summary": "Aufgaben"
   },
   "P:StockSharp.Localization.LocalizedStrings.TasksAllInstruments": {
-    "summary": "Tasks '{0}' are running for all instruments. Often these are incorrect settings. It is recommended to set specific instruments for each task. Do you want to continue as is or stop the launch?"
+    "summary": "Die Aufgaben '{0}' laufen für alle Instrumente. Oft sind das falsche Einstellungen. Es wird empfohlen, für jede Aufgabe spezifische Instrumente festzulegen. Möchten Sie so weitermachen wie es ist oder den Start stoppen?"
   },
   "P:StockSharp.Localization.LocalizedStrings.TasksHasSameDirectories": {
     "summary": "Die Aufgaben '{0}' haben das gleiche Arbeitsverzeichnis '{1}'."
@@ -153357,7 +153357,7 @@
     "summary": "Tunis BVMT"
   },
   "P:StockSharp.Localization.LocalizedStrings.TurnOnServerMode": {
-    "summary": "Turn on Hydra into server mode to allow other application get downloaded market data?"
+    "summary": "Schalten Sie Hydra in den Servermodus ein, damit andere Anwendungen Marktdaten herunterladen können?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Turnover": {
     "summary": "Umsatz"
@@ -153612,7 +153612,7 @@
     "summary": "Aufwärtstrend"
   },
   "P:StockSharp.Localization.LocalizedStrings.UpTrendDesc": {
-    "summary": "Is the tick trending upward or downward in price?"
+    "summary": "Ist der Tick Trend nach oben oder unten im Preis?"
   },
   "P:StockSharp.Localization.LocalizedStrings.Upbit": {
     "summary": "Upbit"
@@ -155142,7 +155142,7 @@
     "summary": "Bestimmt, ob der angegebene Nachrichtentyp Marktdaten ist."
   },
   "P:StockSharp.Messages.DataType.IsNonSecurity": {
-    "summary": "Is the data type never associated with security."
+    "summary": "Ist der Datentyp niemals mit einem Finanzinstrument verbunden?"
   },
   "P:StockSharp.Messages.DataType.IsSecurityRequired": {
     "summary": "Is the data type required security info."
@@ -155643,7 +155643,7 @@
     "summary": "Adapter benötigt Emulation PositionChangeMessage."
   },
   "P:StockSharp.Messages.IMessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Messages.IMessageAdapter.IsSecurityNewsOnly": {
     "summary": "Adapter liefert Nachrichten zu einem bestimmten Finanzinstrument."
@@ -156078,7 +156078,7 @@
     "summary": "Adapter benötigt Emulation PositionChangeMessage."
   },
   "P:StockSharp.Messages.MessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Messages.MessageAdapter.IsSecurityNewsOnly": {
     "summary": "Adapter liefert Nachrichten zu einem bestimmten Finanzinstrument."
@@ -165044,7 +165044,7 @@
     "summary": "Verbinden Sie sich mit Demo-Handel anstelle von echten Trading-Server."
   },
   "P:StockSharp.Tradier.TradierMessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.Tradier.TradierMessageAdapter.Token": {
     "summary": "Token-Regeln, es ist verbunden mit (zum Beispiel für Regel ISubscriptionProvider) die Bestellung wird ein Token sein)."
@@ -165746,7 +165746,7 @@
     "summary": "Wire Feld buildField."
   },
   "P:StockSharp.Ws.WsMarketData.BuildFrom": {
-    "summary": "Wire field buildFrom. DataType is composite (e.g. CandleTimeFrame), so its serializable string form is kept here."
+    "summary": "Drahtfeld buildFrom. DataType ist zusammengesetzt (e.g. CandleTimeFrame), so dass seine serialisierbare Stringform hier beibehalten wird."
   },
   "P:StockSharp.Ws.WsMarketData.BuildMode": {
     "summary": "Wire Feld buildMode."
@@ -168225,7 +168225,7 @@
     "summary": "Die Zeitrahmen, die der Streifen bietet. Standardmäßig DefaultTimeframes."
   },
   "P:StockSharp.Xaml.Charting.Maui.CandleChartWithTimeframeView.VisibleCandleCount": {
-    "summary": "How many candles are visible in the viewport."
+    "summary": "Wie viele Kerzen sind im Viewport sichtbar?"
   },
   "P:StockSharp.Xaml.Charting.Maui.ChartDrawable.AdditionalYAxes": {
     "summary": "Erhält die zusätzlichen Y-Achsen."
@@ -172518,7 +172518,7 @@
     "summary": "Holen Sie sich die vertikale Größe des scrollbaren Teils dieses Diagramms in Steuereinheiten (geräteunabhängiges Pixel). (Implements IScrollInfo @ .)"
   },
   "P:StockSharp.Xaml.Diagram.GXDiagram.DiagramPanel.ExtentWidth": {
-    "summary": "Holen Sie sich die horizontale Größe des scrollbaren Teils dieses Diagramms in Steuereinheiten (geräteunabhängige Pixel). (Implements IScrollInfo @ @)"
+    "summary": "Holen Sie sich die horizontale Größe des scrollbaren Teils dieses Diagramms in Steuereinheiten (geräteunabhängige Pixel). (Implements IScrollInfo.)"
   },
   "P:StockSharp.Xaml.Diagram.GXDiagram.DiagramPanel.FixedBounds": {
     "summary": "Bekommt oder setzt ein festes Begrenzungsrechteck, das von ComputeDiagramBounds zurückgegeben wird."
@@ -172569,7 +172569,7 @@
     "summary": "Holen Sie sich die vertikale Größe des sichtbaren Teils dieses Panels unter Kontrolle (geräteunabhängiges Pixel) Einheiten. (Implements IScrollInfo @)."
   },
   "P:StockSharp.Xaml.Diagram.GXDiagram.DiagramPanel.ViewportWidth": {
-    "summary": "Holen Sie sich die horizontale Größe des sichtbaren Teils dieses Panels unter Kontrolle (geräteunabhängiges Pixel) Einheiten. (Implements IScrollInfo @ @)"
+    "summary": "Holen Sie sich die horizontale Größe des sichtbaren Teils dieses Panels in Steuergeräten (geräteunabhängige Pixel) Einheiten. (Implements IScrollInfo.)"
   },
   "P:StockSharp.Xaml.Diagram.GXDiagram.DiagramPanel.ZoomPoint": {
     "summary": "Bekommt oder setzt den scheinbaren Fokuspunkt, der beim Ein- oder Auszoomen verwendet wird."
@@ -179337,7 +179337,7 @@
     "summary": "Native Identifier kann gespeichert werden."
   },
   "P:StockSharp.cTrader.cTraderMessageAdapter.IsReplaceCommandEditCurrent": {
-    "summary": "Is the OrderReplaceMessage command edit a current order."
+    "summary": "Bearbeitet der Befehl OrderReplaceMessage eine aktuelle Bestellung?"
   },
   "P:StockSharp.cTrader.cTraderMessageAdapter.IsSupportOrderBookIncrements": {
     "summary": "Adapter übersetzt inkrementelle Auftragsbücher."
