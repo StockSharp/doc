@@ -7422,7 +7422,7 @@
     "summary": "32バイト: アドレスの順序にパーティーの識別のコンポーネント"
   },
   "T:StockSharp.SpbEx.Protocol.Period": {
-    "summary": "Формат компонента Period: размер динамический, размер 26 байтов ???"
+    "summary": "期間構成形式:動的サイズ、26バイト。"
   },
   "T:StockSharp.SpbEx.Protocol.PositionUpdateMsg": {
     "summary": "クリアポジションの流れは、非ジャーナルです。"
@@ -39162,7 +39162,7 @@
     "summary": "ストリーミングデータの到着メッセージ。"
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTime": {
-    "summary": "???"
+    "summary": "メッセージの時間。"
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTnBegin": {
     "summary": "次回のデータブロックが受信されるタイミングです。"

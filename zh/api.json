@@ -6630,7 +6630,7 @@
     "summary": "Поток FORTS_FORECASTIM_REPL - Прогноз рисков после возможной раздвижки. Таблица part_sa_forecast: Прогноз объема свободных средств для РК."
   },
   "T:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns": {
-    "summary": "FORTS_REFDATA_REPL - ��������: ���������� � ���������� ����������. ������� fut_instruments: ���������� ������������."
+    "summary": "FORTS REFDATA REPL流:期货参考和会话信息. fut 仪器表:仪器目录."
   },
   "T:StockSharp.Plaza.Metadata.PlazaFutMarginTypeColumns": {
     "summary": "FORTS_REFDATA_REPL - Фьючерсы: справочная и сессионная информация. Таблица fut_margin_type: Типы маржирования."
@@ -6834,7 +6834,7 @@
     "summary": "流出FORTS_PART_REPL-资金和限额信息. 表部分-客户的资金和限额."
   },
   "T:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns": {
-    "summary": "����� FORTS_PART_REPL - ���������� � ��������� � �������. ������� part_sa - ��������� ��������."
+    "summary": "FORTS PART REPL流:参与者和账户信息. part sa表:参与者账户。"
   },
   "T:StockSharp.Plaza.Metadata.PlazaPositionColumns": {
     "summary": "流出FORTS_POS_REPL-位置信息. 表格位置-客户位置."
@@ -7422,7 +7422,7 @@
     "summary": "32字节:地址令各方身份识别的组成部分"
   },
   "T:StockSharp.SpbEx.Protocol.Period": {
-    "summary": "Формат компонента Period: размер динамический, размер 26 байтов ???"
+    "summary": "期间组件格式:动态大小,26字节."
   },
   "T:StockSharp.SpbEx.Protocol.PositionUpdateMsg": {
     "summary": "清空位置的流量没有被记录."
@@ -39162,7 +39162,7 @@
     "summary": "流出数据到来的消息."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTime": {
-    "summary": "???"
+    "summary": "消息时间。"
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTnBegin": {
     "summary": "这是下一个数据块开始接收的时间."

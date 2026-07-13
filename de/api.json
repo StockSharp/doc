@@ -7422,7 +7422,7 @@
     "summary": "32 Bytes: Komponente der Identifizierung der Parteien der Adressreihenfolge"
   },
   "T:StockSharp.SpbEx.Protocol.Period": {
-    "summary": "Формат компонента Period: размер динамический, размер 26 байтов ???"
+    "summary": "Periodenkomponentenformat: dynamische Größe, 26 Bytes."
   },
   "T:StockSharp.SpbEx.Protocol.PositionUpdateMsg": {
     "summary": "Der Fluss der Clearing-Positionen ist unjournaled."
@@ -39162,7 +39162,7 @@
     "summary": "Die Nachricht über die Ankunft von Streaming-Daten."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTime": {
-    "summary": "???"
+    "summary": "Uhrzeit der Meldung."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTnBegin": {
     "summary": "Dies ist die Zeit, in der der nächste Datenblock zu empfangen beginnt."

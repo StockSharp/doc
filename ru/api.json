@@ -6537,7 +6537,7 @@
     "summary": "Поток FORTS_INFO_REPL - Дополнительная справочная информация. Таблица base_contracts_params - Параметры базовых контрактов."
   },
   "T:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns": {
-    "summary": "������� �������, ���������� ������� ���������� � �������."
+    "summary": "Таблица с информацией о базовом заказе."
   },
   "T:StockSharp.Plaza.Metadata.PlazaBondIsinFutureColumns": {
     "summary": "Поток FORTS_REFDATA_REPL - Фьючерсы: справочная и сессионная информация. Таблица fut_bond_isin: Справочник инструментов облигаций."
@@ -6630,7 +6630,7 @@
     "summary": "Поток FORTS_FORECASTIM_REPL - ​​Прогноз риска после возможной раздвижки. Таблица part_sa_forecast: Прогноз объёма запасов РК."
   },
   "T:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns": {
-    "summary": "FORTS_REFDATA_REPL - ��������: ���������� � ���������� ����������. ������� fut_instruments: ���������� ������������."
+    "summary": "Поток FORTS REFDATA REPL: справочная и сессионная информация о фьючерсах. fut instruments table: каталог инструментов."
   },
   "T:StockSharp.Plaza.Metadata.PlazaFutMarginTypeColumns": {
     "summary": "FORTS_REFDATA_REPL - Фьючерсы: справочная и сессионная информация. Таблица fut_margin_type: Типы маржирования."
@@ -6834,7 +6834,7 @@
     "summary": "Поток FORTS_PART_REPL - Информация о средствах и лимитах. Часть таблицы - Средства и лимиты клиентов."
   },
   "T:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns": {
-    "summary": "����� FORTS_PART_REPL - ���������� � ��������� � �������. ������� part_sa - ��������� ��������."
+    "summary": "Поток FORTS PART REPL: информация об участниках и счетах. part sa table: счета участников."
   },
   "T:StockSharp.Plaza.Metadata.PlazaPositionColumns": {
     "summary": "Поток FORTS_POS_REPL - Информация о позициях. Таблица позиций - Позиции клиентов."
@@ -7422,7 +7422,7 @@
     "summary": "32 байта. Компонент идентификации стороны адресного поручения"
   },
   "T:StockSharp.SpbEx.Protocol.Period": {
-    "summary": "Формат компонента Period: размер динамический, размер 26 байтов ???"
+    "summary": "Формат компонента периода: динамический размер, 26 байт."
   },
   "T:StockSharp.SpbEx.Protocol.PositionUpdateMsg": {
     "summary": "Поток клиринговых позиций нежурналируемый."
@@ -35895,40 +35895,40 @@
     "summary": "Коэффициент для определения размера окна, сглаживания при маржировании межконтрактного спрэда"
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.Action": {
-    "summary": "�������� � �������."
+    "summary": "Порядок действий."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.Amount": {
-    "summary": "���������� � �������� (��� ��������� - ���������� ���������� � �������� �� ������� ����� ��������)."
+    "summary": "Количество в заказе. Для ордеров котировок это количество в цитате на текущей стороне."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.AmountRest": {
-    "summary": "���������� ���������� � ������ (��� ��������� - ���������� ���������� ���������� � ������� ����� ��������)."
+    "summary": "Оставшееся количество в заказе. Для ордеров котировок это оставшееся количество в цитате на текущей стороне."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.Direction": {
-    "summary": "�����������."
+    "summary": "Направление."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.IsinId": {
-    "summary": "���������� �������� ������������� �����������."
+    "summary": "Цифровой идентификатор прибора."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.Moment": {
-    "summary": "����� ��������� ��������� ������."
+    "summary": "Время регистрации заказа."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.MomentNs": {
-    "summary": "����� ��������� ��������� ������, �����������."
+    "summary": "Время регистрации заказа в наносекундах."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.OrderId": {
-    "summary": "����� ������."
+    "summary": "Идентификатор заказа."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.Price": {
-    "summary": "����."
+    "summary": "Цена."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.SessionId": {
-    "summary": "������������� �������� ������."
+    "summary": "Идентификатор торговой сессии."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.XStatus": {
-    "summary": "������ ������."
+    "summary": "Статус заказа."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBaseOrdersColumns.XStatus2": {
-    "summary": "������ ������ (2-� ������� �������)."
+    "summary": "Дополнительный статус заказа."
   },
   "F:StockSharp.Plaza.Metadata.PlazaBondIsinFutureColumns.BondId": {
     "summary": "Цифровые кодовые облигации."
@@ -36741,94 +36741,94 @@
     "summary": "Расчетный код."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.BaseContractCode": {
-    "summary": "��� �������� ������."
+    "summary": "Базовый код контракта."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.EnforceImsHalfNetting": {
-    "summary": "������� ��������������� ��������� ���������."
+    "summary": "Принудительный флаг в IMS."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.ExpStart": {
-    "summary": "���� ������ ���������� �����������."
+    "summary": "Срок годности."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.GroupMask": {
-    "summary": "����� ������ ������������."
+    "summary": "Групповая маска."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.InstTerm": {
-    "summary": "�������� �� �����."
+    "summary": "Инструментальный термин."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.IsSpread": {
-    "summary": "������� ��������� �������� � ����������� �����."
+    "summary": "Распространяйте флаг инструмента."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.Isin": {
-    "summary": "���������� ��� �����������."
+    "summary": "Код инструмента."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.IsinId": {
-    "summary": "���������� �������� ������������� �����������."
+    "summary": "Цифровой идентификатор прибора."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.LastTradeDate": {
-    "summary": "���� ��������� ��������� �����������."
+    "summary": "Последняя торговая дата."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.LegsQty": {
-    "summary": "���������� ������������ � ������."
+    "summary": "Количество ног."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.LotVolume": {
-    "summary": "�-�� ������ �������� ������ � �����������."
+    "summary": "Большой размер."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.MinStep": {
-    "summary": "����������� ��� ����."
+    "summary": "Минимальный ценовой шаг."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.MultilegType": {
-    "summary": "��� ������."
+    "summary": "Многогранный тип инструмента."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.Name": {
-    "summary": "������������ �����������."
+    "summary": "Имя инструмента."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.PctYieldCoeff": {
-    "summary": "����������� ���������� ����������."
+    "summary": "Коэффициент расчета доходности."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.PctYieldTotal": {
-    "summary": "����� ���������� ����������."
+    "summary": "Общая доходность."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.PercentRate": {
-    "summary": "���������� ������ ��� ������� ������������ ����� �� ���������� ���������."
+    "summary": "Процентная ставка."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.RoundTo": {
-    "summary": "���������� ������ ����� ������� � ����."
+    "summary": "Точность округления цены."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.SeriesType": {
-    "summary": "������� ��������� �������. D-daily, W-weekly, M-monthly."
+    "summary": "Тип серии."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.SettlementPrice": {
-    "summary": "��������� ���� ����� ���������� ��������."
+    "summary": "Расчетная цена."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.SettlementPriceOpen": {
-    "summary": "��������� ���� �� ������ ������."
+    "summary": "Цена открытия расчетов."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.ShortIsin": {
-    "summary": "��������� �����������."
+    "summary": "Короткий код инструмента."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.Signs": {
-    "summary": "���� ���������."
+    "summary": "Количество десятичных мест."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.StepPrice": {
-    "summary": "��������� ���� ����."
+    "summary": "Стоимость одного минимального шага."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.StepPriceClr": {
-    "summary": "��������� ���� ���� ��������� ��������."
+    "summary": "Очистка цены на один минимальный шаг."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.StepPriceCurr": {
-    "summary": "��������� ������������ ���� ����, ���������� � ������."
+    "summary": "Валюта цены шага."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.StepPriceInterClr": {
-    "summary": "��������� ���� ���� ����. ��������."
+    "summary": "Межклиринговая цена одного минимального шага."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.TasBaseFutIsinId": {
-    "summary": "������������� (isin_id) ��-�������� ��� TAS-��������."
+    "summary": "Идентификатор фьючерсного инструмента TAS."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.TradeModeId": {
-    "summary": "������������� ��������� ������."
+    "summary": "Идентификатор режима торговли."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns.TradePeriodAccess": {
-    "summary": "������ ������� � �������� ��������."
+    "summary": "Флаг доступа торгового периода."
   },
   "F:StockSharp.Plaza.Metadata.PlazaFutMarginTypeColumns.Code": {
     "summary": "Буквенный код РФ или код расчетной фирмы."
@@ -37974,52 +37974,52 @@
     "summary": "Сумма, зарезервированная под отрицательную вариационную маржу."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.ActualAmountOfBaseCurrency": {
-    "summary": "���������� ����� � ������� ������."
+    "summary": "Фактическая сумма в базовой валюте."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.BlockedTax": {
-    "summary": "��������������� ���."
+    "summary": "Сумма заблокированного налога."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.Fee": {
-    "summary": "��������� ���� � �������� �� �������� ������."
+    "summary": "Плата."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.MarginCallCurrent": {
-    "summary": "������ ������ margin call."
+    "summary": "Текущий маржинальный звонок."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.MarginCallFix": {
-    "summary": "������ margin call fix."
+    "summary": "Фиксированный маржинальный звонок."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.MarginCallMoment": {
-    "summary": "����� margin call."
+    "summary": "Время звонков."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.MoneyAmount": {
-    "summary": "����� �����."
+    "summary": "Денежная сумма."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.MoneyBlocked": {
-    "summary": "������������� �����."
+    "summary": "Заблокированные деньги."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.MoneyFree": {
-    "summary": "�������� �����."
+    "summary": "Бесплатные деньги."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.MoneyOld": {
-    "summary": "����� ����� �� ����� ���������� ������."
+    "summary": "Предыдущая сумма наличными."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.MoneyPledgeAmount": {
-    "summary": "��������� ��������� ��������� ������� ������� �����������."
+    "summary": "Обещанная денежная сумма."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.NetOptionValue": {
-    "summary": "�����-��������� �������."
+    "summary": "Чистая стоимость опциона."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.PremiumInterCl": {
-    "summary": "������, ��������� ��� ���������� � ����. ��������."
+    "summary": "Премия за межклиринг."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.SettlementAccount": {
-    "summary": "��������� ��� ���."
+    "summary": "Расчетный счет."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.VmInterCl": {
-    "summary": "������������ �����, ��������� ��� ���������� � ����. �������."
+    "summary": "Межклиринговая вариационная маржа."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns.VmReserve": {
-    "summary": "������ ������������ �����."
+    "summary": "Вариационный маржинальный резерв."
   },
   "F:StockSharp.Plaza.Metadata.PlazaPositionColumns.AccountType": {
     "summary": "0 - для РФ 1 - для БФ 2 - для клиента"
@@ -39162,7 +39162,7 @@
     "summary": "Сообщение о приходе потоков данных."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTime": {
-    "summary": "???"
+    "summary": "Время сообщений."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTnBegin": {
     "summary": "Означает момент начала получения очередного блока данных."

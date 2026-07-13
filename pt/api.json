@@ -7422,7 +7422,7 @@
     "summary": "32 bytes: Componente de identificação das partes na ordem de endereço"
   },
   "T:StockSharp.SpbEx.Protocol.Period": {
-    "summary": "Формат компонента Period: размер динамический, размер 26 байтов ???"
+    "summary": "Formato do componente do período: tamanho dinâmico, 26 bytes."
   },
   "T:StockSharp.SpbEx.Protocol.PositionUpdateMsg": {
     "summary": "O fluxo de posições de compensação não é percorrido."
@@ -39162,7 +39162,7 @@
     "summary": "A mensagem da chegada dos dados de streaming."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTime": {
-    "summary": "???"
+    "summary": "Hora da mensagem."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTnBegin": {
     "summary": "Este é o momento em que o próximo bloco de dados começa a ser recebido."

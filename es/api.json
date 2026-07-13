@@ -6630,7 +6630,7 @@
     "summary": "Stream FORTS_FORECASTIM_REPL - Previsión de riesgo después de posible deslizamiento. Tabla part_sa_forecast: Pronóstico de fondos gratuitos para Kazajstán."
   },
   "T:StockSharp.Plaza.Metadata.PlazaFutInstrumentsColumns": {
-    "summary": "FORTS_REFDATA_REPL - ��������: ���������� � ���������� ����������. ������� fut_instruments: ���������� ������������."
+    "summary": "FORTS REFDATA REPL stream: futuros referencia e información de sesión. fut instruments table: instrument directory."
   },
   "T:StockSharp.Plaza.Metadata.PlazaFutMarginTypeColumns": {
     "summary": "FORTS_REFDATA_REPL - Futuros: información de antecedentes y sesiones. Tabla fut_margin_type: Margin types."
@@ -6834,7 +6834,7 @@
     "summary": "Stream FORTS_PART_REPL - Información sobre fondos y límites. Parte de la tabla - Fondos y límites de los clientes."
   },
   "T:StockSharp.Plaza.Metadata.PlazaPortfolioSaColumns": {
-    "summary": "����� FORTS_PART_REPL - ���������� � ��������� � �������. ������� part_sa - ��������� ��������."
+    "summary": "FORTS PART REPL stream: información del participante y de la cuenta. part sa table: participant accounts."
   },
   "T:StockSharp.Plaza.Metadata.PlazaPositionColumns": {
     "summary": "Stream FORTS_POS_REPL - Información de posición. Posición de la tabla - Posiciones de clientes."
@@ -7422,7 +7422,7 @@
     "summary": "32 bytes: Componente de identificación de las partes en la orden de dirección"
   },
   "T:StockSharp.SpbEx.Protocol.Period": {
-    "summary": "Формат компонента Period: размер динамический, размер 26 байтов ???"
+    "summary": "Formato de componente de período: tamaño dinámico, 26 bytes."
   },
   "T:StockSharp.SpbEx.Protocol.PositionUpdateMsg": {
     "summary": "El flujo de posiciones despejadas no está registrado."
@@ -39162,7 +39162,7 @@
     "summary": "El mensaje de la llegada de datos de transmisión."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTime": {
-    "summary": "???"
+    "summary": "Hora del mensaje."
   },
   "F:StockSharp.Plaza.Native.CGate.Messages.PlazaMessageTypes.MsgTnBegin": {
     "summary": "Este es el momento en que el siguiente bloque de datos comienza a ser recibido."
