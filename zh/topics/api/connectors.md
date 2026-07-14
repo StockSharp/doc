@@ -2,6 +2,12 @@
 
 要在 [S#](../api.md) 中处理交易所和数据源，建议使用基类 [Connector](xref:StockSharp.Algo.Connector)。
 
+## 源代码仓库
+
+基础 [Connector](xref:StockSharp.Algo.Connector)、消息模型和通用适配器协议仍位于 [StockSharp 核心仓库](https://github.com/StockSharp/StockSharp)。面向特定提供商的开源适配器则在 [StockSharp Connectors 仓库](https://github.com/StockSharp/Connectors) 中单独维护。
+
+每个顶层连接器目录都包含独立的 .NET 项目，`Connectors.slnx` 可用于构建整个仓库。研究适配器实现、修复现有连接器或贡献新连接器时，请使用此仓库。
+
 让我们看看如何使用 [Connector](xref:StockSharp.Algo.Connector)。示例的源代码位于 Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments 项目中。
 
 ![MultiConnection 主界面](../../images/multiconnection_main.png)

@@ -2260,6 +2260,8 @@
     - name: チャート
       href: api/graphical_user_interface/charts.md
       items:
+      - name: JavaScript チャート
+        href: api/graphical_user_interface/charts/javascript_charts.md
       - name: ローソク足チャート
         href: api/graphical_user_interface/charts/candle_chart.md
       - name: ローソク足チャートパネル

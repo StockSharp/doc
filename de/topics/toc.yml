@@ -2260,6 +2260,8 @@
     - name: Diagramme
       href: api/graphical_user_interface/charts.md
       items:
+      - name: JavaScript-Diagramme
+        href: api/graphical_user_interface/charts/javascript_charts.md
       - name: Kerzendiagramm
         href: api/graphical_user_interface/charts/candle_chart.md
       - name: Kerzendiagramm-Panel

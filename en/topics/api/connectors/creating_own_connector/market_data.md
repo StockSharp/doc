@@ -444,7 +444,7 @@ The order log is detailed information about all changes in the order book, inclu
 
 To implement a subscription to an order log in an adapter, the **OnOrderLogSubscriptionAsync** method is used. This method is called when a [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) message with the [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) data type is received.
 
-Below is an example implementation of this method taken from the [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) connector, which supports order log:
+Below is an example implementation of this method taken from the [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp) connector, which supports order log:
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)

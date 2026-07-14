@@ -1,6 +1,10 @@
 # Source codes
 
-Currently, the [S#](../api.md) core is being developed as part of the Open Source community, is available as source code, and is hosted in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository.
+The open-source [S#](../api.md) code is split across several repositories. The [StockSharp core repository](https://github.com/StockSharp/StockSharp) contains the message model, business entities, shared connector abstractions, algorithms, testing tools, and other platform foundations. Provider-specific connector implementations are not stored in the core repository.
+
+All open provider-specific connectors are maintained in [StockSharp\/Connectors](https://github.com/StockSharp/Connectors). Each connector is an independent .NET project, and the repository includes `Connectors.slnx` for building them together.
+
+The standalone browser chart engine and web-terminal chart stack are maintained in [StockSharp\/Charts](https://github.com/StockSharp/Charts). See [JavaScript charts](../api/graphical_user_interface/charts/javascript_charts.md).
 
 [Instructions for using GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world)
 
@@ -10,7 +14,7 @@ List of components available with source code:
 - Format of the market data storage.
 - Trading simulator.
 - History simulator (backtester).
-- Indicators (more than 70) of technical analysis.
+- Indicators (more than 140) of technical analysis.
 - Algorithms for calculating profit-loss, slippage, delay.
 - Algorithms for building candles of any time frame, as well as non-time-based candles (tick, range, etc.).
 - Logging.

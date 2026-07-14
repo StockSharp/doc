@@ -148,7 +148,7 @@ public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, C
 
 需要注意的是，并非所有交易所都支持此功能。例如，Coinbase 并未提供批量撤单的 API。在这种情况下，可能需要实现对单个订单的顺序撤单。
 
-下面是批量撤单方法的实现示例，取自支持此功能的 [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) 连接器：
+下面是批量撤单方法的实现示例，取自支持此功能的 [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp) 连接器：
 
 ```cs
 public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage cancelMsg, CancellationToken cancellationToken)

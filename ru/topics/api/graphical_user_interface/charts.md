@@ -63,6 +63,8 @@
 
 ## См. также
 
+[JavaScript-графики](charts/javascript_charts.md)
+
 [Свечной график](charts/candle_chart.md)
 
 [График\-панель](charts/candle_chart_panel.md)

@@ -444,7 +444,7 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 
 要在适配器中实现对订单日志的订阅，使用 **OnOrderLogSubscriptionAsync** 方法。当收到 [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) 消息且其数据类型为 [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) 时会调用该方法。
 
-以下是从支持订单日志的 [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) 连接器中提取的该方法实现示例：
+以下是从支持订单日志的 [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp) 连接器中提取的该方法实现示例：
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)

@@ -445,7 +445,7 @@ private void SessionOnTradeReceived(Trade trade)
 
 Для реализации подписки на лог заявок в адаптере используется метод **OnOrderLogSubscriptionAsync**. Этот метод вызывается при получении сообщения [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) с типом данных [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog).
 
-Ниже приведен пример реализации этого метода, взятый из коннектора [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), поддерживающего лог заявок:
+Ниже приведен пример реализации этого метода, взятый из коннектора [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp), поддерживающего лог заявок:
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)

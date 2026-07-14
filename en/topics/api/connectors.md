@@ -2,6 +2,12 @@
 
 For working with exchanges and data sources in [S#](../api.md), it is recommended to use the base class [Connector](xref:StockSharp.Algo.Connector).
 
+## Source code repository
+
+The base [Connector](xref:StockSharp.Algo.Connector), message model, and common adapter contracts remain in the [StockSharp core repository](https://github.com/StockSharp/StockSharp). Provider-specific open adapters are maintained separately in the [StockSharp Connectors repository](https://github.com/StockSharp/Connectors).
+
+Each top-level connector directory contains its own .NET project, while `Connectors.slnx` builds the repository as a whole. Use this repository when studying an adapter implementation, fixing an existing connector, or contributing a new one.
+
 Let's look at working with [Connector](xref:StockSharp.Algo.Connector). The source code of the example can be found in the Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments project.
 
 ![multiconnection main](../../images/multiconnection_main.png)

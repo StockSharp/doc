@@ -21,7 +21,7 @@ The adapter performs two main functions:
 1. Converts incoming messages into commands of a specific trading system.
 2. Converts information received from the trading system (connection, market data, transactions, etc.) into outgoing messages.
 
-Below is a description of the process of creating your own adapter for [Coinbase](https://github.com/StockSharp/StockSharp/tree/master/Connectors/Coinbase) (all connectors with source code are available in the [StockSharp repository](https://github.com/StockSharp/StockSharp/tree/master/Connectors) and are provided as a tutorial).
+Below is a description of the process of creating your own adapter for [Coinbase](https://github.com/StockSharp/Connectors/tree/main/Coinbase) (all open connectors are available in the dedicated [Connectors repository](https://github.com/StockSharp/Connectors) and can be used as implementation examples).
 
 ## Example of Creating a Coinbase Message Adapter
 

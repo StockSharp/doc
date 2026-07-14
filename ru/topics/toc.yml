@@ -2408,6 +2408,8 @@
     - name: Графики
       href: api/graphical_user_interface/charts.md
       items:
+      - name: JavaScript-графики
+        href: api/graphical_user_interface/charts/javascript_charts.md
       - name: Свечной график
         href: api/graphical_user_interface/charts/candle_chart.md
       - name: График-панель

@@ -148,7 +148,7 @@ public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, C
 
 すべての取引所がこの機能をサポートしているわけではありません。たとえば Coinbase は、一括注文キャンセル用の API を提供していません。このような場合、必要であれば個別注文の逐次キャンセルを実装します。
 
-以下は、この機能をサポートする [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) コネクターから取得した、一括注文キャンセルメソッドの実装例です。
+以下は、この機能をサポートする [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp) コネクターから取得した、一括注文キャンセルメソッドの実装例です。
 
 ```cs
 public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage cancelMsg, CancellationToken cancellationToken)

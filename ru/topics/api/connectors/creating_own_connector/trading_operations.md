@@ -148,7 +148,7 @@ public override async ValueTask CancelOrderAsync(OrderCancelMessage cancelMsg, C
 
 Стоит отметить, что не все биржи поддерживают эту функцию. Например, Coinbase не предоставляет API для массовой отмены заявок. В таких случаях может потребоваться реализация последовательной отмены отдельных заявок.
 
-Ниже приведен пример реализации метода массовой отмены заявок, взятый из коннектора [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), который поддерживает эту функцию:
+Ниже приведен пример реализации метода массовой отмены заявок, взятый из коннектора [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp), который поддерживает эту функцию:
 
 ```cs
 public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage cancelMsg, CancellationToken cancellationToken)

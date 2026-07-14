@@ -148,7 +148,7 @@ Para implementar o cancelamento em massa de ordens no adaptador, normalmente é 
 
 Nem todas as bolsas suportam essa função. Por exemplo, a Coinbase não oferece uma API para cancelamento em massa de ordens. Nesses casos, implemente o cancelamento sequencial de ordens individuais, se necessário.
 
-Abaixo está um exemplo da implementação do método de cancelamento em massa de ordens, retirado do conector [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), que suporta essa função:
+Abaixo está um exemplo da implementação do método de cancelamento em massa de ordens, retirado do conector [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp), que suporta essa função:
 
 ```cs
 public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage cancelMsg, CancellationToken cancellationToken)

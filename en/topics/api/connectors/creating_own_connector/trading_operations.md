@@ -148,7 +148,7 @@ To implement mass order cancellation in the adapter, the **CancelOrderGroupAsync
 
 Not all exchanges support this function. For example, Coinbase does not provide an API for mass order cancellation. In such cases, implement sequential cancellation of individual orders if needed.
 
-Below is an example of the implementation of the mass order cancellation method, taken from the [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) connector, which supports this function:
+Below is an example of the implementation of the mass order cancellation method, taken from the [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp) connector, which supports this function:
 
 ```cs
 public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage cancelMsg, CancellationToken cancellationToken)

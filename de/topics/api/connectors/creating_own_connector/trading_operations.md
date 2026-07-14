@@ -148,7 +148,7 @@ Zur Implementierung der Massenstornierung von Aufträgen im Adapter wird in der 
 
 Nicht alle Börsen unterstützen diese Funktion. Coinbase bietet beispielsweise keine API für die Massenstornierung von Aufträgen. Implementieren Sie in solchen Fällen bei Bedarf die sequenzielle Stornierung einzelner Aufträge.
 
-Nachfolgend finden Sie ein Beispiel für die Implementierung der Methode zur Massenstornierung von Aufträgen, entnommen aus dem [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp)-Connector, der diese Funktion unterstützt:
+Nachfolgend finden Sie ein Beispiel für die Implementierung der Methode zur Massenstornierung von Aufträgen, entnommen aus dem [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp)-Connector, der diese Funktion unterstützt:
 
 ```cs
 public override async ValueTask CancelOrderGroupAsync(OrderGroupCancelMessage cancelMsg, CancellationToken cancellationToken)

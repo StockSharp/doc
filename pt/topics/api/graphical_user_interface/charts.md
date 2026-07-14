@@ -63,6 +63,7 @@ As classes de elementos visuais têm várias propriedades para ajustar a aparên
 
 ## Ver também
 
+- [Gráficos JavaScript](charts/javascript_charts.md)
 - [Gráfico de velas](charts/candle_chart.md)
 - [Painel de gráfico](charts/candle_chart_panel.md)
 - [Gráfico de curva de capital](charts/equity_curve_chart.md)

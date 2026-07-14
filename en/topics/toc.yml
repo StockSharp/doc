@@ -2260,6 +2260,8 @@
     - name: Charts
       href: api/graphical_user_interface/charts.md
       items:
+      - name: JavaScript charts
+        href: api/graphical_user_interface/charts/javascript_charts.md
       - name: Candle chart
         href: api/graphical_user_interface/charts/candle_chart.md
       - name: Candle chart panel

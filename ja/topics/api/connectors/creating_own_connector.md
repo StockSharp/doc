@@ -21,7 +21,7 @@
 1. 受信メッセージを特定の取引システムのコマンドへ変換します。
 2. 取引システムから受け取った情報（接続、マーケットデータ、トランザクションなど）を送信メッセージへ変換します。
 
-以下では、[Coinbase](https://github.com/StockSharp/StockSharp/tree/master/Connectors/Coinbase) 用の独自アダプターを作成するプロセスについて説明します（ソースコード付きのすべてのコネクターは [StockSharp リポジトリ](https://github.com/StockSharp/StockSharp/tree/master/Connectors) で利用でき、チュートリアルとして提供されています）。
+以下では、[Coinbase](https://github.com/StockSharp/Connectors/tree/main/Coinbase) 用の独自アダプターを作成するプロセスについて説明します（すべてのオープンコネクターは専用の [Connectors リポジトリ](https://github.com/StockSharp/Connectors) で公開され、実装例として利用できます）。
 
 ## Coinbase メッセージアダプター作成例
 

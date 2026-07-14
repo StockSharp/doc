@@ -2,6 +2,12 @@
 
 Para trabalhar com bolsas e fontes de dados no [S#](../api.md), recomenda-se usar a classe base [Connector](xref:StockSharp.Algo.Connector).
 
+## Repositório de código-fonte
+
+O [Connector](xref:StockSharp.Algo.Connector) base, o modelo de mensagens e os contratos comuns dos adaptadores permanecem no [repositório principal do StockSharp](https://github.com/StockSharp/StockSharp). Os adaptadores abertos específicos de cada fornecedor são mantidos separadamente no [repositório StockSharp Connectors](https://github.com/StockSharp/Connectors).
+
+Cada diretório de conector de nível superior contém o seu próprio projeto .NET, enquanto `Connectors.slnx` compila todo o repositório. Use este repositório para estudar a implementação de um adaptador, corrigir um conector existente ou contribuir com um novo.
+
 Vamos examinar o trabalho com [Connector](xref:StockSharp.Algo.Connector). O código-fonte do exemplo pode ser encontrado no projeto Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments.
 
 ![MultiConnection principal](../../images/multiconnection_main.png)

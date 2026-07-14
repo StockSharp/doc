@@ -2,6 +2,12 @@
 
 [S#](../api.md) で取引所やデータソースを扱うには、基底クラス [Connector](xref:StockSharp.Algo.Connector) を使用することを推奨します。
 
+## ソースコードリポジトリ
+
+基底 [Connector](xref:StockSharp.Algo.Connector)、メッセージモデル、共通アダプター契約は [StockSharp コアリポジトリ](https://github.com/StockSharp/StockSharp) に残っています。プロバイダー固有のオープンアダプターは、[StockSharp Connectors リポジトリ](https://github.com/StockSharp/Connectors) で個別に管理されています。
+
+最上位の各コネクターディレクトリには独立した .NET プロジェクトがあり、`Connectors.slnx` でリポジトリ全体をビルドできます。アダプター実装の調査、既存コネクターの修正、新しいコネクターの追加には、このリポジトリを使用してください。
+
 [Connector](xref:StockSharp.Algo.Connector) の利用方法を見てみましょう。この例のソースコードは Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments プロジェクトにあります。
 
 ![MultiConnection メイン](../../images/multiconnection_main.png)

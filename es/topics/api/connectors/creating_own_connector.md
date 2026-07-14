@@ -21,7 +21,7 @@ El adaptador realiza dos funciones principales:
 1. Convierte los mensajes entrantes en comandos de un sistema de negociación específico.
 2. Convierte la información recibida del sistema de negociación (conexión, datos de mercado, transacciones, etc.) en mensajes salientes.
 
-A continuación se describe el proceso de creación de su propio adaptador para [Coinbase](https://github.com/StockSharp/StockSharp/tree/master/Connectors/Coinbase) (todos los conectores con código fuente están disponibles en el [repositorio de StockSharp](https://github.com/StockSharp/StockSharp/tree/master/Connectors) y se proporcionan como tutorial).
+A continuación se describe el proceso de creación de su propio adaptador para [Coinbase](https://github.com/StockSharp/Connectors/tree/main/Coinbase) (todos los conectores abiertos están disponibles en el [repositorio Connectors](https://github.com/StockSharp/Connectors) y se pueden usar como ejemplos de implementación).
 
 ## Ejemplo de Creación de un Adaptador de Mensajes de Coinbase
 

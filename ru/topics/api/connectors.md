@@ -2,6 +2,12 @@
 
 Для работы с биржами и источниками данных в [S\#](../api.md) рекомендуется работать через базовый класс [Connector](xref:StockSharp.Algo.Connector).
 
+## Репозиторий исходного кода
+
+Базовый [Connector](xref:StockSharp.Algo.Connector), модель сообщений и общие контракты адаптеров остаются в [репозитории ядра StockSharp](https://github.com/StockSharp/StockSharp). Открытые адаптеры для конкретных поставщиков отдельно поддерживаются в [репозитории StockSharp Connectors](https://github.com/StockSharp/Connectors).
+
+Каждый каталог коннектора верхнего уровня содержит отдельный проект .NET, а файл `Connectors.slnx` позволяет собрать репозиторий целиком. Используйте этот репозиторий для изучения реализации адаптера, исправления существующего коннектора или добавления нового.
+
 Рассмотрим работу с [Connector](xref:StockSharp.Algo.Connector). Исходные коды примера находятся в проекте Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments.
 
 ![мультиподключение: главное окно](../../images/multiconnection_main.png)

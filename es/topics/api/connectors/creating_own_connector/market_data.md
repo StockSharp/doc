@@ -444,7 +444,7 @@ El registro de órdenes es información detallada sobre todos los cambios en el 
 
 Para implementar una suscripción a un registro de órdenes en un adaptador, se utiliza el método **OnOrderLogSubscriptionAsync**. Este método se llama cuando se recibe un mensaje [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) con el tipo de datos [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog).
 
-A continuación se muestra un ejemplo de implementación de este método tomado del conector [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), que admite el registro de órdenes:
+A continuación se muestra un ejemplo de implementación de este método tomado del conector [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp), que admite el registro de órdenes:
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)

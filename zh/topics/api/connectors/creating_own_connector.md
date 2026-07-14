@@ -21,7 +21,7 @@
 1. 将传入消息转换为特定交易系统的命令。
 2. 将从交易系统接收到的信息（连接、市场数据、交易等）转换为传出消息。
 
-下面描述了为 [Coinbase](https://github.com/StockSharp/StockSharp/tree/master/Connectors/Coinbase) 创建自己适配器的过程（所有带源代码的连接器都可以在 [StockSharp 仓库](https://github.com/StockSharp/StockSharp/tree/master/Connectors) 中找到，并作为教程提供）。
+下面介绍为 [Coinbase](https://github.com/StockSharp/Connectors/tree/main/Coinbase) 创建自定义适配器的过程（所有开源连接器都位于独立的 [Connectors 仓库](https://github.com/StockSharp/Connectors) 中，可作为实现示例）。
 
 ## 创建 Coinbase 消息适配器示例
 

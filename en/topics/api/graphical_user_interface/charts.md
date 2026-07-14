@@ -63,6 +63,7 @@ The classes of visual elements have several properties for adjusting the appeara
 
 ## See also
 
+- [JavaScript charts](charts/javascript_charts.md)
 - [Candlestick chart](charts/candle_chart.md)
 - [Chart panel](charts/candle_chart_panel.md)
 - [Equity curve chart](charts/equity_curve_chart.md)

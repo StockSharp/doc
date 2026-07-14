@@ -444,7 +444,7 @@ O registo de ordens é uma informação detalhada sobre todas as mudanças no li
 
 Para implementar uma assinatura de registo de ordens em um adaptador, o método **OnOrderLogSubscriptionAsync** é usado. Esse método é chamado quando uma mensagem [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) com o tipo de dado [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) é recebida.
 
-Abaixo está um exemplo de implementação desse método retirado do conector [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), que suporta registo de ordens:
+Abaixo está um exemplo de implementação desse método retirado do conector [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp), que suporta registo de ordens:
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)

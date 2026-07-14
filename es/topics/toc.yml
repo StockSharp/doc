@@ -2260,6 +2260,8 @@
     - name: Gráficos
       href: api/graphical_user_interface/charts.md
       items:
+      - name: Gráficos JavaScript
+        href: api/graphical_user_interface/charts/javascript_charts.md
       - name: Gráfico de velas
         href: api/graphical_user_interface/charts/candle_chart.md
       - name: Panel de gráfico de velas

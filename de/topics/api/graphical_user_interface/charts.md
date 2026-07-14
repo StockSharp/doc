@@ -63,6 +63,7 @@ Die Klassen visueller Elemente besitzen mehrere Eigenschaften zur Anpassung des 
 
 ## Siehe auch
 
+- [JavaScript-Diagramme](charts/javascript_charts.md)
 - [Kerzendiagramm](charts/candle_chart.md)
 - [Diagramm-Panel](charts/candle_chart_panel.md)
 - [Equity-Curve-Diagramm](charts/equity_curve_chart.md)

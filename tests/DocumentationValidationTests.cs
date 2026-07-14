@@ -2369,6 +2369,37 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void ConnectorSourceLinksUseDedicatedRepository()
+	{
+		var errors = new List<string>();
+		var staleLinkPattern = new Regex(
+			@"https?://github\.com/StockSharp/StockSharp/(?:tree|blob)/[^/\s\)\]\}>\""'<]+/Connectors",
+			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var content = ReadAllText(file);
+				var matches = staleLinkPattern.Matches(content);
+				if (matches.Count == 0)
+					continue;
+
+				var lineStarts = GetLineStarts(content);
+				foreach (Match match in matches)
+				{
+					var location = $"{RelativeToRepo(file)}:{GetLineNumber(lineStarts, match.Index)}";
+					errors.Add($"{location}: connector source link '{match.Value}' points into the core repository; use https://github.com/StockSharp/Connectors.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownAnchorReferencesMatchDefaultLanguage()
 	{
 		var errors = new List<string>();

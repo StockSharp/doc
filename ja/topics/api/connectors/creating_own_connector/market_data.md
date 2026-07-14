@@ -444,7 +444,7 @@ private async ValueTask SessionOnTradeReceived(Trade trade, CancellationToken ca
 
 アダプターで注文ログへのサブスクリプションを実装するには、**OnOrderLogSubscriptionAsync** メソッドを使用します。このメソッドは、[MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) メッセージを [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) データ型で受信したときに呼び出されます。
 
-以下は、注文ログをサポートする [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp) コネクターから取った、このメソッドの実装例です。
+以下は、注文ログをサポートする [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp) コネクターから取った、このメソッドの実装例です。
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)

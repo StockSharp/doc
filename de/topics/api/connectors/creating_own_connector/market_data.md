@@ -444,7 +444,7 @@ Das Orderprotokoll enthält detaillierte Informationen über alle Änderungen im
 
 Um ein Abonnement eines Orderprotokolls in einem Adapter zu implementieren, wird die Methode **OnOrderLogSubscriptionAsync** verwendet. Diese Methode wird aufgerufen, wenn eine Nachricht [MarketDataMessage](xref:StockSharp.Messages.MarketDataMessage) mit dem Datentyp [DataType.OrderLog](xref:StockSharp.Messages.DataType.OrderLog) empfangen wird.
 
-Nachfolgend finden Sie ein Beispiel für die Implementierung dieser Methode aus dem Connector [BitStamp](https://github.com/StockSharp/StockSharp/tree/master/Connectors/BitStamp), der das Orderprotokoll unterstützt:
+Nachfolgend finden Sie ein Beispiel für die Implementierung dieser Methode aus dem Connector [BitStamp](https://github.com/StockSharp/Connectors/tree/main/BitStamp), der das Orderprotokoll unterstützt:
 
 ```cs
 protected override async ValueTask OnOrderLogSubscriptionAsync(MarketDataMessage mdMsg, CancellationToken cancellationToken)

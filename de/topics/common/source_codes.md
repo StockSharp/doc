@@ -1,6 +1,10 @@
 # Quellcodes
 
-Derzeit wird der Kern von [S#](../api.md) im Rahmen der Open-Source-Community entwickelt, ist als Quellcode verfügbar und befindet sich im Repository [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp).
+Der Open-Source-Code von [S#](../api.md) ist auf mehrere Repositorys verteilt. Das [StockSharp-Kernrepository](https://github.com/StockSharp/StockSharp) enthält das Nachrichtenmodell, Geschäftsobjekte, gemeinsame Konnektorabstraktionen, Algorithmen, Testwerkzeuge und weitere Grundlagen der Plattform. Anbieterspezifische Konnektorimplementierungen werden nicht im Kernrepository gespeichert.
+
+Alle offenen, anbieterspezifischen Konnektoren werden in [StockSharp\/Connectors](https://github.com/StockSharp/Connectors) gepflegt. Jeder Konnektor ist ein eigenständiges .NET-Projekt, und das Repository enthält `Connectors.slnx`, um sie gemeinsam zu erstellen.
+
+Die eigenständige Browser-Diagramm-Engine und der Diagramm-Stack für Webterminals werden in [StockSharp\/Charts](https://github.com/StockSharp/Charts) gepflegt. Siehe [JavaScript-Diagramme](../api/graphical_user_interface/charts/javascript_charts.md).
 
 [Anleitung zur Verwendung von GitHub](https://docs.github.com/de/get-started/start-your-journey/hello-world)
 
@@ -10,7 +14,7 @@ Liste der Komponenten, die mit Quellcode verfügbar sind:
 - Format des Marktdatenspeichers.
 - Handelssimulator.
 - Historischer Simulator (Rücktester).
-- Indikatoren der technischen Analyse (mehr als 70).
+- Indikatoren der technischen Analyse (mehr als 140).
 - Algorithmen zur Berechnung von Gewinn/Verlust, Slippage und Verzögerung.
 - Algorithmen zum Erstellen von Kerzen beliebiger Zeitrahmen sowie nicht zeitbasierter Kerzen (Tick, Range usw.).
 - Protokollierung.

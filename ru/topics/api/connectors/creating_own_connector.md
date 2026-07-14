@@ -24,7 +24,7 @@
 1. Преобразует входящие сообщения в команды конкретной торговой системы.
 2. Преобразует информацию, поступающую от торговой системы (соединение, рыночные данные, транзакции и т.п.), в исходящие сообщения.
 
-Ниже описан процесс создания собственного адаптера для [Coinbase](https://github.com/StockSharp/StockSharp/tree/master/Connectors/Coinbase) (все коннекторы с исходным кодом доступны в [репозитории StockSharp](https://github.com/StockSharp/StockSharp/tree/master/Connectors) и предоставляются как учебное пособие).
+Ниже описан процесс создания собственного адаптера для [Coinbase](https://github.com/StockSharp/Connectors/tree/main/Coinbase) (все открытые коннекторы доступны в отдельном [репозитории Connectors](https://github.com/StockSharp/Connectors) и могут использоваться как примеры реализации).
 
 ## Пример создания адаптера сообщений Coinbase
 

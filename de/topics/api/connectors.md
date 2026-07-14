@@ -2,6 +2,12 @@
 
 Für die Arbeit mit Börsen und Datenquellen in [S#](../api.md) wird empfohlen, die Basisklasse [Connector](xref:StockSharp.Algo.Connector) zu verwenden.
 
+## Quellcode-Repository
+
+Der grundlegende [Connector](xref:StockSharp.Algo.Connector), das Nachrichtenmodell und die gemeinsamen Adapterverträge verbleiben im [StockSharp-Kernrepository](https://github.com/StockSharp/StockSharp). Offene, anbieterspezifische Adapter werden separat im [StockSharp-Connectors-Repository](https://github.com/StockSharp/Connectors) gepflegt.
+
+Jedes Konnektorverzeichnis auf der obersten Ebene enthält ein eigenes .NET-Projekt, während `Connectors.slnx` das gesamte Repository erstellt. Verwenden Sie dieses Repository, um eine Adapterimplementierung zu untersuchen, einen vorhandenen Konnektor zu korrigieren oder einen neuen beizutragen.
+
 Schauen wir uns die Arbeit mit [Connector](xref:StockSharp.Algo.Connector) an. Der Quellcode des Beispiels befindet sich im Projekt Samples\/01\_Basic\/01\_ConnectAndDownloadInstruments.
 
 ![MultiConnection Hauptansicht](../../images/multiconnection_main.png)

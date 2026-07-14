@@ -2260,6 +2260,8 @@
     - name: 图表
       href: api/graphical_user_interface/charts.md
       items:
+      - name: JavaScript 图表
+        href: api/graphical_user_interface/charts/javascript_charts.md
       - name: K线图
         href: api/graphical_user_interface/charts/candle_chart.md
       - name: K线图面板
