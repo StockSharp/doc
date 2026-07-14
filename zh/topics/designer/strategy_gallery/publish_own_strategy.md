@@ -14,7 +14,7 @@
 
 - 名称
 - 描述
-- NuGet 包标识符。此参数用于设置商店中产品的链接。例如，在地址 https://stocksharp.com/store/runner/ 中，单词 **runner** 由此参数指定。
+- NuGet 包标识符。此参数用于设置商店中产品的链接。例如，在地址 https://stocksharp.com/zh/store/runner/ 中，单词 **runner** 由此参数指定。
 
 只有通过电子邮件 [info@stocksharp.com](mailto:info@stocksharp.com) 联系后，才能获得 **免费** 或 **付费** 级别的访问权限。默认提供 **私有** 级别，该级别仅允许以私有形式向选定用户发布策略：
 

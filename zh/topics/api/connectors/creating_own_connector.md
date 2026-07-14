@@ -205,7 +205,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 
 连接器实现完成后，有两种使用方式：
 
-1. 将其发布到 [StockSharp Store](https://stocksharp.com/store)，作为付费或免费产品。在这种情况下，用户会通过 [安装程序](../../installer/setup.md) 自动安装该连接器。
+1. 将其发布到 [StockSharp Store](https://stocksharp.com/zh/store)，作为付费或免费产品。在这种情况下，用户会通过 [安装程序](../../installer/setup.md) 自动安装该连接器。
 2. 仅供个人使用时，将编译好的连接器 *.dll* 文件复制到你的应用程序（或任意 StockSharp 产品）的文件夹中。启动时，应用程序会按照以下标准扫描当前目录中的适配器：
 
    - 只考虑名称以 `StockSharp.` 开头、扩展名为 **.dll** 的文件。

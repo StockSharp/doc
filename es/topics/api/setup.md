@@ -174,7 +174,7 @@ Algunos componentes (conectores cripto, etc.) solo están disponibles mediante e
 ### Método 1: autenticación mediante token en la URL
 
 1. Regístrese en el sitio web de StockSharp.
-2. Copie el token desde su [cuenta personal](https://stocksharp.ru/profile/).
+2. Copie el token desde su [cuenta personal](https://stocksharp.com/es/profile/).
 3. Agregue el origen de paquetes:
 
 **CLI:**

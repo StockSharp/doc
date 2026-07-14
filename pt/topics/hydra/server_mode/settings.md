@@ -23,8 +23,8 @@ Depois disso, clique no botão **Definições** para abrir a janela de definiç�
   2. **QuotesInterval** - período de atualização das cotações
   3. **TransactionSession** - definição de uma sessão de negociação. Configuração para negociação através do programa [Hydra](../../hydra.md).
 
-     Esta definição permite configurar o dialeto do protocolo FIX, o remetente e o destinatário, o formato dos dados e outras definições. Consulte as [propriedades FIXServer](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) para obter detalhes.
-  4. **MarketDataSession** - definições para a transferência de dados de mercado recebidos através do [Hydra](../../hydra.md). Consulte as [propriedades FIXServer](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) para obter detalhes.
+     Esta definição permite configurar o dialeto do protocolo FIX, o remetente e o destinatário, o formato dos dados e outras definições. Consulte as [propriedades FIXServer](https://doc.stocksharp.com/html/Properties_T_StockSharp_Fix_FixServer.htm) para obter detalhes.
+  4. **MarketDataSession** - definições para a transferência de dados de mercado recebidos através do [Hydra](../../hydra.md). Consulte as [propriedades FIXServer](https://doc.stocksharp.com/html/Properties_T_StockSharp_Fix_FixServer.htm) para obter detalhes.
   5. **KeepSubscriptionsOnDisconnect** - manter subscrições quando a ligação à fonte é desligada.
   6. **DeadSessionCleanupInterval** - após que intervalo de tempo a informação será limpa se a ligação for desligada.
 - **Autorização** - autorização para obter acesso ao servidor Hydra

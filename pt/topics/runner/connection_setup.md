@@ -56,7 +56,7 @@ E autentique-se por um método conveniente:
 
 ![Configuração da Ligação 2 (2)](../../images/runner_telegram_2.png)
 
-Para autenticação por token, introduza o token de [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
+Para autenticação por token, introduza o token de [https://stocksharp.com/pt/profile/](https://stocksharp.com/pt/profile/):
 
 ![Perfil](../../images/profile.png)
 

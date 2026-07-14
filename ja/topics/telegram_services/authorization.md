@@ -4,7 +4,7 @@
 
 ![認可 のスクリーンショット 1](../../images/telegramactivating.png)
 
-ボットは、[https://stocksharp.com/profile/](https://stocksharp.com/profile/) のプロフィールにアクセスし、そこからトークンをコピーするよう求めます。
+ボットは、[https://stocksharp.com/ja/profile/](https://stocksharp.com/ja/profile/) のプロフィールにアクセスし、そこからトークンをコピーするよう求めます。
 
 ![プロファイル](../../images/profile.png)
 

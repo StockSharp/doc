@@ -2,7 +2,7 @@
 
 目前，[S#](../api.md) 核心由开源社区共同开发，其源代码公开并托管在 [GitHub/StockSharp](https://github.com/StockSharp/StockSharp) 仓库中。
 
-[GitHub 使用说明](https://stocksharp.com/forum/4848/rukovodstvo-po-github/)
+[GitHub 使用说明](https://stocksharp.com/zh/forum/4848/rukovodstvo-po-github/)
 
 提供源代码的组件包括：
 
@@ -16,7 +16,7 @@
 - 日志记录。
 - 导入和导出。
 
-购买后可以获得所有闭源组件以及现成程序的源代码。有关源代码价格的详细信息，请参阅 [源代码价格](https://stocksharp.com/store/?groups=22)。
+购买后可以获得所有闭源组件以及现成程序的源代码。有关源代码价格的详细信息，请参阅 [源代码价格](https://stocksharp.com/zh/store/?groups=22)。
 
 ## 推荐内容
 

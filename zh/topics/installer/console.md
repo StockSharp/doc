@@ -5,9 +5,9 @@
 ## 运行
 
 1. 安装适用于当前平台的 .NET 6 SDK 或运行时。
-2. 从[下载页面](https://stocksharp.com/products/download/)下载 `StockSharp.Installer.Console.zip`。
+2. 从[下载页面](https://stocksharp.com/zh/products/download/)下载 `StockSharp.Installer.Console.zip`。
 3. 解压文件，然后从命令行运行该工具：
-   
+
    ```bash
    dotnet StockSharp.Installer.Console.dll <Command> [product] [dir] [options]
    ```
@@ -26,7 +26,7 @@
 - `Installed` — 列出已安装的程序。
 - `Sign` — 为 DLL 文件签名。
 
-可选参数 `[product]` 是[商店](https://stocksharp.com/store/)中的产品 ID。可以在产品页面中找到该 ID，例如 [Hydra Server 页面](https://stocksharp.com/store/hydra-server/)；也可以运行 `StockSharp.Installer.Console.exe Products -s hydra` 进行查询。`[dir]` 用于指定安装目录。
+可选参数 `[product]` 是[商店](https://stocksharp.com/zh/store/)中的产品 ID。可以在产品页面中找到该 ID，例如 [Hydra Server 页面](https://stocksharp.com/zh/store/hydra-server/)；也可以运行 `StockSharp.Installer.Console.exe Products -s hydra` 进行查询。`[dir]` 用于指定安装目录。
 
 ## 选项
 
@@ -55,7 +55,7 @@ dotnet StockSharp.Installer.Console.dll Install 1269 /home/user/stocksharp -p -r
 
 ## 签名
 
-`Sign` 命令用于为交易机器人的 DLL 添加数字签名。分发自行开发的、基于 API 的交易机器人时，可以使用此命令，使所有接收者（包括使用[免费方案](https://stocksharp.com/pricing/)的用户）都能运行该机器人。
+`Sign` 命令用于为交易机器人的 DLL 添加数字签名。分发自行开发的、基于 API 的交易机器人时，可以使用此命令，使所有接收者（包括使用[免费方案](https://stocksharp.com/zh/pricing/)的用户）都能运行该机器人。
 
 请先编译交易机器人，并添加 `StockSharp.Configuration` 命名空间中的 `[assembly: ProductId(9)]` 特性。需要签名的是 DLL 文件（例如 `MyRobot.dll`），而不是 `.exe` 文件。
 

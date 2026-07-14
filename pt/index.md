@@ -1,6 +1,6 @@
 # Sobre o StockSharp
 
-[StockSharp (S#)](https://stocksharp.com/store/) fornece aplicações de negociação **gratuitas** para mercados globais, incluindo ações, futuros, opções, criptomoedas e forex. Você pode negociar manualmente ou executar estratégias automatizadas, desde robôs de negociação convencionais até sistemas HFT (negociação de alta frequência).
+[StockSharp (S#)](https://stocksharp.com/pt/store/) fornece aplicações de negociação **gratuitas** para mercados globais, incluindo ações, futuros, opções, criptomoedas e forex. Você pode negociar manualmente ou executar estratégias automatizadas, desde robôs de negociação convencionais até sistemas HFT (negociação de alta frequência).
 
 **Suporta mais de 90 corretoras, bolsas e fontes de dados:** [Conectores](topics/api/connectors.md).
 
@@ -79,7 +79,7 @@ A [API](topics/api.md) é uma biblioteca C# para desenvolvimento profissional de
 - [Shell](topics/shell.md) - Estrutura gráfica pronta para estratégias com código-fonte.
 - [MATLAB](topics/matlab.md) - Integração do MATLAB com sistemas de negociação. Negocie a partir de scripts do MATLAB.
 
-[Transferir](https://stocksharp.com/products/download/)
+[Transferir](https://stocksharp.com/pt/products/download/)
 
 ## Conteúdo Recomendado
 

@@ -20724,7 +20724,7 @@
     "summary": "Der connector wurde erfolgreich gekauft. Um ihn zu nutzen, müssen Sie Anwendungen aktualisieren, die connectors unterstützen."
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorIsStubKey": {
-    "summary": "Connector ist nur Stub. Bitte besuchen Sie https://stocksharp.com/pricing/ um weitere Informationen zu erhalten."
+    "summary": "Connector ist nur Stub. Bitte besuchen Sie https://stocksharp.com/de/pricing/ um weitere Informationen zu erhalten."
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorKey": {
     "summary": "Connector"
@@ -143388,7 +143388,7 @@
     "summary": "Der connector wurde erfolgreich gekauft. Um ihn zu nutzen, müssen Sie Anwendungen aktualisieren, die connectors unterstützen."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorIsStub": {
-    "summary": "Connector ist nur Stub. Bitte besuchen Sie https://stocksharp.com/pricing/ um weitere Informationen zu erhalten."
+    "summary": "Connector ist nur Stub. Bitte besuchen Sie https://stocksharp.com/de/pricing/ um weitere Informationen zu erhalten."
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorMustBeExtraInstalled": {
     "summary": "Der connector {0} muss als separates Produkt installiert werden, und das Terminal muss gemäß den Anweisungen konfiguriert werden. Möchten Sie das Produkt {0} für die Installation auswählen?"

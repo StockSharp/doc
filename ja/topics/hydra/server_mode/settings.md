@@ -23,8 +23,8 @@
   2. **QuotesInterval** - 気配値の更新期間
   3. **TransactionSession** - 取引セッションの設定。[Hydra](../../hydra.md) プログラム経由で取引するための設定。
 
-     この設定により、FIX プロトコルのダイアレクト、送信者と受信者、データ形式、およびその他の設定を構成できます。詳細は [FIXServer プロパティ](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) を参照してください。
-  4. **MarketDataSession** - [Hydra](../../hydra.md) を使用して受信したマーケットデータを転送するための設定。詳細は [FIXServer プロパティ](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm) を参照してください。
+     この設定により、FIX プロトコルのダイアレクト、送信者と受信者、データ形式、およびその他の設定を構成できます。詳細は [FIXServer プロパティ](https://doc.stocksharp.com/html/Properties_T_StockSharp_Fix_FixServer.htm) を参照してください。
+  4. **MarketDataSession** - [Hydra](../../hydra.md) を使用して受信したマーケットデータを転送するための設定。詳細は [FIXServer プロパティ](https://doc.stocksharp.com/html/Properties_T_StockSharp_Fix_FixServer.htm) を参照してください。
   5. **KeepSubscriptionsOnDisconnect** - ソースから切断されたときにサブスクリプションを保持します。
   6. **DeadSessionCleanupInterval** - 接続が切断された場合、どの時間間隔後に情報をクリアするか。
 - **認可** - Hydra サーバーへのアクセス権を得るための認可

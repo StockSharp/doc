@@ -23,8 +23,8 @@
   2. **QuotesInterval** \- 行情更新周期。
   3. **TransactionSession** \- 交易会话设置，用于通过 [Hydra](../../hydra.md) 进行交易。
 
-     此设置可用于配置 FIX 协议方言、发送方和接收方、数据格式及其他参数。详情请参阅 [FIXServer 属性](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm)。
-  4. **MarketDataSession** \- 配置通过 [Hydra](../../hydra.md) 接收的市场数据的传输。详情请参阅 [FIXServer 属性](https://doc.stocksharp.ru/html/Properties_T_StockSharp_Fix_FixServer.htm)。
+     此设置可用于配置 FIX 协议方言、发送方和接收方、数据格式及其他参数。详情请参阅 [FIXServer 属性](https://doc.stocksharp.com/html/Properties_T_StockSharp_Fix_FixServer.htm)。
+  4. **MarketDataSession** \- 配置通过 [Hydra](../../hydra.md) 接收的市场数据的传输。详情请参阅 [FIXServer 属性](https://doc.stocksharp.com/html/Properties_T_StockSharp_Fix_FixServer.htm)。
   5. **KeepSubscriptionsOnDisconnect** \- 与数据源断开连接后保留订阅。
   6. **DeadSessionCleanupInterval** \- 连接断开后，经过多长时间清除相关信息。
 - **身份验证** \- 访问 Hydra 服务器时使用的身份验证方式。

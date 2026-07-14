@@ -9,7 +9,7 @@ ConfigManager.RegisterService<ICredentialsProvider>(new DefaultCredentialsProvid
 
 // Ligar o fornecedor de serviços para acesso ao StockSharp WebAPI
 ConfigManager.RegisterService<IApiServiceProvider>(new ApiServiceProvider());
-							
+
 // Serviço de autorização OAuth que será usado pelos conectores
 ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 //ConfigManager.RegisterService<IOAuthProvider>(new WebApiOAuthProvider());
@@ -23,7 +23,7 @@ Existem duas opções de implementação para [ICredentialsProvider](xref:StockS
 
 1. [DefaultCredentialsProvider](xref:StockSharp.Configuration.DefaultCredentialsProvider) - carrega os dados da conta StockSharp a partir de um ficheiro local. É necessária autorização prévia. Por exemplo, através do Installer.
 
-2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - passa o token diretamente a partir do código. Não é necessário nenhum ficheiro secreto na máquina. O token é obtido em [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
+2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - passa o token diretamente a partir do código. Não é necessário nenhum ficheiro secreto na máquina. O token é obtido em [https://stocksharp.com/pt/profile/](https://stocksharp.com/pt/profile/):
 
    ![Perfil](../../../images/profile.png)
 

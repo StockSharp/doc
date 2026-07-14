@@ -5,9 +5,9 @@ La aplicación `Installer.Console` es una versión multiplataforma de StockSharp
 ## Ejecución
 
 1. Instale el SDK o runtime de .NET 6 para su plataforma.
-2. Descargue `StockSharp.Installer.Console.zip` desde la [página de descarga](https://stocksharp.com/products/download/).
+2. Descargue `StockSharp.Installer.Console.zip` desde la [página de descarga](https://stocksharp.com/es/products/download/).
 3. Descomprima el archivo y ejecute la utilidad desde la línea de comandos:
-   
+
    ```bash
    dotnet StockSharp.Installer.Console.dll <Command> [product] [dir] [options]
    ```
@@ -26,7 +26,7 @@ La aplicación `Installer.Console` es una versión multiplataforma de StockSharp
 - `Installed` – listar programas instalados.
 - `Sign` – firmar un archivo DLL.
 
-El parámetro opcional `[product]` es el ID del producto en la [tienda](https://stocksharp.com/store/). Puede encontrar este ID en la página del producto —por ejemplo, en la [página de Hydra Server](https://stocksharp.com/store/hydra-server/)— o ejecutando `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` especifica el directorio de instalación.
+El parámetro opcional `[product]` es el ID del producto en la [tienda](https://stocksharp.com/es/store/). Puede encontrar este ID en la página del producto —por ejemplo, en la [página de Hydra Server](https://stocksharp.com/es/store/hydra-server/)— o ejecutando `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` especifica el directorio de instalación.
 
 ## Opciones
 
@@ -55,7 +55,7 @@ Esto instala el producto **1269** (usado aquí solo como ejemplo) en el director
 
 ## Firma
 
-El comando `Sign` firma digitalmente una DLL de robot. Úselo al distribuir su propio robot basado en API para que todos los destinatarios, incluso en el [plan gratuito](https://stocksharp.com/pricing/), puedan ejecutarlo.
+El comando `Sign` firma digitalmente una DLL de robot. Úselo al distribuir su propio robot basado en API para que todos los destinatarios, incluso en el [plan gratuito](https://stocksharp.com/es/pricing/), puedan ejecutarlo.
 
 Compile el robot previamente y añada el atributo `[assembly: ProductId(9)]` desde el namespace `StockSharp.Configuration`. Firme la DLL (por ejemplo, `MyRobot.dll`) en lugar del archivo `.exe`.
 

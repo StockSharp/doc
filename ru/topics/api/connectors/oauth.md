@@ -9,7 +9,7 @@ ConfigManager.RegisterService<ICredentialsProvider>(new DefaultCredentialsProvid
 
 // Подключение провайдера сервисов для доступа к StockSharp WebAPI
 ConfigManager.RegisterService<IApiServiceProvider>(new ApiServiceProvider());
-							
+
 // Сервис OAuth авторизации, который будут использовать коннекторы
 ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 //ConfigManager.RegisterService<IOAuthProvider>(new WebApiOAuthProvider());
@@ -23,7 +23,7 @@ ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 
 1. [DefaultCredentialsProvider](xref:StockSharp.Configuration.DefaultCredentialsProvider) - загружает данные учетной записи StockSharp из локального файла. Требуется предварительная авторизация. Например, через Installer.
 
-2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - передача токена напрямую из кода. Наличие файла с секретами не требуется на машине. Токен получается из [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
+2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - передача токена напрямую из кода. Наличие файла с секретами не требуется на машине. Токен получается из [https://stocksharp.com/ru/profile/](https://stocksharp.com/ru/profile/):
 
    ![Профиль](../../../images/profile.png)
 

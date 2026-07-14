@@ -1,6 +1,6 @@
 # About StockSharp
 
-[StockSharp (S#)](https://stocksharp.com/store/) provides **free** trading applications for global markets, including stocks, futures, options, cryptocurrencies, and forex. You can trade manually or run automated strategies, from conventional trading robots to HFT (High-Frequency Trading) systems.
+[StockSharp (S#)](https://stocksharp.com/en/store/) provides **free** trading applications for global markets, including stocks, futures, options, cryptocurrencies, and forex. You can trade manually or run automated strategies, from conventional trading robots to HFT (High-Frequency Trading) systems.
 
 **Supports 90+ brokers, exchanges, and data sources:** [Connectors](topics/api/connectors.md).
 
@@ -79,7 +79,7 @@ The Shell provides a ready-made graphical framework that can be quickly customiz
 - [Shell](topics/shell.md) - Ready-made graphical framework for strategies with source code.
 - [MATLAB](topics/matlab.md) - Integration of MATLAB with trading systems. Trade from MATLAB scripts.
 
-[Download](https://stocksharp.com/products/download/)
+[Download](https://stocksharp.com/en/products/download/)
 
 ## Recommended Content
 

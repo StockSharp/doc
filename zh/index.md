@@ -1,6 +1,6 @@
 # 关于 StockSharp
 
-[StockSharp (S#)](https://stocksharp.com/store/) 提供面向全球市场（美国、欧洲、亚洲、俄罗斯，涵盖股票、期货、期权、比特币、外汇等）的**免费**交易程序。用户可选择手动交易或通过自动化交易进行操作，包括算法交易机器人、传统交易或高频交易（HFT）。
+[StockSharp (S#)](https://stocksharp.com/zh/store/) 提供面向全球市场（美国、欧洲、亚洲、俄罗斯，涵盖股票、期货、期权、比特币、外汇等）的**免费**交易程序。用户可选择手动交易或通过自动化交易进行操作，包括算法交易机器人、传统交易或高频交易（HFT）。
 
 **支持 90 多家券商、交易所和数据源：** [连接器](topics/api/connectors.md).
 
@@ -79,7 +79,7 @@ Shell 提供了一个现成的图形化框架，可根据您的需求快速定�
 - [Shell](topics/shell.md) - 带源代码的现成策略图形化框架。
 - [MATLAB](topics/matlab.md) - MATLAB 与交易系统的集成。通过 MATLAB 脚本进行交易。
 
-[下载](https://stocksharp.com/products/download/)
+[下载](https://stocksharp.com/zh/products/download/)
 
 ## 推荐内容
 

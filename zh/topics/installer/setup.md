@@ -1,7 +1,7 @@
 # 首次运行
 
-1. 要安装 [安装程序](../installer.md)，请打开[下载](https://stocksharp.com/products/download/)页面：
-   
+1. 要安装 [安装程序](../installer.md)，请打开[下载](https://stocksharp.com/zh/products/download/)页面：
+
     ![安装程序安装](../../images/installer_installation.png)
 
 2. 下载 [安装程序](../installer.md) 安装包。

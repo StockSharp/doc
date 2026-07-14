@@ -205,7 +205,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 
 Una vez que el conector está implementado, hay dos opciones para su uso:
 
-1. Publicarlo en la [Tienda de StockSharp](https://stocksharp.com/store) como un producto de pago o gratuito. En este caso, los usuarios instalan el conector automáticamente a través del [Instalador](../../installer/setup.md).
+1. Publicarlo en la [Tienda de StockSharp](https://stocksharp.com/es/store) como un producto de pago o gratuito. En este caso, los usuarios instalan el conector automáticamente a través del [Instalador](../../installer/setup.md).
 2. Para uso personal, copie el archivo *.dll* del conector compilado a la carpeta de su aplicación (o de cualquier producto de StockSharp). Al iniciarse, la aplicación escanea el directorio actual en busca de adaptadores utilizando los siguientes criterios:
 
    - Solo se consideran los archivos con la extensión **.dll** cuyos nombres comienzan con `StockSharp.`.

@@ -1,7 +1,7 @@
 # 初回実行
 
-1. [インストーラー](../installer.md) をインストールするには、[ダウンロード](https://stocksharp.com/products/download/) ページに移動します。
-   
+1. [インストーラー](../installer.md) をインストールするには、[ダウンロード](https://stocksharp.com/ja/products/download/) ページに移動します。
+
     ![インストーラーのインストール](../../images/installer_installation.png)
 
 2. [インストーラー](../installer.md) のディストリビューションをダウンロードします。

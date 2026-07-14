@@ -57,7 +57,7 @@ Data フォルダーに **connector.json** ファイルが作成され（まだ�
 
 ![接続設定 2 (2)](../../images/runner_telegram_2.png)
 
-トークンで認証する場合は、[https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) のトークンを入力します。
+トークンで認証する場合は、[https://stocksharp.com/ja/profile/](https://stocksharp.com/ja/profile/) のトークンを入力します。
 
 ![プロファイル](../../images/profile.png)
 

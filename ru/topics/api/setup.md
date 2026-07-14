@@ -176,7 +176,7 @@ Install-Package StockSharp.Algo.Strategies
 ### Способ 1: Аутентификация через токен в адресе
 
 1. Зарегистрируйтесь на сайте StockSharp.
-2. Скопируйте токен из [личного кабинета](https://stocksharp.ru/profile/).
+2. Скопируйте токен из [личного кабинета](https://stocksharp.com/ru/profile/).
 3. Добавьте источник пакетов:
 
 **CLI:**

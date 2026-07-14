@@ -14,7 +14,7 @@ Auszufüllende Felder:
 
 - Name
 - Beschreibung
-- NuGet-Paketkennung. Dieser Parameter wird benötigt, um den Link zum Produkt im Store festzulegen. Zum Beispiel wird in der Adresse https://stocksharp.com/store/runner/ das Wort **runner** über diesen Parameter angegeben.
+- NuGet-Paketkennung. Dieser Parameter wird benötigt, um den Link zum Produkt im Store festzulegen. Zum Beispiel wird in der Adresse https://stocksharp.com/de/store/runner/ das Wort **runner** über diesen Parameter angegeben.
 
 Zugriff auf die Stufen **Kostenlos** oder **Kostenpflichtig** wird erst nach Kontaktaufnahme per E-Mail an [info@stocksharp.com](mailto:info@stocksharp.com) gewährt. Standardmäßig ist die Stufe **Privat** verfügbar; sie erlaubt das Veröffentlichen von Strategien nur in privatem Format (für ausgewählte Benutzer):
 

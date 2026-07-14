@@ -1,6 +1,6 @@
 # StockSharp について
 
-[StockSharp (S#)](https://stocksharp.com/store/) は、株式、先物、オプション、暗号資産、外国為替を含むグローバル市場向けの**無料**トレーディングアプリケーションを提供します。従来型のトレーディングロボットから HFT (高頻度取引) システムまで、手動で取引することも、自動売買戦略を実行することもできます。
+[StockSharp (S#)](https://stocksharp.com/ja/store/) は、株式、先物、オプション、暗号資産、外国為替を含むグローバル市場向けの**無料**トレーディングアプリケーションを提供します。従来型のトレーディングロボットから HFT (高頻度取引) システムまで、手動で取引することも、自動売買戦略を実行することもできます。
 
 **90 以上のブローカー、取引所、データソースをサポート:** [コネクター](topics/api/connectors.md)。
 
@@ -79,7 +79,7 @@ Shell は、ニーズに合わせてすばやくカスタマイズできる既�
 - [Shell](topics/shell.md) - ソースコード付きの、戦略向け既製グラフィカルフレームワーク。
 - [MATLAB](topics/matlab.md) - MATLAB と取引システムの統合。MATLAB スクリプトから取引できます。
 
-[ダウンロード](https://stocksharp.com/products/download/)
+[ダウンロード](https://stocksharp.com/ja/products/download/)
 
 ## 推奨コンテンツ
 

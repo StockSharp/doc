@@ -174,7 +174,7 @@ Install-Package StockSharp.Algo.Strategies
 ### 方法1：通过URL中的令牌进行身份验证
 
 1. 在 StockSharp 网站上注册。
-2. 从你的[个人账户](https://stocksharp.ru/profile/)复制令牌。
+2. 从你的[个人账户](https://stocksharp.com/zh/profile/)复制令牌。
 3. 添加软件包源：
 
 **命令行界面:**

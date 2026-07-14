@@ -5,7 +5,7 @@ Die Anwendung `Installer.Console` ist eine plattformübergreifende Version des S
 ## Ausführen
 
 1. Installieren Sie das .NET 6 SDK oder die Runtime für Ihre Plattform.
-2. Laden Sie `StockSharp.Installer.Console.zip` von der [Seite zum Herunterladen](https://stocksharp.com/products/download/) herunter.
+2. Laden Sie `StockSharp.Installer.Console.zip` von der [Seite zum Herunterladen](https://stocksharp.com/de/products/download/) herunter.
 3. Entpacken Sie das Archiv und starten Sie das Dienstprogramm über die Befehlszeile:
 
    ```bash
@@ -26,7 +26,7 @@ Die Anwendung `Installer.Console` ist eine plattformübergreifende Version des S
 - `Installed` - installierte Programme auflisten.
 - `Sign` - eine DLL-Datei signieren.
 
-Der optionale Parameter `[product]` ist die Produkt-ID aus dem [Shop](https://stocksharp.com/store/). Sie finden diese ID auf der Produktseite, zum Beispiel auf der [Hydra-Server-Seite](https://stocksharp.com/store/hydra-server/), oder indem Sie `StockSharp.Installer.Console.exe Products -s hydra` ausführen. `[dir]` gibt das Installationsverzeichnis an.
+Der optionale Parameter `[product]` ist die Produkt-ID aus dem [Shop](https://stocksharp.com/de/store/). Sie finden diese ID auf der Produktseite, zum Beispiel auf der [Hydra-Server-Seite](https://stocksharp.com/de/store/hydra-server/), oder indem Sie `StockSharp.Installer.Console.exe Products -s hydra` ausführen. `[dir]` gibt das Installationsverzeichnis an.
 
 ## Optionen
 
@@ -55,7 +55,7 @@ Dies installiert das Produkt **1269** (hier nur als Beispiel verwendet) in das a
 
 ## Signieren
 
-Der Befehl `Sign` signiert eine Roboter-DLL digital. Verwenden Sie ihn, wenn Sie einen eigenen API-basierten Roboter verteilen, damit alle Empfänger ihn ausführen können, auch im [kostenlosen Tarif](https://stocksharp.com/pricing/).
+Der Befehl `Sign` signiert eine Roboter-DLL digital. Verwenden Sie ihn, wenn Sie einen eigenen API-basierten Roboter verteilen, damit alle Empfänger ihn ausführen können, auch im [kostenlosen Tarif](https://stocksharp.com/de/pricing/).
 
 Kompilieren Sie den Roboter vorher und fügen Sie das Attribut `[assembly: ProductId(9)]` aus dem Namespace `StockSharp.Configuration` hinzu. Signieren Sie die DLL (zum Beispiel `MyRobot.dll`) und nicht die `.exe`-Datei.
 

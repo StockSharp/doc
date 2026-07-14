@@ -205,7 +205,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 
 Once the connector is implemented, there are two options for using it:
 
-1. Publish it to the [StockSharp Store](https://stocksharp.com/store) as either a paid or free product. In this case, users install the connector automatically through the [Installer](../../installer/setup.md).
+1. Publish it to the [StockSharp Store](https://stocksharp.com/en/store) as either a paid or free product. In this case, users install the connector automatically through the [Installer](../../installer/setup.md).
 2. For personal use, copy the built connector *.dll* file to the folder of your application (or any StockSharp product). At startup, the application scans the current directory for adapters using the following criteria:
 
    - Only files with the **.dll** extension whose names begin with `StockSharp.` are considered.

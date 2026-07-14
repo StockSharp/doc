@@ -9,7 +9,7 @@ ConfigManager.RegisterService<ICredentialsProvider>(new DefaultCredentialsProvid
 
 // 连接用于访问 StockSharp WebAPI 的服务提供程序
 ConfigManager.RegisterService<IApiServiceProvider>(new ApiServiceProvider());
-							
+
 // 连接器将使用的 OAuth 授权服务
 ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 //ConfigManager.RegisterService<IOAuthProvider>(new WebApiOAuthProvider());
@@ -23,7 +23,7 @@ ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 
 1. [DefaultCredentialsProvider](xref:StockSharp.Configuration.DefaultCredentialsProvider) - 从本地文件加载StockSharp账户数据。需要事先授权。例如，通过安装程序。
 
-2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - 直接从代码传递令牌。不需要在机器上使用密钥文件。令牌是从 [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) 获取的：
+2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - 直接从代码传递令牌。不需要在机器上使用密钥文件。令牌是从 [https://stocksharp.com/zh/profile/](https://stocksharp.com/zh/profile/) 获取的：
 
    ![配置文件](../../../images/profile.png)
 

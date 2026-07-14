@@ -57,7 +57,7 @@ And authenticate by a convenient method:
 
 ![runner_telegram_2](../../images/runner_telegram_2.png)
 
-For authentication by token, enter the token from [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
+For authentication by token, enter the token from [https://stocksharp.com/en/profile/](https://stocksharp.com/en/profile/):
 
 ![Profile](../../images/profile.png)
 

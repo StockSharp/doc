@@ -56,7 +56,7 @@ stocksharp.studio.runner setup
 
 ![Настройка подключения 2 (2)](../../images/runner_telegram_2.png)
 
-Для авторизации по токену введите токен из [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
+Для авторизации по токену введите токен из [https://stocksharp.com/ru/profile/](https://stocksharp.com/ru/profile/):
 
 ![Профиль](../../images/profile.png)
 

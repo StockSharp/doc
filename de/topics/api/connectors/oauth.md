@@ -23,7 +23,7 @@ Für [ICredentialsProvider](xref:StockSharp.Configuration.ICredentialsProvider) 
 
 1. [DefaultCredentialsProvider](xref:StockSharp.Configuration.DefaultCredentialsProvider) - lädt StockSharp-Kontodaten aus einer lokalen Datei. Eine vorherige Autorisierung ist erforderlich, beispielsweise über den Installer.
 
-2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - übergibt den Token direkt aus dem Code. Auf dem Rechner ist keine geheime Datei erforderlich. Den Token erhalten Sie unter [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/):
+2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - übergibt den Token direkt aus dem Code. Auf dem Rechner ist keine geheime Datei erforderlich. Den Token erhalten Sie unter [https://stocksharp.com/de/profile/](https://stocksharp.com/de/profile/):
 
    ![Profil](../../../images/profile.png)
 

@@ -56,7 +56,7 @@ stocksharp.studio.runner setup
 
 ![连接设置 2 (2)](../../images/runner_telegram_2.png)
 
-使用令牌进行身份验证时，请输入从 [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) 获取的令牌：
+使用令牌进行身份验证时，请输入从 [https://stocksharp.com/zh/profile/](https://stocksharp.com/zh/profile/) 获取的令牌：
 
 ![个人资料](../../images/profile.png)
 

@@ -4,7 +4,7 @@
 
 ![Снимок экрана: Авторизация 1](../../images/telegramactivating.png)
 
-Бот попросит вас перейти в ваш профиль [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) и скопировать оттуда токен
+Бот попросит вас перейти в ваш профиль [https://stocksharp.com/ru/profile/](https://stocksharp.com/ru/profile/) и скопировать оттуда токен
 
 ![Профиль](../../images/profile.png)
 

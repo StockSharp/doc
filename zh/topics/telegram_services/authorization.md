@@ -4,7 +4,7 @@
 
 ![授权 截图 1](../../images/telegramactivating.png)
 
-机器人会要求您打开个人资料页面 [https://stocksharp.com/profile/](https://stocksharp.com/profile/)，并复制其中的令牌。
+机器人会要求您打开个人资料页面 [https://stocksharp.com/zh/profile/](https://stocksharp.com/zh/profile/)，并复制其中的令牌。
 
 ![个人资料](../../images/profile.png)
 

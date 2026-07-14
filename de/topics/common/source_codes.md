@@ -2,7 +2,7 @@
 
 Derzeit wird der Kern von [S#](../api.md) im Rahmen der Open-Source-Community entwickelt, ist als Quellcode verfügbar und befindet sich im Repository [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp).
 
-[Anleitung zur Verwendung von GitHub](https://stocksharp.com/forum/4848/rukovodstvo-po-github/)
+[Anleitung zur Verwendung von GitHub](https://stocksharp.com/de/forum/4848/rukovodstvo-po-github/)
 
 Liste der Komponenten, die mit Quellcode verfügbar sind:
 
@@ -16,7 +16,7 @@ Liste der Komponenten, die mit Quellcode verfügbar sind:
 - Protokollierung.
 - Import und Export.
 
-Die Quellcodes aller geschlossenen Komponenten sowie fertiger Programme sind nach dem Kauf verfügbar. Weitere Informationen zu den Kosten der Quellcodes finden Sie unter [Kosten der Quellcodes](https://stocksharp.com/store/?groups=22).
+Die Quellcodes aller geschlossenen Komponenten sowie fertiger Programme sind nach dem Kauf verfügbar. Weitere Informationen zu den Kosten der Quellcodes finden Sie unter [Kosten der Quellcodes](https://stocksharp.com/de/store/?groups=22).
 
 ## Empfohlene Inhalte
 

@@ -14,7 +14,7 @@ Fields that must be filled in:
 
 - Name
 - Description
-- Nuget package identifier. This parameter is needed to set the link to the product in the store. For example, in the address https://stocksharp.com/store/runner/, the word **runner** is specified through this parameter.
+- Nuget package identifier. This parameter is needed to set the link to the product in the store. For example, in the address https://stocksharp.com/en/store/runner/, the word **runner** is specified through this parameter.
 
 Access to the **Free** or **Paid** level is only granted after contacting via email [info@stocksharp.com](mailto:info@stocksharp.com). By default, the **Private** level is available, and it allows publishing strategies only in a private format (for selected users):
 

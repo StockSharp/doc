@@ -1,6 +1,6 @@
 # Über StockSharp
 
-[StockSharp (S#)](https://stocksharp.com/store/) bietet **kostenlose** Handelsanwendungen für globale Märkte, einschließlich Aktien, Futures, Optionen, Kryptowährungen und Forex. Sie können manuell handeln oder automatisierte Strategien ausführen, von herkömmlichen Handelsrobotern bis hin zu HFT-Systemen (Hochfrequenzhandel).
+[StockSharp (S#)](https://stocksharp.com/de/store/) bietet **kostenlose** Handelsanwendungen für globale Märkte, einschließlich Aktien, Futures, Optionen, Kryptowährungen und Forex. Sie können manuell handeln oder automatisierte Strategien ausführen, von herkömmlichen Handelsrobotern bis hin zu HFT-Systemen (Hochfrequenzhandel).
 
 **Unterstützt 90+ Broker, Börsen und Datenquellen:** [Konnektoren](topics/api/connectors.md).
 
@@ -79,7 +79,7 @@ Die Shell bietet ein fertiges grafisches Framework, das schnell an Ihre Bedürfn
 - [Shell](topics/shell.md) - Fertiges grafisches Framework für Strategien mit Quellcode.
 - [MATLAB](topics/matlab.md) - Integration von MATLAB mit Handelssystemen. Handeln aus MATLAB-Skripten heraus.
 
-[Herunterladen](https://stocksharp.com/products/download/)
+[Herunterladen](https://stocksharp.com/de/products/download/)
 
 ## Empfohlene Inhalte
 

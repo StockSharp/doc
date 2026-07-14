@@ -5,9 +5,9 @@ A aplicação `Installer.Console` é uma versão multiplataforma do StockSharp I
 ## Execução
 
 1. Instale o SDK ou runtime .NET 6 para a sua plataforma.
-2. Descarregue `StockSharp.Installer.Console.zip` a partir da [página de transferência](https://stocksharp.com/products/download/).
+2. Descarregue `StockSharp.Installer.Console.zip` a partir da [página de transferência](https://stocksharp.com/pt/products/download/).
 3. Descompacte o arquivo e execute o utilitário a partir da linha de comandos:
-   
+
    ```bash
    dotnet StockSharp.Installer.Console.dll <Command> [product] [dir] [options]
    ```
@@ -26,7 +26,7 @@ A aplicação `Installer.Console` é uma versão multiplataforma do StockSharp I
 - `Installed` - listar os programas instalados.
 - `Sign` - assinar um ficheiro DLL.
 
-O parâmetro opcional `[product]` é o ID do produto na [loja](https://stocksharp.com/store/). Pode encontrar este ID na página do produto, por exemplo na [página do Hydra Server](https://stocksharp.com/store/hydra-server/), ou executando `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` especifica o diretório de instalação.
+O parâmetro opcional `[product]` é o ID do produto na [loja](https://stocksharp.com/pt/store/). Pode encontrar este ID na página do produto, por exemplo na [página do Hydra Server](https://stocksharp.com/pt/store/hydra-server/), ou executando `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` especifica o diretório de instalação.
 
 ## Opções
 
@@ -55,7 +55,7 @@ Isto instala o produto **1269** (usado aqui apenas como exemplo) no diretório e
 
 ## Assinatura
 
-O comando `Sign` assina digitalmente a DLL de um robô. Use-o ao distribuir o seu próprio robô baseado na API, para que todos os destinatários, mesmo no [plano gratuito](https://stocksharp.com/pricing/), possam executá-lo.
+O comando `Sign` assina digitalmente a DLL de um robô. Use-o ao distribuir o seu próprio robô baseado na API, para que todos os destinatários, mesmo no [plano gratuito](https://stocksharp.com/pt/pricing/), possam executá-lo.
 
 Compile previamente o robô e adicione o atributo `[assembly: ProductId(9)]` do namespace `StockSharp.Configuration`. Assine a DLL (por exemplo, `MyRobot.dll`) em vez do ficheiro `.exe`.
 

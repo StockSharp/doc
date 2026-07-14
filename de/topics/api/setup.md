@@ -174,7 +174,7 @@ Einige Komponenten (Krypto-Connectors usw.) sind nur über den privaten NuGet-Se
 ### Methode 1: Authentifizierung per Token in der URL
 
 1. Registrieren Sie sich auf der StockSharp-Website.
-2. Kopieren Sie das Token aus Ihrem [persönlichen Konto](https://stocksharp.ru/profile/).
+2. Kopieren Sie das Token aus Ihrem [persönlichen Konto](https://stocksharp.com/de/profile/).
 3. Fügen Sie die Paketquelle hinzu:
 
 **CLI:**

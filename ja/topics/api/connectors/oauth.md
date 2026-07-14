@@ -9,7 +9,7 @@ ConfigManager.RegisterService<ICredentialsProvider>(new DefaultCredentialsProvid
 
 // StockSharp WebAPI へアクセスするためのサービスプロバイダーを接続する
 ConfigManager.RegisterService<IApiServiceProvider>(new ApiServiceProvider());
-							
+
 // コネクターによって使用される OAuth 認可サービス
 ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 //ConfigManager.RegisterService<IOAuthProvider>(new WebApiOAuthProvider());
@@ -23,7 +23,7 @@ ConfigManager.RegisterService<IOAuthProvider>(new OAuthProvider());
 
 1. [DefaultCredentialsProvider](xref:StockSharp.Configuration.DefaultCredentialsProvider) - ローカルファイルから StockSharp アカウントデータを読み込みます。事前の認可が必要です。たとえば、Installer を通じて行います。
 
-2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - コードからトークンを直接渡します。マシン上にシークレットファイルは不要です。トークンは [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) から取得します。
+2. [TokenCredentialsProvider](xref:StockSharp.Configuration.TokenCredentialsProvider) - コードからトークンを直接渡します。マシン上にシークレットファイルは不要です。トークンは [https://stocksharp.com/ja/profile/](https://stocksharp.com/ja/profile/) から取得します。
 
    ![プロファイル](../../../images/profile.png)
 

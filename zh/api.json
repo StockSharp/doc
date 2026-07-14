@@ -20724,7 +20724,7 @@
     "summary": "connector 已成功购买。 要使用, 您需要更新支持 connectors 的应用程序 。"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorIsStubKey": {
-    "summary": "Connector只是个分机。 请访问 https://stocksharp.com/pricing/ 获取更多信息 。"
+    "summary": "Connector只是个分机。 请访问 https://stocksharp.com/zh/pricing/ 获取更多信息 。"
   },
   "F:StockSharp.Localization.LocalizedStrings.ConnectorKey": {
     "summary": "Connector"
@@ -143388,7 +143388,7 @@
     "summary": "connector 已成功购买。 要使用, 您需要更新支持 connectors 的应用程序 。"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorIsStub": {
-    "summary": "Connector只是个分机。 请访问 https://stocksharp.com/pricing/ 获取更多信息 。"
+    "summary": "Connector只是个分机。 请访问 https://stocksharp.com/zh/pricing/ 获取更多信息 。"
   },
   "P:StockSharp.Localization.LocalizedStrings.ConnectorMustBeExtraInstalled": {
     "summary": "connector {0}必须作为单独的产品安装,终端必须按照指令配置。您要选择产品{0}进行安装吗?"

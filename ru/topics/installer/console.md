@@ -5,7 +5,7 @@
 ## Запуск
 
 1. Установите .NET 6 SDK или Runtime для вашей платформы.
-2. Скачайте архив `StockSharp.Installer.Console.zip` на странице [Скачать](https://stocksharp.ru/products/download/).
+2. Скачайте архив `StockSharp.Installer.Console.zip` на странице [Скачать](https://stocksharp.com/ru/products/download/).
 3. Распакуйте архив и запустите утилиту из командной строки:
 
    ```bash
@@ -26,7 +26,7 @@
 - `Installed` – вывести список установленных программ.
 - `Sign` – подписать DLL файл.
 
-Необязательный параметр `[продукт]` — это ID продукта из [магазина](https://stocksharp.ru/store/). Найти его можно на странице товара, например на странице [Hydra сервера](https://stocksharp.ru/store/hydra-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80/), либо командой `StockSharp.Installer.Console.exe Products -s hydra`. `[путь]` указывает каталог установки.
+Необязательный параметр `[продукт]` — это ID продукта из [магазина](https://stocksharp.com/ru/store/). Найти его можно на странице товара, например на странице [Hydra сервера](https://stocksharp.com/ru/store/hydra-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80/), либо командой `StockSharp.Installer.Console.exe Products -s hydra`. `[путь]` указывает каталог установки.
 
 ## Опции
 
@@ -55,7 +55,7 @@ dotnet StockSharp.Installer.Console.dll Install 1269 ~/stocksharp -p -r StockSha
 
 ## Подпись
 
-Команда `Sign` используется для цифровой подписи DLL файла торгового робота. Такая подпись необходима, если вы распространяете собственного робота на базе API — все получатели смогут запускать его даже на [бесплатном тарифе](https://stocksharp.ru/pricing/).
+Команда `Sign` используется для цифровой подписи DLL файла торгового робота. Такая подпись необходима, если вы распространяете собственного робота на базе API — все получатели смогут запускать его даже на [бесплатном тарифе](https://stocksharp.com/ru/pricing/).
 
 Перед подписью необходимо скомпилировать робота и добавить атрибут `[assembly: ProductId(9)]` из пространства имен `StockSharp.Configuration`. Подписывать нужно именно DLL файл (например, `MyRobot.dll`), а не `.exe`.
 

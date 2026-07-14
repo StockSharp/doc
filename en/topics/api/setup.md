@@ -174,7 +174,7 @@ Some components (crypto connectors, etc.) are only available through the private
 ### Method 1: Authentication via Token in URL
 
 1. Register on the StockSharp website.
-2. Copy the token from your [personal account](https://stocksharp.ru/profile/).
+2. Copy the token from your [personal account](https://stocksharp.com/en/profile/).
 3. Add the package source:
 
 **CLI:**

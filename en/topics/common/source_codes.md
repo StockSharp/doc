@@ -1,8 +1,8 @@
 # Source codes
 
-Currently, the [S#](../api.md) core is being developed as part of the Open Source community, is available as source code, and is hosted in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository. 
+Currently, the [S#](../api.md) core is being developed as part of the Open Source community, is available as source code, and is hosted in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository.
 
-[Instructions for using GitHub](https://stocksharp.com/forum/4848/rukovodstvo-po-github/)
+[Instructions for using GitHub](https://stocksharp.com/en/forum/4848/rukovodstvo-po-github/)
 
 List of components available with source code:
 
@@ -16,7 +16,7 @@ List of components available with source code:
 - Logging.
 - Import and export.
 
-The source codes of all closed components, as well as ready-made programs, are available upon purchase. For more information about the cost of source codes, see [Source Code Cost](https://stocksharp.com/store/?groups=22). 
+The source codes of all closed components, as well as ready-made programs, are available upon purchase. For more information about the cost of source codes, see [Source Code Cost](https://stocksharp.com/en/store/?groups=22).
 
 ## Recommended content
 

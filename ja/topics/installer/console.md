@@ -5,9 +5,9 @@
 ## 実行
 
 1. 使用するプラットフォーム向けの .NET 6 SDK またはランタイムをインストールします。
-2. [ダウンロードページ](https://stocksharp.com/products/download/) から `StockSharp.Installer.Console.zip` をダウンロードします。
+2. [ダウンロードページ](https://stocksharp.com/ja/products/download/) から `StockSharp.Installer.Console.zip` をダウンロードします。
 3. アーカイブを展開し、コマンドラインからユーティリティを実行します。
-   
+
    ```bash
    dotnet StockSharp.Installer.Console.dll <Command> [product] [dir] [options]
    ```
@@ -26,7 +26,7 @@
 - `Installed` - インストール済みプログラムを一覧表示します。
 - `Sign` - DLL ファイルに署名します。
 
-省略可能な `[product]` パラメーターは、[ストア](https://stocksharp.com/store/) の製品 ID です。この ID は、製品ページ、たとえば [Hydra サーバーページ](https://stocksharp.com/store/hydra-server/) で確認できます。または、`StockSharp.Installer.Console.exe Products -s hydra` を実行して確認できます。`[dir]` はインストールディレクトリを指定します。
+省略可能な `[product]` パラメーターは、[ストア](https://stocksharp.com/ja/store/) の製品 ID です。この ID は、製品ページ、たとえば [Hydra サーバーページ](https://stocksharp.com/ja/store/hydra-server/) で確認できます。または、`StockSharp.Installer.Console.exe Products -s hydra` を実行して確認できます。`[dir]` はインストールディレクトリを指定します。
 
 ## オプション
 
@@ -55,7 +55,7 @@ dotnet StockSharp.Installer.Console.dll Install 1269 /home/user/stocksharp -p -r
 
 ## 署名
 
-`Sign` コマンドは、ロボット DLL にデジタル署名します。独自の API ベースのロボットを配布する際、[無料プラン](https://stocksharp.com/pricing/) のユーザーを含むすべての受信者が実行できるようにするために使用します。
+`Sign` コマンドは、ロボット DLL にデジタル署名します。独自の API ベースのロボットを配布する際、[無料プラン](https://stocksharp.com/ja/pricing/) のユーザーを含むすべての受信者が実行できるようにするために使用します。
 
 事前にロボットをコンパイルし、`StockSharp.Configuration` 名前空間の `[assembly: ProductId(9)]` 属性を追加します。`.exe` ファイルではなく、DLL（例: `MyRobot.dll`）に署名してください。
 

@@ -4,7 +4,7 @@ Um [StockSharpBot](https://t.me/StockSharpBot) zu aktivieren, müssen Sie ihn st
 
 ![Autorisierung Bildschirmfoto 1](../../images/telegramactivating.png)
 
-Der Bot fordert Sie auf, Ihr Profil unter [https://stocksharp.com/profile/](https://stocksharp.com/profile/) zu öffnen und das Token dort zu kopieren.
+Der Bot fordert Sie auf, Ihr Profil unter [https://stocksharp.com/de/profile/](https://stocksharp.com/de/profile/) zu öffnen und das Token dort zu kopieren.
 
 ![Profil](../../images/profile.png)
 

@@ -174,7 +174,7 @@ Install-Package StockSharp.Algo.Strategies
 ### 方法 1: URL 内のトークンによる認証
 
 1. StockSharp Web サイトで登録します。
-2. [個人アカウント](https://stocksharp.ru/profile/) からトークンをコピーします。
+2. [個人アカウント](https://stocksharp.com/ja/profile/) からトークンをコピーします。
 3. パッケージソースを追加します。
 
 **CLI:**

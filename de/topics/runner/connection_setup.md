@@ -57,7 +57,7 @@ Und authentifizieren Sie sich mit einer geeigneten Methode:
 
 ![Verbindung einrichten 2 (2)](../../images/runner_telegram_2.png)
 
-Für die Authentifizierung per Token geben Sie das Token von [https://stocksharp.ru/profile/](https://stocksharp.ru/profile/) ein:
+Für die Authentifizierung per Token geben Sie das Token von [https://stocksharp.com/de/profile/](https://stocksharp.com/de/profile/) ein:
 
 ![Profil](../../images/profile.png)
 

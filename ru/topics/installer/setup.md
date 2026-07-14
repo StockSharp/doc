@@ -1,7 +1,7 @@
 # Первый запуск
 
-1. Для установки [Installer](../installer.md) необходимо перейти на страницу [Скачать](https://stocksharp.ru/products/download/):
-   
+1. Для установки [Installer](../installer.md) необходимо перейти на страницу [Скачать](https://stocksharp.com/ru/products/download/):
+
    ![установщик: установка](../../images/installer_installation.png)
 
 2. Скачать дистрибутив [Installer](../installer.md).

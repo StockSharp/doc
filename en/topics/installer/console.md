@@ -5,9 +5,9 @@ The `Installer.Console` application is a cross-platform version of StockSharp In
 ## Running
 
 1. Install the .NET 6 SDK or runtime for your platform.
-2. Download `StockSharp.Installer.Console.zip` from the [Download page](https://stocksharp.com/products/download/).
+2. Download `StockSharp.Installer.Console.zip` from the [Download page](https://stocksharp.com/en/products/download/).
 3. Unpack the archive and run the utility from the command line:
-   
+
    ```bash
    dotnet StockSharp.Installer.Console.dll <Command> [product] [dir] [options]
    ```
@@ -26,7 +26,7 @@ The `Installer.Console` application is a cross-platform version of StockSharp In
 - `Installed` – list installed programs.
 - `Sign` – sign a DLL file.
 
-The optional `[product]` parameter is the product ID from the [Store](https://stocksharp.com/store/). You can find this ID on the product page—for example on the [Hydra server page](https://stocksharp.com/store/hydra-server/)—or by running `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` specifies the installation directory.
+The optional `[product]` parameter is the product ID from the [Store](https://stocksharp.com/en/store/). You can find this ID on the product page—for example on the [Hydra server page](https://stocksharp.com/en/store/hydra-server/)—or by running `StockSharp.Installer.Console.exe Products -s hydra`. `[dir]` specifies the installation directory.
 
 ## Options
 
@@ -55,7 +55,7 @@ This installs product **1269** (used here just as an example) into the specified
 
 ## Signing
 
-The `Sign` command digitally signs a robot DLL. Use it when distributing your own API‑based robot so that all recipients, even on the [free plan](https://stocksharp.com/pricing/), can run it.
+The `Sign` command digitally signs a robot DLL. Use it when distributing your own API‑based robot so that all recipients, even on the [free plan](https://stocksharp.com/en/pricing/), can run it.
 
 Compile the robot beforehand and add the `[assembly: ProductId(9)]` attribute from the `StockSharp.Configuration` namespace. Sign the DLL (for example, `MyRobot.dll`) rather than the `.exe` file.
 

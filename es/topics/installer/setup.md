@@ -1,7 +1,7 @@
 # Primer inicio
 
-1. Para instalar [Installer](../installer.md), vaya a la página [Descarga](https://stocksharp.com/products/download/):
-   
+1. Para instalar [Installer](../installer.md), vaya a la página [Descarga](https://stocksharp.com/es/products/download/):
+
     ![Instalación del instalador](../../images/installer_installation.png)
 
 2. Descargue la distribución de [Installer](../installer.md).

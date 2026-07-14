@@ -14,7 +14,7 @@ Campos que devem ser preenchidos:
 
 - Nome
 - Descrição
-- Identificador do pacote NuGet. Este parâmetro é necessário para definir a ligação para o produto na loja. Por exemplo, no endereço https://stocksharp.com/store/runner/, a palavra **runner** é especificada através deste parâmetro.
+- Identificador do pacote NuGet. Este parâmetro é necessário para definir a ligação para o produto na loja. Por exemplo, no endereço https://stocksharp.com/pt/store/runner/, a palavra **runner** é especificada através deste parâmetro.
 
 O acesso ao nível **Gratuito** ou **Pago** só é concedido após contacto por email [info@stocksharp.com](mailto:info@stocksharp.com). Por predefinição, está disponível o nível **Privado**, que permite publicar estratégias apenas em formato privado (para utilizadores seleccionados):
 

@@ -34,6 +34,17 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 	private static readonly string _repoRoot = FindRepoRoot();
 
+	private static readonly string[] _stockSharpSiteLanguages =
+	[
+		"en",
+		"ru",
+		"de",
+		"es",
+		"pt",
+		"ja",
+		"zh",
+	];
+
 	private static readonly string[] _textFileExtensions =
 	[
 		".json",
@@ -2274,6 +2285,61 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void StockSharpSiteLinksUseLocalizedRoutes()
+	{
+		var errors = new List<string>();
+		var siteLinkPattern = new Regex(@"https?:(?://|\\/\\/)(?:www\.)?stocksharp\.(?<domain>ru|com)(?<suffix>[^\s\)\]\}>""'<]*)?", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var checkedExtensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+		{
+			".json",
+			".md",
+			".yml",
+			".yaml",
+		};
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
+
+			foreach (var file in Directory.EnumerateFiles(langRoot, "*.*", SearchOption.AllDirectories)
+				.Where(file => checkedExtensions.Contains(Path.GetExtension(file)))
+				.Order(StringComparer.OrdinalIgnoreCase))
+			{
+				var text = ReadAllText(file);
+				var matches = siteLinkPattern.Matches(text);
+				if (matches.Count == 0)
+					continue;
+
+				var lineStarts = GetLineStarts(text);
+
+				foreach (Match match in matches)
+				{
+					var location = $"{RelativeToRepo(file)}:{GetLineNumber(lineStarts, match.Index)}";
+					var domain = match.Groups["domain"].Value;
+
+					if (domain.Equals("ru", StringComparison.OrdinalIgnoreCase))
+					{
+						errors.Add($"{location}: StockSharp site link '{match.Value}' uses obsolete stocksharp.ru; use https://stocksharp.com/{lang} for the {lang} docs.");
+						continue;
+					}
+
+					var suffix = NormalizeStockSharpSiteSuffix(match.Groups["suffix"].Value);
+					if (HasStockSharpSiteLanguagePrefix(suffix, lang))
+						continue;
+
+					var actualLang = GetStockSharpSiteLanguagePrefix(suffix);
+					if (actualLang.Length > 0)
+						errors.Add($"{location}: StockSharp site link '{match.Value}' uses '/{actualLang}' but this is the {lang} docs.");
+					else
+						errors.Add($"{location}: StockSharp site link '{match.Value}' must start with https://stocksharp.com/{lang} for the {lang} docs.");
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedMarkdownAnchorReferencesMatchDefaultLanguage()
 	{
 		var errors = new List<string>();
@@ -3047,7 +3113,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			foreach (var label in EnumerateMarkdownLinkLabels(ReadAllText(file)))
 			{
 				if (label.Text.Equals("Store", StringComparison.Ordinal)
-					&& label.Url.Equals("https://stocksharp.com/store/", StringComparison.OrdinalIgnoreCase))
+					&& NormalizeStockSharpSiteLanguageRouteForStructure(label.Url).Equals("https://stocksharp.com/{lang}/store/", StringComparison.OrdinalIgnoreCase))
 				{
 					errors.Add($"{RelativeToRepo(file)}:{label.Line}: localized installer documentation keeps English Store link label.");
 				}
@@ -11606,7 +11672,48 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	private static string NormalizeStructureUrl(string url)
-		=> (url ?? string.Empty).Replace('\\', '/').Trim();
+	{
+		var normalized = (url ?? string.Empty).Replace('\\', '/').Trim();
+		return NormalizeStockSharpSiteLanguageRouteForStructure(normalized);
+	}
+
+	private static string NormalizeStockSharpSiteLanguageRouteForStructure(string url)
+		=> Regex.Replace(
+			url,
+			@"^(?<scheme>https?://)(?:www\.)?stocksharp\.com/(?<lang>en|ru|de|es|pt|ja|zh)(?=$|[/?#])",
+			match => $"{match.Groups["scheme"].Value}stocksharp.com/{{lang}}",
+			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+	private static string NormalizeStockSharpSiteSuffix(string suffix)
+	{
+		var value = (suffix ?? string.Empty).Replace(@"\/", "/");
+
+		while (value.Length > 0 && ".,;:".IndexOf(value[^1]) >= 0)
+			value = value[..^1];
+
+		return value;
+	}
+
+	private static bool HasStockSharpSiteLanguagePrefix(string suffix, string lang)
+	{
+		var prefix = "/" + lang;
+
+		return suffix.Equals(prefix, StringComparison.OrdinalIgnoreCase)
+			|| suffix.StartsWith(prefix + "/", StringComparison.OrdinalIgnoreCase)
+			|| suffix.StartsWith(prefix + "?", StringComparison.OrdinalIgnoreCase)
+			|| suffix.StartsWith(prefix + "#", StringComparison.OrdinalIgnoreCase);
+	}
+
+	private static string GetStockSharpSiteLanguagePrefix(string suffix)
+	{
+		foreach (var lang in _stockSharpSiteLanguages)
+		{
+			if (HasStockSharpSiteLanguagePrefix(suffix, lang))
+				return lang;
+		}
+
+		return string.Empty;
+	}
 
 	private static string FormatStructureSequence<T>(IReadOnlyList<T> values)
 		=> values.Count == 0
@@ -12734,7 +12841,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			return normalizedUrl.Equals("../hydra_server.md", StringComparison.OrdinalIgnoreCase);
 
 		if (text.Equals("Store", StringComparison.Ordinal))
-			return normalizedUrl.Equals("https://stocksharp.com/store/", StringComparison.OrdinalIgnoreCase);
+			return NormalizeStockSharpSiteLanguageRouteForStructure(normalizedUrl).Equals("https://stocksharp.com/{lang}/store/", StringComparison.OrdinalIgnoreCase);
 
 		return false;
 	}

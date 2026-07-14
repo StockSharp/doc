@@ -1,6 +1,6 @@
 # Acerca de StockSharp
 
-[StockSharp (S#)](https://stocksharp.com/store/) ofrece aplicaciones de negociación **gratuitas** para los mercados globales, incluyendo acciones, futuros, opciones, criptomonedas y forex. Puede operar manualmente o ejecutar estrategias automatizadas, desde robots de negociación convencionales hasta sistemas HFT (negociación de alta frecuencia).
+[StockSharp (S#)](https://stocksharp.com/es/store/) ofrece aplicaciones de negociación **gratuitas** para los mercados globales, incluyendo acciones, futuros, opciones, criptomonedas y forex. Puede operar manualmente o ejecutar estrategias automatizadas, desde robots de negociación convencionales hasta sistemas HFT (negociación de alta frecuencia).
 
 **Compatible con más de 90 brokers, bolsas y fuentes de datos:** [Conectores](topics/api/connectors.md).
 
@@ -79,7 +79,7 @@ Shell proporciona un marco gráfico ya preparado que puede personalizarse rápid
 - [Shell](topics/shell.md) - Marco gráfico ya preparado para estrategias con código fuente.
 - [MATLAB](topics/matlab.md) - Integración de MATLAB con sistemas de negociación. Opere desde scripts de MATLAB.
 
-[Descargar](https://stocksharp.com/products/download/)
+[Descargar](https://stocksharp.com/es/products/download/)
 
 ## Contenido recomendado
 
