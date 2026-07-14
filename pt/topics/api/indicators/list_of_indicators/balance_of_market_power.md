@@ -1,7 +1,5 @@
 # BMP
 
-﻿# BMP
-
 **Equilíbrio de poder do mercado (BMP)** é um indicador que mede a força dos compradores em relação aos vendedores, com base numa análise dos movimentos de preço e dos volumes de negociação.
 
 Para usar o indicador, é necessário usar a classe [BalanceOfMarketPower](xref:StockSharp.Algo.Indicators.BalanceOfMarketPower).

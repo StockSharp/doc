@@ -1,7 +1,5 @@
 # Alligator
 
-﻿# Alligator
-
 O indicador **Alligator** é composto por um grupo de três médias móveis. Estas médias móveis têm períodos diferentes e também são deslocadas para a frente no gráfico.
 
 Para usar o indicador, deve ser usada a classe [Alligator](xref:StockSharp.Algo.Indicators.Alligator).

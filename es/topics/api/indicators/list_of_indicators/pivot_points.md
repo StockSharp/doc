@@ -1,16 +1,16 @@
 # PP
 
-**puntos pivote (PP)** es un indicador técnico que utiliza precios máximos, mínimos y de cierre anteriores para determinar los posibles niveles de soporte y resistencia para el período comercial actual.
+El indicador **Puntos pivote (PP)** utiliza los precios máximos, mínimos y de cierre anteriores para determinar posibles niveles de soporte y resistencia para el período de negociación actual.
 
 Para utilizar el indicador, debe utilizar la clase [PivotPoints](xref:StockSharp.Algo.Indicators.PivotPoints).
 
 ## Descripción
 
-puntos pivote (puntos de pivote) son uno de los métodos más antiguos y utilizados para identificar niveles clave de mercado. El indicador calcula el punto de pivote central (PP) y varios niveles de soporte (S1, S2, S3) y resistencia (R1, R2, R3) basándose en los datos del período anterior.
+Los puntos pivote son uno de los métodos más antiguos y utilizados para identificar niveles clave del mercado. El indicador calcula el punto de pivote central (PP) y varios niveles de soporte (S1, S2, S3) y resistencia (R1, R2, R3) basándose en los datos del período anterior.
 
-Originalmente, los operadores en los pisos de intercambio utilizaban puntos pivote para determinar los niveles clave para el día de negociación actual en función de los datos del día anterior. Hoy en día, este método se ha adaptado a varios períodos de tiempo, desde intradiario hasta mensual.
+Originalmente, los operadores en los parqués bursátiles utilizaban puntos pivote para determinar los niveles clave del día de negociación actual a partir de los datos del día anterior. Hoy en día, este método se ha adaptado a varios marcos temporales, desde el intradiario hasta el mensual.
 
-La idea principal detrás de puntos pivote es que el mercado tiende a reaccionar a estos niveles precalculados, usándolos como puntos de reversión o zonas donde puede ocurrir una consolidación. Los operadores utilizan estos niveles para tomar decisiones sobre la entrada y salida del mercado, así como para establecer niveles objetivo y límites de pérdidas.
+La idea principal de los puntos pivote es que el mercado tiende a reaccionar a estos niveles precalculados, usándolos como puntos de reversión o zonas donde puede producirse una consolidación. Los operadores utilizan estos niveles para tomar decisiones sobre la entrada y salida del mercado, así como para establecer niveles objetivo y límites de pérdidas.
 
 ## Cálculo
 

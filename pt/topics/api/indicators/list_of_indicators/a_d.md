@@ -1,7 +1,5 @@
 # A/D
 
-﻿# A/D
-
 **Acceleration/Deceleration (A/D)** é um oscilador criado por Bill Williams. Mede a aceleração e a desaceleração do momentum da tendência.
 
 Para usar o indicador, deve ser usada a classe [Acceleration](xref:StockSharp.Algo.Indicators.Acceleration).

@@ -1,7 +1,5 @@
 # BBP
 
-﻿# BBP
-
 **percentual de Bollinger B (BBP)** é um indicador desenvolvido por John Bollinger como complemento do indicador bandas de Bollinger. O BBP mostra a localização do preço em relação às bandas de Bollinger superior e inferior.
 
 Para usar o indicador, é necessário usar a classe [BollingerPercentB](xref:StockSharp.Algo.Indicators.BollingerPercentB).

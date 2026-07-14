@@ -1,7 +1,5 @@
 # BV
 
-﻿# BV
-
 **volume de balanço (BV)** é um indicador técnico que acompanha a acumulação e distribuição do volume de negociação com base em alterações de preço.
 
 Para usar o indicador, é necessário usar a classe [BalanceVolume](xref:StockSharp.Algo.Indicators.BalanceVolume).

@@ -1,7 +1,5 @@
 # ALF
 
-﻿# ALF
-
 **filtro adaptativo de Laguerre (ALF)** é um indicador desenvolvido para suavizar dados de preço com atraso mínimo, baseado nos princípios matemáticos do filtro de Laguerre.
 
 Para usar o indicador, é necessário usar a classe [AdaptiveLaguerreFilter](xref:StockSharp.Algo.Indicators.AdaptiveLaguerreFilter).

@@ -1,7 +1,5 @@
 # Lista de indicadores
 
-﻿# Lista de indicadores
-
 [S#](../../api.md) fornece mais de 140 indicadores de análise técnica por defeito. Isto permite usar indicadores prontos em vez de os criar de raiz.
 
 - [A/D](list_of_indicators/a_d.md) - indicador A/D, mede a aceleração ou desaceleração do movimento do preço

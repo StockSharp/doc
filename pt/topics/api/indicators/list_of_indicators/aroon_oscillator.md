@@ -1,7 +1,5 @@
 # oscilador Aroon
 
-﻿# oscilador Aroon
-
 O **oscilador Aroon** mede a diferença entre as linhas Aroon ascendente e Aroon descendente. Destaca que lado do mercado é dominante e quão forte é a tendência atual.
 
 Use a classe [AroonOscillator](xref:StockSharp.Algo.Indicators.AroonOscillator) para trabalhar com este indicador.

@@ -1623,6 +1623,35 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void SpanishTradingDocsDoNotKeepLiteralEnglishCalques()
+	{
+		var errors = new List<string>();
+		var checks = new (string RelativePath, Regex Pattern, string PreferredTerm)[]
+		{
+			("topics/api/indicators/list_of_indicators/approval_flow_index.md", new Regex(@"\bflujo\s+de\s+pedidos\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant), "flujo de órdenes"),
+			("topics/api/indicators/list_of_indicators/pivot_points.md", new Regex(@"\bper[ií]odo\s+comercial\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant), "período de negociación"),
+			("topics/api/indicators/list_of_indicators/pivot_points.md", new Regex(@"\bpisos?\s+de\s+intercambio\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant), "parqués bursátiles"),
+			("topics/api/connectors/creating_own_connector/messages.md", new Regex(@"\binformaci[oó]n\s+de\s+intercambio\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant), "información bursátil"),
+		};
+
+		foreach (var (relativePath, pattern, preferredTerm) in checks)
+		{
+			var file = Path.Combine(_repoRoot, "es", relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (!File.Exists(file))
+				continue;
+
+			foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
+			{
+				var match = pattern.Match(text);
+				if (match.Success)
+					errors.Add($"{RelativeToRepo(file)}:{line}: literal trading calque '{match.Value}' should use '{preferredTerm}'.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void SpanishPortugueseDocsDoNotKeepEnglishTraderTermInVisibleText()
 	{
 		var errors = new List<string>();
@@ -10909,6 +10938,25 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		foreach (var file in EnumerateContentTextFiles())
 			ValidateNoReplacementCharacters(file, errors);
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void TextFilesDoNotContainEmbeddedByteOrderMarks()
+	{
+		var errors = new List<string>();
+
+		foreach (var file in EnumerateContentTextFiles())
+		{
+			var text = ReadAllText(file);
+			var index = text.IndexOf('\uFEFF');
+			if (index < 0)
+				continue;
+
+			var line = 1 + text[..index].Count(ch => ch == '\n');
+			errors.Add($"{RelativeToRepo(file)}:{line}: contains an embedded Unicode byte-order mark.");
+		}
 
 		AssertNoErrors(errors);
 	}

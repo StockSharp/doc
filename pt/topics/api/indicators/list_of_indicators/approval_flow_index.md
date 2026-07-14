@@ -1,7 +1,5 @@
 # AFI
 
-﻿# AFI
-
 **índice de fluxo de aprovação (AFI)** é um indicador que mede a força da tendência com base na relação entre volume e movimento do preço.
 
 Para usar o indicador, é necessário usar a classe [ApprovalFlowIndex](xref:StockSharp.Algo.Indicators.ApprovalFlowIndex).

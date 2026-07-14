@@ -1,7 +1,5 @@
 # AO
 
-﻿# AO
-
 O **oscilador incrível (AO)** é um indicador técnico clássico construído subtraindo médias móveis (SMA) com períodos diferentes.
 
 Para usar o indicador, deve ser usada a classe [AwesomeOscillator](xref:StockSharp.Algo.Indicators.AwesomeOscillator).

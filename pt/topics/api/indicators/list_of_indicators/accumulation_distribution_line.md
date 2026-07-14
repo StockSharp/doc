@@ -1,7 +1,5 @@
 # ADL
 
-﻿# ADL
-
 **Linha de acumulação/distribuição (ADL)** é um indicador de volume desenvolvido por Mark Chaikin. O indicador avalia a relação entre oferta e procura no mercado analisando a correlação entre preço e volume.
 
 Para usar o indicador, é necessário usar a classe [AccumulationDistributionLine](xref:StockSharp.Algo.Indicators.AccumulationDistributionLine).

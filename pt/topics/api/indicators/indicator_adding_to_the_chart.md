@@ -1,7 +1,5 @@
 # Adicionar um indicador ao gráfico
 
-﻿# Adicionar um indicador ao gráfico
-
 O exemplo seguinte demonstra como adicionar um indicador para desenhar num gráfico:
 
 ```cs

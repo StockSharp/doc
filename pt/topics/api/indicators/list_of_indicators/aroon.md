@@ -1,7 +1,5 @@
 # Aroon
 
-﻿# Aroon
-
 O **Indicador Aroon** é um indicador técnico desenvolvido por Tushar Chande em 1995 para identificar alterações de tendência e a força da tendência. O nome "Aroon" vem de uma palavra em sânscrito que significa "amanhecer de uma nova era".
 
 Para usar o indicador, é necessário usar a classe [Aroon](xref:StockSharp.Algo.Indicators.Aroon).

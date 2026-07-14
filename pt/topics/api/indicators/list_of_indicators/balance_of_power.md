@@ -1,7 +1,5 @@
 # BOP
 
-﻿# BOP
-
 **Equilíbrio de poder (BOP)** é um indicador concebido para medir a força dos compradores em relação aos vendedores, avaliando a capacidade dos compradores para elevar o preço do mínimo até ao máximo.
 
 Para usar o indicador, é necessário usar a classe [BalanceOfPower](xref:StockSharp.Algo.Indicators.BalanceOfPower).
