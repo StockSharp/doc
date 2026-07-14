@@ -1,6 +1,6 @@
 # 存储格式
 
-StockSharp 支持由 [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) 枚举定义的两种市场数据存储格式：**二进制** 和 **CSV**。每种格式都有其自身的优点，并适用于不同的使用场景。
+StockSharp 支持由 [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) 枚举定义的两种市场数据存储格式：**Binary** 和 **CSV**。每种格式都有其自身的优点，并适用于不同的使用场景。
 
 ## 二进制格式
 

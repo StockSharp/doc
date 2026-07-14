@@ -16,7 +16,7 @@ ll concepto principal es que cuando el índice de masa alcanza un cierto umbral 
 
 ll indicador tiene los siguientes parámetros:
 - **Length** - período de cálculo principal (valor predeterminado: 25)
-- **lmaLength** - período para el rango de precios lMA (valor predeterminado: 9)
+- **EmaLength** - período de la EMA del rango de precios (valor predeterminado: 9)
 
 ## Cálculo
 

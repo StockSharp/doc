@@ -90,7 +90,7 @@ public class EmptyIndicator : BaseIndicator
 }
 ```
 
-このインジケーターは入力値を受け取り、**変更** パラメーター値に基づいて任意の偏差を加えます。
+このインジケーターは入力値を受け取り、**Change** パラメーター値に基づいて任意の偏差を加えます。
 
 インジケーターメソッドの説明は、[カスタムインジケーター](../../../../api/indicators/custom_indicator.md) セクションで確認できます。
 
@@ -98,7 +98,7 @@ public class EmptyIndicator : BaseIndicator
 
 ![Designer ソースコードインジケーター 01](../../../../../images/designer_source_code_indicator_01.png)
 
-インジケーターコードで以前に設定した **変更** パラメーターは、プロパティパネルに表示されます。
+インジケーターコードで以前に設定した **Change** パラメーターは、プロパティパネルに表示されます。
 
 > [!WARNING]
 > C# コードのインジケーターは、C# コードで作成されたストラテジーでは使用できません。[キューブから](../../using_visual_designer.md)作成されたストラテジーでのみ使用できます。

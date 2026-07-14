@@ -10,7 +10,7 @@
 - [MarketDepthControl.IsBidsOnTop](xref:StockSharp.Xaml.MarketDepthControl.IsBidsOnTop) - 将出价显示在顶部。
 - [MarketDepthControl.UpdateFormat](xref:StockSharp.Xaml.MarketDepthControl.UpdateFormat(StockSharp.BusinessEntities.Security))**(**[StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security) security **)** - 使用该交易品种更新价格和成交量显示格式。
 - [MarketDepthControl.ProcessOrder](xref:StockSharp.Xaml.MarketDepthControl.ProcessOrder(StockSharp.BusinessEntities.Order,System.Decimal,System.Decimal,StockSharp.Messages.OrderStates))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) 订单, [System.Decimal](xref:System.Decimal) 价格, [System.Decimal](xref:System.Decimal) 余额, [StockSharp.Messages.OrderStates](xref:StockSharp.Messages.OrderStates) 状态 **)** - 处理订单。
-- [MarketDepthControl.UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth(StockSharp.Messages.IOrderBookMessage,StockSharp.BusinessEntities.Security))**(**[StockSharp.Messages.IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) 消息, [StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security) 安全 **)** - 使用消息更新订单簿。
+- [MarketDepthControl.UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth(StockSharp.Messages.IOrderBookMessage,StockSharp.BusinessEntities.Security))**(**[StockSharp.Messages.IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) 消息, [StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security) 交易品种 **)** - 使用消息更新订单簿。
 
 以下是展示其用法的代码片段：
 

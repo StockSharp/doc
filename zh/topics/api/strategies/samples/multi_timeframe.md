@@ -29,8 +29,8 @@ public class MultiTimeframeStrategy : Strategy
 - **FastSmaLength** - 小时图的快速移动平均周期（默认值 10）
 - **SlowSmaLength** - 小时图的慢速移动平均周期（默认值 30）
 - **RsiLength** - 5 分钟图表的 RSI 周期（默认 14）
-- **止盈** - 止盈比例（百分比）（默认值 2）
-- **止损** - 止损比例（百分比）（默认1）
+- **TakeProfit** - 止盈比例（百分比）（默认值 2）
+- **StopLoss** - 止损比例（百分比）（默认1）
 
 所有参数都可以在指定的取值范围内进行优化。
 

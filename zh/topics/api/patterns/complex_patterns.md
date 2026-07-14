@@ -24,7 +24,7 @@ public interface ICandlePattern : IPersistable
 
 `CandlePatternRegistry` 注册表包含一组内置模式：`Flat`、`White`、`Black`、`Hammer`、`BullishEngulfing`、`MorningStar`、`ThreeWhiteSoldiers` 等。
 
-## 复杂烛形模式
+## 复杂K线形态
 
 `ComplexCandlePattern` 类实现了 `ICandlePattern` 并结合了多个内部模式：
 

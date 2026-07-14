@@ -33,4 +33,4 @@
 
 [黑色K线形态](black_candle.md)
 
-[白色光头光脚线形态](white_marubozu.md)
+[白色光头光脚阳线形态](white_marubozu.md)

@@ -6,8 +6,8 @@
 
 [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager) 接口定义了基础契约：
 
-- **已实现盈亏** — 已实现的利润/亏损（小数）。在平仓时累计。
-- **未实现盈亏** — 未实现的利润/亏损（小数）。根据当前市场价格重新计算。
+- **RealizedPnL** — 已实现的利润/亏损（小数）。在平仓时累计。
+- **UnrealizedPnL** — 未实现的利润/亏损（小数）。根据当前市场价格重新计算。
 - **Reset()** — 重置管理器的状态。
 - **UpdateSecurity(Level1ChangeMessage)** — 更新工具参数（价格步长、步进价格、手数倍数）。
 - **ProcessMessage(Message, ICollection\<PortfolioPnLManager\>)** — 处理一条消息；当一个持仓被关闭时返回 [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo)，否则返回 `null`。
@@ -32,7 +32,7 @@ PnLManager
 
 - **PriceStep** — 工具价格步长。
 - **StepPrice** — 步长价格（期货用）。
-- **杠杆** — 杠杆。
+- **Leverage** — 杠杆。
 - **LotMultiplier** — 手数乘数。
 
 利润乘数的计算公式如下：
@@ -47,8 +47,8 @@ Multiplier = (StepPrice / PriceStep) * Leverage * LotMultiplier
 
 [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) 类包含平仓结果：
 
-- **服务器时间** — 交易时间。
-- **已平仓量** — 已平仓持仓的交易量。
+- **ServerTime** — 交易时间。
+- **ClosedVolume** — 已平仓持仓的交易量。
 - **PnL** — 来自此交易的已实现利润。
 
 例如，如果持仓是+2，而来了一个-5合约的交易，那么`ClosedVolume = 2`（持仓中的2个合约被平仓）。

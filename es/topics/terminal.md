@@ -6,7 +6,7 @@
 
 ## Ventajas y características de Terminal:
 
-1. **Admite muchas fuentes de datos:** [Conectores](api/connectors.md).
+1. **Soporte para más de 70 conexiones** a bolsas y brókeres mediante [Conectores](api/connectors.md).
 2. **Negociación desde gráficos**.
 3. **Marcos temporales personalizados**.
 4. **Velas de volumen, tick, rango, PnF y Renko**.

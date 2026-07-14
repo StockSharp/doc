@@ -122,7 +122,7 @@ var patternStorage = new CandlePatternFileStorage(
 );
 ```
 
-### NativeIdStorage、安全映射存储等
+### NativeIdStorage、SecurityMappingStorage 等
 
 大多数映射和标识符存储也接受 `IFileSystem`:
 

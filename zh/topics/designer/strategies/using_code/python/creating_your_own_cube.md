@@ -195,7 +195,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 使用 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) 类后，系统会自动处理设置的保存和恢复。
 
-**最小值** 属性被标记为基本属性，因此会显示在[基本属性](../../using_visual_designer/diagram_panel.md)模式中。
+**MinValue** 属性被标记为基本属性，因此会显示在[基本属性](../../using_visual_designer/diagram_panel.md)模式中。
 
 已注释的 [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) 属性控制何时根据输入端口的数据调用方法：
 
@@ -205,7 +205,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 #     return False
 ```
 
-取消注释后，只要至少有一个值到达，**进程** 方法就会被调用。在本例中，该值可以是K线或数值。
+取消注释后，只要至少有一个值到达，**Process** 方法就会被调用。在本例中，该值可以是K线或数值。
 
 要将创建的模块添加到策略图，请在组件面板的 **自定义模块** 部分选择该模块：
 

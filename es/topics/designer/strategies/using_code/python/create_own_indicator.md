@@ -102,7 +102,7 @@ class empty_indicator(BaseIndicator):
 		return str(self)
 ```
 
-Este indicador recibe un valor entrante y realiza una desviación aleatoria basada en el valor especificado del parámetro **Cambio**.
+Este indicador recibe un valor entrante y realiza una desviación aleatoria basada en el valor especificado del parámetro **Change**.
 
 La descripción de los métodos del indicador está disponible en la sección [Indicador personalizado](../../../../api/indicators/custom_indicator.md).
 
@@ -110,7 +110,7 @@ Para añadir el indicador creado al esquema, debe usar el cubo [Indicador](../..
 
 ![Designer indicador de código fuente 01](../../../../../images/designer_source_code_indicator_01.png)
 
-El parámetro **Cambio**, establecido previamente en el código del indicador, se muestra en el panel de propiedades.
+El parámetro **Change**, establecido previamente en el código del indicador, se muestra en el panel de propiedades.
 
 > [!WARNING]
 > Los indicadores creados con código Python no pueden usarse en estrategias creadas con código Python. Solo pueden usarse en estrategias creadas [a partir de cubos](../../using_visual_designer.md).

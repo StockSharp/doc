@@ -1,12 +1,12 @@
 # Terminal
 
-O **Terminal** é um terminal de negociação gratuito. A sua principal vantagem é a capacidade de se ligar a várias bolsas, brokers e fontes de dados ao mesmo tempo, incluindo venues que não fornecem o seu próprio terminal.
+O **Terminal** é um terminal de negociação gratuito. A sua principal vantagem é a capacidade de se ligar a várias bolsas, brokers e fontes de dados ao mesmo tempo, incluindo plataformas de negociação que não fornecem o seu próprio terminal.
 
 ![Terminal principal 00](../images/terminal_main_00.png)
 
 ## Vantagens e funcionalidades do Terminal:
 
-1. **Suporta muitas fontes de dados:** [Conectores](api/connectors.md).
+1. **Suporte para mais de 70 ligações** a bolsas e brokers através de [Conectores](api/connectors.md).
 2. **Negociação a partir dos gráficos**. 
 3. **Períodos personalizados**.
 4. **Velas Volume, Tick, Range, PnF e Renko**. 

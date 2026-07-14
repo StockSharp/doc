@@ -67,12 +67,12 @@ Console.WriteLine($"已导入 {count} 条记录，最后一条: {lastTime}");
 
 主要属性：
 
-- **名称** — 消息中的字段名称。
+- **Name** — 消息中的字段名称。
 - **DisplayName** — 显示名称。
-- **类型** — 值类型。
-- **顺序** — 文件中的列索引（从 0 开始）。
+- **Type** — 值类型。
+- **Order** — 文件中的列索引（从 0 开始）。
 - **IsRequired** — 该字段是否为必填项。
-- **格式** — 解析格式 (例如， 日期格式)。
+- **Format** — 解析格式 (例如， 日期格式)。
 - **DefaultValue** — 默认值。
 - **ZeroAsNull** — 是否将零值解释为 `null`。
 
@@ -105,9 +105,9 @@ sideField.Values.Add(new FieldMappingValue
 
 [ImportSettings](xref:StockSharp.Algo.Import.ImportSettings) 类将所有导入参数组合到一个配置对象中：
 
-- **数据类型** — 被导入的数据类型。
-- **文件名** — 文件路径。
-- **目录** — 用于文件搜索的目录。
+- **DataType** — 被导入的数据类型。
+- **FileName** — 文件路径。
+- **Directory** — 用于文件搜索的目录。
 - **FileMask** — 文件搜索掩码 (例如， `*.csv`)。
 - **ColumnSeparator** — 列分隔符。
 - **SkipFromHeader** — 要跳过的行数。

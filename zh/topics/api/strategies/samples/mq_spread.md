@@ -23,7 +23,7 @@ public class MqSpreadStrategy : Strategy
 该策略允许自定义以下参数：
 
 - **PriceType** - 报价的市场价格类型（默认 跟随）
-- **价格偏移** - 与市场价格的偏移
+- **PriceOffset** - 与市场价格的偏移
 - **BestPriceOffset** - 报价更新的最小偏差（默认 0.1%）
 
 ## 策略初始化

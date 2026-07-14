@@ -17,7 +17,7 @@
 
 埃尔德射线 继承了 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 的设置：
 
-- **长度** — EMA周期；
+- **Length** — EMA周期；
 - **Alpha** — 平滑系数，直接配置时使用。
 
 ## 解释

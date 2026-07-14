@@ -17,7 +17,7 @@ public class OneCandleCountertrendStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **K线类型** - 要使用的K线类型（默认5分钟）
+- **CandleType** - 要使用的K线类型（默认5分钟）
 
 ## 策略初始化
 

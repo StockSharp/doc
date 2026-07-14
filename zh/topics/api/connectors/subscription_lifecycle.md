@@ -125,7 +125,7 @@ public void SetupSubscriptionTracking()
     _connector.SubscriptionStarted += subscription =>
     {
         Console.WriteLine($"订阅已启动: {subscription.DataType}, " +
-            $"证券: {subscription.SecurityId}");
+            $"交易品种: {subscription.SecurityId}");
     };
 
     _connector.SubscriptionOnline += subscription =>

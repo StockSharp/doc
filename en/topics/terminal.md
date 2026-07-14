@@ -6,7 +6,7 @@
 
 ## Advantages and features of Terminal:
 
-1. **Supports many data sources:** [Connectors](api/connectors.md).
+1. **Support for more than 70 connections** to exchanges and brokers through [Connectors](api/connectors.md).
 2. **Trading from charts**. 
 3. **Custom timeframes**. 
 4. **Volume, Tick, Range, PnF, and Renko candles**. 

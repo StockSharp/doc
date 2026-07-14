@@ -10,7 +10,7 @@
 
 - [OrderWindow.Portfolios](xref:StockSharp.Xaml.OrderWindow.Portfolios) - 投资组合列表。
 - [OrderWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderWindow.MarketDataProvider) - 市场数据提供商。
-- [OrderWindow.SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) - 安全信息提供者。
+- [OrderWindow.SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) - 交易品种信息提供者。
 - [OrderWindow.Order](xref:StockSharp.Xaml.OrderWindow.Order) - 已创建订单。
 
 使用它的代码片段如下所示。示例代码取自 *Samples/01_Basic/03_Orders*。

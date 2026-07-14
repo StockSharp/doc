@@ -20,8 +20,8 @@ StockSharp 中的快照是一种保存市场数据最新实际状态的机制。
 
 [ISnapshotSerializer](xref:StockSharp.Algo.Storages.ISnapshotSerializer`2) 接口负责将快照转换为二进制表示并进行还原：
 
-- **数据类型** -- 快照数据类型信息。
-- **版本** -- 序列化格式版本。
+- **DataType** -- 快照数据类型信息。
+- **Version** -- 序列化格式版本。
 - **Serialize(version, message)** -- 将消息序列化为字节数组。
 - **Deserialize(version, buffer)** -- 将字节数组反序列化回消息。
 - **GetKey(message)** -- 从消息中提取密钥。

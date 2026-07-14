@@ -41,12 +41,12 @@ var subscription = new Subscription(lookupMessage);
   - **BoardCode** — 交易板代码（例如，[ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
 - **SecurityType** — 交易品种类型 ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) 等)
 - **SecurityTypes** — 用于高级搜索的交易品种类型数组
-- **货币** — 该交易品种的交易货币
+- **Currency** — 该交易品种的交易货币
 - **ExpiryDate** — 到期日（用于衍生品）
-- **行权价** — 期权的行权价
+- **Strike** — 期权的行权价
 - **OptionType** — 期权类型（适用于期权）
-- **名称** — 交易品种名称或其部分
-- **类** — 交易品种类别
+- **Name** — 交易品种名称或其部分
+- **Class** — 交易品种类别
 
 ### 正在处理搜索结果
 
@@ -59,7 +59,7 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"找到证券: {security.Id} - {security.Name}, 类型: {security.Type}");
+	Console.WriteLine($"找到交易品种: {security.Id} - {security.Name}, 类型: {security.Type}");
 	
 	// 这里可以将交易品种添加到集合或执行其他操作
 	Securities.Add(security);
@@ -71,7 +71,7 @@ private void OnSubscriptionFinished(Subscription subscription)
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"搜索完成。找到证券数: {Securities.Count}");
+	Console.WriteLine($"搜索完成。找到的交易品种数: {Securities.Count}");
 }
 
 // 订阅错误处理器
@@ -80,7 +80,7 @@ private void OnSubscriptionFailed(Subscription subscription, Exception error, bo
 	if (subscription.SubscriptionMessage is not SecurityLookupMessage)
 		return;
 		
-	Console.WriteLine($"证券搜索错误: {error.Message}");
+	Console.WriteLine($"交易品种搜索错误: {error.Message}");
 }
 
 // 订阅事件
@@ -141,7 +141,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		// 将结果复制到主集合
 		_searchResults.AddRange(foundSecurities);
 		
-		Console.WriteLine($"搜索完成。找到证券数: {foundSecurities.Count}");
+		Console.WriteLine($"搜索完成。找到的交易品种数: {foundSecurities.Count}");
 		
 		// 取消事件订阅
 		Connector.SecurityReceived -= OnSecurityReceived;
@@ -155,7 +155,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		if (sub != subscription)
 			return;
 			
-		Console.WriteLine($"证券搜索错误: {error.Message}");
+		Console.WriteLine($"交易品种搜索错误: {error.Message}");
 		
 		// 取消事件订阅
 		Connector.SecurityReceived -= OnSecurityReceived;
@@ -207,7 +207,7 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## 使用安全查找窗口
+## 使用 SecurityLookupWindow
 
 StockSharp 还提供了一个现成的工具搜索对话框 — [SecurityLookupWindow](xref:StockSharp.Xaml.SecurityLookupWindow)：
 

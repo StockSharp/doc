@@ -7,7 +7,7 @@
 [PropertyGridEx](xref:StockSharp.Xaml.PropertyGrid.PropertyGridEx) 为以下类型提供了自己的编辑器：
 
 - [单位](xref:StockSharp.Messages.Unit)。
-- [安全](xref:StockSharp.BusinessEntities.Security)。
+- [Security](xref:StockSharp.BusinessEntities.Security)。
 - [投资组合](xref:StockSharp.BusinessEntities.Portfolio). 
 - [交易板](xref:StockSharp.BusinessEntities.ExchangeBoard)。
 - [交易](xref:StockSharp.BusinessEntities.Exchange)。

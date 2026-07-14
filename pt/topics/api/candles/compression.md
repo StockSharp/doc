@@ -2,7 +2,7 @@
 
 ## Introdução
 
-A API fornece ferramentas poderosas para comprimir dados de tick e spreads (melhores preços de compra/venda) em candles. Essa funcionalidade é especialmente útil para analisar dados históricos ou construir indicadores personalizados.
+A API fornece ferramentas poderosas para comprimir dados de tick e spreads (melhores preços de compra/venda) em velas. Essa funcionalidade é especialmente útil para analisar dados históricos ou construir indicadores personalizados.
 
 Os principais métodos de extensão para compressão de dados estão localizados na classe `CandleHelper`. O código-fonte completo dessa classe está [disponível no GitHub](https://github.com/StockSharp/StockSharp/blob/master/Algo/Candles/CandleHelper.cs).
 

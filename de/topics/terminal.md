@@ -6,7 +6,7 @@
 
 ## Vorteile und Funktionen von Terminal:
 
-1. **Unterstützt viele Datenquellen:** [Konnektoren](api/connectors.md).
+1. **Unterstützung für mehr als 70 Verbindungen** zu Börsen und Brokern über [Konnektoren](api/connectors.md).
 2. **Handel aus Charts**.
 3. **Benutzerdefinierte Zeitrahmen**.
 4. **Volume-, Tick-, Range-, PnF- und Renko-Kerzen**.

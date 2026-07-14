@@ -5868,6 +5868,206 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void LocalizedTechnicalIdentifiersMatchRussianReference()
+	{
+		var errors = new List<string>();
+		var russianRoot = Path.Combine(_repoRoot, "ru");
+		var identifierPattern = new Regex(@"^\s*-\s+\*\*(?<name>[A-Za-z][A-Za-z0-9]*(?:\(\))?)\*\*", RegexOptions.Multiline | RegexOptions.CultureInvariant);
+		var relativeFiles = new List<string>();
+
+		foreach (var relativeDirectory in new[]
+		{
+			"topics/api/indicators/list_of_indicators",
+			"topics/api/strategies/samples",
+		})
+		{
+			var directory = Path.Combine(russianRoot, relativeDirectory.Replace('/', Path.DirectorySeparatorChar));
+			relativeFiles.AddRange(Directory.EnumerateFiles(directory, "*.md", SearchOption.AllDirectories)
+				.Select(file => Path.GetRelativePath(russianRoot, file).Replace('\\', '/')));
+		}
+
+		relativeFiles.AddRange(new[]
+		{
+			"topics/api/export.md",
+			"topics/api/import.md",
+			"topics/api/instruments/instrument_search.md",
+			"topics/api/latency.md",
+			"topics/api/market_data_storage/drives.md",
+			"topics/api/market_data_storage/snapshots.md",
+			"topics/api/pnl.md",
+			"topics/api/slippage.md",
+			"topics/api/strategies/chart.md",
+			"topics/api/strategies/quoting.md",
+			"topics/api/strategies/statistics_reference.md",
+		});
+
+		foreach (var relativePath in relativeFiles.Distinct(StringComparer.OrdinalIgnoreCase))
+		{
+			var russianFile = Path.Combine(russianRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			var identifiers = identifierPattern.Matches(ReadAllText(russianFile))
+				.Select(match => match.Groups["name"].Value)
+				.Distinct(StringComparer.Ordinal)
+				.ToArray();
+
+			foreach (var lang in GetContentLanguages().Where(lang => lang != "ru"))
+			{
+				var localizedFile = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(localizedFile))
+					continue;
+
+				var markdown = ReadAllText(localizedFile);
+				foreach (var identifier in identifiers)
+				{
+					if (!markdown.Contains($"**{identifier}**", StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(localizedFile)}: API identifier '**{identifier}**' from ru/{relativePath} was translated or changed.");
+				}
+			}
+		}
+
+		var designerIdentifiers = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
+		{
+			["topics/designer/strategies/using_code/csharp/create_own_indicator.md"] = ["Change"],
+			["topics/designer/strategies/using_code/fsharp/create_own_indicator.md"] = ["Change"],
+			["topics/designer/strategies/using_code/python/create_own_indicator.md"] = ["Change"],
+			["topics/designer/strategies/using_code/csharp/creating_your_own_cube.md"] = ["MinValue", "Process"],
+			["topics/designer/strategies/using_code/fsharp/creating_your_own_cube.md"] = ["MinValue", "Process"],
+			["topics/designer/strategies/using_code/python/creating_your_own_cube.md"] = ["MinValue", "Process"],
+		};
+
+		foreach (var (relativePath, identifiers) in designerIdentifiers)
+		{
+			foreach (var lang in GetContentLanguages().Where(lang => lang != "ru"))
+			{
+				var localizedFile = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+				if (!File.Exists(localizedFile))
+					continue;
+
+				var markdown = ReadAllText(localizedFile);
+				foreach (var identifier in identifiers)
+				{
+					if (!markdown.Contains($"**{identifier}**", StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(localizedFile)}: Designer API identifier '**{identifier}**' from the Russian reference was translated or changed.");
+				}
+			}
+		}
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != "ru"))
+		{
+			var formatsFile = Path.Combine(_repoRoot, lang, "topics", "api", "market_data_storage", "formats.md");
+			if (File.Exists(formatsFile) && !ReadAllText(formatsFile).Contains("**Binary**", StringComparison.Ordinal))
+				errors.Add($"{RelativeToRepo(formatsFile)}: StorageFormats value '**Binary**' from the Russian reference was translated or changed.");
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void LocalizedTerminalKeepsRussianConnectionCount()
+	{
+		var errors = new List<string>();
+		const string relativePath = "topics/terminal.md";
+		var russianFile = Path.Combine(_repoRoot, "ru", relativePath.Replace('/', Path.DirectorySeparatorChar));
+		var countMatch = Regex.Match(ReadAllText(russianFile), @"более\s+(?<count>\d+)\s+подключ", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		IsTrue(countMatch.Success, "The Russian Terminal reference must contain the connection count.");
+		var expectedCount = countMatch.Groups["count"].Value;
+
+		foreach (var lang in GetContentLanguages().Where(lang => lang != "ru"))
+		{
+			var file = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			if (File.Exists(file) && !Regex.IsMatch(ReadAllText(file), $@"(?<!\d){Regex.Escape(expectedCount)}(?!\d)", RegexOptions.CultureInvariant))
+				errors.Add($"{RelativeToRepo(file)}: Terminal capabilities lost the Russian reference count of {expectedCount} connections.");
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void ChineseDocsUseEstablishedTradingTerminology()
+	{
+		var errors = new List<string>();
+		var root = Path.Combine(_repoRoot, "zh", "topics");
+		var wrongSecurityPhrases = new[]
+		{
+			"基础安全类",
+			"使用安全查找窗口",
+			"安全信息提供者",
+			"[安全](xref:StockSharp.BusinessEntities.Security)",
+			"安全映射存储",
+		};
+
+		foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
+		{
+			var lines = ReadAllText(file).Replace("\r\n", "\n").Split('\n');
+			for (var i = 0; i < lines.Length; i++)
+			{
+				var line = lines[i];
+				if (line.Contains('烛') || line.Contains("K线线", StringComparison.Ordinal))
+					errors.Add($"{RelativeToRepo(file)}:{i + 1}: use the established Chinese candlestick term 'K线' consistently.");
+
+				if (Regex.IsMatch(line, @"\bi\.e\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant))
+					errors.Add($"{RelativeToRepo(file)}:{i + 1}: Chinese text keeps the English abbreviation 'i.e'.");
+
+				var withoutOfficialNames = line
+					.Replace("盈透证券", string.Empty, StringComparison.Ordinal)
+					.Replace("纽约证券交易所", string.Empty, StringComparison.Ordinal)
+					.Replace("美国证券交易所", string.Empty, StringComparison.Ordinal)
+					.Replace("伦敦证券交易所", string.Empty, StringComparison.Ordinal);
+				if (withoutOfficialNames.Contains("证券", StringComparison.Ordinal))
+					errors.Add($"{RelativeToRepo(file)}:{i + 1}: generic Security/instrument text uses '证券' instead of the project term '交易品种'.");
+
+				foreach (var phrase in wrongSecurityPhrases)
+				{
+					if (line.Contains(phrase, StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(file)}:{i + 1}: Security was mistranslated as safety in '{phrase}'.");
+				}
+			}
+		}
+
+		var blackMarubozu = Path.Combine(root, "api", "patterns", "black_marubozu.md");
+		var blackText = ReadAllText(blackMarubozu);
+		if (!blackText.Contains("黑色光头光脚阴线", StringComparison.Ordinal)
+			|| blackText.Contains("吞没", StringComparison.Ordinal)
+			|| blackText.Contains("黑色光头阳线", StringComparison.Ordinal))
+		{
+			errors.Add($"{RelativeToRepo(blackMarubozu)}: black Marubozu must use the bearish term '黑色光头光脚阴线'.");
+		}
+
+		var whiteMarubozu = Path.Combine(root, "api", "patterns", "white_marubozu.md");
+		var whiteText = ReadAllText(whiteMarubozu);
+		if (!whiteText.Contains("白色光头光脚阳线", StringComparison.Ordinal) || whiteText.Contains("吞没", StringComparison.Ordinal))
+			errors.Add($"{RelativeToRepo(whiteMarubozu)}: white Marubozu must use the bullish term '白色光头光脚阳线'.");
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
+	public void KnownTranslationErrorsDoNotReturn()
+	{
+		var errors = new List<string>();
+		var forbiddenByFile = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
+		{
+			["pt/topics/terminal.md"] = ["venues"],
+			["pt/topics/api/candles/compression.md"] = ["em candles"],
+			["es/topics/api/indicators/list_of_indicators/mcginley_dynamic.md"] = ["comercio a corto plazo", "comercio a largo plazo"],
+			["de/topics/api/indicators/list_of_indicators/median.md"] = ["ist er geringer", "wählt den Mittelwert aus"],
+			["zh/topics/api/indicators/list_of_indicators/median.md"] = ["更不那么"],
+		};
+
+		foreach (var (relativePath, forbiddenPhrases) in forbiddenByFile)
+		{
+			var file = Path.Combine(_repoRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
+			var text = ReadAllText(file);
+			foreach (var phrase in forbiddenPhrases)
+			{
+				if (text.Contains(phrase, StringComparison.OrdinalIgnoreCase))
+					errors.Add($"{RelativeToRepo(file)}: known translation error '{phrase}' returned.");
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedFastProtocolDocsDoNotKeepEnglishProtocolLinkLabel()
 	{
 		var errors = new List<string>();

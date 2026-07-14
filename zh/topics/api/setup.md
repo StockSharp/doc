@@ -86,7 +86,7 @@ StockSharp 通过 NuGet 分发。以下是按类别整理的完整软件包目�
 | 软件包 | 描述 |
 |---------|-------------|
 | [StockSharp.Xaml](https://www.nuget.org/packages/StockSharp.Xaml/) | WPF 控件：工具、投资组合和订单表格 |
-| [StockSharp.Xaml.Charting](https://www.nuget.org/packages/StockSharp.Xaml.Charting/) | 烛线图，指标，股票曲线 |
+| [StockSharp.Xaml.Charting](https://www.nuget.org/packages/StockSharp.Xaml.Charting/) | K线图、指标、权益曲线 |
 | [StockSharp.Charting.Interfaces](https://www.nuget.org/packages/StockSharp.Charting.Interfaces/) | 图表组件接口 |
 | [StockSharp.Alerts.Interfaces](https://www.nuget.org/packages/StockSharp.Alerts.Interfaces/) | 警报系统接口 |
 | [StockSharp.Diagram.Core](https://www.nuget.org/packages/StockSharp.Diagram.Core/) | 可视化策略设计器核心 |

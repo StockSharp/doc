@@ -1,6 +1,6 @@
 # 单位类型
 
-为了简化对百分比和绝对值等数值进行算术操作的工作，你可以使用 [Unit](xref:StockSharp.Messages.Unit) 数据类型。它允许透明地进行加法、减法、乘法和除法操作。[Unit](xref:StockSharp.Messages.Unit) 可以转换为 [Decimal](xref:System.Decimal)（除了当值为百分比时，i.e，类型 [Unit.Type](xref:StockSharp.Messages.Unit.Type) 被设置为 [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)）并且可以转换回去（在这种情况下，总是会创建一个绝对值，i.e，类型 [Unit.Type](xref:StockSharp.Messages.Unit.Type) 被设置为 [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)）。
+为了简化对百分比和绝对值等数值进行算术操作的工作，你可以使用 [Unit](xref:StockSharp.Messages.Unit) 数据类型。它允许透明地进行加法、减法、乘法和除法操作。[Unit](xref:StockSharp.Messages.Unit) 可以转换为 [Decimal](xref:System.Decimal)（仅当值为百分比时无法转换，即类型 [Unit.Type](xref:StockSharp.Messages.Unit.Type) 被设置为 [UnitTypes.Percent](xref:StockSharp.Messages.UnitTypes.Percent)），也可以从 Decimal 转换回来（在这种情况下，总是会创建一个绝对值，即类型 [Unit.Type](xref:StockSharp.Messages.Unit.Type) 被设置为 [UnitTypes.Absolute](xref:StockSharp.Messages.UnitTypes.Absolute)）。
 
 ## 使用单元
 

@@ -1,13 +1,12 @@
 # Gleitender Median
 
-Der Indikator **Gleitender Median** berechnet den Median der aktuellsten N-Werte. Im Vergleich zu gleitenden Durchschnitten ist er geringer
-reagiert empfindlich auf Ausreißer und bewahrt abrupte Preisänderungen, was es in lauten Umgebungen nützlich macht.
+Der Indikator **Gleitender Median** berechnet den Median der aktuellsten N-Werte. Im Vergleich zu gleitenden Durchschnitten reagiert er weniger empfindlich auf Ausreißer und bewahrt abrupte Preisänderungen, wodurch er in unruhigen Marktphasen nützlich ist.
 
 Verwenden Sie die Klasse [Median](xref:StockSharp.Algo.Indicators.Median), um auf den Indikator zuzugreifen.
 
 ## Beschreibung
 
-Ein Medianfilter sortiert die Preise innerhalb des beweglichen Fensters und wählt den Mittelwert aus. Als Ergebnis:
+Ein Medianfilter sortiert die Preise innerhalb des beweglichen Fensters und wählt den mittleren Wert aus. Als Ergebnis:
 
 - Einzelne Spitzen oder Tropfen verzerren die Ausgabe nicht.
 - Die Verzögerung ist kleiner als bei vielen Glättungsfiltern.

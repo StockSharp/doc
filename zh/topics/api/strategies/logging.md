@@ -153,7 +153,7 @@ protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	LogInfo("策略 {0} 已于 {1} 启动。证券: {2}, 投资组合: {3}",
+	LogInfo("策略 {0} 已于 {1} 启动。交易品种: {2}, 投资组合: {3}",
 		Name, time, Security?.Code, Portfolio?.Name);
 
 	// ...

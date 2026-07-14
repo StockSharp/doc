@@ -38,7 +38,7 @@ private void OnNewsReceived(Subscription subscription, News news)
 
 	// 如果新闻与特定交易品种相关
 	if (news.SecurityId != null)
-		Console.WriteLine($"证券: {news.SecurityId}");
+		Console.WriteLine($"交易品种: {news.SecurityId}");
 }
 ```
 

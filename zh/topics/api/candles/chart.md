@@ -2,7 +2,7 @@
 
 要以图形方式显示K线，可以使用专用的 [Chart](xref:StockSharp.Xaml.Charting.Chart) 组件（请参阅[图表构建组件](../graphical_user_interface/charts.md)）。K线显示效果如下：
 
-![蜡烛图示例](../../../images/sample_candleschart.png)
+![K线图示例](../../../images/sample_candleschart.png)
 
 ## 显示K线的基本方式
 

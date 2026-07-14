@@ -105,7 +105,7 @@ _minValue = AddParam("MinValue", 10)
 
 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) クラスを使用すると、設定を保存および復元する方法が自動的に利用されます。
 
-**最小値** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
+**MinValue** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
 
 コメントアウトされている [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) プロパティは、入力ソケットを持つメソッド呼び出しのタイミングを担います。
 
@@ -113,7 +113,7 @@ _minValue = AddParam("MinValue", 10)
 //public override bool WaitAllInput => false;
 ```
 
-コメント解除すると、少なくとも 1 つの値が到着した時点で、**プロセス** メソッドが常に呼び出されます (この例では、ローソク足または数値のいずれかです)。
+コメント解除すると、少なくとも 1 つの値が到着した時点で、**Process** メソッドが常に呼び出されます (この例では、ローソク足または数値のいずれかです)。
 
 作成されたキューブをダイアグラムに追加するには、パレットの **独自要素** セクションで作成したキューブを選択する必要があります。
 

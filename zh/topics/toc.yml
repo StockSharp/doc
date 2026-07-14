@@ -2029,7 +2029,7 @@
       href: api/patterns/bearish_harami.md
     - name: '黑色K线'
       href: api/patterns/black_candle.md
-    - name: '黑色光头阳线'
+    - name: '黑色光头光脚阴线'
       href: api/patterns/black_marubozu.md
     - name: '看涨'
       href: api/patterns/bullish.md
@@ -2067,7 +2067,7 @@
       href: api/patterns/tweezer_top.md
     - name: '白色K线'
       href: api/patterns/white_candle.md
-    - name: '白色光头阳线'
+    - name: '白色光头光脚阳线'
       href: api/patterns/white_marubozu.md
     - name: 复杂模式
       href: api/patterns/complex_patterns.md

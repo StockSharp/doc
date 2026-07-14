@@ -102,7 +102,7 @@ class empty_indicator(BaseIndicator):
 		return str(self)
 ```
 
-このインジケーターは入力値を受け取り、指定された **変更** パラメーター値に基づいてランダムな偏差を加えます。
+このインジケーターは入力値を受け取り、指定された **Change** パラメーター値に基づいてランダムな偏差を加えます。
 
 インジケーターメソッドの説明は、[カスタムインジケーター](../../../../api/indicators/custom_indicator.md)セクションで確認できます。
 
@@ -110,7 +110,7 @@ class empty_indicator(BaseIndicator):
 
 ![Designer ソースコードインジケーター 01](../../../../../images/designer_source_code_indicator_01.png)
 
-インジケーターコードで事前に設定した **変更** パラメーターが、プロパティパネルに表示されます。
+インジケーターコードで事前に設定した **Change** パラメーターが、プロパティパネルに表示されます。
 
 > [!WARNING]
 > Python コードのインジケーターは、Python コードで作成されたストラテジーでは使用できません。[キューブから](../../using_visual_designer.md)作成されたストラテジーでのみ使用できます。

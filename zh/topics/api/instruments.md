@@ -2,7 +2,7 @@
 
 在 StockSharp 中，金融工具由 [Security](xref:StockSharp.BusinessEntities.Security) 类表示，这是处理交易数据的基本元素。本节涵盖了在平台内处理金融工具的主要方面。
 
-## 基础安全类
+## Security 基类
 
 [Security](xref:StockSharp.BusinessEntities.Security) 表示在交易所交易的金融工具。金融工具可以是股票、期货合约、期权、货币对、加密货币及其他资产。该类包含识别和交易该金融工具所需的所有信息：
 

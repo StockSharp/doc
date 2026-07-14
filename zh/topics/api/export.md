@@ -6,8 +6,8 @@
 
 基础抽象类 [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter) 定义了所有导出器的通用契约：
 
-- **数据类型** — 被导出的数据类型（逐笔数据、K线、订单簿等）。
-- **编码** — 编码（默认 UTF-8）。
+- **DataType** — 被导出的数据类型（逐笔数据、K线、订单簿等）。
+- **Encoding** — 编码（默认 UTF-8）。
 - **Export\<T\>(IAsyncEnumerable\<T\>, CancellationToken)** — 主要的导出方法。返回 `Task<(int count, DateTime? lastTime)>` — 导出记录的数量以及最后一条记录的时间。
 
 该方法会自动将数据路由到特定类型的处理程序，适用于：[QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage)、[Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage)、[ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)（行情、订单日志、交易）、[CandleMessage](xref:StockSharp.Messages.CandleMessage)、[NewsMessage](xref:StockSharp.Messages.NewsMessage)、[SecurityMessage](xref:StockSharp.Messages.SecurityMessage)、[PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage)、[IndicatorValue](xref:StockSharp.Messages.IndicatorValue) 和 [BoardStateMessage](xref:StockSharp.Messages.BoardStateMessage)。
@@ -35,7 +35,7 @@ var (count, lastTime) = await exporter.Export(tickMessages, token);
 [JsonExporter](xref:StockSharp.Algo.Export.JsonExporter) 以 JSON 格式保存数据。
 
 - **构造函数**: `(DataType dataType, Stream stream)`
-- **缩进** — 缩进格式（默认 `true`）。
+- **Indent** — 缩进格式（默认 `true`）。
 
 ```cs
 await using var stream = File.Create("candles.json");
@@ -49,7 +49,7 @@ await exporter.Export(candleMessages, token);
 [XmlExporter](xref:StockSharp.Algo.Export.XmlExporter) 以 XML 格式保存数据。
 
 - **构造函数**: `(DataType dataType, Stream stream)`
-- **缩进** — 缩进格式（默认 `true`）。
+- **Indent** — 缩进格式（默认 `true`）。
 
 ```cs
 await using var stream = File.Create("candles.xml");

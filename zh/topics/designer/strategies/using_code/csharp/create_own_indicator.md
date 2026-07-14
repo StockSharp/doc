@@ -90,7 +90,7 @@ public class EmptyIndicator : BaseIndicator
 }
 ```
 
-该指标接收输入值，并根据 **变化** 参数对该值进行随机偏移。
+该指标接收输入值，并根据 **Change** 参数对该值进行随机偏移。
 
 有关指标方法的说明，请参阅[自定义指标](../../../../api/indicators/custom_indicator.md)。
 
@@ -98,7 +98,7 @@ public class EmptyIndicator : BaseIndicator
 
 ![Designer 源代码指标 01](../../../../../images/designer_source_code_indicator_01.png)
 
-属性面板会显示此前在指标代码中定义的 **变化** 参数。
+属性面板会显示此前在指标代码中定义的 **Change** 参数。
 
 > [!WARNING]
 > 使用 C# 代码创建的指标不能用于同样使用 C# 代码创建的策略，只能用于通过[模块](../../using_visual_designer.md)创建的策略。
