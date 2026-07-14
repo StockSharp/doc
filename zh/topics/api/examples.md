@@ -10,4 +10,4 @@
 
 我们建议仔细研究这些示例和文档，以充分利用我们平台的功能。
 
-如果您有任何问题，您可以随时在我们的 [Telegram 聊天](https://t.me/stocksharpchat/361) 中寻求帮助。
+如果您有任何问题，您可以随时在我们的 [Telegram 聊天](https://stocksharp.com/zh/chat/) 中寻求帮助。

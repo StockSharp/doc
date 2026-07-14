@@ -2,7 +2,7 @@
 
 Currently, the [S#](../api.md) core is being developed as part of the Open Source community, is available as source code, and is hosted in the [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) repository.
 
-[Instructions for using GitHub](https://stocksharp.com/en/forum/4848/rukovodstvo-po-github/)
+[Instructions for using GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world)
 
 List of components available with source code:
 

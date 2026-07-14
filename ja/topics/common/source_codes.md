@@ -2,7 +2,7 @@
 
 現在、[S#](../api.md) コアはオープンソースコミュニティの一部として開発されており、ソースコードとして利用可能で、[GitHub\/StockSharp](https://github.com/StockSharp/StockSharp) リポジトリでホストされています。
 
-[GitHub の使用手順](https://stocksharp.com/ja/forum/4848/rukovodstvo-po-github/)
+[GitHub の使用手順](https://docs.github.com/ja/get-started/start-your-journey/hello-world)
 
 ソースコード付きで利用できるコンポーネントの一覧:
 

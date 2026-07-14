@@ -24,7 +24,7 @@ StockSharp 公式 Web サイトのストラテジーギャラリーには、「D
 
 他のユーザーと交流し、「Designer」の使用方法について迅速なサポートを受けるには、Telegram のチャットに参加してください。
 
-- **Telegram の「Designer」チャット**: [チャットに参加](https://t.me/stocksharpchat/361)
+- **Telegram の「Designer」チャット**: [チャットに参加](https://stocksharp.com/ja/chat/)
 
 これらのリソースは、「Designer」プログラムを効果的に学習し利用するために必要なものをすべて提供します。取引で最良の結果を得るために、提供されているすべての資料を活用することをお勧めします。
 

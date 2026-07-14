@@ -10,4 +10,4 @@ El código proporcionado en la documentación se toma de estos ejemplos. Puede e
 
 Recomendamos estudiar cuidadosamente los ejemplos y la documentación para aprovechar al máximo las capacidades de nuestra plataforma.
 
-Si tiene alguna pregunta, siempre puede buscar ayuda en nuestro [chat de Telegram](https://t.me/stocksharpchat/361).
+Si tiene alguna pregunta, siempre puede buscar ayuda en nuestro [chat de Telegram](https://stocksharp.com/es/chat/).

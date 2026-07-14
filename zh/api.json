@@ -29430,7 +29430,7 @@
     "summary": "库存"
   },
   "F:StockSharp.Localization.LocalizedStrings.StockSharpChatUrlKey": {
-    "summary": "https://t.me/stocksharpchat/361"
+    "summary": "https://stocksharp.com/zh/chat/"
   },
   "F:StockSharp.Localization.LocalizedStrings.StockSharpDomainKey": {
     "summary": "com 调制解调器"
@@ -152097,7 +152097,7 @@
     "summary": "StockSharp"
   },
   "P:StockSharp.Localization.LocalizedStrings.StockSharpChatUrl": {
-    "summary": "https://t.me/stocksharpchat/361"
+    "summary": "https://stocksharp.com/zh/chat/"
   },
   "P:StockSharp.Localization.LocalizedStrings.StockSharpDomain": {
     "summary": "com 调制解调器"

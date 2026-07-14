@@ -13,4 +13,4 @@
 
 - Site da plataforma - [https:\/\/stocksharp.com/pt](https://stocksharp.com/pt/).
 - Blogue - [StockSharp Blog](https://stocksharp.com/pt/blog/).
-- Chat do Telegram - [abrir chat](https://t.me/stocksharpchat/361).
+- Chat do Telegram - [abrir chat](https://stocksharp.com/pt/chat/).

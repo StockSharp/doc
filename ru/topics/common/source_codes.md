@@ -2,7 +2,7 @@
 
 В настоящее время ядро [S\#](../api.md) разрабатывается в рамках Open Source комьюнити, доступно в виде исходных кодов, и размещено в репозитории [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp).
 
-[Инструкция использования GitHub](https://stocksharp.com/ru/forum/4848/rukovodstvo-po-github/)
+[Инструкция использования GitHub](https://docs.github.com/ru/get-started/start-your-journey/hello-world)
 
 Список компонент, доступных с исходными кодами:
 

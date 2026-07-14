@@ -13,4 +13,4 @@
 
 - Сайт платформы \- [https:\/\/stocksharp.com/ru](https://stocksharp.com/ru/).
 - Блог \- [Блог](https://stocksharp.com/ru/blog/).
-- Чат в Телеграме \- [Чат](https://t.me/stocksharpchat/1).
+- Чат в Телеграме \- [Чат](https://stocksharp.com/ru/chat/).

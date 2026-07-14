@@ -29430,7 +29430,7 @@
     "summary": "Unidade populacional"
   },
   "F:StockSharp.Localization.LocalizedStrings.StockSharpChatUrlKey": {
-    "summary": "https://t.me/stocksharpchat/361"
+    "summary": "https://stocksharp.com/pt/chat/"
   },
   "F:StockSharp.Localization.LocalizedStrings.StockSharpDomainKey": {
     "summary": "com"
@@ -152097,7 +152097,7 @@
     "summary": "StockSharp"
   },
   "P:StockSharp.Localization.LocalizedStrings.StockSharpChatUrl": {
-    "summary": "https://t.me/stocksharpchat/361"
+    "summary": "https://stocksharp.com/pt/chat/"
   },
   "P:StockSharp.Localization.LocalizedStrings.StockSharpDomain": {
     "summary": "com"

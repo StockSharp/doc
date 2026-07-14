@@ -2,7 +2,7 @@
 
 Actualmente, el núcleo de [S#](../api.md) se desarrolla como parte de la comunidad de código abierto, está disponible como código fuente y se aloja en el repositorio [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp).
 
-[Instrucciones para usar GitHub](https://stocksharp.com/es/forum/4848/rukovodstvo-po-github/)
+[Instrucciones para usar GitHub](https://docs.github.com/es/get-started/start-your-journey/hello-world)
 
 Lista de componentes disponibles con código fuente:
 

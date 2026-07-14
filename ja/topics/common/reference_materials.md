@@ -13,4 +13,4 @@
 
 - プラットフォームサイト - [https:\/\/stocksharp.com/ja](https://stocksharp.com/ja/).
 - ブログ - [StockSharp Blog](https://stocksharp.com/ja/blog/).
-- Telegram チャット - [チャット](https://t.me/stocksharpchat/361).
+- Telegram チャット - [チャット](https://stocksharp.com/ja/chat/).

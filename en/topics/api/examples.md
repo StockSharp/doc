@@ -10,4 +10,4 @@ The code provided in the documentation is taken from these examples. You can exp
 
 We recommend carefully studying the examples and documentation to make the most effective use of our platform's capabilities.
 
-If you have any questions, you can always seek help in our [Telegram chat](https://t.me/stocksharpchat/361).
+If you have any questions, you can always seek help in our [Telegram chat](https://stocksharp.com/en/chat/).

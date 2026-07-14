@@ -2,7 +2,7 @@
 
 Derzeit wird der Kern von [S#](../api.md) im Rahmen der Open-Source-Community entwickelt, ist als Quellcode verfügbar und befindet sich im Repository [GitHub\/StockSharp](https://github.com/StockSharp/StockSharp).
 
-[Anleitung zur Verwendung von GitHub](https://stocksharp.com/de/forum/4848/rukovodstvo-po-github/)
+[Anleitung zur Verwendung von GitHub](https://docs.github.com/de/get-started/start-your-journey/hello-world)
 
 Liste der Komponenten, die mit Quellcode verfügbar sind:
 

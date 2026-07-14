@@ -24,6 +24,6 @@ Designer 使用的策略及其他组件的源代码可在 GitHub 上获取。该
 
 要与其他用户交流并快速获得 Designer 使用方面的帮助，请加入 Telegram 群聊。
 
-- **Designer Telegram 群聊**：[加入群聊](https://t.me/stocksharpchat/361)
+- **Designer Telegram 群聊**：[加入群聊](https://stocksharp.com/zh/chat/)
 
 这些资源涵盖了有效学习和使用 Designer 所需的资料。建议充分利用这些内容，以获得更好的交易实践效果。

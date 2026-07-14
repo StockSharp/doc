@@ -10,4 +10,4 @@ Der in der Dokumentation gezeigte Code stammt aus diesen Beispielen. Über den o
 
 Wir empfehlen, die Beispiele und die Dokumentation sorgfältig zu studieren, um die Möglichkeiten unserer Plattform möglichst effektiv zu nutzen.
 
-Wenn Sie Fragen haben, können Sie jederzeit in unserem [Telegram-Chat](https://t.me/stocksharpchat/361) Hilfe suchen.
+Wenn Sie Fragen haben, können Sie jederzeit in unserem [Telegram-Chat](https://stocksharp.com/de/chat/) Hilfe suchen.

@@ -10,4 +10,4 @@ StockSharp API ライブラリの使用例は、GitHub リポジトリの次の�
 
 プラットフォームの機能を最も効果的に活用するために、例とドキュメントを注意深く学習することをお勧めします。
 
-質問がある場合は、いつでも [Telegram チャット](https://t.me/stocksharpchat/361) でサポートを求めることができます。
+質問がある場合は、いつでも [Telegram チャット](https://stocksharp.com/ja/chat/) でサポートを求めることができます。

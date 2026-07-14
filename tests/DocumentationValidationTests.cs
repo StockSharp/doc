@@ -3088,9 +3088,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			foreach (var label in EnumerateMarkdownLinkLabels(ReadAllText(file)))
 			{
 				if (label.Text.Equals("Chat", StringComparison.Ordinal)
-					&& label.Url.Contains("t.me/stocksharpchat", StringComparison.OrdinalIgnoreCase))
+					&& NormalizeStockSharpSiteLanguageRouteForStructure(label.Url).Equals("https://stocksharp.com/{lang}/chat/", StringComparison.OrdinalIgnoreCase))
 				{
-					errors.Add($"{RelativeToRepo(file)}:{label.Line}: localized common reference keeps English Telegram chat link label.");
+					errors.Add($"{RelativeToRepo(file)}:{label.Line}: localized common reference keeps English chat link label.");
 				}
 			}
 		}
@@ -11674,7 +11674,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private static string NormalizeStructureUrl(string url)
 	{
 		var normalized = (url ?? string.Empty).Replace('\\', '/').Trim();
-		return NormalizeStockSharpSiteLanguageRouteForStructure(normalized);
+		normalized = NormalizeStockSharpSiteLanguageRouteForStructure(normalized);
+		return NormalizeGitHubDocsLanguageRouteForStructure(normalized);
 	}
 
 	private static string NormalizeStockSharpSiteLanguageRouteForStructure(string url)
@@ -11682,6 +11683,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			url,
 			@"^(?<scheme>https?://)(?:www\.)?stocksharp\.com/(?<lang>en|ru|de|es|pt|ja|zh)(?=$|[/?#])",
 			match => $"{match.Groups["scheme"].Value}stocksharp.com/{{lang}}",
+			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+
+	private static string NormalizeGitHubDocsLanguageRouteForStructure(string url)
+		=> Regex.Replace(
+			url,
+			@"^(?<scheme>https?://)docs\.github\.com/(?<lang>en|ru|de|es|pt|ja|zh)(?=$|[/?#])",
+			match => $"{match.Groups["scheme"].Value}docs.github.com/{{lang}}",
 			RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
 	private static string NormalizeStockSharpSiteSuffix(string suffix)
@@ -12826,7 +12834,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private static bool IsKnownShortTranslatableEnglishMarkdownLinkLabel(string text, string normalizedUrl)
 	{
 		if (text.Equals("Chat", StringComparison.Ordinal))
-			return normalizedUrl.Contains("t.me/stocksharpchat", StringComparison.OrdinalIgnoreCase);
+			return NormalizeStockSharpSiteLanguageRouteForStructure(normalizedUrl).Equals("https://stocksharp.com/{lang}/chat/", StringComparison.OrdinalIgnoreCase);
 
 		if (text.Equals("formed", StringComparison.Ordinal))
 			return normalizedUrl.EndsWith("/api/indicators.md", StringComparison.OrdinalIgnoreCase);

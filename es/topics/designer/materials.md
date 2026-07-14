@@ -24,6 +24,6 @@ Los códigos fuente de estrategias y otros componentes usados en "Designer" est�
 
 Para interactuar con otros usuarios y obtener ayuda rápida sobre el uso de "Designer", únase a nuestro chat en Telegram.
 
-- **Chat "Designer" en Telegram**: [Unirse al chat](https://t.me/stocksharpchat/361)
+- **Chat "Designer" en Telegram**: [Unirse al chat](https://stocksharp.com/es/chat/)
 
 Estos recursos proporcionan todo lo necesario para aprender y usar eficazmente el programa "Designer". Recomendamos aprovechar todos los materiales proporcionados para lograr los mejores resultados en negociación.
