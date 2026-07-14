@@ -991,6 +991,15 @@
           href: api/connectors/stock_market/rithmic/graphical_configuration_rithmic.md
         - name: Инициализация адаптера Rithmic
           href: api/connectors/stock_market/rithmic/adapter_initialization_rithmic.md
+      - name: Charles Schwab
+        href: api/connectors/stock_market/schwab.md
+        items:
+        - name: Настройки коннектора Charles Schwab
+          href: api/connectors/stock_market/schwab/configuration_schwab.md
+        - name: Графическое конфигурирование Charles Schwab
+          href: api/connectors/stock_market/schwab/graphical_configuration_schwab.md
+        - name: Инициализация адаптера Charles Schwab
+          href: api/connectors/stock_market/schwab/adapter_initialization_schwab.md
       - name: Sterling
         href: api/connectors/stock_market/sterling.md
         items:
@@ -1009,6 +1018,15 @@
           href: api/connectors/stock_market/tradier/graphical_configuration_tradier.md
         - name: Инициализация адаптера Tradier
           href: api/connectors/stock_market/tradier/adapter_initialization_tradier.md
+      - name: Webull
+        href: api/connectors/stock_market/webull.md
+        items:
+        - name: Настройки коннектора Webull
+          href: api/connectors/stock_market/webull/configuration_webull.md
+        - name: Графическое конфигурирование Webull
+          href: api/connectors/stock_market/webull/graphical_configuration_webull.md
+        - name: Инициализация адаптера Webull
+          href: api/connectors/stock_market/webull/adapter_initialization_webull.md
       - name: Xignite
         href: api/connectors/stock_market/xignite.md
         items:

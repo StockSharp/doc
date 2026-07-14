@@ -954,6 +954,57 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void CompleteStockMarketConnectorDocumentationIsIndexed()
+	{
+		var errors = new List<string>();
+		var defaultConnectorRoot = Path.Combine(_repoRoot, DefaultLanguage, "topics", "api", "connectors", "stock_market");
+		var connectors = Directory.EnumerateDirectories(defaultConnectorRoot)
+			.Select(Path.GetFileName)
+			.Where(name =>
+				File.Exists(Path.Combine(defaultConnectorRoot, name, $"configuration_{name}.md")) &&
+				File.Exists(Path.Combine(defaultConnectorRoot, name, $"graphical_configuration_{name}.md")) &&
+				File.Exists(Path.Combine(defaultConnectorRoot, name, $"adapter_initialization_{name}.md")))
+			.Order(StringComparer.OrdinalIgnoreCase)
+			.ToArray();
+
+		foreach (var lang in GetContentLanguages())
+		{
+			var topicsRoot = Path.Combine(_repoRoot, lang, "topics");
+			var tocPath = Path.Combine(topicsRoot, "toc.yml");
+			var designerPath = Path.Combine(topicsRoot, "designer", "connections_settings", "connectors_settings.md");
+			var hydraPath = Path.Combine(topicsRoot, "hydra", "data_sources.md");
+			var toc = ReadAllText(tocPath);
+			var designer = ReadAllText(designerPath);
+			var hydra = ReadAllText(hydraPath);
+
+			foreach (var connector in connectors)
+			{
+				var overview = $"api/connectors/stock_market/{connector}.md";
+				var configuration = $"api/connectors/stock_market/{connector}/configuration_{connector}.md";
+				var graphical = $"api/connectors/stock_market/{connector}/graphical_configuration_{connector}.md";
+				var initialization = $"api/connectors/stock_market/{connector}/adapter_initialization_{connector}.md";
+
+				foreach (var reference in new[] { overview, configuration, graphical, initialization })
+				{
+					if (!toc.Contains(reference, StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(tocPath)} must index the complete '{connector}' connector documentation set. Missing: {reference}.");
+				}
+
+				foreach (var (path, content) in new[] { (designerPath, designer), (hydraPath, hydra) })
+				{
+					foreach (var reference in new[] { overview, configuration, graphical })
+					{
+						if (!content.Contains(reference, StringComparison.Ordinal))
+							errors.Add($"{RelativeToRepo(path)} must list the '{connector}' connector. Missing: {reference}.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedTocFilesMatchDefaultStructure()
 	{
 		var errors = new List<string>();
