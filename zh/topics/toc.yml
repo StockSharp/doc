@@ -861,6 +861,15 @@
           href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
         - name: 适配器初始化 Sterling
           href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+      - name: TradeZero
+        href: api/connectors/stock_market/tradezero.md
+        items:
+        - name: TradeZero 连接器配置
+          href: api/connectors/stock_market/tradezero/configuration_tradezero.md
+        - name: TradeZero 图形化配置
+          href: api/connectors/stock_market/tradezero/graphical_configuration_tradezero.md
+        - name: TradeZero 适配器初始化
+          href: api/connectors/stock_market/tradezero/adapter_initialization_tradezero.md
       - name: Tradier
         href: api/connectors/stock_market/tradier.md
         items:
@@ -870,6 +879,15 @@
           href: api/connectors/stock_market/tradier/graphical_configuration_tradier.md
         - name: 适配器初始化 Tradier
           href: api/connectors/stock_market/tradier/adapter_initialization_tradier.md
+      - name: Tradovate
+        href: api/connectors/stock_market/tradovate.md
+        items:
+        - name: Tradovate 连接器配置
+          href: api/connectors/stock_market/tradovate/configuration_tradovate.md
+        - name: Tradovate 图形化配置
+          href: api/connectors/stock_market/tradovate/graphical_configuration_tradovate.md
+        - name: Tradovate 适配器初始化
+          href: api/connectors/stock_market/tradovate/adapter_initialization_tradovate.md
       - name: Webull
         href: api/connectors/stock_market/webull.md
         items:

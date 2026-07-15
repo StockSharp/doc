@@ -1009,6 +1009,15 @@
           href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
         - name: Инициализация адаптера Sterling
           href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+      - name: TradeZero
+        href: api/connectors/stock_market/tradezero.md
+        items:
+        - name: Настройки коннектора TradeZero
+          href: api/connectors/stock_market/tradezero/configuration_tradezero.md
+        - name: Графическое конфигурирование TradeZero
+          href: api/connectors/stock_market/tradezero/graphical_configuration_tradezero.md
+        - name: Инициализация адаптера TradeZero
+          href: api/connectors/stock_market/tradezero/adapter_initialization_tradezero.md
       - name: Tradier
         href: api/connectors/stock_market/tradier.md
         items:
@@ -1018,6 +1027,15 @@
           href: api/connectors/stock_market/tradier/graphical_configuration_tradier.md
         - name: Инициализация адаптера Tradier
           href: api/connectors/stock_market/tradier/adapter_initialization_tradier.md
+      - name: Tradovate
+        href: api/connectors/stock_market/tradovate.md
+        items:
+        - name: Настройки коннектора Tradovate
+          href: api/connectors/stock_market/tradovate/configuration_tradovate.md
+        - name: Графическое конфигурирование Tradovate
+          href: api/connectors/stock_market/tradovate/graphical_configuration_tradovate.md
+        - name: Инициализация адаптера Tradovate
+          href: api/connectors/stock_market/tradovate/adapter_initialization_tradovate.md
       - name: Webull
         href: api/connectors/stock_market/webull.md
         items:
