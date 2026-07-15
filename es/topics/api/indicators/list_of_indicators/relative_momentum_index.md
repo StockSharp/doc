@@ -17,8 +17,8 @@ RMI es particularmente útil para identificar posibles puntos de inversión de t
 
 ## Parámetros
 
-- **MomentumPeriod**: período de impulso que define el desfase de tiempo para la comparación de precios.
-- **Length** - período principal para calcular el indicador (similar al período en RSI).
+- **Período de impulso**: período de impulso que define el desfase de tiempo para la comparación de precios.
+- **Longitud** - período principal para calcular el indicador (similar al período en RSI).
 
 ## Cálculo
 

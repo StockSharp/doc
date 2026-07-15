@@ -19,7 +19,7 @@ Die Grundidee von CMF besteht darin, dass der Schlusskurs bei einem starken Aufw
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** - Berechnungszeitraum (Standardwert: 20-21 Tage)
+- **Länge** - Berechnungszeitraum (Standardwert: 20-21 Tage)
 
 ## Berechnung
 

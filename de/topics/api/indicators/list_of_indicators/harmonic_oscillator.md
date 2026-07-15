@@ -19,7 +19,7 @@ HO ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Analysezeitraum (Standardwert: 30)
+- **Länge** – Analysezeitraum (Standardwert: 30)
 
 ## Berechnung
 

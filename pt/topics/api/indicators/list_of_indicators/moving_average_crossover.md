@@ -19,8 +19,8 @@ O MAC é amplamente usado tanto em estratégias de negociação autónomas como 
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **ShortPeriod** - período da média móvel curta (valor predefinido: 9)
-- **LongPeriod** - período da média móvel longa (valor predefinido: 26)
+- **Período curto** - período da média móvel curta (valor predefinido: 9)
+- **Período longo** - período da média móvel longa (valor predefinido: 26)
 
 ## Cálculo
 

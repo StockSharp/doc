@@ -19,8 +19,8 @@ El indicador utiliza la fórmula:
 
 fuerza alcista hereda sus parámetros de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
-- **Length** — Período EMA.
-- **Alpha** (opcional): coeficiente de suavizado, cuando corresponda.
+- **Longitud** — Período EMA.
+- **Alfa** (opcional): coeficiente de suavizado, cuando corresponda.
 
 ## Uso
 

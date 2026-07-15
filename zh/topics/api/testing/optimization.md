@@ -161,7 +161,7 @@ _candleType = Param(nameof(CandleType), TimeSpan.FromMinutes(5).TimeFrame())
 ### 创建并配置优化器
 
 ```csharp
-// 工具和投资组合。
+// 交易品种和投资组合。
 var security = new Security
 {
     Id = "AAPL@NASDAQ",
@@ -417,7 +417,7 @@ using StockSharp.BusinessEntities;
 using StockSharp.Configuration;
 using StockSharp.Messages;
 
-// 配置工具和投资组合。
+// 配置交易品种和投资组合。
 var security = new Security
 {
     Id = "AAPL@NASDAQ",

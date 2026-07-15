@@ -10,7 +10,7 @@ Utilice la clase [DeMarker](xref:StockSharp.Algo.Indicators.DeMarker) para traba
 1. Para cada barra, calcule valores intermedios:
    `DeMax = max(High − PreviousHigh, 0)`
    `DeMin = max(PreviousLow − Low, 0)`
-2. Suaviza `DeMax` y `DeMin` con una media móvil de longitud **Length**.
+2. Suaviza `DeMax` y `DeMin` con una media móvil de longitud **Longitud**.
 3. Calcular el valor final:
    `DeMarker = SMA(DeMax, Length) / (SMA(DeMax, Length) + SMA(DeMin, Length))`.
 
@@ -18,7 +18,7 @@ La salida se normaliza entre 0 y 1.
 
 ## Parámetros
 
-- **Length** — período de suavizado que controla la capacidad de respuesta del indicador.
+- **Longitud** — período de suavizado que controla la capacidad de respuesta del indicador.
 
 ## Interpretación
 

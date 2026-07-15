@@ -7,10 +7,10 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 - **chave** - chave.
 - **segredo** - segredo.
 - **frase-passe** - frase-passe.
-- **Futures** - secção de futuros
-- **Spot** - secção spot
-- **Swap** - secção swap.
-- **palavra-passe** - password administrativa.
+- **Futuros** - secção de futuros
+- **Mercado à vista** - secção spot
+- **Swaps** - secção swap.
+- **palavra-passe** - palavra-passe administrativa.
 - **Intervalo de verificação da ligação** - intervalo de verificação do servidor para controlar que a ligação está ativa. Por predefinição, é igual a 1 minuto.
 - **Definições de religação** - mecanismo para controlar as ligações com as definições do sistema de negociação. ([Definições de reconexão](../../reconnection_settings.md))
 

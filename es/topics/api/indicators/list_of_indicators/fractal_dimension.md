@@ -16,7 +16,7 @@ El indicador se basa en la geometría fractal y mide la complejidad de la trayec
 ## Parámetros
 
 El indicador tiene el siguiente parámetro:
-- **Length** – período de cálculo (valor predeterminado: 30)
+- **Longitud** – período de cálculo (valor predeterminado: 30)
 
 ## Cálculo
 

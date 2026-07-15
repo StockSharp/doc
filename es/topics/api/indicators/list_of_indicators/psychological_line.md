@@ -18,7 +18,7 @@ El indicador PSY ayuda a determinar si el mercado se encuentra en una condición
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 12-14)
+- **Longitud** - período de cálculo (valor predeterminado: 12-14)
 
 ## Cálculo
 

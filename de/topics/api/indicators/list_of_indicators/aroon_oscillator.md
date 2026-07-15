@@ -17,7 +17,7 @@ Je weiter sich der Wert von null entfernt, desto stärker ist die gerichtete Bew
 
 ## Parameter
 
-- **Length** - Periode, die für die zugrunde liegenden Aroon-Berechnungen verwendet wird. Größere Werte liefern glattere Signale mit langsamerer Reaktion.
+- **Länge** - Periode, die für die zugrunde liegenden Aroon-Berechnungen verwendet wird. Größere Werte liefern glattere Signale mit langsamerer Reaktion.
 
 ## Berechnung
 

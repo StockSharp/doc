@@ -10,7 +10,7 @@
 1. 各バーについて中間値を計算します。
    `DeMax = max(High − PreviousHigh, 0)`
    `DeMin = max(PreviousLow − Low, 0)`
-2. `DeMax` と `DeMin` を、長さ **Length** の移動平均で平滑化します。
+2. `DeMax` と `DeMin` を、長さ **期間** の移動平均で平滑化します。
 3. 最終値を計算します。
    `DeMarker = SMA(DeMax, Length) / (SMA(DeMax, Length) + SMA(DeMin, Length))`.
 
@@ -18,7 +18,7 @@
 
 ## パラメーター
 
-- **Length** — インジケーターの応答性を制御する平滑化期間。
+- **期間** — インジケーターの応答性を制御する平滑化期間。
 
 ## 解釈
 

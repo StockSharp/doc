@@ -21,7 +21,7 @@ O indicador é especialmente útil para identificar fases iniciais da formação
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (normalmente são usados 14-25 períodos)
+- **Período** - período de cálculo (normalmente são usados 14-25 períodos)
 
 ## Cálculo
 

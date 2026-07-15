@@ -16,7 +16,7 @@ O indicador ajuda a determinar a direção e a força da tendência:
 
 ## Parâmetros
 
-- **Lines** - número de médias móveis SMA utilizadas no gráfico rainbow.
+- **Linhas** - número de médias móveis SMA utilizadas no gráfico rainbow.
 
 ## Cálculo
 

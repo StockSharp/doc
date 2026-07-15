@@ -2,8 +2,8 @@
 
 In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) konfiguriert.
 
-- **Zugriffstoken** (`Token`) — das OAuth-Zugriffstoken.
-- **Adresse** (`Address`) — die Adresse der Trader API.
+- **Zugriffstoken** — das OAuth-Zugriffstoken.
+- **Adresse** — die Adresse der Trader API.
 
 ## Empfohlene Inhalte
 

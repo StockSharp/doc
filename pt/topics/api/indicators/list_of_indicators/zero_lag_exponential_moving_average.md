@@ -21,7 +21,7 @@ A ZLEMA pode ser usada para:
 
 ## Parâmetros
 
-- **Length** - período de cálculo que determina o grau de suavização (semelhante ao período na EMA).
+- **Período** - período de cálculo que determina o grau de suavização (semelhante ao período na EMA).
 
 ## Cálculo
 

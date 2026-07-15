@@ -16,7 +16,7 @@ Der Indikator hilft bei der Bestimmung der Trendrichtung und -stärke:
 
 ## Parameter
 
-- **Lines** – Anzahl der im Regenbogendiagramm verwendeten gleitenden Durchschnitte SMA.
+- **Linien** – Anzahl der im Regenbogendiagramm verwendeten gleitenden Durchschnitte SMA.
 
 ## Berechnung
 

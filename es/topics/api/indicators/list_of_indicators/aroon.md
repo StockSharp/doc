@@ -21,7 +21,7 @@ El indicador es particularmente útil para identificar las primeras etapas de la
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (normalmente se utilizan entre 14 y 25 períodos)
+- **Longitud** - período de cálculo (normalmente se utilizan entre 14 y 25 períodos)
 
 ## Cálculo
 

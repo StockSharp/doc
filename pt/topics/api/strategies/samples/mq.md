@@ -21,9 +21,9 @@ public class MqStrategy : Strategy
 
 A estratégia permite personalizar os seguintes parâmetros:
 
-- **PriceType** - tipo de preço de mercado para cotação (predefinição Following)
-- **PriceOffset** - desvio do preço em relação ao preço de mercado
-- **BestPriceOffset** - desvio mínimo para atualização da cotação (predefinição 0,1%)
+- **Tipo de preço** - tipo de preço de mercado para cotação (predefinição Following)
+- **Desvio de preço** - desvio do preço em relação ao preço de mercado
+- **Desvio ao melhor preço** - desvio mínimo para atualização da cotação (predefinição 0,1%)
 
 ## Inicialização da Estratégia
 

@@ -19,7 +19,7 @@ El Oscilador de pronóstico es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período para el cálculo de regresión lineal (valor predeterminado: 14)
+- **Longitud** - período para el cálculo de regresión lineal (valor predeterminado: 14)
 
 ## Cálculo
 

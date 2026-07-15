@@ -17,8 +17,8 @@ O RMI é particularmente útil para identificar potenciais pontos de inversão d
 
 ## Parâmetros
 
-- **MomentumPeriod** - período de momentum que define o desfasamento temporal para a comparação de preços.
-- **Length** - período principal para calcular o indicador (semelhante ao período no RSI).
+- **Período de impulso** - período de momentum que define o desfasamento temporal para a comparação de preços.
+- **Período** - período principal para calcular o indicador (semelhante ao período no RSI).
 
 ## Cálculo
 

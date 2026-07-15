@@ -19,8 +19,8 @@ Der Elliott-Wellen-Oszillator ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – Zeitraum für den kurzen gleitenden Durchschnitt (Standardwert: 5)
-- **LongPeriod** – Zeitraum für den langen gleitenden Durchschnitt (Standardwert: 35)
+- **Kurzer Zeitraum** – Zeitraum für den kurzen gleitenden Durchschnitt (Standardwert: 5)
+- **Langer Zeitraum** – Zeitraum für den langen gleitenden Durchschnitt (Standardwert: 35)
 
 ## Berechnung
 

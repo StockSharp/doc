@@ -17,8 +17,8 @@ Conectores de entrada
 
 Conectores de salida
 
-- **Take-profit** – orden para fijar beneficios.
-- **Stop-loss** – orden para limitar pérdidas.
+- **Toma de beneficios** – orden para fijar beneficios.
+- **Limitación de pérdidas** – orden para limitar pérdidas.
 - **Transacción propia** – transacción creada por una de las órdenes anteriores.
 
 ### Parámetros
@@ -26,7 +26,7 @@ Conectores de salida
 Parámetros Take y Stop
 
 - **Valor** - valor de take o stop.
-- **Trailing** – si se usa protección trailing.
+- **Seguimiento** – si se usa protección trailing.
 - **Tiempo de espera** - valor de timeout después del cual la protección se activa forzosamente al precio de mercado.
 - **Órdenes de mercado** – usar órdenes de mercado (sin precio) para cerrar rápidamente la posición.
 

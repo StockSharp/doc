@@ -24,9 +24,9 @@ public class SmaStrategyMartingaleStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **LongSmaLength** - Periode des langen gleitenden Durchschnitts (Standardwert 80)
-- **ShortSmaLength** - Periode des kurzen gleitenden Durchschnitts (Standardwert 30)
-- **CandleType** - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
+- **Zeitraum des langen gleitenden Durchschnitts** - Periode des langen gleitenden Durchschnitts (Standardwert 80)
+- **Zeitraum des kurzen gleitenden Durchschnitts** - Periode des kurzen gleitenden Durchschnitts (Standardwert 30)
+- **Kerzentyp** - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
 
 Alle Parameter stehen mit festgelegten Wertebereichen für die Optimierung zur Verfügung.
 

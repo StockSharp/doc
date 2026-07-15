@@ -15,7 +15,7 @@ Es kann dabei helfen, die Markteffizienz abzuschätzen und sich abzeichnende Zyk
 
 ## Parameter
 
-- **Length** – die Anzahl der in der Berechnung verwendeten Balken.
+- **Länge** – die Anzahl der in der Berechnung verwendeten Balken.
 
 ## Berechnung
 

@@ -21,7 +21,7 @@ Der Indikator ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum zur Feststellung einer signifikanten Preisbewegung (Standardwert hängt vom Zeitrahmen ab)
+- **Länge** – Zeitraum zur Feststellung einer signifikanten Preisbewegung (Standardwert hängt vom Zeitrahmen ab)
 
 ## Berechnung
 

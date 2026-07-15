@@ -195,7 +195,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 Bei Verwendung der Klasse [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) wird automatisch der Ansatz zum Speichern und Wiederherstellen von Einstellungen verwendet.
 
-Die Eigenschaft **MinValue** ist als Basiseigenschaft markiert und wird im Modus [Basiseinstellungen](../../using_visual_designer/diagram_panel.md) sichtbar sein.
+Die Eigenschaft **Mindestwert** ist als Basiseigenschaft markiert und wird im Modus [Basiseinstellungen](../../using_visual_designer/diagram_panel.md) sichtbar sein.
 
 Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) bestimmt, wann die Methode mit eingehenden Anschlüssen aufgerufen wird:
 
@@ -205,7 +205,7 @@ Die auskommentierte Eigenschaft [WaitAllInput](xref:StockSharp.Diagram.DiagramEx
 #     return False
 ```
 
-Wenn Sie die Auskommentierung der Eigenschaft entfernen, wird die Methode **Process** immer aufgerufen, sobald mindestens ein Wert eintrifft (im Beispiel entweder eine Kerze oder ein numerischer Wert).
+Wenn Sie die Auskommentierung der Eigenschaft entfernen, wird die Methode **Prozess** immer aufgerufen, sobald mindestens ein Wert eintrifft (im Beispiel entweder eine Kerze oder ein numerischer Wert).
 
 Um den resultierenden Würfel zum Schema hinzuzufügen, wählen Sie den erstellten Würfel in der Palette im Abschnitt **Benutzerdefinierte Blöcke** aus:
 

@@ -13,7 +13,7 @@ La principal ventaja de ALF sobre las medias móviles clásicas radica en su cap
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Gamma** - coeficiente de filtrado (normalmente en el rango de 0,1 a 0,9)
+- **Gama** - coeficiente de filtrado (normalmente en el rango de 0,1 a 0,9)
 
 El parámetro Gamma determina el grado de suavizado: los valores más bajos crean una línea más suave con más retraso, mientras que los valores más altos dan como resultado menos suavizado pero una respuesta más rápida a los cambios de precios.
 

@@ -19,9 +19,9 @@ CRSI ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **RSIPeriod** – Zeitraum zur Berechnung der RSI-Komponente (Standardwert: 3)
-- **StreakRSIPeriod** – Zeitraum zur Berechnung der Streak-RSI-Komponente (Standardwert: 2)
-- **ROCRSIPeriod** – Zeitraum zur Berechnung der Änderungsrate der RSI-Komponente (Standardwert: 100)
+- **RSI-Zeitraum** – Zeitraum zur Berechnung der RSI-Komponente (Standardwert: 3)
+- **Serien-RSI-Zeitraum** – Zeitraum zur Berechnung der Streak-RSI-Komponente (Standardwert: 2)
+- **ROC-RSI-Zeitraum** – Zeitraum zur Berechnung der Änderungsrate der RSI-Komponente (Standardwert: 100)
 
 ## Berechnung
 

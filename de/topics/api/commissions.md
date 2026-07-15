@@ -6,8 +6,8 @@
 
 Die Schnittstelle [ICommissionManager](xref:StockSharp.Algo.Commissions.ICommissionManager) definiert den Basisvertrag:
 
-- **Rules** — eine Sammlung von [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule)-Regeln zur Provisionsberechnung.
-- **Commission** — der gesamte aufgelaufene Provisionsbetrag (decimal).
+- **Regeln** — eine Sammlung von [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule)-Regeln zur Provisionsberechnung.
+- **Provision** — der gesamte aufgelaufene Provisionsbetrag (decimal).
 - **Reset()** — setzt den Zustand des Managers und aller Regeln zurück.
 - **Process(Message)** — verarbeitet eine Nachricht; gibt die Provision für die angegebene Nachricht oder `null` zurück.
 
@@ -15,8 +15,8 @@ Die Schnittstelle [ICommissionManager](xref:StockSharp.Algo.Commissions.ICommiss
 
 Jede Regel implementiert [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule):
 
-- **Title** — der Titel der Regel.
-- **Value** — der Provisionswert ([Unit](xref:Ecng.ComponentModel.Unit)), kann absolut oder prozentual sein.
+- **Titel** — der Titel der Regel.
+- **Wert** — der Provisionswert ([Unit](xref:Ecng.ComponentModel.Unit)), kann absolut oder prozentual sein.
 - **Process(ExecutionMessage)** — berechnet die Provision für eine bestimmte Nachricht.
 
 Die Basisklasse [CommissionRule](xref:StockSharp.Algo.Commissions.CommissionRule) enthält eine Hilfsmethode `GetValue(price, volume)`:

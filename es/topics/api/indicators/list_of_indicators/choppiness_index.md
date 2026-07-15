@@ -21,7 +21,7 @@ CHOP es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 14)
+- **Longitud** - período de cálculo (valor predeterminado: 14)
 
 ## Cálculo
 

@@ -6,7 +6,7 @@
 
 [ISlippageManager](xref:StockSharp.Algo.Slippage.ISlippageManager) 接口定义了基础契约：
 
-- **Slippage** — 累积的总滑点（小数）。
+- **滑点** — 累积的总滑点（小数）。
 - **Reset()** — 重置管理器的状态。
 - **ProcessMessage(Message)** — 处理一条消息；返回给定执行的滑点或 `null`。
 
@@ -38,7 +38,7 @@
 
 [ISlippageManagerState](xref:StockSharp.Algo.Slippage.ISlippageManagerState) 接口存储管理器的内部状态：
 
-- 每个工具的最佳买入/卖出价格（[SecurityId](xref:StockSharp.Messages.SecurityId)）。
+- 每个交易品种的最佳买入/卖出价格（[SecurityId](xref:StockSharp.Messages.SecurityId)）。
 - 每笔交易的计划价格和方向（`TransactionId`）。
 - 总累计滑点。
 

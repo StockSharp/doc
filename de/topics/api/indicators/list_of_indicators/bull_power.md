@@ -19,7 +19,7 @@ Der Indikator verwendet die Formel:
 
 Bullenstärke übernimmt seine Parameter von [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
-- **Length** - EMA-Periode.
+- **Länge** - EMA-Periode.
 - **Alpha** (optional) - Glättungskoeffizient, wenn anwendbar.
 
 ## Verwendung

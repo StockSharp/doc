@@ -29,7 +29,7 @@ Task Run(
 - **storage** — マーケットデータストレージレジストリ。
 - **drive** — データソース。
 - **format** — データ保存形式。
-- **dataType** — 分析するデータの型。
+- **データ型** — 分析するデータの型。
 - **cancellationToken** — キャンセレーショントークン。
 
 ## IAnalyticsPanel — 結果パネル
@@ -53,10 +53,10 @@ void Append(string title, IEnumerable<X> xValues, IEnumerable<Y> yValues,
 
 利用可能な描画スタイル ([DrawStyles](xref:StockSharp.Algo.Analytics.DrawStyles)):
 
-- **Line** — 折れ線チャート。
-- **DashedLine** — 破線。
-- **Histogram** — ヒストグラム。
-- **Bubble** — バブルチャート。
+- **折れ線** — 折れ線チャート。
+- **破線** — 破線。
+- **ヒストグラム** — ヒストグラム。
+- **バブル** — バブルチャート。
 
 ## IAnalyticsGrid — テーブル
 

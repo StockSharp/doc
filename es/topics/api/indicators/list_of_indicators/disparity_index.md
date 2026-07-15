@@ -19,7 +19,7 @@ El índice de disparidad es útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período para calcular la media móvil (valor predeterminado: 14)
+- **Longitud** - período para calcular la media móvil (valor predeterminado: 14)
 
 ## Cálculo
 

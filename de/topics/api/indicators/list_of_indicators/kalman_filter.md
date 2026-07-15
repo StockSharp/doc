@@ -10,8 +10,8 @@ Der Kalman-Filter wendet einen Vorhersage-Korrektur-Zyklus an, um Preisdaten zu 
 
 ## Parameter
 
-- **ProcessNoise** – erwartete Varianz im zugrunde liegenden Prozess.
-- **ObservationNoise** – erwartete Varianz in den beobachteten Daten.
+- **Prozessrauschen** – erwartete Varianz im zugrunde liegenden Prozess.
+- **Beobachtungsrauschen** – erwartete Varianz in den beobachteten Daten.
 
 ## Berechnung
 

@@ -19,8 +19,8 @@ El indicador es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **ShortPeriod** - período para calcular la volatilidad a corto plazo (valor predeterminado: 5)
-- **LongPeriod** - período para calcular la volatilidad a largo plazo (valor predeterminado: 20)
+- **Período corto** - período para calcular la volatilidad a corto plazo (valor predeterminado: 5)
+- **Período largo** - período para calcular la volatilidad a largo plazo (valor predeterminado: 20)
 
 ## Cálculo
 

@@ -48,8 +48,8 @@
 
 これらは次の設定をサポートします。
 
-- **RiskFreeRate** -- 年率のリスクフリーレート (例: `0.03m` = 3%)
-- **Period** -- リターン計算期間 (既定値 `TimeSpan.FromDays(1)`)
+- **無リスク金利** -- 年率のリスクフリーレート (例: `0.03m` = 3%)
+- **期間** -- リターン計算期間 (既定値 `TimeSpan.FromDays(1)`)
 
 [CalmarRatioParameter](xref:StockSharp.Algo.Statistics.CalmarRatioParameter) と [SterlingRatioParameter](xref:StockSharp.Algo.Statistics.SterlingRatioParameter) は他のパラメーター (`NetProfitParameter`, `MaxDrawdownParameter`, `AverageDrawdownParameter`) に依存し、[StatisticParameterRegistry](xref:StockSharp.Algo.Statistics.StatisticParameterRegistry) 経由で作成された場合に自動的にリンクされます。
 

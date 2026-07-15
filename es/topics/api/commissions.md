@@ -6,8 +6,8 @@
 
 La interfaz [ICommissionManager](xref:StockSharp.Algo.Commissions.ICommissionManager) define el contrato base:
 
-- **Rules** — una colección de reglas [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) para el cálculo de comisiones.
-- **Commission** — el monto total acumulado de la comisión (decimal).
+- **Reglas** — una colección de reglas [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) para el cálculo de comisiones.
+- **Comisión** — el monto total acumulado de la comisión (decimal).
 - **Reset()** — restablece el estado del gestor y de todas las reglas.
 - **Process(Message)** — procesa un mensaje; devuelve la comisión para el mensaje dado o `null`.
 
@@ -15,8 +15,8 @@ La interfaz [ICommissionManager](xref:StockSharp.Algo.Commissions.ICommissionMan
 
 Cada regla implementa [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule):
 
-- **Title** — el título de la regla.
-- **Value** — el valor de la comisión ([Unit](xref:Ecng.ComponentModel.Unit)), puede ser absoluto o basado en porcentaje.
+- **Título** — el título de la regla.
+- **Valor** — el valor de la comisión ([Unit](xref:Ecng.ComponentModel.Unit)), puede ser absoluto o basado en porcentaje.
 - **Process(ExecutionMessage)** — calcula la comisión para un mensaje específico.
 
 La clase base [CommissionRule](xref:StockSharp.Algo.Commissions.CommissionRule) contiene un método auxiliar `GetValue(price, volume)`:

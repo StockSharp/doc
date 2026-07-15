@@ -17,7 +17,7 @@ El indicador ayuda a los operadores a distinguir entre períodos de fuertes tend
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período para el cálculo de regresión lineal (valor predeterminado: 14)
+- **Longitud** - período para el cálculo de regresión lineal (valor predeterminado: 14)
 
 ## Cálculo
 

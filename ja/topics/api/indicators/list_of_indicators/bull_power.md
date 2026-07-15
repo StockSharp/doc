@@ -18,8 +18,8 @@
 
 ブルパワー は [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) からパラメーターを継承します。
 
-- **Length** - EMA 期間。
-- **Alpha**（任意） - 該当する場合の平滑化係数。
+- **期間** - EMA 期間。
+- **アルファ**（任意） - 該当する場合の平滑化係数。
 
 ## 使用方法
 

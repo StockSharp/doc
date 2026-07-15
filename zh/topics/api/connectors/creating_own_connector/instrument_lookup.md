@@ -1,6 +1,6 @@
-# 金融工具查询
+# 交易品种查询
 
-在为交易所创建自己的适配器时，需要实现金融工具查询方法。发送 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息时会调用此方法，并通过 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息返回有关金融工具的信息。
+在为交易所创建自己的适配器时，需要实现交易品种查询方法。发送 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息时会调用此方法，并通过 [SecurityMessage](xref:StockSharp.Messages.SecurityMessage) 消息返回有关交易品种的信息。
 
 ## 实现 SecurityLookupAsync 方法
 

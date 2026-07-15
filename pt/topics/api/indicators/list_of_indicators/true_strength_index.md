@@ -12,13 +12,13 @@ Use a classe [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengthInd
 2. Aplique duas médias móveis exponenciais com períodos `Length1` e `Length2` tanto a `m` como a `|m|`.
 3. Calcule a razão entre o momentum com dupla suavização e o momentum absoluto com dupla suavização:
    `TSI = 100 × EMA(EMA(m, Length1), Length2) / EMA(EMA(|m|, Length1), Length2)`.
-4. Opcionalmente, derive uma linha de sinal usando uma EMA do TSI com o período **Signal**.
+4. Opcionalmente, derive uma linha de sinal usando uma EMA do TSI com o período **Sinal**.
 
 ## Parâmetros
 
-- **Length1** — primeiro período de suavização.
-- **Length2** — segundo período de suavização.
-- **Signal** — período da linha de sinal (opcional).
+- **Período 1** — primeiro período de suavização.
+- **Período 2** — segundo período de suavização.
+- **Sinal** — período da linha de sinal (opcional).
 
 ## Interpretação
 

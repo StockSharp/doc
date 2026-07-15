@@ -19,7 +19,7 @@ Der Intraday-Intensitätsindex ist besonders effektiv für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Glättungszeitraum (Standardwert: 14)
+- **Länge** – Glättungszeitraum (Standardwert: 14)
 
 ## Berechnung
 

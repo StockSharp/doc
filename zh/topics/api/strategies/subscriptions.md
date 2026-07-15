@@ -40,7 +40,7 @@ protected override void OnStarted2(DateTime time)
 
 在策略中使用订阅相比直接订阅 [Strategy.Connector](xref:StockSharp.Algo.Strategies.Strategy.Connector) 事件有几个优势：
 
-1. **隔离**——每个订阅独立工作，允许为不同的工具接收不同类型的数据而互不干扰。这也保护策略不会接收到为其他并行运行的策略准备的数据。通过直接订阅连接器事件，你还需要额外过滤数据以排除来自其他策略的信息。
+1. **隔离**——每个订阅独立工作，允许为不同的交易品种接收不同类型的数据而互不干扰。这也保护策略不会接收到为其他并行运行的策略准备的数据。通过直接订阅连接器事件，你还需要额外过滤数据以排除来自其他策略的信息。
 
 2. **状态管理** - 订阅具有清晰的状态（[SubscriptionStates](xref:StockSharp.Messages.SubscriptionStates)），这使得可以准确判断历史数据是否正在接收，或者订阅是否已经转为在线模式。
 

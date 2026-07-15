@@ -20,8 +20,8 @@ A T3MA pode ser utilizada para:
 
 ## Parâmetros
 
-- **VolumeFactor** - fator de volume que determina o grau de suavização (normalmente um valor entre 0 e 1; o valor recomendado é 0,7).
-- **Length** - período de cálculo, semelhante ao período em médias móveis comuns.
+- **Fator de volume** - fator de volume que determina o grau de suavização (normalmente um valor entre 0 e 1; o valor recomendado é 0,7).
+- **Período** - período de cálculo, semelhante ao período em médias móveis comuns.
 
 ## Cálculo
 

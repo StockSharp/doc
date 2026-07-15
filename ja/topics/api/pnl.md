@@ -6,8 +6,8 @@
 
 [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager) インターフェイスは、基本契約を定義します。
 
-- **RealizedPnL** — 実現損益（decimal）。ポジションがクローズされると累積されます。
-- **UnrealizedPnL** — 未実現損益（decimal）。現在の市場価格に基づいて再計算されます。
+- **実現損益** — 実現損益（decimal）。ポジションがクローズされると累積されます。
+- **含み損益** — 未実現損益（decimal）。現在の市場価格に基づいて再計算されます。
 - **Reset()** — マネージャーの状態をリセットします。
 - **UpdateSecurity(Level1ChangeMessage)** — 銘柄パラメーター（価格ステップ、ステップ価格、ロット乗数）を更新します。
 - **ProcessMessage(Message, ICollection\<PortfolioPnLManager\>)** — メッセージを処理します。ポジションがクローズされた場合は [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) を返し、それ以外の場合は `null` を返します。
@@ -32,8 +32,8 @@ PnLManager
 
 - **PriceStep** — 銘柄の価格ステップ。
 - **StepPrice** — 価格ステップのコスト（先物用）。
-- **Leverage** — レバレッジ。
-- **LotMultiplier** — ロット乗数。
+- **レバレッジ** — レバレッジ。
+- **ロット乗数** — ロット乗数。
 
 利益乗数は次の式で計算されます。
 
@@ -47,8 +47,8 @@ Multiplier = (StepPrice / PriceStep) * Leverage * LotMultiplier
 
 [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) クラスには、ポジションをクローズした結果が含まれます。
 
-- **ServerTime** — 取引時刻。
-- **ClosedVolume** — クローズされたポジションの数量。
+- **サーバー時刻** — 取引時刻。
+- **決済済み数量** — クローズされたポジションの数量。
 - **PnL** — この取引からの実現利益。
 
 たとえば、ポジションが +2 で、-5 契約の取引が到着した場合、`ClosedVolume = 2`（ポジションから 2 契約がクローズされた）になります。

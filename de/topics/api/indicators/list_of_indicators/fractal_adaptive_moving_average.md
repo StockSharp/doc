@@ -18,7 +18,7 @@ Dadurch kann FRAMA schneller auf erhebliche Preisbewegungen reagieren und Marktg
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 10-20)
+- **Länge** – Berechnungszeitraum (Standardwert: 10-20)
 
 ## Berechnung
 

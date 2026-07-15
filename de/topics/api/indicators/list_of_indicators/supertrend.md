@@ -11,7 +11,7 @@ SuperTrend wird aus dem Durchschnittspreis und dem ATR-Wert erstellt. Die Indika
 ## Parameter
 
 - **ATR-Zeitraum** – der für die ATR-Berechnung verwendete Zeitraum.
-- **Multiplier** – der Faktor, der definiert, wie weit die Linie vom Durchschnittspreis abweicht.
+- **Multiplikator** – der Faktor, der definiert, wie weit die Linie vom Durchschnittspreis abweicht.
 
 ## Berechnung
 

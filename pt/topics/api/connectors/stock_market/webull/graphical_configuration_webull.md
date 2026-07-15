@@ -2,11 +2,11 @@
 
 Em todos os produtos StockSharp, a ligação é configurada na [janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md).
 
-- **Chave** (`Key`) — a chave da aplicação.
-- **Segredo** (`Secret`) — o segredo da aplicação.
-- **Token de acesso** (`Token`) — um token de acesso opcional.
-- **Conta** (`Account`) — o identificador da conta de negociação.
-- **Modo de demonstração** (`IsDemo`) — utilização do ambiente de testes.
+- **Chave** — a chave da aplicação.
+- **Segredo** — o segredo da aplicação.
+- **Token de acesso** — um token de acesso opcional.
+- **Conta** — o identificador da conta de negociação.
+- **Modo de demonstração** — utilização do ambiente de testes.
 
 ## Ver também
 

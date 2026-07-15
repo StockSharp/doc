@@ -18,7 +18,7 @@ Der Oszillator reicht von 0 bis 100:
 
 ## Parameter
 
-- **Length** – Zeitraum zur Berechnung der Preisspanne, also der Höchst- und Tiefststände. Der übliche Standardwert ist 14.
+- **Länge** – Zeitraum zur Berechnung der Preisspanne, also der Höchst- und Tiefststände. Der übliche Standardwert ist 14.
 
 ## Berechnung
 

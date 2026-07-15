@@ -15,8 +15,8 @@ O indicador é um oscilador que flutua acima e abaixo da linha zero. Valores pos
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **ShortPeriod** - período para calcular a EMA curta (valor predefinido: 34)
-- **LongPeriod** - período para calcular a EMA longa (valor predefinido: 55)
+- **Período curto** - período para calcular a EMA curta (valor predefinido: 34)
+- **Período longo** - período para calcular a EMA longa (valor predefinido: 55)
 
 ## Cálculo
 

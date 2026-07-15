@@ -7,10 +7,10 @@
 Die Klasse [CsvParser](xref:StockSharp.Algo.Import.CsvParser) parst CSV-Dateien und konvertiert Zeilen in [S#](../api.md)-Nachrichten.
 
 - **Konstruktor**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
-- **ColumnSeparator** - Spaltentrennzeichen (Standard `","`).
-- **LineSeparator** - Zeilentrennzeichen (Standard CRLF).
-- **SkipFromHeader** - Anzahl der Zeilen, die am Dateianfang übersprungen werden (Standard `0`).
-- **IgnoreNonIdSecurities** - Zeilen mit nicht erkannten Instrumenten ignorieren (Standard `true`).
+- **Spaltentrennzeichen** - Spaltentrennzeichen (Standard `","`).
+- **Zeilentrennzeichen** - Zeilentrennzeichen (Standard CRLF).
+- **Übersprungene Kopfzeilen** - Anzahl der Zeilen, die am Dateianfang übersprungen werden (Standard `0`).
+- **Instrumente ohne Kennung ignorieren** - Zeilen mit nicht erkannten Instrumenten ignorieren (Standard `true`).
 - **Parse(Stream)** - Parsingmethode, gibt `IAsyncEnumerable<Message>` zurück.
 
 ```cs
@@ -35,8 +35,8 @@ Die Klasse [CsvImporter](xref:StockSharp.Algo.Import.CsvImporter) erweitert [Csv
 
 - **Konstruktor**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
 - **Import(Stream, Action\<int\> progress, CancellationToken)** - führt den Import aus und gibt `ValueTask<(int count, DateTime? lastTime)>` zurück.
-- **UpdateDuplicateSecurities** - ob doppelte Instrumente aktualisiert werden sollen (Standard `false`).
-- **SecurityUpdated** - Ereignis, das ausgelöst wird, wenn ein Instrument aktualisiert wird.
+- **Doppelte Instrumente aktualisieren** - ob doppelte Instrumente aktualisiert werden sollen (Standard `false`).
+- **Instrument aktualisiert** - Ereignis, das ausgelöst wird, wenn ein Instrument aktualisiert wird.
 
 ```cs
 var fields = FieldMappingRegistry.CreateFields(DataType.Ticks);
@@ -68,13 +68,13 @@ Die Klasse [FieldMapping](xref:StockSharp.Algo.Import.FieldMapping) beschreibt d
 Wichtigste Eigenschaften:
 
 - **Name** - Feldname in der Nachricht.
-- **DisplayName** - Anzeigename.
+- **Anzeigename** - Anzeigename.
 - **Type** - Werttyp.
-- **Order** - Spaltenindex in der Datei (beginnend bei 0).
-- **IsRequired** - ob das Feld erforderlich ist.
+- **Reihenfolge** - Spaltenindex in der Datei (beginnend bei 0).
+- **Pflichtfeld** - ob das Feld erforderlich ist.
 - **Format** - Parsingformat (z. B. Datumsformat).
-- **DefaultValue** - Standardwert.
-- **ZeroAsNull** - ob Nullwerte als `null` interpretiert werden sollen.
+- **Standardwert** - Standardwert.
+- **Null als leer behandeln** - ob Nullwerte als `null` interpretiert werden sollen.
 
 Für benutzerdefinierte Werttransformationen verwenden Sie [FieldMappingValue](xref:StockSharp.Algo.Import.FieldMappingValue). Sie können beispielsweise eine Zuordnung von Textwerten zu Enumerationen definieren:
 
@@ -105,14 +105,14 @@ Unterstützte Datentypen: Ticks, Kerzen, Orderbücher, Level1, Orderprotokoll, T
 
 Die Klasse [ImportSettings](xref:StockSharp.Algo.Import.ImportSettings) fasst alle Importparameter in einem einzigen Konfigurationsobjekt zusammen:
 
-- **DataType** - Typ der zu importierenden Daten.
-- **FileName** - Dateipfad.
-- **Directory** - Verzeichnis für die Dateisuche.
-- **FileMask** - Suchmaske für Dateien (z. B. `*.csv`).
-- **ColumnSeparator** - Spaltentrennzeichen.
-- **SkipFromHeader** - Anzahl der zu überspringenden Zeilen.
-- **SelectedFields** - für den Import ausgewählte Felder.
-- **UpdateDuplicateSecurities** - ob doppelte Instrumente aktualisiert werden sollen.
+- **Datentyp** - Typ der zu importierenden Daten.
+- **Dateiname** - Dateipfad.
+- **Verzeichnis** - Verzeichnis für die Dateisuche.
+- **Dateimaske** - Suchmaske für Dateien (z. B. `*.csv`).
+- **Spaltentrennzeichen** - Spaltentrennzeichen.
+- **Übersprungene Kopfzeilen** - Anzahl der zu überspringenden Zeilen.
+- **Ausgewählte Felder** - für den Import ausgewählte Felder.
+- **Doppelte Instrumente aktualisieren** - ob doppelte Instrumente aktualisiert werden sollen.
 
 Hilfsmethoden:
 

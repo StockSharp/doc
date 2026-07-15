@@ -19,7 +19,7 @@ O HO é particularmente útil para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de análise (valor predefinido: 30)
+- **Período** - período de análise (valor predefinido: 30)
 
 ## Cálculo
 

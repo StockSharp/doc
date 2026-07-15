@@ -20,7 +20,7 @@ Der Indikator ist nützlich für:
 
 ## Parameter
 
-- **Length** - Berechnungsperiode für den exponentiellen gleitenden Durchschnitt, typischerweise mit dem Wert 21.
+- **Länge** - Berechnungsperiode für den exponentiellen gleitenden Durchschnitt, typischerweise mit dem Wert 21.
 
 ## Berechnung
 

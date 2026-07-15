@@ -1,6 +1,6 @@
 # 存储格式
 
-StockSharp 支持由 [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) 枚举定义的两种市场数据存储格式：**Binary** 和 **CSV**。每种格式都有其自身的优点，并适用于不同的使用场景。
+StockSharp 支持由 [StorageFormats](xref:StockSharp.Algo.Storages.StorageFormats) 枚举定义的两种市场数据存储格式：**Binary（二进制）** 和 **CSV**。每种格式都有其自身的优点，并适用于不同的使用场景。
 
 ## 二进制格式
 
@@ -53,7 +53,7 @@ CSV 文件的扩展名是 `.csv`。
 {root_folder}/{first_letter}/{instrument_identifier}/{yyyy_MM_dd}/{file_name}.{extension}
 ```
 
-扩展名为二进制格式时是 `.bin`，文本格式时是 `.csv`。这种分层组织确保按工具和日期快速查找数据。例如，AAPL@NASDAQ 工具在 2024 年 4 月 1 日的 5 分钟 K线数据的二进制格式将位于如下路径：
+扩展名为二进制格式时是 `.bin`，文本格式时是 `.csv`。这种分层组织确保按交易品种和日期快速查找数据。例如，AAPL@NASDAQ 交易品种在 2024 年 4 月 1 日的 5 分钟 K线数据的二进制格式将位于如下路径：
 
 
 

@@ -20,7 +20,7 @@ O indicador é útil para:
 
 ## Parâmetros
 
-- **Length** - período de cálculo da média móvel exponencial, usando tipicamente um valor de 21.
+- **Período** - período de cálculo da média móvel exponencial, usando tipicamente um valor de 21.
 
 ## Cálculo
 

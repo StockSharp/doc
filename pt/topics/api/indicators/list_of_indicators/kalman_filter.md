@@ -10,8 +10,8 @@ O filtro de Kalman aplica um ciclo de previsão-correção para suavizar dados d
 
 ## Parâmetros
 
-- **ProcessNoise** - variância esperada no processo subjacente.
-- **ObservationNoise** - variância esperada nos dados observados.
+- **Ruído do processo** - variância esperada no processo subjacente.
+- **Ruído da observação** - variância esperada nos dados observados.
 
 ## Cálculo
 

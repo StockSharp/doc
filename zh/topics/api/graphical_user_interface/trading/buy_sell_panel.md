@@ -33,7 +33,7 @@
 	  				
 ```
 
-要用数据填充面板，您必须指定市场数据来源和工具来源。
+要用数据填充面板，您必须指定市场数据来源和交易品种来源。
 
 ```cs
 		private void Connect_Click(object sender, RoutedEventArgs e)

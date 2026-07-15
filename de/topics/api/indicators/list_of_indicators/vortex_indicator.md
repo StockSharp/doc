@@ -23,7 +23,7 @@ Der Vortex-Indikator ist besonders nützlich für:
 
 ## Parameter
 
-- **Length** - Berechnungsperiode, typischerweise mit dem Wert 14.
+- **Länge** - Berechnungsperiode, typischerweise mit dem Wert 14.
 
 ## Berechnung
 

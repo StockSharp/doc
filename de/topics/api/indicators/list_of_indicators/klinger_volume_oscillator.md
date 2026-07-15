@@ -15,8 +15,8 @@ Der Indikator ist ein Oszillator, der oberhalb und unterhalb der Nulllinie schwa
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – Zeitraum zur Berechnung des kurzen EMA (Standardwert: 34)
-- **LongPeriod** – Zeitraum für die Berechnung des langen EMA (Standardwert: 55)
+- **Kurzer Zeitraum** – Zeitraum zur Berechnung des kurzen EMA (Standardwert: 34)
+- **Langer Zeitraum** – Zeitraum für die Berechnung des langen EMA (Standardwert: 55)
 
 ## Berechnung
 

@@ -17,8 +17,8 @@ Conectores de entrada
 
 Conectores de saída
 
-- **Take-profit** - uma ordem para fixar lucros.
-- **Stop-loss** - uma ordem para limitar perdas.
+- **Realização de lucro** - uma ordem para fixar lucros.
+- **Limitação de perdas** - uma ordem para limitar perdas.
 - **Transação própria** - uma transacção criada por uma das ordens acima.
 
 ### Parâmetros
@@ -26,7 +26,7 @@ Conectores de saída
 Parâmetros de Take e Stop
 
 - **Valor** - o valor do take ou do stop.
-- **Trailing** - indica se é utilizada protecção trailing.
+- **Dinâmica** - indica se é utilizada protecção trailing.
 - **Tempo limite** - o valor do tempo limite após o qual a protecção é accionada à força ao preço de mercado.
 - **Ordens de mercado** - utilizar ordens de mercado (sem preço) para fechar rapidamente a posição.
 

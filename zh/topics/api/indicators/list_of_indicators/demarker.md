@@ -10,7 +10,7 @@
 1. 对于每个条形计算中间值：
    `DeMax = max(High − PreviousHigh, 0)`
 `DeMin = max(PreviousLow − Low, 0)`
-2. 对 `DeMax` 和 `DeMin` 使用长度为 **Length** 的移动平均进行平滑处理。
+2. 对 `DeMax` 和 `DeMin` 使用长度为 **周期** 的移动平均进行平滑处理。
 3. 计算最终值：
 `DeMarker = SMA(DeMax, Length) / (SMA(DeMax, Length) + SMA(DeMin, Length))`。
 
@@ -18,7 +18,7 @@
 
 ## 参数
 
-- **Length** — 平滑周期，用于控制指标的响应速度。
+- **周期** — 平滑周期，用于控制指标的响应速度。
 
 ## 解释
 

@@ -15,7 +15,7 @@ A ideia principal é que o MGD "acelera" durante movimentos rápidos do mercado 
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (valor predefinido: 14)
+- **Período** - período de cálculo (valor predefinido: 14)
 
 ## Cálculo
 

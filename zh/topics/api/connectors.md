@@ -173,7 +173,7 @@ private readonly IFileSystem _fileSystem = Paths.FileSystem;
 
 ### SubscriptionsOnConnect
 
-`SubscriptionsOnConnect` 属性控制在连接时自动执行的订阅。默认情况下，它包括对金融工具、投资组合和订单的订阅。
+`SubscriptionsOnConnect` 属性控制在连接时自动执行的订阅。默认情况下，它包括对交易品种、投资组合和订单的订阅。
 
 ### 适配器事件
 

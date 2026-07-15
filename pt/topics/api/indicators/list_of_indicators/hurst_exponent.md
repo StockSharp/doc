@@ -15,7 +15,7 @@ Pode ajudar a estimar a eficiência do mercado e revelar ciclos ou tendências e
 
 ## Parâmetros
 
-- **Length** - o número de barras usadas no cálculo.
+- **Período** - o número de barras usadas no cálculo.
 
 ## Cálculo
 

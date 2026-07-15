@@ -17,7 +17,7 @@ Cuanto más se aleje el valor de cero, más fuerte será el movimiento direccion
 
 ## Parámetros
 
-- **Length**: período utilizado para los cálculos subyacentes de Aroon. Los valores más grandes proporcionan lecturas más suaves con una respuesta más lenta.
+- **Longitud**: período utilizado para los cálculos subyacentes de Aroon. Los valores más grandes proporcionan lecturas más suaves con una respuesta más lenta.
 
 ## Cálculo
 

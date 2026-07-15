@@ -17,7 +17,7 @@ CGO es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 10)
+- **Longitud** - período de cálculo (valor predeterminado: 10)
 
 ## Cálculo
 

@@ -1,6 +1,6 @@
 # Charles Schwab
 
-**Charles Schwab** 是一家提供股票及其他金融工具交易服务的美国经纪商。
+**Charles Schwab** 是一家提供股票及其他交易品种交易服务的美国经纪商。
 
 在为 Charles Schwab 开发交易机器人之前，请先阅读[连接器](../../connectors.md)章节中的相关内容。
 

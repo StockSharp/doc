@@ -24,9 +24,9 @@ public class SmaStrategyMartingaleStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **LongSmaLength** - 长期移动平均周期（默认 80）
-- **ShortSmaLength** - 短期移动平均周期（默认值 30）
-- **CandleType** - 要使用的K线类型（默认5分钟）
+- **长期移动平均周期** - 长期移动平均周期（默认 80）
+- **短期移动平均周期** - 短期移动平均周期（默认值 30）
+- **K线类型** - 要使用的K线类型（默认5分钟）
 
 所有参数都可以在指定的取值范围内进行优化。
 
@@ -121,11 +121,11 @@ private void ProcessCandle(ICandleMessage candle, decimal longValue, decimal sho
 - **买入信号**：短期SMA从下方穿过长期SMA
 - **卖出信号**：短期SMA从上方穿过长期SMA
 - 每次新交易时，持仓大小都会按当前持仓数量增加（马丁格尔元素）
-- 订单价格设置为当前短期SMA值，并四舍五入到该工具的最小价格变动单位
+- 订单价格设置为当前短期SMA值，并四舍五入到该交易品种的最小价格变动单位
 
 ## 特征
 
-- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的工具
+- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的交易品种
 - 该策略仅适用于已完成的K线
 - 该策略通过比较当前与之前的SMA关系来跟踪指标交叉情况
 - 在下新订单之前，所有活跃的订单都已被取消

@@ -20,8 +20,8 @@ T3MA kann verwendet werden für:
 
 ## Parameter
 
-- **VolumeFactor** – Volumenfaktor, der den Grad der Glättung bestimmt (normalerweise ein Wert zwischen 0 und 1, empfohlener Wert ist 0,7).
-- **Length** – Berechnungszeitraum, ähnlich dem Zeitraum bei gewöhnlichen gleitenden Durchschnitten.
+- **Volumenfaktor** – Volumenfaktor, der den Grad der Glättung bestimmt (normalerweise ein Wert zwischen 0 und 1, empfohlener Wert ist 0,7).
+- **Länge** – Berechnungszeitraum, ähnlich dem Zeitraum bei gewöhnlichen gleitenden Durchschnitten.
 
 ## Berechnung
 

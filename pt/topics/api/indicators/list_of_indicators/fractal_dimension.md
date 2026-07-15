@@ -16,7 +16,7 @@ O indicador baseia-se em geometria fractal e mede quão complexo é o percurso d
 ## Parâmetros
 
 O indicador tem o seguinte parâmetro:
-- **Length** - período de cálculo (valor predefinido: 30)
+- **Período** - período de cálculo (valor predefinido: 30)
 
 ## Cálculo
 

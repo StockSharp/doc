@@ -19,7 +19,7 @@ FVE es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de suavizado (valor predeterminado: 22)
+- **Longitud** - período de suavizado (valor predeterminado: 22)
 
 ## Cálculo
 

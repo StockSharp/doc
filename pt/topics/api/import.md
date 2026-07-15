@@ -7,10 +7,10 @@
 A classe [CsvParser](xref:StockSharp.Algo.Import.CsvParser) executa a análise de ficheiros CSV e converte linhas em mensagens [S#](../api.md).
 
 - **Construtor**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
-- **ColumnSeparator** — separador de colunas (predefinição `","`).
-- **LineSeparator** — separador de linhas (CRLF por predefinição).
-- **SkipFromHeader** — número de linhas a ignorar desde o início do ficheiro (predefinição `0`).
-- **IgnoreNonIdSecurities** — ignorar linhas com instrumentos não reconhecidos (predefinição `true`).
+- **Separador de colunas** — separador de colunas (predefinição `","`).
+- **Separador de linhas** — separador de linhas (CRLF por predefinição).
+- **Linhas de cabeçalho ignoradas** — número de linhas a ignorar desde o início do ficheiro (predefinição `0`).
+- **Ignorar instrumentos sem identificador** — ignorar linhas com instrumentos não reconhecidos (predefinição `true`).
 - **Parse(Stream)** — método de análise, devolve `IAsyncEnumerable<Message>`.
 
 ```cs
@@ -35,8 +35,8 @@ A classe [CsvImporter](xref:StockSharp.Algo.Import.CsvImporter) expande [CsvPars
 
 - **Construtor**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
 - **Import(Stream, Action\<int\> progress, CancellationToken)** — executa a importação e devolve `ValueTask<(int count, DateTime? lastTime)>`.
-- **UpdateDuplicateSecurities** — se deve atualizar instrumentos duplicados (predefinição `false`).
-- **SecurityUpdated** — evento gerado quando um instrumento é atualizado.
+- **Atualizar instrumentos duplicados** — se deve atualizar instrumentos duplicados (predefinição `false`).
+- **Instrumento atualizado** — evento gerado quando um instrumento é atualizado.
 
 ```cs
 var fields = FieldMappingRegistry.CreateFields(DataType.Ticks);
@@ -67,14 +67,14 @@ A classe [FieldMapping](xref:StockSharp.Algo.Import.FieldMapping) descreve o map
 
 Propriedades principais:
 
-- **Name** — nome do campo na mensagem.
-- **DisplayName** — nome apresentado.
-- **Type** — tipo de valor.
-- **Order** — índice da coluna no ficheiro (a começar em 0).
-- **IsRequired** — se o campo é obrigatório.
-- **Format** — formato de análise (por exemplo, formato de data).
-- **DefaultValue** — valor predefinido.
-- **ZeroAsNull** — se deve interpretar valores zero como `null`.
+- **Nome** — nome do campo na mensagem.
+- **Nome de apresentação** — nome apresentado.
+- **Tipo** — tipo de valor.
+- **Ordem** — índice da coluna no ficheiro (a começar em 0).
+- **Obrigatório** — se o campo é obrigatório.
+- **Formato** — formato de análise (por exemplo, formato de data).
+- **Valor predefinido** — valor predefinido.
+- **Zero como nulo** — se deve interpretar valores zero como `null`.
 
 Para transformações de valores personalizadas, use [FieldMappingValue](xref:StockSharp.Algo.Import.FieldMappingValue). Por exemplo, pode definir um mapeamento de valores de texto para enumerações:
 
@@ -105,14 +105,14 @@ Tipos de dados suportados: ticks, velas, livros de ofertas, Level1, registo de o
 
 A classe [ImportSettings](xref:StockSharp.Algo.Import.ImportSettings) combina todos os parâmetros de importação num único objeto de configuração:
 
-- **DataType** — o tipo de dados a importar.
-- **FileName** — caminho do ficheiro.
-- **Directory** — diretório para pesquisa de ficheiros.
-- **FileMask** — máscara de pesquisa de ficheiros (por exemplo, `*.csv`).
-- **ColumnSeparator** — separador de colunas.
-- **SkipFromHeader** — número de linhas a ignorar.
-- **SelectedFields** — campos selecionados para importação.
-- **UpdateDuplicateSecurities** — se deve atualizar instrumentos duplicados.
+- **Tipo de dados** — o tipo de dados a importar.
+- **Nome do ficheiro** — caminho do ficheiro.
+- **Diretório** — diretório para pesquisa de ficheiros.
+- **Máscara do ficheiro** — máscara de pesquisa de ficheiros (por exemplo, `*.csv`).
+- **Separador de colunas** — separador de colunas.
+- **Linhas de cabeçalho ignoradas** — número de linhas a ignorar.
+- **Campos selecionados** — campos selecionados para importação.
+- **Atualizar instrumentos duplicados** — se deve atualizar instrumentos duplicados.
 
 Métodos auxiliares:
 

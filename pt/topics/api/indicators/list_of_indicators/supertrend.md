@@ -11,7 +11,7 @@ O SuperTrend é construído com o preço médio e o valor do ATR. A linha do ind
 ## Parâmetros
 
 - **período ATR** - o período utilizado para o cálculo do ATR.
-- **Multiplier** - o fator que define a distância a que a linha é deslocada em relação ao preço médio.
+- **Multiplicador** - o fator que define a distância a que a linha é deslocada em relação ao preço médio.
 
 ## Cálculo
 

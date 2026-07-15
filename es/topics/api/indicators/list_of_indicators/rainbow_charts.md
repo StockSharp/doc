@@ -16,7 +16,7 @@ El indicador ayuda a determinar la dirección y la fuerza de la tendencia:
 
 ## Parámetros
 
-- **Lines**: número de medias móviles SMA utilizadas en el gráfico de arcoíris.
+- **Líneas**: número de medias móviles SMA utilizadas en el gráfico de arcoíris.
 
 ## Cálculo
 

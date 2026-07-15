@@ -19,7 +19,7 @@ Principais sinais do indicador:
 
 ## Parâmetros
 
-- **Length** - período principal para calcular o indicador.
+- **Período** - período principal para calcular o indicador.
 
 ## Cálculo
 

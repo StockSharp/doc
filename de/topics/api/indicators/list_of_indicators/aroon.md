@@ -21,7 +21,7 @@ Der Indikator ist besonders nützlich, um frühe Phasen einer neuen Trendbildung
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** - Berechnungsperiode (typischerweise werden 14-25 Perioden verwendet)
+- **Länge** - Berechnungsperiode (typischerweise werden 14-25 Perioden verwendet)
 
 ## Berechnung
 

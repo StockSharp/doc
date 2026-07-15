@@ -23,7 +23,7 @@ El indicador Vortex es particularmente útil para:
 
 ## Parámetros
 
-- **Length**: período de cálculo, que normalmente utiliza un valor de 14.
+- **Longitud**: período de cálculo, que normalmente utiliza un valor de 14.
 
 ## Cálculo
 

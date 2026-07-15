@@ -17,8 +17,8 @@ O APZ é especialmente útil para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Period** - período de cálculo (valor predefinido: 5)
-- **BandPercentage** - percentagem do intervalo para definir a largura da banda (valor predefinido: 2%)
+- **Período** - período de cálculo (valor predefinido: 5)
+- **Percentagem da banda** - percentagem do intervalo para definir a largura da banda (valor predefinido: 2%)
 
 ## Cálculo
 

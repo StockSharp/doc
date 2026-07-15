@@ -48,8 +48,8 @@ Der [SharpeRatioParameter](xref:StockSharp.Algo.Statistics.SharpeRatioParameter)
 
 Sie unterstützen die folgenden Einstellungen:
 
-- **RiskFreeRate** -- jährlicher risikofreier Zinssatz (z. B. `0.03m` = 3 %)
-- **Period** -- Periode für die Renditeberechnung (Standardwert `TimeSpan.FromDays(1)`)
+- **Risikofreier Zinssatz** -- jährlicher risikofreier Zinssatz (z. B. `0.03m` = 3 %)
+- **Zeitraum** -- Periode für die Renditeberechnung (Standardwert `TimeSpan.FromDays(1)`)
 
 Der [CalmarRatioParameter](xref:StockSharp.Algo.Statistics.CalmarRatioParameter) und der [SterlingRatioParameter](xref:StockSharp.Algo.Statistics.SterlingRatioParameter) hängen von anderen Parametern ab (`NetProfitParameter`, `MaxDrawdownParameter`, `AverageDrawdownParameter`) und werden automatisch verknüpft, wenn sie über die [StatisticParameterRegistry](xref:StockSharp.Algo.Statistics.StatisticParameterRegistry) erstellt werden.
 

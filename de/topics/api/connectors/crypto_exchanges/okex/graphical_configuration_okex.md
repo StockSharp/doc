@@ -8,8 +8,8 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Geheimnis** - Geheimer Schlüssel.
 - **Kennphrase** - Kennphrase.
 - **Futures** - Futures-Bereich
-- **Spot** - Spot-Bereich
-- **Swap** - Swap-Bereich.
+- **Spotmarkt** - Spot-Bereich
+- **Swaps** - Swap-Bereich.
 - **Passwort** - Administratorpasswort.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu überwachen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Einstellungen des Mechanismus zur Verbindungsüberwachung mit dem Handelssystem. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

@@ -15,7 +15,7 @@ La idea principal es que MGD "acelera" durante los movimientos rápidos del merc
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 14)
+- **Longitud** - período de cálculo (valor predeterminado: 14)
 
 ## Cálculo
 

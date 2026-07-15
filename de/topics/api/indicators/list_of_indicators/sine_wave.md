@@ -19,7 +19,7 @@ Anzeigesignale:
 
 ## Parameter
 
-- **Length** – Periode des Sinuswellenzyklus, die die Zykluslänge in Preisbalken definiert.
+- **Länge** – Periode des Sinuswellenzyklus, die die Zykluslänge in Preisbalken definiert.
 
 ## Berechnung
 

@@ -18,8 +18,8 @@ O indicador usa a fórmula:
 
 força compradora herda os seus parâmetros de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
-- **Length** — período da EMA.
-- **Alpha** (opcional) — coeficiente de suavização, quando aplicável.
+- **Período** — período da EMA.
+- **Alfa** (opcional) — coeficiente de suavização, quando aplicável.
 
 ## Utilização
 

@@ -19,8 +19,8 @@ O BBP também pode assumir valores fora do intervalo 0-1:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo da SMA (valor predefinido: 20)
-- **StdDevMultiplier** - multiplicador do desvio padrão para calcular bandas de Bollinger (valor predefinido: 2)
+- **Período** - período de cálculo da SMA (valor predefinido: 20)
+- **Multiplicador do desvio padrão** - multiplicador do desvio padrão para calcular bandas de Bollinger (valor predefinido: 2)
 
 ## Cálculo
 

@@ -1,13 +1,13 @@
 # 连续期货
 
-[ContinuousSecurityWindow](xref:StockSharp.Xaml.ContinuousSecurityWindow) - 是一个用于创建*连续* ([ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)) 工具的可视化编辑器。请参见 [连续期货](../../instruments/continuous_futures.md)。
+[ContinuousSecurityWindow](xref:StockSharp.Xaml.ContinuousSecurityWindow) - 是一个用于创建*连续* ([ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)) 交易品种的可视化编辑器。请参见 [连续期货](../../instruments/continuous_futures.md)。
 
 ![Hydra 自定义连续期货](../../../../images/hydragluingcscustom.png)
 
 该组件包括：
 
-- 特殊 [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox) 文本字段，它通过输入 Id \- \[Code\]@\[Board\] 生成一个*连续*的工具。
-- [SecurityJumpsEditor](xref:StockSharp.Xaml.SecurityJumpsEditor) 组件是一个用于处理属于*连续*工具的工具的特殊 DataGrid。工具被封装在 [SecurityJump](xref:StockSharp.Xaml.SecurityJump) 类中，该类具有两个属性：[SecurityJump.Security](xref:StockSharp.Xaml.SecurityJump.Security) 和 [SecurityJump.Date](xref:StockSharp.Xaml.SecurityJump.Date)（向前滚动）。添加的工具存储在 [SecurityJumpsEditor.Jumps](xref:StockSharp.Xaml.SecurityJumpsEditor.Jumps) 列表中。该组件具有 [SecurityJumpsEditor.Validate](xref:StockSharp.Xaml.SecurityJumpsEditor.Validate) 函数，用于检查组件工具的正确性。
+- 特殊 [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox) 文本字段，它通过输入 Id \- \[Code\]@\[Board\] 生成一个*连续*的交易品种。
+- [SecurityJumpsEditor](xref:StockSharp.Xaml.SecurityJumpsEditor) 组件是一个用于处理属于*连续*交易品种的交易品种的特殊 DataGrid。交易品种被封装在 [SecurityJump](xref:StockSharp.Xaml.SecurityJump) 类中，该类具有两个属性：[SecurityJump.Security](xref:StockSharp.Xaml.SecurityJump.Security) 和 [SecurityJump.Date](xref:StockSharp.Xaml.SecurityJump.Date)（向前滚动）。添加的交易品种存储在 [SecurityJumpsEditor.Jumps](xref:StockSharp.Xaml.SecurityJumpsEditor.Jumps) 列表中。该组件具有 [SecurityJumpsEditor.Validate](xref:StockSharp.Xaml.SecurityJumpsEditor.Validate) 函数，用于检查组件交易品种的正确性。
 - 用于添加/删除交易品种的按钮。
 - **自动** 按钮允许你自动创建一个*连续*交易品种。
 - **确定**按钮完成*连续*交易品种的创建。

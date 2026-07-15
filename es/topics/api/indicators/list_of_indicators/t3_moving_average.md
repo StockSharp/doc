@@ -20,8 +20,8 @@ T3MA se puede utilizar para:
 
 ## Parámetros
 
-- **VolumeFactor**: factor de volumen que determina el grado de suavizado (normalmente un valor entre 0 y 1, el valor recomendado es 0,7).
-- **Length** - período de cálculo, similar al período de las medias móviles ordinarias.
+- **Factor de volumen**: factor de volumen que determina el grado de suavizado (normalmente un valor entre 0 y 1, el valor recomendado es 0,7).
+- **Longitud** - período de cálculo, similar al período de las medias móviles ordinarias.
 
 ## Cálculo
 

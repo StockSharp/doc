@@ -15,7 +15,7 @@ Um filtro de mediana ordena os preços dentro da janela móvel e selecciona o va
 
 ## Parâmetros
 
-- **Length** — tamanho da janela usado para calcular a mediana. Janelas maiores proporcionam uma suavização mais forte, mas aumentam o atraso.
+- **Período** — tamanho da janela usado para calcular a mediana. Janelas maiores proporcionam uma suavização mais forte, mas aumentam o atraso.
 
 ## Utilização
 

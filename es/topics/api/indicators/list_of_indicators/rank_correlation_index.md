@@ -7,7 +7,7 @@ Utilice la clase [RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorr
 
 ## Cálculo
 
-1. Asigne a cada punto de datos dentro de la ventana **Length** un rango de tiempo (1 para el valor más antiguo, `Length` para el más reciente).
+1. Asigne a cada punto de datos dentro de la ventana **Longitud** un rango de tiempo (1 para el valor más antiguo, `Length` para el más reciente).
 2. Clasifique los precios por valor (1 para el precio más bajo, `Length` para el más alto).
 3. Calcule la diferencia `d = RankTime − RankPrice` para cada barra.
 4. Aplicar la fórmula de Spearman:
@@ -17,7 +17,7 @@ Cuando se multiplica por 100, el indicador oscila entre −100 y +100.
 
 ## Parámetros
 
-- **Length** — tamaño de ventana para el procedimiento de clasificación.
+- **Longitud** — tamaño de ventana para el procedimiento de clasificación.
 
 ## Interpretación
 

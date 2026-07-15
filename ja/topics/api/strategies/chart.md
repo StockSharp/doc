@@ -115,11 +115,11 @@ private void ConfigureChartElements()
 
 [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) インターフェイスは、ローソク足表示を設定するための多くのプロパティを提供します。
 
-- **DrawStyle** - ローソク足の表示スタイル:
+- **描画スタイル** - ローソク足の表示スタイル:
   - **CandleStick** - ローソク足
   - **Ohlc** - バー
   - **LineOpen/LineHigh/LineLow/LineClose** - 各価格に対応する線
-  - **BoxVolume** - 出来高ボックス
+  - **ボックス出来高** - 出来高ボックス
   - **ClusterProfile** - クラスタープロファイル
   - **Area** - エリア
   - **PnF** - ポイントアンドフィギュアチャート
@@ -127,13 +127,13 @@ private void ConfigureChartElements()
 - **色設定**:
   - **UpFillColor/DownFillColor** - 上昇/下落ローソク足の実体色
   - **UpBorderColor/DownBorderColor** - 上昇/下落ローソク足の枠線色
-  - **LineColor** - ライン型チャートの線色
-  - **AreaColor** - Area 型のエリア色
+  - **線色** - ライン型チャートの線色
+  - **領域色** - Area 型のエリア色
 
 - **その他の設定**:
-  - **StrokeThickness** - 線の太さ
-  - **AntiAliasing** - スムージング
-  - **ShowAxisMarker** - Y 軸マーカーを表示
+  - **線の太さ** - 線の太さ
+  - **アンチエイリアス** - スムージング
+  - **軸マーカーを表示** - Y 軸マーカーを表示
 
 ### インジケーターの追加
 
@@ -176,12 +176,12 @@ smaElement.AutoAssignYAxis = true; // Y 軸を自動的に割り当て
 
 [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) インターフェイスは、設定用に次のプロパティを提供します。
 
-- **Color** - メインインジケーター色
-- **AdditionalColor** - 追加色（2 本の線を持つインジケーター用）
-- **StrokeThickness** - 線の太さ
-- **AntiAliasing** - スムージング
-- **DrawStyle** - 描画スタイル（線、点、ヒストグラムなど）
-- **ShowAxisMarker** - Y 軸マーカーを表示
+- **色** - メインインジケーター色
+- **追加色** - 追加色（2 本の線を持つインジケーター用）
+- **線の太さ** - 線の太さ
+- **アンチエイリアス** - スムージング
+- **描画スタイル** - 描画スタイル（線、点、ヒストグラムなど）
+- **軸マーカーを表示** - Y 軸マーカーを表示
 - **AutoAssignYAxis** - Y 軸を自動的に割り当て
 
 ### 約定の追加
@@ -216,12 +216,12 @@ _ordersElement.PointSize = 8;                // 点のサイズ
 
 [IChartOrderElement](xref:StockSharp.Charting.IChartOrderElement) インターフェイスは、設定用に次のプロパティを提供します。
 
-- **ActiveBrush** - アクティブな注文の色
-- **CanceledBrush** - キャンセル済み注文の色
-- **DoneBrush** - 完了済み注文の色
-- **ErrorColor** - エラー色
-- **ErrorStrokeColor** - エラー枠線色
-- **Filter** - 注文表示フィルター
+- **有効な注文の色** - アクティブな注文の色
+- **キャンセル済み注文の色** - キャンセル済み注文の色
+- **完了済み注文の色** - 完了済み注文の色
+- **エラー色** - エラー色
+- **エラー境界色** - エラー枠線色
+- **フィルター** - 注文表示フィルター
 
 ## チャート上へのデータ描画
 

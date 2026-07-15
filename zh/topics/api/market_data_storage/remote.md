@@ -22,7 +22,7 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 
 ## 正在加载交易品种信息
 
-在加载市场数据之前，您需要获取可用工具的信息。
+在加载市场数据之前，您需要获取可用交易品种的信息。
 
 ```cs
 // 加载交易品种信息

@@ -26,10 +26,10 @@ public class PairsTradingStrategy : Strategy
 
 A estratégia permite personalizar os seguintes parâmetros:
 
-- **SpreadLength** - período para calcular a média e o desvio padrão do spread (predefinição 20)
-- **EntryThreshold** - limiar de Z-Score para entrar numa posição (predefinição 2.0)
-- **ExitThreshold** - limiar de Z-Score para sair de uma posição (predefinição 0.5)
-- **CandleType** - tipo de vela com que trabalhar (predefinição 5 minutos)
+- **Período do diferencial** - período para calcular a média e o desvio padrão do spread (predefinição 20)
+- **Limiar de entrada** - limiar de Z-Score para entrar numa posição (predefinição 2.0)
+- **Limiar de saída** - limiar de Z-Score para sair de uma posição (predefinição 0.5)
+- **Tipo de vela** - tipo de vela com que trabalhar (predefinição 5 minutos)
 
 Todos os parâmetros estão disponíveis para otimização com intervalos de valores especificados.
 

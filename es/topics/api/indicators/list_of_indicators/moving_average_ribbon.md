@@ -15,8 +15,8 @@ La idea principal es que el posicionamiento mutuo y la forma de estos promedios 
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **ShortPeriod** - período inicial (mínimo) para promedios móviles (valor predeterminado: 10)
-- **LongPeriod** - período final (máximo) para promedios móviles (valor predeterminado: 100)
+- **Período corto** - período inicial (mínimo) para promedios móviles (valor predeterminado: 10)
+- **Período largo** - período final (máximo) para promedios móviles (valor predeterminado: 100)
 - **RibbonCount** - número de medias móviles en la cinta (valor predeterminado: 10)
 
 ## Cálculo

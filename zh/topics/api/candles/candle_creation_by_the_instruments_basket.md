@@ -61,7 +61,7 @@ private void CreateIndexAndSubscribe()
 	// 创建指数交易品种 K线订阅
 	_indexSubscription = new Subscription(
 		DataType.TimeFrame(_timeFrame),  // 1分钟K线
-		_indexInstr)  // 我们的指数工具
+		_indexInstr)  // 我们的指数交易品种
 	{
 		MarketData = 
 		{

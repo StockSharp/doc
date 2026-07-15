@@ -22,8 +22,8 @@ Wichtige Signale im Woodies-CCI-System:
 
 ## Parameter
 
-- **Length** - Berechnungsperiode für die Haupt-CCI-Linie (typischerweise 14)
-- **SMALength** - Periode zur Glättung der Haupt-CCI-Linie, um die zweite Linie zu erhalten (typischerweise 9)
+- **Länge** - Berechnungsperiode für die Haupt-CCI-Linie (typischerweise 14)
+- **SMA-Länge** - Periode zur Glättung der Haupt-CCI-Linie, um die zweite Linie zu erhalten (typischerweise 9)
 
 ## Berechnung
 

@@ -7,7 +7,7 @@ Use a classe [RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorrelat
 
 ## Cálculo
 
-1. Atribua a cada ponto de dados dentro da janela **Length** um posto temporal (1 para o valor mais antigo, `Length` para o mais recente).
+1. Atribua a cada ponto de dados dentro da janela **Período** um posto temporal (1 para o valor mais antigo, `Length` para o mais recente).
 2. Ordene os preços por valor (1 para o preço mais baixo, `Length` para o mais alto).
 3. Calcule a diferença `d = RankTime - RankPrice` para cada barra.
 4. Aplique a fórmula de Spearman:
@@ -17,7 +17,7 @@ Quando multiplicado por 100, o indicador varia entre -100 e +100.
 
 ## Parâmetros
 
-- **Length** - tamanho da janela para o procedimento de ordenação.
+- **Período** - tamanho da janela para o procedimento de ordenação.
 
 ## Interpretação
 

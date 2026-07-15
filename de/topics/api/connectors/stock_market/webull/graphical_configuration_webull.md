@@ -2,11 +2,11 @@
 
 In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) konfiguriert.
 
-- **Schlüssel** (`Key`) — der Anwendungsschlüssel.
-- **Geheimnis** (`Secret`) — das Anwendungsgeheimnis.
-- **Zugriffstoken** (`Token`) — ein optionales Zugriffstoken.
-- **Konto** (`Account`) — die Kennung des Handelskontos.
-- **Demomodus** (`IsDemo`) — Verwendung der Testumgebung.
+- **Schlüssel** — der Anwendungsschlüssel.
+- **Geheimnis** — das Anwendungsgeheimnis.
+- **Zugriffstoken** — ein optionales Zugriffstoken.
+- **Konto** — die Kennung des Handelskontos.
+- **Demomodus** — Verwendung der Testumgebung.
 
 ## Empfohlene Inhalte
 

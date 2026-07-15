@@ -6,8 +6,8 @@
 
 抽象基底クラス [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter) は、すべてのエクスポーターに共通する契約を定義します。
 
-- **DataType** - エクスポートされるデータの種類（ティック、ローソク足、オーダーブックなど）。
-- **Encoding** - エンコーディング（既定では UTF-8）。
+- **データ型** - エクスポートされるデータの種類（ティック、ローソク足、オーダーブックなど）。
+- **エンコーディング** - エンコーディング（既定では UTF-8）。
 - **Export\<T\>(IAsyncEnumerable\<T\>, CancellationToken)** - メインのエクスポートメソッド。`Task<(int count, DateTime? lastTime)>` を返します。これはエクスポートされたレコード数と最後のレコードの時刻です。
 
 このメソッドは、データを型固有のハンドラーへ自動的にルーティングします。対象は [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage)、[Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage)、[ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)（ティック、注文ログ、トランザクション）、[CandleMessage](xref:StockSharp.Messages.CandleMessage)、[NewsMessage](xref:StockSharp.Messages.NewsMessage)、[SecurityMessage](xref:StockSharp.Messages.SecurityMessage)、[PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage)、[IndicatorValue](xref:StockSharp.Messages.IndicatorValue)、[BoardStateMessage](xref:StockSharp.Messages.BoardStateMessage) です。
@@ -35,7 +35,7 @@ var (count, lastTime) = await exporter.Export(tickMessages, token);
 [JsonExporter](xref:StockSharp.Algo.Export.JsonExporter) はデータを JSON 形式で保存します。
 
 - **コンストラクター**: `(DataType dataType, Stream stream)`
-- **Indent** - インデント付き整形（既定値は `true`）。
+- **インデント** - インデント付き整形（既定値は `true`）。
 
 ```cs
 await using var stream = File.Create("candles.json");
@@ -49,7 +49,7 @@ await exporter.Export(candleMessages, token);
 [XmlExporter](xref:StockSharp.Algo.Export.XmlExporter) はデータを XML 形式で保存します。
 
 - **コンストラクター**: `(DataType dataType, Stream stream)`
-- **Indent** - インデント付き整形（既定値は `true`）。
+- **インデント** - インデント付き整形（既定値は `true`）。
 
 ```cs
 await using var stream = File.Create("candles.xml");
@@ -77,7 +77,7 @@ await exporter.Export(tickMessages, token);
 [DatabaseExporter](xref:StockSharp.Algo.Export.DatabaseExporter) は、LinqToDB 経由でデータをデータベースに保存します。
 
 - **コンストラクター**: `(IDatabaseProvider dbProvider, DataType dataType, DatabaseConnectionPair connection, decimal? priceStep, decimal? volumeStep)`
-- **BatchSize** - レコードのバッチサイズ（既定値は 50）。
+- **バッチサイズ** - レコードのバッチサイズ（既定値は 50）。
 - **CheckUnique** - レコードの一意性をチェックします（既定値は `false`）。
 - **DropExisting** - エクスポート前に既存データを削除します（既定値は `false`）。
 
@@ -96,7 +96,7 @@ await exporter.Export(tickMessages, token);
 [StockSharpExporter](xref:StockSharp.Algo.Export.StockSharpExporter) は、内部 StockSharp ストレージ形式でデータを保存します。
 
 - **コンストラクター**: `(DataType dataType, IStorageRegistry storageRegistry, IMarketDataDrive drive, StorageFormats format)`
-- **BatchSize** - レコードのバッチサイズ（既定値は 50）。
+- **バッチサイズ** - レコードのバッチサイズ（既定値は 50）。
 
 ```cs
 var exporter = new StockSharpExporter(
@@ -114,7 +114,7 @@ await exporter.Export(tickMessages, token);
 - **TemplateTxtLevel1** - Level1 データ用テンプレート。
 - **TemplateTxtOrderLog** - 注文ログ用テンプレート。
 - **TemplateTxtTransaction** - トランザクション用テンプレート。
-- **TemplateTxtSecurity** - 銘柄用テンプレート。
+- **銘柄テンプレート** - 銘柄用テンプレート。
 - **TemplateTxtNews** - ニュース用テンプレート。
 
 テンプレートは必要に応じてカスタマイズまたは置換できます。このレジストリは [IPersistable](xref:Ecng.Serialization.IPersistable) を実装し、設定から保存および読み込みできます。

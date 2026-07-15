@@ -18,7 +18,7 @@ El oscilador oscila entre 0 y 100:
 
 ## Parámetros
 
-- **Length** - período utilizado para calcular el rango de precios, es decir, los máximos y mínimos. El valor predeterminado común es 14.
+- **Longitud** - período utilizado para calcular el rango de precios, es decir, los máximos y mínimos. El valor predeterminado común es 14.
 
 ## Cálculo
 

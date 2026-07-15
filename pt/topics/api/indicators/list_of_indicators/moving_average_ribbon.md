@@ -15,8 +15,8 @@ A ideia principal é que o posicionamento mútuo e a forma destas médias móvei
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **ShortPeriod** - período inicial (mínimo) das médias móveis (valor predefinido: 10)
-- **LongPeriod** - período final (máximo) das médias móveis (valor predefinido: 100)
+- **Período curto** - período inicial (mínimo) das médias móveis (valor predefinido: 10)
+- **Período longo** - período final (máximo) das médias móveis (valor predefinido: 100)
 - **RibbonCount** - número de médias móveis na fita (valor predefinido: 10)
 
 ## Cálculo

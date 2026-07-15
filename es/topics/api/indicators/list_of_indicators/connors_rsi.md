@@ -19,9 +19,9 @@ CRSI es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **RSIPeriod** - período para calcular el componente RSI (valor predeterminado: 3)
-- **StreakRSIPeriod** - período para calcular el componente de racha RSI (valor predeterminado: 2)
-- **ROCRSIPeriod** - período para calcular la tasa de cambio del componente RSI (valor predeterminado: 100)
+- **Período del RSI** - período para calcular el componente RSI (valor predeterminado: 3)
+- **Período del RSI de racha** - período para calcular el componente de racha RSI (valor predeterminado: 2)
+- **Período del RSI de la tasa de cambio** - período para calcular la tasa de cambio del componente RSI (valor predeterminado: 100)
 
 ## Cálculo
 

@@ -20,8 +20,8 @@ La interfaz [ISnapshotStorage](xref:StockSharp.Algo.Storages.ISnapshotStorage) d
 
 La interfaz [ISnapshotSerializer](xref:StockSharp.Algo.Storages.ISnapshotSerializer`2) es responsable de convertir instantáneas a una representación binaria y viceversa:
 
-- **DataType** -- información del tipo de datos de la instantánea.
-- **Version** -- versión del formato de serialización.
+- **Tipo de datos** -- información del tipo de datos de la instantánea.
+- **Versión** -- versión del formato de serialización.
 - **Serialize(version, message)** -- serializar un mensaje a un array de bytes.
 - **Deserialize(version, buffer)** -- deserializar un array de bytes de vuelta a un mensaje.
 - **GetKey(message)** -- extraer la clave de un mensaje.

@@ -15,8 +15,8 @@ La principal fortaleza de OMA radica en su capacidad para identificar cambios en
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **ShortPeriod** - período para la media móvil corta (valor predeterminado: 12)
-- **LongPeriod** - período para la media móvil larga (valor predeterminado: 26)
+- **Período corto** - período para la media móvil corta (valor predeterminado: 12)
+- **Período largo** - período para la media móvil larga (valor predeterminado: 26)
 
 ## Cálculo
 

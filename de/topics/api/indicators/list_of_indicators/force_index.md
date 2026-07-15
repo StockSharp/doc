@@ -19,7 +19,7 @@ Der Kraftindex ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Glättungszeitraum (Standardwert: 13)
+- **Länge** – Glättungszeitraum (Standardwert: 13)
 
 ## Berechnung
 

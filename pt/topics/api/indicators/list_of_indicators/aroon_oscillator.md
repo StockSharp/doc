@@ -16,7 +16,7 @@ Quanto mais o valor se afasta de zero, mais forte é o movimento direcional.
 
 ## Parâmetros
 
-- **Length** — período usado para os cálculos Aroon subjacentes. Valores maiores fornecem leituras mais suaves com resposta mais lenta.
+- **Período** — período usado para os cálculos Aroon subjacentes. Valores maiores fornecem leituras mais suaves com resposta mais lenta.
 
 ## Cálculo
 

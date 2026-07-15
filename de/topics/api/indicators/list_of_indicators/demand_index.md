@@ -17,7 +17,7 @@ DI zielt darauf ab, die folgenden Marktsituationen zu identifizieren:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 13)
+- **Länge** – Berechnungszeitraum (Standardwert: 13)
 
 ## Berechnung
 

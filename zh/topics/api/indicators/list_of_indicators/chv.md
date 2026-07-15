@@ -13,8 +13,8 @@ CHV = (EMA(H-L(i), n) — EMA(H-L(i-n), n)) / EMA(H-L(i-n), n) x 100。
 
 指标的主要参数：
 
-- **ROCPeriod** — 相对于其进行计算的周期数。最初设置为5。
-- **SmoothPeriod** — 移动平均的周期。默认设置为 32。
+- **ROC周期** — 相对于其进行计算的周期数。最初设置为5。
+- **平滑周期** — 移动平均的周期。默认设置为 32。
 
 ![CHV 指标图表](../../../../images/indicatorchaikinvolatility.png)
 

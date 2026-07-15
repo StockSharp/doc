@@ -18,7 +18,7 @@ Der PSY-Indikator hilft festzustellen, ob sich der Markt in einem überkauften o
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 12-14)
+- **Länge** – Berechnungszeitraum (Standardwert: 12-14)
 
 ## Berechnung
 

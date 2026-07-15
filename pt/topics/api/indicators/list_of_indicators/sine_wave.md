@@ -19,7 +19,7 @@ Sinais do indicador:
 
 ## Parâmetros
 
-- **Length** - período do ciclo da onda sinusoidal, que define o comprimento do ciclo em barras de preço.
+- **Período** - período do ciclo da onda sinusoidal, que define o comprimento do ciclo em barras de preço.
 
 ## Cálculo
 

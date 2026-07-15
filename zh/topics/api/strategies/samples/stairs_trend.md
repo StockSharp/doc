@@ -21,8 +21,8 @@ public class StairsTrendStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **Length** - 用于识别趋势的连续同向K线数量（默认值 3）
-- **CandleType** - 要使用的K线类型（默认5分钟）
+- **长度** - 用于识别趋势的连续同向K线数量（默认值 3）
+- **K线类型** - 要使用的K线类型（默认5分钟）
 
 Length 参数可在 2 到 10 的范围内进行优化，步长为 1。
 
@@ -107,7 +107,7 @@ private void ProcessCandle(ICandleMessage candle)
 
 ## 特征
 
-- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的工具
+- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的交易品种
 - 该策略仅适用于已完成的K线
 - 该策略使用市价单进行建仓
 - 该策略基于一系列K线应用简单的趋势检测逻辑

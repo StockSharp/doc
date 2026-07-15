@@ -17,7 +17,7 @@ El índice oscila de 0 a 100:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 20)
+- **Longitud** - período de cálculo (valor predeterminado: 20)
 
 ## Cálculo
 

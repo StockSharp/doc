@@ -20,7 +20,7 @@ Der Indikator wird als Differenz zwischen dem Balkentief und dem EMA-Wert berech
 
 Bärenstärke übernimmt die Konfiguration von [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
-- **Length** - EMA-Periode.
+- **Länge** - EMA-Periode.
 - **Alpha** (optional) - Glättungskoeffizient, wenn die EMA auf diese Weise konfiguriert wird.
 
 ## Verwendung

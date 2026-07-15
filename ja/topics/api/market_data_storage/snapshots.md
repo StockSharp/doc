@@ -20,8 +20,8 @@ StockSharp のスナップショットは、市場データの最新の実際の
 
 [ISnapshotSerializer](xref:StockSharp.Algo.Storages.ISnapshotSerializer`2) インターフェイスは、スナップショットをバイナリ表現へ変換し、また元に戻す役割を担います。
 
-- **DataType** -- スナップショットデータ型情報。
-- **Version** -- シリアライズ形式のバージョン。
+- **データ型** -- スナップショットデータ型情報。
+- **バージョン** -- シリアライズ形式のバージョン。
 - **Serialize(version, message)** -- メッセージをバイト配列にシリアライズします。
 - **Deserialize(version, buffer)** -- バイト配列をメッセージにデシリアライズします。
 - **GetKey(message)** -- メッセージからキーを抽出します。

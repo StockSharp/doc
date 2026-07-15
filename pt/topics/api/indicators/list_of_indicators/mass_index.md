@@ -15,8 +15,8 @@ O conceito principal é que, quando o índice de massa atinge um determinado lim
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período principal de cálculo (valor predefinido: 25)
-- **EmaLength** - período da EMA do intervalo de preços (valor predefinido: 9)
+- **Período** - período principal de cálculo (valor predefinido: 25)
+- **Período da EMA** - período da EMA do intervalo de preços (valor predefinido: 9)
 
 ## Cálculo
 

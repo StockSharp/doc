@@ -195,7 +195,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) クラスを使用すると、設定の保存と復元の仕組みが自動的に使用されます。
 
-**MinValue** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
+**最小値** プロパティは基本プロパティとしてマークされており、[基本プロパティ](../../using_visual_designer/diagram_panel.md) モードで表示されます。
 
 コメントアウトされた [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) プロパティは、入力ソケットを持つメソッドがいつ呼び出されるかを決定します。
 
@@ -205,7 +205,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 #     return False
 ```
 
-このプロパティのコメントを解除すると、少なくとも 1 つの値が到着するたびに **Process** メソッドが呼び出されます（この例では、ローソク足または数値のどちらか）。
+このプロパティのコメントを解除すると、少なくとも 1 つの値が到着するたびに **プロセス** メソッドが呼び出されます（この例では、ローソク足または数値のどちらか）。
 
 作成したキューブをスキームに追加するには、パレットの **カスタムブロック** セクションで作成済みのキューブを選択する必要があります。
 

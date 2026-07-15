@@ -50,7 +50,7 @@ _connector.Disconnected += () =>
 	Console.WriteLine("连接已断开");
 };
 
-// 收到工具事件
+// 收到交易品种事件
 _connector.SecurityReceived += (subscription, security) =>
 {
 	Console.WriteLine($"收到交易品种: {security.Code}, {security.Id}");

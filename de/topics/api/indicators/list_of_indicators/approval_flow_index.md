@@ -16,7 +16,7 @@ Der AFI-Indikator kann verwendet werden für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** - Berechnungsperiode des Indikators
+- **Länge** - Berechnungsperiode des Indikators
 
 ## Berechnung
 

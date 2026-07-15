@@ -102,7 +102,7 @@ class empty_indicator(BaseIndicator):
 		return str(self)
 ```
 
-Dieser Indikator empfängt einen eingehenden Wert und erzeugt auf Basis des angegebenen Parameterwerts **Change** eine zufällige Abweichung.
+Dieser Indikator empfängt einen eingehenden Wert und erzeugt auf Basis des angegebenen Parameterwerts **Änderung** eine zufällige Abweichung.
 
 Die Beschreibung der Indikatormethoden finden Sie im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md).
 
@@ -110,7 +110,7 @@ Um den erstellten Indikator zum Schema hinzuzufügen, verwenden Sie den Würfel 
 
 ![Designer Quellcode-Indikator 01](../../../../../images/designer_source_code_indicator_01.png)
 
-Der Parameter **Change**, der zuvor im Indikatorcode festgelegt wurde, wird im Eigenschaftenpanel angezeigt.
+Der Parameter **Änderung**, der zuvor im Indikatorcode festgelegt wurde, wird im Eigenschaftenpanel angezeigt.
 
 > [!WARNING]
 > Indikatoren aus Python-Code können nicht in Strategien verwendet werden, die in Python-Code erstellt wurden. Sie können nur in Strategien verwendet werden, die [aus Würfeln](../../using_visual_designer.md) erstellt wurden.

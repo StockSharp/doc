@@ -20,9 +20,9 @@ A ALMA é usada para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (número de velas a analisar)
+- **Período** - período de cálculo (número de velas a analisar)
 - **Sigma** - sigma, um parâmetro que controla a forma da curva Gaussiana (valor recomendado: 6)
-- **Offset** - offset, um parâmetro que controla a suavização e a velocidade de resposta (valor recomendado: 0.85)
+- **Deslocamento** - offset, um parâmetro que controla a suavização e a velocidade de resposta (valor recomendado: 0.85)
 
 ## Cálculo
 

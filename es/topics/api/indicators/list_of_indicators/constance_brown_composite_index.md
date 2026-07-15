@@ -19,9 +19,9 @@ El indicador funciona bien en varios períodos de tiempo y tipos de mercado, inc
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo principal para el índice (valor predeterminado: 14)
-- **StochasticKPeriod** - período para calcular el oscilador estocástico %K (valor predeterminado: 5)
-- **StochasticDPeriod** - período para calcular el oscilador estocástico %D (valor predeterminado: 3)
+- **Longitud** - período de cálculo principal para el índice (valor predeterminado: 14)
+- **Período de la estocástica K** - período para calcular el oscilador estocástico %K (valor predeterminado: 5)
+- **Período de la estocástica D** - período para calcular el oscilador estocástico %D (valor predeterminado: 3)
 
 ## Cálculo
 

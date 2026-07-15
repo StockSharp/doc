@@ -21,8 +21,8 @@ public class StairsCountertrendStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **Length** - Anzahl aufeinanderfolgender Kerzen in eine Richtung zur Erkennung eines Trends (Standardwert 3)
-- **CandleType** - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
+- **Länge** - Anzahl aufeinanderfolgender Kerzen in eine Richtung zur Erkennung eines Trends (Standardwert 3)
+- **Kerzentyp** - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
 
 Der Parameter Length steht für die Optimierung im Bereich von 2 bis 10 mit einer Schrittweite von 1 zur Verfügung.
 

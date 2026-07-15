@@ -20,9 +20,9 @@ ALMA wird verwendet für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** - Berechnungsperiode (Anzahl der zu analysierenden Kerzen)
+- **Länge** - Berechnungsperiode (Anzahl der zu analysierenden Kerzen)
 - **Sigma** - Sigma, ein Parameter zur Steuerung der Form der Gauß-Kurve (empfohlener Wert: 6)
-- **Offset** - Offset, ein Parameter zur Steuerung von Glättung und Reaktionsgeschwindigkeit (empfohlener Wert: 0,85)
+- **Versatz** - Offset, ein Parameter zur Steuerung von Glättung und Reaktionsgeschwindigkeit (empfohlener Wert: 0,85)
 
 ## Berechnung
 

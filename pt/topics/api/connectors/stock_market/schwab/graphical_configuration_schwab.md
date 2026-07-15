@@ -2,8 +2,8 @@
 
 Em todos os produtos StockSharp, a ligação é configurada na [janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md).
 
-- **Token de acesso** (`Token`) — o token de acesso OAuth.
-- **Endereço** (`Address`) — o endereço da API de negociação.
+- **Token de acesso** — o token de acesso OAuth.
+- **Endereço** — o endereço da API de negociação.
 
 ## Ver também
 

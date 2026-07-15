@@ -13,8 +13,8 @@ Neste caso, H-L(i) representa a diferença de preço na barra atual, e H-L(i-n) 
 
 Principais parâmetros do indicador:
 
-- **ROCPeriod** - o número do período em relação ao qual o cálculo será realizado. Inicialmente definido como 5.
-- **SmoothPeriod** - o período da média móvel. Por defeito, está definido como 32.
+- **Período do ROC** - o número do período em relação ao qual o cálculo será realizado. Inicialmente definido como 5.
+- **Período de suavização** - o período da média móvel. Por defeito, está definido como 32.
 
 ![Gráfico do indicador CHV](../../../../images/indicatorchaikinvolatility.png)
 

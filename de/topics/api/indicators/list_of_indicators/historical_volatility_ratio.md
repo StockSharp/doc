@@ -19,8 +19,8 @@ Der Indikator ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – Zeitraum zur Berechnung der kurzfristigen Volatilität (Standardwert: 5)
-- **LongPeriod** – Zeitraum zur Berechnung der langfristigen Volatilität (Standardwert: 20)
+- **Kurzer Zeitraum** – Zeitraum zur Berechnung der kurzfristigen Volatilität (Standardwert: 5)
+- **Langer Zeitraum** – Zeitraum zur Berechnung der langfristigen Volatilität (Standardwert: 20)
 
 ## Berechnung
 

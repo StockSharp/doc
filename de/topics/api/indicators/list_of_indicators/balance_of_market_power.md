@@ -17,7 +17,7 @@ BMP hilft Tradern:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** - Glättungsperiode (Standardwert: 14)
+- **Länge** - Glättungsperiode (Standardwert: 14)
 
 ## Berechnung
 

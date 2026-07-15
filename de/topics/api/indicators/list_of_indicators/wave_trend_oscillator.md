@@ -21,9 +21,9 @@ Wichtige Indikatorsignale:
 
 ## Parameter
 
-- **EsaPeriod** - EMA-Periode zur Berechnung des ESA-Werts (typischerweise 10)
-- **DPeriod** - Periode zur Berechnung der Abweichung (typischerweise 21)
-- **AveragePeriod** - Periode zur Berechnung des Durchschnitts des endgültigen Oszillators (typischerweise 4)
+- **ESA-Zeitraum** - EMA-Periode zur Berechnung des ESA-Werts (typischerweise 10)
+- **Abweichungszeitraum** - Periode zur Berechnung der Abweichung (typischerweise 21)
+- **Durchschnittszeitraum** - Periode zur Berechnung des Durchschnitts des endgültigen Oszillators (typischerweise 4)
 
 ## Berechnung
 

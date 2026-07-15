@@ -47,8 +47,8 @@ StockSharp stellt leistungsfähige Werkzeuge für die Arbeit mit Informationen z
 
 Jedes Instrument in StockSharp besitzt einen eindeutigen Bezeichner [SecurityId](xref:StockSharp.Messages.SecurityId), der zur eindeutigen Identifikation des Instruments im System verwendet wird. Der Bezeichner enthält:
 
-- **SecurityCode** - Börsencode des Instruments
-- **BoardCode** - Code des Handelsplatzes
+- **Instrumentencode** - Börsencode des Instruments
+- **Handelsplatzcode** - Code des Handelsplatzes
 - **Bloomberg/Reuters/ISIN** und andere Codes - alternative Identifikationsmethoden
 
 ## Besonderheiten

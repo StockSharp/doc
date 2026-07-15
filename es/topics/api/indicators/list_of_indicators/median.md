@@ -15,7 +15,7 @@ Un filtro mediano ordena los precios dentro de la ventana móvil y selecciona el
 
 ## Parámetros
 
-- **Length**: tamaño de ventana utilizado para calcular la mediana. Las ventanas más grandes ofrecen un suavizado más fuerte pero aumentan el retraso.
+- **Longitud**: tamaño de ventana utilizado para calcular la mediana. Las ventanas más grandes ofrecen un suavizado más fuerte pero aumentan el retraso.
 
 ## Uso
 

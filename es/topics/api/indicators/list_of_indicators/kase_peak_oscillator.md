@@ -15,8 +15,8 @@ El indicador es un oscilador adimensional que fluctúa alrededor de la línea ce
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **ShortPeriod** - período corto para el cálculo del impulso (valor predeterminado: 10)
-- **LongPeriod** - largo período para el cálculo del impulso (valor predeterminado: 30)
+- **Período corto** - período corto para el cálculo del impulso (valor predeterminado: 10)
+- **Período largo** - largo período para el cálculo del impulso (valor predeterminado: 30)
 
 ## Cálculo
 

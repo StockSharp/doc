@@ -15,8 +15,8 @@ Die Hauptstärke von OMA liegt in seiner Fähigkeit, Veränderungen in der Trend
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – Zeitraum für den kurzen gleitenden Durchschnitt (Standardwert: 12)
-- **LongPeriod** – Zeitraum für den langen gleitenden Durchschnitt (Standardwert: 26)
+- **Kurzer Zeitraum** – Zeitraum für den kurzen gleitenden Durchschnitt (Standardwert: 12)
+- **Langer Zeitraum** – Zeitraum für den langen gleitenden Durchschnitt (Standardwert: 26)
 
 ## Berechnung
 

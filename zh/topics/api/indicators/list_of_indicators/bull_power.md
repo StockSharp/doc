@@ -18,8 +18,8 @@
 
 多头力量 从 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 继承其参数：
 
-- **Length** — EMA周期。
-- **Alpha**（可选）——平滑系数（如适用）。
+- **长度** — EMA周期。
+- **阿尔法**（可选）——平滑系数（如适用）。
 
 ## 使用
 

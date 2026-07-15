@@ -18,8 +18,8 @@ O indicador é calculado como a diferença entre o mínimo da barra e o valor da
 
 força vendedora herda a configuração de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
-- **Length** — período da EMA.
-- **Alpha** (opcional) — coeficiente de suavização se a EMA estiver configurada desta forma.
+- **Período** — período da EMA.
+- **Alfa** (opcional) — coeficiente de suavização se a EMA estiver configurada desta forma.
 
 ## Utilização
 

@@ -37,16 +37,16 @@ var subscription = new Subscription(lookupMessage);
 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) メッセージでは、次の検索条件を設定できます。
 
 - **SecurityId** — 金融商品識別子。次を含みます。
-  - **SecurityCode** — 金融商品コード、または金融商品コードのマスク（たとえば "AAPL" または "MS*"）
-  - **BoardCode** — 取引所ボードコード（たとえば [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
-- **SecurityType** — 金融商品の種類（[SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock)、[SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) など）
+  - **銘柄コード** — 金融商品コード、または金融商品コードのマスク（たとえば "AAPL" または "MS*"）
+  - **市場コード** — 取引所ボードコード（たとえば [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
+- **銘柄タイプ** — 金融商品の種類（[SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock)、[SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) など）
 - **SecurityTypes** — 高度な検索用の金融商品種類の配列
-- **Currency** — 金融商品の取引通貨
+- **通貨** — 金融商品の取引通貨
 - **ExpiryDate** — 有効期限（デリバティブ用）
-- **Strike** — 権利行使価格（オプション用）
-- **OptionType** — オプションの種類（オプション用）
-- **Name** — 金融商品名、またはその一部
-- **Class** — 金融商品クラス
+- **権利行使価格** — 権利行使価格（オプション用）
+- **オプションタイプ** — オプションの種類（オプション用）
+- **名前** — 金融商品名、またはその一部
+- **クラス** — 金融商品クラス
 
 ### 検索結果の処理
 

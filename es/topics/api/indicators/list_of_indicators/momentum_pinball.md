@@ -15,7 +15,7 @@ La idea principal es que los valores de impulso extremos suelen ser inestables y
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 14)
+- **Longitud** - período de cálculo (valor predeterminado: 14)
 
 ## Cálculo
 

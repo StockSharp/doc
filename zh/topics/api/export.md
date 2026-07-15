@@ -6,8 +6,8 @@
 
 基础抽象类 [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter) 定义了所有导出器的通用契约：
 
-- **DataType** — 被导出的数据类型（逐笔数据、K线、订单簿等）。
-- **Encoding** — 编码（默认 UTF-8）。
+- **数据类型** — 被导出的数据类型（逐笔数据、K线、订单簿等）。
+- **编码** — 编码（默认 UTF-8）。
 - **Export\<T\>(IAsyncEnumerable\<T\>, CancellationToken)** — 主要的导出方法。返回 `Task<(int count, DateTime? lastTime)>` — 导出记录的数量以及最后一条记录的时间。
 
 该方法会自动将数据路由到特定类型的处理程序，适用于：[QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage)、[Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage)、[ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage)（行情、订单日志、交易）、[CandleMessage](xref:StockSharp.Messages.CandleMessage)、[NewsMessage](xref:StockSharp.Messages.NewsMessage)、[SecurityMessage](xref:StockSharp.Messages.SecurityMessage)、[PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage)、[IndicatorValue](xref:StockSharp.Messages.IndicatorValue) 和 [BoardStateMessage](xref:StockSharp.Messages.BoardStateMessage)。
@@ -35,7 +35,7 @@ var (count, lastTime) = await exporter.Export(tickMessages, token);
 [JsonExporter](xref:StockSharp.Algo.Export.JsonExporter) 以 JSON 格式保存数据。
 
 - **构造函数**: `(DataType dataType, Stream stream)`
-- **Indent** — 缩进格式（默认 `true`）。
+- **缩进** — 缩进格式（默认 `true`）。
 
 ```cs
 await using var stream = File.Create("candles.json");
@@ -49,7 +49,7 @@ await exporter.Export(candleMessages, token);
 [XmlExporter](xref:StockSharp.Algo.Export.XmlExporter) 以 XML 格式保存数据。
 
 - **构造函数**: `(DataType dataType, Stream stream)`
-- **Indent** — 缩进格式（默认 `true`）。
+- **缩进** — 缩进格式（默认 `true`）。
 
 ```cs
 await using var stream = File.Create("candles.xml");
@@ -77,7 +77,7 @@ await exporter.Export(tickMessages, token);
 [DatabaseExporter](xref:StockSharp.Algo.Export.DatabaseExporter) 通过 LinqToDB 将数据保存到数据库。
 
 - **构造函数**: `(IDatabaseProvider dbProvider, DataType dataType, DatabaseConnectionPair connection, decimal? priceStep, decimal? volumeStep)`
-- **BatchSize** — 记录的批量大小（默认 50）。
+- **批量大小** — 记录的批量大小（默认 50）。
 - **CheckUnique** — 检查记录唯一性（默认 `false`）。
 - **DropExisting** — 在导出前删除现有数据（默认 `false`）。
 
@@ -96,7 +96,7 @@ await exporter.Export(tickMessages, token);
 [StockSharpExporter](xref:StockSharp.Algo.Export.StockSharpExporter) 将数据保存为内部 StockSharp 存储格式。
 
 - **构造函数**: `(DataType dataType, IStorageRegistry storageRegistry, IMarketDataDrive drive, StorageFormats format)`
-- **BatchSize** — 记录的批量大小（默认 50）。
+- **批量大小** — 记录的批量大小（默认 50）。
 
 ```cs
 var exporter = new StockSharpExporter(
@@ -114,7 +114,7 @@ await exporter.Export(tickMessages, token);
 - **TemplateTxtLevel1** — Level1 数据的模板。
 - **TemplateTxtOrderLog** — 订单日志模板。
 - **TemplateTxtTransaction** — 交易模板。
-- **TemplateTxtSecurity** — 交易品种模板。
+- **交易品种模板** — 交易品种模板。
 - **TemplateTxtNews** — 新闻模板。
 
 模板可以根据需要进行自定义或替换。注册表实现了 [IPersistable](xref:Ecng.Serialization.IPersistable)，可以从设置中保存/加载。

@@ -15,8 +15,8 @@ Der Indikator ist ein dimensionsloser Oszillator, der um die Nulllinie schwankt.
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – kurzer Zeitraum für die Impulsberechnung (Standardwert: 10)
-- **LongPeriod** – langer Zeitraum für die Impulsberechnung (Standardwert: 30)
+- **Kurzer Zeitraum** – kurzer Zeitraum für die Impulsberechnung (Standardwert: 10)
+- **Langer Zeitraum** – langer Zeitraum für die Impulsberechnung (Standardwert: 30)
 
 ## Berechnung
 

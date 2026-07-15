@@ -15,8 +15,8 @@ Das Grundkonzept besteht darin, dass die Wahrscheinlichkeit einer aktuellen Tren
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Hauptberechnungszeitraum (Standardwert: 25)
-- **EmaLength** – Zeitraum für Preisspanne EMA (Standardwert: 9)
+- **Länge** – Hauptberechnungszeitraum (Standardwert: 25)
+- **EMA-Länge** – Zeitraum für Preisspanne EMA (Standardwert: 9)
 
 ## Berechnung
 

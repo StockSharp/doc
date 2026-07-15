@@ -49,7 +49,7 @@ namespace StockSharp.Algo.Analytics
 				return Task.CompletedTask;
 			}
 
-			// 脚本只能处理 1 个工具
+			// 脚本只能处理 1 个交易品种
 			var security = securities.First();
 
 			// 获取 K线存储
@@ -118,7 +118,7 @@ class price_volume_script(IAnalyticsScript):
 			logs.LogWarning("没有交易品种。")
 			return Task.CompletedTask
 
-		# 脚本只能处理 1 个工具
+		# 脚本只能处理 1 个交易品种
 		security = securities[0]
 
 		if data_type is None:

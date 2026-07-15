@@ -15,7 +15,7 @@ A principal vantagem do LRSI é a sua capacidade de identificar rapidamente alte
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Gamma** - coeficiente de filtragem (valor predefinido: 0,4, intervalo de 0,1 a 0,9)
+- **Gama** - coeficiente de filtragem (valor predefinido: 0,4, intervalo de 0,1 a 0,9)
 
 O parâmetro Gamma determina o grau de filtragem e afecta a sensibilidade do indicador. Valores Gamma mais baixos resultam num indicador mais suave e menos sensível, enquanto valores mais altos tornam o indicador mais sensível a alterações de preço, mas potencialmente mais ruidoso.
 

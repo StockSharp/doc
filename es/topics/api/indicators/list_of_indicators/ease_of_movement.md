@@ -19,7 +19,7 @@ El indicador es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de suavizado (valor predeterminado: 14)
+- **Longitud** - período de suavizado (valor predeterminado: 14)
 
 ## Cálculo
 

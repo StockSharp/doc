@@ -17,7 +17,7 @@ Der Indikator gibt eine [ElderRayValue](xref:StockSharp.Algo.Indicators.ElderRay
 
 Elder-Ray erbt die Einstellungen von [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
-- **Length** — EMA-Periode;
+- **Länge** — EMA-Periode;
 - **Alpha** – Glättungskoeffizient, wenn direkt konfiguriert.
 
 ## Interpretation

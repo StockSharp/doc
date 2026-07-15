@@ -19,7 +19,7 @@ A ideia principal do CMF é que, numa tendência ascendente forte, o preço de f
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (valor padrão: 20-21 dias)
+- **Período** - período de cálculo (valor padrão: 20-21 dias)
 
 ## Cálculo
 

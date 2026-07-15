@@ -18,8 +18,8 @@
 
 空头力量 继承了 [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) 的配置：
 
-- **Length** — EMA周期。
-- **Alpha**（可选）——如果EMA以这种方式配置，则为平滑系数。
+- **长度** — EMA周期。
+- **阿尔法**（可选）——如果EMA以这种方式配置，则为平滑系数。
 
 ## 使用
 

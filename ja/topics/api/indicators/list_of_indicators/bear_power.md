@@ -19,8 +19,8 @@
 
 ベアパワー は [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) の設定を継承します。
 
-- **Length** - EMA 期間。
-- **Alpha**（任意） - EMA がこの方法で設定されている場合の平滑化係数。
+- **期間** - EMA 期間。
+- **アルファ**（任意） - EMA がこの方法で設定されている場合の平滑化係数。
 
 ## 使用方法
 

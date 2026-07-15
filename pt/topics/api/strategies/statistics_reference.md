@@ -48,8 +48,8 @@ O [SharpeRatioParameter](xref:StockSharp.Algo.Statistics.SharpeRatioParameter) e
 
 Suportam as seguintes definições:
 
-- **RiskFreeRate** -- taxa anual sem risco (por exemplo, `0.03m` = 3%)
-- **Period** -- período de cálculo do retorno (predefinição `TimeSpan.FromDays(1)`)
+- **Taxa sem risco** -- taxa anual sem risco (por exemplo, `0.03m` = 3%)
+- **Período** -- período de cálculo do retorno (predefinição `TimeSpan.FromDays(1)`)
 
 O [CalmarRatioParameter](xref:StockSharp.Algo.Statistics.CalmarRatioParameter) e o [SterlingRatioParameter](xref:StockSharp.Algo.Statistics.SterlingRatioParameter) dependem de outros parâmetros (`NetProfitParameter`, `MaxDrawdownParameter`, `AverageDrawdownParameter`) e são automaticamente associados quando criados através de [StatisticParameterRegistry](xref:StockSharp.Algo.Statistics.StatisticParameterRegistry).
 

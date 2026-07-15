@@ -11,15 +11,15 @@ El oscilador porcentual de volumen (PVO) es una modificación del indicador MACD
 PVO consta de tres componentes:
 1. **XQX000Línea XQX** - diferencia porcentual entre volumen rápido y lento EMA
 2. **Línea de señal** - EMA de la línea PVO
-3. **Histogram** - diferencia entre la línea PVO y la línea de señal
+3. **Histograma** - diferencia entre la línea PVO y la línea de señal
 
 El indicador PVO ayuda a identificar anomalías de volumen que pueden preceder a movimientos significativos de precios. También es útil para confirmar tendencias de precios e identificar posibles puntos de reversión.
 
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **ShortPeriod** - período para calcular el volumen corto EMA (valor predeterminado: 12)
-- **LongPeriod** - período para calcular el volumen largo EMA (valor predeterminado: 26)
+- **Período corto** - período para calcular el volumen corto EMA (valor predeterminado: 12)
+- **Período largo** - período para calcular el volumen largo EMA (valor predeterminado: 26)
 
 ## Cálculo
 

@@ -17,7 +17,7 @@ Os valores do KER oscilam entre 0 e 1:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período para o cálculo da eficiência (valor predefinido: 10)
+- **Período** - período para o cálculo da eficiência (valor predefinido: 10)
 
 ## Cálculo
 

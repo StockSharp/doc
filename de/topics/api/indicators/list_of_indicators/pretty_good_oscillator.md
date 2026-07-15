@@ -15,7 +15,7 @@ PGO eignet sich besonders zur Identifizierung überkaufter und überverkaufter B
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 14)
+- **Länge** – Berechnungszeitraum (Standardwert: 14)
 
 ## Berechnung
 

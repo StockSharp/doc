@@ -18,7 +18,7 @@ Isto permite que a FRAMA responda mais depressa a movimentos significativos do p
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (valor predefinido: 10-20)
+- **Período** - período de cálculo (valor predefinido: 10-20)
 
 ## Cálculo
 

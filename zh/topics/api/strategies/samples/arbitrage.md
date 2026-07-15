@@ -2,7 +2,7 @@
 
 ## 概览
 
-`ArbitrageStrategy` 是一种期货合约与其基础资产之间的套利策略。它跟踪工具之间的价差，并在出现套利机会时开仓。
+`ArbitrageStrategy` 是一种期货合约与其基础资产之间的套利策略。它跟踪交易品种之间的价差，并在出现套利机会时开仓。
 
 ## 主要组件
 
@@ -36,13 +36,13 @@ public class ArbitrageStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **FutureSecurity** - 期货工具
-- **StockSecurity** - 基础资产
-- **FuturePortfolio** - 期货交易组合
-- **StockPortfolio** - 用于基础资产交易的投资组合
-- **StockMultiplicator** - 标的资产的乘数（例如，合约单位）
-- **FutureVolume** - 期货交易的交易量
-- **StockVolume** - 基础资产交易的交易量
+- **期货交易品种** - 期货交易品种
+- **股票类交易品种** - 基础资产
+- **期货投资组合** - 期货交易组合
+- **股票投资组合** - 用于基础资产交易的投资组合
+- **股票乘数** - 标的资产的乘数（例如，合约单位）
+- **期货交易量** - 期货交易的交易量
+- **股票交易量** - 基础资产交易的交易量
 - **ProfitToExit** - 平仓的利润阈值
 - **SpreadToGenerateSignal** - 产生入场信号的点差阈值
 
@@ -70,7 +70,7 @@ protected override void OnStarted2(DateTime time)
 	_futId = FutureSecurity.ToSecurityId();
 	_stockId = StockSecurity.ToSecurityId();
 
-	// 订阅两个工具的订单簿更新
+	// 订阅两个交易品种的订单簿更新
 	var futureDepthSubscription = new Subscription(DataType.MarketDepth, FutureSecurity);
 	var stockDepthSubscription = new Subscription(DataType.MarketDepth, StockSecurity);
 
@@ -96,13 +96,13 @@ protected override void OnStarted2(DateTime time)
 ```cs
 private void ProcessMarketDepth(IOrderBookMessage depth)
 {
-	// 更新每个工具的最新订单簿
+	// 更新每个交易品种的最新订单簿
 	if (depth.SecurityId == _futId)
 		_lastFut = depth;
 	else if (depth.SecurityId == _stockId)
 		_lastSt = depth;
 
-	// 等待两个工具的数据
+	// 等待两个交易品种的数据
 	if (_lastFut is null || _lastSt is null)
 		return;
 
@@ -253,7 +253,7 @@ private (Order sell, Order buy) GenerateOrdersContango()
 
 ## 特征
 
-- 该策略支持同时使用两种不同的工具和两个投资组合
+- 该策略支持同时使用两种不同的交易品种和两个投资组合
 - 市价单用于快速执行
 - 规则 (IMarketRule) 用于跟踪订单执行
 - 成交量加权平均价格是根据成交量计算以获得更准确的价格

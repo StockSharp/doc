@@ -105,7 +105,7 @@ _minValue = AddParam("MinValue", 10)
 
 A utilização da classe [DiagramElementParam](xref:StockSharp.Diagram.DiagramElementParam`1) aplica automaticamente a abordagem de guardar e restaurar definições.
 
-A propriedade **MinValue** está marcada como básica e ficará visível no modo [Propriedades básicas](../../using_visual_designer/diagram_panel.md).
+A propriedade **Valor mínimo** está marcada como básica e ficará visível no modo [Propriedades básicas](../../using_visual_designer/diagram_panel.md).
 
 A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) é responsável pelo momento da chamada do método com conectores de entrada:
 
@@ -113,7 +113,7 @@ A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalEl
 //public override bool WaitAllInput => false;
 ```
 
-Se for descomentada, o método **Process** será sempre chamado assim que pelo menos um valor chegar (no caso do exemplo, uma vela ou um valor numérico).
+Se for descomentada, o método **Processo** será sempre chamado assim que pelo menos um valor chegar (no caso do exemplo, uma vela ou um valor numérico).
 
 Para adicionar o cubo resultante ao diagrama, é necessário selecionar o cubo criado na paleta, na secção **Elementos próprios**:
 

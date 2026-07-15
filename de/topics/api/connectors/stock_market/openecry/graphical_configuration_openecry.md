@@ -8,7 +8,7 @@ Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration 
 - **Benutzername** - Benutzername.
 - **Passwort** - Passwort.
 - **Arbeitszeitplan** - Erforderlicher Modus für die Verbindung zum Terminal.
-- **Reconnection** - Nativen Wiederverbindungsmechanismus verwenden.
+- **Wiederverbindung** - Nativen Wiederverbindungsmechanismus verwenden.
 - **Protokollierungsstufe** - Protokollierung der OpenECry API verwenden.
 - **Verbindungsprüfung** - Intervall zur Serverprüfung, um die Verbindung zu überwachen. Standardmäßig 1 Minute.
 - **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung von Verbindungen mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))

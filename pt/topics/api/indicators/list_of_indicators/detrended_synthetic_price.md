@@ -19,7 +19,7 @@ DSP é útil para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (valor predefinido: 10-20 períodos)
+- **Período** - período de cálculo (valor predefinido: 10-20 períodos)
 
 ## Cálculo
 

@@ -99,7 +99,7 @@ type EmptyIndicator() as this =
 
 ```
 
-Dieser Indikator empfängt einen eingehenden Wert und erzeugt auf Basis des gesetzten Parameterwerts **Change** eine beliebige Abweichung.
+Dieser Indikator empfängt einen eingehenden Wert und erzeugt auf Basis des gesetzten Parameterwerts **Änderung** eine beliebige Abweichung.
 
 Die Beschreibung der Indikatormethoden finden Sie im Abschnitt [Benutzerdefinierter Indikator](../../../../api/indicators/custom_indicator.md).
 
@@ -107,7 +107,7 @@ Um den erstellten Indikator zum Diagramm hinzuzufügen, verwenden Sie den Würfe
 
 ![Designer Quellcode-Indikator 01](../../../../../images/designer_source_code_indicator_01.png)
 
-Der Parameter **Change**, der zuvor im Indikatorcode festgelegt wurde, wird im Eigenschaftenpanel angezeigt.
+Der Parameter **Änderung**, der zuvor im Indikatorcode festgelegt wurde, wird im Eigenschaftenpanel angezeigt.
 
 > [!WARNING]
 > Indikatoren aus F#-Code können nicht in Strategien verwendet werden, die in F#-Code erstellt wurden. Sie können nur in Strategien verwendet werden, die [aus Würfeln](../../using_visual_designer.md) erstellt wurden.

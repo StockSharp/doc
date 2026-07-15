@@ -14,7 +14,7 @@ Ein Medianfilter sortiert die Preise innerhalb des beweglichen Fensters und wäh
 
 ## Parameter
 
-- **Length** – Fenstergröße, die zur Berechnung des Medians verwendet wird. Größere Fenster sorgen für eine stärkere Glättung, erhöhen aber die Verzögerung.
+- **Länge** – Fenstergröße, die zur Berechnung des Medians verwendet wird. Größere Fenster sorgen für eine stärkere Glättung, erhöhen aber die Verzögerung.
 
 ## Nutzung
 

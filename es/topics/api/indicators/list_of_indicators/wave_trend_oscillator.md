@@ -21,9 +21,9 @@ Señales indicadoras clave:
 
 ## Parámetros
 
-- **EsaPeriod** - Período EMA para calcular el valor ESA (normalmente 10)
-- **DPeriod** - período para calcular la desviación (normalmente 21)
-- **AveragePeriod** - período para calcular el promedio del oscilador final (normalmente 4)
+- **Período de ESA** - Período EMA para calcular el valor ESA (normalmente 10)
+- **Período de desviación** - período para calcular la desviación (normalmente 21)
+- **Período medio** - período para calcular el promedio del oscilador final (normalmente 4)
 
 ## Cálculo
 

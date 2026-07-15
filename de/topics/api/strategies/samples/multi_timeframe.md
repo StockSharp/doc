@@ -26,11 +26,11 @@ public class MultiTimeframeStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **FastSmaLength** - Periode des schnellen gleitenden Durchschnitts für den Stundenchart (Standardwert 10)
-- **SlowSmaLength** - Periode des langsamen gleitenden Durchschnitts für den Stundenchart (Standardwert 30)
-- **RsiLength** - RSI-Periode für den 5-Minuten-Chart (Standardwert 14)
-- **TakeProfit** - Take-Profit-Größe in Prozent (Standardwert 2)
-- **StopLoss** - Stop-Loss-Größe in Prozent (Standardwert 1)
+- **Zeitraum des schnellen gleitenden Durchschnitts** - Periode des schnellen gleitenden Durchschnitts für den Stundenchart (Standardwert 10)
+- **Zeitraum des langsamen gleitenden Durchschnitts** - Periode des langsamen gleitenden Durchschnitts für den Stundenchart (Standardwert 30)
+- **RSI-Zeitraum** - RSI-Periode für den 5-Minuten-Chart (Standardwert 14)
+- **Gewinnmitnahme** - Take-Profit-Größe in Prozent (Standardwert 2)
+- **Verlustbegrenzung** - Stop-Loss-Größe in Prozent (Standardwert 1)
 
 Alle Parameter stehen mit festgelegten Wertebereichen für die Optimierung zur Verfügung.
 

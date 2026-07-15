@@ -7,7 +7,7 @@
 [ILatencyManager](xref:StockSharp.Algo.Latency.ILatencyManager) 接口定义了基础契约：
 
 - **LatencyRegistration** — 所有订单的总注册延迟时间 (TimeSpan)。
-- **LatencyCancellation** — 所有订单的总取消延迟（时间跨度）。
+- **延迟取消** — 所有订单的总取消延迟（时间跨度）。
 - **Reset()** — 重置管理器的状态。
 - **ProcessMessage(Message)** — 处理一条消息；返回给定操作的延迟或 `null`。
 

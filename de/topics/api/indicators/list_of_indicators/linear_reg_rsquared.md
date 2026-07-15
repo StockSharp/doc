@@ -17,7 +17,7 @@ Der Indikator hilft Händlern, zwischen Phasen starker Trends und Phasen der Kon
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum für lineare Regressionsberechnung (Standardwert: 14)
+- **Länge** – Zeitraum für lineare Regressionsberechnung (Standardwert: 14)
 
 ## Berechnung
 

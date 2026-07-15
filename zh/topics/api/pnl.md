@@ -6,10 +6,10 @@
 
 [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager) 接口定义了基础契约：
 
-- **RealizedPnL** — 已实现的利润/亏损（小数）。在平仓时累计。
-- **UnrealizedPnL** — 未实现的利润/亏损（小数）。根据当前市场价格重新计算。
+- **已实现盈亏** — 已实现的利润/亏损（小数）。在平仓时累计。
+- **未实现盈亏** — 未实现的利润/亏损（小数）。根据当前市场价格重新计算。
 - **Reset()** — 重置管理器的状态。
-- **UpdateSecurity(Level1ChangeMessage)** — 更新工具参数（价格步长、步进价格、手数倍数）。
+- **UpdateSecurity(Level1ChangeMessage)** — 更新交易品种参数（价格步长、步进价格、手数倍数）。
 - **ProcessMessage(Message, ICollection\<PortfolioPnLManager\>)** — 处理一条消息；当一个持仓被关闭时返回 [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo)，否则返回 `null`。
 
 ## 建筑学
@@ -23,17 +23,17 @@ PnLManager
 ```
 
 - [PnLManager](xref:StockSharp.Algo.PnL.PnLManager) — 顶层，管理一个组合经理字典。
-- [PortfolioPnLManager](xref:StockSharp.Algo.PnL.PortfolioPnLManager) — 特定投资组合的PnL管理器，按工具管理队列。
-- [PnLQueue](xref:StockSharp.Algo.PnL.PnLQueue) — 用于单一工具匹配交易的先进先出队列。
+- [PortfolioPnLManager](xref:StockSharp.Algo.PnL.PortfolioPnLManager) — 特定投资组合的PnL管理器，按交易品种管理队列。
+- [PnLQueue](xref:StockSharp.Algo.PnL.PnLQueue) — 用于单一交易品种匹配交易的先进先出队列。
 
 ### PnL队列 — 计算队列
 
 [PnLQueue](xref:StockSharp.Algo.PnL.PnLQueue) 负责匹配开仓和平仓交易：
 
-- **PriceStep** — 工具价格步长。
+- **PriceStep** — 交易品种价格步长。
 - **StepPrice** — 步长价格（期货用）。
-- **Leverage** — 杠杆。
-- **LotMultiplier** — 手数乘数。
+- **杠杆** — 杠杆。
+- **手数乘数** — 手数乘数。
 
 利润乘数的计算公式如下：
 
@@ -47,8 +47,8 @@ Multiplier = (StepPrice / PriceStep) * Leverage * LotMultiplier
 
 [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) 类包含平仓结果：
 
-- **ServerTime** — 交易时间。
-- **ClosedVolume** — 已平仓持仓的交易量。
+- **服务器时间** — 交易时间。
+- **已平仓量** — 已平仓持仓的交易量。
 - **PnL** — 来自此交易的已实现利润。
 
 例如，如果持仓是+2，而来了一个-5合约的交易，那么`ClosedVolume = 2`（持仓中的2个合约被平仓）。

@@ -14,8 +14,8 @@ Verwenden Sie die Klasse [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.Tru
 
 ## Parameter
 
-- **Length1** - erste Glättungsperiode.
-- **Length2** - zweite Glättungsperiode.
+- **Länge 1** - erste Glättungsperiode.
+- **Länge 2** - zweite Glättungsperiode.
 - **Signal** - Periode der Signallinie (optional).
 
 ## Interpretation

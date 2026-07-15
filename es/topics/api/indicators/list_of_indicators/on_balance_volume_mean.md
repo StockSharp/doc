@@ -15,7 +15,7 @@ La principal ventaja de OBVM es su capacidad para generar señales de negociaci�
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período para el cálculo de la media móvil (valor predeterminado: 20)
+- **Longitud** - período para el cálculo de la media móvil (valor predeterminado: 20)
 
 ## Cálculo
 

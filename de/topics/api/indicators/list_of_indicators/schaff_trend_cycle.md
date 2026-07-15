@@ -19,7 +19,7 @@ Hauptindikatorsignale:
 
 ## Parameter
 
-- **Length** – Hauptzeitraum für die Berechnung des Indikators.
+- **Länge** – Hauptzeitraum für die Berechnung des Indikators.
 
 ## Berechnung
 

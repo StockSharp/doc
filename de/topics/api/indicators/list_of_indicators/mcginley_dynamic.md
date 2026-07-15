@@ -15,7 +15,7 @@ Die Grundidee besteht darin, dass MGD bei schnellen Marktbewegungen „beschleun
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 14)
+- **Länge** – Berechnungszeitraum (Standardwert: 14)
 
 ## Berechnung
 

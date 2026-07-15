@@ -17,7 +17,7 @@ BMP ayuda a los operadores:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de suavizado (valor predeterminado: 14)
+- **Longitud** - período de suavizado (valor predeterminado: 14)
 
 ## Cálculo
 

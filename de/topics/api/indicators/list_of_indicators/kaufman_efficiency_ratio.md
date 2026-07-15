@@ -17,7 +17,7 @@ KER-Werte schwanken zwischen 0 und 1:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum für Effizienzberechnung (Standardwert: 10)
+- **Länge** – Zeitraum für Effizienzberechnung (Standardwert: 10)
 
 ## Berechnung
 

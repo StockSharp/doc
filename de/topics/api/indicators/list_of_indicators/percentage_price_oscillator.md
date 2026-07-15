@@ -18,8 +18,8 @@ Der PPO-Indikator schwankt um die Nulllinie, wobei positive Werte auf eine bulli
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – Zeitraum zur Berechnung des kurzen EMA (Standardwert: 12)
-- **LongPeriod** – Zeitraum für die Berechnung des langen EMA (Standardwert: 26)
+- **Kurzer Zeitraum** – Zeitraum zur Berechnung des kurzen EMA (Standardwert: 12)
+- **Langer Zeitraum** – Zeitraum für die Berechnung des langen EMA (Standardwert: 26)
 
 ## Berechnung
 

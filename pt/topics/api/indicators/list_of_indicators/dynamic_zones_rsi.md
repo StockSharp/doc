@@ -15,9 +15,9 @@ O DZRSI resolve este problema ajustando dinamicamente estes níveis com base no 
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período para calcular o RSI base (valor predefinido: 14)
-- **OverboughtLevel** - nível inicial de sobrecompra (valor predefinido: 70)
-- **OversoldLevel** - nível inicial de sobrevenda (valor predefinido: 30)
+- **Período** - período para calcular o RSI base (valor predefinido: 14)
+- **Nível de sobrecompra** - nível inicial de sobrecompra (valor predefinido: 70)
+- **Nível de sobrevenda** - nível inicial de sobrevenda (valor predefinido: 30)
 
 ## Cálculo
 

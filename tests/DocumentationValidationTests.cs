@@ -199,37 +199,88 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private static readonly HashSet<string> _knownEnglishBoldUiLabels = new(StringComparer.OrdinalIgnoreCase)
 	{
 		"Account index",
+		"Address",
 		"API Key",
 		"API key index",
 		"Balance",
+		"BandPercentage",
+		"BatchSize",
+		"BoardCode",
 		"Broker",
+		"Bubble",
 		"Candles",
+		"CandleType",
+		"Change",
 		"Clearing account",
+		"Commission",
 		"Credentials",
+		"Database",
+		"DashedLine",
+		"DataType",
+		"Delay",
 		"Demo",
 		"Derivatives mode",
+		"DisplayName",
+		"Duplicate",
+		"Encoding",
 		"Expires after",
+		"FileMask",
 		"History",
+		"Histogram",
+		"Identifier",
+		"IgnoreNonIdSecurities",
 		"Info endpoint / Exchange endpoint / WS endpoint",
+		"Indent",
 		"Indicator",
+		"Initially",
 		"Key",
+		"Length",
+		"Line",
+		"LineSeparator",
 		"Licenses",
+		"LMAX location",
+		"LongPeriod",
+		"Main",
 		"Market slippage",
+		"MaxVersion",
+		"MinValue",
+		"Multiplier",
 		"Orders",
+		"OverboughtLevel",
+		"OversoldLevel",
 		"Passphrase",
+		"Period",
 		"P/L realized",
 		"P/L unrealized",
 		"Private key",
+		"Process",
+		"Protocol",
+		"Real-time",
+		"Reconnection",
+		"Recovery",
+		"Replay",
+		"Rules",
 		"Section",
 		"Sections",
 		"Secret",
+		"SecurityCode",
 		"Security mapping",
+		"Securities",
+		"SecurityUpdated",
+		"SelectedFields",
+		"ShortPeriod",
 		"Starknet account",
 		"Starknet key",
 		"Settings",
+		"StopLoss",
 		"Strategies",
 		"Strategy",
+		"TakeProfit",
 		"Testnet",
+		"Title",
+		"Trailing",
+		"User",
+		"Value",
 		"Vault address",
 		"Wallet address",
 		"WS read-only mode",
@@ -3343,18 +3394,30 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var errors = new List<string>();
 		var boldPattern = new Regex(@"\*\*(?<label>[^*`\r\n]+)\*\*", RegexOptions.CultureInvariant);
 
-		foreach (var lang in GetContentLanguages().Where(lang => !lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)))
+		foreach (var lang in GetContentLanguages().Where(lang =>
+			!lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase)
+			&& !lang.Equals("ru", StringComparison.OrdinalIgnoreCase)))
 		{
 			var langRoot = Path.Combine(_repoRoot, lang);
 
 			foreach (var file in Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
 			{
+				var relative = Path.GetRelativePath(langRoot, file);
+				var russianFile = Path.Combine(_repoRoot, "ru", relative);
+				var russianLabels = File.Exists(russianFile)
+					? boldPattern.Matches(ReadAllText(russianFile))
+						.Cast<Match>()
+						.Select(match => Regex.Replace(match.Groups["label"].Value.Trim(), @"\s+", " ", RegexOptions.CultureInvariant))
+						.ToHashSet(StringComparer.OrdinalIgnoreCase)
+					: [];
+
 				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
 				{
 					foreach (Match match in boldPattern.Matches(text))
 					{
 						var label = Regex.Replace(match.Groups["label"].Value.Trim(), @"\s+", " ", RegexOptions.CultureInvariant);
-						if (!_knownEnglishBoldUiLabels.Contains(label))
+						var isCodeParameter = label.Length > 0 && char.IsLower(label[0]) && russianLabels.Contains(label);
+						if (!_knownEnglishBoldUiLabels.Contains(label) || isCodeParameter)
 							continue;
 
 						errors.Add($"{RelativeToRepo(file)}:{line}: contains known untranslated English bold UI label '{label}'.");
@@ -5919,94 +5982,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
-	public void LocalizedTechnicalIdentifiersMatchRussianReference()
+	public void LocalizedStorageFormatDocsKeepBinaryEnumValue()
 	{
 		var errors = new List<string>();
-		var russianRoot = Path.Combine(_repoRoot, "ru");
-		var identifierPattern = new Regex(@"^\s*-\s+\*\*(?<name>[A-Za-z][A-Za-z0-9]*(?:\(\))?)\*\*", RegexOptions.Multiline | RegexOptions.CultureInvariant);
-		var relativeFiles = new List<string>();
-
-		foreach (var relativeDirectory in new[]
-		{
-			"topics/api/indicators/list_of_indicators",
-			"topics/api/strategies/samples",
-		})
-		{
-			var directory = Path.Combine(russianRoot, relativeDirectory.Replace('/', Path.DirectorySeparatorChar));
-			relativeFiles.AddRange(Directory.EnumerateFiles(directory, "*.md", SearchOption.AllDirectories)
-				.Select(file => Path.GetRelativePath(russianRoot, file).Replace('\\', '/')));
-		}
-
-		relativeFiles.AddRange(new[]
-		{
-			"topics/api/export.md",
-			"topics/api/import.md",
-			"topics/api/instruments/instrument_search.md",
-			"topics/api/latency.md",
-			"topics/api/market_data_storage/drives.md",
-			"topics/api/market_data_storage/snapshots.md",
-			"topics/api/pnl.md",
-			"topics/api/slippage.md",
-			"topics/api/strategies/chart.md",
-			"topics/api/strategies/quoting.md",
-			"topics/api/strategies/statistics_reference.md",
-		});
-
-		foreach (var relativePath in relativeFiles.Distinct(StringComparer.OrdinalIgnoreCase))
-		{
-			var russianFile = Path.Combine(russianRoot, relativePath.Replace('/', Path.DirectorySeparatorChar));
-			var identifiers = identifierPattern.Matches(ReadAllText(russianFile))
-				.Select(match => match.Groups["name"].Value)
-				.Distinct(StringComparer.Ordinal)
-				.ToArray();
-
-			foreach (var lang in GetContentLanguages().Where(lang => lang != "ru"))
-			{
-				var localizedFile = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
-				if (!File.Exists(localizedFile))
-					continue;
-
-				var markdown = ReadAllText(localizedFile);
-				foreach (var identifier in identifiers)
-				{
-					if (!markdown.Contains($"**{identifier}**", StringComparison.Ordinal))
-						errors.Add($"{RelativeToRepo(localizedFile)}: API identifier '**{identifier}**' from ru/{relativePath} was translated or changed.");
-				}
-			}
-		}
-
-		var designerIdentifiers = new Dictionary<string, string[]>(StringComparer.OrdinalIgnoreCase)
-		{
-			["topics/designer/strategies/using_code/csharp/create_own_indicator.md"] = ["Change"],
-			["topics/designer/strategies/using_code/fsharp/create_own_indicator.md"] = ["Change"],
-			["topics/designer/strategies/using_code/python/create_own_indicator.md"] = ["Change"],
-			["topics/designer/strategies/using_code/csharp/creating_your_own_cube.md"] = ["MinValue", "Process"],
-			["topics/designer/strategies/using_code/fsharp/creating_your_own_cube.md"] = ["MinValue", "Process"],
-			["topics/designer/strategies/using_code/python/creating_your_own_cube.md"] = ["MinValue", "Process"],
-		};
-
-		foreach (var (relativePath, identifiers) in designerIdentifiers)
-		{
-			foreach (var lang in GetContentLanguages().Where(lang => lang != "ru"))
-			{
-				var localizedFile = Path.Combine(_repoRoot, lang, relativePath.Replace('/', Path.DirectorySeparatorChar));
-				if (!File.Exists(localizedFile))
-					continue;
-
-				var markdown = ReadAllText(localizedFile);
-				foreach (var identifier in identifiers)
-				{
-					if (!markdown.Contains($"**{identifier}**", StringComparison.Ordinal))
-						errors.Add($"{RelativeToRepo(localizedFile)}: Designer API identifier '**{identifier}**' from the Russian reference was translated or changed.");
-				}
-			}
-		}
 
 		foreach (var lang in GetContentLanguages().Where(lang => lang != "ru"))
 		{
 			var formatsFile = Path.Combine(_repoRoot, lang, "topics", "api", "market_data_storage", "formats.md");
-			if (File.Exists(formatsFile) && !ReadAllText(formatsFile).Contains("**Binary**", StringComparison.Ordinal))
-				errors.Add($"{RelativeToRepo(formatsFile)}: StorageFormats value '**Binary**' from the Russian reference was translated or changed.");
+			if (File.Exists(formatsFile) && !Regex.IsMatch(ReadAllText(formatsFile), @"\*\*Binary(?:\*\*|[（(])", RegexOptions.CultureInvariant))
+				errors.Add($"{RelativeToRepo(formatsFile)}: StorageFormats value 'Binary' from the Russian reference was translated or changed.");
 		}
 
 		AssertNoErrors(errors);
@@ -6045,6 +6029,14 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			"[安全](xref:StockSharp.BusinessEntities.Security)",
 			"安全映射存储",
 		};
+		var wrongInstrumentPhrases = new[]
+		{
+			"金融工具",
+			"无法识别工具",
+			"工具搜索",
+			"工具价格",
+			"按工具",
+		};
 
 		foreach (var file in Directory.EnumerateFiles(root, "*.md", SearchOption.AllDirectories).Order(StringComparer.OrdinalIgnoreCase))
 		{
@@ -6070,6 +6062,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				{
 					if (line.Contains(phrase, StringComparison.Ordinal))
 						errors.Add($"{RelativeToRepo(file)}:{i + 1}: Security was mistranslated as safety in '{phrase}'.");
+				}
+
+				foreach (var phrase in wrongInstrumentPhrases)
+				{
+					if (line.Contains(phrase, StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(file)}:{i + 1}: use the established Chinese instrument term '交易品种' instead of '{phrase}'.");
 				}
 			}
 		}

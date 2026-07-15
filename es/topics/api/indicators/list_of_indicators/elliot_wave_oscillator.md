@@ -19,8 +19,8 @@ El oscilador de ondas de Elliott es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **ShortPeriod** - período para la media móvil corta (valor predeterminado: 5)
-- **LongPeriod** - período para la media móvil larga (valor predeterminado: 35)
+- **Período corto** - período para la media móvil corta (valor predeterminado: 5)
+- **Período largo** - período para la media móvil larga (valor predeterminado: 35)
 
 ## Cálculo
 

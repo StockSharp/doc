@@ -43,7 +43,7 @@ if (posChange != null)
 | `TryGetOrder` | 检索订单参数（交易品种、投资组合、方向、余额） |
 | `UpdateOrderBalance` | 在部分执行后更新当前订单余额 |
 | `RemoveOrder` | 从跟踪中移除已完成的订单 |
-| `UpdatePosition` | 按工具和投资组合更新持仓，返回新值 |
+| `UpdatePosition` | 按交易品种和投资组合更新持仓，返回新值 |
 | `Clear` | 重置所有管理器状态 |
 
 ### 与状态示例一起工作

@@ -18,8 +18,8 @@ Os canais de Keltner ajudam os operadores a determinar a direcção da tendênci
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período para calcular EMA e ATR (valor predefinido: 20)
-- **Multiplier** - multiplicador para o ATR, que determina a largura do canal (valor predefinido: 2,0)
+- **Período** - período para calcular EMA e ATR (valor predefinido: 20)
+- **Multiplicador** - multiplicador para o ATR, que determina a largura do canal (valor predefinido: 2,0)
 
 ## Cálculo
 

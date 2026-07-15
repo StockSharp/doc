@@ -97,7 +97,7 @@
 
    1. 正在重置 [OptionPositionChart.Model](xref:StockSharp.Xaml.Charting.OptionPositionChart.Model) 控件的模型；
    2. 使用初始值重新绘制图表 [OptionPositionChart.Refresh](xref:StockSharp.Xaml.Charting.OptionPositionChart.Refresh(System.Nullable{System.Decimal},System.Nullable{System.DateTimeOffset},System.Nullable{System.DateTimeOffset}))**(**[System.Nullable\<System.Decimal\>](xref:System.Nullable`1) assetPrice, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) currentTime, [System.Nullable\<System.DateTimeOffset\>](xref:System.Nullable`1) expiryDate **)**;
-   3. 为市场数据和工具指定消息提供者。
+   3. 为市场数据和交易品种指定消息提供者。
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)

@@ -17,8 +17,8 @@ RMI ist besonders nützlich, um potenzielle Trendumkehrpunkte zu identifizieren 
 
 ## Parameter
 
-- **MomentumPeriod** – Momentum-Periode, die die Zeitverzögerung für den Preisvergleich definiert.
-- **Length** – Hauptperiode zur Berechnung des Indikators (ähnlich der Periode in RSI).
+- **Momentum-Zeitraum** – Momentum-Periode, die die Zeitverzögerung für den Preisvergleich definiert.
+- **Länge** – Hauptperiode zur Berechnung des Indikators (ähnlich der Periode in RSI).
 
 ## Berechnung
 

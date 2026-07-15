@@ -12,13 +12,13 @@ Utilice la clase [TrueStrengthIndex](xref:StockSharp.Algo.Indicators.TrueStrengt
 2. Aplique dos medias móviles exponenciales con períodos `Length1` y `Length2` a `m` y `|m|`.
 3. Calcule la relación entre el impulso doblemente suavizado y el impulso absoluto doblemente suavizado:
    `TSI = 100 × EMA(EMA(m, Length1), Length2) / EMA(EMA(|m|, Length1), Length2)`.
-4. Opcionalmente, obtenga una línea de señal tomando un EMA del TSI con un período **Signal**.
+4. Opcionalmente, obtenga una línea de señal tomando un EMA del TSI con un período **Señal**.
 
 ## Parámetros
 
-- **Length1**: primer período de suavizado.
-- **Length2**: segundo período de suavizado.
-- **Signal** — período de la línea de señal (opcional).
+- **Longitud 1**: primer período de suavizado.
+- **Longitud 2**: segundo período de suavizado.
+- **Señal** — período de la línea de señal (opcional).
 
 ## Interpretación
 

@@ -7,7 +7,7 @@ StockSharp 中的 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensi
 ## 目的
 
 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) 的主要目标是将价格四舍五入到允许的值，考虑到：
-1. 该工具的价格步长 ([Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep))
+1. 该交易品种的价格步长 ([Security.PriceStep](xref:StockSharp.BusinessEntities.Security.PriceStep))
 2. 小数位数 ([Security.Decimals](xref:StockSharp.BusinessEntities.Security.Decimals))
 
 ## 使用的重要性
@@ -15,7 +15,7 @@ StockSharp 中的 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensi
 使用 [ShrinkPrice](xref:StockSharp.BusinessEntities.EntitiesExtensions.ShrinkPrice(StockSharp.BusinessEntities.Security,System.Decimal)) 对于以下方面至关重要：
 - 防止因价格错误而被交易所或经纪商拒绝订单
 - 确保计算和交易操作的准确性
-- 遵守特定市场或工具的规则和限制
+- 遵守特定市场或交易品种的规则和限制
 
 ## 操作原理
 

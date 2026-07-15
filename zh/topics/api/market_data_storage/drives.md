@@ -6,12 +6,12 @@ StockSharp中的存储驱动负责市场数据的物理存放——无论是在�
 
 [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) 接口提供以下关键功能：
 
-- **Path** -- 数据存储的路径。
-- **GetAvailableSecuritiesAsync()** -- 检索存储中所有可用工具的列表。
+- **路径** -- 数据存储的路径。
+- **GetAvailableSecuritiesAsync()** -- 检索存储中所有可用交易品种的列表。
 - **GetAvailableDataTypesAsync()** -- 检索特定交易品种可用的数据类型列表。
 - **GetStorageDrive()** -- 获取特定交易品种和数据类型的存储驱动器。
 - **VerifyAsync()** -- 验证存储的完整性。
-- **LookupSecuritiesAsync()** -- 根据指定条件搜索金融工具。
+- **LookupSecuritiesAsync()** -- 根据指定条件搜索交易品种。
 
 ## LocalMarketDataDrive -- 本地文件存储
 
@@ -50,11 +50,11 @@ await foreach (var secId in localDrive.GetAvailableSecuritiesAsync())
 
 ### 连接设置
 
-- **Address** -- 远程服务器地址。默认是 `127.0.0.1:5002`。
+- **地址** -- 远程服务器地址。默认是 `127.0.0.1:5002`。
 - **凭证** -- 认证凭证（电子邮件和密码）。
 - **TargetCompId** -- 目标组件标识符，默认值为 `"StockSharpHydraMD"`。
-- **SecurityBatchSize** -- 加载工具时的批量大小，默认值为 1000。
-- **Timeout** -- 连接超时，默认是2分钟。
+- **SecurityBatchSize** -- 加载交易品种时的批量大小，默认值为 1000。
+- **超时** -- 连接超时，默认是2分钟。
 
 ### 使用示例
 
@@ -87,7 +87,7 @@ await foreach (var dataType in remoteDrive.GetAvailableDataTypesAsync(secId, Sto
 - **TryDefaultDrive** -- 第一个可用的 [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive)。
 - **NewDriveCreated** -- 新驱动器创建事件。
 - **DriveDeleted** -- 驱动器删除的事件。
-- **Changed**——驱动器收集更改的事件。
+- **已更改**——驱动器收集更改的事件。
 
 该类实现了 `IPersistable` 接口，该接口允许保存和加载驱动器配置。
 

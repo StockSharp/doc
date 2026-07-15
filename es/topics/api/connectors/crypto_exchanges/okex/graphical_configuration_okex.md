@@ -7,9 +7,9 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **clave** - Clave.
 - **secreto** - Secreto.
 - **frase de acceso** - Frase de contraseña.
-- **Futures** - Sección de futuros
-- **Spot** - Sección spot
-- **Swap** - Sección swap.
+- **Futuros** - Sección de futuros
+- **Mercado al contado** - Sección spot
+- **Permutas** - Sección swap.
 - **contraseña** - Contraseña administrativa.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de negociación. ([Configuración de reconexión](../../reconnection_settings.md))

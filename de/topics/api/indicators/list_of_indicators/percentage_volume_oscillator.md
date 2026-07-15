@@ -18,8 +18,8 @@ Der PVO-Indikator hilft bei der Identifizierung von Volumenanomalien, die erhebl
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – Zeitraum zur Berechnung des kurzen Volumen-EMA (Standardwert: 12)
-- **LongPeriod** – Zeitraum zur Berechnung des langen Volumen-EMA (Standardwert: 26)
+- **Kurzer Zeitraum** – Zeitraum zur Berechnung des kurzen Volumen-EMA (Standardwert: 12)
+- **Langer Zeitraum** – Zeitraum zur Berechnung des langen Volumen-EMA (Standardwert: 26)
 
 ## Berechnung
 

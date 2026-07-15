@@ -19,9 +19,9 @@ CKS ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Period** – Hauptperiode zur Berechnung von Extremwerten (Standardwert: 10)
-- **Multiplier** – Multiplikator für ATR, der den Abstand von Extrema bestimmt (Standardwert: 1,5)
-- **StopPeriod** – Zeitraum zur Berechnung der Stop-Levels (Standardwert: 20)
+- **Zeitraum** – Hauptperiode zur Berechnung von Extremwerten (Standardwert: 10)
+- **Multiplikator** – Multiplikator für ATR, der den Abstand von Extrema bestimmt (Standardwert: 1,5)
+- **Stoppzeitraum** – Zeitraum zur Berechnung der Stop-Levels (Standardwert: 20)
 
 ## Berechnung
 

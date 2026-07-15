@@ -22,7 +22,7 @@ Donchian-Kanäle sind nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 20)
+- **Länge** – Berechnungszeitraum (Standardwert: 20)
 
 ## Berechnung
 

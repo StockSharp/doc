@@ -22,7 +22,7 @@ canales de Donchian son útiles para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 20)
+- **Longitud** - período de cálculo (valor predeterminado: 20)
 
 ## Cálculo
 

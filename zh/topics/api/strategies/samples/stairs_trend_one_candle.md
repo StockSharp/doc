@@ -17,7 +17,7 @@ public class OneCandleTrendStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **CandleType** - 要使用的K线类型（默认5分钟）
+- **K线类型** - 要使用的K线类型（默认5分钟）
 
 ## 策略初始化
 
@@ -82,7 +82,7 @@ private void ProcessCandle(ICandleMessage candle)
 
 ## 特征
 
-- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的工具
+- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的交易品种
 - 该策略仅适用于已完成的K线
 - 该策略使用市价单进行建仓
 - 该策略应用基于单根K线的简单趋势检测逻辑

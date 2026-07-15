@@ -7,8 +7,8 @@
 [SecurityPicker](xref:StockSharp.Xaml.SecurityPicker) 由以下部分组成：
 
 1. 一个文本字段，用于输入交易品种的代码（或编号）。输入后，列表将根据输入的子字符串进行过滤。
-2. 用于按类型筛选工具的特殊 [SecurityTypeComboBox](xref:StockSharp.Xaml.SecurityTypeComboBox) 下拉框。
-3. 显示工具列表的 [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) 表。
+2. 用于按类型筛选交易品种的特殊 [SecurityTypeComboBox](xref:StockSharp.Xaml.SecurityTypeComboBox) 下拉框。
+3. 显示交易品种列表的 [SecurityGrid](xref:StockSharp.Xaml.SecurityGrid) 表。
 
 **主要属性**
 

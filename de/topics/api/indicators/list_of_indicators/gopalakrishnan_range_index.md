@@ -19,7 +19,7 @@ Der GAPO-Indikator ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 10)
+- **Länge** – Berechnungszeitraum (Standardwert: 10)
 
 ## Berechnung
 

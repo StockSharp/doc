@@ -7,12 +7,12 @@ Utilice la clase [Shift](xref:StockSharp.Algo.Indicators.Shift) para acceder al 
 
 ## Descripción
 
-El indicador mantiene un búfer de los últimos valores y genera el que llegó hace **Length** barras. Si el historial de datos es
+El indicador mantiene un búfer de los últimos valores y genera el que llegó hace **Longitud** barras. Si el historial de datos es
 más corto que el desplazamiento requerido, el valor se considera indefinido.
 
 ## Parámetros
 
-- **Length**: número de períodos en los que se desplazan los datos.
+- **Longitud**: número de períodos en los que se desplazan los datos.
 
 ## Uso
 

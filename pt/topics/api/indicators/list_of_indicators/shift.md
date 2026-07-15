@@ -7,12 +7,12 @@ Use a classe [Shift](xref:StockSharp.Algo.Indicators.Shift) para aceder ao indic
 
 ## Descrição
 
-O indicador mantém um buffer dos valores mais recentes e devolve aquele que chegou há **Length** barras. Se o histórico de dados for
+O indicador mantém um buffer dos valores mais recentes e devolve aquele que chegou há **Período** barras. Se o histórico de dados for
 mais curto do que o deslocamento necessário, o valor é considerado indefinido.
 
 ## Parâmetros
 
-- **Length** - número de períodos pelos quais os dados são deslocados.
+- **Período** - número de períodos pelos quais os dados são deslocados.
 
 ## Utilização
 

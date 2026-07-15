@@ -15,7 +15,7 @@ Der Hauptvorteil von OBVM ist seine Fähigkeit, im Vergleich zum klassischen OBV
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum für die Berechnung des gleitenden Durchschnitts (Standardwert: 20)
+- **Länge** – Zeitraum für die Berechnung des gleitenden Durchschnitts (Standardwert: 20)
 
 ## Berechnung
 

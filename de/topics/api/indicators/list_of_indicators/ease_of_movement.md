@@ -19,7 +19,7 @@ Der Indikator ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Glättungszeitraum (Standardwert: 14)
+- **Länge** – Glättungszeitraum (Standardwert: 14)
 
 ## Berechnung
 

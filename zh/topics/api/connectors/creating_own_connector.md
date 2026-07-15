@@ -215,7 +215,7 @@ public override ValueTask ResetAsync(ResetMessage resetMsg, CancellationToken ca
 
 本文档描述了适配器工作的一般原理、其创建方式以及与交易系统连接的管理方式。以下文档将专门介绍适配器功能的具体实现：
 
-- [金融工具查询](creating_own_connector/instrument_lookup.md)
+- [交易品种查询](creating_own_connector/instrument_lookup.md)
 - [使用市场数据](creating_own_connector/market_data.md)
 - [请求投资组合和订单的当前状态](creating_own_connector/portfolio_and_orders_state.md)
 - [处理交易操作](creating_own_connector/trading_operations.md)

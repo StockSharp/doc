@@ -6,7 +6,7 @@
 
 La interfaz [ISlippageManager](xref:StockSharp.Algo.Slippage.ISlippageManager) define el contrato base:
 
-- **Slippage** — deslizamiento acumulado total (decimal).
+- **Deslizamiento** — deslizamiento acumulado total (decimal).
 - **Reset()** — restablece el estado del administrador.
 - **ProcessMessage(Message)** — procesa un mensaje; devuelve el deslizamiento de la ejecución dada o `null`.
 

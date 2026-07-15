@@ -2,7 +2,7 @@
 
 ## 概览
 
-`PairsTradingStrategy` 是一种基于两种相关工具之间统计套利的配对交易策略。它跟踪两种资产价格之间的价差，并在价差显著偏离均值时开仓，期望价差回归均值。
+`PairsTradingStrategy` 是一种基于两种相关交易品种之间统计套利的配对交易策略。它跟踪两种资产价格之间的价差，并在价差显著偏离均值时开仓，期望价差回归均值。
 
 ## 主要组件
 
@@ -16,7 +16,7 @@ public class PairsTradingStrategy : Strategy
 	private readonly StrategyParam<decimal> _exitThreshold;
 	private readonly StrategyParam<DataType> _candleType;
 
-	// 每个工具的最新价格
+	// 每个交易品种的最新价格
 	private decimal? _lastPrice1;
 	private decimal? _lastPrice2;
 }
@@ -26,26 +26,26 @@ public class PairsTradingStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **SpreadLength** - 用于计算点差均值和标准差的周期（默认值20）
-- **EntryThreshold** - 建仓的 Z 分数阈值（默认值 2.0）
-- **ExitThreshold** - 用于退出持仓的 Z 分数阈值（默认 0.5）
-- **CandleType** - 要使用的K线类型（默认5分钟）
+- **价差周期** - 用于计算点差均值和标准差的周期（默认值20）
+- **入场阈值** - 建仓的 Z 分数阈值（默认值 2.0）
+- **退出阈值** - 用于退出持仓的 Z 分数阈值（默认 0.5）
+- **K线类型** - 要使用的K线类型（默认5分钟）
 
 所有参数都可以在指定的取值范围内进行优化。
 
 ## 策略初始化
 
-在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，为两个工具创建指标并设置K线订阅：
+在 [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) 方法中，为两个交易品种创建指标并设置K线订阅：
 
 ```cs
 protected override void OnStarted2(DateTime time)
 {
 	base.OnStarted2(time);
 
-	// 获取用于配对交易的两个工具
+	// 获取用于配对交易的两个交易品种
 	var securities = GetWorkingSecurities().ToArray();
 	if (securities.Length < 2)
-		throw new InvalidOperationException("必须指定两个工具。");
+		throw new InvalidOperationException("必须指定两个交易品种。");
 
 	var sec1 = securities[0].sec;
 	var sec2 = securities[1].sec;
@@ -142,8 +142,8 @@ private void ProcessSpread(decimal price1, decimal price2,
 
 ## 特征
 
-- 该策略适用于通过 `GetWorkingSecurities()` 方法获得的两种工具
-- 价差是通过两个工具的K线收盘价的差额来计算的
+- 该策略适用于通过 `GetWorkingSecurities()` 方法获得的两种交易品种
+- 价差是通过两个交易品种的K线收盘价的差额来计算的
 - Z 分数用于标准化与平均值的偏差分布
 - 该策略实现了经典的均值回归概念
 - 该策略仅适用于已完成的K线

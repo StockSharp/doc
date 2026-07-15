@@ -2,11 +2,11 @@
 
 En todos los productos StockSharp, la conexión se configura en la [ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md).
 
-- **Clave** (`Key`) — la clave de la aplicación.
-- **Secreto** (`Secret`) — el secreto de la aplicación.
-- **Token de acceso** (`Token`) — un token de acceso opcional.
-- **Cuenta** (`Account`) — el identificador de la cuenta de negociación.
-- **Modo de demostración** (`IsDemo`) — uso del entorno de pruebas.
+- **Clave** — la clave de la aplicación.
+- **Secreto** — el secreto de la aplicación.
+- **Token de acceso** — un token de acceso opcional.
+- **Cuenta** — el identificador de la cuenta de negociación.
+- **Modo de demostración** — uso del entorno de pruebas.
 
 ## Contenido recomendado
 

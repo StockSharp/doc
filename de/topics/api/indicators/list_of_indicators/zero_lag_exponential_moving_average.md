@@ -21,7 +21,7 @@ ZLEMA kann verwendet werden für:
 
 ## Parameter
 
-- **Length** - Berechnungsperiode, die den Glättungsgrad bestimmt (ähnlich der Periode beim EMA).
+- **Länge** - Berechnungsperiode, die den Glättungsgrad bestimmt (ähnlich der Periode beim EMA).
 
 ## Berechnung
 

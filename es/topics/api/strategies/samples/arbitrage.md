@@ -36,13 +36,13 @@ public class ArbitrageStrategy : Strategy
 
 La estrategia permite personalizar los siguientes parámetros:
 
-- **FutureSecurity** - instrumento de futuros
-- **StockSecurity** - instrumento del activo subyacente
-- **FuturePortfolio** - cartera para la negociación de futuros
-- **StockPortfolio** - cartera para la negociación del activo subyacente
-- **StockMultiplicator** - multiplicador del activo subyacente (por ejemplo, tamaño de lote)
-- **FutureVolume** - volumen para la negociación de futuros
-- **StockVolume** - volumen para la negociación del activo subyacente
+- **Instrumento de futuros** - instrumento de futuros
+- **Instrumento subyacente** - instrumento del activo subyacente
+- **Cartera de futuros** - cartera para la negociación de futuros
+- **Cartera del subyacente** - cartera para la negociación del activo subyacente
+- **Multiplicador del subyacente** - multiplicador del activo subyacente (por ejemplo, tamaño de lote)
+- **Volumen de futuros** - volumen para la negociación de futuros
+- **Volumen del subyacente** - volumen para la negociación del activo subyacente
 - **ProfitToExit** - umbral de beneficio para salir de la posición
 - **SpreadToGenerateSignal** - umbral de spread para generar señal de entrada
 

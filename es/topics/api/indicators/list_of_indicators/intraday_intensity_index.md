@@ -19,7 +19,7 @@ El índice de intensidad intradía es especialmente eficaz para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de suavizado (valor predeterminado: 14)
+- **Longitud** - período de suavizado (valor predeterminado: 14)
 
 ## Cálculo
 

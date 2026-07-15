@@ -4,13 +4,13 @@
 
 ## 订单批量取消示例
 
-要取消指定投资组合和工具的所有普通订单（[OrderTypes.Limit](xref:StockSharp.Messages.OrderTypes.Limit)）:
+要取消指定投资组合和交易品种的所有普通订单（[OrderTypes.Limit](xref:StockSharp.Messages.OrderTypes.Limit)）:
 
 ```cs
 _connector.CancelOrders(false, MainWindow.Instance.Portfolio, null, null, security);
 ```
 
-要取消指定工具的所有订单：
+要取消指定交易品种的所有订单：
 
 ```cs
 _connector.CancelOrders(null, null, null, null, security);

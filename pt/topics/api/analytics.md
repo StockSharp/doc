@@ -29,7 +29,7 @@ Parâmetros:
 - **storage** — registro de armazenamento de dados de mercado.
 - **drive** — fonte de dados.
 - **format** — formato de armazenamento de dados.
-- **dataType** — tipo de dado a analisar.
+- **Tipo de dados** — tipo de dado a analisar.
 - **cancellationToken** — token de cancelamento.
 
 ## IAnalyticsPanel — Painel de Resultados
@@ -53,10 +53,10 @@ void Append(string title, IEnumerable<X> xValues, IEnumerable<Y> yValues,
 
 Estilos de desenho disponíveis ([DrawStyles](xref:StockSharp.Algo.Analytics.DrawStyles)):
 
-- **Line** — gráfico de linha.
-- **DashedLine** — linha tracejada.
-- **Histogram** — histograma.
-- **Bubble** — gráfico de bolhas.
+- **Linha** — gráfico de linha.
+- **Linha tracejada** — linha tracejada.
+- **Histograma** — histograma.
+- **Bolhas** — gráfico de bolhas.
 
 ## IAnalyticsGrid — Tabelas
 

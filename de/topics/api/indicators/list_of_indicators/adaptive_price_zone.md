@@ -17,8 +17,8 @@ APZ ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Period** - Berechnungsperiode (Standardwert: 5)
-- **BandPercentage** - Prozentanteil der Spanne zur Definition der Bandbreite (Standardwert: 2 %)
+- **Zeitraum** - Berechnungsperiode (Standardwert: 5)
+- **Bandbreite in Prozent** - Prozentanteil der Spanne zur Definition der Bandbreite (Standardwert: 2 %)
 
 ## Berechnung
 

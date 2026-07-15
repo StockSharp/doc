@@ -15,8 +15,8 @@ MOMA ayuda a determinar la fuerza de la tendencia y los posibles puntos de rever
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período para el cálculo de la media móvil (valor predeterminado: 14)
-- **MomentumPeriod** - período para el cálculo del impulso (valor predeterminado: 10)
+- **Longitud** - período para el cálculo de la media móvil (valor predeterminado: 14)
+- **Período de impulso** - período para el cálculo del impulso (valor predeterminado: 10)
 
 ## Cálculo
 

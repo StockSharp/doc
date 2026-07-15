@@ -168,7 +168,7 @@ class chart3d_script(IAnalyticsScript):
 			# 用交易品种标识符填充 X 标签
 			x.append(to_string_id(security))
 
-			# 获取当前工具的K线存储
+			# 获取当前交易品种的K线存储
 			candle_storage = get_candle_storage(storage, security, data_type, drive, format)
 
 			# 获取指定期间内的可用日期
@@ -185,7 +185,7 @@ class chart3d_script(IAnalyticsScript):
 				hour = int(candle.OpenTime.TimeOfDay.TotalHours)
 				by_hours[hour] = by_hours.get(hour, 0) + candle.TotalVolume
 
-			# 填充当前工具的 Z 值
+			# 填充当前交易品种的 Z 值
 			for hour, volume in by_hours.items():
 				if hour < len(y):
 					z[i][hour] = float(volume)

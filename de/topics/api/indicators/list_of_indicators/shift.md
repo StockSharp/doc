@@ -7,12 +7,12 @@ Verwenden Sie die Klasse [Shift](xref:StockSharp.Algo.Indicators.Shift), um auf 
 
 ## Beschreibung
 
-Der Indikator speichert einen Puffer der neuesten Werte und gibt denjenigen aus, der vor **Length** Balken eingegangen ist. Wenn der Datenverlauf
+Der Indikator speichert einen Puffer der neuesten Werte und gibt denjenigen aus, der vor **Länge** Balken eingegangen ist. Wenn der Datenverlauf
 kürzer als der erforderliche Offset ist, gilt der Wert als undefiniert.
 
 ## Parameter
 
-- **Length** – Anzahl der Perioden, um die die Daten verschoben werden.
+- **Länge** – Anzahl der Perioden, um die die Daten verschoben werden.
 
 ## Nutzung
 

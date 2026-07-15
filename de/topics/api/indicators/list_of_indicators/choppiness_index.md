@@ -21,7 +21,7 @@ CHOP ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 14)
+- **Länge** – Berechnungszeitraum (Standardwert: 14)
 
 ## Berechnung
 

@@ -17,7 +17,7 @@ O indicador ajuda os operadores a distinguir entre períodos de tendências fort
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período para o cálculo da regressão linear (valor predefinido: 14)
+- **Período** - período para o cálculo da regressão linear (valor predefinido: 14)
 
 ## Cálculo
 

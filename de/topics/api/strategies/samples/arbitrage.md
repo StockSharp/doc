@@ -36,13 +36,13 @@ public class ArbitrageStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **FutureSecurity** - Futures-Instrument
-- **StockSecurity** - Instrument des Basiswerts
-- **FuturePortfolio** - Portfolio für den Futures-Handel
-- **StockPortfolio** - Portfolio für den Handel mit dem Basiswert
-- **StockMultiplicator** - Multiplikator für den Basiswert (z. B. Lotgröße)
-- **FutureVolume** - Volumen für den Futures-Handel
-- **StockVolume** - Volumen für den Handel mit dem Basiswert
+- **Futures-Instrument** - Futures-Instrument
+- **Basisinstrument** - Instrument des Basiswerts
+- **Futures-Portfolio** - Portfolio für den Futures-Handel
+- **Basisportfolio** - Portfolio für den Handel mit dem Basiswert
+- **Multiplikator des Basiswerts** - Multiplikator für den Basiswert (z. B. Lotgröße)
+- **Futures-Volumen** - Volumen für den Futures-Handel
+- **Volumen des Basiswerts** - Volumen für den Handel mit dem Basiswert
 - **ProfitToExit** - Gewinnschwelle für den Positionsausstieg
 - **SpreadToGenerateSignal** - Spread-Schwellenwert zur Erzeugung eines Einstiegssignals
 

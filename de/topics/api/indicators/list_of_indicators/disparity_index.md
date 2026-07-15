@@ -19,7 +19,7 @@ Der Disparitätsindex ist nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum zur Berechnung des gleitenden Durchschnitts (Standardwert: 14)
+- **Länge** – Zeitraum zur Berechnung des gleitenden Durchschnitts (Standardwert: 14)
 
 ## Berechnung
 

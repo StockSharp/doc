@@ -15,7 +15,7 @@ A ideia principal é que valores extremos de momentum são frequentemente instá
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (valor predefinido: 14)
+- **Período** - período de cálculo (valor predefinido: 14)
 
 ## Cálculo
 

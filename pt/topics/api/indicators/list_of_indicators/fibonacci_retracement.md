@@ -21,7 +21,7 @@ O indicador é particularmente útil para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período para determinar um movimento significativo do preço (o valor predefinido depende do período)
+- **Período** - período para determinar um movimento significativo do preço (o valor predefinido depende do período)
 
 ## Cálculo
 

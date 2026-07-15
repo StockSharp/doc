@@ -15,8 +15,8 @@ A principal força do OMA está na sua capacidade de identificar alterações no
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **ShortPeriod** - período da média móvel curta (valor predefinido: 12)
-- **LongPeriod** - período da média móvel longa (valor predefinido: 26)
+- **Período curto** - período da média móvel curta (valor predefinido: 12)
+- **Período longo** - período da média móvel longa (valor predefinido: 26)
 
 ## Cálculo
 

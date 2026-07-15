@@ -18,8 +18,8 @@ O indicador PPO oscila em torno da linha zero, onde valores positivos indicam um
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **ShortPeriod** - período para calcular a EMA curta (valor predefinido: 12)
-- **LongPeriod** - período para calcular a EMA longa (valor predefinido: 26)
+- **Período curto** - período para calcular a EMA curta (valor predefinido: 12)
+- **Período longo** - período para calcular a EMA longa (valor predefinido: 26)
 
 ## Cálculo
 

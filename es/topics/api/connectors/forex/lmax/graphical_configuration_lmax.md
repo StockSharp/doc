@@ -7,7 +7,7 @@ Para todos los productos [S#](../../../../api.md), la configuración gráfica de
 - **usuario** - Usuario.
 - **contraseña** - Contraseña.
 - **Demostración** - Conectarse a la negociación de demostración en lugar del servidor de negociación real.
-- **LMAX location** - Ubicación de LMAX Exchange.
+- **Ubicación de LMAX** - Ubicación de LMAX Exchange.
 - **Intervalo de comprobación** - Intervalo de comprobación del servidor para rastrear si la conexión está activa. Por defecto es igual a 1 minuto.
 - **Configuración de reconexión** - Mecanismo para rastrear las conexiones con la configuración del sistema de negociación. ([Configuración de reconexión](../../reconnection_settings.md))
 

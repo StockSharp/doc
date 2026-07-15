@@ -18,7 +18,7 @@ Esto permite que FRAMA responda más rápido a movimientos de precios significat
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 10-20)
+- **Longitud** - período de cálculo (valor predeterminado: 10-20)
 
 ## Cálculo
 

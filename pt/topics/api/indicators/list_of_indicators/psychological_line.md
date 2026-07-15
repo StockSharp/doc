@@ -18,7 +18,7 @@ O indicador PSY ajuda a determinar se o mercado está em condição de sobrecomp
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (valor predefinido: 12-14)
+- **Período** - período de cálculo (valor predefinido: 12-14)
 
 ## Cálculo
 

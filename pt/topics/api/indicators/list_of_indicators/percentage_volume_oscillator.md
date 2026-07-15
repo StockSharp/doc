@@ -18,8 +18,8 @@ O indicador PVO ajuda a identificar anomalias de volume que podem anteceder movi
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **ShortPeriod** - período para calcular a EMA curta do volume (valor predefinido: 12)
-- **LongPeriod** - período para calcular a EMA longa do volume (valor predefinido: 26)
+- **Período curto** - período para calcular a EMA curta do volume (valor predefinido: 12)
+- **Período longo** - período para calcular a EMA longa do volume (valor predefinido: 26)
 
 ## Cálculo
 

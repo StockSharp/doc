@@ -19,9 +19,9 @@ Der Indikator funktioniert gut über verschiedene Zeitrahmen und Markttypen hinw
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Hauptberechnungszeitraum für den Index (Standardwert: 14)
-- **StochasticKPeriod** – Zeitraum zur Berechnung des stochastischen Oszillators %K (Standardwert: 5)
-- **StochasticDPeriod** – Zeitraum zur Berechnung des stochastischen Oszillators %D (Standardwert: 3)
+- **Länge** – Hauptberechnungszeitraum für den Index (Standardwert: 14)
+- **Stochastik-K-Zeitraum** – Zeitraum zur Berechnung des stochastischen Oszillators %K (Standardwert: 5)
+- **Stochastik-D-Zeitraum** – Zeitraum zur Berechnung des stochastischen Oszillators %D (Standardwert: 3)
 
 ## Berechnung
 

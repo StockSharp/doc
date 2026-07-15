@@ -15,8 +15,8 @@ Der Grundgedanke besteht darin, dass die gegenseitige Positionierung und Form di
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **ShortPeriod** – anfänglicher (minimaler) Zeitraum für gleitende Durchschnitte (Standardwert: 10)
-- **LongPeriod** – letzter (maximaler) Zeitraum für gleitende Durchschnitte (Standardwert: 100)
+- **Kurzer Zeitraum** – anfänglicher (minimaler) Zeitraum für gleitende Durchschnitte (Standardwert: 10)
+- **Langer Zeitraum** – letzter (maximaler) Zeitraum für gleitende Durchschnitte (Standardwert: 100)
 - **RibbonCount** – Anzahl der gleitenden Durchschnitte im Band (Standardwert: 10)
 
 ## Berechnung

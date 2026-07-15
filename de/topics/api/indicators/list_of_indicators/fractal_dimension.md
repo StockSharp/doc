@@ -16,7 +16,7 @@ Der Indikator basiert auf fraktaler Geometrie und misst, wie komplex der Preispf
 ## Parameter
 
 Der Indikator hat den folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 30)
+- **Länge** – Berechnungszeitraum (Standardwert: 30)
 
 ## Berechnung
 

@@ -1,6 +1,6 @@
 # 交易品种搜索
 
-大多数与美国股票交易所的连接器（例如 [Interactive Brokers](../connectors/stock_market/interactive_brokers.md)、[PolygonIO](../connectors/stock_market/polygonio.md) 等）在通过 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法建立连接后，并不会向客户端传输所有可用的交易品种。这是由于美国交易所交易的工具数量庞大，因此这样做是为了减轻经纪商服务器和数据源的负载。
+大多数与美国股票交易所的连接器（例如 [Interactive Brokers](../connectors/stock_market/interactive_brokers.md)、[PolygonIO](../connectors/stock_market/polygonio.md) 等）在通过 [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect) 方法建立连接后，并不会向客户端传输所有可用的交易品种。这是由于美国交易所交易的交易品种数量庞大，因此这样做是为了减轻经纪商服务器和数据源的负载。
 
 ## 交易品种搜索基础
 
@@ -37,16 +37,16 @@ var subscription = new Subscription(lookupMessage);
 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息允许设置以下搜索条件：
 
 - **SecurityId** — 交易品种标识符，包含：
-  - **SecurityCode** — 交易品种代码或代码掩码（例如，“AAPL”或“MS*”）
-  - **BoardCode** — 交易板代码（例如，[ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
-- **SecurityType** — 交易品种类型 ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) 等)
+  - **交易品种代码** — 交易品种代码或代码掩码（例如，“AAPL”或“MS*”）
+  - **交易板代码** — 交易板代码（例如，[ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
+- **交易品种类型** — 交易品种类型 ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) 等)
 - **SecurityTypes** — 用于高级搜索的交易品种类型数组
-- **Currency** — 该交易品种的交易货币
+- **货币** — 该交易品种的交易货币
 - **ExpiryDate** — 到期日（用于衍生品）
-- **Strike** — 期权的行权价
-- **OptionType** — 期权类型（适用于期权）
-- **Name** — 交易品种名称或其部分
-- **Class** — 交易品种类别
+- **行权价** — 期权的行权价
+- **期权类型** — 期权类型（适用于期权）
+- **名称** — 交易品种名称或其部分
+- **类** — 交易品种类别
 
 ### 正在处理搜索结果
 
@@ -209,7 +209,7 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 
 ## 使用 SecurityLookupWindow
 
-StockSharp 还提供了一个现成的工具搜索对话框 — [SecurityLookupWindow](xref:StockSharp.Xaml.SecurityLookupWindow)：
+StockSharp 还提供了一个现成的交易品种搜索对话框 — [SecurityLookupWindow](xref:StockSharp.Xaml.SecurityLookupWindow)：
 
 ```csharp
 private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
@@ -239,4 +239,4 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 
 ## 结论
 
-StockSharp 中的订阅机制提供了一种获取数据的统一方式，包括工具搜索。这允许对不同的连接器和数据类型使用相同的方法，从而显著简化了交易应用程序的开发。
+StockSharp 中的订阅机制提供了一种获取数据的统一方式，包括交易品种搜索。这允许对不同的连接器和数据类型使用相同的方法，从而显著简化了交易应用程序的开发。

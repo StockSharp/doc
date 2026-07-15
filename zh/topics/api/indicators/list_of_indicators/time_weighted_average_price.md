@@ -1,6 +1,6 @@
 # 时间加权平均价格
 
-**时间加权平均价格 (TWAP)** 是一种通过时间加权计算特定时期内金融工具平均价格的指标。TWAP 被机构投资者广泛用于以最小的市场影响执行大额订单。
+**时间加权平均价格 (TWAP)** 是一种通过时间加权计算特定时期内交易品种平均价格的指标。TWAP 被机构投资者广泛用于以最小的市场影响执行大额订单。
 
 要使用该指标，你需要使用 [TimeWeightedAveragePrice](xref:StockSharp.Algo.Indicators.TimeWeightedAveragePrice) 类。
 

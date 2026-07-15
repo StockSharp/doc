@@ -15,7 +15,7 @@ Die Grundidee besteht darin, dass extreme Impulswerte oft instabil sind und nach
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 14)
+- **Länge** – Berechnungszeitraum (Standardwert: 14)
 
 ## Berechnung
 

@@ -15,7 +15,7 @@ O PGO é particularmente útil para identificar condições de sobrecompra e sob
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo (valor predefinido: 14)
+- **Período** - período de cálculo (valor predefinido: 14)
 
 ## Cálculo
 

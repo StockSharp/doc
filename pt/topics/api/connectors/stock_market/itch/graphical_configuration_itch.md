@@ -4,14 +4,14 @@ Para todos os produtos [S#](../../../../api.md), a configuração gráfica da li
 
 ![Configurações da API GUI ITCH](../../../../../images/api_gui_settings_itch.png)
 
-- **Main** - O grupo UDP principal.
-- **Duplicate** - Grupo UDP duplicado.
-- **Recovery** - Servidor de recuperação.
-- **Replay** - Servidor de replay.
+- **Principal** - O grupo UDP principal.
+- **Duplicado** - Grupo UDP duplicado.
+- **Recuperação** - Servidor de recuperação.
+- **Reprodução** - Servidor de replay.
 - **nome de utilizador** - Nome de utilizador.
 - **palavra-passe** - Palavra-passe.
-- **Securities** - Ficheiro com títulos.
-- **Delay** - Atrasar o carregamento de instrumentos.
+- **Instrumentos** - Ficheiro com títulos.
+- **Diferido** - Atrasar o carregamento de instrumentos.
 - **Ativo** - Apenas instrumentos ativos.
 - **ID do grupo** - ID do grupo.
 - **Fuso horário** - Informação sobre o fuso horário onde a bolsa está localizada.

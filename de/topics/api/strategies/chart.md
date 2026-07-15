@@ -115,11 +115,11 @@ private void ConfigureChartElements()
 
 Die Schnittstelle [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) bietet viele Eigenschaften zum Konfigurieren der Kerzendarstellung:
 
-- **DrawStyle** - Darstellungsstil der Kerzen:
+- **Darstellungsstil** - Darstellungsstil der Kerzen:
   - **CandleStick** - japanische Kerzen
   - **Ohlc** - Balken
   - **LineOpen/LineHigh/LineLow/LineClose** - Linien für die jeweiligen Preise
-  - **BoxVolume** - Volumenboxen
+  - **Volumenbox** - Volumenboxen
   - **ClusterProfile** - Clusterprofil
   - **Area** - Fläche
   - **PnF** - Point-and-Figure-Chart
@@ -127,13 +127,13 @@ Die Schnittstelle [IChartCandleElement](xref:StockSharp.Charting.IChartCandleEle
 - **Farbeinstellungen**:
   - **UpFillColor/DownFillColor** - Körperfarbe steigender/fallender Kerzen
   - **UpBorderColor/DownBorderColor** - Rahmenfarbe steigender/fallender Kerzen
-  - **LineColor** - Linienfarbe für linienbasierte Charts
-  - **AreaColor** - Flächenfarbe für den Typ Area
+  - **Linienfarbe** - Linienfarbe für linienbasierte Charts
+  - **Flächenfarbe** - Flächenfarbe für den Typ Area
 
 - **Weitere Einstellungen**:
-  - **StrokeThickness** - Linienstärke
-  - **AntiAliasing** - Glättung
-  - **ShowAxisMarker** - Y-Achsenmarker anzeigen
+  - **Linienstärke** - Linienstärke
+  - **Kantenglättung** - Glättung
+  - **Achsenmarkierung anzeigen** - Y-Achsenmarker anzeigen
 
 ### Indikatoren hinzufügen
 
@@ -176,12 +176,12 @@ smaElement.AutoAssignYAxis = true; // Y-Achse automatisch zuweisen
 
 Die Schnittstelle [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) stellt die folgenden Eigenschaften zur Konfiguration bereit:
 
-- **Color** - Hauptfarbe des Indikators
-- **AdditionalColor** - zusätzliche Farbe (für Indikatoren mit zwei Linien)
-- **StrokeThickness** - Linienstärke
-- **AntiAliasing** - Glättung
-- **DrawStyle** - Zeichenstil (Linie, Punkte, Histogramm usw.)
-- **ShowAxisMarker** - Y-Achsenmarker anzeigen
+- **Farbe** - Hauptfarbe des Indikators
+- **Zusätzliche Farbe** - zusätzliche Farbe (für Indikatoren mit zwei Linien)
+- **Linienstärke** - Linienstärke
+- **Kantenglättung** - Glättung
+- **Darstellungsstil** - Zeichenstil (Linie, Punkte, Histogramm usw.)
+- **Achsenmarkierung anzeigen** - Y-Achsenmarker anzeigen
 - **AutoAssignYAxis** - Y-Achse automatisch zuweisen
 
 ### Trades hinzufügen
@@ -216,11 +216,11 @@ _ordersElement.PointSize = 8;                // Punktgröße
 
 Die Schnittstelle [IChartOrderElement](xref:StockSharp.Charting.IChartOrderElement) stellt die folgenden Eigenschaften zur Konfiguration bereit:
 
-- **ActiveBrush** - Farbe aktiver Orders
-- **CanceledBrush** - Farbe stornierter Orders
-- **DoneBrush** - Farbe ausgeführter Orders
-- **ErrorColor** - Fehlerfarbe
-- **ErrorStrokeColor** - Fehler-Rahmenfarbe
+- **Farbe aktiver Aufträge** - Farbe aktiver Orders
+- **Farbe stornierter Aufträge** - Farbe stornierter Orders
+- **Farbe ausgeführter Aufträge** - Farbe ausgeführter Orders
+- **Fehlerfarbe** - Fehlerfarbe
+- **Fehlerrahmenfarbe** - Fehler-Rahmenfarbe
 - **Filter** - Filter für die Order-Anzeige
 
 ## Daten im Chart zeichnen

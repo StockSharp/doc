@@ -17,8 +17,8 @@ Eingehende Anschlüsse
 
 Ausgehende Anschlüsse
 
-- **Take-Profit** - eine Order zur Gewinnsicherung.
-- **Stop-Loss** - eine Order zur Verlustbegrenzung.
+- **Gewinnmitnahme** - eine Order zur Gewinnsicherung.
+- **Verlustbegrenzung** - eine Order zur Verlustbegrenzung.
 - **Eigene Transaktion** - eine Transaktion, die durch eine der oben genannten Orders erstellt wurde.
 
 ### Parameter
@@ -26,8 +26,8 @@ Ausgehende Anschlüsse
 Take- und Stop-Parameter
 
 - **Wert** - der Wert des Take oder Stop.
-- **Trailing** - gibt an, ob Trailing-Schutz verwendet wird.
-- **Timeout** - der Timeout-Wert, nach dem der Schutz zwangsweise zum Marktpreis ausgelöst wird.
+- **Nachlaufend** - gibt an, ob Trailing-Schutz verwendet wird.
+- **Zeitüberschreitung** - der Timeout-Wert, nach dem der Schutz zwangsweise zum Marktpreis ausgelöst wird.
 - **Market-Orders** - Market-Orders (ohne Preis) zum schnellen Schließen der Position verwenden.
 
 ![Designer Positionen schützen 02](../../../../../../images/designer_protect_positions_02.png)

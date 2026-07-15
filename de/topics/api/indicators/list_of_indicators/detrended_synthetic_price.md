@@ -19,7 +19,7 @@ DSP ist nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Berechnungszeitraum (Standardwert: 10-20 Perioden)
+- **Länge** – Berechnungszeitraum (Standardwert: 10-20 Perioden)
 
 ## Berechnung
 

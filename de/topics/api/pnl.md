@@ -6,8 +6,8 @@
 
 Das Interface [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager) definiert den Basisvertrag:
 
-- **RealizedPnL** - realisierter Gewinn/Verlust (decimal). Wird angesammelt, wenn Positionen geschlossen werden.
-- **UnrealizedPnL** - unrealisierter Gewinn/Verlust (decimal). Wird anhand aktueller Marktpreise neu berechnet.
+- **Realisierter Gewinn oder Verlust** - realisierter Gewinn/Verlust (decimal). Wird angesammelt, wenn Positionen geschlossen werden.
+- **Nicht realisierter Gewinn oder Verlust** - unrealisierter Gewinn/Verlust (decimal). Wird anhand aktueller Marktpreise neu berechnet.
 - **Reset()** - setzt den Zustand des Managers zurück.
 - **UpdateSecurity(Level1ChangeMessage)** - aktualisiert Instrumentparameter (Preisschritt, Schrittpreis, Lot-Multiplikator).
 - **ProcessMessage(Message, ICollection\<PortfolioPnLManager\>)** - verarbeitet eine Nachricht; gibt [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) zurück, wenn eine Position geschlossen wird, andernfalls `null`.
@@ -32,8 +32,8 @@ PnLManager
 
 - **PriceStep** - Preisschritt des Instruments.
 - **StepPrice** - Wert eines Preisschritts (für Futures).
-- **Leverage** - Hebel.
-- **LotMultiplier** - Lot-Multiplikator.
+- **Hebel** - Hebel.
+- **Losgrößenmultiplikator** - Lot-Multiplikator.
 
 Der Gewinnmultiplikator wird mit folgender Formel berechnet:
 
@@ -47,8 +47,8 @@ Für reguläre Aktien (bei denen `StepPrice` nicht gesetzt ist) entspricht der M
 
 Die Klasse [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) enthält das Ergebnis des Schließens einer Position:
 
-- **ServerTime** - Trade-Zeit.
-- **ClosedVolume** - Volumen der geschlossenen Position.
+- **Serverzeit** - Trade-Zeit.
+- **Geschlossenes Volumen** - Volumen der geschlossenen Position.
 - **PnL** - realisierter Gewinn aus diesem Trade.
 
 Wenn die Position beispielsweise +2 war und ein Trade über -5 Kontrakte eingetroffen ist, dann gilt `ClosedVolume = 2` (2 Kontrakte aus der Position wurden geschlossen).

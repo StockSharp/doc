@@ -21,9 +21,9 @@ public class MqStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **PriceType** - Marktpreistyp für das Quoting (Standardwert Following)
-- **PriceOffset** - Preisabstand zum Marktpreis
-- **BestPriceOffset** - Mindestabweichung für die Aktualisierung der Quote (Standardwert 0.1 %)
+- **Preistyp** - Marktpreistyp für das Quoting (Standardwert Following)
+- **Preisversatz** - Preisabstand zum Marktpreis
+- **Versatz zum besten Preis** - Mindestabweichung für die Aktualisierung der Quote (Standardwert 0.1 %)
 
 ## Initialisierung der Strategie
 

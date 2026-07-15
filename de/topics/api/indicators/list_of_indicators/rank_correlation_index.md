@@ -7,7 +7,7 @@ Verwenden Sie die Klasse [RankCorrelationIndex](xref:StockSharp.Algo.Indicators.
 
 ## Berechnung
 
-1. Weisen Sie jedem Datenpunkt innerhalb des **Length**-Fensters einen Zeitrang zu (1 für den ältesten Wert, `Length` für den aktuellsten).
+1. Weisen Sie jedem Datenpunkt innerhalb des **Länge**-Fensters einen Zeitrang zu (1 für den ältesten Wert, `Length` für den aktuellsten).
 2. Ordnen Sie die Preise nach ihrem Wert (1 für den niedrigsten Preis, `Length` für den höchsten).
 3. Berechnen Sie die Differenz `d = RankTime − RankPrice` für jeden Balken.
 4. Wenden Sie die Spearman-Formel an:
@@ -17,7 +17,7 @@ Bei Multiplikation mit 100 liegt der Indikator zwischen −100 und +100.
 
 ## Parameter
 
-- **Length** – Fenstergröße für das Ranking-Verfahren.
+- **Länge** – Fenstergröße für das Ranking-Verfahren.
 
 ## Interpretation
 

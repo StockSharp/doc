@@ -6,10 +6,10 @@ Todos los conectores proporcionan la posibilidad de configurar la reconexión en
 
 **Propiedades de reconexión**
 
-- **Interval** - Intervalo con el que se realizarán los intentos de conexión.
-- **Initially** - Número de intentos para establecer la conexión inicial si no se estableció (timeout, fallo de red, etc.).
-- **Reconnection** - Número de intentos para reconectar si la conexión se interrumpió durante el funcionamiento.
-- **Timeout** - Timeout para una conexión\/desconexión correcta.
+- **Intervalo** - Intervalo con el que se realizarán los intentos de conexión.
+- **Inicialmente** - Número de intentos para establecer la conexión inicial si no se estableció (timeout, fallo de red, etc.).
+- **Reconexión** - Número de intentos para reconectar si la conexión se interrumpió durante el funcionamiento.
+- **Tiempo de espera** - Timeout para una conexión\/desconexión correcta.
 - **Modo de operación** - Modo de operación durante el cual deben realizarse los intentos de conexión.
 
 ## Configuración de reconexión en código

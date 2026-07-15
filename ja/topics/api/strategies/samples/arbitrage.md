@@ -36,13 +36,13 @@ public class ArbitrageStrategy : Strategy
 
 このストラテジーでは、次のパラメーターをカスタマイズできます。
 
-- **FutureSecurity** - 先物銘柄
-- **StockSecurity** - 原資産銘柄
-- **FuturePortfolio** - 先物取引用ポートフォリオ
-- **StockPortfolio** - 原資産取引用ポートフォリオ
-- **StockMultiplicator** - 原資産の乗数 (例: ロット サイズ)
-- **FutureVolume** - 先物取引の数量
-- **StockVolume** - 原資産取引の数量
+- **先物銘柄** - 先物銘柄
+- **原資産** - 原資産銘柄
+- **先物ポートフォリオ** - 先物取引用ポートフォリオ
+- **原資産ポートフォリオ** - 原資産取引用ポートフォリオ
+- **原資産の乗数** - 原資産の乗数 (例: ロット サイズ)
+- **先物の取引数量** - 先物取引の数量
+- **原資産の取引数量** - 原資産取引の数量
 - **ProfitToExit** - ポジション退出の利益しきい値
 - **SpreadToGenerateSignal** - エントリー シグナル生成のスプレッドしきい値
 

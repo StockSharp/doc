@@ -19,8 +19,8 @@ BBP kann auch Werte außerhalb des Bereichs 0-1 annehmen:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** - SMA-Berechnungsperiode (Standardwert: 20)
-- **StdDevMultiplier** - Multiplikator der Standardabweichung zur Berechnung der Bollinger-Bänder (Standardwert: 2)
+- **Länge** - SMA-Berechnungsperiode (Standardwert: 20)
+- **Standardabweichungsmultiplikator** - Multiplikator der Standardabweichung zur Berechnung der Bollinger-Bänder (Standardwert: 2)
 
 ## Berechnung
 

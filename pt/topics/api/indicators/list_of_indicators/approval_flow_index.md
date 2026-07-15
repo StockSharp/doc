@@ -16,7 +16,7 @@ O indicador AFI pode ser usado para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de cálculo do indicador
+- **Período** - período de cálculo do indicador
 
 ## Cálculo
 

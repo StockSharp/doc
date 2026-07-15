@@ -15,8 +15,8 @@ El indicador es un oscilador que fluctúa por encima y por debajo de la línea c
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **ShortPeriod** - período para calcular EMA corto (valor predeterminado: 34)
-- **LongPeriod** - período para calcular EMA largo (valor predeterminado: 55)
+- **Período corto** - período para calcular EMA corto (valor predeterminado: 34)
+- **Período largo** - período para calcular EMA largo (valor predeterminado: 55)
 
 ## Cálculo
 

@@ -17,7 +17,7 @@ O BMP ajuda os operadores a:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de suavização (valor predefinido: 14)
+- **Período** - período de suavização (valor predefinido: 14)
 
 ## Cálculo
 

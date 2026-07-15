@@ -19,7 +19,7 @@ FVE ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Glättungszeitraum (Standardwert: 22)
+- **Länge** – Glättungszeitraum (Standardwert: 22)
 
 ## Berechnung
 

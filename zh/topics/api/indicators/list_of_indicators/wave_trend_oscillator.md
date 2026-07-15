@@ -21,9 +21,9 @@ WTO的主要特征：
 
 ## 参数
 
-- **EsaPeriod** - 用于计算ESA值的EMA周期（通常为10）
-- **DPeriod** - 用于计算偏差的周期（通常为21）
-- **AveragePeriod** - 用于计算最终振荡器平均值的周期（通常为4）
+- **ESA周期** - 用于计算ESA值的EMA周期（通常为10）
+- **偏差周期** - 用于计算偏差的周期（通常为21）
+- **平均周期** - 用于计算最终振荡器平均值的周期（通常为4）
 
 ## 计算
 
@@ -50,7 +50,7 @@ WTO的主要特征：
    WTO = EMA(CI, AveragePeriod)
    ```
 
-指标参数的典型值为：EsaPeriod = 10，DPeriod = 21，AveragePeriod = 4，但它们可以根据不同的时间框架和工具进行调整。
+指标参数的典型值为：EsaPeriod = 10，DPeriod = 21，AveragePeriod = 4，但它们可以根据不同的时间框架和交易品种进行调整。
 
 ![WTO 指标图表](../../../../images/indicator_wave_trend_oscillator.png)
 

@@ -17,8 +17,8 @@ O indicador devolve uma estrutura [ElderRayValue](xref:StockSharp.Algo.Indicator
 
 Raios de Elder herda as definições de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
-- **Length** - período da EMA;
-- **Alpha** - coeficiente de suavização, quando configurado diretamente.
+- **Período** - período da EMA;
+- **Alfa** - coeficiente de suavização, quando configurado diretamente.
 
 ## Interpretação
 

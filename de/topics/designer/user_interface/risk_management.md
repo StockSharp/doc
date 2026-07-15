@@ -16,7 +16,7 @@ Liste der Risikoregeln
 - **Position** - eine Risikoregel, die die Positionsgröße überwacht.
 - **Position (Zeit)** - eine Risikoregel, die die Lebensdauer einer Position überwacht.
 - **Provision** - eine Risikoregel, die die Höhe der Kommission überwacht.
-- **Slippage** - eine Risikoregel, die die Höhe des Slippage überwacht.
+- **Kursabweichung** - eine Risikoregel, die die Höhe des Slippage überwacht.
 - **Auftragspreis** - eine Risikoregel, die den Preis einer Order überwacht.
 - **Auftragsvolumen** - eine Risikoregel, die das Volumen einer Order überwacht.
 - **Auftrag (Frequenz)** - eine Risikoregel, die die Häufigkeit der Orderplatzierung überwacht.

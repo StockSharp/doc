@@ -2,8 +2,8 @@
 
 すべての StockSharp 製品では、[接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md)で接続を設定します。
 
-- **アクセストークン** (`Token`) — OAuth アクセストークン。
-- **アドレス** (`Address`) — Trader API のアドレス。
+- **アクセストークン** — OAuth アクセストークン。
+- **アドレス** — Trader API のアドレス。
 
 ## 推奨コンテンツ
 

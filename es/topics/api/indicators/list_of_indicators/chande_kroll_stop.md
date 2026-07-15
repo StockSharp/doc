@@ -19,9 +19,9 @@ CKS es particularmente útil para:
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Period** - período principal para calcular los extremos (valor predeterminado: 10)
-- **Multiplier** - multiplicador para ATR, que determina la distancia desde los extremos (valor predeterminado: 1,5)
-- **StopPeriod** - período para calcular los niveles de parada (valor predeterminado: 20)
+- **Período** - período principal para calcular los extremos (valor predeterminado: 10)
+- **Multiplicador** - multiplicador para ATR, que determina la distancia desde los extremos (valor predeterminado: 1,5)
+- **Período de parada** - período para calcular los niveles de parada (valor predeterminado: 20)
 
 ## Cálculo
 

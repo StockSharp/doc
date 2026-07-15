@@ -15,8 +15,8 @@ O indicador é um oscilador adimensional que flutua em torno da linha zero. Valo
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **ShortPeriod** - período curto para o cálculo do momentum (valor predefinido: 10)
-- **LongPeriod** - período longo para o cálculo do momentum (valor predefinido: 30)
+- **Período curto** - período curto para o cálculo do momentum (valor predefinido: 10)
+- **Período longo** - período longo para o cálculo do momentum (valor predefinido: 30)
 
 ## Cálculo
 

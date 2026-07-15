@@ -19,7 +19,7 @@ O Índice de força é particularmente útil para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período de suavização (valor predefinido: 13)
+- **Período** - período de suavização (valor predefinido: 13)
 
 ## Cálculo
 

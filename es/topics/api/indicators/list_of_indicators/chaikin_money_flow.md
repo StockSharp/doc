@@ -19,7 +19,7 @@ La idea clave de CMF es que en una fuerte tendencia ascendente, el precio de cie
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor estándar: 20-21 días)
+- **Longitud** - período de cálculo (valor estándar: 20-21 días)
 
 ## Cálculo
 

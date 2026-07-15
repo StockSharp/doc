@@ -15,8 +15,8 @@ MOMA hilft bei der Bestimmung der Trendstärke und potenzieller Umkehrpunkte, in
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum für die Berechnung des gleitenden Durchschnitts (Standardwert: 14)
-- **MomentumPeriod** – Zeitraum für die Impulsberechnung (Standardwert: 10)
+- **Länge** – Zeitraum für die Berechnung des gleitenden Durchschnitts (Standardwert: 14)
+- **Momentum-Zeitraum** – Zeitraum für die Impulsberechnung (Standardwert: 10)
 
 ## Berechnung
 

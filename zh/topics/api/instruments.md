@@ -1,19 +1,19 @@
 # 交易品种
 
-在 StockSharp 中，金融工具由 [Security](xref:StockSharp.BusinessEntities.Security) 类表示，这是处理交易数据的基本元素。本节涵盖了在平台内处理金融工具的主要方面。
+在 StockSharp 中，交易品种由 [Security](xref:StockSharp.BusinessEntities.Security) 类表示，这是处理交易数据的基本元素。本节涵盖了在平台内处理交易品种的主要方面。
 
 ## Security 基类
 
-[Security](xref:StockSharp.BusinessEntities.Security) 表示在交易所交易的金融工具。金融工具可以是股票、期货合约、期权、货币对、加密货币及其他资产。该类包含识别和交易该金融工具所需的所有信息：
+[Security](xref:StockSharp.BusinessEntities.Security) 表示在交易所交易的交易品种。交易品种可以是股票、期货合约、期权、货币对、加密货币及其他资产。该类包含识别和交易该交易品种所需的所有信息：
 
-- **识别信息** - 代码、ISIN、名称、工具类别
+- **识别信息** - 代码、ISIN、名称、交易品种类别
 - **交易参数** - 价格步长、手数、最小交易量
 - **市场数据** - 当前的价格、交易量、订单簿等数值。
 - **计算值** - 衍生品、风险计算等的参数。
 
 ## 交易品种类型
 
-StockSharp 支持处理所有主要类型的金融工具：
+StockSharp 支持处理所有主要类型的交易品种：
 
 - **股票** - 股权类交易品种
 - **债券** - 债务交易品种
@@ -36,7 +36,7 @@ StockSharp 支持处理所有主要类型的金融工具：
 
 ## 处理交易品种信息
 
-StockSharp 提供了用于处理金融工具信息的强大工具：
+StockSharp 提供了用于处理交易品种信息的强大工具：
 
 - **交易品种搜索** - 按各种条件（代码、名称、类别）
 - **筛选** - 根据指定参数选择交易品种
@@ -45,10 +45,10 @@ StockSharp 提供了用于处理金融工具信息的强大工具：
 
 ## 交易品种识别
 
-StockSharp 中的每个工具都有一个唯一标识符 [SecurityId](xref:StockSharp.Messages.SecurityId)，用于在系统中明确识别该工具。该标识符包括：
+StockSharp 中的每个交易品种都有一个唯一标识符 [SecurityId](xref:StockSharp.Messages.SecurityId)，用于在系统中明确识别该交易品种。该标识符包括：
 
-- **SecurityCode** - 该工具的交易代码
-- **BoardCode** - 交易场所代码
+- **交易品种代码** - 该交易品种的交易代码
+- **交易板代码** - 交易场所代码
 - **彭博/路透/ISIN** 及其他代码 - 替代识别方法
 
 ## 特殊功能

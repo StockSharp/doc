@@ -18,8 +18,8 @@ Keltner-Kanäle hilft Händlern dabei, die Trendrichtung sowie potenzielle Unter
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum zur Berechnung von EMA und ATR (Standardwert: 20)
-- **Multiplier** – Multiplikator für ATR, der die Kanalbreite bestimmt (Standardwert: 2,0)
+- **Länge** – Zeitraum zur Berechnung von EMA und ATR (Standardwert: 20)
+- **Multiplikator** – Multiplikator für ATR, der die Kanalbreite bestimmt (Standardwert: 2,0)
 
 ## Berechnung
 

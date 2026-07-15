@@ -17,7 +17,7 @@ DI tiene como objetivo identificar las siguientes situaciones de mercado:
 ## Parámetros
 
 ll indicador tiene los siguientes parámetros:
-- **Length** - período de cálculo (valor predeterminado: 13)
+- **Longitud** - período de cálculo (valor predeterminado: 13)
 
 ## Cálculo
 

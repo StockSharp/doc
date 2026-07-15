@@ -90,7 +90,7 @@ public class EmptyIndicator : BaseIndicator
 }
 ```
 
-Este indicador recibe un valor entrante y realiza una desviación arbitraria basada en el valor del parámetro **Change**.
+Este indicador recibe un valor entrante y realiza una desviación arbitraria basada en el valor del parámetro **Cambio**.
 
 La descripción de los métodos del indicador está disponible en la sección [Indicador personalizado](../../../../api/indicators/custom_indicator.md).
 
@@ -98,7 +98,7 @@ Para añadir el indicador creado al diagrama, debe usar el cubo [Indicador](../.
 
 ![Designer indicador de código fuente 01](../../../../../images/designer_source_code_indicator_01.png)
 
-El parámetro **Change**, establecido previamente en el código del indicador, se muestra en el panel de propiedades.
+El parámetro **Cambio**, establecido previamente en el código del indicador, se muestra en el panel de propiedades.
 
 > [!WARNING]
 > Los indicadores creados con código C# no pueden usarse en estrategias creadas con código C#. Solo pueden usarse en estrategias creadas [a partir de cubos](../../using_visual_designer.md).

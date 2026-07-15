@@ -13,8 +13,8 @@ In diesem Fall stellt H-L(i) die Preisdifferenz auf dem aktuellen Balken dar und
 
 Hauptparameter des Indikators:
 
-- **ROCPeriod** – die Periodennummer, relativ zu der die Berechnung durchgeführt wird. Ursprünglich auf 5 eingestellt.
-- **SmoothPeriod** – der Zeitraum des gleitenden Durchschnitts. Standardmäßig ist es auf 32 eingestellt.
+- **ROC-Zeitraum** – die Periodennummer, relativ zu der die Berechnung durchgeführt wird. Ursprünglich auf 5 eingestellt.
+- **Glättungszeitraum** – der Zeitraum des gleitenden Durchschnitts. Standardmäßig ist es auf 32 eingestellt.
 
 ![CHV Diagramm](../../../../images/indicatorchaikinvolatility.png)
 

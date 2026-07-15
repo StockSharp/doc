@@ -18,8 +18,8 @@ Los canales Keltner ayudan a los operadores a determinar la dirección de la ten
 ## Parámetros
 
 El indicador tiene los siguientes parámetros:
-- **Length** - período para calcular EMA y ATR (valor predeterminado: 20)
-- **Multiplier** - multiplicador para ATR, que determina el ancho del canal (valor predeterminado: 2,0)
+- **Longitud** - período para calcular EMA y ATR (valor predeterminado: 20)
+- **Multiplicador** - multiplicador para ATR, que determina el ancho del canal (valor predeterminado: 2,0)
 
 ## Cálculo
 

@@ -22,8 +22,8 @@ public class StairsCountertrendStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **CandleDataType** - 要使用的K线类型（默认1分钟）
-- **Length** - 用于识别趋势的连续同向K线数量（默认值 5）
+- **K线类型** - 要使用的K线类型（默认1分钟）
+- **长度** - 用于识别趋势的连续同向K线数量（默认值 5）
 
 Length 参数可在 2 到 10 的范围内进行优化，步长为 1。
 
@@ -187,7 +187,7 @@ private void CreateQuotingProcessor(Sides side)
 
 ## 特征
 
-- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的工具
+- 该策略通过 `GetWorkingSecurities()` 方法自动确定要使用的交易品种
 - 该策略仅适用于已完成的K线
 - 为了更高效地进入市场，使用报价而不是市价单
 - 该策略采用逆势方法，开仓与已建立的趋势相反的方向

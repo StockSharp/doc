@@ -15,9 +15,9 @@ DZRSI löst dieses Problem, indem es diese Niveaus basierend auf dem historische
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum zur Berechnung der Basis RSI (Standardwert: 14)
-- **OverboughtLevel** – anfängliches Überkaufniveau (Standardwert: 70)
-- **OversoldLevel** – anfängliches überverkauftes Niveau (Standardwert: 30)
+- **Länge** – Zeitraum zur Berechnung der Basis RSI (Standardwert: 14)
+- **Überkauft-Niveau** – anfängliches Überkaufniveau (Standardwert: 70)
+- **Überverkauft-Niveau** – anfängliches überverkauftes Niveau (Standardwert: 30)
 
 ## Berechnung
 

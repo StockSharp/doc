@@ -2,8 +2,8 @@
 
 在所有 StockSharp 产品中，都可以通过[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)配置连接。
 
-- **访问令牌** (`Token`) — OAuth 访问令牌。
-- **地址** (`Address`) — Trader API 地址。
+- **访问令牌** — OAuth 访问令牌。
+- **地址** — Trader API 地址。
 
 ## 推荐内容
 

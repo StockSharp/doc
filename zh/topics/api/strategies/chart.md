@@ -115,25 +115,25 @@ private void ConfigureChartElements()
 
 [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) 接口提供了许多用于配置K线显示的属性：
 
-- **DrawStyle** - K线显示风格：
-  - **CandleStick** - 日本K线
+- **绘图样式** - K线显示风格：
+  - **K线** - 日本K线
   - **Ohlc** - 柱状图
   - **LineOpen/LineHigh/LineLow/LineClose** - 分别表示相应价格的线
-  - **BoxVolume** - 体积盒
+  - **箱体体积** - 体积盒
   - **ClusterProfile** - 集群配置文件
-  - **Area** - 区域
+  - **区域** - 区域
   - **PnF** - 点数图表
 
 - **颜色设置**：
   - **UpFillColor/DownFillColor** - 上涨/下跌K线实体颜色
   - **UpBorderColor/DownBorderColor** - 上涨/下跌K线边框颜色
-  - **LineColor** - 线型图的线条颜色
-  - **AreaColor** - 区域类型的区域颜色
+  - **线条颜色** - 线型图的线条颜色
+  - **区域颜色** - 区域类型的区域颜色
 
 - **其他设置**：
-  - **StrokeThickness** - 线条粗细
-  - **AntiAliasing** - 平滑
-  - **ShowAxisMarker** - 显示 Y 轴标记
+  - **线条粗细** - 线条粗细
+  - **抗锯齿** - 平滑
+  - **显示坐标轴标记** - 显示 Y 轴标记
 
 ### 添加指标
 
@@ -176,12 +176,12 @@ smaElement.AutoAssignYAxis = true; // 自动分配 Y 轴
 
 [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) 接口提供以下属性用于配置：
 
-- **Color** - 主要指示颜色
-- **AdditionalColor** - 附加颜色（用于有两条线的指示器）
-- **StrokeThickness** - 线条粗细
-- **AntiAliasing** - 平滑
-- **DrawStyle** - 绘图风格（线条、点、直方图等）
-- **ShowAxisMarker** - 显示 Y 轴标记
+- **颜色** - 主要指示颜色
+- **附加颜色** - 附加颜色（用于有两条线的指示器）
+- **线条粗细** - 线条粗细
+- **抗锯齿** - 平滑
+- **绘图样式** - 绘图风格（线条、点、直方图等）
+- **显示坐标轴标记** - 显示 Y 轴标记
 - **AutoAssignYAxis** - 自动分配 Y 轴
 
 ### 添加交易
@@ -216,12 +216,12 @@ _ordersElement.PointSize = 8;                // Point size
 
 [IChartOrderElement](xref:StockSharp.Charting.IChartOrderElement) 接口提供以下属性用于配置：
 
-- **ActiveBrush** - 活动订单的颜色
-- **CanceledBrush** - 已取消订单的颜色
-- **DoneBrush** - 已完成订单的颜色
-- **ErrorColor** - 错误颜色
-- **ErrorStrokeColor** - 错误边框颜色
-- **Filter** - 订单显示筛选
+- **活动订单颜色** - 活动订单的颜色
+- **已取消画笔** - 已取消订单的颜色
+- **已完成笔刷** - 已完成订单的颜色
+- **错误颜色** - 错误颜色
+- **错误边框颜色** - 错误边框颜色
+- **筛选** - 订单显示筛选
 
 ## 在图表上绘制数据
 

@@ -22,8 +22,8 @@ Señales clave en el sistema CCI de Woodies:
 
 ## Parámetros
 
-- **Length** - período de cálculo para la línea principal CCI (normalmente 14)
-- **SMALength** - período para suavizar la línea principal CCI para obtener la segunda línea (normalmente 9)
+- **Longitud** - período de cálculo para la línea principal CCI (normalmente 14)
+- **Período de SMA** - período para suavizar la línea principal CCI para obtener la segunda línea (normalmente 9)
 
 ## Cálculo
 

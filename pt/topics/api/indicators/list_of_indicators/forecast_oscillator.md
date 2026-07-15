@@ -19,7 +19,7 @@ O Oscilador de previsão é particularmente útil para:
 ## Parâmetros
 
 O indicador tem os seguintes parâmetros:
-- **Length** - período para o cálculo da regressão linear (valor predefinido: 14)
+- **Período** - período para o cálculo da regressão linear (valor predefinido: 14)
 
 ## Cálculo
 

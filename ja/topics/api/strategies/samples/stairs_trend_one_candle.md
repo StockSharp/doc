@@ -17,7 +17,7 @@ public class OneCandleTrendStrategy : Strategy
 
 この戦略では、次のパラメーターをカスタマイズできます。
 
-- **CandleType** - 使用するローソク足タイプ（既定値は 5 分）
+- **ローソク足タイプ** - 使用するローソク足タイプ（既定値は 5 分）
 
 ## 戦略の初期化
 

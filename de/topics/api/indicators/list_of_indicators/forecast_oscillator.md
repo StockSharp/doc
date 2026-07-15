@@ -19,7 +19,7 @@ Der Prognose-Oszillator ist besonders nützlich für:
 ## Parameter
 
 Der Indikator hat die folgenden Parameter:
-- **Length** – Zeitraum für lineare Regressionsberechnung (Standardwert: 14)
+- **Länge** – Zeitraum für lineare Regressionsberechnung (Standardwert: 14)
 
 ## Berechnung
 
