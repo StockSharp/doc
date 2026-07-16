@@ -30,6 +30,7 @@
   "search_heading": "Search",
   "search_no_results": "Nothing found for your query.",
   "search_prompt": "Type a query to search the documentation.",
+  "search_indexing": "The search index is still being built. Please refresh in a moment.",
   "api_reference": "API Reference",
   "api_unavailable": "The API reference is not built yet.",
   "constructors": "Constructors",

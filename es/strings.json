@@ -30,6 +30,7 @@
   "search_heading": "Buscar",
   "search_no_results": "No se encontró nada para tu búsqueda.",
   "search_prompt": "Escribe una consulta para buscar en la documentación.",
+  "search_indexing": "El índice de búsqueda aún se está creando. Actualiza la página en un momento.",
   "api_reference": "Referencia de la API",
   "api_unavailable": "La referencia de la API aún no está generada.",
   "constructors": "Constructores",

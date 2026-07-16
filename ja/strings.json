@@ -30,6 +30,7 @@
   "search_heading": "検索",
   "search_no_results": "検索条件に一致する結果がありません。",
   "search_prompt": "ドキュメントを検索するにはクエリを入力してください。",
+  "search_indexing": "検索インデックスを作成しています。少し待ってからページを更新してください。",
   "api_reference": "API リファレンス",
   "api_unavailable": "API リファレンスはまだ生成されていません。",
   "constructors": "コンストラクター",

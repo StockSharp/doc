@@ -30,6 +30,7 @@
   "search_heading": "Pesquisar",
   "search_no_results": "Nada encontrado para a sua pesquisa.",
   "search_prompt": "Digite uma consulta para pesquisar na documentação.",
+  "search_indexing": "O índice de pesquisa ainda está sendo criado. Atualize a página em instantes.",
   "api_reference": "Referência da API",
   "api_unavailable": "A referência da API ainda não foi gerada.",
   "constructors": "Construtores",
