@@ -861,6 +861,195 @@
           href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
         - name: Inicialización del adaptador Sterling
           href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+      - name: TradeStation
+        href: api/connectors/stock_market/tradestation.md
+        items:
+        - name: Configuración del conector TradeStation
+          href: api/connectors/stock_market/tradestation/configuration_tradestation.md
+        - name: Configuración gráfica de TradeStation
+          href: api/connectors/stock_market/tradestation/graphical_configuration_tradestation.md
+        - name: Inicialización del adaptador TradeStation
+          href: api/connectors/stock_market/tradestation/adapter_initialization_tradestation.md
+      - name: Robinhood
+        href: api/connectors/stock_market/robinhood.md
+        items:
+        - name: Configuración del conector Robinhood
+          href: api/connectors/stock_market/robinhood/configuration_robinhood.md
+        - name: Configuración gráfica de Robinhood
+          href: api/connectors/stock_market/robinhood/graphical_configuration_robinhood.md
+        - name: Inicialización del adaptador Robinhood
+          href: api/connectors/stock_market/robinhood/adapter_initialization_robinhood.md
+      - name: tastytrade
+        href: api/connectors/stock_market/tastytrade.md
+        items:
+        - name: Configuración del conector tastytrade
+          href: api/connectors/stock_market/tastytrade/configuration_tastytrade.md
+        - name: Configuración gráfica de tastytrade
+          href: api/connectors/stock_market/tastytrade/graphical_configuration_tastytrade.md
+        - name: Inicialización del adaptador tastytrade
+          href: api/connectors/stock_market/tastytrade/adapter_initialization_tastytrade.md
+      - name: Public.com
+        href: api/connectors/stock_market/public.md
+        items:
+        - name: Configuración del conector Public.com
+          href: api/connectors/stock_market/public/configuration_public.md
+        - name: Configuración gráfica de Public.com
+          href: api/connectors/stock_market/public/graphical_configuration_public.md
+        - name: Inicialización del adaptador Public.com
+          href: api/connectors/stock_market/public/adapter_initialization_public.md
+      - name: Moomoo
+        href: api/connectors/stock_market/moomoo.md
+        items:
+        - name: Configuración del conector Moomoo
+          href: api/connectors/stock_market/moomoo/configuration_moomoo.md
+        - name: Configuración gráfica de Moomoo
+          href: api/connectors/stock_market/moomoo/graphical_configuration_moomoo.md
+        - name: Inicialización del adaptador Moomoo
+          href: api/connectors/stock_market/moomoo/adapter_initialization_moomoo.md
+      - name: NinjaTrader
+        href: api/connectors/stock_market/ninjatrader.md
+        items:
+        - name: Configuración del conector NinjaTrader
+          href: api/connectors/stock_market/ninjatrader/configuration_ninjatrader.md
+        - name: Configuración gráfica de NinjaTrader
+          href: api/connectors/stock_market/ninjatrader/graphical_configuration_ninjatrader.md
+        - name: Inicialización del adaptador NinjaTrader
+          href: api/connectors/stock_market/ninjatrader/adapter_initialization_ninjatrader.md
+      - name: Lime
+        href: api/connectors/stock_market/lime.md
+        items:
+        - name: Configuración del conector Lime
+          href: api/connectors/stock_market/lime/configuration_lime.md
+        - name: Configuración gráfica de Lime
+          href: api/connectors/stock_market/lime/graphical_configuration_lime.md
+        - name: Inicialización del adaptador Lime
+          href: api/connectors/stock_market/lime/adapter_initialization_lime.md
+      - name: Upstox
+        href: api/connectors/stock_market/upstox.md
+        items:
+        - name: Configuración del conector Upstox
+          href: api/connectors/stock_market/upstox/configuration_upstox.md
+        - name: Configuración gráfica de Upstox
+          href: api/connectors/stock_market/upstox/graphical_configuration_upstox.md
+        - name: Inicialización del adaptador Upstox
+          href: api/connectors/stock_market/upstox/adapter_initialization_upstox.md
+      - name: Zhongtai XTP
+        href: api/connectors/stock_market/xtp.md
+        items:
+        - name: Configuración del conector Zhongtai XTP
+          href: api/connectors/stock_market/xtp/configuration_xtp.md
+        - name: Configuración gráfica de Zhongtai XTP
+          href: api/connectors/stock_market/xtp/graphical_configuration_xtp.md
+        - name: Inicialización del adaptador Zhongtai XTP
+          href: api/connectors/stock_market/xtp/adapter_initialization_xtp.md
+      - name: Angel One
+        href: api/connectors/stock_market/angelone.md
+        items:
+        - name: Configuración del conector Angel One
+          href: api/connectors/stock_market/angelone/configuration_angelone.md
+        - name: Configuración gráfica de Angel One
+          href: api/connectors/stock_market/angelone/graphical_configuration_angelone.md
+        - name: Inicialización del adaptador Angel One
+          href: api/connectors/stock_market/angelone/adapter_initialization_angelone.md
+      - name: DhanHQ
+        href: api/connectors/stock_market/dhan.md
+        items:
+        - name: Configuración del conector DhanHQ
+          href: api/connectors/stock_market/dhan/configuration_dhan.md
+        - name: Configuración gráfica de DhanHQ
+          href: api/connectors/stock_market/dhan/graphical_configuration_dhan.md
+        - name: Inicialización del adaptador DhanHQ
+          href: api/connectors/stock_market/dhan/adapter_initialization_dhan.md
+      - name: FYERS
+        href: api/connectors/stock_market/fyers.md
+        items:
+        - name: Configuración del conector FYERS
+          href: api/connectors/stock_market/fyers/configuration_fyers.md
+        - name: Configuración gráfica de FYERS
+          href: api/connectors/stock_market/fyers/graphical_configuration_fyers.md
+        - name: Inicialización del adaptador FYERS
+          href: api/connectors/stock_market/fyers/adapter_initialization_fyers.md
+      - name: ICICI Direct Breeze
+        href: api/connectors/stock_market/breeze.md
+        items:
+        - name: Configuración del conector ICICI Direct Breeze
+          href: api/connectors/stock_market/breeze/configuration_breeze.md
+        - name: Configuración gráfica de ICICI Direct Breeze
+          href: api/connectors/stock_market/breeze/graphical_configuration_breeze.md
+        - name: Inicialización del adaptador ICICI Direct Breeze
+          href: api/connectors/stock_market/breeze/adapter_initialization_breeze.md
+      - name: CTP
+        href: api/connectors/stock_market/ctp.md
+        items:
+        - name: Configuración del conector CTP
+          href: api/connectors/stock_market/ctp/configuration_ctp.md
+        - name: Configuración gráfica de CTP
+          href: api/connectors/stock_market/ctp/graphical_configuration_ctp.md
+        - name: Inicialización del adaptador CTP
+          href: api/connectors/stock_market/ctp/adapter_initialization_ctp.md
+      - name: Kotak Neo
+        href: api/connectors/stock_market/kotak_neo.md
+        items:
+        - name: Configuración del conector Kotak Neo
+          href: api/connectors/stock_market/kotak_neo/configuration_kotak_neo.md
+        - name: Configuración gráfica de Kotak Neo
+          href: api/connectors/stock_market/kotak_neo/graphical_configuration_kotak_neo.md
+        - name: Inicialización del adaptador Kotak Neo
+          href: api/connectors/stock_market/kotak_neo/adapter_initialization_kotak_neo.md
+      - name: Tiger Brokers
+        href: api/connectors/stock_market/tiger_brokers.md
+        items:
+        - name: Configuración del conector Tiger Brokers
+          href: api/connectors/stock_market/tiger_brokers/configuration_tiger_brokers.md
+        - name: Configuración gráfica de Tiger Brokers
+          href: api/connectors/stock_market/tiger_brokers/graphical_configuration_tiger_brokers.md
+        - name: Inicialización del adaptador Tiger Brokers
+          href: api/connectors/stock_market/tiger_brokers/adapter_initialization_tiger_brokers.md
+      - name: Saxo OpenAPI
+        href: api/connectors/stock_market/saxo.md
+        items:
+        - name: Configuración del conector Saxo OpenAPI
+          href: api/connectors/stock_market/saxo/configuration_saxo.md
+        - name: Configuración gráfica de Saxo OpenAPI
+          href: api/connectors/stock_market/saxo/graphical_configuration_saxo.md
+        - name: Inicialización del adaptador Saxo OpenAPI
+          href: api/connectors/stock_market/saxo/adapter_initialization_saxo.md
+      - name: Questrade
+        href: api/connectors/stock_market/questrade.md
+        items:
+        - name: Configuración del conector Questrade
+          href: api/connectors/stock_market/questrade/configuration_questrade.md
+        - name: Configuración gráfica de Questrade
+          href: api/connectors/stock_market/questrade/graphical_configuration_questrade.md
+        - name: Inicialización del adaptador Questrade
+          href: api/connectors/stock_market/questrade/adapter_initialization_questrade.md
+      - name: Longbridge OpenAPI
+        href: api/connectors/stock_market/longbridge.md
+        items:
+        - name: Configuración del conector Longbridge OpenAPI
+          href: api/connectors/stock_market/longbridge/configuration_longbridge.md
+        - name: Configuración gráfica de Longbridge OpenAPI
+          href: api/connectors/stock_market/longbridge/graphical_configuration_longbridge.md
+        - name: Inicialización del adaptador Longbridge OpenAPI
+          href: api/connectors/stock_market/longbridge/adapter_initialization_longbridge.md
+      - name: CQG Web API
+        href: api/connectors/stock_market/cqg_web_api.md
+        items:
+        - name: Configuración del conector CQG Web API
+          href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
+        - name: Configuración gráfica de CQG Web API
+          href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
+        - name: Inicialización del adaptador CQG Web API
+          href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
+      - name: IG Markets
+        href: api/connectors/stock_market/ig.md
+        items:
+        - name: Configuración del conector IG Markets
+          href: api/connectors/stock_market/ig/configuration_ig.md
+        - name: Configuración gráfica de IG Markets
+          href: api/connectors/stock_market/ig/graphical_configuration_ig.md
+        - name: Inicialización del adaptador IG Markets
+          href: api/connectors/stock_market/ig/adapter_initialization_ig.md
       - name: TradeZero
         href: api/connectors/stock_market/tradezero.md
         items:

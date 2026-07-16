@@ -1009,6 +1009,195 @@
           href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
         - name: Инициализация адаптера Sterling
           href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+      - name: TradeStation
+        href: api/connectors/stock_market/tradestation.md
+        items:
+        - name: Настройки коннектора TradeStation
+          href: api/connectors/stock_market/tradestation/configuration_tradestation.md
+        - name: Графическое конфигурирование TradeStation
+          href: api/connectors/stock_market/tradestation/graphical_configuration_tradestation.md
+        - name: Инициализация адаптера TradeStation
+          href: api/connectors/stock_market/tradestation/adapter_initialization_tradestation.md
+      - name: Robinhood
+        href: api/connectors/stock_market/robinhood.md
+        items:
+        - name: Настройки коннектора Robinhood
+          href: api/connectors/stock_market/robinhood/configuration_robinhood.md
+        - name: Графическое конфигурирование Robinhood
+          href: api/connectors/stock_market/robinhood/graphical_configuration_robinhood.md
+        - name: Инициализация адаптера Robinhood
+          href: api/connectors/stock_market/robinhood/adapter_initialization_robinhood.md
+      - name: tastytrade
+        href: api/connectors/stock_market/tastytrade.md
+        items:
+        - name: Настройки коннектора tastytrade
+          href: api/connectors/stock_market/tastytrade/configuration_tastytrade.md
+        - name: Графическое конфигурирование tastytrade
+          href: api/connectors/stock_market/tastytrade/graphical_configuration_tastytrade.md
+        - name: Инициализация адаптера tastytrade
+          href: api/connectors/stock_market/tastytrade/adapter_initialization_tastytrade.md
+      - name: Public.com
+        href: api/connectors/stock_market/public.md
+        items:
+        - name: Настройки коннектора Public.com
+          href: api/connectors/stock_market/public/configuration_public.md
+        - name: Графическое конфигурирование Public.com
+          href: api/connectors/stock_market/public/graphical_configuration_public.md
+        - name: Инициализация адаптера Public.com
+          href: api/connectors/stock_market/public/adapter_initialization_public.md
+      - name: Moomoo
+        href: api/connectors/stock_market/moomoo.md
+        items:
+        - name: Настройки коннектора Moomoo
+          href: api/connectors/stock_market/moomoo/configuration_moomoo.md
+        - name: Графическое конфигурирование Moomoo
+          href: api/connectors/stock_market/moomoo/graphical_configuration_moomoo.md
+        - name: Инициализация адаптера Moomoo
+          href: api/connectors/stock_market/moomoo/adapter_initialization_moomoo.md
+      - name: NinjaTrader
+        href: api/connectors/stock_market/ninjatrader.md
+        items:
+        - name: Настройки коннектора NinjaTrader
+          href: api/connectors/stock_market/ninjatrader/configuration_ninjatrader.md
+        - name: Графическое конфигурирование NinjaTrader
+          href: api/connectors/stock_market/ninjatrader/graphical_configuration_ninjatrader.md
+        - name: Инициализация адаптера NinjaTrader
+          href: api/connectors/stock_market/ninjatrader/adapter_initialization_ninjatrader.md
+      - name: Lime Trader
+        href: api/connectors/stock_market/lime.md
+        items:
+        - name: Настройки коннектора Lime Trader
+          href: api/connectors/stock_market/lime/configuration_lime.md
+        - name: Графическое конфигурирование Lime Trader
+          href: api/connectors/stock_market/lime/graphical_configuration_lime.md
+        - name: Инициализация адаптера Lime Trader
+          href: api/connectors/stock_market/lime/adapter_initialization_lime.md
+      - name: Upstox
+        href: api/connectors/stock_market/upstox.md
+        items:
+        - name: Настройки коннектора Upstox
+          href: api/connectors/stock_market/upstox/configuration_upstox.md
+        - name: Графическое конфигурирование Upstox
+          href: api/connectors/stock_market/upstox/graphical_configuration_upstox.md
+        - name: Инициализация адаптера Upstox
+          href: api/connectors/stock_market/upstox/adapter_initialization_upstox.md
+      - name: Zhongtai XTP
+        href: api/connectors/stock_market/xtp.md
+        items:
+        - name: Настройки коннектора Zhongtai XTP
+          href: api/connectors/stock_market/xtp/configuration_xtp.md
+        - name: Графическое конфигурирование Zhongtai XTP
+          href: api/connectors/stock_market/xtp/graphical_configuration_xtp.md
+        - name: Инициализация адаптера Zhongtai XTP
+          href: api/connectors/stock_market/xtp/adapter_initialization_xtp.md
+      - name: Angel One
+        href: api/connectors/stock_market/angelone.md
+        items:
+        - name: Настройки коннектора Angel One
+          href: api/connectors/stock_market/angelone/configuration_angelone.md
+        - name: Графическое конфигурирование Angel One
+          href: api/connectors/stock_market/angelone/graphical_configuration_angelone.md
+        - name: Инициализация адаптера Angel One
+          href: api/connectors/stock_market/angelone/adapter_initialization_angelone.md
+      - name: DhanHQ
+        href: api/connectors/stock_market/dhan.md
+        items:
+        - name: Настройки коннектора DhanHQ
+          href: api/connectors/stock_market/dhan/configuration_dhan.md
+        - name: Графическое конфигурирование DhanHQ
+          href: api/connectors/stock_market/dhan/graphical_configuration_dhan.md
+        - name: Инициализация адаптера DhanHQ
+          href: api/connectors/stock_market/dhan/adapter_initialization_dhan.md
+      - name: FYERS
+        href: api/connectors/stock_market/fyers.md
+        items:
+        - name: Настройки коннектора FYERS
+          href: api/connectors/stock_market/fyers/configuration_fyers.md
+        - name: Графическое конфигурирование FYERS
+          href: api/connectors/stock_market/fyers/graphical_configuration_fyers.md
+        - name: Инициализация адаптера FYERS
+          href: api/connectors/stock_market/fyers/adapter_initialization_fyers.md
+      - name: ICICI Direct Breeze
+        href: api/connectors/stock_market/breeze.md
+        items:
+        - name: Настройки коннектора ICICI Direct Breeze
+          href: api/connectors/stock_market/breeze/configuration_breeze.md
+        - name: Графическое конфигурирование ICICI Direct Breeze
+          href: api/connectors/stock_market/breeze/graphical_configuration_breeze.md
+        - name: Инициализация адаптера ICICI Direct Breeze
+          href: api/connectors/stock_market/breeze/adapter_initialization_breeze.md
+      - name: CTP
+        href: api/connectors/stock_market/ctp.md
+        items:
+        - name: Настройки коннектора CTP
+          href: api/connectors/stock_market/ctp/configuration_ctp.md
+        - name: Графическое конфигурирование CTP
+          href: api/connectors/stock_market/ctp/graphical_configuration_ctp.md
+        - name: Инициализация адаптера CTP
+          href: api/connectors/stock_market/ctp/adapter_initialization_ctp.md
+      - name: Kotak Neo
+        href: api/connectors/stock_market/kotak_neo.md
+        items:
+        - name: Настройки коннектора Kotak Neo
+          href: api/connectors/stock_market/kotak_neo/configuration_kotak_neo.md
+        - name: Графическое конфигурирование Kotak Neo
+          href: api/connectors/stock_market/kotak_neo/graphical_configuration_kotak_neo.md
+        - name: Инициализация адаптера Kotak Neo
+          href: api/connectors/stock_market/kotak_neo/adapter_initialization_kotak_neo.md
+      - name: Tiger Brokers
+        href: api/connectors/stock_market/tiger_brokers.md
+        items:
+        - name: Настройки коннектора Tiger Brokers
+          href: api/connectors/stock_market/tiger_brokers/configuration_tiger_brokers.md
+        - name: Графическое конфигурирование Tiger Brokers
+          href: api/connectors/stock_market/tiger_brokers/graphical_configuration_tiger_brokers.md
+        - name: Инициализация адаптера Tiger Brokers
+          href: api/connectors/stock_market/tiger_brokers/adapter_initialization_tiger_brokers.md
+      - name: Saxo OpenAPI
+        href: api/connectors/stock_market/saxo.md
+        items:
+        - name: Настройки коннектора Saxo OpenAPI
+          href: api/connectors/stock_market/saxo/configuration_saxo.md
+        - name: Графическое конфигурирование Saxo OpenAPI
+          href: api/connectors/stock_market/saxo/graphical_configuration_saxo.md
+        - name: Инициализация адаптера Saxo OpenAPI
+          href: api/connectors/stock_market/saxo/adapter_initialization_saxo.md
+      - name: Questrade
+        href: api/connectors/stock_market/questrade.md
+        items:
+        - name: Настройки коннектора Questrade
+          href: api/connectors/stock_market/questrade/configuration_questrade.md
+        - name: Графическое конфигурирование Questrade
+          href: api/connectors/stock_market/questrade/graphical_configuration_questrade.md
+        - name: Инициализация адаптера Questrade
+          href: api/connectors/stock_market/questrade/adapter_initialization_questrade.md
+      - name: Longbridge OpenAPI
+        href: api/connectors/stock_market/longbridge.md
+        items:
+        - name: Настройки коннектора Longbridge OpenAPI
+          href: api/connectors/stock_market/longbridge/configuration_longbridge.md
+        - name: Графическое конфигурирование Longbridge OpenAPI
+          href: api/connectors/stock_market/longbridge/graphical_configuration_longbridge.md
+        - name: Инициализация адаптера Longbridge OpenAPI
+          href: api/connectors/stock_market/longbridge/adapter_initialization_longbridge.md
+      - name: CQG Web API
+        href: api/connectors/stock_market/cqg_web_api.md
+        items:
+        - name: Настройки коннектора CQG Web API
+          href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
+        - name: Графическое конфигурирование CQG Web API
+          href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
+        - name: Инициализация адаптера CQG Web API
+          href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
+      - name: IG Markets
+        href: api/connectors/stock_market/ig.md
+        items:
+        - name: Настройки коннектора IG Markets
+          href: api/connectors/stock_market/ig/configuration_ig.md
+        - name: Графическое конфигурирование IG Markets
+          href: api/connectors/stock_market/ig/graphical_configuration_ig.md
+        - name: Инициализация адаптера IG Markets
+          href: api/connectors/stock_market/ig/adapter_initialization_ig.md
       - name: TradeZero
         href: api/connectors/stock_market/tradezero.md
         items:

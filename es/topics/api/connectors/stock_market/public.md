@@ -1,0 +1,23 @@
+# Public.com
+
+**Public.com** integra **API de Public.com** con StockSharp para obtener datos de mercado y operar.
+
+El conector admite búsqueda de instrumentos, cotizaciones, velas históricas, cuentas, saldos y posiciones, gestión de órdenes, consulta REST para las suscripciones, órdenes de opciones con múltiples patas.
+
+Antes de desarrollar robots de negociación para Public.com, consulte los enlaces de la sección [Conectores](../../connectors.md).
+
+## Contenido recomendado
+
+[Conectores](../../connectors.md)
+
+[Configuración gráfica](../graphical_configuration.md)
+
+[Guardar y cargar configuraciones](../save_and_load_settings.md)
+
+[Crear un conector propio](../creating_own_connector.md)
+
+[Gestión de órdenes](../../orders_management.md)
+
+[Crear una orden](../../orders_management/create_new_order.md)
+
+[Crear una orden de parada](../../orders_management/create_new_stop_order.md)

@@ -861,6 +861,195 @@
           href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
         - name: 适配器初始化 Sterling
           href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+      - name: TradeStation
+        href: api/connectors/stock_market/tradestation.md
+        items:
+        - name: TradeStation 连接器配置
+          href: api/connectors/stock_market/tradestation/configuration_tradestation.md
+        - name: TradeStation 图形化配置
+          href: api/connectors/stock_market/tradestation/graphical_configuration_tradestation.md
+        - name: TradeStation 适配器初始化
+          href: api/connectors/stock_market/tradestation/adapter_initialization_tradestation.md
+      - name: Robinhood
+        href: api/connectors/stock_market/robinhood.md
+        items:
+        - name: Robinhood 连接器配置
+          href: api/connectors/stock_market/robinhood/configuration_robinhood.md
+        - name: Robinhood 图形化配置
+          href: api/connectors/stock_market/robinhood/graphical_configuration_robinhood.md
+        - name: Robinhood 适配器初始化
+          href: api/connectors/stock_market/robinhood/adapter_initialization_robinhood.md
+      - name: tastytrade
+        href: api/connectors/stock_market/tastytrade.md
+        items:
+        - name: tastytrade 连接器配置
+          href: api/connectors/stock_market/tastytrade/configuration_tastytrade.md
+        - name: tastytrade 图形化配置
+          href: api/connectors/stock_market/tastytrade/graphical_configuration_tastytrade.md
+        - name: tastytrade 适配器初始化
+          href: api/connectors/stock_market/tastytrade/adapter_initialization_tastytrade.md
+      - name: Public.com
+        href: api/connectors/stock_market/public.md
+        items:
+        - name: Public.com 连接器配置
+          href: api/connectors/stock_market/public/configuration_public.md
+        - name: Public.com 图形化配置
+          href: api/connectors/stock_market/public/graphical_configuration_public.md
+        - name: Public.com 适配器初始化
+          href: api/connectors/stock_market/public/adapter_initialization_public.md
+      - name: Moomoo
+        href: api/connectors/stock_market/moomoo.md
+        items:
+        - name: Moomoo 连接器配置
+          href: api/connectors/stock_market/moomoo/configuration_moomoo.md
+        - name: Moomoo 图形化配置
+          href: api/connectors/stock_market/moomoo/graphical_configuration_moomoo.md
+        - name: Moomoo 适配器初始化
+          href: api/connectors/stock_market/moomoo/adapter_initialization_moomoo.md
+      - name: NinjaTrader
+        href: api/connectors/stock_market/ninjatrader.md
+        items:
+        - name: NinjaTrader 连接器配置
+          href: api/connectors/stock_market/ninjatrader/configuration_ninjatrader.md
+        - name: NinjaTrader 图形化配置
+          href: api/connectors/stock_market/ninjatrader/graphical_configuration_ninjatrader.md
+        - name: NinjaTrader 适配器初始化
+          href: api/connectors/stock_market/ninjatrader/adapter_initialization_ninjatrader.md
+      - name: Lime Trader
+        href: api/connectors/stock_market/lime.md
+        items:
+        - name: Lime Trader 连接器配置
+          href: api/connectors/stock_market/lime/configuration_lime.md
+        - name: Lime Trader 图形化配置
+          href: api/connectors/stock_market/lime/graphical_configuration_lime.md
+        - name: Lime Trader 适配器初始化
+          href: api/connectors/stock_market/lime/adapter_initialization_lime.md
+      - name: Upstox
+        href: api/connectors/stock_market/upstox.md
+        items:
+        - name: Upstox 连接器配置
+          href: api/connectors/stock_market/upstox/configuration_upstox.md
+        - name: Upstox 图形化配置
+          href: api/connectors/stock_market/upstox/graphical_configuration_upstox.md
+        - name: Upstox 适配器初始化
+          href: api/connectors/stock_market/upstox/adapter_initialization_upstox.md
+      - name: Zhongtai XTP
+        href: api/connectors/stock_market/xtp.md
+        items:
+        - name: Zhongtai XTP 连接器配置
+          href: api/connectors/stock_market/xtp/configuration_xtp.md
+        - name: Zhongtai XTP 图形化配置
+          href: api/connectors/stock_market/xtp/graphical_configuration_xtp.md
+        - name: Zhongtai XTP 适配器初始化
+          href: api/connectors/stock_market/xtp/adapter_initialization_xtp.md
+      - name: Angel One
+        href: api/connectors/stock_market/angelone.md
+        items:
+        - name: Angel One 连接器配置
+          href: api/connectors/stock_market/angelone/configuration_angelone.md
+        - name: Angel One 图形化配置
+          href: api/connectors/stock_market/angelone/graphical_configuration_angelone.md
+        - name: Angel One 适配器初始化
+          href: api/connectors/stock_market/angelone/adapter_initialization_angelone.md
+      - name: DhanHQ
+        href: api/connectors/stock_market/dhan.md
+        items:
+        - name: DhanHQ 连接器配置
+          href: api/connectors/stock_market/dhan/configuration_dhan.md
+        - name: DhanHQ 图形化配置
+          href: api/connectors/stock_market/dhan/graphical_configuration_dhan.md
+        - name: DhanHQ 适配器初始化
+          href: api/connectors/stock_market/dhan/adapter_initialization_dhan.md
+      - name: FYERS
+        href: api/connectors/stock_market/fyers.md
+        items:
+        - name: FYERS 连接器配置
+          href: api/connectors/stock_market/fyers/configuration_fyers.md
+        - name: FYERS 图形化配置
+          href: api/connectors/stock_market/fyers/graphical_configuration_fyers.md
+        - name: FYERS 适配器初始化
+          href: api/connectors/stock_market/fyers/adapter_initialization_fyers.md
+      - name: ICICI Direct Breeze
+        href: api/connectors/stock_market/breeze.md
+        items:
+        - name: ICICI Direct Breeze 连接器配置
+          href: api/connectors/stock_market/breeze/configuration_breeze.md
+        - name: ICICI Direct Breeze 图形化配置
+          href: api/connectors/stock_market/breeze/graphical_configuration_breeze.md
+        - name: ICICI Direct Breeze 适配器初始化
+          href: api/connectors/stock_market/breeze/adapter_initialization_breeze.md
+      - name: CTP
+        href: api/connectors/stock_market/ctp.md
+        items:
+        - name: CTP 连接器配置
+          href: api/connectors/stock_market/ctp/configuration_ctp.md
+        - name: CTP 图形化配置
+          href: api/connectors/stock_market/ctp/graphical_configuration_ctp.md
+        - name: CTP 适配器初始化
+          href: api/connectors/stock_market/ctp/adapter_initialization_ctp.md
+      - name: Kotak Neo
+        href: api/connectors/stock_market/kotak_neo.md
+        items:
+        - name: Kotak Neo 连接器配置
+          href: api/connectors/stock_market/kotak_neo/configuration_kotak_neo.md
+        - name: Kotak Neo 图形化配置
+          href: api/connectors/stock_market/kotak_neo/graphical_configuration_kotak_neo.md
+        - name: Kotak Neo 适配器初始化
+          href: api/connectors/stock_market/kotak_neo/adapter_initialization_kotak_neo.md
+      - name: Tiger Brokers
+        href: api/connectors/stock_market/tiger_brokers.md
+        items:
+        - name: Tiger Brokers 连接器配置
+          href: api/connectors/stock_market/tiger_brokers/configuration_tiger_brokers.md
+        - name: Tiger Brokers 图形化配置
+          href: api/connectors/stock_market/tiger_brokers/graphical_configuration_tiger_brokers.md
+        - name: Tiger Brokers 适配器初始化
+          href: api/connectors/stock_market/tiger_brokers/adapter_initialization_tiger_brokers.md
+      - name: Saxo OpenAPI
+        href: api/connectors/stock_market/saxo.md
+        items:
+        - name: Saxo OpenAPI 连接器配置
+          href: api/connectors/stock_market/saxo/configuration_saxo.md
+        - name: Saxo OpenAPI 图形化配置
+          href: api/connectors/stock_market/saxo/graphical_configuration_saxo.md
+        - name: Saxo OpenAPI 适配器初始化
+          href: api/connectors/stock_market/saxo/adapter_initialization_saxo.md
+      - name: Questrade
+        href: api/connectors/stock_market/questrade.md
+        items:
+        - name: Questrade 连接器配置
+          href: api/connectors/stock_market/questrade/configuration_questrade.md
+        - name: Questrade 图形化配置
+          href: api/connectors/stock_market/questrade/graphical_configuration_questrade.md
+        - name: Questrade 适配器初始化
+          href: api/connectors/stock_market/questrade/adapter_initialization_questrade.md
+      - name: Longbridge OpenAPI
+        href: api/connectors/stock_market/longbridge.md
+        items:
+        - name: Longbridge OpenAPI 连接器配置
+          href: api/connectors/stock_market/longbridge/configuration_longbridge.md
+        - name: Longbridge OpenAPI 图形化配置
+          href: api/connectors/stock_market/longbridge/graphical_configuration_longbridge.md
+        - name: Longbridge OpenAPI 适配器初始化
+          href: api/connectors/stock_market/longbridge/adapter_initialization_longbridge.md
+      - name: CQG Web API
+        href: api/connectors/stock_market/cqg_web_api.md
+        items:
+        - name: CQG Web API 连接器配置
+          href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
+        - name: CQG Web API 图形化配置
+          href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
+        - name: CQG Web API 适配器初始化
+          href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
+      - name: IG Markets
+        href: api/connectors/stock_market/ig.md
+        items:
+        - name: IG Markets 连接器配置
+          href: api/connectors/stock_market/ig/configuration_ig.md
+        - name: IG Markets 图形化配置
+          href: api/connectors/stock_market/ig/graphical_configuration_ig.md
+        - name: IG Markets 适配器初始化
+          href: api/connectors/stock_market/ig/adapter_initialization_ig.md
       - name: TradeZero
         href: api/connectors/stock_market/tradezero.md
         items:
