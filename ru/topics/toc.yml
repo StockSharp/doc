@@ -2736,6 +2736,10 @@
       href: api/patterns/white_marubozu.md
     - name: Составные паттерны
       href: api/patterns/complex_patterns.md
+  - name: Управление позициями
+    href: api/positions.md
+  - name: Маршрутизация адаптеров
+    href: api/basket_routing.md
   - name: Стаканы
     href: api/order_books.md
     items:
@@ -2751,10 +2755,6 @@
       href: api/order_books/grouped.md
     - name: Отображение
       href: api/order_books/display.md
-  - name: Управление позициями
-    href: api/positions.md
-  - name: Маршрутизация адаптеров
-    href: api/basket_routing.md
   - name: Cтратегии
     href: api/strategies.md
     items:
@@ -2778,10 +2778,6 @@
       href: api/strategies/chart.md
     - name: Статистика
       href: api/strategies/statistics.md
-    - name: Справочник статистик
-      href: api/strategies/statistics_reference.md
-    - name: Продвинутая оптимизация
-      href: api/strategies/optimization_advanced.md
     - name: Сохранение и загрузка настроек
       href: api/strategies/settings_saving_and_loading.md
     - name: Загрузка состояния
@@ -2792,8 +2788,6 @@
       href: api/strategies/unit_type.md
     - name: Алгоритм Котирования
       href: api/strategies/quoting.md
-    - name: Справочник котирования
-      href: api/strategies/quoting_reference.md
     - name: Рабочие инструменты
       href: api/strategies/working_securities.md
     - name: Обзор стратегий
@@ -2814,6 +2808,12 @@
       href: api/strategies/trading_modes.md
     - name: Расширенные возможности
       href: api/strategies/advanced_features.md
+    - name: Справочник статистик
+      href: api/strategies/statistics_reference.md
+    - name: Продвинутая оптимизация
+      href: api/strategies/optimization_advanced.md
+    - name: Справочник котирования
+      href: api/strategies/quoting_reference.md
     - name: Событийная модель
       href: api/strategies/event_model.md
       items:

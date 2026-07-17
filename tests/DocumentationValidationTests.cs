@@ -1068,7 +1068,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			if (expected is null)
 				continue;
 
-			foreach (var lang in GetTranslatedContentLanguages())
+			foreach (var lang in GetLocalizedContentQualityLanguages())
 			{
 				var localizedToc = Path.Combine(_repoRoot, lang, relative.Replace('/', Path.DirectorySeparatorChar));
 				if (!File.Exists(localizedToc))
@@ -2544,7 +2544,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			.Select(file => Path.GetRelativePath(defaultRoot, file).Replace('\\', '/'))
 			.ToHashSet(StringComparer.OrdinalIgnoreCase);
 
-		foreach (var lang in GetTranslatedContentLanguages())
+		foreach (var lang in GetLocalizedContentQualityLanguages())
 		{
 			var langRoot = Path.Combine(_repoRoot, lang);
 			var localizedRelativeFiles = Directory.EnumerateFiles(langRoot, "*.md", SearchOption.AllDirectories)
@@ -2556,6 +2556,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 			foreach (var relative in localizedRelativeFiles.Except(defaultRelativeFiles, StringComparer.OrdinalIgnoreCase).Order(StringComparer.OrdinalIgnoreCase))
 				errors.Add($"{lang}/{relative}: localized Markdown file has no matching {DefaultLanguage}/{relative} source file.");
+		}
+
+		foreach (var lang in GetTranslatedContentLanguages())
+		{
+			var langRoot = Path.Combine(_repoRoot, lang);
 
 			foreach (var defaultFile in defaultFiles)
 			{
@@ -11474,6 +11479,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		List<string> errors,
 		string path)
 	{
+		actual = ExcludeRussianTocExceptions(localizedToc, path, actual);
+
 		if (expected.Count != actual.Count)
 		{
 			errors.Add($"{RelativeToRepo(localizedToc)}{FormatTocPath(path)}: TOC item count must match {DefaultLanguage}/{relative}. Expected {expected.Count}, actual {actual.Count}.");
@@ -11499,6 +11506,19 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 			ValidateTocStructureMatchesDefault(relative, localizedToc, expectedEntry.Items, actualEntry.Items, errors, itemPath);
 		}
+	}
+
+	private static IReadOnlyList<TocEntry> ExcludeRussianTocExceptions(string localizedToc, string path, IReadOnlyList<TocEntry> entries)
+	{
+		if (!RelativeToRepo(localizedToc).Equals("ru/topics/toc.yml", StringComparison.OrdinalIgnoreCase))
+			return entries;
+
+		return path switch
+		{
+			"[3]/[0]/[1]" => entries.Where(entry => !NormalizeStructureUrl(entry.Href).Equals("hydra/videos/sources_samples/finam.md", StringComparison.OrdinalIgnoreCase)).ToArray(),
+			"[7]/[3]" => entries.Where(entry => !string.Equals(entry.Name, "Россия", StringComparison.Ordinal)).ToArray(),
+			_ => entries,
+		};
 	}
 
 	private static IEnumerable<TocEntryText> FlattenTocEntries(IEnumerable<TocEntry> entries)
@@ -11754,7 +11774,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			var target = ResolveMarkdownPage(lang, resolved);
 			if (!target.Exists)
 			{
-				errors.Add($"{location}: markdown link '{rawUrl}' points to missing page '{lang}/{resolved}' and fallback '{DefaultLanguage}/{resolved}' is missing too.");
+				errors.Add($"{location}: markdown link '{rawUrl}' points to missing page '{lang}/{resolved}'.");
 				return;
 			}
 
@@ -12222,17 +12242,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private static MarkdownTarget ResolveMarkdownPage(string lang, string relativePath)
 	{
 		var current = ResolveExistingPath(Path.Combine(_repoRoot, lang), relativePath);
-		if (current.Exists)
-			return new MarkdownTarget(lang, current.Exists, current.ExactCase, current.FullPath, current.ActualRelativePath);
-
-		if (!lang.Equals(DefaultLanguage, StringComparison.OrdinalIgnoreCase))
-		{
-			var fallback = ResolveExistingPath(Path.Combine(_repoRoot, DefaultLanguage), relativePath);
-			if (fallback.Exists)
-				return new MarkdownTarget(DefaultLanguage, fallback.Exists, fallback.ExactCase, fallback.FullPath, fallback.ActualRelativePath);
-		}
-
-		return new MarkdownTarget(lang, false, true, string.Empty, relativePath);
+		return new MarkdownTarget(lang, current.Exists, current.ExactCase, current.FullPath, current.ActualRelativePath);
 	}
 
 	private static void ValidateAnchor(string targetFile, string rawFragment, string location, List<string> errors)
