@@ -1,0 +1,19 @@
+# グラフィカル設定: Databento
+
+すべての StockSharp 製品では、[接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md)で接続を設定します。
+
+- `Key` - 認証用の資格情報です。
+- `Dataset` - 接続パラメーターです。 既定値: `GLBX.MDP3`.
+- `LiveAddress` - サービスのアドレスです。
+- `HistoricalAddress` - サービスのアドレスです。 既定値: `https://hist.databento.com/v0/timeseries.get_range`.
+- `Symbology` - コネクターの動作モードまたは選択項目です。 既定値: `DatabentoSymbologyTypes.RawSymbol`.
+
+## 関連項目
+
+[コネクター](../../../connectors.md)
+
+[グラフィカル設定](../../graphical_configuration.md)
+
+[設定の保存と読み込み](../../save_and_load_settings.md)
+
+[独自コネクターの作成](../../creating_own_connector.md)
