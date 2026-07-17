@@ -6,4 +6,3 @@ Obtenha as credenciais, os endereços dos servidores e os identificadores da con
 - **Token de atualização** - propriedade `RefreshToken`.
 - **Servidor de API** - propriedade `ApiServer`.
 - **Conta** - propriedade `Account`.
-

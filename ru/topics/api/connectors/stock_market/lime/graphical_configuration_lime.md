@@ -16,4 +16,3 @@
 [Сохранение и загрузка настроек](../../save_and_load_settings.md)
 
 [Создание собственного коннектора](../../creating_own_connector.md)
-

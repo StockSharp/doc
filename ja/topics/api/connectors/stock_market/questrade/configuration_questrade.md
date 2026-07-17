@@ -6,4 +6,3 @@ Questrade API に必要な認証情報、サーバーアドレス、口座識別
 - **更新トークン** - プロパティ `RefreshToken`。
 - **API サーバー** - プロパティ `ApiServer`。
 - **口座** - プロパティ `Account`。
-

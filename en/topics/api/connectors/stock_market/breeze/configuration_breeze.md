@@ -5,4 +5,3 @@ Obtain the credentials, endpoints, and account identifiers required by ICICI Dir
 - **API key** - property `ApiKey`.
 - **Secret key** - property `SecretKey`.
 - **API session** - property `ApiSession`.
-

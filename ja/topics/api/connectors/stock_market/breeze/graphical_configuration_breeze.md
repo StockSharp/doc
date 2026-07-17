@@ -15,4 +15,3 @@
 [設定の保存と読み込み](../../save_and_load_settings.md)
 
 [独自コネクタの作成](../../creating_own_connector.md)
-

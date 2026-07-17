@@ -6,4 +6,3 @@ Obtain the credentials, endpoints, and account identifiers required by Lime Trad
 - **Password** - property `Password`.
 - **Client ID** - property `ClientId`.
 - **Client secret** - property `ClientSecret`.
-

@@ -6,4 +6,3 @@ Obtenga las credenciales, direcciones de servidores e identificadores de cuenta 
 - **Token de actualización** - propiedad `RefreshToken`.
 - **Servidor de API** - propiedad `ApiServer`.
 - **Cuenta** - propiedad `Account`.
-

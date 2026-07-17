@@ -18,4 +18,3 @@ Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ## См. также
 
 [Окно настройки подключений](../../../graphical_user_interface/connection_settings_window.md)
-

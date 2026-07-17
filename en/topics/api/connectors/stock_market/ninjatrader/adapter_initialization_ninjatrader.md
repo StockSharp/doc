@@ -23,4 +23,3 @@ Replace the example values with credentials and endpoints issued for your accoun
 ## Recommended content
 
 [Connection settings window](../../../graphical_user_interface/connection_settings_window.md)
-

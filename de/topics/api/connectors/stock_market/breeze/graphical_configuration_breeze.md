@@ -15,4 +15,3 @@ Für alle StockSharp-Produkte wird die Verbindung im [Fenster für Verbindungsei
 [Einstellungen speichern und laden](../../save_and_load_settings.md)
 
 [Eigenen Konnektor erstellen](../../creating_own_connector.md)
-

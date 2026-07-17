@@ -15,4 +15,3 @@ Em todos os produtos StockSharp, configure a ligação na [janela de definiçõe
 [Guardar e carregar definições](../../save_and_load_settings.md)
 
 [Criar o seu próprio conector](../../creating_own_connector.md)
-

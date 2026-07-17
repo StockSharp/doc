@@ -5,4 +5,3 @@ ICICI Direct Breeze API に必要な認証情報、サーバーアドレス、�
 - **API キー** - プロパティ `ApiKey`。
 - **秘密鍵** - プロパティ `SecretKey`。
 - **API セッション** - プロパティ `ApiSession`。
-

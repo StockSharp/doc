@@ -16,4 +16,3 @@
 [保存和加载设置](../../save_and_load_settings.md)
 
 [创建自己的连接器](../../creating_own_connector.md)
-

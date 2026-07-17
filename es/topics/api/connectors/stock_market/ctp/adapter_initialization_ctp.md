@@ -24,4 +24,3 @@ Sustituya los valores de ejemplo por las credenciales y direcciones de servidore
 ## Contenido recomendado
 
 [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md)
-

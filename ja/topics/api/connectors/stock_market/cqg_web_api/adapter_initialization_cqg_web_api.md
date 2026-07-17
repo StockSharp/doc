@@ -21,4 +21,3 @@ Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ## 推奨コンテンツ
 
 [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md)
-

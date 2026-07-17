@@ -6,4 +6,3 @@ Beschaffen Sie die für Questrade API erforderlichen Zugangsdaten, Serveradresse
 - **Aktualisierungstoken** - Eigenschaft `RefreshToken`.
 - **API-Server** - Eigenschaft `ApiServer`.
 - **Konto** - Eigenschaft `Account`.
-

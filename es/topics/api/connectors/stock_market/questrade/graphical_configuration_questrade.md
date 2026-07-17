@@ -16,4 +16,3 @@ En todos los productos StockSharp, configure la conexión en la [ventana de conf
 [Guardar y cargar configuraciones](../../save_and_load_settings.md)
 
 [Crear un conector propio](../../creating_own_connector.md)
-

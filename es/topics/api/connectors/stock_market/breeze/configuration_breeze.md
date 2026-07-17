@@ -5,4 +5,3 @@ Obtenga las credenciales, direcciones de servidores e identificadores de cuenta 
 - **Clave de API** - propiedad `ApiKey`.
 - **Clave secreta** - propiedad `SecretKey`.
 - **Sesión de API** - propiedad `ApiSession`.
-

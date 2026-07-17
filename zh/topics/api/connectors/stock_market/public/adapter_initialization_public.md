@@ -17,4 +17,3 @@ Connector.Adapter.InnerAdapters.Add(messageAdapter);
 ## 推荐内容
 
 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)
-

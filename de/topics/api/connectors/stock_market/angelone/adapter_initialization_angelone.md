@@ -23,4 +23,3 @@ Ersetzen Sie die Beispielwerte durch die für Ihr Konto ausgegebenen Zugangsdate
 ## Empfohlene Inhalte
 
 [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md)
-

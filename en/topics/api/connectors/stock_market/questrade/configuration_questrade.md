@@ -6,4 +6,3 @@ Obtain the credentials, endpoints, and account identifiers required by Questrade
 - **Refresh token** - property `RefreshToken`.
 - **API server** - property `ApiServer`.
 - **Account** - property `Account`.
-

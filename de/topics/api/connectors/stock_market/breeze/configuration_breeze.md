@@ -5,4 +5,3 @@ Beschaffen Sie die für ICICI Direct Breeze API erforderlichen Zugangsdaten, Ser
 - **API-Schlüssel** - Eigenschaft `ApiKey`.
 - **Geheimer Schlüssel** - Eigenschaft `SecretKey`.
 - **API-Sitzung** - Eigenschaft `ApiSession`.
-

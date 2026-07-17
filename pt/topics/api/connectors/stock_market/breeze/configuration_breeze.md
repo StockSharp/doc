@@ -5,4 +5,3 @@ Obtenha as credenciais, os endereços dos servidores e os identificadores da con
 - **Chave de API** - propriedade `ApiKey`.
 - **Chave secreta** - propriedade `SecretKey`.
 - **Sessão de API** - propriedade `ApiSession`.
-

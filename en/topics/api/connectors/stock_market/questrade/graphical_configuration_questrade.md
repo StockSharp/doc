@@ -16,4 +16,3 @@ For all StockSharp products, configure the connection in the [connection setting
 [Save and load settings](../../save_and_load_settings.md)
 
 [Creating own connector](../../creating_own_connector.md)
-

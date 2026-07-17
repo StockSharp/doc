@@ -22,4 +22,3 @@ Substitua os valores de exemplo pelas credenciais e pelos endereços dos servido
 ## Conteúdo recomendado
 
 [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md)
-
