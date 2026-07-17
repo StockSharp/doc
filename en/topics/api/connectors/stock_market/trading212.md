@@ -1,0 +1,23 @@
+# Trading 212
+
+**Trading 212** connects StockSharp to the official **Trading 212 Public API**.
+
+The connector supports account information and order operations.
+
+Before developing trading robots, review the materials in the [Connectors](../../connectors.md) section.
+
+## See also
+
+[Connectors](../../connectors.md)
+
+[Graphical configuration](../graphical_configuration.md)
+
+[Save and load settings](../save_and_load_settings.md)
+
+[Creating own connector](../creating_own_connector.md)
+
+[Orders management](../../orders_management.md)
+
+[Create new order](../../orders_management/create_new_order.md)
+
+[Create new stop order](../../orders_management/create_new_stop_order.md)
