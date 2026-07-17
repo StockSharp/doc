@@ -1,0 +1,10 @@
+# 连接器配置: Korea Investment & Securities
+
+从服务提供商获取身份验证凭据，并指定连接参数。
+
+- `AppKey` - 身份验证凭据。
+- `AppSecret` - 身份验证凭据。
+- `AccountNumber` - 连接参数。
+- `ProductCode` - 账户或客户端标识符。 默认值: `01`.
+- `HtsId` - 账户或客户端标识符。
+- `IsDemo` - 控制连接器行为的开关。 默认值: `true`.
