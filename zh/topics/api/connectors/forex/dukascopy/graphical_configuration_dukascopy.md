@@ -1,18 +1,19 @@
-# DukasCopy 图形化配置
+# 图形化配置: Dukascopy JForex
 
-对于所有 [S#](../../../../api.md) 产品，连接的图形化配置在 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md) 上进行：
+在所有 StockSharp 产品中，均通过[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)配置连接。
 
-![API GUI 设置 Dukascopy](../../../../../images/api_gui_settings_dukascopy.png)
+- `UserName` - 账户或客户端标识符。
+- `Password` - 身份验证凭据。
+- `IsDemo` - 控制连接器行为的开关。 默认值: `true`.
+- `BridgePort` - 连接器的数值参数。 默认值: `27431`.
+- `BridgeJarPath` - 本地文件或目录的路径。
 
-- **心跳** - 服务器检查间隔，用于追踪连接是否处于活动状态。默认值为 1 分钟。
-- **重新连接设置** - 跟踪与交易系统连接状态的机制。([重新连接设置](../../reconnection_settings.md))
-
-## 推荐内容
+## 另请参阅
 
 [连接器](../../../connectors.md)
 
 [图形化配置](../../graphical_configuration.md)
 
-[创建自己的连接器](../../creating_own_connector.md)
-
 [保存和加载设置](../../save_and_load_settings.md)
+
+[创建自定义连接器](../../creating_own_connector.md)

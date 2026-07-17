@@ -1,14 +1,21 @@
-# Adapter initialization DukasCopy
+# Adapter initialization: Dukascopy JForex
 
-The code below demonstrates how to initialize the [DukasCopyMessageAdapter](xref:StockSharp.DukasCopy.DukasCopyMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
+The following code shows how to initialize [DukasCopyMessageAdapter](xref:StockSharp.DukasCopy.DukasCopyMessageAdapter) and add it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
-var messageAdapter = new DukasCopyMessageAdapter(Connector.TransactionIdGenerator);
+var messageAdapter = new DukasCopyMessageAdapter(Connector.TransactionIdGenerator)
+{
+	Password = "<value>".ToSecureString(),
+	UserName = "<value>",
+	BridgeJarPath = "<value>",
+	IsDemo = true,
+};
+
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
 ```
 
-## Recommended content
+Replace the sample values with the parameters issued or configured for your account.
+
+## See also
 
 [Connection settings window](../../../graphical_user_interface/connection_settings_window.md)

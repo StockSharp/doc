@@ -1,13 +1,12 @@
-# DukasCopy
+# Dukascopy JForex
 
-**DukasCopy** - the historical data provides a variety of financial instruments (e.g. Forex, Commodities and Indices).
+**Dukascopy JForex** connects StockSharp to the official **JForex SDK**.
 
-Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
+The connector supports instrument lookup, market data, portfolio information, and order operations.
 
-> [!CAUTION]
-> Connector supports only market-data feed; transactions are not supported. 
+Before developing trading robots, review the materials in the [Connectors](../../connectors.md) section.
 
-## Recommended content
+## See also
 
 [Connectors](../../connectors.md)
 

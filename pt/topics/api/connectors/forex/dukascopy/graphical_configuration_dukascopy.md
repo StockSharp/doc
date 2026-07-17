@@ -1,18 +1,19 @@
-# Configuração gráfica DukasCopy
+# Configuração gráfica: Dukascopy JForex
 
-Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):
+Em todos os produtos StockSharp, a conexão é configurada na [janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md).
 
-![Configurações da API GUI Dukascopy](../../../../../images/api_gui_settings_dukascopy.png)
+- `UserName` - identificador da conta ou do cliente.
+- `Password` - credencial de autenticação.
+- `IsDemo` - interruptor que controla o comportamento do conector. Valor predefinido: `true`.
+- `BridgePort` - parâmetro numérico do conector. Valor predefinido: `27431`.
+- `BridgeJarPath` - caminho para um ficheiro ou diretório local.
 
-- **Intervalo de verificação da ligação** - Intervalo de verificação do servidor para acompanhar se a ligação está ativa. Por predefinição, é igual a 1 minuto.
-- **Definições de religação** - Mecanismo para acompanhar ligações com as definições do sistema de negociação. ([Definições de religação](../../reconnection_settings.md))
-
-## Conteúdo recomendado
+## Consulte também
 
 [Conectores](../../../connectors.md)
 
 [Configuração gráfica](../../graphical_configuration.md)
 
-[Criar o próprio conector](../../creating_own_connector.md)
+[Guardar e carregar configurações](../../save_and_load_settings.md)
 
-[Guardar e carregar definições](../../save_and_load_settings.md)
+[Criar um conector próprio](../../creating_own_connector.md)

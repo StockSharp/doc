@@ -1,18 +1,19 @@
-# Graphical configuration DukasCopy
+# Graphical configuration: Dukascopy JForex
 
-For all [S#](../../../../api.md) products, graphical configuration of the connection is performed on the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):
+For all StockSharp products, configure the connection in the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md).
 
-![API GUI Settings Dukascopy](../../../../../images/api_gui_settings_dukascopy.png)
+- `UserName` - account or client identifier.
+- `Password` - authentication credential.
+- `IsDemo` - switch controlling connector behavior. Default value: `true`.
+- `BridgePort` - numeric connector parameter. Default value: `27431`.
+- `BridgeJarPath` - path to a local file or directory.
 
-- **Heartbeat** - Server check interval to track that the connection is alive. By default equal to 1 minute.
-- **Reconnection settings** - Mechanism for tracking connections with the trading system settings. ([Reconnection settings](../../reconnection_settings.md))
-
-## Recommended content
+## See also
 
 [Connectors](../../../connectors.md)
 
 [Graphical configuration](../../graphical_configuration.md)
 
-[Creating own connector](../../creating_own_connector.md)
-
 [Save and load settings](../../save_and_load_settings.md)
+
+[Creating own connector](../../creating_own_connector.md)
