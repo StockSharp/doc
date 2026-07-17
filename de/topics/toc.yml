@@ -779,6 +779,8 @@
       - name: IQFeed
         href: api/connectors/stock_market/iqfeed.md
         items:
+        - name: Konfiguration des Konnektors IQFeed
+          href: api/connectors/stock_market/iqfeed/configuration_iqfeed.md
         - name: Verbindung IQFeed
           href: api/connectors/stock_market/iqfeed/connection_iqfeed.md
         - name: Grafische Konfiguration IQFeed
@@ -1050,6 +1052,285 @@
           href: api/connectors/stock_market/ig/graphical_configuration_ig.md
         - name: Initialisierung des IG Markets-Adapters
           href: api/connectors/stock_market/ig/adapter_initialization_ig.md
+      - name: eToro
+        href: api/connectors/stock_market/etoro.md
+        items:
+        - name: Konfiguration des Konnektors eToro
+          href: api/connectors/stock_market/etoro/configuration_etoro.md
+        - name: Grafische Konfiguration von eToro
+          href: api/connectors/stock_market/etoro/graphical_configuration_etoro.md
+        - name: Initialisierung des Adapters eToro
+          href: api/connectors/stock_market/etoro/adapter_initialization_etoro.md
+      - name: Korea Investment & Securities
+        href: api/connectors/stock_market/korea_investment.md
+        items:
+        - name: Konfiguration des Konnektors Korea Investment & Securities
+          href: api/connectors/stock_market/korea_investment/configuration_korea_investment.md
+        - name: Grafische Konfiguration von Korea Investment & Securities
+          href: api/connectors/stock_market/korea_investment/graphical_configuration_korea_investment.md
+        - name: Initialisierung des Adapters Korea Investment & Securities
+          href: api/connectors/stock_market/korea_investment/adapter_initialization_korea_investment.md
+      - name: Kiwoom
+        href: api/connectors/stock_market/kiwoom.md
+        items:
+        - name: Konfiguration des Konnektors Kiwoom
+          href: api/connectors/stock_market/kiwoom/configuration_kiwoom.md
+        - name: Grafische Konfiguration von Kiwoom
+          href: api/connectors/stock_market/kiwoom/graphical_configuration_kiwoom.md
+        - name: Initialisierung des Adapters Kiwoom
+          href: api/connectors/stock_market/kiwoom/adapter_initialization_kiwoom.md
+      - name: Groww
+        href: api/connectors/stock_market/groww.md
+        items:
+        - name: Konfiguration des Konnektors Groww
+          href: api/connectors/stock_market/groww/configuration_groww.md
+        - name: Grafische Konfiguration von Groww
+          href: api/connectors/stock_market/groww/graphical_configuration_groww.md
+        - name: Initialisierung des Adapters Groww
+          href: api/connectors/stock_market/groww/adapter_initialization_groww.md
+      - name: kabu Station
+        href: api/connectors/stock_market/kabu_station.md
+        items:
+        - name: Konfiguration des Konnektors kabu Station
+          href: api/connectors/stock_market/kabu_station/configuration_kabu_station.md
+        - name: Grafische Konfiguration von kabu Station
+          href: api/connectors/stock_market/kabu_station/graphical_configuration_kabu_station.md
+        - name: Initialisierung des Adapters kabu Station
+          href: api/connectors/stock_market/kabu_station/adapter_initialization_kabu_station.md
+      - name: Capital.com
+        href: api/connectors/stock_market/capitalcom.md
+        items:
+        - name: Konfiguration des Konnektors Capital.com
+          href: api/connectors/stock_market/capitalcom/configuration_capitalcom.md
+        - name: Grafische Konfiguration von Capital.com
+          href: api/connectors/stock_market/capitalcom/graphical_configuration_capitalcom.md
+        - name: Initialisierung des Adapters Capital.com
+          href: api/connectors/stock_market/capitalcom/adapter_initialization_capitalcom.md
+      - name: Zerodha Kite Connect
+        href: api/connectors/stock_market/zerodha.md
+        items:
+        - name: Konfiguration des Konnektors Zerodha Kite Connect
+          href: api/connectors/stock_market/zerodha/configuration_zerodha.md
+        - name: Grafische Konfiguration von Zerodha Kite Connect
+          href: api/connectors/stock_market/zerodha/graphical_configuration_zerodha.md
+        - name: Initialisierung des Adapters Zerodha Kite Connect
+          href: api/connectors/stock_market/zerodha/adapter_initialization_zerodha.md
+      - name: LS Securities
+        href: api/connectors/stock_market/ls_securities.md
+        items:
+        - name: Konfiguration des Konnektors LS Securities
+          href: api/connectors/stock_market/ls_securities/configuration_ls_securities.md
+        - name: Grafische Konfiguration von LS Securities
+          href: api/connectors/stock_market/ls_securities/graphical_configuration_ls_securities.md
+        - name: Initialisierung des Adapters LS Securities
+          href: api/connectors/stock_market/ls_securities/adapter_initialization_ls_securities.md
+      - name: Mirae Asset Sharekhan
+        href: api/connectors/stock_market/mirae_asset_sharekhan.md
+        items:
+        - name: Konfiguration des Konnektors Mirae Asset Sharekhan
+          href: api/connectors/stock_market/mirae_asset_sharekhan/configuration_mirae_asset_sharekhan.md
+        - name: Grafische Konfiguration von Mirae Asset Sharekhan
+          href: api/connectors/stock_market/mirae_asset_sharekhan/graphical_configuration_mirae_asset_sharekhan.md
+        - name: Initialisierung des Adapters Mirae Asset Sharekhan
+          href: api/connectors/stock_market/mirae_asset_sharekhan/adapter_initialization_mirae_asset_sharekhan.md
+      - name: Swissquote OpenWealth
+        href: api/connectors/stock_market/swissquote.md
+        items:
+        - name: Konfiguration des Konnektors Swissquote OpenWealth
+          href: api/connectors/stock_market/swissquote/configuration_swissquote.md
+        - name: Grafische Konfiguration von Swissquote OpenWealth
+          href: api/connectors/stock_market/swissquote/graphical_configuration_swissquote.md
+        - name: Initialisierung des Adapters Swissquote OpenWealth
+          href: api/connectors/stock_market/swissquote/adapter_initialization_swissquote.md
+      - name: dxFeed
+        href: api/connectors/stock_market/dxfeed.md
+        items:
+        - name: Konfiguration des Konnektors dxFeed
+          href: api/connectors/stock_market/dxfeed/configuration_dxfeed.md
+        - name: Grafische Konfiguration von dxFeed
+          href: api/connectors/stock_market/dxfeed/graphical_configuration_dxfeed.md
+        - name: Initialisierung des Adapters dxFeed
+          href: api/connectors/stock_market/dxfeed/adapter_initialization_dxfeed.md
+      - name: Databento
+        href: api/connectors/stock_market/databento.md
+        items:
+        - name: Konfiguration des Konnektors Databento
+          href: api/connectors/stock_market/databento/configuration_databento.md
+        - name: Grafische Konfiguration von Databento
+          href: api/connectors/stock_market/databento/graphical_configuration_databento.md
+        - name: Initialisierung des Adapters Databento
+          href: api/connectors/stock_market/databento/adapter_initialization_databento.md
+      - name: Bloomberg BLPAPI and EMSX
+        href: api/connectors/stock_market/bloomberg.md
+        items:
+        - name: Konfiguration des Konnektors Bloomberg BLPAPI and EMSX
+          href: api/connectors/stock_market/bloomberg/configuration_bloomberg.md
+        - name: Grafische Konfiguration von Bloomberg BLPAPI and EMSX
+          href: api/connectors/stock_market/bloomberg/graphical_configuration_bloomberg.md
+        - name: Initialisierung des Adapters Bloomberg BLPAPI and EMSX
+          href: api/connectors/stock_market/bloomberg/adapter_initialization_bloomberg.md
+      - name: LSEG Real-Time
+        href: api/connectors/stock_market/lseg_real_time.md
+        items:
+        - name: Konfiguration des Konnektors LSEG Real-Time
+          href: api/connectors/stock_market/lseg_real_time/configuration_lseg_real_time.md
+        - name: Grafische Konfiguration von LSEG Real-Time
+          href: api/connectors/stock_market/lseg_real_time/graphical_configuration_lseg_real_time.md
+        - name: Initialisierung des Adapters LSEG Real-Time
+          href: api/connectors/stock_market/lseg_real_time/adapter_initialization_lseg_real_time.md
+      - name: Handelstechnologien
+        href: api/connectors/stock_market/trading_technologies.md
+        items:
+        - name: Konfiguration des Konnektors Handelstechnologien
+          href: api/connectors/stock_market/trading_technologies/configuration_trading_technologies.md
+        - name: Grafische Konfiguration von Handelstechnologien
+          href: api/connectors/stock_market/trading_technologies/graphical_configuration_trading_technologies.md
+        - name: Initialisierung des Adapters Handelstechnologien
+          href: api/connectors/stock_market/trading_technologies/adapter_initialization_trading_technologies.md
+      - name: QMT
+        href: api/connectors/stock_market/qmt.md
+        items:
+        - name: Konfiguration des Konnektors QMT
+          href: api/connectors/stock_market/qmt/configuration_qmt.md
+        - name: Grafische Konfiguration von QMT
+          href: api/connectors/stock_market/qmt/graphical_configuration_qmt.md
+        - name: Initialisierung des Adapters QMT
+          href: api/connectors/stock_market/qmt/adapter_initialization_qmt.md
+      - name: 5paisa Xstream
+        href: api/connectors/stock_market/fivepaisa.md
+        items:
+        - name: Konfiguration des Konnektors 5paisa Xstream
+          href: api/connectors/stock_market/fivepaisa/configuration_fivepaisa.md
+        - name: Grafische Konfiguration von 5paisa Xstream
+          href: api/connectors/stock_market/fivepaisa/graphical_configuration_fivepaisa.md
+        - name: Initialisierung des Adapters 5paisa Xstream
+          href: api/connectors/stock_market/fivepaisa/adapter_initialization_fivepaisa.md
+      - name: Motilal Oswal
+        href: api/connectors/stock_market/motilal_oswal.md
+        items:
+        - name: Konfiguration des Konnektors Motilal Oswal
+          href: api/connectors/stock_market/motilal_oswal/configuration_motilal_oswal.md
+        - name: Grafische Konfiguration von Motilal Oswal
+          href: api/connectors/stock_market/motilal_oswal/graphical_configuration_motilal_oswal.md
+        - name: Initialisierung des Adapters Motilal Oswal
+          href: api/connectors/stock_market/motilal_oswal/adapter_initialization_motilal_oswal.md
+      - name: Shoonya
+        href: api/connectors/stock_market/shoonya.md
+        items:
+        - name: Konfiguration des Konnektors Shoonya
+          href: api/connectors/stock_market/shoonya/configuration_shoonya.md
+        - name: Grafische Konfiguration von Shoonya
+          href: api/connectors/stock_market/shoonya/graphical_configuration_shoonya.md
+        - name: Initialisierung des Adapters Shoonya
+          href: api/connectors/stock_market/shoonya/adapter_initialization_shoonya.md
+      - name: Alice Blue
+        href: api/connectors/stock_market/alice_blue.md
+        items:
+        - name: Konfiguration des Konnektors Alice Blue
+          href: api/connectors/stock_market/alice_blue/configuration_alice_blue.md
+        - name: Grafische Konfiguration von Alice Blue
+          href: api/connectors/stock_market/alice_blue/graphical_configuration_alice_blue.md
+        - name: Initialisierung des Adapters Alice Blue
+          href: api/connectors/stock_market/alice_blue/adapter_initialization_alice_blue.md
+      - name: Flattrade
+        href: api/connectors/stock_market/flattrade.md
+        items:
+        - name: Konfiguration des Konnektors Flattrade
+          href: api/connectors/stock_market/flattrade/configuration_flattrade.md
+        - name: Grafische Konfiguration von Flattrade
+          href: api/connectors/stock_market/flattrade/graphical_configuration_flattrade.md
+        - name: Initialisierung des Adapters Flattrade
+          href: api/connectors/stock_market/flattrade/adapter_initialization_flattrade.md
+      - name: Fugle
+        href: api/connectors/stock_market/fugle.md
+        items:
+        - name: Konfiguration des Konnektors Fugle
+          href: api/connectors/stock_market/fugle/configuration_fugle.md
+        - name: Grafische Konfiguration von Fugle
+          href: api/connectors/stock_market/fugle/graphical_configuration_fugle.md
+        - name: Initialisierung des Adapters Fugle
+          href: api/connectors/stock_market/fugle/adapter_initialization_fugle.md
+      - name: SinoPac Shioaji
+        href: api/connectors/stock_market/shioaji.md
+        items:
+        - name: Konfiguration des Konnektors SinoPac Shioaji
+          href: api/connectors/stock_market/shioaji/configuration_shioaji.md
+        - name: Grafische Konfiguration von SinoPac Shioaji
+          href: api/connectors/stock_market/shioaji/graphical_configuration_shioaji.md
+        - name: Initialisierung des Adapters SinoPac Shioaji
+          href: api/connectors/stock_market/shioaji/adapter_initialization_shioaji.md
+      - name: Fubon Neo
+        href: api/connectors/stock_market/fubon_neo.md
+        items:
+        - name: Konfiguration des Konnektors Fubon Neo
+          href: api/connectors/stock_market/fubon_neo/configuration_fubon_neo.md
+        - name: Grafische Konfiguration von Fubon Neo
+          href: api/connectors/stock_market/fubon_neo/graphical_configuration_fubon_neo.md
+        - name: Initialisierung des Adapters Fubon Neo
+          href: api/connectors/stock_market/fubon_neo/adapter_initialization_fubon_neo.md
+      - name: Yuanta SPARK
+        href: api/connectors/stock_market/yuanta.md
+        items:
+        - name: Konfiguration des Konnektors Yuanta SPARK
+          href: api/connectors/stock_market/yuanta/configuration_yuanta.md
+        - name: Grafische Konfiguration von Yuanta SPARK
+          href: api/connectors/stock_market/yuanta/graphical_configuration_yuanta.md
+        - name: Initialisierung des Adapters Yuanta SPARK
+          href: api/connectors/stock_market/yuanta/adapter_initialization_yuanta.md
+      - name: Capital Futures
+        href: api/connectors/stock_market/capital_futures.md
+        items:
+        - name: Konfiguration des Konnektors Capital Futures
+          href: api/connectors/stock_market/capital_futures/configuration_capital_futures.md
+        - name: Grafische Konfiguration von Capital Futures
+          href: api/connectors/stock_market/capital_futures/graphical_configuration_capital_futures.md
+        - name: Initialisierung des Adapters Capital Futures
+          href: api/connectors/stock_market/capital_futures/adapter_initialization_capital_futures.md
+      - name: Daishin CYBOS Plus
+        href: api/connectors/stock_market/daishin.md
+        items:
+        - name: Konfiguration des Konnektors Daishin CYBOS Plus
+          href: api/connectors/stock_market/daishin/configuration_daishin.md
+        - name: Grafische Konfiguration von Daishin CYBOS Plus
+          href: api/connectors/stock_market/daishin/graphical_configuration_daishin.md
+        - name: Initialisierung des Adapters Daishin CYBOS Plus
+          href: api/connectors/stock_market/daishin/adapter_initialization_daishin.md
+      - name: Handel 212
+        href: api/connectors/stock_market/trading212.md
+        items:
+        - name: Konfiguration des Konnektors Handel 212
+          href: api/connectors/stock_market/trading212/configuration_trading212.md
+        - name: Grafische Konfiguration von Handel 212
+          href: api/connectors/stock_market/trading212/graphical_configuration_trading212.md
+        - name: Initialisierung des Adapters Handel 212
+          href: api/connectors/stock_market/trading212/adapter_initialization_trading212.md
+      - name: lemon.markets
+        href: api/connectors/stock_market/lemon_markets.md
+        items:
+        - name: Konfiguration des Konnektors lemon.markets
+          href: api/connectors/stock_market/lemon_markets/configuration_lemon_markets.md
+        - name: Grafische Konfiguration von lemon.markets
+          href: api/connectors/stock_market/lemon_markets/graphical_configuration_lemon_markets.md
+        - name: Initialisierung des Adapters lemon.markets
+          href: api/connectors/stock_market/lemon_markets/adapter_initialization_lemon_markets.md
+      - name: SnapTrade
+        href: api/connectors/stock_market/snaptrade.md
+        items:
+        - name: Konfiguration des Konnektors SnapTrade
+          href: api/connectors/stock_market/snaptrade/configuration_snaptrade.md
+        - name: Grafische Konfiguration von SnapTrade
+          href: api/connectors/stock_market/snaptrade/graphical_configuration_snaptrade.md
+        - name: Initialisierung des Adapters SnapTrade
+          href: api/connectors/stock_market/snaptrade/adapter_initialization_snaptrade.md
+      - name: OpenMarkets
+        href: api/connectors/stock_market/openmarkets.md
+        items:
+        - name: Konfiguration des Konnektors OpenMarkets
+          href: api/connectors/stock_market/openmarkets/configuration_openmarkets.md
+        - name: Grafische Konfiguration von OpenMarkets
+          href: api/connectors/stock_market/openmarkets/graphical_configuration_openmarkets.md
+        - name: Initialisierung des Adapters OpenMarkets
+          href: api/connectors/stock_market/openmarkets/adapter_initialization_openmarkets.md
       - name: TradeZero
         href: api/connectors/stock_market/tradezero.md
         items:
@@ -1127,6 +1408,8 @@
       - name: DukasCopy
         href: api/connectors/forex/dukascopy.md
         items:
+        - name: Konfiguration des Konnektors Dukascopy JForex
+          href: api/connectors/forex/dukascopy/configuration_dukascopy.md
         - name: Grafische Konfiguration von DukasCopy
           href: api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md
         - name: DukasCopy-Adapter initialisieren
@@ -1785,6 +2068,15 @@
           href: api/connectors/common/rss/graphical_configuration_rss.md
         - name: Adapterinitialisierung RSS
           href: api/connectors/common/rss/adapter_initialization_rss.md
+      - name: Sierra Chart DTC
+        href: api/connectors/common/sierra_chart_dtc.md
+        items:
+        - name: Konfiguration des Konnektors Sierra Chart DTC
+          href: api/connectors/common/sierra_chart_dtc/configuration_sierra_chart_dtc.md
+        - name: Grafische Konfiguration von Sierra Chart DTC
+          href: api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md
+        - name: Initialisierung des Adapters Sierra Chart DTC
+          href: api/connectors/common/sierra_chart_dtc/adapter_initialization_sierra_chart_dtc.md
     - name: Erstellen eines eigenen Connectors
       href: api/connectors/creating_own_connector.md
       items:
