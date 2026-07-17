@@ -1,22 +1,19 @@
-# Adapter initialization FXCM
+# Adapter initialization: FXCM
 
-The code below demonstrates how to initialize the [FxcmMessageAdapter](xref:StockSharp.Fxcm.FxcmMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).
+The following code shows how to initialize [FxcmMessageAdapter](xref:StockSharp.Fxcm.FxcmMessageAdapter) and add it to [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
-Connector Connector = new Connector();				
-...				
 var messageAdapter = new FxcmMessageAdapter(Connector.TransactionIdGenerator)
 {
-	Login = "<Your Login>",
-	Password = "<Your Password>".To<SecureString>(),
-	Address = "<Your Address>".To<Uri>(),
-	IsDemo = true
+	Token = "<value>".ToSecureString(),
+	IsDemo = true,
 };
+
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
 ```
 
-## Recommended content
+Replace the sample values with the parameters issued or configured for your account.
+
+## See also
 
 [Connection settings window](../../../graphical_user_interface/connection_settings_window.md)

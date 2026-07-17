@@ -1,3 +1,6 @@
-# Configuração FXCM
+# Configuração do conector: FXCM
 
-Para trabalhar com um conector, é necessário especificar o **nome de utilizador** e a **palavra-passe**. O **nome de utilizador** e a **palavra-passe** são fornecidos pelo broker. Para obter acesso à API, recomenda-se contactar o broker.
+Obtenha as credenciais junto do fornecedor e indique os parâmetros de conexão.
+
+- `Token` - credencial de autenticação.
+- `IsDemo` - interruptor que controla o comportamento do conector. Valor predefinido: `true`.

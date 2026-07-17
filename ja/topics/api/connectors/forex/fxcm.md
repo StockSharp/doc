@@ -1,21 +1,23 @@
 # FXCM
 
-**FXCM** - Forex 取引プラットフォームです。
+**FXCM** は StockSharp を公式の **FXCM REST and Socket.IO API** に接続します。
 
-現在の取引プラットフォーム向けに取引ロボットを書き始める前に、[コネクタ](../../connectors.md)のリンクを読むことをお勧めします。 
+このコネクターは、銘柄検索、市場データ、ポートフォリオ情報、注文操作に対応します。
 
-## 推奨コンテンツ
+取引ロボットを開発する前に、[コネクター](../../connectors.md) セクションの資料を確認してください。
 
-[コネクタ](../../connectors.md)
+## 関連項目
+
+[コネクター](../../connectors.md)
 
 [グラフィカル設定](../graphical_configuration.md)
 
 [設定の保存と読み込み](../save_and_load_settings.md)
 
-[独自コネクタの作成](../creating_own_connector.md)
+[独自コネクターの作成](../creating_own_connector.md)
 
 [注文管理](../../orders_management.md)
 
 [新規注文の作成](../../orders_management/create_new_order.md)
 
-[新規ストップ注文の作成](../../orders_management/create_new_stop_order.md)
+[ストップ注文の作成](../../orders_management/create_new_stop_order.md)

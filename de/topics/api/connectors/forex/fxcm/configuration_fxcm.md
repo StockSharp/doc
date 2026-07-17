@@ -1,3 +1,6 @@
-# FXCM-Konfiguration
+# Connector-Konfiguration: FXCM
 
-Um mit dem Connector zu arbeiten, müssen Sie **Benutzername** und **Passwort** angeben. **Benutzername** und **Passwort** werden vom Broker bereitgestellt. Um API-Zugriff zu erhalten, empfehlen wir, den Broker zu kontaktieren.
+Beziehen Sie die Zugangsdaten vom Anbieter und geben Sie die Verbindungsparameter an.
+
+- `Token` - Zugangsdaten für die Authentifizierung.
+- `IsDemo` - Schalter für das Verhalten des Konnektors. Standardwert: `true`.

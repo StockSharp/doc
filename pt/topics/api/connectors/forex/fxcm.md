@@ -1,21 +1,23 @@
 # FXCM
 
-**FXCM** - plataforma de negociação Forex.
+**FXCM** liga o StockSharp à interface oficial **FXCM REST and Socket.IO API**.
 
-Antes de começar a escrever robôs de negociação para a plataforma de negociação atual, recomenda-se ler as ligações em [Conectores](../../connectors.md). 
+O conector permite procurar instrumentos, receber dados de mercado, consultar a carteira e operar com ordens.
 
-## Conteúdo recomendado
+Antes de desenvolver robôs de negociação, consulte os materiais da secção [Conectores](../../connectors.md).
+
+## Consulte também
 
 [Conectores](../../connectors.md)
 
 [Configuração gráfica](../graphical_configuration.md)
 
-[Guardar e carregar definições](../save_and_load_settings.md)
+[Guardar e carregar configurações](../save_and_load_settings.md)
 
-[Criar o seu próprio conector](../creating_own_connector.md)
+[Criar um conector próprio](../creating_own_connector.md)
 
-[Gestão de Ordens](../../orders_management.md)
+[Gestão de ordens](../../orders_management.md)
 
-[Criar nova ordem](../../orders_management/create_new_order.md)
+[Criar uma ordem](../../orders_management/create_new_order.md)
 
-[Criar nova ordem stop](../../orders_management/create_new_stop_order.md)
+[Criar uma ordem stop](../../orders_management/create_new_stop_order.md)

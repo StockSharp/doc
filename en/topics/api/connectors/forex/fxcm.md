@@ -1,10 +1,12 @@
 # FXCM
 
-**FXCM** - Forex trading platform.
+**FXCM** connects StockSharp to the official **FXCM REST and Socket.IO API**.
 
-Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
+The connector supports instrument lookup, market data, portfolio information, and order operations.
 
-## Recommended content
+Before developing trading robots, review the materials in the [Connectors](../../connectors.md) section.
+
+## See also
 
 [Connectors](../../connectors.md)
 
