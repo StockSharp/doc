@@ -1056,6 +1056,69 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	}
 
 	[TestMethod]
+	public void AllConnectorDocumentationPagesAreIndexed()
+	{
+		var errors = new List<string>();
+		var contentLanguages = GetContentLanguages();
+
+		// Every connector overview page on disk must be reachable from the navigation (toc.yml) and listed in
+		// both aggregator tables (Designer connectors_settings.md and Hydra data_sources.md). Russia connectors
+		// are documented only in the Russian locale, so they are validated against ru instead of every language.
+		var categories = new (string Category, IReadOnlyList<string> Languages)[]
+		{
+			("common", contentLanguages),
+			("crypto_exchanges", contentLanguages),
+			("forex", contentLanguages),
+			("stock_market", contentLanguages),
+			("russia", new[] { "ru" }),
+		};
+
+		foreach (var (category, languages) in categories)
+		{
+			var defaultCategoryRoot = Path.Combine(_repoRoot, DefaultLanguage, "topics", "api", "connectors", category);
+			if (!Directory.Exists(defaultCategoryRoot))
+				continue;
+
+			// A connector documentation page is a "<name>.md" overview accompanied by a "<name>/" folder holding
+			// its detail pages (configuration, graphical configuration, and so on). Lone topic pages that merely
+			// live under a connector category but have no such folder (e.g. withdraw, fix_server, metatrader) are
+			// cross-cutting articles, not connectors, and are intentionally excluded.
+			var connectors = Directory.EnumerateFiles(defaultCategoryRoot, "*.md", SearchOption.TopDirectoryOnly)
+				.Select(Path.GetFileNameWithoutExtension)
+				.Where(name => Directory.Exists(Path.Combine(defaultCategoryRoot, name)))
+				.Order(StringComparer.OrdinalIgnoreCase)
+				.ToArray();
+
+			foreach (var lang in languages)
+			{
+				var topicsRoot = Path.Combine(_repoRoot, lang, "topics");
+				var tocPath = Path.Combine(topicsRoot, "toc.yml");
+				var designerPath = Path.Combine(topicsRoot, "designer", "connections_settings", "connectors_settings.md");
+				var hydraPath = Path.Combine(topicsRoot, "hydra", "data_sources.md");
+				var toc = ReadAllText(tocPath);
+				var designer = ReadAllText(designerPath);
+				var hydra = ReadAllText(hydraPath);
+
+				foreach (var connector in connectors)
+				{
+					var overview = $"api/connectors/{category}/{connector}.md";
+
+					if (!toc.Contains(overview, StringComparison.Ordinal))
+						errors.Add($"{RelativeToRepo(tocPath)} must index the '{category}/{connector}' connector. Missing: {overview}.");
+
+					foreach (var (path, content) in new[] { (designerPath, designer), (hydraPath, hydra) })
+					{
+						if (!content.Contains(overview, StringComparison.Ordinal))
+							errors.Add($"{RelativeToRepo(path)} must list the '{category}/{connector}' connector. Missing: {overview}.");
+					}
+				}
+			}
+		}
+
+		AssertNoErrors(errors);
+	}
+
+	[TestMethod]
 	public void LocalizedTocFilesMatchDefaultStructure()
 	{
 		var errors = new List<string>();
