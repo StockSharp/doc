@@ -704,685 +704,695 @@
       href: api/connectors/graphical_configuration.md
     - name: Stock market
       items:
-      - name: Alpaca
-        href: api/connectors/stock_market/alpaca.md
-        items:
-        - name: Configuration Alpaca
-          href: api/connectors/stock_market/alpaca/configuration_alpaca.md
-        - name: Graphical configuration Alpaca
-          href: api/connectors/stock_market/alpaca/graphical_configuration_alpaca.md
-        - name: Adapter initialization Alpaca
-          href: api/connectors/stock_market/alpaca/adapter_initialization_alpaca.md
-      - name: AlphaVantage
-        href: api/connectors/stock_market/alphavantage.md
-        items:
-        - name: Configuration AlphaVantage
-          href: api/connectors/stock_market/alphavantage/configuration_alphavantage.md
-        - name: Graphical configuration AlphaVantage
-          href: api/connectors/stock_market/alphavantage/graphical_configuration_alphavantage.md
-        - name: Adapter initialization AlphaVantage
-          href: api/connectors/stock_market/alphavantage/adapter_initialization_alphavantage.md
-      - name: BarChart
-        href: api/connectors/stock_market/barchart.md
-        items:
-        - name: Configuration BarChart
-          href: api/connectors/stock_market/barchart/configuration_barchart.md
-        - name: Graphical configuration BarChart
-          href: api/connectors/stock_market/barchart/graphical_configuration_barchart.md
-        - name: Adapter initialization BarChart
-          href: api/connectors/stock_market/barchart/adapter_initialization_barchart.md
-      - name: Blackwood (Fusion)
-        href: api/connectors/stock_market/blackwood_fusion.md
-        items:
-        - name: Configuration Blackwood (Fusion)
-          href: api/connectors/stock_market/blackwood_fusion/configuration_blackwood_fusion.md
-        - name: Graphical configuration Blackwood (Fusion)
-          href: api/connectors/stock_market/blackwood_fusion/graphical_configuration_blackwood_fusion.md
-        - name: Adapter initialization Blackwood (Fusion)
-          href: api/connectors/stock_market/blackwood_fusion/adapter_initialization_blackwood_fusion.md
-      - name: CQG
-        href: api/connectors/stock_market/cqg.md
-        items:
-        - name: Configuration CQG
-          href: api/connectors/stock_market/cqg/configuration_cqg.md
-        - name: Graphical configuration CQG COM
-          href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
-        - name: Graphical configuration CQG Continuum
-          href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
-        - name: Adapter initialization CQG
-          href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
-      - name: E*TRADE
-        href: api/connectors/stock_market/e_trade.md
-        items:
-        - name: Configuration E*TRADE
-          href: api/connectors/stock_market/e_trade/configuration_e_trade.md
-        - name: Graphical configuration E*TRADE
-          href: api/connectors/stock_market/e_trade/graphical_configuration_e_trade.md
-        - name: Adapter initialization E*TRADE
-          href: api/connectors/stock_market/e_trade/adapter_initialization_e_trade.md
-      - name: IEX
-        href: api/connectors/stock_market/iex.md
-        items:
-        - name: Configuration IEX
-          href: api/connectors/stock_market/iex/configuration_iex.md
-        - name: Graphical configuration IEX
-          href: api/connectors/stock_market/iex/graphical_configuration_iex.md
-        - name: Adapter initialization IEX
-          href: api/connectors/stock_market/iex/adapter_initialization_iex.md
-      - name: Interactive Brokers
-        href: api/connectors/stock_market/interactive_brokers.md
-        items:
-        - name: Graphical configuration Interactive Brokers
-          href: api/connectors/stock_market/interactive_brokers/graphical_configuration_interactive_brokers.md
-        - name: Adapter initialization Interactive Brokers
-          href: api/connectors/stock_market/interactive_brokers/adapter_initialization_interactive_brokers.md
-      - name: IQFeed
-        href: api/connectors/stock_market/iqfeed.md
-        items:
-        - name: IQFeed connector configuration
-          href: api/connectors/stock_market/iqfeed/configuration_iqfeed.md
-        - name: Connection IQFeed
-          href: api/connectors/stock_market/iqfeed/connection_iqfeed.md
-        - name: Graphical configuration IQFeed
-          href: api/connectors/stock_market/iqfeed/graphical_configuration_iqfeed.md
-        - name: Adapter initialization IQFeed
-          href: api/connectors/stock_market/iqfeed/adapter_initialization_iqfeed.md
-      - name: ITCH
-        href: api/connectors/stock_market/itch.md
-        items:
-        - name: Configuration ITCH
-          href: api/connectors/stock_market/itch/configuration_itch.md
-        - name: Graphical configuration ITCH
-          href: api/connectors/stock_market/itch/graphical_configuration_itch.md
-        - name: Adapter initialization ITCH
-          href: api/connectors/stock_market/itch/adapter_initialization_itch.md
-      - name: OpenECry
-        href: api/connectors/stock_market/openecry.md
-        items:
-        - name: Configuration OpenECry
-          href: api/connectors/stock_market/openecry/configuration_openecry.md
-        - name: Graphical configuration OpenECry
-          href: api/connectors/stock_market/openecry/graphical_configuration_openecry.md
-        - name: Adapter initialization OpenECry
-          href: api/connectors/stock_market/openecry/adapter_initialization_openecry.md
-        - name: Several algorithms connection
-          href: api/connectors/stock_market/openecry/several_algorithms_connection.md
-        - name: Simultaneous terminal and algorithm operation
-          href: api/connectors/stock_market/openecry/simultaneous_terminal_and_algorithm_operation.md
-      - name: PolygonIO
-        href: api/connectors/stock_market/polygonio.md
-        items:
-        - name: Configuration PolygonIO
-          href: api/connectors/stock_market/polygonio/configuration_polygonio.md
-        - name: Graphical configuration PolygonIO
-          href: api/connectors/stock_market/polygonio/graphical_configuration_polygonio.md
-        - name: Adapter initialization PolygonIO
-          href: api/connectors/stock_market/polygonio/adapter_initialization_polygonio.md
-      - name: Quandl
-        href: api/connectors/stock_market/quandl.md
-        items:
-        - name: Configuration Quandl
-          href: api/connectors/stock_market/quandl/configuration_quandl.md
-        - name: Graphical configuration Quandl
-          href: api/connectors/stock_market/quandl/graphical_configuration_quandl.md
-        - name: Adapter initialization Quandl
-          href: api/connectors/stock_market/quandl/adapter_initialization_quandl.md
-      - name: QuantFEED
-        href: api/connectors/stock_market/quantfeed.md
-        items:
-        - name: Configuration QuantFEED
-          href: api/connectors/stock_market/quantfeed/configuration_quantfeed.md
-        - name: Graphical configuration QuantFEED
-          href: api/connectors/stock_market/quantfeed/graphical_configuration_quantfeed.md
-        - name: Adapter initialization QuantFEED
-          href: api/connectors/stock_market/quantfeed/adapter_initialization_quantfeed.md
-      - name: Rithmic
-        href: api/connectors/stock_market/rithmic.md
-        items:
-        - name: Configuration Rithmic
-          href: api/connectors/stock_market/rithmic/configuration_rithmic.md
-        - name: Graphical configuration Rithmic
-          href: api/connectors/stock_market/rithmic/graphical_configuration_rithmic.md
-        - name: Adapter initialization Rithmic
-          href: api/connectors/stock_market/rithmic/adapter_initialization_rithmic.md
-      - name: Charles Schwab
-        href: api/connectors/stock_market/schwab.md
-        items:
-        - name: Charles Schwab connector configuration
-          href: api/connectors/stock_market/schwab/configuration_schwab.md
-        - name: Charles Schwab graphical configuration
-          href: api/connectors/stock_market/schwab/graphical_configuration_schwab.md
-        - name: Charles Schwab adapter initialization
-          href: api/connectors/stock_market/schwab/adapter_initialization_schwab.md
-      - name: Sterling
-        href: api/connectors/stock_market/sterling.md
-        items:
-        - name: Configuration Sterling
-          href: api/connectors/stock_market/sterling/configuration_sterling.md
-        - name: Graphical configuration Sterling
-          href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
-        - name: Adapter initialization Sterling
-          href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
-      - name: TradeStation
-        href: api/connectors/stock_market/tradestation.md
-        items:
-        - name: TradeStation connector configuration
-          href: api/connectors/stock_market/tradestation/configuration_tradestation.md
-        - name: TradeStation graphical configuration
-          href: api/connectors/stock_market/tradestation/graphical_configuration_tradestation.md
-        - name: TradeStation adapter initialization
-          href: api/connectors/stock_market/tradestation/adapter_initialization_tradestation.md
-      - name: Robinhood
-        href: api/connectors/stock_market/robinhood.md
-        items:
-        - name: Robinhood connector configuration
-          href: api/connectors/stock_market/robinhood/configuration_robinhood.md
-        - name: Robinhood graphical configuration
-          href: api/connectors/stock_market/robinhood/graphical_configuration_robinhood.md
-        - name: Robinhood adapter initialization
-          href: api/connectors/stock_market/robinhood/adapter_initialization_robinhood.md
-      - name: tastytrade
-        href: api/connectors/stock_market/tastytrade.md
-        items:
-        - name: tastytrade connector configuration
-          href: api/connectors/stock_market/tastytrade/configuration_tastytrade.md
-        - name: tastytrade graphical configuration
-          href: api/connectors/stock_market/tastytrade/graphical_configuration_tastytrade.md
-        - name: tastytrade adapter initialization
-          href: api/connectors/stock_market/tastytrade/adapter_initialization_tastytrade.md
-      - name: Public.com
-        href: api/connectors/stock_market/public.md
-        items:
-        - name: Public.com connector configuration
-          href: api/connectors/stock_market/public/configuration_public.md
-        - name: Public.com graphical configuration
-          href: api/connectors/stock_market/public/graphical_configuration_public.md
-        - name: Public.com adapter initialization
-          href: api/connectors/stock_market/public/adapter_initialization_public.md
-      - name: Moomoo
-        href: api/connectors/stock_market/moomoo.md
-        items:
-        - name: Moomoo connector configuration
-          href: api/connectors/stock_market/moomoo/configuration_moomoo.md
-        - name: Moomoo graphical configuration
-          href: api/connectors/stock_market/moomoo/graphical_configuration_moomoo.md
-        - name: Moomoo adapter initialization
-          href: api/connectors/stock_market/moomoo/adapter_initialization_moomoo.md
-      - name: NinjaTrader
-        href: api/connectors/stock_market/ninjatrader.md
-        items:
-        - name: NinjaTrader connector configuration
-          href: api/connectors/stock_market/ninjatrader/configuration_ninjatrader.md
-        - name: NinjaTrader graphical configuration
-          href: api/connectors/stock_market/ninjatrader/graphical_configuration_ninjatrader.md
-        - name: NinjaTrader adapter initialization
-          href: api/connectors/stock_market/ninjatrader/adapter_initialization_ninjatrader.md
-      - name: Lime Trader
-        href: api/connectors/stock_market/lime.md
-        items:
-        - name: Lime Trader connector configuration
-          href: api/connectors/stock_market/lime/configuration_lime.md
-        - name: Lime Trader graphical configuration
-          href: api/connectors/stock_market/lime/graphical_configuration_lime.md
-        - name: Lime Trader adapter initialization
-          href: api/connectors/stock_market/lime/adapter_initialization_lime.md
-      - name: Upstox
-        href: api/connectors/stock_market/upstox.md
-        items:
-        - name: Upstox connector configuration
-          href: api/connectors/stock_market/upstox/configuration_upstox.md
-        - name: Upstox graphical configuration
-          href: api/connectors/stock_market/upstox/graphical_configuration_upstox.md
-        - name: Upstox adapter initialization
-          href: api/connectors/stock_market/upstox/adapter_initialization_upstox.md
-      - name: Zhongtai XTP
-        href: api/connectors/stock_market/xtp.md
-        items:
-        - name: Zhongtai XTP connector configuration
-          href: api/connectors/stock_market/xtp/configuration_xtp.md
-        - name: Zhongtai XTP graphical configuration
-          href: api/connectors/stock_market/xtp/graphical_configuration_xtp.md
-        - name: Zhongtai XTP adapter initialization
-          href: api/connectors/stock_market/xtp/adapter_initialization_xtp.md
-      - name: Angel One
-        href: api/connectors/stock_market/angelone.md
-        items:
-        - name: Angel One connector configuration
-          href: api/connectors/stock_market/angelone/configuration_angelone.md
-        - name: Angel One graphical configuration
-          href: api/connectors/stock_market/angelone/graphical_configuration_angelone.md
-        - name: Angel One adapter initialization
-          href: api/connectors/stock_market/angelone/adapter_initialization_angelone.md
-      - name: DhanHQ
-        href: api/connectors/stock_market/dhan.md
-        items:
-        - name: DhanHQ connector configuration
-          href: api/connectors/stock_market/dhan/configuration_dhan.md
-        - name: DhanHQ graphical configuration
-          href: api/connectors/stock_market/dhan/graphical_configuration_dhan.md
-        - name: DhanHQ adapter initialization
-          href: api/connectors/stock_market/dhan/adapter_initialization_dhan.md
-      - name: FYERS
-        href: api/connectors/stock_market/fyers.md
-        items:
-        - name: FYERS connector configuration
-          href: api/connectors/stock_market/fyers/configuration_fyers.md
-        - name: FYERS graphical configuration
-          href: api/connectors/stock_market/fyers/graphical_configuration_fyers.md
-        - name: FYERS adapter initialization
-          href: api/connectors/stock_market/fyers/adapter_initialization_fyers.md
-      - name: ICICI Direct Breeze
-        href: api/connectors/stock_market/breeze.md
-        items:
-        - name: ICICI Direct Breeze connector configuration
-          href: api/connectors/stock_market/breeze/configuration_breeze.md
-        - name: ICICI Direct Breeze graphical configuration
-          href: api/connectors/stock_market/breeze/graphical_configuration_breeze.md
-        - name: ICICI Direct Breeze adapter initialization
-          href: api/connectors/stock_market/breeze/adapter_initialization_breeze.md
-      - name: CTP
-        href: api/connectors/stock_market/ctp.md
-        items:
-        - name: CTP connector configuration
-          href: api/connectors/stock_market/ctp/configuration_ctp.md
-        - name: CTP graphical configuration
-          href: api/connectors/stock_market/ctp/graphical_configuration_ctp.md
-        - name: CTP adapter initialization
-          href: api/connectors/stock_market/ctp/adapter_initialization_ctp.md
-      - name: Kotak Neo
-        href: api/connectors/stock_market/kotak_neo.md
-        items:
-        - name: Kotak Neo connector configuration
-          href: api/connectors/stock_market/kotak_neo/configuration_kotak_neo.md
-        - name: Kotak Neo graphical configuration
-          href: api/connectors/stock_market/kotak_neo/graphical_configuration_kotak_neo.md
-        - name: Kotak Neo adapter initialization
-          href: api/connectors/stock_market/kotak_neo/adapter_initialization_kotak_neo.md
-      - name: Tiger Brokers
-        href: api/connectors/stock_market/tiger_brokers.md
-        items:
-        - name: Tiger Brokers connector configuration
-          href: api/connectors/stock_market/tiger_brokers/configuration_tiger_brokers.md
-        - name: Tiger Brokers graphical configuration
-          href: api/connectors/stock_market/tiger_brokers/graphical_configuration_tiger_brokers.md
-        - name: Tiger Brokers adapter initialization
-          href: api/connectors/stock_market/tiger_brokers/adapter_initialization_tiger_brokers.md
-      - name: Saxo OpenAPI
-        href: api/connectors/stock_market/saxo.md
-        items:
-        - name: Saxo OpenAPI connector configuration
-          href: api/connectors/stock_market/saxo/configuration_saxo.md
-        - name: Saxo OpenAPI graphical configuration
-          href: api/connectors/stock_market/saxo/graphical_configuration_saxo.md
-        - name: Saxo OpenAPI adapter initialization
-          href: api/connectors/stock_market/saxo/adapter_initialization_saxo.md
-      - name: Questrade
-        href: api/connectors/stock_market/questrade.md
-        items:
-        - name: Questrade connector configuration
-          href: api/connectors/stock_market/questrade/configuration_questrade.md
-        - name: Questrade graphical configuration
-          href: api/connectors/stock_market/questrade/graphical_configuration_questrade.md
-        - name: Questrade adapter initialization
-          href: api/connectors/stock_market/questrade/adapter_initialization_questrade.md
-      - name: Longbridge OpenAPI
-        href: api/connectors/stock_market/longbridge.md
-        items:
-        - name: Longbridge OpenAPI connector configuration
-          href: api/connectors/stock_market/longbridge/configuration_longbridge.md
-        - name: Longbridge OpenAPI graphical configuration
-          href: api/connectors/stock_market/longbridge/graphical_configuration_longbridge.md
-        - name: Longbridge OpenAPI adapter initialization
-          href: api/connectors/stock_market/longbridge/adapter_initialization_longbridge.md
-      - name: CQG Web API
-        href: api/connectors/stock_market/cqg_web_api.md
-        items:
-        - name: CQG Web API connector configuration
-          href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
-        - name: CQG Web API graphical configuration
-          href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
-        - name: CQG Web API adapter initialization
-          href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
-      - name: IG Markets
-        href: api/connectors/stock_market/ig.md
-        items:
-        - name: IG Markets connector configuration
-          href: api/connectors/stock_market/ig/configuration_ig.md
-        - name: IG Markets graphical configuration
-          href: api/connectors/stock_market/ig/graphical_configuration_ig.md
-        - name: IG Markets adapter initialization
-          href: api/connectors/stock_market/ig/adapter_initialization_ig.md
-      - name: eToro
-        href: api/connectors/stock_market/etoro.md
-        items:
-        - name: eToro connector configuration
-          href: api/connectors/stock_market/etoro/configuration_etoro.md
-        - name: eToro graphical configuration
-          href: api/connectors/stock_market/etoro/graphical_configuration_etoro.md
-        - name: eToro adapter initialization
-          href: api/connectors/stock_market/etoro/adapter_initialization_etoro.md
-      - name: Korea Investment & Securities
-        href: api/connectors/stock_market/korea_investment.md
-        items:
-        - name: Korea Investment & Securities connector configuration
-          href: api/connectors/stock_market/korea_investment/configuration_korea_investment.md
-        - name: Korea Investment & Securities graphical configuration
-          href: api/connectors/stock_market/korea_investment/graphical_configuration_korea_investment.md
-        - name: Korea Investment & Securities adapter initialization
-          href: api/connectors/stock_market/korea_investment/adapter_initialization_korea_investment.md
-      - name: Kiwoom
-        href: api/connectors/stock_market/kiwoom.md
-        items:
-        - name: Kiwoom connector configuration
-          href: api/connectors/stock_market/kiwoom/configuration_kiwoom.md
-        - name: Kiwoom graphical configuration
-          href: api/connectors/stock_market/kiwoom/graphical_configuration_kiwoom.md
-        - name: Kiwoom adapter initialization
-          href: api/connectors/stock_market/kiwoom/adapter_initialization_kiwoom.md
-      - name: Groww
-        href: api/connectors/stock_market/groww.md
-        items:
-        - name: Groww connector configuration
-          href: api/connectors/stock_market/groww/configuration_groww.md
-        - name: Groww graphical configuration
-          href: api/connectors/stock_market/groww/graphical_configuration_groww.md
-        - name: Groww adapter initialization
-          href: api/connectors/stock_market/groww/adapter_initialization_groww.md
-      - name: kabu Station
-        href: api/connectors/stock_market/kabu_station.md
-        items:
-        - name: kabu Station connector configuration
-          href: api/connectors/stock_market/kabu_station/configuration_kabu_station.md
-        - name: kabu Station graphical configuration
-          href: api/connectors/stock_market/kabu_station/graphical_configuration_kabu_station.md
-        - name: kabu Station adapter initialization
-          href: api/connectors/stock_market/kabu_station/adapter_initialization_kabu_station.md
-      - name: Capital.com
-        href: api/connectors/stock_market/capitalcom.md
-        items:
-        - name: Capital.com connector configuration
-          href: api/connectors/stock_market/capitalcom/configuration_capitalcom.md
-        - name: Capital.com graphical configuration
-          href: api/connectors/stock_market/capitalcom/graphical_configuration_capitalcom.md
-        - name: Capital.com adapter initialization
-          href: api/connectors/stock_market/capitalcom/adapter_initialization_capitalcom.md
-      - name: Zerodha Kite Connect
-        href: api/connectors/stock_market/zerodha.md
-        items:
-        - name: Zerodha Kite Connect connector configuration
-          href: api/connectors/stock_market/zerodha/configuration_zerodha.md
-        - name: Zerodha Kite Connect graphical configuration
-          href: api/connectors/stock_market/zerodha/graphical_configuration_zerodha.md
-        - name: Zerodha Kite Connect adapter initialization
-          href: api/connectors/stock_market/zerodha/adapter_initialization_zerodha.md
-      - name: LS Securities
-        href: api/connectors/stock_market/ls_securities.md
-        items:
-        - name: LS Securities connector configuration
-          href: api/connectors/stock_market/ls_securities/configuration_ls_securities.md
-        - name: LS Securities graphical configuration
-          href: api/connectors/stock_market/ls_securities/graphical_configuration_ls_securities.md
-        - name: LS Securities adapter initialization
-          href: api/connectors/stock_market/ls_securities/adapter_initialization_ls_securities.md
-      - name: Mirae Asset Sharekhan
-        href: api/connectors/stock_market/mirae_asset_sharekhan.md
-        items:
-        - name: Mirae Asset Sharekhan connector configuration
-          href: api/connectors/stock_market/mirae_asset_sharekhan/configuration_mirae_asset_sharekhan.md
-        - name: Mirae Asset Sharekhan graphical configuration
-          href: api/connectors/stock_market/mirae_asset_sharekhan/graphical_configuration_mirae_asset_sharekhan.md
-        - name: Mirae Asset Sharekhan adapter initialization
-          href: api/connectors/stock_market/mirae_asset_sharekhan/adapter_initialization_mirae_asset_sharekhan.md
-      - name: Swissquote OpenWealth
-        href: api/connectors/stock_market/swissquote.md
-        items:
-        - name: Swissquote OpenWealth connector configuration
-          href: api/connectors/stock_market/swissquote/configuration_swissquote.md
-        - name: Swissquote OpenWealth graphical configuration
-          href: api/connectors/stock_market/swissquote/graphical_configuration_swissquote.md
-        - name: Swissquote OpenWealth adapter initialization
-          href: api/connectors/stock_market/swissquote/adapter_initialization_swissquote.md
-      - name: dxFeed
-        href: api/connectors/stock_market/dxfeed.md
-        items:
-        - name: dxFeed connector configuration
-          href: api/connectors/stock_market/dxfeed/configuration_dxfeed.md
-        - name: dxFeed graphical configuration
-          href: api/connectors/stock_market/dxfeed/graphical_configuration_dxfeed.md
-        - name: dxFeed adapter initialization
-          href: api/connectors/stock_market/dxfeed/adapter_initialization_dxfeed.md
-      - name: Databento
-        href: api/connectors/stock_market/databento.md
-        items:
-        - name: Databento connector configuration
-          href: api/connectors/stock_market/databento/configuration_databento.md
-        - name: Databento graphical configuration
-          href: api/connectors/stock_market/databento/graphical_configuration_databento.md
-        - name: Databento adapter initialization
-          href: api/connectors/stock_market/databento/adapter_initialization_databento.md
-      - name: Bloomberg BLPAPI and EMSX
-        href: api/connectors/stock_market/bloomberg.md
-        items:
-        - name: Bloomberg BLPAPI and EMSX connector configuration
-          href: api/connectors/stock_market/bloomberg/configuration_bloomberg.md
-        - name: Bloomberg BLPAPI and EMSX graphical configuration
-          href: api/connectors/stock_market/bloomberg/graphical_configuration_bloomberg.md
-        - name: Bloomberg BLPAPI and EMSX adapter initialization
-          href: api/connectors/stock_market/bloomberg/adapter_initialization_bloomberg.md
-      - name: LSEG Real-Time
-        href: api/connectors/stock_market/lseg_real_time.md
-        items:
-        - name: LSEG Real-Time connector configuration
-          href: api/connectors/stock_market/lseg_real_time/configuration_lseg_real_time.md
-        - name: LSEG Real-Time graphical configuration
-          href: api/connectors/stock_market/lseg_real_time/graphical_configuration_lseg_real_time.md
-        - name: LSEG Real-Time adapter initialization
-          href: api/connectors/stock_market/lseg_real_time/adapter_initialization_lseg_real_time.md
-      - name: Trading Technologies
-        href: api/connectors/stock_market/trading_technologies.md
-        items:
-        - name: Trading Technologies connector configuration
-          href: api/connectors/stock_market/trading_technologies/configuration_trading_technologies.md
-        - name: Trading Technologies graphical configuration
-          href: api/connectors/stock_market/trading_technologies/graphical_configuration_trading_technologies.md
-        - name: Trading Technologies adapter initialization
-          href: api/connectors/stock_market/trading_technologies/adapter_initialization_trading_technologies.md
-      - name: QMT
-        href: api/connectors/stock_market/qmt.md
-        items:
-        - name: QMT connector configuration
-          href: api/connectors/stock_market/qmt/configuration_qmt.md
-        - name: QMT graphical configuration
-          href: api/connectors/stock_market/qmt/graphical_configuration_qmt.md
-        - name: QMT adapter initialization
-          href: api/connectors/stock_market/qmt/adapter_initialization_qmt.md
-      - name: 5paisa Xstream
-        href: api/connectors/stock_market/fivepaisa.md
-        items:
-        - name: 5paisa Xstream connector configuration
-          href: api/connectors/stock_market/fivepaisa/configuration_fivepaisa.md
-        - name: 5paisa Xstream graphical configuration
-          href: api/connectors/stock_market/fivepaisa/graphical_configuration_fivepaisa.md
-        - name: 5paisa Xstream adapter initialization
-          href: api/connectors/stock_market/fivepaisa/adapter_initialization_fivepaisa.md
-      - name: Motilal Oswal
-        href: api/connectors/stock_market/motilal_oswal.md
-        items:
-        - name: Motilal Oswal connector configuration
-          href: api/connectors/stock_market/motilal_oswal/configuration_motilal_oswal.md
-        - name: Motilal Oswal graphical configuration
-          href: api/connectors/stock_market/motilal_oswal/graphical_configuration_motilal_oswal.md
-        - name: Motilal Oswal adapter initialization
-          href: api/connectors/stock_market/motilal_oswal/adapter_initialization_motilal_oswal.md
-      - name: Shoonya
-        href: api/connectors/stock_market/shoonya.md
-        items:
-        - name: Shoonya connector configuration
-          href: api/connectors/stock_market/shoonya/configuration_shoonya.md
-        - name: Shoonya graphical configuration
-          href: api/connectors/stock_market/shoonya/graphical_configuration_shoonya.md
-        - name: Shoonya adapter initialization
-          href: api/connectors/stock_market/shoonya/adapter_initialization_shoonya.md
-      - name: Alice Blue
-        href: api/connectors/stock_market/alice_blue.md
-        items:
-        - name: Alice Blue connector configuration
-          href: api/connectors/stock_market/alice_blue/configuration_alice_blue.md
-        - name: Alice Blue graphical configuration
-          href: api/connectors/stock_market/alice_blue/graphical_configuration_alice_blue.md
-        - name: Alice Blue adapter initialization
-          href: api/connectors/stock_market/alice_blue/adapter_initialization_alice_blue.md
-      - name: Flattrade
-        href: api/connectors/stock_market/flattrade.md
-        items:
-        - name: Flattrade connector configuration
-          href: api/connectors/stock_market/flattrade/configuration_flattrade.md
-        - name: Flattrade graphical configuration
-          href: api/connectors/stock_market/flattrade/graphical_configuration_flattrade.md
-        - name: Flattrade adapter initialization
-          href: api/connectors/stock_market/flattrade/adapter_initialization_flattrade.md
-      - name: Fugle
-        href: api/connectors/stock_market/fugle.md
-        items:
-        - name: Fugle connector configuration
-          href: api/connectors/stock_market/fugle/configuration_fugle.md
-        - name: Fugle graphical configuration
-          href: api/connectors/stock_market/fugle/graphical_configuration_fugle.md
-        - name: Fugle adapter initialization
-          href: api/connectors/stock_market/fugle/adapter_initialization_fugle.md
-      - name: SinoPac Shioaji
-        href: api/connectors/stock_market/shioaji.md
-        items:
-        - name: SinoPac Shioaji connector configuration
-          href: api/connectors/stock_market/shioaji/configuration_shioaji.md
-        - name: SinoPac Shioaji graphical configuration
-          href: api/connectors/stock_market/shioaji/graphical_configuration_shioaji.md
-        - name: SinoPac Shioaji adapter initialization
-          href: api/connectors/stock_market/shioaji/adapter_initialization_shioaji.md
-      - name: Fubon Neo
-        href: api/connectors/stock_market/fubon_neo.md
-        items:
-        - name: Fubon Neo connector configuration
-          href: api/connectors/stock_market/fubon_neo/configuration_fubon_neo.md
-        - name: Fubon Neo graphical configuration
-          href: api/connectors/stock_market/fubon_neo/graphical_configuration_fubon_neo.md
-        - name: Fubon Neo adapter initialization
-          href: api/connectors/stock_market/fubon_neo/adapter_initialization_fubon_neo.md
-      - name: Yuanta SPARK
-        href: api/connectors/stock_market/yuanta.md
-        items:
-        - name: Yuanta SPARK connector configuration
-          href: api/connectors/stock_market/yuanta/configuration_yuanta.md
-        - name: Yuanta SPARK graphical configuration
-          href: api/connectors/stock_market/yuanta/graphical_configuration_yuanta.md
-        - name: Yuanta SPARK adapter initialization
-          href: api/connectors/stock_market/yuanta/adapter_initialization_yuanta.md
-      - name: Capital Futures
-        href: api/connectors/stock_market/capital_futures.md
-        items:
-        - name: Capital Futures connector configuration
-          href: api/connectors/stock_market/capital_futures/configuration_capital_futures.md
-        - name: Capital Futures graphical configuration
-          href: api/connectors/stock_market/capital_futures/graphical_configuration_capital_futures.md
-        - name: Capital Futures adapter initialization
-          href: api/connectors/stock_market/capital_futures/adapter_initialization_capital_futures.md
-      - name: Daishin CYBOS Plus
-        href: api/connectors/stock_market/daishin.md
-        items:
-        - name: Daishin CYBOS Plus connector configuration
-          href: api/connectors/stock_market/daishin/configuration_daishin.md
-        - name: Daishin CYBOS Plus graphical configuration
-          href: api/connectors/stock_market/daishin/graphical_configuration_daishin.md
-        - name: Daishin CYBOS Plus adapter initialization
-          href: api/connectors/stock_market/daishin/adapter_initialization_daishin.md
-      - name: Trading 212
-        href: api/connectors/stock_market/trading212.md
-        items:
-        - name: Trading 212 connector configuration
-          href: api/connectors/stock_market/trading212/configuration_trading212.md
-        - name: Trading 212 graphical configuration
-          href: api/connectors/stock_market/trading212/graphical_configuration_trading212.md
-        - name: Trading 212 adapter initialization
-          href: api/connectors/stock_market/trading212/adapter_initialization_trading212.md
-      - name: lemon.markets
-        href: api/connectors/stock_market/lemon_markets.md
-        items:
-        - name: lemon.markets connector configuration
-          href: api/connectors/stock_market/lemon_markets/configuration_lemon_markets.md
-        - name: lemon.markets graphical configuration
-          href: api/connectors/stock_market/lemon_markets/graphical_configuration_lemon_markets.md
-        - name: lemon.markets adapter initialization
-          href: api/connectors/stock_market/lemon_markets/adapter_initialization_lemon_markets.md
-      - name: SnapTrade
-        href: api/connectors/stock_market/snaptrade.md
-        items:
-        - name: SnapTrade connector configuration
-          href: api/connectors/stock_market/snaptrade/configuration_snaptrade.md
-        - name: SnapTrade graphical configuration
-          href: api/connectors/stock_market/snaptrade/graphical_configuration_snaptrade.md
-        - name: SnapTrade adapter initialization
-          href: api/connectors/stock_market/snaptrade/adapter_initialization_snaptrade.md
-      - name: OpenMarkets
-        href: api/connectors/stock_market/openmarkets.md
-        items:
-        - name: OpenMarkets connector configuration
-          href: api/connectors/stock_market/openmarkets/configuration_openmarkets.md
-        - name: OpenMarkets graphical configuration
-          href: api/connectors/stock_market/openmarkets/graphical_configuration_openmarkets.md
-        - name: OpenMarkets adapter initialization
-          href: api/connectors/stock_market/openmarkets/adapter_initialization_openmarkets.md
-      - name: TradeZero
-        href: api/connectors/stock_market/tradezero.md
-        items:
-        - name: TradeZero connector configuration
-          href: api/connectors/stock_market/tradezero/configuration_tradezero.md
-        - name: TradeZero graphical configuration
-          href: api/connectors/stock_market/tradezero/graphical_configuration_tradezero.md
-        - name: TradeZero adapter initialization
-          href: api/connectors/stock_market/tradezero/adapter_initialization_tradezero.md
-      - name: Tradier
-        href: api/connectors/stock_market/tradier.md
-        items:
-        - name: Configuration Tradier
-          href: api/connectors/stock_market/tradier/configuration_tradier.md
-        - name: Graphical configuration Tradier
-          href: api/connectors/stock_market/tradier/graphical_configuration_tradier.md
-        - name: Adapter initialization Tradier
-          href: api/connectors/stock_market/tradier/adapter_initialization_tradier.md
-      - name: Tradovate
-        href: api/connectors/stock_market/tradovate.md
-        items:
-        - name: Tradovate connector configuration
-          href: api/connectors/stock_market/tradovate/configuration_tradovate.md
-        - name: Tradovate graphical configuration
-          href: api/connectors/stock_market/tradovate/graphical_configuration_tradovate.md
-        - name: Tradovate adapter initialization
-          href: api/connectors/stock_market/tradovate/adapter_initialization_tradovate.md
-      - name: Webull
-        href: api/connectors/stock_market/webull.md
-        items:
-        - name: Webull connector configuration
-          href: api/connectors/stock_market/webull/configuration_webull.md
-        - name: Webull graphical configuration
-          href: api/connectors/stock_market/webull/graphical_configuration_webull.md
-        - name: Webull adapter initialization
-          href: api/connectors/stock_market/webull/adapter_initialization_webull.md
-      - name: Xignite
-        href: api/connectors/stock_market/xignite.md
-        items:
-        - name: Configuration Xignite
-          href: api/connectors/stock_market/xignite/configuration_xignite.md
-        - name: Graphical configuration Xignite
-          href: api/connectors/stock_market/xignite/graphical_configuration_xignite.md
-        - name: Adapter initialization Xignite
-          href: api/connectors/stock_market/xignite/adapter_initialization_xignite.md
-      - name: Yahoo
-        href: api/connectors/stock_market/yahoo.md
-        items:
-        - name: Graphical configuration Yahoo
-          href: api/connectors/stock_market/yahoo/graphical_configuration_yahoo.md
-        - name: Adapter initialization Yahoo
-          href: api/connectors/stock_market/yahoo/adapter_initialization_yahoo.md
+      - name: Americas
+        items:
+        - name: Alpaca
+          href: api/connectors/stock_market/alpaca.md
+          items:
+          - name: Configuration Alpaca
+            href: api/connectors/stock_market/alpaca/configuration_alpaca.md
+          - name: Graphical configuration Alpaca
+            href: api/connectors/stock_market/alpaca/graphical_configuration_alpaca.md
+          - name: Adapter initialization Alpaca
+            href: api/connectors/stock_market/alpaca/adapter_initialization_alpaca.md
+        - name: Blackwood (Fusion)
+          href: api/connectors/stock_market/blackwood_fusion.md
+          items:
+          - name: Configuration Blackwood (Fusion)
+            href: api/connectors/stock_market/blackwood_fusion/configuration_blackwood_fusion.md
+          - name: Graphical configuration Blackwood (Fusion)
+            href: api/connectors/stock_market/blackwood_fusion/graphical_configuration_blackwood_fusion.md
+          - name: Adapter initialization Blackwood (Fusion)
+            href: api/connectors/stock_market/blackwood_fusion/adapter_initialization_blackwood_fusion.md
+        - name: CQG
+          href: api/connectors/stock_market/cqg.md
+          items:
+          - name: Configuration CQG
+            href: api/connectors/stock_market/cqg/configuration_cqg.md
+          - name: Graphical configuration CQG COM
+            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
+          - name: Graphical configuration CQG Continuum
+            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
+          - name: Adapter initialization CQG
+            href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
+        - name: CQG Web API
+          href: api/connectors/stock_market/cqg_web_api.md
+          items:
+          - name: CQG Web API connector configuration
+            href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
+          - name: CQG Web API graphical configuration
+            href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
+          - name: CQG Web API adapter initialization
+            href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
+        - name: E*TRADE
+          href: api/connectors/stock_market/e_trade.md
+          items:
+          - name: Configuration E*TRADE
+            href: api/connectors/stock_market/e_trade/configuration_e_trade.md
+          - name: Graphical configuration E*TRADE
+            href: api/connectors/stock_market/e_trade/graphical_configuration_e_trade.md
+          - name: Adapter initialization E*TRADE
+            href: api/connectors/stock_market/e_trade/adapter_initialization_e_trade.md
+        - name: Interactive Brokers
+          href: api/connectors/stock_market/interactive_brokers.md
+          items:
+          - name: Graphical configuration Interactive Brokers
+            href: api/connectors/stock_market/interactive_brokers/graphical_configuration_interactive_brokers.md
+          - name: Adapter initialization Interactive Brokers
+            href: api/connectors/stock_market/interactive_brokers/adapter_initialization_interactive_brokers.md
+        - name: IQFeed
+          href: api/connectors/stock_market/iqfeed.md
+          items:
+          - name: IQFeed connector configuration
+            href: api/connectors/stock_market/iqfeed/configuration_iqfeed.md
+          - name: Connection IQFeed
+            href: api/connectors/stock_market/iqfeed/connection_iqfeed.md
+          - name: Graphical configuration IQFeed
+            href: api/connectors/stock_market/iqfeed/graphical_configuration_iqfeed.md
+          - name: Adapter initialization IQFeed
+            href: api/connectors/stock_market/iqfeed/adapter_initialization_iqfeed.md
+        - name: ITCH
+          href: api/connectors/stock_market/itch.md
+          items:
+          - name: Configuration ITCH
+            href: api/connectors/stock_market/itch/configuration_itch.md
+          - name: Graphical configuration ITCH
+            href: api/connectors/stock_market/itch/graphical_configuration_itch.md
+          - name: Adapter initialization ITCH
+            href: api/connectors/stock_market/itch/adapter_initialization_itch.md
+        - name: Lime Trader
+          href: api/connectors/stock_market/lime.md
+          items:
+          - name: Lime Trader connector configuration
+            href: api/connectors/stock_market/lime/configuration_lime.md
+          - name: Lime Trader graphical configuration
+            href: api/connectors/stock_market/lime/graphical_configuration_lime.md
+          - name: Lime Trader adapter initialization
+            href: api/connectors/stock_market/lime/adapter_initialization_lime.md
+        - name: NinjaTrader
+          href: api/connectors/stock_market/ninjatrader.md
+          items:
+          - name: NinjaTrader connector configuration
+            href: api/connectors/stock_market/ninjatrader/configuration_ninjatrader.md
+          - name: NinjaTrader graphical configuration
+            href: api/connectors/stock_market/ninjatrader/graphical_configuration_ninjatrader.md
+          - name: NinjaTrader adapter initialization
+            href: api/connectors/stock_market/ninjatrader/adapter_initialization_ninjatrader.md
+        - name: OpenECry
+          href: api/connectors/stock_market/openecry.md
+          items:
+          - name: Configuration OpenECry
+            href: api/connectors/stock_market/openecry/configuration_openecry.md
+          - name: Graphical configuration OpenECry
+            href: api/connectors/stock_market/openecry/graphical_configuration_openecry.md
+          - name: Adapter initialization OpenECry
+            href: api/connectors/stock_market/openecry/adapter_initialization_openecry.md
+          - name: Several algorithms connection
+            href: api/connectors/stock_market/openecry/several_algorithms_connection.md
+          - name: Simultaneous terminal and algorithm operation
+            href: api/connectors/stock_market/openecry/simultaneous_terminal_and_algorithm_operation.md
+        - name: PolygonIO
+          href: api/connectors/stock_market/polygonio.md
+          items:
+          - name: Configuration PolygonIO
+            href: api/connectors/stock_market/polygonio/configuration_polygonio.md
+          - name: Graphical configuration PolygonIO
+            href: api/connectors/stock_market/polygonio/graphical_configuration_polygonio.md
+          - name: Adapter initialization PolygonIO
+            href: api/connectors/stock_market/polygonio/adapter_initialization_polygonio.md
+        - name: Public.com
+          href: api/connectors/stock_market/public.md
+          items:
+          - name: Public.com connector configuration
+            href: api/connectors/stock_market/public/configuration_public.md
+          - name: Public.com graphical configuration
+            href: api/connectors/stock_market/public/graphical_configuration_public.md
+          - name: Public.com adapter initialization
+            href: api/connectors/stock_market/public/adapter_initialization_public.md
+        - name: Questrade
+          href: api/connectors/stock_market/questrade.md
+          items:
+          - name: Questrade connector configuration
+            href: api/connectors/stock_market/questrade/configuration_questrade.md
+          - name: Questrade graphical configuration
+            href: api/connectors/stock_market/questrade/graphical_configuration_questrade.md
+          - name: Questrade adapter initialization
+            href: api/connectors/stock_market/questrade/adapter_initialization_questrade.md
+        - name: Rithmic
+          href: api/connectors/stock_market/rithmic.md
+          items:
+          - name: Configuration Rithmic
+            href: api/connectors/stock_market/rithmic/configuration_rithmic.md
+          - name: Graphical configuration Rithmic
+            href: api/connectors/stock_market/rithmic/graphical_configuration_rithmic.md
+          - name: Adapter initialization Rithmic
+            href: api/connectors/stock_market/rithmic/adapter_initialization_rithmic.md
+        - name: Robinhood
+          href: api/connectors/stock_market/robinhood.md
+          items:
+          - name: Robinhood connector configuration
+            href: api/connectors/stock_market/robinhood/configuration_robinhood.md
+          - name: Robinhood graphical configuration
+            href: api/connectors/stock_market/robinhood/graphical_configuration_robinhood.md
+          - name: Robinhood adapter initialization
+            href: api/connectors/stock_market/robinhood/adapter_initialization_robinhood.md
+        - name: Charles Schwab
+          href: api/connectors/stock_market/schwab.md
+          items:
+          - name: Charles Schwab connector configuration
+            href: api/connectors/stock_market/schwab/configuration_schwab.md
+          - name: Charles Schwab graphical configuration
+            href: api/connectors/stock_market/schwab/graphical_configuration_schwab.md
+          - name: Charles Schwab adapter initialization
+            href: api/connectors/stock_market/schwab/adapter_initialization_schwab.md
+        - name: SnapTrade
+          href: api/connectors/stock_market/snaptrade.md
+          items:
+          - name: SnapTrade connector configuration
+            href: api/connectors/stock_market/snaptrade/configuration_snaptrade.md
+          - name: SnapTrade graphical configuration
+            href: api/connectors/stock_market/snaptrade/graphical_configuration_snaptrade.md
+          - name: SnapTrade adapter initialization
+            href: api/connectors/stock_market/snaptrade/adapter_initialization_snaptrade.md
+        - name: Sterling
+          href: api/connectors/stock_market/sterling.md
+          items:
+          - name: Configuration Sterling
+            href: api/connectors/stock_market/sterling/configuration_sterling.md
+          - name: Graphical configuration Sterling
+            href: api/connectors/stock_market/sterling/graphical_configuration_sterling.md
+          - name: Adapter initialization Sterling
+            href: api/connectors/stock_market/sterling/adapter_initialization_sterling.md
+        - name: tastytrade
+          href: api/connectors/stock_market/tastytrade.md
+          items:
+          - name: tastytrade connector configuration
+            href: api/connectors/stock_market/tastytrade/configuration_tastytrade.md
+          - name: tastytrade graphical configuration
+            href: api/connectors/stock_market/tastytrade/graphical_configuration_tastytrade.md
+          - name: tastytrade adapter initialization
+            href: api/connectors/stock_market/tastytrade/adapter_initialization_tastytrade.md
+        - name: TradeStation
+          href: api/connectors/stock_market/tradestation.md
+          items:
+          - name: TradeStation connector configuration
+            href: api/connectors/stock_market/tradestation/configuration_tradestation.md
+          - name: TradeStation graphical configuration
+            href: api/connectors/stock_market/tradestation/graphical_configuration_tradestation.md
+          - name: TradeStation adapter initialization
+            href: api/connectors/stock_market/tradestation/adapter_initialization_tradestation.md
+        - name: TradeZero
+          href: api/connectors/stock_market/tradezero.md
+          items:
+          - name: TradeZero connector configuration
+            href: api/connectors/stock_market/tradezero/configuration_tradezero.md
+          - name: TradeZero graphical configuration
+            href: api/connectors/stock_market/tradezero/graphical_configuration_tradezero.md
+          - name: TradeZero adapter initialization
+            href: api/connectors/stock_market/tradezero/adapter_initialization_tradezero.md
+        - name: Tradier
+          href: api/connectors/stock_market/tradier.md
+          items:
+          - name: Configuration Tradier
+            href: api/connectors/stock_market/tradier/configuration_tradier.md
+          - name: Graphical configuration Tradier
+            href: api/connectors/stock_market/tradier/graphical_configuration_tradier.md
+          - name: Adapter initialization Tradier
+            href: api/connectors/stock_market/tradier/adapter_initialization_tradier.md
+        - name: Trading Technologies
+          href: api/connectors/stock_market/trading_technologies.md
+          items:
+          - name: Trading Technologies connector configuration
+            href: api/connectors/stock_market/trading_technologies/configuration_trading_technologies.md
+          - name: Trading Technologies graphical configuration
+            href: api/connectors/stock_market/trading_technologies/graphical_configuration_trading_technologies.md
+          - name: Trading Technologies adapter initialization
+            href: api/connectors/stock_market/trading_technologies/adapter_initialization_trading_technologies.md
+        - name: Tradovate
+          href: api/connectors/stock_market/tradovate.md
+          items:
+          - name: Tradovate connector configuration
+            href: api/connectors/stock_market/tradovate/configuration_tradovate.md
+          - name: Tradovate graphical configuration
+            href: api/connectors/stock_market/tradovate/graphical_configuration_tradovate.md
+          - name: Tradovate adapter initialization
+            href: api/connectors/stock_market/tradovate/adapter_initialization_tradovate.md
+        - name: Webull
+          href: api/connectors/stock_market/webull.md
+          items:
+          - name: Webull connector configuration
+            href: api/connectors/stock_market/webull/configuration_webull.md
+          - name: Webull graphical configuration
+            href: api/connectors/stock_market/webull/graphical_configuration_webull.md
+          - name: Webull adapter initialization
+            href: api/connectors/stock_market/webull/adapter_initialization_webull.md
+        - name: Xignite
+          href: api/connectors/stock_market/xignite.md
+          items:
+          - name: Configuration Xignite
+            href: api/connectors/stock_market/xignite/configuration_xignite.md
+          - name: Graphical configuration Xignite
+            href: api/connectors/stock_market/xignite/graphical_configuration_xignite.md
+          - name: Adapter initialization Xignite
+            href: api/connectors/stock_market/xignite/adapter_initialization_xignite.md
+        - name: Yahoo
+          href: api/connectors/stock_market/yahoo.md
+          items:
+          - name: Graphical configuration Yahoo
+            href: api/connectors/stock_market/yahoo/graphical_configuration_yahoo.md
+          - name: Adapter initialization Yahoo
+            href: api/connectors/stock_market/yahoo/adapter_initialization_yahoo.md
+      - name: Europe
+        items:
+        - name: Capital.com
+          href: api/connectors/stock_market/capitalcom.md
+          items:
+          - name: Capital.com connector configuration
+            href: api/connectors/stock_market/capitalcom/configuration_capitalcom.md
+          - name: Capital.com graphical configuration
+            href: api/connectors/stock_market/capitalcom/graphical_configuration_capitalcom.md
+          - name: Capital.com adapter initialization
+            href: api/connectors/stock_market/capitalcom/adapter_initialization_capitalcom.md
+        - name: IG Markets
+          href: api/connectors/stock_market/ig.md
+          items:
+          - name: IG Markets connector configuration
+            href: api/connectors/stock_market/ig/configuration_ig.md
+          - name: IG Markets graphical configuration
+            href: api/connectors/stock_market/ig/graphical_configuration_ig.md
+          - name: IG Markets adapter initialization
+            href: api/connectors/stock_market/ig/adapter_initialization_ig.md
+        - name: lemon.markets
+          href: api/connectors/stock_market/lemon_markets.md
+          items:
+          - name: lemon.markets connector configuration
+            href: api/connectors/stock_market/lemon_markets/configuration_lemon_markets.md
+          - name: lemon.markets graphical configuration
+            href: api/connectors/stock_market/lemon_markets/graphical_configuration_lemon_markets.md
+          - name: lemon.markets adapter initialization
+            href: api/connectors/stock_market/lemon_markets/adapter_initialization_lemon_markets.md
+        - name: LSEG Real-Time
+          href: api/connectors/stock_market/lseg_real_time.md
+          items:
+          - name: LSEG Real-Time connector configuration
+            href: api/connectors/stock_market/lseg_real_time/configuration_lseg_real_time.md
+          - name: LSEG Real-Time graphical configuration
+            href: api/connectors/stock_market/lseg_real_time/graphical_configuration_lseg_real_time.md
+          - name: LSEG Real-Time adapter initialization
+            href: api/connectors/stock_market/lseg_real_time/adapter_initialization_lseg_real_time.md
+        - name: Saxo OpenAPI
+          href: api/connectors/stock_market/saxo.md
+          items:
+          - name: Saxo OpenAPI connector configuration
+            href: api/connectors/stock_market/saxo/configuration_saxo.md
+          - name: Saxo OpenAPI graphical configuration
+            href: api/connectors/stock_market/saxo/graphical_configuration_saxo.md
+          - name: Saxo OpenAPI adapter initialization
+            href: api/connectors/stock_market/saxo/adapter_initialization_saxo.md
+        - name: Swissquote OpenWealth
+          href: api/connectors/stock_market/swissquote.md
+          items:
+          - name: Swissquote OpenWealth connector configuration
+            href: api/connectors/stock_market/swissquote/configuration_swissquote.md
+          - name: Swissquote OpenWealth graphical configuration
+            href: api/connectors/stock_market/swissquote/graphical_configuration_swissquote.md
+          - name: Swissquote OpenWealth adapter initialization
+            href: api/connectors/stock_market/swissquote/adapter_initialization_swissquote.md
+        - name: Trading 212
+          href: api/connectors/stock_market/trading212.md
+          items:
+          - name: Trading 212 connector configuration
+            href: api/connectors/stock_market/trading212/configuration_trading212.md
+          - name: Trading 212 graphical configuration
+            href: api/connectors/stock_market/trading212/graphical_configuration_trading212.md
+          - name: Trading 212 adapter initialization
+            href: api/connectors/stock_market/trading212/adapter_initialization_trading212.md
+      - name: Asia-Pacific
+        items:
+        - name: Alice Blue
+          href: api/connectors/stock_market/alice_blue.md
+          items:
+          - name: Alice Blue connector configuration
+            href: api/connectors/stock_market/alice_blue/configuration_alice_blue.md
+          - name: Alice Blue graphical configuration
+            href: api/connectors/stock_market/alice_blue/graphical_configuration_alice_blue.md
+          - name: Alice Blue adapter initialization
+            href: api/connectors/stock_market/alice_blue/adapter_initialization_alice_blue.md
+        - name: Angel One
+          href: api/connectors/stock_market/angelone.md
+          items:
+          - name: Angel One connector configuration
+            href: api/connectors/stock_market/angelone/configuration_angelone.md
+          - name: Angel One graphical configuration
+            href: api/connectors/stock_market/angelone/graphical_configuration_angelone.md
+          - name: Angel One adapter initialization
+            href: api/connectors/stock_market/angelone/adapter_initialization_angelone.md
+        - name: ICICI Direct Breeze
+          href: api/connectors/stock_market/breeze.md
+          items:
+          - name: ICICI Direct Breeze connector configuration
+            href: api/connectors/stock_market/breeze/configuration_breeze.md
+          - name: ICICI Direct Breeze graphical configuration
+            href: api/connectors/stock_market/breeze/graphical_configuration_breeze.md
+          - name: ICICI Direct Breeze adapter initialization
+            href: api/connectors/stock_market/breeze/adapter_initialization_breeze.md
+        - name: Capital Futures
+          href: api/connectors/stock_market/capital_futures.md
+          items:
+          - name: Capital Futures connector configuration
+            href: api/connectors/stock_market/capital_futures/configuration_capital_futures.md
+          - name: Capital Futures graphical configuration
+            href: api/connectors/stock_market/capital_futures/graphical_configuration_capital_futures.md
+          - name: Capital Futures adapter initialization
+            href: api/connectors/stock_market/capital_futures/adapter_initialization_capital_futures.md
+        - name: CTP
+          href: api/connectors/stock_market/ctp.md
+          items:
+          - name: CTP connector configuration
+            href: api/connectors/stock_market/ctp/configuration_ctp.md
+          - name: CTP graphical configuration
+            href: api/connectors/stock_market/ctp/graphical_configuration_ctp.md
+          - name: CTP adapter initialization
+            href: api/connectors/stock_market/ctp/adapter_initialization_ctp.md
+        - name: Daishin CYBOS Plus
+          href: api/connectors/stock_market/daishin.md
+          items:
+          - name: Daishin CYBOS Plus connector configuration
+            href: api/connectors/stock_market/daishin/configuration_daishin.md
+          - name: Daishin CYBOS Plus graphical configuration
+            href: api/connectors/stock_market/daishin/graphical_configuration_daishin.md
+          - name: Daishin CYBOS Plus adapter initialization
+            href: api/connectors/stock_market/daishin/adapter_initialization_daishin.md
+        - name: DhanHQ
+          href: api/connectors/stock_market/dhan.md
+          items:
+          - name: DhanHQ connector configuration
+            href: api/connectors/stock_market/dhan/configuration_dhan.md
+          - name: DhanHQ graphical configuration
+            href: api/connectors/stock_market/dhan/graphical_configuration_dhan.md
+          - name: DhanHQ adapter initialization
+            href: api/connectors/stock_market/dhan/adapter_initialization_dhan.md
+        - name: 5paisa Xstream
+          href: api/connectors/stock_market/fivepaisa.md
+          items:
+          - name: 5paisa Xstream connector configuration
+            href: api/connectors/stock_market/fivepaisa/configuration_fivepaisa.md
+          - name: 5paisa Xstream graphical configuration
+            href: api/connectors/stock_market/fivepaisa/graphical_configuration_fivepaisa.md
+          - name: 5paisa Xstream adapter initialization
+            href: api/connectors/stock_market/fivepaisa/adapter_initialization_fivepaisa.md
+        - name: Flattrade
+          href: api/connectors/stock_market/flattrade.md
+          items:
+          - name: Flattrade connector configuration
+            href: api/connectors/stock_market/flattrade/configuration_flattrade.md
+          - name: Flattrade graphical configuration
+            href: api/connectors/stock_market/flattrade/graphical_configuration_flattrade.md
+          - name: Flattrade adapter initialization
+            href: api/connectors/stock_market/flattrade/adapter_initialization_flattrade.md
+        - name: Fubon Neo
+          href: api/connectors/stock_market/fubon_neo.md
+          items:
+          - name: Fubon Neo connector configuration
+            href: api/connectors/stock_market/fubon_neo/configuration_fubon_neo.md
+          - name: Fubon Neo graphical configuration
+            href: api/connectors/stock_market/fubon_neo/graphical_configuration_fubon_neo.md
+          - name: Fubon Neo adapter initialization
+            href: api/connectors/stock_market/fubon_neo/adapter_initialization_fubon_neo.md
+        - name: Fugle
+          href: api/connectors/stock_market/fugle.md
+          items:
+          - name: Fugle connector configuration
+            href: api/connectors/stock_market/fugle/configuration_fugle.md
+          - name: Fugle graphical configuration
+            href: api/connectors/stock_market/fugle/graphical_configuration_fugle.md
+          - name: Fugle adapter initialization
+            href: api/connectors/stock_market/fugle/adapter_initialization_fugle.md
+        - name: FYERS
+          href: api/connectors/stock_market/fyers.md
+          items:
+          - name: FYERS connector configuration
+            href: api/connectors/stock_market/fyers/configuration_fyers.md
+          - name: FYERS graphical configuration
+            href: api/connectors/stock_market/fyers/graphical_configuration_fyers.md
+          - name: FYERS adapter initialization
+            href: api/connectors/stock_market/fyers/adapter_initialization_fyers.md
+        - name: Groww
+          href: api/connectors/stock_market/groww.md
+          items:
+          - name: Groww connector configuration
+            href: api/connectors/stock_market/groww/configuration_groww.md
+          - name: Groww graphical configuration
+            href: api/connectors/stock_market/groww/graphical_configuration_groww.md
+          - name: Groww adapter initialization
+            href: api/connectors/stock_market/groww/adapter_initialization_groww.md
+        - name: kabu Station
+          href: api/connectors/stock_market/kabu_station.md
+          items:
+          - name: kabu Station connector configuration
+            href: api/connectors/stock_market/kabu_station/configuration_kabu_station.md
+          - name: kabu Station graphical configuration
+            href: api/connectors/stock_market/kabu_station/graphical_configuration_kabu_station.md
+          - name: kabu Station adapter initialization
+            href: api/connectors/stock_market/kabu_station/adapter_initialization_kabu_station.md
+        - name: Kiwoom
+          href: api/connectors/stock_market/kiwoom.md
+          items:
+          - name: Kiwoom connector configuration
+            href: api/connectors/stock_market/kiwoom/configuration_kiwoom.md
+          - name: Kiwoom graphical configuration
+            href: api/connectors/stock_market/kiwoom/graphical_configuration_kiwoom.md
+          - name: Kiwoom adapter initialization
+            href: api/connectors/stock_market/kiwoom/adapter_initialization_kiwoom.md
+        - name: Korea Investment & Securities
+          href: api/connectors/stock_market/korea_investment.md
+          items:
+          - name: Korea Investment & Securities connector configuration
+            href: api/connectors/stock_market/korea_investment/configuration_korea_investment.md
+          - name: Korea Investment & Securities graphical configuration
+            href: api/connectors/stock_market/korea_investment/graphical_configuration_korea_investment.md
+          - name: Korea Investment & Securities adapter initialization
+            href: api/connectors/stock_market/korea_investment/adapter_initialization_korea_investment.md
+        - name: Kotak Neo
+          href: api/connectors/stock_market/kotak_neo.md
+          items:
+          - name: Kotak Neo connector configuration
+            href: api/connectors/stock_market/kotak_neo/configuration_kotak_neo.md
+          - name: Kotak Neo graphical configuration
+            href: api/connectors/stock_market/kotak_neo/graphical_configuration_kotak_neo.md
+          - name: Kotak Neo adapter initialization
+            href: api/connectors/stock_market/kotak_neo/adapter_initialization_kotak_neo.md
+        - name: Longbridge OpenAPI
+          href: api/connectors/stock_market/longbridge.md
+          items:
+          - name: Longbridge OpenAPI connector configuration
+            href: api/connectors/stock_market/longbridge/configuration_longbridge.md
+          - name: Longbridge OpenAPI graphical configuration
+            href: api/connectors/stock_market/longbridge/graphical_configuration_longbridge.md
+          - name: Longbridge OpenAPI adapter initialization
+            href: api/connectors/stock_market/longbridge/adapter_initialization_longbridge.md
+        - name: LS Securities
+          href: api/connectors/stock_market/ls_securities.md
+          items:
+          - name: LS Securities connector configuration
+            href: api/connectors/stock_market/ls_securities/configuration_ls_securities.md
+          - name: LS Securities graphical configuration
+            href: api/connectors/stock_market/ls_securities/graphical_configuration_ls_securities.md
+          - name: LS Securities adapter initialization
+            href: api/connectors/stock_market/ls_securities/adapter_initialization_ls_securities.md
+        - name: Mirae Asset Sharekhan
+          href: api/connectors/stock_market/mirae_asset_sharekhan.md
+          items:
+          - name: Mirae Asset Sharekhan connector configuration
+            href: api/connectors/stock_market/mirae_asset_sharekhan/configuration_mirae_asset_sharekhan.md
+          - name: Mirae Asset Sharekhan graphical configuration
+            href: api/connectors/stock_market/mirae_asset_sharekhan/graphical_configuration_mirae_asset_sharekhan.md
+          - name: Mirae Asset Sharekhan adapter initialization
+            href: api/connectors/stock_market/mirae_asset_sharekhan/adapter_initialization_mirae_asset_sharekhan.md
+        - name: Moomoo
+          href: api/connectors/stock_market/moomoo.md
+          items:
+          - name: Moomoo connector configuration
+            href: api/connectors/stock_market/moomoo/configuration_moomoo.md
+          - name: Moomoo graphical configuration
+            href: api/connectors/stock_market/moomoo/graphical_configuration_moomoo.md
+          - name: Moomoo adapter initialization
+            href: api/connectors/stock_market/moomoo/adapter_initialization_moomoo.md
+        - name: Motilal Oswal
+          href: api/connectors/stock_market/motilal_oswal.md
+          items:
+          - name: Motilal Oswal connector configuration
+            href: api/connectors/stock_market/motilal_oswal/configuration_motilal_oswal.md
+          - name: Motilal Oswal graphical configuration
+            href: api/connectors/stock_market/motilal_oswal/graphical_configuration_motilal_oswal.md
+          - name: Motilal Oswal adapter initialization
+            href: api/connectors/stock_market/motilal_oswal/adapter_initialization_motilal_oswal.md
+        - name: OpenMarkets
+          href: api/connectors/stock_market/openmarkets.md
+          items:
+          - name: OpenMarkets connector configuration
+            href: api/connectors/stock_market/openmarkets/configuration_openmarkets.md
+          - name: OpenMarkets graphical configuration
+            href: api/connectors/stock_market/openmarkets/graphical_configuration_openmarkets.md
+          - name: OpenMarkets adapter initialization
+            href: api/connectors/stock_market/openmarkets/adapter_initialization_openmarkets.md
+        - name: QMT
+          href: api/connectors/stock_market/qmt.md
+          items:
+          - name: QMT connector configuration
+            href: api/connectors/stock_market/qmt/configuration_qmt.md
+          - name: QMT graphical configuration
+            href: api/connectors/stock_market/qmt/graphical_configuration_qmt.md
+          - name: QMT adapter initialization
+            href: api/connectors/stock_market/qmt/adapter_initialization_qmt.md
+        - name: SinoPac Shioaji
+          href: api/connectors/stock_market/shioaji.md
+          items:
+          - name: SinoPac Shioaji connector configuration
+            href: api/connectors/stock_market/shioaji/configuration_shioaji.md
+          - name: SinoPac Shioaji graphical configuration
+            href: api/connectors/stock_market/shioaji/graphical_configuration_shioaji.md
+          - name: SinoPac Shioaji adapter initialization
+            href: api/connectors/stock_market/shioaji/adapter_initialization_shioaji.md
+        - name: Shoonya
+          href: api/connectors/stock_market/shoonya.md
+          items:
+          - name: Shoonya connector configuration
+            href: api/connectors/stock_market/shoonya/configuration_shoonya.md
+          - name: Shoonya graphical configuration
+            href: api/connectors/stock_market/shoonya/graphical_configuration_shoonya.md
+          - name: Shoonya adapter initialization
+            href: api/connectors/stock_market/shoonya/adapter_initialization_shoonya.md
+        - name: Tiger Brokers
+          href: api/connectors/stock_market/tiger_brokers.md
+          items:
+          - name: Tiger Brokers connector configuration
+            href: api/connectors/stock_market/tiger_brokers/configuration_tiger_brokers.md
+          - name: Tiger Brokers graphical configuration
+            href: api/connectors/stock_market/tiger_brokers/graphical_configuration_tiger_brokers.md
+          - name: Tiger Brokers adapter initialization
+            href: api/connectors/stock_market/tiger_brokers/adapter_initialization_tiger_brokers.md
+        - name: Upstox
+          href: api/connectors/stock_market/upstox.md
+          items:
+          - name: Upstox connector configuration
+            href: api/connectors/stock_market/upstox/configuration_upstox.md
+          - name: Upstox graphical configuration
+            href: api/connectors/stock_market/upstox/graphical_configuration_upstox.md
+          - name: Upstox adapter initialization
+            href: api/connectors/stock_market/upstox/adapter_initialization_upstox.md
+        - name: Zhongtai XTP
+          href: api/connectors/stock_market/xtp.md
+          items:
+          - name: Zhongtai XTP connector configuration
+            href: api/connectors/stock_market/xtp/configuration_xtp.md
+          - name: Zhongtai XTP graphical configuration
+            href: api/connectors/stock_market/xtp/graphical_configuration_xtp.md
+          - name: Zhongtai XTP adapter initialization
+            href: api/connectors/stock_market/xtp/adapter_initialization_xtp.md
+        - name: Yuanta SPARK
+          href: api/connectors/stock_market/yuanta.md
+          items:
+          - name: Yuanta SPARK connector configuration
+            href: api/connectors/stock_market/yuanta/configuration_yuanta.md
+          - name: Yuanta SPARK graphical configuration
+            href: api/connectors/stock_market/yuanta/graphical_configuration_yuanta.md
+          - name: Yuanta SPARK adapter initialization
+            href: api/connectors/stock_market/yuanta/adapter_initialization_yuanta.md
+        - name: Zerodha Kite Connect
+          href: api/connectors/stock_market/zerodha.md
+          items:
+          - name: Zerodha Kite Connect connector configuration
+            href: api/connectors/stock_market/zerodha/configuration_zerodha.md
+          - name: Zerodha Kite Connect graphical configuration
+            href: api/connectors/stock_market/zerodha/graphical_configuration_zerodha.md
+          - name: Zerodha Kite Connect adapter initialization
+            href: api/connectors/stock_market/zerodha/adapter_initialization_zerodha.md
+      - name: Middle East and Africa
+        items:
+        - name: eToro
+          href: api/connectors/stock_market/etoro.md
+          items:
+          - name: eToro connector configuration
+            href: api/connectors/stock_market/etoro/configuration_etoro.md
+          - name: eToro graphical configuration
+            href: api/connectors/stock_market/etoro/graphical_configuration_etoro.md
+          - name: eToro adapter initialization
+            href: api/connectors/stock_market/etoro/adapter_initialization_etoro.md
+      - name: Market data and news
+        items:
+        - name: AlphaVantage
+          href: api/connectors/stock_market/alphavantage.md
+          items:
+          - name: Configuration AlphaVantage
+            href: api/connectors/stock_market/alphavantage/configuration_alphavantage.md
+          - name: Graphical configuration AlphaVantage
+            href: api/connectors/stock_market/alphavantage/graphical_configuration_alphavantage.md
+          - name: Adapter initialization AlphaVantage
+            href: api/connectors/stock_market/alphavantage/adapter_initialization_alphavantage.md
+        - name: BarChart
+          href: api/connectors/stock_market/barchart.md
+          items:
+          - name: Configuration BarChart
+            href: api/connectors/stock_market/barchart/configuration_barchart.md
+          - name: Graphical configuration BarChart
+            href: api/connectors/stock_market/barchart/graphical_configuration_barchart.md
+          - name: Adapter initialization BarChart
+            href: api/connectors/stock_market/barchart/adapter_initialization_barchart.md
+        - name: Bloomberg BLPAPI and EMSX
+          href: api/connectors/stock_market/bloomberg.md
+          items:
+          - name: Bloomberg BLPAPI and EMSX connector configuration
+            href: api/connectors/stock_market/bloomberg/configuration_bloomberg.md
+          - name: Bloomberg BLPAPI and EMSX graphical configuration
+            href: api/connectors/stock_market/bloomberg/graphical_configuration_bloomberg.md
+          - name: Bloomberg BLPAPI and EMSX adapter initialization
+            href: api/connectors/stock_market/bloomberg/adapter_initialization_bloomberg.md
+        - name: Databento
+          href: api/connectors/stock_market/databento.md
+          items:
+          - name: Databento connector configuration
+            href: api/connectors/stock_market/databento/configuration_databento.md
+          - name: Databento graphical configuration
+            href: api/connectors/stock_market/databento/graphical_configuration_databento.md
+          - name: Databento adapter initialization
+            href: api/connectors/stock_market/databento/adapter_initialization_databento.md
+        - name: dxFeed
+          href: api/connectors/stock_market/dxfeed.md
+          items:
+          - name: dxFeed connector configuration
+            href: api/connectors/stock_market/dxfeed/configuration_dxfeed.md
+          - name: dxFeed graphical configuration
+            href: api/connectors/stock_market/dxfeed/graphical_configuration_dxfeed.md
+          - name: dxFeed adapter initialization
+            href: api/connectors/stock_market/dxfeed/adapter_initialization_dxfeed.md
+        - name: IEX
+          href: api/connectors/stock_market/iex.md
+          items:
+          - name: Configuration IEX
+            href: api/connectors/stock_market/iex/configuration_iex.md
+          - name: Graphical configuration IEX
+            href: api/connectors/stock_market/iex/graphical_configuration_iex.md
+          - name: Adapter initialization IEX
+            href: api/connectors/stock_market/iex/adapter_initialization_iex.md
+        - name: QuantFEED
+          href: api/connectors/stock_market/quantfeed.md
+          items:
+          - name: Configuration QuantFEED
+            href: api/connectors/stock_market/quantfeed/configuration_quantfeed.md
+          - name: Graphical configuration QuantFEED
+            href: api/connectors/stock_market/quantfeed/graphical_configuration_quantfeed.md
+          - name: Adapter initialization QuantFEED
+            href: api/connectors/stock_market/quantfeed/adapter_initialization_quantfeed.md
+        - name: Quandl
+          href: api/connectors/stock_market/quandl.md
+          items:
+          - name: Configuration Quandl
+            href: api/connectors/stock_market/quandl/configuration_quandl.md
+          - name: Graphical configuration Quandl
+            href: api/connectors/stock_market/quandl/graphical_configuration_quandl.md
+          - name: Adapter initialization Quandl
+            href: api/connectors/stock_market/quandl/adapter_initialization_quandl.md
     - name: Forex
       items:
       - name: MetaTrader
@@ -1443,548 +1453,556 @@
           href: api/connectors/forex/oanda/adapter_initialization_oanda.md
     - name: Crypto exchanges
       items:
-      - name: Bibox
-        href: api/connectors/crypto_exchanges/bibox.md
+      - name: Global and multi-region
         items:
-        - name: Configuration Bibox
-          href: api/connectors/crypto_exchanges/bibox/configuration_bibox.md
-        - name: Graphical configuration Bibox
-          href: api/connectors/crypto_exchanges/bibox/graphical_configuration_bibox.md
-        - name: Adapter initialization Bibox
-          href: api/connectors/crypto_exchanges/bibox/adapter_initialization_bibox.md
-      - name: Binance
-        href: api/connectors/crypto_exchanges/binance.md
+        - name: Bitexbook
+          href: api/connectors/crypto_exchanges/bitexbook.md
+          items:
+          - name: Configuration Bitexbook
+            href: api/connectors/crypto_exchanges/bitexbook/configuration_bitexbook.md
+          - name: Graphical configuration Bitexbook
+            href: api/connectors/crypto_exchanges/bitexbook/graphical_configuration_bitexbook.md
+          - name: Adapter initialization Bitexbook
+            href: api/connectors/crypto_exchanges/bitexbook/adapter_initialization_bitexbook.md
+        - name: Bitfinex
+          href: api/connectors/crypto_exchanges/bitfinex.md
+          items:
+          - name: Configuration Bitfinex
+            href: api/connectors/crypto_exchanges/bitfinex/configuration_bitfinex.md
+          - name: Graphical configuration Bitfinex
+            href: api/connectors/crypto_exchanges/bitfinex/graphical_configuration_bitfinex.md
+          - name: Adapter initialization Bitfinex
+            href: api/connectors/crypto_exchanges/bitfinex/adapter_initialization_bitfinex.md
+        - name: Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history.md
+          items:
+          - name: Configuration Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+          - name: Graphical configuration Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+          - name: Adapter initialization Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
+        - name: CoinHub
+          href: api/connectors/crypto_exchanges/coinhub.md
+          items:
+          - name: Configuration CoinHub
+            href: api/connectors/crypto_exchanges/coinhub/configuration_coinhub.md
+          - name: Graphical configuration CoinHub
+            href: api/connectors/crypto_exchanges/coinhub/graphical_configuration_coinhub.md
+          - name: Adapter initialization CoinHub
+            href: api/connectors/crypto_exchanges/coinhub/adapter_initialization_coinhub.md
+        - name: HitBTC
+          href: api/connectors/crypto_exchanges/hitbtc.md
+          items:
+          - name: Configuration HitBTC
+            href: api/connectors/crypto_exchanges/hitbtc/configuration_hitbtc.md
+          - name: Graphical configuration HitBTC
+            href: api/connectors/crypto_exchanges/hitbtc/graphical_configuration_hitbtc.md
+          - name: Adapter initialization HitBTC
+            href: api/connectors/crypto_exchanges/hitbtc/adapter_initialization_hitbtc.md
+        - name: PrizmBit
+          href: api/connectors/crypto_exchanges/prizmbit.md
+          items:
+          - name: Configuration PrizmBit
+            href: api/connectors/crypto_exchanges/prizmbit/configuration_prizmbit.md
+          - name: Graphical configuration PrizmBit
+            href: api/connectors/crypto_exchanges/prizmbit/graphical_configuration_prizmbit.md
+          - name: Adapter initialization PrizmBit
+            href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
+        - name: Withdraw
+          href: api/connectors/crypto_exchanges/withdraw.md
+      - name: Americas
         items:
-        - name: Configuration Binance
-          href: api/connectors/crypto_exchanges/binance/configuration_binance.md
-        - name: Graphical configuration Binance
-          href: api/connectors/crypto_exchanges/binance/graphical_configuration_binance.md
-        - name: Adapter initialization Binance
-          href: api/connectors/crypto_exchanges/binance/adapter_initialization_binance.md
-      - name: Binance History
-        href: api/connectors/crypto_exchanges/binance_history.md
+        - name: Bittrex
+          href: api/connectors/crypto_exchanges/bittrex.md
+          items:
+          - name: Configuration Bittrex
+            href: api/connectors/crypto_exchanges/bittrex/configuration_bittrex.md
+          - name: Graphical configuration Bittrex
+            href: api/connectors/crypto_exchanges/bittrex/graphical_configuration_bittrex.md
+          - name: Adapter initialization Bittrex
+            href: api/connectors/crypto_exchanges/bittrex/adapter_initialization_bittrex.md
+        - name: Coinbase
+          href: api/connectors/crypto_exchanges/coinbase.md
+          items:
+          - name: Configuration Coinbase
+            href: api/connectors/crypto_exchanges/coinbase/configuration_coinbase.md
+          - name: Graphical configuration Coinbase
+            href: api/connectors/crypto_exchanges/coinbase/graphical_configuration_coinbase.md
+          - name: Adapter initialization Coinbase
+            href: api/connectors/crypto_exchanges/coinbase/adapter_initialization_coinbase.md
+        - name: CoinCap
+          href: api/connectors/crypto_exchanges/coincap.md
+          items:
+          - name: Configuration CoinCap
+            href: api/connectors/crypto_exchanges/coincap/configuration_coincap.md
+          - name: Graphical configuration CoinCap
+            href: api/connectors/crypto_exchanges/coincap/graphical_configuration_coincap.md
+          - name: Adapter initialization CoinCap
+            href: api/connectors/crypto_exchanges/coincap/adapter_initialization_coincap.md
+        - name: Coinigy
+          href: api/connectors/crypto_exchanges/coinigy.md
+          items:
+          - name: Configuration Coinigy
+            href: api/connectors/crypto_exchanges/coinigy/configuration_coinigy.md
+          - name: Graphical configuration Coinigy
+            href: api/connectors/crypto_exchanges/coinigy/graphical_configuration_coinigy.md
+          - name: Adapter initialization Coinigy
+            href: api/connectors/crypto_exchanges/coinigy/adapter_initialization_coinigy.md
+        - name: CoinExchange
+          href: api/connectors/crypto_exchanges/coinexchange.md
+          items:
+          - name: Configuration CoinExchange
+            href: api/connectors/crypto_exchanges/coinexchange/configuration_coinexchange.md
+          - name: Graphical configuration CoinExchange
+            href: api/connectors/crypto_exchanges/coinexchange/graphical_configuration_coinexchange.md
+          - name: Adapter initialization CoinExchange
+            href: api/connectors/crypto_exchanges/coinexchange/adapter_initialization_coinexchange.md
+        - name: GDAX
+          href: api/connectors/crypto_exchanges/gdax.md
+          items:
+          - name: Configuration GDAX
+            href: api/connectors/crypto_exchanges/gdax/configuration_gdax.md
+          - name: Graphical configuration GDAX
+            href: api/connectors/crypto_exchanges/gdax/graphical_configuration_gdax.md
+          - name: Adapter initialization GDAX
+            href: api/connectors/crypto_exchanges/gdax/adapter_initialization_gdax.md
+        - name: Kraken
+          href: api/connectors/crypto_exchanges/kraken.md
+          items:
+          - name: Configuration Kraken
+            href: api/connectors/crypto_exchanges/kraken/configuration_kraken.md
+          - name: Graphical configuration Kraken
+            href: api/connectors/crypto_exchanges/kraken/graphical_configuration_kraken.md
+          - name: Adapter initialization Kraken
+            href: api/connectors/crypto_exchanges/kraken/adapter_initialization_kraken.md
+        - name: Poloniex
+          href: api/connectors/crypto_exchanges/poloniex.md
+          items:
+          - name: Configuration Poloniex
+            href: api/connectors/crypto_exchanges/poloniex/configuration_poloniex.md
+          - name: Graphical configuration Poloniex
+            href: api/connectors/crypto_exchanges/poloniex/graphical_configuration_poloniex.md
+          - name: Adapter initialization Poloniex
+            href: api/connectors/crypto_exchanges/poloniex/adapter_initialization_poloniex.md
+        - name: TradeOgre
+          href: api/connectors/crypto_exchanges/tradeogre.md
+          items:
+          - name: Configuration TradeOgre
+            href: api/connectors/crypto_exchanges/tradeogre/configuration_tradeogre.md
+          - name: Graphical configuration TradeOgre
+            href: api/connectors/crypto_exchanges/tradeogre/graphical_configuration_tradeogre.md
+          - name: Adapter initialization TradeOgre
+            href: api/connectors/crypto_exchanges/tradeogre/adapter_initialization_tradeogre.md
+      - name: Europe
         items:
-        - name: Configuration Binance History
-          href: api/connectors/crypto_exchanges/binance_history/configuration_binance_history.md
-        - name: Graphical configuration Binance History
-          href: api/connectors/crypto_exchanges/binance_history/graphical_configuration_binance_history.md
-        - name: Adapter initialization Binance History
-          href: api/connectors/crypto_exchanges/binance_history/adapter_initialization_binance_history.md
-      - name: Bybit History
-        href: api/connectors/crypto_exchanges/bybit_history.md
+        - name: BitStamp
+          href: api/connectors/crypto_exchanges/bitstamp.md
+          items:
+          - name: Configuration BitStamp
+            href: api/connectors/crypto_exchanges/bitstamp/configuration_bitstamp.md
+          - name: Graphical configuration BitStamp
+            href: api/connectors/crypto_exchanges/bitstamp/graphical_configuration_bitstamp.md
+          - name: Adapter initialization BitStamp
+            href: api/connectors/crypto_exchanges/bitstamp/adapter_initialization_bitstamp.md
+        - name: CEX.IO
+          href: api/connectors/crypto_exchanges/cex.io.md
+          items:
+          - name: Configuration CEX.IO
+            href: api/connectors/crypto_exchanges/cex.io/configuration_cex.io.md
+          - name: Graphical configuration CEX.IO
+            href: api/connectors/crypto_exchanges/cex.io/graphical_configuration_cex.io.md
+          - name: Adapter initialization CEX.IO
+            href: api/connectors/crypto_exchanges/cex.io/adapter_initialization_cex.io.md
+        - name: Deribit
+          href: api/connectors/crypto_exchanges/deribit.md
+          items:
+          - name: Configuration Deribit
+            href: api/connectors/crypto_exchanges/deribit/configuration_deribit.md
+          - name: Graphical configuration Deribit
+            href: api/connectors/crypto_exchanges/deribit/graphical_configuration_deribit.md
+          - name: Adapter initialization Deribit
+            href: api/connectors/crypto_exchanges/deribit/adapter_initialization_deribit.md
+        - name: EXMO
+          href: api/connectors/crypto_exchanges/exmo.md
+          items:
+          - name: Configuration EXMO
+            href: api/connectors/crypto_exchanges/exmo/configuration_exmo.md
+          - name: Graphical configuration EXMO
+            href: api/connectors/crypto_exchanges/exmo/graphical_configuration_exmo.md
+          - name: Adapter initialization EXMO
+            href: api/connectors/crypto_exchanges/exmo/adapter_initialization_exmo.md
+        - name: Latoken
+          href: api/connectors/crypto_exchanges/latoken.md
+          items:
+          - name: Configuration Latoken
+            href: api/connectors/crypto_exchanges/latoken/configuration_latoken.md
+          - name: Graphical configuration Latoken
+            href: api/connectors/crypto_exchanges/latoken/graphical_configuration_latoken.md
+          - name: Adapter initialization Latoken
+            href: api/connectors/crypto_exchanges/latoken/adapter_initialization_latoken.md
+        - name: Liqui
+          href: api/connectors/crypto_exchanges/liqui.md
+          items:
+          - name: Configuration Liqui
+            href: api/connectors/crypto_exchanges/liqui/configuration_liqui.md
+          - name: Graphical configuration Liqui
+            href: api/connectors/crypto_exchanges/liqui/graphical_configuration_liqui.md
+          - name: Adapter initialization Liqui
+            href: api/connectors/crypto_exchanges/liqui/adapter_initialization_liqui.md
+        - name: Livecoin
+          href: api/connectors/crypto_exchanges/livecoin.md
+          items:
+          - name: Configuration Livecoin
+            href: api/connectors/crypto_exchanges/livecoin/configuration_livecoin.md
+          - name: Graphical configuration Livecoin
+            href: api/connectors/crypto_exchanges/livecoin/graphical_configuration_livecoin.md
+          - name: Adapter initialization Livecoin
+            href: api/connectors/crypto_exchanges/livecoin/adapter_initialization_livecoin.md
+        - name: WEX (BTC-e)
+          href: api/connectors/crypto_exchanges/wex_btc_e.md
+          items:
+          - name: Configuration WEX (BTC-e)
+            href: api/connectors/crypto_exchanges/wex_btc_e/configuration_wex_btc_e.md
+          - name: Graphical configuration WEX (BTC-e)
+            href: api/connectors/crypto_exchanges/wex_btc_e/graphical_configuration_wex_btc_e.md
+          - name: Adapter initialization WEX (BTC-e)
+            href: api/connectors/crypto_exchanges/wex_btc_e/adapter_initialization_wex_btc_e.md
+        - name: Yobit
+          href: api/connectors/crypto_exchanges/yobit.md
+          items:
+          - name: Configuration Yobit
+            href: api/connectors/crypto_exchanges/yobit/configuration_yobit.md
+          - name: Graphical configuration Yobit
+            href: api/connectors/crypto_exchanges/yobit/graphical_configuration_yobit.md
+          - name: Adapter initialization Yobit
+            href: api/connectors/crypto_exchanges/yobit/adapter_initialization_yobit.md
+      - name: Asia-Pacific
         items:
-        - name: Configuration Bybit History
-          href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
-        - name: Graphical configuration Bybit History
-          href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
-        - name: Adapter initialization Bybit History
-          href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
-      - name: BingX
-        href: api/connectors/crypto_exchanges/bingx.md
-        items:
-        - name: Configuration BingX
-          href: api/connectors/crypto_exchanges/bingx/configuration_bingx.md
-        - name: Graphical configuration BingX
-          href: api/connectors/crypto_exchanges/bingx/graphical_configuration_bingx.md
-        - name: Adapter initialization BingX
-          href: api/connectors/crypto_exchanges/bingx/adapter_initialization_bingx.md
-      - name: Bitalong
-        href: api/connectors/crypto_exchanges/bitalong.md
-        items:
-        - name: Configuration Bitalong
-          href: api/connectors/crypto_exchanges/bitalong/configuration_bitalong.md
-        - name: Graphical configuration Bitalong
-          href: api/connectors/crypto_exchanges/bitalong/graphical_configuration_bitalong.md
-        - name: Adapter initialization Bitalong
-          href: api/connectors/crypto_exchanges/bitalong/adapter_initialization_bitalong.md
-      - name: Bitbank
-        href: api/connectors/crypto_exchanges/bitbank.md
-        items:
-        - name: Configuration Bitbank
-          href: api/connectors/crypto_exchanges/bitbank/configuration_bitbank.md
-        - name: Graphical configuration Bitbank
-          href: api/connectors/crypto_exchanges/bitbank/graphical_configuration_bitbank.md
-        - name: Adapter initialization Bitbank
-          href: api/connectors/crypto_exchanges/bitbank/adapter_initialization_bitbank.md
-      - name: Bitget
-        href: api/connectors/crypto_exchanges/bitget.md
-        items:
-        - name: Configuration Bitget
-          href: api/connectors/crypto_exchanges/bitget/configuration_bitget.md
-        - name: Graphical configuration Bitget
-          href: api/connectors/crypto_exchanges/bitget/graphical_configuration_bitget.md
-        - name: Adapter initialization Bitget
-          href: api/connectors/crypto_exchanges/bitget/adapter_initialization_bitget.md
-      - name: Bitexbook
-        href: api/connectors/crypto_exchanges/bitexbook.md
-        items:
-        - name: Configuration Bitexbook
-          href: api/connectors/crypto_exchanges/bitexbook/configuration_bitexbook.md
-        - name: Graphical configuration Bitexbook
-          href: api/connectors/crypto_exchanges/bitexbook/graphical_configuration_bitexbook.md
-        - name: Adapter initialization Bitexbook
-          href: api/connectors/crypto_exchanges/bitexbook/adapter_initialization_bitexbook.md
-      - name: Bitfinex
-        href: api/connectors/crypto_exchanges/bitfinex.md
-        items:
-        - name: Configuration Bitfinex
-          href: api/connectors/crypto_exchanges/bitfinex/configuration_bitfinex.md
-        - name: Graphical configuration Bitfinex
-          href: api/connectors/crypto_exchanges/bitfinex/graphical_configuration_bitfinex.md
-        - name: Adapter initialization Bitfinex
-          href: api/connectors/crypto_exchanges/bitfinex/adapter_initialization_bitfinex.md
-      - name: Bithumb
-        href: api/connectors/crypto_exchanges/bithumb.md
-        items:
-        - name: Configuration Bithumb
-          href: api/connectors/crypto_exchanges/bithumb/configuration_bithumb.md
-        - name: Graphical configuration Bithumb
-          href: api/connectors/crypto_exchanges/bithumb/graphical_configuration_bithumb.md
-        - name: Adapter initialization Bithumb
-          href: api/connectors/crypto_exchanges/bithumb/adapter_initialization_bithumb.md
-      - name: Bitmart
-        href: api/connectors/crypto_exchanges/bitmart.md
-        items:
-        - name: Configuration Bitmart
-          href: api/connectors/crypto_exchanges/bitmart/configuration_bitmart.md
-        - name: Graphical configuration Bitmart
-          href: api/connectors/crypto_exchanges/bitmart/graphical_configuration_bitmart.md
-        - name: Adapter initialization Bitmart
-          href: api/connectors/crypto_exchanges/bitmart/adapter_initialization_bitmart.md
-      - name: BitMax
-        href: api/connectors/crypto_exchanges/bitmax.md
-        items:
-        - name: Configuration BitMax
-          href: api/connectors/crypto_exchanges/bitmax/configuration_bitmax.md
-        - name: Graphical configuration BitMax
-          href: api/connectors/crypto_exchanges/bitmax/graphical_configuration_bitmax.md
-        - name: Adapter initialization BitMax
-          href: api/connectors/crypto_exchanges/bitmax/adapter_initialization_bitmax.md
-      - name: BitMEX
-        href: api/connectors/crypto_exchanges/bitmex.md
-        items:
-        - name: Configuration BitMEX
-          href: api/connectors/crypto_exchanges/bitmex/configuration_bitmex.md
-        - name: Graphical configuration BitMEX
-          href: api/connectors/crypto_exchanges/bitmex/graphical_configuration_bitmex.md
-        - name: Adapter initialization BitMEX
-          href: api/connectors/crypto_exchanges/bitmex/adapter_initialization_bitmex.md
-      - name: BitStamp
-        href: api/connectors/crypto_exchanges/bitstamp.md
-        items:
-        - name: Configuration BitStamp
-          href: api/connectors/crypto_exchanges/bitstamp/configuration_bitstamp.md
-        - name: Graphical configuration BitStamp
-          href: api/connectors/crypto_exchanges/bitstamp/graphical_configuration_bitstamp.md
-        - name: Adapter initialization BitStamp
-          href: api/connectors/crypto_exchanges/bitstamp/adapter_initialization_bitstamp.md
-      - name: Bittrex
-        href: api/connectors/crypto_exchanges/bittrex.md
-        items:
-        - name: Configuration Bittrex
-          href: api/connectors/crypto_exchanges/bittrex/configuration_bittrex.md
-        - name: Graphical configuration Bittrex
-          href: api/connectors/crypto_exchanges/bittrex/graphical_configuration_bittrex.md
-        - name: Adapter initialization Bittrex
-          href: api/connectors/crypto_exchanges/bittrex/adapter_initialization_bittrex.md
-      - name: BitZ
-        href: api/connectors/crypto_exchanges/bitz.md
-        items:
-        - name: Configuration BitZ
-          href: api/connectors/crypto_exchanges/bitz/configuration_bitz.md
-        - name: Graphical configuration BitZ
-          href: api/connectors/crypto_exchanges/bitz/graphical_configuration_bitz.md
-        - name: Adapter initialization BitZ
-          href: api/connectors/crypto_exchanges/bitz/adapter_initialization_bitz.md
-      - name: ByBit
-        href: api/connectors/crypto_exchanges/bybit.md
-        items:
-        - name: Configuration ByBit
-          href: api/connectors/crypto_exchanges/bybit/configuration_bybit.md
-        - name: Graphical configuration ByBit
-          href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
-        - name: Adapter initialization ByBit
-          href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
-      - name: BW
-        href: api/connectors/crypto_exchanges/bw.md
-        items:
-        - name: Configuration BW
-          href: api/connectors/crypto_exchanges/bw/configuration_bw.md
-        - name: Graphical configuration BW
-          href: api/connectors/crypto_exchanges/bw/graphical_configuration_bw.md
-        - name: Adapter initialization BW
-          href: api/connectors/crypto_exchanges/bw/adapter_initialization_bw.md
-      - name: CEX.IO
-        href: api/connectors/crypto_exchanges/cex.io.md
-        items:
-        - name: Configuration CEX.IO
-          href: api/connectors/crypto_exchanges/cex.io/configuration_cex.io.md
-        - name: Graphical configuration CEX.IO
-          href: api/connectors/crypto_exchanges/cex.io/graphical_configuration_cex.io.md
-        - name: Adapter initialization CEX.IO
-          href: api/connectors/crypto_exchanges/cex.io/adapter_initialization_cex.io.md
-      - name: Coinbase
-        href: api/connectors/crypto_exchanges/coinbase.md
-        items:
-        - name: Configuration Coinbase
-          href: api/connectors/crypto_exchanges/coinbase/configuration_coinbase.md
-        - name: Graphical configuration Coinbase
-          href: api/connectors/crypto_exchanges/coinbase/graphical_configuration_coinbase.md
-        - name: Adapter initialization Coinbase
-          href: api/connectors/crypto_exchanges/coinbase/adapter_initialization_coinbase.md
-      - name: CoinBene
-        href: api/connectors/crypto_exchanges/coinbene.md
-        items:
-        - name: Configuration CoinBene
-          href: api/connectors/crypto_exchanges/coinbene/configuration_coinbene.md
-        - name: Graphical configuration CoinBene
-          href: api/connectors/crypto_exchanges/coinbene/graphical_configuration_coinbene.md
-        - name: Adapter initialization CoinBene
-          href: api/connectors/crypto_exchanges/coinbene/adapter_initialization_coinbene.md
-      - name: CoinCap
-        href: api/connectors/crypto_exchanges/coincap.md
-        items:
-        - name: Configuration CoinCap
-          href: api/connectors/crypto_exchanges/coincap/configuration_coincap.md
-        - name: Graphical configuration CoinCap
-          href: api/connectors/crypto_exchanges/coincap/graphical_configuration_coincap.md
-        - name: Adapter initialization CoinCap
-          href: api/connectors/crypto_exchanges/coincap/adapter_initialization_coincap.md
-      - name: Coincheck
-        href: api/connectors/crypto_exchanges/coincheck.md
-        items:
-        - name: Configuration Coincheck
-          href: api/connectors/crypto_exchanges/coincheck/configuration_coincheck.md
-        - name: Graphical configuration Coincheck
-          href: api/connectors/crypto_exchanges/coincheck/graphical_configuration_coincheck.md
-        - name: Adapter initialization Coincheck
-          href: api/connectors/crypto_exchanges/coincheck/adapter_initialization_coincheck.md
-      - name: CoinEx
-        href: api/connectors/crypto_exchanges/coinex.md
-        items:
-        - name: Configuration CoinEx
-          href: api/connectors/crypto_exchanges/coinex/configuration_coinex.md
-        - name: Graphical configuration CoinEx
-          href: api/connectors/crypto_exchanges/coinex/graphical_configuration_coinex.md
-        - name: Adapter initialization CoinEx
-          href: api/connectors/crypto_exchanges/coinex/adapter_initialization_coinex.md
-      - name: CoinExchange
-        href: api/connectors/crypto_exchanges/coinexchange.md
-        items:
-        - name: Configuration CoinExchange
-          href: api/connectors/crypto_exchanges/coinexchange/configuration_coinexchange.md
-        - name: Graphical configuration CoinExchange
-          href: api/connectors/crypto_exchanges/coinexchange/graphical_configuration_coinexchange.md
-        - name: Adapter initialization CoinExchange
-          href: api/connectors/crypto_exchanges/coinexchange/adapter_initialization_coinexchange.md
-      - name: Coinigy
-        href: api/connectors/crypto_exchanges/coinigy.md
-        items:
-        - name: Configuration Coinigy
-          href: api/connectors/crypto_exchanges/coinigy/configuration_coinigy.md
-        - name: Graphical configuration Coinigy
-          href: api/connectors/crypto_exchanges/coinigy/graphical_configuration_coinigy.md
-        - name: Adapter initialization Coinigy
-          href: api/connectors/crypto_exchanges/coinigy/adapter_initialization_coinigy.md
-      - name: CoinHub
-        href: api/connectors/crypto_exchanges/coinhub.md
-        items:
-        - name: Configuration CoinHub
-          href: api/connectors/crypto_exchanges/coinhub/configuration_coinhub.md
-        - name: Graphical configuration CoinHub
-          href: api/connectors/crypto_exchanges/coinhub/graphical_configuration_coinhub.md
-        - name: Adapter initialization CoinHub
-          href: api/connectors/crypto_exchanges/coinhub/adapter_initialization_coinhub.md
-      - name: Cryptopia
-        href: api/connectors/crypto_exchanges/cryptopia.md
-        items:
-        - name: Configuration Cryptopia
-          href: api/connectors/crypto_exchanges/cryptopia/configuration_cryptopia.md
-        - name: Graphical configuration Cryptopia
-          href: api/connectors/crypto_exchanges/cryptopia/graphical_configuration_cryptopia.md
-        - name: Adapter initialization Cryptopia
-          href: api/connectors/crypto_exchanges/cryptopia/adapter_initialization_cryptopia.md
-      - name: Deribit
-        href: api/connectors/crypto_exchanges/deribit.md
-        items:
-        - name: Configuration Deribit
-          href: api/connectors/crypto_exchanges/deribit/configuration_deribit.md
-        - name: Graphical configuration Deribit
-          href: api/connectors/crypto_exchanges/deribit/graphical_configuration_deribit.md
-        - name: Adapter initialization Deribit
-          href: api/connectors/crypto_exchanges/deribit/adapter_initialization_deribit.md
-      - name: Digifinex
-        href: api/connectors/crypto_exchanges/digifinex.md
-        items:
-        - name: Configuration Digifinex
-          href: api/connectors/crypto_exchanges/digifinex/configuration_digifinex.md
-        - name: Graphical configuration Digifinex
-          href: api/connectors/crypto_exchanges/digifinex/graphical_configuration_digifinex.md
-        - name: Adapter initialization Digifinex
-          href: api/connectors/crypto_exchanges/digifinex/adapter_initialization_digifinex.md
-      - name: DigitexFutures
-        href: api/connectors/crypto_exchanges/digitexfutures.md
-        items:
-        - name: Configuration DigitexFutures
-          href: api/connectors/crypto_exchanges/digitexfutures/configuration_digitexfutures.md
-        - name: Graphical configuration DigitexFutures
-          href: api/connectors/crypto_exchanges/digitexfutures/graphical_configuration_digitexfutures.md
-        - name: Adapter initialization DigitexFutures
-          href: api/connectors/crypto_exchanges/digitexfutures/adapter_initialization_digitexfutures.md
-      - name: EXMO
-        href: api/connectors/crypto_exchanges/exmo.md
-        items:
-        - name: Configuration EXMO
-          href: api/connectors/crypto_exchanges/exmo/configuration_exmo.md
-        - name: Graphical configuration EXMO
-          href: api/connectors/crypto_exchanges/exmo/graphical_configuration_exmo.md
-        - name: Adapter initialization EXMO
-          href: api/connectors/crypto_exchanges/exmo/adapter_initialization_exmo.md
-      - name: FatBTC
-        href: api/connectors/crypto_exchanges/fatbtc.md
-        items:
-        - name: Configuration FatBTC
-          href: api/connectors/crypto_exchanges/fatbtc/configuration_fatbtc.md
-        - name: Graphical configuration FatBTC
-          href: api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md
-        - name: Adapter initialization FatBTC
-          href: api/connectors/crypto_exchanges/fatbtc/adapter_initialization_fatbtc.md
-      - name: Gate.io
-        href: api/connectors/crypto_exchanges/gateio.md
-        items:
-        - name: Configuration Gate.io
-          href: api/connectors/crypto_exchanges/gateio/configuration_gateio.md
-        - name: Graphical configuration Gate.io
-          href: api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md
-        - name: Adapter initialization Gate.io
-          href: api/connectors/crypto_exchanges/gateio/adapter_initialization_gateio.md
-      - name: GDAX
-        href: api/connectors/crypto_exchanges/gdax.md
-        items:
-        - name: Configuration GDAX
-          href: api/connectors/crypto_exchanges/gdax/configuration_gdax.md
-        - name: Graphical configuration GDAX
-          href: api/connectors/crypto_exchanges/gdax/graphical_configuration_gdax.md
-        - name: Adapter initialization GDAX
-          href: api/connectors/crypto_exchanges/gdax/adapter_initialization_gdax.md
-      - name: Gopax
-        href: api/connectors/crypto_exchanges/gopax.md
-        items:
-        - name: Configuration Gopax
-          href: api/connectors/crypto_exchanges/gopax/configuration_gopax.md
-        - name: Graphical configuration Gopax
-          href: api/connectors/crypto_exchanges/gopax/graphical_configuration_gopax.md
-        - name: Adapter initialization Gopax
-          href: api/connectors/crypto_exchanges/gopax/adapter_initialization_gopax.md
-      - name: HitBTC
-        href: api/connectors/crypto_exchanges/hitbtc.md
-        items:
-        - name: Configuration HitBTC
-          href: api/connectors/crypto_exchanges/hitbtc/configuration_hitbtc.md
-        - name: Graphical configuration HitBTC
-          href: api/connectors/crypto_exchanges/hitbtc/graphical_configuration_hitbtc.md
-        - name: Adapter initialization HitBTC
-          href: api/connectors/crypto_exchanges/hitbtc/adapter_initialization_hitbtc.md
-      - name: Hotbit
-        href: api/connectors/crypto_exchanges/hotbit.md
-        items:
-        - name: Configuration Hotbit
-          href: api/connectors/crypto_exchanges/hotbit/configuration_hotbit.md
-        - name: Graphical configuration Hotbit
-          href: api/connectors/crypto_exchanges/hotbit/graphical_configuration_hotbit.md
-        - name: Adapter initialization Hotbit
-          href: api/connectors/crypto_exchanges/hotbit/adapter_initialization_hotbit.md
-      - name: Huobi
-        href: api/connectors/crypto_exchanges/huobi.md
-        items:
-        - name: Configuration Huobi
-          href: api/connectors/crypto_exchanges/huobi/configuration_huobi.md
-        - name: Graphical configuration Huobi
-          href: api/connectors/crypto_exchanges/huobi/graphical_configuration_huobi.md
-        - name: Adapter initialization Huobi
-          href: api/connectors/crypto_exchanges/huobi/adapter_initialization_huobi.md
-      - name: Idax
-        href: api/connectors/crypto_exchanges/idax.md
-        items:
-        - name: Configuration Idax
-          href: api/connectors/crypto_exchanges/idax/configuration_idax.md
-        - name: Graphical configuration Idax
-          href: api/connectors/crypto_exchanges/idax/graphical_configuration_idax.md
-        - name: Adapter initialization Idax
-          href: api/connectors/crypto_exchanges/idax/adapter_initialization_idax.md
-      - name: Kraken
-        href: api/connectors/crypto_exchanges/kraken.md
-        items:
-        - name: Configuration Kraken
-          href: api/connectors/crypto_exchanges/kraken/configuration_kraken.md
-        - name: Graphical configuration Kraken
-          href: api/connectors/crypto_exchanges/kraken/graphical_configuration_kraken.md
-        - name: Adapter initialization Kraken
-          href: api/connectors/crypto_exchanges/kraken/adapter_initialization_kraken.md
-      - name: Kucoin
-        href: api/connectors/crypto_exchanges/kucoin.md
-        items:
-        - name: Configuration Kucoin
-          href: api/connectors/crypto_exchanges/kucoin/configuration_kucoin.md
-        - name: Graphical configuration Kucoin
-          href: api/connectors/crypto_exchanges/kucoin/graphical_configuration_kucoin.md
-        - name: Adapter initialization Kucoin
-          href: api/connectors/crypto_exchanges/kucoin/adapter_initialization_kucoin.md
-      - name: Latoken
-        href: api/connectors/crypto_exchanges/latoken.md
-        items:
-        - name: Configuration Latoken
-          href: api/connectors/crypto_exchanges/latoken/configuration_latoken.md
-        - name: Graphical configuration Latoken
-          href: api/connectors/crypto_exchanges/latoken/graphical_configuration_latoken.md
-        - name: Adapter initialization Latoken
-          href: api/connectors/crypto_exchanges/latoken/adapter_initialization_latoken.md
-      - name: LBank
-        href: api/connectors/crypto_exchanges/lbank.md
-        items:
-        - name: Configuration LBank
-          href: api/connectors/crypto_exchanges/lbank/configuration_lbank.md
-        - name: Graphical configuration LBank
-          href: api/connectors/crypto_exchanges/lbank/graphical_configuration_lbank.md
-        - name: Adapter initialization LBank
-          href: api/connectors/crypto_exchanges/lbank/adapter_initialization_lbank.md
-      - name: Liqui
-        href: api/connectors/crypto_exchanges/liqui.md
-        items:
-        - name: Configuration Liqui
-          href: api/connectors/crypto_exchanges/liqui/configuration_liqui.md
-        - name: Graphical configuration Liqui
-          href: api/connectors/crypto_exchanges/liqui/graphical_configuration_liqui.md
-        - name: Adapter initialization Liqui
-          href: api/connectors/crypto_exchanges/liqui/adapter_initialization_liqui.md
-      - name: Livecoin
-        href: api/connectors/crypto_exchanges/livecoin.md
-        items:
-        - name: Configuration Livecoin
-          href: api/connectors/crypto_exchanges/livecoin/configuration_livecoin.md
-        - name: Graphical configuration Livecoin
-          href: api/connectors/crypto_exchanges/livecoin/graphical_configuration_livecoin.md
-        - name: Adapter initialization Livecoin
-          href: api/connectors/crypto_exchanges/livecoin/adapter_initialization_livecoin.md
-      - name: MEXC
-        href: api/connectors/crypto_exchanges/mexc.md
-        items:
-        - name: Configuration MEXC
-          href: api/connectors/crypto_exchanges/mexc/configuration_mexc.md
-        - name: Graphical configuration MEXC
-          href: api/connectors/crypto_exchanges/mexc/graphical_configuration_mexc.md
-        - name: Adapter initialization MEXC
-          href: api/connectors/crypto_exchanges/mexc/adapter_initialization_mexc.md
-      - name: OKCoin
-        href: api/connectors/crypto_exchanges/okcoin.md
-        items:
-        - name: Configuration OKCoin
-          href: api/connectors/crypto_exchanges/okcoin/configuration_okcoin.md
-        - name: Graphical configuration OKCoin
-          href: api/connectors/crypto_exchanges/okcoin/graphical_configuration_okcoin.md
-        - name: Adapter initialization OKCoin
-          href: api/connectors/crypto_exchanges/okcoin/adapter_initialization_okcoin.md
-      - name: OKEx
-        href: api/connectors/crypto_exchanges/okex.md
-        items:
-        - name: Configuration OKEx
-          href: api/connectors/crypto_exchanges/okex/configuration_okex.md
-        - name: Graphical configuration OKEx
-          href: api/connectors/crypto_exchanges/okex/graphical_configuration_okex.md
-        - name: Adapter initialization OKEx
-          href: api/connectors/crypto_exchanges/okex/adapter_initialization_okex.md
-      - name: OKEx History
-        href: api/connectors/crypto_exchanges/okex_history.md
-        items:
-        - name: Configuration OKEx History
-          href: api/connectors/crypto_exchanges/okex_history/configuration_okex_history.md
-        - name: Graphical configuration OKEx History
-          href: api/connectors/crypto_exchanges/okex_history/graphical_configuration_okex_history.md
-        - name: Adapter initialization OKEx History
-          href: api/connectors/crypto_exchanges/okex_history/adapter_initialization_okex_history.md
-      - name: Poloniex
-        href: api/connectors/crypto_exchanges/poloniex.md
-        items:
-        - name: Configuration Poloniex
-          href: api/connectors/crypto_exchanges/poloniex/configuration_poloniex.md
-        - name: Graphical configuration Poloniex
-          href: api/connectors/crypto_exchanges/poloniex/graphical_configuration_poloniex.md
-        - name: Adapter initialization Poloniex
-          href: api/connectors/crypto_exchanges/poloniex/adapter_initialization_poloniex.md
-      - name: PrizmBit
-        href: api/connectors/crypto_exchanges/prizmbit.md
-        items:
-        - name: Configuration PrizmBit
-          href: api/connectors/crypto_exchanges/prizmbit/configuration_prizmbit.md
-        - name: Graphical configuration PrizmBit
-          href: api/connectors/crypto_exchanges/prizmbit/graphical_configuration_prizmbit.md
-        - name: Adapter initialization PrizmBit
-          href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
-      - name: Quoinex
-        href: api/connectors/crypto_exchanges/quoinex.md
-        items:
-        - name: Configuration Quoinex
-          href: api/connectors/crypto_exchanges/quoinex/configuration_quoinex.md
-        - name: Graphical configuration Quoinex
-          href: api/connectors/crypto_exchanges/quoinex/graphical_configuration_quoinex.md
-        - name: Adapter initialization Quoinex
-          href: api/connectors/crypto_exchanges/quoinex/adapter_initialization_quoinex.md
-      - name: TradeOgre
-        href: api/connectors/crypto_exchanges/tradeogre.md
-        items:
-        - name: Configuration TradeOgre
-          href: api/connectors/crypto_exchanges/tradeogre/configuration_tradeogre.md
-        - name: Graphical configuration TradeOgre
-          href: api/connectors/crypto_exchanges/tradeogre/graphical_configuration_tradeogre.md
-        - name: Adapter initialization TradeOgre
-          href: api/connectors/crypto_exchanges/tradeogre/adapter_initialization_tradeogre.md
-      - name: Upbit
-        href: api/connectors/crypto_exchanges/upbit.md
-        items:
-        - name: Configuration Upbit
-          href: api/connectors/crypto_exchanges/upbit/configuration_upbit.md
-        - name: Graphical configuration Upbit
-          href: api/connectors/crypto_exchanges/upbit/graphical_configuration_upbit.md
-        - name: Adapter initialization Upbit
-          href: api/connectors/crypto_exchanges/upbit/adapter_initialization_upbit.md
-      - name: WEX (BTC-e)
-        href: api/connectors/crypto_exchanges/wex_btc_e.md
-        items:
-        - name: Configuration WEX (BTC-e)
-          href: api/connectors/crypto_exchanges/wex_btc_e/configuration_wex_btc_e.md
-        - name: Graphical configuration WEX (BTC-e)
-          href: api/connectors/crypto_exchanges/wex_btc_e/graphical_configuration_wex_btc_e.md
-        - name: Adapter initialization WEX (BTC-e)
-          href: api/connectors/crypto_exchanges/wex_btc_e/adapter_initialization_wex_btc_e.md
-      - name: Yobit
-        href: api/connectors/crypto_exchanges/yobit.md
-        items:
-        - name: Configuration Yobit
-          href: api/connectors/crypto_exchanges/yobit/configuration_yobit.md
-        - name: Graphical configuration Yobit
-          href: api/connectors/crypto_exchanges/yobit/graphical_configuration_yobit.md
-        - name: Adapter initialization Yobit
-          href: api/connectors/crypto_exchanges/yobit/adapter_initialization_yobit.md
-      - name: Zaif
-        href: api/connectors/crypto_exchanges/zaif.md
-        items:
-        - name: Configuration Zaif
-          href: api/connectors/crypto_exchanges/zaif/configuration_zaif.md
-        - name: Graphical configuration Zaif
-          href: api/connectors/crypto_exchanges/zaif/graphical_configuration_zaif.md
-        - name: Adapter initialization Zaif
-          href: api/connectors/crypto_exchanges/zaif/adapter_initialization_zaif.md
-      - name: ZB
-        href: api/connectors/crypto_exchanges/zb.md
-        items:
-        - name: Configuration ZB
-          href: api/connectors/crypto_exchanges/zb/configuration_zb.md
-        - name: Graphical configuration ZB
-          href: api/connectors/crypto_exchanges/zb/graphical_configuration_zb.md
-        - name: Adapter initialization ZB
-          href: api/connectors/crypto_exchanges/zb/adapter_initialization_zb.md
-      - name: Withdraw
-        href: api/connectors/crypto_exchanges/withdraw.md
+        - name: Bibox
+          href: api/connectors/crypto_exchanges/bibox.md
+          items:
+          - name: Configuration Bibox
+            href: api/connectors/crypto_exchanges/bibox/configuration_bibox.md
+          - name: Graphical configuration Bibox
+            href: api/connectors/crypto_exchanges/bibox/graphical_configuration_bibox.md
+          - name: Adapter initialization Bibox
+            href: api/connectors/crypto_exchanges/bibox/adapter_initialization_bibox.md
+        - name: Binance
+          href: api/connectors/crypto_exchanges/binance.md
+          items:
+          - name: Configuration Binance
+            href: api/connectors/crypto_exchanges/binance/configuration_binance.md
+          - name: Graphical configuration Binance
+            href: api/connectors/crypto_exchanges/binance/graphical_configuration_binance.md
+          - name: Adapter initialization Binance
+            href: api/connectors/crypto_exchanges/binance/adapter_initialization_binance.md
+        - name: Binance History
+          href: api/connectors/crypto_exchanges/binance_history.md
+          items:
+          - name: Configuration Binance History
+            href: api/connectors/crypto_exchanges/binance_history/configuration_binance_history.md
+          - name: Graphical configuration Binance History
+            href: api/connectors/crypto_exchanges/binance_history/graphical_configuration_binance_history.md
+          - name: Adapter initialization Binance History
+            href: api/connectors/crypto_exchanges/binance_history/adapter_initialization_binance_history.md
+        - name: BingX
+          href: api/connectors/crypto_exchanges/bingx.md
+          items:
+          - name: Configuration BingX
+            href: api/connectors/crypto_exchanges/bingx/configuration_bingx.md
+          - name: Graphical configuration BingX
+            href: api/connectors/crypto_exchanges/bingx/graphical_configuration_bingx.md
+          - name: Adapter initialization BingX
+            href: api/connectors/crypto_exchanges/bingx/adapter_initialization_bingx.md
+        - name: Bitalong
+          href: api/connectors/crypto_exchanges/bitalong.md
+          items:
+          - name: Configuration Bitalong
+            href: api/connectors/crypto_exchanges/bitalong/configuration_bitalong.md
+          - name: Graphical configuration Bitalong
+            href: api/connectors/crypto_exchanges/bitalong/graphical_configuration_bitalong.md
+          - name: Adapter initialization Bitalong
+            href: api/connectors/crypto_exchanges/bitalong/adapter_initialization_bitalong.md
+        - name: Bitbank
+          href: api/connectors/crypto_exchanges/bitbank.md
+          items:
+          - name: Configuration Bitbank
+            href: api/connectors/crypto_exchanges/bitbank/configuration_bitbank.md
+          - name: Graphical configuration Bitbank
+            href: api/connectors/crypto_exchanges/bitbank/graphical_configuration_bitbank.md
+          - name: Adapter initialization Bitbank
+            href: api/connectors/crypto_exchanges/bitbank/adapter_initialization_bitbank.md
+        - name: Bitget
+          href: api/connectors/crypto_exchanges/bitget.md
+          items:
+          - name: Configuration Bitget
+            href: api/connectors/crypto_exchanges/bitget/configuration_bitget.md
+          - name: Graphical configuration Bitget
+            href: api/connectors/crypto_exchanges/bitget/graphical_configuration_bitget.md
+          - name: Adapter initialization Bitget
+            href: api/connectors/crypto_exchanges/bitget/adapter_initialization_bitget.md
+        - name: Bithumb
+          href: api/connectors/crypto_exchanges/bithumb.md
+          items:
+          - name: Configuration Bithumb
+            href: api/connectors/crypto_exchanges/bithumb/configuration_bithumb.md
+          - name: Graphical configuration Bithumb
+            href: api/connectors/crypto_exchanges/bithumb/graphical_configuration_bithumb.md
+          - name: Adapter initialization Bithumb
+            href: api/connectors/crypto_exchanges/bithumb/adapter_initialization_bithumb.md
+        - name: Bitmart
+          href: api/connectors/crypto_exchanges/bitmart.md
+          items:
+          - name: Configuration Bitmart
+            href: api/connectors/crypto_exchanges/bitmart/configuration_bitmart.md
+          - name: Graphical configuration Bitmart
+            href: api/connectors/crypto_exchanges/bitmart/graphical_configuration_bitmart.md
+          - name: Adapter initialization Bitmart
+            href: api/connectors/crypto_exchanges/bitmart/adapter_initialization_bitmart.md
+        - name: BitMax
+          href: api/connectors/crypto_exchanges/bitmax.md
+          items:
+          - name: Configuration BitMax
+            href: api/connectors/crypto_exchanges/bitmax/configuration_bitmax.md
+          - name: Graphical configuration BitMax
+            href: api/connectors/crypto_exchanges/bitmax/graphical_configuration_bitmax.md
+          - name: Adapter initialization BitMax
+            href: api/connectors/crypto_exchanges/bitmax/adapter_initialization_bitmax.md
+        - name: BitMEX
+          href: api/connectors/crypto_exchanges/bitmex.md
+          items:
+          - name: Configuration BitMEX
+            href: api/connectors/crypto_exchanges/bitmex/configuration_bitmex.md
+          - name: Graphical configuration BitMEX
+            href: api/connectors/crypto_exchanges/bitmex/graphical_configuration_bitmex.md
+          - name: Adapter initialization BitMEX
+            href: api/connectors/crypto_exchanges/bitmex/adapter_initialization_bitmex.md
+        - name: BitZ
+          href: api/connectors/crypto_exchanges/bitz.md
+          items:
+          - name: Configuration BitZ
+            href: api/connectors/crypto_exchanges/bitz/configuration_bitz.md
+          - name: Graphical configuration BitZ
+            href: api/connectors/crypto_exchanges/bitz/graphical_configuration_bitz.md
+          - name: Adapter initialization BitZ
+            href: api/connectors/crypto_exchanges/bitz/adapter_initialization_bitz.md
+        - name: BW
+          href: api/connectors/crypto_exchanges/bw.md
+          items:
+          - name: Configuration BW
+            href: api/connectors/crypto_exchanges/bw/configuration_bw.md
+          - name: Graphical configuration BW
+            href: api/connectors/crypto_exchanges/bw/graphical_configuration_bw.md
+          - name: Adapter initialization BW
+            href: api/connectors/crypto_exchanges/bw/adapter_initialization_bw.md
+        - name: ByBit
+          href: api/connectors/crypto_exchanges/bybit.md
+          items:
+          - name: Configuration ByBit
+            href: api/connectors/crypto_exchanges/bybit/configuration_bybit.md
+          - name: Graphical configuration ByBit
+            href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
+          - name: Adapter initialization ByBit
+            href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
+        - name: CoinBene
+          href: api/connectors/crypto_exchanges/coinbene.md
+          items:
+          - name: Configuration CoinBene
+            href: api/connectors/crypto_exchanges/coinbene/configuration_coinbene.md
+          - name: Graphical configuration CoinBene
+            href: api/connectors/crypto_exchanges/coinbene/graphical_configuration_coinbene.md
+          - name: Adapter initialization CoinBene
+            href: api/connectors/crypto_exchanges/coinbene/adapter_initialization_coinbene.md
+        - name: Coincheck
+          href: api/connectors/crypto_exchanges/coincheck.md
+          items:
+          - name: Configuration Coincheck
+            href: api/connectors/crypto_exchanges/coincheck/configuration_coincheck.md
+          - name: Graphical configuration Coincheck
+            href: api/connectors/crypto_exchanges/coincheck/graphical_configuration_coincheck.md
+          - name: Adapter initialization Coincheck
+            href: api/connectors/crypto_exchanges/coincheck/adapter_initialization_coincheck.md
+        - name: CoinEx
+          href: api/connectors/crypto_exchanges/coinex.md
+          items:
+          - name: Configuration CoinEx
+            href: api/connectors/crypto_exchanges/coinex/configuration_coinex.md
+          - name: Graphical configuration CoinEx
+            href: api/connectors/crypto_exchanges/coinex/graphical_configuration_coinex.md
+          - name: Adapter initialization CoinEx
+            href: api/connectors/crypto_exchanges/coinex/adapter_initialization_coinex.md
+        - name: Cryptopia
+          href: api/connectors/crypto_exchanges/cryptopia.md
+          items:
+          - name: Configuration Cryptopia
+            href: api/connectors/crypto_exchanges/cryptopia/configuration_cryptopia.md
+          - name: Graphical configuration Cryptopia
+            href: api/connectors/crypto_exchanges/cryptopia/graphical_configuration_cryptopia.md
+          - name: Adapter initialization Cryptopia
+            href: api/connectors/crypto_exchanges/cryptopia/adapter_initialization_cryptopia.md
+        - name: Digifinex
+          href: api/connectors/crypto_exchanges/digifinex.md
+          items:
+          - name: Configuration Digifinex
+            href: api/connectors/crypto_exchanges/digifinex/configuration_digifinex.md
+          - name: Graphical configuration Digifinex
+            href: api/connectors/crypto_exchanges/digifinex/graphical_configuration_digifinex.md
+          - name: Adapter initialization Digifinex
+            href: api/connectors/crypto_exchanges/digifinex/adapter_initialization_digifinex.md
+        - name: DigitexFutures
+          href: api/connectors/crypto_exchanges/digitexfutures.md
+          items:
+          - name: Configuration DigitexFutures
+            href: api/connectors/crypto_exchanges/digitexfutures/configuration_digitexfutures.md
+          - name: Graphical configuration DigitexFutures
+            href: api/connectors/crypto_exchanges/digitexfutures/graphical_configuration_digitexfutures.md
+          - name: Adapter initialization DigitexFutures
+            href: api/connectors/crypto_exchanges/digitexfutures/adapter_initialization_digitexfutures.md
+        - name: FatBTC
+          href: api/connectors/crypto_exchanges/fatbtc.md
+          items:
+          - name: Configuration FatBTC
+            href: api/connectors/crypto_exchanges/fatbtc/configuration_fatbtc.md
+          - name: Graphical configuration FatBTC
+            href: api/connectors/crypto_exchanges/fatbtc/graphical_configuration_fatbtc.md
+          - name: Adapter initialization FatBTC
+            href: api/connectors/crypto_exchanges/fatbtc/adapter_initialization_fatbtc.md
+        - name: Gate.io
+          href: api/connectors/crypto_exchanges/gateio.md
+          items:
+          - name: Configuration Gate.io
+            href: api/connectors/crypto_exchanges/gateio/configuration_gateio.md
+          - name: Graphical configuration Gate.io
+            href: api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md
+          - name: Adapter initialization Gate.io
+            href: api/connectors/crypto_exchanges/gateio/adapter_initialization_gateio.md
+        - name: Gopax
+          href: api/connectors/crypto_exchanges/gopax.md
+          items:
+          - name: Configuration Gopax
+            href: api/connectors/crypto_exchanges/gopax/configuration_gopax.md
+          - name: Graphical configuration Gopax
+            href: api/connectors/crypto_exchanges/gopax/graphical_configuration_gopax.md
+          - name: Adapter initialization Gopax
+            href: api/connectors/crypto_exchanges/gopax/adapter_initialization_gopax.md
+        - name: Hotbit
+          href: api/connectors/crypto_exchanges/hotbit.md
+          items:
+          - name: Configuration Hotbit
+            href: api/connectors/crypto_exchanges/hotbit/configuration_hotbit.md
+          - name: Graphical configuration Hotbit
+            href: api/connectors/crypto_exchanges/hotbit/graphical_configuration_hotbit.md
+          - name: Adapter initialization Hotbit
+            href: api/connectors/crypto_exchanges/hotbit/adapter_initialization_hotbit.md
+        - name: Huobi
+          href: api/connectors/crypto_exchanges/huobi.md
+          items:
+          - name: Configuration Huobi
+            href: api/connectors/crypto_exchanges/huobi/configuration_huobi.md
+          - name: Graphical configuration Huobi
+            href: api/connectors/crypto_exchanges/huobi/graphical_configuration_huobi.md
+          - name: Adapter initialization Huobi
+            href: api/connectors/crypto_exchanges/huobi/adapter_initialization_huobi.md
+        - name: Idax
+          href: api/connectors/crypto_exchanges/idax.md
+          items:
+          - name: Configuration Idax
+            href: api/connectors/crypto_exchanges/idax/configuration_idax.md
+          - name: Graphical configuration Idax
+            href: api/connectors/crypto_exchanges/idax/graphical_configuration_idax.md
+          - name: Adapter initialization Idax
+            href: api/connectors/crypto_exchanges/idax/adapter_initialization_idax.md
+        - name: Kucoin
+          href: api/connectors/crypto_exchanges/kucoin.md
+          items:
+          - name: Configuration Kucoin
+            href: api/connectors/crypto_exchanges/kucoin/configuration_kucoin.md
+          - name: Graphical configuration Kucoin
+            href: api/connectors/crypto_exchanges/kucoin/graphical_configuration_kucoin.md
+          - name: Adapter initialization Kucoin
+            href: api/connectors/crypto_exchanges/kucoin/adapter_initialization_kucoin.md
+        - name: LBank
+          href: api/connectors/crypto_exchanges/lbank.md
+          items:
+          - name: Configuration LBank
+            href: api/connectors/crypto_exchanges/lbank/configuration_lbank.md
+          - name: Graphical configuration LBank
+            href: api/connectors/crypto_exchanges/lbank/graphical_configuration_lbank.md
+          - name: Adapter initialization LBank
+            href: api/connectors/crypto_exchanges/lbank/adapter_initialization_lbank.md
+        - name: MEXC
+          href: api/connectors/crypto_exchanges/mexc.md
+          items:
+          - name: Configuration MEXC
+            href: api/connectors/crypto_exchanges/mexc/configuration_mexc.md
+          - name: Graphical configuration MEXC
+            href: api/connectors/crypto_exchanges/mexc/graphical_configuration_mexc.md
+          - name: Adapter initialization MEXC
+            href: api/connectors/crypto_exchanges/mexc/adapter_initialization_mexc.md
+        - name: OKCoin
+          href: api/connectors/crypto_exchanges/okcoin.md
+          items:
+          - name: Configuration OKCoin
+            href: api/connectors/crypto_exchanges/okcoin/configuration_okcoin.md
+          - name: Graphical configuration OKCoin
+            href: api/connectors/crypto_exchanges/okcoin/graphical_configuration_okcoin.md
+          - name: Adapter initialization OKCoin
+            href: api/connectors/crypto_exchanges/okcoin/adapter_initialization_okcoin.md
+        - name: OKEx
+          href: api/connectors/crypto_exchanges/okex.md
+          items:
+          - name: Configuration OKEx
+            href: api/connectors/crypto_exchanges/okex/configuration_okex.md
+          - name: Graphical configuration OKEx
+            href: api/connectors/crypto_exchanges/okex/graphical_configuration_okex.md
+          - name: Adapter initialization OKEx
+            href: api/connectors/crypto_exchanges/okex/adapter_initialization_okex.md
+        - name: OKEx History
+          href: api/connectors/crypto_exchanges/okex_history.md
+          items:
+          - name: Configuration OKEx History
+            href: api/connectors/crypto_exchanges/okex_history/configuration_okex_history.md
+          - name: Graphical configuration OKEx History
+            href: api/connectors/crypto_exchanges/okex_history/graphical_configuration_okex_history.md
+          - name: Adapter initialization OKEx History
+            href: api/connectors/crypto_exchanges/okex_history/adapter_initialization_okex_history.md
+        - name: Quoinex
+          href: api/connectors/crypto_exchanges/quoinex.md
+          items:
+          - name: Configuration Quoinex
+            href: api/connectors/crypto_exchanges/quoinex/configuration_quoinex.md
+          - name: Graphical configuration Quoinex
+            href: api/connectors/crypto_exchanges/quoinex/graphical_configuration_quoinex.md
+          - name: Adapter initialization Quoinex
+            href: api/connectors/crypto_exchanges/quoinex/adapter_initialization_quoinex.md
+        - name: Upbit
+          href: api/connectors/crypto_exchanges/upbit.md
+          items:
+          - name: Configuration Upbit
+            href: api/connectors/crypto_exchanges/upbit/configuration_upbit.md
+          - name: Graphical configuration Upbit
+            href: api/connectors/crypto_exchanges/upbit/graphical_configuration_upbit.md
+          - name: Adapter initialization Upbit
+            href: api/connectors/crypto_exchanges/upbit/adapter_initialization_upbit.md
+        - name: Zaif
+          href: api/connectors/crypto_exchanges/zaif.md
+          items:
+          - name: Configuration Zaif
+            href: api/connectors/crypto_exchanges/zaif/configuration_zaif.md
+          - name: Graphical configuration Zaif
+            href: api/connectors/crypto_exchanges/zaif/graphical_configuration_zaif.md
+          - name: Adapter initialization Zaif
+            href: api/connectors/crypto_exchanges/zaif/adapter_initialization_zaif.md
+        - name: ZB
+          href: api/connectors/crypto_exchanges/zb.md
+          items:
+          - name: Configuration ZB
+            href: api/connectors/crypto_exchanges/zb/configuration_zb.md
+          - name: Graphical configuration ZB
+            href: api/connectors/crypto_exchanges/zb/graphical_configuration_zb.md
+          - name: Adapter initialization ZB
+            href: api/connectors/crypto_exchanges/zb/adapter_initialization_zb.md
     - name: DEX
       items:
       - name: Aster
