@@ -2716,6 +2716,24 @@
             href: api/connectors/crypto_exchanges/pintu_pro/adapter_initialization_pintu_pro.md
     - name: DEX
       items:
+      - name: 1inch
+        href: api/connectors/crypto_exchanges/one_inch.md
+        items:
+        - name: Configuration 1inch
+          href: api/connectors/crypto_exchanges/one_inch/configuration_one_inch.md
+        - name: Graphical configuration 1inch
+          href: api/connectors/crypto_exchanges/one_inch/graphical_configuration_one_inch.md
+        - name: Adapter initialization 1inch
+          href: api/connectors/crypto_exchanges/one_inch/adapter_initialization_one_inch.md
+      - name: Aerodrome Finance
+        href: api/connectors/crypto_exchanges/aerodrome.md
+        items:
+        - name: Configuration Aerodrome Finance
+          href: api/connectors/crypto_exchanges/aerodrome/configuration_aerodrome.md
+        - name: Graphical configuration Aerodrome Finance
+          href: api/connectors/crypto_exchanges/aerodrome/graphical_configuration_aerodrome.md
+        - name: Adapter initialization Aerodrome Finance
+          href: api/connectors/crypto_exchanges/aerodrome/adapter_initialization_aerodrome.md
       - name: Aster
         href: api/connectors/crypto_exchanges/aster.md
         items:
@@ -2725,6 +2743,33 @@
           href: api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md
         - name: Adapter initialization Aster
           href: api/connectors/crypto_exchanges/aster/adapter_initialization_aster.md
+      - name: Cetus
+        href: api/connectors/crypto_exchanges/cetus.md
+        items:
+        - name: Configuration Cetus
+          href: api/connectors/crypto_exchanges/cetus/configuration_cetus.md
+        - name: Graphical configuration Cetus
+          href: api/connectors/crypto_exchanges/cetus/graphical_configuration_cetus.md
+        - name: Adapter initialization Cetus
+          href: api/connectors/crypto_exchanges/cetus/adapter_initialization_cetus.md
+      - name: CoW Protocol
+        href: api/connectors/crypto_exchanges/cow_protocol.md
+        items:
+        - name: Configuration CoW Protocol
+          href: api/connectors/crypto_exchanges/cow_protocol/configuration_cow_protocol.md
+        - name: Graphical configuration CoW Protocol
+          href: api/connectors/crypto_exchanges/cow_protocol/graphical_configuration_cow_protocol.md
+        - name: Adapter initialization CoW Protocol
+          href: api/connectors/crypto_exchanges/cow_protocol/adapter_initialization_cow_protocol.md
+      - name: Curve
+        href: api/connectors/crypto_exchanges/curve.md
+        items:
+        - name: Configuration Curve
+          href: api/connectors/crypto_exchanges/curve/configuration_curve.md
+        - name: Graphical configuration Curve
+          href: api/connectors/crypto_exchanges/curve/graphical_configuration_curve.md
+        - name: Adapter initialization Curve
+          href: api/connectors/crypto_exchanges/curve/adapter_initialization_curve.md
       - name: edgeX
         href: api/connectors/crypto_exchanges/edgex.md
         items:
@@ -2734,6 +2779,24 @@
           href: api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md
         - name: Adapter initialization edgeX
           href: api/connectors/crypto_exchanges/edgex/adapter_initialization_edgex.md
+      - name: Fluid DEX
+        href: api/connectors/crypto_exchanges/fluid_dex.md
+        items:
+        - name: Configuration Fluid DEX
+          href: api/connectors/crypto_exchanges/fluid_dex/configuration_fluid_dex.md
+        - name: Graphical configuration Fluid DEX
+          href: api/connectors/crypto_exchanges/fluid_dex/graphical_configuration_fluid_dex.md
+        - name: Adapter initialization Fluid DEX
+          href: api/connectors/crypto_exchanges/fluid_dex/adapter_initialization_fluid_dex.md
+      - name: GRVT
+        href: api/connectors/crypto_exchanges/grvt.md
+        items:
+        - name: Configuration GRVT
+          href: api/connectors/crypto_exchanges/grvt/configuration_grvt.md
+        - name: Graphical configuration GRVT
+          href: api/connectors/crypto_exchanges/grvt/graphical_configuration_grvt.md
+        - name: Adapter initialization GRVT
+          href: api/connectors/crypto_exchanges/grvt/adapter_initialization_grvt.md
       - name: Hyperliquid
         href: api/connectors/crypto_exchanges/hyperliquid.md
         items:
@@ -2743,6 +2806,24 @@
           href: api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md
         - name: Adapter initialization Hyperliquid
           href: api/connectors/crypto_exchanges/hyperliquid/adapter_initialization_hyperliquid.md
+      - name: Jupiter
+        href: api/connectors/crypto_exchanges/jupiter.md
+        items:
+        - name: Configuration Jupiter
+          href: api/connectors/crypto_exchanges/jupiter/configuration_jupiter.md
+        - name: Graphical configuration Jupiter
+          href: api/connectors/crypto_exchanges/jupiter/graphical_configuration_jupiter.md
+        - name: Adapter initialization Jupiter
+          href: api/connectors/crypto_exchanges/jupiter/adapter_initialization_jupiter.md
+      - name: LFJ
+        href: api/connectors/crypto_exchanges/lfj.md
+        items:
+        - name: Configuration LFJ
+          href: api/connectors/crypto_exchanges/lfj/configuration_lfj.md
+        - name: Graphical configuration LFJ
+          href: api/connectors/crypto_exchanges/lfj/graphical_configuration_lfj.md
+        - name: Adapter initialization LFJ
+          href: api/connectors/crypto_exchanges/lfj/adapter_initialization_lfj.md
       - name: Ligther
         href: api/connectors/crypto_exchanges/ligther.md
         items:
@@ -2752,15 +2833,42 @@
           href: api/connectors/crypto_exchanges/ligther/graphical_configuration_ligther.md
         - name: Adapter initialization Ligther
           href: api/connectors/crypto_exchanges/ligther/adapter_initialization_ligther.md
-      - name: Paradex
-        href: api/connectors/crypto_exchanges/paradex.md
+      - name: Manifest Trade
+        href: api/connectors/crypto_exchanges/manifest_trade.md
         items:
-        - name: Configuration Paradex
-          href: api/connectors/crypto_exchanges/paradex/configuration_paradex.md
-        - name: Graphical configuration Paradex
-          href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
-        - name: Adapter initialization Paradex
-          href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
+        - name: Configuration Manifest Trade
+          href: api/connectors/crypto_exchanges/manifest_trade/configuration_manifest_trade.md
+        - name: Graphical configuration Manifest Trade
+          href: api/connectors/crypto_exchanges/manifest_trade/graphical_configuration_manifest_trade.md
+        - name: Adapter initialization Manifest Trade
+          href: api/connectors/crypto_exchanges/manifest_trade/adapter_initialization_manifest_trade.md
+      - name: Meteora DLMM
+        href: api/connectors/crypto_exchanges/meteora.md
+        items:
+        - name: Configuration Meteora DLMM
+          href: api/connectors/crypto_exchanges/meteora/configuration_meteora.md
+        - name: Graphical configuration Meteora DLMM
+          href: api/connectors/crypto_exchanges/meteora/graphical_configuration_meteora.md
+        - name: Adapter initialization Meteora DLMM
+          href: api/connectors/crypto_exchanges/meteora/adapter_initialization_meteora.md
+      - name: Orca Whirlpools
+        href: api/connectors/crypto_exchanges/orca.md
+        items:
+        - name: Configuration Orca Whirlpools
+          href: api/connectors/crypto_exchanges/orca/configuration_orca.md
+        - name: Graphical configuration Orca Whirlpools
+          href: api/connectors/crypto_exchanges/orca/graphical_configuration_orca.md
+        - name: Adapter initialization Orca Whirlpools
+          href: api/connectors/crypto_exchanges/orca/adapter_initialization_orca.md
+      - name: Osmosis
+        href: api/connectors/crypto_exchanges/osmosis.md
+        items:
+        - name: Configuration Osmosis
+          href: api/connectors/crypto_exchanges/osmosis/configuration_osmosis.md
+        - name: Graphical configuration Osmosis
+          href: api/connectors/crypto_exchanges/osmosis/graphical_configuration_osmosis.md
+        - name: Adapter initialization Osmosis
+          href: api/connectors/crypto_exchanges/osmosis/adapter_initialization_osmosis.md
       - name: PancakeSwap
         href: api/connectors/crypto_exchanges/pancakeswap.md
         items:
@@ -2770,6 +2878,60 @@
           href: api/connectors/crypto_exchanges/pancakeswap/graphical_configuration_pancakeswap.md
         - name: Adapter initialization PancakeSwap
           href: api/connectors/crypto_exchanges/pancakeswap/adapter_initialization_pancakeswap.md
+      - name: Paradex
+        href: api/connectors/crypto_exchanges/paradex.md
+        items:
+        - name: Configuration Paradex
+          href: api/connectors/crypto_exchanges/paradex/configuration_paradex.md
+        - name: Graphical configuration Paradex
+          href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
+        - name: Adapter initialization Paradex
+          href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
+      - name: PumpSwap
+        href: api/connectors/crypto_exchanges/pumpswap.md
+        items:
+        - name: Configuration PumpSwap
+          href: api/connectors/crypto_exchanges/pumpswap/configuration_pumpswap.md
+        - name: Graphical configuration PumpSwap
+          href: api/connectors/crypto_exchanges/pumpswap/graphical_configuration_pumpswap.md
+        - name: Adapter initialization PumpSwap
+          href: api/connectors/crypto_exchanges/pumpswap/adapter_initialization_pumpswap.md
+      - name: QuickSwap
+        href: api/connectors/crypto_exchanges/quickswap.md
+        items:
+        - name: Configuration QuickSwap
+          href: api/connectors/crypto_exchanges/quickswap/configuration_quickswap.md
+        - name: Graphical configuration QuickSwap
+          href: api/connectors/crypto_exchanges/quickswap/graphical_configuration_quickswap.md
+        - name: Adapter initialization QuickSwap
+          href: api/connectors/crypto_exchanges/quickswap/adapter_initialization_quickswap.md
+      - name: Raydium
+        href: api/connectors/crypto_exchanges/raydium.md
+        items:
+        - name: Configuration Raydium
+          href: api/connectors/crypto_exchanges/raydium/configuration_raydium.md
+        - name: Graphical configuration Raydium
+          href: api/connectors/crypto_exchanges/raydium/graphical_configuration_raydium.md
+        - name: Adapter initialization Raydium
+          href: api/connectors/crypto_exchanges/raydium/adapter_initialization_raydium.md
+      - name: SUN.io
+        href: api/connectors/crypto_exchanges/sunio.md
+        items:
+        - name: Configuration SUN.io
+          href: api/connectors/crypto_exchanges/sunio/configuration_sunio.md
+        - name: Graphical configuration SUN.io
+          href: api/connectors/crypto_exchanges/sunio/graphical_configuration_sunio.md
+        - name: Adapter initialization SUN.io
+          href: api/connectors/crypto_exchanges/sunio/adapter_initialization_sunio.md
+      - name: THORChain
+        href: api/connectors/crypto_exchanges/thorchain.md
+        items:
+        - name: Configuration THORChain
+          href: api/connectors/crypto_exchanges/thorchain/configuration_thorchain.md
+        - name: Graphical configuration THORChain
+          href: api/connectors/crypto_exchanges/thorchain/graphical_configuration_thorchain.md
+        - name: Adapter initialization THORChain
+          href: api/connectors/crypto_exchanges/thorchain/adapter_initialization_thorchain.md
       - name: Uniswap
         href: api/connectors/crypto_exchanges/uniswap.md
         items:

@@ -777,6 +777,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Ichimoku",
 		"KAMA",
 		"Kaufman Adaptive Moving Average",
+		"Manifest Trade",
 		"Money Flow Index",
 		"Moving Median",
 		"Nasdaq Cloud Data Service",
@@ -1655,7 +1656,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 		void AddErrorIfMatched(string file, int line, string scope, string text)
 		{
-			if (text.Contains("E*TRADE", StringComparison.Ordinal)
+			if (text.Contains("Manifest Trade", StringComparison.Ordinal)
+				|| text.Contains("E*TRADE", StringComparison.Ordinal)
 				|| text.Contains(@"E\*TRADE", StringComparison.Ordinal)
 				|| text.Contains("E TRADE", StringComparison.Ordinal)
 				|| text.Contains("Security, Order, Trade, Portfolio", StringComparison.Ordinal)
