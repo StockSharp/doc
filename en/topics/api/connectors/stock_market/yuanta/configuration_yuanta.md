@@ -9,4 +9,4 @@ Install the official client SDK and specify its path, credentials, and other con
 - `CertificatePassword` - authentication credential.
 - `Environment` - connector mode or option. Default value: `YuantaEnvironments.Production`.
 - `LogPath` - path to a local file or directory.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.

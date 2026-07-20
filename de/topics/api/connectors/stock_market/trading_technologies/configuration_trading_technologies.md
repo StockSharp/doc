@@ -6,6 +6,6 @@ Installieren Sie das offizielle Entwicklerpaket und geben Sie dessen Pfad, die Z
 - `AppSecretKey` - Zugangsdaten für die Authentifizierung.
 - `Environment` - Betriebsart oder Option des Konnektors. Standardwert: `TradingTechnologiesEnvironments.ProdSim`.
 - `InitializationTimeout` - Zeitintervall. Standardwert: `5000`.
-- `MarketDepth` - numerischer Konnektorparameter. Standardwert: `20`.
+- `MarketDepth` - Anzahl der abzufragenden Orderbuchtiefen. Standardwert: `20`.
 - `IsBinaryProtocol` - Schalter für das Verhalten des Konnektors. Standardwert: `true`.
 - `IsOptionsEnabled` - Schalter für das Verhalten des Konnektors. Standardwert: `true`.

@@ -9,4 +9,4 @@ Installieren Sie das offizielle Entwicklerpaket und geben Sie dessen Pfad, die Z
 - `CertificatePassword` - Zugangsdaten für die Authentifizierung.
 - `Environment` - Betriebsart oder Option des Konnektors. Standardwert: `YuantaEnvironments.Production`.
 - `LogPath` - Pfad zu einer lokalen Datei oder einem Verzeichnis.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.

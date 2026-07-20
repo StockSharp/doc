@@ -15,7 +15,7 @@ For all StockSharp products, configure the connection in the [Connection setting
 - `IsDemo` - switch controlling connector behavior.
 - `DefaultProduct` - connector mode or option. Default value: `MotilalOswalProducts.Normal`.
 - `AlgoId` - account or client identifier.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.
 
 ## See also
 

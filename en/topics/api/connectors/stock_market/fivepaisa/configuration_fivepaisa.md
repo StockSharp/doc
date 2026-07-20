@@ -6,5 +6,5 @@ Obtain the credentials from the provider and specify the connection parameters.
 - `ClientCode` - account or client identifier.
 - `Token` - authentication credential.
 - `DefaultProduct` - connector mode or option. Default value: `FivePaisaProducts.Intraday`.
-- `AlgoId` - numeric connector parameter.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `AlgoId` - algorithm identifier issued by the broker.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.

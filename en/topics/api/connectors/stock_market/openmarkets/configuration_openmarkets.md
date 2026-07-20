@@ -11,5 +11,5 @@ Obtain the credentials from the provider and specify the connection parameters.
 - `DefaultDestination` - connection parameter. Default value: `OpenMarketsExtensions.DefaultExchange`.
 - `OrderGiver` - connection parameter.
 - `OrderTaker` - connection parameter.
-- `DefaultPriceMultiplier` - numeric connector parameter. Default value: `0.01m`.
+- `DefaultPriceMultiplier` - multiplier applied to received prices. Default value: `0.01m`.
 - `DepthPollingInterval` - time interval. Default value: `TimeSpan.FromSeconds(2)`.

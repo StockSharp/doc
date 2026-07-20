@@ -6,7 +6,7 @@ For all StockSharp products, configure the connection in the [Connection setting
 - `AppSecretKey` - authentication credential.
 - `Environment` - connector mode or option. Default value: `TradingTechnologiesEnvironments.ProdSim`.
 - `InitializationTimeout` - time interval. Default value: `5000`.
-- `MarketDepth` - numeric connector parameter. Default value: `20`.
+- `MarketDepth` - number of order book levels to request. Default value: `20`.
 - `IsBinaryProtocol` - switch controlling connector behavior. Default value: `true`.
 - `IsOptionsEnabled` - switch controlling connector behavior. Default value: `true`.
 

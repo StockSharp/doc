@@ -7,7 +7,7 @@ In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungsei
 - `Token` - Zugangsdaten für die Authentifizierung.
 - `DeviceId` - Konto- oder Clientkennung.
 - `DefaultProduct` - Betriebsart oder Option des Konnektors. Standardwert: `AliceBlueProducts.LongTerm`.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.
 
 ## Siehe auch
 

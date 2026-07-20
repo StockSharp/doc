@@ -11,7 +11,7 @@ For all StockSharp products, configure the connection in the [Connection setting
 - `CertificatePassword` - authentication credential.
 - `EnvironmentUrl` - service address.
 - `RealtimeMode` - connector mode or option. Default value: `FubonNeoRealtimeModes.Normal`.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.
 
 ## See also
 

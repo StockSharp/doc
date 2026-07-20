@@ -9,7 +9,7 @@ For all StockSharp products, configure the connection in the [Connection setting
 - `CertificatePassword` - authentication credential.
 - `Environment` - connector mode or option. Default value: `YuantaEnvironments.Production`.
 - `LogPath` - path to a local file or directory.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.
 
 ## See also
 

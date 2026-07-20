@@ -9,7 +9,7 @@ In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungsei
 - `DataPrivacyPrincipal` - Verbindungsparameter.
 - `DataPrivacyJustification` - Verbindungsparameter. Standardwert: `app_usage-stocksharp`.
 - `PersonId` - Konto- oder Clientkennung.
-- `DefaultFeeAmount` - numerischer Konnektorparameter.
+- `DefaultFeeAmount` - Gebührenbetrag, wenn der Dienst keinen Wert liefert.
 - `IsAppropriatenessConsentAccepted` - Schalter für das Verhalten des Konnektors.
 - `PollingInterval` - Zeitintervall. Standardwert: `TimeSpan.FromSeconds(10)`.
 

@@ -11,7 +11,7 @@ In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungsei
 - `DefaultDestination` - Verbindungsparameter. Standardwert: `OpenMarketsExtensions.DefaultExchange`.
 - `OrderGiver` - Verbindungsparameter.
 - `OrderTaker` - Verbindungsparameter.
-- `DefaultPriceMultiplier` - numerischer Konnektorparameter. Standardwert: `0.01m`.
+- `DefaultPriceMultiplier` - Multiplikator für empfangene Preise. Standardwert: `0.01m`.
 - `DepthPollingInterval` - Zeitintervall. Standardwert: `TimeSpan.FromSeconds(2)`.
 
 ## Siehe auch

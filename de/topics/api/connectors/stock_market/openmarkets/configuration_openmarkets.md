@@ -11,5 +11,5 @@ Beziehen Sie die Zugangsdaten vom Anbieter und geben Sie die Verbindungsparamete
 - `DefaultDestination` - Verbindungsparameter. Standardwert: `OpenMarketsExtensions.DefaultExchange`.
 - `OrderGiver` - Verbindungsparameter.
 - `OrderTaker` - Verbindungsparameter.
-- `DefaultPriceMultiplier` - numerischer Konnektorparameter. Standardwert: `0.01m`.
+- `DefaultPriceMultiplier` - Multiplikator für empfangene Preise. Standardwert: `0.01m`.
 - `DepthPollingInterval` - Zeitintervall. Standardwert: `TimeSpan.FromSeconds(2)`.

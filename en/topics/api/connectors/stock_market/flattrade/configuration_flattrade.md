@@ -6,4 +6,4 @@ Obtain the credentials from the provider and specify the connection parameters.
 - `AccountId` - account or client identifier.
 - `Token` - authentication credential.
 - `DefaultProduct` - connector mode or option. Default value: `FlattradeProducts.Delivery`.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.

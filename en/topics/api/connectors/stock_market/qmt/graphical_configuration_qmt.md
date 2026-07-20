@@ -3,9 +3,9 @@
 For all StockSharp products, configure the connection in the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md).
 
 - `GatewayHost` - service address. Default value: `127.0.0.1`.
-- `GatewayPort` - numeric connector parameter. Default value: `58630`.
+- `GatewayPort` - TCP port of the local gateway. Default value: `58630`.
 - `GatewayToken` - authentication credential.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.
 - `RequestTimeout` - time interval. Default value: `30`.
 
 ## See also

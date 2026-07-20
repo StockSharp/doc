@@ -1027,6 +1027,15 @@
             href: api/connectors/stock_market/trading212/graphical_configuration_trading212.md
           - name: 交易 212 适配器初始化
             href: api/connectors/stock_market/trading212/adapter_initialization_trading212.md
+        - name: TradeLocker
+          href: api/connectors/stock_market/tradelocker.md
+          items:
+          - name: TradeLocker 配置
+            href: api/connectors/stock_market/tradelocker/configuration_tradelocker.md
+          - name: TradeLocker 图形配置
+            href: api/connectors/stock_market/tradelocker/graphical_configuration_tradelocker.md
+          - name: TradeLocker 适配器初始化
+            href: api/connectors/stock_market/tradelocker/adapter_initialization_tradelocker.md
       - name: 亚太地区
         items:
         - name: Alice Blue
@@ -1308,6 +1317,33 @@
             href: api/connectors/stock_market/zerodha/graphical_configuration_zerodha.md
           - name: Zerodha Kite Connect 适配器初始化
             href: api/connectors/stock_market/zerodha/adapter_initialization_zerodha.md
+        - name: Phillip POEMS
+          href: api/connectors/stock_market/phillip_poems.md
+          items:
+          - name: Phillip POEMS 配置
+            href: api/connectors/stock_market/phillip_poems/configuration_phillip_poems.md
+          - name: Phillip POEMS 图形配置
+            href: api/connectors/stock_market/phillip_poems/graphical_configuration_phillip_poems.md
+          - name: Phillip POEMS 适配器初始化
+            href: api/connectors/stock_market/phillip_poems/adapter_initialization_phillip_poems.md
+        - name: Rakuten MARKETSPEED II RSS
+          href: api/connectors/stock_market/rakuten_rss.md
+          items:
+          - name: Rakuten MARKETSPEED II RSS 配置
+            href: api/connectors/stock_market/rakuten_rss/configuration_rakuten_rss.md
+          - name: Rakuten MARKETSPEED II RSS 图形配置
+            href: api/connectors/stock_market/rakuten_rss/graphical_configuration_rakuten_rss.md
+          - name: Rakuten MARKETSPEED II RSS 适配器初始化
+            href: api/connectors/stock_market/rakuten_rss/adapter_initialization_rakuten_rss.md
+        - name: uSMART OpenAPI
+          href: api/connectors/stock_market/usmart.md
+          items:
+          - name: uSMART OpenAPI 配置
+            href: api/connectors/stock_market/usmart/configuration_usmart.md
+          - name: uSMART OpenAPI 图形配置
+            href: api/connectors/stock_market/usmart/graphical_configuration_usmart.md
+          - name: uSMART OpenAPI 适配器初始化
+            href: api/connectors/stock_market/usmart/adapter_initialization_usmart.md
       - name: 中东和非洲
         items:
         - name: eToro
@@ -1393,6 +1429,249 @@
             href: api/connectors/stock_market/quandl/graphical_configuration_quandl.md
           - name: Quandl 适配器初始化
             href: api/connectors/stock_market/quandl/adapter_initialization_quandl.md
+        - name: ACTIV Financial
+          href: api/connectors/stock_market/activ_financial.md
+          items:
+          - name: ACTIV Financial 配置
+            href: api/connectors/stock_market/activ_financial/configuration_activ_financial.md
+          - name: ACTIV Financial 图形配置
+            href: api/connectors/stock_market/activ_financial/graphical_configuration_activ_financial.md
+          - name: ACTIV Financial 适配器初始化
+            href: api/connectors/stock_market/activ_financial/adapter_initialization_activ_financial.md
+        - name: AlgoSeek
+          href: api/connectors/stock_market/algoseek.md
+          items:
+          - name: AlgoSeek 配置
+            href: api/connectors/stock_market/algoseek/configuration_algoseek.md
+          - name: AlgoSeek 图形配置
+            href: api/connectors/stock_market/algoseek/graphical_configuration_algoseek.md
+          - name: AlgoSeek 适配器初始化
+            href: api/connectors/stock_market/algoseek/adapter_initialization_algoseek.md
+        - name: Benzinga
+          href: api/connectors/stock_market/benzinga.md
+          items:
+          - name: Benzinga 配置
+            href: api/connectors/stock_market/benzinga/configuration_benzinga.md
+          - name: Benzinga 图形配置
+            href: api/connectors/stock_market/benzinga/graphical_configuration_benzinga.md
+          - name: Benzinga 适配器初始化
+            href: api/connectors/stock_market/benzinga/adapter_initialization_benzinga.md
+        - name: BMLL
+          href: api/connectors/stock_market/bmll.md
+          items:
+          - name: BMLL 配置
+            href: api/connectors/stock_market/bmll/configuration_bmll.md
+          - name: BMLL 图形配置
+            href: api/connectors/stock_market/bmll/graphical_configuration_bmll.md
+          - name: BMLL 适配器初始化
+            href: api/connectors/stock_market/bmll/adapter_initialization_bmll.md
+        - name: Cboe DataShop / LiveVol
+          href: api/connectors/stock_market/cboe_datashop.md
+          items:
+          - name: Cboe DataShop / LiveVol 配置
+            href: api/connectors/stock_market/cboe_datashop/configuration_cboe_datashop.md
+          - name: Cboe DataShop / LiveVol 图形配置
+            href: api/connectors/stock_market/cboe_datashop/graphical_configuration_cboe_datashop.md
+          - name: Cboe DataShop / LiveVol 适配器初始化
+            href: api/connectors/stock_market/cboe_datashop/adapter_initialization_cboe_datashop.md
+        - name: Dow Jones
+          href: api/connectors/stock_market/dow_jones.md
+          items:
+          - name: Dow Jones 配置
+            href: api/connectors/stock_market/dow_jones/configuration_dow_jones.md
+          - name: Dow Jones 图形配置
+            href: api/connectors/stock_market/dow_jones/graphical_configuration_dow_jones.md
+          - name: Dow Jones 适配器初始化
+            href: api/connectors/stock_market/dow_jones/adapter_initialization_dow_jones.md
+        - name: EOD Historical Data
+          href: api/connectors/stock_market/eodhd.md
+          items:
+          - name: EOD Historical Data 配置
+            href: api/connectors/stock_market/eodhd/configuration_eodhd.md
+          - name: EOD Historical Data 图形配置
+            href: api/connectors/stock_market/eodhd/graphical_configuration_eodhd.md
+          - name: EOD Historical Data 适配器初始化
+            href: api/connectors/stock_market/eodhd/adapter_initialization_eodhd.md
+        - name: Exegy
+          href: api/connectors/stock_market/exegy.md
+          items:
+          - name: Exegy 配置
+            href: api/connectors/stock_market/exegy/configuration_exegy.md
+          - name: Exegy 图形配置
+            href: api/connectors/stock_market/exegy/graphical_configuration_exegy.md
+          - name: Exegy 适配器初始化
+            href: api/connectors/stock_market/exegy/adapter_initialization_exegy.md
+        - name: FactSet
+          href: api/connectors/stock_market/factset.md
+          items:
+          - name: FactSet 配置
+            href: api/connectors/stock_market/factset/configuration_factset.md
+          - name: FactSet 图形配置
+            href: api/connectors/stock_market/factset/graphical_configuration_factset.md
+          - name: FactSet 适配器初始化
+            href: api/connectors/stock_market/factset/adapter_initialization_factset.md
+        - name: Finnhub
+          href: api/connectors/stock_market/finnhub.md
+          items:
+          - name: Finnhub 配置
+            href: api/connectors/stock_market/finnhub/configuration_finnhub.md
+          - name: Finnhub 图形配置
+            href: api/connectors/stock_market/finnhub/graphical_configuration_finnhub.md
+          - name: Finnhub 适配器初始化
+            href: api/connectors/stock_market/finnhub/adapter_initialization_finnhub.md
+        - name: Financial Modeling Prep
+          href: api/connectors/stock_market/fmp.md
+          items:
+          - name: Financial Modeling Prep 配置
+            href: api/connectors/stock_market/fmp/configuration_fmp.md
+          - name: Financial Modeling Prep 图形配置
+            href: api/connectors/stock_market/fmp/graphical_configuration_fmp.md
+          - name: Financial Modeling Prep 适配器初始化
+            href: api/connectors/stock_market/fmp/adapter_initialization_fmp.md
+        - name: Intrinio
+          href: api/connectors/stock_market/intrinio.md
+          items:
+          - name: Intrinio 配置
+            href: api/connectors/stock_market/intrinio/configuration_intrinio.md
+          - name: Intrinio 图形配置
+            href: api/connectors/stock_market/intrinio/graphical_configuration_intrinio.md
+          - name: Intrinio 适配器初始化
+            href: api/connectors/stock_market/intrinio/adapter_initialization_intrinio.md
+        - name: J.P. Morgan DataQuery
+          href: api/connectors/stock_market/jpm_dataquery.md
+          items:
+          - name: J.P. Morgan DataQuery 配置
+            href: api/connectors/stock_market/jpm_dataquery/configuration_jpm_dataquery.md
+          - name: J.P. Morgan DataQuery 图形配置
+            href: api/connectors/stock_market/jpm_dataquery/graphical_configuration_jpm_dataquery.md
+          - name: J.P. Morgan DataQuery 适配器初始化
+            href: api/connectors/stock_market/jpm_dataquery/adapter_initialization_jpm_dataquery.md
+        - name: Marketstack
+          href: api/connectors/stock_market/marketstack.md
+          items:
+          - name: Marketstack 配置
+            href: api/connectors/stock_market/marketstack/configuration_marketstack.md
+          - name: Marketstack 图形配置
+            href: api/connectors/stock_market/marketstack/graphical_configuration_marketstack.md
+          - name: Marketstack 适配器初始化
+            href: api/connectors/stock_market/marketstack/adapter_initialization_marketstack.md
+        - name: Goldman Sachs Marquee
+          href: api/connectors/stock_market/marquee.md
+          items:
+          - name: Goldman Sachs Marquee 配置
+            href: api/connectors/stock_market/marquee/configuration_marquee.md
+          - name: Goldman Sachs Marquee 图形配置
+            href: api/connectors/stock_market/marquee/graphical_configuration_marquee.md
+          - name: Goldman Sachs Marquee 适配器初始化
+            href: api/connectors/stock_market/marquee/adapter_initialization_marquee.md
+        - name: Morningstar Direct Web Services
+          href: api/connectors/stock_market/morningstar.md
+          items:
+          - name: Morningstar Direct Web Services 配置
+            href: api/connectors/stock_market/morningstar/configuration_morningstar.md
+          - name: Morningstar Direct Web Services 图形配置
+            href: api/connectors/stock_market/morningstar/graphical_configuration_morningstar.md
+          - name: Morningstar Direct Web Services 适配器初始化
+            href: api/connectors/stock_market/morningstar/adapter_initialization_morningstar.md
+        - name: MT Newswires
+          href: api/connectors/stock_market/mt_newswires.md
+          items:
+          - name: MT Newswires 配置
+            href: api/connectors/stock_market/mt_newswires/configuration_mt_newswires.md
+          - name: MT Newswires 图形配置
+            href: api/connectors/stock_market/mt_newswires/graphical_configuration_mt_newswires.md
+          - name: MT Newswires 适配器初始化
+            href: api/connectors/stock_market/mt_newswires/adapter_initialization_mt_newswires.md
+        - name: Nasdaq Cloud Data Service
+          href: api/connectors/stock_market/nasdaq_cloud_data_service.md
+          items:
+          - name: Nasdaq Cloud Data Service 配置
+            href: api/connectors/stock_market/nasdaq_cloud_data_service/configuration_nasdaq_cloud_data_service.md
+          - name: Nasdaq Cloud Data Service 图形配置
+            href: api/connectors/stock_market/nasdaq_cloud_data_service/graphical_configuration_nasdaq_cloud_data_service.md
+          - name: Nasdaq Cloud Data Service 适配器初始化
+            href: api/connectors/stock_market/nasdaq_cloud_data_service/adapter_initialization_nasdaq_cloud_data_service.md
+        - name: Nasdaq Data Link
+          href: api/connectors/stock_market/nasdaq_data_link.md
+          items:
+          - name: Nasdaq Data Link 配置
+            href: api/connectors/stock_market/nasdaq_data_link/configuration_nasdaq_data_link.md
+          - name: Nasdaq Data Link 图形配置
+            href: api/connectors/stock_market/nasdaq_data_link/graphical_configuration_nasdaq_data_link.md
+          - name: Nasdaq Data Link 适配器初始化
+            href: api/connectors/stock_market/nasdaq_data_link/adapter_initialization_nasdaq_data_link.md
+        - name: OptionMetrics IvyDB
+          href: api/connectors/stock_market/optionmetrics.md
+          items:
+          - name: OptionMetrics IvyDB 配置
+            href: api/connectors/stock_market/optionmetrics/configuration_optionmetrics.md
+          - name: OptionMetrics IvyDB 图形配置
+            href: api/connectors/stock_market/optionmetrics/graphical_configuration_optionmetrics.md
+          - name: OptionMetrics IvyDB 适配器初始化
+            href: api/connectors/stock_market/optionmetrics/adapter_initialization_optionmetrics.md
+        - name: ORATS
+          href: api/connectors/stock_market/orats.md
+          items:
+          - name: ORATS 配置
+            href: api/connectors/stock_market/orats/configuration_orats.md
+          - name: ORATS 图形配置
+            href: api/connectors/stock_market/orats/graphical_configuration_orats.md
+          - name: ORATS 适配器初始化
+            href: api/connectors/stock_market/orats/adapter_initialization_orats.md
+        - name: QUODD
+          href: api/connectors/stock_market/quodd.md
+          items:
+          - name: QUODD 配置
+            href: api/connectors/stock_market/quodd/configuration_quodd.md
+          - name: QUODD 图形配置
+            href: api/connectors/stock_market/quodd/graphical_configuration_quodd.md
+          - name: QUODD 适配器初始化
+            href: api/connectors/stock_market/quodd/adapter_initialization_quodd.md
+        - name: RavenPack
+          href: api/connectors/stock_market/ravenpack.md
+          items:
+          - name: RavenPack 配置
+            href: api/connectors/stock_market/ravenpack/configuration_ravenpack.md
+          - name: RavenPack 图形配置
+            href: api/connectors/stock_market/ravenpack/graphical_configuration_ravenpack.md
+          - name: RavenPack 适配器初始化
+            href: api/connectors/stock_market/ravenpack/adapter_initialization_ravenpack.md
+        - name: S&P Global Commodity Insights
+          href: api/connectors/stock_market/sp_global_commodity_insights.md
+          items:
+          - name: S&P Global Commodity Insights 配置
+            href: api/connectors/stock_market/sp_global_commodity_insights/configuration_sp_global_commodity_insights.md
+          - name: S&P Global Commodity Insights 图形配置
+            href: api/connectors/stock_market/sp_global_commodity_insights/graphical_configuration_sp_global_commodity_insights.md
+          - name: S&P Global Commodity Insights 适配器初始化
+            href: api/connectors/stock_market/sp_global_commodity_insights/adapter_initialization_sp_global_commodity_insights.md
+        - name: ThetaData
+          href: api/connectors/stock_market/thetadata.md
+          items:
+          - name: ThetaData 配置
+            href: api/connectors/stock_market/thetadata/configuration_thetadata.md
+          - name: ThetaData 图形配置
+            href: api/connectors/stock_market/thetadata/graphical_configuration_thetadata.md
+          - name: ThetaData 适配器初始化
+            href: api/connectors/stock_market/thetadata/adapter_initialization_thetadata.md
+        - name: Tiingo
+          href: api/connectors/stock_market/tiingo.md
+          items:
+          - name: Tiingo 配置
+            href: api/connectors/stock_market/tiingo/configuration_tiingo.md
+          - name: Tiingo 图形配置
+            href: api/connectors/stock_market/tiingo/graphical_configuration_tiingo.md
+          - name: Tiingo 适配器初始化
+            href: api/connectors/stock_market/tiingo/adapter_initialization_tiingo.md
+        - name: Twelve Data
+          href: api/connectors/stock_market/twelvedata.md
+          items:
+          - name: Twelve Data 配置
+            href: api/connectors/stock_market/twelvedata/configuration_twelvedata.md
+          - name: Twelve Data 图形配置
+            href: api/connectors/stock_market/twelvedata/graphical_configuration_twelvedata.md
+          - name: Twelve Data 适配器初始化
+            href: api/connectors/stock_market/twelvedata/adapter_initialization_twelvedata.md
     - name: 外汇
       items:
       - name: MetaTrader
@@ -1451,6 +1730,24 @@
           href: api/connectors/forex/oanda/graphical_configuration_oanda.md
         - name: 适配器初始化 Oanda
           href: api/connectors/forex/oanda/adapter_initialization_oanda.md
+      - name: Match-Trader
+        href: api/connectors/forex/matchtrader.md
+        items:
+        - name: 配置 Match-Trader
+          href: api/connectors/forex/matchtrader/configuration_matchtrader.md
+        - name: 图形配置 Match-Trader
+          href: api/connectors/forex/matchtrader/graphical_configuration_matchtrader.md
+        - name: 适配器初始化 Match-Trader
+          href: api/connectors/forex/matchtrader/adapter_initialization_matchtrader.md
+      - name: X Open Hub
+        href: api/connectors/forex/xopenhub.md
+        items:
+        - name: 配置 X Open Hub
+          href: api/connectors/forex/xopenhub/configuration_xopenhub.md
+        - name: 图形配置 X Open Hub
+          href: api/connectors/forex/xopenhub/graphical_configuration_xopenhub.md
+        - name: 适配器初始化 X Open Hub
+          href: api/connectors/forex/xopenhub/adapter_initialization_xopenhub.md
     - name: 加密货币交易所
       items:
       - name: 全球及跨区域
@@ -1511,6 +1808,195 @@
             href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
         - name: 提款
           href: api/connectors/crypto_exchanges/withdraw.md
+        - name: Bitrue
+          href: api/connectors/crypto_exchanges/bitrue.md
+          items:
+          - name: 配置 Bitrue
+            href: api/connectors/crypto_exchanges/bitrue/configuration_bitrue.md
+          - name: 图形配置 Bitrue
+            href: api/connectors/crypto_exchanges/bitrue/graphical_configuration_bitrue.md
+          - name: 适配器初始化 Bitrue
+            href: api/connectors/crypto_exchanges/bitrue/adapter_initialization_bitrue.md
+        - name: Bitunix
+          href: api/connectors/crypto_exchanges/bitunix.md
+          items:
+          - name: 配置 Bitunix
+            href: api/connectors/crypto_exchanges/bitunix/configuration_bitunix.md
+          - name: 图形配置 Bitunix
+            href: api/connectors/crypto_exchanges/bitunix/graphical_configuration_bitunix.md
+          - name: 适配器初始化 Bitunix
+            href: api/connectors/crypto_exchanges/bitunix/adapter_initialization_bitunix.md
+        - name: BloFin
+          href: api/connectors/crypto_exchanges/blofin.md
+          items:
+          - name: 配置 BloFin
+            href: api/connectors/crypto_exchanges/blofin/configuration_blofin.md
+          - name: 图形配置 BloFin
+            href: api/connectors/crypto_exchanges/blofin/graphical_configuration_blofin.md
+          - name: 适配器初始化 BloFin
+            href: api/connectors/crypto_exchanges/blofin/adapter_initialization_blofin.md
+        - name: BTSE
+          href: api/connectors/crypto_exchanges/btse.md
+          items:
+          - name: 配置 BTSE
+            href: api/connectors/crypto_exchanges/btse/configuration_btse.md
+          - name: 图形配置 BTSE
+            href: api/connectors/crypto_exchanges/btse/graphical_configuration_btse.md
+          - name: 适配器初始化 BTSE
+            href: api/connectors/crypto_exchanges/btse/adapter_initialization_btse.md
+        - name: Bullish
+          href: api/connectors/crypto_exchanges/bullish.md
+          items:
+          - name: 配置 Bullish
+            href: api/connectors/crypto_exchanges/bullish/configuration_bullish.md
+          - name: 图形配置 Bullish
+            href: api/connectors/crypto_exchanges/bullish/graphical_configuration_bullish.md
+          - name: 适配器初始化 Bullish
+            href: api/connectors/crypto_exchanges/bullish/adapter_initialization_bullish.md
+        - name: BYDFi
+          href: api/connectors/crypto_exchanges/bydfi.md
+          items:
+          - name: 配置 BYDFi
+            href: api/connectors/crypto_exchanges/bydfi/configuration_bydfi.md
+          - name: 图形配置 BYDFi
+            href: api/connectors/crypto_exchanges/bydfi/graphical_configuration_bydfi.md
+          - name: 适配器初始化 BYDFi
+            href: api/connectors/crypto_exchanges/bydfi/adapter_initialization_bydfi.md
+        - name: CoinW
+          href: api/connectors/crypto_exchanges/coinw.md
+          items:
+          - name: 配置 CoinW
+            href: api/connectors/crypto_exchanges/coinw/configuration_coinw.md
+          - name: 图形配置 CoinW
+            href: api/connectors/crypto_exchanges/coinw/graphical_configuration_coinw.md
+          - name: 适配器初始化 CoinW
+            href: api/connectors/crypto_exchanges/coinw/adapter_initialization_coinw.md
+        - name: Crypto.com
+          href: api/connectors/crypto_exchanges/crypto_com.md
+          items:
+          - name: 配置 Crypto.com
+            href: api/connectors/crypto_exchanges/crypto_com/configuration_crypto_com.md
+          - name: 图形配置 Crypto.com
+            href: api/connectors/crypto_exchanges/crypto_com/graphical_configuration_crypto_com.md
+          - name: 适配器初始化 Crypto.com
+            href: api/connectors/crypto_exchanges/crypto_com/adapter_initialization_crypto_com.md
+        - name: Deepcoin
+          href: api/connectors/crypto_exchanges/deepcoin.md
+          items:
+          - name: 配置 Deepcoin
+            href: api/connectors/crypto_exchanges/deepcoin/configuration_deepcoin.md
+          - name: 图形配置 Deepcoin
+            href: api/connectors/crypto_exchanges/deepcoin/graphical_configuration_deepcoin.md
+          - name: 适配器初始化 Deepcoin
+            href: api/connectors/crypto_exchanges/deepcoin/adapter_initialization_deepcoin.md
+        - name: FTX
+          href: api/connectors/crypto_exchanges/ftx.md
+          items:
+          - name: 配置 FTX
+            href: api/connectors/crypto_exchanges/ftx/configuration_ftx.md
+          - name: 图形配置 FTX
+            href: api/connectors/crypto_exchanges/ftx/graphical_configuration_ftx.md
+          - name: 适配器初始化 FTX
+            href: api/connectors/crypto_exchanges/ftx/adapter_initialization_ftx.md
+        - name: Ourbit
+          href: api/connectors/crypto_exchanges/ourbit.md
+          items:
+          - name: 配置 Ourbit
+            href: api/connectors/crypto_exchanges/ourbit/configuration_ourbit.md
+          - name: 图形配置 Ourbit
+            href: api/connectors/crypto_exchanges/ourbit/graphical_configuration_ourbit.md
+          - name: 适配器初始化 Ourbit
+            href: api/connectors/crypto_exchanges/ourbit/adapter_initialization_ourbit.md
+        - name: Phemex
+          href: api/connectors/crypto_exchanges/phemex.md
+          items:
+          - name: 配置 Phemex
+            href: api/connectors/crypto_exchanges/phemex/configuration_phemex.md
+          - name: 图形配置 Phemex
+            href: api/connectors/crypto_exchanges/phemex/graphical_configuration_phemex.md
+          - name: 适配器初始化 Phemex
+            href: api/connectors/crypto_exchanges/phemex/adapter_initialization_phemex.md
+        - name: Pionex
+          href: api/connectors/crypto_exchanges/pionex.md
+          items:
+          - name: 配置 Pionex
+            href: api/connectors/crypto_exchanges/pionex/configuration_pionex.md
+          - name: 图形配置 Pionex
+            href: api/connectors/crypto_exchanges/pionex/graphical_configuration_pionex.md
+          - name: 适配器初始化 Pionex
+            href: api/connectors/crypto_exchanges/pionex/adapter_initialization_pionex.md
+        - name: Rain
+          href: api/connectors/crypto_exchanges/rain.md
+          items:
+          - name: 配置 Rain
+            href: api/connectors/crypto_exchanges/rain/configuration_rain.md
+          - name: 图形配置 Rain
+            href: api/connectors/crypto_exchanges/rain/graphical_configuration_rain.md
+          - name: 适配器初始化 Rain
+            href: api/connectors/crypto_exchanges/rain/adapter_initialization_rain.md
+        - name: Tapbit
+          href: api/connectors/crypto_exchanges/tapbit.md
+          items:
+          - name: 配置 Tapbit
+            href: api/connectors/crypto_exchanges/tapbit/configuration_tapbit.md
+          - name: 图形配置 Tapbit
+            href: api/connectors/crypto_exchanges/tapbit/graphical_configuration_tapbit.md
+          - name: 适配器初始化 Tapbit
+            href: api/connectors/crypto_exchanges/tapbit/adapter_initialization_tapbit.md
+        - name: Toobit
+          href: api/connectors/crypto_exchanges/toobit.md
+          items:
+          - name: 配置 Toobit
+            href: api/connectors/crypto_exchanges/toobit/configuration_toobit.md
+          - name: 图形配置 Toobit
+            href: api/connectors/crypto_exchanges/toobit/graphical_configuration_toobit.md
+          - name: 适配器初始化 Toobit
+            href: api/connectors/crypto_exchanges/toobit/adapter_initialization_toobit.md
+        - name: VALR
+          href: api/connectors/crypto_exchanges/valr.md
+          items:
+          - name: 配置 VALR
+            href: api/connectors/crypto_exchanges/valr/configuration_valr.md
+          - name: 图形配置 VALR
+            href: api/connectors/crypto_exchanges/valr/graphical_configuration_valr.md
+          - name: 适配器初始化 VALR
+            href: api/connectors/crypto_exchanges/valr/adapter_initialization_valr.md
+        - name: WEEX
+          href: api/connectors/crypto_exchanges/weex.md
+          items:
+          - name: 配置 WEEX
+            href: api/connectors/crypto_exchanges/weex/configuration_weex.md
+          - name: 图形配置 WEEX
+            href: api/connectors/crypto_exchanges/weex/graphical_configuration_weex.md
+          - name: 适配器初始化 WEEX
+            href: api/connectors/crypto_exchanges/weex/adapter_initialization_weex.md
+        - name: WOO X
+          href: api/connectors/crypto_exchanges/woox.md
+          items:
+          - name: 配置 WOO X
+            href: api/connectors/crypto_exchanges/woox/configuration_woox.md
+          - name: 图形配置 WOO X
+            href: api/connectors/crypto_exchanges/woox/graphical_configuration_woox.md
+          - name: 适配器初始化 WOO X
+            href: api/connectors/crypto_exchanges/woox/adapter_initialization_woox.md
+        - name: XT.COM
+          href: api/connectors/crypto_exchanges/xtcom.md
+          items:
+          - name: 配置 XT.COM
+            href: api/connectors/crypto_exchanges/xtcom/configuration_xtcom.md
+          - name: 图形配置 XT.COM
+            href: api/connectors/crypto_exchanges/xtcom/graphical_configuration_xtcom.md
+          - name: 适配器初始化 XT.COM
+            href: api/connectors/crypto_exchanges/xtcom/adapter_initialization_xtcom.md
+        - name: Zoomex
+          href: api/connectors/crypto_exchanges/zoomex.md
+          items:
+          - name: 配置 Zoomex
+            href: api/connectors/crypto_exchanges/zoomex/configuration_zoomex.md
+          - name: 图形配置 Zoomex
+            href: api/connectors/crypto_exchanges/zoomex/graphical_configuration_zoomex.md
+          - name: 适配器初始化 Zoomex
+            href: api/connectors/crypto_exchanges/zoomex/adapter_initialization_zoomex.md
       - name: 美洲
         items:
         - name: Bittrex
@@ -1594,6 +2080,60 @@
             href: api/connectors/crypto_exchanges/tradeogre/graphical_configuration_tradeogre.md
           - name: 适配器初始化 TradeOgre
             href: api/connectors/crypto_exchanges/tradeogre/adapter_initialization_tradeogre.md
+        - name: Backpack
+          href: api/connectors/crypto_exchanges/backpack.md
+          items:
+          - name: 配置 Backpack
+            href: api/connectors/crypto_exchanges/backpack/configuration_backpack.md
+          - name: 图形配置 Backpack
+            href: api/connectors/crypto_exchanges/backpack/graphical_configuration_backpack.md
+          - name: 适配器初始化 Backpack
+            href: api/connectors/crypto_exchanges/backpack/adapter_initialization_backpack.md
+        - name: Bitso
+          href: api/connectors/crypto_exchanges/bitso.md
+          items:
+          - name: 配置 Bitso
+            href: api/connectors/crypto_exchanges/bitso/configuration_bitso.md
+          - name: 图形配置 Bitso
+            href: api/connectors/crypto_exchanges/bitso/graphical_configuration_bitso.md
+          - name: 适配器初始化 Bitso
+            href: api/connectors/crypto_exchanges/bitso/adapter_initialization_bitso.md
+        - name: Foxbit
+          href: api/connectors/crypto_exchanges/foxbit.md
+          items:
+          - name: 配置 Foxbit
+            href: api/connectors/crypto_exchanges/foxbit/configuration_foxbit.md
+          - name: 图形配置 Foxbit
+            href: api/connectors/crypto_exchanges/foxbit/graphical_configuration_foxbit.md
+          - name: 适配器初始化 Foxbit
+            href: api/connectors/crypto_exchanges/foxbit/adapter_initialization_foxbit.md
+        - name: Gemini
+          href: api/connectors/crypto_exchanges/gemini.md
+          items:
+          - name: 配置 Gemini
+            href: api/connectors/crypto_exchanges/gemini/configuration_gemini.md
+          - name: 图形配置 Gemini
+            href: api/connectors/crypto_exchanges/gemini/graphical_configuration_gemini.md
+          - name: 适配器初始化 Gemini
+            href: api/connectors/crypto_exchanges/gemini/adapter_initialization_gemini.md
+        - name: Mercado Bitcoin
+          href: api/connectors/crypto_exchanges/mercado_bitcoin.md
+          items:
+          - name: 配置 Mercado Bitcoin
+            href: api/connectors/crypto_exchanges/mercado_bitcoin/configuration_mercado_bitcoin.md
+          - name: 图形配置 Mercado Bitcoin
+            href: api/connectors/crypto_exchanges/mercado_bitcoin/graphical_configuration_mercado_bitcoin.md
+          - name: 适配器初始化 Mercado Bitcoin
+            href: api/connectors/crypto_exchanges/mercado_bitcoin/adapter_initialization_mercado_bitcoin.md
+        - name: NDAX
+          href: api/connectors/crypto_exchanges/ndax.md
+          items:
+          - name: 配置 NDAX
+            href: api/connectors/crypto_exchanges/ndax/configuration_ndax.md
+          - name: 图形配置 NDAX
+            href: api/connectors/crypto_exchanges/ndax/graphical_configuration_ndax.md
+          - name: 适配器初始化 NDAX
+            href: api/connectors/crypto_exchanges/ndax/adapter_initialization_ndax.md
       - name: 欧洲
         items:
         - name: BitStamp
@@ -1677,6 +2217,42 @@
             href: api/connectors/crypto_exchanges/yobit/graphical_configuration_yobit.md
           - name: 适配器初始化 Yobit
             href: api/connectors/crypto_exchanges/yobit/adapter_initialization_yobit.md
+        - name: Bitpanda Fusion
+          href: api/connectors/crypto_exchanges/bitpanda_fusion.md
+          items:
+          - name: 配置 Bitpanda Fusion
+            href: api/connectors/crypto_exchanges/bitpanda_fusion/configuration_bitpanda_fusion.md
+          - name: 图形配置 Bitpanda Fusion
+            href: api/connectors/crypto_exchanges/bitpanda_fusion/graphical_configuration_bitpanda_fusion.md
+          - name: 适配器初始化 Bitpanda Fusion
+            href: api/connectors/crypto_exchanges/bitpanda_fusion/adapter_initialization_bitpanda_fusion.md
+        - name: Bitvavo
+          href: api/connectors/crypto_exchanges/bitvavo.md
+          items:
+          - name: 配置 Bitvavo
+            href: api/connectors/crypto_exchanges/bitvavo/configuration_bitvavo.md
+          - name: 图形配置 Bitvavo
+            href: api/connectors/crypto_exchanges/bitvavo/graphical_configuration_bitvavo.md
+          - name: 适配器初始化 Bitvavo
+            href: api/connectors/crypto_exchanges/bitvavo/adapter_initialization_bitvavo.md
+        - name: Luno
+          href: api/connectors/crypto_exchanges/luno.md
+          items:
+          - name: 配置 Luno
+            href: api/connectors/crypto_exchanges/luno/configuration_luno.md
+          - name: 图形配置 Luno
+            href: api/connectors/crypto_exchanges/luno/graphical_configuration_luno.md
+          - name: 适配器初始化 Luno
+            href: api/connectors/crypto_exchanges/luno/adapter_initialization_luno.md
+        - name: WhiteBIT
+          href: api/connectors/crypto_exchanges/whitebit.md
+          items:
+          - name: 配置 WhiteBIT
+            href: api/connectors/crypto_exchanges/whitebit/configuration_whitebit.md
+          - name: 图形配置 WhiteBIT
+            href: api/connectors/crypto_exchanges/whitebit/graphical_configuration_whitebit.md
+          - name: 适配器初始化 WhiteBIT
+            href: api/connectors/crypto_exchanges/whitebit/adapter_initialization_whitebit.md
       - name: 亚太地区
         items:
         - name: Bibox
@@ -2003,6 +2579,141 @@
             href: api/connectors/crypto_exchanges/zb/graphical_configuration_zb.md
           - name: 适配器初始化 ZB
             href: api/connectors/crypto_exchanges/zb/adapter_initialization_zb.md
+        - name: bitFlyer
+          href: api/connectors/crypto_exchanges/bitflyer.md
+          items:
+          - name: 配置 bitFlyer
+            href: api/connectors/crypto_exchanges/bitflyer/configuration_bitflyer.md
+          - name: 图形配置 bitFlyer
+            href: api/connectors/crypto_exchanges/bitflyer/graphical_configuration_bitflyer.md
+          - name: 适配器初始化 bitFlyer
+            href: api/connectors/crypto_exchanges/bitflyer/adapter_initialization_bitflyer.md
+        - name: Bitkub
+          href: api/connectors/crypto_exchanges/bitkub.md
+          items:
+          - name: 配置 Bitkub
+            href: api/connectors/crypto_exchanges/bitkub/configuration_bitkub.md
+          - name: 图形配置 Bitkub
+            href: api/connectors/crypto_exchanges/bitkub/graphical_configuration_bitkub.md
+          - name: 适配器初始化 Bitkub
+            href: api/connectors/crypto_exchanges/bitkub/adapter_initialization_bitkub.md
+        - name: BTC Markets
+          href: api/connectors/crypto_exchanges/btc_markets.md
+          items:
+          - name: 配置 BTC Markets
+            href: api/connectors/crypto_exchanges/btc_markets/configuration_btc_markets.md
+          - name: 图形配置 BTC Markets
+            href: api/connectors/crypto_exchanges/btc_markets/graphical_configuration_btc_markets.md
+          - name: 适配器初始化 BTC Markets
+            href: api/connectors/crypto_exchanges/btc_markets/adapter_initialization_btc_markets.md
+        - name: CoinDCX
+          href: api/connectors/crypto_exchanges/coindcx.md
+          items:
+          - name: 配置 CoinDCX
+            href: api/connectors/crypto_exchanges/coindcx/configuration_coindcx.md
+          - name: 图形配置 CoinDCX
+            href: api/connectors/crypto_exchanges/coindcx/graphical_configuration_coindcx.md
+          - name: 适配器初始化 CoinDCX
+            href: api/connectors/crypto_exchanges/coindcx/adapter_initialization_coindcx.md
+        - name: Coinhako
+          href: api/connectors/crypto_exchanges/coinhako.md
+          items:
+          - name: 配置 Coinhako
+            href: api/connectors/crypto_exchanges/coinhako/configuration_coinhako.md
+          - name: 图形配置 Coinhako
+            href: api/connectors/crypto_exchanges/coinhako/graphical_configuration_coinhako.md
+          - name: 适配器初始化 Coinhako
+            href: api/connectors/crypto_exchanges/coinhako/adapter_initialization_coinhako.md
+        - name: CoinJar
+          href: api/connectors/crypto_exchanges/coinjar.md
+          items:
+          - name: 配置 CoinJar
+            href: api/connectors/crypto_exchanges/coinjar/configuration_coinjar.md
+          - name: 图形配置 CoinJar
+            href: api/connectors/crypto_exchanges/coinjar/graphical_configuration_coinjar.md
+          - name: 适配器初始化 CoinJar
+            href: api/connectors/crypto_exchanges/coinjar/adapter_initialization_coinjar.md
+        - name: Coinone
+          href: api/connectors/crypto_exchanges/coinone.md
+          items:
+          - name: 配置 Coinone
+            href: api/connectors/crypto_exchanges/coinone/configuration_coinone.md
+          - name: 图形配置 Coinone
+            href: api/connectors/crypto_exchanges/coinone/graphical_configuration_coinone.md
+          - name: 适配器初始化 Coinone
+            href: api/connectors/crypto_exchanges/coinone/adapter_initialization_coinone.md
+        - name: Coins.ph
+          href: api/connectors/crypto_exchanges/coins_ph.md
+          items:
+          - name: 配置 Coins.ph
+            href: api/connectors/crypto_exchanges/coins_ph/configuration_coins_ph.md
+          - name: 图形配置 Coins.ph
+            href: api/connectors/crypto_exchanges/coins_ph/graphical_configuration_coins_ph.md
+          - name: 适配器初始化 Coins.ph
+            href: api/connectors/crypto_exchanges/coins_ph/adapter_initialization_coins_ph.md
+        - name: GMO Coin
+          href: api/connectors/crypto_exchanges/gmo_coin.md
+          items:
+          - name: 配置 GMO Coin
+            href: api/connectors/crypto_exchanges/gmo_coin/configuration_gmo_coin.md
+          - name: 图形配置 GMO Coin
+            href: api/connectors/crypto_exchanges/gmo_coin/graphical_configuration_gmo_coin.md
+          - name: 适配器初始化 GMO Coin
+            href: api/connectors/crypto_exchanges/gmo_coin/adapter_initialization_gmo_coin.md
+        - name: HashKey Global
+          href: api/connectors/crypto_exchanges/hashkey_global.md
+          items:
+          - name: 配置 HashKey Global
+            href: api/connectors/crypto_exchanges/hashkey_global/configuration_hashkey_global.md
+          - name: 图形配置 HashKey Global
+            href: api/connectors/crypto_exchanges/hashkey_global/graphical_configuration_hashkey_global.md
+          - name: 适配器初始化 HashKey Global
+            href: api/connectors/crypto_exchanges/hashkey_global/adapter_initialization_hashkey_global.md
+        - name: Independent Reserve
+          href: api/connectors/crypto_exchanges/independent_reserve.md
+          items:
+          - name: 配置 Independent Reserve
+            href: api/connectors/crypto_exchanges/independent_reserve/configuration_independent_reserve.md
+          - name: 图形配置 Independent Reserve
+            href: api/connectors/crypto_exchanges/independent_reserve/graphical_configuration_independent_reserve.md
+          - name: 适配器初始化 Independent Reserve
+            href: api/connectors/crypto_exchanges/independent_reserve/adapter_initialization_independent_reserve.md
+        - name: Indodax
+          href: api/connectors/crypto_exchanges/indodax.md
+          items:
+          - name: 配置 Indodax
+            href: api/connectors/crypto_exchanges/indodax/configuration_indodax.md
+          - name: 图形配置 Indodax
+            href: api/connectors/crypto_exchanges/indodax/graphical_configuration_indodax.md
+          - name: 适配器初始化 Indodax
+            href: api/connectors/crypto_exchanges/indodax/adapter_initialization_indodax.md
+        - name: Korbit
+          href: api/connectors/crypto_exchanges/korbit.md
+          items:
+          - name: 配置 Korbit
+            href: api/connectors/crypto_exchanges/korbit/configuration_korbit.md
+          - name: 图形配置 Korbit
+            href: api/connectors/crypto_exchanges/korbit/graphical_configuration_korbit.md
+          - name: 适配器初始化 Korbit
+            href: api/connectors/crypto_exchanges/korbit/adapter_initialization_korbit.md
+        - name: OSL Global
+          href: api/connectors/crypto_exchanges/osl.md
+          items:
+          - name: 配置 OSL Global
+            href: api/connectors/crypto_exchanges/osl/configuration_osl.md
+          - name: 图形配置 OSL Global
+            href: api/connectors/crypto_exchanges/osl/graphical_configuration_osl.md
+          - name: 适配器初始化 OSL Global
+            href: api/connectors/crypto_exchanges/osl/adapter_initialization_osl.md
+        - name: Pintu Pro
+          href: api/connectors/crypto_exchanges/pintu_pro.md
+          items:
+          - name: 配置 Pintu Pro
+            href: api/connectors/crypto_exchanges/pintu_pro/configuration_pintu_pro.md
+          - name: 图形配置 Pintu Pro
+            href: api/connectors/crypto_exchanges/pintu_pro/graphical_configuration_pintu_pro.md
+          - name: 适配器初始化 Pintu Pro
+            href: api/connectors/crypto_exchanges/pintu_pro/adapter_initialization_pintu_pro.md
     - name: DEX
       items:
       - name: Aster
@@ -2050,6 +2761,24 @@
           href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
         - name: 适配器初始化 Paradex
           href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
+      - name: PancakeSwap
+        href: api/connectors/crypto_exchanges/pancakeswap.md
+        items:
+        - name: 配置 PancakeSwap
+          href: api/connectors/crypto_exchanges/pancakeswap/configuration_pancakeswap.md
+        - name: 图形配置 PancakeSwap
+          href: api/connectors/crypto_exchanges/pancakeswap/graphical_configuration_pancakeswap.md
+        - name: 适配器初始化 PancakeSwap
+          href: api/connectors/crypto_exchanges/pancakeswap/adapter_initialization_pancakeswap.md
+      - name: Uniswap
+        href: api/connectors/crypto_exchanges/uniswap.md
+        items:
+        - name: 配置 Uniswap
+          href: api/connectors/crypto_exchanges/uniswap/configuration_uniswap.md
+        - name: 图形配置 Uniswap
+          href: api/connectors/crypto_exchanges/uniswap/graphical_configuration_uniswap.md
+        - name: 适配器初始化 Uniswap
+          href: api/connectors/crypto_exchanges/uniswap/adapter_initialization_uniswap.md
     - name: 通用
       items:
       - name: CSV

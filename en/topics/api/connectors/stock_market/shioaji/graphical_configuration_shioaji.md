@@ -5,7 +5,7 @@ For all StockSharp products, configure the connection in the [Connection setting
 - `Address` - service address. Default value: `http://localhost:8080/`.
 - `Key` - authentication credential.
 - `Secret` - authentication credential.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.
 
 ## See also
 

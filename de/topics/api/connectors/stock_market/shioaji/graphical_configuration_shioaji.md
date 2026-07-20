@@ -5,7 +5,7 @@ In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungsei
 - `Address` - Adresse des Dienstes. Standardwert: `http://localhost:8080/`.
 - `Key` - Zugangsdaten für die Authentifizierung.
 - `Secret` - Zugangsdaten für die Authentifizierung.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.
 
 ## Siehe auch
 

@@ -770,6 +770,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Chaikin's Volatility",
 		"DEMA",
 		"DeMarker",
+		"EOD Historical Data",
 		"Fix Trading Community",
 		"Force Index",
 		"Fractal Adaptive Moving Average",
@@ -778,6 +779,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Kaufman Adaptive Moving Average",
 		"Money Flow Index",
 		"Moving Median",
+		"Nasdaq Cloud Data Service",
+		"Nasdaq Data Link",
 		"Peak",
 		"QStick",
 		"RAVI",
@@ -785,6 +788,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Smoothed Moving Average",
 		"SuperTrend",
 		"TRIX",
+		"Twelve Data",
 		"TWAP",
 		"VIDYA",
 		"VWAP",
@@ -1255,6 +1259,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			{
 				if (!nameLine.Name.Contains(fragment, StringComparison.OrdinalIgnoreCase))
 					continue;
+
+				if (fragment == "Bullish" && nameLine.Name is
+					("Bullish"
+					or "Настройки коннектора Bullish"
+					or "Графическое конфигурирование Bullish"
+					or "Инициализация адаптера Bullish"))
+				{
+					continue;
+				}
 
 				errors.Add($"{RelativeToRepo(tocPath)}:{nameLine.Line}: Russian TOC keeps English navigation fragment '{fragment}' in '{nameLine.Name}'.");
 			}
@@ -1829,6 +1842,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			if (text.Contains("IB Trader Workstation", StringComparison.Ordinal)
 				|| text.Contains("Sterling Trader Pro", StringComparison.Ordinal)
 				|| text.Contains("OEC Trader", StringComparison.Ordinal)
+				|| text.Contains("Match-Trader", StringComparison.Ordinal)
 				|| text.Contains("Trader.RemotingRequired", StringComparison.Ordinal))
 				return;
 
@@ -3963,9 +3977,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			{
 				foreach (var (text, line) in EnumerateUserVisibleMarkdownLines(ReadAllText(file)))
 				{
+					var textWithoutInlineCode = Regex.Replace(text, @"`[^`\r\n]*`", " ", RegexOptions.CultureInvariant);
+
 					foreach (var pattern in _knownEnglishLowercaseProseTerms)
 					{
-						var match = pattern.Match(text);
+						var match = pattern.Match(textWithoutInlineCode);
 						if (!match.Success)
 							continue;
 

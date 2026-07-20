@@ -11,7 +11,7 @@
 - `DefaultDestination` - параметр подключения. Значение по умолчанию: `OpenMarketsExtensions.DefaultExchange`.
 - `OrderGiver` - параметр подключения.
 - `OrderTaker` - параметр подключения.
-- `DefaultPriceMultiplier` - числовой параметр коннектора. Значение по умолчанию: `0.01m`.
+- `DefaultPriceMultiplier` - множитель, применяемый к полученным ценам. Значение по умолчанию: `0.01m`.
 - `DepthPollingInterval` - временной интервал. Значение по умолчанию: `TimeSpan.FromSeconds(2)`.
 
 ## См. также

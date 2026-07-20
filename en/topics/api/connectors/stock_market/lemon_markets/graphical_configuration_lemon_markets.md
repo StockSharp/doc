@@ -9,7 +9,7 @@ For all StockSharp products, configure the connection in the [Connection setting
 - `DataPrivacyPrincipal` - connection parameter.
 - `DataPrivacyJustification` - connection parameter. Default value: `app_usage-stocksharp`.
 - `PersonId` - account or client identifier.
-- `DefaultFeeAmount` - numeric connector parameter.
+- `DefaultFeeAmount` - fee amount used when the service does not provide one.
 - `IsAppropriatenessConsentAccepted` - switch controlling connector behavior.
 - `PollingInterval` - time interval. Default value: `TimeSpan.FromSeconds(10)`.
 

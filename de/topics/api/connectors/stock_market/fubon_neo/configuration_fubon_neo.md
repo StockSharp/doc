@@ -11,4 +11,4 @@ Installieren Sie das offizielle Entwicklerpaket und geben Sie dessen Pfad, die Z
 - `CertificatePassword` - Zugangsdaten für die Authentifizierung.
 - `EnvironmentUrl` - Adresse des Dienstes.
 - `RealtimeMode` - Betriebsart oder Option des Konnektors. Standardwert: `FubonNeoRealtimeModes.Normal`.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.

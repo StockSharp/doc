@@ -9,6 +9,6 @@ Obtain the credentials from the provider and specify the connection parameters.
 - `DataPrivacyPrincipal` - connection parameter.
 - `DataPrivacyJustification` - connection parameter. Default value: `app_usage-stocksharp`.
 - `PersonId` - account or client identifier.
-- `DefaultFeeAmount` - numeric connector parameter.
+- `DefaultFeeAmount` - fee amount used when the service does not provide one.
 - `IsAppropriatenessConsentAccepted` - switch controlling connector behavior.
 - `PollingInterval` - time interval. Default value: `TimeSpan.FromSeconds(10)`.

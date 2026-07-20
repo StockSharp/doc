@@ -8,7 +8,7 @@ Bereiten Sie das lokale Gateway oder den Client des Anbieters vor und geben Sie 
 - `Password` - Zugangsdaten für die Authentifizierung.
 - `TradeAccount` - Konto- oder Clientkennung.
 - `MarketDataTransmissionInterval` - Zeitintervall.
-- `MarketDepthLevels` - numerischer Konnektorparameter. Standardwert: `20`.
+- `MarketDepthLevels` - Anzahl der abzufragenden Orderbuchtiefen. Standardwert: `20`.
 - `SslProtocol` - Betriebsart oder Option des Konnektors.
 - `HistorySslProtocol` - Betriebsart oder Option des Konnektors.
 - `IsCertificateValidation` - Schalter für das Verhalten des Konnektors. Standardwert: `true`.

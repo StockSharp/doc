@@ -9,7 +9,7 @@ In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungsei
 - `CertificatePassword` - Zugangsdaten für die Authentifizierung.
 - `Environment` - Betriebsart oder Option des Konnektors. Standardwert: `YuantaEnvironments.Production`.
 - `LogPath` - Pfad zu einer lokalen Datei oder einem Verzeichnis.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.
 
 ## Siehe auch
 

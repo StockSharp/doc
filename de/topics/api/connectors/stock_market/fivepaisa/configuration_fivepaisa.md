@@ -6,5 +6,5 @@ Beziehen Sie die Zugangsdaten vom Anbieter und geben Sie die Verbindungsparamete
 - `ClientCode` - Konto- oder Clientkennung.
 - `Token` - Zugangsdaten für die Authentifizierung.
 - `DefaultProduct` - Betriebsart oder Option des Konnektors. Standardwert: `FivePaisaProducts.Intraday`.
-- `AlgoId` - numerischer Konnektorparameter.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `AlgoId` - Vom Broker vergebene Algorithmuskennung.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.

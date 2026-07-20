@@ -11,7 +11,7 @@ In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungsei
 - `CertificatePassword` - Zugangsdaten für die Authentifizierung.
 - `EnvironmentUrl` - Adresse des Dienstes.
 - `RealtimeMode` - Betriebsart oder Option des Konnektors. Standardwert: `FubonNeoRealtimeModes.Normal`.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.
 
 ## Siehe auch
 

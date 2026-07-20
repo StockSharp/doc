@@ -15,7 +15,7 @@ In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungsei
 - `IsDemo` - Schalter für das Verhalten des Konnektors.
 - `DefaultProduct` - Betriebsart oder Option des Konnektors. Standardwert: `MotilalOswalProducts.Normal`.
 - `AlgoId` - Konto- oder Clientkennung.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.
 
 ## Siehe auch
 

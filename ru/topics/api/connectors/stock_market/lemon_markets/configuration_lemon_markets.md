@@ -9,6 +9,6 @@
 - `DataPrivacyPrincipal` - параметр подключения.
 - `DataPrivacyJustification` - параметр подключения. Значение по умолчанию: `app_usage-stocksharp`.
 - `PersonId` - идентификатор счёта или клиента.
-- `DefaultFeeAmount` - числовой параметр коннектора.
+- `DefaultFeeAmount` - размер комиссии, используемый при отсутствии значения от сервиса.
 - `IsAppropriatenessConsentAccepted` - переключатель поведения коннектора.
 - `PollingInterval` - временной интервал. Значение по умолчанию: `TimeSpan.FromSeconds(10)`.

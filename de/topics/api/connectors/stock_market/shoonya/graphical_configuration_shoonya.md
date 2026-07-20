@@ -6,7 +6,7 @@ In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungsei
 - `AccountId` - Konto- oder Clientkennung.
 - `Token` - Zugangsdaten für die Authentifizierung.
 - `DefaultProduct` - Betriebsart oder Option des Konnektors. Standardwert: `ShoonyaProducts.Delivery`.
-- `ReconnectAttempts` - numerischer Konnektorparameter. Standardwert: `10`.
+- `ReconnectAttempts` - Maximale Anzahl der Wiederverbindungsversuche. Standardwert: `10`.
 
 ## Siehe auch
 

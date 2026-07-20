@@ -7,7 +7,7 @@ For all StockSharp products, configure the connection in the [Connection setting
 - `Token` - authentication credential.
 - `DeviceId` - account or client identifier.
 - `DefaultProduct` - connector mode or option. Default value: `AliceBlueProducts.LongTerm`.
-- `ReconnectAttempts` - numeric connector parameter. Default value: `10`.
+- `ReconnectAttempts` - maximum number of reconnection attempts. Default value: `10`.
 
 ## See also
 
