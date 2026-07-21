@@ -872,6 +872,15 @@
             href: api/connectors/stock_market/blackwood_fusion/graphical_configuration_blackwood_fusion.md
           - name: Инициализация адаптера Blackwood (Fusion)
             href: api/connectors/stock_market/blackwood_fusion/adapter_initialization_blackwood_fusion.md
+        - name: Charles Schwab
+          href: api/connectors/stock_market/schwab.md
+          items:
+          - name: Настройки коннектора Charles Schwab
+            href: api/connectors/stock_market/schwab/configuration_schwab.md
+          - name: Графическое конфигурирование Charles Schwab
+            href: api/connectors/stock_market/schwab/graphical_configuration_schwab.md
+          - name: Инициализация адаптера Charles Schwab
+            href: api/connectors/stock_market/schwab/adapter_initialization_schwab.md
         - name: CQG
           href: api/connectors/stock_market/cqg.md
           items:
@@ -928,6 +937,15 @@
             href: api/connectors/stock_market/itch/graphical_configuration_itch.md
           - name: Инициализация адаптера ITCH
             href: api/connectors/stock_market/itch/adapter_initialization_itch.md
+        - name: Kalshi
+          href: api/connectors/stock_market/kalshi.md
+          items:
+          - name: Настройки коннектора Kalshi
+            href: api/connectors/stock_market/kalshi/configuration_kalshi.md
+          - name: Графическое конфигурирование Kalshi
+            href: api/connectors/stock_market/kalshi/graphical_configuration_kalshi.md
+          - name: Инициализация адаптера Kalshi
+            href: api/connectors/stock_market/kalshi/adapter_initialization_kalshi.md
         - name: Lime Trader
           href: api/connectors/stock_market/lime.md
           items:
@@ -1004,15 +1022,6 @@
             href: api/connectors/stock_market/robinhood/graphical_configuration_robinhood.md
           - name: Инициализация адаптера Robinhood
             href: api/connectors/stock_market/robinhood/adapter_initialization_robinhood.md
-        - name: Charles Schwab
-          href: api/connectors/stock_market/schwab.md
-          items:
-          - name: Настройки коннектора Charles Schwab
-            href: api/connectors/stock_market/schwab/configuration_schwab.md
-          - name: Графическое конфигурирование Charles Schwab
-            href: api/connectors/stock_market/schwab/graphical_configuration_schwab.md
-          - name: Инициализация адаптера Charles Schwab
-            href: api/connectors/stock_market/schwab/adapter_initialization_schwab.md
         - name: SnapTrade
           href: api/connectors/stock_market/snaptrade.md
           items:
@@ -1918,44 +1927,6 @@
             href: api/connectors/crypto_exchanges/bitfinex/graphical_configuration_bitfinex.md
           - name: Инициализация адаптера Bitfinex
             href: api/connectors/crypto_exchanges/bitfinex/adapter_initialization_bitfinex.md
-        - name: Bybit History
-          href: api/connectors/crypto_exchanges/bybit_history.md
-          items:
-          - name: Настройки коннектора Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
-          - name: Графическое конфигурирование Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
-          - name: Инициализация адаптера Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
-        - name: CoinHub
-          href: api/connectors/crypto_exchanges/coinhub.md
-          items:
-          - name: Настройки коннектора CoinHub
-            href: api/connectors/crypto_exchanges/coinhub/configuration_coinhub.md
-          - name: Графическое конфигурирование CoinHub
-            href: api/connectors/crypto_exchanges/coinhub/graphical_configuration_coinhub.md
-          - name: Инициализация адаптера CoinHub
-            href: api/connectors/crypto_exchanges/coinhub/adapter_initialization_coinhub.md
-        - name: HitBTC
-          href: api/connectors/crypto_exchanges/hitbtc.md
-          items:
-          - name: Настройки коннектора HitBTC
-            href: api/connectors/crypto_exchanges/hitbtc/configuration_hitbtc.md
-          - name: Графическое конфигурирование HitBTC
-            href: api/connectors/crypto_exchanges/hitbtc/graphical_configuration_hitbtc.md
-          - name: Инициализация адаптера HitBTC
-            href: api/connectors/crypto_exchanges/hitbtc/adapter_initialization_hitbtc.md
-        - name: PrizmBit
-          href: api/connectors/crypto_exchanges/prizmbit.md
-          items:
-          - name: Настройки коннектора PrizmBit
-            href: api/connectors/crypto_exchanges/prizmbit/configuration_prizmbit.md
-          - name: Графическое конфигурирование коннектора
-            href: api/connectors/crypto_exchanges/prizmbit/graphical_configuration_prizmbit.md
-          - name: Инициализация адаптера PrizmBit
-            href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
-        - name: Вывод средств
-          href: api/connectors/crypto_exchanges/withdraw.md
         - name: Bitrue
           href: api/connectors/crypto_exchanges/bitrue.md
           items:
@@ -2001,6 +1972,15 @@
             href: api/connectors/crypto_exchanges/bullish/graphical_configuration_bullish.md
           - name: Инициализация адаптера Bullish
             href: api/connectors/crypto_exchanges/bullish/adapter_initialization_bullish.md
+        - name: Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history.md
+          items:
+          - name: Настройки коннектора Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+          - name: Графическое конфигурирование Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+          - name: Инициализация адаптера Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
         - name: BYDFi
           href: api/connectors/crypto_exchanges/bydfi.md
           items:
@@ -2010,6 +1990,15 @@
             href: api/connectors/crypto_exchanges/bydfi/graphical_configuration_bydfi.md
           - name: Инициализация адаптера BYDFi
             href: api/connectors/crypto_exchanges/bydfi/adapter_initialization_bydfi.md
+        - name: CoinHub
+          href: api/connectors/crypto_exchanges/coinhub.md
+          items:
+          - name: Настройки коннектора CoinHub
+            href: api/connectors/crypto_exchanges/coinhub/configuration_coinhub.md
+          - name: Графическое конфигурирование CoinHub
+            href: api/connectors/crypto_exchanges/coinhub/graphical_configuration_coinhub.md
+          - name: Инициализация адаптера CoinHub
+            href: api/connectors/crypto_exchanges/coinhub/adapter_initialization_coinhub.md
         - name: CoinW
           href: api/connectors/crypto_exchanges/coinw.md
           items:
@@ -2037,6 +2026,24 @@
             href: api/connectors/crypto_exchanges/deepcoin/graphical_configuration_deepcoin.md
           - name: Инициализация адаптера Deepcoin
             href: api/connectors/crypto_exchanges/deepcoin/adapter_initialization_deepcoin.md
+        - name: FalconX
+          href: api/connectors/crypto_exchanges/falconx.md
+          items:
+          - name: Настройки коннектора FalconX
+            href: api/connectors/crypto_exchanges/falconx/configuration_falconx.md
+          - name: Графическое конфигурирование FalconX
+            href: api/connectors/crypto_exchanges/falconx/graphical_configuration_falconx.md
+          - name: Инициализация адаптера FalconX
+            href: api/connectors/crypto_exchanges/falconx/adapter_initialization_falconx.md
+        - name: Fireblocks
+          href: api/connectors/crypto_exchanges/fireblocks.md
+          items:
+          - name: Настройки коннектора Fireblocks
+            href: api/connectors/crypto_exchanges/fireblocks/configuration_fireblocks.md
+          - name: Графическое конфигурирование Fireblocks
+            href: api/connectors/crypto_exchanges/fireblocks/graphical_configuration_fireblocks.md
+          - name: Инициализация адаптера Fireblocks
+            href: api/connectors/crypto_exchanges/fireblocks/adapter_initialization_fireblocks.md
         - name: FTX
           href: api/connectors/crypto_exchanges/ftx.md
           items:
@@ -2046,6 +2053,15 @@
             href: api/connectors/crypto_exchanges/ftx/graphical_configuration_ftx.md
           - name: Инициализация адаптера FTX
             href: api/connectors/crypto_exchanges/ftx/adapter_initialization_ftx.md
+        - name: HitBTC
+          href: api/connectors/crypto_exchanges/hitbtc.md
+          items:
+          - name: Настройки коннектора HitBTC
+            href: api/connectors/crypto_exchanges/hitbtc/configuration_hitbtc.md
+          - name: Графическое конфигурирование HitBTC
+            href: api/connectors/crypto_exchanges/hitbtc/graphical_configuration_hitbtc.md
+          - name: Инициализация адаптера HitBTC
+            href: api/connectors/crypto_exchanges/hitbtc/adapter_initialization_hitbtc.md
         - name: Ourbit
           href: api/connectors/crypto_exchanges/ourbit.md
           items:
@@ -2073,6 +2089,15 @@
             href: api/connectors/crypto_exchanges/pionex/graphical_configuration_pionex.md
           - name: Инициализация адаптера Pionex
             href: api/connectors/crypto_exchanges/pionex/adapter_initialization_pionex.md
+        - name: PrizmBit
+          href: api/connectors/crypto_exchanges/prizmbit.md
+          items:
+          - name: Настройки коннектора PrizmBit
+            href: api/connectors/crypto_exchanges/prizmbit/configuration_prizmbit.md
+          - name: Графическое конфигурирование коннектора
+            href: api/connectors/crypto_exchanges/prizmbit/graphical_configuration_prizmbit.md
+          - name: Инициализация адаптера PrizmBit
+            href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
         - name: Rain
           href: api/connectors/crypto_exchanges/rain.md
           items:
@@ -2082,6 +2107,15 @@
             href: api/connectors/crypto_exchanges/rain/graphical_configuration_rain.md
           - name: Инициализация адаптера Rain
             href: api/connectors/crypto_exchanges/rain/adapter_initialization_rain.md
+        - name: Talos
+          href: api/connectors/crypto_exchanges/talos.md
+          items:
+          - name: Настройки коннектора Talos
+            href: api/connectors/crypto_exchanges/talos/configuration_talos.md
+          - name: Графическое конфигурирование Talos
+            href: api/connectors/crypto_exchanges/talos/graphical_configuration_talos.md
+          - name: Инициализация адаптера Talos
+            href: api/connectors/crypto_exchanges/talos/adapter_initialization_talos.md
         - name: Tapbit
           href: api/connectors/crypto_exchanges/tapbit.md
           items:
@@ -2118,6 +2152,8 @@
             href: api/connectors/crypto_exchanges/weex/graphical_configuration_weex.md
           - name: Инициализация адаптера WEEX
             href: api/connectors/crypto_exchanges/weex/adapter_initialization_weex.md
+        - name: Вывод средств
+          href: api/connectors/crypto_exchanges/withdraw.md
         - name: WOO X
           href: api/connectors/crypto_exchanges/woox.md
           items:
@@ -2882,6 +2918,24 @@
           href: api/connectors/crypto_exchanges/aerodrome/graphical_configuration_aerodrome.md
         - name: Инициализация адаптера Aerodrome Finance
           href: api/connectors/crypto_exchanges/aerodrome/adapter_initialization_aerodrome.md
+      - name: Aevo
+        href: api/connectors/crypto_exchanges/aevo.md
+        items:
+        - name: Настройки коннектора Aevo
+          href: api/connectors/crypto_exchanges/aevo/configuration_aevo.md
+        - name: Графическое конфигурирование Aevo
+          href: api/connectors/crypto_exchanges/aevo/graphical_configuration_aevo.md
+        - name: Инициализация адаптера Aevo
+          href: api/connectors/crypto_exchanges/aevo/adapter_initialization_aevo.md
+      - name: ApeX Omni
+        href: api/connectors/crypto_exchanges/apex_omni.md
+        items:
+        - name: Настройки коннектора ApeX Omni
+          href: api/connectors/crypto_exchanges/apex_omni/configuration_apex_omni.md
+        - name: Графическое конфигурирование ApeX Omni
+          href: api/connectors/crypto_exchanges/apex_omni/graphical_configuration_apex_omni.md
+        - name: Инициализация адаптера ApeX Omni
+          href: api/connectors/crypto_exchanges/apex_omni/adapter_initialization_apex_omni.md
       - name: Aster
         href: api/connectors/crypto_exchanges/aster.md
         items:
@@ -2891,6 +2945,33 @@
           href: api/connectors/crypto_exchanges/aster/graphical_configuration_aster.md
         - name: Инициализация адаптера Aster
           href: api/connectors/crypto_exchanges/aster/adapter_initialization_aster.md
+      - name: Avantis
+        href: api/connectors/crypto_exchanges/avantis.md
+        items:
+        - name: Настройки коннектора Avantis
+          href: api/connectors/crypto_exchanges/avantis/configuration_avantis.md
+        - name: Графическое конфигурирование Avantis
+          href: api/connectors/crypto_exchanges/avantis/graphical_configuration_avantis.md
+        - name: Инициализация адаптера Avantis
+          href: api/connectors/crypto_exchanges/avantis/adapter_initialization_avantis.md
+      - name: Balancer
+        href: api/connectors/crypto_exchanges/balancer.md
+        items:
+        - name: Настройки коннектора Balancer
+          href: api/connectors/crypto_exchanges/balancer/configuration_balancer.md
+        - name: Графическое конфигурирование Balancer
+          href: api/connectors/crypto_exchanges/balancer/graphical_configuration_balancer.md
+        - name: Инициализация адаптера Balancer
+          href: api/connectors/crypto_exchanges/balancer/adapter_initialization_balancer.md
+      - name: Bluefin
+        href: api/connectors/crypto_exchanges/bluefin.md
+        items:
+        - name: Настройки коннектора Bluefin
+          href: api/connectors/crypto_exchanges/bluefin/configuration_bluefin.md
+        - name: Графическое конфигурирование Bluefin
+          href: api/connectors/crypto_exchanges/bluefin/graphical_configuration_bluefin.md
+        - name: Инициализация адаптера Bluefin
+          href: api/connectors/crypto_exchanges/bluefin/adapter_initialization_bluefin.md
       - name: Cetus
         href: api/connectors/crypto_exchanges/cetus.md
         items:
@@ -2918,6 +2999,24 @@
           href: api/connectors/crypto_exchanges/curve/graphical_configuration_curve.md
         - name: Инициализация адаптера Curve
           href: api/connectors/crypto_exchanges/curve/adapter_initialization_curve.md
+      - name: Drift
+        href: api/connectors/crypto_exchanges/drift.md
+        items:
+        - name: Настройки коннектора Drift
+          href: api/connectors/crypto_exchanges/drift/configuration_drift.md
+        - name: Графическое конфигурирование Drift
+          href: api/connectors/crypto_exchanges/drift/graphical_configuration_drift.md
+        - name: Инициализация адаптера Drift
+          href: api/connectors/crypto_exchanges/drift/adapter_initialization_drift.md
+      - name: dYdX Chain
+        href: api/connectors/crypto_exchanges/dydx_chain.md
+        items:
+        - name: Настройки коннектора dYdX Chain
+          href: api/connectors/crypto_exchanges/dydx_chain/configuration_dydx_chain.md
+        - name: Графическое конфигурирование dYdX Chain
+          href: api/connectors/crypto_exchanges/dydx_chain/graphical_configuration_dydx_chain.md
+        - name: Инициализация адаптера dYdX Chain
+          href: api/connectors/crypto_exchanges/dydx_chain/adapter_initialization_dydx_chain.md
       - name: edgeX
         href: api/connectors/crypto_exchanges/edgex.md
         items:
@@ -2927,6 +3026,15 @@
           href: api/connectors/crypto_exchanges/edgex/graphical_configuration_edgex.md
         - name: Инициализация адаптера edgeX
           href: api/connectors/crypto_exchanges/edgex/adapter_initialization_edgex.md
+      - name: Extended
+        href: api/connectors/crypto_exchanges/extended.md
+        items:
+        - name: Настройки коннектора Extended
+          href: api/connectors/crypto_exchanges/extended/configuration_extended.md
+        - name: Графическое конфигурирование Extended
+          href: api/connectors/crypto_exchanges/extended/graphical_configuration_extended.md
+        - name: Инициализация адаптера Extended
+          href: api/connectors/crypto_exchanges/extended/adapter_initialization_extended.md
       - name: Fluid DEX
         href: api/connectors/crypto_exchanges/fluid_dex.md
         items:
@@ -2936,6 +3044,33 @@
           href: api/connectors/crypto_exchanges/fluid_dex/graphical_configuration_fluid_dex.md
         - name: Инициализация адаптера Fluid DEX
           href: api/connectors/crypto_exchanges/fluid_dex/adapter_initialization_fluid_dex.md
+      - name: Gains Network
+        href: api/connectors/crypto_exchanges/gains_network.md
+        items:
+        - name: Настройки коннектора Gains Network
+          href: api/connectors/crypto_exchanges/gains_network/configuration_gains_network.md
+        - name: Графическое конфигурирование Gains Network
+          href: api/connectors/crypto_exchanges/gains_network/graphical_configuration_gains_network.md
+        - name: Инициализация адаптера Gains Network
+          href: api/connectors/crypto_exchanges/gains_network/adapter_initialization_gains_network.md
+      - name: GMTrade
+        href: api/connectors/crypto_exchanges/gmtrade.md
+        items:
+        - name: Настройки коннектора GMTrade
+          href: api/connectors/crypto_exchanges/gmtrade/configuration_gmtrade.md
+        - name: Графическое конфигурирование GMTrade
+          href: api/connectors/crypto_exchanges/gmtrade/graphical_configuration_gmtrade.md
+        - name: Инициализация адаптера GMTrade
+          href: api/connectors/crypto_exchanges/gmtrade/adapter_initialization_gmtrade.md
+      - name: GMX
+        href: api/connectors/crypto_exchanges/gmx.md
+        items:
+        - name: Настройки коннектора GMX
+          href: api/connectors/crypto_exchanges/gmx/configuration_gmx.md
+        - name: Графическое конфигурирование GMX
+          href: api/connectors/crypto_exchanges/gmx/graphical_configuration_gmx.md
+        - name: Инициализация адаптера GMX
+          href: api/connectors/crypto_exchanges/gmx/adapter_initialization_gmx.md
       - name: GRVT
         href: api/connectors/crypto_exchanges/grvt.md
         items:
@@ -2954,6 +3089,15 @@
           href: api/connectors/crypto_exchanges/hyperliquid/graphical_configuration_hyperliquid.md
         - name: Инициализация адаптера Hyperliquid
           href: api/connectors/crypto_exchanges/hyperliquid/adapter_initialization_hyperliquid.md
+      - name: Injective
+        href: api/connectors/crypto_exchanges/injective.md
+        items:
+        - name: Настройки коннектора Injective
+          href: api/connectors/crypto_exchanges/injective/configuration_injective.md
+        - name: Графическое конфигурирование Injective
+          href: api/connectors/crypto_exchanges/injective/graphical_configuration_injective.md
+        - name: Инициализация адаптера Injective
+          href: api/connectors/crypto_exchanges/injective/adapter_initialization_injective.md
       - name: Jupiter
         href: api/connectors/crypto_exchanges/jupiter.md
         items:
@@ -2999,6 +3143,15 @@
           href: api/connectors/crypto_exchanges/meteora/graphical_configuration_meteora.md
         - name: Инициализация адаптера Meteora DLMM
           href: api/connectors/crypto_exchanges/meteora/adapter_initialization_meteora.md
+      - name: Nado
+        href: api/connectors/crypto_exchanges/nado.md
+        items:
+        - name: Настройки коннектора Nado
+          href: api/connectors/crypto_exchanges/nado/configuration_nado.md
+        - name: Графическое конфигурирование Nado
+          href: api/connectors/crypto_exchanges/nado/graphical_configuration_nado.md
+        - name: Инициализация адаптера Nado
+          href: api/connectors/crypto_exchanges/nado/adapter_initialization_nado.md
       - name: Orca Whirlpools
         href: api/connectors/crypto_exchanges/orca.md
         items:
@@ -3008,6 +3161,15 @@
           href: api/connectors/crypto_exchanges/orca/graphical_configuration_orca.md
         - name: Инициализация адаптера Orca Whirlpools
           href: api/connectors/crypto_exchanges/orca/adapter_initialization_orca.md
+      - name: Orderly Network
+        href: api/connectors/crypto_exchanges/orderly_network.md
+        items:
+        - name: Настройки коннектора Orderly Network
+          href: api/connectors/crypto_exchanges/orderly_network/configuration_orderly_network.md
+        - name: Графическое конфигурирование Orderly Network
+          href: api/connectors/crypto_exchanges/orderly_network/graphical_configuration_orderly_network.md
+        - name: Инициализация адаптера Orderly Network
+          href: api/connectors/crypto_exchanges/orderly_network/adapter_initialization_orderly_network.md
       - name: Osmosis
         href: api/connectors/crypto_exchanges/osmosis.md
         items:
@@ -3017,6 +3179,24 @@
           href: api/connectors/crypto_exchanges/osmosis/graphical_configuration_osmosis.md
         - name: Инициализация адаптера Osmosis
           href: api/connectors/crypto_exchanges/osmosis/adapter_initialization_osmosis.md
+      - name: Ostium
+        href: api/connectors/crypto_exchanges/ostium.md
+        items:
+        - name: Настройки коннектора Ostium
+          href: api/connectors/crypto_exchanges/ostium/configuration_ostium.md
+        - name: Графическое конфигурирование Ostium
+          href: api/connectors/crypto_exchanges/ostium/graphical_configuration_ostium.md
+        - name: Инициализация адаптера Ostium
+          href: api/connectors/crypto_exchanges/ostium/adapter_initialization_ostium.md
+      - name: Pacifica
+        href: api/connectors/crypto_exchanges/pacifica.md
+        items:
+        - name: Настройки коннектора Pacifica
+          href: api/connectors/crypto_exchanges/pacifica/configuration_pacifica.md
+        - name: Графическое конфигурирование Pacifica
+          href: api/connectors/crypto_exchanges/pacifica/graphical_configuration_pacifica.md
+        - name: Инициализация адаптера Pacifica
+          href: api/connectors/crypto_exchanges/pacifica/adapter_initialization_pacifica.md
       - name: PancakeSwap
         href: api/connectors/crypto_exchanges/pancakeswap.md
         items:
@@ -3035,6 +3215,15 @@
           href: api/connectors/crypto_exchanges/paradex/graphical_configuration_paradex.md
         - name: Инициализация адаптера Paradex
           href: api/connectors/crypto_exchanges/paradex/adapter_initialization_paradex.md
+      - name: Polymarket
+        href: api/connectors/crypto_exchanges/polymarket.md
+        items:
+        - name: Настройки коннектора Polymarket
+          href: api/connectors/crypto_exchanges/polymarket/configuration_polymarket.md
+        - name: Графическое конфигурирование Polymarket
+          href: api/connectors/crypto_exchanges/polymarket/graphical_configuration_polymarket.md
+        - name: Инициализация адаптера Polymarket
+          href: api/connectors/crypto_exchanges/polymarket/adapter_initialization_polymarket.md
       - name: PumpSwap
         href: api/connectors/crypto_exchanges/pumpswap.md
         items:
@@ -3044,6 +3233,15 @@
           href: api/connectors/crypto_exchanges/pumpswap/graphical_configuration_pumpswap.md
         - name: Инициализация адаптера PumpSwap
           href: api/connectors/crypto_exchanges/pumpswap/adapter_initialization_pumpswap.md
+      - name: QFEX
+        href: api/connectors/crypto_exchanges/qfex.md
+        items:
+        - name: Настройки коннектора QFEX
+          href: api/connectors/crypto_exchanges/qfex/configuration_qfex.md
+        - name: Графическое конфигурирование QFEX
+          href: api/connectors/crypto_exchanges/qfex/graphical_configuration_qfex.md
+        - name: Инициализация адаптера QFEX
+          href: api/connectors/crypto_exchanges/qfex/adapter_initialization_qfex.md
       - name: QuickSwap
         href: api/connectors/crypto_exchanges/quickswap.md
         items:
@@ -3062,6 +3260,24 @@
           href: api/connectors/crypto_exchanges/raydium/graphical_configuration_raydium.md
         - name: Инициализация адаптера Raydium
           href: api/connectors/crypto_exchanges/raydium/adapter_initialization_raydium.md
+      - name: Reya
+        href: api/connectors/crypto_exchanges/reya.md
+        items:
+        - name: Настройки коннектора Reya
+          href: api/connectors/crypto_exchanges/reya/configuration_reya.md
+        - name: Графическое конфигурирование Reya
+          href: api/connectors/crypto_exchanges/reya/graphical_configuration_reya.md
+        - name: Инициализация адаптера Reya
+          href: api/connectors/crypto_exchanges/reya/adapter_initialization_reya.md
+      - name: StandX
+        href: api/connectors/crypto_exchanges/standx.md
+        items:
+        - name: Настройки коннектора StandX
+          href: api/connectors/crypto_exchanges/standx/configuration_standx.md
+        - name: Графическое конфигурирование StandX
+          href: api/connectors/crypto_exchanges/standx/graphical_configuration_standx.md
+        - name: Инициализация адаптера StandX
+          href: api/connectors/crypto_exchanges/standx/adapter_initialization_standx.md
       - name: SUN.io
         href: api/connectors/crypto_exchanges/sunio.md
         items:
@@ -3071,6 +3287,24 @@
           href: api/connectors/crypto_exchanges/sunio/graphical_configuration_sunio.md
         - name: Инициализация адаптера SUN.io
           href: api/connectors/crypto_exchanges/sunio/adapter_initialization_sunio.md
+      - name: SynFutures
+        href: api/connectors/crypto_exchanges/synfutures.md
+        items:
+        - name: Настройки коннектора SynFutures
+          href: api/connectors/crypto_exchanges/synfutures/configuration_synfutures.md
+        - name: Графическое конфигурирование SynFutures
+          href: api/connectors/crypto_exchanges/synfutures/graphical_configuration_synfutures.md
+        - name: Инициализация адаптера SynFutures
+          href: api/connectors/crypto_exchanges/synfutures/adapter_initialization_synfutures.md
+      - name: Synthetix
+        href: api/connectors/crypto_exchanges/synthetix.md
+        items:
+        - name: Настройки коннектора Synthetix
+          href: api/connectors/crypto_exchanges/synthetix/configuration_synthetix.md
+        - name: Графическое конфигурирование Synthetix
+          href: api/connectors/crypto_exchanges/synthetix/graphical_configuration_synthetix.md
+        - name: Инициализация адаптера Synthetix
+          href: api/connectors/crypto_exchanges/synthetix/adapter_initialization_synthetix.md
       - name: THORChain
         href: api/connectors/crypto_exchanges/thorchain.md
         items:
@@ -3089,6 +3323,15 @@
           href: api/connectors/crypto_exchanges/uniswap/graphical_configuration_uniswap.md
         - name: Инициализация адаптера Uniswap
           href: api/connectors/crypto_exchanges/uniswap/adapter_initialization_uniswap.md
+      - name: Variational Omni
+        href: api/connectors/crypto_exchanges/variational_omni.md
+        items:
+        - name: Настройки коннектора Variational Omni
+          href: api/connectors/crypto_exchanges/variational_omni/configuration_variational_omni.md
+        - name: Графическое конфигурирование Variational Omni
+          href: api/connectors/crypto_exchanges/variational_omni/graphical_configuration_variational_omni.md
+        - name: Инициализация адаптера Variational Omni
+          href: api/connectors/crypto_exchanges/variational_omni/adapter_initialization_variational_omni.md
     - name: Общие
       items:
       - name: CSV
