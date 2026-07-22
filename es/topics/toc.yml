@@ -2074,6 +2074,15 @@
             href: api/connectors/crypto_exchanges/prizmbit/graphical_configuration_prizmbit.md
           - name: Inicialización del adaptador PrizmBit
             href: api/connectors/crypto_exchanges/prizmbit/adapter_initialization_prizmbit.md
+        - name: ProBit Global
+          href: api/connectors/crypto_exchanges/probit.md
+          items:
+          - name: Configuración ProBit Global
+            href: api/connectors/crypto_exchanges/probit/configuration_probit.md
+          - name: Configuración gráfica ProBit Global
+            href: api/connectors/crypto_exchanges/probit/graphical_configuration_probit.md
+          - name: Inicialización del adaptador ProBit Global
+            href: api/connectors/crypto_exchanges/probit/adapter_initialization_probit.md
         - name: Pyth
           href: api/connectors/crypto_exchanges/pyth.md
           items:
