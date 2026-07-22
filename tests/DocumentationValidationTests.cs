@@ -2254,7 +2254,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var pattern = new Regex(@"\bfeeds?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 		var iqFeedPattern = new Regex(@"\bIQ\s+Feed(?:\s+Client)?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 		var markdownLinkTargetPattern = new Regex(@"\]\([^)]+\)", RegexOptions.CultureInvariant);
-		var rawUrlPattern = new Regex(@"https?://\S+", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var rawUrlPattern = new Regex(@"(?:https?|wss?)://\S+", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
 		void AddErrorIfMatched(string file, int line, string scope, string text)
 		{
