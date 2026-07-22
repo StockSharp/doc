@@ -1876,6 +1876,15 @@
           href: api/connectors/forex/fxcm/graphical_configuration_fxcm.md
         - name: Инициализация адаптера FXCM
           href: api/connectors/forex/fxcm/adapter_initialization_fxcm.md
+      - name: FXOpen TickTrader
+        href: api/connectors/forex/fxopen.md
+        items:
+        - name: Настройки коннектора FXOpen TickTrader
+          href: api/connectors/forex/fxopen/configuration_fxopen.md
+        - name: Графическое конфигурирование FXOpen TickTrader
+          href: api/connectors/forex/fxopen/graphical_configuration_fxopen.md
+        - name: Инициализация адаптера FXOpen TickTrader
+          href: api/connectors/forex/fxopen/adapter_initialization_fxopen.md
       - name: LMAX
         href: api/connectors/forex/lmax.md
         items:
@@ -3501,15 +3510,8 @@
           href: api/connectors/crypto_exchanges/variational_omni/graphical_configuration_variational_omni.md
         - name: Инициализация адаптера Variational Omni
           href: api/connectors/crypto_exchanges/variational_omni/adapter_initialization_variational_omni.md
-    - name: Общие
+    - name: HFT
       items:
-      - name: CSV
-        href: api/connectors/common/csv.md
-        items:
-        - name: Графическое конфигурирование CSV
-          href: api/connectors/common/csv/graphical_configuration_csv.md
-        - name: Инициализация адаптера CSV
-          href: api/connectors/common/csv/adapter_initialization_csv.md
       - name: FIX протокол
         href: api/connectors/common/fix_protocol.md
         items:
@@ -3528,15 +3530,17 @@
           href: api/connectors/common/fast_protocol/adapter_initialization_fast.md
         - name: Отладка в dump режиме
           href: api/connectors/common/fast_protocol/dump_mode.md
+      - name: SBE протокол
+        href: api/connectors/hft/sbe_protocol.md
+        items:
+        - name: Настройка SBE
+          href: api/connectors/hft/sbe_protocol/configuration_sbe.md
+        - name: Графическая настройка SBE
+          href: api/connectors/hft/sbe_protocol/graphical_configuration_sbe.md
+        - name: Инициализация адаптера SBE
+          href: api/connectors/hft/sbe_protocol/adapter_initialization_sbe.md
       - name: FIX Server
         href: api/connectors/common/fix_server.md
-      - name: RSS
-        href: api/connectors/common/rss.md
-        items:
-        - name: Графическое конфигурирование RSS
-          href: api/connectors/common/rss/graphical_configuration_rss.md
-        - name: Инициализация адаптера RSS
-          href: api/connectors/common/rss/adapter_initialization_rss.md
       - name: Sierra Chart DTC
         href: api/connectors/common/sierra_chart_dtc.md
         items:
@@ -3546,6 +3550,22 @@
           href: api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md
         - name: Инициализация адаптера Sierra Chart DTC
           href: api/connectors/common/sierra_chart_dtc/adapter_initialization_sierra_chart_dtc.md
+    - name: Общие
+      items:
+      - name: CSV
+        href: api/connectors/common/csv.md
+        items:
+        - name: Графическое конфигурирование CSV
+          href: api/connectors/common/csv/graphical_configuration_csv.md
+        - name: Инициализация адаптера CSV
+          href: api/connectors/common/csv/adapter_initialization_csv.md
+      - name: RSS
+        href: api/connectors/common/rss.md
+        items:
+        - name: Графическое конфигурирование RSS
+          href: api/connectors/common/rss/graphical_configuration_rss.md
+        - name: Инициализация адаптера RSS
+          href: api/connectors/common/rss/adapter_initialization_rss.md
     - name: Создание собственного коннектора
       href: api/connectors/creating_own_connector.md
       items:

@@ -130,6 +130,7 @@
 | [DukasCopy](../api/connectors/forex/dukascopy.md) | ---------------------------------- | [DukasCopy のグラフィカル設定](../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md) |
 | [DukasCopy Live](../api/connectors/forex/dukascopy_live.md) | [DukasCopy Live コネクターの設定](../api/connectors/forex/dukascopy_live/configuration_dukascopy_live.md) | [DukasCopy Live のグラフィカル設定](../api/connectors/forex/dukascopy_live/graphical_configuration_dukascopy_live.md) |
 | [FXCM](../api/connectors/forex/fxcm.md) | [FXCM の設定](../api/connectors/forex/fxcm/configuration_fxcm.md) | [FXCM のグラフィカル設定](../api/connectors/forex/fxcm/graphical_configuration_fxcm.md) |
+| [FXOpen TickTrader](../api/connectors/forex/fxopen.md) | [FXOpen TickTrader の設定](../api/connectors/forex/fxopen/configuration_fxopen.md) | [FXOpen TickTrader のグラフィカル設定](../api/connectors/forex/fxopen/graphical_configuration_fxopen.md) |
 | [LMAX](../api/connectors/forex/lmax.md) | [LMAX の設定](../api/connectors/forex/lmax/configuration_lmax.md) | [LMAX のグラフィカル設定](../api/connectors/forex/lmax/graphical_configuration_lmax.md) |
 | [Oanda](../api/connectors/forex/oanda.md) | [Oanda の設定](../api/connectors/forex/oanda/configuration_oanda.md) | [Oanda のグラフィカル設定](../api/connectors/forex/oanda/graphical_configuration_oanda.md) |
 
@@ -318,12 +319,18 @@
 | [Uniswap](../api/connectors/crypto_exchanges/uniswap.md) | [Uniswap の設定](../api/connectors/crypto_exchanges/uniswap/configuration_uniswap.md) | [Uniswap のグラフィカル設定](../api/connectors/crypto_exchanges/uniswap/graphical_configuration_uniswap.md) |
 | [Variational Omni](../api/connectors/crypto_exchanges/variational_omni.md) | [Variational Omni の設定](../api/connectors/crypto_exchanges/variational_omni/configuration_variational_omni.md) | [Variational Omni のグラフィカル設定](../api/connectors/crypto_exchanges/variational_omni/graphical_configuration_variational_omni.md) |
 
+## HFT
+
+| コネクタ | コネクタ設定 | グラフィカル設定 |
+| ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| [FIX プロトコル](../api/connectors/common/fix_protocol.md) | [FIX の設定](../api/connectors/common/fix_protocol/configuration_fix.md) | [FIX のグラフィカル設定](../api/connectors/common/fix_protocol/graphical_configuration_fix.md) |
+| [FAST プロトコル](../api/connectors/common/fast_protocol.md) | [FAST の設定](../api/connectors/common/fast_protocol/adapter_initialization_fast.md) | [FAST のグラフィカル設定](../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
+| [SBE プロトコル](../api/connectors/hft/sbe_protocol.md) | [SBE の設定](../api/connectors/hft/sbe_protocol/configuration_sbe.md) | [SBE のグラフィカル設定](../api/connectors/hft/sbe_protocol/graphical_configuration_sbe.md) |
+| [Sierra Chart DTC コネクター](../api/connectors/common/sierra_chart_dtc.md) | [Sierra Chart DTC コネクターの設定](../api/connectors/common/sierra_chart_dtc/configuration_sierra_chart_dtc.md) | [Sierra Chart DTC のグラフィカル設定](../api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md) |
+
 ## 共通
 
 | コネクタ | コネクタ設定 | グラフィカル設定 |
 | ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
 | [CSV](../api/connectors/common/csv.md) | ---------------------------------- | [CSV のグラフィカル設定](../api/connectors/common/csv/graphical_configuration_csv.md) |
-| [FIX プロトコル](../api/connectors/common/fix_protocol.md) | [FIX の設定](../api/connectors/common/fix_protocol/configuration_fix.md) | [FIX のグラフィカル設定](../api/connectors/common/fix_protocol/graphical_configuration_fix.md) |
-| [FAST プロトコル](../api/connectors/common/fast_protocol.md) | [FAST の設定](../api/connectors/common/fast_protocol/adapter_initialization_fast.md) | [FAST のグラフィカル設定](../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
 | [RSS](../api/connectors/common/rss.md) | ---------------------------------- | [RSS のグラフィカル設定](../api/connectors/common/rss/graphical_configuration_rss.md) |
-| [Sierra Chart DTC コネクター](../api/connectors/common/sierra_chart_dtc.md) | [Sierra Chart DTC コネクターの設定](../api/connectors/common/sierra_chart_dtc/configuration_sierra_chart_dtc.md) | [Sierra Chart DTC のグラフィカル設定](../api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md) |

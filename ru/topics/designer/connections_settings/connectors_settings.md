@@ -148,6 +148,7 @@
 | [DukasCopy](../../api/connectors/forex/dukascopy.md) | ---------------------------------- | [Графическое конфигурирование DukasCopy](../../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md) |
 | [DukasCopy Live](../../api/connectors/forex/dukascopy_live.md) | [Настройки коннектора DukasCopy Live](../../api/connectors/forex/dukascopy_live/configuration_dukascopy_live.md) | [Графическая настройка DukasCopy Live](../../api/connectors/forex/dukascopy_live/graphical_configuration_dukascopy_live.md) |
 | [FXCM](../../api/connectors/forex/fxcm.md)                   | [Настройки коннектора FXCM](../../api/connectors/forex/fxcm/configuration_fxcm.md)               | [Графическое конфигурирование FXCM](../../api/connectors/forex/fxcm/graphical_configuration_fxcm.md)                   |
+| [FXOpen TickTrader](../../api/connectors/forex/fxopen.md) | [Настройки коннектора FXOpen TickTrader](../../api/connectors/forex/fxopen/configuration_fxopen.md) | [Графическое конфигурирование FXOpen TickTrader](../../api/connectors/forex/fxopen/graphical_configuration_fxopen.md) |
 | [LMAX](../../api/connectors/forex/lmax.md)                   | [Настройки коннектора LMAX](../../api/connectors/forex/lmax/configuration_lmax.md)               | [Графическое конфигурирование LMAX](../../api/connectors/forex/lmax/graphical_configuration_lmax.md)                   |
 | [Oanda](../../api/connectors/forex/oanda.md)                 | [Настройки коннектора Oanda](../../api/connectors/forex/oanda/configuration_oanda.md)             | [Графическое конфигурирование Oanda](../../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
 
@@ -336,12 +337,18 @@
 | [Uniswap](../../api/connectors/crypto_exchanges/uniswap.md)                     | [Настройки коннектора Uniswap](../../api/connectors/crypto_exchanges/uniswap/configuration_uniswap.md)                     | [Графическое конфигурирование Uniswap](../../api/connectors/crypto_exchanges/uniswap/graphical_configuration_uniswap.md)                     |
 | [Variational Omni](../../api/connectors/crypto_exchanges/variational_omni.md)                     | [Настройки коннектора Variational Omni](../../api/connectors/crypto_exchanges/variational_omni/configuration_variational_omni.md)                     | [Графическое конфигурирование Variational Omni](../../api/connectors/crypto_exchanges/variational_omni/graphical_configuration_variational_omni.md)                     |
 
+## HFT
+
+| Коннектор              | Настройки коннектора                                                 | Графическое конфигурирование                                  |
+| ---------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [FIX протокол](../../api/connectors/common/fix_protocol.md) | [Настройки коннекторов FIX](../../api/connectors/common/fix_protocol/configuration_fix.md) | [Графическое конфигурирование FIX](../../api/connectors/common/fix_protocol/graphical_configuration_fix.md) |
+| [FAST протокол](../../api/connectors/common/fast_protocol.md) | [Настройки коннекторов FAST](../../api/connectors/common/fast_protocol/adapter_initialization_fast.md) | [Графическое конфигурирование FAST](../../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
+| [SBE протокол](../../api/connectors/hft/sbe_protocol.md) | [Настройка SBE](../../api/connectors/hft/sbe_protocol/configuration_sbe.md) | [Графическая настройка SBE](../../api/connectors/hft/sbe_protocol/graphical_configuration_sbe.md) |
+| [Коннектор Sierra Chart DTC](../../api/connectors/common/sierra_chart_dtc.md) | [Настройки коннектора Sierra Chart DTC](../../api/connectors/common/sierra_chart_dtc/configuration_sierra_chart_dtc.md) | [Графическая настройка Sierra Chart DTC](../../api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md) |
+
 ## Общие
 
 | Коннектор              | Настройки коннектора                                                 | Графическое конфигурирование                                  |
 | ---------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
 | [CSV](../../api/connectors/common/csv.md)          | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование CSV](../../api/connectors/common/csv/graphical_configuration_csv.md)   |
-| [FIX протокол](../../api/connectors/common/fix_protocol.md) | [Настройки коннекторов FIX](../../api/connectors/common/fix_protocol/configuration_fix.md)                | [Графическое конфигурирование FIX](../../api/connectors/common/fix_protocol/graphical_configuration_fix.md)   |
-| [FAST протокол](../../api/connectors/common/fast_protocol.md) | [Настройки коннекторов FAST](../../api/connectors/common/fast_protocol/adapter_initialization_fast.md)                | [Графическое конфигурирование FAST](../../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
 | [RSS](../../api/connectors/common/rss.md)          | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование RSS](../../api/connectors/common/rss/graphical_configuration_rss.md)   |
-| [Коннектор Sierra Chart DTC](../../api/connectors/common/sierra_chart_dtc.md) | [Настройки коннектора Sierra Chart DTC](../../api/connectors/common/sierra_chart_dtc/configuration_sierra_chart_dtc.md) | [Графическая настройка Sierra Chart DTC](../../api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md) |

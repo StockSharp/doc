@@ -1728,6 +1728,15 @@
           href: api/connectors/forex/fxcm/graphical_configuration_fxcm.md
         - name: 适配器初始化 FXCM
           href: api/connectors/forex/fxcm/adapter_initialization_fxcm.md
+      - name: FXOpen TickTrader
+        href: api/connectors/forex/fxopen.md
+        items:
+        - name: FXOpen TickTrader 配置
+          href: api/connectors/forex/fxopen/configuration_fxopen.md
+        - name: FXOpen TickTrader 图形配置
+          href: api/connectors/forex/fxopen/graphical_configuration_fxopen.md
+        - name: FXOpen TickTrader 适配器初始化
+          href: api/connectors/forex/fxopen/adapter_initialization_fxopen.md
       - name: LMAX
         href: api/connectors/forex/lmax.md
         items:
@@ -3353,15 +3362,8 @@
           href: api/connectors/crypto_exchanges/variational_omni/graphical_configuration_variational_omni.md
         - name: 适配器初始化 Variational Omni
           href: api/connectors/crypto_exchanges/variational_omni/adapter_initialization_variational_omni.md
-    - name: 通用
+    - name: HFT
       items:
-      - name: CSV
-        href: api/connectors/common/csv.md
-        items:
-        - name: 图形配置 CSV
-          href: api/connectors/common/csv/graphical_configuration_csv.md
-        - name: 适配器初始化 CSV
-          href: api/connectors/common/csv/adapter_initialization_csv.md
       - name: FIX 协议
         href: api/connectors/common/fix_protocol.md
         items:
@@ -3380,15 +3382,17 @@
           href: api/connectors/common/fast_protocol/adapter_initialization_fast.md
         - name: 转储模式
           href: api/connectors/common/fast_protocol/dump_mode.md
+      - name: SBE 协议
+        href: api/connectors/hft/sbe_protocol.md
+        items:
+        - name: SBE 配置
+          href: api/connectors/hft/sbe_protocol/configuration_sbe.md
+        - name: SBE 图形化配置
+          href: api/connectors/hft/sbe_protocol/graphical_configuration_sbe.md
+        - name: SBE 适配器初始化
+          href: api/connectors/hft/sbe_protocol/adapter_initialization_sbe.md
       - name: FIX 服务器
         href: api/connectors/common/fix_server.md
-      - name: RSS
-        href: api/connectors/common/rss.md
-        items:
-        - name: 图形配置 RSS
-          href: api/connectors/common/rss/graphical_configuration_rss.md
-        - name: 适配器初始化 RSS
-          href: api/connectors/common/rss/adapter_initialization_rss.md
       - name: Sierra Chart DTC
         href: api/connectors/common/sierra_chart_dtc.md
         items:
@@ -3398,6 +3402,22 @@
           href: api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md
         - name: Sierra Chart DTC 适配器初始化
           href: api/connectors/common/sierra_chart_dtc/adapter_initialization_sierra_chart_dtc.md
+    - name: 通用
+      items:
+      - name: CSV
+        href: api/connectors/common/csv.md
+        items:
+        - name: 图形配置 CSV
+          href: api/connectors/common/csv/graphical_configuration_csv.md
+        - name: 适配器初始化 CSV
+          href: api/connectors/common/csv/adapter_initialization_csv.md
+      - name: RSS
+        href: api/connectors/common/rss.md
+        items:
+        - name: 图形配置 RSS
+          href: api/connectors/common/rss/graphical_configuration_rss.md
+        - name: 适配器初始化 RSS
+          href: api/connectors/common/rss/adapter_initialization_rss.md
     - name: 创建自己的连接器
       href: api/connectors/creating_own_connector.md
       items:

@@ -130,6 +130,7 @@ Actualmente, [Hydra](../hydra.md) admite las siguientes fuentes:
 | [DukasCopy](../api/connectors/forex/dukascopy.md) | ---------------------------------- | [Configuración gráfica de DukasCopy](../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md) |
 | [DukasCopy Live](../api/connectors/forex/dukascopy_live.md) | [Configuración del conector DukasCopy Live](../api/connectors/forex/dukascopy_live/configuration_dukascopy_live.md) | [Configuración gráfica de DukasCopy Live](../api/connectors/forex/dukascopy_live/graphical_configuration_dukascopy_live.md) |
 | [FXCM](../api/connectors/forex/fxcm.md)                   | [Configuración de FXCM](../api/connectors/forex/fxcm/configuration_fxcm.md)                      | [Configuración gráfica de FXCM](../api/connectors/forex/fxcm/graphical_configuration_fxcm.md)                   |
+| [FXOpen TickTrader](../api/connectors/forex/fxopen.md) | [Configuración de FXOpen TickTrader](../api/connectors/forex/fxopen/configuration_fxopen.md) | [Configuración gráfica de FXOpen TickTrader](../api/connectors/forex/fxopen/graphical_configuration_fxopen.md) |
 | [LMAX](../api/connectors/forex/lmax.md)                   | [Configuración de LMAX](../api/connectors/forex/lmax/configuration_lmax.md)                      | [Configuración gráfica de LMAX](../api/connectors/forex/lmax/graphical_configuration_lmax.md)                   |
 | [Oanda](../api/connectors/forex/oanda.md)                 | [Configuración de Oanda](../api/connectors/forex/oanda/configuration_oanda.md)                    | [Configuración gráfica de Oanda](../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
 
@@ -318,12 +319,18 @@ Actualmente, [Hydra](../hydra.md) admite las siguientes fuentes:
 | [Uniswap](../api/connectors/crypto_exchanges/uniswap.md)           | [Configuración de Uniswap](../api/connectors/crypto_exchanges/uniswap/configuration_uniswap.md)           | [Configuración gráfica de Uniswap](../api/connectors/crypto_exchanges/uniswap/graphical_configuration_uniswap.md)            |
 | [Variational Omni](../api/connectors/crypto_exchanges/variational_omni.md)           | [Configuración de Variational Omni](../api/connectors/crypto_exchanges/variational_omni/configuration_variational_omni.md)           | [Configuración gráfica de Variational Omni](../api/connectors/crypto_exchanges/variational_omni/graphical_configuration_variational_omni.md)            |
 
+## HFT
+
+| Conectores             | Configuración del conector                                                   | Configuración gráfica                                  |
+| ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| [Protocolo FIX](../api/connectors/common/fix_protocol.md) | [Configuración de FIX](../api/connectors/common/fix_protocol/configuration_fix.md) | [Configuración gráfica de FIX](../api/connectors/common/fix_protocol/graphical_configuration_fix.md) |
+| [Protocolo FAST](../api/connectors/common/fast_protocol.md) | [Configuración de FAST](../api/connectors/common/fast_protocol/adapter_initialization_fast.md) | [Configuración gráfica de FAST](../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
+| [Protocolo SBE](../api/connectors/hft/sbe_protocol.md) | [Configuración de SBE](../api/connectors/hft/sbe_protocol/configuration_sbe.md) | [Configuración gráfica de SBE](../api/connectors/hft/sbe_protocol/graphical_configuration_sbe.md) |
+| [Conector Sierra Chart DTC](../api/connectors/common/sierra_chart_dtc.md) | [Configuración del conector Sierra Chart DTC](../api/connectors/common/sierra_chart_dtc/configuration_sierra_chart_dtc.md) | [Configuración gráfica de Sierra Chart DTC](../api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md) |
+
 ## Comunes
 
 | Conectores             | Configuración del conector                                                   | Configuración gráfica                                  |
 | ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
 | [CSV](../api/connectors/common/csv.md)          | ---------------------------------- | [Configuración gráfica de CSV](../api/connectors/common/csv/graphical_configuration_csv.md)   |
-| [Protocolo FIX](../api/connectors/common/fix_protocol.md) | [Configuración de FIX](../api/connectors/common/fix_protocol/configuration_fix.md)                        | [Configuración gráfica de FIX](../api/connectors/common/fix_protocol/graphical_configuration_fix.md)   |
-| [Protocolo FAST](../api/connectors/common/fast_protocol.md) | [Configuración de FAST](../api/connectors/common/fast_protocol/adapter_initialization_fast.md)                        | [Configuración gráfica de FAST](../api/connectors/common/fast_protocol/graphical_configuration_fast.md) |
 | [RSS](../api/connectors/common/rss.md)          | ---------------------------------- | [Configuración gráfica de RSS](../api/connectors/common/rss/graphical_configuration_rss.md)   |
-| [Conector Sierra Chart DTC](../api/connectors/common/sierra_chart_dtc.md) | [Configuración del conector Sierra Chart DTC](../api/connectors/common/sierra_chart_dtc/configuration_sierra_chart_dtc.md) | [Configuración gráfica de Sierra Chart DTC](../api/connectors/common/sierra_chart_dtc/graphical_configuration_sierra_chart_dtc.md) |
