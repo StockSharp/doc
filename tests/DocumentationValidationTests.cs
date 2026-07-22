@@ -769,6 +769,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Aroon",
 		"ATR",
 		"Chaikin's Volatility",
+		"Chainlink Data Streams",
+		"Coin Metrics",
 		"DEMA",
 		"DeMarker",
 		"DukasCopy Live",
@@ -797,9 +799,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Twelve Data",
 		"TWAP",
 		"Variational Omni",
+		"Velo Data",
 		"VIDYA",
 		"VWAP",
 		"Wilder MA",
+		"Zero Hash",
 		"ZLEMA",
 	};
 
@@ -1907,6 +1911,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		{
 			if (text.Contains("LMAX Exchange", StringComparison.Ordinal)
 				|| text.Contains("Investors Exchange", StringComparison.Ordinal)
+				|| text.Contains("`Exchange`", StringComparison.Ordinal)
 				|| text.Contains("[Exchange](xref:", StringComparison.Ordinal)
 				|| text.Contains("BusinessEntities.Exchange", StringComparison.Ordinal)
 				|| text.Contains("exchange.csv", StringComparison.Ordinal)
