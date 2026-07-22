@@ -771,6 +771,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Chaikin's Volatility",
 		"DEMA",
 		"DeMarker",
+		"DukasCopy Live",
 		"dYdX Chain",
 		"EOD Historical Data",
 		"Fix Trading Community",

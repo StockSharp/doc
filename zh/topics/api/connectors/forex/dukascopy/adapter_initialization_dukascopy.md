@@ -1,21 +1,13 @@
-# 适配器初始化: Dukascopy JForex
+# DukasCopy 适配器初始化
 
-以下代码演示如何初始化 [DukasCopyMessageAdapter](xref:StockSharp.DukasCopy.DukasCopyMessageAdapter) 并将其添加到 [Connector](xref:StockSharp.Algo.Connector)。
+下面的代码演示了如何初始化 [DukasCopyMessageAdapter](xref:StockSharp.DukasCopy.DukasCopyMessageAdapter) 并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
-var messageAdapter = new DukasCopyMessageAdapter(Connector.TransactionIdGenerator)
-{
-	Password = "<值>".ToSecureString(),
-	UserName = "<值>",
-	BridgeJarPath = "<值>",
-	IsDemo = true,
-};
-
+var messageAdapter = new DukasCopyMessageAdapter(Connector.TransactionIdGenerator);
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
+...
 ```
 
-请将示例值替换为针对您的账户签发或配置的参数。
-
-## 另请参阅
+## 推荐内容
 
 [连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)

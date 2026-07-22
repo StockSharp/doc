@@ -1,12 +1,13 @@
-# Dukascopy JForex
+# DukasCopy
 
-**Dukascopy JForex** conecta StockSharp con la interfaz oficial **JForex SDK**.
+**DukasCopy** - el proveedor de datos históricos ofrece una variedad de instrumentos financieros (por ejemplo, Forex, materias primas e índices).
 
-El conector permite buscar instrumentos, recibir datos de mercado, consultar la cartera y operar con órdenes.
+Antes de comenzar a escribir robots de negociación para la plataforma de negociación actual, se recomienda leer los enlaces en [Conectores](../../connectors.md).
 
-Antes de desarrollar robots de negociación, consulte los materiales de la sección [Conectores](../../connectors.md).
+> [!CAUTION]
+> El conector solo admite el flujo de datos de mercado; las transacciones no están admitidas.
 
-## Véase también
+## Contenido recomendado
 
 [Conectores](../../connectors.md)
 
@@ -18,6 +19,6 @@ Antes de desarrollar robots de negociación, consulte los materiales de la secci
 
 [Gestión de órdenes](../../orders_management.md)
 
-[Crear una orden](../../orders_management/create_new_order.md)
+[Crear una nueva orden](../../orders_management/create_new_order.md)
 
-[Crear una orden stop](../../orders_management/create_new_stop_order.md)
+[Crear una nueva orden stop](../../orders_management/create_new_stop_order.md)

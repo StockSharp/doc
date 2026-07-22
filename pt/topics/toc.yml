@@ -1706,12 +1706,19 @@
       - name: DukasCopy
         href: api/connectors/forex/dukascopy.md
         items:
-        - name: Configuração do conector Dukascopy JForex
-          href: api/connectors/forex/dukascopy/configuration_dukascopy.md
         - name: Configuração gráfica DukasCopy
           href: api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md
         - name: Inicialização do adaptador DukasCopy
           href: api/connectors/forex/dukascopy/adapter_initialization_dukascopy.md
+      - name: DukasCopy Live
+        href: api/connectors/forex/dukascopy_live.md
+        items:
+        - name: Configuração do conector DukasCopy Live
+          href: api/connectors/forex/dukascopy_live/configuration_dukascopy_live.md
+        - name: Configuração gráfica DukasCopy Live
+          href: api/connectors/forex/dukascopy_live/graphical_configuration_dukascopy_live.md
+        - name: Inicialização do adaptador DukasCopy Live
+          href: api/connectors/forex/dukascopy_live/adapter_initialization_dukascopy_live.md
       - name: FXCM
         href: api/connectors/forex/fxcm.md
         items:

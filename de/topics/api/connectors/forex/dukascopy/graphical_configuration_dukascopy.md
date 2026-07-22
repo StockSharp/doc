@@ -1,19 +1,18 @@
-# Grafische Konfiguration: Dukascopy JForex
+# Grafische Konfiguration von DukasCopy
 
-In allen StockSharp-Produkten wird die Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) konfiguriert.
+Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):
 
-- `UserName` - Konto- oder Clientkennung.
-- `Password` - Zugangsdaten für die Authentifizierung.
-- `IsDemo` - Schalter für das Verhalten des Konnektors. Standardwert: `true`.
-- `BridgePort` - TCP-Port der lokalen Bridge. Standardwert: `27431`.
-- `BridgeJarPath` - Pfad zu einer lokalen Datei oder einem Verzeichnis.
+![API-GUI-Einstellungen Dukascopy](../../../../../images/api_gui_settings_dukascopy.png)
 
-## Siehe auch
+- **Verbindungsprüfung** - Intervall zur Serverprüfung, um zu überwachen, ob die Verbindung aktiv ist. Standardmäßig 1 Minute.
+- **Einstellungen für die Wiederverbindung** - Mechanismus zur Überwachung der Verbindung mit den Einstellungen des Handelssystems. ([Einstellungen für die Wiederverbindung](../../reconnection_settings.md))
 
-[Konnektoren](../../../connectors.md)
+## Empfohlene Inhalte
+
+[Connectoren](../../../connectors.md)
 
 [Grafische Konfiguration](../../graphical_configuration.md)
 
-[Einstellungen speichern und laden](../../save_and_load_settings.md)
+[Eigenen Connector erstellen](../../creating_own_connector.md)
 
-[Eigenen Konnektor erstellen](../../creating_own_connector.md)
+[Einstellungen speichern und laden](../../save_and_load_settings.md)
