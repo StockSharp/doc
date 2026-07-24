@@ -4047,7 +4047,20 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				errors.Add($"{RelativeToRepo(file)}:{comment.Line}: Portuguese code comment keeps English candle term '{match.Value}'. Use 'vela'/'velas' in explanatory comments.");
 			}
 
-			// Code string literals are not candle-checked: they hold API type/node identifiers, which are code, not prose.
+			foreach (var literal in EnumerateLocalizableCodeStringLiterals(markdown))
+			{
+				var normalized = NormalizeMarkdownTextForLocalizedLoggingTermCheck(NormalizeCodeStringLiteralForTranslationCheck(literal.Text));
+				normalized = Regex.Replace(normalized, @"(?::param|@param)\s+[A-Za-z_]\w*\s*:?", " ", RegexOptions.CultureInvariant);
+
+				if (IsAllowedLocalizedCandleTermLine(relative, normalized))
+					continue;
+
+				var match = pattern.Match(normalized);
+				if (!match.Success)
+					continue;
+
+				errors.Add($"{RelativeToRepo(file)}:{literal.Line}: Portuguese code string keeps English candle term '{match.Value}'. Use 'vela'/'velas' in user-facing strings.");
+			}
 		}
 
 		var tocPath = Path.Combine(langRoot, "topics", "toc.yml");
@@ -4154,8 +4167,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				foreach (var comment in EnumerateCodeComments(markdown))
 					AddLocalizedCandleTermError(file, relative, comment.Line, "code comment", NormalizeTextForLocalizedCandleTermCheck(NormalizeCodeCommentForTranslationCheck(comment.Text)), replacement, pattern, errors);
 
-				// Code string literals are not candle-checked: they hold API type/node identifiers
-				// (name: 'Candles', type: 'Candle'), which are code, not translatable prose.
+				foreach (var literal in EnumerateLocalizableCodeStringLiterals(markdown))
+					AddLocalizedCandleTermError(file, relative, literal.Line, "code string", NormalizeTextForLocalizedCandleTermCheck(NormalizeCodeStringLiteralForTranslationCheck(literal.Text)), replacement, pattern, errors);
 			}
 
 			var tocPath = Path.Combine(langRoot, "topics", "toc.yml");
@@ -13415,23 +13428,6 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			|| word.Equals("trading", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("visual", StringComparison.OrdinalIgnoreCase);
 
-	// A comment that is only a pipe-separated list of code tokens (enum values / command ids,
-	// e.g. "// undo | redo | cut" or "// BidAsk | Delta | Total | Ladder") documents API values,
-	// not translatable prose, so it is excluded from localization checks.
-	private static bool IsValueListComment(string comment)
-	{
-		var text = comment.TrimStart('/', '#').Trim();
-		if (!text.Contains('|'))
-			return false;
-		foreach (var part in text.Split('|'))
-		{
-			var token = part.Trim();
-			if (token.Length == 0 || !Regex.IsMatch(token, @"^[A-Za-z_][A-Za-z0-9_.]*$", RegexOptions.CultureInvariant))
-				return false;
-		}
-		return true;
-	}
-
 	private static IEnumerable<CodeComment> EnumerateCodeComments(string markdown)
 	{
 		foreach (Match block in Regex.Matches(markdown, "```(?<info>[^\\r\\n]*)\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
@@ -13462,8 +13458,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					|| trimmed.StartsWith("#", StringComparison.Ordinal))
 				{
 					fullLineComment = true;
-					if (!IsValueListComment(trimmed))
-						yield return new CodeComment(trimmed, line);
+					yield return new CodeComment(trimmed, line);
 				}
 
 				if (fullLineComment)
@@ -13471,11 +13466,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 				var slashComment = FindInlineLineCommentStart(text, "//");
 				if (slashComment > 0)
-				{
-					var inlineComment = text[slashComment..].Trim();
-					if (!IsValueListComment(inlineComment))
-						yield return new CodeComment(inlineComment, line);
-				}
+					yield return new CodeComment(text[slashComment..].Trim(), line);
 
 				if (IsPythonCodeBlock(info))
 				{
@@ -13730,6 +13721,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		}
 	}
 
+	// String literals that carry user-facing text, with the code-only ones dropped: API type, node and
+	// port identifiers (name: 'Candles', type: 'Candle'), keys, paths, URLs and file names. Those are
+	// code and stay English in every language, while the remaining literals are prose and must be
+	// translated like any other visible text.
+	private static IEnumerable<CodeStringLiteral> EnumerateLocalizableCodeStringLiterals(string markdown)
+		=> EnumerateCodeStringLiterals(markdown).Where(literal => !IsAllowedInvariantCodeStringLiteral(literal.Text));
+
 	private static string NormalizeCodeStringLiteralForTranslationCheck(string text)
 	{
 		var value = Regex.Replace(text ?? string.Empty, @"\\[rnt]", " ", RegexOptions.CultureInvariant);
@@ -13881,6 +13879,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (Regex.IsMatch(text, @"^<[^>]+/?>$|^[A-Za-z_][A-Za-z0-9_.]*$|^[A-Za-z_][A-Za-z0-9_]*\s*-\s*StockSharp(?:\.[A-Za-z_][A-Za-z0-9_]*)+$|[;{}=]", RegexOptions.CultureInvariant))
 			return true;
 
+		if (IsCodeTokenListCommentText(text))
+			return true;
+
 		// Skip commented-out code and compiler/preprocessor directives without hiding prose comments
 		// such as "if no historical data..." or "Class for analyzing...".
 		return Regex.IsMatch(text, @"^[+\-*/]\s*[A-Za-z_][A-Za-z0-9_.]*(?:\.|\()", RegexOptions.CultureInvariant)
@@ -13888,6 +13889,18 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			|| Regex.IsMatch(text, @"^return\s+(?:true|false|null|default|new\b|[A-Za-z_][A-Za-z0-9_.]*(?:\([^)]*\))?)$", RegexOptions.CultureInvariant)
 			|| Regex.IsMatch(text, @"^(?:using|var|let|public|private|protected|await|yield|pragma|region|endregion|nullable|define|endif|else|elif|def|with)\b", RegexOptions.CultureInvariant)
 			|| Regex.IsMatch(text, @"^(?:class|new)\s+[A-Za-z_][A-Za-z0-9_.]*(?:\b|[<(])", RegexOptions.CultureInvariant);
+	}
+
+	// A comment whose whole body is a pipe-separated list of code tokens — accepted values of an API
+	// member, such as "undo | redo | cut" or "BidAsk | Delta | Total | Ladder" — spells out identifiers,
+	// not prose. The tokens are code and stay English in every language, so translation checks skip
+	// them; a comment that mixes such a list with words is prose and is still checked.
+	private static bool IsCodeTokenListCommentText(string text)
+	{
+		if (!text.Contains('|'))
+			return false;
+
+		return text.Split('|').All(part => Regex.IsMatch(part.Trim(), @"^[A-Za-z_][A-Za-z0-9_.]*$", RegexOptions.CultureInvariant));
 	}
 
 	private static string NormalizeCodeCommentForLikelyEnglishCheck(string comment)
