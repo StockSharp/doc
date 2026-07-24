@@ -13,7 +13,7 @@
 
 ```js
 const series = chart.addSeries(SSChart.TpoSeries, {
-  displayMode: SSChart.TpoDisplayMode.Auto,  // Auto | Letters | Blocks — режим отображения
+  displayMode: SSChart.TpoDisplayMode.Auto,  // режим отображения: Auto | Letters | Blocks
   showPoc: true,
   showValueArea: true,
   showInitialBalance: true,

@@ -23,8 +23,8 @@ candles.setData(exactBars);
 
 const profile = chart.addSeries(SSChart.ExactVolumeProfileSeries, {
   tickSize: 0.25,
-  rangeMode: SSChart.VolumeProfileRangeMode.Visible,     // Visible | Fixed | Session
-  displayMode: SSChart.VolumeProfileDisplayMode.BidAsk,  // Total | BidAsk | Delta
+  rangeMode: SSChart.VolumeProfileRangeMode.Visible,     // режим диапазона: Visible | Fixed | Session
+  displayMode: SSChart.VolumeProfileDisplayMode.BidAsk,  // режим отображения: Total | BidAsk | Delta
   bidColor: '#26a69a',
   askColor: '#ef5350',
   showLabels: true,

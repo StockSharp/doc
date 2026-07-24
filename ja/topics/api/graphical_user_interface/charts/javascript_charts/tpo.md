@@ -13,7 +13,7 @@ TPO（Time Price Opportunity）チャートは、マーケットプロファイ�
 
 ```js
 const series = chart.addSeries(SSChart.TpoSeries, {
-  displayMode: SSChart.TpoDisplayMode.Auto,  // Auto（自動）| Letters（文字）| Blocks（ブロック）
+  displayMode: SSChart.TpoDisplayMode.Auto,  // 表示モード: Auto | Letters | Blocks
   showPoc: true,
   showValueArea: true,
   showInitialBalance: true,

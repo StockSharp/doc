@@ -13,7 +13,7 @@ Adicione uma `TpoSeries` e alimente-a com barras OHLC que carreguem cada uma um 
 
 ```js
 const series = chart.addSeries(SSChart.TpoSeries, {
-  displayMode: SSChart.TpoDisplayMode.Auto,  // Auto | Letters | Blocks
+  displayMode: SSChart.TpoDisplayMode.Auto,  // modo de exibição: Auto | Letters | Blocks
   showPoc: true,
   showValueArea: true,
   showInitialBalance: true,

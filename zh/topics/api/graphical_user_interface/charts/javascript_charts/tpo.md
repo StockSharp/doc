@@ -13,7 +13,7 @@ TPO（Time Price Opportunity，时间价格机会）图，也称为市场剖面�
 
 ```js
 const series = chart.addSeries(SSChart.TpoSeries, {
-  displayMode: SSChart.TpoDisplayMode.Auto,  // Auto | Letters | Blocks
+  displayMode: SSChart.TpoDisplayMode.Auto,  // 显示模式：Auto | Letters | Blocks
   showPoc: true,
   showValueArea: true,
   showInitialBalance: true,

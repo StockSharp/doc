@@ -13,7 +13,7 @@ Add a `TpoSeries` and feed it OHLC bars that each carry a `sessionId`; the serie
 
 ```js
 const series = chart.addSeries(SSChart.TpoSeries, {
-  displayMode: SSChart.TpoDisplayMode.Auto,  // Auto | Letters | Blocks
+  displayMode: SSChart.TpoDisplayMode.Auto,  // display mode: Auto | Letters | Blocks
   showPoc: true,
   showValueArea: true,
   showInitialBalance: true,

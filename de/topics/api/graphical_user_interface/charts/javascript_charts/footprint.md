@@ -18,8 +18,8 @@ Fügen Sie eine `FootprintSeries` hinzu und speisen Sie sie mit exakten Order-Fl
 ```js
 const series = chart.addSeries(SSChart.FootprintSeries, {
   tickSize: 0.25,
-  mode: SSChart.FootprintDisplayMode.BidAsk,       // BidAsk | Delta | Total | Ladder
-  detailLevel: SSChart.FootprintDetailLevel.Auto,  // Auto | Numbers | Heatmap | Summary
+  mode: SSChart.FootprintDisplayMode.BidAsk,       // Anzeigemodus: BidAsk | Delta | Total | Ladder
+  detailLevel: SSChart.FootprintDetailLevel.Auto,  // Detailgrad: Auto | Numbers | Heatmap | Summary
   bidColor: '#26a69a',
   askColor: '#ef5350',
   showUnfinishedAuctions: true,
