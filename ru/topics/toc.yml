@@ -4263,11 +4263,49 @@
   - name: Графические компоненты
     href: api/graphical_user_interface.md
     items:
-    - name: Графики
-      href: api/graphical_user_interface/charts.md
+    - name: JavaScript-компоненты
       items:
       - name: JavaScript-графики
         href: api/graphical_user_interface/charts/javascript_charts.md
+        items:
+        - name: Свечи
+          href: api/graphical_user_interface/charts/javascript_charts/candlestick.md
+        - name: OHLC-бары
+          href: api/graphical_user_interface/charts/javascript_charts/bar.md
+        - name: Линия
+          href: api/graphical_user_interface/charts/javascript_charts/line.md
+        - name: Область
+          href: api/graphical_user_interface/charts/javascript_charts/area.md
+        - name: Гистограмма
+          href: api/graphical_user_interface/charts/javascript_charts/histogram.md
+        - name: Канал
+          href: api/graphical_user_interface/charts/javascript_charts/band.md
+        - name: Хейкин-Аси
+          href: api/graphical_user_interface/charts/javascript_charts/heikin_ashi.md
+        - name: Ренко
+          href: api/graphical_user_interface/charts/javascript_charts/renko.md
+        - name: Крестики-нолики
+          href: api/graphical_user_interface/charts/javascript_charts/point_figure.md
+        - name: Футпринт
+          href: api/graphical_user_interface/charts/javascript_charts/footprint.md
+        - name: Профиль объёма
+          href: api/graphical_user_interface/charts/javascript_charts/volume_profile.md
+        - name: TPO (профиль рынка)
+          href: api/graphical_user_interface/charts/javascript_charts/tpo.md
+        - name: Индикаторы
+          href: api/graphical_user_interface/charts/javascript_charts/indicators.md
+        - name: Догрузка истории
+          href: api/graphical_user_interface/charts/javascript_charts/backfill.md
+      - name: JavaScript-диаграмма
+        href: api/graphical_user_interface/javascript_diagram.md
+        items:
+        - name: Интерактивный редактор
+          href: api/graphical_user_interface/javascript_diagram/editor.md
+        - name: События и API
+          href: api/graphical_user_interface/javascript_diagram/events.md
+    - name: Графики
+      href: api/graphical_user_interface/charts.md
+      items:
       - name: Свечной график
         href: api/graphical_user_interface/charts/candle_chart.md
       - name: График-панель

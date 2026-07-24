@@ -1,23 +1,45 @@
-# Gráficos JavaScript
+# Gráficos en JavaScript
 
-[Gráficos de negociación JavaScript de StockSharp](https://github.com/StockSharp/Charts) es una biblioteca de gráficos independiente para navegadores. Contiene el motor canvas `sschart` sin dependencias en tiempo de ejecución y el conjunto de módulos gráficos utilizado por el terminal web de StockSharp. Hay una versión funcional disponible en la [demostración en línea](https://stocksharp.github.io/Charts/demo/).
+[StockSharp JS Trading Charts](https://github.com/StockSharp/Charts) es una biblioteca de gráficos para navegador, autónoma y sin dependencias. Se publica en npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e incluye el motor de canvas `sschart` que utiliza el terminal web de StockSharp. Hay una versión funcional disponible en la [demo en vivo](https://stocksharp.github.io/Charts/demo/).
 
-![Gráfico de negociación JavaScript de StockSharp](../../../../images/javascript_charts.jpg)
+![Gráfico de trading en JavaScript de StockSharp](../../../../images/javascript_charts.jpg)
 
-A diferencia de los componentes para Windows de `StockSharp.Xaml.Charting`, esta biblioteca se ejecuta en el navegador y dibuja directamente en un `canvas` HTML. El motor se expone mediante el objeto global `SSChart` y también se puede importar desde `src/sschart.ts` en una compilación TypeScript.
+A diferencia de los componentes de Windows de `StockSharp.Xaml.Charting`, esta biblioteca se ejecuta en un navegador y dibuja directamente sobre un `canvas` HTML. El motor se expone a través del objeto global `SSChart` (desde `dist/sschart.js`) y también puede importarse como módulos ECMAScript desde el paquete npm (`import { createChart, CandlestickSeries } from '@stocksharp/chart'`).
 
-## Funciones
+## Demo en vivo
 
-- Series de velas, barras OHLC, líneas, áreas, histogramas, Renko, punto y figura, perfil de volumen, clústeres y cajas.
-- Carga del histórico y actualizaciones en tiempo real mediante `setData` y `update`.
-- Marcadores de operaciones, líneas de precio, cruceta, zoom, desplazamiento y cálculo automático del rango.
+El gráfico de abajo es el motor real ejecutándose en esta página: velas con un histograma de volumen y una media móvil. Arrastre para desplazarse, use la rueda para hacer zoom y pulse el botón de expandir (arriba a la derecha) para abrirlo en pantalla completa.
+
+```chart-demo overview
+```
+
+## Capacidades
+
+- Un conjunto completo de series de precios: velas (candlesticks), barras OHLC, línea, área, histograma, banda, además de los tipos derivados Heikin-Ashi, Renko y Point & Figure.
+- Estudios exactos de order-flow: footprint, perfil de volumen y TPO (perfil de mercado).
+- Carga histórica y actualizaciones en tiempo real mediante `setData` y `update`.
+- Marcadores de operaciones, líneas de precio, crosshair, zoom, desplazamiento y cálculo automático del rango.
 - Un motor de indicadores con aproximadamente 160 implementaciones de cálculo.
-- Indicadores superpuestos, paneles de osciladores sincronizados y una leyenda controlada por la cruceta.
-- Temas claro y oscuro, menú contextual, diálogo de indicadores y cambio del tipo de gráfico.
+- Indicadores superpuestos (overlay), paneles de osciladores sincronizados y una leyenda controlada por el crosshair.
+- Temas claro y oscuro, un menú contextual, un diálogo de indicadores y cambio de tipo de gráfico.
+
+## Instalación
+
+Instale el paquete desde npm e importe los módulos ES:
+
+```bash
+npm install @stocksharp/chart
+```
+
+```js
+import { createChart, CandlestickSeries } from '@stocksharp/chart';
+```
+
+O bien, sin un bundler, incluya el objeto global precompilado `SSChart` con una etiqueta `<script>` como se muestra a continuación.
 
 ## Añadir un gráfico a una página
 
-La compilación genera `dist/sschart.js`, que publica `window.SSChart`. Los valores de tiempo se pasan a la API como marcas de tiempo Unix en segundos.
+La compilación produce `dist/sschart.js`, que publica `window.SSChart`. Los valores de tiempo pasados a la API son marcas de tiempo Unix en segundos.
 
 ```html
 <div id="chart" style="width: 800px; height: 400px"></div>
@@ -33,8 +55,8 @@ const chart = SSChart.createChart(document.getElementById('chart'), {
 });
 
 const candles = chart.addSeries(SSChart.CandlestickSeries, {
-  upColor: '#00c853',
-  downColor: '#ff3d57',
+  upColor: '#26a69a',
+  downColor: '#ef5350',
   borderVisible: false,
 });
 
@@ -54,22 +76,43 @@ candles.update({
 chart.timeScale().fitContent();
 ```
 
-Una llamada a `update` con la marca de tiempo actual sustituye el último punto. Una marca más reciente añade un punto.
+Llamar a `update` con la marca de tiempo actual reemplaza el último punto. Una marca de tiempo más reciente añade un punto.
 
-## Conjunto completo de módulos del terminal
+## Modos de gráfico
 
-Los módulos de `src/chart` amplían el motor base con funciones del terminal:
+Cada tipo de serie tiene su propio tema con una demo en vivo y el JavaScript que la configura:
 
-- `IndicatorEngine`, renderizadores y ajustes de indicadores, además del catálogo de cálculos.
-- Un selector de tipo para velas, barras, líneas, áreas, Heikin-Ashi, Renko, punto y figura, clústeres y cajas.
-- Leyenda, paneles secundarios sincronizados, menú contextual y diálogo de selección de indicadores.
+- [Vela (Candlestick)](javascript_charts/candlestick.md) — velas OHLC clásicas.
+- [Barras OHLC](javascript_charts/bar.md) — ticks de apertura/cierre sobre una barra de rango vertical.
+- [Línea](javascript_charts/line.md) — una única polilínea a través de los cierres.
+- [Área](javascript_charts/area.md) — una línea con un relleno degradado.
+- [Histograma](javascript_charts/histogram.md) — barras verticales, normalmente de volumen.
+- [Banda](javascript_charts/band.md) — un canal superior/inferior (envolventes, Bollinger).
+- [Heikin-Ashi](javascript_charts/heikin_ashi.md) — velas suavizadas que filtran el ruido.
+- [Renko](javascript_charts/renko.md) — ladrillos guiados por el precio, independientes del tiempo.
+- [Point and Figure](javascript_charts/point_figure.md) — columnas de X/O del movimiento del precio.
+- [Footprint](javascript_charts/footprint.md) — volumen de bid × ask en cada precio dentro de cada barra.
+- [Perfil de volumen](javascript_charts/volume_profile.md) — volumen por precio con POC y área de valor.
+- [TPO (Perfil de mercado)](javascript_charts/tpo.md) — tiempo pasado en cada precio por sesión.
+
+Más allá de los tipos de serie, el gráfico también dispone de un [motor de indicadores](javascript_charts/indicators.md) con unos 160 estudios y de [relleno histórico perezoso (lazy backfill)](javascript_charts/backfill.md) que carga barras más antiguas a medida que se desplaza.
+
+Para el editor visual de estrategias renderizado por la misma pila web, consulte [Diagrama en JavaScript](../javascript_diagram.md).
+
+## Pila completa del gráfico del terminal
+
+Los módulos bajo `src/chart` amplían el motor base con funciones de terminal:
+
+- `IndicatorEngine`, renderizadores de indicadores, ajustes y el catálogo de cálculos.
+- Un conmutador de tipo de gráfico para velas, barras, líneas, áreas, Heikin-Ashi, Renko y Point & Figure.
+- Una leyenda, paneles secundarios sincronizados, un menú contextual y un diálogo de selección de indicadores.
 - Recálculo de los indicadores activos cuando cambian los datos en tiempo real.
 
-Utilice `src/chart/app.ts` como ejemplo de integración del conjunto completo.
+Use `src/chart/app.ts` como ejemplo de integración de la pila completa.
 
 ## Compilar desde el código fuente
 
-Clone el repositorio y utilice los scripts npm incluidos:
+Clone el repositorio y utilice los scripts de npm incluidos:
 
 ```bash
 git clone https://github.com/StockSharp/Charts.git
@@ -80,10 +123,11 @@ npm test
 npm run serve
 ```
 
-El servidor de desarrollo sirve la demostración en `http://localhost:8791/demo/index.html`.
+El servidor de desarrollo sirve la demo en `http://localhost:8791/demo/index.html`.
 
 ## Véase también
 
+- [Diagrama en JavaScript](../javascript_diagram.md)
 - [Repositorio de Charts](https://github.com/StockSharp/Charts)
-- [Demostración en línea](https://stocksharp.github.io/Charts/demo/)
-- [Componentes gráficos para Windows](../charts.md)
+- [Demo en vivo](https://stocksharp.github.io/Charts/demo/)
+- [Componentes de gráficos de Windows](../charts.md)

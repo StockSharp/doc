@@ -1,0 +1,34 @@
+# Renko
+
+Os gráficos Renko são construídos a partir de *tijolos* de preço de tamanho fixo e ignoram o tempo: um novo tijolo é adicionado apenas quando o preço se move pelo tamanho da caixa, de modo que o ruído lateral desaparece e as tendências se destacam. Cada tijolo abrange uma caixa na direção do movimento.
+
+## Demonstração ao vivo
+
+```chart-demo renko
+```
+
+## Configuração
+
+Adicione uma `RenkoSeries` com um `boxSize` e alimente-a com candles brutos `{ time, open, high, low, close }` — a série constrói os tijolos por conta própria:
+
+```js
+const series = chart.addSeries(SSChart.RenkoSeries, {
+  upColor: '#26a69a',
+  downColor: '#ef5350',
+  boxSize: 0.5,
+});
+
+series.setData(candles.map(c => ({
+  time: c.time, open: c.open, high: c.high, low: c.low, close: c.close,
+})));
+
+chart.timeScale().fitContent();
+```
+
+Escolha o `boxSize` a partir da faixa de preço do instrumento: valores muito pequenos produzem ruído, valores muito grandes ocultam os movimentos. Uma regra comum é usar uma fração da faixa média das barras.
+
+## Veja também
+
+- [Gráficos JavaScript](../javascript_charts.md)
+- [Point and Figure](point_figure.md)
+- [Heikin-Ashi](heikin_ashi.md)

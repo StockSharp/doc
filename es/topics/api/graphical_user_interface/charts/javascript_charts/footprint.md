@@ -1,0 +1,37 @@
+# Footprint
+
+Un gráfico de footprint despliega cada barra para mostrar el volumen negociado en cada precio dentro de ella, dividido en bid y ask. El coloreado por desequilibrio (imbalance) resalta dónde dominaron los compradores o vendedores agresivos, que es la esencia de la lectura del order flow.
+
+## Demostración en vivo
+
+Haz zoom para leer las celdas individuales — el footprint solo es legible en unas pocas barras a la vez.
+
+```chart-demo footprint
+```
+
+![Gráfico de footprint](../../../../../images/chart_footprint.png)
+
+## Configuración
+
+Añade una `FootprintSeries` y aliméntala con barras exactas de order flow. Cada barra lleva `dataMode: 'exact'`, su OHLC y un array `levels` de `{ price, bidVolume, askVolume, tradeCount }`:
+
+```js
+const series = chart.addSeries(SSChart.FootprintSeries, {
+  tickSize: 0.25,
+  mode: SSChart.FootprintDisplayMode.BidAsk,       // BidAsk | Delta | Total | Ladder
+  detailLevel: SSChart.FootprintDetailLevel.Auto,  // Auto | Numbers | Heatmap | Summary
+  bidColor: '#26a69a',
+  askColor: '#ef5350',
+  showUnfinishedAuctions: true,
+});
+
+series.setData(exactBars);
+```
+
+`mode` elige lo que muestra cada celda (bid × ask, delta, total o una escalera); `detailLevel` intercambia detalle numérico por densidad a medida que haces zoom — `Auto` cambia automáticamente.
+
+## Véase también
+
+- [Gráficos JavaScript](../javascript_charts.md)
+- [Volume profile](volume_profile.md)
+- [TPO (Market profile)](tpo.md)

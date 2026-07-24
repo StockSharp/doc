@@ -1,0 +1,44 @@
+# Perfil de volumen
+
+Un perfil de volumen agrega el volumen negociado por precio y lo dibuja como un histograma horizontal, marcando el point of control (el precio más negociado) y el área de valor. Responde a "dónde se hizo el negocio", con independencia de cuándo.
+
+## Demostración en vivo
+
+El perfil se recalcula sobre las barras que estén a la vista: desplázate y haz zoom para verlo cambiar.
+
+```chart-demo volume-profile
+```
+
+![Perfil de volumen con point of control y área de valor](../../../../../images/chart_volume_profile.png)
+
+## Configuración
+
+Añade una `ExactVolumeProfileSeries` (normalmente sobre una serie de velas para dar contexto) y aliméntala con las mismas barras exactas de order flow que usa el footprint:
+
+```js
+const candles = chart.addSeries(SSChart.CandlestickSeries, {
+  upColor: '#26a69a', downColor: '#ef5350', borderVisible: false,
+});
+candles.setData(exactBars);
+
+const profile = chart.addSeries(SSChart.ExactVolumeProfileSeries, {
+  tickSize: 0.25,
+  rangeMode: SSChart.VolumeProfileRangeMode.Visible,     // Visible | Fixed | Session
+  displayMode: SSChart.VolumeProfileDisplayMode.BidAsk,  // Total | BidAsk | Delta
+  bidColor: '#26a69a',
+  askColor: '#ef5350',
+  showLabels: true,
+  profileWidth: 0.32,
+});
+profile.setData(exactBars);
+
+chart.timeScale().fitContent();
+```
+
+`rangeMode` define lo que abarca el perfil: `Visible` lo recalcula sobre la ventana visible, `Fixed` fija un rango, `Session` construye un perfil por cada sesión.
+
+## Véase también
+
+- [Gráficos JavaScript](../javascript_charts.md)
+- [Footprint](footprint.md)
+- [TPO (Market profile)](tpo.md)
