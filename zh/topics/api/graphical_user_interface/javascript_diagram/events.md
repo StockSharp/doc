@@ -14,8 +14,8 @@
 - `fullscreenRequested` — `{ fullscreen }`；由宿主应用布局。
 
 ```js
-const off = diagram.on('linkAdded', ({ links }) => console.log('connected', links[0]));
-// later:
+const off = diagram.on('linkAdded', ({ links }) => console.log('已连接', links[0]));
+// 稍后：
 off();
 ```
 
@@ -25,7 +25,7 @@ off();
 
 ```js
 diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] where command is one of
+  // commands: { command, enabled }[]，其中 command 为以下之一：
   // undo | redo | cut | copy | paste | open | delete | properties | help
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
   menu.onPick = command => diagram.executeContextCommand(command);
@@ -46,7 +46,7 @@ diagram.setLinkValidator(({ fromPort, toPort }) => fromPort.type === toPort.type
 const scheme = diagram.save();              // { nodes, links }
 diagram.load(scheme.nodes, scheme.links);
 
-const document = diagram.saveDocument();     // versioned document
+const document = diagram.saveDocument();     // 带版本的文档
 diagram.loadDocument(document);
 ```
 
@@ -65,22 +65,22 @@ diagram.on('undoStackChanged', ({ canUndo, canRedo }) => {
 
 ## 运行时状态与错误高亮
 
-图表可以在方案之上叠加执行状态。`setNodeError` 会以动画脉冲（约 1 秒）闪烁节点的边框，并用红色高亮标记它 —— 用它来报告运行时故障。[编辑器演示](editor.md)中的 **Error** 按钮正是这么做的。
+图表可以在方案之上叠加执行状态。`setNodeError` 会以动画脉冲（约 1 秒）闪烁节点的边框，并用红色高亮标记它 —— 用它来报告运行时故障。[交互式编辑器](editor.md)中的 **Error** 按钮正是这么做的。
 
 ```js
-diagram.setNodeError('sma', 'SMA failed: no data source is configured.');
-diagram.setNodeError('sma', 'Warning', { animate: false }); // mark it, but skip the initial flash
+diagram.setNodeError('sma', 'SMA 失败：未配置数据源。');
+diagram.setNodeError('sma', '警告', { animate: false }); // 标记它，但跳过初始闪烁
 ```
 
 在加载时就已存在的错误会绘制成红色背景，而非闪烁 —— 将它们传给 `load`：
 
 ```js
-diagram.load(nodes, links, { nodeErrors: { sma: 'The saved period value is invalid.' } });
+diagram.load(nodes, links, { nodeErrors: { sma: '保存的周期值无效。' } });
 ```
 
 其他运行时钩子：`setActiveNode(id)` 高亮当前正在执行的节点（调试器光标），`setPortRuntimeState(id, direction, portId, patch)` 标注单个端口，`setGlobalError(message)` 闪烁整个方案范围的错误。使用 `clearRuntimeState()` 清除所有内容。
 
 ## 参见
 
-- [JavaScript 图表](../javascript_diagram.md)
+- [JavaScript 框图](../javascript_diagram.md)
 - [交互式编辑器](editor.md)

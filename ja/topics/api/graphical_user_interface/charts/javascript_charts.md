@@ -1,6 +1,6 @@
 # JavaScript チャート
 
-[StockSharp JS Trading Charts](https://github.com/StockSharp/Charts) は、依存関係のないスタンドアロンなブラウザ用チャートライブラリです。[@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) として npm に公開されており、StockSharp Web ターミナルで使用されている `sschart` キャンバスエンジンを同梱しています。動作するバージョンは[ライブデモ](https://stocksharp.github.io/Charts/demo/)で確認できます。
+[StockSharp JS トレーディングチャート](https://github.com/StockSharp/Charts) は、依存関係のないスタンドアロンなブラウザ用チャートライブラリです。[@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) として npm に公開されており、StockSharp Web ターミナルで使用されている `sschart` キャンバスエンジンを同梱しています。動作するバージョンは[ライブデモ](https://stocksharp.github.io/Charts/demo/)で確認できます。
 
 ![StockSharp JavaScript トレーディングチャート](../../../../images/javascript_charts.jpg)
 
@@ -88,9 +88,9 @@ chart.timeScale().fitContent();
 - [エリア](javascript_charts/area.md) — グラデーション塗りつぶしを伴うライン。
 - [ヒストグラム](javascript_charts/histogram.md) — 縦棒、通常はボリューム。
 - [バンド](javascript_charts/band.md) — 上下のチャネル（エンベロープ、ボリンジャー）。
-- [Heikin-Ashi](javascript_charts/heikin_ashi.md) — ノイズを除去する平滑化されたローソク足。
-- [Renko](javascript_charts/renko.md) — 価格駆動のブロック、時間非依存。
-- [Point and Figure](javascript_charts/point_figure.md) — 価格変動の X/O 列。
+- [平均足 (Heikin-Ashi)](javascript_charts/heikin_ashi.md) — ノイズを除去する平滑化されたローソク足。
+- [練行足 (Renko)](javascript_charts/renko.md) — 価格駆動のブロック、時間非依存。
+- [ポイント・アンド・フィギュア](javascript_charts/point_figure.md) — 価格変動の X/O 列。
 - [フットプリント](javascript_charts/footprint.md) — 各バー内のすべての価格における bid × ask のボリューム。
 - [ボリュームプロファイル](javascript_charts/volume_profile.md) — POC とバリューエリアを伴う価格別ボリューム。
 - [TPO（マーケットプロファイル）](javascript_charts/tpo.md) — セッションごとの各価格に費やされた時間。

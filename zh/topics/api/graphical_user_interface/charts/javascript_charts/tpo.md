@@ -30,5 +30,5 @@ chart.timeScale().fitContent();
 ## 参见
 
 - [JavaScript 图表](../javascript_charts.md)
-- [成交量剖面图](volume_profile.md)
-- [Footprint](footprint.md)
+- [成交量分布图](volume_profile.md)
+- [足迹图（Footprint）](footprint.md)

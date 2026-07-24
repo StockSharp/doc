@@ -1,8 +1,8 @@
 # JavaScript-Charts
 
-[StockSharp JS Trading Charts](https://github.com/StockSharp/Charts) ist eine eigenständige, abhängigkeitsfreie Charting-Bibliothek für den Browser. Sie wird auf npm als [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) veröffentlicht und liefert die `sschart`-Canvas-Engine, die im StockSharp-Web-Terminal verwendet wird. Eine funktionierende Version ist in der [Live-Demo](https://stocksharp.github.io/Charts/demo/) verfügbar.
+[StockSharp JS Handels-Charts](https://github.com/StockSharp/Charts) ist eine eigenständige, abhängigkeitsfreie Charting-Bibliothek für den Browser. Sie wird auf npm als [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) veröffentlicht und liefert die `sschart`-Canvas-Engine, die im StockSharp-Web-Terminal verwendet wird. Eine funktionierende Version ist in der [Live-Demo](https://stocksharp.github.io/Charts/demo/) verfügbar.
 
-![StockSharp JavaScript-Trading-Chart](../../../../images/javascript_charts.jpg)
+![StockSharp JavaScript-Handels-Chart](../../../../images/javascript_charts.jpg)
 
 Anders als die Windows-Komponenten aus `StockSharp.Xaml.Charting` läuft diese Bibliothek im Browser und zeichnet direkt auf ein HTML-`canvas`. Die Engine wird über das globale `SSChart`-Objekt (aus `dist/sschart.js`) bereitgestellt und kann auch als ECMAScript-Module aus dem npm-Paket importiert werden (`import { createChart, CandlestickSeries } from '@stocksharp/chart'`).
 
@@ -16,7 +16,7 @@ Der Chart unten ist die echte Engine, die auf dieser Seite läuft — Kerzen mit
 ## Funktionen
 
 - Ein vollständiger Satz von Kursreihen: Candlesticks, OHLC-Balken, Linie, Fläche, Histogramm, Band, dazu die abgeleiteten Typen Heikin-Ashi, Renko und Point & Figure.
-- Exakte Order-Flow-Studien: Footprint, Volume Profile und TPO (Market Profile).
+- Exakte Order-Flow-Studien: Footprint, Volumenprofil und TPO (Market Profile).
 - Historisches Laden und Echtzeit-Updates über `setData` und `update`.
 - Trade-Markierungen, Preislinien, Fadenkreuz, Zoomen, Scrollen und automatische Bereichsberechnung.
 - Eine Indikator-Engine mit rund 160 Berechnungsimplementierungen.
@@ -82,17 +82,17 @@ Ein Aufruf von `update` mit dem aktuellen Zeitstempel ersetzt den letzten Punkt.
 
 Jeder Reihentyp hat sein eigenes Thema mit einer Live-Demo und dem JavaScript, das ihn konfiguriert:
 
-- [Candlestick](javascript_charts/candlestick.md) — klassische OHLC-Kerzen.
+- [Kerzenchart](javascript_charts/candlestick.md) — klassische OHLC-Kerzen.
 - [OHLC-Balken](javascript_charts/bar.md) — Open-/Close-Ticks an einem vertikalen Bereichsbalken.
 - [Linie](javascript_charts/line.md) — eine einzelne Polylinie durch die Schlusskurse.
 - [Fläche](javascript_charts/area.md) — eine Linie mit Gradientenfüllung.
 - [Histogramm](javascript_charts/histogram.md) — vertikale Balken, typischerweise Volumen.
 - [Band](javascript_charts/band.md) — ein oberer/unterer Kanal (Hüllkurven, Bollinger).
-- [Heikin-Ashi](javascript_charts/heikin_ashi.md) — geglättete Kerzen, die Rauschen herausfiltern.
+- [Heikin-Ashi-Kerzen](javascript_charts/heikin_ashi.md) — geglättete Kerzen, die Rauschen herausfiltern.
 - [Renko](javascript_charts/renko.md) — kursgetriebene Bausteine, zeitunabhängig.
-- [Point and Figure](javascript_charts/point_figure.md) — X/O-Spalten der Kursbewegung.
+- [Point-&-Figure-Chart](javascript_charts/point_figure.md) — X/O-Spalten der Kursbewegung.
 - [Footprint](javascript_charts/footprint.md) — Bid- × Ask-Volumen zu jedem Preis innerhalb jedes Balkens.
-- [Volume Profile](javascript_charts/volume_profile.md) — Volumen-pro-Preis mit POC und Value Area.
+- [Volumenprofil](javascript_charts/volume_profile.md) — Volumen-pro-Preis mit POC und Value Area.
 - [TPO (Market Profile)](javascript_charts/tpo.md) — die pro Session an jedem Preis verbrachte Zeit.
 
 Neben den Reihentypen verfügt der Chart außerdem über eine [Indikator-Engine](javascript_charts/indicators.md) mit etwa 160 Studien und ein [verzögertes Nachladen der Historie](javascript_charts/backfill.md), das ältere Balken beim Scrollen lädt.

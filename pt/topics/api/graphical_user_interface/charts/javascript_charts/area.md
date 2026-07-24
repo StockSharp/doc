@@ -26,6 +26,6 @@ chart.timeScale().fitContent();
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Linha](line.md)
 - [Histograma](histogram.md)

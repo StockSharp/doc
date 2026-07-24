@@ -13,7 +13,7 @@
 
 ## 设置
 
-添加一个 `ExactVolumeProfileSeries`（通常叠加在蜡烛图序列之上以提供上下文），并向它输入与足迹图相同的精确订单流柱线：
+添加一个 `ExactVolumeProfileSeries`（通常叠加在K线图序列之上以提供上下文），并向它输入与足迹图相同的精确订单流柱线：
 
 ```js
 const candles = chart.addSeries(SSChart.CandlestickSeries, {
@@ -40,5 +40,5 @@ chart.timeScale().fitContent();
 ## 参见
 
 - [JavaScript 图表](../javascript_charts.md)
-- [足迹图](footprint.md)
-- [TPO（市场分布图）](tpo.md)
+- [足迹图（Footprint）](footprint.md)
+- [TPO（市场剖面图）](tpo.md)

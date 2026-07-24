@@ -1,10 +1,10 @@
 # Editor interativo
 
-O embed somente leitura (`renderScheme`) é um wrapper fino sobre o editor completo. A classe `StockSharpDiagram` — junto com `StockSharpPalette` e `StockSharpCatalog`, todas exportadas de `@stocksharp/diagram` — é um editor visual completo: arraste elementos da paleta, conecte portas, mova e exclua nós, desfaça/refaça e valide links tipados. A edição fica ativada por padrão.
+O embed somente leitura (`renderScheme`) é um invólucro fino sobre o editor completo. A classe `StockSharpDiagram` — junto com `StockSharpPalette` e `StockSharpCatalog`, todas exportadas de `@stocksharp/diagram` — é um editor visual completo: arraste elementos da paleta, conecte portas, mova e exclua nós, desfaça/refaça e valide links tipados. A edição fica ativada por padrão.
 
 ## Demonstração ao vivo
 
-Arraste um elemento da paleta para o canvas, arraste entre portas para conectá-las, clique com o botão direito para abrir o menu e use Desfazer/Refazer. Conexões incompatíveis são rejeitadas (observe a linha de status). Pressione **Error** para exibir um erro de tempo de execução animado em um nó (veja [Eventos e API](events.md#runtime-state-and-error-highlighting)).
+Arraste um elemento da paleta para o canvas, arraste entre portas para conectá-las, clique com o botão direito para abrir o menu e use Desfazer/Refazer. Conexões incompatíveis são rejeitadas (observe a linha de status). Pressione **Error** para exibir um erro de tempo de execução animado em um nó (veja [Eventos e API](events.md)).
 
 ```diagram-editor sma
 ```
@@ -19,7 +19,7 @@ import {
   Node, PortType, DiagramNode, Link, PALETTE_DRAG_MIME,
 } from '@stocksharp/diagram';
 
-// 1) Catalog: the socket (port) types and the element (node) types.
+// 1) Catálogo: os tipos de soquete (porta) e os tipos de elemento (nó).
 const catalog = new StockSharpCatalog();
 catalog.addPortType(new PortType({ name: 'Candle', color: '#4aa3ff' }));
 catalog.addPortType(new PortType({ name: 'Indicator', color: '#a779e9' }));
@@ -33,23 +33,23 @@ catalog.addNodeType(new Node({
   outPorts: [{ id: 'Output', name: 'Output', type: 'Indicator' }],
 }));
 
-// 2) Editable diagram + palette toolbox (each renders into its own element).
+// 2) Diagrama editável + caixa de ferramentas da paleta (cada um renderiza em seu próprio elemento).
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) Add nodes from the palette: double-click, or native drag/drop onto the canvas.
+// 3) Adicione nós a partir da paleta: duplo clique, ou arrastar/soltar nativo no canvas.
 palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
 canvasHost.addEventListener('drop', event => {
   const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 
-// 4) Load a starting scheme and react to edits.
+// 4) Carregue um esquema inicial e reaja às edições.
 diagram.load(
   [new DiagramNode({ id: 'c', typeId: 'candles', name: 'Candles', x: 60, y: 120 })],
   [],
 );
-diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('rejected:', reason); });
+diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('rejeitado:', reason); });
 diagram.zoomToFit();
 ```
 
@@ -61,11 +61,11 @@ Para transformar o embed somente leitura em um editor sem reconstruí-lo, use o 
 import { renderScheme } from '@stocksharp/diagram/embed';
 
 const handle = await renderScheme(host, '/data/designer-palette.json', scheme);
-handle.diagram.setReadOnly(false);   // editing enabled
+handle.diagram.setReadOnly(false);   // edição ativada
 ```
 
 ## Veja também
 
-- [Diagrama JavaScript](../javascript_diagram.md)
+- [Diagrama em JavaScript](../javascript_diagram.md)
 - [Eventos e API](events.md)
-- [Gráficos JavaScript](../charts/javascript_charts.md)
+- [Gráficos em JavaScript](../charts/javascript_charts.md)

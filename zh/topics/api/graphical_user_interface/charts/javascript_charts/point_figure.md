@@ -9,7 +9,7 @@
 
 ## 设置
 
-添加一个带有 `boxSize` 和 `reversal` 的 `PointFigureSeries`，然后向它输入原始蜡烛图数据——该系列会自行构建这些列：
+添加一个带有 `boxSize` 和 `reversal` 的 `PointFigureSeries`，然后向它输入原始 K线数据——该系列会自行构建这些列：
 
 ```js
 const series = chart.addSeries(SSChart.PointFigureSeries, {
@@ -32,4 +32,4 @@ chart.timeScale().fitContent();
 
 - [JavaScript 图表](../javascript_charts.md)
 - [Renko](renko.md)
-- [蜡烛图](candlestick.md)
+- [K线图](candlestick.md)

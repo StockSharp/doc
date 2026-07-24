@@ -4,7 +4,7 @@ La incrustación de solo lectura (`renderScheme`) es una envoltura ligera sobre 
 
 ## Demo en vivo
 
-Arrastra un elemento desde la paleta hacia el lienzo, arrastra entre puertos para conectarlos, haz clic derecho para abrir el menú y usa Deshacer/Rehacer. Las conexiones incompatibles se rechazan (observa la línea de estado). Pulsa **Error** para mostrar un error de ejecución animado en un nodo (consulta [Eventos y API](events.md#runtime-state-and-error-highlighting)).
+Arrastra un elemento desde la paleta hacia el lienzo, arrastra entre puertos para conectarlos, haz clic derecho para abrir el menú y usa Deshacer/Rehacer. Las conexiones incompatibles se rechazan (observa la línea de estado). Pulsa **Error** para mostrar un error de ejecución animado en un nodo (consulta [Eventos y API](events.md)).
 
 ```diagram-editor sma
 ```
@@ -19,7 +19,7 @@ import {
   Node, PortType, DiagramNode, Link, PALETTE_DRAG_MIME,
 } from '@stocksharp/diagram';
 
-// 1) Catalog: the socket (port) types and the element (node) types.
+// 1) Catálogo: los tipos de conector (puerto) y los tipos de elemento (nodo).
 const catalog = new StockSharpCatalog();
 catalog.addPortType(new PortType({ name: 'Candle', color: '#4aa3ff' }));
 catalog.addPortType(new PortType({ name: 'Indicator', color: '#a779e9' }));
@@ -33,23 +33,23 @@ catalog.addNodeType(new Node({
   outPorts: [{ id: 'Output', name: 'Output', type: 'Indicator' }],
 }));
 
-// 2) Editable diagram + palette toolbox (each renders into its own element).
+// 2) Diagrama editable + caja de herramientas de la paleta (cada uno se renderiza en su propio elemento).
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) Add nodes from the palette: double-click, or native drag/drop onto the canvas.
+// 3) Añade nodos desde la paleta: doble clic, o arrastrar y soltar nativo sobre el lienzo.
 palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
 canvasHost.addEventListener('drop', event => {
   const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 
-// 4) Load a starting scheme and react to edits.
+// 4) Carga un esquema inicial y reacciona a las ediciones.
 diagram.load(
   [new DiagramNode({ id: 'c', typeId: 'candles', name: 'Candles', x: 60, y: 120 })],
   [],
 );
-diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('rejected:', reason); });
+diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('rechazado:', reason); });
 diagram.zoomToFit();
 ```
 
@@ -61,11 +61,11 @@ Para convertir la incrustación de solo lectura en un editor sin volver a crearl
 import { renderScheme } from '@stocksharp/diagram/embed';
 
 const handle = await renderScheme(host, '/data/designer-palette.json', scheme);
-handle.diagram.setReadOnly(false);   // editing enabled
+handle.diagram.setReadOnly(false);   // edición activada
 ```
 
 ## Véase también
 
-- [Diagrama JavaScript](../javascript_diagram.md)
+- [Diagrama en JavaScript](../javascript_diagram.md)
 - [Eventos y API](events.md)
-- [Gráficos JavaScript](../charts/javascript_charts.md)
+- [Gráficos en JavaScript](../charts/javascript_charts.md)

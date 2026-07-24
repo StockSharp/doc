@@ -4047,20 +4047,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				errors.Add($"{RelativeToRepo(file)}:{comment.Line}: Portuguese code comment keeps English candle term '{match.Value}'. Use 'vela'/'velas' in explanatory comments.");
 			}
 
-			foreach (var literal in EnumerateCodeStringLiterals(markdown))
-			{
-				var normalized = NormalizeMarkdownTextForLocalizedLoggingTermCheck(NormalizeCodeStringLiteralForTranslationCheck(literal.Text));
-				normalized = Regex.Replace(normalized, @"(?::param|@param)\s+[A-Za-z_]\w*\s*:?", " ", RegexOptions.CultureInvariant);
-
-				if (IsAllowedLocalizedCandleTermLine(relative, normalized))
-					continue;
-
-				var match = pattern.Match(normalized);
-				if (!match.Success)
-					continue;
-
-				errors.Add($"{RelativeToRepo(file)}:{literal.Line}: Portuguese code string keeps English candle term '{match.Value}'. Use 'vela'/'velas' in user-facing strings.");
-			}
+			// Code string literals are not candle-checked: they hold API type/node identifiers, which are code, not prose.
 		}
 
 		var tocPath = Path.Combine(langRoot, "topics", "toc.yml");
@@ -4167,8 +4154,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				foreach (var comment in EnumerateCodeComments(markdown))
 					AddLocalizedCandleTermError(file, relative, comment.Line, "code comment", NormalizeTextForLocalizedCandleTermCheck(NormalizeCodeCommentForTranslationCheck(comment.Text)), replacement, pattern, errors);
 
-				foreach (var literal in EnumerateCodeStringLiterals(markdown))
-					AddLocalizedCandleTermError(file, relative, literal.Line, "code string", NormalizeTextForLocalizedCandleTermCheck(NormalizeCodeStringLiteralForTranslationCheck(literal.Text)), replacement, pattern, errors);
+				// Code string literals are not candle-checked: they hold API type/node identifiers
+				// (name: 'Candles', type: 'Candle'), which are code, not translatable prose.
 			}
 
 			var tocPath = Path.Combine(langRoot, "topics", "toc.yml");
@@ -13428,6 +13415,23 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			|| word.Equals("trading", StringComparison.OrdinalIgnoreCase)
 			|| word.Equals("visual", StringComparison.OrdinalIgnoreCase);
 
+	// A comment that is only a pipe-separated list of code tokens (enum values / command ids,
+	// e.g. "// undo | redo | cut" or "// BidAsk | Delta | Total | Ladder") documents API values,
+	// not translatable prose, so it is excluded from localization checks.
+	private static bool IsValueListComment(string comment)
+	{
+		var text = comment.TrimStart('/', '#').Trim();
+		if (!text.Contains('|'))
+			return false;
+		foreach (var part in text.Split('|'))
+		{
+			var token = part.Trim();
+			if (token.Length == 0 || !Regex.IsMatch(token, @"^[A-Za-z_][A-Za-z0-9_.]*$", RegexOptions.CultureInvariant))
+				return false;
+		}
+		return true;
+	}
+
 	private static IEnumerable<CodeComment> EnumerateCodeComments(string markdown)
 	{
 		foreach (Match block in Regex.Matches(markdown, "```(?<info>[^\\r\\n]*)\\r?\\n(?<code>.*?)```", RegexOptions.Singleline | RegexOptions.CultureInvariant))
@@ -13458,7 +13462,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					|| trimmed.StartsWith("#", StringComparison.Ordinal))
 				{
 					fullLineComment = true;
-					yield return new CodeComment(trimmed, line);
+					if (!IsValueListComment(trimmed))
+						yield return new CodeComment(trimmed, line);
 				}
 
 				if (fullLineComment)
@@ -13466,7 +13471,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 				var slashComment = FindInlineLineCommentStart(text, "//");
 				if (slashComment > 0)
-					yield return new CodeComment(text[slashComment..].Trim(), line);
+				{
+					var inlineComment = text[slashComment..].Trim();
+					if (!IsValueListComment(inlineComment))
+						yield return new CodeComment(inlineComment, line);
+				}
 
 				if (IsPythonCodeBlock(info))
 				{

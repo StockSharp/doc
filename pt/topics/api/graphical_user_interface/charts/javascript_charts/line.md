@@ -26,6 +26,6 @@ Qualquer conjunto de dados de valor único funciona aqui — troque `c.close` po
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Área](area.md)
 - [Banda](band.md)

@@ -29,6 +29,6 @@ Elige `boxSize` a partir del rango de precios del instrumento: demasiado pequeñ
 
 ## Véase también
 
-- [Gráficos JavaScript](../javascript_charts.md)
-- [Point and Figure](point_figure.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [Gráficos en JavaScript](../javascript_charts.md)
+- [Punto y Figura](point_figure.md)
+- [Velas Heikin-Ashi](heikin_ashi.md)

@@ -9,7 +9,7 @@ Renko 图表由固定大小的价格*砖块*构成，并且忽略时间：只有
 
 ## 设置
 
-添加一个带有 `boxSize` 的 `RenkoSeries`，并向其输入原始的 `{ time, open, high, low, close }` 蜡烛数据——该系列会自行构建砖块：
+添加一个带有 `boxSize` 的 `RenkoSeries`，并向其输入原始的 `{ time, open, high, low, close }` K线数据——该系列会自行构建砖块：
 
 ```js
 const series = chart.addSeries(SSChart.RenkoSeries, {
@@ -30,5 +30,5 @@ chart.timeScale().fitContent();
 ## 参见
 
 - [JavaScript 图表](../javascript_charts.md)
-- [Point and Figure](point_figure.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [点数图 (Point and Figure)](point_figure.md)
+- [Heikin-Ashi K线图](heikin_ashi.md)

@@ -1,4 +1,4 @@
-# Heikin-Ashi
+# 平均足 (Heikin-Ashi)
 
 Heikin-Ashi（「平均足」）ローソク足は、ノイズを平滑化するために生の OHLC から計算されます。同じ色のローソク足が連続することでトレンドが読み取りやすくなる一方、真の始値と終値は隠されます。変換した値を通常のローソク足シリーズに供給して描画します。
 
@@ -42,4 +42,4 @@ chart.timeScale().fitContent();
 
 - [JavaScript チャート](../javascript_charts.md)
 - [ローソク足](candlestick.md)
-- [Renko](renko.md)
+- [練行足 (Renko)](renko.md)

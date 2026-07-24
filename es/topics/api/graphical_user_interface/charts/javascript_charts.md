@@ -1,8 +1,8 @@
 # Gráficos en JavaScript
 
-[StockSharp JS Trading Charts](https://github.com/StockSharp/Charts) es una biblioteca de gráficos para navegador, autónoma y sin dependencias. Se publica en npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e incluye el motor de canvas `sschart` que utiliza el terminal web de StockSharp. Hay una versión funcional disponible en la [demo en vivo](https://stocksharp.github.io/Charts/demo/).
+[Gráficos de negociación JS de StockSharp](https://github.com/StockSharp/Charts) es una biblioteca de gráficos para navegador, autónoma y sin dependencias. Se publica en npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e incluye el motor de canvas `sschart` que utiliza el terminal web de StockSharp. Hay una versión funcional disponible en la [demo en vivo](https://stocksharp.github.io/Charts/demo/).
 
-![Gráfico de trading en JavaScript de StockSharp](../../../../images/javascript_charts.jpg)
+![Gráfico de negociación en JavaScript de StockSharp](../../../../images/javascript_charts.jpg)
 
 A diferencia de los componentes de Windows de `StockSharp.Xaml.Charting`, esta biblioteca se ejecuta en un navegador y dibuja directamente sobre un `canvas` HTML. El motor se expone a través del objeto global `SSChart` (desde `dist/sschart.js`) y también puede importarse como módulos ECMAScript desde el paquete npm (`import { createChart, CandlestickSeries } from '@stocksharp/chart'`).
 
@@ -15,7 +15,7 @@ El gráfico de abajo es el motor real ejecutándose en esta página: velas con u
 
 ## Capacidades
 
-- Un conjunto completo de series de precios: velas (candlesticks), barras OHLC, línea, área, histograma, banda, además de los tipos derivados Heikin-Ashi, Renko y Point & Figure.
+- Un conjunto completo de series de precios: velas, barras OHLC, línea, área, histograma, banda, además de los tipos derivados Heikin-Ashi, Renko y Point & Figure.
 - Estudios exactos de order-flow: footprint, perfil de volumen y TPO (perfil de mercado).
 - Carga histórica y actualizaciones en tiempo real mediante `setData` y `update`.
 - Marcadores de operaciones, líneas de precio, crosshair, zoom, desplazamiento y cálculo automático del rango.
@@ -82,15 +82,15 @@ Llamar a `update` con la marca de tiempo actual reemplaza el último punto. Una 
 
 Cada tipo de serie tiene su propio tema con una demo en vivo y el JavaScript que la configura:
 
-- [Vela (Candlestick)](javascript_charts/candlestick.md) — velas OHLC clásicas.
+- [Velas](javascript_charts/candlestick.md) — velas OHLC clásicas.
 - [Barras OHLC](javascript_charts/bar.md) — ticks de apertura/cierre sobre una barra de rango vertical.
 - [Línea](javascript_charts/line.md) — una única polilínea a través de los cierres.
 - [Área](javascript_charts/area.md) — una línea con un relleno degradado.
 - [Histograma](javascript_charts/histogram.md) — barras verticales, normalmente de volumen.
 - [Banda](javascript_charts/band.md) — un canal superior/inferior (envolventes, Bollinger).
-- [Heikin-Ashi](javascript_charts/heikin_ashi.md) — velas suavizadas que filtran el ruido.
+- [Velas Heikin-Ashi](javascript_charts/heikin_ashi.md) — velas suavizadas que filtran el ruido.
 - [Renko](javascript_charts/renko.md) — ladrillos guiados por el precio, independientes del tiempo.
-- [Point and Figure](javascript_charts/point_figure.md) — columnas de X/O del movimiento del precio.
+- [Punto y Figura](javascript_charts/point_figure.md) — columnas de X/O del movimiento del precio.
 - [Footprint](javascript_charts/footprint.md) — volumen de bid × ask en cada precio dentro de cada barra.
 - [Perfil de volumen](javascript_charts/volume_profile.md) — volumen por precio con POC y área de valor.
 - [TPO (Perfil de mercado)](javascript_charts/tpo.md) — tiempo pasado en cada precio por sesión.

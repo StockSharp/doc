@@ -27,6 +27,6 @@ Calcule `upper`/`lower` conforme o estudo exigir — para as Bandas de Bollinger
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Linha](line.md)
 - [Perfil de volume](volume_profile.md)

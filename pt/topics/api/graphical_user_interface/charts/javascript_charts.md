@@ -1,6 +1,6 @@
 # Gráficos em JavaScript
 
-Os [StockSharp JS Trading Charts](https://github.com/StockSharp/Charts) são uma biblioteca de gráficos para navegador, autônoma e sem dependências. Ela é publicada no npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e fornece o motor de canvas `sschart` usado pelo terminal web da StockSharp. Uma versão funcional está disponível na [demonstração online](https://stocksharp.github.io/Charts/demo/).
+Os [Gráficos de negociação JS da StockSharp](https://github.com/StockSharp/Charts) são uma biblioteca de gráficos para navegador, autônoma e sem dependências. Ela é publicada no npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e fornece o motor de canvas `sschart` usado pelo terminal web da StockSharp. Uma versão funcional está disponível na [demonstração online](https://stocksharp.github.io/Charts/demo/).
 
 ![Gráfico de negociação JavaScript do StockSharp](../../../../images/javascript_charts.jpg)
 
@@ -15,8 +15,8 @@ O gráfico abaixo é o motor real em execução nesta página — velas com um h
 
 ## Funcionalidades
 
-- Um conjunto completo de séries de preço: velas (candlesticks), barras OHLC, linha, área, histograma, banda, além dos tipos derivados Heikin-Ashi, Renko e Point & Figure.
-- Estudos exatos de order-flow: footprint, perfil de volume (volume profile) e TPO (market profile).
+- Um conjunto completo de séries de preço: velas, barras OHLC, linha, área, histograma, banda, além dos tipos derivados Heikin-Ashi, Renko e Point & Figure.
+- Estudos exatos de order-flow: footprint, perfil de volume e TPO (market profile).
 - Carregamento de histórico e atualizações em tempo real com `setData` e `update`.
 - Marcadores de negócios, linhas de preço, cursor em cruz, zoom, deslocamento e cálculo automático do intervalo.
 - Um motor de indicadores com aproximadamente 160 implementações de cálculo.
@@ -88,12 +88,12 @@ Cada tipo de série tem seu próprio tópico com uma demonstração online e o J
 - [Área](javascript_charts/area.md) — uma linha com preenchimento em gradiente.
 - [Histograma](javascript_charts/histogram.md) — barras verticais, tipicamente de volume.
 - [Banda](javascript_charts/band.md) — um canal superior/inferior (envelopes, Bollinger).
-- [Heikin-Ashi](javascript_charts/heikin_ashi.md) — velas suavizadas que filtram o ruído.
+- [Velas Heikin-Ashi](javascript_charts/heikin_ashi.md) — velas suavizadas que filtram o ruído.
 - [Renko](javascript_charts/renko.md) — tijolos determinados pelo preço, independentes do tempo.
-- [Point and Figure](javascript_charts/point_figure.md) — colunas de X/O do movimento de preço.
+- [Ponto e Figura](javascript_charts/point_figure.md) — colunas de X/O do movimento de preço.
 - [Footprint](javascript_charts/footprint.md) — volume de bid × ask em cada preço dentro de cada barra.
 - [Perfil de volume](javascript_charts/volume_profile.md) — volume por preço com POC e área de valor.
-- [TPO (Market profile)](javascript_charts/tpo.md) — tempo gasto em cada preço por sessão.
+- [TPO (Perfil de mercado)](javascript_charts/tpo.md) — tempo gasto em cada preço por sessão.
 
 Além dos tipos de série, o gráfico também tem um [motor de indicadores](javascript_charts/indicators.md) com cerca de 160 estudos e [preenchimento de histórico sob demanda](javascript_charts/backfill.md) que carrega barras mais antigas conforme você desloca.
 

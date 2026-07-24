@@ -13,7 +13,7 @@
 
 ```js
 const series = chart.addSeries(SSChart.TpoSeries, {
-  displayMode: SSChart.TpoDisplayMode.Auto,  // Auto | Letters | Blocks
+  displayMode: SSChart.TpoDisplayMode.Auto,  // Auto | Letters | Blocks — режим отображения
   showPoc: true,
   showValueArea: true,
   showInitialBalance: true,
@@ -31,4 +31,4 @@ chart.timeScale().fitContent();
 
 - [JavaScript-графики](../javascript_charts.md)
 - [Профиль объёма](volume_profile.md)
-- [Footprint](footprint.md)
+- [Footprint-график](footprint.md)

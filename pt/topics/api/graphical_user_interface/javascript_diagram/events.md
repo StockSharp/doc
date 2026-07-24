@@ -15,7 +15,7 @@ Assine com `diagram.on(event, handler)`; a chamada retorna uma função de cance
 
 ```js
 const off = diagram.on('linkAdded', ({ links }) => console.log('connected', links[0]));
-// later:
+// depois:
 off();
 ```
 
@@ -25,7 +25,7 @@ O componente informa a posição do clique e a lista de comandos habilitados; vo
 
 ```js
 diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] where command is one of
+  // commands: { command, enabled }[] onde command é um de
   // undo | redo | cut | copy | paste | open | delete | properties | help
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
   menu.onPick = command => diagram.executeContextCommand(command);
@@ -46,7 +46,7 @@ diagram.setLinkValidator(({ fromPort, toPort }) => fromPort.type === toPort.type
 const scheme = diagram.save();              // { nodes, links }
 diagram.load(scheme.nodes, scheme.links);
 
-const document = diagram.saveDocument();     // versioned document
+const document = diagram.saveDocument();     // documento versionado
 diagram.loadDocument(document);
 ```
 
@@ -65,17 +65,17 @@ diagram.on('undoStackChanged', ({ canUndo, canRedo }) => {
 
 ## Estado de execução e destaque de erros
 
-O diagrama pode sobrepor o estado de execução ao esquema. `setNodeError` faz a borda de um nó piscar com uma pulsação animada (~1 segundo) e o marca com um destaque vermelho — use-o para reportar uma falha em tempo de execução. O botão **Error** no [demo do editor](editor.md) faz exatamente isso.
+O diagrama pode sobrepor o estado de execução ao esquema. `setNodeError` faz a borda de um nó piscar com uma pulsação animada (~1 segundo) e o marca com um destaque vermelho — use-o para reportar uma falha em tempo de execução. O botão **Error** no [Editor interativo](editor.md) faz exatamente isso.
 
 ```js
-diagram.setNodeError('sma', 'SMA failed: no data source is configured.');
-diagram.setNodeError('sma', 'Warning', { animate: false }); // mark it, but skip the initial flash
+diagram.setNodeError('sma', 'SMA falhou: nenhuma fonte de dados está configurada.');
+diagram.setNodeError('sma', 'Aviso', { animate: false }); // marca o nó, mas ignora o piscar inicial
 ```
 
 Erros que já existem no momento do carregamento pintam um fundo vermelho em vez de piscar — passe-os para `load`:
 
 ```js
-diagram.load(nodes, links, { nodeErrors: { sma: 'The saved period value is invalid.' } });
+diagram.load(nodes, links, { nodeErrors: { sma: 'O valor de período salvo é inválido.' } });
 ```
 
 Outros hooks de tempo de execução: `setActiveNode(id)` destaca o nó em execução no momento (um cursor de depurador), `setPortRuntimeState(id, direction, portId, patch)` anota uma única porta, e `setGlobalError(message)` faz piscar um erro que abrange todo o esquema. Limpe tudo com `clearRuntimeState()`.

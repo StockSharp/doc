@@ -14,8 +14,8 @@ Abonnieren Sie mit `diagram.on(event, handler)`; es wird eine Funktion zum Abbes
 - `fullscreenRequested` — `{ fullscreen }`; der Host wendet das Layout an.
 
 ```js
-const off = diagram.on('linkAdded', ({ links }) => console.log('connected', links[0]));
-// later:
+const off = diagram.on('linkAdded', ({ links }) => console.log('verbunden', links[0]));
+// später:
 off();
 ```
 
@@ -25,7 +25,7 @@ Die Komponente meldet die Klickposition und die Liste der aktivierten Befehle; S
 
 ```js
 diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] where command is one of
+  // commands: { command, enabled }[], wobei command einen der folgenden Werte hat:
   // undo | redo | cut | copy | paste | open | delete | properties | help
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
   menu.onPick = command => diagram.executeContextCommand(command);
@@ -46,7 +46,7 @@ diagram.setLinkValidator(({ fromPort, toPort }) => fromPort.type === toPort.type
 const scheme = diagram.save();              // { nodes, links }
 diagram.load(scheme.nodes, scheme.links);
 
-const document = diagram.saveDocument();     // versioned document
+const document = diagram.saveDocument();     // versioniertes Dokument
 diagram.loadDocument(document);
 ```
 
@@ -65,17 +65,17 @@ diagram.on('undoStackChanged', ({ canUndo, canRedo }) => {
 
 ## Laufzeitzustand und Fehlerhervorhebung
 
-Das Diagramm kann den Ausführungszustand über das Schema legen. `setNodeError` lässt den Rand eines Knotens mit einem animierten Puls (~1 Sekunde) aufblinken und markiert ihn mit einer roten Hervorhebung — verwenden Sie es, um einen Laufzeitfehler zu melden. Die Schaltfläche **Error** in der [Editor-Demo](editor.md) tut genau das.
+Das Diagramm kann den Ausführungszustand über das Schema legen. `setNodeError` lässt den Rand eines Knotens mit einem animierten Puls (~1 Sekunde) aufblinken und markiert ihn mit einer roten Hervorhebung — verwenden Sie es, um einen Laufzeitfehler zu melden. Die Schaltfläche **Fehler** in [Interaktiver Editor](editor.md) tut genau das.
 
 ```js
-diagram.setNodeError('sma', 'SMA failed: no data source is configured.');
-diagram.setNodeError('sma', 'Warning', { animate: false }); // mark it, but skip the initial flash
+diagram.setNodeError('sma', 'SMA fehlgeschlagen: Es ist keine Datenquelle konfiguriert.');
+diagram.setNodeError('sma', 'Warnung', { animate: false }); // markieren, aber das erste Aufblinken überspringen
 ```
 
 Fehler, die bereits zum Ladezeitpunkt bestehen, färben den Hintergrund rot, anstatt zu blinken — übergeben Sie sie an `load`:
 
 ```js
-diagram.load(nodes, links, { nodeErrors: { sma: 'The saved period value is invalid.' } });
+diagram.load(nodes, links, { nodeErrors: { sma: 'Der gespeicherte Periodenwert ist ungültig.' } });
 ```
 
 Weitere Laufzeit-Hooks: `setActiveNode(id)` hebt den aktuell ausgeführten Knoten hervor (ein Debugger-Cursor), `setPortRuntimeState(id, direction, portId, patch)` annotiert einen einzelnen Port, und `setGlobalError(message)` lässt einen schemaweiten Fehler aufblinken. Setzen Sie alles mit `clearRuntimeState()` zurück.

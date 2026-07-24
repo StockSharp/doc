@@ -28,6 +28,6 @@ chart.timeScale().fitContent();
 
 ## 関連項目
 
-- [JavaScriptチャート](../javascript_charts.md)
+- [JavaScript チャート](../javascript_charts.md)
 - [ローソク足](candlestick.md)
 - [ライン](line.md)

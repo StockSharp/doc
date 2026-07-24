@@ -40,5 +40,5 @@ chart.timeScale().fitContent();
 ## Смотрите также
 
 - [JavaScript-графики](../javascript_charts.md)
-- [Footprint](footprint.md)
-- [TPO (Market profile)](tpo.md)
+- [Footprint-график](footprint.md)
+- [TPO (Профиль рынка)](tpo.md)

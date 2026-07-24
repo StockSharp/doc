@@ -1,4 +1,4 @@
-# Footprint
+# Footprint-график
 
 Footprint-график раскрывает каждый бар, показывая объём, торгованный на каждой цене внутри него, с разбивкой на bid и ask. Раскраска по дисбалансу подсвечивает, где доминировали агрессивные покупатели или продавцы, — это основа чтения потока ордеров (order-flow).
 
@@ -34,4 +34,4 @@ series.setData(exactBars);
 
 - [JavaScript-графики](../javascript_charts.md)
 - [Профиль объёма](volume_profile.md)
-- [TPO (Market profile)](tpo.md)
+- [TPO (Профиль рынка)](tpo.md)

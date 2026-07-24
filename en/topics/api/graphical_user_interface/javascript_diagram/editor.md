@@ -4,7 +4,7 @@ The read-only embed (`renderScheme`) is a thin wrapper over the full editor. The
 
 ## Live demo
 
-Drag an element from the palette onto the canvas, drag between ports to connect them, right-click for the menu, and use Undo/Redo. Incompatible connections are rejected (watch the status line). Press **Error** to flash an animated runtime error on a node (see [Events and API](events.md#runtime-state-and-error-highlighting)).
+Drag an element from the palette onto the canvas, drag between ports to connect them, right-click for the menu, and use Undo/Redo. Incompatible connections are rejected (watch the status line). Press **Error** to flash an animated runtime error on a node (see [Events and API](events.md)).
 
 ```diagram-editor sma
 ```

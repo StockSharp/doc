@@ -30,5 +30,5 @@ chart.timeScale().fitContent();
 ## Siehe auch
 
 - [JavaScript-Charts](../javascript_charts.md)
-- [Volume Profile](volume_profile.md)
+- [Volumenprofil](volume_profile.md)
 - [Footprint](footprint.md)

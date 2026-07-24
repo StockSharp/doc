@@ -14,8 +14,8 @@
 - `fullscreenRequested` — `{ fullscreen }`。レイアウトの適用はホストが行います。
 
 ```js
-const off = diagram.on('linkAdded', ({ links }) => console.log('connected', links[0]));
-// later:
+const off = diagram.on('linkAdded', ({ links }) => console.log('接続しました', links[0]));
+// 後で:
 off();
 ```
 
@@ -25,7 +25,7 @@ off();
 
 ```js
 diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] where command is one of
+  // commands: { command, enabled }[]（command は次のいずれか）
   // undo | redo | cut | copy | paste | open | delete | properties | help
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
   menu.onPick = command => diagram.executeContextCommand(command);
@@ -46,7 +46,7 @@ diagram.setLinkValidator(({ fromPort, toPort }) => fromPort.type === toPort.type
 const scheme = diagram.save();              // { nodes, links }
 diagram.load(scheme.nodes, scheme.links);
 
-const document = diagram.saveDocument();     // versioned document
+const document = diagram.saveDocument();     // バージョン管理されたドキュメント
 diagram.loadDocument(document);
 ```
 
@@ -65,17 +65,17 @@ diagram.on('undoStackChanged', ({ canUndo, canRedo }) => {
 
 ## 実行時の状態とエラーのハイライト
 
-ダイアグラムはスキームの上に実行状態を重ねて表示できます。`setNodeError` はノードの枠線をアニメーション付きのパルス（約 1 秒）で点滅させ、赤いハイライトでマークします。実行時の失敗を報告するのに使います。[エディタのデモ](editor.md) にある **Error** ボタンは、まさにこれを行っています。
+ダイアグラムはスキームの上に実行状態を重ねて表示できます。`setNodeError` はノードの枠線をアニメーション付きのパルス（約 1 秒）で点滅させ、赤いハイライトでマークします。実行時の失敗を報告するのに使います。[インタラクティブエディタ](editor.md) にある **Error** ボタンは、まさにこれを行っています。
 
 ```js
-diagram.setNodeError('sma', 'SMA failed: no data source is configured.');
-diagram.setNodeError('sma', 'Warning', { animate: false }); // mark it, but skip the initial flash
+diagram.setNodeError('sma', 'SMA が失敗しました: データソースが設定されていません。');
+diagram.setNodeError('sma', '警告', { animate: false }); // マークするが、最初のフラッシュはスキップする
 ```
 
 読み込み時点で存在するエラーは、点滅する代わりに赤い背景で描画されます。それらは `load` に渡してください。
 
 ```js
-diagram.load(nodes, links, { nodeErrors: { sma: 'The saved period value is invalid.' } });
+diagram.load(nodes, links, { nodeErrors: { sma: '保存された期間の値が無効です。' } });
 ```
 
 その他の実行時フック: `setActiveNode(id)` は現在実行中のノードをハイライトし（デバッガのカーソル）、`setPortRuntimeState(id, direction, portId, patch)` は単一のポートに注釈を付け、`setGlobalError(message)` はスキーム全体のエラーを点滅させます。`clearRuntimeState()` ですべてをクリアします。

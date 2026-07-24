@@ -17,17 +17,17 @@
 import { createChart, CandlestickSeries } from '@stocksharp/chart';
 import { ChartDataController } from '@stocksharp/chart/data';
 
-// A data source: resolve the symbol, then serve pages of bars ending before `to`.
+// データソース: 銘柄を解決し、`to` より前で終わるバーのページを提供します。
 const dataSource = {
   resolveSymbol(request) {
     return Promise.resolve({ id: request.symbol, priceFormat: { type: 'price', precision: 2, minMove: 0.01 } });
   },
   getBars(request) {
-    // request: { symbol, resolution, to?, countBack }. Return { bars, hasMoreBefore, hasMoreAfter }.
+    // request: { symbol, resolution, to?, countBack }。{ bars, hasMoreBefore, hasMoreAfter } を返します。
     return fetchBars(request).then(bars => ({ bars, hasMoreBefore: bars.length > 0, hasMoreAfter: false }));
   },
   subscribeBars(request, listener) {
-    // Push realtime bars via listener({ bar, isFinal }); return an unsubscribe function.
+    // listener({ bar, isFinal }) を通じてリアルタイムのバーをプッシュします。購読解除関数を返します。
     return () => {};
   },
 };
@@ -39,18 +39,18 @@ const controller = new ChartDataController({
   chart,
   series,
   dataSource,
-  initialCount: 300,               // bars loaded first
-  historyCount: 250,               // bars per older page
-  historyPrefetchThreshold: 40,    // prefetch when within 40 bars of the left edge
-  autoPrefetch: true,              // load older bars automatically on scroll / zoom
+  initialCount: 300,               // 最初に読み込むバー数
+  historyCount: 250,               // 古いページごとのバー数
+  historyPrefetchThreshold: 40,    // 左端から40バー以内になったらプリフェッチ
+  autoPrefetch: true,              // スクロール／ズーム時に古いバーを自動的に読み込む
 });
 
-// Optional: observe loading state and progress.
+// 任意: 読み込み状態と進捗を監視します。
 controller.subscribe(snap => {
   console.log(snap.loadedBars, snap.hasMoreBefore, snap.loadingHistory);
 });
 
-// Load the first page, then park the viewport near the right edge so there is room to scroll left.
+// 最初のページを読み込み、左にスクロールする余地ができるようにビューポートを右端付近に配置します。
 controller.setSelection({ symbol: 'DEMO', resolution: '1h' }).then(() => {
   const loaded = controller.rawData().length;
   chart.timeScale().setVisibleLogicalRange({ from: Math.max(0, loaded - 90), to: loaded + 3 });

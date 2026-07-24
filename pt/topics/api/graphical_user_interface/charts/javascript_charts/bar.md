@@ -28,6 +28,6 @@ A barra é colorida como de alta quando o fechamento é igual ou superior à abe
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Candlestick](candlestick.md)
 - [Linha](line.md)

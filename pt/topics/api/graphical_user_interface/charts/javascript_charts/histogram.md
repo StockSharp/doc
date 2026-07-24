@@ -34,6 +34,6 @@ volume.priceScale().applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Área](area.md)
 - [Candlestick](candlestick.md)

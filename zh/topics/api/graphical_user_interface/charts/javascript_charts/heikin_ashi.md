@@ -1,6 +1,6 @@
-# Heikin-Ashi
+# Heikin-Ashi K线图
 
-Heikin-Ashi（“平均K线”）蜡烛图由原始 OHLC 计算得出，用于平滑噪声：连续的同色蜡烛让趋势更易读，但代价是隐藏了真实的开盘价和收盘价。它们通过将变换后的数值输入到普通的蜡烛图序列中来绘制。
+Heikin-Ashi（“平均K线”）K线由原始 OHLC 计算得出，用于平滑噪声：连续的同色K线让趋势更易读，但代价是隐藏了真实的开盘价和收盘价。它们通过将变换后的数值输入到普通的K线序列中来绘制。
 
 ## 在线演示
 
@@ -41,5 +41,5 @@ chart.timeScale().fitContent();
 ## 另请参阅
 
 - [JavaScript 图表](../javascript_charts.md)
-- [蜡烛图](candlestick.md)
+- [K线图](candlestick.md)
 - [Renko](renko.md)

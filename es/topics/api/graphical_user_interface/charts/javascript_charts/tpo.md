@@ -29,6 +29,6 @@ chart.timeScale().fitContent();
 
 ## Véase también
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos en JavaScript](../javascript_charts.md)
 - [Perfil de volumen](volume_profile.md)
 - [Footprint](footprint.md)

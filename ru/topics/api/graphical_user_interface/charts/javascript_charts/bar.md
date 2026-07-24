@@ -29,5 +29,5 @@ chart.timeScale().fitContent();
 ## Смотрите также
 
 - [JavaScript-графики](../javascript_charts.md)
-- [Свечной график](candlestick.md)
-- [Линейный график](line.md)
+- [Свечи](candlestick.md)
+- [Линия](line.md)

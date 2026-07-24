@@ -36,4 +36,4 @@ volume.priceScale().applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
 
 - [JavaScript 图表](../javascript_charts.md)
 - [面积图](area.md)
-- [蜡烛图](candlestick.md)
+- [K线图](candlestick.md)

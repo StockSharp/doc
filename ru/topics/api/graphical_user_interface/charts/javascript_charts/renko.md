@@ -30,5 +30,5 @@ chart.timeScale().fitContent();
 ## Смотрите также
 
 - [JavaScript-графики](../javascript_charts.md)
-- [Point and Figure](point_figure.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [График Point and Figure](point_figure.md)
+- [Свечи Heikin-Ashi](heikin_ashi.md)

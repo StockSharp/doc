@@ -8,15 +8,15 @@
 
 ## 在线演示
 
-下面的图表就是在本页上运行的真实引擎——带成交量直方图和移动平均线的蜡烛图。拖动可滚动，使用滚轮缩放，点击（右上角的）展开按钮可全屏显示。
+下面的图表就是在本页上运行的真实引擎——带成交量直方图和移动平均线的K线图。拖动可滚动，使用滚轮缩放，点击（右上角的）展开按钮可全屏显示。
 
 ```chart-demo overview
 ```
 
 ## 功能特性
 
-- 完整的价格系列：蜡烛图、OHLC 柱状图、折线图、面积图、直方图、通道（band），以及衍生的 Heikin-Ashi、Renko 和 Point & Figure 类型。
-- 精确的订单流研究：footprint、成交量分布（volume profile）和 TPO（市场分布图）。
+- 完整的价格系列：K线图、OHLC 柱状图、折线图、面积图、直方图、通道（band），以及衍生的 Heikin-Ashi、Renko 和 Point & Figure 类型。
+- 精确的订单流研究：footprint、成交量分布和 TPO（市场分布图）。
 - 通过 `setData` 和 `update` 实现历史数据加载和实时更新。
 - 成交标记、价格线、十字光标、缩放、滚动以及自动区间计算。
 - 拥有约 160 种计算实现的指标引擎。
@@ -82,29 +82,29 @@ chart.timeScale().fitContent();
 
 每种系列类型都有自己的专题，包含在线演示以及用于配置它的 JavaScript：
 
-- [蜡烛图](javascript_charts/candlestick.md) — 经典的 OHLC 蜡烛。
+- [K线图](javascript_charts/candlestick.md) — 经典的 OHLC K线。
 - [OHLC 柱状图](javascript_charts/bar.md) — 在垂直区间柱上标出开/收价刻度。
 - [折线图](javascript_charts/line.md) — 一条穿过各收盘价的折线。
 - [面积图](javascript_charts/area.md) — 带渐变填充的折线。
 - [直方图](javascript_charts/histogram.md) — 垂直柱，通常表示成交量。
-- [通道图](javascript_charts/band.md) — 上/下轨通道（包络线、布林带）。
-- [Heikin-Ashi](javascript_charts/heikin_ashi.md) — 过滤噪声的平滑蜡烛。
+- [带状图（Band）](javascript_charts/band.md) — 上/下轨通道（包络线、布林带）。
+- [Heikin-Ashi K线图](javascript_charts/heikin_ashi.md) — 过滤噪声的平滑K线。
 - [Renko](javascript_charts/renko.md) — 由价格驱动的砖块，与时间无关。
-- [Point and Figure](javascript_charts/point_figure.md) — 表示价格变动的 X/O 列。
-- [Footprint](javascript_charts/footprint.md) — 每根柱内每个价位的买 × 卖成交量。
-- [成交量分布](javascript_charts/volume_profile.md) — 按价位的成交量，包含 POC（point of control）和价值区。
-- [TPO（市场分布图）](javascript_charts/tpo.md) — 每个交易时段在各价位停留的时间。
+- [点数图 (Point and Figure)](javascript_charts/point_figure.md) — 表示价格变动的 X/O 列。
+- [足迹图（Footprint）](javascript_charts/footprint.md) — 每根柱内每个价位的买 × 卖成交量。
+- [成交量分布图](javascript_charts/volume_profile.md) — 按价位的成交量，包含 POC（point of control）和价值区。
+- [TPO（市场剖面图）](javascript_charts/tpo.md) — 每个交易时段在各价位停留的时间。
 
 除了系列类型之外，图表还提供了拥有约 160 种研究的[指标引擎](javascript_charts/indicators.md)，以及在滚动时加载更早柱线的[惰性历史回填](javascript_charts/backfill.md)。
 
-关于由同一 Web 技术栈渲染的可视化策略编辑器，请参阅 [JavaScript 图示](../javascript_diagram.md)。
+关于由同一 Web 技术栈渲染的可视化策略编辑器，请参阅 [JavaScript 框图](../javascript_diagram.md)。
 
 ## 完整的终端图表技术栈
 
 `src/chart` 下的模块为基础引擎扩展了终端功能：
 
 - `IndicatorEngine`、指标渲染器、设置以及计算目录。
-- 用于蜡烛图、柱状图、折线图、面积图、Heikin-Ashi、Renko 和 Point & Figure 的图表类型切换器。
+- 用于K线图、柱状图、折线图、面积图、Heikin-Ashi、Renko 和 Point & Figure 的图表类型切换器。
 - 图例、同步的副窗格、右键菜单以及指标选择对话框。
 - 在实时数据变化时重新计算活动指标。
 
@@ -127,7 +127,7 @@ npm run serve
 
 ## 另请参阅
 
-- [JavaScript 图示](../javascript_diagram.md)
+- [JavaScript 框图](../javascript_diagram.md)
 - [Charts 仓库](https://github.com/StockSharp/Charts)
 - [在线演示](https://stocksharp.github.io/Charts/demo/)
 - [Windows 图表组件](../charts.md)

@@ -87,13 +87,13 @@ chart.timeScale().fitContent();
 - [Линия](javascript_charts/line.md) — одна ломаная линия по ценам закрытия.
 - [Область](javascript_charts/area.md) — линия с градиентной заливкой.
 - [Гистограмма](javascript_charts/histogram.md) — вертикальные бары, обычно объём.
-- [Полоса](javascript_charts/band.md) — верхний/нижний канал (конверты, полосы Боллинджера).
-- [Heikin-Ashi](javascript_charts/heikin_ashi.md) — сглаженные свечи, фильтрующие шум.
+- [Полоса (Band)](javascript_charts/band.md) — верхний/нижний канал (конверты, полосы Боллинджера).
+- [Свечи Heikin-Ashi](javascript_charts/heikin_ashi.md) — сглаженные свечи, фильтрующие шум.
 - [Renko](javascript_charts/renko.md) — кирпичи, управляемые ценой, независимые от времени.
-- [Крестики-нолики (Point and Figure)](javascript_charts/point_figure.md) — столбцы X/O ценового движения.
-- [Footprint](javascript_charts/footprint.md) — объём bid × ask на каждой цене внутри каждого бара.
+- [График Point and Figure](javascript_charts/point_figure.md) — столбцы X/O ценового движения.
+- [Footprint-график](javascript_charts/footprint.md) — объём bid × ask на каждой цене внутри каждого бара.
 - [Профиль объёма](javascript_charts/volume_profile.md) — объём по ценам с POC и зоной стоимости.
-- [TPO (рыночный профиль)](javascript_charts/tpo.md) — время, проведённое на каждой цене за сессию.
+- [TPO (Профиль рынка)](javascript_charts/tpo.md) — время, проведённое на каждой цене за сессию.
 
 Помимо типов серий, у графика есть [движок индикаторов](javascript_charts/indicators.md) (около 160 исследований) и [ленивая догрузка истории](javascript_charts/backfill.md), которая подгружает старые бары по мере прокрутки.
 

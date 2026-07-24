@@ -14,8 +14,8 @@ Suscríbete con `diagram.on(event, handler)`; devuelve una función para cancela
 - `fullscreenRequested` — `{ fullscreen }`; el host aplica el diseño.
 
 ```js
-const off = diagram.on('linkAdded', ({ links }) => console.log('connected', links[0]));
-// later:
+const off = diagram.on('linkAdded', ({ links }) => console.log('conectado', links[0]));
+// más tarde:
 off();
 ```
 
@@ -25,7 +25,7 @@ El componente informa la posición del clic y la lista de comandos habilitados; 
 
 ```js
 diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] where command is one of
+  // commands: { command, enabled }[] donde command es uno de
   // undo | redo | cut | copy | paste | open | delete | properties | help
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
   menu.onPick = command => diagram.executeContextCommand(command);
@@ -46,7 +46,7 @@ diagram.setLinkValidator(({ fromPort, toPort }) => fromPort.type === toPort.type
 const scheme = diagram.save();              // { nodes, links }
 diagram.load(scheme.nodes, scheme.links);
 
-const document = diagram.saveDocument();     // versioned document
+const document = diagram.saveDocument();     // documento versionado
 diagram.loadDocument(document);
 ```
 
@@ -68,14 +68,14 @@ diagram.on('undoStackChanged', ({ canUndo, canRedo }) => {
 El diagrama puede superponer el estado de ejecución sobre el esquema. `setNodeError` hace parpadear el borde de un nodo con un pulso animado (~1 segundo) y lo marca con un resaltado rojo — úsalo para informar de un fallo en tiempo de ejecución. El botón **Error** de la [demo del editor](editor.md) hace exactamente esto.
 
 ```js
-diagram.setNodeError('sma', 'SMA failed: no data source is configured.');
-diagram.setNodeError('sma', 'Warning', { animate: false }); // mark it, but skip the initial flash
+diagram.setNodeError('sma', 'SMA falló: no hay ninguna fuente de datos configurada.');
+diagram.setNodeError('sma', 'Advertencia', { animate: false }); // márcalo, pero omite el parpadeo inicial
 ```
 
 Los errores que existen en el momento de la carga pintan un fondo rojo en lugar de parpadear — pásalos a `load`:
 
 ```js
-diagram.load(nodes, links, { nodeErrors: { sma: 'The saved period value is invalid.' } });
+diagram.load(nodes, links, { nodeErrors: { sma: 'El valor de período guardado no es válido.' } });
 ```
 
 Otros hooks de tiempo de ejecución: `setActiveNode(id)` resalta el nodo que se está ejecutando actualmente (un cursor de depuración), `setPortRuntimeState(id, direction, portId, patch)` anota un único puerto, y `setGlobalError(message)` hace parpadear un error a nivel de todo el esquema. Limpia todo con `clearRuntimeState()`.

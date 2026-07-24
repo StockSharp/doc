@@ -36,6 +36,6 @@ Llama a `series.update({ time, open, high, low, close })` para enviar una barra 
 
 ## Véase también
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos en JavaScript](../javascript_charts.md)
 - [Barras OHLC](bar.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [Velas Heikin-Ashi](heikin_ashi.md)

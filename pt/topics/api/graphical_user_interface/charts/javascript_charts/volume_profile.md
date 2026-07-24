@@ -13,7 +13,7 @@ O perfil é recalculado sobre quaisquer barras que estejam à vista — role e a
 
 ## Configuração
 
-Adicione uma `ExactVolumeProfileSeries` (geralmente sobre uma série de candlesticks para dar contexto) e alimente-a com as mesmas barras de order flow usadas pelo footprint:
+Adicione uma `ExactVolumeProfileSeries` (geralmente sobre uma série de velas para dar contexto) e alimente-a com as mesmas barras de order flow usadas pelo footprint:
 
 ```js
 const candles = chart.addSeries(SSChart.CandlestickSeries, {
@@ -39,6 +39,6 @@ chart.timeScale().fitContent();
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Footprint](footprint.md)
-- [TPO (Market profile)](tpo.md)
+- [TPO (Perfil de mercado)](tpo.md)

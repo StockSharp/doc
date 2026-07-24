@@ -4,7 +4,7 @@ Read-only-встраивание (`renderScheme`) — это тонкая обё
 
 ## Живая демонстрация
 
-Перетащите элемент из палитры на холст, протяните связь между портами, вызовите меню правым кликом, используйте Undo/Redo. Несовместимые соединения отклоняются (следите за строкой статуса). Нажмите **Error**, чтобы подсветить узел анимированной ошибкой выполнения (см. [События и API](events.md#состояние-выполнения-и-подсветка-ошибок)).
+Перетащите элемент из палитры на холст, протяните связь между портами, вызовите меню правым кликом, используйте Undo/Redo. Несовместимые соединения отклоняются (следите за строкой статуса). Нажмите **Error**, чтобы подсветить узел анимированной ошибкой выполнения (см. [События и API](events.md)).
 
 ```diagram-editor sma
 ```
@@ -19,7 +19,7 @@ import {
   Node, PortType, DiagramNode, Link, PALETTE_DRAG_MIME,
 } from '@stocksharp/diagram';
 
-// 1) Catalog: the socket (port) types and the element (node) types.
+// 1) Каталог: типы сокетов (портов) и типы элементов (узлов).
 const catalog = new StockSharpCatalog();
 catalog.addPortType(new PortType({ name: 'Candle', color: '#4aa3ff' }));
 catalog.addPortType(new PortType({ name: 'Indicator', color: '#a779e9' }));
@@ -33,23 +33,23 @@ catalog.addNodeType(new Node({
   outPorts: [{ id: 'Output', name: 'Output', type: 'Indicator' }],
 }));
 
-// 2) Editable diagram + palette toolbox (each renders into its own element).
+// 2) Редактируемая диаграмма + палитра инструментов (каждая рендерится в свой элемент).
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) Add nodes from the palette: double-click, or native drag/drop onto the canvas.
+// 3) Добавление узлов из палитры: двойной клик или нативный drag/drop на холст.
 palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
 canvasHost.addEventListener('drop', event => {
   const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 
-// 4) Load a starting scheme and react to edits.
+// 4) Загрузка начальной схемы и реакция на правки.
 diagram.load(
   [new DiagramNode({ id: 'c', typeId: 'candles', name: 'Candles', x: 60, y: 120 })],
   [],
 );
-diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('rejected:', reason); });
+diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('отклонено:', reason); });
 diagram.zoomToFit();
 ```
 
@@ -61,7 +61,7 @@ diagram.zoomToFit();
 import { renderScheme } from '@stocksharp/diagram/embed';
 
 const handle = await renderScheme(host, '/data/designer-palette.json', scheme);
-handle.diagram.setReadOnly(false);   // editing enabled
+handle.diagram.setReadOnly(false);   // редактирование включено
 ```
 
 ## Смотрите также

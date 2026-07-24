@@ -4,7 +4,7 @@
 
 ## ライブデモ
 
-パレットから要素をキャンバスにドラッグし、ポート間をドラッグして接続し、右クリックでメニューを開き、Undo/Redo を使用してください。互換性のない接続は拒否されます（ステータス行に注目してください）。**Error** を押すと、ノード上でアニメーション付きのランタイムエラーが点滅します（[イベントと API](events.md#runtime-state-and-error-highlighting) を参照）。
+パレットから要素をキャンバスにドラッグし、ポート間をドラッグして接続し、右クリックでメニューを開き、Undo/Redo を使用してください。互換性のない接続は拒否されます（ステータス行に注目してください）。**Error** を押すと、ノード上でアニメーション付きのランタイムエラーが点滅します（[イベントと API](events.md) を参照）。
 
 ```diagram-editor sma
 ```
@@ -19,7 +19,7 @@ import {
   Node, PortType, DiagramNode, Link, PALETTE_DRAG_MIME,
 } from '@stocksharp/diagram';
 
-// 1) Catalog: the socket (port) types and the element (node) types.
+// 1) カタログ: ソケット（ポート）型と要素（ノード）型。
 const catalog = new StockSharpCatalog();
 catalog.addPortType(new PortType({ name: 'Candle', color: '#4aa3ff' }));
 catalog.addPortType(new PortType({ name: 'Indicator', color: '#a779e9' }));
@@ -33,23 +33,23 @@ catalog.addNodeType(new Node({
   outPorts: [{ id: 'Output', name: 'Output', type: 'Indicator' }],
 }));
 
-// 2) Editable diagram + palette toolbox (each renders into its own element).
+// 2) 編集可能なダイアグラム + パレットツールボックス（それぞれが自身の要素に描画されます）。
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) Add nodes from the palette: double-click, or native drag/drop onto the canvas.
+// 3) パレットからノードを追加: ダブルクリック、またはキャンバスへのネイティブなドラッグ&ドロップ。
 palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
 canvasHost.addEventListener('drop', event => {
   const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 
-// 4) Load a starting scheme and react to edits.
+// 4) 初期スキームを読み込み、編集に反応します。
 diagram.load(
   [new DiagramNode({ id: 'c', typeId: 'candles', name: 'Candles', x: 60, y: 120 })],
   [],
 );
-diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('rejected:', reason); });
+diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('拒否:', reason); });
 diagram.zoomToFit();
 ```
 
@@ -61,7 +61,7 @@ diagram.zoomToFit();
 import { renderScheme } from '@stocksharp/diagram/embed';
 
 const handle = await renderScheme(host, '/data/designer-palette.json', scheme);
-handle.diagram.setReadOnly(false);   // editing enabled
+handle.diagram.setReadOnly(false);   // 編集を有効化
 ```
 
 ## 関連項目

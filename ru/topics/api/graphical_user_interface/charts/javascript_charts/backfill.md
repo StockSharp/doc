@@ -17,17 +17,17 @@
 import { createChart, CandlestickSeries } from '@stocksharp/chart';
 import { ChartDataController } from '@stocksharp/chart/data';
 
-// A data source: resolve the symbol, then serve pages of bars ending before `to`.
+// Источник данных: разрешает символ, затем отдаёт страницы баров, заканчивающиеся до `to`.
 const dataSource = {
   resolveSymbol(request) {
     return Promise.resolve({ id: request.symbol, priceFormat: { type: 'price', precision: 2, minMove: 0.01 } });
   },
   getBars(request) {
-    // request: { symbol, resolution, to?, countBack }. Return { bars, hasMoreBefore, hasMoreAfter }.
+    // request: { symbol, resolution, to?, countBack }. Верните { bars, hasMoreBefore, hasMoreAfter }.
     return fetchBars(request).then(bars => ({ bars, hasMoreBefore: bars.length > 0, hasMoreAfter: false }));
   },
   subscribeBars(request, listener) {
-    // Push realtime bars via listener({ bar, isFinal }); return an unsubscribe function.
+    // Отправляйте бары в реальном времени через слушатель ({ bar, isFinal }); верните функцию отписки.
     return () => {};
   },
 };
@@ -39,18 +39,18 @@ const controller = new ChartDataController({
   chart,
   series,
   dataSource,
-  initialCount: 300,               // bars loaded first
-  historyCount: 250,               // bars per older page
-  historyPrefetchThreshold: 40,    // prefetch when within 40 bars of the left edge
-  autoPrefetch: true,              // load older bars automatically on scroll / zoom
+  initialCount: 300,               // баров загружается первыми
+  historyCount: 250,               // баров на каждую страницу более старой истории
+  historyPrefetchThreshold: 40,    // предзагрузка, когда до левого края остаётся 40 баров
+  autoPrefetch: true,              // автоматически подгружать старые бары при прокрутке / масштабировании
 });
 
-// Optional: observe loading state and progress.
+// Необязательно: отслеживать состояние загрузки и прогресс.
 controller.subscribe(snap => {
   console.log(snap.loadedBars, snap.hasMoreBefore, snap.loadingHistory);
 });
 
-// Load the first page, then park the viewport near the right edge so there is room to scroll left.
+// Загрузите первую страницу, затем разместите видимую область у правого края, чтобы было куда прокручивать влево.
 controller.setSelection({ symbol: 'DEMO', resolution: '1h' }).then(() => {
   const loaded = controller.rawData().length;
   chart.timeScale().setVisibleLogicalRange({ from: Math.max(0, loaded - 90), to: loaded + 3 });

@@ -4,7 +4,7 @@
 
 ## 在线演示
 
-从调色板将元素拖到画布上，在端口之间拖动以建立连接，右键打开菜单，并使用撤销/重做。不兼容的连接会被拒绝（请留意状态栏）。按下 **Error** 可在节点上闪现一个动画运行时错误（参见 [事件与 API](events.md#runtime-state-and-error-highlighting)）。
+从调色板将元素拖到画布上，在端口之间拖动以建立连接，右键打开菜单，并使用撤销/重做。不兼容的连接会被拒绝（请留意状态栏）。按下 **Error** 可在节点上闪现一个动画运行时错误（参见 [事件与 API](events.md)）。
 
 ```diagram-editor sma
 ```
@@ -19,7 +19,7 @@ import {
   Node, PortType, DiagramNode, Link, PALETTE_DRAG_MIME,
 } from '@stocksharp/diagram';
 
-// 1) Catalog: the socket (port) types and the element (node) types.
+// 1) 目录（catalog）：套接字（端口）类型与元素（节点）类型。
 const catalog = new StockSharpCatalog();
 catalog.addPortType(new PortType({ name: 'Candle', color: '#4aa3ff' }));
 catalog.addPortType(new PortType({ name: 'Indicator', color: '#a779e9' }));
@@ -33,23 +33,23 @@ catalog.addNodeType(new Node({
   outPorts: [{ id: 'Output', name: 'Output', type: 'Indicator' }],
 }));
 
-// 2) Editable diagram + palette toolbox (each renders into its own element).
+// 2) 可编辑的框图 + 调色板工具箱（各自渲染到自己的元素中）。
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) Add nodes from the palette: double-click, or native drag/drop onto the canvas.
+// 3) 从调色板添加节点：双击，或原生拖放到画布上。
 palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
 canvasHost.addEventListener('drop', event => {
   const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 
-// 4) Load a starting scheme and react to edits.
+// 4) 加载初始方案并响应编辑。
 diagram.load(
   [new DiagramNode({ id: 'c', typeId: 'candles', name: 'Candles', x: 60, y: 120 })],
   [],
 );
-diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('rejected:', reason); });
+diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.log('已拒绝：', reason); });
 diagram.zoomToFit();
 ```
 
@@ -61,11 +61,11 @@ diagram.zoomToFit();
 import { renderScheme } from '@stocksharp/diagram/embed';
 
 const handle = await renderScheme(host, '/data/designer-palette.json', scheme);
-handle.diagram.setReadOnly(false);   // editing enabled
+handle.diagram.setReadOnly(false);   // 已启用编辑
 ```
 
 ## 另请参阅
 
-- [JavaScript 图表（Diagram）](../javascript_diagram.md)
+- [JavaScript 框图](../javascript_diagram.md)
 - [事件与 API](events.md)
-- [JavaScript 图表（Charts）](../charts/javascript_charts.md)
+- [JavaScript 图表](../charts/javascript_charts.md)

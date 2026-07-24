@@ -11,7 +11,7 @@ El diagrama de abajo es el motor real ejecutándose en esta página: un esquelet
 ```diagram-demo sma
 ```
 
-Los tres bloques son una fuente de **Candles** que alimenta un **Indicator** (una media móvil simple); tanto las velas como la salida del indicador se dibujan en un elemento **Chart**. Este es el patrón completo más pequeño de Designer: producir datos, transformarlos y visualizarlos.
+Los tres bloques son una fuente de **Velas** que alimenta un **Indicador** (una media móvil simple); tanto las velas como la salida del indicador se dibujan en un elemento **Chart**. Este es el patrón completo más pequeño de Designer: producir datos, transformarlos y visualizarlos.
 
 ## Instalación
 

@@ -28,4 +28,4 @@ chart.timeScale().fitContent();
 
 - [JavaScript 图表](../javascript_charts.md)
 - [面积图](area.md)
-- [带状图](band.md)
+- [带状图（Band）](band.md)

@@ -1,4 +1,4 @@
-# Point and Figure
+# Punto y Figura
 
 Los gráficos Point & Figure eliminan por completo el tiempo y dibujan columnas de X (alcistas) y O (bajistas). Una columna sigue creciendo mientras el precio se mueve en su dirección en cajas enteras; un número `reversal` de cajas en su contra inicia una nueva columna. El resultado resalta los soportes, las resistencias y las rupturas.
 
@@ -30,6 +30,6 @@ chart.timeScale().fitContent();
 
 ## Véase también
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos en JavaScript](../javascript_charts.md)
 - [Renko](renko.md)
-- [Velas japonesas](candlestick.md)
+- [Velas](candlestick.md)

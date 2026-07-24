@@ -27,6 +27,6 @@ Calcule `upper`/`lower` según lo requiera el estudio: para las bandas de Bollin
 
 ## Véase también
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos en JavaScript](../javascript_charts.md)
 - [Línea](line.md)
 - [Perfil de volumen](volume_profile.md)

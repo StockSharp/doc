@@ -31,5 +31,5 @@ chart.timeScale().fitContent();
 ## 関連情報
 
 - [JavaScript チャート](../javascript_charts.md)
-- [練行足（Renko）](renko.md)
+- [練行足 (Renko)](renko.md)
 - [ローソク足](candlestick.md)

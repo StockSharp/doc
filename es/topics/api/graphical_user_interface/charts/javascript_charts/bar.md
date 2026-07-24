@@ -28,6 +28,6 @@ La barra se colorea al alza cuando el cierre es igual o superior a la apertura, 
 
 ## Véase también
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos en JavaScript](../javascript_charts.md)
 - [Velas](candlestick.md)
 - [Línea](line.md)

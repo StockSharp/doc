@@ -9,7 +9,7 @@ Os gráficos Renko são construídos a partir de *tijolos* de preço de tamanho 
 
 ## Configuração
 
-Adicione uma `RenkoSeries` com um `boxSize` e alimente-a com candles brutos `{ time, open, high, low, close }` — a série constrói os tijolos por conta própria:
+Adicione uma `RenkoSeries` com um `boxSize` e alimente-a com velas brutas `{ time, open, high, low, close }` — a série constrói os tijolos por conta própria:
 
 ```js
 const series = chart.addSeries(SSChart.RenkoSeries, {
@@ -29,6 +29,6 @@ Escolha o `boxSize` a partir da faixa de preço do instrumento: valores muito pe
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
-- [Point and Figure](point_figure.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
+- [Ponto e Figura](point_figure.md)
+- [Velas Heikin-Ashi](heikin_ashi.md)

@@ -1,4 +1,4 @@
-# Point and Figure
+# Point-&-Figure-Chart
 
 Point-&-Figure-Charts verzichten vollständig auf die Zeit und zeichnen Spalten aus X (steigend) und O (fallend). Eine Spalte wächst weiter, solange sich der Preis in ihrer Richtung um ganze Boxen bewegt; eine Zahl von `reversal` Boxen gegen sie beginnt eine neue Spalte. Das Ergebnis hebt Unterstützungen, Widerstände und Ausbrüche hervor.
 
@@ -32,4 +32,4 @@ chart.timeScale().fitContent();
 
 - [JavaScript-Charts](../javascript_charts.md)
 - [Renko](renko.md)
-- [Candlestick](candlestick.md)
+- [Kerzenchart](candlestick.md)

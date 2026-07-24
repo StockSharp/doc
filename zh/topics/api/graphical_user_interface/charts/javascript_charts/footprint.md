@@ -33,5 +33,5 @@ series.setData(exactBars);
 ## 另请参阅
 
 - [JavaScript 图表](../javascript_charts.md)
-- [成交量分布图（Volume profile）](volume_profile.md)
-- [TPO（市场分布图 Market profile）](tpo.md)
+- [成交量分布图](volume_profile.md)
+- [TPO（市场剖面图）](tpo.md)

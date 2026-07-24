@@ -4,7 +4,7 @@ Um gráfico não consegue manter todo o histórico de um instrumento de uma só 
 
 ## Demonstração ao vivo
 
-Role ou dê zoom em direção à borda esquerda — as barras mais antigas são carregadas em páginas (observe a legenda de status). O feed aqui possui um atraso artificial para que o estado de carregamento fique visível.
+Role ou dê zoom em direção à borda esquerda — as barras mais antigas são carregadas em páginas (observe a legenda de status). O fluxo de dados aqui possui um atraso artificial para que o estado de carregamento fique visível.
 
 ```chart-demo backfill
 ```
@@ -17,17 +17,17 @@ Forneça ao controlador o gráfico, a série que ele controla e uma fonte de dad
 import { createChart, CandlestickSeries } from '@stocksharp/chart';
 import { ChartDataController } from '@stocksharp/chart/data';
 
-// A data source: resolve the symbol, then serve pages of bars ending before `to`.
+// Uma fonte de dados: resolve o símbolo e então serve páginas de barras terminando antes de `to`.
 const dataSource = {
   resolveSymbol(request) {
     return Promise.resolve({ id: request.symbol, priceFormat: { type: 'price', precision: 2, minMove: 0.01 } });
   },
   getBars(request) {
-    // request: { symbol, resolution, to?, countBack }. Return { bars, hasMoreBefore, hasMoreAfter }.
+    // request: { symbol, resolution, to?, countBack }. Retorna { bars, hasMoreBefore, hasMoreAfter }.
     return fetchBars(request).then(bars => ({ bars, hasMoreBefore: bars.length > 0, hasMoreAfter: false }));
   },
   subscribeBars(request, listener) {
-    // Push realtime bars via listener({ bar, isFinal }); return an unsubscribe function.
+    // Envie barras em tempo real pelo callback ({ bar, isFinal }); retorne uma função de cancelamento de inscrição.
     return () => {};
   },
 };
@@ -39,18 +39,18 @@ const controller = new ChartDataController({
   chart,
   series,
   dataSource,
-  initialCount: 300,               // bars loaded first
-  historyCount: 250,               // bars per older page
-  historyPrefetchThreshold: 40,    // prefetch when within 40 bars of the left edge
-  autoPrefetch: true,              // load older bars automatically on scroll / zoom
+  initialCount: 300,               // barras carregadas primeiro
+  historyCount: 250,               // barras por página mais antiga
+  historyPrefetchThreshold: 40,    // pré-carrega quando estiver a 40 barras da borda esquerda
+  autoPrefetch: true,              // carrega barras mais antigas automaticamente ao rolar / dar zoom
 });
 
-// Optional: observe loading state and progress.
+// Opcional: observe o estado e o progresso do carregamento.
 controller.subscribe(snap => {
   console.log(snap.loadedBars, snap.hasMoreBefore, snap.loadingHistory);
 });
 
-// Load the first page, then park the viewport near the right edge so there is room to scroll left.
+// Carrega a primeira página e posiciona a viewport perto da borda direita para haver espaço para rolar à esquerda.
 controller.setSelection({ symbol: 'DEMO', resolution: '1h' }).then(() => {
   const loaded = controller.rawData().length;
   chart.timeScale().setVisibleLogicalRange({ from: Math.max(0, loaded - 90), to: loaded + 3 });
@@ -61,6 +61,6 @@ controller.setSelection({ symbol: 'DEMO', resolution: '1h' }).then(() => {
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Candlestick](candlestick.md)
 - [Indicadores](indicators.md)

@@ -38,4 +38,4 @@ chart.timeScale().fitContent();
 
 - [JavaScript-графики](../javascript_charts.md)
 - [OHLC-бары](bar.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [Свечи Heikin-Ashi](heikin_ashi.md)

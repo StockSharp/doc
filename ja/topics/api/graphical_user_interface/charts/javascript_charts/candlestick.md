@@ -37,5 +37,5 @@ chart.timeScale().fitContent();
 ## 関連項目
 
 - [JavaScript チャート](../javascript_charts.md)
-- [OHLC バー](bar.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [OHLCバー](bar.md)
+- [平均足 (Heikin-Ashi)](heikin_ashi.md)

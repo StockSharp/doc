@@ -11,7 +11,7 @@
 ```diagram-demo sma
 ```
 
-3 つのブロックは、**Indicator**（単純移動平均）に供給する **Candles** ソースです。ローソク足とインジケーターの出力はどちらも **Chart** 要素上に描画されます。これは Designer における最小の完全なパターンです。データを生成し、変換し、可視化します。
+3 つのブロックは、**インジケーター**（単純移動平均）に供給する **ローソク足** ソースです。ローソク足とインジケーターの出力はどちらも **チャート** 要素上に描画されます。これは Designer における最小の完全なパターンです。データを生成し、変換し、可視化します。
 
 ## インストール
 
@@ -21,7 +21,7 @@ npm からパッケージをインストールします。
 npm install @stocksharp/diagram
 ```
 
-続いて ES モジュールをインポートします。読み取り専用の埋め込みには `import { renderScheme } from '@stocksharp/diagram/embed'` を、[インタラクティブエディター](javascript_diagram/editor.md) には `import { StockSharpDiagram } from '@stocksharp/diagram'` を使用します。
+続いて ES モジュールをインポートします。読み取り専用の埋め込みには `import { renderScheme } from '@stocksharp/diagram/embed'` を、[インタラクティブエディタ](javascript_diagram/editor.md) には `import { StockSharpDiagram } from '@stocksharp/diagram'` を使用します。
 
 ## ダイアグラムの埋め込み
 
@@ -48,11 +48,11 @@ renderScheme(document.getElementById('diagram'), '/data/designer-palette.json', 
 
 各ノードの `typeId` はパレット内に存在している必要があります。不明なタイプはプレースホルダーのブロックとして描画されます。ポートは `key` によって参照され、ソースポートの型がターゲットポートの型と互換性がある場合にリンクが有効になります。`renderScheme` は読み取り専用です。エンジンはレイアウトとテーマ適用（ページのライト/ダーク設定に従います）を行い、閲覧者にパン・ズーム・展開を許可しますが、スキームの編集は行いません。
 
-同じコンポーネントは、完全な **エディター** としても動作します。パレットから要素をドラッグし、ポートを接続し、ノードの編集や削除、元に戻す/やり直しを行えます。[インタラクティブエディター](javascript_diagram/editor.md) と [イベントと API](javascript_diagram/events.md) を参照してください。
+同じコンポーネントは、完全な **エディター** としても動作します。パレットから要素をドラッグし、ポートを接続し、ノードの編集や削除、元に戻す/やり直しを行えます。[インタラクティブエディタ](javascript_diagram/editor.md) と [イベントと API](javascript_diagram/events.md) を参照してください。
 
 ## 関連項目
 
-- [インタラクティブエディター](javascript_diagram/editor.md)
+- [インタラクティブエディタ](javascript_diagram/editor.md)
 - [イベントと API](javascript_diagram/events.md)
 - [JavaScript チャート](charts/javascript_charts.md)
 - [Designer](../../designer.md) — デスクトップ版のビジュアルストラテジーエディター

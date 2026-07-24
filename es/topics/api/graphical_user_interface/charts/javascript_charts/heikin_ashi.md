@@ -1,4 +1,4 @@
-# Heikin-Ashi
+# Velas Heikin-Ashi
 
 Las velas Heikin-Ashi ("barra promedio") se calculan a partir del OHLC bruto para suavizar el ruido: las velas consecutivas del mismo color facilitan la lectura de las tendencias, a costa de ocultar la apertura y el cierre reales. Se dibujan con la serie de velas japonesas habitual, alimentada con los valores transformados.
 
@@ -40,6 +40,6 @@ chart.timeScale().fitContent();
 
 ## Véase también
 
-- [Gráficos JavaScript](../javascript_charts.md)
-- [Velas japonesas](candlestick.md)
+- [Gráficos en JavaScript](../javascript_charts.md)
+- [Velas](candlestick.md)
 - [Renko](renko.md)

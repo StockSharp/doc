@@ -26,6 +26,6 @@ Cualquier conjunto de datos de un solo valor funciona aquí — sustituye `c.clo
 
 ## Véase también
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos en JavaScript](../javascript_charts.md)
 - [Área](area.md)
 - [Banda](band.md)

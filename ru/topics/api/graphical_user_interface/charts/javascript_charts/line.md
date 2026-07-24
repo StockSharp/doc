@@ -28,4 +28,4 @@ chart.timeScale().fitContent();
 
 - [JavaScript-графики](../javascript_charts.md)
 - [Область](area.md)
-- [Полоса](band.md)
+- [Полоса (Band)](band.md)

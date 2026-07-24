@@ -15,7 +15,7 @@
 
 ```js
 const off = diagram.on('linkAdded', ({ links }) => console.log('connected', links[0]));
-// later:
+// позже:
 off();
 ```
 
@@ -25,7 +25,7 @@ off();
 
 ```js
 diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] where command is one of
+  // commands: { command, enabled }[], где command — одно из значений:
   // undo | redo | cut | copy | paste | open | delete | properties | help
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
   menu.onPick = command => diagram.executeContextCommand(command);
@@ -46,7 +46,7 @@ diagram.setLinkValidator(({ fromPort, toPort }) => fromPort.type === toPort.type
 const scheme = diagram.save();              // { nodes, links }
 diagram.load(scheme.nodes, scheme.links);
 
-const document = diagram.saveDocument();     // versioned document
+const document = diagram.saveDocument();     // версионированный документ
 diagram.loadDocument(document);
 ```
 
@@ -65,17 +65,17 @@ diagram.on('undoStackChanged', ({ canUndo, canRedo }) => {
 
 ## Состояние выполнения и подсветка ошибок
 
-Диаграмма может накладывать состояние выполнения поверх схемы. `setNodeError` мигает рамкой узла анимацией (~1 секунда) и помечает его красной подсветкой — используйте это, чтобы сообщить о сбое во время выполнения. Кнопка **Error** в [демо редактора](editor.md) делает ровно это.
+Диаграмма может накладывать состояние выполнения поверх схемы. `setNodeError` мигает рамкой узла анимацией (~1 секунда) и помечает его красной подсветкой — используйте это, чтобы сообщить о сбое во время выполнения. Кнопка **Error** в [Интерактивный редактор](editor.md) делает ровно это.
 
 ```js
-diagram.setNodeError('sma', 'SMA failed: no data source is configured.');
-diagram.setNodeError('sma', 'Warning', { animate: false }); // mark it, but skip the initial flash
+diagram.setNodeError('sma', 'Сбой SMA: источник данных не настроен.');
+diagram.setNodeError('sma', 'Предупреждение', { animate: false }); // пометить его, но пропустить начальную вспышку
 ```
 
 Ошибки, существующие на момент загрузки, красят фон красным вместо мигания — передайте их в `load`:
 
 ```js
-diagram.load(nodes, links, { nodeErrors: { sma: 'The saved period value is invalid.' } });
+diagram.load(nodes, links, { nodeErrors: { sma: 'Сохранённое значение периода недопустимо.' } });
 ```
 
 Другие runtime-хуки: `setActiveNode(id)` подсвечивает узел, выполняющийся сейчас (курсор отладчика), `setPortRuntimeState(id, direction, portId, patch)` аннотирует отдельный порт, а `setGlobalError(message)` мигает ошибкой уровня всей схемы. Очистить всё — `clearRuntimeState()`.

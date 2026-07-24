@@ -23,7 +23,7 @@ band.setData(data.map(d => ({ time: d.time, upper: d.upper, lower: d.lower })));
 chart.timeScale().fitContent();
 ```
 
-Berechnen Sie `upper`/`lower` so, wie es die Studie erfordert — für Bollinger-Bänder bilden Sie einen gleitenden Durchschnitt des Schlusskurses und addieren bzw. subtrahieren ein Vielfaches seiner Standardabweichung. Legen Sie das Band über eine Linien- oder Candlestick-Serie, die den Preis selbst trägt.
+Berechnen Sie `upper`/`lower` so, wie es die Studie erfordert — für Bollinger-Bänder bilden Sie einen gleitenden Durchschnitt des Schlusskurses und addieren bzw. subtrahieren ein Vielfaches seiner Standardabweichung. Legen Sie das Band über eine Linien- oder Kerzen-Serie, die den Preis selbst trägt.
 
 ## Siehe auch
 

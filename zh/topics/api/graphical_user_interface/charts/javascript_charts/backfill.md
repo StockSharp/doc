@@ -17,17 +17,17 @@
 import { createChart, CandlestickSeries } from '@stocksharp/chart';
 import { ChartDataController } from '@stocksharp/chart/data';
 
-// A data source: resolve the symbol, then serve pages of bars ending before `to`.
+// 数据源：解析标的，然后返回以 `to` 之前结束的多页 K线。
 const dataSource = {
   resolveSymbol(request) {
     return Promise.resolve({ id: request.symbol, priceFormat: { type: 'price', precision: 2, minMove: 0.01 } });
   },
   getBars(request) {
-    // request: { symbol, resolution, to?, countBack }. Return { bars, hasMoreBefore, hasMoreAfter }.
+    // request：{ symbol, resolution, to?, countBack }。返回 { bars, hasMoreBefore, hasMoreAfter }。
     return fetchBars(request).then(bars => ({ bars, hasMoreBefore: bars.length > 0, hasMoreAfter: false }));
   },
   subscribeBars(request, listener) {
-    // Push realtime bars via listener({ bar, isFinal }); return an unsubscribe function.
+    // 通过回调 ({ bar, isFinal }) 推送实时 K线；返回一个取消订阅函数。
     return () => {};
   },
 };
@@ -39,18 +39,18 @@ const controller = new ChartDataController({
   chart,
   series,
   dataSource,
-  initialCount: 300,               // bars loaded first
-  historyCount: 250,               // bars per older page
-  historyPrefetchThreshold: 40,    // prefetch when within 40 bars of the left edge
-  autoPrefetch: true,              // load older bars automatically on scroll / zoom
+  initialCount: 300,               // 首先加载的 K线
+  historyCount: 250,               // 每页更早数据的 K线数
+  historyPrefetchThreshold: 40,    // 当距左边缘不足 40 根 K线时预取
+  autoPrefetch: true,              // 滚动/缩放时自动加载更早的 K线
 });
 
-// Optional: observe loading state and progress.
+// 可选：观察加载状态与进度。
 controller.subscribe(snap => {
   console.log(snap.loadedBars, snap.hasMoreBefore, snap.loadingHistory);
 });
 
-// Load the first page, then park the viewport near the right edge so there is room to scroll left.
+// 加载第一页，然后将视口停靠在靠近右边缘处，以便留出向左滚动的空间。
 controller.setSelection({ symbol: 'DEMO', resolution: '1h' }).then(() => {
   const loaded = controller.rawData().length;
   chart.timeScale().setVisibleLogicalRange({ from: Math.max(0, loaded - 90), to: loaded + 3 });
@@ -62,5 +62,5 @@ controller.setSelection({ symbol: 'DEMO', resolution: '1h' }).then(() => {
 ## 参见
 
 - [JavaScript 图表](../javascript_charts.md)
-- [蜡烛图](candlestick.md)
+- [K线图](candlestick.md)
 - [指标](indicators.md)

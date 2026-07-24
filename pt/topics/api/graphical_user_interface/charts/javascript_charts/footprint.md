@@ -32,6 +32,6 @@ series.setData(exactBars);
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Perfil de volume](volume_profile.md)
-- [TPO (Market profile)](tpo.md)
+- [TPO (Perfil de mercado)](tpo.md)

@@ -32,10 +32,10 @@ series.setData(candles.map(c => ({
 chart.timeScale().fitContent();
 ```
 
-Chame `series.update({ time, open, high, low, close })` para enviar uma barra em tempo real: o mesmo timestamp substitui o último candle, um timestamp mais recente adiciona um novo.
+Chame `series.update({ time, open, high, low, close })` para enviar uma barra em tempo real: o mesmo timestamp substitui a última vela, um timestamp mais recente adiciona uma nova.
 
 ## Veja também
 
-- [Gráficos JavaScript](../javascript_charts.md)
+- [Gráficos em JavaScript](../javascript_charts.md)
 - [Barras OHLC](bar.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [Velas Heikin-Ashi](heikin_ashi.md)

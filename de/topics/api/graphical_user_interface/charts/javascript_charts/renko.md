@@ -30,5 +30,5 @@ Wählen Sie `boxSize` anhand der Preisspanne des Instruments: zu klein erzeugt R
 ## Siehe auch
 
 - [JavaScript-Charts](../javascript_charts.md)
-- [Point and Figure](point_figure.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [Point-&-Figure-Chart](point_figure.md)
+- [Heikin-Ashi-Kerzen](heikin_ashi.md)

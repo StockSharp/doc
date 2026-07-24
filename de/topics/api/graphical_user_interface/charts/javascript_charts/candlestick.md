@@ -1,6 +1,6 @@
-# Candlestick
+# Kerzenchart
 
-Candlesticks sind die Standard-Preisserie: Jeder Balken wird als Körper zwischen Eröffnungs- und Schlusskurs mit Dochten bis zum Hoch und Tief gezeichnet und je nach Aufwärts- oder Abwärtsbewegung eingefärbt. Sie sind die informationsdichteste Art, den Preis abzulesen, und der Ausgangspunkt für die meisten Charts.
+Kerzen sind die Standard-Preisserie: Jeder Balken wird als Körper zwischen Eröffnungs- und Schlusskurs mit Dochten bis zum Hoch und Tief gezeichnet und je nach Aufwärts- oder Abwärtsbewegung eingefärbt. Sie sind die informationsdichteste Art, den Preis abzulesen, und der Ausgangspunkt für die meisten Charts.
 
 ## Live-Demo
 
@@ -38,4 +38,4 @@ Rufe `series.update({ time, open, high, low, close })` auf, um einen Echtzeit-Ba
 
 - [JavaScript-Charts](../javascript_charts.md)
 - [OHLC-Balken](bar.md)
-- [Heikin-Ashi](heikin_ashi.md)
+- [Heikin-Ashi-Kerzen](heikin_ashi.md)

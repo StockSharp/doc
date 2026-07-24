@@ -29,5 +29,5 @@ Der Balken wird als steigend eingefärbt, wenn der Schlusskurs auf oder über de
 ## Siehe auch
 
 - [JavaScript-Charts](../javascript_charts.md)
-- [Candlestick](candlestick.md)
+- [Kerzenchart](candlestick.md)
 - [Linie](line.md)

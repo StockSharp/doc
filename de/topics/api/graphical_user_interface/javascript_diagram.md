@@ -11,7 +11,7 @@ Das folgende Diagramm ist die echte Engine, die auf dieser Seite läuft — ein 
 ```diagram-demo sma
 ```
 
-Die drei Blöcke sind eine **Candles**-Quelle, die einen **Indicator** (einen einfachen gleitenden Durchschnitt) speist; sowohl die Kerzen als auch die Ausgabe des Indikators werden auf einem **Chart**-Element gezeichnet. Dies ist das kleinste vollständige Muster im Designer: Daten erzeugen, transformieren, visualisieren.
+Die drei Blöcke sind eine **Kerzen**-Quelle, die einen **Indikator** (einen einfachen gleitenden Durchschnitt) speist; sowohl die Kerzen als auch die Ausgabe des Indikators werden auf einem **Chart**-Element gezeichnet. Dies ist das kleinste vollständige Muster im Designer: Daten erzeugen, transformieren, visualisieren.
 
 ## Installation
 
@@ -21,7 +21,7 @@ Installieren Sie das Paket von npm:
 npm install @stocksharp/diagram
 ```
 
-Importieren Sie dann die ES-Module — `import { renderScheme } from '@stocksharp/diagram/embed'` für die schreibgeschützte Einbettung oder `import { StockSharpDiagram } from '@stocksharp/diagram'` für den [interaktiven Editor](javascript_diagram/editor.md).
+Importieren Sie dann die ES-Module — `import { renderScheme } from '@stocksharp/diagram/embed'` für die schreibgeschützte Einbettung oder `import { StockSharpDiagram } from '@stocksharp/diagram'` für den [Interaktiver Editor](javascript_diagram/editor.md).
 
 ## Ein Diagramm einbetten
 
