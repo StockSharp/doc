@@ -3812,18 +3812,6 @@
   "T:StockSharp.Connectors.Common.S3BucketHelper": {
     "summary": "AWS S3 バケットを直接 HTTP 経由で動作させるためのヘルプ (AWS SDK なし)。"
   },
-  "T:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter": {
-    "summary": "CryBroSBE メッセージアダプター — SBE プロトコルを介して connector を SbeServer にクライアント側で送信。"
-  },
-  "T:StockSharp.CryBro.WS.CryBroWSMessageAdapter": {
-    "summary": "電子メール アダプターCryBroWSWebSocketゲート —WsGateにつなぎ、StockSharp@にWsRelayJSONプロトコルからの/へのStockSharpの送信を送信します。"
-  },
-  "T:StockSharp.CryBro.WS.CryBroWSOrderCondition": {
-    "summary": "CryBroWS@connector. ストップフレーバー(ストップロス/テイク-ファシリティ)とアルゴリズム実行フレーバー(TWAP/VWAP/アイスバーグ/NBBO)の条件条件-順序条件-条件-. 味はAlgoKindで区別されます: 注文がnullの場合、それ以外の場合はalgo親がサーバーに転送するルータです。"
-  },
-  "T:StockSharp.CryBro.WS.Native.WsClient": {
-    "summary": "WebSocket@CryBroWS@WsGate. ラップWebSocketClient, IConnectionを実行します。 イベントは、ネイティブDTOを返す - アダプターは、StockSharp@メッセージに変換します。"
-  },
   "T:StockSharp.DXtrade.DXtradeMessageAdapter": {
     "summary": "DXtrade のメッセージ アダプター。"
   },
@@ -7160,6 +7148,9 @@
   "T:StockSharp.Rss.RssMessageAdapter": {
     "summary": "RSS の市場データメッセージ アダプター。"
   },
+  "T:StockSharp.SBE.StockSharpSBEMessageAdapter": {
+    "summary": "StockSharpSBE メッセージアダプター — SBE プロトコルを介して connector を SbeServer にクライアント側で送信。"
+  },
   "T:StockSharp.Server.Core.BaseProtocolServer`3": {
     "summary": "プロトコルサーバー(FIX、SBEなど)のベースクラス。共有インフラ:ライフサイクル、セッション、サブスクリプション、メッセージチャネル、背景タスクが含まれています。"
   },
@@ -7585,6 +7576,15 @@
   },
   "T:StockSharp.Upbit.UpbitOrderCondition": {
     "summary": "アップビット注文条件。"
+  },
+  "T:StockSharp.WS.Native.WsClient": {
+    "summary": "WebSocket@StockSharpWS@WsGate. ラップWebSocketClient, IConnectionを実行します。 イベントは、ネイティブDTOを返す - アダプターは、StockSharp@メッセージに変換します。"
+  },
+  "T:StockSharp.WS.StockSharpWSMessageAdapter": {
+    "summary": "電子メール アダプターStockSharpWSWebSocketゲート —WsGateにつなぎ、StockSharp@にWsRelayJSONプロトコルからの/へのStockSharpの送信を送信します。"
+  },
+  "T:StockSharp.WS.StockSharpWSOrderCondition": {
+    "summary": "StockSharpWS@connector. ストップフレーバー(ストップロス/テイク-ファシリティ)とアルゴリズム実行フレーバー(TWAP/VWAP/アイスバーグ/NBBO)の条件条件-順序条件-条件-. 味はAlgoKindで区別されます: 注文がnullの場合、それ以外の場合はalgo親がサーバーに転送するルータです。"
   },
   "T:StockSharp.Ws.WsAuthKeyRequest": {
     "summary": "クライアント → API キー経由でサーバーのauth. パスワードフローの代わりにプログラム型クライアント(ボット、SDK)によって使用されます。 署名は、HMAC-SHA256 を \"$ {KeyId} \\n $ {Timestamp} \\n $ {Nonce} \\n $ {Nonce} \\n\" に、API キーシークレットで使用されます。 交換用の標準線形状。 外部の ±2 分か (KeyId、Nonce) が最近見られた場合 (再プレイ)。"
@@ -20930,12 +20930,6 @@
   "F:StockSharp.Localization.LocalizedStrings.CrossoverProbabilityKey": {
     "summary": "クロスオーバー確率"
   },
-  "F:StockSharp.Localization.LocalizedStrings.CryBroSBEKey": {
-    "summary": "担当: 佐藤 宏"
-  },
-  "F:StockSharp.Localization.LocalizedStrings.CryBroWSKey": {
-    "summary": "担当: 藤田 宏"
-  },
   "F:StockSharp.Localization.LocalizedStrings.CryptoAddressKey": {
     "summary": "暗号化アドレス"
   },
@@ -29446,6 +29440,12 @@
   },
   "F:StockSharp.Localization.LocalizedStrings.StockSharpLLCKey": {
     "summary": "担当: 佐藤 宏"
+  },
+  "F:StockSharp.Localization.LocalizedStrings.StockSharpSBEKey": {
+    "summary": "StockSharp SBE"
+  },
+  "F:StockSharp.Localization.LocalizedStrings.StockSharpWSKey": {
+    "summary": "StockSharp WS"
   },
   "F:StockSharp.Localization.LocalizedStrings.StopAllKey": {
     "summary": "全てを止める"
@@ -77379,121 +77379,6 @@
       "baseUrl": "S3 互換エンドポイントのオプションのカスタムベース URL 。 null なら、バーチャルホスト型スタイルを使用します。"
     }
   },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
-    "summary": "CryBroSBEMessageAdapter の新規インスタンスを初期化します。"
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
-    "summary": "対象となる全ての金融商品のダウンロードは有効です。",
-    "returns": "結果をチェックする。",
-    "params": {
-      "dataType": "データ型情報。"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "キャンドルPriceLevels@を応援します。",
-    "returns": "結果をチェックする。",
-    "params": {
-      "subscription": "担当: 佐藤 宏"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "キャンドルのサブスクリプションとライブ更新をサポート。",
-    "returns": "結果をチェックする。",
-    "params": {
-      "subscription": "担当: 佐藤 宏"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
-    "summary": "設定をロードします。",
-    "params": {
-      "storage": "設定ストレージ。"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
-    "summary": "設定を保存します。",
-    "params": {
-      "storage": "設定ストレージ。"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.ToString": {
-    "summary": "ライン表現に換算します。",
-    "returns": "弦のパフォーマンス。"
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
-    "summary": "CryBroWSMessageAdapter の新規インスタンスを初期化します。"
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
-    "summary": "対象となる全ての金融商品のダウンロードは有効です。",
-    "returns": "結果をチェックする。",
-    "params": {
-      "dataType": "データ型情報。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "キャンドルPriceLevels@を応援します。",
-    "returns": "結果をチェックする。",
-    "params": {
-      "subscription": "担当: 佐藤 宏"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "キャンドルのサブスクリプションとライブ更新をサポート。",
-    "returns": "結果をチェックする。",
-    "params": {
-      "subscription": "担当: 佐藤 宏"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
-    "summary": "設定をロードします。",
-    "params": {
-      "storage": "設定ストレージ。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnLevel1SubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "サブスクリプションリクエストをLevel1データに処理します。Level1サブスクリプション処理の実装をオーバーライドします。デフォルトでは、NotSupportedをスローします。",
-    "returns": "同期動作を表すValueTask",
-    "params": {
-      "mdMsg": "市場データサブスクリプションメッセージ。",
-      "cancellationToken": "キャンセルトークンで操作をキャンセルします。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnMarketDepthSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "市場深度データへのサブスクリプションリクエストを処理します。 市場深度サブスクリプション処理の実装をオーバーライドします。 デフォルト実装はNotSupportedをスローします。",
-    "returns": "同期動作を表すValueTask",
-    "params": {
-      "mdMsg": "市場データサブスクリプションメッセージ。",
-      "cancellationToken": "キャンセルトークンで操作をキャンセルします。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnTFCandlesSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "時間枠のキャンドル(TFキャンドル)データのためのサブスクリプションリクエストを処理します。 TFキャンドルサブスクリプション処理の実装をオーバーライドします。 デフォルトの実装はNotSupportedをスローします。",
-    "returns": "同期動作を表すValueTask",
-    "params": {
-      "mdMsg": "市場データサブスクリプションメッセージ。",
-      "cancellationToken": "キャンセルトークンで操作をキャンセルします。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnTicksSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "サブスクリプションリクエストを処理し、データのティックスを処理します。 サブスクリプション処理のティックスへの実装をオーバーライドします。 デフォルトでは、NotSupportedをスローします。",
-    "returns": "同期動作を表すValueTask",
-    "params": {
-      "mdMsg": "市場データサブスクリプションメッセージ。",
-      "cancellationToken": "キャンセルトークンで操作をキャンセルします。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
-    "summary": "設定を保存します。",
-    "params": {
-      "storage": "設定ストレージ。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.ToString": {
-    "summary": "ライン表現に換算します。",
-    "returns": "弦のパフォーマンス。"
-  },
-  "M:StockSharp.CryBro.WS.Native.WsClient.ComputeSignature(System.String,System.String,System.Int64,System.String)": {
-    "summary": "HMAC-SHA256 は keyId\\nts\\n キーを秘密、小文字の六角でキープします。 サーバー側 ApiKeyService.ComputeSignature をミラーリングします。"
-  },
   "M:StockSharp.DXtrade.DXtradeMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
     "summary": "DXtradeMessageAdapter の新規インスタンスを初期化します。",
     "params": {
@@ -98000,6 +97885,46 @@
     "summary": "ライン表現に換算します。",
     "returns": "弦のパフォーマンス。"
   },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
+    "summary": "StockSharpSBEMessageAdapter の新規インスタンスを初期化します。"
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
+    "summary": "対象となる全ての金融商品のダウンロードは有効です。",
+    "returns": "結果をチェックする。",
+    "params": {
+      "dataType": "データ型情報。"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "キャンドルPriceLevels@を応援します。",
+    "returns": "結果をチェックする。",
+    "params": {
+      "subscription": "担当: 佐藤 宏"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "キャンドルのサブスクリプションとライブ更新をサポート。",
+    "returns": "結果をチェックする。",
+    "params": {
+      "subscription": "担当: 佐藤 宏"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
+    "summary": "設定をロードします。",
+    "params": {
+      "storage": "設定ストレージ。"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
+    "summary": "設定を保存します。",
+    "params": {
+      "storage": "設定ストレージ。"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.ToString": {
+    "summary": "ライン表現に換算します。",
+    "returns": "弦のパフォーマンス。"
+  },
   "M:StockSharp.Server.Core.BaseProtocolServer`3.#ctor(`2)": {
     "summary": "新規インスタンスを初期化します。",
     "params": {
@@ -100389,6 +100314,81 @@
   },
   "M:StockSharp.Upbit.UpbitOrderCondition.#ctor": {
     "summary": "UpbitOrderCondition の新規インスタンスを初期化します。"
+  },
+  "M:StockSharp.WS.Native.WsClient.ComputeSignature(System.String,System.String,System.Int64,System.String)": {
+    "summary": "HMAC-SHA256 は keyId\\nts\\n キーを秘密、小文字の六角でキープします。 サーバー側 ApiKeyService.ComputeSignature をミラーリングします。"
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
+    "summary": "StockSharpWSMessageAdapter の新規インスタンスを初期化します。"
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
+    "summary": "対象となる全ての金融商品のダウンロードは有効です。",
+    "returns": "結果をチェックする。",
+    "params": {
+      "dataType": "データ型情報。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "キャンドルPriceLevels@を応援します。",
+    "returns": "結果をチェックする。",
+    "params": {
+      "subscription": "担当: 佐藤 宏"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "キャンドルのサブスクリプションとライブ更新をサポート。",
+    "returns": "結果をチェックする。",
+    "params": {
+      "subscription": "担当: 佐藤 宏"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
+    "summary": "設定をロードします。",
+    "params": {
+      "storage": "設定ストレージ。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnLevel1SubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "サブスクリプションリクエストをLevel1データに処理します。Level1サブスクリプション処理の実装をオーバーライドします。デフォルトでは、NotSupportedをスローします。",
+    "returns": "同期動作を表すValueTask",
+    "params": {
+      "mdMsg": "市場データサブスクリプションメッセージ。",
+      "cancellationToken": "キャンセルトークンで操作をキャンセルします。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnMarketDepthSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "市場深度データへのサブスクリプションリクエストを処理します。 市場深度サブスクリプション処理の実装をオーバーライドします。 デフォルト実装はNotSupportedをスローします。",
+    "returns": "同期動作を表すValueTask",
+    "params": {
+      "mdMsg": "市場データサブスクリプションメッセージ。",
+      "cancellationToken": "キャンセルトークンで操作をキャンセルします。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnTFCandlesSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "時間枠のキャンドル(TFキャンドル)データのためのサブスクリプションリクエストを処理します。 TFキャンドルサブスクリプション処理の実装をオーバーライドします。 デフォルトの実装はNotSupportedをスローします。",
+    "returns": "同期動作を表すValueTask",
+    "params": {
+      "mdMsg": "市場データサブスクリプションメッセージ。",
+      "cancellationToken": "キャンセルトークンで操作をキャンセルします。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnTicksSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "サブスクリプションリクエストを処理し、データのティックスを処理します。 サブスクリプション処理のティックスへの実装をオーバーライドします。 デフォルトでは、NotSupportedをスローします。",
+    "returns": "同期動作を表すValueTask",
+    "params": {
+      "mdMsg": "市場データサブスクリプションメッセージ。",
+      "cancellationToken": "キャンセルトークンで操作をキャンセルします。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
+    "summary": "設定を保存します。",
+    "params": {
+      "storage": "設定ストレージ。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.ToString": {
+    "summary": "ライン表現に換算します。",
+    "returns": "弦のパフォーマンス。"
   },
   "M:StockSharp.Ws.WsCandle.From(StockSharp.Messages.CandleMessage)": {
     "summary": "から。"
@@ -135928,69 +135928,6 @@
   "P:StockSharp.Configuration.SubscriptionConfig.To": {
     "summary": "要求されたデータ間隔の任意終了時刻(UTC)。"
   },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Address": {
-    "summary": "サーバーアドレス。"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportNativeCandles": {
-    "summary": "ネイティブキャンドルのサポートを有効にします(サーバーは、あらかじめ構築されたキャンドルをストリーム)。 とき(デフォルト)、CandleBuilderは、クライアント側でティック/L1からキャンドルを構築します。"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportOrderBookIncrements": {
-    "summary": "アダプターは、増分注文書を翻訳します。"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportSubscriptions": {
-    "summary": "サブスクリプション(ticks、オーダーブックなど)をサポート"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Password": {
-    "summary": "パスワード"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.SenderCompId": {
-    "summary": "送信者ID。"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.TargetCompId": {
-    "summary": "ターゲットID。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Address": {
-    "summary": "サーバアドレス(e.g@.ws://localhost:20000/ws)"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportOrderBookIncrements": {
-    "summary": "アダプターは、増分注文書を翻訳します。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Key": {
-    "summary": "主。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Login": {
-    "summary": "WsGateログイン/パスワードフローにログインします。設定されたキーとキーが設定されていない場合は、HMAC署名の代わりに、アダプターはログイン+パスワードで認証します。パスワードはJWTになります。同じフローはWebターミナルが使用されます。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Password": {
-    "summary": "ログイン/パスワードフローのログインとパスワード(JWT)をペアリングしました。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Secret": {
-    "summary": "秘密。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.ActivationPrice": {
-    "summary": "保護戦略に到達したときに価格の絶対値がアクティブになります。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoEndAt": {
-    "summary": "algoが終了しなければならないUTC時間(そして残りの部分をキャンセル)。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoKind": {
-    "summary": "アルゴリズム実行型(=TWAP、2=VWAP、3=Iceberg、4=NBBO)、サーバサイドAlgoOrderKindenum. プレーンストップオーダーのNullにマッチ。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoParametersJson": {
-    "summary": "パーアルゴパラメータ(スライスカウント、表示量、参加率、...)のJSON。 アルゴリズム固有のスキーマ、ワイヤ/条件への不透明。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoStartAt": {
-    "summary": "algo が動作する UTC 時間."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.ClosePositionPrice": {
-    "summary": "ポジション価格を閉じます。市場によって近い意味します。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.IsTrailing": {
-    "summary": "停止損失を追跡する。"
-  },
-  "P:StockSharp.CryBro.WS.Native.WsClient.ClientId": {
-    "summary": "サーバがhelloフレームに割り当てられたクライアントID。"
-  },
   "P:StockSharp.DXtrade.DXtradeMessageAdapter.Address": {
     "summary": "サーバーアドレス。"
   },
@@ -143590,12 +143527,6 @@
   },
   "P:StockSharp.Localization.LocalizedStrings.CrossoverProbabilityDesc": {
     "summary": "交差する可能性が起こります。"
-  },
-  "P:StockSharp.Localization.LocalizedStrings.CryBroSBE": {
-    "summary": "担当: 佐藤 宏"
-  },
-  "P:StockSharp.Localization.LocalizedStrings.CryBroWS": {
-    "summary": "担当: 藤田 宏"
   },
   "P:StockSharp.Localization.LocalizedStrings.Crypto": {
     "summary": "クリエーター"
@@ -152110,6 +152041,12 @@
   },
   "P:StockSharp.Localization.LocalizedStrings.StockSharpLLC": {
     "summary": "担当: 佐藤 宏"
+  },
+  "P:StockSharp.Localization.LocalizedStrings.StockSharpSBE": {
+    "summary": "StockSharp SBE"
+  },
+  "P:StockSharp.Localization.LocalizedStrings.StockSharpWS": {
+    "summary": "StockSharp WS"
   },
   "P:StockSharp.Localization.LocalizedStrings.Stop": {
     "summary": "ストップ"
@@ -164470,6 +164407,27 @@
   "P:StockSharp.Rss.RssMessageAdapter.CustomDateFormat": {
     "summary": "日付の形式。 RSSストリームフォーマットがddd、dd MMM yyyyy HH:mm:ss zzzzzzと異なる場合、必須です。"
   },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.Address": {
+    "summary": "サーバーアドレス。"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportNativeCandles": {
+    "summary": "ネイティブキャンドルのサポートを有効にします(サーバーは、あらかじめ構築されたキャンドルをストリーム)。 とき(デフォルト)、CandleBuilderは、クライアント側でティック/L1からキャンドルを構築します。"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportOrderBookIncrements": {
+    "summary": "アダプターは、増分注文書を翻訳します。"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportSubscriptions": {
+    "summary": "サブスクリプション(ticks、オーダーブックなど)をサポート"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.Password": {
+    "summary": "パスワード"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.SenderCompId": {
+    "summary": "送信者ID。"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.TargetCompId": {
+    "summary": "ターゲットID。"
+  },
   "P:StockSharp.Server.Core.BaseProtocolServer`3.LoginRateLimiter": {
     "summary": "ログインの試みのためのレートリミッター(すべてのリスナー間で共有)。"
   },
@@ -165543,6 +165501,48 @@
   },
   "P:StockSharp.Upbit.UpbitMessageAdapter.Secret": {
     "summary": "秘密。"
+  },
+  "P:StockSharp.WS.Native.WsClient.ClientId": {
+    "summary": "サーバがhelloフレームに割り当てられたクライアントID。"
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Address": {
+    "summary": "サーバアドレス(e.g@.ws://localhost:20000/ws)"
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportOrderBookIncrements": {
+    "summary": "アダプターは、増分注文書を翻訳します。"
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Key": {
+    "summary": "主。"
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Login": {
+    "summary": "WsGateログイン/パスワードフローにログインします。設定されたキーとキーが設定されていない場合は、HMAC署名の代わりに、アダプターはログイン+パスワードで認証します。パスワードはJWTになります。同じフローはWebターミナルが使用されます。"
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Password": {
+    "summary": "ログイン/パスワードフローのログインとパスワード(JWT)をペアリングしました。"
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Secret": {
+    "summary": "秘密。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.ActivationPrice": {
+    "summary": "保護戦略に到達したときに価格の絶対値がアクティブになります。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoEndAt": {
+    "summary": "algoが終了しなければならないUTC時間(そして残りの部分をキャンセル)。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoKind": {
+    "summary": "アルゴリズム実行型(=TWAP、2=VWAP、3=Iceberg、4=NBBO)、サーバサイドAlgoOrderKindenum. プレーンストップオーダーのNullにマッチ。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoParametersJson": {
+    "summary": "パーアルゴパラメータ(スライスカウント、表示量、参加率、...)のJSON。 アルゴリズム固有のスキーマ、ワイヤ/条件への不透明。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoStartAt": {
+    "summary": "algo が動作する UTC 時間."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.ClosePositionPrice": {
+    "summary": "ポジション価格を閉じます。市場によって近い意味します。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.IsTrailing": {
+    "summary": "停止損失を追跡する。"
   },
   "P:StockSharp.Ws.WsAuthKeyRequest.KeyId": {
     "summary": "ワイヤフィールドkeyId — パブリックID (ak_...)。 秘密のサーバー側を調べます。"

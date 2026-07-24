@@ -2,7 +2,7 @@
 
 Поддержка **SBE (Simple Binary Encoding)** предоставляет компактный бинарный транспорт для рыночных данных и торговых сообщений с низкой задержкой.
 
-В StockSharp предусмотрены [SbeRecordSerializer](xref:StockSharp.Server.Sbe.SbeRecordSerializer) для кодирования и декодирования записей, [SbeServer](xref:StockSharp.Server.Sbe.SbeServer) для приема клиентских подключений и [CryBroSBEMessageAdapter](xref:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter) для подключения клиента.
+В StockSharp предусмотрены [SbeRecordSerializer](xref:StockSharp.Server.Sbe.SbeRecordSerializer) для кодирования и декодирования записей, [SbeServer](xref:StockSharp.Server.Sbe.SbeServer) для приема клиентских подключений и [StockSharpSBEMessageAdapter](xref:StockSharp.SBE.StockSharpSBEMessageAdapter) для подключения клиента.
 
 Реализация поддерживает поиск инструментов, Level1, стаканы, тики, необязательные нативные свечи, данные по портфелям и позициям, а также операции с заявками. Идентификаторы и версии схемы на клиенте и сервере должны совпадать.
 

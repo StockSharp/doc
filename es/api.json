@@ -3812,18 +3812,6 @@
   "T:StockSharp.Connectors.Common.S3BucketHelper": {
     "summary": "Ayudante para trabajar con cubos AWS S3 a través de HTTP directo (sin AWS SDK)."
   },
-  "T:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter": {
-    "summary": "Adaptador de mensajes CryBroSBE — cliente-side connector a SbeServer a través del protocolo SBE."
-  },
-  "T:StockSharp.CryBro.WS.CryBroWSMessageAdapter": {
-    "summary": "Adaptador de mensajes para la puerta CryBroWS WebSocket — se conecta a WsGate y traduce mensajes StockSharp al protocolo WsRelay JSON."
-  },
-  "T:StockSharp.CryBro.WS.CryBroWSOrderCondition": {
-    "summary": "Condición-orden para el CryBro WS connector. Lleva el sabor de parada (de parada/despegue) y el sabor de ejecución algoritmoica (TWAP / VWAP / Iceberg / NBBO).El sabor es dicho por AlgoKind@padre: cuando se null el pedido es un servidor de parada, de lo contrario."
-  },
-  "T:StockSharp.CryBro.WS.Native.WsClient": {
-    "summary": "WebSocket cliente para CryBroWS WsGate. Wraps WebSocketClient, implementa IConnection. Eventos devuelven DTOs nativos — adaptador convierte a mensajes StockSharp."
-  },
   "T:StockSharp.DXtrade.DXtradeMessageAdapter": {
     "summary": "El adaptador de mensaje para DXtrade."
   },
@@ -7160,6 +7148,9 @@
   "T:StockSharp.Rss.RssMessageAdapter": {
     "summary": "Adaptador de mensajes de datos de mercado para RSS."
   },
+  "T:StockSharp.SBE.StockSharpSBEMessageAdapter": {
+    "summary": "Adaptador de mensajes StockSharpSBE — cliente-side connector a SbeServer a través del protocolo SBE."
+  },
   "T:StockSharp.Server.Core.BaseProtocolServer`3": {
     "summary": "Clase base para servidores de protocolo (FIX, SBE, etc.) Contiene infraestructura compartida: ciclo de vida, sesiones, suscripciones, canales de mensajes, tareas de fondo."
   },
@@ -7585,6 +7576,15 @@
   },
   "T:StockSharp.Upbit.UpbitOrderCondition": {
     "summary": "Condicion de orden de arriba."
+  },
+  "T:StockSharp.WS.Native.WsClient": {
+    "summary": "WebSocket cliente para StockSharpWS WsGate. Wraps WebSocketClient, implementa IConnection. Eventos devuelven DTOs nativos — adaptador convierte a mensajes StockSharp."
+  },
+  "T:StockSharp.WS.StockSharpWSMessageAdapter": {
+    "summary": "Adaptador de mensajes para la puerta StockSharpWS WebSocket — se conecta a WsGate y traduce mensajes StockSharp al protocolo WsRelay JSON."
+  },
+  "T:StockSharp.WS.StockSharpWSOrderCondition": {
+    "summary": "Condición-orden para el StockSharp WS connector. Lleva el sabor de parada (de parada/despegue) y el sabor de ejecución algoritmoica (TWAP / VWAP / Iceberg / NBBO).El sabor es dicho por AlgoKind@padre: cuando se null el pedido es un servidor de parada, de lo contrario."
   },
   "T:StockSharp.Ws.WsAuthKeyRequest": {
     "summary": "Cliente → servidor auth a través de la tecla API. Utilizado por clientes programáticos (bots, SDKs) en lugar del flujo de contraseña. La firma es HMAC-SHA256 sobre \"${KeyId}\\n${Timestamp}\\n${Nonce}\\n\" con el secreto de la clave API — la forma de cable estándar de los intercambios."
@@ -20930,12 +20930,6 @@
   "F:StockSharp.Localization.LocalizedStrings.CrossoverProbabilityKey": {
     "summary": "Probabilidad de cruce"
   },
-  "F:StockSharp.Localization.LocalizedStrings.CryBroSBEKey": {
-    "summary": "CryBroSBE"
-  },
-  "F:StockSharp.Localization.LocalizedStrings.CryBroWSKey": {
-    "summary": "CryBroWS"
-  },
   "F:StockSharp.Localization.LocalizedStrings.CryptoAddressKey": {
     "summary": "Dirección de Crypto"
   },
@@ -29446,6 +29440,12 @@
   },
   "F:StockSharp.Localization.LocalizedStrings.StockSharpLLCKey": {
     "summary": "StockSharpLLC"
+  },
+  "F:StockSharp.Localization.LocalizedStrings.StockSharpSBEKey": {
+    "summary": "StockSharp SBE"
+  },
+  "F:StockSharp.Localization.LocalizedStrings.StockSharpWSKey": {
+    "summary": "StockSharp WS"
   },
   "F:StockSharp.Localization.LocalizedStrings.StopAllKey": {
     "summary": "Parad todos"
@@ -77379,121 +77379,6 @@
       "baseUrl": "URL de base personalizada opcional para puntos finales compatibles con S3. Si null, utiliza estilo virtual hosted."
     }
   },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
-    "summary": "Inicia una nueva instancia de la CryBroSBEMessageAdapter."
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
-    "summary": "Es para los instrumentos financieros especificados que se descargan habilitados.",
-    "returns": "Resultado de la comprobación.",
-    "params": {
-      "dataType": "Datos tipo info."
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Soporta velas PriceLevels.",
-    "returns": "Resultado de la comprobación.",
-    "params": {
-      "subscription": "MarketDataMessage@"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Soporta la suscripción de velas y actualizaciones en vivo.",
-    "returns": "Resultado de la comprobación.",
-    "params": {
-      "subscription": "MarketDataMessage@"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
-    "summary": "Ajustes de carga.",
-    "params": {
-      "storage": "Configuración de almacenamiento."
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
-    "summary": "Guardar configuración.",
-    "params": {
-      "storage": "Configuración de almacenamiento."
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.ToString": {
-    "summary": "Convertirse en una representación de línea.",
-    "returns": "Rendimiento de cuerda."
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
-    "summary": "Inicia una nueva instancia de la CryBroWSMessageAdapter."
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
-    "summary": "Es para los instrumentos financieros especificados que se descargan habilitados.",
-    "returns": "Resultado de la comprobación.",
-    "params": {
-      "dataType": "Datos tipo info."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Soporta velas PriceLevels.",
-    "returns": "Resultado de la comprobación.",
-    "params": {
-      "subscription": "MarketDataMessage@"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Soporta la suscripción de velas y actualizaciones en vivo.",
-    "returns": "Resultado de la comprobación.",
-    "params": {
-      "subscription": "MarketDataMessage@"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
-    "summary": "Ajustes de carga.",
-    "params": {
-      "storage": "Configuración de almacenamiento."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnLevel1SubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "Solicitud de suscripción de fichas para datos de nivel 1. Sobrescribir para proporcionar la implementación para el procesamiento de suscripción de nivel1. La implementación predeterminada lanza NotSupported.",
-    "returns": "A ValueTask@ representante de la operación asincrónica.",
-    "params": {
-      "mdMsg": "Mensaje de suscripción de datos de mercado.",
-      "cancellationToken": "Cancelación de token para cancelar la operación."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnMarketDepthSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "Solicitud de suscripción de mangos para datos de profundidad de mercado. Sobrescribir para proporcionar la implementación para el procesamiento de suscripción a profundidad de mercado. La implementación predeterminada lanza NotSupported.",
-    "returns": "A ValueTask@ representante de la operación asincrónica.",
-    "params": {
-      "mdMsg": "Mensaje de suscripción de datos de mercado.",
-      "cancellationToken": "Cancelación de token para cancelar la operación."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnTFCandlesSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "Solicitud de suscripción de manijas para los datos de velas de marco de tiempo ( velas de FT). Sobrescribir para proporcionar aplicación para el procesamiento de suscripción de velas TF. La implementación predeterminada lanza NotSupported.",
-    "returns": "A ValueTask@ representante de la operación asincrónica.",
-    "params": {
-      "mdMsg": "Mensaje de suscripción de datos de mercado.",
-      "cancellationToken": "Cancelación de token para cancelar la operación."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnTicksSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "Solicitud de suscripción de mangos para datos de garrapatas. Sobrescribir para proporcionar la implementación para el procesamiento de la suscripción de garrapatas. La implementación predeterminada lanza NotSupported.",
-    "returns": "A ValueTask@ representante de la operación asincrónica.",
-    "params": {
-      "mdMsg": "Mensaje de suscripción de datos de mercado.",
-      "cancellationToken": "Cancelación de token para cancelar la operación."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
-    "summary": "Guardar configuración.",
-    "params": {
-      "storage": "Configuración de almacenamiento."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.ToString": {
-    "summary": "Convertirse en una representación de línea.",
-    "returns": "Rendimiento de cuerda."
-  },
-  "M:StockSharp.CryBro.WS.Native.WsClient.ComputeSignature(System.String,System.String,System.Int64,System.String)": {
-    "summary": "HMAC-SHA256 sobre keyId\\nts\\nnonce\\n keyed by the secret, lowercase hex. Mirrors the server-side ApiKeyService.ComputeSignature@."
-  },
   "M:StockSharp.DXtrade.DXtradeMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
     "summary": "Inicia una nueva instancia de la DXtradeMessageAdapter.",
     "params": {
@@ -98000,6 +97885,46 @@
     "summary": "Convertirse en una representación de línea.",
     "returns": "Rendimiento de cuerda."
   },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
+    "summary": "Inicia una nueva instancia de la StockSharpSBEMessageAdapter."
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
+    "summary": "Es para los instrumentos financieros especificados que se descargan habilitados.",
+    "returns": "Resultado de la comprobación.",
+    "params": {
+      "dataType": "Datos tipo info."
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Soporta velas PriceLevels.",
+    "returns": "Resultado de la comprobación.",
+    "params": {
+      "subscription": "MarketDataMessage@"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Soporta la suscripción de velas y actualizaciones en vivo.",
+    "returns": "Resultado de la comprobación.",
+    "params": {
+      "subscription": "MarketDataMessage@"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
+    "summary": "Ajustes de carga.",
+    "params": {
+      "storage": "Configuración de almacenamiento."
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
+    "summary": "Guardar configuración.",
+    "params": {
+      "storage": "Configuración de almacenamiento."
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.ToString": {
+    "summary": "Convertirse en una representación de línea.",
+    "returns": "Rendimiento de cuerda."
+  },
   "M:StockSharp.Server.Core.BaseProtocolServer`3.#ctor(`2)": {
     "summary": "Inicia una nueva instancia.",
     "params": {
@@ -100389,6 +100314,81 @@
   },
   "M:StockSharp.Upbit.UpbitOrderCondition.#ctor": {
     "summary": "Inicia una nueva instancia de la UpbitOrderCondition."
+  },
+  "M:StockSharp.WS.Native.WsClient.ComputeSignature(System.String,System.String,System.Int64,System.String)": {
+    "summary": "HMAC-SHA256 sobre keyId\\nts\\nnonce\\n keyed by the secret, lowercase hex. Mirrors the server-side ApiKeyService.ComputeSignature@."
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
+    "summary": "Inicia una nueva instancia de la StockSharpWSMessageAdapter."
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
+    "summary": "Es para los instrumentos financieros especificados que se descargan habilitados.",
+    "returns": "Resultado de la comprobación.",
+    "params": {
+      "dataType": "Datos tipo info."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Soporta velas PriceLevels.",
+    "returns": "Resultado de la comprobación.",
+    "params": {
+      "subscription": "MarketDataMessage@"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Soporta la suscripción de velas y actualizaciones en vivo.",
+    "returns": "Resultado de la comprobación.",
+    "params": {
+      "subscription": "MarketDataMessage@"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
+    "summary": "Ajustes de carga.",
+    "params": {
+      "storage": "Configuración de almacenamiento."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnLevel1SubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "Solicitud de suscripción de fichas para datos de nivel 1. Sobrescribir para proporcionar la implementación para el procesamiento de suscripción de nivel1. La implementación predeterminada lanza NotSupported.",
+    "returns": "A ValueTask@ representante de la operación asincrónica.",
+    "params": {
+      "mdMsg": "Mensaje de suscripción de datos de mercado.",
+      "cancellationToken": "Cancelación de token para cancelar la operación."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnMarketDepthSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "Solicitud de suscripción de mangos para datos de profundidad de mercado. Sobrescribir para proporcionar la implementación para el procesamiento de suscripción a profundidad de mercado. La implementación predeterminada lanza NotSupported.",
+    "returns": "A ValueTask@ representante de la operación asincrónica.",
+    "params": {
+      "mdMsg": "Mensaje de suscripción de datos de mercado.",
+      "cancellationToken": "Cancelación de token para cancelar la operación."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnTFCandlesSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "Solicitud de suscripción de manijas para los datos de velas de marco de tiempo ( velas de FT). Sobrescribir para proporcionar aplicación para el procesamiento de suscripción de velas TF. La implementación predeterminada lanza NotSupported.",
+    "returns": "A ValueTask@ representante de la operación asincrónica.",
+    "params": {
+      "mdMsg": "Mensaje de suscripción de datos de mercado.",
+      "cancellationToken": "Cancelación de token para cancelar la operación."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnTicksSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "Solicitud de suscripción de mangos para datos de garrapatas. Sobrescribir para proporcionar la implementación para el procesamiento de la suscripción de garrapatas. La implementación predeterminada lanza NotSupported.",
+    "returns": "A ValueTask@ representante de la operación asincrónica.",
+    "params": {
+      "mdMsg": "Mensaje de suscripción de datos de mercado.",
+      "cancellationToken": "Cancelación de token para cancelar la operación."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
+    "summary": "Guardar configuración.",
+    "params": {
+      "storage": "Configuración de almacenamiento."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.ToString": {
+    "summary": "Convertirse en una representación de línea.",
+    "returns": "Rendimiento de cuerda."
   },
   "M:StockSharp.Ws.WsCandle.From(StockSharp.Messages.CandleMessage)": {
     "summary": "De."
@@ -135928,69 +135928,6 @@
   "P:StockSharp.Configuration.SubscriptionConfig.To": {
     "summary": "Tiempo de finalización opcional (UTC) del intervalo de datos solicitado."
   },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Address": {
-    "summary": "Dirección de servidor."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportNativeCandles": {
-    "summary": "Permite el soporte de vela nativa (candelas preconstruidas por el servidor). Cuando (por defecto), CandleBuilder@ construirá velas desde las garrapatas/L1 en el lado cliente."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportOrderBookIncrements": {
-    "summary": "Adaptador traduce libros de orden incremental."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportSubscriptions": {
-    "summary": "Soporta cualquier suscripción (ticks, libros de pedidos, etc.)."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Password": {
-    "summary": "Contraseña."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.SenderCompId": {
-    "summary": "ID de remitente."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.TargetCompId": {
-    "summary": "Identificación de destino."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Address": {
-    "summary": "Dirección del servidor WebSocket (e.g. ws://localhost:20000/ws)."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportOrderBookIncrements": {
-    "summary": "Adaptador traduce libros de orden incremental."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Key": {
-    "summary": "Llave."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Login": {
-    "summary": "Inicio de sesión para el flujo WsGate login/password. Cuando se establece y no se configura Key, el adaptador autentica con login + Contraseña en lugar de firma HMAC. La contraseña puede ser un JWT — el mismo flujo que el terminal web utiliza."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Password": {
-    "summary": "Contraseña (o JWT) emparejado con Iniciar sesión para el flujo de inicio de sesión/password."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Secret": {
-    "summary": "Secreto."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.ActivationPrice": {
-    "summary": "El valor absoluto del precio cuando se alcanza la estrategia de protección se activa."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoEndAt": {
-    "summary": "Tiempo de UTC el algo debe terminar (entonces cancela el resto)."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoKind": {
-    "summary": "Tipo de ejecución Algorítmica (1=TWAP, 2=VWAP, 3=Iceberg, 4=NBBO), que coincide con el servidor-side AlgoOrderKind enum. Rellena una orden de parada sencilla."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoParametersJson": {
-    "summary": "JSON de parámetros de per-algo (conteo de piojos, volumen de visualización, tasa de participación, ...). esquema específico de algo, opaco al alambre/condición."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoStartAt": {
-    "summary": "Hora de UTC el algo debe comenzar a funcionar."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.ClosePositionPrice": {
-    "summary": "Precio de posición cercano. significa cercano por mercado."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.IsTrailing": {
-    "summary": "Perder la parada."
-  },
-  "P:StockSharp.CryBro.WS.Native.WsClient.ClientId": {
-    "summary": "ID de cliente asignado por el servidor en el marco de salud."
-  },
   "P:StockSharp.DXtrade.DXtradeMessageAdapter.Address": {
     "summary": "Dirección de servidor."
   },
@@ -143590,12 +143527,6 @@
   },
   "P:StockSharp.Localization.LocalizedStrings.CrossoverProbabilityDesc": {
     "summary": "Probabilidad de la cruzada que ocurre."
-  },
-  "P:StockSharp.Localization.LocalizedStrings.CryBroSBE": {
-    "summary": "CryBroSBE"
-  },
-  "P:StockSharp.Localization.LocalizedStrings.CryBroWS": {
-    "summary": "CryBroWS"
   },
   "P:StockSharp.Localization.LocalizedStrings.Crypto": {
     "summary": "Crypto"
@@ -152110,6 +152041,12 @@
   },
   "P:StockSharp.Localization.LocalizedStrings.StockSharpLLC": {
     "summary": "StockSharpLLC"
+  },
+  "P:StockSharp.Localization.LocalizedStrings.StockSharpSBE": {
+    "summary": "StockSharp SBE"
+  },
+  "P:StockSharp.Localization.LocalizedStrings.StockSharpWS": {
+    "summary": "StockSharp WS"
   },
   "P:StockSharp.Localization.LocalizedStrings.Stop": {
     "summary": "Para."
@@ -164470,6 +164407,27 @@
   "P:StockSharp.Rss.RssMessageAdapter.CustomDateFormat": {
     "summary": "Formato de fechas. Se requiere para ser rellenado si el formato RSS de flujo es diferente de ddd, dd MMM yyyyy HH:mm:ss zzzz."
   },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.Address": {
+    "summary": "Dirección de servidor."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportNativeCandles": {
+    "summary": "Permite el soporte de vela nativa (candelas preconstruidas por el servidor). Cuando (por defecto), CandleBuilder@ construirá velas desde las garrapatas/L1 en el lado cliente."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportOrderBookIncrements": {
+    "summary": "Adaptador traduce libros de orden incremental."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportSubscriptions": {
+    "summary": "Soporta cualquier suscripción (ticks, libros de pedidos, etc.)."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.Password": {
+    "summary": "Contraseña."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.SenderCompId": {
+    "summary": "ID de remitente."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.TargetCompId": {
+    "summary": "Identificación de destino."
+  },
   "P:StockSharp.Server.Core.BaseProtocolServer`3.LoginRateLimiter": {
     "summary": "Limitador de tarifas para los intentos de inicio de sesión (compartido entre todos los oyentes)."
   },
@@ -165543,6 +165501,48 @@
   },
   "P:StockSharp.Upbit.UpbitMessageAdapter.Secret": {
     "summary": "Secreto."
+  },
+  "P:StockSharp.WS.Native.WsClient.ClientId": {
+    "summary": "ID de cliente asignado por el servidor en el marco de salud."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Address": {
+    "summary": "Dirección del servidor WebSocket (e.g. ws://localhost:20000/ws)."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportOrderBookIncrements": {
+    "summary": "Adaptador traduce libros de orden incremental."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Key": {
+    "summary": "Llave."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Login": {
+    "summary": "Inicio de sesión para el flujo WsGate login/password. Cuando se establece y no se configura Key, el adaptador autentica con login + Contraseña en lugar de firma HMAC. La contraseña puede ser un JWT — el mismo flujo que el terminal web utiliza."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Password": {
+    "summary": "Contraseña (o JWT) emparejado con Iniciar sesión para el flujo de inicio de sesión/password."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Secret": {
+    "summary": "Secreto."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.ActivationPrice": {
+    "summary": "El valor absoluto del precio cuando se alcanza la estrategia de protección se activa."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoEndAt": {
+    "summary": "Tiempo de UTC el algo debe terminar (entonces cancela el resto)."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoKind": {
+    "summary": "Tipo de ejecución Algorítmica (1=TWAP, 2=VWAP, 3=Iceberg, 4=NBBO), que coincide con el servidor-side AlgoOrderKind enum. Rellena una orden de parada sencilla."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoParametersJson": {
+    "summary": "JSON de parámetros de per-algo (conteo de piojos, volumen de visualización, tasa de participación, ...). esquema específico de algo, opaco al alambre/condición."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoStartAt": {
+    "summary": "Hora de UTC el algo debe comenzar a funcionar."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.ClosePositionPrice": {
+    "summary": "Precio de posición cercano. significa cercano por mercado."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.IsTrailing": {
+    "summary": "Perder la parada."
   },
   "P:StockSharp.Ws.WsAuthKeyRequest.KeyId": {
     "summary": "Campo de Wire keyId@ — el público id (ak_...)."

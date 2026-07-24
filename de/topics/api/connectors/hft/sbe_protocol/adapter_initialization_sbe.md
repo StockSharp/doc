@@ -1,9 +1,9 @@
 # Initialisierung des SBE-Adapters
 
-Der folgende Code initialisiert [CryBroSBEMessageAdapter](xref:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter) und fügt ihn zu [Connector](xref:StockSharp.Algo.Connector) hinzu.
+Der folgende Code initialisiert [StockSharpSBEMessageAdapter](xref:StockSharp.SBE.StockSharpSBEMessageAdapter) und fügt ihn zu [Connector](xref:StockSharp.Algo.Connector) hinzu.
 
 ```cs
-var messageAdapter = new CryBroSBEMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new StockSharpSBEMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Address = "127.0.0.1:5002".To<EndPoint>(),
 	SenderCompId = "<login>",

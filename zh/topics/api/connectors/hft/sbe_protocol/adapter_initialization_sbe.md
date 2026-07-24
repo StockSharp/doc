@@ -1,9 +1,9 @@
 # SBE 适配器初始化
 
-以下代码初始化 [CryBroSBEMessageAdapter](xref:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter)，并将其添加到 [Connector](xref:StockSharp.Algo.Connector)。
+以下代码初始化 [StockSharpSBEMessageAdapter](xref:StockSharp.SBE.StockSharpSBEMessageAdapter)，并将其添加到 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
-var messageAdapter = new CryBroSBEMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new StockSharpSBEMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Address = "127.0.0.1:5002".To<EndPoint>(),
 	SenderCompId = "<login>",

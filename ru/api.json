@@ -3812,18 +3812,6 @@
   "T:StockSharp.Connectors.Common.S3BucketHelper": {
     "summary": "Помощник для работы с корзинами AWS S3 через прямой HTTP (без AWS SDK)."
   },
-  "T:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter": {
-    "summary": "Адаптер сообщений CryBroSBE — со стороны клиента connector на SbeServer по протоколу SBE."
-  },
-  "T:StockSharp.CryBro.WS.CryBroWSMessageAdapter": {
-    "summary": "Адаптер сообщений для шлюза CryBroWS WebSocket — подключается к WsGate и транслирует сообщения StockSharp в/из протокола WsRelay JSON."
-  },
-  "T:StockSharp.CryBro.WS.CryBroWSOrderCondition": {
-    "summary": "Условие условного порядка для CryBro WS connector. Содержит как вариант стопа (стоп-лосс/тейк-профит), так и вариант алгоритмического исполнения (TWAP/VWAP/Iceberg/NBBO). Вариант отличается AlgoKind: когда он равен нулю, заказ является простой остановкой, в противном случае это родительский алгоритм, который маршрутизатор пересылает на сервер алгоритма."
-  },
-  "T:StockSharp.CryBro.WS.Native.WsClient": {
-    "summary": "WebSocket клиент для CryBroWS WsGate. Обертывает WebSocketClient, реализует IConnection. События возвращают собственные DTO — адаптер преобразуется в сообщения StockSharp."
-  },
   "T:StockSharp.DXtrade.DXtradeMessageAdapter": {
     "summary": "Адаптер сообщений для DXtrade."
   },
@@ -7160,6 +7148,9 @@
   "T:StockSharp.Rss.RssMessageAdapter": {
     "summary": "Адаптер сообщений рыночных данных для RSS."
   },
+  "T:StockSharp.SBE.StockSharpSBEMessageAdapter": {
+    "summary": "Адаптер сообщений StockSharpSBE — со стороны клиента connector на SbeServer по протоколу SBE."
+  },
   "T:StockSharp.Server.Core.BaseProtocolServer`3": {
     "summary": "Базовый класс для серверов протоколов (FIX, SBE и т. д.). Содержит общую инфраструктуру: жизненный цикл, сеансы, подписки, каналы сообщений, фоновые задачи."
   },
@@ -7585,6 +7576,15 @@
   },
   "T:StockSharp.Upbit.UpbitOrderCondition": {
     "summary": "Условие заказа Upbit."
+  },
+  "T:StockSharp.WS.Native.WsClient": {
+    "summary": "WebSocket клиент для StockSharpWS WsGate. Обертывает WebSocketClient, реализует IConnection. События возвращают собственные DTO — адаптер преобразуется в сообщения StockSharp."
+  },
+  "T:StockSharp.WS.StockSharpWSMessageAdapter": {
+    "summary": "Адаптер сообщений для шлюза StockSharpWS WebSocket — подключается к WsGate и транслирует сообщения StockSharp в/из протокола WsRelay JSON."
+  },
+  "T:StockSharp.WS.StockSharpWSOrderCondition": {
+    "summary": "Условие условного порядка для StockSharp WS connector. Содержит как вариант стопа (стоп-лосс/тейк-профит), так и вариант алгоритмического исполнения (TWAP/VWAP/Iceberg/NBBO). Вариант отличается AlgoKind: когда он равен нулю, заказ является простой остановкой, в противном случае это родительский алгоритм, который маршрутизатор пересылает на сервер алгоритма."
   },
   "T:StockSharp.Ws.WsAuthKeyRequest": {
     "summary": "Клиент → серверная аутентификация через ключ API. Используется программными клиентами (ботами, SDK) вместо потока паролей. Подпись — HMAC-SHA256 поверх «${KeyId}\\n${Timestamp}\\n${Nonce}\\n» с секретным ключом API — стандартной формой провода биржи. Отклонять, если отклонение за пределами ±2 минуты или если (KeyId, Nonce) недавно был замечен (повтор)."
@@ -20930,12 +20930,6 @@
   "F:StockSharp.Localization.LocalizedStrings.CrossoverProbabilityKey": {
     "summary": "Вероятность пересечения"
   },
-  "F:StockSharp.Localization.LocalizedStrings.CryBroSBEKey": {
-    "summary": "CryBro СБЕ"
-  },
-  "F:StockSharp.Localization.LocalizedStrings.CryBroWSKey": {
-    "summary": "CryBro WS"
-  },
   "F:StockSharp.Localization.LocalizedStrings.CryptoAddressKey": {
     "summary": "Криптовалютный адрес"
   },
@@ -29446,6 +29440,12 @@
   },
   "F:StockSharp.Localization.LocalizedStrings.StockSharpLLCKey": {
     "summary": "ООО StockSharp"
+  },
+  "F:StockSharp.Localization.LocalizedStrings.StockSharpSBEKey": {
+    "summary": "StockSharp SBE"
+  },
+  "F:StockSharp.Localization.LocalizedStrings.StockSharpWSKey": {
+    "summary": "StockSharp WS"
   },
   "F:StockSharp.Localization.LocalizedStrings.StopAllKey": {
     "summary": "Остановить все"
@@ -77379,121 +77379,6 @@
       "baseUrl": "Необязательный пользовательский базовый URL-адрес для конечных точек, совместимых с S3. Если значение равно нулю, используется стиль виртуального размещения."
     }
   },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
-    "summary": "Инициализирует новый экземпляр CryBroSBEMessageAdapter."
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
-    "summary": "Включена ли для указанного загрузка всех финансовых инструментов.",
-    "returns": "Проверьте результат.",
-    "params": {
-      "dataType": "Информация о типе данных."
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Свечи поддержки PriceLevels.",
-    "returns": "Проверьте результат.",
-    "params": {
-      "subscription": "MarketDataMessage"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Поддержка подписки на свечи и живых обновлений.",
-    "returns": "Проверьте результат.",
-    "params": {
-      "subscription": "MarketDataMessage"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
-    "summary": "Загрузить настройки.",
-    "params": {
-      "storage": "Хранилище настроек."
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
-    "summary": "Сохраните настройки.",
-    "params": {
-      "storage": "Хранилище настроек."
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.ToString": {
-    "summary": "Преобразовать к строковому представлению.",
-    "returns": "Строковое представление."
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
-    "summary": "Инициализирует новый экземпляр CryBroWSMessageAdapter."
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
-    "summary": "Включена ли для указанного загрузка всех финансовых инструментов.",
-    "returns": "Проверьте результат.",
-    "params": {
-      "dataType": "Информация о типе данных."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Свечи поддержки PriceLevels.",
-    "returns": "Проверьте результат.",
-    "params": {
-      "subscription": "MarketDataMessage"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Поддержка подписки на свечи и живых обновлений.",
-    "returns": "Проверьте результат.",
-    "params": {
-      "subscription": "MarketDataMessage"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
-    "summary": "Загрузить настройки.",
-    "params": {
-      "storage": "Хранилище настроек."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnLevel1SubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "Обрабатывает запрос на подписку для данных уровня 1. Переопределить, чтобы обеспечить реализацию обработки подписки уровня 1. Реализация по умолчанию выдает NotSupported.",
-    "returns": "ValueTask, представляющий асинхронную операцию.",
-    "params": {
-      "mdMsg": "Сообщение о подписке на рыночные данные.",
-      "cancellationToken": "Токен отмены для отмены операции."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnMarketDepthSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "Обрабатывает запрос на подписку на данные о глубине рынка. Переопределить, чтобы обеспечить реализацию обработки подписки на глубину рынка. Реализация по умолчанию выдает NotSupported.",
-    "returns": "ValueTask, представляющий асинхронную операцию.",
-    "params": {
-      "mdMsg": "Сообщение о подписке на рыночные данные.",
-      "cancellationToken": "Токен отмены для отмены операции."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnTFCandlesSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "Обрабатывает запрос на подписку на данные временных свечей (TF-свечи). Переопределить, чтобы обеспечить реализацию обработки подписки на свечи TF. Реализация по умолчанию выдает NotSupported.",
-    "returns": "ValueTask, представляющий асинхронную операцию.",
-    "params": {
-      "mdMsg": "Сообщение о подписке на рыночные данные.",
-      "cancellationToken": "Токен отмены для отмены операции."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnTicksSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "Обрабатывает запрос подписки на данные тиков. Переопределить, чтобы обеспечить реализацию обработки подписки на тики. Реализация по умолчанию выдает NotSupported.",
-    "returns": "ValueTask, представляющий асинхронную операцию.",
-    "params": {
-      "mdMsg": "Сообщение о подписке на рыночные данные.",
-      "cancellationToken": "Токен отмены для отмены операции."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
-    "summary": "Сохраните настройки.",
-    "params": {
-      "storage": "Хранилище настроек."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.ToString": {
-    "summary": "Преобразовать к строковому представлению.",
-    "returns": "Строковое представление."
-  },
-  "M:StockSharp.CryBro.WS.Native.WsClient.ComputeSignature(System.String,System.String,System.Int64,System.String)": {
-    "summary": "HMAC-SHA256 поверх keyId\\nts\\nnonce\\n с секретным шестнадцатеричным ключом в нижнем регистре. Отражает серверную сторону ApiKeyService.ComputeSignature."
-  },
   "M:StockSharp.DXtrade.DXtradeMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
     "summary": "Инициализирует новый экземпляр DXtradeMessageAdapter.",
     "params": {
@@ -98000,6 +97885,46 @@
     "summary": "Преобразовать к строковому представлению.",
     "returns": "Строковое представление."
   },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
+    "summary": "Инициализирует новый экземпляр StockSharpSBEMessageAdapter."
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
+    "summary": "Включена ли для указанного загрузка всех финансовых инструментов.",
+    "returns": "Проверьте результат.",
+    "params": {
+      "dataType": "Информация о типе данных."
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Свечи поддержки PriceLevels.",
+    "returns": "Проверьте результат.",
+    "params": {
+      "subscription": "MarketDataMessage"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Поддержка подписки на свечи и живых обновлений.",
+    "returns": "Проверьте результат.",
+    "params": {
+      "subscription": "MarketDataMessage"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
+    "summary": "Загрузить настройки.",
+    "params": {
+      "storage": "Хранилище настроек."
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
+    "summary": "Сохраните настройки.",
+    "params": {
+      "storage": "Хранилище настроек."
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.ToString": {
+    "summary": "Преобразовать к строковому представлению.",
+    "returns": "Строковое представление."
+  },
   "M:StockSharp.Server.Core.BaseProtocolServer`3.#ctor(`2)": {
     "summary": "Инициализирует новый экземпляр.",
     "params": {
@@ -100389,6 +100314,81 @@
   },
   "M:StockSharp.Upbit.UpbitOrderCondition.#ctor": {
     "summary": "Инициализирует новый экземпляр UpbitOrderCondition."
+  },
+  "M:StockSharp.WS.Native.WsClient.ComputeSignature(System.String,System.String,System.Int64,System.String)": {
+    "summary": "HMAC-SHA256 поверх keyId\\nts\\nnonce\\n с секретным шестнадцатеричным ключом в нижнем регистре. Отражает серверную сторону ApiKeyService.ComputeSignature."
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
+    "summary": "Инициализирует новый экземпляр StockSharpWSMessageAdapter."
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
+    "summary": "Включена ли для указанного загрузка всех финансовых инструментов.",
+    "returns": "Проверьте результат.",
+    "params": {
+      "dataType": "Информация о типе данных."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Свечи поддержки PriceLevels.",
+    "returns": "Проверьте результат.",
+    "params": {
+      "subscription": "MarketDataMessage"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Поддержка подписки на свечи и живых обновлений.",
+    "returns": "Проверьте результат.",
+    "params": {
+      "subscription": "MarketDataMessage"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
+    "summary": "Загрузить настройки.",
+    "params": {
+      "storage": "Хранилище настроек."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnLevel1SubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "Обрабатывает запрос на подписку для данных уровня 1. Переопределить, чтобы обеспечить реализацию обработки подписки уровня 1. Реализация по умолчанию выдает NotSupported.",
+    "returns": "ValueTask, представляющий асинхронную операцию.",
+    "params": {
+      "mdMsg": "Сообщение о подписке на рыночные данные.",
+      "cancellationToken": "Токен отмены для отмены операции."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnMarketDepthSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "Обрабатывает запрос на подписку на данные о глубине рынка. Переопределить, чтобы обеспечить реализацию обработки подписки на глубину рынка. Реализация по умолчанию выдает NotSupported.",
+    "returns": "ValueTask, представляющий асинхронную операцию.",
+    "params": {
+      "mdMsg": "Сообщение о подписке на рыночные данные.",
+      "cancellationToken": "Токен отмены для отмены операции."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnTFCandlesSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "Обрабатывает запрос на подписку на данные временных свечей (TF-свечи). Переопределить, чтобы обеспечить реализацию обработки подписки на свечи TF. Реализация по умолчанию выдает NotSupported.",
+    "returns": "ValueTask, представляющий асинхронную операцию.",
+    "params": {
+      "mdMsg": "Сообщение о подписке на рыночные данные.",
+      "cancellationToken": "Токен отмены для отмены операции."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnTicksSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "Обрабатывает запрос подписки на данные тиков. Переопределить, чтобы обеспечить реализацию обработки подписки на тики. Реализация по умолчанию выдает NotSupported.",
+    "returns": "ValueTask, представляющий асинхронную операцию.",
+    "params": {
+      "mdMsg": "Сообщение о подписке на рыночные данные.",
+      "cancellationToken": "Токен отмены для отмены операции."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
+    "summary": "Сохраните настройки.",
+    "params": {
+      "storage": "Хранилище настроек."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.ToString": {
+    "summary": "Преобразовать к строковому представлению.",
+    "returns": "Строковое представление."
   },
   "M:StockSharp.Ws.WsCandle.From(StockSharp.Messages.CandleMessage)": {
     "summary": "От."
@@ -135928,69 +135928,6 @@
   "P:StockSharp.Configuration.SubscriptionConfig.To": {
     "summary": "Факультативное время окончания (UTC) запрашиваемого интервала данных."
   },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Address": {
-    "summary": "Адрес сервера."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportNativeCandles": {
-    "summary": "Включите встроенную поддержку свечей (сервер транслирует предварительно построенные свечи). Когда (по умолчанию), CandleBuilder будет строить свечи из клещей/L1 на стороне клиента."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportOrderBookIncrements": {
-    "summary": "Адаптер переводит книги с дополнительными заказами."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportSubscriptions": {
-    "summary": "Поддерживать любые подписки (тиксы, книги заказов и т.д.)."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Password": {
-    "summary": "Пароль."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.SenderCompId": {
-    "summary": "Идентификатор отправителя."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.TargetCompId": {
-    "summary": "Идентификатор цели."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Address": {
-    "summary": "Адрес сервера WebSocket (e.g. ws://localhost:20000/ws)."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportOrderBookIncrements": {
-    "summary": "Адаптер переводит книги с дополнительными заказами."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Key": {
-    "summary": "Ключ."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Login": {
-    "summary": "Логин для потока WsGate login/password. При настройке и отсутствии Ключа адаптер аутентифицируется с логином + Password вместо подписи HMAC. Пароль может быть JWT — тем же потоком, который использует веб-терминал."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Password": {
-    "summary": "Пароль (или JWT) в паре с Логином для потока логин/пароль."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Secret": {
-    "summary": "Секрет."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.ActivationPrice": {
-    "summary": "При достижении абсолютного значения цены активируется защитная стратегия."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoEndAt": {
-    "summary": "Время UTC, когда альго должно закончиться (тогда отменяется остаток)."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoKind": {
-    "summary": "Алгоритмический вид исполнения (1=TWAP, 2=VWAP, 3=Iceberg, 4=NBBO), соответствующий серверной стороне AlgoOrderKindenum. Null на простом стоп-ордере."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoParametersJson": {
-    "summary": "JSON параметров на альго (счет срезов, объем дисплея, скорость участия, ...). Алгоспецифическая схема, непрозрачная для провода/состояния."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoStartAt": {
-    "summary": "Время UTC, когда алгоритм должен начать работать."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.ClosePositionPrice": {
-    "summary": "Цена близкой позиции означает близость к рынку."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.IsTrailing": {
-    "summary": "Трейлинг-стоп-лосс."
-  },
-  "P:StockSharp.CryBro.WS.Native.WsClient.ClientId": {
-    "summary": "Идентификатор клиента, присвоенный сервером в рамке приветствия."
-  },
   "P:StockSharp.DXtrade.DXtradeMessageAdapter.Address": {
     "summary": "Адрес сервера."
   },
@@ -143590,12 +143527,6 @@
   },
   "P:StockSharp.Localization.LocalizedStrings.CrossoverProbabilityDesc": {
     "summary": "Вероятность возникновения кроссовера."
-  },
-  "P:StockSharp.Localization.LocalizedStrings.CryBroSBE": {
-    "summary": "CryBro СБЕ"
-  },
-  "P:StockSharp.Localization.LocalizedStrings.CryBroWS": {
-    "summary": "CryBro WS"
   },
   "P:StockSharp.Localization.LocalizedStrings.Crypto": {
     "summary": "Крипто"
@@ -152110,6 +152041,12 @@
   },
   "P:StockSharp.Localization.LocalizedStrings.StockSharpLLC": {
     "summary": "ООО StockSharp"
+  },
+  "P:StockSharp.Localization.LocalizedStrings.StockSharpSBE": {
+    "summary": "StockSharp SBE"
+  },
+  "P:StockSharp.Localization.LocalizedStrings.StockSharpWS": {
+    "summary": "StockSharp WS"
   },
   "P:StockSharp.Localization.LocalizedStrings.Stop": {
     "summary": "Стоп"
@@ -164470,6 +164407,27 @@
   "P:StockSharp.Rss.RssMessageAdapter.CustomDateFormat": {
     "summary": "Формат дат. Обязательно заполняется, если формат потока RSS отличается от ддд, дд МММ гггг ЧЧ:мм:сс zzzz."
   },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.Address": {
+    "summary": "Адрес сервера."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportNativeCandles": {
+    "summary": "Включите встроенную поддержку свечей (сервер транслирует предварительно построенные свечи). Когда (по умолчанию), CandleBuilder будет строить свечи из клещей/L1 на стороне клиента."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportOrderBookIncrements": {
+    "summary": "Адаптер переводит книги с дополнительными заказами."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportSubscriptions": {
+    "summary": "Поддерживать любые подписки (тиксы, книги заказов и т.д.)."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.Password": {
+    "summary": "Пароль."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.SenderCompId": {
+    "summary": "Идентификатор отправителя."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.TargetCompId": {
+    "summary": "Идентификатор цели."
+  },
   "P:StockSharp.Server.Core.BaseProtocolServer`3.LoginRateLimiter": {
     "summary": "Ограничитель скорости для попыток входа (общий для всех слушателей)."
   },
@@ -165543,6 +165501,48 @@
   },
   "P:StockSharp.Upbit.UpbitMessageAdapter.Secret": {
     "summary": "Секрет."
+  },
+  "P:StockSharp.WS.Native.WsClient.ClientId": {
+    "summary": "Идентификатор клиента, присвоенный сервером в рамке приветствия."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Address": {
+    "summary": "Адрес сервера WebSocket (e.g. ws://localhost:20000/ws)."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportOrderBookIncrements": {
+    "summary": "Адаптер переводит книги с дополнительными заказами."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Key": {
+    "summary": "Ключ."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Login": {
+    "summary": "Логин для потока WsGate login/password. При настройке и отсутствии Ключа адаптер аутентифицируется с логином + Password вместо подписи HMAC. Пароль может быть JWT — тем же потоком, который использует веб-терминал."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Password": {
+    "summary": "Пароль (или JWT) в паре с Логином для потока логин/пароль."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Secret": {
+    "summary": "Секрет."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.ActivationPrice": {
+    "summary": "При достижении абсолютного значения цены активируется защитная стратегия."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoEndAt": {
+    "summary": "Время UTC, когда альго должно закончиться (тогда отменяется остаток)."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoKind": {
+    "summary": "Алгоритмический вид исполнения (1=TWAP, 2=VWAP, 3=Iceberg, 4=NBBO), соответствующий серверной стороне AlgoOrderKindenum. Null на простом стоп-ордере."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoParametersJson": {
+    "summary": "JSON параметров на альго (счет срезов, объем дисплея, скорость участия, ...). Алгоспецифическая схема, непрозрачная для провода/состояния."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoStartAt": {
+    "summary": "Время UTC, когда алгоритм должен начать работать."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.ClosePositionPrice": {
+    "summary": "Цена близкой позиции означает близость к рынку."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.IsTrailing": {
+    "summary": "Трейлинг-стоп-лосс."
   },
   "P:StockSharp.Ws.WsAuthKeyRequest.KeyId": {
     "summary": "Проводное поле keyId — public id (ak_...)."

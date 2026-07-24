@@ -1,9 +1,9 @@
 # SBE アダプターの初期化
 
-次のコードは [CryBroSBEMessageAdapter](xref:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter) を初期化し、[Connector](xref:StockSharp.Algo.Connector) に追加します。
+次のコードは [StockSharpSBEMessageAdapter](xref:StockSharp.SBE.StockSharpSBEMessageAdapter) を初期化し、[Connector](xref:StockSharp.Algo.Connector) に追加します。
 
 ```cs
-var messageAdapter = new CryBroSBEMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new StockSharpSBEMessageAdapter(Connector.TransactionIdGenerator)
 {
 	Address = "127.0.0.1:5002".To<EndPoint>(),
 	SenderCompId = "<login>",

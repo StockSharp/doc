@@ -3812,18 +3812,6 @@
   "T:StockSharp.Connectors.Common.S3BucketHelper": {
     "summary": "帮助通过直接HTTP(没有AWS SDK)与AWS S3桶相通."
   },
-  "T:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter": {
-    "summary": "CryBroSBE消息适配器——客户端侧connector通过SBE协议到SbeServer."
-  },
-  "T:StockSharp.CryBro.WS.CryBroWSMessageAdapter": {
-    "summary": "CryBroWS WebSocket门的訊息适配器——连接到WsGate并翻译StockSharp消息到/从WsRelay JSON协议."
-  },
-  "T:StockSharp.CryBro.WS.CryBroWSOrderCondition": {
-    "summary": "CryBro Wconnector的有条件命令条件 。 carry既包括了停止的口味(stop-loss / take-finity),也包括了算法-执行的口味(TWAP / VWAP / Iceberg / NBBO). 口味被AlgoKind区分开来: 当命令无效时是平坦的口令, 否则它就是algo母路由器向algo 服务器前进的."
-  },
-  "T:StockSharp.CryBro.WS.Native.WsClient": {
-    "summary": "WebSocket客户端为CryBroWS WsGate. 包接 WebSocketClient, 执行 IConnection. 事件返回本土 DTO —适配器转换为StockSharp消息."
-  },
   "T:StockSharp.DXtrade.DXtradeMessageAdapter": {
     "summary": "DXtrade 的电文适配器."
   },
@@ -7160,6 +7148,9 @@
   "T:StockSharp.Rss.RssMessageAdapter": {
     "summary": "RSS的市场-数据消息适配器."
   },
+  "T:StockSharp.SBE.StockSharpSBEMessageAdapter": {
+    "summary": "StockSharpSBE消息适配器——客户端侧connector通过SBE协议到SbeServer."
+  },
   "T:StockSharp.Server.Core.BaseProtocolServer`3": {
     "summary": "协议服务器的基类(FIX,SBE等). 包含共享的基础设施:生命周期,会话,订阅,消息通道,背景任务."
   },
@@ -7585,6 +7576,15 @@
   },
   "T:StockSharp.Upbit.UpbitOrderCondition": {
     "summary": "上位命令条件 。"
+  },
+  "T:StockSharp.WS.Native.WsClient": {
+    "summary": "WebSocket客户端为StockSharpWS WsGate. 包接 WebSocketClient, 执行 IConnection. 事件返回本土 DTO —适配器转换为StockSharp消息."
+  },
+  "T:StockSharp.WS.StockSharpWSMessageAdapter": {
+    "summary": "StockSharpWS WebSocket门的訊息适配器——连接到WsGate并翻译StockSharp消息到/从WsRelay JSON协议."
+  },
+  "T:StockSharp.WS.StockSharpWSOrderCondition": {
+    "summary": "StockSharp Wconnector的有条件命令条件 。 carry既包括了停止的口味(stop-loss / take-finity),也包括了算法-执行的口味(TWAP / VWAP / Iceberg / NBBO). 口味被AlgoKind区分开来: 当命令无效时是平坦的口令, 否则它就是algo母路由器向algo 服务器前进的."
   },
   "T:StockSharp.Ws.WsAuthKeyRequest": {
     "summary": "客户端 – 通过 API 密钥服务器 认证。 程序客户端(机器人、 SDKs) 使用, 而不是密码流。 签名是 HMAC- SHA256, 上面写着 API 密钥的 {KeyId} \\n $ {Timestamp}\\n \\ n \\ n \\ n \\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\ n\\"
@@ -20930,12 +20930,6 @@
   "F:StockSharp.Localization.LocalizedStrings.CrossoverProbabilityKey": {
     "summary": "交叉概率"
   },
-  "F:StockSharp.Localization.LocalizedStrings.CryBroSBEKey": {
-    "summary": "CryBroSBE"
-  },
-  "F:StockSharp.Localization.LocalizedStrings.CryBroWSKey": {
-    "summary": "CryBro+WS 键"
-  },
   "F:StockSharp.Localization.LocalizedStrings.CryptoAddressKey": {
     "summary": "加密地址"
   },
@@ -29446,6 +29440,12 @@
   },
   "F:StockSharp.Localization.LocalizedStrings.StockSharpLLCKey": {
     "summary": "· 专卖局长"
+  },
+  "F:StockSharp.Localization.LocalizedStrings.StockSharpSBEKey": {
+    "summary": "StockSharp SBE"
+  },
+  "F:StockSharp.Localization.LocalizedStrings.StockSharpWSKey": {
+    "summary": "StockSharp WS"
   },
   "F:StockSharp.Localization.LocalizedStrings.StopAllKey": {
     "summary": "都别闹了"
@@ -77379,121 +77379,6 @@
       "baseUrl": "S3 兼容端点的可选自定义基址。 如果无效, 则使用虚拟托管样式 。"
     }
   },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
-    "summary": "初始化了 & ##CryBroSBEMessageAdapter+#的新实例."
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
-    "summary": "用于指定的所有金融工具下载启用。",
-    "returns": "检查结果。",
-    "params": {
-      "dataType": "数据类型信息."
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Support candles PriceLevels.",
-    "returns": "检查结果。",
-    "params": {
-      "subscription": "MarketDataMessage"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "支持订阅蜡烛和现场更新。",
-    "returns": "检查结果。",
-    "params": {
-      "subscription": "MarketDataMessage"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
-    "summary": "装入设置 。",
-    "params": {
-      "storage": "设置存储 。"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
-    "summary": "保存设置 。",
-    "params": {
-      "storage": "设置存储 。"
-    }
-  },
-  "M:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.ToString": {
-    "summary": "转换为行代表.",
-    "returns": "弦乐表演."
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
-    "summary": "初始化了 & ##CryBroWSMessageAdapter+#的新实例."
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
-    "summary": "用于指定的所有金融工具下载启用。",
-    "returns": "检查结果。",
-    "params": {
-      "dataType": "数据类型信息."
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "Support candles PriceLevels.",
-    "returns": "检查结果。",
-    "params": {
-      "subscription": "MarketDataMessage"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
-    "summary": "支持订阅蜡烛和现场更新。",
-    "returns": "检查结果。",
-    "params": {
-      "subscription": "MarketDataMessage"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
-    "summary": "装入设置 。",
-    "params": {
-      "storage": "设置存储 。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnLevel1SubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "处理关卡1 的订阅请求。 覆盖以提供关卡1 的订阅处理。 默认执行会丢出 NotSupported 。",
-    "returns": "代表同步操作的ValueTask.",
-    "params": {
-      "mdMsg": "市场数据订阅信息.",
-      "cancellationToken": "取消操作的代理 。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnMarketDepthSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "处理市场深度数据的订阅请求。 覆盖以提供市场深度订阅处理的操作。 默认执行将丢出 NotSupported 。",
-    "returns": "代表同步操作的ValueTask.",
-    "params": {
-      "mdMsg": "市场数据订阅信息.",
-      "cancellationToken": "取消操作的代理 。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnTFCandlesSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "处理对时间范围蜡烛(TF clash) 数据的订阅请求。 覆盖为 TF 蜡烛订阅处理提供执行。 默认执行会丢出 NotSupported 。",
-    "returns": "代表同步操作的ValueTask.",
-    "params": {
-      "mdMsg": "市场数据订阅信息.",
-      "cancellationToken": "取消操作的代理 。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.OnTicksSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
-    "summary": "处理对 勾选数据的订阅请求。 覆盖为 勾选订阅处理提供执行。 默认执行会丢出 NotSupported 。",
-    "returns": "代表同步操作的ValueTask.",
-    "params": {
-      "mdMsg": "市场数据订阅信息.",
-      "cancellationToken": "取消操作的代理 。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
-    "summary": "保存设置 。",
-    "params": {
-      "storage": "设置存储 。"
-    }
-  },
-  "M:StockSharp.CryBro.WS.CryBroWSMessageAdapter.ToString": {
-    "summary": "转换为行代表.",
-    "returns": "弦乐表演."
-  },
-  "M:StockSharp.CryBro.WS.Native.WsClient.ComputeSignature(System.String,System.String,System.Int64,System.String)": {
-    "summary": "HMAC-SHA256 上方由 keyId\\nts\\nnnonce\\n 键入密钥,小写为六分法. 镜像服务器侧 ApiKeyService.ComputeSignature."
-  },
   "M:StockSharp.DXtrade.DXtradeMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
     "summary": "初始化了 & ##DXtradeMessageAdapter+#的新实例.",
     "params": {
@@ -98000,6 +97885,46 @@
     "summary": "转换为行代表.",
     "returns": "弦乐表演."
   },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
+    "summary": "初始化了 & ##StockSharpSBEMessageAdapter+#的新实例."
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
+    "summary": "用于指定的所有金融工具下载启用。",
+    "returns": "检查结果。",
+    "params": {
+      "dataType": "数据类型信息."
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Support candles PriceLevels.",
+    "returns": "检查结果。",
+    "params": {
+      "subscription": "MarketDataMessage"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "支持订阅蜡烛和现场更新。",
+    "returns": "检查结果。",
+    "params": {
+      "subscription": "MarketDataMessage"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
+    "summary": "装入设置 。",
+    "params": {
+      "storage": "设置存储 。"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
+    "summary": "保存设置 。",
+    "params": {
+      "storage": "设置存储 。"
+    }
+  },
+  "M:StockSharp.SBE.StockSharpSBEMessageAdapter.ToString": {
+    "summary": "转换为行代表.",
+    "returns": "弦乐表演."
+  },
   "M:StockSharp.Server.Core.BaseProtocolServer`3.#ctor(`2)": {
     "summary": "初始化一个新实例。",
     "params": {
@@ -100389,6 +100314,81 @@
   },
   "M:StockSharp.Upbit.UpbitOrderCondition.#ctor": {
     "summary": "初始化了 & ##UpbitOrderCondition+#的新实例."
+  },
+  "M:StockSharp.WS.Native.WsClient.ComputeSignature(System.String,System.String,System.Int64,System.String)": {
+    "summary": "HMAC-SHA256 上方由 keyId\\nts\\nnnonce\\n 键入密钥,小写为六分法. 镜像服务器侧 ApiKeyService.ComputeSignature."
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.#ctor(Ecng.Common.IdGenerator)": {
+    "summary": "初始化了 & ##StockSharpWSMessageAdapter+#的新实例."
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsAllDownloadingSupported(StockSharp.Messages.DataType)": {
+    "summary": "用于指定的所有金融工具下载启用。",
+    "returns": "检查结果。",
+    "params": {
+      "dataType": "数据类型信息."
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportCandlesPriceLevels(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "Support candles PriceLevels.",
+    "returns": "检查结果。",
+    "params": {
+      "subscription": "MarketDataMessage"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportCandlesUpdates(StockSharp.Messages.MarketDataMessage)": {
+    "summary": "支持订阅蜡烛和现场更新。",
+    "returns": "检查结果。",
+    "params": {
+      "subscription": "MarketDataMessage"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.Load(Ecng.Serialization.SettingsStorage)": {
+    "summary": "装入设置 。",
+    "params": {
+      "storage": "设置存储 。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnLevel1SubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "处理关卡1 的订阅请求。 覆盖以提供关卡1 的订阅处理。 默认执行会丢出 NotSupported 。",
+    "returns": "代表同步操作的ValueTask.",
+    "params": {
+      "mdMsg": "市场数据订阅信息.",
+      "cancellationToken": "取消操作的代理 。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnMarketDepthSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "处理市场深度数据的订阅请求。 覆盖以提供市场深度订阅处理的操作。 默认执行将丢出 NotSupported 。",
+    "returns": "代表同步操作的ValueTask.",
+    "params": {
+      "mdMsg": "市场数据订阅信息.",
+      "cancellationToken": "取消操作的代理 。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnTFCandlesSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "处理对时间范围蜡烛(TF clash) 数据的订阅请求。 覆盖为 TF 蜡烛订阅处理提供执行。 默认执行会丢出 NotSupported 。",
+    "returns": "代表同步操作的ValueTask.",
+    "params": {
+      "mdMsg": "市场数据订阅信息.",
+      "cancellationToken": "取消操作的代理 。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.OnTicksSubscriptionAsync(StockSharp.Messages.MarketDataMessage,System.Threading.CancellationToken)": {
+    "summary": "处理对 勾选数据的订阅请求。 覆盖为 勾选订阅处理提供执行。 默认执行会丢出 NotSupported 。",
+    "returns": "代表同步操作的ValueTask.",
+    "params": {
+      "mdMsg": "市场数据订阅信息.",
+      "cancellationToken": "取消操作的代理 。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.Save(Ecng.Serialization.SettingsStorage)": {
+    "summary": "保存设置 。",
+    "params": {
+      "storage": "设置存储 。"
+    }
+  },
+  "M:StockSharp.WS.StockSharpWSMessageAdapter.ToString": {
+    "summary": "转换为行代表.",
+    "returns": "弦乐表演."
   },
   "M:StockSharp.Ws.WsCandle.From(StockSharp.Messages.CandleMessage)": {
     "summary": "从."
@@ -135928,69 +135928,6 @@
   "P:StockSharp.Configuration.SubscriptionConfig.To": {
     "summary": "请求的数据间隔的可选结束时间( UTC) 。"
   },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Address": {
-    "summary": "服务器地址 。"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportNativeCandles": {
-    "summary": "启用本地烛光支持(服务器流预建的烛光) 。 当(默认) 时, CandleBuilder 将从勾选/ L1 侧面的客户端建立蜡烛 。"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportOrderBookIncrements": {
-    "summary": "适生翻译增量令书."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.IsSupportSubscriptions": {
-    "summary": "支持任何订阅( ticks, 订购书等) 。"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.Password": {
-    "summary": "密码"
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.SenderCompId": {
-    "summary": "发信人身份证明."
-  },
-  "P:StockSharp.CryBro.SBE.CryBroSBEMessageAdapter.TargetCompId": {
-    "summary": "目标身份"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Address": {
-    "summary": "WebSocket服务器地址(e.g. ws://localhost:20000/ws)."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.IsSupportOrderBookIncrements": {
-    "summary": "适生翻译增量令书."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Key": {
-    "summary": "钥匙"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Login": {
-    "summary": "登录 WsGate 登录/ 密码流。 当设置和没有配置密钥时, 适配器会用登录 + 密码认证, 而不是 HMAC 签名。 密码可以是 JWT —— 和网页终端使用相同的流量 。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Password": {
-    "summary": "密码(或JWT)与Login对接,用于登录/密码流."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSMessageAdapter.Secret": {
-    "summary": "秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 secret."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.ActivationPrice": {
-    "summary": "达到保护策略时价格的绝对值被激活."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoEndAt": {
-    "summary": "UTC时间上, 上方必须完成( 然后取消剩余部分) 。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoKind": {
-    "summary": "算法-执行类型(1=TWAP,2=VWAP,3=Iceberg,4=NBBO),匹配服务器侧AlgoOrderKind enum. Null在平站指令上."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoParametersJson": {
-    "summary": "单阿尔戈参数的JSON(切片计数,显示体积,参与率,.). Algo特有计划,不透明到线/条件."
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.AlgoStartAt": {
-    "summary": "UTC时间 高级程序应该开始工作。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.ClosePositionPrice": {
-    "summary": "近地价,指接近市场。"
-  },
-  "P:StockSharp.CryBro.WS.CryBroWSOrderCondition.IsTrailing": {
-    "summary": "被拖住的路程会停住"
-  },
-  "P:StockSharp.CryBro.WS.Native.WsClient.ClientId": {
-    "summary": "服务器在\"你好\"框架中指定的客户端ID."
-  },
   "P:StockSharp.DXtrade.DXtradeMessageAdapter.Address": {
     "summary": "服务器地址 。"
   },
@@ -143590,12 +143527,6 @@
   },
   "P:StockSharp.Localization.LocalizedStrings.CrossoverProbabilityDesc": {
     "summary": "交叉的可能性。"
-  },
-  "P:StockSharp.Localization.LocalizedStrings.CryBroSBE": {
-    "summary": "CryBroSBE"
-  },
-  "P:StockSharp.Localization.LocalizedStrings.CryBroWS": {
-    "summary": "CryBro+WS 键"
   },
   "P:StockSharp.Localization.LocalizedStrings.Crypto": {
     "summary": "加密( C)"
@@ -152110,6 +152041,12 @@
   },
   "P:StockSharp.Localization.LocalizedStrings.StockSharpLLC": {
     "summary": "· 专卖局长"
+  },
+  "P:StockSharp.Localization.LocalizedStrings.StockSharpSBE": {
+    "summary": "StockSharp SBE"
+  },
+  "P:StockSharp.Localization.LocalizedStrings.StockSharpWS": {
+    "summary": "StockSharp WS"
   },
   "P:StockSharp.Localization.LocalizedStrings.Stop": {
     "summary": "停下来"
@@ -164470,6 +164407,27 @@
   "P:StockSharp.Rss.RssMessageAdapter.CustomDateFormat": {
     "summary": "日期格式。 如果 RSS 流格式不同于 ddd, dMM yyy HH: mm: ss zz, 则需要填入 。"
   },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.Address": {
+    "summary": "服务器地址 。"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportNativeCandles": {
+    "summary": "启用本地烛光支持(服务器流预建的烛光) 。 当(默认) 时, CandleBuilder 将从勾选/ L1 侧面的客户端建立蜡烛 。"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportOrderBookIncrements": {
+    "summary": "适生翻译增量令书."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.IsSupportSubscriptions": {
+    "summary": "支持任何订阅( ticks, 订购书等) 。"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.Password": {
+    "summary": "密码"
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.SenderCompId": {
+    "summary": "发信人身份证明."
+  },
+  "P:StockSharp.SBE.StockSharpSBEMessageAdapter.TargetCompId": {
+    "summary": "目标身份"
+  },
   "P:StockSharp.Server.Core.BaseProtocolServer`3.LoginRateLimiter": {
     "summary": "登录尝试的速率限制器( 在所有听众中共享) 。"
   },
@@ -165543,6 +165501,48 @@
   },
   "P:StockSharp.Upbit.UpbitMessageAdapter.Secret": {
     "summary": "秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 secret."
+  },
+  "P:StockSharp.WS.Native.WsClient.ClientId": {
+    "summary": "服务器在\"你好\"框架中指定的客户端ID."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Address": {
+    "summary": "WebSocket服务器地址(e.g. ws://localhost:20000/ws)."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.IsSupportOrderBookIncrements": {
+    "summary": "适生翻译增量令书."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Key": {
+    "summary": "钥匙"
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Login": {
+    "summary": "登录 WsGate 登录/ 密码流。 当设置和没有配置密钥时, 适配器会用登录 + 密码认证, 而不是 HMAC 签名。 密码可以是 JWT —— 和网页终端使用相同的流量 。"
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Password": {
+    "summary": "密码(或JWT)与Login对接,用于登录/密码流."
+  },
+  "P:StockSharp.WS.StockSharpWSMessageAdapter.Secret": {
+    "summary": "秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 秘密 secret."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.ActivationPrice": {
+    "summary": "达到保护策略时价格的绝对值被激活."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoEndAt": {
+    "summary": "UTC时间上, 上方必须完成( 然后取消剩余部分) 。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoKind": {
+    "summary": "算法-执行类型(1=TWAP,2=VWAP,3=Iceberg,4=NBBO),匹配服务器侧AlgoOrderKind enum. Null在平站指令上."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoParametersJson": {
+    "summary": "单阿尔戈参数的JSON(切片计数,显示体积,参与率,.). Algo特有计划,不透明到线/条件."
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.AlgoStartAt": {
+    "summary": "UTC时间 高级程序应该开始工作。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.ClosePositionPrice": {
+    "summary": "近地价,指接近市场。"
+  },
+  "P:StockSharp.WS.StockSharpWSOrderCondition.IsTrailing": {
+    "summary": "被拖住的路程会停住"
   },
   "P:StockSharp.Ws.WsAuthKeyRequest.KeyId": {
     "summary": "电线场 keyId – 公用代号 (ak_.). 向上看密服务器侧."
