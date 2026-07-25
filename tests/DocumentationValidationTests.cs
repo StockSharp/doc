@@ -1720,7 +1720,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		var errors = new List<string>();
 		var pattern = new Regex(@"\btrading\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 		var markdownLinkTargetPattern = new Regex(@"\]\([^)]+\)", RegexOptions.CultureInvariant);
-		var rawUrlPattern = new Regex(@"https?://\S+", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var inlineCodePattern = new Regex(@"`[^`\r\n]*`", RegexOptions.CultureInvariant);
+		var rawUrlPattern = new Regex(@"(?:https?|wss?)://\S+", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
 		void AddErrorIfMatched(string file, int line, string scope, string text)
 		{
@@ -1728,7 +1729,10 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				|| text.Contains("FIX Trading Community", StringComparison.Ordinal))
 				return;
 
+			// Inline code holds identifiers and endpoints (`wss://api.derivws.com/trading/v1/...`),
+			// which stay English in every language, so only the prose around them is checked.
 			var normalized = markdownLinkTargetPattern.Replace(text, "]");
+			normalized = inlineCodePattern.Replace(normalized, " ");
 			normalized = rawUrlPattern.Replace(normalized, " ");
 
 			var match = pattern.Match(normalized);

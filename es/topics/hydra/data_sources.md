@@ -125,6 +125,7 @@ Actualmente, [Hydra](../hydra.md) admite las siguientes fuentes:
 | [MetaTrader](../api/connectors/forex/metatrader.md)       | ---------------------------------- | ----------------------------------         |
 | [DXtrade](../api/connectors/forex/dxtrade.md)                 | [Configuración de DXtrade](../api/connectors/forex/dxtrade/configuration_dxtrade.md)             | [Configuración gráfica de DXtrade](../api/connectors/forex/dxtrade/graphical_configuration_dxtrade.md)                 |
 | [cTrader](../api/connectors/forex/ctrader.md)                 | [Configuración de cTrader](../api/connectors/forex/ctrader/configuration_ctrader.md)             | [Configuración gráfica de cTrader](../api/connectors/forex/ctrader/graphical_configuration_ctrader.md)                 |
+| [Deriv](../api/connectors/forex/deriv.md) | [Configuración de Deriv](../api/connectors/forex/deriv/configuration_deriv.md) | [Configuración gráfica de Deriv](../api/connectors/forex/deriv/graphical_configuration_deriv.md) |
 | [Match-Trader](../api/connectors/forex/matchtrader.md)                 | [Configuración de Match-Trader](../api/connectors/forex/matchtrader/configuration_matchtrader.md)             | [Configuración gráfica de Match-Trader](../api/connectors/forex/matchtrader/graphical_configuration_matchtrader.md)                 |
 | [X Open Hub](../api/connectors/forex/xopenhub.md)                 | [Configuración de X Open Hub](../api/connectors/forex/xopenhub/configuration_xopenhub.md)             | [Configuración gráfica de X Open Hub](../api/connectors/forex/xopenhub/graphical_configuration_xopenhub.md)                 |
 | [DukasCopy](../api/connectors/forex/dukascopy.md) | ---------------------------------- | [Configuración gráfica de DukasCopy](../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md) |
@@ -132,7 +133,9 @@ Actualmente, [Hydra](../hydra.md) admite las siguientes fuentes:
 | [FXCM](../api/connectors/forex/fxcm.md)                   | [Configuración de FXCM](../api/connectors/forex/fxcm/configuration_fxcm.md)                      | [Configuración gráfica de FXCM](../api/connectors/forex/fxcm/graphical_configuration_fxcm.md)                   |
 | [FXOpen TickTrader](../api/connectors/forex/fxopen.md) | [Configuración de FXOpen TickTrader](../api/connectors/forex/fxopen/configuration_fxopen.md) | [Configuración gráfica de FXOpen TickTrader](../api/connectors/forex/fxopen/graphical_configuration_fxopen.md) |
 | [LMAX](../api/connectors/forex/lmax.md)                   | [Configuración de LMAX](../api/connectors/forex/lmax/configuration_lmax.md)                      | [Configuración gráfica de LMAX](../api/connectors/forex/lmax/graphical_configuration_lmax.md)                   |
+| [MetaApi](../api/connectors/forex/metaapi.md) | [Configuración de MetaApi](../api/connectors/forex/metaapi/configuration_metaapi.md) | [Configuración gráfica de MetaApi](../api/connectors/forex/metaapi/graphical_configuration_metaapi.md) |
 | [Oanda](../api/connectors/forex/oanda.md)                 | [Configuración de Oanda](../api/connectors/forex/oanda/configuration_oanda.md)                    | [Configuración gráfica de Oanda](../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
+| [StocksTrader](../api/connectors/forex/stocks_trader.md) | [Configuración de StocksTrader](../api/connectors/forex/stocks_trader/configuration_stocks_trader.md) | [Configuración gráfica de StocksTrader](../api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md) |
 
 ## Criptomonedas
 

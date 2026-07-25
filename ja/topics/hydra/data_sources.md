@@ -125,6 +125,7 @@
 | [MetaTrader](../api/connectors/forex/metatrader.md) | ---------------------------------- | ---------------------------------- |
 | [DXtrade](../api/connectors/forex/dxtrade.md) | [DXtrade の設定](../api/connectors/forex/dxtrade/configuration_dxtrade.md) | [DXtrade のグラフィカル設定](../api/connectors/forex/dxtrade/graphical_configuration_dxtrade.md) |
 | [cTrader](../api/connectors/forex/ctrader.md) | [cTrader の設定](../api/connectors/forex/ctrader/configuration_ctrader.md) | [cTrader のグラフィカル設定](../api/connectors/forex/ctrader/graphical_configuration_ctrader.md) |
+| [Deriv](../api/connectors/forex/deriv.md) | [Deriv の設定](../api/connectors/forex/deriv/configuration_deriv.md) | [Deriv のグラフィカル設定](../api/connectors/forex/deriv/graphical_configuration_deriv.md) |
 | [Match-Trader](../api/connectors/forex/matchtrader.md) | [Match-Trader の設定](../api/connectors/forex/matchtrader/configuration_matchtrader.md) | [Match-Trader のグラフィカル設定](../api/connectors/forex/matchtrader/graphical_configuration_matchtrader.md) |
 | [X Open Hub](../api/connectors/forex/xopenhub.md) | [X Open Hub の設定](../api/connectors/forex/xopenhub/configuration_xopenhub.md) | [X Open Hub のグラフィカル設定](../api/connectors/forex/xopenhub/graphical_configuration_xopenhub.md) |
 | [DukasCopy](../api/connectors/forex/dukascopy.md) | ---------------------------------- | [DukasCopy のグラフィカル設定](../api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md) |
@@ -132,7 +133,9 @@
 | [FXCM](../api/connectors/forex/fxcm.md) | [FXCM の設定](../api/connectors/forex/fxcm/configuration_fxcm.md) | [FXCM のグラフィカル設定](../api/connectors/forex/fxcm/graphical_configuration_fxcm.md) |
 | [FXOpen TickTrader](../api/connectors/forex/fxopen.md) | [FXOpen TickTrader の設定](../api/connectors/forex/fxopen/configuration_fxopen.md) | [FXOpen TickTrader のグラフィカル設定](../api/connectors/forex/fxopen/graphical_configuration_fxopen.md) |
 | [LMAX](../api/connectors/forex/lmax.md) | [LMAX の設定](../api/connectors/forex/lmax/configuration_lmax.md) | [LMAX のグラフィカル設定](../api/connectors/forex/lmax/graphical_configuration_lmax.md) |
+| [MetaApi](../api/connectors/forex/metaapi.md) | [MetaApi の設定](../api/connectors/forex/metaapi/configuration_metaapi.md) | [MetaApi のグラフィカル設定](../api/connectors/forex/metaapi/graphical_configuration_metaapi.md) |
 | [Oanda](../api/connectors/forex/oanda.md) | [Oanda の設定](../api/connectors/forex/oanda/configuration_oanda.md) | [Oanda のグラフィカル設定](../api/connectors/forex/oanda/graphical_configuration_oanda.md) |
+| [StocksTrader](../api/connectors/forex/stocks_trader.md) | [StocksTrader の設定](../api/connectors/forex/stocks_trader/configuration_stocks_trader.md) | [StocksTrader のグラフィカル設定](../api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md) |
 
 ## 暗号通貨
 

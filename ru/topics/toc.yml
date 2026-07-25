@@ -1851,6 +1851,15 @@
           href: api/connectors/forex/ctrader/graphical_configuration_ctrader.md
         - name: Инициализация адаптера cTrader
           href: api/connectors/forex/ctrader/adapter_initialization_ctrader.md
+      - name: Deriv
+        href: api/connectors/forex/deriv.md
+        items:
+        - name: Настройки коннектора Deriv
+          href: api/connectors/forex/deriv/configuration_deriv.md
+        - name: Графическое конфигурирование Deriv
+          href: api/connectors/forex/deriv/graphical_configuration_deriv.md
+        - name: Инициализация адаптера Deriv
+          href: api/connectors/forex/deriv/adapter_initialization_deriv.md
       - name: DukasCopy
         href: api/connectors/forex/dukascopy.md
         items:
@@ -1894,6 +1903,15 @@
           href: api/connectors/forex/lmax/graphical_configuration_lmax.md
         - name: Инициализация адаптера LMAX
           href: api/connectors/forex/lmax/adapter_initialization_lmax.md
+      - name: MetaApi
+        href: api/connectors/forex/metaapi.md
+        items:
+        - name: Настройки коннектора MetaApi
+          href: api/connectors/forex/metaapi/configuration_metaapi.md
+        - name: Графическое конфигурирование MetaApi
+          href: api/connectors/forex/metaapi/graphical_configuration_metaapi.md
+        - name: Инициализация адаптера MetaApi
+          href: api/connectors/forex/metaapi/adapter_initialization_metaapi.md
       - name: Oanda
         href: api/connectors/forex/oanda.md
         items:
@@ -1912,6 +1930,15 @@
           href: api/connectors/forex/matchtrader/graphical_configuration_matchtrader.md
         - name: Инициализация адаптера Match-Trader
           href: api/connectors/forex/matchtrader/adapter_initialization_matchtrader.md
+      - name: StocksTrader
+        href: api/connectors/forex/stocks_trader.md
+        items:
+        - name: Настройки коннектора StocksTrader
+          href: api/connectors/forex/stocks_trader/configuration_stocks_trader.md
+        - name: Графическое конфигурирование StocksTrader
+          href: api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md
+        - name: Инициализация адаптера StocksTrader
+          href: api/connectors/forex/stocks_trader/adapter_initialization_stocks_trader.md
       - name: X Open Hub
         href: api/connectors/forex/xopenhub.md
         items:
