@@ -1,6 +1,3 @@
-> [!WARNING]
-> この取引所は恒久的に閉鎖されました（~2023 - 閉鎖）。このコネクターは現在動作しません。ドキュメントは履歴参照用として保持されています。
-
 # アダプターの初期化 Gopax
 
 以下のコードは、[GopaxMessageAdapter](xref:StockSharp.Gopax.GopaxMessageAdapter) を初期化し、それを [Connector](xref:StockSharp.Algo.Connector) に送る方法を示しています。

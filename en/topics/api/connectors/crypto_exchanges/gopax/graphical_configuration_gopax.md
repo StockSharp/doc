@@ -1,6 +1,3 @@
-> [!WARNING]
-> This exchange has permanently shut down (~2023 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
-
 # Graphical configuration Gopax
 
 For all [S#](../../../../api.md) products, graphical configuration of the connection is performed on the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse Bittrex hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
+
 # Bittrex
 
 **Bittrex** - Kryptowährungsbörse.

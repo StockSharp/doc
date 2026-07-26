@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse CoinHub und ihre API sind nicht mehr verfügbar. Der Konnektor funktioniert nicht; die Dokumentation dient nur noch als Referenz.**
+
 # Konfiguration CoinHub
 
 Um mit einem Connector zu arbeiten, müssen Sie im persönlichen Konto der Börse den **Schlüssel (API Key)** und das **Geheimnis** generieren und diese in den Verbindungseinstellungen angeben.

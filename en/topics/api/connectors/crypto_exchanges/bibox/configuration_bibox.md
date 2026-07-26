@@ -1,4 +1,7 @@
-﻿# Configuration Bibox
+> [!CAUTION]
+> **The Bibox exchange API used by this connector is no longer available. The connector does not work; the documentation is retained for reference only.**
+
+# Configuration Bibox
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them at the connection settings.
 

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Os serviços de negociação da OKCoin foram desativados após a migração da plataforma para a OKX. Este conector não funciona mais; a documentação é mantida apenas para referência.**
+
 # Configuração OKCoin
 
 Para trabalhar com um conector, é necessário gerar a **chave (API Key)** e o **segredo** na conta pessoal da bolsa e especificá-los nas definições de ligação.

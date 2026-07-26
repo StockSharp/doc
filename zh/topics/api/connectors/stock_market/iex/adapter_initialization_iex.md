@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **该连接器使用的 IEX 交易 API 已不可用。该连接器无法使用；文档仅保留供参考。**
+
 # IEX 适配器初始化
 
 下面的代码演示了如何初始化 [IEXMessageAdapter](xref:StockSharp.IEX.IEXMessageAdapter) 并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The Bibox exchange API used by this connector is no longer available. The connector does not work; the documentation is retained for reference only.**
+
 # Graphical configuration Bibox
 
 For all [S#](../../../../api.md) products, graphical configuration of the connection is performed on the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

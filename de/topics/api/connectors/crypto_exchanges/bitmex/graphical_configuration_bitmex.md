@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse BitMEX schließt am 23. September 2026; Neuregistrierungen wurden bereits eingestellt. Nach der Schließung wird der Konnektor nicht mehr funktionieren.**
+
 # Grafische Konfiguration BitMEX
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster der Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) durchgeführt:

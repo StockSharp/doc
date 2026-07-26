@@ -1,4 +1,7 @@
-﻿# Configuration BitMEX
+> [!CAUTION]
+> **The BitMEX exchange will close on September 23, 2026; new user registrations have already stopped. The connector will stop working after the closure.**
+
+# Configuration BitMEX
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them in the connection settings.
 

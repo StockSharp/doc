@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **PrizmBit 交易所及其 API 已不可用。该连接器无法使用；文档仅保留供参考。**
+
 # PrizmBit
 
 **PrizmBit** - 加密货币交易所。

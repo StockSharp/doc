@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa BitMEX cerrará el 23 de septiembre de 2026; ya se han suspendido los nuevos registros. Después del cierre, el conector dejará de funcionar.**
+
 # Configuración de BitMEX
 
 Para trabajar con un conector, es necesario generar la **clave (API Key)** y el **secreto** en la cuenta personal de la bolsa y especificarlos en la configuración de conexión.

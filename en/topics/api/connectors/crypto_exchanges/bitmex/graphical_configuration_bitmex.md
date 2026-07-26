@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The BitMEX exchange will close on September 23, 2026; new user registrations have already stopped. The connector will stop working after the closure.**
+
 # Graphical configuration BitMEX
 
 For all [S#](../../../../api.md) products, graphical configuration of the connection is performed on the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

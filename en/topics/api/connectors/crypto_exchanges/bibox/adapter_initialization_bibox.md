@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The Bibox exchange API used by this connector is no longer available. The connector does not work; the documentation is retained for reference only.**
+
 # Adapter initialization Bibox
 
 The code below demonstrates how to initialize the [BiboxMessageAdapter](xref:StockSharp.Bibox.BiboxMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

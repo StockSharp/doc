@@ -1,5 +1,5 @@
-> [!NOTE]
-> BitMax ha sido renombrado a AscendEX. Esta documentación se conserva como referencia histórica.
+> [!CAUTION]
+> **La bolsa BitMax, posteriormente renombrada AscendEX, cesó sus operaciones el 1 de julio de 2026. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
 
 # Configuración gráfica de BitMax
 

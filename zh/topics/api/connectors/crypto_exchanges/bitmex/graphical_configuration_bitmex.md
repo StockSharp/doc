@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **BitMEX 交易所将于 2026 年 9 月 23 日关闭，新用户注册已停止。关闭后，该连接器将无法使用。**
+
 # BitMEX 图形化配置
 
 对于所有 [S#](../../../../api.md) 产品，连接的图形化配置都在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)中完成：

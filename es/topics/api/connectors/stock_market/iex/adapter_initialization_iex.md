@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La API de negociación de IEX utilizada por este conector ya no está disponible. El conector no funciona; la documentación se conserva únicamente como referencia.**
+
 # Inicialización del adaptador IEX
 
 El siguiente código muestra cómo inicializar [IEXMessageAdapter](xref:StockSharp.IEX.IEXMessageAdapter) y enviarlo a [Connector](xref:StockSharp.Algo.Connector).

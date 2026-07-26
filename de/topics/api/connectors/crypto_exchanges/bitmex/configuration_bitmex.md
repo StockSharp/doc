@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse BitMEX schließt am 23. September 2026; Neuregistrierungen wurden bereits eingestellt. Nach der Schließung wird der Konnektor nicht mehr funktionieren.**
+
 # Konfiguration BitMEX
 
 Um mit einem Connector zu arbeiten, ist es erforderlich, den **Schlüssel (API Key)** und das **Geheimnis** im persönlichen Konto der Börse zu generieren und diese in den Verbindungseinstellungen anzugeben.

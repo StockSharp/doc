@@ -1,5 +1,5 @@
-> [!WARNING]
-> Diese Börse wurde dauerhaft geschlossen (November 2019 - geschlossen). Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
+> [!CAUTION]
+> **Die Börse IDAX hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # Grafische Konfiguration Idax
 

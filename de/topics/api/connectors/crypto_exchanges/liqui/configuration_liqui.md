@@ -1,5 +1,5 @@
-> [!WARNING]
-> Diese Börse wurde im Januar 2019 endgültig geschlossen. Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
+> [!CAUTION]
+> **Die Börse Liqui hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # Liqui-Konfiguration
 

@@ -1,5 +1,5 @@
-> [!NOTE]
-> GDAX foi renomeada para Coinbase Pro e, mais tarde, para Coinbase Advanced Trade. Esta documentação é preservada para referência histórica.
+> [!CAUTION]
+> **O serviço GDAX não está mais disponível. Seu sucessor, Coinbase Pro, também foi descontinuado; para a Coinbase, use o conector Coinbase atual. Este conector não funciona; a documentação é mantida apenas para referência.**
 
 # Configuração gráfica GDAX
 

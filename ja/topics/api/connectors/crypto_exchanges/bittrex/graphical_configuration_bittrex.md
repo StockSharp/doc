@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Bittrex 取引所は運営を終了しました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # Bittrex のグラフィカル設定
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。

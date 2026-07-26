@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The FTX exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # Initialization of FTX Adapter
 
 The code below demonstrates how to initialize the [FtxMessageAdapter](xref:StockSharp.FTX.FtxMessageAdapter) and pass it to the [Connector](xref:StockSharp.Algo.Connector).

@@ -1,6 +1,3 @@
-> [!WARNING]
-> Diese Börse wurde dauerhaft geschlossen (~2023 - geschlossen). Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
-
 # Konfiguration Gopax
 
 Für die Arbeit mit dem Connector müssen im persönlichen Konto der Börse der **Schlüssel (API Key)** und das **Geheimnis** generiert und anschließend in den Verbindungseinstellungen angegeben werden.

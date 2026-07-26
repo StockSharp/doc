@@ -1,5 +1,5 @@
-> [!WARNING]
-> Diese Börse wurde dauerhaft geschlossen (ca. 2022 - Betrieb eingestellt). Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt zu historischen Referenzzwecken erhalten.
+> [!CAUTION]
+> **Die Börse Digitex Futures hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # Adapterinitialisierung DigitexFutures
 

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **ZB 取引所とその API は利用できなくなりました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # ZB アダプターの初期化
 
 以下のコードは、[ZBMessageAdapter](xref:StockSharp.ZB.ZBMessageAdapter) を初期化し、それを [Connector](xref:StockSharp.Algo.Connector) に渡す方法を示しています。

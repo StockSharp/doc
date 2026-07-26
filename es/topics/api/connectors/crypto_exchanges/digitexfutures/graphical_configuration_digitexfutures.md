@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa ha cerrado permanentemente (~2022 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> [!CAUTION]
+> **La bolsa Digitex Futures ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
 
 # Configuración gráfica DigitexFutures
 

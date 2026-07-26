@@ -1,5 +1,5 @@
-> [!WARNING]
-> Diese Börse wurde dauerhaft geschlossen (Mai 2023 - geschlossen). Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
+> [!CAUTION]
+> **Die Börse Hotbit hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # Konfiguration Hotbit
 

@@ -1,6 +1,3 @@
-﻿> [!WARNING]
-> This exchange has permanently shut down (~2023 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
-
 # Configuration Gopax
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them at the connection settings.

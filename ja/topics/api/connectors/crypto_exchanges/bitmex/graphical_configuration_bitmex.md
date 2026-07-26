@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **BitMEX は 2026 年 9 月 23 日に閉鎖予定で、新規登録はすでに停止されています。閉鎖後、このコネクターは動作しなくなります。**
+
 # BitMEX のグラフィカル設定
 
 すべての [S#](../../../../api.md) 製品では、接続のグラフィカル設定は [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md) で行います。

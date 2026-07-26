@@ -1,6 +1,3 @@
-> [!WARNING]
-> Diese Börse wurde dauerhaft geschlossen (~2023 - geschlossen). Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
-
 # Adapterinitialisierung Gopax
 
 Der folgende Code zeigt, wie der [GopaxMessageAdapter](xref:StockSharp.Gopax.GopaxMessageAdapter) initialisiert und an [Connector](xref:StockSharp.Algo.Connector) übergeben wird.

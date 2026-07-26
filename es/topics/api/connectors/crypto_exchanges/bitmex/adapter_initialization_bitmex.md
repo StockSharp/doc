@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa BitMEX cerrará el 23 de septiembre de 2026; ya se han suspendido los nuevos registros. Después del cierre, el conector dejará de funcionar.**
+
 # Inicialización del adaptador BitMEX
 
 El código siguiente muestra cómo inicializar el [BitmexMessageAdapter](xref:StockSharp.Bitmex.BitmexMessageAdapter) y enviarlo al [Connector](xref:StockSharp.Algo.Connector).

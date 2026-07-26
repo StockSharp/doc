@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **ZB 交易所及其 API 已不可用。该连接器无法使用；文档仅保留供参考。**
+
 # ZB 适配器初始化
 
 下面的代码演示如何初始化 [ZBMessageAdapter](xref:StockSharp.ZB.ZBMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。

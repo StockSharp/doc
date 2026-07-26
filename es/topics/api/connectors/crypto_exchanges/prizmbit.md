@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa PrizmBit y su API ya no están disponibles. El conector no funciona; la documentación se conserva únicamente como referencia.**
+
 # PrizmBit
 
 **PrizmBit** - bolsa de criptomonedas.

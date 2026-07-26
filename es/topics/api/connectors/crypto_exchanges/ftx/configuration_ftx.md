@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa FTX ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
+
 # Configuración del conector FTX
 
 Indique en la configuración del conector los parámetros de conexión proporcionados por el servicio.

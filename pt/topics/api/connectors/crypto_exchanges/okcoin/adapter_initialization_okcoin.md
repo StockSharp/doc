@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Os serviços de negociação da OKCoin foram desativados após a migração da plataforma para a OKX. Este conector não funciona mais; a documentação é mantida apenas para referência.**
+
 # Inicialização do adaptador OKCoin
 
 O código abaixo demonstra como inicializar o [OkcoinMessageAdapter](xref:StockSharp.Okcoin.OkcoinMessageAdapter) e enviá-lo para o [Connector](xref:StockSharp.Algo.Connector).

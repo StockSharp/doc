@@ -1,6 +1,3 @@
-﻿> [!WARNING]
-> This exchange has permanently shut down (~2023 — effectively defunct). This connector is no longer operational. Documentation is preserved for historical reference.
-
 # Configuration Yobit
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them in the connection settings.

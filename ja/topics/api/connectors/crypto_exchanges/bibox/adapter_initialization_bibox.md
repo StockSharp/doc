@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **このコネクターが使用する Bibox 取引所の API は利用できなくなりました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # Bibox アダプターの初期化
 
 以下のコードは、[BiboxMessageAdapter](xref:StockSharp.Bibox.BiboxMessageAdapter) を初期化し、それを [Connector](xref:StockSharp.Algo.Connector) に送る方法を示しています。

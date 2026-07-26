@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa ha cerrado permanentemente (octubre de 2019 — cerrada). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> [!CAUTION]
+> **La bolsa CoinExchange ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
 
 # Configuración gráfica CoinExchange
 

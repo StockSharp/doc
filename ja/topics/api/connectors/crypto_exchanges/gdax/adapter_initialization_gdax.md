@@ -1,5 +1,5 @@
-> [!NOTE]
-> GDAX は Coinbase Pro に名称変更され、その後 Coinbase Advanced Trade に変更されました。このドキュメントは履歴参照用として保持されています。
+> [!CAUTION]
+> **GDAX サービスは利用できなくなりました。後継の Coinbase Pro も終了しているため、Coinbase には現在の Coinbase コネクターを使用してください。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
 
 # GDAX アダプターの初期化
 

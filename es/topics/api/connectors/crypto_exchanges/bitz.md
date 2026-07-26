@@ -1,5 +1,5 @@
-> [!WARNING]
-> esta bolsa ha cerrado permanentemente (~2021 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> [!CAUTION]
+> **La bolsa BitZ ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
 
 # BitZ
 

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa Bittrex ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
+
 # Bittrex
 
 **Bittrex** - bolsa de criptomonedas.

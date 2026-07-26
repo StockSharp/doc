@@ -1,5 +1,5 @@
-> [!WARNING]
-> This exchange has permanently shut down (~2022 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+> [!CAUTION]
+> **The FatBTC exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
 
 # FatBTC
 

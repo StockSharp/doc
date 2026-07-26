@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **OKCoin trading services were disabled following the platform's transition to OKX. This connector no longer works; the documentation is retained for reference only.**
+
 # OKCoin
 
 **OKCoin** - cryptocurrency exchange.

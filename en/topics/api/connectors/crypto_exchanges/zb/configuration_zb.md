@@ -1,4 +1,7 @@
-﻿# Configuration ZB
+> [!CAUTION]
+> **The ZB exchange and its API are no longer available. The connector does not work; the documentation is retained for reference only.**
+
+# Configuration ZB
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them in the connection settings.
 

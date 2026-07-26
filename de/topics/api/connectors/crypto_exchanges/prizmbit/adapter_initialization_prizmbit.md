@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse PrizmBit und ihre API sind nicht mehr verfügbar. Der Konnektor funktioniert nicht; die Dokumentation dient nur noch als Referenz.**
+
 # PrizmBit-Adapter initialisieren
 
 Der folgende Code zeigt, wie der [PrizmBitMessageAdapter](xref:StockSharp.PrizmBit.PrizmBitMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) übergeben wird.

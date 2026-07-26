@@ -1,6 +1,3 @@
-> [!WARNING]
-> Esta bolsa foi encerrada permanentemente (~2023 — efetivamente inativa). Este conector já não está operacional. A documentação é preservada para referência histórica.
-
 # Inicialização do adaptador Yobit
 
 O código abaixo demonstra como inicializar o [YobitMessageAdapter](xref:StockSharp.Yobit.YobitMessageAdapter) e enviá-lo para o [Connector](xref:StockSharp.Algo.Connector).

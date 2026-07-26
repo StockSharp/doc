@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa encerrou permanentemente (~2022 - encerrada). Este conector já não está operacional. A documentação é preservada para referência histórica.
+> [!CAUTION]
+> **A bolsa Digitex Futures encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Inicialização do adaptador DigitexFutures
 

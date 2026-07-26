@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa encerrou permanentemente (outubro de 2019 — encerrada). Este conector já não está operacional. A documentação é preservada para referência histórica.
+> [!CAUTION]
+> **A bolsa CoinExchange encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Inicialização do adaptador CoinExchange
 

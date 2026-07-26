@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa PrizmBit y su API ya no están disponibles. El conector no funciona; la documentación se conserva únicamente como referencia.**
+
 # Configuración PrizmBit
 
 Para trabajar con un conector, es necesario generar **clave (API Key)** y **secreto** en la cuenta personal de la bolsa y especificarlos en la configuración de conexión.

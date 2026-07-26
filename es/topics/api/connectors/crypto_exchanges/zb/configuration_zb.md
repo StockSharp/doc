@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa ZB y su API ya no están disponibles. El conector no funciona; la documentación se conserva únicamente como referencia.**
+
 # Configuración ZB
 
 Para trabajar con un conector, es necesario generar **clave (API Key)** y **secreto** en la cuenta personal de la bolsa y especificarlos en la configuración de conexión.

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse Bitalong und ihre API sind nicht mehr verfügbar. Der Konnektor funktioniert nicht; die Dokumentation dient nur noch als Referenz.**
+
 # Konfiguration Bitalong
 
 Um mit einem Connector zu arbeiten, müssen im persönlichen Konto der Börse **Schlüssel (API Key)** und **Geheimnis** generiert und in den Verbindungseinstellungen angegeben werden.

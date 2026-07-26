@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Os serviços de negociação da OKCoin foram desativados após a migração da plataforma para a OKX. Este conector não funciona mais; a documentação é mantida apenas para referência.**
+
 # OKCoin
 
 **OKCoin** - bolsa de criptomoedas.

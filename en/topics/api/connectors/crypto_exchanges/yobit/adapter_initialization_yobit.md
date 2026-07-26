@@ -1,6 +1,3 @@
-> [!WARNING]
-> This exchange has permanently shut down (~2023 — effectively defunct). This connector is no longer operational. Documentation is preserved for historical reference.
-
 # Adapter initialization Yobit
 
 The code below demonstrates how to initialize the [YobitMessageAdapter](xref:StockSharp.Yobit.YobitMessageAdapter) and send it to [Connector](xref:StockSharp.Algo.Connector).

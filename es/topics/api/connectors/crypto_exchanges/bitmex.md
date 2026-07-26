@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa BitMEX cerrará el 23 de septiembre de 2026; ya se han suspendido los nuevos registros. Después del cierre, el conector dejará de funcionar.**
+
 # BitMEX
 
 **BitMEX** - bolsa de criptomonedas.

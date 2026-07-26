@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A API da bolsa Bibox usada por este conector não está mais disponível. O conector não funciona; a documentação é mantida apenas para referência.**
+
 # Configuração gráfica Bibox
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é realizada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Bitalong 取引所とその API は利用できなくなりました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # Bitalong アダプターの初期化
 
 以下のコードは、[BitalongMessageAdapter](xref:StockSharp.Bitalong.BitalongMessageAdapter) を初期化し、[Connector](xref:StockSharp.Algo.Connector) に渡す方法を示しています。

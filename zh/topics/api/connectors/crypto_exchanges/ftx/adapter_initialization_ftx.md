@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **FTX 交易所已停止运营。该连接器已无法使用；文档仅保留供参考。**
+
 # FTX 适配器初始化
 
 下面的代码演示如何初始化 [FtxMessageAdapter](xref:StockSharp.FTX.FtxMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。

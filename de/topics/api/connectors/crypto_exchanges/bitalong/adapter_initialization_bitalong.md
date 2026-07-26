@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse Bitalong und ihre API sind nicht mehr verfügbar. Der Konnektor funktioniert nicht; die Dokumentation dient nur noch als Referenz.**
+
 # Adapterinitialisierung Bitalong
 
 Der folgende Code zeigt, wie man den [BitalongMessageAdapter](xref:StockSharp.Bitalong.BitalongMessageAdapter) initialisiert und ihn an den [Connector](xref:StockSharp.Algo.Connector) sendet.

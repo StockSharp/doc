@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa ZB y su API ya no están disponibles. El conector no funciona; la documentación se conserva únicamente como referencia.**
+
 # Inicialización del adaptador ZB
 
 El siguiente código muestra cómo inicializar [ZBMessageAdapter](xref:StockSharp.ZB.ZBMessageAdapter) y enviarlo a [Connector](xref:StockSharp.Algo.Connector).

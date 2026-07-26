@@ -1,6 +1,3 @@
-> [!WARNING]
-> 该交易所已永久关闭（~2023 — 实际上已停止运作）。该连接器不再可用。文档已保留以作历史参考。
-
 # Yobit 适配器初始化
 
 下面的代码演示如何初始化 [YobitMessageAdapter](xref:StockSharp.Yobit.YobitMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。

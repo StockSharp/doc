@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A bolsa FTX encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
+
 # FTX
 
 **FTX** - um conector para uma bolsa de criptomoedas.

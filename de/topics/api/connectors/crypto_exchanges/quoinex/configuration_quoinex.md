@@ -1,5 +1,5 @@
-> [!NOTE]
-> QUOINEX wurde in Liquid umbenannt, das 2022 geschlossen wurde. Diese Dokumentation bleibt als historische Referenz erhalten.
+> [!CAUTION]
+> **Die Börse QUOINEX wurde in Liquid umbenannt, die später ihren Betrieb einstellte. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # Quoinex-Konfiguration
 

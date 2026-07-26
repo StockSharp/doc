@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The ZB exchange and its API are no longer available. The connector does not work; the documentation is retained for reference only.**
+
 # Graphical configuration ZB
 
 For all [S#](../../../../api.md) products, graphical configuration of the connection is performed on the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

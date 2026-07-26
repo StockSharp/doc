@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse Bitalong und ihre API sind nicht mehr verfügbar. Der Konnektor funktioniert nicht; die Dokumentation dient nur noch als Referenz.**
+
 # Bitalong
 
 **Bitalong** - Kryptowährungsbörse.

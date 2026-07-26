@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Биржа PrizmBit и её API больше недоступны. Коннектор не работает; документация сохранена только для справки.**
+
 # Инициализация адаптера PrizmBit
 
 Код ниже демонстрирует, как инициализировать [PrizmBitMessageAdapter](xref:StockSharp.PrizmBit.PrizmBitMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

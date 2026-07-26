@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **CoinHub 取引所とその API は利用できなくなりました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # CoinHub アダプターの初期化
 
 以下のコードは、[CoinHubMessageAdapter](xref:StockSharp.CoinHub.CoinHubMessageAdapter) を初期化し、それを [Connector](xref:StockSharp.Algo.Connector) に送信する方法を示しています。

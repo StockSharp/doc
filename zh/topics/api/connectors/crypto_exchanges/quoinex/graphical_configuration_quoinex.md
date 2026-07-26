@@ -1,5 +1,5 @@
-> [!NOTE]
-> QUOINEX 已更名为 Liquid，该公司于 2022 年关闭。本文件保留以供历史参考。
+> [!CAUTION]
+> **QUOINEX 交易所更名为 Liquid 后，Liquid 也已停止运营。该连接器已无法使用；文档仅保留供参考。**
 
 # Quoinex 图形化配置
 

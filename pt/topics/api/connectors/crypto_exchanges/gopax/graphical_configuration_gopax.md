@@ -1,6 +1,3 @@
-> [!WARNING]
-> Esta bolsa foi encerrada permanentemente (~2023 - encerrada). Este conector já não está operacional. A documentação é preservada para referência histórica.
-
 # Configuração gráfica Gopax
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é realizada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):

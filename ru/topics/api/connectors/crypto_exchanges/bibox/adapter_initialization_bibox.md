@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **API биржи Bibox, который использует этот коннектор, больше недоступен. Коннектор не работает; документация сохранена только для справки.**
+
 # Инициализация адаптера Bibox
 
 Код ниже демонстрирует, как инициализировать [BiboxMessageAdapter](xref:StockSharp.Bibox.BiboxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

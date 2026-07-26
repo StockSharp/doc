@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa ha cerrado permanentemente (noviembre de 2019 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> [!CAUTION]
+> **La bolsa IDAX ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
 
 # Inicialización del adaptador Idax
 

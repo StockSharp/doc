@@ -1,5 +1,5 @@
-> [!WARNING]
-> Diese Börse wurde im Dezember 2020 nach einem Hack endgültig geschlossen. Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
+> [!CAUTION]
+> **Die Börse Livecoin hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # Livecoin-Adapter initialisieren
 

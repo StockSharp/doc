@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die von diesem Konnektor verwendete IEX-Handels-API ist nicht mehr verfügbar. Der Konnektor funktioniert nicht; die Dokumentation dient nur noch als Referenz.**
+
 # Grafische Konfiguration IEX
 
 Für alle [S#](../../../../api.md)-Produkte wird die grafische Konfiguration der Verbindung im [Fenster Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) vorgenommen:

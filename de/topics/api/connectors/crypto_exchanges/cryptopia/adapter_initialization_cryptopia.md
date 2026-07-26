@@ -1,5 +1,5 @@
-> [!WARNING]
-> Diese Börse wurde dauerhaft geschlossen (Mai 2019 - gehackt und liquidiert). Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt zu historischen Referenzzwecken erhalten.
+> [!CAUTION]
+> **Die Börse Cryptopia hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # Adapterinitialisierung Cryptopia
 

@@ -1,5 +1,5 @@
-﻿> [!WARNING]
-> This exchange has permanently shut down (October 2019 — shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+> [!CAUTION]
+> **The CoinExchange exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
 
 # Configuration CoinExchange
 

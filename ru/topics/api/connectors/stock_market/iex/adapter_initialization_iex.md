@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Торговый API IEX, который использует этот коннектор, больше недоступен. Коннектор не работает; документация сохранена только для справки.**
+
 # Инициализация адаптера IEX
 
 Код ниже демонстрирует, как инициализировать [IEXMessageAdapter](xref:StockSharp.IEX.IEXMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The FTX exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # FTX
 
 **FTX** - a connector for a cryptocurrency exchange.

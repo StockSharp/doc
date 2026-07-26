@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse FTX hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
+
 # FTX-Connector-Einstellungen
 
 Geben Sie in den Konnektoreinstellungen die vom Dienst bereitgestellten Verbindungsparameter an.

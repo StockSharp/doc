@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La API de la bolsa Bibox que utiliza este conector ya no está disponible. El conector no funciona; la documentación se conserva únicamente como referencia.**
+
 # Configuración Bibox
 
 Para trabajar con un conector, es necesario generar la **clave (API Key)** y el **secreto** en la cuenta personal de la bolsa y especificarlos en la configuración de conexión.

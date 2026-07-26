@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa FTX ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
+
 # FTX
 
 **FTX** - un conector para una bolsa de criptomonedas.

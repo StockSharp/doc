@@ -1,6 +1,3 @@
-> [!WARNING]
-> Diese Börse ist seit etwa 2023 faktisch nicht mehr aktiv. Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
-
 # Yobit
 
 **YoBit** - Kryptobörse.

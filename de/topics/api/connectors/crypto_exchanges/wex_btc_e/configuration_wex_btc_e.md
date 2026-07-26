@@ -1,5 +1,5 @@
-> [!WARNING]
-> Diese Börse wurde im Juli 2017 nach einer Beschlagnahmung endgültig geschlossen. Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
+> [!CAUTION]
+> **Die Börsen BTC-e und WEX haben ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # WEX-(BTC-e)-Konfiguration
 

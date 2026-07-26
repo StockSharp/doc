@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **CoinHub 交易所及其 API 已不可用。该连接器无法使用；文档仅保留供参考。**
+
 # CoinHub 图形化配置
 
 对于所有 [S#](../../../../api.md) 产品，连接的图形化配置都在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)中完成：

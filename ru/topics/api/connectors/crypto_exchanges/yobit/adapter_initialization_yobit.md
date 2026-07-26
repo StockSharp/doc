@@ -1,6 +1,3 @@
-> [!WARNING]
-> Данная биржа прекратила работу (~2023 — фактически мертва). Коннектор более не функционирует. Документация сохранена для справки.
-
 # Инициализация адаптера Yobit
 
 Код ниже демонстрирует, как инициализировать [YobitMessageAdapter](xref:StockSharp.Yobit.YobitMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

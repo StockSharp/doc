@@ -1,5 +1,5 @@
-> [!NOTE]
-> BitMax 已更名为 AscendEX。本文件保留用于历史参考。
+> [!CAUTION]
+> **BitMax 交易所（后更名为 AscendEX）已于 2026 年 7 月 1 日停止运营。该连接器已无法使用；文档仅保留供参考。**
 
 # BitMax 配置
 

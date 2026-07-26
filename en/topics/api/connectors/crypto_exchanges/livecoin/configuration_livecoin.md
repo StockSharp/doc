@@ -1,5 +1,5 @@
-﻿> [!WARNING]
-> This exchange has permanently shut down (December 2020 — hacked and shut down). This connector is no longer operational. Documentation is preserved for historical reference.
+> [!CAUTION]
+> **The Livecoin exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
 
 # Livecoin configuration
 

@@ -1,5 +1,5 @@
-> [!WARNING]
-> esta bolsa cerró permanentemente (enero de 2019 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> [!CAUTION]
+> **La bolsa Liqui ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
 
 # Configuración Liqui
 

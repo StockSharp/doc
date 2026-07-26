@@ -1,4 +1,7 @@
-﻿# Configuration OKCoin
+> [!CAUTION]
+> **OKCoin trading services were disabled following the platform's transition to OKX. This connector no longer works; the documentation is retained for reference only.**
+
+# Configuration OKCoin
 
 To work with a connector, it is required to generate the **Key (API Key)** and **Secret** in the personal account of the exchange and specify them in the connection settings.
 

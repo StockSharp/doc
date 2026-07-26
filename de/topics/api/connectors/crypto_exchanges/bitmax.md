@@ -1,5 +1,5 @@
-> [!NOTE]
-> BitMax wurde in AscendEX umbenannt. Diese Dokumentation bleibt zu historischen Referenzzwecken erhalten.
+> [!CAUTION]
+> **Die Börse BitMax, die später in AscendEX umbenannt wurde, hat ihren Betrieb am 1. Juli 2026 eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # BitMax
 

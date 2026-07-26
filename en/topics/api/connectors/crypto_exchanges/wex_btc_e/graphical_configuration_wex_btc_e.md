@@ -1,5 +1,5 @@
-> [!WARNING]
-> This exchange has permanently shut down (July 2017 — seized). This connector is no longer operational. Documentation is preserved for historical reference.
+> [!CAUTION]
+> **The BTC-e and WEX exchanges have ceased operations. The connector no longer works; the documentation is retained for reference only.**
 
 # Graphical configuration WEX (BTC-e)
 

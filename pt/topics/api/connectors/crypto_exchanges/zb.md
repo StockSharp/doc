@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A bolsa ZB e sua API não estão mais disponíveis. O conector não funciona; a documentação é mantida apenas para referência.**
+
 # ZB
 
 **ZB** - bolsa de criptomoedas.

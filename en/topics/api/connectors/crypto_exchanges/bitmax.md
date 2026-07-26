@@ -1,5 +1,5 @@
-> [!NOTE]
-> BitMax has been renamed to AscendEX. This documentation is preserved for historical reference.
+> [!CAUTION]
+> **The BitMax exchange, later renamed AscendEX, ceased operations on July 1, 2026. The connector no longer works; the documentation is retained for reference only.**
 
 # BitMax
 

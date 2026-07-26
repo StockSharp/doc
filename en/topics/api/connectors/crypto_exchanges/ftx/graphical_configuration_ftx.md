@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The FTX exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # Graphical Configuration of FTX
 
 For all [S#](../../../../api.md) products, graphical configuration of the connection is performed in the [Connection Settings Window](../../../graphical_user_interface/connection_settings_window.md):

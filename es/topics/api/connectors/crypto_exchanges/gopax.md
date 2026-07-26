@@ -1,6 +1,3 @@
-> [!WARNING]
-> Esta bolsa ha cerrado permanentemente (~2023 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
-
 # Gopax
 
 **GOPAX** - bolsa de criptomonedas.

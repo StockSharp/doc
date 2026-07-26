@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A bolsa Bitalong e sua API não estão mais disponíveis. O conector não funciona; a documentação é mantida apenas para referência.**
+
 # Configuração Bitalong
 
 Para trabalhar com um conector, é necessário gerar a **chave (API Key)** e o **segredo** na conta pessoal da bolsa e especificá-los nas configurações de conexão.

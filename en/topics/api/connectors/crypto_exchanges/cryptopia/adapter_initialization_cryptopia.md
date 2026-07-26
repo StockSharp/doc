@@ -1,5 +1,5 @@
-> [!WARNING]
-> This exchange has permanently shut down (May 2019 — hacked and liquidated). This connector is no longer operational. Documentation is preserved for historical reference.
+> [!CAUTION]
+> **The Cryptopia exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
 
 # Adapter initialization Cryptopia
 

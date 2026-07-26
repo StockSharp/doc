@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse CoinHub und ihre API sind nicht mehr verfügbar. Der Konnektor funktioniert nicht; die Dokumentation dient nur noch als Referenz.**
+
 # CoinHub
 
 **CoinHub** - Kryptowährungsbörse.

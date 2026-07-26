@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **このコネクターが使用する IEX 取引 API は利用できなくなりました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # IEX アダプターの初期化
 
 以下のコードは、[IEXMessageAdapter](xref:StockSharp.IEX.IEXMessageAdapter) を初期化し、それを [Connector](xref:StockSharp.Algo.Connector) に送信する方法を示しています。

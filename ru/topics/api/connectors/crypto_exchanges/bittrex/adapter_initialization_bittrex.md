@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Биржа Bittrex прекратила работу. Коннектор больше не работает; документация сохранена только для справки.**
+
 # Инициализация адаптера Bittrex
 
 Код ниже демонстрирует, как инициализировать [BittrexMessageAdapter](xref:StockSharp.Bittrex.BittrexMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

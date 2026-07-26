@@ -1,6 +1,3 @@
-> [!WARNING]
-> Diese Börse wurde dauerhaft geschlossen (~2023 - geschlossen). Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
-
 # Grafische Konfiguration Gopax
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):

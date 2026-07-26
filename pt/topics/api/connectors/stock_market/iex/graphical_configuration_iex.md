@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A API de negociação da IEX usada por este conector não está mais disponível. O conector não funciona; a documentação é mantida apenas para referência.**
+
 # Configuração gráfica IEX
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da ligação é efetuada na [Janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md):

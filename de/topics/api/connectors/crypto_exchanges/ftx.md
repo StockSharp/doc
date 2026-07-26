@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse FTX hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
+
 # FTX
 
 **FTX** - ein Konnektor für eine Kryptowährungsbörse.

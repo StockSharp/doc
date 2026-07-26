@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa foi encerrada permanentemente (maio de 2023 - encerrada). Este conector já não está operacional. A documentação é preservada para referência histórica.
+> [!CAUTION]
+> **A bolsa Hotbit encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Configuração gráfica Hotbit
 

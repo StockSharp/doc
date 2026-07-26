@@ -1,5 +1,5 @@
-﻿> [!NOTE]
-> QUOINEX has been renamed to Liquid, which shut down in 2022. This documentation is preserved for historical reference.
+> [!CAUTION]
+> **The QUOINEX exchange was renamed Liquid, which later ceased operations. The connector no longer works; the documentation is retained for reference only.**
 
 # Configuration Quoinex
 

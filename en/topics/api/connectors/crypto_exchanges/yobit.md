@@ -1,6 +1,3 @@
-> [!WARNING]
-> This exchange has permanently shut down (~2023 — effectively defunct). This connector is no longer operational. Documentation is preserved for historical reference.
-
 # Yobit
 
 **YoBit** - cryptocurrency exchange.

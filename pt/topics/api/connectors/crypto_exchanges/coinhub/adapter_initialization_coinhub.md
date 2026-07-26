@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A bolsa CoinHub e sua API não estão mais disponíveis. O conector não funciona; a documentação é mantida apenas para referência.**
+
 # Inicialização do adaptador CoinHub
 
 O código abaixo demonstra como inicializar o [CoinHubMessageAdapter](xref:StockSharp.CoinHub.CoinHubMessageAdapter) e enviá-lo para o [Connector](xref:StockSharp.Algo.Connector).

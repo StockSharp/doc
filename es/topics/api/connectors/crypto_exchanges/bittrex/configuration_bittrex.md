@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa Bittrex ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
+
 # Configuración de Bittrex
 
 Para trabajar con un conector, es necesario generar la **clave (API Key)** y el **secreto** en la cuenta personal de la bolsa y especificarlos en la configuración de conexión.

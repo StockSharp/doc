@@ -1,5 +1,5 @@
-> [!NOTE]
-> GDAX 已被更名为 Coinbase Pro，后来又更名为 Coinbase 高级交易。此文档为历史参考而保留。
+> [!CAUTION]
+> **GDAX 服务已不可用，其后继服务 Coinbase Pro 也已停止；如需连接 Coinbase，请使用当前的 Coinbase 连接器。此连接器已无法使用；文档仅保留供参考。**
 
 # GDAX 配置
 

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die von diesem Konnektor verwendete API der Börse Bibox ist nicht mehr verfügbar. Der Konnektor funktioniert nicht; die Dokumentation dient nur noch als Referenz.**
+
 # Adapterinitialisierung Bibox
 
 Der folgende Code zeigt, wie der [BiboxMessageAdapter](xref:StockSharp.Bibox.BiboxMessageAdapter) initialisiert und an [Connector](xref:StockSharp.Algo.Connector) übergeben wird.

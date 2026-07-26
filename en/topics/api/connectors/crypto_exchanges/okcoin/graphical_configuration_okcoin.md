@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **OKCoin trading services were disabled following the platform's transition to OKX. This connector no longer works; the documentation is retained for reference only.**
+
 # Graphical configuration OKCoin
 
 For all [S#](../../../../api.md) products, graphical configuration of the connection is performed in the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

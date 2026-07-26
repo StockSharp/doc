@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa ha cerrado permanentemente (mayo de 2019 — hackeada y liquidada). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
+> [!CAUTION]
+> **La bolsa Cryptopia ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
 
 # Cryptopia
 

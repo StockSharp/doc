@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa foi encerrada permanentemente (dezembro de 2020 — comprometida e encerrada). Este conector já não está operacional. A documentação é preservada para referência histórica.
+> [!CAUTION]
+> **A bolsa Livecoin encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Inicialização do adaptador Livecoin
 

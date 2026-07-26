@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The BitMEX exchange will close on September 23, 2026; new user registrations have already stopped. The connector will stop working after the closure.**
+
 # BitMEX
 
 **BitMEX** - cryptocurrency exchange.

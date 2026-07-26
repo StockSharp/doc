@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A API da bolsa Bibox usada por este conector não está mais disponível. O conector não funciona; a documentação é mantida apenas para referência.**
+
 # Bibox
 
 **Bibox** - bolsa de criptomoedas.

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La bolsa Bittrex ha cesado sus operaciones. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
+
 # Configuración gráfica de Bittrex
 
 Para todos los productos [S#](../../../../api.md), la configuración gráfica de la conexión se realiza en la [Ventana de configuración de conexión](../../../graphical_user_interface/connection_settings_window.md):

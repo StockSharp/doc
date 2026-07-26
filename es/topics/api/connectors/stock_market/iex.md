@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **La API de negociación de IEX utilizada por este conector ya no está disponible. El conector no funciona; la documentación se conserva únicamente como referencia.**
+
 # IEX
 
 **Investors Exchange (IEX)** - proveedor de datos de mercado en tiempo real para cotizaciones de acciones, Forex, noticias, contratos de futuros, etc.

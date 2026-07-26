@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Биржа Bitalong и её API больше недоступны. Коннектор не работает; документация сохранена только для справки.**
+
 # Инициализация адаптера Bitalong
 
 Код ниже демонстрирует, как инициализировать [BitalongMessageAdapter](xref:StockSharp.Bitalong.BitalongMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

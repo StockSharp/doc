@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa encerrou permanentemente as operações (~2021 — encerrada). Este conector não está mais operacional. A documentação é mantida para referência histórica.
+> [!CAUTION]
+> **A bolsa BitZ encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Inicialização do adaptador BitZ
 

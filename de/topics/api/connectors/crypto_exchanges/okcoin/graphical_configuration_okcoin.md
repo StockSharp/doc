@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Handelsdienste von OKCoin wurden im Zuge der Umstellung der Plattform auf OKX abgeschaltet. Dieser Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
+
 # Grafische Konfiguration von OKCoin
 
 Für alle [S#](../../../../api.md)-Produkte erfolgt die grafische Konfiguration der Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md):

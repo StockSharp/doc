@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The Bittrex exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # Bittrex
 
 **Bittrex** - cryptocurrency exchange.

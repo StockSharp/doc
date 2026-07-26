@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The FTX exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # FTX Connector Settings
 
 Specify the connection parameters issued by the service in the connector settings.

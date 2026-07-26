@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The Bibox exchange API used by this connector is no longer available. The connector does not work; the documentation is retained for reference only.**
+
 # Bibox
 
 **Bibox** - cryptocurrency exchange.

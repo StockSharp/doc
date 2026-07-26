@@ -1,6 +1,3 @@
-> [!WARNING]
-> Esta bolsa foi encerrada permanentemente (~2023 - encerrada). Este conector já não está operacional. A documentação é preservada para referência histórica.
-
 # Inicialização do adaptador Gopax
 
 O código abaixo demonstra como inicializar o [GopaxMessageAdapter](xref:StockSharp.Gopax.GopaxMessageAdapter) e enviá-lo para o [Connector](xref:StockSharp.Algo.Connector).

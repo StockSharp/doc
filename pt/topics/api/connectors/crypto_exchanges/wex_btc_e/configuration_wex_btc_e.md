@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa foi encerrada permanentemente (julho de 2017 — apreendida). Este conector já não está operacional. A documentação é preservada para referência histórica.
+> [!CAUTION]
+> **As bolsas BTC-e e WEX encerraram as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Configuração WEX (BTC-e)
 

@@ -1,6 +1,3 @@
-> [!WARNING]
-> Diese Börse wurde dauerhaft geschlossen (~2023 - geschlossen). Dieser Connector ist nicht mehr funktionsfähig. Die Dokumentation bleibt als historische Referenz erhalten.
-
 # Gopax
 
 **GOPAX** - Kryptowährungsbörse.

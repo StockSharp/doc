@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A bolsa Bitalong e sua API não estão mais disponíveis. O conector não funciona; a documentação é mantida apenas para referência.**
+
 # Configuração gráfica Bitalong
 
 Para todos os produtos [S#](../../../../api.md), a configuração gráfica da conexão é realizada na [Janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md):

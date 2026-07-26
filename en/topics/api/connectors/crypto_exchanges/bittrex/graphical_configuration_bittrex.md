@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The Bittrex exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # Graphical configuration Bittrex
 
 For all [S#](../../../../api.md) products, graphical configuration of the connection is performed on the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md):

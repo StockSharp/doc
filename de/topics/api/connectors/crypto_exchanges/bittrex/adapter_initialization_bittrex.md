@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse Bittrex hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
+
 # Adapterinitialisierung Bittrex
 
 Der folgende Code zeigt, wie man den [BittrexMessageAdapter](xref:StockSharp.Bittrex.BittrexMessageAdapter) initialisiert und an den [Connector](xref:StockSharp.Algo.Connector) sendet.

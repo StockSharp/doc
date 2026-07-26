@@ -1,6 +1,3 @@
-> [!WARNING]
-> Esta bolsa foi encerrada permanentemente (~2023 - encerrada). Este conector já não está operacional. A documentação é preservada para referência histórica.
-
 # Gopax
 
 **GOPAX** - uma bolsa de negociação de criptomoedas.

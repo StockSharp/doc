@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa encerrou permanentemente (maio de 2019 — pirateada e liquidada). Este conector já não está operacional. A documentação é preservada para referência histórica.
+> [!CAUTION]
+> **A bolsa Cryptopia encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Configuração gráfica Cryptopia
 

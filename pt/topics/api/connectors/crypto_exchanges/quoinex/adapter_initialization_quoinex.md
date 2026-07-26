@@ -1,5 +1,5 @@
-> [!NOTE]
-> QUOINEX foi renomeada para Liquid, que encerrou em 2022. Esta documentação é preservada para referência histórica.
+> [!CAUTION]
+> **A bolsa QUOINEX foi renomeada para Liquid, que posteriormente encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Inicialização do adaptador Quoinex
 

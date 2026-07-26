@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Биржа FTX прекратила работу. Коннектор больше не работает; документация сохранена только для справки.**
+
 # Инициализация адаптера FTX
 
 Код ниже демонстрирует как инициализировать [FtxMessageAdapter](xref:StockSharp.FTX.FtxMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).

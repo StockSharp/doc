@@ -1,6 +1,3 @@
-> [!WARNING]
-> esta bolsa cerró permanentemente (~2023 — efectivamente inactivo). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
-
 # Configuración Yobit
 
 Para trabajar con un conector, es necesario generar **clave (API Key)** y **secreto** en la cuenta personal de la bolsa y especificarlos en la configuración de conexión.

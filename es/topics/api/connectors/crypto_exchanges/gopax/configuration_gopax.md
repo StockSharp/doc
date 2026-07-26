@@ -1,6 +1,3 @@
-> [!WARNING]
-> Esta bolsa ha cerrado permanentemente (~2023 — cierre). Este conector ya no está operativo. La documentación se conserva como referencia histórica.
-
 # Configuración Gopax
 
 Para trabajar con un conector, es necesario generar la **clave (API Key)** y el **secreto** en la cuenta personal de la bolsa y especificarlos en la configuración de conexión.

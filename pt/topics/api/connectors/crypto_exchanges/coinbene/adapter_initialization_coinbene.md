@@ -1,5 +1,5 @@
-> [!WARNING]
-> Esta bolsa encerrou permanentemente as operações (~2021 — encerrada). Este conector já não está operacional. A documentação é preservada para referência histórica.
+> [!CAUTION]
+> **A bolsa CoinBene encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
 
 # Inicialização do adaptador CoinBene
 
