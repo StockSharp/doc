@@ -2169,15 +2169,15 @@
           href: api/connectors/forex/dukascopy/graphical_configuration_dukascopy.md
         - name: Inicialización del adaptador DukasCopy
           href: api/connectors/forex/dukascopy/adapter_initialization_dukascopy.md
-      - name: DukasCopy Live
-        href: api/connectors/forex/dukascopy_live.md
+      - name: DukasCopy JForex
+        href: api/connectors/forex/dukascopy_jforex.md
         items:
-        - name: Configuración del conector DukasCopy Live
-          href: api/connectors/forex/dukascopy_live/configuration_dukascopy_live.md
-        - name: Configuración gráfica DukasCopy Live
-          href: api/connectors/forex/dukascopy_live/graphical_configuration_dukascopy_live.md
-        - name: Inicialización del adaptador DukasCopy Live
-          href: api/connectors/forex/dukascopy_live/adapter_initialization_dukascopy_live.md
+        - name: Configuración del conector DukasCopy JForex
+          href: api/connectors/forex/dukascopy_jforex/configuration_dukascopy_jforex.md
+        - name: Configuración gráfica DukasCopy JForex
+          href: api/connectors/forex/dukascopy_jforex/graphical_configuration_dukascopy_jforex.md
+        - name: Inicialización del adaptador DukasCopy JForex
+          href: api/connectors/forex/dukascopy_jforex/adapter_initialization_dukascopy_jforex.md
       - name: FXCM
         href: api/connectors/forex/fxcm.md
         items:

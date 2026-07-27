@@ -773,7 +773,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Coin Metrics",
 		"DEMA",
 		"DeMarker",
-		"DukasCopy Live",
+		"DukasCopy JForex",
 		"dYdX Chain",
 		"EOD Historical Data",
 		"Fix Trading Community",
