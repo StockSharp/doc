@@ -793,8 +793,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"QStick",
 		"RAVI",
 		"RSI",
+		"SET Market Data",
 		"Smoothed Moving Average",
 		"SuperTrend",
+		"TASE Data Hub",
+		"Trading Economics",
 		"TRIX",
 		"Twelve Data",
 		"TWAP",
@@ -1280,6 +1283,12 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					continue;
 				}
 
+				if (fragment == "Market data"
+					&& nameLine.Name.Contains("SET Market Data", StringComparison.Ordinal))
+				{
+					continue;
+				}
+
 				errors.Add($"{RelativeToRepo(tocPath)}:{nameLine.Line}: Russian TOC keeps English navigation fragment '{fragment}' in '{nameLine.Name}'.");
 			}
 		}
@@ -1726,7 +1735,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		void AddErrorIfMatched(string file, int line, string scope, string text)
 		{
 			if (text.Contains("Fix Trading Community", StringComparison.Ordinal)
-				|| text.Contains("FIX Trading Community", StringComparison.Ordinal))
+				|| text.Contains("FIX Trading Community", StringComparison.Ordinal)
+				|| text.Contains("Trading Economics", StringComparison.Ordinal))
 				return;
 
 			// Inline code holds identifiers and endpoints (`wss://api.derivws.com/trading/v1/...`),

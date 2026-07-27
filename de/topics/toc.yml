@@ -971,6 +971,51 @@
             href: api/connectors/stock_market/yahoo/graphical_configuration_yahoo.md
           - name: Adapter-Initialisierung Yahoo
             href: api/connectors/stock_market/yahoo/adapter_initialization_yahoo.md
+        - name: B3 UP2DATA
+          href: api/connectors/stock_market/b3_up2data.md
+          items:
+          - name: B3 UP2DATA-Konfiguration
+            href: api/connectors/stock_market/b3_up2data/configuration_b3_up2data.md
+          - name: Grafische Konfiguration von B3 UP2DATA
+            href: api/connectors/stock_market/b3_up2data/graphical_configuration_b3_up2data.md
+          - name: B3 UP2DATA-Adapter initialisieren
+            href: api/connectors/stock_market/b3_up2data/adapter_initialization_b3_up2data.md
+        - name: FINRA
+          href: api/connectors/stock_market/finra.md
+          items:
+          - name: FINRA-Konfiguration
+            href: api/connectors/stock_market/finra/configuration_finra.md
+          - name: Grafische Konfiguration von FINRA
+            href: api/connectors/stock_market/finra/graphical_configuration_finra.md
+          - name: FINRA-Adapter initialisieren
+            href: api/connectors/stock_market/finra/adapter_initialization_finra.md
+        - name: InvertirOnline
+          href: api/connectors/stock_market/invertironline.md
+          items:
+          - name: InvertirOnline-Konfiguration
+            href: api/connectors/stock_market/invertironline/configuration_invertironline.md
+          - name: Grafische Konfiguration von InvertirOnline
+            href: api/connectors/stock_market/invertironline/graphical_configuration_invertironline.md
+          - name: InvertirOnline-Adapter initialisieren
+            href: api/connectors/stock_market/invertironline/adapter_initialization_invertironline.md
+        - name: PPI
+          href: api/connectors/stock_market/ppi.md
+          items:
+          - name: PPI-Konfiguration
+            href: api/connectors/stock_market/ppi/configuration_ppi.md
+          - name: Grafische Konfiguration von PPI
+            href: api/connectors/stock_market/ppi/graphical_configuration_ppi.md
+          - name: PPI-Adapter initialisieren
+            href: api/connectors/stock_market/ppi/adapter_initialization_ppi.md
+        - name: Primary
+          href: api/connectors/stock_market/primary.md
+          items:
+          - name: Primary-Konfiguration
+            href: api/connectors/stock_market/primary/configuration_primary.md
+          - name: Grafische Konfiguration von Primary
+            href: api/connectors/stock_market/primary/graphical_configuration_primary.md
+          - name: Primary-Adapter initialisieren
+            href: api/connectors/stock_market/primary/adapter_initialization_primary.md
       - name: Europa
         items:
         - name: Capital.com
@@ -1045,6 +1090,78 @@
             href: api/connectors/stock_market/tradelocker/graphical_configuration_tradelocker.md
           - name: Adapterinitialisierung TradeLocker
             href: api/connectors/stock_market/tradelocker/adapter_initialization_tradelocker.md
+        - name: BCS
+          href: api/connectors/russia/bcs.md
+          items:
+          - name: BCS-Konfiguration
+            href: api/connectors/russia/bcs/configuration_bcs.md
+          - name: Grafische Konfiguration von BCS
+            href: api/connectors/russia/bcs/graphical_configuration_bcs.md
+          - name: BCS-Adapter initialisieren
+            href: api/connectors/russia/bcs/adapter_initialization_bcs.md
+        - name: comdirect
+          href: api/connectors/europe/comdirect.md
+          items:
+          - name: comdirect-Konfiguration
+            href: api/connectors/europe/comdirect/configuration_comdirect.md
+          - name: Grafische Konfiguration von comdirect
+            href: api/connectors/europe/comdirect/graphical_configuration_comdirect.md
+          - name: comdirect-Adapter initialisieren
+            href: api/connectors/europe/comdirect/adapter_initialization_comdirect.md
+        - name: Directa
+          href: api/connectors/europe/directa.md
+          items:
+          - name: Directa-Konfiguration
+            href: api/connectors/europe/directa/configuration_directa.md
+          - name: Grafische Konfiguration von Directa
+            href: api/connectors/europe/directa/graphical_configuration_directa.md
+          - name: Directa-Adapter initialisieren
+            href: api/connectors/europe/directa/adapter_initialization_directa.md
+        - name: ESMA FIRDS
+          href: api/connectors/stock_market/esma_firds.md
+          items:
+          - name: ESMA FIRDS-Konfiguration
+            href: api/connectors/stock_market/esma_firds/configuration_esma_firds.md
+          - name: Grafische Konfiguration von ESMA FIRDS
+            href: api/connectors/stock_market/esma_firds/graphical_configuration_esma_firds.md
+          - name: ESMA FIRDS-Adapter initialisieren
+            href: api/connectors/stock_market/esma_firds/adapter_initialization_esma_firds.md
+        - name: Euronext Web Services
+          href: api/connectors/stock_market/euronext_web_services.md
+          items:
+          - name: Euronext Web Services-Konfiguration
+            href: api/connectors/stock_market/euronext_web_services/configuration_euronext_web_services.md
+          - name: Grafische Konfiguration von Euronext Web Services
+            href: api/connectors/stock_market/euronext_web_services/graphical_configuration_euronext_web_services.md
+          - name: Euronext Web Services-Adapter initialisieren
+            href: api/connectors/stock_market/euronext_web_services/adapter_initialization_euronext_web_services.md
+        - name: EXANTE
+          href: api/connectors/europe/exante.md
+          items:
+          - name: EXANTE-Konfiguration
+            href: api/connectors/europe/exante/configuration_exante.md
+          - name: Grafische Konfiguration von EXANTE
+            href: api/connectors/europe/exante/graphical_configuration_exante.md
+          - name: EXANTE-Adapter initialisieren
+            href: api/connectors/europe/exante/adapter_initialization_exante.md
+        - name: Tradernet
+          href: api/connectors/europe/tradernet.md
+          items:
+          - name: Tradernet-Konfiguration
+            href: api/connectors/europe/tradernet/configuration_tradernet.md
+          - name: Grafische Konfiguration von Tradernet
+            href: api/connectors/europe/tradernet/graphical_configuration_tradernet.md
+          - name: Tradernet-Adapter initialisieren
+            href: api/connectors/europe/tradernet/adapter_initialization_tradernet.md
+        - name: XBRL Filings
+          href: api/connectors/stock_market/xbrl_filings.md
+          items:
+          - name: XBRL Filings-Konfiguration
+            href: api/connectors/stock_market/xbrl_filings/configuration_xbrl_filings.md
+          - name: Grafische Konfiguration von XBRL Filings
+            href: api/connectors/stock_market/xbrl_filings/graphical_configuration_xbrl_filings.md
+          - name: XBRL Filings-Adapter initialisieren
+            href: api/connectors/stock_market/xbrl_filings/adapter_initialization_xbrl_filings.md
       - name: Asien-Pazifik
         items:
         - name: Alice Blue
@@ -1353,6 +1470,240 @@
             href: api/connectors/stock_market/usmart/graphical_configuration_usmart.md
           - name: Adapterinitialisierung uSMART OpenAPI
             href: api/connectors/stock_market/usmart/adapter_initialization_usmart.md
+        - name: Bigul
+          href: api/connectors/stock_market/bigul.md
+          items:
+          - name: Bigul-Konfiguration
+            href: api/connectors/stock_market/bigul/configuration_bigul.md
+          - name: Grafische Konfiguration von Bigul
+            href: api/connectors/stock_market/bigul/graphical_configuration_bigul.md
+          - name: Bigul-Adapter initialisieren
+            href: api/connectors/stock_market/bigul/adapter_initialization_bigul.md
+        - name: Choice FinX
+          href: api/connectors/stock_market/choice_finx.md
+          items:
+          - name: Choice FinX-Konfiguration
+            href: api/connectors/stock_market/choice_finx/configuration_choice_finx.md
+          - name: Grafische Konfiguration von Choice FinX
+            href: api/connectors/stock_market/choice_finx/graphical_configuration_choice_finx.md
+          - name: Choice FinX-Adapter initialisieren
+            href: api/connectors/stock_market/choice_finx/adapter_initialization_choice_finx.md
+        - name: Definedge
+          href: api/connectors/stock_market/definedge.md
+          items:
+          - name: Definedge-Konfiguration
+            href: api/connectors/stock_market/definedge/configuration_definedge.md
+          - name: Grafische Konfiguration von Definedge
+            href: api/connectors/stock_market/definedge/graphical_configuration_definedge.md
+          - name: Definedge-Adapter initialisieren
+            href: api/connectors/stock_market/definedge/adapter_initialization_definedge.md
+        - name: DNSE
+          href: api/connectors/stock_market/dnse.md
+          items:
+          - name: DNSE-Konfiguration
+            href: api/connectors/stock_market/dnse/configuration_dnse.md
+          - name: Grafische Konfiguration von DNSE
+            href: api/connectors/stock_market/dnse/graphical_configuration_dnse.md
+          - name: DNSE-Adapter initialisieren
+            href: api/connectors/stock_market/dnse/adapter_initialization_dnse.md
+        - name: EDINET
+          href: api/connectors/stock_market/edinet.md
+          items:
+          - name: EDINET-Konfiguration
+            href: api/connectors/stock_market/edinet/configuration_edinet.md
+          - name: Grafische Konfiguration von EDINET
+            href: api/connectors/stock_market/edinet/graphical_configuration_edinet.md
+          - name: EDINET-Adapter initialisieren
+            href: api/connectors/stock_market/edinet/adapter_initialization_edinet.md
+        - name: Firstock
+          href: api/connectors/stock_market/firstock.md
+          items:
+          - name: Firstock-Konfiguration
+            href: api/connectors/stock_market/firstock/configuration_firstock.md
+          - name: Grafische Konfiguration von Firstock
+            href: api/connectors/stock_market/firstock/graphical_configuration_firstock.md
+          - name: Firstock-Adapter initialisieren
+            href: api/connectors/stock_market/firstock/adapter_initialization_firstock.md
+        - name: HDFC Securities
+          href: api/connectors/stock_market/hdfc_securities.md
+          items:
+          - name: HDFC Securities-Konfiguration
+            href: api/connectors/stock_market/hdfc_securities/configuration_hdfc_securities.md
+          - name: Grafische Konfiguration von HDFC Securities
+            href: api/connectors/stock_market/hdfc_securities/graphical_configuration_hdfc_securities.md
+          - name: HDFC Securities-Adapter initialisieren
+            href: api/connectors/stock_market/hdfc_securities/adapter_initialization_hdfc_securities.md
+        - name: Jainam
+          href: api/connectors/stock_market/jainam.md
+          items:
+          - name: Jainam-Konfiguration
+            href: api/connectors/stock_market/jainam/configuration_jainam.md
+          - name: Grafische Konfiguration von Jainam
+            href: api/connectors/stock_market/jainam/graphical_configuration_jainam.md
+          - name: Jainam-Adapter initialisieren
+            href: api/connectors/stock_market/jainam/adapter_initialization_jainam.md
+        - name: JPX TDnet
+          href: api/connectors/stock_market/jpx_tdnet.md
+          items:
+          - name: JPX TDnet-Konfiguration
+            href: api/connectors/stock_market/jpx_tdnet/configuration_jpx_tdnet.md
+          - name: Grafische Konfiguration von JPX TDnet
+            href: api/connectors/stock_market/jpx_tdnet/graphical_configuration_jpx_tdnet.md
+          - name: JPX TDnet-Adapter initialisieren
+            href: api/connectors/stock_market/jpx_tdnet/adapter_initialization_jpx_tdnet.md
+        - name: Korean FSC
+          href: api/connectors/stock_market/korean_fsc.md
+          items:
+          - name: Korean FSC-Konfiguration
+            href: api/connectors/stock_market/korean_fsc/configuration_korean_fsc.md
+          - name: Grafische Konfiguration von Korean FSC
+            href: api/connectors/stock_market/korean_fsc/graphical_configuration_korean_fsc.md
+          - name: Korean FSC-Adapter initialisieren
+            href: api/connectors/stock_market/korean_fsc/adapter_initialization_korean_fsc.md
+        - name: KRX Open API
+          href: api/connectors/stock_market/krx_open_api.md
+          items:
+          - name: KRX Open API-Konfiguration
+            href: api/connectors/stock_market/krx_open_api/configuration_krx_open_api.md
+          - name: Grafische Konfiguration von KRX Open API
+            href: api/connectors/stock_market/krx_open_api/graphical_configuration_krx_open_api.md
+          - name: KRX Open API-Adapter initialisieren
+            href: api/connectors/stock_market/krx_open_api/adapter_initialization_krx_open_api.md
+        - name: MasterLink
+          href: api/connectors/stock_market/masterlink.md
+          items:
+          - name: MasterLink-Konfiguration
+            href: api/connectors/stock_market/masterlink/configuration_masterlink.md
+          - name: Grafische Konfiguration von MasterLink
+            href: api/connectors/stock_market/masterlink/graphical_configuration_masterlink.md
+          - name: MasterLink-Adapter initialisieren
+            href: api/connectors/stock_market/masterlink/adapter_initialization_masterlink.md
+        - name: Mastertrust
+          href: api/connectors/stock_market/mastertrust.md
+          items:
+          - name: Mastertrust-Konfiguration
+            href: api/connectors/stock_market/mastertrust/configuration_mastertrust.md
+          - name: Grafische Konfiguration von Mastertrust
+            href: api/connectors/stock_market/mastertrust/graphical_configuration_mastertrust.md
+          - name: Mastertrust-Adapter initialisieren
+            href: api/connectors/stock_market/mastertrust/adapter_initialization_mastertrust.md
+        - name: Nubra
+          href: api/connectors/stock_market/nubra.md
+          items:
+          - name: Nubra-Konfiguration
+            href: api/connectors/stock_market/nubra/configuration_nubra.md
+          - name: Grafische Konfiguration von Nubra
+            href: api/connectors/stock_market/nubra/graphical_configuration_nubra.md
+          - name: Nubra-Adapter initialisieren
+            href: api/connectors/stock_market/nubra/adapter_initialization_nubra.md
+        - name: Nuvama
+          href: api/connectors/stock_market/nuvama.md
+          items:
+          - name: Nuvama-Konfiguration
+            href: api/connectors/stock_market/nuvama/configuration_nuvama.md
+          - name: Grafische Konfiguration von Nuvama
+            href: api/connectors/stock_market/nuvama/graphical_configuration_nuvama.md
+          - name: Nuvama-Adapter initialisieren
+            href: api/connectors/stock_market/nuvama/adapter_initialization_nuvama.md
+        - name: Open DART
+          href: api/connectors/stock_market/open_dart.md
+          items:
+          - name: Open DART-Konfiguration
+            href: api/connectors/stock_market/open_dart/configuration_open_dart.md
+          - name: Grafische Konfiguration von Open DART
+            href: api/connectors/stock_market/open_dart/graphical_configuration_open_dart.md
+          - name: Open DART-Adapter initialisieren
+            href: api/connectors/stock_market/open_dart/adapter_initialization_open_dart.md
+        - name: Paytm Money
+          href: api/connectors/stock_market/paytm_money.md
+          items:
+          - name: Paytm Money-Konfiguration
+            href: api/connectors/stock_market/paytm_money/configuration_paytm_money.md
+          - name: Grafische Konfiguration von Paytm Money
+            href: api/connectors/stock_market/paytm_money/graphical_configuration_paytm_money.md
+          - name: Paytm Money-Adapter initialisieren
+            href: api/connectors/stock_market/paytm_money/adapter_initialization_paytm_money.md
+        - name: Rupeezy
+          href: api/connectors/stock_market/rupeezy.md
+          items:
+          - name: Rupeezy-Konfiguration
+            href: api/connectors/stock_market/rupeezy/configuration_rupeezy.md
+          - name: Grafische Konfiguration von Rupeezy
+            href: api/connectors/stock_market/rupeezy/graphical_configuration_rupeezy.md
+          - name: Rupeezy-Adapter initialisieren
+            href: api/connectors/stock_market/rupeezy/adapter_initialization_rupeezy.md
+        - name: SET Market Data
+          href: api/connectors/stock_market/set_market_data.md
+          items:
+          - name: SET Market Data-Konfiguration
+            href: api/connectors/stock_market/set_market_data/configuration_set_market_data.md
+          - name: Grafische Konfiguration von SET Market Data
+            href: api/connectors/stock_market/set_market_data/graphical_configuration_set_market_data.md
+          - name: SET Market Data-Adapter initialisieren
+            href: api/connectors/stock_market/set_market_data/adapter_initialization_set_market_data.md
+        - name: Toss Securities
+          href: api/connectors/stock_market/toss_securities.md
+          items:
+          - name: Toss Securities-Konfiguration
+            href: api/connectors/stock_market/toss_securities/configuration_toss_securities.md
+          - name: Grafische Konfiguration von Toss Securities
+            href: api/connectors/stock_market/toss_securities/graphical_configuration_toss_securities.md
+          - name: Toss Securities-Adapter initialisieren
+            href: api/connectors/stock_market/toss_securities/adapter_initialization_toss_securities.md
+        - name: TPEx
+          href: api/connectors/stock_market/tpex.md
+          items:
+          - name: TPEx-Konfiguration
+            href: api/connectors/stock_market/tpex/configuration_tpex.md
+          - name: Grafische Konfiguration von TPEx
+            href: api/connectors/stock_market/tpex/graphical_configuration_tpex.md
+          - name: TPEx-Adapter initialisieren
+            href: api/connectors/stock_market/tpex/adapter_initialization_tpex.md
+        - name: Tradejini
+          href: api/connectors/stock_market/tradejini.md
+          items:
+          - name: Tradejini-Konfiguration
+            href: api/connectors/stock_market/tradejini/configuration_tradejini.md
+          - name: Grafische Konfiguration von Tradejini
+            href: api/connectors/stock_market/tradejini/graphical_configuration_tradejini.md
+          - name: Tradejini-Adapter initialisieren
+            href: api/connectors/stock_market/tradejini/adapter_initialization_tradejini.md
+        - name: TWSE
+          href: api/connectors/stock_market/twse_openapi.md
+          items:
+          - name: TWSE-Konfiguration
+            href: api/connectors/stock_market/twse_openapi/configuration_twse_openapi.md
+          - name: Grafische Konfiguration von TWSE
+            href: api/connectors/stock_market/twse_openapi/graphical_configuration_twse_openapi.md
+          - name: TWSE-Adapter initialisieren
+            href: api/connectors/stock_market/twse_openapi/adapter_initialization_twse_openapi.md
+        - name: Ventura
+          href: api/connectors/stock_market/ventura.md
+          items:
+          - name: Ventura-Konfiguration
+            href: api/connectors/stock_market/ventura/configuration_ventura.md
+          - name: Grafische Konfiguration von Ventura
+            href: api/connectors/stock_market/ventura/graphical_configuration_ventura.md
+          - name: Ventura-Adapter initialisieren
+            href: api/connectors/stock_market/ventura/adapter_initialization_ventura.md
+        - name: Wisdom Capital
+          href: api/connectors/stock_market/wisdom_capital.md
+          items:
+          - name: Wisdom Capital-Konfiguration
+            href: api/connectors/stock_market/wisdom_capital/configuration_wisdom_capital.md
+          - name: Grafische Konfiguration von Wisdom Capital
+            href: api/connectors/stock_market/wisdom_capital/graphical_configuration_wisdom_capital.md
+          - name: Wisdom Capital-Adapter initialisieren
+            href: api/connectors/stock_market/wisdom_capital/adapter_initialization_wisdom_capital.md
+        - name: Zebu
+          href: api/connectors/stock_market/zebu.md
+          items:
+          - name: Zebu-Konfiguration
+            href: api/connectors/stock_market/zebu/configuration_zebu.md
+          - name: Grafische Konfiguration von Zebu
+            href: api/connectors/stock_market/zebu/graphical_configuration_zebu.md
+          - name: Zebu-Adapter initialisieren
+            href: api/connectors/stock_market/zebu/adapter_initialization_zebu.md
       - name: Naher Osten und Afrika
         items:
         - name: eToro
@@ -1364,6 +1715,15 @@
             href: api/connectors/stock_market/etoro/graphical_configuration_etoro.md
           - name: Initialisierung des Adapters eToro
             href: api/connectors/stock_market/etoro/adapter_initialization_etoro.md
+        - name: TASE Data Hub
+          href: api/connectors/stock_market/tase_data_hub.md
+          items:
+          - name: TASE Data Hub-Konfiguration
+            href: api/connectors/stock_market/tase_data_hub/configuration_tase_data_hub.md
+          - name: Grafische Konfiguration von TASE Data Hub
+            href: api/connectors/stock_market/tase_data_hub/graphical_configuration_tase_data_hub.md
+          - name: TASE Data Hub-Adapter initialisieren
+            href: api/connectors/stock_market/tase_data_hub/adapter_initialization_tase_data_hub.md
       - name: Marktdaten und Nachrichten
         items:
         - name: AlphaVantage
@@ -1681,6 +2041,96 @@
             href: api/connectors/stock_market/twelvedata/graphical_configuration_twelvedata.md
           - name: Adapterinitialisierung Twelve Data
             href: api/connectors/stock_market/twelvedata/adapter_initialization_twelvedata.md
+        - name: Bavest
+          href: api/connectors/stock_market/bavest.md
+          items:
+          - name: Bavest-Konfiguration
+            href: api/connectors/stock_market/bavest/configuration_bavest.md
+          - name: Grafische Konfiguration von Bavest
+            href: api/connectors/stock_market/bavest/graphical_configuration_bavest.md
+          - name: Bavest-Adapter initialisieren
+            href: api/connectors/stock_market/bavest/adapter_initialization_bavest.md
+        - name: Financial Datasets
+          href: api/connectors/stock_market/financial_datasets.md
+          items:
+          - name: Financial Datasets-Konfiguration
+            href: api/connectors/stock_market/financial_datasets/configuration_financial_datasets.md
+          - name: Grafische Konfiguration von Financial Datasets
+            href: api/connectors/stock_market/financial_datasets/graphical_configuration_financial_datasets.md
+          - name: Financial Datasets-Adapter initialisieren
+            href: api/connectors/stock_market/financial_datasets/adapter_initialization_financial_datasets.md
+        - name: GLEIF
+          href: api/connectors/stock_market/gleif.md
+          items:
+          - name: GLEIF-Konfiguration
+            href: api/connectors/stock_market/gleif/configuration_gleif.md
+          - name: Grafische Konfiguration von GLEIF
+            href: api/connectors/stock_market/gleif/graphical_configuration_gleif.md
+          - name: GLEIF-Adapter initialisieren
+            href: api/connectors/stock_market/gleif/adapter_initialization_gleif.md
+        - name: GuruFocus
+          href: api/connectors/stock_market/gurufocus.md
+          items:
+          - name: GuruFocus-Konfiguration
+            href: api/connectors/stock_market/gurufocus/configuration_gurufocus.md
+          - name: Grafische Konfiguration von GuruFocus
+            href: api/connectors/stock_market/gurufocus/graphical_configuration_gurufocus.md
+          - name: GuruFocus-Adapter initialisieren
+            href: api/connectors/stock_market/gurufocus/adapter_initialization_gurufocus.md
+        - name: Marketaux
+          href: api/connectors/stock_market/marketaux.md
+          items:
+          - name: Marketaux-Konfiguration
+            href: api/connectors/stock_market/marketaux/configuration_marketaux.md
+          - name: Grafische Konfiguration von Marketaux
+            href: api/connectors/stock_market/marketaux/graphical_configuration_marketaux.md
+          - name: Marketaux-Adapter initialisieren
+            href: api/connectors/stock_market/marketaux/adapter_initialization_marketaux.md
+        - name: Quiver Quantitative
+          href: api/connectors/stock_market/quiver_quant.md
+          items:
+          - name: Quiver Quantitative-Konfiguration
+            href: api/connectors/stock_market/quiver_quant/configuration_quiver_quant.md
+          - name: Grafische Konfiguration von Quiver Quantitative
+            href: api/connectors/stock_market/quiver_quant/graphical_configuration_quiver_quant.md
+          - name: Quiver Quantitative-Adapter initialisieren
+            href: api/connectors/stock_market/quiver_quant/adapter_initialization_quiver_quant.md
+        - name: SEC API
+          href: api/connectors/stock_market/sec_api.md
+          items:
+          - name: SEC API-Konfiguration
+            href: api/connectors/stock_market/sec_api/configuration_sec_api.md
+          - name: Grafische Konfiguration von SEC API
+            href: api/connectors/stock_market/sec_api/graphical_configuration_sec_api.md
+          - name: SEC API-Adapter initialisieren
+            href: api/connectors/stock_market/sec_api/adapter_initialization_sec_api.md
+        - name: StockData.org
+          href: api/connectors/stock_market/stockdata_org.md
+          items:
+          - name: StockData.org-Konfiguration
+            href: api/connectors/stock_market/stockdata_org/configuration_stockdata_org.md
+          - name: Grafische Konfiguration von StockData.org
+            href: api/connectors/stock_market/stockdata_org/graphical_configuration_stockdata_org.md
+          - name: StockData.org-Adapter initialisieren
+            href: api/connectors/stock_market/stockdata_org/adapter_initialization_stockdata_org.md
+        - name: Trading Economics
+          href: api/connectors/stock_market/trading_economics.md
+          items:
+          - name: Trading Economics-Konfiguration
+            href: api/connectors/stock_market/trading_economics/configuration_trading_economics.md
+          - name: Grafische Konfiguration von Trading Economics
+            href: api/connectors/stock_market/trading_economics/graphical_configuration_trading_economics.md
+          - name: Trading Economics-Adapter initialisieren
+            href: api/connectors/stock_market/trading_economics/adapter_initialization_trading_economics.md
+        - name: Unusual Whales
+          href: api/connectors/stock_market/unusual_whales.md
+          items:
+          - name: Unusual Whales-Konfiguration
+            href: api/connectors/stock_market/unusual_whales/configuration_unusual_whales.md
+          - name: Grafische Konfiguration von Unusual Whales
+            href: api/connectors/stock_market/unusual_whales/graphical_configuration_unusual_whales.md
+          - name: Unusual Whales-Adapter initialisieren
+            href: api/connectors/stock_market/unusual_whales/adapter_initialization_unusual_whales.md
     - name: Forex
       items:
       - name: MetaTrader

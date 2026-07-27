@@ -1,0 +1,25 @@
+# Inicialização do adaptador: PPI
+
+O código a seguir inicializa [PpiMessageAdapter](xref:StockSharp.Ppi.PpiMessageAdapter) e o adiciona ao [Connector](xref:StockSharp.Algo.Connector).
+
+```cs
+var messageAdapter = new PpiMessageAdapter(Connector.TransactionIdGenerator)
+{
+	Key = "<key>".ToSecureString(),
+	Secret = "<secret>".ToSecureString(),
+	AuthorizedClient = "<id>",
+	ClientKey = "<key>".ToSecureString(),
+	IsDemo = true,
+	Account = "<id>",
+};
+
+Connector.Adapter.InnerAdapters.Add(messageAdapter);
+```
+
+Informe as credenciais e as demais propriedades necessárias descritas na página de [Configuração do conector](configuration_ppi.md).
+
+## Veja também
+
+[Configuração do conector](configuration_ppi.md)
+
+[janela de configurações de conexão](../../../graphical_user_interface/connection_settings_window.md)

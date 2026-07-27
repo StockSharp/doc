@@ -1,0 +1,27 @@
+# HDFC Securities
+
+Der **HDFC Securities-Konnektor** verbindet StockSharp mit einem Broker oder elektronischen Handelsplatz für Finanzmärkte. Er übersetzt anbieterspezifische Daten und Vorgänge in das einheitliche StockSharp-Nachrichtenmodell, sodass Anwendungen dieselben Abonnements und Abläufe für verschiedene Handelsplätze verwenden können.
+
+## Wichtige Funktionen
+
+- Typische Abdeckung: Aktien, Futures, Optionen und Rohstoffe.
+- Instrumentensuche und Referenzdaten des Anbieters.
+- Vom Adapter unterstützte Marktdaten: Level-1-Kurse, Tick-Trades und Orderbücher.
+- Vom Anbieter unterstützte Abläufe für Orderübermittlung und Ausführungen.
+- Aktualisierungen von Portfolios, Salden, Positionen und Ausführungsstatus.
+- Echtzeitabonnements über den Datenstrom des Anbieters.
+- Anbieterspezifische Transporte, Sitzungen und Datenformate werden hinter der standardisierten StockSharp-API verborgen.
+
+## Typische Verwendung
+
+Geeignet für Live-Strategien, Handelsterminals, Ordermanagement-Dienste und Überwachungswerkzeuge mit direktem Anbieterzugang.
+
+Instrumente, Datentiefe, Handelsrechte, Limits und Verfügbarkeit werden von HDFC Securities, dem API-Tarif und den Berechtigungen des verbundenen Kontos bestimmt.
+
+## Siehe auch
+
+[Connector-Konfiguration](hdfc_securities/configuration_hdfc_securities.md)
+
+[Grafische Konfiguration](hdfc_securities/graphical_configuration_hdfc_securities.md)
+
+[Adapterinitialisierung](hdfc_securities/adapter_initialization_hdfc_securities.md)
