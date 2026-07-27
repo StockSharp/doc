@@ -2780,6 +2780,15 @@
             href: api/connectors/crypto_exchanges/backpack/graphical_configuration_backpack.md
           - name: Inicialização do adaptador Backpack
             href: api/connectors/crypto_exchanges/backpack/adapter_initialization_backpack.md
+        - name: Bit2Me
+          href: api/connectors/crypto_exchanges/bit2me.md
+          items:
+          - name: Configuração Bit2Me
+            href: api/connectors/crypto_exchanges/bit2me/configuration_bit2me.md
+          - name: Configuração gráfica Bit2Me
+            href: api/connectors/crypto_exchanges/bit2me/graphical_configuration_bit2me.md
+          - name: Inicialização do adaptador Bit2Me
+            href: api/connectors/crypto_exchanges/bit2me/adapter_initialization_bit2me.md
         - name: Bitso
           href: api/connectors/crypto_exchanges/bitso.md
           items:
