@@ -47,5 +47,9 @@
   "designer_education": "Designer-Lektionen",
   "view_on_github": "Auf GitHub ansehen",
   "expand": "Erweitern",
-  "collapse": "Verkleinern"
+  "collapse": "Verkleinern",
+  "diagram_error_load": "Das Schema konnte nicht geladen werden.",
+  "diagram_error_empty": "Das Schema ist leer oder beschädigt.",
+  "diagram_error_draw": "Das Schema konnte nicht gezeichnet werden.",
+  "diagram_missing_element": "Das Element „{typeId}“ fehlt in der Palette."
 }

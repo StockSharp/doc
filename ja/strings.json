@@ -47,5 +47,9 @@
   "designer_education": "Designer レッスン",
   "view_on_github": "GitHub で見る",
   "expand": "拡大",
-  "collapse": "折りたたむ"
+  "collapse": "折りたたむ",
+  "diagram_error_load": "スキームを読み込めませんでした。",
+  "diagram_error_empty": "スキームが空か、壊れています。",
+  "diagram_error_draw": "スキームを描画できませんでした。",
+  "diagram_missing_element": "パレットに要素「{typeId}」がありません。"
 }

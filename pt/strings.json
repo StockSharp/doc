@@ -47,5 +47,9 @@
   "designer_education": "Lições do Designer",
   "view_on_github": "Ver no GitHub",
   "expand": "Expandir",
-  "collapse": "Recolher"
+  "collapse": "Recolher",
+  "diagram_error_load": "Não foi possível carregar o esquema.",
+  "diagram_error_empty": "O esquema está vazio ou corrompido.",
+  "diagram_error_draw": "Não foi possível desenhar o esquema.",
+  "diagram_missing_element": "O elemento “{typeId}” não está na paleta."
 }

@@ -47,5 +47,9 @@
   "designer_education": "Designer 教程",
   "view_on_github": "在 GitHub 上查看",
   "expand": "展开",
-  "collapse": "收起"
+  "collapse": "收起",
+  "diagram_error_load": "无法加载方案。",
+  "diagram_error_empty": "方案为空或已损坏。",
+  "diagram_error_draw": "方案无法绘制。",
+  "diagram_missing_element": "调色板中没有元素「{typeId}」。"
 }

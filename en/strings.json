@@ -47,5 +47,9 @@
   "designer_education": "Designer lessons",
   "view_on_github": "View on GitHub",
   "expand": "Expand",
-  "collapse": "Collapse"
+  "collapse": "Collapse",
+  "diagram_error_load": "Diagram source could not be loaded.",
+  "diagram_error_empty": "Diagram is empty or malformed.",
+  "diagram_error_draw": "Diagram could not be rendered.",
+  "diagram_missing_element": "Element \"{typeId}\" is missing from the palette."
 }

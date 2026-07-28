@@ -47,5 +47,9 @@
   "designer_education": "Lecciones de Designer",
   "view_on_github": "Ver en GitHub",
   "expand": "Ampliar",
-  "collapse": "Contraer"
+  "collapse": "Contraer",
+  "diagram_error_load": "No se pudo cargar el esquema.",
+  "diagram_error_empty": "El esquema está vacío o dañado.",
+  "diagram_error_draw": "No se pudo dibujar el esquema.",
+  "diagram_missing_element": "El elemento «{typeId}» no está en la paleta."
 }

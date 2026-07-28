@@ -47,5 +47,9 @@
   "designer_education": "Уроки Designer",
   "view_on_github": "Открыть на GitHub",
   "expand": "Развернуть",
-  "collapse": "Свернуть"
+  "collapse": "Свернуть",
+  "diagram_error_load": "Не удалось загрузить схему.",
+  "diagram_error_empty": "Схема пуста или повреждена.",
+  "diagram_error_draw": "Схему не удалось отрисовать.",
+  "diagram_missing_element": "Элемента «{typeId}» нет в палитре."
 }
