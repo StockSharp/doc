@@ -1,0 +1,20 @@
+# 连接器配置：CoinSpot
+
+连接 CoinSpot 前，请配置以下适配器属性。该列表已根据 [CoinSpotMessageAdapter](xref:StockSharp.CoinSpot.CoinSpotMessageAdapter) 的实现进行核对。
+
+## 基本设置
+
+连接编辑器会优先显示这些设置。
+
+- `Key` (`SecureString`)
+- `Secret` (`SecureString`)
+- `PublicEndpoint` (`string`)
+- `TradingEndpoint` (`string`)
+- `ReadOnlyEndpoint` (`string`)
+- `PollingInterval` (`TimeSpan`)
+
+## 另请参阅
+
+[图形化配置](graphical_configuration_coinspot.md)
+
+[适配器初始化](adapter_initialization_coinspot.md)

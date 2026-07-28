@@ -5,6 +5,8 @@ En todos los productos StockSharp, la conexión se configura en la [ventana de c
 - `Login` - identificador de cuenta o cliente.
 - `Password` - credencial de autenticación.
 - `IsDemo` - interruptor que controla el comportamiento del conector. Valor predeterminado: `true`.
+- `DemoAddress` - dirección del servicio JNLP de JForex utilizada en modo de demostración.
+- `LiveAddress` - dirección del servicio JNLP de JForex utilizada en modo de producción.
 - `BridgePort` - parámetro numérico del conector. Valor predeterminado: `27431`.
 - `BridgeJarPath` - ruta de un archivo o directorio local.
 

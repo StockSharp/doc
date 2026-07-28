@@ -771,8 +771,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Chaikin's Volatility",
 		"Chainlink Data Streams",
 		"Coin Metrics",
+		"CoinSwitch PRO",
 		"DEMA",
 		"DeMarker",
+		"Delta Exchange India",
+		"DEX Screener",
 		"DukasCopy JForex",
 		"dYdX Chain",
 		"EOD Historical Data",
@@ -784,6 +787,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Kaufman Adaptive Moving Average",
 		"Gains Network",
 		"Manifest Trade",
+		"MAX Exchange",
 		"Money Flow Index",
 		"Moving Median",
 		"Nasdaq Cloud Data Service",
@@ -1925,6 +1929,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		{
 			if (text.Contains("LMAX Exchange", StringComparison.Ordinal)
 				|| text.Contains("Investors Exchange", StringComparison.Ordinal)
+				|| text.Contains("Delta Exchange India", StringComparison.Ordinal)
+				|| text.Contains("MAX Exchange", StringComparison.Ordinal)
 				|| text.Contains("`Exchange`", StringComparison.Ordinal)
 				|| text.Contains("[Exchange](xref:", StringComparison.Ordinal)
 				|| text.Contains("BusinessEntities.Exchange", StringComparison.Ordinal)

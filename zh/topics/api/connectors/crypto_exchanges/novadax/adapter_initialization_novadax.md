@@ -1,0 +1,24 @@
+# 适配器初始化：NovaDAX
+
+以下代码初始化 [NovaDaxMessageAdapter](xref:StockSharp.NovaDax.NovaDaxMessageAdapter)，并将其添加到 [Connector](xref:StockSharp.Algo.Connector)。
+
+```cs
+Connector connector = new Connector();
+...
+var messageAdapter = new NovaDaxMessageAdapter(connector.TransactionIdGenerator)
+{
+	Key = "<您的 API 密钥>".To<SecureString>(),
+	Secret = "<您的 API Secret>".To<SecureString>(),
+	AccountId = "<您的账户标识>",
+};
+connector.Adapter.InnerAdapters.Add(messageAdapter);
+...
+```
+
+请填写凭据以及[连接器配置](configuration_novadax.md)页面中说明的其他必需属性。
+
+## 另请参阅
+
+[连接器配置](configuration_novadax.md)
+
+[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)

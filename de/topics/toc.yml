@@ -1640,7 +1640,16 @@
           - name: Grafische Konfiguration von SET Market Data
             href: api/connectors/stock_market/set_market_data/graphical_configuration_set_market_data.md
           - name: SET Market Data-Adapter initialisieren
-            href: api/connectors/stock_market/set_market_data/adapter_initialization_set_market_data.md
+          href: api/connectors/stock_market/set_market_data/adapter_initialization_set_market_data.md
+        - name: Settrade
+          href: api/connectors/stock_market/settrade.md
+          items:
+          - name: Konfiguration Settrade
+            href: api/connectors/stock_market/settrade/configuration_settrade.md
+          - name: Grafische Konfiguration Settrade
+            href: api/connectors/stock_market/settrade/graphical_configuration_settrade.md
+          - name: Adapterinitialisierung Settrade
+            href: api/connectors/stock_market/settrade/adapter_initialization_settrade.md
         - name: Toss Securities
           href: api/connectors/stock_market/toss_securities.md
           items:
@@ -2688,6 +2697,114 @@
             href: api/connectors/crypto_exchanges/zoomex/graphical_configuration_zoomex.md
           - name: Adapterinitialisierung Zoomex
             href: api/connectors/crypto_exchanges/zoomex/adapter_initialization_zoomex.md
+        - name: CoinGlass
+          href: api/connectors/crypto_exchanges/coinglass.md
+          items:
+          - name: Konfiguration CoinGlass
+            href: api/connectors/crypto_exchanges/coinglass/configuration_coinglass.md
+          - name: Grafische Konfiguration CoinGlass
+            href: api/connectors/crypto_exchanges/coinglass/graphical_configuration_coinglass.md
+          - name: Adapterinitialisierung CoinGlass
+            href: api/connectors/crypto_exchanges/coinglass/adapter_initialization_coinglass.md
+        - name: CoinPaprika
+          href: api/connectors/crypto_exchanges/coinpaprika.md
+          items:
+          - name: Konfiguration CoinPaprika
+            href: api/connectors/crypto_exchanges/coinpaprika/configuration_coinpaprika.md
+          - name: Grafische Konfiguration CoinPaprika
+            href: api/connectors/crypto_exchanges/coinpaprika/graphical_configuration_coinpaprika.md
+          - name: Adapterinitialisierung CoinPaprika
+            href: api/connectors/crypto_exchanges/coinpaprika/adapter_initialization_coinpaprika.md
+        - name: Coincall
+          href: api/connectors/crypto_exchanges/coincall.md
+          items:
+          - name: Konfiguration Coincall
+            href: api/connectors/crypto_exchanges/coincall/configuration_coincall.md
+          - name: Grafische Konfiguration Coincall
+            href: api/connectors/crypto_exchanges/coincall/graphical_configuration_coincall.md
+          - name: Adapterinitialisierung Coincall
+            href: api/connectors/crypto_exchanges/coincall/adapter_initialization_coincall.md
+        - name: Birdeye
+          href: api/connectors/crypto_exchanges/birdeye.md
+          items:
+          - name: Konfiguration Birdeye
+            href: api/connectors/crypto_exchanges/birdeye/configuration_birdeye.md
+          - name: Grafische Konfiguration Birdeye
+            href: api/connectors/crypto_exchanges/birdeye/graphical_configuration_birdeye.md
+          - name: Adapterinitialisierung Birdeye
+            href: api/connectors/crypto_exchanges/birdeye/adapter_initialization_birdeye.md
+        - name: DEX Screener
+          href: api/connectors/crypto_exchanges/dex_screener.md
+          items:
+          - name: Konfiguration DEX Screener
+            href: api/connectors/crypto_exchanges/dex_screener/configuration_dex_screener.md
+          - name: Grafische Konfiguration DEX Screener
+            href: api/connectors/crypto_exchanges/dex_screener/graphical_configuration_dex_screener.md
+          - name: Adapterinitialisierung DEX Screener
+            href: api/connectors/crypto_exchanges/dex_screener/adapter_initialization_dex_screener.md
+        - name: Coinalyze
+          href: api/connectors/crypto_exchanges/coinalyze.md
+          items:
+          - name: Konfiguration Coinalyze
+            href: api/connectors/crypto_exchanges/coinalyze/configuration_coinalyze.md
+          - name: Grafische Konfiguration Coinalyze
+            href: api/connectors/crypto_exchanges/coinalyze/graphical_configuration_coinalyze.md
+          - name: Adapterinitialisierung Coinalyze
+            href: api/connectors/crypto_exchanges/coinalyze/adapter_initialization_coinalyze.md
+        - name: AscendEX
+          href: api/connectors/crypto_exchanges/ascendex.md
+          items:
+          - name: Konfiguration AscendEX
+            href: api/connectors/crypto_exchanges/ascendex/configuration_ascendex.md
+          - name: Grafische Konfiguration AscendEX
+            href: api/connectors/crypto_exchanges/ascendex/graphical_configuration_ascendex.md
+          - name: Adapterinitialisierung AscendEX
+            href: api/connectors/crypto_exchanges/ascendex/adapter_initialization_ascendex.md
+        - name: Coinstore
+          href: api/connectors/crypto_exchanges/coinstore.md
+          items:
+          - name: Konfiguration Coinstore
+            href: api/connectors/crypto_exchanges/coinstore/configuration_coinstore.md
+          - name: Grafische Konfiguration Coinstore
+            href: api/connectors/crypto_exchanges/coinstore/graphical_configuration_coinstore.md
+          - name: Adapterinitialisierung Coinstore
+            href: api/connectors/crypto_exchanges/coinstore/adapter_initialization_coinstore.md
+        - name: BigONE
+          href: api/connectors/crypto_exchanges/bigone.md
+          items:
+          - name: Konfiguration BigONE
+            href: api/connectors/crypto_exchanges/bigone/configuration_bigone.md
+          - name: Grafische Konfiguration BigONE
+            href: api/connectors/crypto_exchanges/bigone/graphical_configuration_bigone.md
+          - name: Adapterinitialisierung BigONE
+            href: api/connectors/crypto_exchanges/bigone/adapter_initialization_bigone.md
+        - name: CoinCatch
+          href: api/connectors/crypto_exchanges/coincatch.md
+          items:
+          - name: Konfiguration CoinCatch
+            href: api/connectors/crypto_exchanges/coincatch/configuration_coincatch.md
+          - name: Grafische Konfiguration CoinCatch
+            href: api/connectors/crypto_exchanges/coincatch/graphical_configuration_coincatch.md
+          - name: Adapterinitialisierung CoinCatch
+            href: api/connectors/crypto_exchanges/coincatch/adapter_initialization_coincatch.md
+        - name: Quidax
+          href: api/connectors/crypto_exchanges/quidax.md
+          items:
+          - name: Konfiguration Quidax
+            href: api/connectors/crypto_exchanges/quidax/configuration_quidax.md
+          - name: Grafische Konfiguration Quidax
+            href: api/connectors/crypto_exchanges/quidax/graphical_configuration_quidax.md
+          - name: Adapterinitialisierung Quidax
+            href: api/connectors/crypto_exchanges/quidax/adapter_initialization_quidax.md
+        - name: AltCoinTrader
+          href: api/connectors/crypto_exchanges/altcointrader.md
+          items:
+          - name: Konfiguration AltCoinTrader
+            href: api/connectors/crypto_exchanges/altcointrader/configuration_altcointrader.md
+          - name: Grafische Konfiguration AltCoinTrader
+            href: api/connectors/crypto_exchanges/altcointrader/graphical_configuration_altcointrader.md
+          - name: Adapterinitialisierung AltCoinTrader
+            href: api/connectors/crypto_exchanges/altcointrader/adapter_initialization_altcointrader.md
       - name: Amerika
         items:
         - name: Bittrex
@@ -2834,6 +2951,24 @@
             href: api/connectors/crypto_exchanges/ndax/graphical_configuration_ndax.md
           - name: Adapterinitialisierung NDAX
             href: api/connectors/crypto_exchanges/ndax/adapter_initialization_ndax.md
+        - name: Buda
+          href: api/connectors/crypto_exchanges/buda.md
+          items:
+          - name: Konfiguration Buda
+            href: api/connectors/crypto_exchanges/buda/configuration_buda.md
+          - name: Grafische Konfiguration Buda
+            href: api/connectors/crypto_exchanges/buda/graphical_configuration_buda.md
+          - name: Adapterinitialisierung Buda
+            href: api/connectors/crypto_exchanges/buda/adapter_initialization_buda.md
+        - name: NovaDAX
+          href: api/connectors/crypto_exchanges/novadax.md
+          items:
+          - name: Konfiguration NovaDAX
+            href: api/connectors/crypto_exchanges/novadax/configuration_novadax.md
+          - name: Grafische Konfiguration NovaDAX
+            href: api/connectors/crypto_exchanges/novadax/graphical_configuration_novadax.md
+          - name: Adapterinitialisierung NovaDAX
+            href: api/connectors/crypto_exchanges/novadax/adapter_initialization_novadax.md
       - name: Europa
         items:
         - name: BitStamp
@@ -2953,6 +3088,51 @@
             href: api/connectors/crypto_exchanges/whitebit/graphical_configuration_whitebit.md
           - name: Adapterinitialisierung WhiteBIT
             href: api/connectors/crypto_exchanges/whitebit/adapter_initialization_whitebit.md
+        - name: Coinmetro
+          href: api/connectors/crypto_exchanges/coinmetro.md
+          items:
+          - name: Konfiguration Coinmetro
+            href: api/connectors/crypto_exchanges/coinmetro/configuration_coinmetro.md
+          - name: Grafische Konfiguration Coinmetro
+            href: api/connectors/crypto_exchanges/coinmetro/graphical_configuration_coinmetro.md
+          - name: Adapterinitialisierung Coinmetro
+            href: api/connectors/crypto_exchanges/coinmetro/adapter_initialization_coinmetro.md
+        - name: LCX
+          href: api/connectors/crypto_exchanges/lcx.md
+          items:
+          - name: Konfiguration LCX
+            href: api/connectors/crypto_exchanges/lcx/configuration_lcx.md
+          - name: Grafische Konfiguration LCX
+            href: api/connectors/crypto_exchanges/lcx/graphical_configuration_lcx.md
+          - name: Adapterinitialisierung LCX
+            href: api/connectors/crypto_exchanges/lcx/adapter_initialization_lcx.md
+        - name: zondacrypto
+          href: api/connectors/crypto_exchanges/zondacrypto.md
+          items:
+          - name: Konfiguration zondacrypto
+            href: api/connectors/crypto_exchanges/zondacrypto/configuration_zondacrypto.md
+          - name: Grafische Konfiguration zondacrypto
+            href: api/connectors/crypto_exchanges/zondacrypto/graphical_configuration_zondacrypto.md
+          - name: Adapterinitialisierung zondacrypto
+            href: api/connectors/crypto_exchanges/zondacrypto/adapter_initialization_zondacrypto.md
+        - name: BtcTurk
+          href: api/connectors/crypto_exchanges/btcturk.md
+          items:
+          - name: Konfiguration BtcTurk
+            href: api/connectors/crypto_exchanges/btcturk/configuration_btcturk.md
+          - name: Grafische Konfiguration BtcTurk
+            href: api/connectors/crypto_exchanges/btcturk/graphical_configuration_btcturk.md
+          - name: Adapterinitialisierung BtcTurk
+            href: api/connectors/crypto_exchanges/btcturk/adapter_initialization_btcturk.md
+        - name: CoinTR
+          href: api/connectors/crypto_exchanges/cointr.md
+          items:
+          - name: Konfiguration CoinTR
+            href: api/connectors/crypto_exchanges/cointr/configuration_cointr.md
+          - name: Grafische Konfiguration CoinTR
+            href: api/connectors/crypto_exchanges/cointr/graphical_configuration_cointr.md
+          - name: Adapterinitialisierung CoinTR
+            href: api/connectors/crypto_exchanges/cointr/adapter_initialization_cointr.md
       - name: Asien-Pazifik
         items:
         - name: Bibox
@@ -3414,6 +3594,69 @@
             href: api/connectors/crypto_exchanges/pintu_pro/graphical_configuration_pintu_pro.md
           - name: Adapterinitialisierung Pintu Pro
             href: api/connectors/crypto_exchanges/pintu_pro/adapter_initialization_pintu_pro.md
+        - name: CoinSpot
+          href: api/connectors/crypto_exchanges/coinspot.md
+          items:
+          - name: Konfiguration CoinSpot
+            href: api/connectors/crypto_exchanges/coinspot/configuration_coinspot.md
+          - name: Grafische Konfiguration CoinSpot
+            href: api/connectors/crypto_exchanges/coinspot/graphical_configuration_coinspot.md
+          - name: Adapterinitialisierung CoinSpot
+            href: api/connectors/crypto_exchanges/coinspot/adapter_initialization_coinspot.md
+        - name: WazirX
+          href: api/connectors/crypto_exchanges/wazirx.md
+          items:
+          - name: Konfiguration WazirX
+            href: api/connectors/crypto_exchanges/wazirx/configuration_wazirx.md
+          - name: Grafische Konfiguration WazirX
+            href: api/connectors/crypto_exchanges/wazirx/graphical_configuration_wazirx.md
+          - name: Adapterinitialisierung WazirX
+            href: api/connectors/crypto_exchanges/wazirx/adapter_initialization_wazirx.md
+        - name: Delta Exchange India
+          href: api/connectors/crypto_exchanges/delta_exchange_india.md
+          items:
+          - name: Konfiguration Delta Exchange India
+            href: api/connectors/crypto_exchanges/delta_exchange_india/configuration_delta_exchange_india.md
+          - name: Grafische Konfiguration Delta Exchange India
+            href: api/connectors/crypto_exchanges/delta_exchange_india/graphical_configuration_delta_exchange_india.md
+          - name: Adapterinitialisierung Delta Exchange India
+            href: api/connectors/crypto_exchanges/delta_exchange_india/adapter_initialization_delta_exchange_india.md
+        - name: CoinSwitch PRO
+          href: api/connectors/crypto_exchanges/coinswitch.md
+          items:
+          - name: Konfiguration CoinSwitch PRO
+            href: api/connectors/crypto_exchanges/coinswitch/configuration_coinswitch.md
+          - name: Grafische Konfiguration CoinSwitch PRO
+            href: api/connectors/crypto_exchanges/coinswitch/graphical_configuration_coinswitch.md
+          - name: Adapterinitialisierung CoinSwitch PRO
+            href: api/connectors/crypto_exchanges/coinswitch/adapter_initialization_coinswitch.md
+        - name: BitoPro
+          href: api/connectors/crypto_exchanges/bitopro.md
+          items:
+          - name: Konfiguration BitoPro
+            href: api/connectors/crypto_exchanges/bitopro/configuration_bitopro.md
+          - name: Grafische Konfiguration BitoPro
+            href: api/connectors/crypto_exchanges/bitopro/graphical_configuration_bitopro.md
+          - name: Adapterinitialisierung BitoPro
+            href: api/connectors/crypto_exchanges/bitopro/adapter_initialization_bitopro.md
+        - name: MAX Exchange
+          href: api/connectors/crypto_exchanges/maxexchange.md
+          items:
+          - name: Konfiguration MAX Exchange
+            href: api/connectors/crypto_exchanges/maxexchange/configuration_maxexchange.md
+          - name: Grafische Konfiguration MAX Exchange
+            href: api/connectors/crypto_exchanges/maxexchange/graphical_configuration_maxexchange.md
+          - name: Adapterinitialisierung MAX Exchange
+            href: api/connectors/crypto_exchanges/maxexchange/adapter_initialization_maxexchange.md
+        - name: Tokocrypto
+          href: api/connectors/crypto_exchanges/tokocrypto.md
+          items:
+          - name: Konfiguration Tokocrypto
+            href: api/connectors/crypto_exchanges/tokocrypto/configuration_tokocrypto.md
+          - name: Grafische Konfiguration Tokocrypto
+            href: api/connectors/crypto_exchanges/tokocrypto/graphical_configuration_tokocrypto.md
+          - name: Adapterinitialisierung Tokocrypto
+            href: api/connectors/crypto_exchanges/tokocrypto/adapter_initialization_tokocrypto.md
     - name: DEX
       items:
       - name: 1inch
@@ -3848,6 +4091,96 @@
           href: api/connectors/crypto_exchanges/variational_omni/graphical_configuration_variational_omni.md
         - name: Adapterinitialisierung Variational Omni
           href: api/connectors/crypto_exchanges/variational_omni/adapter_initialization_variational_omni.md
+      - name: DeepBook
+        href: api/connectors/crypto_exchanges/deepbook.md
+        items:
+        - name: Konfiguration DeepBook
+          href: api/connectors/crypto_exchanges/deepbook/configuration_deepbook.md
+        - name: Grafische Konfiguration DeepBook
+          href: api/connectors/crypto_exchanges/deepbook/graphical_configuration_deepbook.md
+        - name: Adapterinitialisierung DeepBook
+          href: api/connectors/crypto_exchanges/deepbook/adapter_initialization_deepbook.md
+      - name: Velodrome
+        href: api/connectors/crypto_exchanges/velodrome.md
+        items:
+        - name: Konfiguration Velodrome
+          href: api/connectors/crypto_exchanges/velodrome/configuration_velodrome.md
+        - name: Grafische Konfiguration Velodrome
+          href: api/connectors/crypto_exchanges/velodrome/graphical_configuration_velodrome.md
+        - name: Adapterinitialisierung Velodrome
+          href: api/connectors/crypto_exchanges/velodrome/adapter_initialization_velodrome.md
+      - name: Velora
+        href: api/connectors/crypto_exchanges/velora.md
+        items:
+        - name: Konfiguration Velora
+          href: api/connectors/crypto_exchanges/velora/configuration_velora.md
+        - name: Grafische Konfiguration Velora
+          href: api/connectors/crypto_exchanges/velora/graphical_configuration_velora.md
+        - name: Adapterinitialisierung Velora
+          href: api/connectors/crypto_exchanges/velora/adapter_initialization_velora.md
+      - name: 0x
+        href: api/connectors/crypto_exchanges/zero_x.md
+        items:
+        - name: Konfiguration 0x
+          href: api/connectors/crypto_exchanges/zero_x/configuration_zero_x.md
+        - name: Grafische Konfiguration 0x
+          href: api/connectors/crypto_exchanges/zero_x/graphical_configuration_zero_x.md
+        - name: Adapterinitialisierung 0x
+          href: api/connectors/crypto_exchanges/zero_x/adapter_initialization_zero_x.md
+      - name: KyberSwap
+        href: api/connectors/crypto_exchanges/kyber_swap.md
+        items:
+        - name: Konfiguration KyberSwap
+          href: api/connectors/crypto_exchanges/kyber_swap/configuration_kyber_swap.md
+        - name: Grafische Konfiguration KyberSwap
+          href: api/connectors/crypto_exchanges/kyber_swap/graphical_configuration_kyber_swap.md
+        - name: Adapterinitialisierung KyberSwap
+          href: api/connectors/crypto_exchanges/kyber_swap/adapter_initialization_kyber_swap.md
+      - name: Pendle
+        href: api/connectors/crypto_exchanges/pendle.md
+        items:
+        - name: Konfiguration Pendle
+          href: api/connectors/crypto_exchanges/pendle/configuration_pendle.md
+        - name: Grafische Konfiguration Pendle
+          href: api/connectors/crypto_exchanges/pendle/graphical_configuration_pendle.md
+        - name: Adapterinitialisierung Pendle
+          href: api/connectors/crypto_exchanges/pendle/adapter_initialization_pendle.md
+      - name: Chainflip
+        href: api/connectors/crypto_exchanges/chainflip.md
+        items:
+        - name: Konfiguration Chainflip
+          href: api/connectors/crypto_exchanges/chainflip/configuration_chainflip.md
+        - name: Grafische Konfiguration Chainflip
+          href: api/connectors/crypto_exchanges/chainflip/graphical_configuration_chainflip.md
+        - name: Adapterinitialisierung Chainflip
+          href: api/connectors/crypto_exchanges/chainflip/adapter_initialization_chainflip.md
+      - name: Dexalot
+        href: api/connectors/crypto_exchanges/dexalot.md
+        items:
+        - name: Konfiguration Dexalot
+          href: api/connectors/crypto_exchanges/dexalot/configuration_dexalot.md
+        - name: Grafische Konfiguration Dexalot
+          href: api/connectors/crypto_exchanges/dexalot/graphical_configuration_dexalot.md
+        - name: Adapterinitialisierung Dexalot
+          href: api/connectors/crypto_exchanges/dexalot/adapter_initialization_dexalot.md
+      - name: STON.fi
+        href: api/connectors/crypto_exchanges/stonfi.md
+        items:
+        - name: Konfiguration STON.fi
+          href: api/connectors/crypto_exchanges/stonfi/configuration_stonfi.md
+        - name: Grafische Konfiguration STON.fi
+          href: api/connectors/crypto_exchanges/stonfi/graphical_configuration_stonfi.md
+        - name: Adapterinitialisierung STON.fi
+          href: api/connectors/crypto_exchanges/stonfi/adapter_initialization_stonfi.md
+      - name: XRPL DEX
+        href: api/connectors/crypto_exchanges/xrpl.md
+        items:
+        - name: Konfiguration XRPL DEX
+          href: api/connectors/crypto_exchanges/xrpl/configuration_xrpl.md
+        - name: Grafische Konfiguration XRPL DEX
+          href: api/connectors/crypto_exchanges/xrpl/graphical_configuration_xrpl.md
+        - name: Adapterinitialisierung XRPL DEX
+          href: api/connectors/crypto_exchanges/xrpl/adapter_initialization_xrpl.md
     - name: HFT
       items:
       - name: FIX-Protokoll

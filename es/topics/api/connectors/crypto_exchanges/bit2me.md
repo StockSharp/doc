@@ -1,6 +1,6 @@
 # Bit2Me
 
-**Bit2Me** es un conector para el exchange al contado de criptomonedas Bit2Me Pro. Admite datos públicos de mercado, velas históricas, saldos de cuenta y operaciones de trading mediante las API REST y WebSocket.
+**Bit2Me** es un conector para la bolsa al contado de criptomonedas Bit2Me Pro. Admite datos públicos de mercado, velas históricas, saldos de cuenta y operaciones de negociación mediante las API REST y WebSocket.
 
 Antes de desarrollar robots para esta plataforma, consulte la sección [Conectores](../../connectors.md).
 

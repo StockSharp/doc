@@ -1,0 +1,24 @@
+# Inicialización del adaptador: NovaDAX
+
+El siguiente código inicializa [NovaDaxMessageAdapter](xref:StockSharp.NovaDax.NovaDaxMessageAdapter) y lo agrega a [Connector](xref:StockSharp.Algo.Connector).
+
+```cs
+Connector connector = new Connector();
+...
+var messageAdapter = new NovaDaxMessageAdapter(connector.TransactionIdGenerator)
+{
+	Key = "<Su clave API>".To<SecureString>(),
+	Secret = "<Su secreto API>".To<SecureString>(),
+	AccountId = "<Su identificador de cuenta>",
+};
+connector.Adapter.InnerAdapters.Add(messageAdapter);
+...
+```
+
+Indique las credenciales y las demás propiedades necesarias descritas en la página de [Configuración del conector](configuration_novadax.md).
+
+## Véase también
+
+[Configuración del conector](configuration_novadax.md)
+
+[ventana de configuración de conexiones](../../../graphical_user_interface/connection_settings_window.md)

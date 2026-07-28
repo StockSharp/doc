@@ -1,6 +1,6 @@
 # Configuración del conector Bit2Me
 
-Los datos públicos de mercado están disponibles sin credenciales. Indique una clave API y un secreto para usar operaciones de cuenta y trading.
+Los datos públicos de mercado están disponibles sin credenciales. Indique una clave API y un secreto para usar operaciones de cuenta y negociación.
 
 ## Parámetros de conexión
 
@@ -14,4 +14,4 @@ El conector admite órdenes de mercado, limitadas y stop-limit. Las suscripcione
 ## Documentación oficial de la API
 
 - [API de Bit2Me](https://api.bit2me.com/)
-- [Ejemplos de trading de Bit2Me](https://github.com/bit2me-devs/trading-spot-samples)
+- [Ejemplos de negociación de Bit2Me](https://github.com/bit2me-devs/trading-spot-samples)

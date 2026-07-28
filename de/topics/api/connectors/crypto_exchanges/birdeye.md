@@ -1,0 +1,23 @@
+# Birdeye
+
+**Birdeye** verbindet StockSharp mit dem Kryptomarktdatendienst Birdeye. Der Adapter stellt die Anbieterdaten über das standardisierte StockSharp-Nachrichtenmodell bereit.
+
+## Wichtige Funktionen
+
+- Im Quellcode geprüfte Adapterfunktionen: Datenaktualisierungen in Echtzeit, Level-1-Kurse, Kerzendaten, historische Datenabfragen.
+- Anbieterspezifische Transporte, Sitzungen und Datenformate werden hinter der standardisierten StockSharp-API verborgen.
+- Dieser Adapter ist für den Datenzugriff vorgesehen und leitet keine Aufträge weiter.
+
+## Typische Verwendung
+
+Geeignet für Charts, Marktdatenspeicher, Analysen, Forschung und Strategietests mit Daten des Anbieters.
+
+Instrumente, Datentiefe, Transaktionsrechte, Anfragelimits und Verfügbarkeit werden von Birdeye, dem API-Tarif und den Berechtigungen des verbundenen Kontos bestimmt.
+
+## Siehe auch
+
+[Connector-Konfiguration](birdeye/configuration_birdeye.md)
+
+[Grafische Konfiguration](birdeye/graphical_configuration_birdeye.md)
+
+[Adapterinitialisierung](birdeye/adapter_initialization_birdeye.md)

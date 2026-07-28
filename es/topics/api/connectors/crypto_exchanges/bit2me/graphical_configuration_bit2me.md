@@ -7,7 +7,7 @@ En todos los productos [S#](../../../../api.md), la configuración gráfica se r
 - `RestEndpoint` — dirección de la API REST.
 - `WebSocketEndpoint` — dirección WebSocket.
 
-Deje `Key` y `Secret` vacíos si solo necesita datos públicos. Para trading y datos de cuenta, configure ambos valores.
+Deje `Key` y `Secret` vacíos si solo necesita datos públicos. Para la negociación y los datos de cuenta, configure ambos valores.
 
 ## Véase también
 
