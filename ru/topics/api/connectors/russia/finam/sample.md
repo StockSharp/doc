@@ -1,4 +1,4 @@
-# Инициализация адаптера Finam
+# Инициализация адаптера Finam History
 
 Код ниже демонстрирует как инициализировать [FinamMessageAdapter](xref:StockSharp.Finam.FinamMessageAdapter) и передать его в [Connector](xref:StockSharp.Algo.Connector).
 

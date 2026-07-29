@@ -11625,10 +11625,13 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (!RelativeToRepo(localizedToc).Equals("ru/topics/toc.yml", StringComparison.OrdinalIgnoreCase))
 			return entries;
 
+		// The Russian navigation additionally exposes legacy Russia-only connectors in its Russia group.
 		return path switch
 		{
 			"[3]/[0]/[1]" => entries.Where(entry => !NormalizeStructureUrl(entry.Href).Equals("hydra/videos/sources_samples/finam.md", StringComparison.OrdinalIgnoreCase)).ToArray(),
-			"[7]/[3]" => entries.Where(entry => !string.Equals(entry.Name, "Россия", StringComparison.Ordinal)).ToArray(),
+			"[7]/[3]/[1]" => entries.Where(entry => NormalizeStructureUrl(entry.Href) is
+				"api/connectors/russia/bcs.md" or
+				"api/connectors/russia/finam_trade.md").ToArray(),
 			_ => entries,
 		};
 	}

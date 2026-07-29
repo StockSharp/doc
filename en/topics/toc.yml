@@ -702,6 +702,26 @@
     items:
     - name: Graphical configuration
       href: api/connectors/graphical_configuration.md
+    - name: Russia
+      items:
+      - name: BCS
+        href: api/connectors/russia/bcs.md
+        items:
+        - name: Configuration BCS
+          href: api/connectors/russia/bcs/configuration_bcs.md
+        - name: Graphical configuration BCS
+          href: api/connectors/russia/bcs/graphical_configuration_bcs.md
+        - name: Adapter initialization BCS
+          href: api/connectors/russia/bcs/adapter_initialization_bcs.md
+      - name: Finam Trade API
+        href: api/connectors/russia/finam_trade.md
+        items:
+        - name: Finam Trade API connector configuration
+          href: api/connectors/russia/finam_trade/configuration_finam_trade.md
+        - name: Finam Trade API graphical configuration
+          href: api/connectors/russia/finam_trade/graphical_configuration_finam_trade.md
+        - name: Finam Trade API adapter initialization
+          href: api/connectors/russia/finam_trade/adapter_initialization_finam_trade.md
     - name: Stock market
       items:
       - name: Americas
@@ -1090,24 +1110,6 @@
             href: api/connectors/stock_market/tradelocker/graphical_configuration_tradelocker.md
           - name: Adapter initialization TradeLocker
             href: api/connectors/stock_market/tradelocker/adapter_initialization_tradelocker.md
-        - name: BCS
-          href: api/connectors/russia/bcs.md
-          items:
-          - name: Configuration BCS
-            href: api/connectors/russia/bcs/configuration_bcs.md
-          - name: Graphical configuration BCS
-            href: api/connectors/russia/bcs/graphical_configuration_bcs.md
-          - name: Adapter initialization BCS
-            href: api/connectors/russia/bcs/adapter_initialization_bcs.md
-        - name: Finam Trade API
-          href: api/connectors/russia/finam_trade.md
-          items:
-          - name: Finam Trade API connector configuration
-            href: api/connectors/russia/finam_trade/configuration_finam_trade.md
-          - name: Finam Trade API graphical configuration
-            href: api/connectors/russia/finam_trade/graphical_configuration_finam_trade.md
-          - name: Finam Trade API adapter initialization
-            href: api/connectors/russia/finam_trade/adapter_initialization_finam_trade.md
         - name: comdirect
           href: api/connectors/europe/comdirect.md
           items:
@@ -2461,15 +2463,6 @@
             href: api/connectors/crypto_exchanges/bullish/graphical_configuration_bullish.md
           - name: Adapter initialization Bullish
             href: api/connectors/crypto_exchanges/bullish/adapter_initialization_bullish.md
-        - name: Bybit History
-          href: api/connectors/crypto_exchanges/bybit_history.md
-          items:
-          - name: Configuration Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
-          - name: Graphical configuration Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
-          - name: Adapter initialization Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
         - name: BYDFi
           href: api/connectors/crypto_exchanges/bydfi.md
           items:
@@ -3369,6 +3362,15 @@
             href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
           - name: Adapter initialization ByBit
             href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
+        - name: Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history.md
+          items:
+          - name: Configuration Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+          - name: Graphical configuration Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+          - name: Adapter initialization Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
         - name: CoinBene
           href: api/connectors/crypto_exchanges/coinbene.md
           items:

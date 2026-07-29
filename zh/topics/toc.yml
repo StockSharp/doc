@@ -702,6 +702,26 @@
     items:
     - name: 图形配置
       href: api/connectors/graphical_configuration.md
+    - name: 俄罗斯
+      items:
+      - name: BCS
+        href: api/connectors/russia/bcs.md
+        items:
+        - name: BCS 配置
+          href: api/connectors/russia/bcs/configuration_bcs.md
+        - name: BCS 图形配置
+          href: api/connectors/russia/bcs/graphical_configuration_bcs.md
+        - name: BCS 适配器初始化
+          href: api/connectors/russia/bcs/adapter_initialization_bcs.md
+      - name: Finam Trade API
+        href: api/connectors/russia/finam_trade.md
+        items:
+        - name: Finam Trade API 连接器配置
+          href: api/connectors/russia/finam_trade/configuration_finam_trade.md
+        - name: Finam Trade API 图形化配置
+          href: api/connectors/russia/finam_trade/graphical_configuration_finam_trade.md
+        - name: Finam Trade API 适配器初始化
+          href: api/connectors/russia/finam_trade/adapter_initialization_finam_trade.md
     - name: 股票市场
       items:
       - name: 美洲
@@ -1090,24 +1110,6 @@
             href: api/connectors/stock_market/tradelocker/graphical_configuration_tradelocker.md
           - name: TradeLocker 适配器初始化
             href: api/connectors/stock_market/tradelocker/adapter_initialization_tradelocker.md
-        - name: BCS
-          href: api/connectors/russia/bcs.md
-          items:
-          - name: BCS 配置
-            href: api/connectors/russia/bcs/configuration_bcs.md
-          - name: BCS 图形配置
-            href: api/connectors/russia/bcs/graphical_configuration_bcs.md
-          - name: BCS 适配器初始化
-            href: api/connectors/russia/bcs/adapter_initialization_bcs.md
-        - name: Finam Trade API
-          href: api/connectors/russia/finam_trade.md
-          items:
-          - name: Finam Trade API 连接器配置
-            href: api/connectors/russia/finam_trade/configuration_finam_trade.md
-          - name: Finam Trade API 图形化配置
-            href: api/connectors/russia/finam_trade/graphical_configuration_finam_trade.md
-          - name: Finam Trade API 适配器初始化
-            href: api/connectors/russia/finam_trade/adapter_initialization_finam_trade.md
         - name: comdirect
           href: api/connectors/europe/comdirect.md
           items:
@@ -2461,15 +2463,6 @@
             href: api/connectors/crypto_exchanges/bullish/graphical_configuration_bullish.md
           - name: 适配器初始化 Bullish
             href: api/connectors/crypto_exchanges/bullish/adapter_initialization_bullish.md
-        - name: Bybit 历史
-          href: api/connectors/crypto_exchanges/bybit_history.md
-          items:
-          - name: 配置 Bybit 历史
-            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
-          - name: 图形配置 Bybit 历史
-            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
-          - name: 适配器初始化 Bybit 历史
-            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
         - name: BYDFi
           href: api/connectors/crypto_exchanges/bydfi.md
           items:
@@ -3369,6 +3362,15 @@
             href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
           - name: 适配器初始化 ByBit
             href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
+        - name: Bybit 历史
+          href: api/connectors/crypto_exchanges/bybit_history.md
+          items:
+          - name: 配置 Bybit 历史
+            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+          - name: 图形配置 Bybit 历史
+            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+          - name: 适配器初始化 Bybit 历史
+            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
         - name: CoinBene
           href: api/connectors/crypto_exchanges/coinbene.md
           items:

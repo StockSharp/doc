@@ -820,13 +820,31 @@
           href: api/connectors/russia/simba/ui_settings.md
         - name: Инициализация адаптера Simba
           href: api/connectors/russia/simba/sample.md
-      - name: Финам
+      - name: BCS
+        href: api/connectors/russia/bcs.md
+        items:
+        - name: Настройки коннектора BCS
+          href: api/connectors/russia/bcs/configuration_bcs.md
+        - name: Графическое конфигурирование BCS
+          href: api/connectors/russia/bcs/graphical_configuration_bcs.md
+        - name: Инициализация адаптера BCS
+          href: api/connectors/russia/bcs/adapter_initialization_bcs.md
+      - name: Финам История
         href: api/connectors/russia/finam.md
         items:
-        - name: Графическое конфигурирование Finam
+        - name: Графическое конфигурирование Finam History
           href: api/connectors/russia/finam/ui_settings.md
-        - name: Инициализация адаптера Finam
+        - name: Инициализация адаптера Finam History
           href: api/connectors/russia/finam/sample.md
+      - name: Finam Trade API
+        href: api/connectors/russia/finam_trade.md
+        items:
+        - name: Настройки коннектора Finam Trade API
+          href: api/connectors/russia/finam_trade/configuration_finam_trade.md
+        - name: Графическое конфигурирование Finam Trade API
+          href: api/connectors/russia/finam_trade/graphical_configuration_finam_trade.md
+        - name: Инициализация адаптера Finam Trade API
+          href: api/connectors/russia/finam_trade/adapter_initialization_finam_trade.md
       - name: Алор История
         href: api/connectors/russia/alorhistory.md
         items:
@@ -850,7 +868,7 @@
           href: api/connectors/russia/lci/ui_settings.md
         - name: Инициализация адаптера ЛЧИ
           href: api/connectors/russia/lci/sample.md
-    - name: Америка
+    - name: Фондовый рынок
       items:
       - name: Америка
         items:
@@ -1238,24 +1256,6 @@
             href: api/connectors/stock_market/tradelocker/graphical_configuration_tradelocker.md
           - name: Инициализация адаптера TradeLocker
             href: api/connectors/stock_market/tradelocker/adapter_initialization_tradelocker.md
-        - name: BCS
-          href: api/connectors/russia/bcs.md
-          items:
-          - name: Настройки коннектора BCS
-            href: api/connectors/russia/bcs/configuration_bcs.md
-          - name: Графическое конфигурирование BCS
-            href: api/connectors/russia/bcs/graphical_configuration_bcs.md
-          - name: Инициализация адаптера BCS
-            href: api/connectors/russia/bcs/adapter_initialization_bcs.md
-        - name: Finam Trade API
-          href: api/connectors/russia/finam_trade.md
-          items:
-          - name: Настройки коннектора Finam Trade API
-            href: api/connectors/russia/finam_trade/configuration_finam_trade.md
-          - name: Графическое конфигурирование Finam Trade API
-            href: api/connectors/russia/finam_trade/graphical_configuration_finam_trade.md
-          - name: Инициализация адаптера Finam Trade API
-            href: api/connectors/russia/finam_trade/adapter_initialization_finam_trade.md
         - name: comdirect
           href: api/connectors/europe/comdirect.md
           items:
@@ -2609,15 +2609,6 @@
             href: api/connectors/crypto_exchanges/bullish/graphical_configuration_bullish.md
           - name: Инициализация адаптера Bullish
             href: api/connectors/crypto_exchanges/bullish/adapter_initialization_bullish.md
-        - name: Bybit History
-          href: api/connectors/crypto_exchanges/bybit_history.md
-          items:
-          - name: Настройки коннектора Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
-          - name: Графическое конфигурирование Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
-          - name: Инициализация адаптера Bybit History
-            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
         - name: BYDFi
           href: api/connectors/crypto_exchanges/bydfi.md
           items:
@@ -3517,6 +3508,15 @@
             href: api/connectors/crypto_exchanges/bybit/graphical_configuration_bybit.md
           - name: Инициализация адаптера ByBit
             href: api/connectors/crypto_exchanges/bybit/adapter_initialization_bybit.md
+        - name: Bybit History
+          href: api/connectors/crypto_exchanges/bybit_history.md
+          items:
+          - name: Настройки коннектора Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/configuration_bybit_history.md
+          - name: Графическое конфигурирование Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/graphical_configuration_bybit_history.md
+          - name: Инициализация адаптера Bybit History
+            href: api/connectors/crypto_exchanges/bybit_history/adapter_initialization_bybit_history.md
         - name: CoinBene
           href: api/connectors/crypto_exchanges/coinbene.md
           items:
