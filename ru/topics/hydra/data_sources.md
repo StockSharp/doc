@@ -198,6 +198,7 @@
 | [Альфа\-Директ](../api/connectors/russia/alfadirect.md)           | [Настройка терминала Альфа\-Директ](../api/connectors/russia/alfadirect/configuration.md)            | [Графическое конфигурирование Альфа\-Директ](../api/connectors/russia/alfadirect/ui_settings.md)                            |
 | [ЛЧИ](../api/connectors/russia/lci.md)                      | \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\- | [Графическое конфигурирование ЛЧИ](../api/connectors/russia/lci/ui_settings.md)                                             |
 | [BCS](../api/connectors/russia/bcs.md) | [Настройки коннектора BCS](../api/connectors/russia/bcs/configuration_bcs.md) | [Графическое конфигурирование BCS](../api/connectors/russia/bcs/graphical_configuration_bcs.md) |
+| [Коннектор Finam Trade API](../api/connectors/russia/finam_trade.md) | [Настройки коннектора Finam Trade API](../api/connectors/russia/finam_trade/configuration_finam_trade.md) | [Графическое конфигурирование Finam Trade API](../api/connectors/russia/finam_trade/graphical_configuration_finam_trade.md) |
 
 ## Коннекторы Forex
 

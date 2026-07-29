@@ -1247,6 +1247,15 @@
             href: api/connectors/russia/bcs/graphical_configuration_bcs.md
           - name: Инициализация адаптера BCS
             href: api/connectors/russia/bcs/adapter_initialization_bcs.md
+        - name: Finam Trade API
+          href: api/connectors/russia/finam_trade.md
+          items:
+          - name: Настройки коннектора Finam Trade API
+            href: api/connectors/russia/finam_trade/configuration_finam_trade.md
+          - name: Графическое конфигурирование Finam Trade API
+            href: api/connectors/russia/finam_trade/graphical_configuration_finam_trade.md
+          - name: Инициализация адаптера Finam Trade API
+            href: api/connectors/russia/finam_trade/adapter_initialization_finam_trade.md
         - name: comdirect
           href: api/connectors/europe/comdirect.md
           items:
