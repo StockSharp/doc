@@ -5166,13 +5166,13 @@
     - name: Handel
       href: api/graphical_user_interface/trading.md
       items:
-      - name: Orders
+      - name: Aufträge
         href: api/graphical_user_interface/trading/orders.md
       - name: Eigene Trades
         href: api/graphical_user_interface/trading/own_trades.md
-      - name: Erstellen einer neuen Order
+      - name: Erstellen eines neuen Auftrags
         href: api/graphical_user_interface/trading/new_order_creation.md
-      - name: Erstellen einer neuen Stop-Order
+      - name: Erstellen eines neuen Stop-Auftrags
         href: api/graphical_user_interface/trading/new_stop_order_creation.md
       - name: Tabelle verfügbarer Marktdaten
         href: api/graphical_user_interface/trading/table_of_available_market_data.md

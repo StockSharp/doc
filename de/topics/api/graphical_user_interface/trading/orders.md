@@ -10,12 +10,12 @@
 **Wichtigste Member**
 
 - [OrderGrid.Orders](xref:StockSharp.Xaml.OrderGrid.Orders) - Liste der Aufträge.
-- [OrderGrid.SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) - ausgewählte Order.
+- [OrderGrid.SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) - ausgewählter Auftrag.
 - [OrderGrid.SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) - ausgewählte Aufträge.
-- [OrderGrid.AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail))**(**[StockSharp.BusinessEntities.OrderFail](xref:StockSharp.BusinessEntities.OrderFail) fail **)** - Methode, die eine Fehlermeldung zur Orderregistrierung zum Kommentarfeld hinzufügt.
-- [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) - Ereignis zur Orderregistrierung (tritt nach Auswahl des entsprechenden Kontextmenüeintrags auf).
-- [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) - Ereignis zur Orderänderung (tritt nach Auswahl des entsprechenden Kontextmenüeintrags auf).
-- [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) - Ereignis zur Orderstornierung (tritt nach Auswahl des entsprechenden Kontextmenüeintrags auf).
+- [OrderGrid.AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail))**(**[StockSharp.BusinessEntities.OrderFail](xref:StockSharp.BusinessEntities.OrderFail) fail **)** - Methode, die eine Fehlermeldung zur Auftragsregistrierung zum Kommentarfeld hinzufügt.
+- [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) - Ereignis zur Auftragsregistrierung (tritt nach Auswahl des entsprechenden Kontextmenüeintrags auf).
+- [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) - Ereignis zur Auftragsänderung (tritt nach Auswahl des entsprechenden Kontextmenüeintrags auf).
+- [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) - Ereignis zur Auftragsstornierung (tritt nach Auswahl des entsprechenden Kontextmenüeintrags auf).
 
 Unten sind Codefragmente für die Verwendung gezeigt. Das Codebeispiel stammt aus *Samples\/01\_Basic\/03\_Orders*.
 
@@ -60,7 +60,7 @@ private void OrderGrid_OnOrderCanceling(IEnumerable<Order> orders)
 	}
 }
 
-// Öffnet ein Fenster zum Bearbeiten der Order und führt die Änderung der ausgewählten Order aus
+// Öffnet ein Fenster zum Bearbeiten des Auftrags und führt die Änderung des ausgewählten Auftrags aus
 private void OrderGrid_OnOrderReRegistering(Order order)
 {
 	var window = new OrderWindow
@@ -89,16 +89,16 @@ _connector.OrderReceived += OnOrderReceived;
 // Handler für empfangene Aufträge
 private void OnOrderReceived(Subscription subscription, Order order)
 {
-	// Prüfen, ob die Order zum für uns relevanten Abonnement gehört
+	// Prüfen, ob der Auftrag zum für uns relevanten Abonnement gehört
 	if (subscription == _ordersSubscription)
 	{
-		// Order zur Tabelle hinzufügen
+		// Auftrag zur Tabelle hinzufügen
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 
-		// Zusätzliche Orderverarbeitung
-		Console.WriteLine($"Order empfangen: {order.TransactionId}, Status: {order.State}");
+		// Zusätzliche Auftragsverarbeitung
+		Console.WriteLine($"Auftrag empfangen: {order.TransactionId}, Status: {order.State}");
 
-		// Wenn die Order in einem finalen Zustand ist, UI aktualisieren
+		// Wenn der Auftrag in einem finalen Zustand ist, UI aktualisieren
 		if (order.State == OrderStates.Done || order.State == OrderStates.Failed)
 		{
 			this.GuiAsync(() => {
@@ -112,7 +112,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 ## Aufträge stornieren
 
 ```cs
-// Moderner Ansatz zur Orderstornierung
+// Moderner Ansatz zur Auftragsstornierung
 private void CancelOrder(Order order)
 {
 	try
@@ -120,11 +120,11 @@ private void CancelOrder(Order order)
 		_connector.CancelOrder(order);
 
 		// Aktion protokollieren
-		_logManager.AddInfoLog($"Befehl zur Orderstornierung gesendet: {order.TransactionId}");
+		_logManager.AddInfoLog($"Befehl zur Auftragsstornierung gesendet: {order.TransactionId}");
 	}
 	catch (Exception ex)
 	{
-		_logManager.AddErrorLog($"Fehler beim Stornieren der Order: {ex.Message}");
+		_logManager.AddErrorLog($"Fehler beim Stornieren des Auftrags: {ex.Message}");
 	}
 }
 
@@ -142,26 +142,26 @@ private void CancelAllOrders()
 }
 ```
 
-## Fehler bei Orderregistrierung und -stornierung behandeln
+## Fehler bei Auftragsregistrierung und -stornierung behandeln
 
 ```cs
-// Fehler bei der Orderregistrierung abonnieren
+// Fehler bei der Auftragsregistrierung abonnieren
 _connector.OrderRegisterFailReceived += OnOrderRegisterFailed;
 
-// Handler für fehlgeschlagene Orderregistrierung
+// Handler für fehlgeschlagene Auftragsregistrierung
 private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 {
 	// Fehlerinformationen zu OrderGrid hinzufügen
 	_ordersWindow.OrderGrid.AddRegistrationFail(fail);
 
 	// Fehler protokollieren
-	_logManager.AddErrorLog($"Fehler bei der Orderregistrierung: {fail.Error}");
+	_logManager.AddErrorLog($"Fehler bei der Auftragsregistrierung: {fail.Error}");
 
 	// Benutzer benachrichtigen
 	this.GuiAsync(() =>
 	{
 		MessageBox.Show(this,
-			$"Order konnte nicht registriert werden: {fail.Error}",
+			$"Auftrag konnte nicht registriert werden: {fail.Error}",
 			"Registrierungsfehler",
 			MessageBoxButton.OK,
 			MessageBoxImage.Error);

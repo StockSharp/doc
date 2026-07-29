@@ -38,7 +38,7 @@ Die folgende Abbildung zeigt die Hauptelemente der grafischen Komponente.
 - [IChart.AddElement](xref:StockSharp.Charting.IChart.AddElement(StockSharp.Charting.IChartArea, StockSharp.Charting.IChartElement)) - ein Datenreihenelement hinzufügen. Verfügt über mehrere Überladungen.
 - [IChart.Reset](xref:StockSharp.Charting.IChart.Reset(System.Collections.Generic.IEnumerable{StockSharp.Charting.IChartElement})) - zuvor gezeichnete Werte "zurücksetzen".
 - [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData)) - einen Wert im Diagramm zeichnen.
-- [IChart.OrderCreationMode](xref:StockSharp.Charting.IChart.OrderCreationMode) - Order-Erstellungsmodus; wenn gesetzt, können Orders aus dem Diagramm erstellt werden. Standardmäßig deaktiviert.
+- [IChart.OrderCreationMode](xref:StockSharp.Charting.IChart.OrderCreationMode) - Modus zur Auftragserstellung; wenn gesetzt, können Aufträge aus dem Diagramm erstellt werden. Standardmäßig deaktiviert.
 
 ## IChartArea
 
@@ -56,7 +56,7 @@ Alle im Diagramm angezeigten Elemente müssen die Schnittstelle [IChartElement](
 
 - [ChartCandleElement](xref:StockSharp.Xaml.Charting.ChartCandleElement) - Element zur Anzeige von Kerzen.
 - [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement) - Element zur Anzeige von Indikatoren.
-- [ChartOrderElement](xref:StockSharp.Xaml.Charting.ChartOrderElement) - Element zur Anzeige von Orders.
+- [ChartOrderElement](xref:StockSharp.Xaml.Charting.ChartOrderElement) - Element zur Anzeige von Aufträgen.
 - [ChartTradeElement](xref:StockSharp.Xaml.Charting.ChartTradeElement) - Element zur Anzeige von Trades.
 
 Die Klassen visueller Elemente besitzen mehrere Eigenschaften zur Anpassung des Erscheinungsbilds des Diagramms. Sie können Farben, Linienstärke und Stil von Elementen anpassen. Mit der Eigenschaft [IChartCandleElement.DrawStyle](xref:StockSharp.Charting.IChartCandleElement.DrawStyle) können Sie beispielsweise das Aussehen der Kerze ändern (Kerze oder Balken). Mit der Eigenschaft [ChartIndicatorElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.DrawStyle) können Sie den Stil der Indikatorlinie festlegen. Um den Indikator als Histogramm anzuzeigen, verwenden Sie den Wert [DrawStyles.Histogram](xref:Ecng.Drawing.DrawStyles.Histogram). Die Eigenschaften [ChartCandleElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartCandleElement.ShowAxisMarker) und [ChartIndicatorElement.ShowAxisMarker](xref:StockSharp.Xaml.Charting.ChartIndicatorElement.ShowAxisMarker) ermöglichen das Ein- und Ausschalten der Markeranzeige (siehe Abbildung) auf den Achsen des Diagramms.

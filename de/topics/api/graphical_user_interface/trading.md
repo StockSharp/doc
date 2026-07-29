@@ -6,8 +6,8 @@ Dieser Abschnitt stellt die Komponenten vor, die mit eigenen Handelstransaktione
 
 [Aufträge](trading/orders.md)
 
-[Erstellen einer neuen Order](trading/new_order_creation.md)
+[Erstellen eines neuen Auftrags](trading/new_order_creation.md)
 
-[Erstellen einer neuen Stop-Order](trading/new_stop_order_creation.md)
+[Erstellen eines neuen Stop-Auftrags](trading/new_stop_order_creation.md)
 
 [Eigene Trades](trading/own_trades.md)

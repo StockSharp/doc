@@ -1,17 +1,17 @@
-# Erstellen einer neuen Order
+# Erstellen eines neuen Auftrags
 
-[OrderWindow](xref:StockSharp.Xaml.OrderWindow) - Fenster zum Erstellen einer Order.
+[OrderWindow](xref:StockSharp.Xaml.OrderWindow) - Fenster zum Erstellen eines Auftrags.
 
-![Erstellen einer neuen Order Bildschirmfoto](../../../../images/gui_orderwindow.png)
+![Erstellen eines neuen Auftrags – Bildschirmfoto](../../../../images/gui_orderwindow.png)
 
-Wenn die Verbindung das Registrieren einer bedingten Order (Stop-Loss, Take-Profit) unterstützt, können Sie in diesem Fenster eine bedingte Order mit erweiterten Bedingungen registrieren, indem Sie das Flag **Erweiterte Bedingungen** setzen.
+Wenn die Verbindung das Registrieren eines bedingten Auftrags (Stop-Loss, Take-Profit) unterstützt, können Sie in diesem Fenster einen bedingten Auftrag mit erweiterten Bedingungen registrieren, indem Sie das Flag **Erweiterte Bedingungen** setzen.
 
 **Grundlegende Eigenschaften**
 
 - [OrderWindow.Portfolios](xref:StockSharp.Xaml.OrderWindow.Portfolios) - Liste der Portfolios.
 - [OrderWindow.MarketDataProvider](xref:StockSharp.Xaml.OrderWindow.MarketDataProvider) - Marktdatenprovider.
 - [OrderWindow.SecurityProvider](xref:StockSharp.Xaml.OrderWindow.SecurityProvider) - Provider für Instrumenteninformationen.
-- [OrderWindow.Order](xref:StockSharp.Xaml.OrderWindow.Order) - erstellte Order.
+- [OrderWindow.Order](xref:StockSharp.Xaml.OrderWindow.Order) - erstellter Auftrag.
 
 Codebeispiele für die Verwendung sind unten gezeigt. Beispielcode aus *Samples\/01\_Basic\/03\_Orders*.
 
