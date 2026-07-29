@@ -3589,6 +3589,15 @@
             href: api/connectors/crypto_exchanges/gateio/graphical_configuration_gateio.md
           - name: Инициализация адаптера Gate.io
             href: api/connectors/crypto_exchanges/gateio/adapter_initialization_gateio.md
+        - name: История Gate.io
+          href: api/connectors/crypto_exchanges/gateio_history.md
+          items:
+          - name: Настройки коннектора «История Gate.io»
+            href: api/connectors/crypto_exchanges/gateio_history/configuration_gateio_history.md
+          - name: Графическая настройка истории Gate.io
+            href: api/connectors/crypto_exchanges/gateio_history/graphical_configuration_gateio_history.md
+          - name: Инициализация адаптера истории Gate.io
+            href: api/connectors/crypto_exchanges/gateio_history/adapter_initialization_gateio_history.md
         - name: GOPAX
           href: api/connectors/crypto_exchanges/gopax.md
           items:
