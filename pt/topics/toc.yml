@@ -3495,6 +3495,15 @@
             href: api/connectors/crypto_exchanges/kucoin/graphical_configuration_kucoin.md
           - name: Inicialização do adaptador Kucoin
             href: api/connectors/crypto_exchanges/kucoin/adapter_initialization_kucoin.md
+        - name: Histórico Kucoin
+          href: api/connectors/crypto_exchanges/kucoin_history.md
+          items:
+          - name: Configuração do Histórico Kucoin
+            href: api/connectors/crypto_exchanges/kucoin_history/configuration_kucoin_history.md
+          - name: Configuração gráfica do Histórico Kucoin
+            href: api/connectors/crypto_exchanges/kucoin_history/graphical_configuration_kucoin_history.md
+          - name: Inicialização do adaptador do Histórico Kucoin
+            href: api/connectors/crypto_exchanges/kucoin_history/adapter_initialization_kucoin_history.md
         - name: LBank
           href: api/connectors/crypto_exchanges/lbank.md
           items:

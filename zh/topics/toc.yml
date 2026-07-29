@@ -3495,6 +3495,15 @@
             href: api/connectors/crypto_exchanges/kucoin/graphical_configuration_kucoin.md
           - name: Kucoin 适配器初始化
             href: api/connectors/crypto_exchanges/kucoin/adapter_initialization_kucoin.md
+        - name: Kucoin历史
+          href: api/connectors/crypto_exchanges/kucoin_history.md
+          items:
+          - name: Kucoin历史配置
+            href: api/connectors/crypto_exchanges/kucoin_history/configuration_kucoin_history.md
+          - name: Kucoin历史图形化配置
+            href: api/connectors/crypto_exchanges/kucoin_history/graphical_configuration_kucoin_history.md
+          - name: Kucoin历史适配器初始化
+            href: api/connectors/crypto_exchanges/kucoin_history/adapter_initialization_kucoin_history.md
         - name: LBank
           href: api/connectors/crypto_exchanges/lbank.md
           items:
