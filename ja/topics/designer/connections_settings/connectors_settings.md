@@ -165,6 +165,16 @@
 | [XBRL Filings](../../api/connectors/stock_market/xbrl_filings.md) | [XBRL Filings の設定](../../api/connectors/stock_market/xbrl_filings/configuration_xbrl_filings.md) | [XBRL Filings のグラフィカル設定](../../api/connectors/stock_market/xbrl_filings/graphical_configuration_xbrl_filings.md) |
 | [Zebu](../../api/connectors/stock_market/zebu.md) | [Zebu の設定](../../api/connectors/stock_market/zebu/configuration_zebu.md) | [Zebu のグラフィカル設定](../../api/connectors/stock_market/zebu/graphical_configuration_zebu.md) |
 
+| [IIFL](../../api/connectors/stock_market/iifl.md) | [IIFL の設定](../../api/connectors/stock_market/iifl/configuration_iifl.md) | [IIFL のグラフィカル設定](../../api/connectors/stock_market/iifl/graphical_configuration_iifl.md) |
+| [J-Quants](../../api/connectors/stock_market/jquants.md) | [J-Quants の設定](../../api/connectors/stock_market/jquants/configuration_jquants.md) | [J-Quants のグラフィカル設定](../../api/connectors/stock_market/jquants/graphical_configuration_jquants.md) |
+| [m.Stock](../../api/connectors/stock_market/mstock.md) | [m.Stock の設定](../../api/connectors/stock_market/mstock/configuration_mstock.md) | [m.Stock のグラフィカル設定](../../api/connectors/stock_market/mstock/graphical_configuration_mstock.md) |
+| [Samco](../../api/connectors/stock_market/samco.md) | [Samco の設定](../../api/connectors/stock_market/samco/configuration_samco.md) | [Samco のグラフィカル設定](../../api/connectors/stock_market/samco/graphical_configuration_samco.md) |
+| [SSI](../../api/connectors/stock_market/ssi.md) | [SSI の設定](../../api/connectors/stock_market/ssi/configuration_ssi.md) | [SSI のグラフィカル設定](../../api/connectors/stock_market/ssi/graphical_configuration_ssi.md) |
+| [MarketData.app](../../api/connectors/stock_market/marketdataapp.md) | [MarketData.app の設定](../../api/connectors/stock_market/marketdataapp/configuration_marketdataapp.md) | [MarketData.app のグラフィカル設定](../../api/connectors/stock_market/marketdataapp/graphical_configuration_marketdataapp.md) |
+| [OpenFIGI](../../api/connectors/stock_market/openfigi.md) | [OpenFIGI の設定](../../api/connectors/stock_market/openfigi/configuration_openfigi.md) | [OpenFIGI のグラフィカル設定](../../api/connectors/stock_market/openfigi/graphical_configuration_openfigi.md) |
+| [SEC EDGAR](../../api/connectors/stock_market/sec_edgar.md) | [SEC EDGAR の設定](../../api/connectors/stock_market/sec_edgar/configuration_sec_edgar.md) | [SEC EDGAR のグラフィカル設定](../../api/connectors/stock_market/sec_edgar/graphical_configuration_sec_edgar.md) |
+| [SimFin](../../api/connectors/stock_market/simfin.md) | [SimFin の設定](../../api/connectors/stock_market/simfin/configuration_simfin.md) | [SimFin のグラフィカル設定](../../api/connectors/stock_market/simfin/graphical_configuration_simfin.md) |
+
 ## 外国為替
 
 | コネクター                        | コネクター設定                                                   | グラフィカル設定                                                    |
@@ -183,6 +193,9 @@
 | [MetaApi](../../api/connectors/forex/metaapi.md) | [MetaApi の設定](../../api/connectors/forex/metaapi/configuration_metaapi.md) | [MetaApi のグラフィカル設定](../../api/connectors/forex/metaapi/graphical_configuration_metaapi.md) |
 | [Oanda](../../api/connectors/forex/oanda.md)                 | [Oanda の設定](../../api/connectors/forex/oanda/configuration_oanda.md)                    | [Oanda のグラフィカル設定](../../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
 | [StocksTrader](../../api/connectors/forex/stocks_trader.md) | [StocksTrader の設定](../../api/connectors/forex/stocks_trader/configuration_stocks_trader.md) | [StocksTrader のグラフィカル設定](../../api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md) |
+
+| [Finage](../../api/connectors/forex/finage.md) | [Finage の設定](../../api/connectors/forex/finage/configuration_finage.md) | [Finage のグラフィカル設定](../../api/connectors/forex/finage/graphical_configuration_finage.md) |
+| [TraderMade](../../api/connectors/forex/tradermade.md) | [TraderMade の設定](../../api/connectors/forex/tradermade/configuration_tradermade.md) | [TraderMade のグラフィカル設定](../../api/connectors/forex/tradermade/graphical_configuration_tradermade.md) |
 
 ## 暗号資産
 

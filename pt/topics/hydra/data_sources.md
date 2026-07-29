@@ -169,6 +169,16 @@ Atualmente, [Hydra](../hydra.md) suporta as seguintes fontes:
 | [XBRL Filings](../api/connectors/stock_market/xbrl_filings.md) | [Configuração do XBRL Filings](../api/connectors/stock_market/xbrl_filings/configuration_xbrl_filings.md) | [Configuração gráfica do XBRL Filings](../api/connectors/stock_market/xbrl_filings/graphical_configuration_xbrl_filings.md) |
 | [Zebu](../api/connectors/stock_market/zebu.md) | [Configuração do Zebu](../api/connectors/stock_market/zebu/configuration_zebu.md) | [Configuração gráfica do Zebu](../api/connectors/stock_market/zebu/graphical_configuration_zebu.md) |
 
+| [IIFL](../api/connectors/stock_market/iifl.md) | [Configuração do IIFL](../api/connectors/stock_market/iifl/configuration_iifl.md) | [Configuração gráfica do IIFL](../api/connectors/stock_market/iifl/graphical_configuration_iifl.md) |
+| [J-Quants](../api/connectors/stock_market/jquants.md) | [Configuração do J-Quants](../api/connectors/stock_market/jquants/configuration_jquants.md) | [Configuração gráfica do J-Quants](../api/connectors/stock_market/jquants/graphical_configuration_jquants.md) |
+| [m.Stock](../api/connectors/stock_market/mstock.md) | [Configuração do m.Stock](../api/connectors/stock_market/mstock/configuration_mstock.md) | [Configuração gráfica do m.Stock](../api/connectors/stock_market/mstock/graphical_configuration_mstock.md) |
+| [Samco](../api/connectors/stock_market/samco.md) | [Configuração do Samco](../api/connectors/stock_market/samco/configuration_samco.md) | [Configuração gráfica do Samco](../api/connectors/stock_market/samco/graphical_configuration_samco.md) |
+| [SSI](../api/connectors/stock_market/ssi.md) | [Configuração do SSI](../api/connectors/stock_market/ssi/configuration_ssi.md) | [Configuração gráfica do SSI](../api/connectors/stock_market/ssi/graphical_configuration_ssi.md) |
+| [MarketData.app](../api/connectors/stock_market/marketdataapp.md) | [Configuração do MarketData.app](../api/connectors/stock_market/marketdataapp/configuration_marketdataapp.md) | [Configuração gráfica do MarketData.app](../api/connectors/stock_market/marketdataapp/graphical_configuration_marketdataapp.md) |
+| [OpenFIGI](../api/connectors/stock_market/openfigi.md) | [Configuração do OpenFIGI](../api/connectors/stock_market/openfigi/configuration_openfigi.md) | [Configuração gráfica do OpenFIGI](../api/connectors/stock_market/openfigi/graphical_configuration_openfigi.md) |
+| [SEC EDGAR](../api/connectors/stock_market/sec_edgar.md) | [Configuração do SEC EDGAR](../api/connectors/stock_market/sec_edgar/configuration_sec_edgar.md) | [Configuração gráfica do SEC EDGAR](../api/connectors/stock_market/sec_edgar/graphical_configuration_sec_edgar.md) |
+| [SimFin](../api/connectors/stock_market/simfin.md) | [Configuração do SimFin](../api/connectors/stock_market/simfin/configuration_simfin.md) | [Configuração gráfica do SimFin](../api/connectors/stock_market/simfin/graphical_configuration_simfin.md) |
+
 ## Forex
 
 | Conectores                        | Definições do conector                                                   | Configuração gráfica                                                    |
@@ -187,6 +197,9 @@ Atualmente, [Hydra](../hydra.md) suporta as seguintes fontes:
 | [MetaApi](../api/connectors/forex/metaapi.md) | [Configuração do MetaApi](../api/connectors/forex/metaapi/configuration_metaapi.md) | [Configuração gráfica do MetaApi](../api/connectors/forex/metaapi/graphical_configuration_metaapi.md) |
 | [Oanda](../api/connectors/forex/oanda.md)                 | [Configuração Oanda](../api/connectors/forex/oanda/configuration_oanda.md)                    | [Configuração gráfica Oanda](../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
 | [StocksTrader](../api/connectors/forex/stocks_trader.md) | [Configuração do StocksTrader](../api/connectors/forex/stocks_trader/configuration_stocks_trader.md) | [Configuração gráfica do StocksTrader](../api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md) |
+
+| [Finage](../api/connectors/forex/finage.md) | [Configuração do Finage](../api/connectors/forex/finage/configuration_finage.md) | [Configuração gráfica do Finage](../api/connectors/forex/finage/graphical_configuration_finage.md) |
+| [TraderMade](../api/connectors/forex/tradermade.md) | [Configuração do TraderMade](../api/connectors/forex/tradermade/configuration_tradermade.md) | [Configuração gráfica do TraderMade](../api/connectors/forex/tradermade/graphical_configuration_tradermade.md) |
 
 ## Criptomoedas
 

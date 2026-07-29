@@ -1,0 +1,31 @@
+# 连接器配置：IIFL
+
+连接 IIFL 前，请配置以下适配器属性。该列表已根据 [IIFLMessageAdapter](xref:StockSharp.IIFL.IIFLMessageAdapter) 的实现进行核对。
+
+## 基本设置
+
+连接编辑器会优先显示这些设置。
+
+- `Key` (`SecureString`)
+- `Secret` (`SecureString`)
+- `ClientId` (`string`)
+
+## 高级设置
+
+这些属性用于控制身份验证和会话状态、服务端点、流式数据及轮询。
+
+- `AuthorizationCode` (`string`)
+- `SessionToken` (`SecureString`)
+- `PortfolioName` (`string`)
+- `RestEndpoint` (`string`)
+- `BridgeHost` (`string`)
+- `BridgePort` (`int`)
+- `TokenValidationEndpoint` (`string`)
+- `StreamingEnabled` (`bool`)
+- `PollingInterval` (`TimeSpan`)
+
+## 另请参阅
+
+[图形化配置](graphical_configuration_iifl.md)
+
+[适配器初始化](adapter_initialization_iifl.md)

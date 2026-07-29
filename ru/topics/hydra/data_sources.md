@@ -166,6 +166,16 @@
 | [XBRL Filings](../api/connectors/stock_market/xbrl_filings.md) | [Настройки коннектора XBRL Filings](../api/connectors/stock_market/xbrl_filings/configuration_xbrl_filings.md) | [Графическое конфигурирование XBRL Filings](../api/connectors/stock_market/xbrl_filings/graphical_configuration_xbrl_filings.md) |
 | [Zebu](../api/connectors/stock_market/zebu.md) | [Настройки коннектора Zebu](../api/connectors/stock_market/zebu/configuration_zebu.md) | [Графическое конфигурирование Zebu](../api/connectors/stock_market/zebu/graphical_configuration_zebu.md) |
 
+| [IIFL](../api/connectors/stock_market/iifl.md) | [Настройки коннектора IIFL](../api/connectors/stock_market/iifl/configuration_iifl.md) | [Графическое конфигурирование IIFL](../api/connectors/stock_market/iifl/graphical_configuration_iifl.md) |
+| [J-Quants](../api/connectors/stock_market/jquants.md) | [Настройки коннектора J-Quants](../api/connectors/stock_market/jquants/configuration_jquants.md) | [Графическое конфигурирование J-Quants](../api/connectors/stock_market/jquants/graphical_configuration_jquants.md) |
+| [m.Stock](../api/connectors/stock_market/mstock.md) | [Настройки коннектора m.Stock](../api/connectors/stock_market/mstock/configuration_mstock.md) | [Графическое конфигурирование m.Stock](../api/connectors/stock_market/mstock/graphical_configuration_mstock.md) |
+| [Samco](../api/connectors/stock_market/samco.md) | [Настройки коннектора Samco](../api/connectors/stock_market/samco/configuration_samco.md) | [Графическое конфигурирование Samco](../api/connectors/stock_market/samco/graphical_configuration_samco.md) |
+| [SSI](../api/connectors/stock_market/ssi.md) | [Настройки коннектора SSI](../api/connectors/stock_market/ssi/configuration_ssi.md) | [Графическое конфигурирование SSI](../api/connectors/stock_market/ssi/graphical_configuration_ssi.md) |
+| [MarketData.app](../api/connectors/stock_market/marketdataapp.md) | [Настройки коннектора MarketData.app](../api/connectors/stock_market/marketdataapp/configuration_marketdataapp.md) | [Графическое конфигурирование MarketData.app](../api/connectors/stock_market/marketdataapp/graphical_configuration_marketdataapp.md) |
+| [OpenFIGI](../api/connectors/stock_market/openfigi.md) | [Настройки коннектора OpenFIGI](../api/connectors/stock_market/openfigi/configuration_openfigi.md) | [Графическое конфигурирование OpenFIGI](../api/connectors/stock_market/openfigi/graphical_configuration_openfigi.md) |
+| [SEC EDGAR](../api/connectors/stock_market/sec_edgar.md) | [Настройки коннектора SEC EDGAR](../api/connectors/stock_market/sec_edgar/configuration_sec_edgar.md) | [Графическое конфигурирование SEC EDGAR](../api/connectors/stock_market/sec_edgar/graphical_configuration_sec_edgar.md) |
+| [SimFin](../api/connectors/stock_market/simfin.md) | [Настройки коннектора SimFin](../api/connectors/stock_market/simfin/configuration_simfin.md) | [Графическое конфигурирование SimFin](../api/connectors/stock_market/simfin/graphical_configuration_simfin.md) |
+
 ## Коннекторы Россия
 
 | Коннектор                          | Настройки коннектора                                                 | Графическое конфигурирование                                                                            |
@@ -207,6 +217,9 @@
 | [MetaApi](../api/connectors/forex/metaapi.md) | [Настройки коннектора MetaApi](../api/connectors/forex/metaapi/configuration_metaapi.md) | [Графическое конфигурирование MetaApi](../api/connectors/forex/metaapi/graphical_configuration_metaapi.md) |
 | [Oanda](../api/connectors/forex/oanda.md)                 | [Настройки коннектора Oanda](../api/connectors/forex/oanda/configuration_oanda.md)             | [Графическое конфигурирование Oanda](../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
 | [StocksTrader](../api/connectors/forex/stocks_trader.md) | [Настройки коннектора StocksTrader](../api/connectors/forex/stocks_trader/configuration_stocks_trader.md) | [Графическое конфигурирование StocksTrader](../api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md) |
+
+| [Finage](../api/connectors/forex/finage.md) | [Настройки коннектора Finage](../api/connectors/forex/finage/configuration_finage.md) | [Графическое конфигурирование Finage](../api/connectors/forex/finage/graphical_configuration_finage.md) |
+| [TraderMade](../api/connectors/forex/tradermade.md) | [Настройки коннектора TraderMade](../api/connectors/forex/tradermade/configuration_tradermade.md) | [Графическое конфигурирование TraderMade](../api/connectors/forex/tradermade/graphical_configuration_tradermade.md) |
 
 ## Коннекторы Криптовалют
 

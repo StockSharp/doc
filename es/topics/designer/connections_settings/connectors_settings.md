@@ -165,6 +165,16 @@ Algunos conectores requieren configuración previa. A continuación se muestran 
 | [XBRL Filings](../../api/connectors/stock_market/xbrl_filings.md) | [Configuración de XBRL Filings](../../api/connectors/stock_market/xbrl_filings/configuration_xbrl_filings.md) | [Configuración gráfica de XBRL Filings](../../api/connectors/stock_market/xbrl_filings/graphical_configuration_xbrl_filings.md) |
 | [Zebu](../../api/connectors/stock_market/zebu.md) | [Configuración de Zebu](../../api/connectors/stock_market/zebu/configuration_zebu.md) | [Configuración gráfica de Zebu](../../api/connectors/stock_market/zebu/graphical_configuration_zebu.md) |
 
+| [IIFL](../../api/connectors/stock_market/iifl.md) | [Configuración de IIFL](../../api/connectors/stock_market/iifl/configuration_iifl.md) | [Configuración gráfica de IIFL](../../api/connectors/stock_market/iifl/graphical_configuration_iifl.md) |
+| [J-Quants](../../api/connectors/stock_market/jquants.md) | [Configuración de J-Quants](../../api/connectors/stock_market/jquants/configuration_jquants.md) | [Configuración gráfica de J-Quants](../../api/connectors/stock_market/jquants/graphical_configuration_jquants.md) |
+| [m.Stock](../../api/connectors/stock_market/mstock.md) | [Configuración de m.Stock](../../api/connectors/stock_market/mstock/configuration_mstock.md) | [Configuración gráfica de m.Stock](../../api/connectors/stock_market/mstock/graphical_configuration_mstock.md) |
+| [Samco](../../api/connectors/stock_market/samco.md) | [Configuración de Samco](../../api/connectors/stock_market/samco/configuration_samco.md) | [Configuración gráfica de Samco](../../api/connectors/stock_market/samco/graphical_configuration_samco.md) |
+| [SSI](../../api/connectors/stock_market/ssi.md) | [Configuración de SSI](../../api/connectors/stock_market/ssi/configuration_ssi.md) | [Configuración gráfica de SSI](../../api/connectors/stock_market/ssi/graphical_configuration_ssi.md) |
+| [MarketData.app](../../api/connectors/stock_market/marketdataapp.md) | [Configuración de MarketData.app](../../api/connectors/stock_market/marketdataapp/configuration_marketdataapp.md) | [Configuración gráfica de MarketData.app](../../api/connectors/stock_market/marketdataapp/graphical_configuration_marketdataapp.md) |
+| [OpenFIGI](../../api/connectors/stock_market/openfigi.md) | [Configuración de OpenFIGI](../../api/connectors/stock_market/openfigi/configuration_openfigi.md) | [Configuración gráfica de OpenFIGI](../../api/connectors/stock_market/openfigi/graphical_configuration_openfigi.md) |
+| [SEC EDGAR](../../api/connectors/stock_market/sec_edgar.md) | [Configuración de SEC EDGAR](../../api/connectors/stock_market/sec_edgar/configuration_sec_edgar.md) | [Configuración gráfica de SEC EDGAR](../../api/connectors/stock_market/sec_edgar/graphical_configuration_sec_edgar.md) |
+| [SimFin](../../api/connectors/stock_market/simfin.md) | [Configuración de SimFin](../../api/connectors/stock_market/simfin/configuration_simfin.md) | [Configuración gráfica de SimFin](../../api/connectors/stock_market/simfin/graphical_configuration_simfin.md) |
+
 ## Forex
 
 | Conectores                        | Configuración del conector                                                   | Configuración gráfica                                                    |
@@ -183,6 +193,9 @@ Algunos conectores requieren configuración previa. A continuación se muestran 
 | [MetaApi](../../api/connectors/forex/metaapi.md) | [Configuración de MetaApi](../../api/connectors/forex/metaapi/configuration_metaapi.md) | [Configuración gráfica de MetaApi](../../api/connectors/forex/metaapi/graphical_configuration_metaapi.md) |
 | [Oanda](../../api/connectors/forex/oanda.md)                 | [Configuración Oanda](../../api/connectors/forex/oanda/configuration_oanda.md)                    | [Configuración gráfica Oanda](../../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
 | [StocksTrader](../../api/connectors/forex/stocks_trader.md) | [Configuración de StocksTrader](../../api/connectors/forex/stocks_trader/configuration_stocks_trader.md) | [Configuración gráfica de StocksTrader](../../api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md) |
+
+| [Finage](../../api/connectors/forex/finage.md) | [Configuración de Finage](../../api/connectors/forex/finage/configuration_finage.md) | [Configuración gráfica de Finage](../../api/connectors/forex/finage/graphical_configuration_finage.md) |
+| [TraderMade](../../api/connectors/forex/tradermade.md) | [Configuración de TraderMade](../../api/connectors/forex/tradermade/configuration_tradermade.md) | [Configuración gráfica de TraderMade](../../api/connectors/forex/tradermade/graphical_configuration_tradermade.md) |
 
 ## Criptomonedas
 

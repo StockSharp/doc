@@ -169,6 +169,16 @@
 | [XBRL Filings](../api/connectors/stock_market/xbrl_filings.md) | [XBRL Filings 配置](../api/connectors/stock_market/xbrl_filings/configuration_xbrl_filings.md) | [XBRL Filings 图形配置](../api/connectors/stock_market/xbrl_filings/graphical_configuration_xbrl_filings.md) |
 | [Zebu](../api/connectors/stock_market/zebu.md) | [Zebu 配置](../api/connectors/stock_market/zebu/configuration_zebu.md) | [Zebu 图形配置](../api/connectors/stock_market/zebu/graphical_configuration_zebu.md) |
 
+| [IIFL](../api/connectors/stock_market/iifl.md) | [IIFL 配置](../api/connectors/stock_market/iifl/configuration_iifl.md) | [IIFL 图形化配置](../api/connectors/stock_market/iifl/graphical_configuration_iifl.md) |
+| [J-Quants](../api/connectors/stock_market/jquants.md) | [J-Quants 配置](../api/connectors/stock_market/jquants/configuration_jquants.md) | [J-Quants 图形化配置](../api/connectors/stock_market/jquants/graphical_configuration_jquants.md) |
+| [m.Stock](../api/connectors/stock_market/mstock.md) | [m.Stock 配置](../api/connectors/stock_market/mstock/configuration_mstock.md) | [m.Stock 图形化配置](../api/connectors/stock_market/mstock/graphical_configuration_mstock.md) |
+| [Samco](../api/connectors/stock_market/samco.md) | [Samco 配置](../api/connectors/stock_market/samco/configuration_samco.md) | [Samco 图形化配置](../api/connectors/stock_market/samco/graphical_configuration_samco.md) |
+| [SSI](../api/connectors/stock_market/ssi.md) | [SSI 配置](../api/connectors/stock_market/ssi/configuration_ssi.md) | [SSI 图形化配置](../api/connectors/stock_market/ssi/graphical_configuration_ssi.md) |
+| [MarketData.app](../api/connectors/stock_market/marketdataapp.md) | [MarketData.app 配置](../api/connectors/stock_market/marketdataapp/configuration_marketdataapp.md) | [MarketData.app 图形化配置](../api/connectors/stock_market/marketdataapp/graphical_configuration_marketdataapp.md) |
+| [OpenFIGI](../api/connectors/stock_market/openfigi.md) | [OpenFIGI 配置](../api/connectors/stock_market/openfigi/configuration_openfigi.md) | [OpenFIGI 图形化配置](../api/connectors/stock_market/openfigi/graphical_configuration_openfigi.md) |
+| [SEC EDGAR](../api/connectors/stock_market/sec_edgar.md) | [SEC EDGAR 配置](../api/connectors/stock_market/sec_edgar/configuration_sec_edgar.md) | [SEC EDGAR 图形化配置](../api/connectors/stock_market/sec_edgar/graphical_configuration_sec_edgar.md) |
+| [SimFin](../api/connectors/stock_market/simfin.md) | [SimFin 配置](../api/connectors/stock_market/simfin/configuration_simfin.md) | [SimFin 图形化配置](../api/connectors/stock_market/simfin/graphical_configuration_simfin.md) |
+
 ## 外汇
 
 | 连接器 | 连接器设置 | 图形化配置 |
@@ -187,6 +197,9 @@
 | [MetaApi](../api/connectors/forex/metaapi.md) | [MetaApi 配置](../api/connectors/forex/metaapi/configuration_metaapi.md) | [MetaApi 图形配置](../api/connectors/forex/metaapi/graphical_configuration_metaapi.md) |
 | [Oanda](../api/connectors/forex/oanda.md)                 | [Oanda 配置](../api/connectors/forex/oanda/configuration_oanda.md)                    | [Oanda 图形化配置](../api/connectors/forex/oanda/graphical_configuration_oanda.md)                 |
 | [StocksTrader](../api/connectors/forex/stocks_trader.md) | [StocksTrader 配置](../api/connectors/forex/stocks_trader/configuration_stocks_trader.md) | [StocksTrader 图形配置](../api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md) |
+
+| [Finage](../api/connectors/forex/finage.md) | [Finage 配置](../api/connectors/forex/finage/configuration_finage.md) | [Finage 图形化配置](../api/connectors/forex/finage/graphical_configuration_finage.md) |
+| [TraderMade](../api/connectors/forex/tradermade.md) | [TraderMade 配置](../api/connectors/forex/tradermade/configuration_tradermade.md) | [TraderMade 图形化配置](../api/connectors/forex/tradermade/graphical_configuration_tradermade.md) |
 
 ## 加密货币
 

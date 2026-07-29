@@ -1861,6 +1861,51 @@
             href: api/connectors/stock_market/zebu/graphical_configuration_zebu.md
           - name: Инициализация адаптера Zebu
             href: api/connectors/stock_market/zebu/adapter_initialization_zebu.md
+        - name: IIFL
+          href: api/connectors/stock_market/iifl.md
+          items:
+          - name: Настройки коннектора IIFL
+            href: api/connectors/stock_market/iifl/configuration_iifl.md
+          - name: Графическое конфигурирование IIFL
+            href: api/connectors/stock_market/iifl/graphical_configuration_iifl.md
+          - name: Инициализация адаптера IIFL
+            href: api/connectors/stock_market/iifl/adapter_initialization_iifl.md
+        - name: J-Quants
+          href: api/connectors/stock_market/jquants.md
+          items:
+          - name: Настройки коннектора J-Quants
+            href: api/connectors/stock_market/jquants/configuration_jquants.md
+          - name: Графическое конфигурирование J-Quants
+            href: api/connectors/stock_market/jquants/graphical_configuration_jquants.md
+          - name: Инициализация адаптера J-Quants
+            href: api/connectors/stock_market/jquants/adapter_initialization_jquants.md
+        - name: m.Stock
+          href: api/connectors/stock_market/mstock.md
+          items:
+          - name: Настройки коннектора m.Stock
+            href: api/connectors/stock_market/mstock/configuration_mstock.md
+          - name: Графическое конфигурирование m.Stock
+            href: api/connectors/stock_market/mstock/graphical_configuration_mstock.md
+          - name: Инициализация адаптера m.Stock
+            href: api/connectors/stock_market/mstock/adapter_initialization_mstock.md
+        - name: Samco
+          href: api/connectors/stock_market/samco.md
+          items:
+          - name: Настройки коннектора Samco
+            href: api/connectors/stock_market/samco/configuration_samco.md
+          - name: Графическое конфигурирование Samco
+            href: api/connectors/stock_market/samco/graphical_configuration_samco.md
+          - name: Инициализация адаптера Samco
+            href: api/connectors/stock_market/samco/adapter_initialization_samco.md
+        - name: SSI
+          href: api/connectors/stock_market/ssi.md
+          items:
+          - name: Настройки коннектора SSI
+            href: api/connectors/stock_market/ssi/configuration_ssi.md
+          - name: Графическое конфигурирование SSI
+            href: api/connectors/stock_market/ssi/graphical_configuration_ssi.md
+          - name: Инициализация адаптера SSI
+            href: api/connectors/stock_market/ssi/adapter_initialization_ssi.md
       - name: Ближний Восток и Африка
         items:
         - name: eToro
@@ -2288,6 +2333,42 @@
             href: api/connectors/stock_market/unusual_whales/graphical_configuration_unusual_whales.md
           - name: Инициализация адаптера Unusual Whales
             href: api/connectors/stock_market/unusual_whales/adapter_initialization_unusual_whales.md
+        - name: MarketData.app
+          href: api/connectors/stock_market/marketdataapp.md
+          items:
+          - name: Настройки коннектора MarketData.app
+            href: api/connectors/stock_market/marketdataapp/configuration_marketdataapp.md
+          - name: Графическое конфигурирование MarketData.app
+            href: api/connectors/stock_market/marketdataapp/graphical_configuration_marketdataapp.md
+          - name: Инициализация адаптера MarketData.app
+            href: api/connectors/stock_market/marketdataapp/adapter_initialization_marketdataapp.md
+        - name: OpenFIGI
+          href: api/connectors/stock_market/openfigi.md
+          items:
+          - name: Настройки коннектора OpenFIGI
+            href: api/connectors/stock_market/openfigi/configuration_openfigi.md
+          - name: Графическое конфигурирование OpenFIGI
+            href: api/connectors/stock_market/openfigi/graphical_configuration_openfigi.md
+          - name: Инициализация адаптера OpenFIGI
+            href: api/connectors/stock_market/openfigi/adapter_initialization_openfigi.md
+        - name: SEC EDGAR
+          href: api/connectors/stock_market/sec_edgar.md
+          items:
+          - name: Настройки коннектора SEC EDGAR
+            href: api/connectors/stock_market/sec_edgar/configuration_sec_edgar.md
+          - name: Графическое конфигурирование SEC EDGAR
+            href: api/connectors/stock_market/sec_edgar/graphical_configuration_sec_edgar.md
+          - name: Инициализация адаптера SEC EDGAR
+            href: api/connectors/stock_market/sec_edgar/adapter_initialization_sec_edgar.md
+        - name: SimFin
+          href: api/connectors/stock_market/simfin.md
+          items:
+          - name: Настройки коннектора SimFin
+            href: api/connectors/stock_market/simfin/configuration_simfin.md
+          - name: Графическое конфигурирование SimFin
+            href: api/connectors/stock_market/simfin/graphical_configuration_simfin.md
+          - name: Инициализация адаптера SimFin
+            href: api/connectors/stock_market/simfin/adapter_initialization_simfin.md
     - name: Forex
       items:
       - name: MetaTrader
@@ -2398,6 +2479,24 @@
           href: api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md
         - name: Инициализация адаптера StocksTrader
           href: api/connectors/forex/stocks_trader/adapter_initialization_stocks_trader.md
+      - name: Finage
+        href: api/connectors/forex/finage.md
+        items:
+        - name: Настройки коннектора Finage
+          href: api/connectors/forex/finage/configuration_finage.md
+        - name: Графическое конфигурирование Finage
+          href: api/connectors/forex/finage/graphical_configuration_finage.md
+        - name: Инициализация адаптера Finage
+          href: api/connectors/forex/finage/adapter_initialization_finage.md
+      - name: TraderMade
+        href: api/connectors/forex/tradermade.md
+        items:
+        - name: Настройки коннектора TraderMade
+          href: api/connectors/forex/tradermade/configuration_tradermade.md
+        - name: Графическое конфигурирование TraderMade
+          href: api/connectors/forex/tradermade/graphical_configuration_tradermade.md
+        - name: Инициализация адаптера TraderMade
+          href: api/connectors/forex/tradermade/adapter_initialization_tradermade.md
       - name: X Open Hub
         href: api/connectors/forex/xopenhub.md
         items:

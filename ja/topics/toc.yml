@@ -1713,6 +1713,51 @@
             href: api/connectors/stock_market/zebu/graphical_configuration_zebu.md
           - name: Zebu アダプターの初期化
             href: api/connectors/stock_market/zebu/adapter_initialization_zebu.md
+        - name: IIFL
+          href: api/connectors/stock_market/iifl.md
+          items:
+          - name: IIFL の設定
+            href: api/connectors/stock_market/iifl/configuration_iifl.md
+          - name: IIFL のグラフィカル設定
+            href: api/connectors/stock_market/iifl/graphical_configuration_iifl.md
+          - name: IIFL アダプターの初期化
+            href: api/connectors/stock_market/iifl/adapter_initialization_iifl.md
+        - name: J-Quants
+          href: api/connectors/stock_market/jquants.md
+          items:
+          - name: J-Quants の設定
+            href: api/connectors/stock_market/jquants/configuration_jquants.md
+          - name: J-Quants のグラフィカル設定
+            href: api/connectors/stock_market/jquants/graphical_configuration_jquants.md
+          - name: J-Quants アダプターの初期化
+            href: api/connectors/stock_market/jquants/adapter_initialization_jquants.md
+        - name: m.Stock
+          href: api/connectors/stock_market/mstock.md
+          items:
+          - name: m.Stock の設定
+            href: api/connectors/stock_market/mstock/configuration_mstock.md
+          - name: m.Stock のグラフィカル設定
+            href: api/connectors/stock_market/mstock/graphical_configuration_mstock.md
+          - name: m.Stock アダプターの初期化
+            href: api/connectors/stock_market/mstock/adapter_initialization_mstock.md
+        - name: Samco
+          href: api/connectors/stock_market/samco.md
+          items:
+          - name: Samco の設定
+            href: api/connectors/stock_market/samco/configuration_samco.md
+          - name: Samco のグラフィカル設定
+            href: api/connectors/stock_market/samco/graphical_configuration_samco.md
+          - name: Samco アダプターの初期化
+            href: api/connectors/stock_market/samco/adapter_initialization_samco.md
+        - name: SSI
+          href: api/connectors/stock_market/ssi.md
+          items:
+          - name: SSI の設定
+            href: api/connectors/stock_market/ssi/configuration_ssi.md
+          - name: SSI のグラフィカル設定
+            href: api/connectors/stock_market/ssi/graphical_configuration_ssi.md
+          - name: SSI アダプターの初期化
+            href: api/connectors/stock_market/ssi/adapter_initialization_ssi.md
       - name: 中東・アフリカ
         items:
         - name: eToro
@@ -2140,6 +2185,42 @@
             href: api/connectors/stock_market/unusual_whales/graphical_configuration_unusual_whales.md
           - name: Unusual Whales アダプターの初期化
             href: api/connectors/stock_market/unusual_whales/adapter_initialization_unusual_whales.md
+        - name: MarketData.app
+          href: api/connectors/stock_market/marketdataapp.md
+          items:
+          - name: MarketData.app の設定
+            href: api/connectors/stock_market/marketdataapp/configuration_marketdataapp.md
+          - name: MarketData.app のグラフィカル設定
+            href: api/connectors/stock_market/marketdataapp/graphical_configuration_marketdataapp.md
+          - name: MarketData.app アダプターの初期化
+            href: api/connectors/stock_market/marketdataapp/adapter_initialization_marketdataapp.md
+        - name: OpenFIGI
+          href: api/connectors/stock_market/openfigi.md
+          items:
+          - name: OpenFIGI の設定
+            href: api/connectors/stock_market/openfigi/configuration_openfigi.md
+          - name: OpenFIGI のグラフィカル設定
+            href: api/connectors/stock_market/openfigi/graphical_configuration_openfigi.md
+          - name: OpenFIGI アダプターの初期化
+            href: api/connectors/stock_market/openfigi/adapter_initialization_openfigi.md
+        - name: SEC EDGAR
+          href: api/connectors/stock_market/sec_edgar.md
+          items:
+          - name: SEC EDGAR の設定
+            href: api/connectors/stock_market/sec_edgar/configuration_sec_edgar.md
+          - name: SEC EDGAR のグラフィカル設定
+            href: api/connectors/stock_market/sec_edgar/graphical_configuration_sec_edgar.md
+          - name: SEC EDGAR アダプターの初期化
+            href: api/connectors/stock_market/sec_edgar/adapter_initialization_sec_edgar.md
+        - name: SimFin
+          href: api/connectors/stock_market/simfin.md
+          items:
+          - name: SimFin の設定
+            href: api/connectors/stock_market/simfin/configuration_simfin.md
+          - name: SimFin のグラフィカル設定
+            href: api/connectors/stock_market/simfin/graphical_configuration_simfin.md
+          - name: SimFin アダプターの初期化
+            href: api/connectors/stock_market/simfin/adapter_initialization_simfin.md
     - name: Forex
       items:
       - name: MetaTrader
@@ -2250,6 +2331,24 @@
           href: api/connectors/forex/stocks_trader/graphical_configuration_stocks_trader.md
         - name: StocksTrader アダプターの初期化
           href: api/connectors/forex/stocks_trader/adapter_initialization_stocks_trader.md
+      - name: Finage
+        href: api/connectors/forex/finage.md
+        items:
+        - name: Finage の設定
+          href: api/connectors/forex/finage/configuration_finage.md
+        - name: Finage のグラフィカル設定
+          href: api/connectors/forex/finage/graphical_configuration_finage.md
+        - name: Finage アダプターの初期化
+          href: api/connectors/forex/finage/adapter_initialization_finage.md
+      - name: TraderMade
+        href: api/connectors/forex/tradermade.md
+        items:
+        - name: TraderMade の設定
+          href: api/connectors/forex/tradermade/configuration_tradermade.md
+        - name: TraderMade のグラフィカル設定
+          href: api/connectors/forex/tradermade/graphical_configuration_tradermade.md
+        - name: TraderMade アダプターの初期化
+          href: api/connectors/forex/tradermade/adapter_initialization_tradermade.md
       - name: X Open Hub
         href: api/connectors/forex/xopenhub.md
         items:
