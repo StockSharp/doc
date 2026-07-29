@@ -16,18 +16,18 @@
 
 ## パラメーター
 
-ブルパワー は [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) からパラメーターを継承します。
+ブルパワーは [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) からパラメーターを継承します。
 
 - **期間** - EMA 期間。
 - **アルファ**（任意） - 該当する場合の平滑化係数。
 
 ## 使用方法
 
-- 上昇する ブルパワー と上昇する EMA は、あわせてトレンドの強さを確認します。
-- 価格が新高値を付けている一方で ブルパワー の読み取り値がより高くならない場合、弱気ダイバージェンスが形成されます。
-- ブルパワー と ベアパワー を価格 EMA と組み合わせて、完全な [エルダー・レイ](elder_ray.md) 構造を評価します。
+- 上昇するブルパワーと上昇する EMA は、あわせてトレンドの強さを確認します。
+- 価格が新高値を付けている一方でブルパワーの読み取り値がより高くならない場合、弱気ダイバージェンスが形成されます。
+- ブルパワーとベアパワーを価格 EMA と組み合わせて、完全な [エルダー・レイ](elder_ray.md) 構造を評価します。
 
-![ブルパワー のチャート](../../../../images/indicator_bull_power.png)
+![ブルパワーのチャート](../../../../images/indicator_bull_power.png)
 
 ## 関連項目
 

@@ -1,8 +1,8 @@
 # Indicadores
 
-O gráfico vem com um catálogo de cerca de 160 indicadores técnicos. Você calcula qualquer um deles com o `IndicatorRuntime` público sobre suas velas e, em seguida, desenha os resultados você mesmo como séries comuns — sobreposições no painel de preço ou osciladores em seus próprios sub-painéis.
+O gráfico inclui um catálogo com cerca de 160 indicadores técnicos. É possível calcular qualquer um deles sobre as velas com o `IndicatorRuntime` público e, em seguida, representar os resultados como séries comuns — sobreposições no painel de preços ou osciladores nos respetivos subpainéis.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 Bandas de Bollinger sobre as velas, com RSI e MACD em painéis separados abaixo.
 
@@ -11,13 +11,13 @@ Bandas de Bollinger sobre as velas, com RSI e MACD em painéis separados abaixo.
 
 ## Configuração
 
-Importe o runtime e as definições de indicadores de que você precisa, execute cada um sobre as velas e plote as saídas. Alimente o runtime com entradas `{ time, value }`, onde `value` é a vela:
+Importe o runtime e as definições dos indicadores de que necessita, execute cada um sobre as velas e represente as saídas. Forneça ao runtime entradas `{ time, value }`, em que `value` é a vela:
 
 ```js
 import { createChart, CandlestickSeries, LineSeries, HistogramSeries, BandSeries } from '@stocksharp/chart';
 import { IndicatorRuntime, BollingerBandsIndicator, RelativeStrengthIndexIndicator, MacdIndicator } from '@stocksharp/chart/indicators';
 
-// Calcula um indicador sobre as velas; retorna seus pontos agrupados por id de saída.
+// Calcula um indicador sobre as velas; devolve os respetivos pontos agrupados por id de saída.
 function compute(definition, parameters, candles) {
   const runtime = new IndicatorRuntime({ definition, parameters });
   const points = runtime.resetStreaming(candles.map(c => ({ time: c.time, value: c })));
@@ -38,12 +38,12 @@ const bb = compute(BollingerBandsIndicator, { length: 20, stdDev: 2 }, candles);
 chart.addSeries(BandSeries, { upperColor: '#42a5f5', lowerColor: '#42a5f5' })
   .setData(bb.upper.map((u, i) => ({ time: u.time, value: bb.middle[i].value, upper: u.value, lower: bb.lower[i].value })));
 
-// RSI (14) em seu próprio sub-painel.
+// RSI (14) no respetivo subpainel.
 const rsiPane = chart.addPane();
 const rsi = compute(RelativeStrengthIndexIndicator, { length: 14 }, candles);       // saída: oscillator
 chart.addSeries(LineSeries, { color: '#4a9eff', lineWidth: 2 }, rsiPane).setData(rsi.oscillator);
 
-// MACD (12, 26, 9) em um segundo sub-painel.
+// MACD (12, 26, 9) num segundo subpainel.
 const macdPane = chart.addPane();
 const macd = compute(MacdIndicator, { fastLength: 12, slowLength: 26, signalLength: 9 }, candles);   // saídas: macd, signal, histogram
 chart.addSeries(HistogramSeries, {}, macdPane).setData(macd.histogram);
@@ -53,7 +53,7 @@ chart.addSeries(LineSeries, { color: '#f5c542' }, macdPane).setData(macd.signal)
 chart.timeScale().fitContent();
 ```
 
-Cada definição declara seus próprios parâmetros e ids de saída (Bollinger emite `upper`/`middle`/`lower`, RSI um único `oscillator`, MACD `macd`/`signal`/`histogram`). Para dados em tempo real, mantenha o `IndicatorRuntime` e chame `runtime.update({ time, value }, isFinal)` por barra em vez de recalcular.
+Cada definição declara os respetivos parâmetros e IDs de saída (Bollinger emite `upper`/`middle`/`lower`, RSI um único `oscillator`, MACD `macd`/`signal`/`histogram`). Para dados em tempo real, mantenha o `IndicatorRuntime` e invoque `runtime.update({ time, value }, isFinal)` por barra, em vez de recalcular.
 
 ## Veja também
 

@@ -15,7 +15,7 @@ O indicador devolve uma estrutura [ElderRayValue](xref:StockSharp.Algo.Indicator
 
 ## Parâmetros
 
-Raios de Elder herda as definições de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
+Os Raios de Elder herdam as definições de [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage):
 
 - **Período** - período da EMA;
 - **Alfa** - coeficiente de suavização, quando configurado diretamente.
@@ -28,7 +28,7 @@ Raios de Elder herda as definições de [ExponentialMovingAverage](xref:StockSha
 - Cruzamentos da linha zero da força compradora ou força vendedora marcam a mudança no controlo do mercado.
 
 As decisões de negociação são tomadas analisando a EMA e ambos os osciladores simultaneamente. Por exemplo, aparece uma oportunidade de compra quando
-a EMA está a subir, o força vendedora recupera de um novo mínimo e o força compradora rompe acima de zero.
+a EMA está a subir, a força vendedora recupera de um novo mínimo e a força compradora rompe acima de zero.
 
 ![Gráfico do indicador Raios de Elder](../../../../images/indicator_elder_ray.png)
 

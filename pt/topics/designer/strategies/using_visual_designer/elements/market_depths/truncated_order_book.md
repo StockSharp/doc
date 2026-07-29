@@ -1,16 +1,16 @@
-# Livro de ofertas truncado
+# Livro de ordens truncado
 
-![Captura de tela de Livro de ofertas truncado](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
+![Captura de ecrã de Livro de ordens truncado](../../../../../../images/designer_marketdepthtruncatediagramelement_00.png)
 
 O cubo é usado para obter um livro de ordens truncado até uma profundidade especificada.
 
 ### Conectores de entrada
 
-- **Livro de ofertas** é um livro de ordens que tem de ser truncado.
+- **Livro de ordens** é um livro de ordens que tem de ser truncado.
 
 ### Conectores de saída
 
-- **Livro de ofertas** é o livro de ordens truncado.
+- **Livro de ordens** é o livro de ordens truncado.
 
 ### Parâmetros
 

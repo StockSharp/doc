@@ -54,7 +54,7 @@ Hinweis: Anstelle von SMA können auch andere Arten von gleitenden Durchschnitte
 Der Indikator zur Kreuzung gleitender Durchschnitte kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
-   - Das Überqueren der MAC-Nulllinie von unten nach oben (FastMA kreuzt SlowMA von unten nach oben) erzeugt ein zinsbullisches Signal, das auf einen möglichen Beginn eines Aufwärtstrends hinweist
+   - Das Überqueren der MAC-Nulllinie von unten nach oben (FastMA kreuzt SlowMA von unten nach oben) erzeugt ein bullisches Signal, das auf einen möglichen Beginn eines Aufwärtstrends hinweist
    - Das Überqueren der MAC-Nulllinie von oben nach unten (FastMA kreuzt SlowMA von oben nach unten) erzeugt ein rückläufiges Signal, das auf einen möglichen Beginn eines Abwärtstrends hinweist
 
 2. **Indikatorwert**:

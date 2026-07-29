@@ -12,7 +12,7 @@
 - [OrderGrid.Orders](xref:StockSharp.Xaml.OrderGrid.Orders) - 订单列表。
 - [OrderGrid.SelectedOrder](xref:StockSharp.Xaml.OrderGrid.SelectedOrder) - 已选择的订单。
 - [OrderGrid.SelectedOrders](xref:StockSharp.Xaml.OrderGrid.SelectedOrders) - 已选择的订单。
-- [OrderGrid.AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail))**(**[StockSharp.BusinessEntities.OrderFail](xref:StockSharp.BusinessEntities.OrderFail) 失败 **)** - 将订单注册错误信息添加到备注字段的方法。
+- [OrderGrid.AddRegistrationFail](xref:StockSharp.Xaml.OrderGrid.AddRegistrationFail(StockSharp.BusinessEntities.OrderFail))**(**[StockSharp.BusinessEntities.OrderFail](xref:StockSharp.BusinessEntities.OrderFail) fail **)** - 将订单注册错误信息添加到备注字段的方法。
 - [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering) - 订单注册事件（在选择相应的上下文菜单项后发生）。
 - [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) - 订单替换事件（在选择相应的上下文菜单项后发生）。
 - [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling) - 订单取消事件（在选择相应的上下文菜单项后发生）。

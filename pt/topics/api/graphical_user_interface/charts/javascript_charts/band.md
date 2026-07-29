@@ -2,7 +2,7 @@
 
 Uma série de banda desenha uma linha de fronteira superior e uma inferior, com o canal entre elas preenchido. É o ajuste natural para envelopes e Bandas de Bollinger, ou qualquer estudo que produza um corredor de preços.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 ```chart-demo band
 ```
@@ -23,7 +23,7 @@ band.setData(data.map(d => ({ time: d.time, upper: d.upper, lower: d.lower })));
 chart.timeScale().fitContent();
 ```
 
-Calcule `upper`/`lower` conforme o estudo exigir — para as Bandas de Bollinger, tome uma média móvel do fechamento e some/subtraia um múltiplo do seu desvio padrão. Sobreponha a banda a uma série de linha ou de velas que carregue o próprio preço.
+Calcule `upper`/`lower` conforme o estudo exigir — para as Bandas de Bollinger, utilize uma média móvel do fecho e some ou subtraia um múltiplo do respetivo desvio padrão. Sobreponha a banda a uma série de linha ou de velas que contenha o próprio preço.
 
 ## Veja também
 

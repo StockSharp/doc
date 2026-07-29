@@ -12,7 +12,7 @@
 
 ## 在随机数据上测试移动平均策略
 
-1. SampleRandomEmulation 示例（*..Samples\/Testing\/SampleRandomEmulation*）几乎与 SampleHistoryTesting 示例相同（其描述可在[历史数据测试](historical_data.md)部分找到），因为它们都使用了统一的[HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector)类。但与[历史数据测试](historical_data.md)不同的是，在随机数据测试中，市场数据不会被加载，而是“即时生成”。因此，该示例中增加了两个随机数据生成器：一个用于订单簿，一个用于逐笔交易。在 SampleHistoryTesting 中只使用了一个生成器——用于订单簿，因为没有历史数据存储。
+1. SampleRandomEmulation 示例（*..Samples\/Testing\/SampleRandomEmulation*）几乎与 SampleHistoryTesting 示例相同（其描述可在[历史数据测试](historical_data.md)部分找到），因为它们都使用了统一的[HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector)类。但与[历史数据测试](historical_data.md)不同的是，在随机数据测试中，市场数据不会被加载，而是“即时生成”。因此，该示例中增加了两个随机数据生成器：一个用于订单簿，一个用于逐笔成交。在 SampleHistoryTesting 中只使用了一个生成器——用于订单簿，因为没有历史数据存储。
 
    ```cs
    _connector.MarketDataAdapter.SendInMessage(new GeneratorMessage

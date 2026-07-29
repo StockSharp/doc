@@ -4,7 +4,7 @@ Der **Store** ist unser Marketplace und Schaufenster für Produkte, die vom Unte
 
 ### Warum veröffentlichen
 
-Wenn Sie Ihre Arbeit im Store teilen, können Entwickler ein größeres Publikum erreichen, Feedback sammeln und ihre Ideen monetarisieren. Gleichzeitig wächst dadurch das gesamte Ökosystem und andere Trader erhalten sofort einsetzbare Werkzeuge.
+Wenn Sie Ihre Arbeit im Store teilen, können Sie ein größeres Publikum erreichen, Feedback sammeln und Ihre Ideen monetarisieren. Gleichzeitig wächst dadurch das gesamte Ökosystem und andere Trader erhalten sofort einsetzbare Werkzeuge.
 
 ### Inhalte hochladen
 

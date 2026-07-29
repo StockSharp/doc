@@ -2,7 +2,7 @@
 
 [S#](../../api.md) では、カスタムローソク足タイプを扱えるようにすることで、ローソク足構築機能を拡張できます。これは、現在 [S#](../../api.md) でサポートされていないローソク足を扱う必要がある場合に便利です。以下では、デルタローソク足（買い出来高と売り出来高の差に基づいて形成されるローソク足）の例を使って、独自のローソク足タイプを作成する手順を示します。
 
-## デルタローソク足 の実装
+## デルタローソク足の実装
 
 1. まず、独自のローソク足メッセージタイプを作成する必要があります。このタイプは [CandleMessage](xref:StockSharp.Messages.CandleMessage) クラスを継承する必要があります。
 
@@ -68,7 +68,7 @@
    public static class DeltaCandleHelper
    {
        /// <summary>
-       /// デルタローソク足 用の一意な MessageType を定義します。
+       /// デルタローソク足用の一意な MessageType を定義します。
        /// </summary>
        public const MessageTypes DeltaCandleType = (MessageTypes)10001;
        
@@ -79,7 +79,7 @@
            DataType.Create(typeof(DeltaCandleMessage)).Immutable();
        
        /// <summary>
-       /// デルタローソク足 用のデータタイプを作成します。
+       /// デルタローソク足用のデータタイプを作成します。
        /// </summary>
        /// <param name="threshold">デルタしきい値。</param>
        /// <returns>データタイプ。</returns>
@@ -89,7 +89,7 @@
        }
        
        /// <summary>
-       /// デルタローソク足 タイプをシステムに登録します。
+       /// デルタローソク足タイプをシステムに登録します。
        /// </summary>
        public static void RegisterDeltaCandleType()
        {
@@ -166,10 +166,10 @@
    ```cs
    private Connector _connector;
    ...
-   // デルタローソク足 タイプをシステムに登録
+   // デルタローソク足タイプをシステムに登録
    DeltaCandleHelper.RegisterDeltaCandleType();
    
-   // デルタローソク足 ビルダーを登録
+   // デルタローソク足ビルダーを登録
    _connector.Adapter.CandleBuilderProvider.Register(new DeltaCandleBuilder(_connector.ExchangeInfoProvider));
    ```
 
@@ -179,7 +179,7 @@
    // デルタしきい値
    decimal deltaThreshold = 1000m;
    
-   // デルタローソク足 用のサブスクリプションを作成
+   // デルタローソク足用のサブスクリプションを作成
    var subscription = new Subscription(
        // 独自の拡張メソッドを使用してデータタイプを作成
        deltaThreshold.Delta(), 
@@ -201,7 +201,7 @@
        
        var deltaCandle = (DeltaCandleMessage)candle;
        
-       // デルタローソク足 を処理
+       // デルタローソク足を処理
        Console.WriteLine($"デルタローソク足 {candle.OpenTime}: O:{candle.OpenPrice} H:{candle.HighPrice} " +
                         $"L:{candle.LowPrice} C:{candle.ClosePrice} V:{candle.TotalVolume} Delta:{deltaCandle.CurrentDelta}");
    };
@@ -217,9 +217,9 @@
    _connector.Subscribe(subscription);
    ```
 
-## 取引戦略での デルタローソク足 の使用
+## 取引戦略でのデルタローソク足の使用
 
-デルタローソク足 を使用するシンプルな戦略の例です。
+デルタローソク足を使用するシンプルな戦略の例です。
 
 ```cs
 public class DeltaCandleStrategy : Strategy
@@ -286,7 +286,7 @@ public class DeltaCandleStrategy : Strategy
 			_deltaIndicatorElement.Color = System.Drawing.Color.Purple;
 		}
 
-		// デルタローソク足 用のサブスクリプションを作成
+		// デルタローソク足用のサブスクリプションを作成
 		var subscription = new Subscription(DeltaThreshold.Delta(), Security)
 		{
 			MarketData =
@@ -296,7 +296,7 @@ public class DeltaCandleStrategy : Strategy
 			}
 		};
 
-		// デルタローソク足 を処理するルールを作成
+		// デルタローソク足を処理するルールを作成
 		this
 			.WhenCandleReceived(subscription)
 			.Do(ProcessDeltaCandle)

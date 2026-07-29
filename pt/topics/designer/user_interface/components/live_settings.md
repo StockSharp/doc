@@ -1,6 +1,6 @@
 # Definições de negociação em tempo real
 
-O painel **Propriedades** está minimizado por predefinição no lado direito do separador da estratégia. Este painel é uma tabela de propriedades de emulação ou de definições em tempo real. Quando selecciona uma propriedade específica, aparece uma descrição detalhada dessa propriedade na parte inferior da tabela. Todas as propriedades estão agrupadas em grupos:
+O painel **Propriedades** está minimizado por predefinição no lado direito do separador da estratégia. Este painel é uma tabela de propriedades de emulação ou de definições em tempo real. Quando seleciona uma propriedade específica, aparece uma descrição detalhada dessa propriedade na parte inferior da tabela. Todas as propriedades estão agrupadas em grupos:
 
 ![Designer Propriedades ao vivo 00](../../../../images/designer_properties_live_00.png)
 

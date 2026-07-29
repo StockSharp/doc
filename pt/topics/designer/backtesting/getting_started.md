@@ -4,9 +4,9 @@ Como exemplo, será considerada a estratégia SMA.
 
 Para executar o teste no histórico, deve selecionar uma estratégia cujo esquema será testado no histórico. A estratégia é selecionada no [Painel de esquemas](../user_interface/schemas.md), na pasta da estratégia, fazendo duplo clique na estratégia pretendida.
 
-Antes do teste, carregue os dados de mercado (instrumentos, velas, transações tick e\/ou livros de ordens). Isto é descrito em [Armazenamento de dados de mercado](../market_data_storage.md).
+Antes do teste, carregue os dados de mercado (instrumentos, velas, negócios por tick e\/ou livros de ordens). Isto é descrito em [Armazenamento de dados de mercado](../market_data_storage.md).
 
-Ao mudar para o separador com uma estratégia, o separador **Emulação** abre automaticamente no **Faixa de opções**. Defina o período de teste neste separador. No campo de dados de mercado, especifique o armazenamento necessário ([Armazenamento de dados de mercado](../market_data_storage.md)); no campo de instrumento, especifique o instrumento necessário.
+Ao mudar para o separador com uma estratégia, o separador **Emulação** abre automaticamente no **Friso**. Defina o período de teste neste separador. No campo de dados de mercado, especifique o armazenamento necessário ([Armazenamento de dados de mercado](../market_data_storage.md)); no campo de instrumento, especifique o instrumento necessário.
 
 No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 
@@ -32,7 +32,7 @@ Durante ou após o teste, pode ver gráficos e tabelas com a informação do tes
 
 ![Designer Exemplo de testes históricos 02](../../../images/designer_example_of_backtesting_02.png)
 
-O gráfico mostra que as transações ocorrem no cruzamento das médias móveis, conforme previsto pela estratégia. Também se pode ver que as ordens são satisfeitas em várias transações. Isto acontece devido ao uso do livro de ordens gerado, que aumenta o realismo do teste. O facto de as ordens serem satisfeitas em várias transações pode ser visto na tabela de transações, nas estatísticas e no gráfico de posições.
+O gráfico mostra que os negócios ocorrem no cruzamento das médias móveis, conforme previsto pela estratégia. Também se pode ver que as ordens são satisfeitas em vários negócios. Isto acontece devido ao uso do livro de ordens gerado, que aumenta o realismo do teste. O facto de as ordens serem satisfeitas em vários negócios pode ser visto na tabela de negócios, nas estatísticas e no gráfico de posições.
 
 ![Designer Exemplo de testes históricos 03](../../../images/designer_example_of_backtesting_03.png)
 

@@ -2,7 +2,7 @@
 
 [AlertSettingsWindow](xref:StockSharp.Alerts.AlertSettingsWindow) - Uma janela especial para configurar o controlo de risco.
 
-![Captura de tela de Janela de definições de risco](../../../images/api_gui_riskwindow.png)
+![Captura de ecrã de Janela de definições de risco](../../../images/api_gui_riskwindow.png)
 
 Segue-se um exemplo do código para chamar a janela de definições de controlo de risco para a estratégia.
 

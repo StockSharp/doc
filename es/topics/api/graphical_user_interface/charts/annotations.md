@@ -4,7 +4,7 @@
 
 ![Captura de Anotaciones](../../../../images/chartannotations.png)
 
-Agregar anotaciones se realiza igual que agregar cualquier otra información al gráfico. Primero debe crear [ChartAnnotation](xref:StockSharp.Xaml.Charting.ChartAnnotation) y agregarlo al área del gráfico:
+Las anotaciones se agregan de la misma manera que cualquier otra información al gráfico. Primero debe crear [ChartAnnotation](xref:StockSharp.Xaml.Charting.ChartAnnotation) y agregarlo al área del gráfico:
 
 ```cs
 var _annotation = new ChartAnnotation { Type = ChartAnnotationTypes.BoxAnnotation };

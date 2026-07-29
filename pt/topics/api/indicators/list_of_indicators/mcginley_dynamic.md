@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [McGinleyDynamic](xref:S
 
 ## Descrição
 
-O Dinâmica de McGinley (MGD) foi criado por John McGinley para superar algumas desvantagens das médias móveis tradicionais, como o atraso e a incapacidade de se adaptar a alterações da velocidade do mercado. O indicador ajusta automaticamente o seu período de reacção consoante a velocidade do movimento do preço, tornando-o mais sensível a alterações rápidas e menos propenso a sinais falsos.
+A Dinâmica de McGinley (MGD) foi criada por John McGinley para superar algumas desvantagens das médias móveis tradicionais, como o atraso e a incapacidade de se adaptar a alterações da velocidade do mercado. O indicador ajusta automaticamente o seu período de reação consoante a velocidade do movimento do preço, tornando-o mais sensível a alterações rápidas e menos propenso a sinais falsos.
 
 Ao contrário das médias móveis simples e exponenciais, o MGD incorpora uma constante de ajuste e o rácio entre o preço e o valor anterior do indicador. Isto permite que o MGD responda mais rapidamente a alterações significativas de preço, mantendo estabilidade durante movimentos mais lentos.
 
@@ -19,14 +19,14 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do Dinâmica de McGinley é efectuado recursivamente usando a seguinte fórmula:
+O cálculo da Dinâmica de McGinley é efetuado recursivamente através da seguinte fórmula:
 
 ```
 MGD = MGD[previous] + (Price - MGD[previous]) / (Length * ((Price / MGD[previous])^4))
 ```
 
 Onde:
-- Price - preço actual (normalmente o preço de fecho)
+- Price - preço atual (normalmente o preço de fecho)
 - MGD[previous] - valor anterior do indicador
 - Length - parâmetro de período
 
@@ -38,7 +38,7 @@ Primeiro cálculo: MGD = SMA(Price, Length)
 
 ## Interpretação
 
-O Dinâmica de McGinley pode ser interpretado de forma semelhante a outras médias móveis, mas com as suas características melhoradas:
+A Dinâmica de McGinley pode ser interpretada de forma semelhante a outras médias móveis, mas com características melhoradas:
 
 1. **Determinação da Tendência**:
    - Quando o preço está acima do MGD, indica uma tendência ascendente
@@ -62,13 +62,13 @@ O Dinâmica de McGinley pode ser interpretado de forma semelhante a outras médi
 
 5. **Relação com o Preço**:
    - A distância entre o preço e o MGD pode indicar condições de sobrecompra ou sobrevenda do mercado
-   - Quando o preço se desvia significativamente do MGD, pode sinalizar uma potencial inversão ou correcção
+   - Quando o preço se desvia significativamente do MGD, pode sinalizar uma potencial inversão ou correção
 
 6. **Combinação com Outros Indicadores**:
    - O MGD funciona bem com osciladores (RSI, Estocástico)
    - Pode ser usado como filtro de tendência para outros sistemas de negociação
 
-7. **Selecção do Parâmetro Length**:
+7. **Seleção do Parâmetro Length**:
    - Valores Length menores (por exemplo, 8-12) tornam o MGD mais sensível a alterações de preço e adequam-se à negociação de curto prazo
    - Valores Length maiores (por exemplo, 20-50) tornam o MGD mais suave e adequam-se à negociação de longo prazo
 
@@ -80,4 +80,3 @@ O Dinâmica de McGinley pode ser interpretado de forma semelhante a outras médi
 [EMA](ema.md)
 [DEMA](dema.md)
 [HMA](hma.md)
-

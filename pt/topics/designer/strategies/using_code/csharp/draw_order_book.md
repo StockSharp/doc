@@ -1,6 +1,6 @@
 # Desenhar o livro de ordens
 
-Uma estratégia criada a partir de código pode desenhar dados no painel [Livro de ordens](../../../user_interface/components/order_book.md), de forma semelhante ao cubo [Painel de livro de ofertas](../../using_visual_designer/elements/market_depths/order_book_panel.md). Para isso, é necessário escrever o seguinte código.
+Uma estratégia criada a partir de código pode desenhar dados no painel [Livro de ordens](../../../user_interface/components/order_book.md), de forma semelhante ao cubo [Painel de livro de ordens](../../using_visual_designer/elements/market_depths/order_book_panel.md). Para isso, é necessário escrever o seguinte código.
 
 1. Crie um descendente da interface [IOrderBookSource](xref:StockSharp.Algo.Strategies.IOrderBookSource), que o **Designer** usa para identificar a fonte. No exemplo, é usada a classe [OrderBookSource](xref:StockSharp.Algo.Strategies.OrderBookSource), que é a implementação predefinida da interface:
 
@@ -38,8 +38,8 @@ No manipulador Do, é feita uma chamada ao método [DrawOrderBook](xref:StockSha
 
 4. Adicione o painel [Livro de ordens](../../../user_interface/components/order_book.md) e selecione a fonte criada no código:
 
-  ![Designer livro de ofertas com código-fonte 00](../../../../../images/designer_source_code_orderbook_00.png)
+  ![Designer livro de ordens com código-fonte 00](../../../../../images/designer_source_code_orderbook_00.png)
 
 5. Depois de lançar a estratégia para teste, o livro de ordens será preenchido com dados:
 
-  ![Designer livro de ofertas com código-fonte 01](../../../../../images/designer_source_code_orderbook_01.png)
+  ![Designer livro de ordens com código-fonte 01](../../../../../images/designer_source_code_orderbook_01.png)

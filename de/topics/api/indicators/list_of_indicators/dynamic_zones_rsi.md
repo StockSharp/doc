@@ -8,7 +8,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [DynamicZonesRSI](
 
 Der Dynamische-Zonen-RSI (DZRSI) basiert auf dem traditionellen RSI, weist jedoch eine wichtige Verbesserung auf: Anstatt feste Überkauf- und Überverkauft-Werte zu verwenden (normalerweise 70 und 30), passt der DZRSI diese Werte an die aktuellen Marktbedingungen an.
 
-Die Grundidee von DZRSI besteht darin, dass unterschiedliche Marktbedingungen unterschiedliche Schwellenwerte für die Bestimmung von überkauften und überverkauften Zuständen erfordern. In einem starken Aufwärtstrend kann RSI über einen längeren Zeitraum über dem traditionellen überkauften Niveau von 70 bleiben, ohne genaue Ein- oder Ausstiegssignale zu liefern. Ebenso kann RSI in einem starken Abwärtstrend länge Zeit unter dem überverkauften Niveau von 30 bleiben.
+Die Grundidee von DZRSI besteht darin, dass unterschiedliche Marktbedingungen unterschiedliche Schwellenwerte für die Bestimmung von überkauften und überverkauften Zuständen erfordern. In einem starken Aufwärtstrend kann RSI über einen längeren Zeitraum über dem traditionellen überkauften Niveau von 70 bleiben, ohne genaue Ein- oder Ausstiegssignale zu liefern. Ebenso kann RSI in einem starken Abwärtstrend längere Zeit unter dem überverkauften Niveau von 30 bleiben.
 
 DZRSI löst dieses Problem, indem es diese Niveaus basierend auf dem historischen Verhalten des RSI selbst dynamisch anpasst, wodurch der Indikator anpassungsfähiger an verschiedene Marktregime wird.
 

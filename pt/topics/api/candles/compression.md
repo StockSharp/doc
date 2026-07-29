@@ -6,7 +6,7 @@ A API fornece ferramentas poderosas para comprimir dados de tick e spreads (melh
 
 Os principais métodos de extensão para compressão de dados estão localizados na classe `CandleHelper`. O código-fonte completo dessa classe está [disponível no GitHub](https://github.com/StockSharp/StockSharp/blob/master/Algo/Candles/CandleHelper.cs).
 
-Recomenda-se revisar este arquivo para uma compreensão completa de todos os métodos disponíveis e seus parâmetros.
+Recomenda-se rever este ficheiro para uma compreensão completa de todos os métodos disponíveis e seus parâmetros.
 
 ## Métodos de Compressão
 

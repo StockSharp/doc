@@ -9,7 +9,7 @@ Las velas japonesas son la serie de precios predeterminada: cada barra se dibuja
 
 ## Configuración
 
-Añade una `CandlestickSeries` y aliméntala con puntos `{ time, open, high, low, close }` (el tiempo va en segundos Unix):
+Añada una `CandlestickSeries` y aliméntela con puntos `{ time, open, high, low, close }` (el tiempo va en segundos Unix):
 
 ```js
 const chart = SSChart.createChart(document.getElementById('chart'), {
@@ -32,7 +32,7 @@ series.setData(candles.map(c => ({
 chart.timeScale().fitContent();
 ```
 
-Llama a `series.update({ time, open, high, low, close })` para enviar una barra en tiempo real: la misma marca de tiempo reemplaza la última vela, mientras que una marca de tiempo más reciente añade una nueva.
+Llame a `series.update({ time, open, high, low, close })` para enviar una barra en tiempo real: la misma marca de tiempo reemplaza la última vela, mientras que una marca de tiempo más reciente añade una nueva.
 
 ## Véase también
 

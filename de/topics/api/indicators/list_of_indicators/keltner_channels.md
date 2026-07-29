@@ -6,7 +6,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [KeltnerChannels](
 
 ## Beschreibung
 
-Keltner-Kanäle besteht aus drei Zeilen:
+Keltner-Kanäle bestehen aus drei Linien:
 1. **Mittellinie**: typischerweise dargestellt durch einen 20-Perioden-EMA
 2. **Oberes Band**: Mittellinie plus ein Multiplikator von ATR
 3. **Unteres Band**: Mittellinie minus dem gleichen ATR-Multiplikator

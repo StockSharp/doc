@@ -271,7 +271,7 @@ protected override void OnStarted2(DateTime time)
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 
-	var subscription = new Subscription(Serie, Security);
+	var subscription = new Subscription(Series, Security);
 
 	// Korrekt: Regeln für die Datenverarbeitung verwenden
 	Connector
@@ -320,7 +320,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Serie
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -355,7 +355,7 @@ public class SmaStrategy : Strategy
 							.SetDisplay("Länge der kurzen SMA", string.Empty, "Grundeinstellungen")
 							.SetCanOptimize(true);
 
-		_series = Param(nameof(Serie), TimeSpan.FromMinutes(15).TimeFrame())
+		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
 					.SetDisplay("Serie", string.Empty, "Grundeinstellungen");
 	}
 
@@ -374,7 +374,7 @@ public class SmaStrategy : Strategy
 		if (_chart != null)
 			InitChart();
 
-		var subscription = new Subscription(Serie, Security);
+		var subscription = new Subscription(Series, Security);
 
 		Connector
 			.WhenCandlesFinished(subscription)

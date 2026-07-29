@@ -31,7 +31,7 @@ A ligação também pode ser configurada utilizando a interface gráfica, confor
 Para receber velas históricas, tem de criar uma subscrição e especificar os parâmetros dos dados pedidos:
 
 ```cs
-// Criar uma subscrição para velas de 5 minutos para o instrumento seleccionado
+// Criar uma subscrição para velas de 5 minutos para o instrumento selecionado
 var subscription = new Subscription(
 	DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 	security)

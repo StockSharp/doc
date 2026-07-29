@@ -34,7 +34,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 {
 	/// <summary>
-	/// <see cref="Fractals.Up"/> dots color.
+	/// <see cref="Fractals.Up"/> の点の色。
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -43,7 +43,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 	public ChartLineElement Up { get; }
 
 	/// <summary>
-	/// <see cref="Fractals.Down"/> dots color.
+	/// <see cref="Fractals.Down"/> の点の色。
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -100,7 +100,7 @@ protected override bool OnDraw(Fractals ind, IDictionary<IIndicator, IList<Chart
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 {
 	/// <summary>
-	/// <see cref="Fractals.Up"/> dots color.
+	/// <see cref="Fractals.Up"/> の点の色。
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -108,7 +108,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 		Description = LocalizedStrings.Str2036Key)]
 	public ChartLineElement Up { get; }
 	/// <summary>
-	/// <see cref="Fractals.Down"/> dots color.
+	/// <see cref="Fractals.Down"/> の点の色。
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),

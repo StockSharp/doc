@@ -1,10 +1,10 @@
-# 市场深度面板
+# 订单簿面板
 
 ![Designer 订单簿面板](../../../../../../images/designer_orderbook_panel.png)
 
-该模块用于在专用图形组件 [市场深度](../../../../user_interface/components/order_book.md) 中显示市场深度。
+该模块用于在专用图形组件 [订单簿](../../../../user_interface/components/order_book.md) 中显示市场深度。
 
-[市场深度](../../../../user_interface/components/order_book.md) 组件需要从 **模拟** 或 **交易** 选项卡的 [组件](../../../../user_interface/components.md) 组中添加。有关 [市场深度](../../../../user_interface/components/order_book.md) 组件的详细信息，请参阅 [市场深度](../../../../user_interface/components/order_book.md) 章节。
+[订单簿](../../../../user_interface/components/order_book.md) 组件需要从 **模拟** 或 **交易** 选项卡的 [组件](../../../../user_interface/components.md) 组中添加。有关 [订单簿](../../../../user_interface/components/order_book.md) 组件的详细信息，请参阅 [订单簿](../../../../user_interface/components/order_book.md) 章节。
 
 ### 输入端口
 
@@ -14,4 +14,4 @@
 
 ## 另请参阅
 
-[分组市场深度](grouped_order_book.md)
+[分组订单簿](grouped_order_book.md)

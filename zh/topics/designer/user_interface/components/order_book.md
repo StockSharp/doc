@@ -1,10 +1,10 @@
-# 市场深度
+# 订单簿
 
-**订单簿** 组件以表格形式显示买入和卖出限价订单。需要在组件顶部选择接收数据的数据源。数据源为 [市场深度面板](../../strategies/using_visual_designer/elements/market_depths/order_book_panel.md) 模块。
+**订单簿** 组件以表格形式显示买入和卖出限价订单。需要在组件顶部选择接收数据的数据源。数据源为 [订单簿面板](../../strategies/using_visual_designer/elements/market_depths/order_book_panel.md) 模块。
 
 策略可以同时使用多种不同类型的市场深度，也可以使用不同交易品种的市场深度，并将其显示在不同面板中。
 
-![Designer 市场深度面板](../../../../images/designer_panel_market_depth.png)
+![Designer 订单簿面板](../../../../images/designer_panel_market_depth.png)
 
 ## 推荐内容
 

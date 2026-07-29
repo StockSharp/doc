@@ -11,7 +11,7 @@ var chartIndicatorElement = new ChartIndicatorElement()
 
 Consideremos cómo crear un IndicatorPainter personalizado usando el indicador [Fractals](xref:StockSharp.Algo.Indicators.Fractals) como ejemplo.
 
-Todo IndicatorPainters debe heredar de la clase base [BaseChartIndicatorPainter\<TIndicator\>](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) o implementar la interfaz [IChartIndicatorPainter](xref:StockSharp.Charting.IChartIndicatorPainter):
+Todo IndicatorPainter debe heredar de la clase base [BaseChartIndicatorPainter\<TIndicator\>](xref:StockSharp.Xaml.Charting.IndicatorPainters.BaseChartIndicatorPainter`1) o implementar la interfaz [IChartIndicatorPainter](xref:StockSharp.Charting.IChartIndicatorPainter):
 
 ```cs
 /// <summary>

@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[StochasticOscillator](xref:StockSharp.Algo.Indicators.StochasticOscillator) クラスを使用する必要があります。
 
-![ストキャスティクスオシレーター のチャート](../../../../images/indicatorstochasticoscillator.png)
+![ストキャスティクスオシレーターのチャート](../../../../images/indicatorstochasticoscillator.png)
 
 ## 推奨コンテンツ
 

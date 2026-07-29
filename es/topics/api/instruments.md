@@ -47,8 +47,8 @@ StockSharp proporciona herramientas potentes para trabajar con información de i
 
 Cada instrumento en StockSharp tiene un identificador único [SecurityId](xref:StockSharp.Messages.SecurityId), que se usa para identificar inequívocamente el instrumento en el sistema. El identificador incluye:
 
-- **Código del instrumento** - código bursátil del instrumento
-- **Código de plaza** - código del mercado o plaza de negociación
+- `SecurityCode` - código bursátil del instrumento
+- `BoardCode` - código del mercado o plaza de negociación
 - **Bloomberg/Reuters/ISIN** y otros códigos - métodos alternativos de identificación
 
 ## Características especiales

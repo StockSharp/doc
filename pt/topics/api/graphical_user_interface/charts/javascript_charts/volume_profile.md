@@ -1,15 +1,15 @@
 # Perfil de volume
 
-Um perfil de volume agrega o volume negociado por preço e o desenha como um histograma horizontal, marcando o point of control (o preço mais negociado) e a value area. Ele responde "onde os negócios foram feitos", independentemente de quando.
+Um perfil de volume agrega o volume negociado por preço e representa-o como um histograma horizontal, assinalando o ponto de controlo (*point of control*, o preço mais negociado) e a área de valor (*value area*). Mostra «onde foram efetuados os negócios», independentemente do momento em que ocorreram.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
-O perfil é recalculado sobre quaisquer barras que estejam à vista — role e amplie para vê-lo mudar.
+O perfil é recalculado sobre todas as barras visíveis — desloque e amplie o gráfico para observar a alteração.
 
 ```chart-demo volume-profile
 ```
 
-![Perfil de volume com point of control e value area](../../../../../images/chart_volume_profile.png)
+![Perfil de volume com ponto de controlo e área de valor](../../../../../images/chart_volume_profile.png)
 
 ## Configuração
 

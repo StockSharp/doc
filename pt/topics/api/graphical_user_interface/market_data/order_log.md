@@ -1,6 +1,6 @@
 # Registo de ordens
 
-![Captura de tela de Registo de ordens](../../../../images/gui_orderlog.png)
+![Captura de ecrã de Registo de ordens](../../../../images/gui_orderlog.png)
 
 [OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid) - um componente gráfico para apresentar o registo de ordens ([OrderLogItem](xref:StockSharp.BusinessEntities.OrderLogItem)).
 

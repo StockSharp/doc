@@ -4,7 +4,7 @@ Usar DLLs prontas é familiar para quem pretende trabalhar continuamente em ambi
 
 - Editor de código mais avançado em comparação com o editor integrado no **Designer**.
 - A recompilação do código atualiza automaticamente o conteúdo dentro do **Designer**.
-- Possibilidade de dividir o código por vários ficheiros (no caso da abordagem de [código](using_code.md), só é possível a variante OneFile-OneStrategy).
+- Possibilidade de dividir o código por vários ficheiros (no caso da abordagem de [código](using_code.md), só é possível a variante «um ficheiro–uma estratégia»).
 - Utilização do [depurador](using_dll/debug_dll_in_visual_studio.md).
 
 ### Criar um projeto no Visual Studio

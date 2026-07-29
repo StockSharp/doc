@@ -2,7 +2,7 @@
 
 Em [S#](../../api.md), os instrumentos de diferentes fontes utilizam um [Security.Id](xref:StockSharp.BusinessEntities.Security.Id) unificado. Isto mantém o código do algoritmo de negociação independente do tipo de ligação, como [OpenECry](../connectors/stock_market/openecry.md), [Rithmic](../connectors/stock_market/rithmic.md) ou [Interactive Brokers](../connectors/stock_market/interactive_brokers.md).
 
-Os identificadores de instrumentos utilizam a seguinte sintaxe: **\[código do instrumento\]@\[código da bolsa\]**. Para acções da Apple Inc., o identificador é **AAPL@NASDAQ**. Para derivados, o código da bolsa é a bolsa onde o contrato é negociado. Por exemplo, o contrato de futuros de Junho sobre o índice ES pode ser identificado como **ESM5@NYSE**.
+Os identificadores de instrumentos utilizam a seguinte sintaxe: **\[código do instrumento\]@\[código da bolsa\]**. Para ações da Apple Inc., o identificador é **AAPL@NASDAQ**. Para derivados, o código da bolsa é a bolsa onde o contrato é negociado. Por exemplo, o contrato de futuros de Junho sobre o índice ES pode ser identificado como **ESM5@NYSE**.
 
 > [!TIP]
 > [Hydra](../../hydra.md) utiliza o mesmo mecanismo para nomear pastas com dados históricos de mercado.

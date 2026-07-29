@@ -1,6 +1,6 @@
 # MATLAB
 
-![Captura de tela de MATLAB](../images/matlab_stocksharp.png)
+![Captura de ecrã de MATLAB](../images/matlab_stocksharp.png)
 
 O **MATLAB** foi concebido para operadores que desenvolvem algoritmos de negociação no ambiente [MATLAB MathWorks](https://www.mathworks.com/).
 

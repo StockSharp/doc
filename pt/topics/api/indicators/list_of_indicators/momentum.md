@@ -10,7 +10,7 @@ O impulso é definido como o rácio entre o preço de hoje e o preço de n perí
 MOMENTUM = CLOSE(i) / CLOSE(i - n) * 100
 
 onde:
-CLOSE(i) — o preço de fecho da barra actual;
+CLOSE(i) — o preço de fecho da barra atual;
 CLOSE(i - n) — o preço de fecho de n barras atrás.
 
 

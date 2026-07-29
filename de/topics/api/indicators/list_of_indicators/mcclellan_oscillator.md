@@ -6,7 +6,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [McClellanOscillat
 
 ## Beschreibung
 
-Der McClellan-Oszillator (MCO) ist einer der bekanntesten Marktbreitenindikatoren, der dabei hilft, die allgemeine Marktlage zu beurteilen und potenzielle Umkehrpunkte zu identifizieren. Es wurde 1969 entwickelt und ist seitdem für viele technische Analysten zu einem wichtigen Werkzeug geworden.
+Der McClellan-Oszillator (MCO) ist einer der bekanntesten Marktbreitenindikatoren, der dabei hilft, die allgemeine Marktlage zu beurteilen und potenzielle Umkehrpunkte zu identifizieren. Er wurde 1969 entwickelt und ist seitdem für viele technische Analysten zu einem wichtigen Werkzeug geworden.
 
 MCO basiert auf der Analyse des Verhältnisses zwischen der Anzahl steigender und fallender Aktien auf dem Markt. Der Indikator berechnet die Differenz zwischen den exponentiellen gleitenden Durchschnitten der Nettozuwächse über 19 und 39 Perioden (Differenz zwischen der Anzahl der steigenden und fallenden Aktien).
 
@@ -46,7 +46,7 @@ Die McClellan-Oszillator-Berechnung umfasst die folgenden Schritte:
 Der McClellan-Oszillator kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
-   - Das Überqueren der Nulllinie von unten nach oben durch MCO kann als zinsbullisches Signal gewertet werden, das auf einen möglichen Beginn eines Aufwärtstrends hinweist
+   - Das Überqueren der Nulllinie von unten nach oben durch MCO kann als bullisches Signal gewertet werden, das auf einen möglichen Beginn eines Aufwärtstrends hinweist
    - Das Überqueren der Nulllinie von MCO von oben nach unten kann als rückläufiges Signal angesehen werden, das auf einen möglichen Beginn eines Abwärtstrends hinweist
 
 2. **Extreme Werte**:

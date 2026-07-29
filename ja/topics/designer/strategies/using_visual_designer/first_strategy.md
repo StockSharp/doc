@@ -43,11 +43,11 @@
 
 ![Designer キューブのアルゴリズム作成 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
-8. ローソク足、インジケーター、取引を視覚的に表示するために、[チャート](elements/common/chart.md) を追加します。[チャート](elements/common/chart.md) に、ローソク足、2 つのインジケーター、取引用の表示要素を追加します。
+8. ローソク足、インジケーター、約定を視覚的に表示するために、[チャート](elements/common/chart.md) を追加します。[チャート](elements/common/chart.md) に、ローソク足、2 つのインジケーター、約定用の表示要素を追加します。
 
 ![Designer キューブのアルゴリズム作成 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. チャートに表示する取引のソースとして、ストラテジーの **約定** キューブを使用します。この例では **ストラテジー別約定** と呼ばれます。
+9. チャートに表示する約定のソースとして、ストラテジーの **約定** キューブを使用します。この例では **ストラテジー別約定** と呼ばれます。
 
 ![Designer キューブのアルゴリズム作成 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 

@@ -34,7 +34,7 @@ public class EmailLogListener : LogListener
 	/// Записать сообщения.
 	/// </summary>
 	/// <param name="messages">Отладочные сообщения.</param>
-	protected override void WriteMessages(IEnumerable<LogMessage> messages)
+	protected override void OnWriteMessages(IEnumerable<LogMessage> messages)
 	{
 		foreach (var message in messages)
 		{

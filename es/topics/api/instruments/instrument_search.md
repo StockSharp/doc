@@ -37,16 +37,16 @@ var subscription = new Subscription(lookupMessage);
 El mensaje [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) permite establecer los siguientes criterios de búsqueda:
 
 - **SecurityId** — identificador del instrumento, que contiene:
-  - **Código del instrumento** — código o máscara del código del instrumento (por ejemplo, "AAPL" o "MS*")
-  - **Código de plaza** — código de la plaza bursátil (por ejemplo, [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
-- **Tipo de instrumento** — tipo de instrumento ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future), etc.)
+  - `SecurityCode` — código o máscara del código del instrumento (por ejemplo, "AAPL" o "MS*")
+  - `BoardCode` — código de la plaza bursátil (por ejemplo, [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
+- **SecurityType** — tipo de instrumento ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future), etc.)
 - **SecurityTypes** — array de tipos de instrumentos para búsqueda avanzada
-- **Moneda** — divisa de negociación del instrumento
+- **Currency** — divisa de negociación del instrumento
 - **ExpiryDate** — fecha de vencimiento (para derivados)
-- **Precio de ejercicio** — precio strike (para opciones)
-- **Tipo de opción** — tipo de opción (para opciones)
-- **Nombre** — nombre del instrumento o parte de él
-- **Clase** — clase del instrumento
+- **Strike** — precio strike (para opciones)
+- **OptionType** — tipo de opción (para opciones)
+- **Name** — nombre del instrumento o parte de él
+- **Class** — clase del instrumento
 
 ### Procesamiento de resultados de búsqueda
 

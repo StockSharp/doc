@@ -25,8 +25,8 @@ Umgekehrter Hammer gilt als mögliches Signal für eine Umkehr eines Abwärtstre
 
 Umgekehrter Hammer erfordert einen vorsichtigen Ansatz und Bestätigung:
 
-- Obligatorisches Warten auf Bestätigung durch die nächste Kerze - eine starke bullische Kerze nach einem Umgekehrter Hammer erhöht die Wahrscheinlichkeit einer Umkehr deutlich.
-- Platzieren eines Stop-Loss unterhalb des Tiefs des Umgekehrter Hammer.
+- Obligatorisches Warten auf Bestätigung durch die nächste Kerze - eine starke bullische Kerze nach einem umgekehrten Hammer erhöht die Wahrscheinlichkeit einer Umkehr deutlich.
+- Platzieren eines Stop-Loss unterhalb des Tiefs des umgekehrten Hammers.
 - Verwenden einer kleineren Positionsgröße im Vergleich zu zuverlässigeren Umkehrmustern.
 - Kombination mit überverkauften Indikatoren wie RSI oder Stochastic, um die Wahrscheinlichkeit eines erfolgreichen Trades zu erhöhen.
 - Achten auf das Handelsvolumen - hohes Volumen erhöht die Bedeutung des Signals.

@@ -35,7 +35,7 @@ private readonly Connector _connector = new Connector();
 SecurityGrid.MarketDataProvider = _connector;
 ..........................
 // Добавляем в сетку инструменты
-_connector.NewSecurity += security =>
+_connector.SecurityReceived += (sub, security) =>
 {
 	SecurityGrid.Securities.Add(security);
 };

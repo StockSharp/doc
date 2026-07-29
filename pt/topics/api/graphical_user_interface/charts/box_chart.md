@@ -2,7 +2,7 @@
 
 BoxChart - é um tipo especial de gráfico para apresentar volumes na forma de uma grelha de números. Para utilizar este tipo de gráfico, é necessário definir o estilo especial [ChartCandleElement.DrawStyle](xref:StockSharp.Xaml.Charting.ChartCandleElement.DrawStyle) \= [ChartCandleDrawStyles.BoxVolume](xref:StockSharp.Charting.ChartCandleDrawStyles.BoxVolume). Este gráfico utiliza a informação da propriedade [PriceLevels](xref:StockSharp.Messages.CandleMessage.PriceLevels) como dados de origem.
 
-![Captura de tela de Gráfico de caixas](../../../../images/gui_boxchart.png)
+![Captura de ecrã de Gráfico de caixas](../../../../images/gui_boxchart.png)
 
 **Propriedades principais**
 

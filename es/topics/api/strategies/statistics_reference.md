@@ -48,8 +48,8 @@ Todos los parámetros de este grupo implementan la interfaz [IPnLStatisticParame
 
 Admiten los siguientes ajustes:
 
-- **Tasa libre de riesgo** -- tasa anual libre de riesgo (por ejemplo, `0.03m` = 3%)
-- **Período** -- periodo de cálculo de rentabilidad (valor predeterminado `TimeSpan.FromDays(1)`)
+- **RiskFreeRate** -- tasa anual libre de riesgo (por ejemplo, `0.03m` = 3%)
+- `Period` -- periodo de cálculo de rentabilidad (valor predeterminado `TimeSpan.FromDays(1)`)
 
 [CalmarRatioParameter](xref:StockSharp.Algo.Statistics.CalmarRatioParameter) y [SterlingRatioParameter](xref:StockSharp.Algo.Statistics.SterlingRatioParameter) dependen de otros parámetros (`NetProfitParameter`, `MaxDrawdownParameter`, `AverageDrawdownParameter`) y se enlazan automáticamente cuando se crean mediante [StatisticParameterRegistry](xref:StockSharp.Algo.Statistics.StatisticParameterRegistry).
 

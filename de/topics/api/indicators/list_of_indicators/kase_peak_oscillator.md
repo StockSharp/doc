@@ -6,7 +6,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [KasePeakOscillato
 
 ## Beschreibung
 
-Der Kase-Peak-Oszillator (KPO) ist ein Tool zur Bestimmung überkaufter und überverkaufter Marktbedingungen und zur Identifizierung potenzieller Umkehrpunkte. Es wurde von der Händlerin und Ingenieurin Celia Kase als Teil ihrer Handelsmethodik entwickelt.
+Der Kase-Peak-Oszillator (KPO) ist ein Tool zur Bestimmung überkaufter und überverkaufter Marktbedingungen und zur Identifizierung potenzieller Umkehrpunkte. Er wurde von der Händlerin und Ingenieurin Celia Kase als Teil ihrer Handelsmethodik entwickelt.
 
 KPO basiert auf dem Konzept, dass sich Markthöhen und -tiefs bilden, wenn die Dynamik der Preisbewegung nachlässt. Der Oszillator verwendet eine Kombination aus Momentum- und Volatilitätsindikatoren, um diese wichtigen Wendepunkte zu identifizieren.
 

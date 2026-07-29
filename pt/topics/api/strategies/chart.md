@@ -1,6 +1,6 @@
 # Trabalhar com Gráficos em Estratégias
 
-No StockSharp, a classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) fornece uma interface conveniente para visualizar a actividade de negociação num gráfico. Neste artigo, veremos como aceder a um gráfico a partir de uma estratégia, criar áreas (ChartArea), adicionar vários elementos (velas, indicadores, negócios) e renderizar dados.
+No StockSharp, a classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) fornece uma interface conveniente para visualizar a atividade de negociação num gráfico. Neste artigo, veremos como aceder a um gráfico a partir de uma estratégia, criar áreas (ChartArea), adicionar vários elementos (velas, indicadores, negócios) e renderizar dados.
 
 ## Aceder ao Gráfico
 
@@ -115,11 +115,11 @@ private void ConfigureChartElements()
 
 A interface [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) fornece muitas propriedades para configurar a apresentação das velas:
 
-- **Estilo de desenho** - estilo de apresentação das velas:
+- **DrawStyle** - estilo de apresentação das velas:
   - **CandleStick** - velas japonesas
   - **Ohlc** - barras
   - **LineOpen/LineHigh/LineLow/LineClose** - linhas para os respectivos preços
-  - **Volume da caixa** - caixas de volume
+  - **BoxVolume** - caixas de volume
   - **ClusterProfile** - perfil de cluster
   - **Area** - área
   - **PnF** - gráfico de ponto e figura
@@ -127,13 +127,13 @@ A interface [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) 
 - **Definições de cor**:
   - **UpFillColor/DownFillColor** - cor do corpo da vela ascendente/descendente
   - **UpBorderColor/DownBorderColor** - cor da margem da vela ascendente/descendente
-  - **Cor da linha** - cor da linha para gráficos do tipo linha
-  - **Cor da área** - cor da área para o tipo Area
+  - **LineColor** - cor da linha para gráficos do tipo linha
+  - **AreaColor** - cor da área para o tipo Area
 
 - **Outras definições**:
-  - **Espessura da linha** - espessura da linha
-  - **Suavização** - suavização
-  - **Mostrar marcador do eixo** - mostrar marcador do eixo Y
+  - **StrokeThickness** - espessura da linha
+  - **AntiAliasing** - suavização
+  - **ShowAxisMarker** - mostrar marcador do eixo Y
 
 ### Adicionar Indicadores
 
@@ -176,12 +176,12 @@ smaElement.AutoAssignYAxis = true; // Atribuir automaticamente o eixo Y
 
 A interface [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) fornece as seguintes propriedades para configuração:
 
-- **Cor** - cor principal do indicador
-- **Cor adicional** - cor adicional (para indicadores com duas linhas)
-- **Espessura da linha** - espessura da linha
-- **Suavização** - suavização
-- **Estilo de desenho** - estilo de desenho (linha, pontos, histograma, etc.)
-- **Mostrar marcador do eixo** - mostrar marcador do eixo Y
+- **Color** - cor principal do indicador
+- **AdditionalColor** - cor adicional (para indicadores com duas linhas)
+- **StrokeThickness** - espessura da linha
+- **AntiAliasing** - suavização
+- **DrawStyle** - estilo de desenho (linha, pontos, histograma, etc.)
+- **ShowAxisMarker** - mostrar marcador do eixo Y
 - **AutoAssignYAxis** - atribuir automaticamente o eixo Y
 
 ### Adicionar Negócios
@@ -216,12 +216,12 @@ _ordersElement.PointSize = 8;                // Point size
 
 A interface [IChartOrderElement](xref:StockSharp.Charting.IChartOrderElement) fornece as seguintes propriedades para configuração:
 
-- **Cor das ordens ativas** - cor das ordens activas
-- **Cor das ordens canceladas** - cor das ordens canceladas
-- **Cor das ordens concluídas** - cor das ordens concluídas
-- **Cor do erro** - cor de erro
-- **Cor do contorno de erro** - cor da margem de erro
-- **Filtro** - filtro de apresentação de ordens
+- **ActiveBrush** - cor das ordens ativas
+- **CanceledBrush** - cor das ordens canceladas
+- **DoneBrush** - cor das ordens concluídas
+- **ErrorColor** - cor de erro
+- **ErrorStrokeColor** - cor da margem de erro
+- **Filter** - filtro de apresentação de ordens
 
 ## Desenhar Dados no Gráfico
 
@@ -229,7 +229,7 @@ Depois de configurar todos os elementos do gráfico, pode prosseguir para desenh
 
 ### Desenhar Velas e Indicadores
 
-A forma mais eficiente de desenhar dados é usar o método [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData)) com um objecto [IChartDrawData](xref:StockSharp.Charting.IChartDrawData):
+A forma mais eficiente de desenhar dados é usar o método [IChart.Draw](xref:StockSharp.Charting.IThemeableChart.Draw(StockSharp.Charting.IChartDrawData)) com um objeto [IChartDrawData](xref:StockSharp.Charting.IChartDrawData):
 
 ```cs
 private void ProcessCandle(ICandleMessage candle)
@@ -274,13 +274,13 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-O método [IChart.CreateData](xref:StockSharp.Charting.IThemeableChart.CreateData) cria um objecto [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) usado para agrupar e adicionar dados para diferentes elementos do gráfico. O agrupamento de dados é feito por carimbo temporal usando o método [Group](xref:StockSharp.Charting.IChartDrawData.Group(System.DateTimeOffset)).
+O método [IChart.CreateData](xref:StockSharp.Charting.IThemeableChart.CreateData) cria um objeto [IChartDrawData](xref:StockSharp.Charting.IChartDrawData) usado para agrupar e adicionar dados para diferentes elementos do gráfico. O agrupamento de dados é feito por carimbo temporal usando o método [Group](xref:StockSharp.Charting.IChartDrawData.Group(System.DateTimeOffset)).
 
-Para adicionar dados de diferentes tipos, são usadas várias sobrecargas do método [Add](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem.Add(StockSharp.Charting.IChartCandleElement,StockSharp.Messages.DataType,StockSharp.Messages.SecurityId,System.Decimal,System.Decimal,System.Decimal,System.Decimal,StockSharp.Messages.CandlePriceLevel[],StockSharp.Messages.CandleStates)) do objecto [IChartDrawDataItem](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem).
+Para adicionar dados de diferentes tipos, são usadas várias sobrecargas do método [Add](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem.Add(StockSharp.Charting.IChartCandleElement,StockSharp.Messages.DataType,StockSharp.Messages.SecurityId,System.Decimal,System.Decimal,System.Decimal,System.Decimal,StockSharp.Messages.CandlePriceLevel[],StockSharp.Messages.CandleStates)) do objeto [IChartDrawDataItem](xref:StockSharp.Charting.IChartDrawData.IChartDrawDataItem).
 
 ### Desenhar Negócios e Ordens
 
-Para desenhar negócios e ordens, normalmente é usado um mecanismo automático accionado quando são recebidos novos negócios ou quando as ordens mudam. No entanto, se for necessário desenho manual, pode usar o seguinte código:
+Para desenhar negócios e ordens, normalmente é usado um mecanismo automático acionado quando são recebidos novos negócios ou quando as ordens mudam. No entanto, se for necessário desenho manual, pode usar o seguinte código:
 
 ```cs
 // Desenhando uma negociação
@@ -485,7 +485,7 @@ public class SmaStrategy : Strategy
 
 ## Conclusão
 
-Usar gráficos em estratégias StockSharp permite visualizar a actividade de negociação, o que simplifica significativamente o desenvolvimento, a depuração e a monitorização de estratégias de negociação. A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) fornece muitos métodos para trabalhar com gráficos, permitindo adicionar facilmente vários elementos e renderizar dados.
+Usar gráficos em estratégias StockSharp permite visualizar a atividade de negociação, o que simplifica significativamente o desenvolvimento, a depuração e a monitorização de estratégias de negociação. A classe [Strategy](xref:StockSharp.Algo.Strategies.Strategy) fornece muitos métodos para trabalhar com gráficos, permitindo adicionar facilmente vários elementos e renderizar dados.
 
 Ao desenvolver uma estratégia com interface gráfica, tenha sempre em conta que o gráfico pode estar indisponível, por exemplo, ao executar em modo de consola ou em testes na cloud. Por isso, é importante verificar se o resultado do método [GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) é `null` e fornecer um cenário alternativo para a estratégia funcionar sem visualização.
 

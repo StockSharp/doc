@@ -30,7 +30,7 @@ var storageRegistry = new StorageRegistry
 ```
 
 > [!CAUTION]
-> O construtor [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) recebe o caminho para o diretório raiz onde o histórico de **todos os instrumentos** está armazenado, não para um diretório com um instrumento específico. Por exemplo, se o arquivo HistoryData.zip foi descompactado para o diretório *C:\\MarketData\\AAPL@NASDAQ\\*, deve passar o caminho *C:\\MarketData\\* para [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive). Mais detalhes na secção [API](../market_data_storage/api.md).
+> O construtor [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive) recebe o caminho para o diretório raiz onde o histórico de **todos os instrumentos** está armazenado, não para um diretório com um instrumento específico. Por exemplo, se o ficheiro HistoryData.zip foi descompactado para o diretório *C:\\MarketData\\AAPL@NASDAQ\\*, deve passar o caminho *C:\\MarketData\\* para [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive). Mais detalhes na secção [API](../market_data_storage/api.md).
 
 ### 2. Criar instrumentos e carteiras
 

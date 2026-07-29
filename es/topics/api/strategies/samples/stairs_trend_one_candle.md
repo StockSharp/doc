@@ -17,7 +17,7 @@ public class OneCandleTrendStrategy : Strategy
 
 La estrategia permite personalizar los siguientes parámetros:
 
-- **Tipo de vela** - tipo de vela con el que trabajar (predeterminado 5 minutos)
+- `CandleType` - tipo de vela con el que trabajar (predeterminado 5 minutos)
 
 ## Inicialización de la estrategia
 

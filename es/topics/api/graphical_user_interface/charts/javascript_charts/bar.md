@@ -9,7 +9,7 @@ Las barras OHLC muestran los mismos cuatro precios que las velas, pero sin el cu
 
 ## Configuración
 
-Añade una `BarSeries` y aliméntala con puntos `{ time, open, high, low, close }`:
+Añada una `BarSeries` y aliméntela con puntos `{ time, open, high, low, close }`:
 
 ```js
 const series = chart.addSeries(SSChart.BarSeries, {

@@ -203,7 +203,7 @@ Para receber mensagens de uma estratégia, ligue ouvintes através de [LogManage
 ```cs
 var logManager = new LogManager();
 
-// Gravar em arquivo
+// Gravar num ficheiro
 var fileListener = new FileLogListener("{0}_{1:00}_{2:00}.txt".Put(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day));
 logManager.Listeners.Add(fileListener);
 

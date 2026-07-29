@@ -1,6 +1,6 @@
 # DC
 
-**canais de Donchian (DC)** é um indicador técnico desenvolvido pelo operador Richard Donchian, composto por uma banda superior e uma inferior (limites do canal) com base nos valores máximos e mínimos do preço durante um período específico.
+O **indicador Canais de Donchian (DC)** foi desenvolvido pelo operador Richard Donchian e é composto por uma banda superior e outra inferior (limites do canal), baseadas nos valores máximos e mínimos do preço durante um período específico.
 
 Para usar o indicador, deve ser usada a classe [DonchianChannels](xref:StockSharp.Algo.Indicators.DonchianChannels).
 

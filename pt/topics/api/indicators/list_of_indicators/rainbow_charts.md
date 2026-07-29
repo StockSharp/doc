@@ -1,6 +1,6 @@
 # RC
 
-**gráficos arco-íris (RC)** é um indicador de análise técnica composto por um conjunto de médias móveis com períodos diferentes, apresentadas num único gráfico. Visualmente, o indicador assemelha-se a um arco-íris, daí o seu nome.
+O indicador **Gráficos arco-íris (RC)** é composto por um conjunto de médias móveis com períodos diferentes, apresentadas num único gráfico. Visualmente, assemelha-se a um arco-íris, daí o seu nome.
 
 Para utilizar o indicador, é necessário usar a classe [RainbowCharts](xref:StockSharp.Algo.Indicators.RainbowCharts).
 

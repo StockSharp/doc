@@ -82,20 +82,20 @@ protected override void OnStarted2(DateTime time)
 ### Primeiro Conjunto de Regras
 
 - Quando é recebido um tick, cria uma ordem para comprar 1 unidade
-- A ordem é criada usando o método `CreateOrder`, especificando direcção, preço (default = mercado) e volume
+- A ordem é criada usando o método `CreateOrder`, especificando direção, preço (default = mercado) e volume
 - Define regras para processar registo bem-sucedido e erros de registo
-- As regras são mutuamente exclusivas e são accionadas apenas uma vez
+- As regras são mutuamente exclusivas e são acionadas apenas uma vez
 
 ### Segundo Conjunto de Regras
 
 - Quando é recebido o tick seguinte, cria uma ordem para comprar 10.000.000 unidades
 - Define, de forma semelhante, regras para processar registo bem-sucedido e erros de registo
-- As regras também são mutuamente exclusivas e são accionadas apenas uma vez
+- As regras também são mutuamente exclusivas e são acionadas apenas uma vez
 
 ## Funcionalidades
 
 - Demonstra a criação de regras para processar eventos de registo de ordens
 - Usa o mecanismo de regras mutuamente exclusivas (`Exclusive`)
 - Mostra um exemplo de registo de informação sobre eventos de ordens usando o método `LogInfo`
-- Ilustra a utilização de `Once()` para limitar o accionamento da regra
+- Ilustra a utilização de `Once()` para limitar o acionamento da regra
 - Cria ordens com volumes diferentes para demonstrar vários cenários (registo bem-sucedido e erro de registo)

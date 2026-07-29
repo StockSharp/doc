@@ -9,7 +9,7 @@ Un gráfico TPO (Time Price Opportunity), también llamado perfil de mercado (Ma
 
 ## Configuración
 
-Añade una `TpoSeries` y aliméntala con barras OHLC que lleven cada una un `sessionId`; la serie construye por sí misma la distribución de letras/bloques por sesión:
+Añada una `TpoSeries` y aliméntela con barras OHLC que lleven cada una un `sessionId`; la serie construye por sí misma la distribución de letras/bloques por sesión:
 
 ```js
 const series = chart.addSeries(SSChart.TpoSeries, {

@@ -6,7 +6,7 @@
 
 [ISlippageManager](xref:StockSharp.Algo.Slippage.ISlippageManager) インターフェイスは、基本契約を定義します。
 
-- **スリッページ** — 累積スリッページ合計（decimal）。
+- **Slippage** — 累積スリッページ合計（decimal）。
 - **Reset()** — マネージャーの状態をリセットします。
 - **ProcessMessage(Message)** — メッセージを処理します。指定された約定のスリッページを返すか、`null` を返します。
 

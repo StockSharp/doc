@@ -2,7 +2,7 @@
 
 Um gráfico de footprint abre cada barra para mostrar o volume negociado em cada preço dentro dela, dividido em bid e ask. A coloração por desequilíbrio (imbalance) destaca onde compradores ou vendedores agressivos dominaram, o que é o cerne da leitura de order-flow.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 Aproxime o zoom para ler as células individuais — o footprint só é legível com um punhado de barras por vez.
 
@@ -13,7 +13,7 @@ Aproxime o zoom para ler as células individuais — o footprint só é legível
 
 ## Configuração
 
-Adicione uma `FootprintSeries` e alimente-a com barras exatas de order-flow. Cada barra carrega `dataMode: 'exact'`, seu OHLC e um array `levels` de `{ price, bidVolume, askVolume, tradeCount }`:
+Adicione uma `FootprintSeries` e alimente-a com barras exatas de order-flow. Cada barra carrega `dataMode: 'exact'`, o respetivo OHLC e um array `levels` de `{ price, bidVolume, askVolume, tradeCount }`:
 
 ```js
 const series = chart.addSeries(SSChart.FootprintSeries, {
@@ -28,7 +28,7 @@ const series = chart.addSeries(SSChart.FootprintSeries, {
 series.setData(exactBars);
 ```
 
-`mode` escolhe o que cada célula exibe (bid × ask, delta, total ou uma escada); `detailLevel` troca detalhe numérico por densidade conforme você aplica zoom — `Auto` alterna automaticamente.
+`mode` seleciona o que cada célula apresenta (bid × ask, delta, total ou uma escada); `detailLevel` troca o detalhe numérico pela densidade à medida que o gráfico é ampliado ou reduzido — `Auto` alterna automaticamente.
 
 ## Veja também
 

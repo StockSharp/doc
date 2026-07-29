@@ -10,7 +10,7 @@ StockSharp stellt eine leistungsfähige Infrastruktur zum Erstellen, Testen und 
 
 - [Marktdatenabonnements in Strategien](strategies/subscriptions.md) - Ausführliche Anleitung zur Verwendung von Marktdatenabonnements in Strategien. Erläutert das Erstellen und Konfigurieren von Abonnements, die Verwaltung ihres Lebenszyklus und die Überwachung ihres Zustands.
 
-- [Indikatoren in Strategien](strategies/indicators.md) - Informationen zur Arbeit mit Indikatoren der technischen Analyse in Strategien. Behandelt das Hinzufügen von Indikatoren zu einer Strategie, die Steuerung ihrer Ausbildung und ihre Verwendung in der Handelslogik.
+- [Indikatoren in Strategien](strategies/indicators.md) - Informationen zur Arbeit mit Indikatoren der technischen Analyse in Strategien. Behandelt das Hinzufügen von Indikatoren zu einer Strategie, die Kontrolle ihrer Berechnung beziehungsweise ihres `IsFormed`-Zustands und ihre Verwendung in der Handelslogik.
 
 - [Handelsoperationen in Strategien](strategies/trading_operations.md) - Anleitung zur Ausführung von Handelsoperationen in Strategien. Beschreibt Methoden zum Erstellen und Senden von Orders, Schließen von Positionen und Überwachen ihres Status.
 

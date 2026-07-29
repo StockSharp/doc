@@ -7,7 +7,7 @@ Drei schwarze Krähen ist ein starkes bärisches Umkehr-Candlestick-Muster aus d
 - Drei aufeinanderfolgende schwarze (bärische) Kerzen mit Eröffnungskurs oberhalb des Schlusskurses (O > C).
 - Jede nachfolgende Kerze eröffnet innerhalb des Körpers der vorherigen Kerze (O < pO).
 - Jede Kerze schließt tiefer als der Schlusskurs der vorherigen Kerze.
-- Alle drei Kerzen haben relativ länge Körper und kurze Schatten.
+- Alle drei Kerzen haben relativ lange Körper und kurze Schatten.
 - Entsteht in einem Aufwärtstrend.
 
 ![Drei-schwarze-Krähen-Muster](../../../images/threeblackcrowspattern.png)

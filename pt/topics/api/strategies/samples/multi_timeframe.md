@@ -26,11 +26,11 @@ public class MultiTimeframeStrategy : Strategy
 
 A estratégia permite personalizar os seguintes parâmetros:
 
-- **Período da média móvel rápida** - período da média móvel rápida para o gráfico horário (predefinição 10)
-- **Período da média móvel lenta** - período da média móvel lenta para o gráfico horário (predefinição 30)
-- **Período do RSI** - período do RSI para o gráfico de 5 minutos (predefinição 14)
-- **Realização de lucro** - tamanho do take-profit em percentagem (predefinição 2)
-- **Limite de perdas** - tamanho do stop-loss em percentagem (predefinição 1)
+- **FastSmaLength** - período da média móvel rápida para o gráfico horário (predefinição 10)
+- **SlowSmaLength** - período da média móvel lenta para o gráfico horário (predefinição 30)
+- **RsiLength** - período do RSI para o gráfico de 5 minutos (predefinição 14)
+- `TakeProfit` - tamanho do take-profit em percentagem (predefinição 2)
+- `StopLoss` - tamanho do stop-loss em percentagem (predefinição 1)
 
 Todos os parâmetros estão disponíveis para otimização com intervalos de valores especificados.
 

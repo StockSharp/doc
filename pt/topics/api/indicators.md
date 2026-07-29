@@ -20,7 +20,7 @@
    ```cs
    private void ProcessCandle(ICandleMessage candle)
    {
-       // Processar a vela com indicadores e salvar imediatamente os resultados
+       // Processar a vela com indicadores e guardar imediatamente os resultados
        var longValue = longSma.Process(candle);
        var shortValue = shortSma.Process(candle);
        
@@ -43,7 +43,7 @@
    // Exemplo de estratégia com duas médias móveis
    private void ProcessCandle(ICandleMessage candle)
    {
-       // Processar a vela com indicadores e salvar imediatamente os resultados
+       // Processar a vela com indicadores e guardar imediatamente os resultados
        var longValue = _longSma.Process(candle);
        var shortValue = _shortSma.Process(candle);
        
@@ -157,7 +157,7 @@ public class SmaStrategy : Strategy
 
 	private void ProcessCandle(ICandleMessage candle)
 	{
-		// Processar a vela com indicadores e salvar resultados
+		// Processar a vela com indicadores e guardar resultados
 		var longValue = _longSma.Process(candle);
 		var shortValue = _shortSma.Process(candle);
 		

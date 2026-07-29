@@ -4,7 +4,7 @@ O [Designer](../../designer.md) permite executar as estratégias criadas no modo
 
 1. Ao clicar na seta junto ao botão **Ligar** ![Designer Barra de ferramentas de acesso rápido 00](../../../images/designer_quick_access_toolbar_00.png), aparece o botão **Definições do emulador**:
 
-![Designer Configurações de conexão 00](../../../images/designer_connection_settings_00.png)
+![Designer Definições de ligação 00](../../../images/designer_connection_settings_00.png)
 
 2. Ao clicar no botão **Definições do emulador**, abre-se a janela **Definições do emulador**:
 
@@ -26,9 +26,9 @@ O [Designer](../../designer.md) permite executar as estratégias criadas no modo
 - **ID da ordem** - Número a partir do qual o emulador irá gerar os identificadores das ordens.
 - **ID do negócio** - Número a partir do qual o emulador irá gerar os identificadores dos negócios.
 - **Transação** - Número a partir do qual o emulador irá gerar os identificadores das transações de ordens.
-- **Tamanho do spread** - Tamanho do spread em incrementos de preço. Usado ao determinar o spread para a geração do livro de ordens a partir de tick trades.
+- **Tamanho do spread** - Tamanho do spread em incrementos de preço. Usado ao determinar o spread para a geração do livro de ordens a partir de negócios por tick.
 - **Profundidade do livro** - Profundidade máxima do livro de ordens que será gerado a partir dos ticks.
-- **Número de passos de volume** - Número de passos de volume pelos quais a ordem é maior do que o tick trade. Usado ao testar tick trades.
+- **Número de passos de volume** - Número de passos de volume pelos quais a ordem é maior do que o negócio por tick. Usado ao testar negócios por tick.
 - **Intervalo dos portefólios** - Intervalo de recálculo dos portefólios. Se o intervalo for igual a zero, não é efetuado recálculo.
 - **Alterar hora** - Alterar a hora das ordens e negócios para a hora da bolsa.
 - **Fuso horário** - Informação sobre o fuso horário da bolsa.

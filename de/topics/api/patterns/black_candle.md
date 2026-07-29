@@ -16,7 +16,7 @@ Schwarze Kerze (bärische Kerze) ist ein klassisches Candlestick-Muster, das ent
 Schwarze Kerze signalisiert bärischen Druck im Markt:
 
 - Je länger der Kerzenkörper, desto stärker ist der bärische Druck.
-- Eine länge schwarze Kerze nach einem Aufwärtstrend kann auf eine mögliche Umkehr hinweisen.
+- Eine lange schwarze Kerze nach einem Aufwärtstrend kann auf eine mögliche Umkehr hinweisen.
 - Kurze Schatten zeigen, dass Bären den Preis während der gesamten Periode kontrollierten.
 - Aufeinanderfolgende schwarze Kerzen weisen auf einen stabilen Abwärtstrend hin.
 
@@ -34,4 +34,3 @@ Obwohl eine einzelne schwarze Kerze normalerweise kein eigenständiges Handelssi
 [Weiße Kerze](white_candle.md)
 
 [Schwarzer Marubozu](black_marubozu.md)
-

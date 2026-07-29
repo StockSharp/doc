@@ -1,6 +1,6 @@
 # Velas
 
-![Captura de tela de Velas](../../../../../../images/designer_candles_00.png)
+![Captura de ecrã de Velas](../../../../../../images/designer_candles_00.png)
 
 Este bloco é usado para construir velas para um instrumento especificado.
 

@@ -1,14 +1,14 @@
 # KST
 
-**indicador KST (KST)** é um indicador técnico desenvolvido por Martin Pring que representa a soma de quatro taxas de variação (ROC) suavizadas com períodos diferentes para identificar ciclos de mercado de longo prazo.
+O **Indicador de Certeza (KST)** é um indicador técnico desenvolvido por Martin Pring que representa a soma de quatro taxas de variação (ROC) suavizadas com períodos diferentes para identificar ciclos de mercado de longo prazo.
 
 Para utilizar o indicador, é necessário usar a classe [KnowSureThing](xref:StockSharp.Algo.Indicators.KnowSureThing).
 
 ## Descrição
 
-O indicador indicador KST (KST) é um oscilador desenvolvido por Martin Pring para identificar tendências medindo o momentum do preço em vários horizontes temporais. O indicador combina quatro medições de taxa de variação (ROC) com períodos diferentes, dando maior importância aos períodos mais longos.
+O Indicador de Certeza (KST) é um oscilador desenvolvido por Martin Pring para identificar tendências através da medição do momentum do preço em vários horizontes temporais. O indicador combina quatro medições da taxa de variação (ROC) com períodos diferentes, atribuindo maior importância aos períodos mais longos.
 
-O KST baseia-se na teoria de que ciclos de mercado com durações diferentes influenciam colectivamente o movimento do preço. Ao combinar ROC de períodos diferentes, o KST procura identificar tendências cíclicas de longo prazo e determinar potenciais pontos de inversão.
+O KST baseia-se na teoria de que ciclos de mercado com durações diferentes influenciam coletivamente o movimento do preço. Ao combinar ROC de períodos diferentes, o KST procura identificar tendências cíclicas de longo prazo e determinar potenciais pontos de inversão.
 
 O indicador é normalmente acompanhado por uma linha de sinal (média móvel do KST), e os seus cruzamentos podem ser usados para gerar sinais de negociação.
 
@@ -18,10 +18,10 @@ O cálculo do indicador KST envolve os seguintes passos:
 
 1. Calcular quatro medições de taxa de variação (ROC) com períodos diferentes:
    ```
-   ROC1 = ((Close / Close[n1 periods ago]) - 1) * 100
-   ROC2 = ((Close / Close[n2 periods ago]) - 1) * 100
-   ROC3 = ((Close / Close[n3 periods ago]) - 1) * 100
-   ROC4 = ((Close / Close[n4 periods ago]) - 1) * 100
+   ROC1 = ((Close / Close[há n1 períodos]) - 1) * 100
+   ROC2 = ((Close / Close[há n2 períodos]) - 1) * 100
+   ROC3 = ((Close / Close[há n3 períodos]) - 1) * 100
+   ROC4 = ((Close / Close[há n4 períodos]) - 1) * 100
    ```
 
 2. Suavizar cada ROC usando uma média móvel simples (SMA):
@@ -68,13 +68,13 @@ O indicador KST pode ser interpretado da seguinte forma:
    - Valores positivos elevados do KST podem indicar condições de sobrecompra do mercado
    - Valores negativos elevados do KST podem indicar condições de sobrevenda do mercado
 
-5. **Direcção do Movimento**:
+5. **Direção do Movimento**:
    - Tendência ascendente do KST indica um sentimento geral altista do mercado
    - Tendência descendente do KST indica um sentimento geral baixista do mercado
 
 6. **Confirmação da Tendência**:
    - O KST pode ser usado para confirmar sinais de outros indicadores
-   - A consistência entre a direcção do KST e o preço confirma a força da tendência actual
+   - A consistência entre a direção do KST e o preço confirma a força da tendência atual
 
 7. **Análise do Sentimento do Mercado**:
    - Valores positivos do KST indicam predominância de sentimento altista

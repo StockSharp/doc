@@ -6,7 +6,7 @@ Una estrategia se describe como un **esquema**: un conjunto de *nodos* (elemento
 
 ## Demostración en vivo
 
-El diagrama de abajo es el motor real ejecutándose en esta página: un esqueleto mínimo de estrategia «fuente de datos → indicador → gráfico». Arrastra el canvas para desplazarte, usa la rueda para hacer zoom y pulsa el botón de expandir para abrirlo a pantalla completa.
+El diagrama de abajo es el motor real ejecutándose en esta página: un esqueleto mínimo de estrategia «fuente de datos → indicador → gráfico». Arrastre el canvas para desplazarse, use la rueda para hacer zoom y pulse el botón de expandir para abrirlo a pantalla completa.
 
 ```diagram-demo sma
 ```
@@ -15,17 +15,17 @@ Los tres bloques son una fuente de **Velas** que alimenta un **Indicador** (una 
 
 ## Instalación
 
-Instala el paquete desde npm:
+Instale el paquete desde npm:
 
 ```bash
 npm install @stocksharp/diagram
 ```
 
-Luego importa los módulos ES: `import { renderScheme } from '@stocksharp/diagram/embed'` para la incrustación de solo lectura, o `import { StockSharpDiagram } from '@stocksharp/diagram'` para el [editor interactivo](javascript_diagram/editor.md).
+Luego importe los módulos ES: `import { renderScheme } from '@stocksharp/diagram/embed'` para la incrustación de solo lectura, o `import { StockSharpDiagram } from '@stocksharp/diagram'` para el [editor interactivo](javascript_diagram/editor.md).
 
 ## Incrustar un diagrama
 
-El componente expone `renderScheme(host, paletteUrl, scheme)` desde el punto de entrada `@stocksharp/diagram/embed`. Proporciónale un elemento anfitrión, la URL de un JSON de paleta y un esquema construido a partir de `nodes` y `links`:
+El componente expone `renderScheme(host, paletteUrl, scheme)` desde el punto de entrada `@stocksharp/diagram/embed`. Proporciónele un elemento anfitrión, la URL de un JSON de paleta y un esquema construido a partir de `nodes` y `links`:
 
 ```js
 import { renderScheme } from '@stocksharp/diagram/embed';
@@ -48,7 +48,7 @@ renderScheme(document.getElementById('diagram'), '/data/designer-palette.json', 
 
 El `typeId` de cada nodo debe existir en la paleta; los tipos desconocidos se renderizan como bloques de marcador de posición. Los puertos se referencian por su `key`, y un enlace es válido cuando el tipo del puerto de origen es compatible con el tipo del puerto de destino. `renderScheme` es de solo lectura: el motor distribuye, aplica el tema (sigue la configuración clara/oscura de la página) y permite al espectador desplazarse, hacer zoom y expandir, pero no edita el esquema.
 
-El mismo componente también funciona como un **editor** completo: arrastra elementos desde una paleta, conecta puertos, edita y elimina nodos, deshaz/rehaz. Consulta [Editor interactivo](javascript_diagram/editor.md) y [Eventos y API](javascript_diagram/events.md).
+El mismo componente también funciona como un **editor** completo: permite arrastrar elementos desde una paleta, conectar puertos, editar y eliminar nodos, y deshacer/rehacer. Consulte [Editor interactivo](javascript_diagram/editor.md) y [Eventos y API](javascript_diagram/events.md).
 
 ## Véase también
 

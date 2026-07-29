@@ -3,7 +3,7 @@
 在历史数据上进行测试可以让市场分析找到模式，并进行[策略参数优化](optimization.md)。主要工作由[HistoryEmulationConnector](xref:StockSharp.Algo.Testing.HistoryEmulationConnector)类执行，该类通过特殊的[API](../market_data_storage/api.md)从本地存储库中检索数据。附加参数在[测试设置](extended_settings.md)部分中描述。
 
 可以使用各种类型的市场数据进行测试：
-- 逐笔交易 ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
+- 逐笔成交 ([ITickTradeMessage](xref:StockSharp.Messages.ITickTradeMessage))
 - 订单簿 ([IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage))
 - 不同时间框架的K线
 - [订单日志](xref:StockSharp.Messages.IOrderLogMessage)

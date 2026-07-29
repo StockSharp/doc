@@ -40,7 +40,7 @@ type EmptyDiagramElement() as this =
 	// seja chamado sempre que for recebido um novo argumento
 	// (não é necessário esperar que todos os argumentos de entrada sejam recebidos).
 	//
-	// sobrescrever this.WaitAllInput
+	// override this.WaitAllInput // substitui a definição predefinida
 	//     with get () = false
 
 	// Conectores de entrada são parâmetros de métodos marcados com o atributo DiagramExternal
@@ -110,11 +110,11 @@ A propriedade **Valor mínimo** está marcada como básica e ficará visível no
 A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.WaitAllInput) é responsável pelo momento da chamada do método com conectores de entrada:
 
 ```fsharp
-// sobrescrever this.WaitAllInput
+// override this.WaitAllInput // substitui a definição predefinida
 //     with get () = false
 ```
 
-Se for descomentada, o método **Processo** será sempre chamado assim que pelo menos um valor chegar (no caso do exemplo, uma vela ou um valor numérico).
+Se for descomentada, o método `Process` será sempre chamado assim que pelo menos um valor chegar (no caso do exemplo, uma vela ou um valor numérico).
 
 Para adicionar o cubo resultante ao diagrama, é necessário selecionar o cubo criado na paleta, na secção **Elementos próprios**:
 

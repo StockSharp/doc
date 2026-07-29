@@ -11,7 +11,7 @@ El componente "Modificar posición" se usa para cambiar una posición de negocia
 - **Cartera**: cartera dentro de la cual ocurre la operación.
 - **Volumen** (opcional): volumen para operaciones "Aumentar" y "Reducir". No se usa para "Invertir" ni "Cerrar posición".
 - **Último precio** y **Último volumen**: para los algoritmos "VWAP" e "Iceberg" se requieren datos sobre el último precio y volumen de la transacción.
-- **Cancelar**: señal para cancelar la configuración de posición, por ejemplo, por timeout.
+- **Cancelar**: señal para cancelar la configuración de posición, por ejemplo, si se agota el tiempo de espera.
 
 ## Conectores de salida
 

@@ -2,7 +2,7 @@
 
 ## Überblick
 
-`SmaStrategyMartingaleStrategy` ist eine Handelsstrategie auf Basis der Kreuzung zweier einfacher gleitender Durchschnitte ([SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage)) mit Martingale-Elementen. Die Strategie verwendet länge und kurze SMAs zur Bestimmung von Ein- und Ausstiegssignalen und erhöht die Positionsgröße bei jedem neuen Trade.
+`SmaStrategyMartingaleStrategy` ist eine Handelsstrategie auf Basis der Kreuzung zweier einfacher gleitender Durchschnitte ([SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage)) mit Martingale-Elementen. Die Strategie verwendet lange und kurze SMAs zur Bestimmung von Ein- und Ausstiegssignalen und erhöht die Positionsgröße bei jedem neuen Trade.
 
 ## Hauptkomponenten
 
@@ -24,9 +24,9 @@ public class SmaStrategyMartingaleStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **Zeitraum des langen gleitenden Durchschnitts** - Periode des langen gleitenden Durchschnitts (Standardwert 80)
-- **Zeitraum des kurzen gleitenden Durchschnitts** - Periode des kurzen gleitenden Durchschnitts (Standardwert 30)
-- **Kerzentyp** - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
+- **LongSmaLength** - Periode des langen gleitenden Durchschnitts (Standardwert 80)
+- **ShortSmaLength** - Periode des kurzen gleitenden Durchschnitts (Standardwert 30)
+- `CandleType` - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
 
 Alle Parameter stehen mit festgelegten Wertebereichen für die Optimierung zur Verfügung.
 

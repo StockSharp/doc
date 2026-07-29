@@ -1,6 +1,6 @@
 # Registo de IConnector
 
-Os objectos [IConnector](xref:StockSharp.BusinessEntities.IConnector), tal como as [estratégias](strategy_logging.md), também implementam a interface [ILogSource](xref:Ecng.Logging.ILogSource). Por isso, a partir do objecto [IConnector](xref:StockSharp.BusinessEntities.IConnector) pode receber mensagens através do [LogManager](xref:Ecng.Logging.LogManager), por todos os meios disponíveis para estratégias.
+Os objetos [IConnector](xref:StockSharp.BusinessEntities.IConnector), tal como as [estratégias](strategy_logging.md), também implementam a interface [ILogSource](xref:Ecng.Logging.ILogSource). Por isso, a partir do objeto [IConnector](xref:StockSharp.BusinessEntities.IConnector) pode receber mensagens através do [LogManager](xref:Ecng.Logging.LogManager), por todos os meios disponíveis para estratégias.
 
 ## Exemplo de registo de IConnector
 

@@ -7,10 +7,10 @@
 La clase [CsvParser](xref:StockSharp.Algo.Import.CsvParser) analiza archivos CSV y convierte filas en mensajes [S#](../api.md).
 
 - **Constructor**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
-- **Separador de columnas** — separador de columnas (por defecto `","`).
-- **Separador de líneas** — separador de líneas (por defecto CRLF).
-- **Filas de encabezado omitidas** — número de filas que se omiten desde el inicio del archivo (por defecto `0`).
-- **Ignorar instrumentos sin identificador** — ignorar filas con instrumentos no reconocidos (por defecto `true`).
+- **ColumnSeparator** — separador de columnas (por defecto `","`).
+- `LineSeparator` — separador de líneas (por defecto CRLF).
+- **SkipFromHeader** — número de filas que se omiten desde el inicio del archivo (por defecto `0`).
+- `IgnoreNonIdSecurities` — ignorar filas con instrumentos no reconocidos (por defecto `true`).
 - **Parse(Stream)** — método de parsing, devuelve `IAsyncEnumerable<Message>`.
 
 ```cs
@@ -35,8 +35,8 @@ La clase [CsvImporter](xref:StockSharp.Algo.Import.CsvImporter) extiende [CsvPar
 
 - **Constructor**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
 - **Import(Stream, Action\<int\> progress, CancellationToken)** — realiza la importación y devuelve `ValueTask<(int count, DateTime? lastTime)>`.
-- **Actualizar instrumentos duplicados** — si se deben actualizar instrumentos duplicados (por defecto `false`).
-- **Instrumento actualizado** — evento generado cuando se actualiza un instrumento.
+- **UpdateDuplicateSecurities** — si se deben actualizar instrumentos duplicados (por defecto `false`).
+- `SecurityUpdated` — evento generado cuando se actualiza un instrumento.
 
 ```cs
 var fields = FieldMappingRegistry.CreateFields(DataType.Ticks);
@@ -67,14 +67,14 @@ La clase [FieldMapping](xref:StockSharp.Algo.Import.FieldMapping) describe el ma
 
 Propiedades principales:
 
-- **Nombre** — nombre del campo en el mensaje.
-- **Nombre para mostrar** — nombre mostrado.
-- **Tipo** — tipo del valor.
-- **Orden** — índice de columna en el archivo (empezando desde 0).
-- **Obligatorio** — si el campo es obligatorio.
-- **Formato** — formato de parsing (por ejemplo, formato de fecha).
-- **Valor predeterminado** — valor predeterminado.
-- **Cero como nulo** — si se deben interpretar valores cero como `null`.
+- **Name** — nombre del campo en el mensaje.
+- `DisplayName` — nombre mostrado.
+- **Type** — tipo del valor.
+- **Order** — índice de columna en el archivo (empezando desde 0).
+- **IsRequired** — si el campo es obligatorio.
+- **Format** — formato de parsing (por ejemplo, formato de fecha).
+- **DefaultValue** — valor predeterminado.
+- **ZeroAsNull** — si se deben interpretar valores cero como `null`.
 
 Para transformaciones de valor personalizadas, use [FieldMappingValue](xref:StockSharp.Algo.Import.FieldMappingValue). Por ejemplo, puede definir un mapeo de valores de texto a enumeraciones:
 
@@ -105,14 +105,14 @@ Tipos de datos admitidos: ticks, velas, libros de órdenes, Level1, registro de 
 
 La clase [ImportSettings](xref:StockSharp.Algo.Import.ImportSettings) combina todos los parámetros de importación en un único objeto de configuración:
 
-- **Tipo de datos** — tipo de datos que se importan.
-- **Nombre de archivo** — ruta del archivo.
-- **Directorio** — directorio para buscar archivos.
-- **Máscara de archivo** — máscara de búsqueda de archivos (por ejemplo, `*.csv`).
-- **Separador de columnas** — separador de columnas.
-- **Filas de encabezado omitidas** — número de filas que se omiten.
-- **Campos seleccionados** — campos seleccionados para importar.
-- **Actualizar instrumentos duplicados** — si se deben actualizar instrumentos duplicados.
+- `DataType` — tipo de datos que se importan.
+- **FileName** — ruta del archivo.
+- **Directory** — directorio para buscar archivos.
+- `FileMask` — máscara de búsqueda de archivos (por ejemplo, `*.csv`).
+- **ColumnSeparator** — separador de columnas.
+- **SkipFromHeader** — número de filas que se omiten.
+- `SelectedFields` — campos seleccionados para importar.
+- **UpdateDuplicateSecurities** — si se deben actualizar instrumentos duplicados.
 
 Métodos auxiliares:
 

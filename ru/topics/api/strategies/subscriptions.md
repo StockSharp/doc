@@ -8,7 +8,7 @@
 
 ## Создание подписки в стратегии
 
-В методе [OnStarted](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) стратегии вы можете создать и запустить подписку на необходимые данные:
+В методе [OnStarted2](xref:StockSharp.Algo.Strategies.Strategy.OnStarted2(System.DateTime)) стратегии вы можете создать и запустить подписку на необходимые данные:
 
 ```cs
 protected override void OnStarted2(DateTime time)

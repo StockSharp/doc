@@ -26,10 +26,10 @@ public class PairsTradingStrategy : Strategy
 
 La estrategia permite personalizar los siguientes parámetros:
 
-- **Período del diferencial** - periodo para calcular la media y desviación estándar del spread (predeterminado 20)
-- **Umbral de entrada** - umbral Z-Score para entrar en posición (predeterminado 2.0)
-- **Umbral de salida** - umbral Z-Score para salir de posición (predeterminado 0.5)
-- **Tipo de vela** - tipo de vela con el que trabajar (predeterminado 5 minutos)
+- **SpreadLength** - periodo para calcular la media y desviación estándar del spread (predeterminado 20)
+- **EntryThreshold** - umbral Z-Score para entrar en posición (predeterminado 2.0)
+- **ExitThreshold** - umbral Z-Score para salir de posición (predeterminado 0.5)
+- `CandleType` - tipo de vela con el que trabajar (predeterminado 5 minutos)
 
 Todos los parámetros están disponibles para optimización con rangos de valores especificados.
 

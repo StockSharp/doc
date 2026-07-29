@@ -1,6 +1,6 @@
 # Cotação de opções
 
-![Captura de tela de Cotação de opções](../../../../../../images/designer_quoting_00.png)
+![Captura de ecrã de Cotação de opções](../../../../../../images/designer_quoting_00.png)
 
 O cubo é usado para cotar opções de acordo com os parâmetros especificados.
 

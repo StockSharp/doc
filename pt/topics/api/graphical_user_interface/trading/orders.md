@@ -2,7 +2,7 @@
 
 [OrderGrid](xref:StockSharp.Xaml.OrderGrid) é uma tabela para apresentar ordens e ordens condicionais. Além disso, o menu de contexto desta tabela contém comandos para operações com ordens: registo, substituição e cancelamento de ordens. A seleção de um item de menu gera os eventos: [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering), [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) ou [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling), respetivamente.
 
-![Captura de tela de Ordens](../../../../images/gui_ordergrid.png)
+![Captura de ecrã de Ordens](../../../../images/gui_ordergrid.png)
 
 > [!TIP]
 > A operação em si (registo, substituição, cancelamento) não é executada. O código correspondente tem de ser escrito manualmente nos manipuladores de eventos.
@@ -37,7 +37,7 @@ private readonly Connector _connector = new Connector();
 
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-	// Outro código durante a conexão...
+	// Outro código durante a ligação...
 	
 	// Assinar o evento de ordem recebida
 	_connector.OrderReceived += (subscription, order) => 
@@ -46,7 +46,7 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 	};
 	
-	// Para conectar o conector
+	// Para ligar o conector
 	_connector.Connect();
 }
 					
@@ -157,7 +157,7 @@ private void OnOrderRegisterFailed(Subscription subscription, OrderFail fail)
 	// Registrar erro
 	_logManager.AddErrorLog($"Erro ao registrar a ordem: {fail.Error}");
 	
-	// Notificar o usuário
+	// Notificar o utilizador
 	this.GuiAsync(() => 
 	{
 		MessageBox.Show(this, 

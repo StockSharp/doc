@@ -2,7 +2,7 @@
 
 ## Графические компоненты S\#
 
-В состав [S\#](../api.md) входит большое количество собственных графических компонент, которые размещены в пространствах имен [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) и [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram). 
+В состав [S\#](../api.md) входит большое количество собственных графических компонентов, которые размещены в пространствах имен [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) и [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram).
 
 [S\#](../api.md) имеет различные контролы для: 
 

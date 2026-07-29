@@ -14,4 +14,4 @@
 
 ## 推奨コンテンツ
 
-[取引](../../../designer/user_interface/components/trades.md)
+[約定](../../../designer/user_interface/components/trades.md)

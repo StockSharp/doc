@@ -91,8 +91,8 @@ public override void Save(SettingsStorage storage)
 {
 	base.Save(storage);
 
-	storage.SetValue(nameof(ShortPeríodo), ShortPeríodo);
-	storage.SetValue(nameof(LongPeríodo), LongPeríodo);
+	storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+	storage.SetValue(nameof(LongPeriod), LongPeriod);
 }
 
 /// <inheritdoc />
@@ -100,14 +100,14 @@ public override void Load(SettingsStorage storage)
 {
 	base.Load(storage);
 
-	ShortPeríodo = storage.GetValue<int>(nameof(ShortPeríodo));
-	LongPeríodo = storage.GetValue<int>(nameof(LongPeríodo));
+	ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+	LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
 }
 ```
 
 ## Indicadores compostos
 
-Alguns indicadores são compostos e usam outros indicadores nos seus cálculos. Por isso, os indicadores podem ser reutilizados entre si, como demonstrado no exemplo de implementação do indicador Chaikin Volatilidade [ChaikinVolatilidade](xref:StockSharp.Algo.Indicators.ChaikinVolatility):
+Alguns indicadores são compostos e usam outros indicadores nos seus cálculos. Por isso, os indicadores podem ser reutilizados entre si, como demonstra o exemplo de implementação do indicador Volatilidade de Chaikin [ChaikinVolatility](xref:StockSharp.Algo.Indicators.ChaikinVolatility):
 
 ```cs
 /// <summary>
@@ -115,12 +115,12 @@ Alguns indicadores são compostos e usam outros indicadores nos seus cálculos. 
 /// </summary>
 [DisplayName("Volatilidade")]
 [Description("Volatilidade de Chaikin.")]
-public class ChaikinVolatilidade : BaseIndicator<IIndicatorValue>
+public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 {
 	/// <summary>
-	/// Cria <see cref="ChaikinVolatilidade"/>.
+	/// Cria <see cref="ChaikinVolatility"/>.
 	/// </summary>
-	public ChaikinVolatilidade()
+	public ChaikinVolatility()
 	{
 		Ema = new ExponentialMovingAverage();
 		Roc = new RateOfChange();
@@ -267,8 +267,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	public PercentageVolumeOscillator()
 		: this(new(), new())
 	{
-		ShortPeríodo = 12;
-		LongPeríodo = 26;
+		ShortPeriod = 12;
+		LongPeriod = 26;
 	}
 
 	/// <summary>
@@ -288,10 +288,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
-		Name = LocalizedStrings.ShortPeríodoKey,
+		Name = LocalizedStrings.ShortPeriodKey,
 		Description = LocalizedStrings.ShortMaDescKey,
 		GroupName = LocalizedStrings.GeneralKey)]
-	public int ShortPeríodo
+	public int ShortPeriod
 	{
 		get => _shortEma.Length;
 		set => _shortEma.Length = value;
@@ -302,10 +302,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
-		Name = LocalizedStrings.LongPeríodoKey,
+		Name = LocalizedStrings.LongPeriodKey,
 		Description = LocalizedStrings.LongMaDescKey,
 		GroupName = LocalizedStrings.GeneralKey)]
-	public int LongPeríodo
+	public int LongPeriod
 	{
 		get => _longEma.Length;
 		set => _longEma.Length = value;
@@ -348,8 +348,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		base.Save(storage);
 
-		storage.SetValue(nameof(ShortPeríodo), ShortPeríodo);
-		storage.SetValue(nameof(LongPeríodo), LongPeríodo);
+		storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+		storage.SetValue(nameof(LongPeriod), LongPeriod);
 	}
 
 	/// <inheritdoc />
@@ -357,12 +357,12 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		base.Load(storage);
 
-		ShortPeríodo = storage.GetValue<int>(nameof(ShortPeríodo));
-		LongPeríodo = storage.GetValue<int>(nameof(LongPeríodo));
+		ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
 	}
 
 	/// <inheritdoc />
-	public override string ToString() => base.ToString() + $" S={ShortPeríodo},L={LongPeríodo}";
+	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
 
 	/// <inheritdoc />
 	protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)

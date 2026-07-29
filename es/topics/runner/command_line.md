@@ -23,7 +23,7 @@ Parámetros disponibles:
 - -f - (opcional) formato de almacenamiento (Binary o Csv).
 - --sec - (opcional) [Identificador de instrumento](../api/instruments/instrument_identifier.md).
 - -r - (opcional) formato del informe de resultado de prueba (json, xml, csv).
-- --tm - (opcional) timeout de la estrategia.
+- --tm - (opcional) tiempo de espera de la estrategia.
 - --memory - (opcional) tamaño máximo de memoria (en megabytes).
 - --cpu - (opcional) máscara del procesador.
 - -l - (opcional) nivel de registro (Info, Debug, Error, Warning, Verbose).

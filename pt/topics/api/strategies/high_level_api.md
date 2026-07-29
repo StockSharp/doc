@@ -431,7 +431,7 @@ public class SmaStrategy : Strategy
 			else
 				SellLimit(price, volume);
 
-			// Salvar a posição atual do indicador
+			// Guardar a posição atual do indicador
 			_isShortLessThenLong = isShortLessThenLong;
 		}
 	}

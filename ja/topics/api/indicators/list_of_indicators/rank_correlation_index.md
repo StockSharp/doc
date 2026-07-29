@@ -2,7 +2,7 @@
 
 **順位相関指数 (RCI)** は、Spearman の順位相関係数に基づくオシレーターです。移動ウィンドウ内で価格の順位と時間の順位を比較し、直近の動きが完全な上昇または下降の連続にどれだけ近いかを示します。
 
-この指標にアクセスするには、[RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorrelationIndex) クラスを使用します。
+このインジケーターにアクセスするには、[RankCorrelationIndex](xref:StockSharp.Algo.Indicators.RankCorrelationIndex) クラスを使用します。
 
 ## 計算
 
@@ -12,7 +12,7 @@
 4. Spearman の公式を適用します。
    `RCI = 1 − (6 × Σ d²) / (Length × (Length² − 1))`。
 
-100 を掛けると、指標は −100 から +100 の範囲になります。
+100 を掛けると、インジケーターは −100 から +100 の範囲になります。
 
 ## パラメーター
 
@@ -25,9 +25,9 @@
 - **RCI が 0 付近** — ランダムまたは横ばいの市場。
 - 価格と RCI の間のダイバージェンスは、反転の可能性を警告します。
 
-この指標は、特にモメンタム系ツールと組み合わせた場合、短期トレンド評価と転換点の発見に役立ちます。
+このインジケーターは、特にモメンタム系ツールと組み合わせた場合、短期トレンド評価と転換点の発見に役立ちます。
 
-![順位相関指数 のチャート](../../../../images/indicator_rank_correlation_index.png)
+![順位相関指数のチャート](../../../../images/indicator_rank_correlation_index.png)
 
 ## 関連項目
 

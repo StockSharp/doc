@@ -91,8 +91,8 @@ public override void Save(SettingsStorage storage)
 {
 	base.Save(storage);
 
-	storage.SetValue(nameof(Short期間), Short期間);
-	storage.SetValue(nameof(Long期間), Long期間);
+	storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+	storage.SetValue(nameof(LongPeriod), LongPeriod);
 }
 
 /// <inheritdoc />
@@ -100,8 +100,8 @@ public override void Load(SettingsStorage storage)
 {
 	base.Load(storage);
 
-	Short期間 = storage.GetValue<int>(nameof(Short期間));
-	Long期間 = storage.GetValue<int>(nameof(Long期間));
+	ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+	LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
 }
 ```
 
@@ -115,12 +115,12 @@ public override void Load(SettingsStorage storage)
 /// </summary>
 [DisplayName("ボラティリティ")]
 [Description("チャイキン・ボラティリティ。")]
-public class Chaikinボラティリティ : BaseIndicator<IIndicatorValue>
+public class ChaikinVolatility : BaseIndicator<IIndicatorValue>
 {
 	/// <summary>
-	/// <see cref="Chaikinボラティリティ"/> を作成します。
+	/// <see cref="ChaikinVolatility"/> を作成します。
 	/// </summary>
-	public Chaikinボラティリティ()
+	public ChaikinVolatility()
 	{
 		Ema = new ExponentialMovingAverage();
 		Roc = new RateOfChange();
@@ -267,8 +267,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	public PercentageVolumeOscillator()
 		: this(new(), new())
 	{
-		Short期間 = 12;
-		Long期間 = 26;
+		ShortPeriod = 12;
+		LongPeriod = 26;
 	}
 
 	/// <summary>
@@ -288,10 +288,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
-		Name = LocalizedStrings.Short期間Key,
+		Name = LocalizedStrings.ShortPeriodKey,
 		Description = LocalizedStrings.ShortMaDescKey,
 		GroupName = LocalizedStrings.GeneralKey)]
-	public int Short期間
+	public int ShortPeriod
 	{
 		get => _shortEma.Length;
 		set => _shortEma.Length = value;
@@ -302,10 +302,10 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
-		Name = LocalizedStrings.Long期間Key,
+		Name = LocalizedStrings.LongPeriodKey,
 		Description = LocalizedStrings.LongMaDescKey,
 		GroupName = LocalizedStrings.GeneralKey)]
-	public int Long期間
+	public int LongPeriod
 	{
 		get => _longEma.Length;
 		set => _longEma.Length = value;
@@ -348,8 +348,8 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		base.Save(storage);
 
-		storage.SetValue(nameof(Short期間), Short期間);
-		storage.SetValue(nameof(Long期間), Long期間);
+		storage.SetValue(nameof(ShortPeriod), ShortPeriod);
+		storage.SetValue(nameof(LongPeriod), LongPeriod);
 	}
 
 	/// <inheritdoc />
@@ -357,12 +357,12 @@ public class PercentageVolumeOscillator : BaseComplexIndicator<PercentageVolumeO
 	{
 		base.Load(storage);
 
-		Short期間 = storage.GetValue<int>(nameof(Short期間));
-		Long期間 = storage.GetValue<int>(nameof(Long期間));
+		ShortPeriod = storage.GetValue<int>(nameof(ShortPeriod));
+		LongPeriod = storage.GetValue<int>(nameof(LongPeriod));
 	}
 
 	/// <inheritdoc />
-	public override string ToString() => base.ToString() + $" S={Short期間},L={Long期間}";
+	public override string ToString() => base.ToString() + $" S={ShortPeriod},L={LongPeriod}";
 
 	/// <inheritdoc />
 	protected override PercentageVolumeOscillatorValue CreateValue(DateTimeOffset time)

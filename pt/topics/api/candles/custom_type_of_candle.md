@@ -1,10 +1,10 @@
 # Tipo personalizado de vela
 
-[S#](../../api.md) permite estender as capacidades de construção de velas, oferecendo a possibilidade de trabalhar com tipos de vela personalizados. Isso é útil nos casos em que você precisa trabalhar com velas que atualmente não são suportadas pelo [S#](../../api.md). Abaixo está o processo de criação do seu próprio tipo de vela usando o exemplo de velas Delta (velas formadas com base na diferença entre volumes de compra e venda).
+[S#](../../api.md) permite estender as capacidades de construção de velas, oferecendo a possibilidade de trabalhar com tipos de vela personalizados. Isto é útil nos casos em que é necessário trabalhar com velas que atualmente não são suportadas pelo [S#](../../api.md). Abaixo está o processo de criação do seu próprio tipo de vela usando o exemplo de velas Delta (velas formadas com base na diferença entre volumes de compra e venda).
 
 ## Implementando velas Delta
 
-1. Primeiro, você precisa criar seu próprio tipo de mensagem de vela. O tipo deve herdar da classe [CandleMessage](xref:StockSharp.Messages.CandleMessage):
+1. Primeiro, é necessário criar o seu próprio tipo de mensagem de vela. O tipo deve herdar da classe [CandleMessage](xref:StockSharp.Messages.CandleMessage):
 
    ```cs
    /// <summary>
@@ -62,7 +62,7 @@
    }
    ```
 
-2. Em seguida, você precisa criar seu próprio tipo de dado na classe [DataType](xref:StockSharp.Messages.DataType):
+2. Em seguida, é necessário criar o seu próprio tipo de dados na classe [DataType](xref:StockSharp.Messages.DataType):
 
    ```cs
    public static class DeltaCandleHelper
@@ -97,7 +97,7 @@
            Extensions.RegisterCandleType<decimal>(
                typeof(DeltaCandleMessage),      // Tipo de mensagem de vela
                DeltaCandleType,                // Tipo de mensagem
-               "delta",                        // Nome do arquivo para armazenamento
+               "delta",                        // Nome do ficheiro para armazenamento
                str => str.To<decimal>(),       // Conversor de string para parâmetro
                arg => arg.ToString(),          // Conversor de parâmetro para string
                a => a > 0,                     // Validador de parâmetros
@@ -107,7 +107,7 @@
    }
    ```
 
-3. Em seguida, você precisa criar um construtor de velas para o novo tipo. Para isso, crie uma implementação de [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1):
+3. Em seguida, é necessário criar um construtor de velas para o novo tipo. Para isso, crie uma implementação de [CandleBuilder\<TCandleMessage\>](xref:StockSharp.Algo.Candles.Compression.CandleBuilder`1):
 
    ```cs
    /// <summary>
@@ -161,7 +161,7 @@
    }
    ```
 
-4. Em seguida, você precisa registrar o construtor de velas em [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider):
+4. Em seguida, é necessário registar o construtor de velas em [CandleBuilderProvider](xref:StockSharp.Algo.Candles.Compression.CandleBuilderProvider):
 
    ```cs
    private Connector _connector;
@@ -365,8 +365,8 @@ public class DeltaCandleStrategy : Strategy
 
 3. **Parâmetro da vela** — implemente a propriedade `ArgType` que retorna o tipo do argumento da vela. Isso é usado para a exibição correta dos parâmetros na interface gráfica.
 
-4. **Sistema de Arquivos** — o parâmetro `fileName` no método `RegisterCandleType` é usado para salvar as velas no sistema de arquivos quando você usa o armazenamento de dados do StockSharp.
+4. **Sistema de Ficheiros** — o parâmetro `fileName` no método `RegisterCandleType` é usado para guardar as velas no sistema de ficheiros quando utiliza o armazenamento de dados do StockSharp.
 
 5. **Validação de Parâmetros** — o método de validação de parâmetros é usado no StockSharp para verificar a correção dos valores antes de criar uma assinatura.
 
-Assim, criamos um tipo de vela totalmente personalizado que se integra corretamente a todo o ecossistema StockSharp (incluindo a interface do usuário e o armazenamento de dados) e pode ser usado para construir estratégias de negociação baseadas na análise de delta de volume.
+Assim, criamos um tipo de vela totalmente personalizado que se integra corretamente a todo o ecossistema StockSharp (incluindo a interface do utilizador e o armazenamento de dados) e pode ser usado para construir estratégias de negociação baseadas na análise de delta de volume.

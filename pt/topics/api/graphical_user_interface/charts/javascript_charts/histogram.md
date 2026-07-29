@@ -1,8 +1,8 @@
 # Histograma
 
-Um histograma desenha uma barra vertical por ponto a partir de um valor base. Seu uso mais comum é o volume, onde cada barra é colorida conforme a vela fechou em alta ou em baixa, mas qualquer quantidade por barra funciona.
+Um histograma desenha uma barra vertical por ponto a partir de um valor base. O seu uso mais comum é o volume, onde cada barra é colorida conforme a vela fechou em alta ou em baixa, mas qualquer quantidade por barra funciona.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 ```chart-demo histogram
 ```
@@ -25,7 +25,7 @@ series.setData(candles.map(c => ({
 chart.timeScale().fitContent();
 ```
 
-Para exibir o volume embaixo de um gráfico de preços em vez de em seu próprio espaço, coloque o histograma em uma escala de preços sobreposta (overlay) e fixe-o na parte inferior:
+Para apresentar o volume por baixo de um gráfico de preços, em vez de o colocar no respetivo espaço, adicione o histograma a uma escala de preços sobreposta (*overlay*) e fixe-o na parte inferior:
 
 ```js
 const volume = chart.addSeries(SSChart.HistogramSeries, { priceScaleId: '', priceFormat: { type: 'volume' } });

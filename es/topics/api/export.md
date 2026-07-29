@@ -6,8 +6,8 @@
 
 La clase abstracta base [BaseExporter](xref:StockSharp.Algo.Export.BaseExporter) define el contrato común para todos los exportadores:
 
-- **Tipo de datos** — tipo de datos que se exportan (ticks, velas, libro de órdenes, etc.).
-- **Codificación** — codificación (UTF-8 por defecto).
+- `DataType` — tipo de datos que se exportan (ticks, velas, libro de órdenes, etc.).
+- `Encoding` — codificación (UTF-8 por defecto).
 - **Export\<T\>(IAsyncEnumerable\<T\>, CancellationToken)** — método principal de exportación. Devuelve `Task<(int count, DateTime? lastTime)>` — el número de registros exportados y la hora del último registro.
 
 El método enruta automáticamente los datos a manejadores específicos por tipo para: [QuoteChangeMessage](xref:StockSharp.Messages.QuoteChangeMessage), [Level1ChangeMessage](xref:StockSharp.Messages.Level1ChangeMessage), [ExecutionMessage](xref:StockSharp.Messages.ExecutionMessage) (ticks, registro de órdenes, transacciones), [CandleMessage](xref:StockSharp.Messages.CandleMessage), [NewsMessage](xref:StockSharp.Messages.NewsMessage), [SecurityMessage](xref:StockSharp.Messages.SecurityMessage), [PositionChangeMessage](xref:StockSharp.Messages.PositionChangeMessage), [IndicatorValue](xref:StockSharp.Messages.IndicatorValue) y [BoardStateMessage](xref:StockSharp.Messages.BoardStateMessage).
@@ -35,7 +35,7 @@ var (count, lastTime) = await exporter.Export(tickMessages, token);
 [JsonExporter](xref:StockSharp.Algo.Export.JsonExporter) guarda datos en formato JSON.
 
 - **Constructor**: `(DataType dataType, Stream stream)`
-- **Sangría** — formato con sangría (por defecto `true`).
+- `Indent` — formato con sangría (por defecto `true`).
 
 ```cs
 await using var stream = File.Create("candles.json");
@@ -49,7 +49,7 @@ await exporter.Export(candleMessages, token);
 [XmlExporter](xref:StockSharp.Algo.Export.XmlExporter) guarda datos en formato XML.
 
 - **Constructor**: `(DataType dataType, Stream stream)`
-- **Sangría** — formato con sangría (por defecto `true`).
+- `Indent` — formato con sangría (por defecto `true`).
 
 ```cs
 await using var stream = File.Create("candles.xml");
@@ -77,7 +77,7 @@ await exporter.Export(tickMessages, token);
 [DatabaseExporter](xref:StockSharp.Algo.Export.DatabaseExporter) guarda datos en una base de datos mediante LinqToDB.
 
 - **Constructor**: `(IDatabaseProvider dbProvider, DataType dataType, DatabaseConnectionPair connection, decimal? priceStep, decimal? volumeStep)`
-- **Tamaño de lote** — tamaño del lote para registros (por defecto 50).
+- `BatchSize` — tamaño del lote para registros (por defecto 50).
 - **CheckUnique** — comprobar unicidad de registros (por defecto `false`).
 - **DropExisting** — eliminar datos existentes antes de exportar (por defecto `false`).
 
@@ -96,7 +96,7 @@ await exporter.Export(tickMessages, token);
 [StockSharpExporter](xref:StockSharp.Algo.Export.StockSharpExporter) guarda datos en el formato interno de almacenamiento StockSharp.
 
 - **Constructor**: `(DataType dataType, IStorageRegistry storageRegistry, IMarketDataDrive drive, StorageFormats format)`
-- **Tamaño de lote** — tamaño del lote para registros (por defecto 50).
+- `BatchSize` — tamaño del lote para registros (por defecto 50).
 
 ```cs
 var exporter = new StockSharpExporter(
@@ -114,7 +114,7 @@ La clase [TemplateTxtRegistry](xref:StockSharp.Algo.Export.TemplateTxtRegistry) 
 - **TemplateTxtLevel1** — plantilla para datos Level1.
 - **TemplateTxtOrderLog** — plantilla para registro de órdenes.
 - **TemplateTxtTransaction** — plantilla para transacciones.
-- **Plantilla de instrumentos** — plantilla para instrumentos.
+- **TemplateTxtSecurity** — plantilla para instrumentos.
 - **TemplateTxtNews** — plantilla para noticias.
 
 Las plantillas pueden personalizarse o reemplazarse según sea necesario. El registro implementa [IPersistable](xref:Ecng.Serialization.IPersistable) y puede guardarse/cargarse desde configuraciones.

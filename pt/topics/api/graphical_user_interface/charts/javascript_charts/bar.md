@@ -1,8 +1,8 @@
 # Barras OHLC
 
-As barras OHLC mostram os mesmos quatro preços que os candlesticks, mas sem o corpo preenchido: uma linha vertical abrange o intervalo máxima–mínima, um traço à esquerda marca a abertura e um traço à direita marca o fechamento. Elas mantêm o gráfico leve e ainda assim exibem a abertura e o fechamento de cada barra.
+As barras OHLC mostram os mesmos quatro preços que os candlesticks, mas sem o corpo preenchido: uma linha vertical abrange o intervalo entre o máximo e o mínimo, um traço à esquerda marca a abertura e um traço à direita marca o fecho. Mantêm o gráfico leve e, ainda assim, apresentam a abertura e o fecho de cada barra.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 ```chart-demo bar
 ```
@@ -24,7 +24,7 @@ series.setData(candles.map(c => ({
 chart.timeScale().fitContent();
 ```
 
-A barra é colorida como de alta quando o fechamento é igual ou superior à abertura e como de baixa caso contrário.
+A barra é colorida como ascendente quando o fecho é igual ou superior à abertura e como descendente no caso contrário.
 
 ## Veja também
 

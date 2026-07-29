@@ -25,7 +25,7 @@ Schwarzer Marubozu gilt als starkes bärisches Signal:
 Schwarzer Marubozu liefert ein stärkeres Signal als eine reguläre schwarze Kerze:
 
 - Möglichkeit zum Einstieg in eine Short-Position nach Bildung eines schwarzen Marubozu, insbesondere wenn er an einem wichtigen Widerstandsniveau erscheint.
-- Verwendung des Schlusskurses des Schwarzer Marubozu als Widerstandsniveau beim Setzen von Stop-Losses.
+- Verwendung des Schlusskurses des schwarzen Marubozu als Widerstandsniveau beim Setzen von Stop-Losses.
 - Kombination mit anderen technischen Indikatoren zur Bestätigung des Signals.
 - Achten Sie auf das Handelsvolumen - hohes Volumen erhöht die Bedeutung des Signals.
 
@@ -34,4 +34,3 @@ Schwarzer Marubozu liefert ein stärkeres Signal als eine reguläre schwarze Ker
 [Weißer Marubozu](white_marubozu.md)
 
 [Schwarze Kerze](black_candle.md)
-

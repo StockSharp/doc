@@ -9,7 +9,7 @@ Los gráficos Renko se construyen a partir de *ladrillos* de precio de tamaño f
 
 ## Configuración
 
-Añade una `RenkoSeries` con un `boxSize` y aliméntala con velas `{ time, open, high, low, close }` en bruto — la serie construye los ladrillos por sí misma:
+Añada una `RenkoSeries` con un `boxSize` y aliméntela con velas `{ time, open, high, low, close }` en bruto — la serie construye los ladrillos por sí misma:
 
 ```js
 const series = chart.addSeries(SSChart.RenkoSeries, {
@@ -25,7 +25,7 @@ series.setData(candles.map(c => ({
 chart.timeScale().fitContent();
 ```
 
-Elige `boxSize` a partir del rango de precios del instrumento: demasiado pequeño produce ruido, demasiado grande oculta los movimientos. Una regla común es una fracción del rango medio de las barras.
+Elija `boxSize` a partir del rango de precios del instrumento: demasiado pequeño produce ruido, demasiado grande oculta los movimientos. Una regla común es una fracción del rango medio de las barras.
 
 ## Véase también
 

@@ -2,7 +2,7 @@
 
 O separador **Tempo real** permite-lhe gerir estratégias iniciadas em negociação.
 
-![Captura de tela de Tempo real](../../../images/shell_realtime_00.png)
+![Captura de ecrã de Tempo real](../../../images/shell_realtime_00.png)
 
 Ao clicar no botão **Adicionar** ![Designer botão Adicionar 00](../../../images/designer_creation_tool_00.png), pode adicionar uma estratégia para iniciar a negociação. Cada estratégia adicionada é aberta num separador separado e adicionada à lista de estratégias no separador **Estratégias**.
 

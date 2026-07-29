@@ -29,7 +29,7 @@ Task Run(
 - **storage** — 市场数据存储注册表。
 - **drive** — 数据源。
 - **format** — 数据存储格式。
-- **数据类型** — 要分析的数据类型。
+- `dataType` — 要分析的数据类型。
 - **cancellationToken** — 取消令牌。
 
 ## IAnalyticsPanel — 结果面板
@@ -53,10 +53,10 @@ void Append(string title, IEnumerable<X> xValues, IEnumerable<Y> yValues,
 
 可用绘图样式（[DrawStyles](xref:StockSharp.Algo.Analytics.DrawStyles)）：
 
-- **折线** — 折线图。
-- **虚线** — 虚线图。
-- **直方图** — 直方图。
-- **气泡图** — 气泡图。
+- `Line` — 折线图。
+- `DashedLine` — 虚线图。
+- `Histogram` — 直方图。
+- `Bubble` — 气泡图。
 
 ## IAnalyticsGrid — 表格
 

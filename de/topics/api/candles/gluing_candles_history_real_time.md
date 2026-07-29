@@ -98,7 +98,7 @@ private void Connector_CandleReceived(Subscription subscription, ICandleMessage 
 }
 ```
 
-## Erstellung eines Kerze-Abonnements
+## Erstellung eines Kerzenabonnements
 
 ```cs
 // Methode, die bei Auswahl eines Instruments aufgerufen wird
@@ -290,7 +290,7 @@ public partial class MainWindow
 
 4. **Ereignisbehandlung**:
    - Abonnement des Ereignisses CandleReceived zur Verarbeitung empfangener Kerzen
-   - Kündigung des vorherigen Abonnements, wenn das ausgewählte Instrument geändert wird
+   - Aufheben des vorherigen Abonnements, wenn das ausgewählte Instrument geändert wird
 
 ## Erweiterte Funktionen
 
@@ -329,7 +329,7 @@ private void SetHistoryPeriod(int days)
 }
 ```
 
-### Zusätzliche Kerze-Verarbeitung
+### Zusätzliche Kerzenverarbeitung
 
 ```cs
 // Erweiterte Kerzenverarbeitung mit Informationsausgabe

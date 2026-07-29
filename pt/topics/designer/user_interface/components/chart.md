@@ -16,7 +16,7 @@ Para um gráfico Box, as velas podem ser adicionalmente agrupadas; a ordem de ag
 
 ![Designer elemento gráfico 05](../../../../images/designer_schedule_05.png)
 
-Existe uma barra de ferramentas acima do gráfico, onde pode seleccionar deslocamento automático, zoom automático, modos de legenda e outras definições gerais do gráfico. Também pode seleccionar os elementos a desenhar no gráfico: linhas, níveis, ponteiros, rectângulo, texto.
+Existe uma barra de ferramentas acima do gráfico, onde pode selecionar deslocamento automático, zoom automático, modos de legenda e outras definições gerais do gráfico. Também pode selecionar os elementos a desenhar no gráfico: linhas, níveis, ponteiros, rectângulo, texto.
 
 ![Designer elemento gráfico 03](../../../../images/designer_schedule_03.png)
 

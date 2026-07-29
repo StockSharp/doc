@@ -159,7 +159,7 @@ var indexFromDepthSubscription = new Subscription(
 _connector.Subscribe(indexFromDepthSubscription);
 ```
 
-### Trabajando con el índice de volatilidad
+### Trabajo con el índice de volatilidad
 
 ```cs
 // Crear índice de volatilidad basado en una expresión

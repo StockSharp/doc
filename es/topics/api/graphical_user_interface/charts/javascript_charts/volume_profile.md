@@ -1,10 +1,10 @@
 # Perfil de volumen
 
-Un perfil de volumen agrega el volumen negociado por precio y lo dibuja como un histograma horizontal, marcando el point of control (el precio más negociado) y el área de valor. Responde a "dónde se hizo el negocio", con independencia de cuándo.
+Un perfil de volumen agrega el volumen negociado por precio y lo dibuja como un histograma horizontal, marcando el point of control (el precio más negociado) y el área de valor. Responde a la pregunta «dónde se negoció», con independencia de cuándo.
 
 ## Demostración en vivo
 
-El perfil se recalcula sobre las barras que estén a la vista: desplázate y haz zoom para verlo cambiar.
+El perfil se recalcula sobre las barras que estén a la vista: desplácese y haga zoom para verlo cambiar.
 
 ```chart-demo volume-profile
 ```
@@ -13,7 +13,7 @@ El perfil se recalcula sobre las barras que estén a la vista: desplázate y haz
 
 ## Configuración
 
-Añade una `ExactVolumeProfileSeries` (normalmente sobre una serie de velas para dar contexto) y aliméntala con las mismas barras exactas de order flow que usa el footprint:
+Añada una `ExactVolumeProfileSeries` (normalmente sobre una serie de velas para dar contexto) y aliméntela con las mismas barras exactas de order flow que usa el footprint:
 
 ```js
 const candles = chart.addSeries(SSChart.CandlestickSeries, {

@@ -1,6 +1,6 @@
 # Compatibilidade da Estratégia com Plataformas StockSharp
 
-Ao desenvolver estratégias de negociação no StockSharp, é importante considerar a sua compatibilidade com várias plataformas: [Designer](../../designer.md), [Shell](../../shell.md), [Runner](../../runner.md) e [testes na cloud](../../designer/backtesting/cloud_backtesting.md). Ao seguir as recomendações abaixo, criará uma estratégia que funciona correctamente em todos os ambientes.
+Ao desenvolver estratégias de negociação no StockSharp, é importante considerar a sua compatibilidade com várias plataformas: [Designer](../../designer.md), [Shell](../../shell.md), [Runner](../../runner.md) e [testes na cloud](../../designer/backtesting/cloud_backtesting.md). Ao seguir as recomendações abaixo, criará uma estratégia que funciona corretamente em todos os ambientes.
 
 ## Parâmetros do Construtor da Estratégia
 
@@ -28,7 +28,7 @@ public class SmaStrategy : Strategy
 }
 ```
 
-As plataformas StockSharp criam instâncias de estratégias usando um construtor sem parâmetros. Se a sua estratégia exigir um construtor com parâmetros, não será inicializada correctamente.
+As plataformas StockSharp criam instâncias de estratégias usando um construtor sem parâmetros. Se a sua estratégia exigir um construtor com parâmetros, não será inicializada corretamente.
 
 ## Usar StrategyParam em Vez de Propriedades Normais
 
@@ -66,7 +66,7 @@ Os parâmetros criados através de [StrategyParam\<T\>](xref:StockSharp.Algo.Str
 - Ser apresentados nas interfaces de utilizador da plataforma
 - Ser guardados e carregados sem sobrepor os métodos `Save` e `Load`
 - Ser usados na optimização
-- Ser serializados correctamente quando enviados para testes na cloud
+- Ser serializados corretamente quando enviados para testes na cloud
 
 ## Trabalhar com a Interface de Utilizador
 
@@ -105,7 +105,7 @@ private void InitChart()
 }
 ```
 
-O método [Strategy.GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) devolve uma interface [IChart](xref:StockSharp.Charting.IChart) se existir um gráfico disponível no ambiente de execução actual. Se a estratégia estiver a correr no [Runner](../../runner.md) de consola ou em testes na cloud, onde não existe interface gráfica, o método devolverá `null`.
+O método [Strategy.GetChart()](xref:StockSharp.Algo.Strategies.Strategy.GetChart) devolve uma interface [IChart](xref:StockSharp.Charting.IChart) se existir um gráfico disponível no ambiente de execução atual. Se a estratégia estiver a correr no [Runner](../../runner.md) de consola ou em testes na cloud, onde não existe interface gráfica, o método devolverá `null`.
 
 A interface [IChart](xref:StockSharp.Charting.IChart) fornece métodos para trabalhar com gráficos:
 - [AddArea](xref:StockSharp.Charting.IChart.AddArea(StockSharp.Charting.IChartArea)) - para adicionar uma área ao gráfico
@@ -136,7 +136,7 @@ private void DrawCandlesAndIndicators(ICandleMessage candle, IIndicatorValue lon
 
 ### Evitar Criar Threads Adicionais
 
-No StockSharp, **não precisa de criar threads adicionais** para processamento de dados. Todos os eventos (dados de mercado, transacções) chegam numa única thread:
+No StockSharp, **não precisa de criar threads adicionais** para processamento de dados. Todos os eventos (dados de mercado, transações) chegam numa única thread:
 
 ```cs
 // Correto: usando manipuladores de evento padrão
@@ -161,9 +161,9 @@ private void ProcessCandle(ICandleMessage candle)
 }
 ```
 
-### Evitar Objectos de Sincronização
+### Evitar Objetos de Sincronização
 
-Como todos os eventos são processados numa única thread, **não há necessidade de usar objectos de sincronização**:
+Como todos os eventos são processados numa única thread, **não há necessidade de usar objetos de sincronização**:
 
 ```cs
 // Correto: processamento normal sem sincronização
@@ -194,10 +194,10 @@ private void ProcessCandle(ICandleMessage candle)
 Em vez de aceder directamente a recursos externos (ficheiros, bases de dados, rede), use as capacidades fornecidas pelas plataformas StockSharp:
 
 ```cs
-// Correto: usando mecanismos integrados para salvar dados
+// Correto: usando mecanismos integrados para guardar dados
 protected override void OnStopped()
 {
-	// Os dados são salvos automaticamente pelos parâmetros da estratégia
+	// Os dados são guardados automaticamente pelos parâmetros da estratégia
 	base.OnStopped();
 }
 
@@ -232,9 +232,9 @@ Os métodos [Strategy.Save](xref:StockSharp.Algo.Strategies.Strategy.Save(Ecng.S
 ```cs
 public override void Save(SettingsStorage settings)
 {
-	base.Save(settings); // Primeiro salve os parâmetros da estratégia
+	base.Save(settings); // Primeiro, guarde os parâmetros da estratégia
 	
-	// Então salvar dados personalizados
+	// Em seguida, guardar dados personalizados
 	settings.SetValue("CustomState", _customState);
 	settings.SetValue("LastSignalTime", _lastSignalTime);
 }
@@ -271,7 +271,7 @@ protected override void OnStarted2(DateTime time)
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 	
-	var subscription = new Subscription(Série, Security);
+	var subscription = new Subscription(Series, Security);
 
 	// Correto: usando regras para processamento de dados
 	Connector
@@ -289,7 +289,7 @@ As regras têm várias vantagens importantes sobre processadores de eventos norm
 
 2. **API de alto nível** - as regras fornecem uma interface mais compreensível e conveniente do que processadores de eventos padrão. Por exemplo, `WhenCandlesFinished` é muito mais claro do que subscrever o evento `CandleReceived` com uma verificação posterior do estado da vela.
 
-3. **Combinação de condições** - as regras podem ser combinadas usando operadores como `And`, `Or` e outros, criando condições de activação complexas:
+3. **Combinação de condições** - as regras podem ser combinadas usando operadores como `And`, `Or` e outros, criando condições de ativação complexas:
 
 ```cs
 // Exemplo de combinação de regras
@@ -307,11 +307,11 @@ tickSub
 Subscribe(tickSub);
 ```
 
-4. **Gestão do ciclo de vida** - as regras podem ser tornadas de utilização única (`Once()`), ter condições de cancelamento definidas (`Until()`), adicionar acções diferidas, etc.
+4. **Gestão do ciclo de vida** - as regras podem ser tornadas de utilização única (`Once()`), ter condições de cancelamento definidas (`Until()`), adicionar ações diferidas, etc.
 
 ## Exemplo de Estratégia Compatível
 
-Abaixo está um exemplo de uma estratégia que segue todas as recomendações e funcionará correctamente em todas as plataformas StockSharp:
+Abaixo está um exemplo de uma estratégia que segue todas as recomendações e funcionará corretamente em todas as plataformas StockSharp:
 
 ```cs
 public class SmaStrategy : Strategy
@@ -320,7 +320,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Série
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -355,7 +355,7 @@ public class SmaStrategy : Strategy
 							.SetDisplay("Período da SMA curta", string.Empty, "Configurações básicas")
 							.SetCanOptimize(true);
 							
-		_series = Param(nameof(Série), TimeSpan.FromMinutes(15).TimeFrame())
+		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
 					.SetDisplay("Série", string.Empty, "Configurações básicas");
 	}
 
@@ -374,7 +374,7 @@ public class SmaStrategy : Strategy
 		if (_chart != null)
 			InitChart();
 		
-		var subscription = new Subscription(Série, Security);
+		var subscription = new Subscription(Series, Security);
 
 		Connector
 			.WhenCandlesFinished(subscription)

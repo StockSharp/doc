@@ -6,7 +6,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [GopalakrishnanRan
 
 ## Beschreibung
 
-Der Gopalakrishnan-Range-Index (GAPO) ist ein Volatilitätsindikator, der eine logarithmische Skala verwendet, um die gesamte Preisspanne über einen bestimmten Zeitraum zu messen. Es wurde von Tushar Gopalakrishnan entwickelt und in der Zeitschrift „Technical Analysis of Stocks & Commodities“ vorgestellt.
+Der Gopalakrishnan-Range-Index (GAPO) ist ein Volatilitätsindikator, der eine logarithmische Skala verwendet, um die gesamte Preisspanne über einen bestimmten Zeitraum zu messen. Er wurde von Tushar Gopalakrishnan entwickelt und in der Zeitschrift „Technical Analysis of Stocks & Commodities“ vorgestellt.
 
 GAPO bewertet extreme Marktbewegungen, indem es das logarithmische Verhältnis zwischen den Höchst- und Tiefstpreisen über einen bestimmten Zeitraum misst. Durch diesen Ansatz kann der Indikator die erhöhte Volatilität genauer widerspiegeln, insbesondere in Zeiten starker Preisbewegungen.
 

@@ -2,7 +2,7 @@
 
 O **Designer** suporta otimização tanto pelo [método de força bruta](brute_force.md) como com base em algoritmos genéticos. A otimização genética acelera significativamente o processo de procura dos parâmetros ótimos.
 
-Para ativar a otimização **Genético**, é necessário:
+Para ativar a otimização **Genética**, é necessário:
 
 - mudar o modo:
 

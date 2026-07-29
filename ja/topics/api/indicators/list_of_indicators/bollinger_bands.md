@@ -5,7 +5,7 @@
 このインジケーターを使用するには、[BollingerBands](xref:StockSharp.Algo.Indicators.BollingerBands) クラスを使用する必要があります。
 ##### 計算
 
-ボリンジャーバンド の計算には、対応する設定を持つ次のパラメーターが使用されます。
+ボリンジャーバンドの計算には、対応する設定を持つ次のパラメーターが使用されます。
 - 標準偏差の型 - 通常は double。
 - 移動平均の期間 - トレーダーの裁量によります。
 
@@ -18,7 +18,7 @@
 D - 設定で指定されたチャネル幅、標準偏差 (StdDev) - 標準偏差。次の式で計算されます: SQRT(Sum(Close, n))^2, n)/n)、ここで
 Sum - n 期間の合計、n - 計算期間、SQRT - 平方根、Close - 終値。
 
-![ボリンジャーバンド のチャート](../../../../images/indicatorbollingerbands.png)
+![ボリンジャーバンドのチャート](../../../../images/indicatorbollingerbands.png)
 
 ## 関連項目
 

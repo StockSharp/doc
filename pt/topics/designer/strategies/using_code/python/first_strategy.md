@@ -25,7 +25,7 @@ Principais bibliotecas que têm de ser ligadas:
 - StockSharp.Algo - contém componentes algorítmicos básicos do S#, incluindo a classe base Strategy
 
 > [!NOTE]
-> É importante ligar as bibliotecas no início do ficheiro, antes de usar quaisquer tipos dessas bibliotecas. Depois de ligar as bibliotecas, pode importar tipos específicos através de import Python normal.
+> É importante ligar as bibliotecas no início do ficheiro, antes de usar quaisquer tipos dessas bibliotecas. Depois de ligar as bibliotecas, pode importar tipos específicos através de uma instrução `import` normal do Python.
 
 2. Os parâmetros da estratégia são criados através de uma abordagem especial:
 

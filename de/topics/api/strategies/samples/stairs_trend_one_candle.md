@@ -17,7 +17,7 @@ public class OneCandleTrendStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **Kerzentyp** - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
+- `CandleType` - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
 
 ## Initialisierung der Strategie
 

@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[WeightedMovingAverage](xref:StockSharp.Algo.Indicators.WeightedMovingAverage) クラスを使用する必要があります。
 
-![加重移動平均 のチャート](../../../../images/indicatorweightedmovingaverage.png)
+![加重移動平均のチャート](../../../../images/indicatorweightedmovingaverage.png)
 
 ## 推奨コンテンツ
 

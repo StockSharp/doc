@@ -2,26 +2,26 @@
 
 [StockSharp (S#)](https://stocksharp.com/zh/store/) 提供面向全球市场（美国、欧洲、亚洲、俄罗斯，涵盖股票、期货、期权、比特币、外汇等）的**免费**交易程序。用户可选择手动交易或通过自动化交易进行操作，包括算法交易机器人、传统交易或高频交易（HFT）。
 
-**支持 90 多家券商、交易所和数据源：** [连接器](topics/api/connectors.md).
+**支持 90 多家券商、交易所和数据源：** [连接器](topics/api/connectors.md)。
 
-S# 与任何支持我们连接方式的经纪商均兼容。
+S# 可与可用连接器支持的任何经纪商、交易所或数据源配合使用。
 
 > [!NOTE]
 > **所有**程序的安装均通过 [安装程序](topics/installer.md) 实用程序。
 
-### 设计师
+### Designer
 
 ![关于 StockSharp 截图 1](images/stocksharptitle_0.png)
 
 [Designer](topics/designer.md) 是一款通用的算法策略应用程序，可简化策略的创建：
 
 - 通过鼠标点击创建交易策略的可视化设计器。
-- 集成 [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) 编辑。
+- 集成 [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) 编辑器。
 - 轻松创建自定义指标。
 - 内置调试器。
 - 支持连接多个电子交易板和经纪商。
 - 兼容全球所有交易平台。
-- 可与团队共享数据模型。
+- 可与团队共享策略图。
 
 [更多...](topics/designer.md)
 
@@ -31,7 +31,7 @@ S# 与任何支持我们连接方式的经纪商均兼容。
 
 [Hydra](topics/hydra.md) 是一款用于自动下载历史及实时市场数据的应用程序：
 
-- 支持多种数据源 [连接器](topics/api/connectors.md).
+- 支持多种数据源 [连接器](topics/api/connectors.md)。
 - 压缩率极高（每笔交易 2 字节，每本订单簿 7 字节）。
 - 支持处理任何数据类型（K线、逐笔成交数据、订单簿、订单日志、期权、新闻等）。
 - 对存储数据的 API 访问。
@@ -58,13 +58,13 @@ Shell 提供了一个现成的图形化框架，可根据您的需求快速定�
 
 - 包含完整的源代码。
 - 支持所有 StockSharp 平台连接：FIX/FAST、加密货币交易所（目前超过 30 家）等。
-- 支持 Designer 架构。
+- 支持 Designer 策略图。
 - 灵活的用户界面。
-- 策略测试工具（统计、权益、报告）。
+- 策略测试工具（统计、资金曲线、报告）。
 - 保存和加载策略设置。
 - 策略的并发执行。
 - 详细的策略表现分析（订单、交易、持仓、收益、日志等）。
-- 策略的定时发布。
+- 支持定时启动策略。
 
 ### API
 
@@ -74,7 +74,7 @@ Shell 提供了一个现成的图形化框架，可根据您的需求快速定�
 
 - [Designer](topics/designer.md) - 通用算法策略设计工具。
 - [Hydra](topics/hydra.md) - 市场数据下载程序。
-- [API](topics/api.md) - 用于开发交易机器人的库 [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
+- [API](topics/api.md) - 用于开发交易机器人的库 [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language))。
 - [Terminal](topics/terminal.md) - 交易终端。
 - [Shell](topics/shell.md) - 带源代码的现成策略图形化框架。
 - [MATLAB](topics/matlab.md) - MATLAB 与交易系统的集成。通过 MATLAB 脚本进行交易。

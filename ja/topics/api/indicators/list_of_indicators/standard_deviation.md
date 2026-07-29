@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[StandardDeviation](xref:StockSharp.Algo.Indicators.StandardDeviation) クラスを使用する必要があります。
 
-![標準偏差 のチャート](../../../../images/indicatorstandarddeviation.png)
+![標準偏差のチャート](../../../../images/indicatorstandarddeviation.png)
 
 ## 推奨コンテンツ
 

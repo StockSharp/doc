@@ -193,7 +193,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType 序列
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -228,7 +228,7 @@ public class SmaStrategy : Strategy
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 		
-		_series = Param(nameof(序列), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
 					.SetDisplay("序列", string.Empty, "基本设置");
 	}
 
@@ -237,7 +237,7 @@ public class SmaStrategy : Strategy
 ```
 
 在此示例中，我们创建了一个基于两条移动平均线交叉的策略，并具有三个可配置参数：
-- `序列` - 数据类型和时间范围
+- `Series` - 数据类型和时间范围
 - `LongSmaLength` - 长期移动平均线的周期
 - `ShortSmaLength` - 短期移动平均线的周期
 

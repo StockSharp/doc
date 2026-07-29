@@ -23,4 +23,4 @@ Ao definir parâmetros:
 - O armazenamento de onde obter os dados.
 - O intervalo de tempo de trabalho do script, caso utilize um.
 
-Ao clicar no botão **Iniciar** ![Captura de tela de Executar um Script](../../../images/hydra_analytics_compile.png), será aberto um novo separador com os resultados da execução do script.
+Ao clicar no botão **Iniciar** ![Captura de ecrã de Executar um Script](../../../images/hydra_analytics_compile.png), será aberto um novo separador com os resultados da execução do script.

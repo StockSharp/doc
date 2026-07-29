@@ -271,7 +271,7 @@ protected override void OnStarted2(DateTime time)
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 	
-	var subscription = new Subscription(シリーズ, Security);
+	var subscription = new Subscription(Series, Security);
 
 	// 正しい: データ処理にルールを使用
 	Connector
@@ -319,7 +319,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType シリーズ
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -354,7 +354,7 @@ public class SmaStrategy : Strategy
 							.SetDisplay("短期SMAの期間", string.Empty, "基本設定")
 							.SetCanOptimize(true);
 							
-		_series = Param(nameof(シリーズ), TimeSpan.FromMinutes(15).TimeFrame())
+		_series = Param(nameof(Series), TimeSpan.FromMinutes(15).TimeFrame())
 					.SetDisplay("シリーズ", string.Empty, "基本設定");
 	}
 
@@ -373,7 +373,7 @@ public class SmaStrategy : Strategy
 		if (_chart != null)
 			InitChart();
 		
-		var subscription = new Subscription(シリーズ, Security);
+		var subscription = new Subscription(Series, Security);
 
 		Connector
 			.WhenCandlesFinished(subscription)
@@ -440,4 +440,3 @@ public class SmaStrategy : Strategy
 - [ストラテジーパラメーター](parameters.md)
 - [イベントモデル](event_model.md)
 - [ストラテジーのログ記録](logging.md)
-

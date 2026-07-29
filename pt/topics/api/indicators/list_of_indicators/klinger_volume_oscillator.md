@@ -6,9 +6,9 @@ Para utilizar o indicador, é necessário usar a classe [KlingerVolumeOscillator
 
 ## Descrição
 
-O Oscilador de volume de Klinger (KVO) foi criado por Stephen Klinger para medir a divergência entre volume e preço. O indicador baseia-se no conceito de que o movimento do preço é confirmado pelo volume. O KVO procura determinar não só a direcção da tendência, mas também a sua força e potenciais pontos de inversão.
+O Oscilador de volume de Klinger (KVO) foi criado por Stephen Klinger para medir a divergência entre volume e preço. O indicador baseia-se no conceito de que o movimento do preço é confirmado pelo volume. O KVO procura determinar não só a direção da tendência, mas também a sua força e potenciais pontos de inversão.
 
-O KVO combina informação de preço com volume usando um indicador força do volume que considera tanto a direcção como a magnitude do movimento do preço, bem como o volume de negociação. Em seguida, aplica médias móveis exponenciais (EMA) com dois períodos diferentes a este fluxo monetário e calcula a diferença entre elas.
+O KVO combina informação de preço com volume usando um indicador força do volume que considera tanto a direção como a magnitude do movimento do preço, bem como o volume de negociação. Em seguida, aplica médias móveis exponenciais (EMA) com dois períodos diferentes a este fluxo monetário e calcula a diferença entre elas.
 
 O indicador é um oscilador que flutua acima e abaixo da linha zero. Valores positivos do KVO indicam que os compradores controlam o mercado, enquanto valores negativos indicam que os vendedores têm vantagem.
 
@@ -78,8 +78,8 @@ O Oscilador de volume de Klinger pode ser interpretado da seguinte forma:
    - Valores negativos do KVO confirmam uma tendência descendente
 
 5. **Força da Tendência**:
-   - O aumento do valor do KVO (tanto positivo como negativo) indica fortalecimento da tendência actual
-   - A diminuição do valor do KVO indica enfraquecimento da tendência actual
+   - O aumento do valor do KVO (tanto positivo como negativo) indica fortalecimento da tendência atual
+   - A diminuição do valor do KVO indica enfraquecimento da tendência atual
 
 6. **Potenciais Inversões**:
    - Valores extremos do KVO podem indicar condições de sobrecompra ou sobrevenda do mercado e potencial inversão
@@ -87,7 +87,7 @@ O Oscilador de volume de Klinger pode ser interpretado da seguinte forma:
 
 7. **Volume e Preço**:
    - O KVO permite avaliar a consistência entre o movimento do preço e do volume
-   - Volume forte na direcção da tendência conduz a valores mais extremos do KVO
+   - Volume forte na direção da tendência conduz a valores mais extremos do KVO
 
 ![Gráfico do indicador KVO](../../../../images/indicator_klinger_volume_oscillator.png)
 

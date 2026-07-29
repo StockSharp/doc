@@ -1,10 +1,10 @@
 # Editor interativo
 
-O embed somente leitura (`renderScheme`) é um invólucro fino sobre o editor completo. A classe `StockSharpDiagram` — junto com `StockSharpPalette` e `StockSharpCatalog`, todas exportadas de `@stocksharp/diagram` — é um editor visual completo: arraste elementos da paleta, conecte portas, mova e exclua nós, desfaça/refaça e valide links tipados. A edição fica ativada por padrão.
+O embed só de leitura (`renderScheme`) é uma camada leve sobre o editor completo. A classe `StockSharpDiagram` — juntamente com `StockSharpPalette` e `StockSharpCatalog`, todas exportadas por `@stocksharp/diagram` — constitui um editor visual completo: arraste elementos da paleta, ligue portas, mova e elimine nós, anule ou refaça operações e valide ligações tipadas. A edição está ativada por predefinição.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
-Arraste um elemento da paleta para o canvas, arraste entre portas para conectá-las, clique com o botão direito para abrir o menu e use Desfazer/Refazer. Conexões incompatíveis são rejeitadas (observe a linha de status). Pressione **Error** para exibir um erro de tempo de execução animado em um nó (veja [Eventos e API](events.md)).
+Arraste um elemento da paleta para o `canvas`, arraste entre portas para as ligar, clique com o botão direito para abrir o menu e utilize **Anular/Refazer**. As ligações incompatíveis são rejeitadas (consulte a linha de estado). Prima **Error** para apresentar um erro animado de tempo de execução num nó (consulte [Eventos e API](events.md)).
 
 ```diagram-editor sma
 ```
@@ -33,7 +33,7 @@ catalog.addNodeType(new Node({
   outPorts: [{ id: 'Output', name: 'Output', type: 'Indicator' }],
 }));
 
-// 2) Diagrama editável + caixa de ferramentas da paleta (cada um renderiza em seu próprio elemento).
+// 2) Diagrama editável + caixa de ferramentas da paleta (cada um é apresentado no respetivo elemento).
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
@@ -53,9 +53,9 @@ diagram.on('linkValidation', ({ allowed, reason }) => { if (!allowed) console.lo
 diagram.zoomToFit();
 ```
 
-Em vez de montar o catálogo manualmente, você pode alimentá-lo com um JSON de paleta (o mesmo `designer-palette.json` que o embed somente leitura busca), convertendo `socketTypes` em `PortType`s e `elements` em `Node`s.
+Em vez de montar o catálogo manualmente, pode alimentá-lo com um JSON de paleta (o mesmo `designer-palette.json` que o embed só de leitura obtém), convertendo `socketTypes` em `PortType`s e `elements` em `Node`s.
 
-Para transformar o embed somente leitura em um editor sem reconstruí-lo, use o handle que ele retorna — `.diagram` é a instância completa:
+Para transformar o embed só de leitura num editor sem o reconstruir, utilize o objeto devolvido — `.diagram` é a instância completa:
 
 ```js
 import { renderScheme } from '@stocksharp/diagram/embed';

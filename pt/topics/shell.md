@@ -4,9 +4,9 @@ O **Shell** é uma framework gráfica pronta a usar para robôs de negociação.
 
 Não precisa de construir uma GUI (interface gráfica de utilizador) do zero. O Shell inclui a funcionalidade básica necessária para testes, negociação, ligação a fontes de dados e apresentação de gráficos, carteiras, posições, ordens e negócios.
 
-![Captura de tela de Shell](../images/shell_title_00.png)
+![Captura de ecrã de Shell](../images/shell_title_00.png)
 
-As principais funcionalidades da shell do robô de negociação:
+As principais funcionalidades do **Shell** para robôs de negociação:
 
 1. Código-fonte completo, adequado para robôs de negociação personalizados e soluções personalizadas.
 2. **Suporte para mais de 70 ligações** a bolsas e brokers através de [Conectores](api/connectors.md).

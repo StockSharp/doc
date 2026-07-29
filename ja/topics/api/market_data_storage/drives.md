@@ -6,7 +6,7 @@ StockSharp のストレージドライブは、市場データの物理的な配
 
 [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) インターフェイスは、次の主要な機能を提供します。
 
-- **パス** -- データストレージへのパス。
+- **Path** -- データストレージへのパス。
 - **GetAvailableSecuritiesAsync()** -- ストレージ内で利用可能なすべての銘柄リストを取得します。
 - **GetAvailableDataTypesAsync()** -- 特定の銘柄で利用可能なデータ型のリストを取得します。
 - **GetStorageDrive()** -- 特定の銘柄およびデータ型のストレージドライブを取得します。
@@ -50,11 +50,11 @@ await foreach (var secId in localDrive.GetAvailableSecuritiesAsync())
 
 ### 接続設定
 
-- **アドレス** -- リモートサーバーアドレス。既定値は `127.0.0.1:5002` です。
-- **認証情報** -- 認証資格情報（メールアドレスとパスワード）。
+- `Address` -- リモートサーバーアドレス。既定値は `127.0.0.1:5002` です。
+- `Credentials` -- 認証資格情報（メールアドレスとパスワード）。
 - **TargetCompId** -- 対象コンポーネント識別子。既定値は `"StockSharpHydraMD"` です。
 - **SecurityBatchSize** -- 銘柄を読み込む際のバッチサイズ。既定値は 1000 です。
-- **タイムアウト** -- 接続タイムアウト。既定値は 2 分です。
+- **Timeout** -- 接続タイムアウト。既定値は 2 分です。
 
 ### 使用例
 

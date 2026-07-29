@@ -69,7 +69,7 @@ Der FVE-Indikator kann wie folgt interpretiert werden:
    - Hohe negative Werte (unter -3) können auf überverkaufte Marktbedingungen hinweisen
 
 3. **Abweichungen**:
-   - Eine zinsbullische Divergenz (der Preis bildet ein neues Tief, während FVE ein höheres Tief bildet) könnte auf eine mögliche Aufwärtsumkehr hinweisen
+   - Eine bullische Divergenz (der Preis bildet ein neues Tief, während FVE ein höheres Tief bildet) könnte auf eine mögliche Aufwärtsumkehr hinweisen
    - Eine rückläufige Divergenz (der Preis bildet ein neues Hoch, während FVE ein niedrigeres Hoch bildet) könnte auf eine mögliche Abwärtsumkehr hinweisen
 
 4. **Trendbestätigung**:

@@ -1,18 +1,18 @@
-# Livro de ofertas agrupado
+# Livro de ordens agrupado
 
-![Designer Livro de ofertas agrupado 01](../../../../../../images/designer_grouped_orderbook_01.png)
+![Designer Livro de ordens agrupado 01](../../../../../../images/designer_grouped_orderbook_01.png)
 
-![Designer Livro de ofertas agrupado 00](../../../../../../images/designer_grouped_orderbook_00.png)
+![Designer Livro de ordens agrupado 00](../../../../../../images/designer_grouped_orderbook_00.png)
 
 O cubo é usado para obter um livro de ordens agrupado.
 
 ### Conectores de entrada
 
-- **Livro de ofertas** - o livro de ordens a agrupar.
+- **Livro de ordens** - o livro de ordens a agrupar.
 
 ### Conectores de saída
 
-- **Livro de ofertas** - o livro de ordens agrupado.
+- **Livro de ordens** - o livro de ordens agrupado.
 
 ### Parâmetros
 
@@ -20,4 +20,4 @@ O cubo é usado para obter um livro de ordens agrupado.
 
 ## Conteúdo recomendado
 
-[Livro de ofertas esparso](sparse_order_book.md)
+[Livro de ordens esparso](sparse_order_book.md)

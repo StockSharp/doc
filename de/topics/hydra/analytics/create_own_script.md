@@ -77,7 +77,7 @@ Die Methode [Run](xref:StockSharp.Algo.Analytics.IAnalyticsScript.Run(Ecng.Loggi
 - `dataType`: [DataType](xref:StockSharp.Messages.DataType), der den angeforderten Marktdatentyp und dessen Parameter beschreibt (zum Beispiel den Kerzenzeitrahmen).
 - `cancellationToken`: [CancellationToken](xref:System.Threading.CancellationToken) zur Überwachung von Abbruchanforderungen.
 
-#### Ruckgabe:
+#### Rückgabe:
 
 - [Task](xref:System.Threading.Tasks.Task), der die asynchrone Operation des Analyseskripts darstellt.
 

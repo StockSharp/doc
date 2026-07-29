@@ -4,7 +4,7 @@
 
 As figuras seguintes mostram a aparência do componente, bem como as funções dos botões da barra de ferramentas.
 
-![Captura de tela de Painel de gráfico de velas 1](../../../../images/gui_chartpanel.png)
+![Captura de ecrã de Painel de gráfico de velas 1](../../../../images/gui_chartpanel.png)
 
 1 - Linha horizontal;
 
@@ -20,7 +20,7 @@ As figuras seguintes mostram a aparência do componente, bem como as funções d
 
 **Funcionalidade da barra de ferramentas**
 
-![Captura de tela de Painel de gráfico de velas 2](../../../../images/gui_chartpaneltools.png)
+![Captura de ecrã de Painel de gráfico de velas 2](../../../../images/gui_chartpaneltools.png)
 
 1 - Adicionar painel;
 

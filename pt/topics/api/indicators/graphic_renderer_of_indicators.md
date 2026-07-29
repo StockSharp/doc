@@ -34,7 +34,7 @@ Vamos definir os elementos de gráfico [ChartLineElement](xref:StockSharp.Xaml.C
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 {
 	/// <summary>
-	/// <see cref="Fractals.Up"/> dots color.
+	/// Cor dos pontos de <see cref="Fractals.Up"/>.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -43,7 +43,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 	public ChartLineElement Up { get; }
 
 	/// <summary>
-	/// <see cref="Fractals.Down"/> dots color.
+	/// Cor dos pontos de <see cref="Fractals.Down"/>.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -100,7 +100,7 @@ Código completo de [FractalsPainter](xref:StockSharp.Xaml.Charting.IndicatorPai
 public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 {
 	/// <summary>
-	/// <see cref="Fractals.Up"/> dots color.
+	/// Cor dos pontos de <see cref="Fractals.Up"/>.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),
@@ -108,7 +108,7 @@ public class FractalsPainter : BaseChartIndicatorPainter<Fractals>
 		Description = LocalizedStrings.Str2036Key)]
 	public ChartLineElement Up { get; }
 	/// <summary>
-	/// <see cref="Fractals.Down"/> dots color.
+	/// Cor dos pontos de <see cref="Fractals.Down"/>.
 	/// </summary>
 	[Display(
 		ResourceType = typeof(LocalizedStrings),

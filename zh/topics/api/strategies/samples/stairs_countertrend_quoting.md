@@ -22,8 +22,8 @@ public class StairsCountertrendStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **K线类型** - 要使用的K线类型（默认1分钟）
-- **长度** - 用于识别趋势的连续同向K线数量（默认值 5）
+- `CandleDataType` - 要使用的K线类型（默认1分钟）
+- `Length` - 用于识别趋势的连续同向K线数量（默认值 5）
 
 Length 参数可在 2 到 10 的范围内进行优化，步长为 1。
 

@@ -15,7 +15,7 @@ var remoteDrive = new RemoteMarketDataDrive(RemoteMarketDataDrive.DefaultAddress
 	Credentials = { Email = "hydra_user", Password = "hydra_user".To<SecureString>() }
 };
 
-// Este código cria uma instância de RemoteMarketDataDrive para conectar ao armazenamento remoto.
+// Este código cria uma instância de RemoteMarketDataDrive para ligar ao armazenamento remoto.
 // Ele usa o endereço padrão e FixMessageAdapter para comunicação.
 // As credenciais são definidas para autenticação.
 ```
@@ -34,7 +34,7 @@ remoteDrive.LookupSecurities(Extensions.LookupAllCriteriaMessage, registry.Secur
 var securities = securityStorage.LookupAll();
 
 // Este código carrega informações sobre todos os instrumentos disponíveis do armazenamento remoto.
-// Os instrumentos carregados são salvos no armazenamento local e exibidos no console.
+// Os instrumentos carregados são guardados no armazenamento local e exibidos no console.
 ```
 
 ## Carregar Dados de Mercado
@@ -60,7 +60,7 @@ foreach (var dataType in remoteDrive.GetAvailableDataTypes(secId, format))
 Os dados carregados podem ser guardados localmente para utilização posterior.
 
 ```cs
-// Salvar dados localmente
+// Guardar dados localmente
 foreach (var dateTime in dates)
 {
 	using (var stream = remoteStorage.LoadStream(dateTime))
@@ -74,7 +74,7 @@ foreach (var dateTime in dates)
 // ... (código de saída de dados)
 }
 
-// Este código carrega dados de cada data do armazenamento remoto e os salva no armazenamento local.
+// Este código carrega dados de cada data do armazenamento remoto e os guarda no armazenamento local.
 ```
 
 ## Usar Dados para Testes

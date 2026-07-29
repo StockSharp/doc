@@ -1,14 +1,14 @@
 # Gráficos em JavaScript
 
-Os [Gráficos de negociação JS da StockSharp](https://github.com/StockSharp/Charts) são uma biblioteca de gráficos para navegador, autônoma e sem dependências. Ela é publicada no npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e fornece o motor de canvas `sschart` usado pelo terminal web da StockSharp. Uma versão funcional está disponível na [demonstração online](https://stocksharp.github.io/Charts/demo/).
+Os [Gráficos de negociação JS da StockSharp](https://github.com/StockSharp/Charts) constituem uma biblioteca de gráficos para navegador, autónoma e sem dependências. É publicada no npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e fornece o motor de `canvas` `sschart` utilizado pelo terminal web da StockSharp. Está disponível uma versão funcional na [demonstração online](https://stocksharp.github.io/Charts/demo/).
 
 ![Gráfico de negociação JavaScript do StockSharp](../../../../images/javascript_charts.jpg)
 
-Ao contrário dos componentes Windows de `StockSharp.Xaml.Charting`, esta biblioteca é executada em um navegador e desenha diretamente em um `canvas` HTML. O motor é exposto através do objeto global `SSChart` (de `dist/sschart.js`) e também pode ser importado como módulos ECMAScript a partir do pacote npm (`import { createChart, CandlestickSeries } from '@stocksharp/chart'`).
+Ao contrário dos componentes Windows de `StockSharp.Xaml.Charting`, esta biblioteca é executada num navegador e desenha diretamente num `canvas` HTML. O motor é exposto através do objeto global `SSChart` (de `dist/sschart.js`) e também pode ser importado como módulos ECMAScript a partir do pacote npm (`import { createChart, CandlestickSeries } from '@stocksharp/chart'`).
 
 ## Demonstração online
 
-O gráfico abaixo é o motor real em execução nesta página — velas com um histograma de volume e uma média móvel. Arraste para deslocar, use a roda do mouse para dar zoom e pressione o botão de expandir (canto superior direito) para abri-lo em tela cheia.
+O gráfico abaixo utiliza o motor real em execução nesta página — velas com um histograma de volume e uma média móvel. Arraste para deslocar, utilize a roda do rato para ampliar ou reduzir e prima o botão de expansão (no canto superior direito) para o abrir em ecrã inteiro.
 
 ```chart-demo overview
 ```
@@ -80,11 +80,11 @@ Uma chamada a `update` com a marca de tempo atual substitui o último ponto. Uma
 
 ## Modos de gráfico
 
-Cada tipo de série tem seu próprio tópico com uma demonstração online e o JavaScript que a configura:
+Cada tipo de série tem o seu próprio tópico com uma demonstração online e o JavaScript que a configura:
 
 - [Candlestick](javascript_charts/candlestick.md) — velas OHLC clássicas.
-- [Barras OHLC](javascript_charts/bar.md) — ticks de abertura/fechamento em uma barra vertical de intervalo.
-- [Linha](javascript_charts/line.md) — uma única polilinha através dos fechamentos.
+- [Barras OHLC](javascript_charts/bar.md) — marcas de abertura/fecho numa barra vertical de intervalo.
+- [Linha](javascript_charts/line.md) — uma única polilinha através dos fechos.
 - [Área](javascript_charts/area.md) — uma linha com preenchimento em gradiente.
 - [Histograma](javascript_charts/histogram.md) — barras verticais, tipicamente de volume.
 - [Banda](javascript_charts/band.md) — um canal superior/inferior (envelopes, Bollinger).
@@ -95,9 +95,9 @@ Cada tipo de série tem seu próprio tópico com uma demonstração online e o J
 - [Perfil de volume](javascript_charts/volume_profile.md) — volume por preço com POC e área de valor.
 - [TPO (Perfil de mercado)](javascript_charts/tpo.md) — tempo gasto em cada preço por sessão.
 
-Além dos tipos de série, o gráfico também tem um [motor de indicadores](javascript_charts/indicators.md) com cerca de 160 estudos e [preenchimento de histórico sob demanda](javascript_charts/backfill.md) que carrega barras mais antigas conforme você desloca.
+Além dos tipos de série, o gráfico também tem um [motor de indicadores](javascript_charts/indicators.md) com cerca de 160 estudos e [preenchimento de histórico a pedido](javascript_charts/backfill.md), que carrega barras mais antigas à medida que o utilizador desloca o gráfico.
 
-Para o editor visual de estratégias renderizado pela mesma stack web, consulte [Diagrama em JavaScript](../javascript_diagram.md).
+Para conhecer o editor visual de estratégias apresentado pela mesma plataforma web, consulte [Diagrama em JavaScript](../javascript_diagram.md).
 
 ## Conjunto completo de módulos do terminal
 

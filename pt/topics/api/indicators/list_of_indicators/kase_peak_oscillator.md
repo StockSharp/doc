@@ -32,7 +32,7 @@ O cálculo do oscilador Kase Peak envolve vários passos:
    momentum longo = EMA(Price, LongPeriod) - EMA(Price, LongPeriod)[previous]
    ```
 
-3. Calcular a volatilidade actual:
+3. Calcular a volatilidade atual:
    ```
    Volatilidade = ATR(ShortPeriod)
    ```

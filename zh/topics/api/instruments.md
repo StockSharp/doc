@@ -47,8 +47,8 @@ StockSharp 提供了用于处理交易品种信息的强大工具：
 
 StockSharp 中的每个交易品种都有一个唯一标识符 [SecurityId](xref:StockSharp.Messages.SecurityId)，用于在系统中明确识别该交易品种。该标识符包括：
 
-- **交易品种代码** - 该交易品种的交易代码
-- **交易板代码** - 交易场所代码
+- `SecurityCode` - 该交易品种的交易代码
+- `BoardCode` - 交易场所代码
 - **彭博/路透/ISIN** 及其他代码 - 替代识别方法
 
 ## 特殊功能

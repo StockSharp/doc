@@ -13,7 +13,7 @@ O padrão Três corvos negros consiste em três velas consecutivas que abriram d
 - O tamanho das velas e as sombras do padrão podem indicar o risco de reversão para pullback.
 - O padrão oposto a Três corvos negros é Três soldados brancos, que indica uma reversão de tendência descendente.
 
-![Captura de tela de Padrão Três corvos negros e Três soldados brancos 1](../../../images/indicatorpattern3bc.png)
+![Captura de ecrã de Padrão Três corvos negros e Três soldados brancos 1](../../../images/indicatorpattern3bc.png)
 
 ### Três soldados brancos
 
@@ -25,4 +25,4 @@ Três soldados brancos é um padrão de velas altista utilizado para prever a re
 - O tamanho das velas e o comprimento das sombras são utilizados para avaliar se existe risco de pullback.
 - O padrão oposto a Três soldados brancos é Três corvos negros, que indica uma reversão de tendência ascendente.
 
-![Captura de tela de Padrão Três corvos negros e Três soldados brancos 2](../../../images/indicatorpattern3ws.png)
+![Captura de ecrã de Padrão Três corvos negros e Três soldados brancos 2](../../../images/indicatorpattern3ws.png)

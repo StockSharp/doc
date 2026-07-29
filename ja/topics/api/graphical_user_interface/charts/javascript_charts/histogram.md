@@ -9,7 +9,7 @@
 
 ## セットアップ
 
-`HistogramSeries` を追加し、`{ time, value, color? }` のポイントを渡します。ポイントごとの `color` はシリーズの色を上書きします:
+`HistogramSeries` を追加し、`{ time, value, color? }` のポイントを渡します。ポイントごとの `color` はシリーズの色を上書きします。
 
 ```js
 const series = chart.addSeries(SSChart.HistogramSeries, {
@@ -25,7 +25,7 @@ series.setData(candles.map(c => ({
 chart.timeScale().fitContent();
 ```
 
-出来高を単独で表示するのではなく価格チャートの下に表示するには、ヒストグラムをオーバーレイの価格スケールに配置し、下部に固定します:
+出来高を単独で表示するのではなく価格チャートの下に表示するには、ヒストグラムをオーバーレイの価格スケールに配置し、下部に固定します。
 
 ```js
 const volume = chart.addSeries(SSChart.HistogramSeries, { priceScaleId: '', priceFormat: { type: 'volume' } });

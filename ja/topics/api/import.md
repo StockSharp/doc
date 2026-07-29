@@ -7,10 +7,10 @@
 [CsvParser](xref:StockSharp.Algo.Import.CsvParser) クラスは CSV ファイルを解析し、行を [S#](../api.md) メッセージに変換します。
 
 - **コンストラクター**: `(DataType dataType, IEnumerable<FieldMapping> fields)`
-- **列区切り** — 列区切り文字（既定値 `","`）。
-- **行区切り** — 行区切り文字（既定値 CRLF）。
-- **ヘッダーのスキップ行数** — ファイル先頭からスキップする行数（既定値 `0`）。
-- **識別子のない銘柄を無視** — 認識できない銘柄を含む行を無視するかどうか（既定値 `true`）。
+- **ColumnSeparator** — 列区切り文字（既定値 `","`）。
+- `LineSeparator` — 行区切り文字（既定値 CRLF）。
+- **SkipFromHeader** — ファイル先頭からスキップする行数（既定値 `0`）。
+- `IgnoreNonIdSecurities` — 認識できない銘柄を含む行を無視するかどうか（既定値 `true`）。
 - **Parse(Stream)** — 解析メソッド。`IAsyncEnumerable<Message>` を返します。
 
 ```cs
@@ -35,8 +35,8 @@ await foreach (var msg in parser.Parse(stream))
 
 - **コンストラクター**: `(DataType dataType, IEnumerable<FieldMapping> fields, ISecurityStorage securityStorage, IExchangeInfoProvider exchangeInfoProvider, Func<SecurityId, IMarketDataStorage> getStorage)`
 - **Import(Stream, Action\<int\> progress, CancellationToken)** — インポートを実行し、`ValueTask<(int count, DateTime? lastTime)>` を返します。
-- **重複銘柄を更新** — 重複する銘柄を更新するかどうか（既定値 `false`）。
-- **銘柄更新** — 銘柄が更新されたときに発生するイベント。
+- **UpdateDuplicateSecurities** — 重複する銘柄を更新するかどうか（既定値 `false`）。
+- `SecurityUpdated` — 銘柄が更新されたときに発生するイベント。
 
 ```cs
 var fields = FieldMappingRegistry.CreateFields(DataType.Ticks);
@@ -67,14 +67,14 @@ Console.WriteLine($"{count} 件のレコードをインポートしました。�
 
 主なプロパティ:
 
-- **名前** — メッセージ内のフィールド名。
-- **表示名** — 表示名。
-- **型** — 値の型。
-- **順序** — ファイル内の列インデックス（0 から開始）。
-- **必須** — フィールドが必須かどうか。
-- **形式** — 解析形式（例: 日付形式）。
-- **既定値** — 既定値。
-- **ゼロを null として扱う** — ゼロ値を `null` として解釈するかどうか。
+- **Name** — メッセージ内のフィールド名。
+- `DisplayName` — 表示名。
+- **Type** — 値の型。
+- **Order** — ファイル内の列インデックス（0 から開始）。
+- **IsRequired** — フィールドが必須かどうか。
+- **Format** — 解析形式（例: 日付形式）。
+- **DefaultValue** — 既定値。
+- **ZeroAsNull** — ゼロ値を `null` として解釈するかどうか。
 
 カスタムの値変換には [FieldMappingValue](xref:StockSharp.Algo.Import.FieldMappingValue) を使用します。たとえば、テキスト値から列挙値へのマッピングを定義できます。
 
@@ -105,14 +105,14 @@ sideField.Values.Add(new FieldMappingValue
 
 [ImportSettings](xref:StockSharp.Algo.Import.ImportSettings) クラスは、すべてのインポートパラメーターを 1 つの構成オブジェクトにまとめます。
 
-- **データ型** — インポートするデータの型。
-- **ファイル名** — ファイルパス。
-- **ディレクトリ** — ファイル検索用ディレクトリ。
-- **ファイルマスク** — ファイル検索マスク（例: `*.csv`）。
-- **列区切り** — 列区切り文字。
-- **ヘッダーのスキップ行数** — スキップする行数。
-- **選択したフィールド** — インポート対象として選択されたフィールド。
-- **重複銘柄を更新** — 重複する銘柄を更新するかどうか。
+- `DataType` — インポートするデータの型。
+- **FileName** — ファイルパス。
+- **Directory** — ファイル検索用ディレクトリ。
+- `FileMask` — ファイル検索マスク（例: `*.csv`）。
+- **ColumnSeparator** — 列区切り文字。
+- **SkipFromHeader** — スキップする行数。
+- `SelectedFields` — インポート対象として選択されたフィールド。
+- **UpdateDuplicateSecurities** — 重複する銘柄を更新するかどうか。
 
 ヘルパーメソッド:
 

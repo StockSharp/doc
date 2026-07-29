@@ -22,8 +22,8 @@ public class StairsCountertrendStrategy : Strategy
 
 A estratégia permite personalizar os seguintes parâmetros:
 
-- **Tipo de vela** - tipo de vela com que trabalhar (predefinição 1 minuto)
-- **Período** - número de velas consecutivas numa direção para identificar uma tendência (predefinição 5)
+- **CandleDataType** - tipo de vela com que trabalhar (predefinição 1 minuto)
+- `Length` - número de velas consecutivas numa direção para identificar uma tendência (predefinição 5)
 
 O parâmetro Length está disponível para otimização no intervalo de 2 a 10 com passo de 1.
 

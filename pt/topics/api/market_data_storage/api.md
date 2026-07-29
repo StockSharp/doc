@@ -8,7 +8,7 @@ Todos os códigos estão disponíveis no [repositório StockSharp](https://githu
 
 ## Criar um Registo de Armazenamento
 
-Para trabalhar com armazenamento de dados de mercado no StockSharp, é utilizada a classe [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry). Ao criar um objecto desta classe, pode definir o caminho para o armazenamento predefinido através da propriedade [StorageRegistry.DefaultDrive](xref:StockSharp.Algo.Storages.StorageRegistry.DefaultDrive) ou especificar uma pasta concreta para trabalhar com dados históricos utilizando [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive).
+Para trabalhar com armazenamento de dados de mercado no StockSharp, é utilizada a classe [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry). Ao criar um objeto desta classe, pode definir o caminho para o armazenamento predefinido através da propriedade [StorageRegistry.DefaultDrive](xref:StockSharp.Algo.Storages.StorageRegistry.DefaultDrive) ou especificar uma pasta concreta para trabalhar com dados históricos utilizando [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive).
 
 ```cs
 // Criar StorageRegistry com caminho predefinido
@@ -77,7 +77,7 @@ Para guardar novos dados no armazenamento existente, utilize o método `SaveAsyn
 // Guardar novas velas
 var newCandles = new List<CandleMessage>
 {
-	// Novos objectos CandleMessage são criados aqui
+	// Novos objetos CandleMessage são criados aqui
 };
 await candleStorage.SaveAsync(newCandles);
 ```
@@ -86,7 +86,7 @@ await candleStorage.SaveAsync(newCandles);
 // Guardar novos ticks
 var newTrades = new List<ExecutionMessage>
 {
-	// Novos objectos ExecutionMessage para ticks são criados aqui
+	// Novos objetos ExecutionMessage para ticks são criados aqui
 };
 await tradeStorage.SaveAsync(newTrades);
 ```
@@ -95,7 +95,7 @@ await tradeStorage.SaveAsync(newTrades);
 // Guardar novos livros de ofertas
 var newMarketDepths = new List<QuoteChangeMessage>
 {
-	// Novos objectos QuoteChangeMessage para livros de ofertas são criados aqui
+	// Novos objetos QuoteChangeMessage para livros de ofertas são criados aqui
 };
 await marketDepthStorage.SaveAsync(newMarketDepths);
 ```

@@ -1,10 +1,10 @@
 # Roteamento de Adaptadores
 
-O StockSharp suporta conexões simultâneas a múltiplas bolsas e corretoras. O sistema de roteamento (basket routing) gerencia quais mensagens são direcionadas para quais adaptadores, garantindo uma operação transparente com múltiplas conexões.
+O StockSharp suporta ligações simultâneas a múltiplas bolsas e corretoras. O sistema de roteamento (basket routing) gere quais mensagens são direcionadas para quais adaptadores, garantindo uma operação transparente com múltiplas ligações.
 
 ## Arquitetura Geral
 
-Ao usar múltiplos adaptadores, o conector cria automaticamente um basket (cesta) que combina todas as conexões. O roteador determina para qual adaptador cada mensagem específica deve ser direcionada -- assinaturas de dados de mercado, transações, requisições de portfólio, etc.
+Ao usar múltiplos adaptadores, o conector cria automaticamente um basket (cesta) que combina todas as ligações. O roteador determina para qual adaptador cada mensagem específica deve ser direcionada -- assinaturas de dados de mercado, transações, requisições de portfólio, etc.
 
 ## AdapterRouter
 
@@ -49,28 +49,28 @@ router.SetPortfolioAdapter(
 );
 ```
 
-## Gerenciando Conexões
+## Gerir ligações
 
-### Estados de Conexão
+### Estados da ligação
 
-Cada adaptador no basket passa pelos estados de conexão padrão:
+Cada adaptador no basket passa pelos estados de ligação padrão:
 
-- **Disconnected** -- desconectado
-- **Connecting** -- conexão em andamento
-- **Connected** -- conectado
-- **Disconnecting** -- desconexão em andamento
+- **Disconnected** -- desligado
+- **Connecting** -- ligação em curso
+- **Connected** -- ligado
+- **Disconnecting** -- desligação em curso
 
 O basket agrega os estados de todos os adaptadores aninhados.
 
 ### Parâmetros de Agregação
 
-A propriedade `ConnectDisconnectEventOnFirstAdapter` determina quando o basket é considerado conectado:
+A propriedade `ConnectDisconnectEventOnFirstAdapter` determina quando o basket é considerado ligado:
 
-- `true` -- o evento de conexão dispara quando o **primeiro** adaptador se conecta (padrão). Permite iniciar o trabalho sem esperar por todas as conexões.
-- `false` -- o evento dispara somente após **todos** os adaptadores se conectarem.
+- `true` -- o evento de ligação dispara quando o **primeiro** adaptador se liga (padrão). Permite iniciar o trabalho sem esperar por todas as ligações.
+- `false` -- o evento dispara somente após **todos** os adaptadores se ligarem.
 
 ```cs
-// Aguardar a conexão de todos os adaptadores
+// Aguardar a ligação de todos os adaptadores
 connector.Adapter.InnerAdapters.ConnectDisconnectEventOnFirstAdapter = false;
 
 connector.Connected += () =>
@@ -106,16 +106,16 @@ connector.Subscribe(subscription);
 
 ## Fila de Mensagens Pendentes
 
-Se nenhum adaptador estiver conectado quando uma mensagem é enviada, a mensagem é colocada em uma fila pendente (`IPendingMessageState`). Quando um adaptador se conecta, todas as mensagens acumuladas são enviadas automaticamente.
+Se nenhum adaptador estiver ligado quando uma mensagem é enviada, a mensagem é colocada em uma fila pendente (`IPendingMessageState`). Quando um adaptador se liga, todas as mensagens acumuladas são enviadas automaticamente.
 
 ```cs
-// Registrar uma ordem antes da conexão -- a ordem será enviada
-// automaticamente após a conexão ser estabelecida
+// Registar uma ordem antes da ligação -- a ordem será enviada
+// automaticamente após a ligação ser estabelecida
 connector.RegisterOrder(order);
 connector.Connect();
 ```
 
-## Configurando Múltiplas Conexões
+## Configurar várias ligações
 
 ### Configuração Programática
 
@@ -145,7 +145,7 @@ connector.Connect();
 
 ### Configuração Gráfica
 
-Para configuração visual de conexões, use o componente de configuração gráfica. Veja a seção [Configuração gráfica](connectors/graphical_configuration.md) para detalhes.
+Para a configuração visual das ligações, use o componente de configuração gráfica. Veja a seção [Configuração gráfica](connectors/graphical_configuration.md) para detalhes.
 
 ## Rastreamento de Ordens
 

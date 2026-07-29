@@ -10,7 +10,7 @@ Das Muster Drei schwarze Krähen besteht aus drei aufeinanderfolgenden Kerzen, d
 
 - Drei schwarze Krähen ist ein bärisches Candlestick-Muster, das zur Prognose der Umkehr des aktuellen Aufwärtstrends verwendet wird.
 - Trader verwenden es zusammen mit anderen technischen Indikatoren, etwa dem Relative Strength Index (RSI).
-- Kerze-Größe und Schatten des Musters können das Risiko einer Umkehr in einen Pullback anzeigen.
+- Kerzengröße und Schatten des Musters können das Risiko einer Umkehr in einen Pullback anzeigen.
 - Das Gegenmuster zu Drei schwarze Krähen ist Drei weiße Soldaten, das eine Umkehr eines Abwärtstrends anzeigt.
 
 ![Drei schwarze Krähen und drei weiße Soldaten Bildschirmfoto 1](../../../images/indicatorpattern3bc.png)
@@ -26,4 +26,3 @@ Drei weiße Soldaten ist ein bullisches Candlestick-Muster, das zur Prognose ein
 - Das Gegenmuster zu Drei weiße Soldaten ist Drei schwarze Krähen, das eine Umkehr eines Aufwärtstrends anzeigt.
 
 ![Drei schwarze Krähen und drei weiße Soldaten Bildschirmfoto 2](../../../images/indicatorpattern3ws.png)
-

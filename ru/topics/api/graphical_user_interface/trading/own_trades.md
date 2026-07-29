@@ -28,7 +28,7 @@ private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 		...............................................
-		_connector.NewMyTrade += trade => _myTradesWindow.TradeGrid.Trades.Add(trade);
+		_connector.OwnTradeReceived += (subscription, trade) => _myTradesWindow.TradeGrid.Trades.Add(trade);
 			
 		...............................................
 }

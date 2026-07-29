@@ -4,7 +4,7 @@
 
 インジケーターを使用するには、[LinearRegressionForecast](xref:StockSharp.Algo.Indicators.LinearRegressionForecast) クラスを使用する必要があります。
 
-![線形回帰予測 のチャート](../../../../images/indicatorlinearregressionforecast.png)
+![線形回帰予測のチャート](../../../../images/indicatorlinearregressionforecast.png)
 
 ## 推奨コンテンツ
 

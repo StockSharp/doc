@@ -69,7 +69,7 @@ O momentum da média móvel pode ser interpretado da seguinte forma:
 
 6. **Filtragem de sinais**:
    - O MOMA pode ser usado para filtrar sinais de outros indicadores
-   - Por exemplo, considerar apenas sinais altista quando o MOMA é positivo, e apenas sinais baixista quando o MOMA é negativo
+   - Por exemplo, considerar apenas sinais altistas quando o MOMA é positivo e apenas sinais baixistas quando o MOMA é negativo
 
 7. **Seleção de parâmetros**:
    - Períodos mais curtos para Length e MomentumPeriod tornam o MOMA mais sensível, mas também mais propenso a sinais falsos

@@ -6,7 +6,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [HistoricalVolatil
 
 ## Beschreibung
 
-Der Historisches Volatilitätsverhältnis (HVR) ist ein relativer Volatilitätsindikator, der die kurzfristige Volatilität mit der langfristigen Marktvolatilität vergleicht. Der Indikator hilft festzustellen, ob die aktuelle Volatilität im Vergleich zu ihrem historischen Niveau zunimmt oder abnimmt.
+Das historische Volatilitätsverhältnis (HVR) ist ein relativer Volatilitätsindikator, der die kurzfristige Volatilität mit der langfristigen Marktvolatilität vergleicht. Der Indikator hilft festzustellen, ob die aktuelle Volatilität im Vergleich zu ihrem historischen Niveau zunimmt oder abnimmt.
 
 HVR wird als Verhältnis der kurzfristigen historischen Volatilität zur langfristigen historischen Volatilität berechnet. Werte über 1,0 weisen darauf hin, dass die aktuelle (kurzfristige) Volatilität höher ist als die langfristige Volatilität, was auf eine erhöhte Marktaktivität oder eine mögliche Trendwende hinweisen kann.
 
@@ -50,7 +50,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Historisches Volatilitätsverhältnis kann wie folgt interpretiert werden:
+Das historische Volatilitätsverhältnis kann wie folgt interpretiert werden:
 
 1. **Stufe 1.0**:
    - HVR = 1,0 bedeutet, dass die kurzfristige Volatilität gleich der langfristigen Volatilität ist

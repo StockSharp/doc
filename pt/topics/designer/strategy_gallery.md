@@ -4,7 +4,7 @@ A **Galeria de estratégias** oferece a possibilidade de transferir estratégias
 
 Para transferir uma estratégia para o seu computador, tem de:
 
-- seleccionar a estratégia pretendida e clicar no botão Transferir:
+- selecionar a estratégia pretendida e clicar no botão Transferir:
 
   ![Designer Galeria de estratégias 00](../../images/designer_gallery_of_strategies_00.png)
 

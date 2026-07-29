@@ -6,10 +6,10 @@
 
 **主要属性和方法**
 
-- [策略统计面板.SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) - 所选策略。
-- [策略统计面板.已选策略](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) - 已选策略。
-- [StrategiesStatisticsPanel.AddStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategy(StockSharp.Algo.Strategies.Strategy))**(**[StockSharp.Algo.Strategies.Strategy](xref:StockSharp.Algo.Strategies.Strategy) 策略 **)** - 将策略添加到表格中。
-- [StrategiesStatisticsPanel.SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility(System.String,System.Windows.Visibility))**(**[System.String](xref:System.String) 名称, [System.Windows.Visibility](xref:System.Windows.Visibility) 可见性 **)** - 设置表格中列的可见性。
+- [StrategiesStatisticsPanel.SelectedStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategy) - 所选策略。
+- [StrategiesStatisticsPanel.SelectedStrategies](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SelectedStrategies) - 已选策略。
+- [StrategiesStatisticsPanel.AddStrategy](xref:StockSharp.Xaml.StrategiesStatisticsPanel.AddStrategy(StockSharp.Algo.Strategies.Strategy))**(**[StockSharp.Algo.Strategies.Strategy](xref:StockSharp.Algo.Strategies.Strategy) strategy **)** - 将策略添加到表格中。
+- [StrategiesStatisticsPanel.SetColumnVisibility](xref:StockSharp.Xaml.StrategiesStatisticsPanel.SetColumnVisibility(System.String,System.Windows.Visibility))**(**[System.String](xref:System.String) parameterId, [System.Windows.Visibility](xref:System.Windows.Visibility) visibility **)** - 设置表格中列的可见性。
 
 下面是代码片段及其用法。代码示例取自 *Samples\/Testing\/SampleHistoryTestingParallel*。
 

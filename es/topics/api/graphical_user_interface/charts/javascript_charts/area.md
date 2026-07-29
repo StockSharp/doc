@@ -9,7 +9,7 @@ Una serie de área es una línea con la región inferior rellena mediante un deg
 
 ## Configuración
 
-Añade una `AreaSeries` y aliméntala con puntos `{ time, value }`; `topColor`/`bottomColor` definen el degradado:
+Añada una `AreaSeries` y aliméntela con puntos `{ time, value }`; `topColor`/`bottomColor` definen el degradado:
 
 ```js
 const series = chart.addSeries(SSChart.AreaSeries, {

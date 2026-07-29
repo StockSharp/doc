@@ -2,7 +2,7 @@
 
 No modo de servidor, o programa permite ativar o modo de emulação.
 
-![Captura de tela de Configuração da emulação 1](../../../images/hydra_emulator_start.png)
+![Captura de ecrã de Configuração da emulação 1](../../../images/hydra_emulator_start.png)
 
 No modo de emulação, o programa [Hydra](../../hydra.md) permite executar as seguintes funções:
 
@@ -15,7 +15,7 @@ Este modo é utilizado ao [testar estratégias](../../shell/user_interface/emula
 
 ## Definições de emulação.
 
-![Captura de tela de Configuração da emulação 2](../../../images/hydra_emulator_prop.png)
+![Captura de ecrã de Configuração da emulação 2](../../../images/hydra_emulator_prop.png)
 
 - **Correspondência no toque** - ao emular o matching de transações, faz corresponder ordens quando o preço da transação é igual ao preço da ordem.
 - **Livro de ordens (validade)** - o período máximo do livro de ordens no emulador. Se o livro de ordens não tiver sido atualizado dentro do período especificado, o seu valor é apagado. É utilizado para remover dados antigos do livro de ordens se existirem lacunas nos dados.

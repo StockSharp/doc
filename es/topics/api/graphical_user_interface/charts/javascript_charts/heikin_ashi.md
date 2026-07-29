@@ -9,7 +9,7 @@ Las velas Heikin-Ashi ("barra promedio") se calculan a partir del OHLC bruto par
 
 ## Configuración
 
-Calcula los valores Heikin-Ashi y aliméntalos a una `CandlestickSeries`:
+Calcule los valores Heikin-Ashi y alimente con ellos una `CandlestickSeries`:
 
 ```js
 function heikinAshi(candles) {

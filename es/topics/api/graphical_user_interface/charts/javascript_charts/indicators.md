@@ -17,7 +17,7 @@ Importe el runtime y las definiciones de indicadores que necesite, ejecute cada 
 import { createChart, CandlestickSeries, LineSeries, HistogramSeries, BandSeries } from '@stocksharp/chart';
 import { IndicatorRuntime, BollingerBandsIndicator, RelativeStrengthIndexIndicator, MacdIndicator } from '@stocksharp/chart/indicators';
 
-// Calcula un indicador sobre las velas; devuelve sus puntos agrupados por id de salida.
+// Calcule un indicador sobre las velas; devuelve sus puntos agrupados por id de salida.
 function compute(definition, parameters, candles) {
   const runtime = new IndicatorRuntime({ definition, parameters });
   const points = runtime.resetStreaming(candles.map(c => ({ time: c.time, value: c })));

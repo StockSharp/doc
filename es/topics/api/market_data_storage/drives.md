@@ -6,7 +6,7 @@ Las unidades de almacenamiento en StockSharp son responsables de la ubicación f
 
 La interfaz [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) proporciona las siguientes capacidades clave:
 
-- **Ruta** -- ruta al almacenamiento de datos.
+- **Path** -- ruta al almacenamiento de datos.
 - **GetAvailableSecuritiesAsync()** -- obtener una lista de todos los instrumentos disponibles en el almacenamiento.
 - **GetAvailableDataTypesAsync()** -- obtener una lista de tipos de datos disponibles para un instrumento específico.
 - **GetStorageDrive()** -- obtener una unidad de almacenamiento para un instrumento y tipo de datos específicos.
@@ -50,11 +50,11 @@ La clase [RemoteMarketDataDrive](xref:StockSharp.Algo.Storages.RemoteMarketDataD
 
 ### Ajustes de conexión
 
-- **dirección** -- dirección del servidor remoto. El valor predeterminado es `127.0.0.1:5002`.
-- **Credenciales** -- credenciales de autenticación (correo electrónico y contraseña).
+- `Address` -- dirección del servidor remoto. El valor predeterminado es `127.0.0.1:5002`.
+- `Credentials` -- credenciales de autenticación (correo electrónico y contraseña).
 - **TargetCompId** -- identificador del componente de destino, por defecto `"StockSharpHydraMD"`.
 - **SecurityBatchSize** -- tamaño de lote al cargar instrumentos, por defecto 1000.
-- **Tiempo de espera** -- tiempo de espera de conexión, por defecto 2 minutos.
+- **Timeout** -- tiempo de espera de conexión, por defecto 2 minutos.
 
 ### Ejemplo de uso
 

@@ -1,6 +1,6 @@
 # Concatenação de strings
 
-![Captura de tela de Concatenação de strings](../../../../../../images/designer_string_concat_00.png)
+![Captura de ecrã de Concatenação de strings](../../../../../../images/designer_string_concat_00.png)
 
 O cubo concatena vários valores recebidos numa única string de texto de acordo com
 um modelo com marcadores de posição entre chavetas. Cada nome de marcador de posição adiciona um conector

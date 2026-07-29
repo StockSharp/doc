@@ -27,7 +27,7 @@ Parámetros Take y Stop
 
 - **Valor** - valor de take o stop.
 - **Seguimiento** – si se usa protección trailing.
-- **Tiempo de espera** - valor de timeout después del cual la protección se activa forzosamente al precio de mercado.
+- **Tiempo de espera** - valor del tiempo de espera tras el cual la protección se activa forzosamente al precio de mercado.
 - **Órdenes de mercado** – usar órdenes de mercado (sin precio) para cerrar rápidamente la posición.
 
 ![Designer protección de posiciones 02](../../../../../../images/designer_protect_positions_02.png)

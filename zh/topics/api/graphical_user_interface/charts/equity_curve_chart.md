@@ -59,7 +59,7 @@
    </Window>
    	  				
    ```
-2. 在主窗口代码中，我们使用 [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,Ecng.Drawing.DrawStyles,System.Guid))**(**[System.String](xref:System.String) 标题, [System.Windows.Media.Color](xref:System.Windows.Media.Color) 颜色, [System.Windows.Media.Color](xref:System.Windows.Media.Color) 第二颜色, [Ecng.Drawing.DrawStyles](xref:Ecng.Drawing.DrawStyles) 样式, [System.Guid](xref:System.Guid) id **)** 方法创建一个数据源来绘制图表。
+2. 在主窗口代码中，我们使用 [EquityCurveChart.CreateCurve](xref:StockSharp.Xaml.Charting.EquityCurveChart.CreateCurve(System.String,System.Windows.Media.Color,System.Windows.Media.Color,Ecng.Drawing.DrawStyles,System.Guid))**(**[System.String](xref:System.String) title, [System.Windows.Media.Color](xref:System.Windows.Media.Color) color, [System.Windows.Media.Color](xref:System.Windows.Media.Color) secondColor, [Ecng.Drawing.DrawStyles](xref:Ecng.Drawing.DrawStyles) style, [System.Guid](xref:System.Guid) id **)** 方法创建一个数据源来绘制图表。
 
    ```cs
    private ChartBandElement _pnl;

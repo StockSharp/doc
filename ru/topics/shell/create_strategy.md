@@ -13,7 +13,7 @@ public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
 	{
 	...
 		#region MonitoringControl
-		public BaseStudioControl AddMonitorigPanel()
+		public BaseStudioControl AddMonitoringPanel()
 		{
 			var usercontrol = new SmaMonitoringControl();
 			usercontrol.Init(this);

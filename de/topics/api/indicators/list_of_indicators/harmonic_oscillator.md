@@ -6,7 +6,7 @@ Um den Indikator verwenden zu können, müssen Sie die Klasse [HarmonicOscillato
 
 ## Beschreibung
 
-Der Harmonischer Oszillator (HO) ist ein Indikator, der entwickelt wurde, um die Periodizität und zyklische Natur von Marktpreisbewegungen zu identifizieren. Es basiert auf dem Prinzip, dass viele Preisbewegungen harmonische (periodische) Komponenten enthalten, die isoliert und zur Vorhersage zukünftiger Preisbewegungen verwendet werden können.
+Der harmonische Oszillator (HO) ist ein Indikator, der entwickelt wurde, um die Periodizität und zyklische Natur von Marktpreisbewegungen zu identifizieren. Er basiert auf dem Prinzip, dass viele Preisbewegungen harmonische (periodische) Komponenten enthalten, die isoliert und zur Vorhersage zukünftiger Preisbewegungen verwendet werden können.
 
 Der Indikator wendet Spektralanalysemethoden an, um die Preisreihe in harmonische Komponenten zu zerlegen und dominante Zyklen hervorzuheben. Anschließend werden diese zyklischen Komponenten als Oszillator angezeigt, der Händlern dabei hilft, zu bestimmen, wann der Preis innerhalb der identifizierten Zyklen lokale Höchst- oder Tiefststände erreichen könnte.
 
@@ -53,7 +53,7 @@ Dabei gilt:
 
 ## Interpretation
 
-Der Harmonischer Oszillator kann wie folgt interpretiert werden:
+Der harmonische Oszillator kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
    - Wenn HO die Nulllinie von unten nach oben überschreitet, kann dies als bullisches Signal angesehen werden

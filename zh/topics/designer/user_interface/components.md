@@ -18,5 +18,5 @@
 - [DLL](../strategies/using_dll/dll_panel.md) - 显示 DLL 元数据的窗口，用于基于现有 DLL 创建策略。
 - [期权持仓图表](../strategies/using_visual_designer/elements/options/chart_positions.md) - 显示期权持仓图表。
 - [期权面板](../strategies/using_visual_designer/elements/options/option_desk.md) - 显示期权表。
-- [市场深度](components/order_book.md) - 显示买入和卖出限价订单表。
+- [订单簿](components/order_book.md) - 显示买入和卖出限价订单表。
 - [订单日志](../../terminal/user_interface/components/order_log.md) - 显示订单表，其中包含所选交易品种全部订单的完整信息。

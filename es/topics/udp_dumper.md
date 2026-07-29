@@ -1,6 +1,6 @@
 # UDP Dumper
 
-**UDPDumper** registra paquetes UDP. Puede usarse para verificar la configuración de red proporcionada por un broker o una bolsa y para recopilar datos para pruebas posteriores de conectores basados en UDP, como [FAST](api/connectors/common/fast_protocol.md) o SBE.
+**UDPDumper** registra paquetes UDP. Puede usarse para verificar la configuración de red proporcionada por un bróker o una bolsa y para recopilar datos para pruebas posteriores de conectores basados en UDP, como [FAST](api/connectors/common/fast_protocol.md) o SBE.
 
 Instale UDPDumper mediante [Installer](installer.md).
 

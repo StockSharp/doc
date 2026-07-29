@@ -20,7 +20,7 @@ O [Designer](../designer.md) tem padrões de velas predefinidos integrados que p
 
 Também é possível editar os padrões existentes e adicionar os seus próprios padrões personalizados. Para isso, tem de clicar no botão ![Designer botão Editar](../../images/designer_creating_repository_of_historical_data_01.png), após o que será apresentada a janela de edição de padrões.
 
-![Captura de tela de Padrões](../../images/indicatorpatterncommon01.png)
+![Captura de ecrã de Padrões](../../images/indicatorpatterncommon01.png)
 
 Para criar o seu próprio padrão, clique no botão ![Designer botão Mais](../../images/designer_panel_circuits_01_button.png) na parte superior da janela. Clicar no botão ![Designer botão Eliminar](../../images/designer_delete_button.png) elimina o padrão.
 

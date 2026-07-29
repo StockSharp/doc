@@ -6,7 +6,7 @@
 
 Das Interface [ISlippageManager](xref:StockSharp.Algo.Slippage.ISlippageManager) definiert den Basisvertrag:
 
-- **Kursabweichung** - insgesamt akkumulierte Slippage (decimal).
+- **Slippage** - insgesamt akkumulierte Slippage (decimal).
 - **Reset()** - setzt den Zustand des Managers zurück.
 - **ProcessMessage(Message)** - verarbeitet eine Nachricht; gibt die Slippage für die angegebene Ausführung oder `null` zurück.
 

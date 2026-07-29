@@ -14,7 +14,7 @@ CLOSE(i) - 現在のバーの終値;
 CLOSE(i - n) - n 本前のバーの終値。
 
 
-![モメンタム のチャート](../../../../images/indicatormomentum.png)
+![モメンタムのチャート](../../../../images/indicatormomentum.png)
 
 ## 関連項目
 

@@ -1,15 +1,15 @@
 # Ponto e Figura
 
-Os gráficos Point & Figure descartam totalmente o tempo e plotam colunas de X (alta) e O (baixa). Uma coluna continua crescendo enquanto o preço se move na sua direção por caixas inteiras; um número `reversal` de caixas contra ela inicia uma nova coluna. O resultado destaca suporte, resistência e rompimentos.
+Os gráficos Point & Figure ignoram totalmente o tempo e representam colunas de X (subida) e O (descida). Uma coluna continua a crescer enquanto o preço se move na respetiva direção por caixas inteiras; um número `reversal` de caixas em sentido contrário inicia uma nova coluna. O resultado realça o suporte, a resistência e os rompimentos.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 ```chart-demo point-figure
 ```
 
 ## Configuração
 
-Adicione uma `PointFigureSeries` com um `boxSize` e um `reversal`, depois alimente-a com velas brutas — a série constrói as colunas por conta própria:
+Adicione uma `PointFigureSeries` com um `boxSize` e um `reversal` e, em seguida, forneça-lhe velas brutas — a série constrói as colunas de forma autónoma:
 
 ```js
 const series = chart.addSeries(SSChart.PointFigureSeries, {

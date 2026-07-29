@@ -23,9 +23,9 @@ public class BollingerStrategyLowBandStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **Bollinger-Länge** - Periode des Bollinger-Bänder-Indikators (Standardwert 20)
-- **Bollinger-Abweichung** - Multiplikator der Standardabweichung (Standardwert 2.0)
-- **Kerzentyp** - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
+- **BollingerLength** - Periode des Bollinger-Bänder-Indikators (Standardwert 20)
+- **BollingerDeviation** - Multiplikator der Standardabweichung (Standardwert 2.0)
+- `CandleType` - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
 
 Alle Parameter stehen mit festgelegten Wertebereichen für die Optimierung zur Verfügung.
 

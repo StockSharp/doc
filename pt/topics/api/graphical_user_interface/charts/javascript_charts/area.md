@@ -1,8 +1,8 @@
 # Área
 
-Uma série de área é uma linha com a região abaixo dela preenchida por um gradiente vertical. Ela se lê como um gráfico de linha, mas enfatiza a magnitude de um único valor ao longo do tempo, o que é adequado para curvas de capital e visões gerais de preços.
+Uma série de área é uma linha cuja região inferior é preenchida por um gradiente vertical. Lê-se como um gráfico de linha, mas realça a magnitude de um único valor ao longo do tempo, sendo adequada para curvas de capital e panorâmicas de preços.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 ```chart-demo area
 ```

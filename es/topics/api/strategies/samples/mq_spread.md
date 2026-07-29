@@ -22,9 +22,9 @@ public class MqSpreadStrategy : Strategy
 
 La estrategia permite personalizar los siguientes parámetros:
 
-- **Tipo de precio** - tipo de precio de mercado para cotización (predeterminado Following)
-- **Desplazamiento de precio** - desplazamiento del precio respecto al precio de mercado
-- **Desplazamiento al mejor precio** - desviación mínima para actualizar la cotización (predeterminado 0.1%)
+- **PriceType** - tipo de precio de mercado para cotización (predeterminado Following)
+- **PriceOffset** - desplazamiento del precio respecto al precio de mercado
+- **BestPriceOffset** - desviación mínima para actualizar la cotización (predeterminado 0.1%)
 
 ## Inicialización de la estrategia
 

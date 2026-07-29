@@ -1,6 +1,6 @@
-# Painel de livro de ofertas
+# Painel de livro de ordens
 
-![Designer Painel do livro de ofertas](../../../../../../images/designer_orderbook_panel.png)
+![Designer Painel do livro de ordens](../../../../../../images/designer_orderbook_panel.png)
 
 O cubo foi concebido para apresentar o livro de ordens num componente gráfico especializado [Livro de ordens](../../../../user_interface/components/order_book.md).
 
@@ -8,10 +8,10 @@ O componente [Livro de ordens](../../../../user_interface/components/order_book.
 
 ### Conectores de entrada
 
-- **Livro de ofertas** - o livro de ordens que tem de ser apresentado.
+- **Livro de ordens** - o livro de ordens que tem de ser apresentado.
 - **Ordem** - uma ordem, cujo volume tem de ser apresentado na coluna *Volume próprio*.
 - **Erro de ordem** - um erro no registo ou cancelamento de uma ordem, para o qual é necessário mostrar uma animação.
 
 ## Ver também
 
-[Livro de ofertas agrupado](grouped_order_book.md)
+[Livro de ordens agrupado](grouped_order_book.md)

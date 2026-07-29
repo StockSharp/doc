@@ -24,9 +24,9 @@ public class SmaStrategyMartingaleStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **长期移动平均周期** - 长期移动平均周期（默认 80）
-- **短期移动平均周期** - 短期移动平均周期（默认值 30）
-- **K线类型** - 要使用的K线类型（默认5分钟）
+- `LongSmaLength` - 长期移动平均周期（默认 80）
+- `ShortSmaLength` - 短期移动平均周期（默认值 30）
+- `CandleType` - 要使用的K线类型（默认5分钟）
 
 所有参数都可以在指定的取值范围内进行优化。
 

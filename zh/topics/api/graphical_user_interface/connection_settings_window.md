@@ -6,7 +6,7 @@
 
 这是连接设置窗口。从下拉列表（通过 '+' 按钮打开）中，您需要选择所需的适配器，并在右侧的属性窗口中配置它们的属性。
 
-此窗口应通过 [Extensions.Configure](xref:StockSharp.Xaml.Extensions.Configure(StockSharp.Algo.Connector,System.Windows.Window))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) 连接器, [System.Windows.Window](xref:System.Windows.Window) 所有者 **)** 扩展方法调用，并传入 [Connector](xref:StockSharp.Algo.Connector) 和父窗口。如果配置成功，[Extensions.Configure](xref:StockSharp.Xaml.Extensions.Configure(StockSharp.Algo.Connector,System.Windows.Window))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) 连接器, [System.Windows.Window](xref:System.Windows.Window) 所有者 **)** 扩展方法将返回 'true'。下面是调用连接器连接设置窗口并将设置保存到文件的代码。
+此窗口应通过 [Extensions.Configure](xref:StockSharp.Xaml.Extensions.Configure(StockSharp.Algo.Connector,System.Windows.Window))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) connector, [System.Windows.Window](xref:System.Windows.Window) owner **)** 扩展方法调用，并传入 [Connector](xref:StockSharp.Algo.Connector) 和父窗口。如果配置成功，[Extensions.Configure](xref:StockSharp.Xaml.Extensions.Configure(StockSharp.Algo.Connector,System.Windows.Window))**(**[StockSharp.Algo.Connector](xref:StockSharp.Algo.Connector) connector, [System.Windows.Window](xref:System.Windows.Window) owner **)** 扩展方法将返回 'true'。下面是调用连接器连接设置窗口并将设置保存到文件的代码。
 
 ```cs
 		private void Setting_Click(object sender, RoutedEventArgs e)

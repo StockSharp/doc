@@ -2,9 +2,9 @@
 
 ![Designer Positionsgrafikoptionen 00](../../../../../../images/designer_graph_options_positions_00.png)
 
-Der Würfel wird verwendet, um den **Diagramm der Optionspositionen** anzuzeigen.
+Der Würfel wird verwendet, um das **Diagramm der Optionspositionen** anzuzeigen.
 
-Um den **Diagramm der Optionspositionen** anzuzeigen, müssen Sie die grafische Komponente **Diagramm der Optionspositionen** hinzufügen.
+Um das **Diagramm der Optionspositionen** anzuzeigen, müssen Sie die grafische Komponente **Diagramm der Optionspositionen** hinzufügen.
 
 ### Eingehende Anschlüsse
 

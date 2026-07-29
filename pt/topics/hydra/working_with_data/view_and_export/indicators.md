@@ -4,7 +4,7 @@ No painel que aparece, selecione o instrumento, o intervalo temporal de interess
 
 ![Hydra exportar indicador](../../../../images/hydra_export_indicator.png)
 
-Para ver o gráfico dos valores, basta clicar no botão ![Captura de tela de Indicadores](../../../../images/hydra_candles.png).
+Para ver o gráfico dos valores, basta clicar no botão ![Captura de ecrã de Indicadores](../../../../images/hydra_candles.png).
 
 ![Hydra exportar visualização de indicador](../../../../images/hydra_export_indicator_view.png)
 

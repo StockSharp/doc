@@ -1,13 +1,13 @@
 # Livro de ofertas
 
-![Captura de tela de Livro de ofertas](../../../../images/gui_marketdepthcontrol.png)
+![Captura de ecrã de Livro de ofertas](../../../../images/gui_marketdepthcontrol.png)
 
 [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl) - um componente gráfico para apresentar o livro de ofertas. O componente permite apresentar cotações e ordens próprias.
 
 **Propriedades e métodos principais**
 
 - [MarketDepthControl.MaxDepth](xref:StockSharp.Xaml.MarketDepthControl.MaxDepth) - profundidade do livro de ofertas.
-- [MarketDepthControl.IsBidsOnTop](xref:StockSharp.Xaml.MarketDepthControl.IsBidsOnTop) - apresentar bids no topo.
+- [MarketDepthControl.IsBidsOnTop](xref:StockSharp.Xaml.MarketDepthControl.IsBidsOnTop) - apresentar as ofertas de compra (`bids`) no topo.
 - [MarketDepthControl.UpdateFormat](xref:StockSharp.Xaml.MarketDepthControl.UpdateFormat(StockSharp.BusinessEntities.Security))**(**[StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security) security **)** - atualizar o formato de apresentação de preço e volume usando o instrumento.
 - [MarketDepthControl.ProcessOrder](xref:StockSharp.Xaml.MarketDepthControl.ProcessOrder(StockSharp.BusinessEntities.Order,System.Decimal,System.Decimal,StockSharp.Messages.OrderStates))**(**[StockSharp.BusinessEntities.Order](xref:StockSharp.BusinessEntities.Order) order, [System.Decimal](xref:System.Decimal) price, [System.Decimal](xref:System.Decimal) balance, [StockSharp.Messages.OrderStates](xref:StockSharp.Messages.OrderStates) state **)** - processar uma ordem.
 - [MarketDepthControl.UpdateDepth](xref:StockSharp.Xaml.MarketDepthControl.UpdateDepth(StockSharp.Messages.IOrderBookMessage,StockSharp.BusinessEntities.Security))**(**[StockSharp.Messages.IOrderBookMessage](xref:StockSharp.Messages.IOrderBookMessage) message, [StockSharp.BusinessEntities.Security](xref:StockSharp.BusinessEntities.Security) security **)** - atualizar o livro de ofertas usando uma mensagem.
@@ -164,7 +164,7 @@ private void OnMarketDepthReceived(Subscription subscription, IOrderBookMessage 
 		
 		this.GuiAsync(() => 
 		{
-			SpreadLabel.Content = $"Diferença: {spread:F2} ({spreadPercent:F2}%)";
+			SpreadLabel.Content = $"Diferencial (spread): {spread:F2} ({spreadPercent:F2}%)";
 		});
 	}
 	

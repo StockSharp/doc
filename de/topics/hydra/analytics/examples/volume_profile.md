@@ -6,7 +6,7 @@ Das Skript "Volumenprofil" dient als Werkzeug zur Analyse der Verteilung des Han
 
 ## Funktionsbeschreibung
 
-Das Skript aggregiert Transaktionsdaten, um ein Profil zu bilden, das die ausgefuhrten Volumina auf verschiedenen Preisniveaus anzeigt. Diese Informationen können in einem Chart dargestellt werden, der die Dichte der Trades über verschiedene Preisbereiche hinweg verdeutlicht.
+Das Skript aggregiert Transaktionsdaten, um ein Profil zu bilden, das die ausgeführten Volumina auf verschiedenen Preisniveaus anzeigt. Diese Informationen können in einem Chart dargestellt werden, der die Dichte der Trades über verschiedene Preisbereiche hinweg verdeutlicht.
 
 ## Praktische Bedeutung
 

@@ -1,6 +1,6 @@
 # 规则暂停
 
-有时你可能想将多个规则设置为挂起模式（防止它们在代码初始化完成之前触发）。为此，可以使用 [MarketRuleHelper.SuspendRules](xref:StockSharp.Algo.MarketRuleHelper.SuspendRules(System.Action))**(**[System.Action](xref:System.Action) 操作 **)** 方法。
+有时你可能想将多个规则设置为挂起模式（防止它们在代码初始化完成之前触发）。为此，可以使用 [MarketRuleHelper.SuspendRules](xref:StockSharp.Algo.MarketRuleHelper.SuspendRules(System.Action))**(**[System.Action](xref:System.Action) action **)** 方法。
 
 ## 使用规则暂停
 

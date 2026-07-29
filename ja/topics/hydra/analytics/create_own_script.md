@@ -68,7 +68,7 @@ namespace StockSharp.Algo.Analytics
 
 - `logs`: スクリプト内のログ記録に使用する [ILogReceiver](xref:Ecng.Logging.ILogReceiver) のインスタンスを受け取ります。
 - `panel`: チャートの描画と結果の表示に使用するユーザーインターフェイス要素である [IAnalyticsPanel](xref:StockSharp.Algo.Analytics.IAnalyticsPanel) を提供します。
-- `securities`: 分析対象の金融商品を識別する [SecurityId](xref:StockSharp.Messages.SecurityId) の配列です。
+- `securities`: 分析対象の銘柄を識別する [SecurityId](xref:StockSharp.Messages.SecurityId) の配列です。
 - `from`: 分析対象データ範囲の開始日です。
 - `to`: 分析対象データ範囲の終了日です。
 - `storage`: マーケットデータストレージへのアクセスを可能にする [IStorageRegistry](xref:StockSharp.Algo.Storages.IStorageRegistry) のインスタンスです。
@@ -83,13 +83,13 @@ namespace StockSharp.Algo.Analytics
 
 ## 実装の詳細
 
-`ChartDrawScript` クラスは、提供された各証券のマーケットデータを具体的に処理します。終値用のラインチャートと、出来高データ用のヒストグラムという 2 種類のチャートを作成します。
+`ChartDrawScript` クラスは、提供された各銘柄のマーケットデータを処理します。終値用のラインチャートと、出来高データ用のヒストグラムという 2 種類のチャートを作成します。
 
 ### 主な処理段階:
 
 1. 処理する銘柄が存在するか確認します。利用可能なものがない場合は警告をログに記録し、タスクを完了します。
 2. [IAnalyticsPanel.CreateChart](xref:StockSharp.Algo.Analytics.IAnalyticsPanel.CreateChart``2) メソッドを使用して、ラインチャートとヒストグラムを作成します。
-3. 各証券を反復処理し、キャンセル要求を確認します。
+3. 各銘柄を反復処理し、キャンセル要求を確認します。
 4. `storage.GetCandleMessageStorage` メソッドを使用してローソク足ストレージを取得します。
 5. 指定された日付範囲内のローソク足データを読み込みます。
 6. 始値時刻の時系列データ、対応する終値、合計出来高を辞書に格納します。

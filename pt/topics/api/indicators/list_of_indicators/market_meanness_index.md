@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [MarketMeannessIndex](xr
 
 ## Descrição
 
-O Índice de adversidade do mercado (MMI) é uma ferramenta que ajuda os operadores a determinar a natureza do mercado actual - se está tendencial ou lateral. O nome "Meanness" reflecte a ideia de que o mercado por vezes se comporta de forma "má" ou imprevisível para os operadores, especialmente quando está em movimento lateral.
+O Índice de adversidade do mercado (MMI) é uma ferramenta que ajuda os operadores a determinar a natureza do mercado atual - se está tendencial ou lateral. O nome "Meanness" reflete a ideia de que o mercado por vezes se comporta de forma "má" ou imprevisível para os operadores, especialmente quando está em movimento lateral.
 
 O MMI baseia-se na contagem do número de pares de valores de preço (normalmente preços de fecho) que não seguem um padrão linear simples, e no seu rácio relativamente ao número total de pares analisados. O indicador mede o "caos" ou a "aleatoriedade" do movimento do preço durante um período específico.
 
@@ -25,7 +25,7 @@ O cálculo do Índice de adversidade do mercado envolve os seguintes passos:
 
 1. Criar um conjunto de pares consecutivos de preços de fecho (Close) dentro do período Length indicado.
 
-2. Contar o número de pares "não sequenciais". Um par é considerado não sequencial se não seguir o padrão linear típico de uma tendência. Se dois pares consecutivos (P1, P2) e (P2, P3) tiverem direcções opostas (sinais de diferença diferentes), o par é considerado não sequencial.
+2. Contar o número de pares "não sequenciais". Um par é considerado não sequencial se não seguir o padrão linear típico de uma tendência. Se dois pares consecutivos (P1, P2) e (P2, P3) tiverem direções opostas (sinais de diferença diferentes), o par é considerado não sequencial.
 
 3. Calcular o MMI como rácio percentual:
    ```
@@ -74,7 +74,7 @@ O Índice de adversidade do mercado pode ser interpretado da seguinte forma:
 7. **Períodos**:
    - O MMI pode ser usado em diferentes períodos para determinar o carácter do mercado
    - O MMI de longo prazo ajuda a determinar o estado primário do mercado
-   - O MMI de curto prazo ajuda a escolher uma estratégia adequada para as condições actuais
+   - O MMI de curto prazo ajuda a escolher uma estratégia adequada para as condições atuais
 
 ![Gráfico do indicador MMI](../../../../images/indicator_market_meanness_index.png)
 

@@ -17,7 +17,7 @@ Conectores de entrada
 
 Conectores de saída
 
-- **Ordem** - a ordem modificada, que pode ser utilizada para obter transacções correspondentes através do elemento **Transações por ordem** e para apresentação no gráfico através do bloco **Painel do gráfico**.
+- **Ordem** - a ordem modificada, que pode ser utilizada para obter transações correspondentes através do elemento **Transações por ordem** e para apresentação no gráfico através do bloco **Painel do gráfico**.
 - **Erro** - um erro ao deslocar a ordem.
 - **Negócio** - a negociação da ordem colocada.
 

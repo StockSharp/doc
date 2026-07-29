@@ -2,7 +2,7 @@
 
 [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) - uma tabela que apresenta dados de mercado disponíveis.
 
-![Captura de tela de Tabela de dados de mercado disponíveis](../../../../images/api_gui_marketdatagrid.png)
+![Captura de ecrã de Tabela de dados de mercado disponíveis](../../../../images/api_gui_marketdatagrid.png)
 
 Segue-se um exemplo do código para adicionar uma tabela [MarketDataGrid](xref:StockSharp.Xaml.MarketDataGrid) ao formulário de ecrã.
 
@@ -27,7 +27,7 @@ Segue-se um exemplo do código para adicionar uma tabela [MarketDataGrid](xref:S
 		</Grid.RowDefinitions>
 		<xaml:MarketDataGrid x:Name="MarketDataGrid"  Grid.Row="1" Grid.ColumnSpan="3" />
 		<Button Grid.Row="0" Grid.Column="0" x:Name="Setting" Content="Configuração" Click="Setting_Click" />
-		<Button Grid.Row="0" Grid.Column="1" x:Name="Connect" Content="Conectar" Click="Connect_Click" />
+		<Button Grid.Row="0" Grid.Column="1" x:Name="Connect" Content="Ligar" Click="Connect_Click" />
 	</Grid>
 </Window>
 	  				

@@ -16,7 +16,7 @@ Después de hacer clic en el botón **Añadir** ![Designer Panel de circuitos 01
 
 3. La esencia de la estrategia de media móvil (SMA) es la siguiente:
 
-- Hay dos medias móviles con distintos períodos de cálculo: una SMA larga y una SMA corta. En el ejemplo, el cubo [Indicador](elements/common/indicator.md) de la SMA larga se llama **SMA largo** y tiene un período de 80 velas; la SMA corta se llama **SMA corto** y tiene un período de 10 velas.
+- Hay dos medias móviles con distintos períodos de cálculo: una SMA larga y una SMA corta. En el ejemplo, el cubo [Indicador](elements/common/indicator.md) de la SMA larga se llama **SMA larga** y tiene un período de 80 velas; la SMA corta se llama **SMA corta** y tiene un período de 10 velas.
 - Cuando una media móvil corta cruza una larga de abajo hacia arriba, se abre una posición larga.
 - Cuando una media móvil corta cruza una larga de arriba hacia abajo, se abre una posición corta.
 - Si hay una posición opuesta en el momento de recibir una señal para abrir una posición, se revierte la posición.
@@ -31,7 +31,7 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Creación algorítmica de cubos 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. Después de añadir el instrumento y la cartera, debe añadir dos cubos [Indicador](elements/common/indicator.md), seleccionar el tipo SMA, nombrar el primero **SMA largo** y establecer el período de 80 velas; nombrar el segundo **SMA corto** y establecer el período de 10 velas.
+5. Después de añadir el instrumento y la cartera, debe añadir dos cubos [Indicador](elements/common/indicator.md), seleccionar el tipo SMA, nombrar el primero **SMA larga** y establecer el período de 80 velas; nombrar el segundo **SMA corta** y establecer el período de 10 velas.
 
 ![Designer Creación algorítmica de cubos 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
@@ -39,7 +39,7 @@ Si necesita usar varios instrumentos o carteras en la estrategia, para cada cubo
 
 ![Designer Creación algorítmica de cubos 05](../../../../images/designer_algorithm_creation_of_elements_05.png)
 
-7. Después de añadir los indicadores, debe añadir dos cubos que definen los cruces de los indicadores. Estos son los cubos [Cruce](elements/common/crossing.md) de los elementos compuestos. El primer cubo se llama **Cruce alcista**. Define el cruce de abajo hacia arriba. El indicador **SMA corto** se pasa a la entrada superior del cubo, y el indicador **SMA largo** a la entrada inferior. El operador CurrComparison se establece en un valor mayor, y el operador PrevComparison se establece en menor o igual. El segundo cubo se llama **Cruce bajista**; define el cruce de arriba hacia abajo. El indicador **SMA corto** se pasa a la entrada superior del cubo, y el indicador **SMA largo** a la entrada inferior. El operador CurrComparison se establece en un valor menor, y el operador PrevComparison se establece en mayor o igual.
+7. Después de añadir los indicadores, debe añadir dos cubos que definen los cruces de los indicadores. Estos son los cubos [Cruce](elements/common/crossing.md) de los elementos compuestos. El primer cubo se llama **Cruce alcista**. Define el cruce de abajo hacia arriba. El indicador **SMA corta** se pasa a la entrada superior del cubo, y el indicador **SMA larga** a la entrada inferior. El operador CurrComparison se establece en un valor mayor, y el operador PrevComparison se establece en menor o igual. El segundo cubo se llama **Cruce bajista**; define el cruce de arriba hacia abajo. El indicador **SMA corta** se pasa a la entrada superior del cubo, y el indicador **SMA larga** a la entrada inferior. El operador CurrComparison se establece en un valor menor, y el operador PrevComparison se establece en mayor o igual.
 
 ![Designer Creación algorítmica de cubos 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 

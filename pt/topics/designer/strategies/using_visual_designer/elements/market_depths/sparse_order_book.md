@@ -1,8 +1,8 @@
-# Livro de ofertas esparso
+# Livro de ordens esparso
 
-![Designer Livro de ofertas esparso 01](../../../../../../images/designer_sparse_orderbook_01.png)
+![Designer Livro de ordens esparso 01](../../../../../../images/designer_sparse_orderbook_01.png)
 
-![Designer Livro de ofertas esparso 00](../../../../../../images/designer_sparse_orderbook_00.png)
+![Designer Livro de ordens esparso 00](../../../../../../images/designer_sparse_orderbook_00.png)
 
 O cubo é usado para obter um livro de ordens esparso para o instrumento especificado.
 

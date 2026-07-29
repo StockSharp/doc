@@ -71,7 +71,7 @@ var binaryStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId, TimeSpan.FromMinutes(5), StorageFormats.Binary);
 var candles = await binaryStorage.LoadAsync(from, to).ToArrayAsync();
 
-// Salvar no armazenamento CSV
+// Guardar no armazenamento CSV
 var csvStorage = storageRegistry.GetTimeFrameCandleMessageStorage(
     securityId, TimeSpan.FromMinutes(5), StorageFormats.Csv);
 await csvStorage.SaveAsync(candles);

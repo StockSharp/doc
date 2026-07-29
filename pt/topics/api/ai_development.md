@@ -1,6 +1,6 @@
 # Desenvolvimento Assistido por IA
 
-As ferramentas modernas de IA podem acelerar significativamente o desenvolvimento de estratégias de negociação e conectores usando o StockSharp. Em vez de escrever código do zero, você descreve a tarefa em linguagem natural e a IA gera código funcional usando a API atual.
+As ferramentas modernas de IA podem acelerar significativamente o desenvolvimento de estratégias de negociação e conectores usando o StockSharp. Em vez de escrever código do zero, o utilizador descreve a tarefa em linguagem natural e a IA gera código funcional usando a API atual.
 
 ## Por que usar IA
 
@@ -31,7 +31,7 @@ Quanto mais contexto a IA tiver, mais preciso será o resultado. Especifique:
 
 ### 2. Usar CLAUDE.md / .cursorrules
 
-Crie um arquivo de regras do projeto na raiz do repositório:
+Crie um ficheiro de regras do projeto na raiz do repositório:
 
 ```markdown
 # Regras do projeto

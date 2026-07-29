@@ -7,7 +7,7 @@ Drei weiße Soldaten ist ein starkes bullisches Umkehr-Candlestick-Muster aus dr
 - Drei aufeinanderfolgende weiße (bullische) Kerzen mit Eröffnungskurs unterhalb des Schlusskurses (O < C).
 - Jede nachfolgende Kerze eröffnet innerhalb des Körpers der vorherigen Kerze (O > pO).
 - Jede Kerze schließt höher als der Schlusskurs der vorherigen Kerze.
-- Alle drei Kerzen haben relativ länge Körper und kurze Schatten.
+- Alle drei Kerzen haben relativ lange Körper und kurze Schatten.
 - Entsteht in einem Abwärtstrend.
 
 ![Drei-weiße-Soldaten-Muster](../../../images/threewhitesoldierspattern.png)

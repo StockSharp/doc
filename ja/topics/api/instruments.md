@@ -47,8 +47,8 @@ StockSharp は、金融商品情報を扱うための強力なツールを提供
 
 StockSharp の各金融商品には一意の識別子 [SecurityId](xref:StockSharp.Messages.SecurityId) があり、システム内で金融商品を一意に識別するために使用されます。この識別子には次が含まれます。
 
-- **銘柄コード** - 金融商品の取引所コード
-- **市場コード** - 取引ボードコード
+- `SecurityCode` - 金融商品の取引所コード
+- `BoardCode` - 取引ボードコード
 - **Bloomberg/Reuters/ISIN** およびその他のコード - 代替の識別方法
 
 ## 特別な機能

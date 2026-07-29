@@ -10,7 +10,7 @@ Para subscrever o livro de ofertas no StockSharp, é necessário executar os seg
 // manipulador de evento
 private void OnOrderBookReceived(Subscription subscription, IOrderBookMessage orderBook)
 {
-	// Aqui você pode processar os dados do livro de ofertas, por exemplo, exibí-los na tela ou usá-los na estratégia
+	// Aqui pode processar os dados do livro de ofertas, por exemplo, apresentá-los no ecrã ou usá-los na estratégia
 	Console.WriteLine($"Livro de ordens recebido para {orderBook.SecurityId}. Melhor preço de compra: {orderBook.GetBestBid()?.Price}, melhor preço de venda: {orderBook.GetBestAsk()?.Price}");
 }
 
@@ -48,7 +48,7 @@ Isto simplifica significativamente o desenvolvimento de estratégias de negocia�
 
 ## Exemplo de Utilização
 
-Exemplos de utilização do livro de ofertas estão disponíveis no projeto *Samples\/01\_Basic\/02\_MarketDepths* no [GitHub](https://github.com/StockSharp/StockSharp/) ou no arquivo da API StockSharp, que pode ser obtido através do [Instalador](../../installer.md). Estes exemplos fornecem ilustrações práticas de ligação a um sistema de negociação, subscrição de um livro de ofertas filtrado e processamento dos dados recebidos, podendo servir como um bom ponto de partida para desenvolver as suas próprias estratégias de negociação.
+Exemplos de utilização do livro de ofertas estão disponíveis no projeto *Samples\/01\_Basic\/02\_MarketDepths* no [GitHub](https://github.com/StockSharp/StockSharp/) ou no ficheiro da API StockSharp, que pode ser obtido através do [Instalador](../../installer.md). Estes exemplos fornecem ilustrações práticas de ligação a um sistema de negociação, subscrição de um livro de ofertas filtrado e processamento dos dados recebidos, podendo servir como um bom ponto de partida para desenvolver as suas próprias estratégias de negociação.
 
 ## Ver Também
 

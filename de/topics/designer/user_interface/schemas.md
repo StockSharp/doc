@@ -4,7 +4,7 @@ Um das Panel **Schemata** zu öffnen, klicken Sie auf der Registerkarte **Allgem
 
 ![Designer Schaltungs-Panel 00](../../../images/designer_panel_circuits_00.png)
 
-1. Der Ordner **Rücktest** enthält Handelsstrategien, die sowohl als Schemata aus Elementen und deren Verbindungen als auch aus Code erstellt wurden. Sie können eine neue Strategie hinzufügen, indem Sie auf der Registerkarte **Allgemein** auf die Schaltfläche **Hinzufügen** ![Designer Schaltungs-Panel 01](../../../images/designer_panel_circuits_01_button.png) klicken und **Strategie** auswählen. Alternativ klicken Sie im Panel **Schemata** mit der rechten Maustaste auf den Ordner **Rücktest** und wählen im Dropdown-Menü die Schaltfläche **Hinzufügen** ![Designer Schaltungs-Panel 01](../../../images/designer_panel_circuits_01_button.png). Wählen Sie im geoffneten Fenster aus, wie genau Sie eine Strategie erstellen möchten.
+1. Der Ordner **Rücktest** enthält Handelsstrategien, die sowohl als Schemata aus Elementen und deren Verbindungen als auch aus Code erstellt wurden. Sie können eine neue Strategie hinzufügen, indem Sie auf der Registerkarte **Allgemein** auf die Schaltfläche **Hinzufügen** ![Designer Schaltungs-Panel 01](../../../images/designer_panel_circuits_01_button.png) klicken und **Strategie** auswählen. Alternativ klicken Sie im Panel **Schemata** mit der rechten Maustaste auf den Ordner **Rücktest** und wählen im Dropdown-Menü die Schaltfläche **Hinzufügen** ![Designer Schaltungs-Panel 01](../../../images/designer_panel_circuits_01_button.png). Wählen Sie im geöffneten Fenster aus, wie genau Sie eine Strategie erstellen möchten.
 
     ![Designer Schaltungs-Panel 04](../../../images/designer_panel_circuits_04.png)
 
@@ -16,7 +16,7 @@ Um das Panel **Schemata** zu öffnen, klicken Sie auf der Registerkarte **Allgem
 
 4. Der Ordner **Indikatoren** enthält Ihre eigenen Indikatoren für Handelsstrategien, die Sie selbst geschrieben haben. Neue Indikatoren können nicht mit Schemata erstellt werden; verfügbar sind nur Code und externe DLL-Dateien. Die Verwendung eigener Indikatoren in Schemata ist über den Block [Indikator](../strategies/using_visual_designer/elements/common/indicator.md) bei Auswahl des Indikatortyps möglich.
 
-5. Der Ordner **Entfernt** enthält Strategien, die sich auf einem Remote-Server befinden.
+5. Der Ordner **Remote** enthält Strategien, die sich auf einem Remote-Server befinden.
 
 ## Siehe auch
 

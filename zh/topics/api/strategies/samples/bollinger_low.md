@@ -23,9 +23,9 @@ public class BollingerStrategyLowBandStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **布林格周期** - 布林带指标周期（默认 20）
-- **布林格偏差** - 标准差乘数（默认值 2.0）
-- **K线类型** - 要使用的K线类型（默认5分钟）
+- `BollingerLength` - 布林带指标周期（默认 20）
+- `BollingerDeviation` - 标准差乘数（默认值 2.0）
+- `CandleType` - 要使用的K线类型（默认5分钟）
 
 所有参数都可以在指定的取值范围内进行优化。
 

@@ -24,9 +24,9 @@ public class SmaStrategyMartingaleStrategy : Strategy
 
 La estrategia permite personalizar los siguientes parámetros:
 
-- **Período de la media móvil larga** - periodo de la media móvil larga (predeterminado 80)
-- **Período de la media móvil corta** - periodo de la media móvil corta (predeterminado 30)
-- **Tipo de vela** - tipo de vela con el que trabajar (predeterminado 5 minutos)
+- **LongSmaLength** - periodo de la media móvil larga (predeterminado 80)
+- **ShortSmaLength** - periodo de la media móvil corta (predeterminado 30)
+- `CandleType` - tipo de vela con el que trabajar (predeterminado 5 minutos)
 
 Todos los parámetros están disponibles para optimización con rangos de valores especificados.
 

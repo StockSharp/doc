@@ -6,8 +6,8 @@
 
 Este componente inclui:
 
-- Campo de texto especial [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox), que gera um instrumento *contínuo* com a introdução do Id - \[Código\]@\[Mercado\].
-- O componente [SecurityJumpsEditor](xref:StockSharp.Xaml.SecurityJumpsEditor) é um DataGrid especial para trabalhar com instrumentos que fazem parte de um instrumento *contínuo*. Os instrumentos são encapsulados na classe [SecurityJump](xref:StockSharp.Xaml.SecurityJump), que tem duas propriedades: [SecurityJump.Security](xref:StockSharp.Xaml.SecurityJump.Security) e [SecurityJump.Date](xref:StockSharp.Xaml.SecurityJump.Date) (roll forward). Os instrumentos adicionados são guardados na lista [SecurityJumpsEditor.Jumps](xref:StockSharp.Xaml.SecurityJumpsEditor.Jumps). O componente tem a função [SecurityJumpsEditor.Validate](xref:StockSharp.Xaml.SecurityJumpsEditor.Validate) para verificar a correção dos instrumentos do componente.
+- Campo de texto especial [SecurityIdTextBox](xref:StockSharp.Xaml.SecurityIdTextBox), que gera um instrumento *contínuo* ao introduzir o identificador no formato `[Code]@[Board]`, em que `Code` é o código do instrumento e `Board` é o código da praça de negociação.
+- O componente [SecurityJumpsEditor](xref:StockSharp.Xaml.SecurityJumpsEditor) é um DataGrid especial para trabalhar com instrumentos que fazem parte de um instrumento *contínuo*. Os instrumentos são encapsulados na classe [SecurityJump](xref:StockSharp.Xaml.SecurityJump), que tem duas propriedades: [SecurityJump.Security](xref:StockSharp.Xaml.SecurityJump.Security) e [SecurityJump.Date](xref:StockSharp.Xaml.SecurityJump.Date) (data de transição, ou *roll forward*). Os instrumentos adicionados são guardados na lista [SecurityJumpsEditor.Jumps](xref:StockSharp.Xaml.SecurityJumpsEditor.Jumps). O componente tem a função [SecurityJumpsEditor.Validate](xref:StockSharp.Xaml.SecurityJumpsEditor.Validate) para verificar a correção dos instrumentos do componente.
 - Botões para adicionar/remover instrumentos.
 - O botão **Auto** permite criar automaticamente um instrumento *contínuo*.
 - O botão **Ok** conclui a criação de um instrumento *contínuo*.

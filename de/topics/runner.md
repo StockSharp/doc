@@ -6,7 +6,7 @@
 
 - Integration mit [Telegram](telegram_services.md), wodurch die Fernsteuerung von Handelsaktivitäten möglich ist.
 
-- Minimalen Ressourcenverbrauch, da keine schwere grafische Oberfläche vorhanden ist.
+- Minimalen Ressourcenverbrauch, da keine ressourcenintensive grafische Benutzeroberfläche vorhanden ist.
 
 - Start von Strategien aus C#-Code, [Designer](designer.md)-Schemata oder fertigen DLL-Assemblies.
 

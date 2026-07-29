@@ -6,16 +6,16 @@ A tarefa exporta dados da bolsa para vários formatos: Excel, xml, sql, bin, Jso
 
 **Base de dados**
 
-- **Ligação** - ligação à base de dados. Utilizado no caso de exportação via SQL.
+- **Ligação** - ligação à base de dados. Utilizada no caso de exportação via SQL.
 - **Pacote** - o tamanho do pacote de dados transmitido. Por predefinição, o tamanho é de 50 elementos. Utilizado no caso de exportação via SQL.
-- **Unicidade** - verificar a unicidade dos dados na base de dados. Afeta o desempenho. Ativado por predefinição. Utilizado no caso de exportação via SQL.
+- **Unicidade** - verificar a unicidade dos dados na base de dados. Afeta o desempenho. Ativada por predefinição. Utilizada no caso de exportação via SQL.
 
 > [!TIP]
 > Ao utilizar exportação via SQL, é necessário definir os parâmetros da string de ligação
 
 **Nova string de ligação**
 
-![Captura de tela de Exportação (automática)](../../../images/hydra_tasks_connstring.png)
+![Captura de ecrã de Exportação (automática)](../../../images/hydra_tasks_connstring.png)
 
 - **Fornecedor** - definições do fornecedor.
 - **Servidor** - endereço do servidor ou caminho para a base de dados.

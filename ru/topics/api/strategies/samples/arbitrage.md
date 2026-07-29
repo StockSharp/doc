@@ -14,7 +14,7 @@ public class ArbitrageStrategy : Strategy
 	private enum ArbitrageState
 	{
 		Contango,        // Фьючерс дороже базового актива
-		Backvordation,   // Базовый актив дороже фьючерса
+		Backwardation,   // Базовый актив дороже фьючерса
 		None,            // Нет позиции
 		OrderRegistration // В процессе регистрации заявок
 	}
@@ -118,16 +118,16 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 
 	// Расчёт спредов
 	var contangoSpread = _futBid - _stAsk;        // Цена фьючерса > цены базового актива
-	var backvordationSpread = _stBid - _futAck;   // Цена базового актива > цены фьючерса
+	var backwardationSpread = _stBid - _futAck;   // Цена базового актива > цены фьючерса
 
 	decimal spread;
 	ArbitrageState arbitrageSignal;
 
 	// Определение лучшей арбитражной возможности
-	if (backvordationSpread > contangoSpread)
+	if (backwardationSpread > contangoSpread)
 	{
-		arbitrageSignal = ArbitrageState.Backvordation;
-		spread = backvordationSpread;
+		arbitrageSignal = ArbitrageState.Backwardation;
+		spread = backwardationSpread;
 	}
 	else
 	{
@@ -137,7 +137,7 @@ private void ProcessMarketDepth(IOrderBookMessage depth)
 
 	// Логирование текущего состояния и спредов
 	LogInfo($"Текущее состояние {_currentState}, входной спред = {_enterSpread}");
-	LogInfo($"{ArbitrageState.Backvordation} spread = {backvordationSpread}");
+	LogInfo($"{ArbitrageState.Backwardation} spread = {backwardationSpread}");
 	LogInfo($"{ArbitrageState.Contango}        spread = {contangoSpread}");
 	LogInfo($"Вход по спреду:{SpreadToGenerateSignal}. Выход по прибыли:{ProfitToExit}");
 
@@ -165,20 +165,20 @@ private void ProcessSignals(ArbitrageState arbitrageSignal, decimal spread)
 	{
 		_currentState = ArbitrageState.OrderRegistration;
 
-		if (arbitrageSignal == ArbitrageState.Backvordation)
+		if (arbitrageSignal == ArbitrageState.Backwardation)
 		{
-			ExecuteBackvardation();
+			ExecuteBackwardation();
 		}
 		else
 		{
 			ExecuteContango();
 		}
 	}
-	// Выход из позиции Backvordation, когда достигнут порог прибыли
-	else if (_currentState == ArbitrageState.Backvordation && _profit >= ProfitToExit)
+	// Выход из позиции Backwardation, когда достигнут порог прибыли
+	else if (_currentState == ArbitrageState.Backwardation && _profit >= ProfitToExit)
 	{
 		_currentState = ArbitrageState.OrderRegistration;
-		CloseBackvardationPosition();
+		CloseBackwardationPosition();
 	}
 	// Выход из позиции Contango, когда достигнут порог прибыли
 	else if (_currentState == ArbitrageState.Contango && _profit >= ProfitToExit)
@@ -198,7 +198,7 @@ private void CalculateProfit()
 {
 	switch (_currentState)
 	{
-		case ArbitrageState.Backvordation:
+		case ArbitrageState.Backwardation:
 			// Купить фьючерс, продать базовый актив - прибыль, когда цена фьючерса растёт и цена базового актива падает
 			_profit = (_stockExitPrice * StockMultiplicator - _stAsk) + (_futBid - _futureBuyPrice);
 			break;
@@ -220,7 +220,7 @@ private void CalculateProfit()
 Для выполнения арбитражных стратегий используются методы для генерации заявок:
 
 ```cs
-private (Order buy, Order sell) GenerateOrdersBackvardation()
+private (Order buy, Order sell) GenerateOrdersBackwardation()
 {
 	var futureBuy = CreateOrder(Sides.Buy, FutureVolume);
 	futureBuy.Portfolio = FuturePortfolio;

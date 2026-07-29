@@ -1,6 +1,6 @@
 # Combinação de velas: histórico + tempo real
 
-Para combinar velas históricos com dados em tempo real, você precisa inicializar os armazenamentos apropriados: armazenamento para objetos de negociação [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), armazenamento para dados de mercado [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry), e o registo de armazenamento de instantâneos [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
+Para combinar velas históricas com dados em tempo real, é necessário inicializar os armazenamentos apropriados: armazenamento para objetos de negociação [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), armazenamento para dados de mercado [StorageRegistry](xref:StockSharp.Algo.Storages.StorageRegistry), e o registo de armazenamento de instantâneos [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry).
 
 O projeto `Samples/Candles/CombineHistoryRealtime` mostra essa configuração na prática:
 
@@ -47,7 +47,7 @@ public partial class MainWindow
 		ConfigManager.RegisterService<IMessageAdapterProvider>(
 			new InMemoryMessageAdapterProvider(_connector.Adapter.InnerAdapters));
 
-		// Carregar configurações do conector se o arquivo existir
+		// Carregar configurações do conector se o ficheiro existir
 		if (_fileSystem.FileExists(_connectorFile))
 		{
 			_connector.Load(_connectorFile.Deserialize<SettingsStorage>(_fileSystem));
@@ -59,21 +59,21 @@ public partial class MainWindow
 }
 ```
 
-## Configuração da Conexão
+## Configuração da Ligação
 
 ```cs
-// Método para configurar parâmetros de conexão
+// Método para configurar parâmetros de ligação
 private void Setting_Click(object sender, RoutedEventArgs e)
 {
 	// Abrir janela de configuração do conector
 	if (_connector.Configure(this))
 	{
-		// Salvar configurações em arquivo
+		// Guardar configurações num ficheiro
 		_connector.Save().Serialize(_fileSystem, _connectorFile);
 	}
 }
 
-// Método para conectar ao sistema de negociação
+// Método para ligar ao sistema de negociação
 private void Connect_Click(object sender, RoutedEventArgs e)
 {
 	// Definir o conector como fonte de dados para seleção de instrumentos
@@ -272,7 +272,7 @@ public partial class MainWindow
 ## Características do Exemplo
 
 > [!IMPORTANT]
-> Todas as classes que trabalham com o sistema de arquivos ([CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive), [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry)) requerem uma instância de `IFileSystem` no construtor. Use `Paths.FileSystem` para a implementação padrão. `CsvEntityRegistry` também requer `ChannelExecutor` para sincronizar o acesso ao disco. Os métodos de serialização (`Serialize`, `Deserialize`) também aceitam `IFileSystem` como parâmetro.
+> Todas as classes que trabalham com o sistema de ficheiros ([CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry), [LocalMarketDataDrive](xref:StockSharp.Algo.Storages.LocalMarketDataDrive), [SnapshotRegistry](xref:StockSharp.Algo.Storages.SnapshotRegistry)) requerem uma instância de `IFileSystem` no construtor. Use `Paths.FileSystem` para a implementação padrão. `CsvEntityRegistry` também requer `ChannelExecutor` para sincronizar o acesso ao disco. Os métodos de serialização (`Serialize`, `Deserialize`) também aceitam `IFileSystem` como parâmetro.
 
 1. **Criação de Armazenamentos**:
    - [CsvEntityRegistry](xref:StockSharp.Algo.Storages.Csv.CsvEntityRegistry) é usado para armazenar entidades e requer `IFileSystem` e `ChannelExecutor`
@@ -286,7 +286,7 @@ public partial class MainWindow
 
 3. **Exibição no Gráfico**:
    - O método Chart.AddElement é usado para vincular o elemento do gráfico à assinatura
-   - O gráfico é atualizado automaticamente quando novas velas são recebidos
+   - O gráfico é atualizado automaticamente quando novas velas são recebidas
 
 4. **Tratamento de Eventos**:
 - Assinatura do evento CandleReceived para processar as velas recebidas
@@ -294,7 +294,7 @@ public partial class MainWindow
 
 ## Recursos Estendidos
 
-Você pode estender este exemplo com as seguintes funções:
+Pode estender este exemplo com as seguintes funções:
 
 ### Rastreamento da Transição para o Modo Tempo Real
 

@@ -17,7 +17,7 @@ public class OneCandleCountertrendStrategy : Strategy
 
 A estratégia permite personalizar os seguintes parâmetros:
 
-- **Tipo de vela** - tipo de vela com que trabalhar (predefinição 5 minutos)
+- `CandleType` - tipo de vela com que trabalhar (predefinição 5 minutos)
 
 ## Inicialização da Estratégia
 

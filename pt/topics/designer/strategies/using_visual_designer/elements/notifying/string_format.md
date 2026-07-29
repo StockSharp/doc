@@ -1,6 +1,6 @@
 # Formatação de strings
 
-![Captura de tela de Formatação de strings](../../../../../../images/designer_string_format_00.png)
+![Captura de ecrã de Formatação de strings](../../../../../../images/designer_string_format_00.png)
 
 O cubo converte um valor recebido de qualquer tipo numa string de texto. A
 conversão é executada de acordo com um modelo com marcadores de posição entre chavetas.

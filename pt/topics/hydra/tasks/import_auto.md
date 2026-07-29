@@ -4,13 +4,13 @@ A tarefa executa a importação automática de dados da bolsa a partir de fichei
 
 Para cada tipo de dados de mercado selecionado, o modelo é configurado no separador [Importação](../importing.md).
 
-![Captura de tela de Importação (automática) 1](../../../images/hydra_tasks_import.png)
+![Captura de ecrã de Importação (automática) 1](../../../images/hydra_tasks_import.png)
 
 Na parte inferior do painel, pode selecionar os instrumentos pelos quais os dados serão importados, bem como o tipo de dados a importar.
 
 Para cada instrumento, pode especificar as seguintes propriedades de importação de dados:
 
-![Captura de tela de Importação (automática) 2](../../../images/hydra_tasks_proper_import.png)
+![Captura de ecrã de Importação (automática) 2](../../../images/hydra_tasks_proper_import.png)
 
 **Importação (automática)**
 

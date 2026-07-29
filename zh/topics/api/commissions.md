@@ -6,8 +6,8 @@
 
 [ICommissionManager](xref:StockSharp.Algo.Commissions.ICommissionManager) 接口定义基础契约：
 
-- **规则** — 用于计算佣金的 [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) 规则集合。
-- **手续费** — 累计佣金总额（decimal）。
+- `Rules` — 用于计算佣金的 [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) 规则集合。
+- `Commission` — 累计佣金总额（decimal）。
 - **Reset()** — 重置管理器和所有规则的状态。
 - **Process(Message)** — 处理消息，并返回该消息的佣金或 `null`。
 
@@ -15,8 +15,8 @@
 
 每条规则都实现 [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule)：
 
-- **标题** — 规则标题。
-- **值** — 佣金值（[Unit](xref:Ecng.ComponentModel.Unit)），可以是绝对值或百分比。
+- `Title` — 规则标题。
+- `Value` — 佣金值（[Unit](xref:Ecng.ComponentModel.Unit)），可以是绝对值或百分比。
 - **Process(ExecutionMessage)** — 计算特定消息的佣金。
 
 基类 [CommissionRule](xref:StockSharp.Algo.Commissions.CommissionRule) 包含辅助方法 `GetValue(price, volume)`：

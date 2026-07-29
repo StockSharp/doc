@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [LinearRegRSquared](xref
 
 ## Descrição
 
-R-quadrado na regressão linear (R²) é uma medida estatística usada para avaliar o grau de correspondência entre os dados de preço e uma linha de regressão linear traçada através desses dados. No contexto da análise técnica, R² mostra quão bem o movimento actual do preço corresponde a uma tendência linear.
+R-quadrado na regressão linear (R²) é uma medida estatística usada para avaliar o grau de correspondência entre os dados de preço e uma linha de regressão linear traçada através desses dados. No contexto da análise técnica, R² mostra quão bem o movimento atual do preço corresponde a uma tendência linear.
 
 Os valores de R² variam de 0 a 1 (ou de 0% a 100%):
 - Um valor próximo de 1 (100%) indica que os preços se alinham muito bem ao longo da linha de tendência, significando uma tendência forte
@@ -30,7 +30,7 @@ O cálculo de R-quadrado na regressão linear envolve os seguintes passos:
    Onde:
    - y - preço (variável dependente)
    - x - número sequencial do período (variável independente)
-   - a - termo livre (intercepção no eixo y)
+   - a - termo livre (interceção no eixo y)
    - b - coeficiente de inclinação
 
 2. Calcular a soma dos desvios quadráticos da regressão (SSE):
@@ -61,7 +61,7 @@ R-quadrado na regressão linear pode ser interpretado da seguinte forma:
    - Valores entre 0,3 e 0,7 (30-70%) indicam uma tendência moderada
    - Valores abaixo de 0,3 (30%) indicam uma tendência fraca ou ausência de tendência
 
-2. **Selecção da Estratégia de Negociação**:
+2. **Seleção da Estratégia de Negociação**:
    - Com valores altos de R² (tendência forte), as estratégias de seguimento de tendência são eficazes
    - Com valores baixos de R² (movimento lateral), as estratégias de negociação em intervalo são eficazes
 

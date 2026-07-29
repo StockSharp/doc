@@ -5,7 +5,7 @@ Das Erstellen einer Strategie aus Quellcode wird anhand des Beispiels einer SMA-
 Dieser Abschnitt beschreibt keine Python-Sprachkonstrukte (oder [Strategy](../../../../api/strategies.md), die als Basis für die Erstellung von Strategien verwendet wird), sondern erwähnt spezielle Aspekte der Arbeit mit Code im **Designer**.
 
 > [!TIP]
-> Strategien, die im **Designer** erstellt wurden, sind durch die gemeinsame Basisklasse [Strategy](../../../../api/strategies.md) mit Strategien aus der [API](../../../../api.md) kompatibel. Dadurch ist das Ausführen solcher Strategien außerhalb des **Designer** deutlich einfacher als das Ausführen von [Schemata](../../../live_execution/running_strategies_outside_of_designer.md).
+> Strategien, die im **Designer** erstellt wurden, sind durch die gemeinsame Basisklasse [Strategy](../../../../api/strategies.md) mit Strategien aus der [API](../../../../api.md) kompatibel. Dadurch ist das Ausführen solcher Strategien außerhalb des **Designers** deutlich einfacher als das Ausführen von [Schemata](../../../live_execution/running_strategies_outside_of_designer.md).
 
 1. Vor dem Beginn der Python-Entwicklung müssen Sie .NET-Abhängigkeiten über das Modul clr importieren, das von IronPython für die Interaktion mit .NET bereitgestellt wird:
 
@@ -102,7 +102,7 @@ subscription = self.SubscribeCandles(self.CandleType)
 subscription.Bind(longSma, shortSma, self.OnProcess).Start()
 ```
 
-4. Bei der Arbeit mit Charts ist es wichtig zu berücksichtigen, dass das Chart-Objekt fehlen kann, wenn die Strategie [außerhalb des Designer](../../../live_execution/running_strategies_outside_of_designer.md) ausgeführt wird.
+4. Bei der Arbeit mit Charts ist es wichtig zu berücksichtigen, dass das Chart-Objekt fehlen kann, wenn die Strategie [außerhalb des Designers](../../../live_execution/running_strategies_outside_of_designer.md) ausgeführt wird.
 
 ```python
 # Chart konfigurieren, wenn eine GUI verfügbar ist

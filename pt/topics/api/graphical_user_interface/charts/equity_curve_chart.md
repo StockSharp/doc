@@ -4,7 +4,7 @@
 
 Abaixo está um exemplo de utilização deste componente. O código completo do exemplo está em Samples\/Testing\/SampleHistoryTesting.
 
-![Captura de tela de Gráfico de curva de capital](../../../../images/gui_equitycurvechart.png)
+![Captura de ecrã de Gráfico de curva de capital](../../../../images/gui_equitycurvechart.png)
 
 ## Exemplo de desenho do EquityCurveChart
 

@@ -9,7 +9,7 @@ Un histograma dibuja una barra vertical por cada punto a partir de un valor base
 
 ## Configuración
 
-Añade una `HistogramSeries` y aliméntala con puntos `{ time, value, color? }`; un `color` por punto anula el color de la serie:
+Añada una `HistogramSeries` y aliméntela con puntos `{ time, value, color? }`; un `color` por punto anula el color de la serie:
 
 ```js
 const series = chart.addSeries(SSChart.HistogramSeries, {
@@ -25,7 +25,7 @@ series.setData(candles.map(c => ({
 chart.timeScale().fitContent();
 ```
 
-Para mostrar el volumen debajo de un gráfico de precios en lugar de por separado, coloca el histograma en una escala de precios superpuesta y fíjalo en la parte inferior:
+Para mostrar el volumen debajo de un gráfico de precios en lugar de por separado, coloque el histograma en una escala de precios superpuesta y fíjelo en la parte inferior:
 
 ```js
 const volume = chart.addSeries(SSChart.HistogramSeries, { priceScaleId: '', priceFormat: { type: 'volume' } });

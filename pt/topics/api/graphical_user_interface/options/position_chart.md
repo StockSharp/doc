@@ -4,7 +4,7 @@ O componente gráfico [OptionPositionChart](xref:StockSharp.Xaml.Charting.Option
 
 Segue-se o exemplo SampleOptionQuoting, no qual este gráfico é utilizado. O código-fonte do exemplo pode ser encontrado na pasta *Samples\/06\_Strategies\/09\_LiveOptionsQuoting*.
 
-![Captura de tela de Gráfico de posição](../../../../images/option_volsmile.png)
+![Captura de ecrã de Gráfico de posição](../../../../images/option_volsmile.png)
 
 ## Exemplo SampleOptionQuoting
 
@@ -33,19 +33,19 @@ Segue-se o exemplo SampleOptionQuoting, no qual este gráfico é utilizado. O c�
    ...                 
    public readonly Connector Connector = new Connector();
    ...                 
-   // assinar o evento de conexão bem-sucedida
+   // assinar o evento de ligação bem-sucedida
    Connector.Connected += () =>
    {
    	// atualizar rótulos da interface
    	this.GuiAsync(() => ChangeConnectStatus(true));
    };
-   // assinar o evento de desconexão
+   // assinar o evento de desligação
    Connector.Disconnected += () =>
    {
    	// atualizar rótulos da interface
    	this.GuiAsync(() => ChangeConnectStatus(false));
    };
-   // assinar o evento de erro de conexão
+   // assinar o evento de erro de ligação
    Connector.ConnectionError += error => this.GuiAsync(() =>
    {
    	// atualizar rótulos da interface

@@ -14,7 +14,7 @@ Signal = EMA_a(EMA_s(P) − EMA_l(P))
 
 Estas duas curvas resultantes representam o MACD linear normal. Além disso, a linha zero, relativamente à qual as curvas flutuam, é normalmente marcada na janela do indicador.
 
-Ao construir o histograma MACD, as barras do histograma mostram a diferença entre a linha de sinal e a linha MACD, simplificando ainda mais a percepção do indicador.
+Ao construir o histograma MACD, as barras do histograma mostram a diferença entre a linha de sinal e a linha MACD, simplificando ainda mais a perceção do indicador.
 
 ![Gráfico do indicador Histograma MACD](../../../../images/indicatormovingaverageconvergencedivergencehistogram.png)
 

@@ -1,6 +1,6 @@
 # MCO
 
-**Oscilador de McClellan (MCO)** é um indicador técnico desenvolvido por Sherman e Marian McClellan que mede a amplitude do mercado analisando a diferença entre médias móveis de acções em alta e em queda.
+**Oscilador de McClellan (MCO)** é um indicador técnico desenvolvido por Sherman e Marian McClellan que mede a amplitude do mercado analisando a diferença entre médias móveis de ações em alta e em queda.
 
 Para utilizar o indicador, é necessário usar a classe [McClellanOscillator](xref:StockSharp.Algo.Indicators.McClellanOscillator).
 
@@ -8,13 +8,13 @@ Para utilizar o indicador, é necessário usar a classe [McClellanOscillator](xr
 
 O Oscilador de McClellan (MCO) é um dos indicadores de amplitude de mercado mais conhecidos, ajudando a avaliar a condição geral do mercado e a identificar potenciais pontos de inversão. Desenvolvido em 1969, tornou-se desde então uma ferramenta crucial para muitos analistas técnicos.
 
-O MCO baseia-se na análise do rácio entre o número de acções em alta e em queda no mercado. O indicador calcula a diferença entre médias móveis exponenciais de 19 e 39 períodos dos avanços líquidos (diferença entre o número de acções em alta e em queda).
+O MCO baseia-se na análise do rácio entre o número de ações em alta e em queda no mercado. O indicador calcula a diferença entre médias móveis exponenciais de 19 e 39 períodos dos avanços líquidos (diferença entre o número de ações em alta e em queda).
 
 O Oscilador de McClellan é particularmente útil para:
-- Determinar a direcção geral do mercado
+- Determinar a direção geral do mercado
 - Identificar condições de sobrecompra e sobrevenda
 - Identificar potenciais pontos de inversão
-- Confirmar a força ou fraqueza da tendência actual
+- Confirmar a força ou fraqueza da tendência atual
 
 ## Cálculo
 
@@ -24,7 +24,7 @@ O cálculo do Oscilador de McClellan envolve os seguintes passos:
    ```
    avanços líquidos = avanços - declínios
    ```
-   onde avanços é o número de acções em alta, declínios é o número de acções em queda.
+   onde avanços é o número de ações em alta, declínios é o número de ações em queda.
 
 2. Calcular a média móvel exponencial de 19 períodos de avanços líquidos:
    ```
@@ -59,12 +59,12 @@ O Oscilador de McClellan pode ser interpretado da seguinte forma:
    - Divergência baixista: o índice forma um novo máximo, enquanto o MCO forma um máximo mais baixo
 
 4. **Estado da Amplitude do Mercado**:
-   - Valores positivos do MCO indicam que a maioria das acções no mercado está a subir
-   - Valores negativos do MCO indicam que a maioria das acções no mercado está a cair
+   - Valores positivos do MCO indicam que a maioria das ações no mercado está a subir
+   - Valores negativos do MCO indicam que a maioria das ações no mercado está a cair
 
 5. **Aceleração/Desaceleração do Movimento**:
-   - Valores crescentes do MCO (positivos ou negativos) indicam aceleração do movimento actual do mercado
-   - Valores decrescentes do MCO indicam desaceleração do movimento actual do mercado
+   - Valores crescentes do MCO (positivos ou negativos) indicam aceleração do movimento atual do mercado
+   - Valores decrescentes do MCO indicam desaceleração do movimento atual do mercado
 
 6. **Combinação com índice de somatório de McClellan**:
    - índice de somatório de McClellan (MSI) é a soma cumulativa dos valores do MCO
@@ -79,4 +79,3 @@ O Oscilador de McClellan pode ser interpretado da seguinte forma:
 ## Ver Também
 
 [HighLowIndex](high_low_index.md)
-

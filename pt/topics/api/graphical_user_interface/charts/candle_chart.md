@@ -4,7 +4,7 @@
 
 Abaixo está um exemplo de construção de um gráfico utilizando o componente [Chart](xref:StockSharp.Xaml.Charting.Chart). O exemplo baseia-se em Samples\/02\_Candles\/01\_Realtime, com algumas modificações.
 
-![Captura de tela de Gráfico de velas](../../../../images/gui_chartsample.png)
+![Captura de ecrã de Gráfico de velas](../../../../images/gui_chartsample.png)
 
 ## Exemplo de construção de um gráfico utilizando Chart
 
@@ -35,7 +35,7 @@ Abaixo está um exemplo de construção de um gráfico utilizando o componente [
    private MovingAverageConvergenceDivergence _macd;
    ```
 
-3. No manipulador do evento **Click** do botão **Conectar**, juntamente com a subscrição dos eventos do conector e a chamada ao método [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), subscrevemos o evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). Neste manipulador de evento, o gráfico será desenhado quando uma nova vela for recebida.
+3. No manipulador do evento **Click** do botão **Ligar**, juntamente com a subscrição dos eventos do conector e a chamada ao método [IConnector.Connect](xref:StockSharp.BusinessEntities.IConnector.Connect), subscrevemos o evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived). Neste manipulador de evento, o gráfico será desenhado quando uma nova vela for recebida.
 
    ```cs
    private void ConnectClick(object sender, RoutedEventArgs e)
@@ -43,8 +43,8 @@ Abaixo está um exemplo de construção de um gráfico utilizando o componente [
        _connector.CandleReceived += OnCandleReceived;
        
        // Subscrever outros eventos necessários
-       _connector.Connected += () => this.GuiAsync(() => { /* Processar conexão */ });
-       _connector.Disconnected += () => this.GuiAsync(() => { /* Processar desconexão */ });
+       _connector.Connected += () => this.GuiAsync(() => { /* Processar ligação */ });
+       _connector.Disconnected += () => this.GuiAsync(() => { /* Processar desligação */ });
        
        // Ligar ao sistema de negociação
        _connector.Connect();

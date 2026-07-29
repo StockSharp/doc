@@ -157,7 +157,7 @@ Für die Erstellung formelbasierter Muster wird `ExpressionCandlePattern` verwen
 | `C` | Schlusskurs |
 | `V` | Volumen |
 | `B` | Kerzenkörper |
-| `LEN` | Kerze-Länge |
+| `LEN` | Kerzenlänge |
 | `BS` | Unterer Schatten |
 | `TS` | Oberer Schatten |
 

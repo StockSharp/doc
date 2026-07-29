@@ -8,7 +8,7 @@
 
 Für die Arbeit mit Abonnements verwenden Sie die Klasse [Subscription](xref:StockSharp.BusinessEntities.Subscription). Betrachten wir Beispiele zur Verwendung von Abonnements zum Abrufen verschiedener Datentypen.
 
-## Beispiel für ein Kerze-Abonnement
+## Beispiel für ein Kerzenabonnement
 
 ```cs
 // Abonnement für 5-Minuten-Kerzen erstellen

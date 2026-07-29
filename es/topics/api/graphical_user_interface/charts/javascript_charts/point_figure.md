@@ -9,7 +9,7 @@ Los gráficos Point & Figure eliminan por completo el tiempo y dibujan columnas 
 
 ## Configuración
 
-Añade una `PointFigureSeries` con un `boxSize` y un `reversal`, y luego aliméntala con velas en bruto — la serie construye las columnas por sí misma:
+Añada una `PointFigureSeries` con un `boxSize` y un `reversal`, y luego aliméntela con velas en bruto — la serie construye las columnas por sí misma:
 
 ```js
 const series = chart.addSeries(SSChart.PointFigureSeries, {

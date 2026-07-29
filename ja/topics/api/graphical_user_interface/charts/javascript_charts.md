@@ -97,7 +97,7 @@ chart.timeScale().fitContent();
 
 系列タイプに加えて、チャートには約 160 種類の分析を備えた[インジケーターエンジン](javascript_charts/indicators.md)と、スクロールに応じて古いバーを読み込む[遅延ヒストリーバックフィル](javascript_charts/backfill.md)もあります。
 
-同じ Web スタックによって描画されるビジュアル戦略エディターについては、[JavaScript ダイアグラム](../javascript_diagram.md)を参照してください。
+同じ Web スタックによって描画されるビジュアルストラテジーエディターについては、[JavaScript ダイアグラム](../javascript_diagram.md)を参照してください。
 
 ## ターミナルの完全なチャートモジュール群
 

@@ -11,7 +11,7 @@ Para pesquisar instrumentos no S#, é utilizado um mecanismo de subscrição, se
 Para pesquisar instrumentos, tem de criar uma instância da classe [Subscription](xref:StockSharp.BusinessEntities.Subscription) com base na mensagem [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage), que contém parâmetros de filtragem:
 
 ```csharp
-// Criar um objecto de filtro para pesquisa
+// Criar um objeto de filtro para pesquisa
 var lookupMessage = new SecurityLookupMessage
 {
 	// Definir critérios de pesquisa
@@ -24,7 +24,7 @@ var lookupMessage = new SecurityLookupMessage
 	},
 	// Pode especificar o tipo de instrumento
 	SecurityType = SecurityTypes.Stock,
-	// Definir ID da transacção
+	// Definir ID da transação
 	TransactionId = Connector.TransactionIdGenerator.GetNextId()
 };
 
@@ -37,16 +37,16 @@ var subscription = new Subscription(lookupMessage);
 A mensagem [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) permite definir os seguintes critérios de pesquisa:
 
 - **SecurityId** — identificador do instrumento, contendo:
-  - **Código do instrumento** — código ou máscara do código do instrumento (por exemplo, "AAPL" ou "MS*")
-  - **Código da praça** — código da bolsa (por exemplo, [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
-- **Tipo de instrumento** — tipo de instrumento ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future), etc.)
+  - `SecurityCode` — código ou máscara do código do instrumento (por exemplo, "AAPL" ou "MS*")
+  - `BoardCode` — código da bolsa (por exemplo, [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
+- **SecurityType** — tipo de instrumento ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future), etc.)
 - **SecurityTypes** — matriz de tipos de instrumentos para pesquisa avançada
-- **Moeda** — moeda de negociação do instrumento
+- **Currency** — moeda de negociação do instrumento
 - **ExpiryDate** — data de vencimento (para derivados)
-- **Preço de exercício** — preço de exercício (para opções)
-- **Tipo de opção** — tipo de opção (para opções)
-- **Nome** — nome do instrumento ou parte dele
-- **Classe** — classe do instrumento
+- **Strike** — preço de exercício (para opções)
+- **OptionType** — tipo de opção (para opções)
+- **Name** — nome do instrumento ou parte dele
+- **Class** — classe do instrumento
 
 ### Processar Resultados da Pesquisa
 
@@ -61,7 +61,7 @@ private void OnSecurityReceived(Subscription subscription, Security security)
 		
 	Console.WriteLine($"Instrumento encontrado: {security.Id} - {security.Name}, Tipo: {security.Type}");
 	
-	// Aqui pode adicionar o instrumento a uma colecção ou executar outras acções
+	// Aqui pode adicionar o instrumento a uma coleção ou executar outras ações
 	Securities.Add(security);
 }
 
@@ -99,7 +99,7 @@ Abaixo está um exemplo completo de um método para pesquisar instrumentos:
 ```csharp
 public void FindSecurities(string searchCode, SecurityTypes? securityType = null)
 {
-	// Criar um objecto para pesquisa de instrumentos
+	// Criar um objeto para pesquisa de instrumentos
 	var lookupMessage = new SecurityLookupMessage
 	{
 		SecurityId = new SecurityId
@@ -115,10 +115,10 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 	// Criar uma subscrição
 	var subscription = new Subscription(lookupMessage);
 	
-	// Limpar a colecção para resultados da pesquisa
+	// Limpar a coleção para resultados da pesquisa
 	_searchResults.Clear();
 	
-	// Colecção temporária para acumular resultados
+	// Coleção temporária para acumular resultados
 	var foundSecurities = new List<Security>();
 	
 	// Subscrição para receber instrumentos
@@ -127,7 +127,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		if (sub != subscription)
 			return;
 			
-		// Adicionar o instrumento encontrado à colecção
+		// Adicionar o instrumento encontrado à coleção
 		foundSecurities.Add(security);
 		Console.WriteLine($"Encontrado: {security.Id}, {security.Name}");
 	}
@@ -138,7 +138,7 @@ public void FindSecurities(string searchCode, SecurityTypes? securityType = null
 		if (sub != subscription)
 			return;
 			
-		// Copiar resultados para a colecção principal
+		// Copiar resultados para a coleção principal
 		_searchResults.AddRange(foundSecurities);
 		
 		Console.WriteLine($"Pesquisa concluída. Instrumentos encontrados: {foundSecurities.Count}");
@@ -193,7 +193,7 @@ private void FindButton_Click(object sender, RoutedEventArgs e)
 	var lookupMessage = new SecurityLookupMessage
 	{
 		SecurityId = new SecurityId { SecurityCode = searchText },
-		// Se for seleccionado um tipo na interface
+		// Se for selecionado um tipo na interface
 		SecurityType = SecurityTypeComboBox.SelectedItem as SecurityTypes?
 	};
 	
@@ -231,7 +231,7 @@ private void ShowSecurityLookupWindow_Click(object sender, RoutedEventArgs e)
 	// Mostrar a janela como uma caixa de diálogo modal
 	if (lookupWindow.ShowModal(this))
 	{
-		// Se o utilizador confirmou a selecção, enviar o pedido
+		// Se o utilizador confirmou a seleção, enviar o pedido
 		Connector.Subscribe(new Subscription(lookupWindow.CriteriaMessage));
 	}
 }

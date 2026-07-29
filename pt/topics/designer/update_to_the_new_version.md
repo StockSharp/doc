@@ -1,6 +1,6 @@
-# Actualizar para a nova versão
+# Atualizar para a nova versão
 
-[Actualizar aplicações](../installer/update_apps.md)
+[Atualizar aplicações](../installer/update_apps.md)
 
 ## Conteúdo recomendado
 

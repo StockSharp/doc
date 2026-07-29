@@ -1,10 +1,10 @@
 # Patrón Tres exteriores bajistas y Tres exteriores alcistas
 
-Los términos Tres exteriores bajistas y Tres exteriores alcistas se refieren a patrones de reversión de tres velas. Para que se forme un patrón, tres velas deben formarse en una secuencia específica, indicando que la tendencia actual ha perdido impulso y puede señalar una reversión de la tendencia existente. En concreto, un patrón se forma cuando una vela bajista (que cierra por debajo de su apertura) es seguida por dos instancias de una vela alcista (que cierra por encima de su apertura), o viceversa.
+Los términos Tres exteriores bajistas y Tres exteriores alcistas se refieren a patrones de reversión de tres velas. Para que se forme un patrón, tres velas deben formarse en una secuencia específica, indicando que la tendencia actual ha perdido impulso y puede señalar una reversión de la tendencia existente. En concreto, un patrón se forma cuando una vela bajista (que cierra por debajo de su apertura) es seguida por dos velas alcistas (que cierran por encima de su apertura), o viceversa.
 
 ##### Características clave:
 
-- Los patrones Tres exteriores bajistas/Up son patrones de tres velas que suelen señalar una reversión de tendencia.
+- Los patrones Tres exteriores bajistas/alcistas son patrones de tres velas que suelen señalar una reversión de tendencia.
 - Los patrones Tres exteriores bajistas y Tres exteriores alcistas se caracterizan por una vela seguida inmediatamente por dos velas del color opuesto.
 - Cada uno busca usar la psicología del mercado para comprender cambios de ánimo a corto plazo.
 

@@ -4,7 +4,7 @@
 
 インジケーターを使用するには、[LinearRegSlope](xref:StockSharp.Algo.Indicators.LinearRegSlope) クラスを使用する必要があります。
 
-![線形回帰傾き のチャート](../../../../images/indicatorlinearregslope.png)
+![線形回帰傾きのチャート](../../../../images/indicatorlinearregslope.png)
 
 ## 推奨コンテンツ
 

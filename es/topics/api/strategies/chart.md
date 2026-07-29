@@ -115,11 +115,11 @@ private void ConfigureChartElements()
 
 La interfaz [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) proporciona muchas propiedades para configurar la visualización de velas:
 
-- **Estilo de dibujo** - estilo de visualización de velas:
+- **DrawStyle** - estilo de visualización de velas:
   - **CandleStick** - velas japonesas
   - **Ohlc** - barras
   - **LineOpen/LineHigh/LineLow/LineClose** - líneas para los precios correspondientes
-  - **Volumen de caja** - cajas de volumen
+  - **BoxVolume** - cajas de volumen
   - **ClusterProfile** - perfil de clúster
   - **Area** - área
   - **PnF** - gráfico punto y figura
@@ -127,13 +127,13 @@ La interfaz [IChartCandleElement](xref:StockSharp.Charting.IChartCandleElement) 
 - **Ajustes de color**:
   - **UpFillColor/DownFillColor** - color del cuerpo de vela alcista/bajista
   - **UpBorderColor/DownBorderColor** - color del borde de vela alcista/bajista
-  - **Color de línea** - color de línea para gráficos de tipo línea
-  - **Color del área** - color de área para tipo Area
+  - **LineColor** - color de línea para gráficos de tipo línea
+  - **AreaColor** - color de área para tipo Area
 
 - **Otros ajustes**:
-  - **Grosor de línea** - grosor de línea
-  - **Suavizado** - suavizado
-  - **Mostrar marcador del eje** - mostrar marcador del eje Y
+  - **StrokeThickness** - grosor de línea
+  - **AntiAliasing** - suavizado
+  - **ShowAxisMarker** - mostrar marcador del eje Y
 
 ### Agregar indicadores
 
@@ -177,11 +177,11 @@ smaElement.AutoAssignYAxis = true; // Asignar eje Y automáticamente
 La interfaz [IChartIndicatorElement](xref:StockSharp.Charting.IChartIndicatorElement) proporciona las siguientes propiedades para configuración:
 
 - **Color** - color principal del indicador
-- **Color adicional** - color adicional (para indicadores con dos líneas)
-- **Grosor de línea** - grosor de línea
-- **Suavizado** - suavizado
-- **Estilo de dibujo** - estilo de dibujo (línea, puntos, histograma, etc.)
-- **Mostrar marcador del eje** - mostrar marcador del eje Y
+- **AdditionalColor** - color adicional (para indicadores con dos líneas)
+- **StrokeThickness** - grosor de línea
+- **AntiAliasing** - suavizado
+- **DrawStyle** - estilo de dibujo (línea, puntos, histograma, etc.)
+- **ShowAxisMarker** - mostrar marcador del eje Y
 - **AutoAssignYAxis** - asignar eje Y automáticamente
 
 ### Agregar operaciones
@@ -216,12 +216,12 @@ _ordersElement.PointSize = 8;                // Tamaño del punto
 
 La interfaz [IChartOrderElement](xref:StockSharp.Charting.IChartOrderElement) proporciona las siguientes propiedades para configuración:
 
-- **Color de órdenes activas** - color de órdenes activas
-- **Color de órdenes canceladas** - color de órdenes canceladas
-- **Color de órdenes completadas** - color de órdenes completadas
-- **Color de error** - color de error
-- **Color del borde de error** - color de borde de error
-- **Filtro** - filtro de visualización de órdenes
+- **ActiveBrush** - color de órdenes activas
+- **CanceledBrush** - color de órdenes canceladas
+- **DoneBrush** - color de órdenes completadas
+- **ErrorColor** - color de error
+- **ErrorStrokeColor** - color de borde de error
+- **Filter** - filtro de visualización de órdenes
 
 ## Dibujo de datos en el gráfico
 

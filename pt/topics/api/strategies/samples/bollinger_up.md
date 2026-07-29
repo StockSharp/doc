@@ -23,9 +23,9 @@ public class BollingerStrategyUpBandStrategy : Strategy
 
 A estratégia permite personalizar os seguintes parâmetros:
 
-- **Período de Bollinger** - período do indicador Bandas de Bollinger (predefinição 20)
-- **Desvio de Bollinger** - multiplicador do desvio padrão (predefinição 2.0)
-- **Tipo de vela** - tipo de vela com que trabalhar (predefinição 5 minutos)
+- **BollingerLength** - período do indicador Bandas de Bollinger (predefinição 20)
+- **BollingerDeviation** - multiplicador do desvio padrão (predefinição 2.0)
+- `CandleType` - tipo de vela com que trabalhar (predefinição 5 minutos)
 
 Todos os parâmetros estão disponíveis para otimização com intervalos de valores especificados.
 

@@ -4785,7 +4785,7 @@
         href: api/indicators/list_of_indicators/vortex_indicator.md
       - name: WTO
         href: api/indicators/list_of_indicators/wave_trend_oscillator.md
-      - name: Preço de Fechamento Ponderado
+      - name: Preço de fecho ponderado
         href: api/indicators/list_of_indicators/weighted_close_price.md
       - name: média móvel ponderada
         href: api/indicators/list_of_indicators/weighted_ma.md

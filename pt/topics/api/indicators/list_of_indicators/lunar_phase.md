@@ -6,7 +6,7 @@ Para utilizar o indicador, é necessário usar a classe [LunarPhase](xref:StockS
 
 ## Descrição
 
-O indicador Fase lunar (LP) é uma ferramenta invulgar de análise técnica que usa informação sobre a fase actual da lua para potencialmente prever tendências de mercado. O indicador baseia-se na teoria de que os ciclos lunares podem influenciar o comportamento dos participantes no mercado e, consequentemente, os movimentos de preço dos instrumentos financeiros.
+O indicador Fase lunar (LP) é uma ferramenta invulgar de análise técnica que usa informação sobre a fase atual da lua para potencialmente prever tendências de mercado. O indicador baseia-se na teoria de que os ciclos lunares podem influenciar o comportamento dos participantes no mercado e, consequentemente, os movimentos de preço dos instrumentos financeiros.
 
 O ciclo lunar dura aproximadamente 29,53 dias e é tradicionalmente dividido em quatro fases principais:
 1. Lua Nova
@@ -14,7 +14,7 @@ O ciclo lunar dura aproximadamente 29,53 dias e é tradicionalmente dividido em 
 3. Lua Cheia
 4. Quarto Minguante (Lua Minguante)
 
-O indicador acompanha a fase actual da lua e representa esta informação como um valor numérico de 0 a 1, onde:
+O indicador acompanha a fase atual da lua e representa esta informação como um valor numérico de 0 a 1, onde:
 - 0 corresponde à lua nova
 - 0,25 corresponde ao quarto crescente
 - 0,5 corresponde à lua cheia
@@ -22,7 +22,7 @@ O indicador acompanha a fase actual da lua e representa esta informação como u
 
 ## Cálculo
 
-O cálculo do indicador Fase lunar baseia-se em algoritmos astronómicos para determinar a fase actual da lua:
+O cálculo do indicador Fase lunar baseia-se em algoritmos astronómicos para determinar a fase atual da lua:
 
 1. Determinar o número de dias decorridos desde o início do ciclo lunar (lua nova):
    ```
@@ -63,7 +63,7 @@ A interpretação do indicador Fase lunar pode variar, pois é uma ferramenta de
    - O LP normalmente não é usado como ferramenta autónoma para tomar decisões de negociação
    - Recomenda-se combiná-lo com indicadores técnicos tradicionais para confirmar sinais
 
-Note que não há evidência científica suficiente de influência directa das fases lunares nos mercados financeiros, e muitos operadores profissionais abordam estas ferramentas com cepticismo. No entanto, alguns participantes do mercado encontram valor em incluir o LP no seu arsenal analítico.
+Note que não há evidência científica suficiente de influência direta das fases lunares nos mercados financeiros, e muitos operadores profissionais abordam estas ferramentas com ceticismo. No entanto, alguns participantes do mercado encontram valor em incluir o LP no seu arsenal analítico.
 
 ![Gráfico do indicador LP](../../../../images/indicator_lunar_phase.png)
 
@@ -71,4 +71,3 @@ Note que não há evidência científica suficiente de influência directa das f
 
 [SineWave](sine_wave.md)
 [HarmonicOscillator](harmonic_oscillator.md)
-

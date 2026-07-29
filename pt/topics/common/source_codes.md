@@ -16,7 +16,7 @@ Lista de componentes disponíveis com código-fonte:
 - Simulador histórico.
 - Indicadores (mais de 140) de análise técnica.
 - Algoritmos para calcular lucro/prejuízo, deslizamento e atraso.
-- Algoritmos para construir velas de qualquer período, bem como velas não baseados no tempo (tick, range, etc.).
+- Algoritmos para construir velas de qualquer período, bem como velas não baseadas no tempo (tick, range, etc.).
 - Registo.
 - Importação e exportação.
 

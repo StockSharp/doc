@@ -1,8 +1,8 @@
 # Execução passo a passo
 
-Para iniciar a execução passo a passo, coloque um ponto de interrupção no elemento onde a execução deve parar primeiro. Depois de o [Designer](../../../designer.md) parar nesse elemento, clique no botão ![Designer controle de depuração 03](../../../../images/designer_debug_03.png)**Próximo elemento**. O Designer passará de um elemento para o seguinte e mostrará como a estratégia é executada passo a passo.
+Para iniciar a execução passo a passo, coloque um ponto de interrupção no elemento onde a execução deve parar primeiro. Depois de o [Designer](../../../designer.md) parar nesse elemento, clique no botão ![Designer controlo de depuração 03](../../../../images/designer_debug_03.png)**Próximo elemento**. O Designer passará de um elemento para o seguinte e mostrará como a estratégia é executada passo a passo.
 
-Para entrar num **elemento composto**, aguarde até que a execução passo a passo chegue a ele e clique em ![Designer controle de depuração 04](../../../../images/designer_debug_04.png)**Entrar**. O passo seguinte será executado dentro do **elemento composto**. Para sair do **elemento composto**, clique em ![Designer controle de depuração 05](../../../../images/designer_debug_05.png)**Sair**.
+Para entrar num **elemento composto**, aguarde até que a execução passo a passo chegue a ele e clique em ![Designer controlo de depuração 04](../../../../images/designer_debug_04.png)**Entrar**. O passo seguinte será executado dentro do **elemento composto**. Para sair do **elemento composto**, clique em ![Designer controlo de depuração 05](../../../../images/designer_debug_05.png)**Sair**.
 
 ## Conteúdo recomendado
 

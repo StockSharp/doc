@@ -1,10 +1,10 @@
 # Drei außen abwärts und Drei außen aufwärts
 
-Die Begriffe Drei außen abwärts und Drei außen aufwärts bezeichnen Drei-Kerze-Umkehrmuster. Damit ein Muster entsteht, müssen drei Kerzen in einer bestimmten Reihenfolge gebildet werden. Dies weist darauf hin, dass der aktuelle Trend an Momentum verloren hat und eine Umkehr des bestehenden Trends signalisieren kann. Konkret entsteht ein Muster, wenn auf eine bärische Kerze (die tiefer schließt als sie eröffnet hat) zwei bullische Kerzen folgen (die höher schließen als sie eröffnet haben) oder umgekehrt.
+Die Begriffe Drei außen abwärts und Drei außen aufwärts bezeichnen Drei-Kerzen-Umkehrmuster. Damit ein Muster entsteht, müssen drei Kerzen in einer bestimmten Reihenfolge gebildet werden. Dies weist darauf hin, dass der aktuelle Trend an Momentum verloren hat und eine Umkehr des bestehenden Trends signalisieren kann. Konkret entsteht ein Muster, wenn auf eine bärische Kerze (die tiefer schließt als sie eröffnet hat) zwei bullische Kerzen folgen (die höher schließen als sie eröffnet haben) oder umgekehrt.
 
 ##### Hauptmerkmale:
 
-- Die Muster Drei außen abwärts/Up sind Drei-Kerzenmuster, die häufig eine Trendumkehr signalisieren.
+- Die Muster Drei außen abwärts/aufwärts sind Drei-Kerzenmuster, die häufig eine Trendumkehr signalisieren.
 - Die Muster Drei außen abwärts und Drei außen aufwärts sind dadurch gekennzeichnet, dass auf eine Kerze unmittelbar zwei Kerzen der entgegengesetzten Farbe folgen.
 - Beide versuchen, Marktpsychologie zu nutzen, um kurzfristige Stimmungsänderungen zu verstehen.
 
@@ -35,4 +35,3 @@ Die erste Kerze signalisiert den Beginn des Endes des vorherrschenden Trends, da
 ## Siehe auch
 
 [Drei innen abwärts und Drei innen aufwärts](3_inside_down_3_side_up.md)
-

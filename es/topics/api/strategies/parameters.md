@@ -193,7 +193,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Serie
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -228,7 +228,7 @@ public class SmaStrategy : Strategy
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 
-		_series = Param(nameof(Serie), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
 					.SetDisplay("Serie", string.Empty, "Configuración básica");
 	}
 
@@ -237,7 +237,7 @@ public class SmaStrategy : Strategy
 ```
 
 En este ejemplo, creamos una estrategia basada en el cruce de dos medias móviles con tres parámetros configurables:
-- `Serie` - tipo de datos y marco temporal
+- `Series` - tipo de datos y marco temporal
 - `LongSmaLength` - periodo de la media móvil larga
 - `ShortSmaLength` - periodo de la media móvil corta
 

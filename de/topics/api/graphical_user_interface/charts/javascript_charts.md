@@ -8,7 +8,7 @@ Anders als die Windows-Komponenten aus `StockSharp.Xaml.Charting` läuft diese B
 
 ## Live-Demo
 
-Der Chart unten ist die echte Engine, die auf dieser Seite läuft — Kerzen mit einem Volumen-Histogramm und einem gleitenden Durchschnitt. Ziehen zum Scrollen, mit dem Mausrad zoomen und die Vergrößern-Schaltfläche (oben rechts) drücken, um ihn im Vollbild zu öffnen.
+Der Chart unten ist die echte Engine, die auf dieser Seite läuft — Kerzen mit einem Volumen-Histogramm und einem gleitenden Durchschnitt. Ziehen Sie zum Scrollen, zoomen Sie mit dem Mausrad und drücken Sie die Vergrößern-Schaltfläche (oben rechts), um ihn im Vollbild zu öffnen.
 
 ```chart-demo overview
 ```

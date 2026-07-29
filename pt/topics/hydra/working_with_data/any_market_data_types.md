@@ -14,7 +14,7 @@ Para o construir, é necessário:
 2. Selecionar o campo **Construir a partir de** e escolher o tipo de dados necessário![Hydra tipo de construção de dados](../../../images/hydra_type_build_data.png)
 
    IMPORTANTE\! Se **Livro de ordens, Registo de ordens, Level 1** forem selecionados como origem para construir uma vela, aparece uma seleção de parâmetros adicionais.![Hydra propriedades estendidas de construção de dados](../../../images/hydra_ext_proper_build_data.png)
-3. Depois de definir os parâmetros, clique no botão ![Captura de tela de Quaisquer tipos de dados de mercado](../../../images/hydra_candles.png).![Hydra resultado dos dados de profundidade Nível 1](../../../images/hydra_level1_build_depth_data_result.png)
+3. Depois de definir os parâmetros, clique no botão ![Captura de ecrã de Quaisquer tipos de dados de mercado](../../../images/hydra_candles.png).![Hydra resultado dos dados de profundidade Nível 1](../../../images/hydra_level1_build_depth_data_result.png)
 
 Para construir **Velas**, também está disponível a opção de construir velas de um período maior a partir de velas de um período menor.
 

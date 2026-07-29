@@ -17,7 +17,7 @@ A principal vantagem do LRSI é a sua capacidade de identificar rapidamente alte
 O indicador tem os seguintes parâmetros:
 - **Gama** - coeficiente de filtragem (valor predefinido: 0,4, intervalo de 0,1 a 0,9)
 
-O parâmetro Gamma determina o grau de filtragem e afecta a sensibilidade do indicador. Valores Gamma mais baixos resultam num indicador mais suave e menos sensível, enquanto valores mais altos tornam o indicador mais sensível a alterações de preço, mas potencialmente mais ruidoso.
+O parâmetro Gamma determina o grau de filtragem e afeta a sensibilidade do indicador. Valores Gamma mais baixos resultam num indicador mais suave e menos sensível, enquanto valores mais altos tornam o indicador mais sensível a alterações de preço, mas potencialmente mais ruidoso.
 
 ## Cálculo
 
@@ -28,7 +28,7 @@ O cálculo do RSI de Laguerre envolve vários passos:
    L0 = L1 = L2 = L3 = 0
    ```
 
-2. Actualizar os valores do filtro para cada novo preço:
+2. Atualizar os valores do filtro para cada novo preço:
    ```
    L0_new = (1 - Gamma) * Price + Gamma * L0_old
    L1_new = -Gamma * L0_new + L0_old + Gamma * L1_old
@@ -98,4 +98,3 @@ O RSI de Laguerre é interpretado de forma semelhante ao RSI tradicional, mas co
 [RSI](rsi.md)
 [AdaptiveLaguerreFilter](adaptive_laguerre_filter.md)
 [ConnorsRSI](connors_rsi.md)
-

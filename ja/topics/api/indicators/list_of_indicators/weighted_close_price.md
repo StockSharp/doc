@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[WeightedClosePrice](xref:StockSharp.Algo.Indicators.WeightedClosePrice) クラスを使用する必要があります。
 
-![加重終値 のチャート](../../../../images/indicatorweightedcloseprice.png)
+![加重終値のチャート](../../../../images/indicatorweightedcloseprice.png)
 
 ## 推奨コンテンツ
 

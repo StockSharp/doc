@@ -20,7 +20,7 @@ Das Interface [ISnapshotStorage](xref:StockSharp.Algo.Storages.ISnapshotStorage)
 
 Das Interface [ISnapshotSerializer](xref:StockSharp.Algo.Storages.ISnapshotSerializer`2) ist für die Konvertierung von Momentaufnahmen in eine Binärdarstellung und zurück verantwortlich:
 
-- **Datentyp** - Informationen zum Datentyp der Momentaufnahme.
+- `DataType` - Informationen zum Datentyp der Momentaufnahme.
 - **Version** - Version des Serialisierungsformats.
 - **Serialize(version, message)** - Nachricht in ein Bytearray serialisieren.
 - **Deserialize(version, buffer)** - Bytearray zurück in eine Nachricht deserialisieren.

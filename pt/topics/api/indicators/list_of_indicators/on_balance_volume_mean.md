@@ -1,12 +1,12 @@
 # OBVM
 
-**volume em balanço Mean (OBVM)** é um indicador técnico que representa uma média móvel do indicador volume em balanço (OBV), permitindo sinais de tendência mais claros com base no volume.
+A **média do volume em balanço (OBVM)** é um indicador técnico que representa uma média móvel do indicador volume em balanço (OBV), permitindo obter sinais de tendência mais claros com base no volume.
 
 Para usar o indicador, é necessário usar a classe [OnBalanceVolumeMean](xref:StockSharp.Algo.Indicators.OnBalanceVolumeMean).
 
 ## Descrição
 
-volume em balanço Mean (OBVM) é uma modificação do indicador clássico volume em balanço (OBV) que aplica uma média móvel aos valores do OBV para suavizar flutuações e identificar tendências mais claras. O indicador mantém o conceito central do OBV - acumulação de volume com base na alteração da direção do preço - mas adiciona uma camada adicional de filtragem.
+A média do volume em balanço (OBVM) é uma modificação do indicador clássico volume em balanço (OBV) que aplica uma média móvel aos valores do OBV para suavizar flutuações e identificar tendências mais claras. O indicador mantém o conceito central do OBV — a acumulação de volume com base na alteração da direção do preço — mas adiciona uma camada de filtragem.
 
 O OBVM ajuda a eliminar o ruído presente no OBV original e torna mais visíveis as tendências de longo prazo do fluxo de volume. Isto é particularmente útil em mercados voláteis ou ao analisar instrumentos com volumes de negociação irregulares.
 
@@ -19,7 +19,7 @@ O indicador tem os seguintes parâmetros:
 
 ## Cálculo
 
-O cálculo do volume em balanço Mean envolve os seguintes passos:
+O cálculo da média do volume em balanço envolve os seguintes passos:
 
 1. Calcular o indicador volume em balanço (OBV) base:
    ```
@@ -47,7 +47,7 @@ Nota: Também podem ser usados outros tipos de médias móveis, como EMA (média
 
 ## Interpretação
 
-volume em balanço Mean pode ser interpretado da seguinte forma:
+A média do volume em balanço pode ser interpretada da seguinte forma:
 
 1. **Análise da tendência**:
    - OBVM em subida indica uma tendência altista com forte suporte de volume

@@ -1,6 +1,6 @@
-# 逐笔交易
+# 逐笔成交
 
-![逐笔交易 截图](../../../../images/gui_tradegrid.png)
+![逐笔成交 截图](../../../../images/gui_tradegrid.png)
 
 [TradeGrid](xref:StockSharp.Xaml.TradeGrid) - 一个交易表。
 

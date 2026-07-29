@@ -1,6 +1,6 @@
 # Gráfico
 
-Para exibição gráfica de velas, você pode usar o componente especial [Chart](xref:StockSharp.Xaml.Charting.Chart) (veja [Componentes para construção de gráficos](../graphical_user_interface/charts.md)), que renderiza velas da seguinte forma:
+Para a apresentação gráfica de velas, pode utilizar o componente especial [Chart](xref:StockSharp.Xaml.Charting.Chart) (consulte [Componentes para construção de gráficos](../graphical_user_interface/charts.md)), que renderiza velas da seguinte forma:
 
 ![Exemplo de gráfico de velas](../../../images/sample_candleschart.png)
 
@@ -282,7 +282,7 @@ private void ConfigureChartZoomAndScroll()
 	// Definir intervalo do eixo Y
 	_chart.SetYRange(100, 150);
 
-	// Botões para controle de zoom
+	// Botões para controlo de zoom
 	zoomInButton.Click += (s, e) => _chart.ZoomIn();
 	zoomOutButton.Click += (s, e) => _chart.ZoomOut();
 
@@ -297,17 +297,17 @@ private void ConfigureChartZoomAndScroll()
 
 ## Exportando o Gráfico para Imagem
 
-Para salvar o gráfico em um arquivo:
+Para guardar o gráfico num ficheiro:
 
 ```cs
 // Exportar gráfico para imagem
 private void ExportChartToImage()
 {
-	// Criar objeto para salvar a imagem
+	// Criar objeto para guardar a imagem
 	var saveFileDialog = new SaveFileDialog
 	{
 		Filter = "Imagem PNG|*.png|Imagem JPEG|*.jpg|Imagem BMP|*.bmp",
-		Title = "Salvar imagem do gráfico"
+		Title = "Guardar imagem do gráfico"
 	};
 
 	if (saveFileDialog.ShowDialog() == true)
@@ -321,7 +321,7 @@ private void ExportChartToImage()
 
 		rtb.Render(_chart);
 
-		// Salvar imagem no formato selecionado
+		// Guardar imagem no formato selecionado
 		BitmapEncoder encoder;
 
 		switch (Path.GetExtension(saveFileDialog.FileName).ToLower())

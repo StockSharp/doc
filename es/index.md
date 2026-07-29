@@ -2,9 +2,9 @@
 
 [StockSharp (S#)](https://stocksharp.com/es/store/) ofrece aplicaciones de negociación **gratuitas** para los mercados globales, incluyendo acciones, futuros, opciones, criptomonedas y forex. Puede operar manualmente o ejecutar estrategias automatizadas, desde robots de negociación convencionales hasta sistemas HFT (negociación de alta frecuencia).
 
-**Compatible con más de 90 brokers, bolsas y fuentes de datos:** [Conectores](topics/api/connectors.md).
+**Compatible con más de 90 brókeres, bolsas y fuentes de datos:** [Conectores](topics/api/connectors.md).
 
-S# funciona con cualquier broker, bolsa o fuente de datos compatible con los conectores disponibles.
+S# funciona con cualquier bróker, bolsa o fuente de datos compatible con los conectores disponibles.
 
 > [!NOTE]
 > Todos los programas se instalan mediante la utilidad [Installer](topics/installer.md).
@@ -19,7 +19,7 @@ S# funciona con cualquier broker, bolsa o fuente de datos compatible con los con
 - Editor de [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) integrado.
 - Creación sencilla de indicadores personalizados.
 - Depurador integrado.
-- Conexiones a múltiples bolsas, plataformas de negociación y brokers.
+- Conexiones a múltiples bolsas, plataformas de negociación y brókeres.
 - Compatibilidad con los mercados globales.
 - Posibilidad de compartir esquemas de estrategias con su equipo.
 

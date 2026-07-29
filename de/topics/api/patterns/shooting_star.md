@@ -19,19 +19,19 @@ Sternschnuppe gilt als starkes Signal für eine mögliche Umkehr eines Aufwärts
 - Der lange obere Schatten zeigt, dass der Preis während der Handelssitzung deutlich stieg, Verkäufer anschließend aber eingriffen und den Preis nach unten drückten.
 - Dies weist auf die Zurückweisung höherer Preise durch den Markt und einen möglichen Stimmungswechsel von bullisch zu bärisch hin.
 - Je länger der obere Schatten ist, desto stärker ist das potenzielle Umkehrsignal.
-- Die Farbe des Kerzenkörpers ist weniger wichtig, obwohl ein schwarzer/roter Sternschnuppe als bärischer gilt als ein weißer/grüner.
-- Das Muster ähnelt einem Umgekehrter Hammer, entsteht jedoch in einem Aufwärtstrend und hat die gegenteilige Bedeutung.
+- Die Farbe des Kerzenkörpers ist weniger wichtig, obwohl eine schwarze/rote Sternschnuppe als bärischer gilt als eine weiße/grüne.
+- Das Muster ähnelt einem umgekehrten Hammer, entsteht jedoch in einem Aufwärtstrend und hat die gegenteilige Bedeutung.
 
 ### Handelsstrategien
 
 Sternschnuppe bietet Möglichkeiten für den Einstieg in eine Short-Position:
 
-- Warten Sie auf Bestätigung durch die nächste Kerze - eine bärische Kerze nach einem Sternschnuppe verstärkt das Umkehrsignal.
-- Platzieren Sie einen Stop-Loss oberhalb des Hochs des Sternschnuppe.
+- Warten Sie auf Bestätigung durch die nächste Kerze - eine bärische Kerze nach einer Sternschnuppe verstärkt das Umkehrsignal.
+- Platzieren Sie einen Stop-Loss oberhalb des Hochs der Sternschnuppe.
 - Legen Sie ein Gewinnziel auf Basis vorheriger Unterstützungsniveaus oder des Risiko-Ertrags-Verhältnisses fest.
 - Kombinieren Sie das Muster mit anderen technischen Indikatoren, etwa RSI in der überkauften Zone oder MACD mit bärischer Divergenz, um die Trendumkehr zu bestätigen.
-- Höheres Handelsvolumen während der Bildung eines Sternschnuppe erhöht die Zuverlässigkeit des Signals.
-- Besonders starkes Signal, wenn sich der Sternschnuppe an einem wichtigen Widerstandsniveau oder nach einem schnellen Preisanstieg bildet.
+- Höheres Handelsvolumen während der Bildung einer Sternschnuppe erhöht die Zuverlässigkeit des Signals.
+- Besonders starkes Signal, wenn sich die Sternschnuppe an einem wichtigen Widerstandsniveau oder nach einem schnellen Preisanstieg bildet.
 
 ## Siehe auch
 

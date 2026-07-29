@@ -10,19 +10,19 @@ Para cotação de opções, está implementada uma estratégia especial [Volatil
    ```cs
    private void InitConnector()
    {
-   	// assinar o evento de conexão bem-sucedida
+       // assinar o evento de ligação bem-sucedida
    	Connector.Connected += () =>
    	{
    		// atualizar rótulos da interface
    		this.GuiAsync(() => ChangeConnectStatus(true));
    	};
-   	// assinar o evento de desconexão
+       // assinar o evento de desligação
    	Connector.Disconnected += () =>
    	{
    		// atualizar rótulos da interface
    		this.GuiAsync(() => ChangeConnectStatus(false));
    	};
-   	// assinar o evento de erro de conexão
+       // assinar o evento de erro de ligação
    	Connector.ConnectionError += error => this.GuiAsync(() =>
    	{
    		// atualizar rótulos da interface

@@ -1,6 +1,6 @@
 # canais de preço
 
-**canais de preço (PC)** apresenta os limites superior e inferior do movimento do preço durante um período especificado.
+O indicador **Canais de preço (PC)** apresenta os limites superior e inferior do movimento do preço durante um período especificado.
 
 Para usar o indicador, deve usar a classe [PriceChannels](xref:StockSharp.Algo.Indicators.PriceChannels).
 
@@ -9,4 +9,3 @@ Para usar o indicador, deve usar a classe [PriceChannels](xref:StockSharp.Algo.I
 ## Conteúdo recomendado
 
 [canais de Donchian](donchian_channels.md)
-

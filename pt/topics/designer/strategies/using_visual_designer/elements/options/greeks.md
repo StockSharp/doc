@@ -1,6 +1,6 @@
 # Gregas
 
-![Captura de tela de Gregas](../../../../../../images/designer_greek_00.png)
+![Captura de ecrã de Gregas](../../../../../../images/designer_greek_00.png)
 
 Este bloco é usado para calcular os principais "Gregos": Delta, Gamma, Vega, Theta, Rho no momento atual.
 

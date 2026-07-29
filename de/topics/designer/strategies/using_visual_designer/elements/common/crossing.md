@@ -17,7 +17,7 @@ Der Vergleich erfolgt anhand der Werte an den beiden Anschlüssen **Aufwärts** 
 
 ![Designer Kreuzung 01](../../../../../../images/designer_crossing_01.png)
 
-Ein Beispiel für die Verwendung des Blocks Crossing zur Verfolgung der Kreuzungen zweier [SMA-Indikatoren](../../../../../api/indicators/list_of_indicators/sma.md). Es werden zwei Crossing-Blöcke verwendet, und jeder gibt separat true aus, je nachdem, ob der länge SMA größer als der kurze ist oder kleiner.
+Ein Beispiel für die Verwendung des Blocks Crossing zur Verfolgung der Kreuzungen zweier [SMA-Indikatoren](../../../../../api/indicators/list_of_indicators/sma.md). Es werden zwei Crossing-Blöcke verwendet, und jeder gibt separat true aus, je nachdem, ob der lange SMA größer als der kurze ist oder kleiner.
 
 ## Siehe auch
 

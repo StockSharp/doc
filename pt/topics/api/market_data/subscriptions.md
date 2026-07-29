@@ -1,9 +1,9 @@
 # Subscrições
 
-A **API StockSharp** oferece um modelo de aquisição de dados baseado em subscrições. Este é um mecanismo universal para receber tanto dados de mercado como informação de transacções. Esta abordagem tem vantagens significativas:
+A **API StockSharp** oferece um modelo de aquisição de dados baseado em subscrições. Este é um mecanismo universal para receber tanto dados de mercado como informação de transações. Esta abordagem tem vantagens significativas:
 
 - **Isolamento da subscrição** — cada subscrição funciona de forma independente, permitindo executar em paralelo qualquer número de subscrições com diferentes parâmetros (com ou sem pedido de histórico).
-- **Acompanhamento de estado** — as subscrições têm estados específicos que permitem controlar se os dados históricos estão actualmente a ser transmitidos ou se a subscrição mudou para modo em tempo real.
+- **Acompanhamento de estado** — as subscrições têm estados específicos que permitem controlar se os dados históricos estão atualmente a ser transmitidos ou se a subscrição mudou para modo em tempo real.
 - **Universalidade** — o código para trabalhar com subscrições é o mesmo independentemente dos tipos de dados pedidos, tornando o desenvolvimento mais eficiente.
 
 Para trabalhar com subscrições, tem de utilizar a classe [Subscription](xref:StockSharp.BusinessEntities.Subscription). Vejamos exemplos de utilização de subscrições para obter vários tipos de dados.
@@ -59,7 +59,7 @@ _connector.Subscribe(subscription);
 ## Exemplo de Subscrição de Livro de Ofertas
 
 ```cs
-// Criar uma subscrição para o livro de ofertas do instrumento seleccionado
+// Criar uma subscrição para o livro de ofertas do instrumento selecionado
 var depthSubscription = new Subscription(DataType.MarketDepth, security);
 
 // Processar livros de ofertas recebidos
@@ -80,7 +80,7 @@ _connector.Subscribe(depthSubscription);
 ## Exemplo de Subscrição de Negócios Tick
 
 ```cs
-// Criar uma subscrição de negócios tick para o instrumento seleccionado
+// Criar uma subscrição de negócios tick para o instrumento selecionado
 var tickSubscription = new Subscription(DataType.Ticks, security);
 
 // Processar ticks recebidos
@@ -108,7 +108,7 @@ var candleSubscription = new Subscription(DataType.TimeFrame(TimeSpan.FromMinute
 		// Especificar o modo de construção e a fonte de dados
 		BuildMode = MarketDataBuildModes.Build,
 		BuildFrom = DataType.Ticks,
-		// Também pode activar a construção do perfil de volume
+		// Também pode ativar a construção do perfil de volume
 		IsCalcVolumeProfile = true,
 	}
 };
@@ -161,7 +161,7 @@ foreach (var sub in _connector.Subscriptions)
 As subscrições podem estar nos seguintes estados:
 
 - [SubscriptionStates.Stopped](xref:StockSharp.Messages.SubscriptionStates.Stopped) — a subscrição está inactiva (parada ou não iniciada).
-- [SubscriptionStates.Active](xref:StockSharp.Messages.SubscriptionStates.Active) — a subscrição está activa e pode transmitir dados históricos até mudar para modo em tempo real ou concluir.
+- [SubscriptionStates.Active](xref:StockSharp.Messages.SubscriptionStates.Active) — a subscrição está ativa e pode transmitir dados históricos até mudar para modo em tempo real ou concluir.
 - [SubscriptionStates.Error](xref:StockSharp.Messages.SubscriptionStates.Error) — a subscrição está inactiva e em estado de erro.
 - [SubscriptionStates.Finished](xref:StockSharp.Messages.SubscriptionStates.Finished) — a subscrição concluiu o seu trabalho (todos os dados recebidos).
 - [SubscriptionStates.Online](xref:StockSharp.Messages.SubscriptionStates.Online) — a subscrição mudou para modo em tempo real e transmite apenas dados actuais.

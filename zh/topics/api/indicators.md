@@ -35,7 +35,7 @@
 
 指标接受 [IIndicatorValue](xref:StockSharp.Algo.Indicators.IIndicatorValue) 作为输入。一些指标使用简单数字，例如 [SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage)。其他指标则需要完整的K线数据，例如 [MedianPrice](xref:StockSharp.Algo.Indicators.MedianPrice)。因此，输入值需要被转换为 [DecimalIndicatorValue](xref:StockSharp.Algo.Indicators.DecimalIndicatorValue) 或 [CandleIndicatorValue](xref:StockSharp.Algo.Indicators.CandleIndicatorValue)。指标的结果值遵循与输入值相同的规则。
 
-3. 指标的结果值和输入值都具有 [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 属性，该属性表示该值是最终值，指标在此时不会变化。例如，[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 指标是基于K线的收盘价形成的，但在当前时刻，最终收盘价未知且在变化。在这种情况下，[IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 的结果值将为 false。如果你将一个已完成的K线传入指标，[IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 的输入值和结果值都将为 true。
+3. 指标的结果值和输入值都具有 [IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 属性，该属性表示该值是最终值，指标在此时不会变化。例如，[SimpleMovingAverage](xref:StockSharp.Algo.Indicators.SimpleMovingAverage) 指标是基于K线的收盘价形成的，但在当前时刻，最终收盘价未知且在变化。在这种情况下，[IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 的结果值将为 false。如果您将一个已完成的K线传入指标，[IIndicatorValue.IsFinal](xref:StockSharp.Algo.Indicators.IIndicatorValue.IsFinal) 的输入值和结果值都将为 true。
 
 4. **推荐方法**：直接使用从调用 [Process](xref:StockSharp.Algo.Indicators.IIndicator.Process(StockSharp.Algo.Indicators.IIndicatorValue)) 方法获得的值，而不是随后调用 [GetCurrentValue](xref:StockSharp.Algo.Indicators.IndicatorHelper.GetCurrentValue(StockSharp.Algo.Indicators.IIndicator))：
 

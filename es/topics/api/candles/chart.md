@@ -98,7 +98,7 @@ private void InitializeChartWithAutoBinding()
 }
 ```
 
-## Trabajando con indicadores
+## Trabajo con indicadores
 
 Para mostrar indicadores en el gráfico junto con las velas, se usan elementos de tipo [ChartIndicatorElement](xref:StockSharp.Xaml.Charting.ChartIndicatorElement):
 
@@ -134,7 +134,7 @@ private void AddIndicatorToChart()
 }
 ```
 
-## Mostrando múltiples indicadores en diferentes áreas
+## Visualización de múltiples indicadores en diferentes áreas
 
 Los indicadores pueden colocarse en áreas separadas del gráfico:
 
@@ -198,7 +198,7 @@ private void AddIndicatorsToSeparateAreas()
 }
 ```
 
-## Mostrando órdenes y operaciones en el gráfico
+## Visualización de órdenes y operaciones en el gráfico
 
 Se usan elementos especiales para mostrar órdenes y operaciones en el gráfico:
 

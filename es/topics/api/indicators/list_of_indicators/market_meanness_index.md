@@ -1,12 +1,12 @@
 # MMI
 
-**Índice de comportamiento adverso del mercado (MMI)** es un indicador técnico desarrollado para determinar si el mercado se encuentra en un estado de tendencia o lateral (caótico).
+El **índice de irregularidad del mercado (MMI)** es un indicador técnico desarrollado para determinar si el mercado se encuentra en un estado de tendencia o lateral (caótico).
 
 Para utilizar el indicador, debe utilizar la clase [MarketMeannessIndex](xref:StockSharp.Algo.Indicators.MarketMeannessIndex).
 
 ## Descripción
 
-El índice de “maldad” del mercado (MMI) es una herramienta que ayuda a los operadores a determinar la naturaleza del mercado actual, ya sea en tendencia o lateral. El nombre “maldad” refleja la idea de que el mercado a veces se comporta de forma “malvada” o impredecible con los operadores, especialmente durante los movimientos laterales.
+El índice de irregularidad del mercado (MMI) es una herramienta que ayuda a los operadores a determinar la naturaleza del mercado actual, ya sea en tendencia o lateral. Su nombre refleja la idea de que el mercado puede comportarse de forma adversa o impredecible para los operadores, especialmente durante los movimientos laterales.
 
 MMI se basa en contar el número de pares precio-valor (normalmente precios de cierre) que no siguen un patrón lineal simple, y su relación con el número total de pares analizados. El indicador mide el "caos" o la "aleatoriedad" del movimiento de precios durante un período específico.
 
@@ -21,7 +21,7 @@ El indicador tiene los siguientes parámetros:
 
 ## Cálculo
 
-El cálculo del índice de “maldad” del mercado implica los siguientes pasos:
+El cálculo del índice de irregularidad del mercado implica los siguientes pasos:
 
 1. Cree un conjunto de pares de precios de cierre consecutivos (Close) dentro del período Length determinado.
 
@@ -41,7 +41,7 @@ Formalmente, esto se puede representar como:
 
 ## Interpretación
 
-El índice de “maldad” del mercado se puede interpretar de la siguiente manera:
+El índice de irregularidad del mercado se puede interpretar de la siguiente manera:
 
 1. **Niveles del indicador**:
    - MMI > 50: El mercado está en un estado lateral o caótico

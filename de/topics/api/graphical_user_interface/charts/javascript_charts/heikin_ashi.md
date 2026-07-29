@@ -1,6 +1,6 @@
 # Heikin-Ashi-Kerzen
 
-Heikin-Ashi-Kerzen ("Durchschnittsbalken") werden aus den rohen OHLC-Werten berechnet, um Rauschen zu glätten: Aufeinanderfolgende Kerzen gleicher Farbe machen Trends leichter lesbar – um den Preis, den tatsächlichen Eröffnungs- und Schlusskurs zu verbergen. Sie werden mit der gewöhnlichen Candlestick-Serie gezeichnet, die mit transformierten Werten gespeist wird.
+Heikin-Ashi-Kerzen ("Durchschnittsbalken") werden aus den rohen OHLC-Werten berechnet, um Rauschen zu glätten: Aufeinanderfolgende Kerzen gleicher Farbe machen Trends leichter lesbar, allerdings auf Kosten der tatsächlichen Eröffnungs- und Schlusskurse. Sie werden mit der gewöhnlichen Candlestick-Serie gezeichnet, die mit transformierten Werten gespeist wird.
 
 ## Live-Demo
 

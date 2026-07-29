@@ -23,7 +23,7 @@ Werte über Null verdeutlichen den Aufwärtsdruck, während Werte unter Null den
 
 ## Interpretation
 
-- **Nulllinienübergänge.** Eine Bewegung über Null bestätigt, dass die PPO-Linie die Signallinie überschritten hat, was auf eine zinsbullische Verschiebung hindeutet. Ein Rückgang unter Null weist auf eine rückläufige Kreuzung hin.
+- **Nulllinienübergänge.** Eine Bewegung über Null bestätigt, dass die PPO-Linie die Signallinie überschritten hat, was auf eine bullische Verschiebung hindeutet. Ein Rückgang unter Null weist auf eine rückläufige Kreuzung hin.
 - **Momentum steigt.** Das schnelle Wachstum positiver Balken deutet auf eine Verstärkung der Aufwärtsdynamik hin; Schrumpfende Balken deuten auf eine nachlassende Stärke und eine mögliche Umkehr hin.
 - **Divergenzen.** Divergenzen zwischen der Preisbewegung und dem Histogramm können Händler auf eine mögliche Trenderschöpfung aufmerksam machen, bevor sie in den Preisdiagrammen sichtbar wird.
 

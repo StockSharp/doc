@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[Trough](xref:StockSharp.Algo.Indicators.Trough) クラスを使用する必要があります。
 
-![谷 のチャート](../../../../images/indicatortrough.png)
+![谷のチャート](../../../../images/indicatortrough.png)
 
 ## 推奨コンテンツ
 

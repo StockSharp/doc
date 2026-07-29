@@ -32,6 +32,6 @@
 
 ![Shell クイックスタート 04](../../images/shell_quick_start_04.png)
 
-[リアルタイム](user_interface/real_time.md) タブと同様に、[エミュレーション](user_interface/emulation.md) タブでは、ヒストリカルデータに対してストラテジーのテストを実行できます。
+[リアルタイム](user_interface/real_time.md) タブと同様に、[エミュレーション](user_interface/emulation.md) タブでは、履歴データに対してストラテジーのテストを実行できます。
 
 ![Shell クイックスタート 05](../../images/shell_quick_start_05.png)

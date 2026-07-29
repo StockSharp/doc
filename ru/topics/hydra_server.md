@@ -11,7 +11,7 @@
 
 ![Hydra сервер](../images/hydraserver_console.png)
 
-Программа имеет конфигурационный файл appsettings.json:
+Программа имеет конфигурационный файл `appsettings.json`:
 
 ```json
 {

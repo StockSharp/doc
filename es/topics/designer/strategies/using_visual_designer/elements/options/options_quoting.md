@@ -15,7 +15,7 @@ Conectores de entrada
 
 Conectores de salida
 
-- **Orden** - orden registrada que puede usarse para obtener sus operaciones usando el elemento **Operaciones** por orden y mostrarla en el gráfico con el cubo **Panel de gráfico**.
+- **Orden** - orden registrada que puede usarse para obtener sus operaciones usando el elemento **Operaciones** por orden y mostrarlas en el gráfico con el cubo **Panel de gráfico**.
 
 ### Parámetros
 

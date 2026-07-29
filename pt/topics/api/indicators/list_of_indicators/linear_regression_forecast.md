@@ -1,6 +1,6 @@
 # Previsão por regressão linear
 
-**Previsão por regressão linear (LRF)** prevê valores futuros do preço com base na regressão linear durante um período seleccionado.
+**Previsão por regressão linear (LRF)** prevê valores futuros do preço com base na regressão linear durante um período selecionado.
 
 Para utilizar o indicador, deve usar a classe [LinearRegressionForecast](xref:StockSharp.Algo.Indicators.LinearRegressionForecast).
 
@@ -8,5 +8,4 @@ Para utilizar o indicador, deve usar a classe [LinearRegressionForecast](xref:St
 
 ## Conteúdo recomendado
 
-[Linear Regression](lrc.md)
-
+[Regressão linear](lrc.md)

@@ -33,7 +33,7 @@ Se o processo estiver em execução com outra conta de utilizador, tem de marcar
 ![Designer Depuração de um cubo DLL com Visual Studio 05](../../../../images/designer_debugging_dll_using_visual_studio_05.png)
 
 > [!WARNING]
-> Quando o código está parado no depurador, todos os processos dentro do programa **Designer** ficam suspensos. Se o programa estiver ligado a negociação real, então, no caso de uma paragem longa no depurador, ocorrerão desconexões.
+> Quando o código está parado no depurador, todos os processos dentro do programa **Designer** ficam suspensos. Se o programa estiver ligado a negociação real, então, no caso de uma paragem longa no depurador, ocorrerão perdas de ligação.
 
 ## Ver Também
 

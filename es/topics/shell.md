@@ -9,7 +9,7 @@ No necesita crear una GUI (interfaz gráfica de usuario) desde cero. Shell inclu
 Características principales del shell para robots de negociación:
 
 1. Código fuente completo, adecuado para robots de negociación personalizados y soluciones propias.
-2. **Soporte para más de 70 conexiones** a bolsas y brokers mediante [Conectores](api/connectors.md).
+2. **Soporte para más de 70 conexiones** a bolsas y brókeres mediante [Conectores](api/connectors.md).
 3. Interfaz de usuario flexible.
 4. Herramientas de prueba de estrategias: estadísticas, equity e informes.
 5. Guardado y restauración de configuración de estrategias.

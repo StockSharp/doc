@@ -1,10 +1,10 @@
-# Preço de Fechamento Ponderado
+# Preço de fecho ponderado
 
-**Preço de Fechamento Ponderado (WCP)** é calculado como (High + Low + 2 × Close) / 4 para cada vela.
+O **Preço de fecho ponderado (WCP)** é calculado como (High + Low + 2 × Close) / 4 para cada vela.
 
 Para usar o indicador, deve usar a classe [WeightedClosePrice](xref:StockSharp.Algo.Indicators.WeightedClosePrice).
 
-![Gráfico do indicador Preço de Fechamento Ponderado](../../../../images/indicatorweightedcloseprice.png)
+![Gráfico do indicador Preço de fecho ponderado](../../../../images/indicatorweightedcloseprice.png)
 
 ## Conteúdo recomendado
 

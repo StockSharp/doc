@@ -1,6 +1,6 @@
 # KC
 
-**canais de Keltner (KC)** é um indicador técnico composto por um conjunto de bandas de volatilidade que usa uma média móvel exponencial (EMA) como linha central e o intervalo verdadeiro médio (ATR) para determinar a largura do canal.
+O indicador **Canais de Keltner (KC)** é composto por um conjunto de bandas de volatilidade que utiliza uma média móvel exponencial (EMA) como linha central e o intervalo verdadeiro médio (ATR) para determinar a largura do canal.
 
 Para utilizar o indicador, é necessário usar a classe [KeltnerChannels](xref:StockSharp.Algo.Indicators.KeltnerChannels).
 
@@ -13,7 +13,7 @@ Os canais de Keltner consistem em três linhas:
 
 O indicador foi desenvolvido por Chester Keltner nos anos 1960 e posteriormente modificado por Linda Raschke, que substituiu a média móvel simples (SMA) por uma média móvel exponencial (EMA) e começou a usar o ATR em vez do intervalo máximo-mínimo para calcular a largura do canal.
 
-Os canais de Keltner ajudam os operadores a determinar a direcção da tendência e potenciais níveis de suporte e resistência. Também são usados para identificar condições de sobrecompra e sobrevenda quando o preço toca ou rompe a banda superior ou inferior, respectivamente.
+Os canais de Keltner ajudam os operadores a determinar a direção da tendência e potenciais níveis de suporte e resistência. Também são usados para identificar condições de sobrecompra e sobrevenda quando o preço toca ou rompe a banda superior ou inferior, respectivamente.
 
 ## Parâmetros
 
@@ -52,7 +52,7 @@ Onde:
 
 Os canais de Keltner podem ser interpretados da seguinte forma:
 
-1. **Direcção da Tendência**:
+1. **Direção da Tendência**:
    - Quando as três linhas apontam para cima, isto indica uma tendência ascendente
    - Quando as três linhas apontam para baixo, isto indica uma tendência descendente
    - O movimento horizontal das linhas indica uma tendência lateral
@@ -60,7 +60,7 @@ Os canais de Keltner podem ser interpretados da seguinte forma:
 2. **Rompimentos**:
    - O preço romper acima da banda superior pode indicar momentum ascendente forte
    - O preço romper abaixo da banda inferior pode indicar momentum descendente forte
-   - Os rompimentos são frequentemente usados como sinais de entrada na direcção do rompimento
+   - Os rompimentos são frequentemente usados como sinais de entrada na direção do rompimento
 
 3. **Regressos à Linha Média**:
    - Depois de romper a banda superior ou inferior, o preço regressa frequentemente à linha média
@@ -71,13 +71,13 @@ Os canais de Keltner podem ser interpretados da seguinte forma:
    - Preço perto ou para lá da banda inferior pode indicar condições de sobrevenda
    - Em mercados tendenciais, o preço pode permanecer em zonas "extremas" durante períodos prolongados
 
-5. **Contracção e Expansão do Canal**:
+5. **Contração e Expansão do Canal**:
    - O estreitamento do canal (diminuição da distância entre as bandas) indica diminuição da volatilidade, frequentemente antecedendo um movimento de preço forte
    - A expansão do canal indica aumento da volatilidade
 
 6. **Estratégias de Negociação**:
    - Estratégia "Da borda ao centro": abrir uma posição quando o preço toca a banda superior ou inferior, tendo como alvo a linha média
-   - Estratégia de rompimento: abrir uma posição quando o preço rompe a banda superior ou inferior, esperando continuação do movimento na mesma direcção
+   - Estratégia de rompimento: abrir uma posição quando o preço rompe a banda superior ou inferior, esperando continuação do movimento na mesma direção
    - Estratégia "Do centro à borda": abrir uma posição quando o preço ressalta da linha média, tendo como alvo a banda superior ou inferior
 
 ![Gráfico do indicador KC](../../../../images/indicator_keltner_channels.png)

@@ -4,5 +4,4 @@
 
 インジケーターを使用するには、[Lowest](xref:StockSharp.Algo.Indicators.Lowest) クラスを使用する必要があります。 
 
-![最小値 のチャート](../../../../images/indicatorlowest.png)
-
+![最小値のチャート](../../../../images/indicatorlowest.png)

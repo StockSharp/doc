@@ -1,9 +1,9 @@
-# Hora actual
+# Hora atual
 
-![Captura de tela de Hora actual](../../../../../../images/designer_time_00.png)
+![Captura de ecrã de Hora atual](../../../../../../images/designer_time_00.png)
 
-Este bloco é utilizado para obter a hora actual.
+Este bloco é utilizado para obter a hora atual.
 
 #### Conectores de saída
 
-- **Saída** - a hora actual.
+- **Saída** - a hora atual.

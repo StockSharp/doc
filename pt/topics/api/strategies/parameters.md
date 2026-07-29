@@ -171,7 +171,7 @@ public override void Save(SettingsStorage settings)
 {
 	base.Save(settings);
 	
-	// Lógica adicional de salvamento...
+	// Lógica adicional de gravação...
 }
 
 public override void Load(SettingsStorage settings)
@@ -193,7 +193,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Série
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -228,7 +228,7 @@ public class SmaStrategy : Strategy
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 		
-		_series = Param(nameof(Série), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
 					.SetDisplay("Série", string.Empty, "Configurações básicas");
 	}
 
@@ -237,7 +237,7 @@ public class SmaStrategy : Strategy
 ```
 
 Neste exemplo, criámos uma estratégia baseada no cruzamento de duas médias móveis com três parâmetros configuráveis:
-- `Série` - tipo de dados e período
+- `Series` - tipo de dados e período
 - `LongSmaLength` - período da média móvel longa
 - `ShortSmaLength` - período da média móvel curta
 

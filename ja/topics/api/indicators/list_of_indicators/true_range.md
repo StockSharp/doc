@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[TrueRange](xref:StockSharp.Algo.Indicators.TrueRange) クラスを使用する必要があります。
 
-![真の値幅 のチャート](../../../../images/indicatortruerange.png)
+![真の値幅のチャート](../../../../images/indicatortruerange.png)
 
 ## 推奨コンテンツ
 

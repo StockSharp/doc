@@ -17,9 +17,9 @@ Fallende Drei-Methoden-Formation ist ein bärisches Trendfortsetzungsmuster aus 
 
 Fallende Drei-Methoden-Formation gilt als zuverlässiges Signal für die Fortsetzung eines Abwärtstrends:
 
-- Die erste länge schwarze Kerze zeigt die Stärke des Abwärtstrends.
+- Die erste lange schwarze Kerze zeigt die Stärke des Abwärtstrends.
 - Drei kleine weiße Kerzen stellen eine vorübergehende Konsolidierung oder Korrektur dar, während der Käufer den Trend nicht wesentlich verändern konnten.
-- Die fünfte länge schwarze Kerze bestätigt die Rückkehr der Kontrolle zu den Verkäufern und die Fortsetzung des Abwärtstrends.
+- Die fünfte lange schwarze Kerze bestätigt die Rückkehr der Kontrolle zu den Verkäufern und die Fortsetzung des Abwärtstrends.
 - Dieses Muster kann in der klassischen technischen Analyse als Flagge oder Wimpel betrachtet werden.
 - Eine solche Kerzenfolge weist darauf hin, dass die Korrektur zum Aufbau von Short-Positionen genutzt wurde, bevor die Abwärtsbewegung fortgesetzt wird.
 

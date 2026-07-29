@@ -1,6 +1,6 @@
 # canales de precio
 
-**canales de precio (PC)** muestra los límites superior e inferior del movimiento de precios durante un período específico.
+Los **canales de precio (PC)** muestran los límites superior e inferior del movimiento de precios durante un período específico.
 
 Para utilizar el indicador, debe utilizar la clase [PriceChannels](xref:StockSharp.Algo.Indicators.PriceChannels).
 

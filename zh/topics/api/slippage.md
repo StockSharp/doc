@@ -6,7 +6,7 @@
 
 [ISlippageManager](xref:StockSharp.Algo.Slippage.ISlippageManager) 接口定义了基础契约：
 
-- **滑点** — 累积的总滑点（小数）。
+- `Slippage` — 累积的总滑点（小数）。
 - **Reset()** — 重置管理器的状态。
 - **ProcessMessage(Message)** — 处理一条消息；返回给定执行的滑点或 `null`。
 

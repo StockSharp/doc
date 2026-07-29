@@ -1,6 +1,6 @@
 # PP
 
-**pontos pivô (PP)** é um indicador técnico que usa os preços máximo, mínimo e de fecho anteriores para determinar potenciais níveis de suporte e resistência para o período de negociação atual.
+O indicador **Pontos pivô (PP)** utiliza os preços máximo, mínimo e de fecho anteriores para determinar potenciais níveis de suporte e resistência para o período de negociação atual.
 
 Para usar o indicador, é necessário usar a classe [PivotPoints](xref:StockSharp.Algo.Indicators.PivotPoints).
 

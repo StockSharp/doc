@@ -57,7 +57,7 @@ Dabei gilt:
 Der EMV-Indikator kann wie folgt interpretiert werden:
 
 1. **Nulllinienübergänge**:
-   - Der Übergang von unten nach oben (von negativen zu positiven Werten) kann als zinsbullisches Signal angesehen werden, das darauf hindeutet, dass der Preis leicht zu steigen beginnt
+   - Der Übergang von unten nach oben (von negativen zu positiven Werten) kann als bullisches Signal angesehen werden, das darauf hindeutet, dass der Preis leicht zu steigen beginnt
    - Ein Übergang von oben nach unten (von positiven zu negativen Werten) kann als bärisches Signal angesehen werden, was darauf hindeutet, dass der Preis beginnt, sich leicht nach unten zu bewegen
 
 2. **Extreme Werte**:

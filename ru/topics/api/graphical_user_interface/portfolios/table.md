@@ -29,7 +29,7 @@ private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	.........................................................				
-	_connector.PositionReceived += (sub, p) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
+	_connector.PositionReceived += (sub, position) => _portfoliosWindow.PortfolioGrid.Positions.TryAdd(position);
 	.........................................................
 }
 	  				

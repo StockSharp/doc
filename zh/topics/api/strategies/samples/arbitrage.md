@@ -36,13 +36,13 @@ public class ArbitrageStrategy : Strategy
 
 该策略允许自定义以下参数：
 
-- **期货交易品种** - 期货交易品种
-- **股票类交易品种** - 基础资产
-- **期货投资组合** - 期货交易组合
-- **股票投资组合** - 用于基础资产交易的投资组合
-- **股票乘数** - 标的资产的乘数（例如，合约单位）
-- **期货交易量** - 期货交易的交易量
-- **股票交易量** - 基础资产交易的交易量
+- `FutureSecurity` - 期货交易品种
+- `StockSecurity` - 基础资产
+- `FuturePortfolio` - 期货交易组合
+- `StockPortfolio` - 用于基础资产交易的投资组合
+- `StockMultiplicator` - 标的资产的乘数（例如，合约单位）
+- `FutureVolume` - 期货交易的交易量
+- `StockVolume` - 基础资产交易的交易量
 - **ProfitToExit** - 平仓的利润阈值
 - **SpreadToGenerateSignal** - 产生入场信号的点差阈值
 

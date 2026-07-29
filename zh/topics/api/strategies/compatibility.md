@@ -271,7 +271,7 @@ protected override void OnStarted2(DateTime time)
 	Indicators.Add(_shortSma);
 	Indicators.Add(_longSma);
 	
-	var subscription = new Subscription(序列, Security);
+	var subscription = new Subscription(Series, Security);
 
 	// 正确：使用规则处理数据
 	Connector
@@ -279,7 +279,7 @@ protected override void OnStarted2(DateTime time)
 		.Do(ProcessCandle)
 		.Apply(this);
 
-	Connector.Subscribe(subscription);
+	Subscribe(subscription);
 }
 ```
 
@@ -293,14 +293,18 @@ protected override void OnStarted2(DateTime time)
 
 ```cs
 // 组合规则示例
-Security
-	.WhenNewTrade()
-	.And(Portfolio.WhenMoneyChanged())
+var tickSub = new Subscription(DataType.Ticks, Security);
+
+tickSub
+	.WhenTickTradeReceived(this)
+	.And(Portfolio.WhenChanged(Connector))
 	.Do(() => {
-		// 仅当有新成交
+		// 仅当有新的逐笔成交
 		// 且投资组合余额发生变化时执行的代码
 	})
 	.Apply(this);
+
+Subscribe(tickSub);
 ```
 
 4. **生命周期管理** - 规则可以设置为一次性（`Once()`）、设定取消条件（`Until()`）、添加延迟操作等。
@@ -316,7 +320,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType 序列
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -351,7 +355,7 @@ public class SmaStrategy : Strategy
 							.SetDisplay("短期 SMA 周期", string.Empty, "基本设置")
 							.SetCanOptimize(true);
 							
-		_series = Param(nameof(序列), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
 					.SetDisplay("序列", string.Empty, "基本设置");
 	}
 
@@ -370,14 +374,14 @@ public class SmaStrategy : Strategy
 		if (_chart != null)
 			InitChart();
 		
-		var subscription = new Subscription(序列, Security);
+		var subscription = new Subscription(Series, Security);
 
 		Connector
 			.WhenCandlesFinished(subscription)
 			.Do(ProcessCandle)
 			.Apply(this);
 
-		Connector.Subscribe(subscription);
+		Subscribe(subscription);
 	}
 
 	private void InitChart()

@@ -1,6 +1,6 @@
 # Логирование
 
-[S\#](../../api.md) предлагает несколько графических компонент для отображения логов: [LogControl](xref:StockSharp.Xaml.LogControl) и [Monitor](xref:StockSharp.Xaml.Monitor).
+[S\#](../../api.md) предлагает несколько графических компонентов для отображения логов: [LogControl](xref:StockSharp.Xaml.LogControl) и [Monitor](xref:StockSharp.Xaml.Monitor).
 
 При использовании визуальных компонентов логирования в качестве "слушателя" необходимо использовать логгер [GuiLogListener](xref:StockSharp.Xaml.GuiLogListener). Этот логгер обеспечивает потоковую синхронизацию с GUI при записи новых сообщений [LogMessage](xref:Ecng.Logging.LogMessage).
 

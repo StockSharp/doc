@@ -2,7 +2,7 @@
 
 O [S#](../api.md) suporta os seguintes tipos de velas:
 
-- [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - uma vela baseada em um intervalo de tempo. Você pode definir tanto intervalos populares (minutos, horas, diário) quanto personalizados. Por exemplo, 21 segundos, 4,5 minutos, etc.
+- [TimeFrameCandleMessage](xref:StockSharp.Messages.TimeFrameCandleMessage) - uma vela baseada em um intervalo de tempo. Pode definir tanto intervalos populares (minutos, horas, diário) quanto personalizados. Por exemplo, 21 segundos, 4,5 minutos, etc.
 - [RangeCandleMessage](xref:StockSharp.Messages.RangeCandleMessage) - uma vela de faixa de preço. Uma nova vela é criada quando aparece uma negociação com um preço que excede os limites aceitáveis. O limite aceitável é formado a cada vez com base no preço da primeira negociação.
 - [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage) - uma vela é formada até que o volume total de negociações exceda um limite especificado. Se uma nova negociação exceder o volume permitido, ela é incluída em uma nova vela.
 - [TickCandleMessage](xref:StockSharp.Messages.TickCandleMessage) - o mesmo que [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage), mas o número de negociações é usado como limitação em vez do volume.
@@ -72,7 +72,7 @@ Depois disso, o evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector
 
 4. O evento [Connector.CandleReceived](xref:StockSharp.Algo.Connector.CandleReceived) é chamado não apenas quando uma nova vela aparece, mas também quando a atual é alterada.
 
-Se você precisar exibir apenas velas **"completas"**, você precisa verificar a propriedade [ICandleMessage.State](xref:StockSharp.Messages.ICandleMessage.State) da vela recebida:
+Se precisar de exibir apenas velas **"completas"**, deve verificar a propriedade [ICandleMessage.State](xref:StockSharp.Messages.ICandleMessage.State) da vela recebida:
 
 ```cs
 private void OnCandleReceived(Subscription subscription, ICandleMessage candle)

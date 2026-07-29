@@ -26,7 +26,7 @@
   }
   ```
 
-  Agora, quando o evento ocorrer (a ordem for registada na bolsa), será chamada a acção especificada através do método [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)**.
+  Agora, quando o evento ocorrer (a ordem for registada na bolsa), será chamada a ação especificada através do método [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)**.
 
   No fim da formação da regra, é chamado o método [MarketRuleHelper.Apply](xref:StockSharp.Algo.MarketRuleHelper.Apply(StockSharp.Algo.IMarketRule))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule **)**. Enquanto este método não for chamado para a regra, ela fica inactiva (o processador em [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)** não será chamado).
   
@@ -68,7 +68,7 @@
 
   [IMarketRule](xref:StockSharp.Algo.IMarketRule) tem [IMarketRule.Token](xref:StockSharp.Algo.IMarketRule.Token), um token da regra à qual está associado. Por exemplo, para a regra [WhenCanceled](xref:StockSharp.Algo.MarketRuleHelper.WhenCanceled(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.ISubscriptionProvider)), o token será a ordem.
 
-  Quando uma regra para cancelamento bem-sucedido de uma ordem for accionada, é melhor remover todas as outras regras relacionadas com esta ordem:
+  Quando uma regra para cancelamento bem-sucedido de uma ordem for acionada, é melhor remover todas as outras regras relacionadas com esta ordem:
 
   ```cs
   var order = this.CreateOrder(direction, (decimal)Security.GetCurrentPrice(direction), Volume);
@@ -162,7 +162,7 @@
   ```
 
   > [!TIP]
-  > O processador em [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)** será chamado depois de a última regra adicionada através de [MarketRuleHelper.And](xref:StockSharp.Algo.MarketRuleHelper.And(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) rules **)** ser accionada.
+  > O processador em [IMarketRule.Do](xref:StockSharp.Algo.IMarketRule.Do(System.Action))**(**[System.Action](xref:System.Action) action **)** será chamado depois de a última regra adicionada através de [MarketRuleHelper.And](xref:StockSharp.Algo.MarketRuleHelper.And(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule[]))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule, [StockSharp.Algo.IMarketRule\[\]](xref:StockSharp.Algo.IMarketRule[]) rules **)** ser acionada.
   
 - **Periodicidade de funcionamento da regra - [IMarketRule.Until](xref:StockSharp.Algo.IMarketRule.Until(System.Func{System.Boolean}))**(**[System.Func\<System.Boolean\>](xref:System.Func`1) canFinish **)**:**
 

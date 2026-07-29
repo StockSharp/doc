@@ -20,7 +20,7 @@
 - [BOP](list_of_indicators/balance_of_power.md) - Indikator BOP, zeigt die Stärke von Käufern gegenüber Verkäufern
 - [BV](list_of_indicators/balance_volume.md) - Indikator BV, verknüpft Volumen mit Preisänderungen
 - [Bollinger-Bänder](list_of_indicators/bollinger_bands.md) - Indikator Bollinger-Bänder, misst Volatilität und erkennt überkaufte oder überverkaufte Bedingungen
-- [BBP](list_of_indicators/bollinger_percent_b.md) - Indikator BBP, zeigt die Preisposition relativ zu den Bollinger-Bänder
+- [BBP](list_of_indicators/bollinger_percent_b.md) - Indikator BBP, zeigt die Preisposition relativ zu den Bollinger-Bändern
 - [Pattern](../patterns.md) - Indikator Pattern, erkennt bestimmte Kursmuster in Charts
 - [CGO](list_of_indicators/center_of_gravity_oscillator.md) - Indikator CGO, identifiziert mögliche Wendepunkte
 - [CMF](list_of_indicators/chaikin_money_flow.md) - Indikator CMF, misst Kauf- und Verkaufsdruck anhand des Volumens
@@ -116,7 +116,7 @@
 - [PPOH](list_of_indicators/percentage_price_oscillator_histogram.md) - Indikator PPOH, zeichnet die Differenz zwischen PPO und seiner Signallinie
 - [PVO](list_of_indicators/percentage_volume_oscillator.md) - Indikator PVO, misst die prozentuale Differenz von Volumentrends
 - [PP](list_of_indicators/pivot_points.md) - Indikator PP, berechnet Unterstützungs- und Widerstandsniveaus anhand vergangener Preisbewegungen
-- [PC](list_of_indicators/price_channels.md) - Indikator PC, zeigen obere und untere Preisgrenzen
+- [PC](list_of_indicators/price_channels.md) - Indikator PC, zeigt obere und untere Preisgrenzen
 - [PVT](list_of_indicators/price_volume_trend.md) - Indikator PVT, multipliziert die Preisänderung mit dem Volumen
 - [PGO](list_of_indicators/pretty_good_oscillator.md) - Indikator PGO, erkennt überkaufte und überverkaufte Bedingungen
 - [PSY](list_of_indicators/psychological_line.md) - Indikator PSY, misst die Marktstimmung anhand von Preisänderungen

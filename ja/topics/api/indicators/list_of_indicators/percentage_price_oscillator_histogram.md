@@ -27,7 +27,7 @@ Histogram = PPO - シグナル
 - **モメンタムの急増。** 正のバーが急速に伸びる場合、強気モメンタムの強化を示唆します。バーの縮小は、強さの低下と反転の可能性を示唆します。
 - **ダイバージェンス。** 価格動向とヒストグラムのダイバージェンスは、価格チャート上で明確になる前に、潜在的なトレンドの消耗をトレーダーに警告することがあります。
 
-![PPO ヒストグラム のチャート](../../../../images/indicator_percentage_price_oscillator_histogram.png)
+![PPO ヒストグラムのチャート](../../../../images/indicator_percentage_price_oscillator_histogram.png)
 
 ## 関連項目
 

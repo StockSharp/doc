@@ -1,6 +1,6 @@
-# Livro de ofertas
+# Livro de ordens
 
-![Designer Livro de ofertas 00](../../../../../../images/designer_orderbook_00.png)
+![Designer Livro de ordens 00](../../../../../../images/designer_orderbook_00.png)
 
 O cubo é usado para obter o livro de ordens pelo instrumento especificado.
 
@@ -10,8 +10,8 @@ O cubo é usado para obter o livro de ordens pelo instrumento especificado.
 
 ### Conectores de saída
 
-- **Livro de ofertas** - alterações do livro de ordens a partir do momento em que subscreve a receção dos dados (a entrada do instrumento na entrada do elemento).
+- **Livro de ordens** - alterações do livro de ordens a partir do momento em que subscreve a receção dos dados (a entrada do instrumento na entrada do elemento).
 
 ## Conteúdo recomendado
 
-[Livro de ofertas agrupado](grouped_order_book.md)
+[Livro de ordens agrupado](grouped_order_book.md)

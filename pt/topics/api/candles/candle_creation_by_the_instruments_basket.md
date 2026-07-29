@@ -16,7 +16,7 @@ readonly TimeSpan _timeFrame = TimeSpan.FromMinutes(1);
 private ChartArea _area;
 private ChartCandleElement _candleElement;
 
-// Configuração da conexão e do conector
+// Configuração da ligação e do conector
 private void ConfigureConnector()
 {
 	if (_connector.Configure(this))

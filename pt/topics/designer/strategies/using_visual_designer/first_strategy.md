@@ -2,11 +2,11 @@
 
 Para criar esquemas de estratégias e elementos compostos, e para testar as estratégias obtidas em dados históricos, pode utilizar um exemplo da estratégia de média móvel (SMA). Este exemplo permite percorrer um ciclo completo desde a criação da estratégia até ao seu teste e depuração. A estratégia de média móvel (SMA) pode ser encontrada na pasta **Estratégias** do painel **Esquemas**.
 
-1. Criar uma nova estratégia a partir dos cubos, conforme descrito em [Utilização de código](../using_code.md). Para adicionar uma nova estratégia, clique no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01.png) no separador **Geral** e seleccione **Estratégia**. Em alternativa, clique com o botão direito do rato na pasta **Estratégia** no painel **Esquemas** e clique no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01.png) no menu pendente.
+1. Criar uma nova estratégia a partir dos cubos, conforme descrito em [Utilização de código](../using_code.md). Para adicionar uma nova estratégia, clique no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01.png) no separador **Geral** e selecione **Estratégia**. Em alternativa, clique com o botão direito do rato na pasta **Estratégia** no painel **Esquemas** e clique no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01.png) no menu pendente.
 
 ![Designer Criação de uma estratégia 00](../../../../images/designer_creation_of_strategy_00.png)
 
-Depois de clicar no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01.png) na pasta **Estratégia** do painel **Esquemas**, aparecerá uma nova estratégia. Na área de trabalho, aparece um novo separador com uma estratégia; ao mudar para ele, o separador **Emulação** será aberto automaticamente na faixa de opções. No separador **Emulação**, pode alterar o nome da estratégia e atribuir-lhe uma breve descrição.
+Depois de clicar no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01.png) na pasta **Estratégia** do painel **Esquemas**, aparecerá uma nova estratégia. Na área de trabalho, aparece um novo separador com uma estratégia; ao mudar para ele, o separador **Emulação** será aberto automaticamente no friso. No separador **Emulação**, pode alterar o nome da estratégia e atribuir-lhe uma breve descrição.
 
 ![Designer Criação de uma estratégia 01](../../../../images/designer_creation_of_strategy_01.png)
 
@@ -21,7 +21,7 @@ Depois de clicar no botão **Adicionar** ![Designer Painel de circuitos 01](../.
 - Quando uma média móvel curta cruza uma longa de cima para baixo, abre-se uma posição curta.
 - Se existir uma posição oposta no momento em que é recebido um sinal para abrir uma posição, inverte-se a posição.
 
-4. Para todas as estratégias, são necessários um instrumento e uma carteira, que serão utilizados para as negociações. Deve adicioná-los do painel **Paleta** ao painel **Designer**. No exemplo, o cubo [Variável](elements/data_sources/variable.md) com o tipo **Instrumento** chama-se **Instrumento**, e o cubo [Variável](elements/data_sources/variable.md) com o tipo **Carteira** chama-se **Carteira**. Defina a caixa de verificação **Parâmetros** dos cubos **Instrumento** e **Carteira**. Quando a caixa de verificação está seleccionada, o cubo obtém o valor a partir das definições da estratégia. Se não seleccionar a caixa de verificação, deve introduzir manualmente os valores do instrumento e da carteira. Se deixar o campo **Valor** do cubo [Variável](elements/data_sources/variable.md) vazio e não definir a caixa de verificação dos parâmetros, durante o teste a estratégia emitirá um erro relativo ao valor não definido do cubo [Variável](elements/data_sources/variable.md).
+4. Para todas as estratégias, são necessários um instrumento e uma carteira, que serão utilizados para os negócios. Deve adicioná-los do painel **Paleta** ao painel **Designer**. No exemplo, o cubo [Variável](elements/data_sources/variable.md) com o tipo **Instrumento** chama-se **Instrumento**, e o cubo [Variável](elements/data_sources/variable.md) com o tipo **Carteira** chama-se **Carteira**. Defina a caixa de verificação **Parâmetros** dos cubos **Instrumento** e **Carteira**. Quando a caixa de verificação está selecionada, o cubo obtém o valor a partir das definições da estratégia. Se não selecionar a caixa de verificação, deve introduzir manualmente os valores do instrumento e da carteira. Se deixar o campo **Valor** do cubo [Variável](elements/data_sources/variable.md) vazio e não definir a caixa de verificação dos parâmetros, durante o teste a estratégia emitirá um erro relativo ao valor não definido do cubo [Variável](elements/data_sources/variable.md).
 
 ![Designer Criação algorítmica de cubos 01](../../../../images/designer_algorithm_creation_of_elements_01.png)
 
@@ -31,7 +31,7 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Criação algorítmica de cubos 03](../../../../images/designer_algorithm_creation_of_elements_03.png)
 
-5. Depois de adicionar o instrumento e a carteira, deve adicionar dois cubos [Indicador](elements/common/indicator.md), seleccionar o tipo SMA, nomear o primeiro **SMA longo**, definir o período de 80 velas, nomear o segundo **SMA curto** e definir o período de 10 velas.
+5. Depois de adicionar o instrumento e a carteira, deve adicionar dois cubos [Indicador](elements/common/indicator.md), selecionar o tipo SMA, nomear o primeiro **SMA longo**, definir o período de 80 velas, nomear o segundo **SMA curto** e definir o período de 10 velas.
 
 ![Designer Criação algorítmica de cubos 04](../../../../images/designer_algorithm_creation_of_elements_04.png)
 
@@ -43,11 +43,11 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Criação algorítmica de cubos 06](../../../../images/designer_algorithm_creation_of_elements_06.png)
 
-8. Adicione o [Gráfico](elements/common/chart.md) para apresentar visualmente velas, indicadores e negociações. Adicione elementos de apresentação para velas, dois indicadores e negociações ao [Gráfico](elements/common/chart.md).
+8. Adicione o [Gráfico](elements/common/chart.md) para apresentar visualmente velas, indicadores e negócios. Adicione elementos de apresentação para velas, dois indicadores e negócios ao [Gráfico](elements/common/chart.md).
 
 ![Designer Criação algorítmica de cubos 07](../../../../images/designer_algorithm_creation_of_elements_07.png)
 
-9. Como origem das negociações para apresentação no gráfico, é utilizado o cubo **Negócios** da estratégia. No exemplo, chama-se **Negócios por estratégia**.
+9. Como origem dos negócios para apresentação no gráfico, é utilizado o cubo **Negócios** da estratégia. No exemplo, chama-se **Negócios por estratégia**.
 
 ![Designer Criação algorítmica de cubos 08](../../../../images/designer_algorithm_creation_of_elements_08.png)
 
@@ -55,7 +55,7 @@ Se precisar de utilizar vários instrumentos ou carteiras na estratégia, então
 
 ![Designer Criação algorítmica de cubos 09](../../../../images/designer_algorithm_creation_of_elements_09.png)
 
-11. Ao ligar os elementos acima com linhas ([Linhas](lines.md)), obtém-se um esquema sem ter em conta a posição actual da estratégia. Nessa condição, acumulará uma quantidade excessiva de lotes.
+11. Ao ligar os elementos acima com linhas ([Linhas](lines.md)), obtém-se um esquema sem ter em conta a posição atual da estratégia. Nessa condição, acumulará uma quantidade excessiva de lotes.
 
 ![Designer Criação algorítmica de cubos 10](../../../../images/designer_algorithm_creation_of_elements_10.png)
 
@@ -63,7 +63,7 @@ Para controlar a posição, precisa de adicionar o cubo [Posição](elements/pos
 
 ![Designer Criação algorítmica de cubos 11](../../../../images/designer_algorithm_creation_of_elements_11.png)
 
-Para processar a posição actual, pode utilizar o esquema pronto descrito em [Obter posição actual](schema_samples/get_current_position.md). Este esquema determina o valor efectivo do volume de ordem necessário. Se a posição tiver de ser invertida, devolve o dobro do valor da carteira.
+Para processar a posição atual, pode utilizar o esquema pronto descrito em [Obter posição atual](schema_samples/get_current_position.md). Este esquema determina o valor efetivo do volume de ordem necessário. Se a posição tiver de ser invertida, devolve o dobro do valor da carteira.
 
 12. Como resultado, a estratégia concluída fica assim:
 

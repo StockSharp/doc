@@ -35,7 +35,7 @@ O canal que criou está agora disponível para as suas estratégias e robôs de 
 
   - Ao usar o [Designer](../designer.md), clique na lista de canais no painel superior:
 
-  ![Captura de tela de Alertas](../../images/designerribbonchannels.png)
+  ![Captura de ecrã de Alertas](../../images/designerribbonchannels.png)
 
   Na janela que aparece, verá listas de todos os canais e grupos onde ativou o bot:
 

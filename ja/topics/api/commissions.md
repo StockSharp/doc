@@ -6,8 +6,8 @@
 
 [ICommissionManager](xref:StockSharp.Algo.Commissions.ICommissionManager) インターフェイスは、基本契約を定義します。
 
-- **ルール** — コミッション計算用の [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) ルールのコレクション。
-- **手数料** — 累積されたコミッション総額 (decimal)。
+- `Rules` — コミッション計算用の [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) ルールのコレクション。
+- `Commission` — 累積されたコミッション総額 (decimal)。
 - **Reset()** — マネージャーとすべてのルールの状態をリセットします。
 - **Process(Message)** — メッセージを処理します。指定されたメッセージのコミッション、または `null` を返します。
 
@@ -15,8 +15,8 @@
 
 各ルールは [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) を実装します。
 
-- **タイトル** — ルールのタイトル。
-- **値** — コミッション値 ([Unit](xref:Ecng.ComponentModel.Unit))。絶対値またはパーセンテージベースにできます。
+- `Title` — ルールのタイトル。
+- `Value` — コミッション値 ([Unit](xref:Ecng.ComponentModel.Unit))。絶対値またはパーセンテージベースにできます。
 - **Process(ExecutionMessage)** — 特定のメッセージに対するコミッションを計算します。
 
 基底クラス [CommissionRule](xref:StockSharp.Algo.Commissions.CommissionRule) には、ヘルパーメソッド `GetValue(price, volume)` が含まれています。

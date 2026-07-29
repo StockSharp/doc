@@ -1,6 +1,6 @@
 # Gruppiertes Orderbuch
 
-Zusätzlich zum [Dünnes Orderbuch](sparse.md) kann es nützlich sein, ein gruppiertes Orderbuch zu verwenden, in dem Orders über breitere Preisbereiche aggregiert werden, um die Analyse zu vereinfachen und allgemeine Trends in Nachfrage und Angebot zu erkennen.
+Zusätzlich zum [dünnen Orderbuch](sparse.md) kann es nützlich sein, ein gruppiertes Orderbuch zu verwenden, in dem Orders über breitere Preisbereiche aggregiert werden, um die Analyse zu vereinfachen und allgemeine Trends in Nachfrage und Angebot zu erkennen.
 
 Vorteile eines gruppierten Orderbuchs:
 
@@ -20,4 +20,3 @@ var groupedDepth = orderBook.Group(0.5);
 ```
 
 Die Methode [Group](xref:StockSharp.Messages.Extensions.Group(StockSharp.Messages.IOrderBookMessage,System.Decimal)) ermöglicht die Aggregation von Orders im Buch über größere Preisniveaus. Dadurch wird die visuelle Marktanalyse vereinfacht und die Identifikation der wichtigsten Nachfrage- und Angebotsniveaus unterstützt, ohne jede einzelne Preisänderung analysieren zu müssen.
-

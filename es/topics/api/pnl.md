@@ -6,8 +6,8 @@
 
 La interfaz [IPnLManager](xref:StockSharp.Algo.PnL.IPnLManager) define el contrato base:
 
-- **Ganancia o pérdida realizada** — beneficio/pérdida realizado (decimal). Se acumula cuando se cierran posiciones.
-- **Ganancia o pérdida no realizada** — beneficio/pérdida no realizado (decimal). Se recalcula basándose en precios de mercado actuales.
+- **RealizedPnL** — beneficio/pérdida realizado (decimal). Se acumula cuando se cierran posiciones.
+- **UnrealizedPnL** — beneficio/pérdida no realizado (decimal). Se recalcula basándose en precios de mercado actuales.
 - **Reset()** — restablece el estado del administrador.
 - **UpdateSecurity(Level1ChangeMessage)** — actualiza parámetros del instrumento (paso de precio, precio del paso, multiplicador de lote).
 - **ProcessMessage(Message, ICollection\<PortfolioPnLManager\>)** — procesa un mensaje; devuelve [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) cuando se cierra una posición, de lo contrario `null`.
@@ -32,8 +32,8 @@ PnLManager
 
 - **PriceStep** — paso de precio del instrumento.
 - **StepPrice** — coste del paso de precio (para futuros).
-- **Apalancamiento** — apalancamiento.
-- **Multiplicador de lote** — multiplicador de lote.
+- **Leverage** — apalancamiento.
+- **LotMultiplier** — multiplicador de lote.
 
 El multiplicador de beneficio se calcula usando la fórmula:
 
@@ -47,8 +47,8 @@ Para acciones normales (donde `StepPrice` no está establecido), el multiplicado
 
 La clase [PnLInfo](xref:StockSharp.Algo.PnL.PnLInfo) contiene el resultado de cerrar una posición:
 
-- **Hora del servidor** — hora de la operación.
-- **Volumen cerrado** — volumen de la posición cerrada.
+- **ServerTime** — hora de la operación.
+- **ClosedVolume** — volumen de la posición cerrada.
 - **PnL** — beneficio realizado de esta operación.
 
 Por ejemplo, si la posición era +2 y llegó una operación de -5 contratos, entonces `ClosedVolume = 2` (se cerraron 2 contratos de la posición).

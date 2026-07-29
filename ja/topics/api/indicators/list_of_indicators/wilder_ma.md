@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[WilderMovingAverage](xref:StockSharp.Algo.Indicators.WilderMovingAverage) クラスを使用する必要があります。
 
-![ワイルダー移動平均 のチャート](../../../../images/indicatorwildermovingaverage.png)
+![ワイルダー移動平均のチャート](../../../../images/indicatorwildermovingaverage.png)
 
 ## 推奨コンテンツ
 

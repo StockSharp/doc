@@ -6,7 +6,7 @@ A aplicação `Installer.Console` é uma versão multiplataforma do StockSharp I
 
 1. Instale o SDK ou runtime .NET 6 para a sua plataforma.
 2. Descarregue `StockSharp.Installer.Console.zip` a partir da [página de transferência](https://stocksharp.com/pt/products/download/).
-3. Descompacte o arquivo e execute o utilitário a partir da linha de comandos:
+3. Descompacte o ficheiro e execute o utilitário a partir da linha de comandos:
 
    ```bash
    dotnet StockSharp.Installer.Console.dll <Command> [product] [dir] [options]

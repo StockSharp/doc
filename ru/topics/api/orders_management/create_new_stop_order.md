@@ -19,10 +19,10 @@ private void StopOrder_Click(object sender, RoutedEventArgs e)
 		Volume = decimal.Parse(TextBoxVolumePrice.Text),
 		Side = Sides.Buy,
 		Type = OrderTypes.Conditional,
-		Condition = new QuikOrderCondition()
+		Condition = new FixOrderCondition
 		{
-			Type = QuikOrderConditionTypes.StopLimit,
-			StopLimitPrice = decimal.Parse(TextBoxStopLimitPrice.Text),
+			Type = FixStopOrderTypes.StopLoss,
+			StopLoss = decimal.Parse(TextBoxStopLossPrice.Text),
 		}
 	};
 	Connector.RegisterOrder(order);
@@ -31,7 +31,7 @@ private void StopOrder_Click(object sender, RoutedEventArgs e)
 							
 ```
 
-Для каждого подключения есть собственная реализация класса [OrderCondition](xref:StockSharp.Messages.OrderCondition) так как каждое подключение имеет свои уникальные особенности. Например, для [QUIK](../connectors/russia/quik.md) это [QuikOrderCondition](xref:StockSharp.Quik.QuikOrderCondition) , для [KuCoin](../connectors/crypto_exchanges/kucoin.md) это [KucoinOrderCondition](xref:StockSharp.Kucoin.KucoinOrderCondition) и т. д. 
+Для каждого подключения используется собственная реализация класса [OrderCondition](xref:StockSharp.Messages.OrderCondition), учитывающая особенности конкретного протокола или биржи. В этом примере для FIX-подключения применяется [FixOrderCondition](xref:StockSharp.Fix.FixOrderCondition), а тип стоп-заявки задаётся значением `FixStopOrderTypes.StopLoss`.
 
 ## См. также
 

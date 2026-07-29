@@ -2,7 +2,7 @@
 
 Se clicar no botão **Instrumentos** no separador Geral, aparece o painel **Instrumentos**. O painel **Instrumentos** apresenta todos os instrumentos disponíveis, bem como os respetivos dados de mercado.
 
-![Captura de tela de Lista de instrumentos](../../../images/hydra_securitiespanel_00.png)
+![Captura de ecrã de Lista de instrumentos](../../../images/hydra_securitiespanel_00.png)
 
 Na parte inferior do painel **Instrumentos** existem botões que lhe permitem:
 

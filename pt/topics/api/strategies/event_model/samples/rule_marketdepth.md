@@ -65,9 +65,9 @@ protected override void OnStarted2(DateTime time)
 
 ### Método #1: Criar uma Regra
 
-- Cria uma regra que é accionada quando é recebido um livro de ordens
+- Cria uma regra que é acionada quando é recebido um livro de ordens
 - Regista o melhor bid e ask
-- A regra é accionada apenas uma vez (`Once()`)
+- A regra é acionada apenas uma vez (`Once()`)
 
 ### Método #2: Criar uma Regra
 
@@ -76,13 +76,13 @@ protected override void OnStarted2(DateTime time)
 
 ### Regra Dentro de uma Regra
 
-- Cria uma regra que é accionada quando é recebido um livro de ordens
+- Cria uma regra que é acionada quando é recebido um livro de ordens
 - Dentro desta regra, é criada outra regra
-- A regra externa é accionada uma vez; a regra interna, sempre que é recebido um livro de ordens
+- A regra externa é acionada uma vez; a regra interna, sempre que é recebido um livro de ordens
 
 ## Funcionalidades
 
 - Demonstra várias formas de criar e aplicar regras no StockSharp
 - Usa subscrição de negócios e livros de ordens
 - Mostra um exemplo de registo de informação numa estratégia usando o método `LogInfo`
-- Ilustra a utilização de `Once()` para limitar o accionamento da regra
+- Ilustra a utilização de `Once()` para limitar o acionamento da regra

@@ -17,18 +17,18 @@
 
 ## パラメーター
 
-ベアパワー は [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) の設定を継承します。
+ベアパワーは [ExponentialMovingAverage](xref:StockSharp.Algo.Indicators.ExponentialMovingAverage) の設定を継承します。
 
 - **期間** - EMA 期間。
 - **アルファ**（任意） - EMA がこの方法で設定されている場合の平滑化係数。
 
 ## 使用方法
 
-- ベアパワー が極端な安値の後に上向きへ転じ、EMA も上昇し始める場合、反転を探します。
+- ベアパワーが極端な安値の後に上向きへ転じ、EMA も上昇し始める場合、反転を探します。
 - ゼロラインのクロスは、支配的なトレンドの変化を確認する場合があります。
-- ベアパワー を [ブルパワー](bull_power.md) および価格 EMA と組み合わせて、完全な [エルダー・レイ](elder_ray.md) インジケーターを構築します。
+- ベアパワーを [ブルパワー](bull_power.md) および価格 EMA と組み合わせて、完全な [エルダー・レイ](elder_ray.md) インジケーターを構築します。
 
-![ベアパワー のチャート](../../../../images/indicator_bear_power.png)
+![ベアパワーのチャート](../../../../images/indicator_bear_power.png)
 
 ## 関連項目
 

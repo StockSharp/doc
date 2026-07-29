@@ -1,8 +1,8 @@
 # A negociação é permitida
 
-![Captura de tela de A negociação é permitida](../../../../../../images/designer_tradealloweddiagramelement_00.png)
+![Captura de ecrã de A negociação é permitida](../../../../../../images/designer_tradealloweddiagramelement_00.png)
 
-Este bloco é utilizado para verificar se a negociação é actualmente permitida. São verificadas as seguintes condições:
+Este bloco é utilizado para verificar se a negociação é atualmente permitida. São verificadas as seguintes condições:
 
 - Todas as subscrições da estratégia a dados de mercado devem estar no estado [Online](../../../../../api/market_data/subscriptions.md) (a receber dados em tempo real).
 - Todos os indicadores devem estar [formados](../../../../../api/indicators.md).
@@ -16,8 +16,8 @@ Este bloco é utilizado para verificar se a negociação é actualmente permitid
 ### Conectores de saída
 
 
-- **Sinalizador** - um sinalizador que determina se a sessão de negociação está activa.
+- **Sinalizador** - um sinalizador que determina se a sessão de negociação está ativa.
 
 ## Ver também
 
-[Hora actual](current_time.md)
+[Hora atual](current_time.md)

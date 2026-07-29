@@ -25,7 +25,7 @@ Sinais do indicador:
 
 O cálculo do indicador onda senoidal baseia-se na utilização da função seno e na determinação do ciclo dominante no movimento do preço:
 
-1. Determinar o ciclo dominante através de análise espectral ou de outro método de identificação de ciclos.
+1. Determinar o ciclo dominante através de análise espetral ou de outro método de identificação de ciclos.
 
 2. Aplicar a função seno para modelar o ciclo identificado:
    ```

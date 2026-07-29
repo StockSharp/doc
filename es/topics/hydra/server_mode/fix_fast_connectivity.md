@@ -168,7 +168,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 // Cierre correcto de la conexión
 private void DisconnectFromServer()
 {
-	// Cancelar la suscripción a todas las suscripciones
+	// Cancelar todas las suscripciones
 	foreach (var subscription in _connector.Subscriptions.ToArray())
 	{
 		_connector.UnSubscribe(subscription);

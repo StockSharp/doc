@@ -6,7 +6,7 @@ Speicherlaufwerke in StockSharp sind für die physische Ablage von Marktdaten ve
 
 Das Interface [IMarketDataDrive](xref:StockSharp.Algo.Storages.IMarketDataDrive) stellt folgende Kernfunktionen bereit:
 
-- **Pfad** - Pfad zum Datenspeicher.
+- **Path** - Pfad zum Datenspeicher.
 - **GetAvailableSecuritiesAsync()** - Liste aller verfügbaren Instrumente im Speicher abrufen.
 - **GetAvailableDataTypesAsync()** - Liste der für ein bestimmtes Instrument verfügbaren Datentypen abrufen.
 - **GetStorageDrive()** - Speicherlaufwerk für ein bestimmtes Instrument und einen bestimmten Datentyp erhalten.
@@ -50,11 +50,11 @@ Die Klasse [RemoteMarketDataDrive](xref:StockSharp.Algo.Storages.RemoteMarketDat
 
 ### Verbindungseinstellungen
 
-- **Adresse** - Adresse des entfernten Servers. Standard ist `127.0.0.1:5002`.
-- **Anmeldedaten** - Anmeldedaten (E-Mail und Passwort).
+- `Address` - Adresse des entfernten Servers. Standard ist `127.0.0.1:5002`.
+- `Credentials` - Anmeldedaten (E-Mail und Passwort).
 - **TargetCompId** - Ziel-Komponentenbezeichner, standardmäßig `"StockSharpHydraMD"`.
 - **SecurityBatchSize** - Batchgröße beim Laden von Instrumenten, standardmäßig 1000.
-- **Zeitüberschreitung** - Verbindungs-Timeout, standardmäßig 2 Minuten.
+- **Timeout** - Verbindungs-Timeout, standardmäßig 2 Minuten.
 
 ### Verwendungsbeispiel
 

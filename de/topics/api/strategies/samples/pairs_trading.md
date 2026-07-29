@@ -26,10 +26,10 @@ public class PairsTradingStrategy : Strategy
 
 Die Strategie erlaubt die Anpassung der folgenden Parameter:
 
-- **Spread-Zeitraum** - Periode zur Berechnung des Spread-Mittelwerts und der Standardabweichung (Standardwert 20)
-- **Einstiegsschwelle** - Z-Score-Schwellenwert für den Positionseinstieg (Standardwert 2.0)
-- **Ausstiegsschwelle** - Z-Score-Schwellenwert für den Positionsausstieg (Standardwert 0.5)
-- **Kerzentyp** - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
+- **SpreadLength** - Periode zur Berechnung des Spread-Mittelwerts und der Standardabweichung (Standardwert 20)
+- **EntryThreshold** - Z-Score-Schwellenwert für den Positionseinstieg (Standardwert 2.0)
+- **ExitThreshold** - Z-Score-Schwellenwert für den Positionsausstieg (Standardwert 0.5)
+- `CandleType` - Kerzentyp, mit dem gearbeitet wird (standardmäßig 5 Minuten)
 
 Alle Parameter stehen mit festgelegten Wertebereichen für die Optimierung zur Verfügung.
 

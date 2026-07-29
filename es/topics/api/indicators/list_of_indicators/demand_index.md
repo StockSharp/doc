@@ -6,7 +6,7 @@ Para utilizar el indicador, debe utilizar la clase [DemandIndex](xref:StockSharp
 
 ## Descripción
 
-ll Índice de demanda (DI) es un indicador de volumen integral que evalúa la relación entre precio y volumen para determinar qué tan fuerte se compara la presión del comprador (demanda) con la presión del vendedor. ll indicador se basa en el supuesto de que la relación entre el cambio de precio y el cambio de volumen permite una evaluación más precisa de la demanda del mercado que simplemente observar el precio o el volumen individualmente.
+El Índice de demanda (DI) es un indicador de volumen integral que evalúa la relación entre precio y volumen para determinar qué tan fuerte es la presión del comprador (demanda) en comparación con la presión del vendedor. El indicador se basa en el supuesto de que la relación entre el cambio de precio y el cambio de volumen permite una evaluación más precisa de la demanda del mercado que simplemente observar el precio o el volumen individualmente.
 
 DI tiene como objetivo identificar las siguientes situaciones de mercado:
 - Fuerte demanda (presión del comprador)
@@ -16,38 +16,38 @@ DI tiene como objetivo identificar las siguientes situaciones de mercado:
 
 ## Parámetros
 
-ll indicador tiene los siguientes parámetros:
-- **Longitud** - período de cálculo (valor predeterminado: 13)
+El indicador tiene los siguientes parámetros:
+- `Length` - período de cálculo (valor predeterminado: 13)
 
 ## Cálculo
 
-ll cálculo de Índice de demanda es bastante complejo y consta de varias etapas:
+El cálculo del Índice de demanda es bastante complejo y consta de varias etapas:
 
 1. Calcular el componente del precio en función del cambio de precio:
    ```
-   componente de precio = ((High + Low + Close) / 3) - ((máximo anterior + mínimo anterior + cierre anterior) / 3)
+   Componente de precio = ((High + Low + Close) / 3) - ((Máximo anterior + Mínimo anterior + Cierre anterior) / 3)
    ```
 
 2. Calcular el componente de volumen, teniendo en cuenta el cambio de volumen relativo.
 
 3. Calcular la demanda como la relación entre los componentes de precio y volumen:
    ```
-   demanda bruta = componente de precio / componente de volumen
+   Demanda bruta = Componente de precio / Componente de volumen
    ```
 
 4. Suavizar los valores obtenidos para reducir el ruido:
    ```
-   demanda suavizada = lMA(demanda bruta, Length)
+   Demanda suavizada = EMA(Demanda bruta, Length)
    ```
 
-5. Normalizando el resultado para obtener el índice final:
+5. Normalizar el resultado para obtener el índice final:
    ```
-   Índice de demanda = 100 * Normalized(demanda suavizada)
+   Índice de demanda = 100 * Normalized(Demanda suavizada)
    ```
 
 ## Interpretación
 
-ll Índice de demanda se puede interpretar de varias maneras:
+El Índice de demanda se puede interpretar de varias maneras:
 
 1. **Niveles extremos**:
    - Los valores positivos altos indican una fuerte demanda (presión del comprador)
@@ -68,7 +68,7 @@ ll Índice de demanda se puede interpretar de varias maneras:
 5. **Valores extremos**:
    - Valores muy altos o muy bajos pueden indicar condiciones de sobrecompra o sobreventa en el mercado.
 
-ll uso del Índice de demanda es más efectivo cuando se combina con otros indicadores y métodos de análisis para filtrar señales falsas.
+El uso del Índice de demanda es más efectivo cuando se combina con otros indicadores y métodos de análisis para filtrar señales falsas.
 
 ![Gráfico del indicador DI](../../../../images/indicator_demand_index.png)
 

@@ -17,9 +17,9 @@ Steigende Drei-Methoden-Formation ist ein bullisches Trendfortsetzungsmuster aus
 
 Steigende Drei-Methoden-Formation gilt als zuverlässiges Signal für die Fortsetzung eines Aufwärtstrends:
 
-- Die erste länge weiße Kerze zeigt die Stärke des Aufwärtstrends.
+- Die erste lange weiße Kerze zeigt die Stärke des Aufwärtstrends.
 - Drei kleine schwarze Kerzen stellen eine vorübergehende Konsolidierung oder Korrektur dar, während der Verkäufer den Trend nicht wesentlich verändern konnten.
-- Die fünfte länge weiße Kerze bestätigt die Rückkehr der Kontrolle zu den Käufern und die Fortsetzung des Aufwärtstrends.
+- Die fünfte lange weiße Kerze bestätigt die Rückkehr der Kontrolle zu den Käufern und die Fortsetzung des Aufwärtstrends.
 - Dieses Muster kann in der klassischen technischen Analyse als Flagge oder Wimpel betrachtet werden.
 - Eine solche Kerzenfolge weist darauf hin, dass die Korrektur zum Aufbau von Long-Positionen genutzt wurde, bevor die Aufwärtsbewegung fortgesetzt wird.
 

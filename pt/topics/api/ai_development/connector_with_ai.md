@@ -23,7 +23,7 @@ dotnet add package StockSharp.Algo
 
 ### 3. Prepare o Contexto para a IA
 
-Crie um arquivo `CLAUDE.md`:
+Crie um ficheiro `CLAUDE.md`:
 
 ```markdown
 # Regras do projeto — conector de bolsa
@@ -136,7 +136,7 @@ Reveja o adaptador gerado quanto à conformidade com a API StockSharp:
 2. CancellationToken é usado corretamente?
 3. O tratamento de erros HTTP está implementado?
 4. SubscriptionFinishedMessage é enviado após a conclusão?
-5. A reconexão WebSocket funciona após uma desconexão?
+5. A nova ligação WebSocket funciona após uma desligação?
 ```
 
 ## Detalhes-Chave da Implementação
@@ -145,8 +145,8 @@ Reveja o adaptador gerado quanto à conformidade com a API StockSharp:
 
 | Mensagem de Entrada | Ação | Mensagem de Resposta |
 |-----------------|--------|-----------------|
-| `ConnectMessage` | Conectar à API | `ConnectMessage` (resposta) |
-| `DisconnectMessage` | Desconectar | `DisconnectMessage` (resposta) |
+| `ConnectMessage` | Ligar à API | `ConnectMessage` (resposta) |
+| `DisconnectMessage` | Desligar | `DisconnectMessage` (resposta) |
 | `SecurityLookupMessage` | Solicitar instrumentos | `SecurityMessage` × N |
 | `MarketDataMessage` (subscribe) | Assinar dados | `SubscriptionResponseMessage` |
 | `OrderRegisterMessage` | Criar ordem | `ExecutionMessage` |
@@ -194,10 +194,10 @@ private string SignRequest(string payload)
 
 ## Lista de Verificação de Revisão do Conector
 
-### Conexão
-- [ ] Conectar/desconectar funciona corretamente
+### Ligação
+- [ ] Ligar/desligar funciona corretamente
 - [ ] Erros de autenticação são tratados
-- [ ] Reconexão funciona após desconexão
+- [ ] O restabelecimento da ligação funciona após uma desligação
 
 ### Instrumentos
 - [ ] Lista de instrumentos carrega com sucesso
@@ -245,8 +245,8 @@ Adicione ao meu conector o tratamento de limites de frequência:
 
 ## Dicas
 
-1. **Comece somente leitura** — primeiro implemente conexão, instrumentos e dados de mercado. Adicione operações de negociação após a verificação
+1. **Comece somente leitura** — primeiro implemente a ligação, os instrumentos e os dados de mercado. Adicione operações de negociação após a verificação
 2. **Use o sandbox** — teste no ambiente de testes da bolsa
 3. **Referencie conectores existentes** — forneça à IA código de um conector StockSharp existente como referência
 4. **Registe tudo** — registos detalhados são inestimáveis ao depurar um conector
-5. **Trate casos extremos** — reconexão, mudanças de instrumentos, tipos de ordem não padronizados
+5. **Trate casos extremos** — restabelecimento da ligação, mudanças de instrumentos, tipos de ordem não padronizados

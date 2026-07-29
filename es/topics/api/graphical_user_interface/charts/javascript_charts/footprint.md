@@ -4,7 +4,7 @@ Un gráfico de footprint despliega cada barra para mostrar el volumen negociado 
 
 ## Demostración en vivo
 
-Haz zoom para leer las celdas individuales — el footprint solo es legible en unas pocas barras a la vez.
+Haga zoom para leer las celdas individuales — el footprint solo es legible en unas pocas barras a la vez.
 
 ```chart-demo footprint
 ```
@@ -13,7 +13,7 @@ Haz zoom para leer las celdas individuales — el footprint solo es legible en u
 
 ## Configuración
 
-Añade una `FootprintSeries` y aliméntala con barras exactas de order flow. Cada barra lleva `dataMode: 'exact'`, su OHLC y un array `levels` de `{ price, bidVolume, askVolume, tradeCount }`:
+Añada una `FootprintSeries` y aliméntela con barras exactas de order flow. Cada barra lleva `dataMode: 'exact'`, su OHLC y un array `levels` de `{ price, bidVolume, askVolume, tradeCount }`:
 
 ```js
 const series = chart.addSeries(SSChart.FootprintSeries, {
@@ -28,7 +28,7 @@ const series = chart.addSeries(SSChart.FootprintSeries, {
 series.setData(exactBars);
 ```
 
-`mode` elige lo que muestra cada celda (bid × ask, delta, total o una escalera); `detailLevel` intercambia detalle numérico por densidad a medida que haces zoom — `Auto` cambia automáticamente.
+`mode` elige lo que muestra cada celda (bid × ask, delta, total o una escalera); `detailLevel` intercambia detalle numérico por densidad a medida que hace zoom — `Auto` cambia automáticamente.
 
 ## Véase también
 

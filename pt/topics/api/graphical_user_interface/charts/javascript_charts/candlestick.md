@@ -1,8 +1,8 @@
 # Candlestick
 
-Os candlesticks são a série de preços padrão: cada barra é desenhada como um corpo entre a abertura e o fechamento, com pavios até a máxima e a mínima, colorida de alta ou de baixa. Eles são a forma mais densa em informação de ler o preço e o ponto de partida para a maioria dos gráficos.
+Os candlesticks são a série de preços predefinida: cada barra é desenhada com um corpo entre a abertura e o fecho e pavios até ao máximo e ao mínimo, colorida como ascendente ou descendente. São a forma com maior densidade de informação para interpretar o preço e o ponto de partida para a maioria dos gráficos.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 ```chart-demo candlestick
 ```

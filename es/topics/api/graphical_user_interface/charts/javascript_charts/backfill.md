@@ -1,17 +1,17 @@
 # Relleno de historial
 
-Un gráfico no puede contener todo el historial de un instrumento a la vez, por lo que carga una ventana de barras recientes y obtiene las más antiguas bajo demanda. El `ChartDataController` vigila el rango visible y, a medida que te desplazas o haces zoom hacia el borde izquierdo, extrae la siguiente página de historial de tu fuente de datos y la antepone.
+Un gráfico no puede contener todo el historial de un instrumento a la vez, por lo que se carga una ventana de barras recientes y se obtienen las más antiguas bajo demanda. El `ChartDataController` vigila el rango visible y, a medida que se desplaza o hace zoom hacia el borde izquierdo, extrae la siguiente página de historial de su fuente de datos y la antepone.
 
 ## Demostración en vivo
 
-Desplázate o haz zoom hacia el borde izquierdo — las barras más antiguas se cargan por páginas (observa el texto de estado). El flujo de datos aquí tiene un retardo artificial para que el estado de carga sea visible.
+Desplácese o haga zoom hacia el borde izquierdo — las barras más antiguas se cargan por páginas (observe el texto de estado). El flujo de datos aquí tiene un retardo artificial para que el estado de carga sea visible.
 
 ```chart-demo backfill
 ```
 
 ## Configuración
 
-Proporciona al controlador el gráfico, la serie que gestiona y una fuente de datos. La fuente de datos resuelve un símbolo y devuelve páginas de barras; el controlador solicita las páginas más antiguas automáticamente:
+Proporcione al controlador el gráfico, la serie que gestiona y una fuente de datos. La fuente de datos resuelve un símbolo y devuelve páginas de barras; el controlador solicita las páginas más antiguas automáticamente:
 
 ```js
 import { createChart, CandlestickSeries } from '@stocksharp/chart';
@@ -45,19 +45,19 @@ const controller = new ChartDataController({
   autoPrefetch: true,              // carga barras más antiguas automáticamente al desplazar / hacer zoom
 });
 
-// Opcional: observa el estado de carga y el progreso.
+// Opcional: observe el estado de carga y el progreso.
 controller.subscribe(snap => {
   console.log(snap.loadedBars, snap.hasMoreBefore, snap.loadingHistory);
 });
 
-// Carga la primera página y luego coloca la vista cerca del borde derecho para dejar espacio para desplazarse hacia la izquierda.
+// Cargue la primera página y luego coloque la vista cerca del borde derecho para dejar espacio para desplazarse hacia la izquierda.
 controller.setSelection({ symbol: 'DEMO', resolution: '1h' }).then(() => {
   const loaded = controller.rawData().length;
   chart.timeScale().setVisibleLogicalRange({ from: Math.max(0, loaded - 90), to: loaded + 3 });
 });
 ```
 
-`historyPrefetchThreshold` es lo cerca que la ventana visible debe llegar a la barra cargada más antigua antes de que se obtenga la siguiente página; `autoPrefetch` activa esa carga automática. Mientras una página está en tránsito, `snapshot.loadingHistory` es `true`, de modo que puedes mostrar un indicador de carga. Llama a `controller.loadMoreBefore()` para desencadenar una página manualmente, y a `controller.dispose()` para limpiar.
+`historyPrefetchThreshold` es lo cerca que la ventana visible debe llegar a la barra cargada más antigua antes de que se obtenga la siguiente página; `autoPrefetch` activa esa carga automática. Mientras una página está en tránsito, `snapshot.loadingHistory` es `true`, de modo que puede mostrar un indicador de carga. Llame a `controller.loadMoreBefore()` para desencadenar una página manualmente y a `controller.dispose()` para limpiar.
 
 ## Véase también
 

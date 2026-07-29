@@ -6,8 +6,8 @@
 
 A interface [ICommissionManager](xref:StockSharp.Algo.Commissions.ICommissionManager) define o contrato base:
 
-- **Regras** — uma coleção de regras [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) para o cálculo de comissões.
-- **Comissão** — o valor total acumulado de comissão (decimal).
+- `Rules` — uma coleção de regras [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule) para o cálculo de comissões.
+- `Commission` — o valor total acumulado de comissão (decimal).
 - **Reset()** — redefine o estado do gerenciador e de todas as regras.
 - **Process(Message)** — processa uma mensagem; retorna a comissão para a mensagem informada ou `null`.
 
@@ -15,8 +15,8 @@ A interface [ICommissionManager](xref:StockSharp.Algo.Commissions.ICommissionMan
 
 Cada regra implementa [ICommissionRule](xref:StockSharp.Algo.Commissions.ICommissionRule):
 
-- **Título** — o título da regra.
-- **Valor** — o valor da comissão ([Unit](xref:Ecng.ComponentModel.Unit)), pode ser absoluto ou baseado em percentual.
+- `Title` — o título da regra.
+- `Value` — o valor da comissão ([Unit](xref:Ecng.ComponentModel.Unit)), pode ser absoluto ou baseado em percentual.
 - **Process(ExecutionMessage)** — calcula a comissão para uma mensagem específica.
 
 A classe base [CommissionRule](xref:StockSharp.Algo.Commissions.CommissionRule) contém um método auxiliar `GetValue(price, volume)`:
@@ -58,7 +58,7 @@ A classe [CommissionMessageAdapter](xref:StockSharp.Algo.Commissions.CommissionM
 
 ## Integração com a Estratégia
 
-A estratégia ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) expõe a propriedade `Commission`, por meio da qual você pode acompanhar a comissão acumulada.
+A estratégia ([Strategy](xref:StockSharp.Algo.Strategies.Strategy)) expõe a propriedade `Commission`, por meio da qual pode acompanhar a comissão acumulada.
 
 ## Exemplo de Uso
 

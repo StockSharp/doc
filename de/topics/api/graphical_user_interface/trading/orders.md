@@ -2,7 +2,7 @@
 
 [OrderGrid](xref:StockSharp.Xaml.OrderGrid) ist eine Tabelle zur Anzeige von Aufträgen und bedingten Aufträgen. Außerdem enthält das Kontextmenü dieser Tabelle Befehle für Operationen mit Aufträgen: Registrierung, Änderung und Stornierung von Aufträgen. Die Auswahl eines Menüeintrags erzeugt die Ereignisse [OrderGrid.OrderRegistering](xref:StockSharp.Xaml.OrderGrid.OrderRegistering), [OrderGrid.OrderReRegistering](xref:StockSharp.Xaml.OrderGrid.OrderReRegistering) bzw. [OrderGrid.OrderCanceling](xref:StockSharp.Xaml.OrderGrid.OrderCanceling).
 
-![Aufträge Bildschirmfoto](../../../../images/gui_ordergrid.png)
+![Aufträge – Bildschirmfoto](../../../../images/gui_ordergrid.png)
 
 > [!TIP]
 > Die Operation selbst (Registrierung, Änderung, Stornierung) wird nicht ausgeführt. Der entsprechende Code muss manuell in den Ereignishandlern geschrieben werden.
@@ -92,7 +92,7 @@ private void OnOrderReceived(Subscription subscription, Order order)
 	// Prüfen, ob die Order zum für uns relevanten Abonnement gehört
 	if (subscription == _ordersSubscription)
 	{
-		// Auftrag zur Tabelle hinzufügen
+		// Order zur Tabelle hinzufügen
 		_ordersWindow.OrderGrid.Orders.TryAdd(order);
 
 		// Zusätzliche Orderverarbeitung

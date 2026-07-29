@@ -1,12 +1,12 @@
 # KER
 
-**rácio de eficiência de Kaufman (KER)** é um indicador técnico desenvolvido por Perry Kaufman que mede a eficiência do movimento do preço comparando o movimento direccional do preço com a volatilidade global.
+**rácio de eficiência de Kaufman (KER)** é um indicador técnico desenvolvido por Perry Kaufman que mede a eficiência do movimento do preço comparando o movimento direcional do preço com a volatilidade global.
 
 Para utilizar o indicador, é necessário usar a classe [KaufmanEfficiencyRatio](xref:StockSharp.Algo.Indicators.KaufmanEfficiencyRatio).
 
 ## Descrição
 
-O rácio de eficiência de Kaufman (KER) avalia quão "eficientemente" o preço se move numa direcção específica em comparação com o percurso total que percorre. Representa o rácio entre o movimento direccional líquido do preço e a soma de todas as variações de preço durante um período específico.
+O rácio de eficiência de Kaufman (KER) avalia quão "eficientemente" o preço se move numa direção específica em comparação com o percurso total que percorre. Representa o rácio entre o movimento direcional líquido do preço e a soma de todas as variações de preço durante um período específico.
 
 O KER foi desenvolvido por Perry Kaufman e foi originalmente usado como componente da média móvel adaptativa de Kaufman (KAMA). No entanto, o próprio KER é uma ferramenta valiosa que ajuda a determinar se o mercado está num estado tendencial ou oscilante.
 
@@ -23,7 +23,7 @@ O indicador tem os seguintes parâmetros:
 
 O cálculo do rácio de eficiência de Kaufman envolve os seguintes passos:
 
-1. Calcular o movimento direccional (variação líquida) durante o período:
+1. Calcular o movimento direcional (variação líquida) durante o período:
    ```
    Direção = |Price[current] - Price[current - Length]|
    ```

@@ -1,6 +1,6 @@
 # Estratégia de P&L
 
-![Captura de tela de Estratégia de P&L](../../../../../../images/designer_strategypnldiagramelement_00.png)
+![Captura de ecrã de Estratégia de P&L](../../../../../../images/designer_strategypnldiagramelement_00.png)
 
 O elemento fornece informações de P\/L da estratégia.
 

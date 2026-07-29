@@ -9,7 +9,7 @@ Una serie de línea une un único valor por barra —normalmente el cierre— en
 
 ## Configuración
 
-Añade una `LineSeries` y aliméntala con puntos `{ time, value }`:
+Añada una `LineSeries` y aliméntela con puntos `{ time, value }`:
 
 ```js
 const series = chart.addSeries(SSChart.LineSeries, {
@@ -22,7 +22,7 @@ series.setData(candles.map(c => ({ time: c.time, value: c.close })));
 chart.timeScale().fitContent();
 ```
 
-Cualquier conjunto de datos de un solo valor funciona aquí — sustituye `c.close` por el valor de un indicador para superponerlo sobre el gráfico de precios.
+Cualquier conjunto de datos de un solo valor funciona aquí — sustituya `c.close` por el valor de un indicador para superponerlo sobre el gráfico de precios.
 
 ## Véase también
 

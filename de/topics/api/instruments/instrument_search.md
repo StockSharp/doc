@@ -37,16 +37,16 @@ var subscription = new Subscription(lookupMessage);
 Die Nachricht [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) erlaubt das Festlegen folgender Suchkriterien:
 
 - **SecurityId** - Instrumentenbezeichner, bestehend aus:
-  - **Instrumentencode** - Code oder Maske des Instrumentencodes (zum Beispiel "AAPL" oder "MS*")
-  - **Handelsplatzcode** - Börsen-Handelsplatzcode (zum Beispiel [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
-- **Instrumententyp** - Instrumententyp ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) usw.)
+  - `SecurityCode` - Code oder Maske des Instrumentencodes (zum Beispiel "AAPL" oder "MS*")
+  - `BoardCode` - Börsen-Handelsplatzcode (zum Beispiel [ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq))
+- **SecurityType** - Instrumententyp ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) usw.)
 - **SecurityTypes** - Array von Instrumententypen für erweiterte Suche
-- **Währung** - Handelswährung des Instruments
+- **Currency** - Handelswährung des Instruments
 - **ExpiryDate** - Verfallsdatum (für Derivate)
-- **Ausübungspreis** - Ausübungspreis (für Optionen)
-- **Optionstyp** - Optionstyp (für Optionen)
+- **Strike** - Ausübungspreis (für Optionen)
+- **OptionType** - Optionstyp (für Optionen)
 - **Name** - Instrumentenname oder ein Teil davon
-- **Klasse** - Instrumentenklasse
+- **Class** - Instrumentenklasse
 
 ### Verarbeitung von Suchergebnissen
 

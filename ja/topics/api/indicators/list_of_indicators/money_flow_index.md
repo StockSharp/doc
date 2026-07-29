@@ -5,9 +5,8 @@
 
 インジケーターを使用するには、[MoneyFlowIndex](xref:StockSharp.Algo.Indicators.MoneyFlowIndex) クラスを使用します。
 
-![マネーフロー指数 のチャート](../../../../images/indicatormoneyflowindex.png)
+![マネーフロー指数のチャート](../../../../images/indicatormoneyflowindex.png)
 
 ## 関連項目
 
 [MACD](macd.md)
-

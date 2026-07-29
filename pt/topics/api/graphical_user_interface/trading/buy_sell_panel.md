@@ -2,7 +2,7 @@
 
 [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel) - Um painel especial que permite registar rapidamente uma ordem aos melhores preços.
 
-![Captura de tela de Painel Comprar/Vender](../../../../images/api_gui_buysell.png)
+![Captura de ecrã de Painel Comprar/Vender](../../../../images/api_gui_buysell.png)
 
 Abaixo está um exemplo do código para adicionar o [BuySellPanel](xref:StockSharp.Xaml.BuySellPanel).
 
@@ -27,7 +27,7 @@ Abaixo está um exemplo do código para adicionar o [BuySellPanel](xref:StockSha
 		</Grid.RowDefinitions>
 	    <xaml:BuySellPanel x:Name="BuySellPanel"  Grid.Row="1" Grid.ColumnSpan="3"/>
 		<Button Grid.Row="0" Grid.Column="0" x:Name="Setting" Content="Configuração" Click="Setting_Click" />
-		<Button Grid.Row="0" Grid.Column="1" x:Name="Connect" Content="Conectar" Click="Connect_Click" />
+		<Button Grid.Row="0" Grid.Column="1" x:Name="Connect" Content="Ligar" Click="Connect_Click" />
 	</Grid>
 </Window>
 	  				

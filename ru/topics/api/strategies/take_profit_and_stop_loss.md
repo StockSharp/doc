@@ -29,7 +29,7 @@ private IProtectivePositionController _posController;
 
 ```cs
 // Инициализация защитного контроллера для новой позиции
-this.WhenNewMyTrade()
+this.WhenOwnTradeReceived()
 	.Do(t =>
 	{
 		// ... (другой код)

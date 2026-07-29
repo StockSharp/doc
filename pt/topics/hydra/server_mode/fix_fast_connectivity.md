@@ -47,7 +47,7 @@ _connector.Connected += () =>
 // Evento de perda de ligação
 _connector.Disconnected += () =>
 {
-	Console.WriteLine("Conexão perdida");
+	Console.WriteLine("Ligação perdida");
 };
 
 // Evento de instrumento recebido
@@ -130,7 +130,7 @@ O Hydra em modo de servidor fornece acesso a vários tipos de dados. Vejamos exe
 // Obter velas históricas
 private void RequestHistoricalCandles(Security security, DateTime from, DateTime to)
 {
-	// Criar uma subscrição para velas históricos
+	// Criar uma subscrição para velas históricas
 	var candleSubscription = new Subscription(
 		DataType.TimeFrame(TimeSpan.FromMinutes(5)),
 		security)
@@ -142,7 +142,7 @@ private void RequestHistoricalCandles(Security security, DateTime from, DateTime
 		}
 	};
 	
-	// Subscrever para processar velas recebidos
+	// Subscrever para processar velas recebidas
 	_connector.CandleReceived += OnCandleReceived;
 	
 	// Iniciar a subscrição
@@ -157,7 +157,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 		
 	Console.WriteLine($"Vela histórica: {candle.OpenTime}, O: {candle.OpenPrice}, H: {candle.HighPrice}, L: {candle.LowPrice}, C: {candle.ClosePrice}, V: {candle.TotalVolume}");
 	
-	// Processar os velas recebidas, por exemplo, guardar no armazenamento local
+	// Processar as velas recebidas, por exemplo, guardar no armazenamento local
 	// ou utilizar para análise/visualização
 }
 ```
@@ -168,7 +168,7 @@ private void OnCandleReceived(Subscription subscription, ICandleMessage candle)
 // Encerramento correto da ligação
 private void DisconnectFromServer()
 {
-	// Cancelar a subscrição de todas as subscrições
+	// Cancelar todas as subscrições
 	foreach (var subscription in _connector.Subscriptions.ToArray())
 	{
 		_connector.UnSubscribe(subscription);

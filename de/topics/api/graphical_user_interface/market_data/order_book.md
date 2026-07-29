@@ -101,7 +101,7 @@ public class MarketDepthWithOrdersWindow
 		var depthSubscription = new Subscription(DataType.MarketDepth, security);
 		_connector.Subscribe(depthSubscription);
 
-		// Bei Bedarf ein Abonnement für Aufträge erstellen
+		// Bei Bedarf ein Abonnement für Orders erstellen
 		var ordersSubscription = new Subscription(DataType.Transactions, null);
 		_connector.Subscribe(ordersSubscription);
 	}

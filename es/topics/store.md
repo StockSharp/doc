@@ -4,7 +4,7 @@
 
 ### Por qué publicar
 
-Compartir su trabajo en Store permite a los desarrolladores llegar a una audiencia más amplia, recopilar feedback y monetizar sus ideas. También hace crecer el ecosistema general y proporciona a otros operadores herramientas listas para usar.
+Compartir su trabajo en Store le permite llegar a una audiencia más amplia, recopilar feedback y monetizar sus ideas. También hace crecer el ecosistema general y proporciona a otros operadores herramientas listas para usar.
 
 ### Carga de contenido
 

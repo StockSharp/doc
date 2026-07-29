@@ -4,7 +4,7 @@
 
 このインジケーターを使用するには、[GatorOscillator](xref:StockSharp.Algo.Indicators.GatorOscillator) クラスを使用する必要があります。
 
-![ゲーターオシレーター のチャート](../../../../images/indicatorgatoroscillator.png)
+![ゲーターオシレーターのチャート](../../../../images/indicatorgatoroscillator.png)
 
 ## 推奨コンテンツ
 

@@ -39,7 +39,7 @@ ISubscriptionHandler<ICandleMessage> SubscribeCandles(Subscription subscription)
 
 ### 订阅逐笔成交
 
-订阅逐笔交易：
+订阅逐笔成交：
 
 ```csharp
 ISubscriptionHandler<ITickTradeMessage> SubscribeTicks(Security security = null);

@@ -16,7 +16,7 @@ Weiße Kerze (bullische Kerze) ist ein klassisches Candlestick-Muster, das entst
 Weiße Kerze signalisiert bullischen Druck im Markt:
 
 - Je länger der Kerzenkörper ist, desto stärker ist der bullische Druck.
-- Eine länge weiße Kerze nach einem Abwärtstrend kann auf eine mögliche Umkehr hinweisen.
+- Eine lange weiße Kerze nach einem Abwärtstrend kann auf eine mögliche Umkehr hinweisen.
 - Kurze Schatten zeigen, dass Bullen den Preis während der gesamten Periode kontrollierten.
 - Aufeinanderfolgende weiße Kerzen weisen auf einen stabilen Aufwärtstrend hin.
 

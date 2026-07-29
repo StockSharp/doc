@@ -7,7 +7,7 @@ Use a classe [Median](xref:StockSharp.Algo.Indicators.Median) para aceder ao ind
 
 ## Descrição
 
-Um filtro de mediana ordena os preços dentro da janela móvel e selecciona o valor central. Como resultado:
+Um filtro de mediana ordena os preços dentro da janela móvel e seleciona o valor central. Como resultado:
 
 - Picos ou quedas isoladas não distorcem a saída.
 - O atraso é menor do que em muitos filtros de suavização.

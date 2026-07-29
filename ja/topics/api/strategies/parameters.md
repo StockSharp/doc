@@ -193,7 +193,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType シリーズ
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -228,7 +228,7 @@ public class SmaStrategy : Strategy
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 		
-		_series = Param(nameof(シリーズ), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
 					.SetDisplay("シリーズ", string.Empty, "基本設定");
 	}
 
@@ -237,7 +237,7 @@ public class SmaStrategy : Strategy
 ```
 
 この例では、2 つの移動平均のクロスに基づくストラテジーを、3 つの設定可能なパラメーターで作成しました。
-- `シリーズ` - データ型とタイムフレーム
+- `Series` - データ型とタイムフレーム
 - `LongSmaLength` - 長期移動平均の期間
 - `ShortSmaLength` - 短期移動平均の期間
 

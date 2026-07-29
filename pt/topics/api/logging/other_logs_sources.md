@@ -1,6 +1,6 @@
 # Outras fontes de registo
 
-Nos tópicos anteriores, os objectos incorporados nas classes [S#](../../api.md) eram fontes de registo. O [S#](../../api.md) fornece possibilidades para os casos em que a fonte de registo é a sua própria classe, ou quando a fonte não tem de estar associada a uma classe específica mas serve toda a aplicação. No primeiro caso, tem de implementar na sua classe a interface [ILogSource](xref:Ecng.Logging.ILogSource) ou herdar de [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver). Na segunda situação, pode utilizar [TraceSource](xref:Ecng.Logging.TraceSource), que usa o sistema de tracing do .NET. A forma de o fazer é mostrada no exemplo *Samples\/08\_Misc\/01\_Logging*.
+Nos tópicos anteriores, os objetos incorporados nas classes [S#](../../api.md) eram fontes de registo. O [S#](../../api.md) fornece possibilidades para os casos em que a fonte de registo é a sua própria classe, ou quando a fonte não tem de estar associada a uma classe específica mas serve toda a aplicação. No primeiro caso, tem de implementar na sua classe a interface [ILogSource](xref:Ecng.Logging.ILogSource) ou herdar de [BaseLogReceiver](xref:Ecng.Logging.BaseLogReceiver). Na segunda situação, pode utilizar [TraceSource](xref:Ecng.Logging.TraceSource), que usa o sistema de tracing do .NET. A forma de o fazer é mostrada no exemplo *Samples\/08\_Misc\/01\_Logging*.
 
 ## Exemplo de registo
 

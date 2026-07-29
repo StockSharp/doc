@@ -48,11 +48,11 @@ protected override void OnStarted2(DateTime time)
 ## Lógica
 
 - Ao iniciar, a estratégia cria subscrições para ticks e livros de ordens
-- É criada uma regra que é accionada sempre que são recebidos dados do livro de ordens
-- Quando a regra é accionada:
+- É criada uma regra que é acionada sempre que são recebidos dados do livro de ordens
+- Quando a regra é acionada:
   - O contador `i` é incrementado
   - A informação sobre os melhores preços bid e ask é adicionada ao registo
-  - O valor actual do contador `i` é adicionado ao registo
+  - O valor atual do contador `i` é adicionado ao registo
 - A regra é executada até o valor do contador `i` atingir ou exceder 10
 - Depois de a condição ser cumprida, a regra pára automaticamente de funcionar
 

@@ -1,8 +1,8 @@
 # Linha
 
-Uma série de linha une um único valor por barra — normalmente o fechamento — em uma única polilinha contínua. É a maneira mais limpa de mostrar uma tendência ou de plotar uma série derivada, como uma média móvel.
+Uma série de linha une um único valor por barra — normalmente o fecho — numa única polilinha contínua. É a forma mais simples de apresentar uma tendência ou representar uma série derivada, como uma média móvel.
 
-## Demonstração ao vivo
+## Demonstração em direto
 
 ```chart-demo line
 ```

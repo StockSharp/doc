@@ -9,7 +9,7 @@ Kerzen sind die Standard-Preisserie: Jeder Balken wird als Körper zwischen Erö
 
 ## Einrichtung
 
-Füge eine `CandlestickSeries` hinzu und speise sie mit `{ time, open, high, low, close }`-Punkten (die Zeit ist in Unix-Sekunden):
+Fügen Sie eine `CandlestickSeries` hinzu und speisen Sie sie mit `{ time, open, high, low, close }`-Punkten (die Zeit ist in Unix-Sekunden):
 
 ```js
 const chart = SSChart.createChart(document.getElementById('chart'), {
@@ -32,7 +32,7 @@ series.setData(candles.map(c => ({
 chart.timeScale().fitContent();
 ```
 
-Rufe `series.update({ time, open, high, low, close })` auf, um einen Echtzeit-Balken einzuspielen: Derselbe Zeitstempel ersetzt die letzte Kerze, ein neuerer Zeitstempel hängt eine neue an.
+Rufen Sie `series.update({ time, open, high, low, close })` auf, um einen Echtzeit-Balken einzuspielen: Derselbe Zeitstempel ersetzt die letzte Kerze, ein neuerer Zeitstempel hängt eine neue an.
 
 ## Siehe auch
 

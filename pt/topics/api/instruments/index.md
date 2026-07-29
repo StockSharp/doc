@@ -4,7 +4,7 @@
 
 1. [ExpressionIndexSecurity](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity) é um índice construído a partir de uma combinação de vários instrumentos utilizando a fórmula matemática em [ExpressionIndexSecurity.Formula](xref:StockSharp.Algo.Expressions.ExpressionIndexSecurity.Formula).
 
-2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) é um índice construído a partir de instrumentos utilizando factores de ponderação de [WeightedIndexSecurity.Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
+2. [WeightedIndexSecurity](xref:StockSharp.Algo.WeightedIndexSecurity) é um índice construído a partir de instrumentos utilizando fatores de ponderação de [WeightedIndexSecurity.Weights](xref:StockSharp.Algo.WeightedIndexSecurity.Weights).
 
 ## Criar ExpressionIndexSecurity
 

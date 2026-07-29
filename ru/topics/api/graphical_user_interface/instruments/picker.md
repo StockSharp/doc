@@ -48,7 +48,7 @@
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
 	......................................
-	_connector.NewSecurity += security => _securitiesWindow.SecurityPicker.Securities.Add(security);
+	_connector.SecurityReceived += (sub, security) => _securitiesWindow.SecurityPicker.Securities.Add(security);
 	// устанавливаем поставщик маркет-данных
 	_securitiesWindow.SecurityPicker.MarketDataProvider = _connector;
 	......................................

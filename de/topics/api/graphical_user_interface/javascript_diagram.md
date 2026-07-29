@@ -21,7 +21,7 @@ Installieren Sie das Paket von npm:
 npm install @stocksharp/diagram
 ```
 
-Importieren Sie dann die ES-Module — `import { renderScheme } from '@stocksharp/diagram/embed'` für die schreibgeschützte Einbettung oder `import { StockSharpDiagram } from '@stocksharp/diagram'` für den [Interaktiver Editor](javascript_diagram/editor.md).
+Importieren Sie dann die ES-Module — `import { renderScheme } from '@stocksharp/diagram/embed'` für die schreibgeschützte Einbettung oder `import { StockSharpDiagram } from '@stocksharp/diagram'` für den [interaktiven Editor](javascript_diagram/editor.md).
 
 ## Ein Diagramm einbetten
 
@@ -46,7 +46,7 @@ const scheme = {
 renderScheme(document.getElementById('diagram'), '/data/designer-palette.json', scheme);
 ```
 
-Der `typeId` jedes Knotens muss in der Palette vorhanden sein; unbekannte Typen werden als Platzhalterblöcke gerendert. Ports werden über ihren `key` referenziert, und eine Verbindung ist gültig, wenn der Typ des Quellports mit dem Typ des Zielports kompatibel ist. `renderScheme` ist schreibgeschützt: Die Engine ordnet an, gestaltet das Theme (sie folgt der Hell-/Dunkel-Einstellung der Seite) und lässt den Betrachter verschieben, zoomen und erweitern, bearbeitet das Schema jedoch nicht.
+Der `typeId` jedes Knotens muss in der Palette vorhanden sein; unbekannte Typen werden als Platzhalterblöcke gerendert. Ports werden über ihren `key` referenziert, und eine Verbindung ist gültig, wenn der Typ des Quellports mit dem Typ des Zielports kompatibel ist. `renderScheme` ist schreibgeschützt: Die Engine berechnet das Layout, wendet das Theme an (es folgt der Hell-/Dunkel-Einstellung der Seite) und lässt den Betrachter verschieben, zoomen und erweitern, bearbeitet das Schema jedoch nicht.
 
 Dieselbe Komponente läuft auch als vollwertiger **Editor** — Elemente aus einer Palette ziehen, Ports verbinden, Knoten bearbeiten und löschen, rückgängig machen/wiederherstellen. Siehe [Interaktiver Editor](javascript_diagram/editor.md) und [Ereignisse und API](javascript_diagram/events.md).
 

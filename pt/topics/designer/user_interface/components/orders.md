@@ -2,7 +2,7 @@
 
 O componente **Ordens** é uma tabela de ordens que apresenta informações completas sobre todas as ordens da estratégia.
 
-![Captura de tela de Ordens](../../../../images/designer_applications_00.png)
+![Captura de ecrã de Ordens](../../../../images/designer_applications_00.png)
 
 ## Conteúdo recomendado
 

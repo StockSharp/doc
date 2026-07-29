@@ -73,7 +73,7 @@ Der prozentuale Volumenoszillator kann wie folgt interpretiert werden:
    - Sehr niedrige PVO-Werte können auf ein unzureichendes Volumen hinweisen, was häufig bei Marktflaute auftritt
 
 5. **Histogrammanalyse**:
-   - Ein zunehmend positives Histogramm deutet auf eine Verstärkung der zinsbullischen Volumendynamik hin
+   - Ein zunehmend positives Histogramm deutet auf eine Verstärkung der bullischen Volumendynamik hin
    - Ein zunehmendes negatives Histogramm deutet auf eine Verstärkung der rückläufigen Volumendynamik hin
    - Die Kontraktion des Histogramms weist auf eine Abschwächung der aktuellen Volumendynamik hin
 

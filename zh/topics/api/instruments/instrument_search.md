@@ -37,16 +37,16 @@ var subscription = new Subscription(lookupMessage);
 [SecurityLookupMessage](xref:StockSharp.Messages.SecurityLookupMessage) 消息允许设置以下搜索条件：
 
 - **SecurityId** — 交易品种标识符，包含：
-  - **交易品种代码** — 交易品种代码或代码掩码（例如，“AAPL”或“MS*”）
-  - **交易板代码** — 交易板代码（例如，[ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
-- **交易品种类型** — 交易品种类型 ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) 等)
+  - `SecurityCode` — 交易品种代码或代码掩码（例如，“AAPL”或“MS*”）
+  - `BoardCode` — 交易板代码（例如，[ExchangeBoard.Nasdaq](xref:StockSharp.BusinessEntities.ExchangeBoard.Nasdaq)）
+- `SecurityType` — 交易品种类型 ([SecurityTypes.Stock](xref:StockSharp.Messages.SecurityTypes.Stock), [SecurityTypes.Future](xref:StockSharp.Messages.SecurityTypes.Future) 等)
 - **SecurityTypes** — 用于高级搜索的交易品种类型数组
-- **货币** — 该交易品种的交易货币
+- `Currency` — 该交易品种的交易货币
 - **ExpiryDate** — 到期日（用于衍生品）
-- **行权价** — 期权的行权价
-- **期权类型** — 期权类型（适用于期权）
-- **名称** — 交易品种名称或其部分
-- **类** — 交易品种类别
+- `Strike` — 期权的行权价
+- `OptionType` — 期权类型（适用于期权）
+- `Name` — 交易品种名称或其部分
+- `Class` — 交易品种类别
 
 ### 正在处理搜索结果
 

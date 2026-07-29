@@ -85,7 +85,7 @@
 - [Valor mínimo](list_of_indicators/lowest.md) - indicador valor mínimo, determina el precio más bajo durante un período específico
 - [LP](list_of_indicators/lunar_phase.md) - indicador LP, correlaciona los movimientos del mercado con los ciclos lunares
 - [MFI](list_of_indicators/market_facilitation_index.md) - indicador MFI, mide la eficiencia del movimiento de precios
-- [MMI](list_of_indicators/market_meanness_index.md) - Índice de “maldad” del mercado, determina si el mercado está en tendencia o lateral
+- [MMI](list_of_indicators/market_meanness_index.md) - índice de irregularidad del mercado, determina si el mercado está en tendencia o lateral
 - [MI](list_of_indicators/mass_index.md) - indicador MI, identifica posibles reversiones en función de la expansión del rango
 - [MCO](list_of_indicators/mcclellan_oscillator.md) - indicador MCO, mide la amplitud del mercado
 - [MGD](list_of_indicators/mcginley_dynamic.md) - indicador MGD, una media móvil responsiva
@@ -174,7 +174,7 @@ Esta lista incluye indicadores de análisis técnico de la biblioteca StockSharp
 - Identificación de tendencias
 - Evaluación de volatilidad
 - Detección de punto de inversión
-- Medición
+- Medición del impulso
 - Análisis del volumen de operaciones
 - Identificación de niveles de soporte y resistencia.
 

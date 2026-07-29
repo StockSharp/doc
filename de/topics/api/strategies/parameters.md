@@ -193,7 +193,7 @@ public class SmaStrategy : Strategy
 	private readonly StrategyParam<int> _longSmaLength;
 	private readonly StrategyParam<int> _shortSmaLength;
 
-	public DataType Serie
+	public DataType Series
 	{
 		get => _series.Value;
 		set => _series.Value = value;
@@ -228,7 +228,7 @@ public class SmaStrategy : Strategy
 							.SetCanOptimize(true)
 							.SetOptimize(5, 50, 5);
 
-		_series = Param(nameof(Serie), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
+		_series = Param(nameof(Series), DataType.TimeFrame(TimeSpan.FromMinutes(15)))
 					.SetDisplay("Serie", string.Empty, "Grundeinstellungen");
 	}
 
@@ -237,7 +237,7 @@ public class SmaStrategy : Strategy
 ```
 
 In diesem Beispiel wurde eine Strategie auf Basis der Kreuzung zweier gleitender Durchschnitte mit drei konfigurierbaren Parametern erstellt:
-- `Serie` - Datentyp und Zeitrahmen
+- `Series` - Datentyp und Zeitrahmen
 - `LongSmaLength` - Periode des langen gleitenden Durchschnitts
 - `ShortSmaLength` - Periode des kurzen gleitenden Durchschnitts
 

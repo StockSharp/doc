@@ -19,7 +19,7 @@ No exemplo com a estratégia SMA serão usados os seguintes parâmetros.
 - Instrumento **AAPL@NASDAQ**
 - Armazenamento padrão **\\Documents\\StockSharp\\Designer\\Storage**
 - Formato de armazenamento - **CSV**
-- Tipo de dados obtidos do armazenamento - **Tiques**
+- Tipo de dados obtidos do armazenamento - **Ticks**
 - Velas com período de 5 s
 - Volume - 100
 - Dias de histórico - 2

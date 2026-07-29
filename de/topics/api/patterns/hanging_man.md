@@ -26,8 +26,8 @@ Hängender Mann gilt als Warnung vor einem möglichen Ende eines Aufwärtstrends
 
 Hängender Mann erfordert vor Handelsentscheidungen normalerweise zusätzliche Bestätigung:
 
-- Warten Sie nach der Bildung des Hängender Mann auf eine bestätigende bärische Kerze, bevor Sie in eine Short-Position einsteigen.
-- Platzieren Sie einen Stop-Loss oberhalb des Hochs des Hängender Mann.
+- Warten Sie nach der Bildung des Hängenden Mannes auf eine bestätigende bärische Kerze, bevor Sie in eine Short-Position einsteigen.
+- Platzieren Sie einen Stop-Loss oberhalb des Hochs des Hängenden Mannes.
 - Berücksichtigen Sie das Handelsvolumen - hohes Volumen während der Musterbildung und bei der bestätigenden Kerze verstärkt das bärische Signal.
 - Kombinieren Sie das Muster mit anderen technischen Indikatoren, etwa RSI in der überkauften Zone oder Divergenzen bei Oszillatoren.
 - Mögliche Verwendung zum teilweisen Schließen bestehender Long-Positionen, auch ohne Öffnen einer Short-Position.

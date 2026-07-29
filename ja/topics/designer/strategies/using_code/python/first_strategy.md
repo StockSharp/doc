@@ -19,7 +19,7 @@ clr.AddReference("StockSharp.Algo")
 
 接続する必要がある主要なライブラリ:
 
-- clr module - Python コードと .NET Framework の連携を可能にするためにインポートされます
+- `clr` モジュール - Python コードと .NET Framework の連携を可能にするためにインポートされます
 - System.Drawing - 色やグラフィックを扱うために必要なライブラリ
 - StockSharp.Messages - 基本的な S# メッセージとデータ型を含みます
 - StockSharp.Algo - Strategy 基底クラスを含む、基本的な S# アルゴリズムコンポーネントを含みます

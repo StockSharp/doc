@@ -75,7 +75,7 @@ var newsPanel = new NewsPanel();
 // Subscrever o evento de notícias recebidas e adicionar notícias ao painel
 _connector.NewsReceived += (subscription, news) =>
 {
-	// Para actualizar elementos da UI
+	// Para atualizar elementos da UI
 	// tem de utilizar o método GuiAsync ou GuiSync
 	this.GuiAsync(() => newsPanel.NewsGrid.News.Add(news));
 };
@@ -142,7 +142,7 @@ connector.Connect();
 - Nem todos os conectores suportam a recepção de notícias. Por exemplo, a Binance não fornece uma fonte de notícias através da API.
 - Para notícias do mercado de criptomoedas, recomenda-se utilizar fontes RSS especializadas.
 - Para notícias relacionadas com instrumentos específicos, pode ser necessária configuração adicional da subscrição.
-- Ao trabalhar com uma interface gráfica, lembre-se de actualizar os elementos da UI na thread da interface de utilizador utilizando os métodos `GuiAsync` ou `GuiSync`.
+- Ao trabalhar com uma interface gráfica, lembre-se de atualizar os elementos da UI na thread da interface de utilizador utilizando os métodos `GuiAsync` ou `GuiSync`.
 
 ## Ver Também
 

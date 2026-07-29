@@ -25,7 +25,7 @@ dotnet add package StockSharp.Binance
 
 ### 3. Prepare o Contexto
 
-Crie um arquivo `CLAUDE.md` (ou `.cursorrules`) na raiz do projeto:
+Crie um ficheiro `CLAUDE.md` (ou `.cursorrules`) na raiz do projeto:
 
 ```markdown
 # Regras do projeto
@@ -268,7 +268,7 @@ if (!_sma.IsFormed)
 ## Dicas
 
 1. **Forneça a documentação à IA** — aponte-a para [doc.stocksharp.com](https://doc.stocksharp.com) ou copie exemplos de código de `Samples/`
-2. **Use o CLAUDE.md** — um arquivo de regras do projeto reduz muito o número de erros
+2. **Use o CLAUDE.md** — um ficheiro de regras do projeto reduz muito o número de erros
 3. **Comece simples** — crie primeiro uma estratégia básica, depois adicione filtros e gestão de risco
 4. **Teste no histórico** — sempre execute um teste histórico antes da negociação ao vivo
 5. **Clone o repositório** — se a IA tiver acesso aos códigos-fonte do StockSharp, ela usará a API com mais precisão

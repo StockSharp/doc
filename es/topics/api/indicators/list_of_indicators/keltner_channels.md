@@ -1,6 +1,6 @@
 # KC
 
-**canales de Keltner (KC)** es un indicador técnico que consta de un conjunto de bandas de volatilidad que utiliza una media móvil exponencial (EMA) como línea central y el rango verdadero promedio (ATR) para determinar el ancho del canal.
+Los **canales de Keltner (KC)** son un indicador técnico que consta de un conjunto de bandas de volatilidad que utiliza una media móvil exponencial (EMA) como línea central y el rango verdadero promedio (ATR) para determinar el ancho del canal.
 
 Para utilizar el indicador, debe utilizar la clase [KeltnerChannels](xref:StockSharp.Algo.Indicators.KeltnerChannels).
 

@@ -4,13 +4,13 @@ El mismo instrumento puede llamarse de forma diferente en distintos sistemas de 
 
 Esto permite organizar los datos recibidos y simplificar el almacenamiento. En la práctica, todos los datos entrantes de distintas fuentes se consolidarán en un solo lugar, no por el nombre de la fuente, sino por el nombre del instrumento.
 
-Esto también es útil al negociar el mismo instrumento en distintos mercados o a través de distintas conexiones (o brokers). Además, permite obtener datos desde una conexión y realizar operaciones a través de otra.
+Esto también es útil al negociar el mismo instrumento en distintos mercados o a través de distintas conexiones (o brókeres). Además, permite obtener datos desde una conexión y realizar operaciones a través de otra.
 
-Para asociar instrumentos y conexiones, debe:
+Para asociar instrumentos y conexiones, siga estos pasos:
 
-1. Vaya a la pestaña **Instrumentos** y hacer clic en el botón **Instrumentos y conexiones**.![Designer asignación de instrumentos 01 00](../../../images/designer_security_mapping_01_00.png)
-2. En la lista de conexiones, seleccionar la conexión necesaria.![Designer asignación de instrumentos 01](../../../images/designer_security_mapping_01.png)
-3. Rellenar todas las columnas.
+1. Vaya a la pestaña **Instrumentos** y haga clic en el botón **Instrumentos y conexiones**.![Designer asignación de instrumentos 01 00](../../../images/designer_security_mapping_01_00.png)
+2. En la lista de conexiones, seleccione la conexión necesaria.![Designer asignación de instrumentos 01](../../../images/designer_security_mapping_01.png)
+3. Rellene todas las columnas.
 
    Por ejemplo:
 

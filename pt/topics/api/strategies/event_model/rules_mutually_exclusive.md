@@ -1,8 +1,8 @@
 # Regras mutuamente exclusivas
 
-Regras mutuamente exclusivas são regras que são removidas depois da activação de uma dessas regras. Para isso, é chamado o método [MarketRuleHelper.Exclusive](xref:StockSharp.Algo.MarketRuleHelper.Exclusive(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule1, [StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule2 **)**, passando-lhe a regra. Esta regra será removida após a sua activação.
+Regras mutuamente exclusivas são regras que são removidas depois da ativação de uma dessas regras. Para isso, é chamado o método [MarketRuleHelper.Exclusive](xref:StockSharp.Algo.MarketRuleHelper.Exclusive(StockSharp.Algo.IMarketRule,StockSharp.Algo.IMarketRule))**(**[StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule1, [StockSharp.Algo.IMarketRule](xref:StockSharp.Algo.IMarketRule) rule2 **)**, passando-lhe a regra. Esta regra será removida após a sua ativação.
 
-Por exemplo, são registadas duas regras: uma para o registo bem-sucedido da ordem e outra para o registo mal-sucedido da ordem. Uma delas deve ser removida em caso de activação da outra:
+Por exemplo, são registadas duas regras: uma para o registo bem-sucedido da ordem e outra para o registo mal-sucedido da ordem. Uma delas deve ser removida em caso de ativação da outra:
 
 ```cs
 var order = this.CreateOrder(direction, (decimal) Security.GetCurrentPrice(direction), Volume);

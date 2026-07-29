@@ -205,7 +205,7 @@ A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalEl
 #     return False
 ```
 
-Se descomentar a propriedade, o método **Processo** será chamado sempre que chegar pelo menos um valor (no caso do exemplo, uma vela ou um valor numérico).
+Se descomentar a propriedade, o método `Process` será chamado sempre que chegar pelo menos um valor (no caso do exemplo, uma vela ou um valor numérico).
 
 Para adicionar o cubo resultante ao esquema, tem de selecionar o cubo criado na paleta, na secção **Blocos personalizados**:
 

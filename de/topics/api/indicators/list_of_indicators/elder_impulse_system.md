@@ -49,18 +49,18 @@ Die Berechnung des Elder-Impulse-Systems umfasst die folgenden Schritte:
 Das Elder-Impulse-System wird wie folgt interpretiert:
 
 1. **Grüne Kerzen (starker bullischer Impuls)**:
-   - Zeigen Sie eine starke Aufwärtsdynamik an
+   - zeigen eine starke Aufwärtsdynamik an
    - Beste Zeit zum Kaufen oder Halten von Kaufpositionen
    - Eine Reihe grüner Kerzen weist auf einen starken Aufwärtstrend hin
 
 2. **Rote Kerzen (starker rückläufiger Impuls)**:
-   - Zeigen Sie eine starke Abwärtsdynamik an
+   - zeigen eine starke Abwärtsdynamik an
    - Beste Zeit zum Verkaufen oder Halten von Verkaufspositionen
    - Eine Reihe roter Kerzen weist auf einen starken Abwärtstrend hin
 
 3. **Blaue Kerzen (kein klarer Impuls)**:
-   - Zeigen Sie Unsicherheit oder Konsolidierung an
-   - Signalisieren Sie eine mögliche Verlangsamung oder Trendumkehr
+   - zeigen Unsicherheit oder Konsolidierung an
+   - signalisieren eine mögliche Verlangsamung oder Trendumkehr
    - Tritt häufig während Konsolidierungsperioden oder vor einer Trendwende auf
 
 4. **Handelsstrategien**:

@@ -1,6 +1,6 @@
 # Negócios tick
 
-![Captura de tela de Negócios tick](../../../../images/gui_tradegrid.png)
+![Captura de ecrã de Negócios tick](../../../../images/gui_tradegrid.png)
 
 [TradeGrid](xref:StockSharp.Xaml.TradeGrid) - uma tabela de negócios.
 
@@ -165,7 +165,7 @@ private void UpdateTradeStatistics()
 // Método para filtrar negociações por volume mínimo
 public void FilterTicksByVolume(decimal minVolume)
 {
-	// Salvar valor do filtro
+	// Guardar valor do filtro
 	_minVolumeFilter = minVolume;
 	
 	// Atualizar manipulador do evento de recebimento de negociações tick

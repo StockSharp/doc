@@ -45,4 +45,4 @@ public static MarketRule<Portfolio, Portfolio> WhenMoneyMore(this Portfolio port
 }		
 ```
 
-A regra *PortfolioRule* subscreve o evento [IPortfolioProvider.PortfolioChanged](xref:StockSharp.BusinessEntities.IPortfolioProvider.PortfolioChanged) e, assim que este é chamado, a condição é verificada para confirmar se o nível actual de dinheiro na carteira excede um limite especificado. Se a condição devolver **true**, a regra é activada através do método [MarketRule\<TToken,TArg\>.Activate](xref:StockSharp.Algo.MarketRule`2.Activate).
+A regra *PortfolioRule* subscreve o evento [IPortfolioProvider.PortfolioChanged](xref:StockSharp.BusinessEntities.IPortfolioProvider.PortfolioChanged) e, assim que este é chamado, a condição é verificada para confirmar se o nível atual de dinheiro na carteira excede um limite especificado. Se a condição devolver **true**, a regra é ativada através do método [MarketRule\<TToken,TArg\>.Activate](xref:StockSharp.Algo.MarketRule`2.Activate).

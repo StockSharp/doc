@@ -25,7 +25,7 @@ Weißer Marubozu gilt als starkes bullisches Signal:
 Weißer Marubozu liefert ein stärkeres Signal als eine reguläre weiße Kerze:
 
 - Möglichkeit zum Einstieg in eine Long-Position nach Bildung eines weißen Marubozu, insbesondere wenn er an einem wichtigen Unterstützungsniveau erscheint.
-- Verwendung des Schlusskurses des Weißer Marubozu als Unterstützungsniveau beim Setzen von Stop-Losses.
+- Verwendung des Schlusskurses des weißen Marubozu als Unterstützungsniveau beim Setzen von Stop-Losses.
 - Kombination mit anderen technischen Indikatoren zur Bestätigung des Signals.
 - Achten Sie auf das Handelsvolumen - hohes Volumen erhöht die Bedeutung des Signals.
 

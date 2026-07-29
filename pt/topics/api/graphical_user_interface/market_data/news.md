@@ -26,7 +26,7 @@ Abaixo encontram-se fragmentos de código que demonstram a sua utilização:
 private readonly Connector _connector = new Connector();
 private void ConnectClick(object sender, RoutedEventArgs e)
 {
-	// Outras ações de conexão
+	// Outras ações de ligação
 	
 	// Definir provedor de notícias
 	_newsWindow.NewsPanel.SubscriptionProvider = _connector;
@@ -38,7 +38,7 @@ private void ConnectClick(object sender, RoutedEventArgs e)
 	var newsSubscription = new Subscription(DataType.News);
 	_connector.Subscribe(newsSubscription);
 	
-	// Realizar conexão
+	// Realizar ligação
 	_connector.Connect();
 }
 
