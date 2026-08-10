@@ -1,6 +1,6 @@
 # JavaScript ダイアグラム
 
-[StockSharp JS Diagram](https://github.com/StockSharp/Diagram) は、依存関係のないスタンドアロンのブラウザーコンポーネントで、[Designer](../../designer.md) のビジュアルなストラテジースキーム（接続された要素の同じブロックダイアグラム）を HTML の `canvas` 上に描画します。npm 上では [@stocksharp/diagram](https://www.npmjs.com/package/@stocksharp/diagram) として公開されており、StockSharp の各 Web サイトで表示される読み取り専用のストラテジーダイアグラムを支えています。
+[StockSharp JS Diagram](https://github.com/StockSharp/JS-Diagram) は、依存関係のないスタンドアロンのブラウザーコンポーネントで、[Designer](../../designer.md) のビジュアルなストラテジースキーム（接続された要素の同じブロックダイアグラム）を HTML の `canvas` 上に描画します。npm 上では [@stocksharp/diagram](https://www.npmjs.com/package/@stocksharp/diagram) として公開されており、StockSharp の各 Web サイトで表示される読み取り専用のストラテジーダイアグラムを支えています。
 
 ストラテジーは **スキーム** として記述されます。すなわち、型付きの *ポート* を介して相互に配線された *ノード*（ローソク足ソース、インジケーター、条件、注文などの要素）の集合です。コンポーネントは、そのスキームと *パレット*（要素タイプ、そのポート、色のカタログ）を受け取って描画します。
 
@@ -56,4 +56,4 @@ renderScheme(document.getElementById('diagram'), '/data/designer-palette.json', 
 - [イベントと API](javascript_diagram/events.md)
 - [JavaScript チャート](charts/javascript_charts.md)
 - [Designer](../../designer.md) — デスクトップ版のビジュアルストラテジーエディター
-- [Diagram リポジトリ](https://github.com/StockSharp/Diagram)
+- [JS-Diagram リポジトリ](https://github.com/StockSharp/JS-Diagram)

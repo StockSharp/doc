@@ -1,6 +1,6 @@
 # JavaScript 图表
 
-[StockSharp JS 交易图表](https://github.com/StockSharp/Charts) 是一个独立、无依赖的浏览器图表库。它以 [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) 的名称发布在 npm 上，并提供 StockSharp 网页终端所使用的 `sschart` canvas 引擎。可在[在线演示](https://stocksharp.github.io/Charts/demo/)中查看可运行的版本。
+[StockSharp JS 交易图表](https://github.com/StockSharp/JS-Charts) 是一个独立、无依赖的浏览器图表库。它以 [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) 的名称发布在 npm 上，并提供 StockSharp 网页终端所使用的 `sschart` canvas 引擎。可在[在线演示](https://stocksharp.github.io/JS-Charts/demo/)中查看可运行的版本。
 
 ![StockSharp JavaScript 交易图表](../../../../images/javascript_charts.jpg)
 
@@ -115,8 +115,8 @@ chart.timeScale().fitContent();
 克隆仓库并使用内置的 npm 脚本：
 
 ```bash
-git clone https://github.com/StockSharp/Charts.git
-cd Charts
+git clone https://github.com/StockSharp/JS-Charts.git
+cd JS-Charts
 npm install
 npm run build
 npm test
@@ -128,6 +128,6 @@ npm run serve
 ## 另请参阅
 
 - [JavaScript 框图](../javascript_diagram.md)
-- [Charts 仓库](https://github.com/StockSharp/Charts)
-- [在线演示](https://stocksharp.github.io/Charts/demo/)
+- [JS-Charts 仓库](https://github.com/StockSharp/JS-Charts)
+- [在线演示](https://stocksharp.github.io/JS-Charts/demo/)
 - [Windows 图表组件](../charts.md)

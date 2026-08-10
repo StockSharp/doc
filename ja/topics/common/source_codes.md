@@ -4,7 +4,7 @@
 
 プロバイダー固有のオープンコネクターは、すべて [StockSharp\/Connectors](https://github.com/StockSharp/Connectors) で管理されています。各コネクターは独立した .NET プロジェクトであり、リポジトリにはまとめてビルドするための `Connectors.slnx` が含まれています。
 
-独立したブラウザーチャートエンジンと Web ターミナル向けチャートスタックは、[StockSharp\/Charts](https://github.com/StockSharp/Charts) で管理されています。[JavaScript チャート](../api/graphical_user_interface/charts/javascript_charts.md)を参照してください。
+独立したブラウザーチャートエンジンと Web ターミナル向けチャートスタックは、[StockSharp\/JS-Charts](https://github.com/StockSharp/JS-Charts) で管理されています。[JavaScript チャート](../api/graphical_user_interface/charts/javascript_charts.md)を参照してください。
 
 [GitHub の使用手順](https://docs.github.com/ja/get-started/start-your-journey/hello-world)
 

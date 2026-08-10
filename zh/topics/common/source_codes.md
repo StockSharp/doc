@@ -4,7 +4,7 @@
 
 所有面向特定提供商的开源连接器都在 [StockSharp/Connectors](https://github.com/StockSharp/Connectors) 中维护。每个连接器都是独立的 .NET 项目，仓库还包含用于统一构建的 `Connectors.slnx`。
 
-独立的浏览器图表引擎和 Web 终端图表组件在 [StockSharp/Charts](https://github.com/StockSharp/Charts) 中维护。请参阅 [JavaScript 图表](../api/graphical_user_interface/charts/javascript_charts.md)。
+独立的浏览器图表引擎和 Web 终端图表组件在 [StockSharp/JS-Charts](https://github.com/StockSharp/JS-Charts) 中维护。请参阅 [JavaScript 图表](../api/graphical_user_interface/charts/javascript_charts.md)。
 
 [GitHub 使用说明](https://docs.github.com/zh/get-started/start-your-journey/hello-world)
 

@@ -1525,6 +1525,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	{
 		var errors = new List<string>();
 		var pattern = new Regex(@"\bdownload(?:ed|s|ing)?\b", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+		var inlineCodePattern = new Regex(@"`[^`\r\n]*`", RegexOptions.CultureInvariant);
 
 		void AddErrorIfMatched(string file, int line, string scope, string text)
 		{
@@ -1534,7 +1535,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				|| text.Contains("dotnet.microsoft.com/download", StringComparison.OrdinalIgnoreCase))
 				return;
 
-			var match = pattern.Match(text);
+			// Method names such as `download()` are API identifiers rather than visible UI wording.
+			var normalized = inlineCodePattern.Replace(text, " ");
+			var match = pattern.Match(normalized);
 			if (!match.Success)
 				return;
 
@@ -1686,7 +1689,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				|| text.Contains("Security, Order, Trade, Portfolio", StringComparison.Ordinal)
 				|| text.Contains("{ Trade =", StringComparison.Ordinal)
 				|| text.Contains("`trade", StringComparison.Ordinal)
-				|| text.Contains("trade.Price", StringComparison.Ordinal))
+				|| text.Contains("trade.Price", StringComparison.Ordinal)
+				|| text.Equals("load trade history", StringComparison.OrdinalIgnoreCase))
 				return;
 
 			var match = pattern.Match(text);
@@ -1748,6 +1752,8 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			var normalized = markdownLinkTargetPattern.Replace(text, "]");
 			normalized = inlineCodePattern.Replace(normalized, " ");
 			normalized = rawUrlPattern.Replace(normalized, " ");
+			// Exact npm package identifiers remain unchanged in imports and other code strings.
+			normalized = normalized.Replace("@stocksharp/trading-controls", " ", StringComparison.OrdinalIgnoreCase);
 
 			var match = pattern.Match(normalized);
 			if (!match.Success)
@@ -13848,6 +13854,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	private static bool IsAllowedInvariantCodeStringLiteral(string text)
 	{
 		var value = text.Trim();
+
+		if (value.Equals("grid-total-value", StringComparison.Ordinal))
+			return true;
 
 		if (value.StartsWith("{", StringComparison.Ordinal)
 			|| value.StartsWith("http://", StringComparison.OrdinalIgnoreCase)

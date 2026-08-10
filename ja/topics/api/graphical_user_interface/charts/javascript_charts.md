@@ -1,6 +1,6 @@
 # JavaScript チャート
 
-[StockSharp JS トレーディングチャート](https://github.com/StockSharp/Charts) は、依存関係のないスタンドアロンなブラウザ用チャートライブラリです。[@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) として npm に公開されており、StockSharp Web ターミナルで使用されている `sschart` キャンバスエンジンを同梱しています。動作するバージョンは[ライブデモ](https://stocksharp.github.io/Charts/demo/)で確認できます。
+[StockSharp JS トレーディングチャート](https://github.com/StockSharp/JS-Charts) は、依存関係のないスタンドアロンなブラウザ用チャートライブラリです。[@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) として npm に公開されており、StockSharp Web ターミナルで使用されている `sschart` キャンバスエンジンを同梱しています。動作するバージョンは[ライブデモ](https://stocksharp.github.io/JS-Charts/demo/)で確認できます。
 
 ![StockSharp JavaScript トレーディングチャート](../../../../images/javascript_charts.jpg)
 
@@ -115,8 +115,8 @@ chart.timeScale().fitContent();
 リポジトリをクローンし、付属の npm スクリプトを使用します。
 
 ```bash
-git clone https://github.com/StockSharp/Charts.git
-cd Charts
+git clone https://github.com/StockSharp/JS-Charts.git
+cd JS-Charts
 npm install
 npm run build
 npm test
@@ -128,6 +128,6 @@ npm run serve
 ## 関連項目
 
 - [JavaScript ダイアグラム](../javascript_diagram.md)
-- [Charts リポジトリ](https://github.com/StockSharp/Charts)
-- [ライブデモ](https://stocksharp.github.io/Charts/demo/)
+- [JS-Charts リポジトリ](https://github.com/StockSharp/JS-Charts)
+- [ライブデモ](https://stocksharp.github.io/JS-Charts/demo/)
 - [Windows 用チャートコンポーネント](../charts.md)

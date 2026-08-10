@@ -5102,6 +5102,34 @@
           href: api/graphical_user_interface/javascript_diagram/editor.md
         - name: 事件与 API
           href: api/graphical_user_interface/javascript_diagram/events.md
+      - name: JavaScript 表格
+        href: api/graphical_user_interface/javascript_grids.md
+        items:
+        - name: 数据表格
+          href: api/graphical_user_interface/javascript_grids/data_grid.md
+        - name: 列设置
+          href: api/graphical_user_interface/javascript_grids/column_settings.md
+        - name: 表格排序
+          href: api/graphical_user_interface/javascript_grids/table_sort.md
+        - name: 表格导出
+          href: api/graphical_user_interface/javascript_grids/table_export.md
+      - name: JavaScript 交易控件
+        href: api/graphical_user_interface/javascript_trading_controls.md
+        items:
+        - name: 活动订单
+          href: api/graphical_user_interface/javascript_trading_controls/active_orders.md
+        - name: 持仓
+          href: api/graphical_user_interface/javascript_trading_controls/positions.md
+        - name: 成交历史
+          href: api/graphical_user_interface/javascript_trading_controls/trade_history.md
+        - name: 自选交易品种列表
+          href: api/graphical_user_interface/javascript_trading_controls/watchlist.md
+        - name: 订单输入
+          href: api/graphical_user_interface/javascript_trading_controls/order_entry.md
+        - name: 订单簿
+          href: api/graphical_user_interface/javascript_trading_controls/order_book.md
+        - name: 成交明细
+          href: api/graphical_user_interface/javascript_trading_controls/trade_feed.md
     - name: 图表
       href: api/graphical_user_interface/charts.md
       items:

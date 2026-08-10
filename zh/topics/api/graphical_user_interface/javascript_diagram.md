@@ -1,6 +1,6 @@
 # JavaScript 框图
 
-[StockSharp JS Diagram](https://github.com/StockSharp/Diagram) 是一个独立、无依赖的浏览器组件，用于在 HTML `canvas` 上渲染 [Designer](../../designer.md) 的可视化策略方案——即由相互连接的元素构成的同一张框图。它以 [@stocksharp/diagram](https://www.npmjs.com/package/@stocksharp/diagram) 的形式发布在 npm 上，为 StockSharp 各网站中展示的只读策略框图提供支持。
+[StockSharp JS Diagram](https://github.com/StockSharp/JS-Diagram) 是一个独立、无依赖的浏览器组件，用于在 HTML `canvas` 上渲染 [Designer](../../designer.md) 的可视化策略方案——即由相互连接的元素构成的同一张框图。它以 [@stocksharp/diagram](https://www.npmjs.com/package/@stocksharp/diagram) 的形式发布在 npm 上，为 StockSharp 各网站中展示的只读策略框图提供支持。
 
 一个策略被描述为一个**方案（scheme）**：一组*节点（nodes）*（诸如 K线 数据源、指标、条件或订单之类的元素）通过带类型的*端口（ports）*相互连接。该组件接收这个方案以及一个*调色板（palette）*（元素类型、其端口及颜色的目录），并将其绘制出来。
 
@@ -56,4 +56,4 @@ renderScheme(document.getElementById('diagram'), '/data/designer-palette.json', 
 - [事件与 API](javascript_diagram/events.md)
 - [JavaScript 图表](charts/javascript_charts.md)
 - [Designer](../../designer.md) —— 桌面版可视化策略编辑器
-- [Diagram 代码仓库](https://github.com/StockSharp/Diagram)
+- [JS-Diagram 代码仓库](https://github.com/StockSharp/JS-Diagram)

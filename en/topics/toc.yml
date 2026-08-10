@@ -5102,6 +5102,34 @@
           href: api/graphical_user_interface/javascript_diagram/editor.md
         - name: Events and API
           href: api/graphical_user_interface/javascript_diagram/events.md
+      - name: JavaScript grids
+        href: api/graphical_user_interface/javascript_grids.md
+        items:
+        - name: Data grid
+          href: api/graphical_user_interface/javascript_grids/data_grid.md
+        - name: Column settings
+          href: api/graphical_user_interface/javascript_grids/column_settings.md
+        - name: Table sorting
+          href: api/graphical_user_interface/javascript_grids/table_sort.md
+        - name: Table export
+          href: api/graphical_user_interface/javascript_grids/table_export.md
+      - name: JavaScript trading controls
+        href: api/graphical_user_interface/javascript_trading_controls.md
+        items:
+        - name: Active orders
+          href: api/graphical_user_interface/javascript_trading_controls/active_orders.md
+        - name: Positions
+          href: api/graphical_user_interface/javascript_trading_controls/positions.md
+        - name: Trade history
+          href: api/graphical_user_interface/javascript_trading_controls/trade_history.md
+        - name: Watchlist
+          href: api/graphical_user_interface/javascript_trading_controls/watchlist.md
+        - name: Order entry
+          href: api/graphical_user_interface/javascript_trading_controls/order_entry.md
+        - name: Order book
+          href: api/graphical_user_interface/javascript_trading_controls/order_book.md
+        - name: Trade feed
+          href: api/graphical_user_interface/javascript_trading_controls/trade_feed.md
     - name: Charts
       href: api/graphical_user_interface/charts.md
       items:

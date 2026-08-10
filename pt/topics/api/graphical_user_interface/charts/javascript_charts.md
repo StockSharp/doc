@@ -1,6 +1,6 @@
 # Gráficos em JavaScript
 
-Os [Gráficos de negociação JS da StockSharp](https://github.com/StockSharp/Charts) constituem uma biblioteca de gráficos para navegador, autónoma e sem dependências. É publicada no npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e fornece o motor de `canvas` `sschart` utilizado pelo terminal web da StockSharp. Está disponível uma versão funcional na [demonstração online](https://stocksharp.github.io/Charts/demo/).
+Os [Gráficos de negociação JS da StockSharp](https://github.com/StockSharp/JS-Charts) constituem uma biblioteca de gráficos para navegador, autónoma e sem dependências. É publicada no npm como [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) e fornece o motor de `canvas` `sschart` utilizado pelo terminal web da StockSharp. Está disponível uma versão funcional na [demonstração online](https://stocksharp.github.io/JS-Charts/demo/).
 
 ![Gráfico de negociação JavaScript do StockSharp](../../../../images/javascript_charts.jpg)
 
@@ -115,8 +115,8 @@ Use `src/chart/app.ts` como exemplo de integração do conjunto completo.
 Clone o repositório e use os scripts npm incluídos:
 
 ```bash
-git clone https://github.com/StockSharp/Charts.git
-cd Charts
+git clone https://github.com/StockSharp/JS-Charts.git
+cd JS-Charts
 npm install
 npm run build
 npm test
@@ -128,6 +128,6 @@ O servidor de desenvolvimento disponibiliza a demonstração em `http://localhos
 ## Ver também
 
 - [Diagrama em JavaScript](../javascript_diagram.md)
-- [Repositório Charts](https://github.com/StockSharp/Charts)
-- [Demonstração online](https://stocksharp.github.io/Charts/demo/)
+- [Repositório JS-Charts](https://github.com/StockSharp/JS-Charts)
+- [Demonstração online](https://stocksharp.github.io/JS-Charts/demo/)
 - [Componentes de gráficos para Windows](../charts.md)

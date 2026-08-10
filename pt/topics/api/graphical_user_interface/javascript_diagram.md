@@ -1,6 +1,6 @@
 # Diagrama em JavaScript
 
-O [StockSharp JS Diagram](https://github.com/StockSharp/Diagram) é um componente de navegador independente e sem dependências que apresenta o esquema visual de estratégia do [Designer](../../designer.md) — o mesmo diagrama de blocos de elementos ligados — num `canvas` HTML. É publicado no npm como [@stocksharp/diagram](https://www.npmjs.com/package/@stocksharp/diagram) e alimenta os diagramas de estratégia só de leitura apresentados em todos os sites web da StockSharp.
+O [StockSharp JS Diagram](https://github.com/StockSharp/JS-Diagram) é um componente de navegador independente e sem dependências que apresenta o esquema visual de estratégia do [Designer](../../designer.md) — o mesmo diagrama de blocos de elementos ligados — num `canvas` HTML. É publicado no npm como [@stocksharp/diagram](https://www.npmjs.com/package/@stocksharp/diagram) e alimenta os diagramas de estratégia só de leitura apresentados em todos os sites web da StockSharp.
 
 Uma estratégia é descrita como um **esquema**: um conjunto de *nós* (elementos como uma fonte de velas, um indicador, uma condição ou uma ordem) interligados através de *portas* tipadas. O componente recebe esse esquema e uma *paleta* (o catálogo de tipos de elementos, respetivas portas e cores) e apresenta-o.
 
@@ -56,4 +56,4 @@ O mesmo componente também funciona como um **editor** completo — arraste elem
 - [Eventos e API](javascript_diagram/events.md)
 - [Gráficos em JavaScript](charts/javascript_charts.md)
 - [Designer](../../designer.md) — o editor visual de estratégias para desktop
-- [Repositório do Diagram](https://github.com/StockSharp/Diagram)
+- [Repositório do JS-Diagram](https://github.com/StockSharp/JS-Diagram)

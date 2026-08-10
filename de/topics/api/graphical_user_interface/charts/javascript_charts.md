@@ -1,6 +1,6 @@
 # JavaScript-Charts
 
-[StockSharp JS Handels-Charts](https://github.com/StockSharp/Charts) ist eine eigenständige, abhängigkeitsfreie Charting-Bibliothek für den Browser. Sie wird auf npm als [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) veröffentlicht und liefert die `sschart`-Canvas-Engine, die im StockSharp-Web-Terminal verwendet wird. Eine funktionierende Version ist in der [Live-Demo](https://stocksharp.github.io/Charts/demo/) verfügbar.
+[StockSharp JS Handels-Charts](https://github.com/StockSharp/JS-Charts) ist eine eigenständige, abhängigkeitsfreie Charting-Bibliothek für den Browser. Sie wird auf npm als [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) veröffentlicht und liefert die `sschart`-Canvas-Engine, die im StockSharp-Web-Terminal verwendet wird. Eine funktionierende Version ist in der [Live-Demo](https://stocksharp.github.io/JS-Charts/demo/) verfügbar.
 
 ![StockSharp JavaScript-Handels-Chart](../../../../images/javascript_charts.jpg)
 
@@ -115,8 +115,8 @@ Verwenden Sie `src/chart/app.ts` als Integrationsbeispiel für den vollständige
 Klonen Sie das Repository und verwenden Sie die enthaltenen npm-Skripte:
 
 ```bash
-git clone https://github.com/StockSharp/Charts.git
-cd Charts
+git clone https://github.com/StockSharp/JS-Charts.git
+cd JS-Charts
 npm install
 npm run build
 npm test
@@ -128,6 +128,6 @@ Der Entwicklungsserver stellt die Demo unter `http://localhost:8791/demo/index.h
 ## Siehe auch
 
 - [JavaScript-Diagramm](../javascript_diagram.md)
-- [Charts-Repository](https://github.com/StockSharp/Charts)
-- [Live-Demo](https://stocksharp.github.io/Charts/demo/)
+- [JS-Charts-Repository](https://github.com/StockSharp/JS-Charts)
+- [Live-Demo](https://stocksharp.github.io/JS-Charts/demo/)
 - [Windows-Chart-Komponenten](../charts.md)

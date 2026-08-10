@@ -5102,6 +5102,34 @@
           href: api/graphical_user_interface/javascript_diagram/editor.md
         - name: イベントと API
           href: api/graphical_user_interface/javascript_diagram/events.md
+      - name: JavaScript テーブル
+        href: api/graphical_user_interface/javascript_grids.md
+        items:
+        - name: データグリッド
+          href: api/graphical_user_interface/javascript_grids/data_grid.md
+        - name: 列設定
+          href: api/graphical_user_interface/javascript_grids/column_settings.md
+        - name: テーブルの並べ替え
+          href: api/graphical_user_interface/javascript_grids/table_sort.md
+        - name: テーブルのエクスポート
+          href: api/graphical_user_interface/javascript_grids/table_export.md
+      - name: JavaScript トレーディングコントロール
+        href: api/graphical_user_interface/javascript_trading_controls.md
+        items:
+        - name: 有効注文
+          href: api/graphical_user_interface/javascript_trading_controls/active_orders.md
+        - name: ポジション
+          href: api/graphical_user_interface/javascript_trading_controls/positions.md
+        - name: 約定履歴
+          href: api/graphical_user_interface/javascript_trading_controls/trade_history.md
+        - name: ウォッチリスト
+          href: api/graphical_user_interface/javascript_trading_controls/watchlist.md
+        - name: 注文入力
+          href: api/graphical_user_interface/javascript_trading_controls/order_entry.md
+        - name: 板情報
+          href: api/graphical_user_interface/javascript_trading_controls/order_book.md
+        - name: 歩み値
+          href: api/graphical_user_interface/javascript_trading_controls/trade_feed.md
     - name: チャート
       href: api/graphical_user_interface/charts.md
       items:

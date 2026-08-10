@@ -5248,6 +5248,34 @@
           href: api/graphical_user_interface/javascript_diagram/editor.md
         - name: События и API
           href: api/graphical_user_interface/javascript_diagram/events.md
+      - name: JavaScript-таблицы
+        href: api/graphical_user_interface/javascript_grids.md
+        items:
+        - name: Таблица данных
+          href: api/graphical_user_interface/javascript_grids/data_grid.md
+        - name: Настройка столбцов
+          href: api/graphical_user_interface/javascript_grids/column_settings.md
+        - name: Сортировка таблицы
+          href: api/graphical_user_interface/javascript_grids/table_sort.md
+        - name: Экспорт таблицы
+          href: api/graphical_user_interface/javascript_grids/table_export.md
+      - name: Торговые JavaScript-контролы
+        href: api/graphical_user_interface/javascript_trading_controls.md
+        items:
+        - name: Активные заявки
+          href: api/graphical_user_interface/javascript_trading_controls/active_orders.md
+        - name: Позиции
+          href: api/graphical_user_interface/javascript_trading_controls/positions.md
+        - name: История сделок
+          href: api/graphical_user_interface/javascript_trading_controls/trade_history.md
+        - name: Список инструментов
+          href: api/graphical_user_interface/javascript_trading_controls/watchlist.md
+        - name: Ввод заявки
+          href: api/graphical_user_interface/javascript_trading_controls/order_entry.md
+        - name: Стакан
+          href: api/graphical_user_interface/javascript_trading_controls/order_book.md
+        - name: Лента сделок
+          href: api/graphical_user_interface/javascript_trading_controls/trade_feed.md
     - name: Графики
       href: api/graphical_user_interface/charts.md
       items:

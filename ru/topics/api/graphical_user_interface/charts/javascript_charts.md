@@ -1,6 +1,6 @@
 # JavaScript-графики
 
-[Торговые JavaScript-графики StockSharp](https://github.com/StockSharp/Charts) — это самостоятельная браузерная библиотека графиков без внешних зависимостей. Она опубликована в npm как [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) и поставляет canvas-движок `sschart`, используемый в веб-терминале StockSharp. Рабочую версию можно посмотреть в [онлайн-демо](https://stocksharp.github.io/Charts/demo/).
+[Торговые JavaScript-графики StockSharp](https://github.com/StockSharp/JS-Charts) — это самостоятельная браузерная библиотека графиков без внешних зависимостей. Она опубликована в npm как [@stocksharp/chart](https://www.npmjs.com/package/@stocksharp/chart) и поставляет canvas-движок `sschart`, используемый в веб-терминале StockSharp. Рабочую версию можно посмотреть в [онлайн-демо](https://stocksharp.github.io/JS-Charts/demo/).
 
 ![Торговый JavaScript-график StockSharp](../../../../images/javascript_charts.jpg)
 
@@ -115,8 +115,8 @@ chart.timeScale().fitContent();
 Клонируйте репозиторий и используйте включённые npm-скрипты:
 
 ```bash
-git clone https://github.com/StockSharp/Charts.git
-cd Charts
+git clone https://github.com/StockSharp/JS-Charts.git
+cd JS-Charts
 npm install
 npm run build
 npm test
@@ -128,6 +128,6 @@ npm run serve
 ## См. также
 
 - [JavaScript-диаграмма](../javascript_diagram.md)
-- [Репозиторий Charts](https://github.com/StockSharp/Charts)
-- [Онлайн-демо](https://stocksharp.github.io/Charts/demo/)
+- [Репозиторий JS-Charts](https://github.com/StockSharp/JS-Charts)
+- [Онлайн-демо](https://stocksharp.github.io/JS-Charts/demo/)
 - [Компоненты графиков для Windows](../charts.md)

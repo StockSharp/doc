@@ -1,6 +1,6 @@
 # JavaScript-Diagramm
 
-[StockSharp JS Diagram](https://github.com/StockSharp/Diagram) ist eine eigenständige, abhängigkeitsfreie Browser-Komponente, die das visuelle Strategieschema des [Designer](../../designer.md) — dasselbe Blockdiagramm aus verbundenen Elementen — auf einem HTML-`canvas` rendert. Sie wird auf npm als [@stocksharp/diagram](https://www.npmjs.com/package/@stocksharp/diagram) veröffentlicht und treibt die schreibgeschützten Strategiediagramme an, die auf den StockSharp-Websites angezeigt werden.
+[StockSharp JS Diagram](https://github.com/StockSharp/JS-Diagram) ist eine eigenständige, abhängigkeitsfreie Browser-Komponente, die das visuelle Strategieschema des [Designer](../../designer.md) — dasselbe Blockdiagramm aus verbundenen Elementen — auf einem HTML-`canvas` rendert. Sie wird auf npm als [@stocksharp/diagram](https://www.npmjs.com/package/@stocksharp/diagram) veröffentlicht und treibt die schreibgeschützten Strategiediagramme an, die auf den StockSharp-Websites angezeigt werden.
 
 Eine Strategie wird als **Schema** beschrieben: eine Menge von *Knoten* (Elemente wie eine Kerzenquelle, ein Indikator, eine Bedingung oder eine Order), die über typisierte *Ports* miteinander verdrahtet sind. Die Komponente nimmt dieses Schema plus eine *Palette* (den Katalog der Elementtypen, ihrer Ports und Farben) und zeichnet es.
 
@@ -56,4 +56,4 @@ Dieselbe Komponente läuft auch als vollwertiger **Editor** — Elemente aus ein
 - [Ereignisse und API](javascript_diagram/events.md)
 - [JavaScript-Charts](charts/javascript_charts.md)
 - [Designer](../../designer.md) — der visuelle Desktop-Strategieeditor
-- [Diagramm-Repository](https://github.com/StockSharp/Diagram)
+- [JS-Diagram-Repository](https://github.com/StockSharp/JS-Diagram)

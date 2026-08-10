@@ -4,7 +4,7 @@ Der Open-Source-Code von [S#](../api.md) ist auf mehrere Repositorys verteilt. D
 
 Alle offenen, anbieterspezifischen Konnektoren werden in [StockSharp\/Connectors](https://github.com/StockSharp/Connectors) gepflegt. Jeder Konnektor ist ein eigenständiges .NET-Projekt, und das Repository enthält `Connectors.slnx`, um sie gemeinsam zu erstellen.
 
-Die eigenständige Browser-Diagramm-Engine und der Diagramm-Stack für Webterminals werden in [StockSharp\/Charts](https://github.com/StockSharp/Charts) gepflegt. Siehe [JavaScript-Diagramme](../api/graphical_user_interface/charts/javascript_charts.md).
+Die eigenständige Browser-Diagramm-Engine und der Diagramm-Stack für Webterminals werden in [StockSharp\/JS-Charts](https://github.com/StockSharp/JS-Charts) gepflegt. Siehe [JavaScript-Diagramme](../api/graphical_user_interface/charts/javascript_charts.md).
 
 [Anleitung zur Verwendung von GitHub](https://docs.github.com/de/get-started/start-your-journey/hello-world)
 
