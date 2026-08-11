@@ -1,6 +1,6 @@
-# Пользовательский интерфейс (GUI)
+# Desktop-контролы
 
-## Графические компоненты S\#
+## Desktop-компоненты S\#
 
 В состав [S\#](../api.md) входит большое количество собственных графических компонентов, которые размещены в пространствах имен [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) и [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram).
 

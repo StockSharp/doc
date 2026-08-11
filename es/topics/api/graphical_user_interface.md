@@ -1,6 +1,6 @@
-# Interfaz gráfica de usuario
+# Controles de escritorio
 
-## Componentes gráficos de S#
+## Componentes de escritorio de S#
 
 [S#](../api.md) incluye una gran cantidad de componentes gráficos propios. Los componentes se encuentran en los espacios de nombres [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) y [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram). 
 

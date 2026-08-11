@@ -143,4 +143,4 @@ connector.Connect();
 ## См. также
 
 - [Подписки](subscriptions.md)
-- [Графические компоненты](../graphical_user_interface.md)
+- [Desktop-контролы](../graphical_user_interface.md)

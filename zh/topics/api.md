@@ -12,7 +12,7 @@ StockSharp API 也称为 S# API，是一套完整的软件开发工具包（SDK�
 
 - **自定义应用程序开发**：除了在现有应用程序中编写脚本，开发人员还可以使用 StockSharp API 创建自定义的[独立交易解决方案](api/examples.md)。对于需要标准交易应用程序通常不具备的定制功能的用户，这一点尤为重要。
 
-- **连接器和图形控件**：API 包含大量[连接器](api/connectors.md)，可接入不同交易所的实时市场数据。此外，它还支持开发可定制的[图形用户界面](api/graphical_user_interface.md)，适合用于构建专业交易平台。
+- **连接器和桌面控件**：API 包含大量[连接器](api/connectors.md)，可接入不同交易所的实时市场数据。此外，它还提供可定制的[桌面控件](api/graphical_user_interface.md)，适合用于构建专业交易平台。
 
 ## 架构
 

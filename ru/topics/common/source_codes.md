@@ -4,7 +4,7 @@
 
 Все открытые коннекторы для конкретных поставщиков поддерживаются в [StockSharp\/Connectors](https://github.com/StockSharp/Connectors). Каждый коннектор представляет собой отдельный проект .NET, а файл `Connectors.slnx` позволяет собрать их вместе.
 
-Самостоятельный движок браузерных графиков и набор компонентов графика для веб-терминала поддерживаются в [StockSharp\/JS-Charts](https://github.com/StockSharp/JS-Charts). См. раздел [JavaScript-графики](../api/graphical_user_interface/charts/javascript_charts.md).
+Самостоятельный движок браузерных графиков и набор компонентов графика для веб-терминала поддерживаются в [StockSharp\/JS-Charts](https://github.com/StockSharp/JS-Charts). См. раздел [JavaScript-графики](../api/javascript_ui/charts.md).
 
 [Инструкция использования GitHub](https://docs.github.com/ru/get-started/start-your-journey/hello-world)
 

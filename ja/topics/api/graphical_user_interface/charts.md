@@ -63,7 +63,7 @@
 
 ## 関連項目
 
-- [JavaScript チャート](charts/javascript_charts.md)
+- [JavaScript チャート](../javascript_ui/charts.md)
 - [ローソク足チャート](charts/candle_chart.md)
 - [チャートパネル](charts/candle_chart_panel.md)
 - [エクイティカーブチャート](charts/equity_curve_chart.md)

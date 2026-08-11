@@ -147,4 +147,4 @@ connector.Connect();
 ## 関連項目
 
 - [サブスクリプション](subscriptions.md)
-- [グラフィカルコンポーネント](../graphical_user_interface.md)
+- [デスクトップコントロール](../graphical_user_interface.md)

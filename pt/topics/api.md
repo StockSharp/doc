@@ -12,7 +12,7 @@ A API do StockSharp, também conhecida como API S#, é um kit de desenvolvimento
 
 - **Desenvolvimento de aplicações personalizadas**: Os desenvolvedores podem usar a API do StockSharp para construir [soluções de negociação](api/examples.md) independentes, em vez de depender apenas do scripting de aplicações integrado.
 
-- **Conectores e controlos gráficos**: A API inclui muitos [Conectores](api/connectors.md) para dados de mercado em tempo real e acesso à negociação. Ela também fornece componentes personalizáveis de [interface gráfica do utilizador](api/graphical_user_interface.md) para construir plataformas de negociação profissionais.
+- **Conectores e controlos de desktop**: A API inclui muitos [Conectores](api/connectors.md) para dados de mercado em tempo real e acesso à negociação. Ela também fornece [Controlos de desktop](api/graphical_user_interface.md) personalizáveis para construir plataformas de negociação profissionais.
 
 ## Arquitetura
 

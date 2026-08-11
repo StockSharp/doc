@@ -1,6 +1,6 @@
-# グラフィカルユーザーインターフェイス
+# デスクトップコントロール
 
-## S# のグラフィカルコンポーネント
+## S# のデスクトップコンポーネント
 
 [S#](../api.md) には、多数の独自グラフィカルコンポーネントが含まれています。コンポーネントは [StockSharp.Xaml](xref:StockSharp.Xaml)、[StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting)、[StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram) 名前空間に配置されています。
 
@@ -27,4 +27,3 @@ XAML コードで [S#](../api.md) のグラフィカルコントロールにア�
 </Window>
 	
 ```
-

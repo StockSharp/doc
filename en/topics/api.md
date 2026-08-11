@@ -12,7 +12,7 @@ StockSharp API, also known as S# API, is a software development kit (SDK) for bu
 
 - **Custom application development**: Developers can use StockSharp API to build standalone [trading solutions](api/examples.md) instead of relying only on built-in application scripting.
 
-- **Connectors and graphical controls**: The API includes many [connectors](api/connectors.md) for real-time market data and trading access. It also provides customizable [graphical user interface](api/graphical_user_interface.md) components for building professional trading platforms.
+- **Connectors and desktop controls**: The API includes many [connectors](api/connectors.md) for real-time market data and trading access. It also provides customizable [desktop controls](api/graphical_user_interface.md) for building professional trading platforms.
 
 ## Architecture
 

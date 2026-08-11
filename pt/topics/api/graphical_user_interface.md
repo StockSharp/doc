@@ -1,6 +1,6 @@
-# Interface gráfica de utilizador
+# Controlos de desktop
 
-## Componentes gráficos do S#
+## Componentes de desktop do S#
 
 [S#](../api.md) inclui um grande número de componentes gráficos próprios. Os componentes estão colocados nos namespaces [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) e [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram).
 

@@ -64,7 +64,7 @@ var filteredNewsSubscription = new Subscription(DataType.News)
 _connector.Subscribe(filteredNewsSubscription);
 ```
 
-## 在用户界面中显示新闻
+## 在桌面控件中显示新闻
 
 StockSharp 提供了一个用于显示新闻的特殊视觉组件 [NewsPanel](xref:StockSharp.Xaml.NewsPanel)：
 
@@ -142,9 +142,9 @@ connector.Connect();
 - 并非所有连接器都支持接收新闻。例如，Binance 并不通过 API 提供新闻源。
 - 对于加密货币市场新闻，建议使用专业的 RSS 来源。
 - 对于与特定交易品种相关的新闻，可能需要额外的订阅配置。
-- 在使用图形界面时，请记住使用 `GuiAsync` 或 `GuiSync` 方法在用户界面线程中更新 UI 元素。
+- 在使用桌面控件时，请记住使用 `GuiAsync` 或 `GuiSync` 方法在用户界面线程中更新 UI 元素。
 
 ## 另请参阅
 
 - [订阅](subscriptions.md)
-- [图形组件](../graphical_user_interface.md)
+- [桌面控件](../graphical_user_interface.md)

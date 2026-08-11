@@ -63,7 +63,7 @@
 
 ## См. также
 
-[JavaScript-графики](charts/javascript_charts.md)
+[JavaScript-графики](../javascript_ui/charts.md)
 
 [Свечной график](charts/candle_chart.md)
 

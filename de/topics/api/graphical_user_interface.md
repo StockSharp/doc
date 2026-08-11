@@ -1,6 +1,6 @@
-# Grafische Benutzeroberfläche
+# Desktop-Steuerelemente
 
-## Grafische Komponenten von S#
+## Desktop-Komponenten von S#
 
 [S#](../api.md) enthält eine große Anzahl eigener grafischer Komponenten. Die Komponenten befinden sich in den Namespaces [StockSharp.Xaml](xref:StockSharp.Xaml), [StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) und [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram).
 

@@ -64,7 +64,7 @@ var filteredNewsSubscription = new Subscription(DataType.News)
 _connector.Subscribe(filteredNewsSubscription);
 ```
 
-## Visualización de noticias en la interfaz de usuario
+## Visualización de noticias en la interfaz de escritorio
 
 StockSharp proporciona un componente visual especial [NewsPanel](xref:StockSharp.Xaml.NewsPanel) para mostrar noticias:
 
@@ -142,9 +142,9 @@ connector.Connect();
 - No todos los conectores admiten recibir noticias. Por ejemplo, Binance no proporciona una fuente de noticias mediante la API.
 - Para noticias del mercado de criptomonedas, se recomienda usar fuentes RSS especializadas.
 - Para noticias relacionadas con instrumentos específicos, puede requerirse configuración adicional de la suscripción.
-- Al trabajar con una interfaz gráfica, recuerde actualizar los elementos de la UI en el hilo de la interfaz de usuario mediante los métodos `GuiAsync` o `GuiSync`.
+- Al trabajar con una interfaz de escritorio, recuerde actualizar los elementos de la UI en el hilo de la interfaz de usuario mediante los métodos `GuiAsync` o `GuiSync`.
 
 ## Véase también
 
 - [Suscripciones](subscriptions.md)
-- [Componentes gráficos](../graphical_user_interface.md)
+- [Controles de escritorio](../graphical_user_interface.md)

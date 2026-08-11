@@ -64,7 +64,7 @@ var filteredNewsSubscription = new Subscription(DataType.News)
 _connector.Subscribe(filteredNewsSubscription);
 ```
 
-## Anzeigen von Nachrichten in der Benutzeroberfläche
+## Anzeigen von Nachrichten in der Desktop-Oberfläche
 
 StockSharp stellt eine spezielle visuelle Komponente [NewsPanel](xref:StockSharp.Xaml.NewsPanel) zur Anzeige von Nachrichten bereit:
 
@@ -142,10 +142,10 @@ connector.Connect();
 - Nicht alle Connectors unterstützen den Empfang von Nachrichten. Binance stellt beispielsweise keinen Newsfeed über die API bereit.
 - Für Nachrichten zum Kryptowährungsmarkt wird empfohlen, spezialisierte RSS-Quellen zu verwenden.
 - Für Nachrichten zu bestimmten Instrumenten kann zusätzliche Abonnementkonfiguration erforderlich sein.
-- Denken Sie bei der Arbeit mit einer grafischen Oberfläche daran, UI-Elemente im UI-Thread mit den Methoden `GuiAsync` oder `GuiSync` zu aktualisieren.
+- Denken Sie bei der Arbeit mit einer Desktop-Oberfläche daran, UI-Elemente im UI-Thread mit den Methoden `GuiAsync` oder `GuiSync` zu aktualisieren.
 
 ## Siehe auch
 
 - [Abonnements](subscriptions.md)
-- [Grafische Komponenten](../graphical_user_interface.md)
+- [Desktop-Steuerelemente](../graphical_user_interface.md)
 

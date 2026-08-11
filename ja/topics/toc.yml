@@ -5059,77 +5059,9 @@
     href: api/import.md
   - name: 分析スクリプト
     href: api/analytics.md
-  - name: グラフィカルユーザーインターフェイス
+  - name: デスクトップコントロール
     href: api/graphical_user_interface.md
     items:
-    - name: JavaScript コンポーネント
-      items:
-      - name: JavaScript チャート
-        href: api/graphical_user_interface/charts/javascript_charts.md
-        items:
-        - name: ローソク足
-          href: api/graphical_user_interface/charts/javascript_charts/candlestick.md
-        - name: OHLC バー
-          href: api/graphical_user_interface/charts/javascript_charts/bar.md
-        - name: ライン
-          href: api/graphical_user_interface/charts/javascript_charts/line.md
-        - name: エリア
-          href: api/graphical_user_interface/charts/javascript_charts/area.md
-        - name: ヒストグラム
-          href: api/graphical_user_interface/charts/javascript_charts/histogram.md
-        - name: バンド
-          href: api/graphical_user_interface/charts/javascript_charts/band.md
-        - name: 平均足
-          href: api/graphical_user_interface/charts/javascript_charts/heikin_ashi.md
-        - name: 練行足
-          href: api/graphical_user_interface/charts/javascript_charts/renko.md
-        - name: ポイント・アンド・フィギュア
-          href: api/graphical_user_interface/charts/javascript_charts/point_figure.md
-        - name: フットプリント
-          href: api/graphical_user_interface/charts/javascript_charts/footprint.md
-        - name: ボリュームプロファイル
-          href: api/graphical_user_interface/charts/javascript_charts/volume_profile.md
-        - name: TPO（マーケットプロファイル）
-          href: api/graphical_user_interface/charts/javascript_charts/tpo.md
-        - name: インジケーター
-          href: api/graphical_user_interface/charts/javascript_charts/indicators.md
-        - name: 履歴バックフィル
-          href: api/graphical_user_interface/charts/javascript_charts/backfill.md
-      - name: JavaScript ダイアグラム
-        href: api/graphical_user_interface/javascript_diagram.md
-        items:
-        - name: インタラクティブエディター
-          href: api/graphical_user_interface/javascript_diagram/editor.md
-        - name: イベントと API
-          href: api/graphical_user_interface/javascript_diagram/events.md
-      - name: JavaScript テーブル
-        href: api/graphical_user_interface/javascript_grids.md
-        items:
-        - name: データグリッド
-          href: api/graphical_user_interface/javascript_grids/data_grid.md
-        - name: 列設定
-          href: api/graphical_user_interface/javascript_grids/column_settings.md
-        - name: テーブルの並べ替え
-          href: api/graphical_user_interface/javascript_grids/table_sort.md
-        - name: テーブルのエクスポート
-          href: api/graphical_user_interface/javascript_grids/table_export.md
-      - name: JavaScript トレーディングコントロール
-        href: api/graphical_user_interface/javascript_trading_controls.md
-        items:
-        - name: 有効注文
-          href: api/graphical_user_interface/javascript_trading_controls/active_orders.md
-        - name: ポジション
-          href: api/graphical_user_interface/javascript_trading_controls/positions.md
-        - name: 約定履歴
-          href: api/graphical_user_interface/javascript_trading_controls/trade_history.md
-        - name: ウォッチリスト
-          href: api/graphical_user_interface/javascript_trading_controls/watchlist.md
-        - name: 注文入力
-          href: api/graphical_user_interface/javascript_trading_controls/order_entry.md
-        - name: 板情報
-          href: api/graphical_user_interface/javascript_trading_controls/order_book.md
-        - name: 歩み値
-          href: api/graphical_user_interface/javascript_trading_controls/trade_feed.md
     - name: チャート
       href: api/graphical_user_interface/charts.md
       items:
@@ -5230,6 +5162,74 @@
       href: api/graphical_user_interface/notification_settings_window.md
     - name: S# グラフィカルコンポーネントのテーマ
       href: api/graphical_user_interface/themes_light_and_dark.md
+  - name: JavaScript
+    items:
+    - name: チャート
+      href: api/javascript_ui/charts.md
+      items:
+      - name: ローソク足
+        href: api/javascript_ui/charts/candlestick.md
+      - name: OHLC バー
+        href: api/javascript_ui/charts/bar.md
+      - name: ライン
+        href: api/javascript_ui/charts/line.md
+      - name: エリア
+        href: api/javascript_ui/charts/area.md
+      - name: ヒストグラム
+        href: api/javascript_ui/charts/histogram.md
+      - name: バンド
+        href: api/javascript_ui/charts/band.md
+      - name: 平均足
+        href: api/javascript_ui/charts/heikin_ashi.md
+      - name: 練行足
+        href: api/javascript_ui/charts/renko.md
+      - name: ポイント・アンド・フィギュア
+        href: api/javascript_ui/charts/point_figure.md
+      - name: フットプリント
+        href: api/javascript_ui/charts/footprint.md
+      - name: ボリュームプロファイル
+        href: api/javascript_ui/charts/volume_profile.md
+      - name: TPO（マーケットプロファイル）
+        href: api/javascript_ui/charts/tpo.md
+      - name: インジケーター
+        href: api/javascript_ui/charts/indicators.md
+      - name: 履歴バックフィル
+        href: api/javascript_ui/charts/backfill.md
+    - name: ダイアグラム
+      href: api/javascript_ui/diagram.md
+      items:
+      - name: インタラクティブエディター
+        href: api/javascript_ui/diagram/editor.md
+      - name: イベントと API
+        href: api/javascript_ui/diagram/events.md
+    - name: テーブル
+      href: api/javascript_ui/grids.md
+      items:
+      - name: データグリッド
+        href: api/javascript_ui/grids/data_grid.md
+      - name: 列設定
+        href: api/javascript_ui/grids/column_settings.md
+      - name: テーブルの並べ替え
+        href: api/javascript_ui/grids/table_sort.md
+      - name: テーブルのエクスポート
+        href: api/javascript_ui/grids/table_export.md
+    - name: トレーディングコントロール
+      href: api/javascript_ui/trading_controls.md
+      items:
+      - name: 有効注文
+        href: api/javascript_ui/trading_controls/active_orders.md
+      - name: ポジション
+        href: api/javascript_ui/trading_controls/positions.md
+      - name: 約定履歴
+        href: api/javascript_ui/trading_controls/trade_history.md
+      - name: ウォッチリスト
+        href: api/javascript_ui/trading_controls/watchlist.md
+      - name: 注文入力
+        href: api/javascript_ui/trading_controls/order_entry.md
+      - name: 板情報
+        href: api/javascript_ui/trading_controls/order_book.md
+      - name: 歩み値
+        href: api/javascript_ui/trading_controls/trade_feed.md
 - name: Shell
   href: shell.md
   items:

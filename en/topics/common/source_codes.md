@@ -4,7 +4,7 @@ The open-source [S#](../api.md) code is split across several repositories. The [
 
 All open provider-specific connectors are maintained in [StockSharp\/Connectors](https://github.com/StockSharp/Connectors). Each connector is an independent .NET project, and the repository includes `Connectors.slnx` for building them together.
 
-The standalone browser chart engine and web-terminal chart stack are maintained in [StockSharp\/JS-Charts](https://github.com/StockSharp/JS-Charts). See [JavaScript charts](../api/graphical_user_interface/charts/javascript_charts.md).
+The standalone browser chart engine and web-terminal chart stack are maintained in [StockSharp\/JS-Charts](https://github.com/StockSharp/JS-Charts). See [JavaScript charts](../api/javascript_ui/charts.md).
 
 [Instructions for using GitHub](https://docs.github.com/en/get-started/start-your-journey/hello-world)
 

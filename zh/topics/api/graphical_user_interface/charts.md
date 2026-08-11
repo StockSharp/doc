@@ -63,7 +63,7 @@
 
 ## 另请参阅
 
-- [JavaScript 图表](charts/javascript_charts.md)
+- [JavaScript 图表](../javascript_ui/charts.md)
 - [K线](charts/candle_chart.md)
 - [图表面板](charts/candle_chart_panel.md)
 - [权益曲线图](charts/equity_curve_chart.md)

@@ -4,7 +4,7 @@ O código aberto do [S#](../api.md) está dividido entre vários repositórios. 
 
 Todos os conectores abertos específicos de cada fornecedor são mantidos em [StockSharp\/Connectors](https://github.com/StockSharp/Connectors). Cada conector é um projeto .NET independente, e o repositório inclui `Connectors.slnx` para os compilar em conjunto.
 
-O motor independente de gráficos para navegador e o conjunto de gráficos para terminais web são mantidos em [StockSharp\/JS-Charts](https://github.com/StockSharp/JS-Charts). Consulte [Gráficos JavaScript](../api/graphical_user_interface/charts/javascript_charts.md).
+O motor independente de gráficos para navegador e o conjunto de gráficos para terminais web são mantidos em [StockSharp\/JS-Charts](https://github.com/StockSharp/JS-Charts). Consulte [Gráficos JavaScript](../api/javascript_ui/charts.md).
 
 [Instruções para usar o GitHub](https://docs.github.com/pt/get-started/start-your-journey/hello-world)
 

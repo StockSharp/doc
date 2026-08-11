@@ -5205,77 +5205,9 @@
     href: api/import.md
   - name: Аналитические скрипты
     href: api/analytics.md
-  - name: Графические компоненты
+  - name: Desktop-контролы
     href: api/graphical_user_interface.md
     items:
-    - name: JavaScript-компоненты
-      items:
-      - name: JavaScript-графики
-        href: api/graphical_user_interface/charts/javascript_charts.md
-        items:
-        - name: Свечи
-          href: api/graphical_user_interface/charts/javascript_charts/candlestick.md
-        - name: OHLC-бары
-          href: api/graphical_user_interface/charts/javascript_charts/bar.md
-        - name: Линия
-          href: api/graphical_user_interface/charts/javascript_charts/line.md
-        - name: Область
-          href: api/graphical_user_interface/charts/javascript_charts/area.md
-        - name: Гистограмма
-          href: api/graphical_user_interface/charts/javascript_charts/histogram.md
-        - name: Канал
-          href: api/graphical_user_interface/charts/javascript_charts/band.md
-        - name: Хейкин-Аси
-          href: api/graphical_user_interface/charts/javascript_charts/heikin_ashi.md
-        - name: Ренко
-          href: api/graphical_user_interface/charts/javascript_charts/renko.md
-        - name: Крестики-нолики
-          href: api/graphical_user_interface/charts/javascript_charts/point_figure.md
-        - name: Футпринт
-          href: api/graphical_user_interface/charts/javascript_charts/footprint.md
-        - name: Профиль объёма
-          href: api/graphical_user_interface/charts/javascript_charts/volume_profile.md
-        - name: TPO (профиль рынка)
-          href: api/graphical_user_interface/charts/javascript_charts/tpo.md
-        - name: Индикаторы
-          href: api/graphical_user_interface/charts/javascript_charts/indicators.md
-        - name: Догрузка истории
-          href: api/graphical_user_interface/charts/javascript_charts/backfill.md
-      - name: JavaScript-диаграмма
-        href: api/graphical_user_interface/javascript_diagram.md
-        items:
-        - name: Интерактивный редактор
-          href: api/graphical_user_interface/javascript_diagram/editor.md
-        - name: События и API
-          href: api/graphical_user_interface/javascript_diagram/events.md
-      - name: JavaScript-таблицы
-        href: api/graphical_user_interface/javascript_grids.md
-        items:
-        - name: Таблица данных
-          href: api/graphical_user_interface/javascript_grids/data_grid.md
-        - name: Настройка столбцов
-          href: api/graphical_user_interface/javascript_grids/column_settings.md
-        - name: Сортировка таблицы
-          href: api/graphical_user_interface/javascript_grids/table_sort.md
-        - name: Экспорт таблицы
-          href: api/graphical_user_interface/javascript_grids/table_export.md
-      - name: Торговые JavaScript-контролы
-        href: api/graphical_user_interface/javascript_trading_controls.md
-        items:
-        - name: Активные заявки
-          href: api/graphical_user_interface/javascript_trading_controls/active_orders.md
-        - name: Позиции
-          href: api/graphical_user_interface/javascript_trading_controls/positions.md
-        - name: История сделок
-          href: api/graphical_user_interface/javascript_trading_controls/trade_history.md
-        - name: Список инструментов
-          href: api/graphical_user_interface/javascript_trading_controls/watchlist.md
-        - name: Ввод заявки
-          href: api/graphical_user_interface/javascript_trading_controls/order_entry.md
-        - name: Стакан
-          href: api/graphical_user_interface/javascript_trading_controls/order_book.md
-        - name: Лента сделок
-          href: api/graphical_user_interface/javascript_trading_controls/trade_feed.md
     - name: Графики
       href: api/graphical_user_interface/charts.md
       items:
@@ -5376,6 +5308,74 @@
       href: api/graphical_user_interface/notification_settings_window.md
     - name: Темы (светлая и темная)
       href: api/graphical_user_interface/themes_light_and_dark.md
+  - name: JavaScript
+    items:
+    - name: Графики
+      href: api/javascript_ui/charts.md
+      items:
+      - name: Свечи
+        href: api/javascript_ui/charts/candlestick.md
+      - name: OHLC-бары
+        href: api/javascript_ui/charts/bar.md
+      - name: Линия
+        href: api/javascript_ui/charts/line.md
+      - name: Область
+        href: api/javascript_ui/charts/area.md
+      - name: Гистограмма
+        href: api/javascript_ui/charts/histogram.md
+      - name: Канал
+        href: api/javascript_ui/charts/band.md
+      - name: Хейкин-Аси
+        href: api/javascript_ui/charts/heikin_ashi.md
+      - name: Ренко
+        href: api/javascript_ui/charts/renko.md
+      - name: Крестики-нолики
+        href: api/javascript_ui/charts/point_figure.md
+      - name: Футпринт
+        href: api/javascript_ui/charts/footprint.md
+      - name: Профиль объёма
+        href: api/javascript_ui/charts/volume_profile.md
+      - name: TPO (профиль рынка)
+        href: api/javascript_ui/charts/tpo.md
+      - name: Индикаторы
+        href: api/javascript_ui/charts/indicators.md
+      - name: Догрузка истории
+        href: api/javascript_ui/charts/backfill.md
+    - name: Диаграмма
+      href: api/javascript_ui/diagram.md
+      items:
+      - name: Интерактивный редактор
+        href: api/javascript_ui/diagram/editor.md
+      - name: События и API
+        href: api/javascript_ui/diagram/events.md
+    - name: Таблицы
+      href: api/javascript_ui/grids.md
+      items:
+      - name: Таблица данных
+        href: api/javascript_ui/grids/data_grid.md
+      - name: Настройка столбцов
+        href: api/javascript_ui/grids/column_settings.md
+      - name: Сортировка таблицы
+        href: api/javascript_ui/grids/table_sort.md
+      - name: Экспорт таблицы
+        href: api/javascript_ui/grids/table_export.md
+    - name: Торговые контролы
+      href: api/javascript_ui/trading_controls.md
+      items:
+      - name: Активные заявки
+        href: api/javascript_ui/trading_controls/active_orders.md
+      - name: Позиции
+        href: api/javascript_ui/trading_controls/positions.md
+      - name: История сделок
+        href: api/javascript_ui/trading_controls/trade_history.md
+      - name: Список инструментов
+        href: api/javascript_ui/trading_controls/watchlist.md
+      - name: Ввод заявки
+        href: api/javascript_ui/trading_controls/order_entry.md
+      - name: Стакан
+        href: api/javascript_ui/trading_controls/order_book.md
+      - name: Лента сделок
+        href: api/javascript_ui/trading_controls/trade_feed.md
 - name: Shell
   href: shell.md
   items:

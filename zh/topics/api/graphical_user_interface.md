@@ -1,6 +1,6 @@
-# 图形用户界面
+# 桌面控件
 
-## S# 的图形组件
+## S# 的桌面组件
 
 [S#](../api.md) 包含大量自己的图形组件。这些组件位于 [StockSharp.Xaml](xref:StockSharp.Xaml)、[StockSharp.Xaml.Charting](xref:StockSharp.Xaml.Charting) 和 [StockSharp.Xaml.Diagram](xref:StockSharp.Xaml.Diagram) 命名空间中。
 

@@ -147,4 +147,4 @@ connector.Connect();
 ## See Also
 
 - [Subscriptions](subscriptions.md)
-- [Graphical Components](../graphical_user_interface.md)
+- [Desktop controls](../graphical_user_interface.md)

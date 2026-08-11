@@ -5059,77 +5059,9 @@
     href: api/import.md
   - name: Scripts de Análise
     href: api/analytics.md
-  - name: Interface gráfica do utilizador
+  - name: Controlos de desktop
     href: api/graphical_user_interface.md
     items:
-    - name: Componentes JavaScript
-      items:
-      - name: Gráficos JavaScript
-        href: api/graphical_user_interface/charts/javascript_charts.md
-        items:
-        - name: Velas
-          href: api/graphical_user_interface/charts/javascript_charts/candlestick.md
-        - name: Barras OHLC
-          href: api/graphical_user_interface/charts/javascript_charts/bar.md
-        - name: Linha
-          href: api/graphical_user_interface/charts/javascript_charts/line.md
-        - name: Área
-          href: api/graphical_user_interface/charts/javascript_charts/area.md
-        - name: Histograma
-          href: api/graphical_user_interface/charts/javascript_charts/histogram.md
-        - name: Banda
-          href: api/graphical_user_interface/charts/javascript_charts/band.md
-        - name: Heikin-Ashi
-          href: api/graphical_user_interface/charts/javascript_charts/heikin_ashi.md
-        - name: Renko
-          href: api/graphical_user_interface/charts/javascript_charts/renko.md
-        - name: Ponto e Figura
-          href: api/graphical_user_interface/charts/javascript_charts/point_figure.md
-        - name: Footprint
-          href: api/graphical_user_interface/charts/javascript_charts/footprint.md
-        - name: Perfil de volume
-          href: api/graphical_user_interface/charts/javascript_charts/volume_profile.md
-        - name: TPO (Perfil de mercado)
-          href: api/graphical_user_interface/charts/javascript_charts/tpo.md
-        - name: Indicadores
-          href: api/graphical_user_interface/charts/javascript_charts/indicators.md
-        - name: Preenchimento de histórico
-          href: api/graphical_user_interface/charts/javascript_charts/backfill.md
-      - name: Diagrama JavaScript
-        href: api/graphical_user_interface/javascript_diagram.md
-        items:
-        - name: Editor interativo
-          href: api/graphical_user_interface/javascript_diagram/editor.md
-        - name: Eventos e API
-          href: api/graphical_user_interface/javascript_diagram/events.md
-      - name: Tabelas JavaScript
-        href: api/graphical_user_interface/javascript_grids.md
-        items:
-        - name: Tabela de dados
-          href: api/graphical_user_interface/javascript_grids/data_grid.md
-        - name: Definições de colunas
-          href: api/graphical_user_interface/javascript_grids/column_settings.md
-        - name: Ordenação da tabela
-          href: api/graphical_user_interface/javascript_grids/table_sort.md
-        - name: Exportação da tabela
-          href: api/graphical_user_interface/javascript_grids/table_export.md
-      - name: Controlos de negociação JavaScript
-        href: api/graphical_user_interface/javascript_trading_controls.md
-        items:
-        - name: Ordens ativas
-          href: api/graphical_user_interface/javascript_trading_controls/active_orders.md
-        - name: Posições
-          href: api/graphical_user_interface/javascript_trading_controls/positions.md
-        - name: Histórico de negócios
-          href: api/graphical_user_interface/javascript_trading_controls/trade_history.md
-        - name: Lista de instrumentos
-          href: api/graphical_user_interface/javascript_trading_controls/watchlist.md
-        - name: Introdução de ordens
-          href: api/graphical_user_interface/javascript_trading_controls/order_entry.md
-        - name: Livro de ofertas
-          href: api/graphical_user_interface/javascript_trading_controls/order_book.md
-        - name: Fluxo de negócios
-          href: api/graphical_user_interface/javascript_trading_controls/trade_feed.md
     - name: Gráficos
       href: api/graphical_user_interface/charts.md
       items:
@@ -5230,6 +5162,74 @@
       href: api/graphical_user_interface/notification_settings_window.md
     - name: Temas dos componentes gráficos S#
       href: api/graphical_user_interface/themes_light_and_dark.md
+  - name: JavaScript
+    items:
+    - name: Gráficos
+      href: api/javascript_ui/charts.md
+      items:
+      - name: Velas
+        href: api/javascript_ui/charts/candlestick.md
+      - name: Barras OHLC
+        href: api/javascript_ui/charts/bar.md
+      - name: Linha
+        href: api/javascript_ui/charts/line.md
+      - name: Área
+        href: api/javascript_ui/charts/area.md
+      - name: Histograma
+        href: api/javascript_ui/charts/histogram.md
+      - name: Banda
+        href: api/javascript_ui/charts/band.md
+      - name: Heikin-Ashi
+        href: api/javascript_ui/charts/heikin_ashi.md
+      - name: Renko
+        href: api/javascript_ui/charts/renko.md
+      - name: Ponto e Figura
+        href: api/javascript_ui/charts/point_figure.md
+      - name: Footprint
+        href: api/javascript_ui/charts/footprint.md
+      - name: Perfil de volume
+        href: api/javascript_ui/charts/volume_profile.md
+      - name: TPO (Perfil de mercado)
+        href: api/javascript_ui/charts/tpo.md
+      - name: Indicadores
+        href: api/javascript_ui/charts/indicators.md
+      - name: Preenchimento de histórico
+        href: api/javascript_ui/charts/backfill.md
+    - name: Diagrama
+      href: api/javascript_ui/diagram.md
+      items:
+      - name: Editor interativo
+        href: api/javascript_ui/diagram/editor.md
+      - name: Eventos e API
+        href: api/javascript_ui/diagram/events.md
+    - name: Tabelas
+      href: api/javascript_ui/grids.md
+      items:
+      - name: Tabela de dados
+        href: api/javascript_ui/grids/data_grid.md
+      - name: Definições de colunas
+        href: api/javascript_ui/grids/column_settings.md
+      - name: Ordenação da tabela
+        href: api/javascript_ui/grids/table_sort.md
+      - name: Exportação da tabela
+        href: api/javascript_ui/grids/table_export.md
+    - name: Controlos de negociação
+      href: api/javascript_ui/trading_controls.md
+      items:
+      - name: Ordens ativas
+        href: api/javascript_ui/trading_controls/active_orders.md
+      - name: Posições
+        href: api/javascript_ui/trading_controls/positions.md
+      - name: Histórico de negócios
+        href: api/javascript_ui/trading_controls/trade_history.md
+      - name: Lista de instrumentos
+        href: api/javascript_ui/trading_controls/watchlist.md
+      - name: Introdução de ordens
+        href: api/javascript_ui/trading_controls/order_entry.md
+      - name: Livro de ofertas
+        href: api/javascript_ui/trading_controls/order_book.md
+      - name: Fluxo de negócios
+        href: api/javascript_ui/trading_controls/trade_feed.md
 - name: Shell
   href: shell.md
   items:

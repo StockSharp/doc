@@ -5059,77 +5059,9 @@
     href: api/import.md
   - name: 分析脚本
     href: api/analytics.md
-  - name: 图形控件
+  - name: 桌面控件
     href: api/graphical_user_interface.md
     items:
-    - name: JavaScript 组件
-      items:
-      - name: JavaScript 图表
-        href: api/graphical_user_interface/charts/javascript_charts.md
-        items:
-        - name: 蜡烛图
-          href: api/graphical_user_interface/charts/javascript_charts/candlestick.md
-        - name: OHLC 条形图
-          href: api/graphical_user_interface/charts/javascript_charts/bar.md
-        - name: 折线图
-          href: api/graphical_user_interface/charts/javascript_charts/line.md
-        - name: 面积图
-          href: api/graphical_user_interface/charts/javascript_charts/area.md
-        - name: 直方图
-          href: api/graphical_user_interface/charts/javascript_charts/histogram.md
-        - name: 带状图
-          href: api/graphical_user_interface/charts/javascript_charts/band.md
-        - name: 平均K线 (Heikin-Ashi)
-          href: api/graphical_user_interface/charts/javascript_charts/heikin_ashi.md
-        - name: 砖形图 (Renko)
-          href: api/graphical_user_interface/charts/javascript_charts/renko.md
-        - name: 点数图 (Point and Figure)
-          href: api/graphical_user_interface/charts/javascript_charts/point_figure.md
-        - name: 足迹图 (Footprint)
-          href: api/graphical_user_interface/charts/javascript_charts/footprint.md
-        - name: 成交量分布
-          href: api/graphical_user_interface/charts/javascript_charts/volume_profile.md
-        - name: TPO（市场轮廓）
-          href: api/graphical_user_interface/charts/javascript_charts/tpo.md
-        - name: 指标
-          href: api/graphical_user_interface/charts/javascript_charts/indicators.md
-        - name: 历史数据回填
-          href: api/graphical_user_interface/charts/javascript_charts/backfill.md
-      - name: JavaScript 示意图
-        href: api/graphical_user_interface/javascript_diagram.md
-        items:
-        - name: 交互式编辑器
-          href: api/graphical_user_interface/javascript_diagram/editor.md
-        - name: 事件与 API
-          href: api/graphical_user_interface/javascript_diagram/events.md
-      - name: JavaScript 表格
-        href: api/graphical_user_interface/javascript_grids.md
-        items:
-        - name: 数据表格
-          href: api/graphical_user_interface/javascript_grids/data_grid.md
-        - name: 列设置
-          href: api/graphical_user_interface/javascript_grids/column_settings.md
-        - name: 表格排序
-          href: api/graphical_user_interface/javascript_grids/table_sort.md
-        - name: 表格导出
-          href: api/graphical_user_interface/javascript_grids/table_export.md
-      - name: JavaScript 交易控件
-        href: api/graphical_user_interface/javascript_trading_controls.md
-        items:
-        - name: 活动订单
-          href: api/graphical_user_interface/javascript_trading_controls/active_orders.md
-        - name: 持仓
-          href: api/graphical_user_interface/javascript_trading_controls/positions.md
-        - name: 成交历史
-          href: api/graphical_user_interface/javascript_trading_controls/trade_history.md
-        - name: 自选交易品种列表
-          href: api/graphical_user_interface/javascript_trading_controls/watchlist.md
-        - name: 订单输入
-          href: api/graphical_user_interface/javascript_trading_controls/order_entry.md
-        - name: 订单簿
-          href: api/graphical_user_interface/javascript_trading_controls/order_book.md
-        - name: 成交明细
-          href: api/graphical_user_interface/javascript_trading_controls/trade_feed.md
     - name: 图表
       href: api/graphical_user_interface/charts.md
       items:
@@ -5230,6 +5162,74 @@
       href: api/graphical_user_interface/notification_settings_window.md
     - name: 主题（亮色和暗色）
       href: api/graphical_user_interface/themes_light_and_dark.md
+  - name: JavaScript
+    items:
+    - name: 图表
+      href: api/javascript_ui/charts.md
+      items:
+      - name: 蜡烛图
+        href: api/javascript_ui/charts/candlestick.md
+      - name: OHLC 条形图
+        href: api/javascript_ui/charts/bar.md
+      - name: 折线图
+        href: api/javascript_ui/charts/line.md
+      - name: 面积图
+        href: api/javascript_ui/charts/area.md
+      - name: 直方图
+        href: api/javascript_ui/charts/histogram.md
+      - name: 带状图
+        href: api/javascript_ui/charts/band.md
+      - name: 平均K线 (Heikin-Ashi)
+        href: api/javascript_ui/charts/heikin_ashi.md
+      - name: 砖形图 (Renko)
+        href: api/javascript_ui/charts/renko.md
+      - name: 点数图 (Point and Figure)
+        href: api/javascript_ui/charts/point_figure.md
+      - name: 足迹图 (Footprint)
+        href: api/javascript_ui/charts/footprint.md
+      - name: 成交量分布
+        href: api/javascript_ui/charts/volume_profile.md
+      - name: TPO（市场轮廓）
+        href: api/javascript_ui/charts/tpo.md
+      - name: 指标
+        href: api/javascript_ui/charts/indicators.md
+      - name: 历史数据回填
+        href: api/javascript_ui/charts/backfill.md
+    - name: 示意图
+      href: api/javascript_ui/diagram.md
+      items:
+      - name: 交互式编辑器
+        href: api/javascript_ui/diagram/editor.md
+      - name: 事件与 API
+        href: api/javascript_ui/diagram/events.md
+    - name: 表格
+      href: api/javascript_ui/grids.md
+      items:
+      - name: 数据表格
+        href: api/javascript_ui/grids/data_grid.md
+      - name: 列设置
+        href: api/javascript_ui/grids/column_settings.md
+      - name: 表格排序
+        href: api/javascript_ui/grids/table_sort.md
+      - name: 表格导出
+        href: api/javascript_ui/grids/table_export.md
+    - name: 交易控件
+      href: api/javascript_ui/trading_controls.md
+      items:
+      - name: 活动订单
+        href: api/javascript_ui/trading_controls/active_orders.md
+      - name: 持仓
+        href: api/javascript_ui/trading_controls/positions.md
+      - name: 成交历史
+        href: api/javascript_ui/trading_controls/trade_history.md
+      - name: 自选交易品种列表
+        href: api/javascript_ui/trading_controls/watchlist.md
+      - name: 订单输入
+        href: api/javascript_ui/trading_controls/order_entry.md
+      - name: 订单簿
+        href: api/javascript_ui/trading_controls/order_book.md
+      - name: 成交明细
+        href: api/javascript_ui/trading_controls/trade_feed.md
 - name: Shell
   href: shell.md
   items:
