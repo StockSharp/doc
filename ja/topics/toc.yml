@@ -758,21 +758,10 @@
           items:
           - name: CQG の設定
             href: api/connectors/stock_market/cqg/configuration_cqg.md
-          - name: CQG COM のグラフィカル設定
-            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
-          - name: CQG Continuum のグラフィカル設定
-            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
+          - name: CQG のグラフィカル設定
+            href: api/connectors/stock_market/cqg/graphical_configuration_cqg.md
           - name: CQG アダプターの初期化
             href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
-        - name: CQG Web API
-          href: api/connectors/stock_market/cqg_web_api.md
-          items:
-          - name: CQG Web API コネクタの設定
-            href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
-          - name: CQG Web API のグラフィカル設定
-            href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
-          - name: CQG Web API アダプターの初期化
-            href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
         - name: E*TRADE
           href: api/connectors/stock_market/e_trade.md
           items:

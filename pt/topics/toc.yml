@@ -758,21 +758,10 @@
           items:
           - name: Configuração CQG
             href: api/connectors/stock_market/cqg/configuration_cqg.md
-          - name: Configuração gráfica CQG COM
-            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
-          - name: Configuração gráfica CQG Continuum
-            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
+          - name: Configuração gráfica CQG
+            href: api/connectors/stock_market/cqg/graphical_configuration_cqg.md
           - name: Inicialização do adaptador CQG
             href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
-        - name: CQG Web API
-          href: api/connectors/stock_market/cqg_web_api.md
-          items:
-          - name: Configuração do conector CQG Web API
-            href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
-          - name: Configuração gráfica de CQG Web API
-            href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
-          - name: Inicialização do adaptador CQG Web API
-            href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
         - name: 'E\*TRADE'
           href: api/connectors/stock_market/e_trade.md
           items:

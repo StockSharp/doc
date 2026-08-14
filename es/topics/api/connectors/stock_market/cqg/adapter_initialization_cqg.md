@@ -1,37 +1,22 @@
 # Inicialización del adaptador CQG
 
-El siguiente código muestra cómo inicializar [CqgComMessageAdapter](xref:StockSharp.Cqg.Com.CqgComMessageAdapter) y [CqgContinuumMessageAdapter](xref:StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter), y enviarlos a [Connector](xref:StockSharp.Algo.Connector).
-
-1. **CQG COM**, conexión mediante **CQG Integrated Client** local:
+El código siguiente muestra cómo inicializar [CqgMessageAdapter](xref:StockSharp.CQG.CqgMessageAdapter) y pasarlo a [Connector](xref:StockSharp.Algo.Connector).
 
 ```cs
-Connector Connector = new Connector();				
-...				
-var messageAdapter = new CqgComMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new CqgMessageAdapter(Connector.TransactionIdGenerator)
 {
-	UserName = "<Su usuario>",
-	Password = "<Su contraseña>".To<SecureString>(),
+	UserName = "<Nombre de usuario>",
+	Password = "<Contraseña>".ToSecureString(),
+	PrivateLabel = "WebAPITest",
+	ClientId = "WebAPITest",
+	Endpoint = "wss://demoapi.cqg.com:443",
+	Portfolio = "<Cartera>",
 };
+
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
 ```
 
-2. **CQG Continuum**, conexión directa al servidor:
-
-```cs
-Connector Connector = new Connector();				
-...				
-var messageAdapter = new CqgContinuumMessageAdapter(Connector.TransactionIdGenerator)
-{
-	UserName = "<Su usuario>",
-	Password = "<Su contraseña>".To<SecureString>(),
-	Address = "<Address>".To<IPAddress>(),
-};
-Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
-```
+Sustituya los valores de ejemplo por las credenciales y direcciones de servidores emitidas para su cuenta.
 
 ## Contenido recomendado
 

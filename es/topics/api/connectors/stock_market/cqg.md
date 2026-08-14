@@ -1,8 +1,10 @@
 # CQG
 
-**CQG** — plataforma de negociación para operar en las bolsas internacionales CME, CBOT, NYMEX, ICE, EUREX.
+**CQG Web API** integra **CQG Web API 2.296** con StockSharp para obtener datos de mercado y operar.
 
-Antes de comenzar a escribir robots de negociación para la plataforma de negociación actual, se recomienda leer los enlaces en [Conectores](../../connectors.md).
+El conector admite búsqueda de instrumentos, cotizaciones, datos de operaciones, profundidad de mercado, velas históricas, velas en tiempo real, cuentas, saldos y posiciones, gestión de órdenes, actualizaciones de cuentas y órdenes en tiempo real, entornos de simulación y reales.
+
+Antes de desarrollar robots de negociación para CQG Web API, consulte los enlaces de la sección [Conectores](../../connectors.md).
 
 ## Contenido recomendado
 
@@ -10,14 +12,14 @@ Antes de comenzar a escribir robots de negociación para la plataforma de negoci
 
 [Configuración gráfica](../graphical_configuration.md)
 
-[Guardar y cargar la configuración](../save_and_load_settings.md)
+[Guardar y cargar configuraciones](../save_and_load_settings.md)
 
-[Creación de un conector propio](../creating_own_connector.md)
+[Crear un conector propio](../creating_own_connector.md)
 
 [Gestión de órdenes](../../orders_management.md)
 
-[Crear una nueva orden](../../orders_management/create_new_order.md)
+[Crear una orden](../../orders_management/create_new_order.md)
 
-[Crear una nueva orden stop](../../orders_management/create_new_stop_order.md)
+[Crear una orden de parada](../../orders_management/create_new_stop_order.md)
 
 [Inicialización del adaptador CQG](cqg/adapter_initialization_cqg.md)

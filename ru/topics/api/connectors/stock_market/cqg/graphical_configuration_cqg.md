@@ -1,4 +1,4 @@
-# Графическое конфигурирование CQG Web API
+# Графическое конфигурирование CQG
 
 Для всех продуктов StockSharp настройка подключения выполняется в [окне настройки подключений](../../../graphical_user_interface/connection_settings_window.md).
 

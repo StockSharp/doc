@@ -1,8 +1,10 @@
 # CQG
 
-**CQG** — trading platform for trading on the international exchanges CME, CBOT, NYMEX, ICE, EUREX. 
+**CQG Web API** integrates StockSharp with **CQG Web API 2.296** for market data and trading.
 
-Before you start writing trading robots for the current trading platform, it is recommended to read the links in the [Connectors](../../connectors.md). 
+The connector supports security lookup, quotes, trade data, market depth, historical candles, real-time candles, accounts, balances, and positions, order management, real-time account and order updates, simulation and live environments.
+
+Before developing trading robots for CQG Web API, review the links in the [Connectors](../../connectors.md) section.
 
 ## Recommended content
 

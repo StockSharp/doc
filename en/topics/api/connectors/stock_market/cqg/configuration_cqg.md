@@ -1,9 +1,14 @@
 # Configuration CQG
 
-There are two ways to work with the **CQG** connector:
+Obtain the credentials, endpoints, and account identifiers required by CQG Web API 2.296, then specify the following connector settings.
 
-1. **CQG COM**, connection through the local **CQG Integrated Client**, which is installed directly on the computer from which the connection will be made. **CQG Integrated Client** can be downloaded [on the developer's site](https://www.cqg.com/products/cqg-integrated-client). To connect to the **CQG Integrated Client**, specify the **Login** and **Password**.
-
-2. **CQG Continuum**, direct connection to the server. Specify the **Login**, **Password**, and **server address**.
-
-**Login**, **Password** and **server address** are provided by the broker. To get the API access it is recommended to contact the broker.
+- **User name** - property `UserName`.
+- **Password** - property `Password`.
+- **One-time password** - property `OneTimePassword`.
+- **Access token** - property `AccessToken`.
+- **Organization identifier** - property `PrivateLabel`. Default value: `WebAPITest`.
+- **Client ID** - property `ClientId`. Default value: `WebAPITest`.
+- **Client version** - property `ClientVersion`. Default value: `StockSharp 5`.
+- **Endpoint** - property `Endpoint`. Default value: `wss://demoapi.cqg.com:443`.
+- **Portfolio** - property `Portfolio`.
+- **Aggregation level** - property `CollapsingLevel`. Default value: `None`.

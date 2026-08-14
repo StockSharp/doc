@@ -1,9 +1,14 @@
 # CQG 配置
 
-有两种方法可以使用 **CQG** 连接器：
+获取 CQG Web API 2.296 所需的凭据、服务器地址和账户标识符，然后指定以下连接器设置。
 
-1. **CQG COM**，通过本地 **CQG Integrated Client** 进行连接，该客户端直接安装在将用于连接的计算机上。**CQG Integrated Client** 可以从[开发者网站](https://www.cqg.com/products/cqg-integrated-client)下载。要连接到 **CQG Integrated Client**，您必须指定 **登录名** 和 **密码**。
-
-2. **CQG Continuum**，直接连接到服务器，要连接你必须指定**登录名**、**密码**和**服务器地址**。
-
-**登录名**、**密码**和**服务器地址**由经纪商提供。要获取 API 访问权限，建议联系经纪商。
+- **用户名** - 属性 `UserName`。
+- **密码** - 属性 `Password`。
+- **一次性密码** - 属性 `OneTimePassword`。
+- **访问令牌** - 属性 `AccessToken`。
+- **组织标识符** - 属性 `PrivateLabel`。默认值为 `WebAPITest`。
+- **客户端标识符** - 属性 `ClientId`。默认值为 `WebAPITest`。
+- **客户端版本** - 属性 `ClientVersion`。默认值为 `StockSharp 5`。
+- **端点** - 属性 `Endpoint`。默认值为 `wss://demoapi.cqg.com:443`。
+- **投资组合** - 属性 `Portfolio`。
+- **聚合级别** - 属性 `CollapsingLevel`。默认值为 `None`。

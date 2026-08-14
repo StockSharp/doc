@@ -1,39 +1,23 @@
 # CQG アダプターの初期化
 
-以下のコードは、[CqgComMessageAdapter](xref:StockSharp.Cqg.Com.CqgComMessageAdapter) と [CqgContinuumMessageAdapter](xref:StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter) を初期化し、それを [Connector](xref:StockSharp.Algo.Connector) に送信する方法を示しています。
-
-1. **CQG COM**、ローカルの **CQG Integrated Client** による接続:
+次のコードは、[CqgMessageAdapter](xref:StockSharp.CQG.CqgMessageAdapter) を初期化し、[Connector](xref:StockSharp.Algo.Connector) に渡す方法を示します。
 
 ```cs
-Connector Connector = new Connector();				
-...				
-var messageAdapter = new CqgComMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new CqgMessageAdapter(Connector.TransactionIdGenerator)
 {
-	UserName = "<ログイン名>",
-	Password = "<パスワード>".To<SecureString>(),
+	UserName = "<ユーザー名>",
+	Password = "<パスワード>".ToSecureString(),
+	PrivateLabel = "WebAPITest",
+	ClientId = "WebAPITest",
+	Endpoint = "wss://demoapi.cqg.com:443",
+	Portfolio = "<ポートフォリオ>",
 };
+
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
 ```
 
-2. **CQG Continuum**、サーバーへの直接接続:
-
-```cs
-Connector Connector = new Connector();				
-...				
-var messageAdapter = new CqgContinuumMessageAdapter(Connector.TransactionIdGenerator)
-{
-	UserName = "<ログイン名>",
-	Password = "<パスワード>".To<SecureString>(),
-	Address = "<Address>".To<IPAddress>(),
-};
-Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
-```
+例の値を、口座用に発行された認証情報とサーバーアドレスに置き換えてください。
 
 ## 推奨コンテンツ
 
 [接続設定ウィンドウ](../../../graphical_user_interface/connection_settings_window.md)
-

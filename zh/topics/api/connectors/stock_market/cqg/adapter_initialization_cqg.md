@@ -1,37 +1,22 @@
 # CQG 适配器初始化
 
-下面的代码演示了如何初始化[CqgComMessageAdapter](xref:StockSharp.Cqg.Com.CqgComMessageAdapter)和[CqgContinuumMessageAdapter](xref:StockSharp.Cqg.Continuum.CqgContinuumMessageAdapter)并将其发送到[Connector](xref:StockSharp.Algo.Connector)。
-
-1. **CQG COM**，通过本地 **CQG Integrated Client** 连接：
+以下代码演示如何初始化 [CqgMessageAdapter](xref:StockSharp.CQG.CqgMessageAdapter)，并将其传递给 [Connector](xref:StockSharp.Algo.Connector)。
 
 ```cs
-Connector Connector = new Connector();				
-...				
-var messageAdapter = new CqgComMessageAdapter(Connector.TransactionIdGenerator)
+var messageAdapter = new CqgMessageAdapter(Connector.TransactionIdGenerator)
 {
-	UserName = "<您的登录名>",
-	Password = "<您的密码>".To<SecureString>(),
+	UserName = "<用户名>",
+	Password = "<密码>".ToSecureString(),
+	PrivateLabel = "WebAPITest",
+	ClientId = "WebAPITest",
+	Endpoint = "wss://demoapi.cqg.com:443",
+	Portfolio = "<投资组合>",
 };
+
 Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
 ```
 
-2. **CQG Continuum**，直接连接到服务器：
-
-```cs
-Connector Connector = new Connector();				
-...				
-var messageAdapter = new CqgContinuumMessageAdapter(Connector.TransactionIdGenerator)
-{
-	UserName = "<您的登录名>",
-	Password = "<您的密码>".To<SecureString>(),
-	Address = "<Address>".To<IPAddress>(),
-};
-Connector.Adapter.InnerAdapters.Add(messageAdapter);
-...	
-							
-```
+请将示例值替换为针对您的账户签发的凭据和服务器地址。
 
 ## 推荐内容
 

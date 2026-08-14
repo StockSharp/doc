@@ -758,21 +758,10 @@
           items:
           - name: CQG 配置
             href: api/connectors/stock_market/cqg/configuration_cqg.md
-          - name: CQG COM 图形配置
-            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
-          - name: CQG Continuum 图形配置
-            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
+          - name: CQG 图形配置
+            href: api/connectors/stock_market/cqg/graphical_configuration_cqg.md
           - name: CQG 适配器初始化
             href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
-        - name: CQG Web API
-          href: api/connectors/stock_market/cqg_web_api.md
-          items:
-          - name: CQG Web API 连接器配置
-            href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
-          - name: CQG Web API 图形化配置
-            href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
-          - name: CQG Web API 适配器初始化
-            href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
         - name: E*TRADE
           href: api/connectors/stock_market/e_trade.md
           items:

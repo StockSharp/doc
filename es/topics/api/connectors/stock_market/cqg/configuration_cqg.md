@@ -1,9 +1,14 @@
 # Configuración CQG
 
-Hay dos formas de trabajar con el conector **CQG**:
+Obtenga las credenciales, direcciones de servidores e identificadores de cuenta necesarios para CQG Web API 2.296 y especifique los siguientes ajustes del conector.
 
-1. **CQG COM**, conexión mediante **CQG Integrated Client** local, instalado directamente en el equipo desde el que se realizará la conexión. **CQG Integrated Client** puede descargarse [en el sitio del desarrollador](https://www.cqg.com/products/cqg-integrated-client). Para conectarse a **CQG Integrated Client**, especifique **usuario** y **contraseña**.
-
-2. **CQG Continuum**, conexión directa al servidor. Especifique **usuario**, **contraseña** y la **dirección del servidor**.
-
-**usuario**, **contraseña** y la **dirección del servidor** los proporciona el bróker. Para obtener acceso API, se recomienda contactar con el bróker.
+- **Nombre de usuario** - propiedad `UserName`.
+- **Contraseña** - propiedad `Password`.
+- **Contraseña de un solo uso** - propiedad `OneTimePassword`.
+- **Token de acceso** - propiedad `AccessToken`.
+- **Identificador de la organización** - propiedad `PrivateLabel`. Valor predeterminado: `WebAPITest`.
+- **Identificador de cliente** - propiedad `ClientId`. Valor predeterminado: `WebAPITest`.
+- **Versión del cliente** - propiedad `ClientVersion`. Valor predeterminado: `StockSharp 5`.
+- **Punto de conexión** - propiedad `Endpoint`. Valor predeterminado: `wss://demoapi.cqg.com:443`.
+- **Cartera** - propiedad `Portfolio`.
+- **Nivel de agregación** - propiedad `CollapsingLevel`. Valor predeterminado: `None`.

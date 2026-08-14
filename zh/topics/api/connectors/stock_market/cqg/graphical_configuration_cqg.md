@@ -1,4 +1,4 @@
-# CQG Web API 图形化配置
+# CQG 图形化配置
 
 在所有 StockSharp 产品中，请在[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)中配置连接。
 

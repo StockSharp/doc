@@ -1,8 +1,10 @@
 # CQG
 
-**CQG** - plataforma de negociação para negociar nas bolsas internacionais CME, CBOT, NYMEX, ICE, EUREX.
+**CQG Web API** integra a **CQG Web API 2.296** no StockSharp para obter dados de mercado e negociar.
 
-Antes de começar a escrever robôs de negociação para esta plataforma de negociação, recomendamos ler as ligações na secção [Conectores](../../connectors.md).
+O conector suporta pesquisa de instrumentos, cotações, dados de negócios, livro de ofertas, velas históricas, velas em tempo real, contas, saldos e posições, gestão de ordens, atualizações de contas e ordens em tempo real, ambientes de simulação e reais.
+
+Antes de desenvolver robôs de negociação para CQG Web API, consulte as ligações na secção [Conectores](../../connectors.md).
 
 ## Conteúdo recomendado
 
@@ -12,9 +14,9 @@ Antes de começar a escrever robôs de negociação para esta plataforma de nego
 
 [Guardar e carregar definições](../save_and_load_settings.md)
 
-[Criar o próprio conector](../creating_own_connector.md)
+[Criar o seu próprio conector](../creating_own_connector.md)
 
-[Gestão de Ordens](../../orders_management.md)
+[Gestão de ordens](../../orders_management.md)
 
 [Criar nova ordem](../../orders_management/create_new_order.md)
 

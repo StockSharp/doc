@@ -904,21 +904,10 @@
           items:
           - name: Настройки коннектора CQG
             href: api/connectors/stock_market/cqg/configuration_cqg.md
-          - name: Графическое конфигурирование CQG COM
-            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_com.md
-          - name: Графическое конфигурирование CQG Continuum
-            href: api/connectors/stock_market/cqg/graphical_configuration_cqg_continuum.md
+          - name: Графическое конфигурирование CQG
+            href: api/connectors/stock_market/cqg/graphical_configuration_cqg.md
           - name: Инициализация адаптера CQG
             href: api/connectors/stock_market/cqg/adapter_initialization_cqg.md
-        - name: CQG Web API
-          href: api/connectors/stock_market/cqg_web_api.md
-          items:
-          - name: Настройки коннектора CQG Web API
-            href: api/connectors/stock_market/cqg_web_api/configuration_cqg_web_api.md
-          - name: Графическое конфигурирование CQG Web API
-            href: api/connectors/stock_market/cqg_web_api/graphical_configuration_cqg_web_api.md
-          - name: Инициализация адаптера CQG Web API
-            href: api/connectors/stock_market/cqg_web_api/adapter_initialization_cqg_web_api.md
         - name: E*TRADE
           href: api/connectors/stock_market/e_trade.md
           items:

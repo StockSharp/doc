@@ -1,6 +1,6 @@
-# Configuração do conector CQG Web API
+# Configuração gráfica CQG
 
-Obtenha as credenciais, os endereços dos servidores e os identificadores da conta necessários para a CQG Web API 2.296 e indique as seguintes definições do conector.
+Em todos os produtos StockSharp, configure a ligação na [janela de definições de ligação](../../../graphical_user_interface/connection_settings_window.md).
 
 - **Nome de utilizador** - propriedade `UserName`.
 - **Palavra-passe** - propriedade `Password`.
@@ -12,3 +12,13 @@ Obtenha as credenciais, os endereços dos servidores e os identificadores da con
 - **Ponto de acesso** - propriedade `Endpoint`. Valor predefinido: `wss://demoapi.cqg.com:443`.
 - **Portefólio** - propriedade `Portfolio`.
 - **Nível de agregação** - propriedade `CollapsingLevel`. Valor predefinido: `None`.
+
+## Conteúdo recomendado
+
+[Conectores](../../../connectors.md)
+
+[Configuração gráfica](../../graphical_configuration.md)
+
+[Guardar e carregar definições](../../save_and_load_settings.md)
+
+[Criar o seu próprio conector](../../creating_own_connector.md)

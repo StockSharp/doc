@@ -1,6 +1,6 @@
-# Konfiguration des CQG Web API-Konnektors
+# Grafische Konfiguration CQG
 
-Beschaffen Sie die für CQG Web API 2.296 erforderlichen Zugangsdaten, Serveradressen und Kontokennungen und geben Sie anschließend die folgenden Konnektoreinstellungen an.
+Für alle StockSharp-Produkte wird die Verbindung im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md) konfiguriert.
 
 - **Benutzername** - Eigenschaft `UserName`.
 - **Passwort** - Eigenschaft `Password`.
@@ -12,3 +12,13 @@ Beschaffen Sie die für CQG Web API 2.296 erforderlichen Zugangsdaten, Serveradr
 - **Endpunkt** - Eigenschaft `Endpoint`. Standardwert: `wss://demoapi.cqg.com:443`.
 - **Portfolio** - Eigenschaft `Portfolio`.
 - **Aggregationsstufe** - Eigenschaft `CollapsingLevel`. Standardwert: `None`.
+
+## Empfohlene Inhalte
+
+[Konnektoren](../../../connectors.md)
+
+[Grafische Konfiguration](../../graphical_configuration.md)
+
+[Einstellungen speichern und laden](../../save_and_load_settings.md)
+
+[Eigenen Konnektor erstellen](../../creating_own_connector.md)
