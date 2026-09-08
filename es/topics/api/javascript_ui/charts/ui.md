@@ -2,6 +2,8 @@
 
 `createChartUi` monta alrededor del motor una interfaz lista para usar: títulos de panel, leyenda con crosshair, menú contextual, menú de tipo de gráfico y diálogo de indicadores. El motor solo dibuja; todo lo que lo rodea vive en un punto de entrada aparte, `@stocksharp/chart/ui`, de modo que una página con un único sparkline no paga por ello.
 
+![La leyenda, un panel de indicador y los menús del gráfico alrededor del motor](../../../../images/javascript_charts_ui.png)
+
 ## Conexión
 
 Esta capa se distribuye como subpath del paquete y necesita su propia hoja de estilos:

@@ -2,6 +2,8 @@
 
 `createChartUi` assembles a ready-made interface around the engine: pane headers, a legend with the crosshair readout, a context menu, a chart type menu, and the indicator dialog. The engine only draws; everything around it lives in a separate `@stocksharp/chart/ui` entry point — a page with a single sparkline does not pay for it.
 
+![The legend, an indicator pane and the chart menus around the engine](../../../../images/javascript_charts_ui.png)
+
 ## Wiring in
 
 The layer ships as a separate package subpath and needs its own stylesheet:
