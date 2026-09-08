@@ -72,7 +72,9 @@ If no reader function is defined for the selected key, the controller attempts t
 
 Clicking a new header enables ascending sorting. The next click changes it to descending, and the third restores the default order. There is no separate unsorted state if the table has a `defaultSort`.
 
-`apply(rows)` always returns a new array and does not modify the application array. Numbers are compared numerically and strings through the supplied `Intl.Collator`. `null`, `undefined`, and an empty string are placed at the end in both directions.
+`apply(rows)` always returns a new array and does not modify the application array. `null`, `undefined`, and an empty string are placed at the end in both directions.
+
+The comparison is chosen **by the values, not by the declared column type**: when both values convert to a finite number, they are compared numerically, and only in every other case does the supplied `Intl.Collator` come into play. The string `"42"` therefore lands between 41 and 43 rather than where the alphabet would put it; a string such as `"1e3"` also counts as a number. If a column has to be sorted as text whatever the values, give out a value from it that does not become a number.
 
 The controller assigns the `sort-asc` or `sort-desc` class to the active header; arrows and other styling for these classes are defined by the application.
 

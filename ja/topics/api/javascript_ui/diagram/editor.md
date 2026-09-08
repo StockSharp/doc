@@ -34,13 +34,27 @@ catalog.addNodeType(new Node({
 }));
 
 // 2) 編集可能なダイアグラム + パレットツールボックス（それぞれが自身の要素に描画されます）。
+const canvasHost = document.getElementById('diagram');
+const paletteHost = document.getElementById('palette');
+
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) パレットからノードを追加: ダブルクリック、またはキャンバスへのネイティブなドラッグ&ドロップ。
-palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
+// 3) パレットからノードを追加: ダブルクリックで表示領域の中央にノードを置きます。
+palette.on('nodeActivated', ({ node }) => {
+  const box = canvasHost.getBoundingClientRect();
+  diagram.dropNodeFromPalette(node.id, box.left + box.width / 2, box.top + box.height / 2);
+});
+
+// キャンバスへのネイティブなドラッグ&ドロップ。dragover は必須です。このイベントをキャンセルしないと、
+// ブラウザは要素をドロップ先とみなさず、drop はまったく発生しません。
+canvasHost.addEventListener('dragover', event => event.preventDefault());
 canvasHost.addEventListener('drop', event => {
-  const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
+  event.preventDefault();
+  const payload = event.dataTransfer?.getData(PALETTE_DRAG_MIME);   // dataTransfer は null になり得ます
+  if (!payload) return;
+
+  const { typeId } = JSON.parse(payload);
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 

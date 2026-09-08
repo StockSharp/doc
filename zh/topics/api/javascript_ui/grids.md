@@ -46,11 +46,15 @@ import { TableExport } from '@stocksharp/grids/table-export';
 不使用打包工具时，可引入预构建的浏览器包。其公共对象位于 `window.SSGrid`：
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1.1.0/dist/ssgrid.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1/dist/ssgrid.js"></script>
 <script>
   const { DataGrid, TableExport } = window.SSGrid;
 </script>
 ```
+
+范围 `@1` 会取第一个主版本分支中的最新版本。只有在需要刻意复现某次构建时才值得锁定确切的版本号：被锁定的旧版本会悄无声息地给出一个不含此后新增能力的构建，而缺少诸如 `groupOrder` 之类的功能，其表现之处并不在写着这个标签的地方。
+
+TypeScript 原始源码可通过子路径 `@stocksharp/grids/source` 和 `@stocksharp/grids/source/<模块>` 获取——当表格需要由你自己的打包器与其余代码一同构建时会用到它们。
 
 ## 快速示例
 

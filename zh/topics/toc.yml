@@ -5184,6 +5184,18 @@
         href: api/javascript_ui/charts/indicators.md
       - name: 历史数据回填
         href: api/javascript_ui/charts/backfill.md
+      - name: 图表外壳
+        href: api/javascript_ui/charts/ui.md
+      - name: 从图表交易
+        href: api/javascript_ui/charts/trading.md
+      - name: 标注工具
+        href: api/javascript_ui/charts/drawings.md
+      - name: 多个图表
+        href: api/javascript_ui/charts/workspace.md
+      - name: 保存布局
+        href: api/javascript_ui/charts/persistence.md
+      - name: 时间与交易时段
+        href: api/javascript_ui/charts/time.md
     - name: 示意图
       href: api/javascript_ui/diagram.md
       items:
@@ -5219,6 +5231,22 @@
         href: api/javascript_ui/trading_controls/order_book.md
       - name: 成交明细
         href: api/javascript_ui/trading_controls/trade_feed.md
+      - name: 统计
+        href: api/javascript_ui/trading_controls/statistics.md
+      - name: 日志
+        href: api/javascript_ui/trading_controls/log_monitor.md
+      - name: 策略
+        href: api/javascript_ui/trading_controls/strategies.md
+      - name: 期权 T 型报价表
+        href: api/javascript_ui/trading_controls/option_desk.md
+      - name: 波动率微笑
+        href: api/javascript_ui/trading_controls/option_smile.md
+      - name: 权益曲线
+        href: api/javascript_ui/trading_controls/equity.md
+      - name: 优化热力图
+        href: api/javascript_ui/trading_controls/optimization_heatmap.md
+      - name: 优化曲面
+        href: api/javascript_ui/trading_controls/optimization_surface.md
 - name: Shell
   href: shell.md
   items:

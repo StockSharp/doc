@@ -34,13 +34,27 @@ catalog.addNodeType(new Node({
 }));
 
 // 2) 可编辑的框图 + 调色板工具箱（各自渲染到自己的元素中）。
+const canvasHost = document.getElementById('diagram');
+const paletteHost = document.getElementById('palette');
+
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) 从调色板添加节点：双击，或原生拖放到画布上。
-palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
+// 3) 从调色板添加节点：双击会把节点放到可见区域的中心。
+palette.on('nodeActivated', ({ node }) => {
+  const box = canvasHost.getBoundingClientRect();
+  diagram.dropNodeFromPalette(node.id, box.left + box.width / 2, box.top + box.height / 2);
+});
+
+// 原生拖放到画布上。dragover 是必需的：不取消该事件，
+// 浏览器就不会把该元素视为放置目标，drop 根本不会发生。
+canvasHost.addEventListener('dragover', event => event.preventDefault());
 canvasHost.addEventListener('drop', event => {
-  const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
+  event.preventDefault();
+  const payload = event.dataTransfer?.getData(PALETTE_DRAG_MIME);   // dataTransfer 可能为 null
+  if (!payload) return;
+
+  const { typeId } = JSON.parse(payload);
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 

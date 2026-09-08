@@ -4,7 +4,7 @@
 
 ![包含成交明细、订单簿、自选交易品种列表、订单输入和表格的交易界面](../../../images/javascript_trading_controls.jpg)
 
-截图中还显示了来自独立 `@stocksharp/chart` 包的K线图。`@stocksharp/trading-controls` 包含七个独立控件：
+截图中还显示了来自独立 `@stocksharp/chart` 包的K线图。`@stocksharp/trading-controls` 包含十五个独立控件：
 
 | 控件 | 类 | 标识符 |
 |---|---|---|
@@ -15,14 +15,30 @@
 | [订单输入](trading_controls/order_entry.md) | `OrderEntryWidget` | `orderEntry` |
 | [订单簿](trading_controls/order_book.md) | `OrderBookWidget` | `orderbook` |
 | [成交明细](trading_controls/trade_feed.md) | `TradeFeedWidget` | `tradefeed` |
+| [统计](trading_controls/statistics.md) | `StatisticsWidget` | `statistics` |
+| [日志](trading_controls/log_monitor.md) | `LogMonitorWidget` | `logMonitor` |
+| [策略](trading_controls/strategies.md) | `StrategiesWidget` | `strategies` |
+| [期权 T 型报价表](trading_controls/option_desk.md) | `OptionDeskWidget` | `optionDesk` |
+| [波动率微笑](trading_controls/option_smile.md) | `OptionSmileWidget` | `optionSmile` |
+| [权益曲线](trading_controls/equity.md) | `EquityWidget` | `equity` |
+| [优化热力图](trading_controls/optimization_heatmap.md) | `OptimizationHeatmapWidget` | `optimizationHeatmap` |
+| [优化曲面](trading_controls/optimization_surface.md) | `SurfaceWidget` | `optimizationSurface` |
 
-这些标识符的值可通过导出的 `ControlTypes` 对象获取。
+这些标识符的值可通过导出的 `ControlTypes` 对象获取。请注意：优化曲面的类名与标识符并不一致——类叫 `SurfaceWidget`，而标识符是 `optimizationSurface`。
 
 ## 安装
 
 ```bash
 npm install @stocksharp/trading-controls
 ```
+
+控件中的表格由 [@stocksharp/grids](grids.md) 绘制——它作为普通依赖自动安装。而 [@stocksharp/chart](charts.md) 被声明为**对等依赖**：npm 不会安装它，如果你要使用权益曲线或波动率微笑，就必须自己安装——它们是基于图表引擎构建的。
+
+```bash
+npm install @stocksharp/chart
+```
+
+除根导入之外，该包还声明了若干子路径：每个控件一个（`@stocksharp/trading-controls/watchlist` 等）、若干辅助模块（`/trading-host`、`/control-types`、`/formatters`、`/dom`、`/trading-data`），以及一整套并行的 `/source/*` TypeScript 源码——供那些要用自己的打包器把控件与其余代码一起构建的人使用。
 
 必须引入基础样式。也可以额外引入现成的浅色和深色配色方案，或者用自己的 `--t-*` CSS 变量进行替换：
 
@@ -89,7 +105,7 @@ positions.update([]);
 
 ## 本地化和外观
 
-控件的所有可见文本都通过 `host.t` 获取。`@stocksharp/trading-controls/translation-keys.json` 中包含当前完整的 153 个键。未知键会原样显示给用户，因此宿主应为整个列表提供翻译。
+控件的所有可见文本都通过 `host.t` 获取。当前完整的 235 个键列表随 `@stocksharp/trading-controls/translation-keys.json` 一起提供。它不是数组，而是一个 `{ $comment, count, keys }` 对象——键本身位于 `keys` 字段中。未知键会原样显示给用户，因此宿主应为整个列表提供翻译。
 
 `styles.css` 文件包含样式规则，但颜色、字体和尺寸取自 `--t-*` CSS 变量。如果不使用现成的 `theme.css`，应用程序需要自行定义这些变量。订单簿和气泡成交明细的 canvas 颜色由 `host.presentation.canvasPalette()` 返回。
 

@@ -99,16 +99,22 @@ chart.timeScale().fitContent();
 
 关于由同一 Web 技术栈渲染的可视化策略编辑器，请参阅 [JavaScript 框图](diagram.md)。
 
-## 完整的终端图表技术栈
+## 引擎之上的各层
 
-`src/chart` 下的模块为基础引擎扩展了终端功能：
+上面描述的一切都是基础引擎，也就是入口点 `@stocksharp/chart`。其余部分被拆分到各个已发布的独立入口点中：导入需要的那个即可，无需复制源码。
 
-- `IndicatorEngine`、指标渲染器、设置以及计算目录。
-- 用于K线图、柱状图、折线图、面积图、Heikin-Ashi、Renko 和 Point & Figure 的图表类型切换器。
-- 图例、同步的副窗格、右键菜单以及指标选择对话框。
-- 在实时数据变化时重新计算活动指标。
+| 入口点 | 提供什么 |
+|---|---|
+| [图表外壳](charts/ui.md) — `@stocksharp/chart/ui` | 现成的外壳：图例、上下文菜单、图表类型切换器、面板管理器、指标对话框。需要样式表 `@stocksharp/chart/ui.css`。 |
+| `@stocksharp/chart/indicators` | `IndicatorEngine`、指标渲染器和指标设置。计算本身在 [@stocksharp/indicators](charts/indicators.md) 包中。 |
+| [从图表交易](charts/trading.md) — `@stocksharp/chart/trading` | 交易层：订单线、带当前结果的持仓、保护性订单和报价。它不了解经纪商——只报告意图，由宿主执行。 |
+| [标注工具](charts/drawings.md) — `@stocksharp/chart/drawings` | 标注工具、吸附到柱体以及自定义图形的注册。 |
+| [多个图表](charts/workspace.md) — `@stocksharp/chart/workspace` | 多个同步的图表、标的对比、区间导航器、指标模板。 |
+| [保存布局](charts/persistence.md) — `@stocksharp/chart/persistence` | 布局的保存与还原，带版本管理和迁移。 |
+| [时间与交易时段](charts/time.md) — `@stocksharp/chart/time` | 交易日历、时段和时区，以及距柱体收盘的倒计时。 |
+| `@stocksharp/chart/orderflow` | 聚类分析：足迹图和成交量分布。 |
 
-可参考 `src/chart/app.ts` 作为完整技术栈的集成示例。
+不使用打包器时，同样的能力可通过浏览器包获得：`dist/sschartui.js` 会发布全局对象 `SSChartUI`。
 
 ## 从源码构建
 

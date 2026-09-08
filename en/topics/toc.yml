@@ -5184,6 +5184,18 @@
         href: api/javascript_ui/charts/indicators.md
       - name: History backfill
         href: api/javascript_ui/charts/backfill.md
+      - name: Chart UI layer
+        href: api/javascript_ui/charts/ui.md
+      - name: Trading from the chart
+        href: api/javascript_ui/charts/trading.md
+      - name: Drawing tools
+        href: api/javascript_ui/charts/drawings.md
+      - name: Multiple charts
+        href: api/javascript_ui/charts/workspace.md
+      - name: Saving the layout
+        href: api/javascript_ui/charts/persistence.md
+      - name: Time and trading sessions
+        href: api/javascript_ui/charts/time.md
     - name: Diagram
       href: api/javascript_ui/diagram.md
       items:
@@ -5219,6 +5231,22 @@
         href: api/javascript_ui/trading_controls/order_book.md
       - name: Trade feed
         href: api/javascript_ui/trading_controls/trade_feed.md
+      - name: Statistics
+        href: api/javascript_ui/trading_controls/statistics.md
+      - name: Log monitor
+        href: api/javascript_ui/trading_controls/log_monitor.md
+      - name: Strategies
+        href: api/javascript_ui/trading_controls/strategies.md
+      - name: Option desk
+        href: api/javascript_ui/trading_controls/option_desk.md
+      - name: Volatility smile
+        href: api/javascript_ui/trading_controls/option_smile.md
+      - name: Equity curve
+        href: api/javascript_ui/trading_controls/equity.md
+      - name: Optimization heatmap
+        href: api/javascript_ui/trading_controls/optimization_heatmap.md
+      - name: Optimization surface
+        href: api/javascript_ui/trading_controls/optimization_surface.md
 - name: Shell
   href: shell.md
   items:

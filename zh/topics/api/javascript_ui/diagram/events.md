@@ -21,16 +21,29 @@ off();
 
 ## 上下文菜单
 
-组件报告点击位置以及已启用命令的列表；由你绘制弹出菜单并运行所选命令：
+右键点击时，组件会绘制**自己的**菜单，同时发出 `contextMenuRequested`。这两种情况下事件都会到达，因此如果你要绘制自己的菜单，就必须关闭内置菜单——否则两者会叠在一起：
 
 ```js
-diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[]，其中 command 为以下之一：
-  // undo | redo | cut | copy | paste | open | delete | properties | help
+const diagram = new StockSharpDiagram(container, { showContextMenu: false });
+```
+
+事件会报告点击位置、光标下的对象，以及应当按其顺序绘制的菜单项列表。菜单项分为两种，区分它们要看有没有 `group` 字段：**命令**带有 `command` 并可以执行，**子菜单**带有 `group` 和自己的 `commands` 列表——它本身没有什么可执行的。
+
+```js
+diagram.on('contextMenuRequested', ({ x, y, node, link, commands }) => {
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
-  menu.onPick = command => diagram.executeContextCommand(command);
+
+  menu.onPick = item => {
+    if ('group' in item) return;                       // 子菜单：展开它，而不是执行
+    diagram.executeContextCommand(item.command);       // 若命令当前不可用则返回 false
+  };
 });
 ```
+
+完整的命令列表：`undo`、`redo`、`cut`、`copy`、`paste`、`open`、`delete`、`exportDocument`、`exportPng`、`exportSvg`、`overview`、`properties`、`help`。唯一的分组是 `export`，它把三个导出命令归到一起。
+
+> [!NOTE]
+> 导出命令是**对宿主的请求**，而不是组件的动作：它既不写文件也不打开对话框。请处理 `exportRequested`，并用你自己的参数执行 `saveDocument()`、`takeScreenshot()` 或 `takeSvg()`。
 
 ## 连线校验
 

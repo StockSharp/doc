@@ -4,7 +4,7 @@
 
 ![Pantalla de negociación con flujo de operaciones, libro de órdenes, lista de instrumentos, entrada de órdenes y tablas](../../../images/javascript_trading_controls.jpg)
 
-La captura también muestra un gráfico de velas del paquete independiente `@stocksharp/chart`. `@stocksharp/trading-controls` incluye siete controles independientes:
+La captura también muestra un gráfico de velas del paquete independiente `@stocksharp/chart`. `@stocksharp/trading-controls` incluye quince controles independientes:
 
 | Control | Clase | Identificador |
 |---|---|---|
@@ -15,14 +15,30 @@ La captura también muestra un gráfico de velas del paquete independiente `@sto
 | [Entrada de órdenes](trading_controls/order_entry.md) | `OrderEntryWidget` | `orderEntry` |
 | [Libro de órdenes](trading_controls/order_book.md) | `OrderBookWidget` | `orderbook` |
 | [Flujo de operaciones](trading_controls/trade_feed.md) | `TradeFeedWidget` | `tradefeed` |
+| [Estadísticas](trading_controls/statistics.md) | `StatisticsWidget` | `statistics` |
+| [Registro](trading_controls/log_monitor.md) | `LogMonitorWidget` | `logMonitor` |
+| [Estrategias](trading_controls/strategies.md) | `StrategiesWidget` | `strategies` |
+| [Tablero de opciones](trading_controls/option_desk.md) | `OptionDeskWidget` | `optionDesk` |
+| [Sonrisa de volatilidad](trading_controls/option_smile.md) | `OptionSmileWidget` | `optionSmile` |
+| [Curva de capital](trading_controls/equity.md) | `EquityWidget` | `equity` |
+| [Mapa de calor de optimización](trading_controls/optimization_heatmap.md) | `OptimizationHeatmapWidget` | `optimizationHeatmap` |
+| [Superficie de optimización](trading_controls/optimization_surface.md) | `SurfaceWidget` | `optimizationSurface` |
 
-Los valores de los identificadores están disponibles mediante el objeto exportado `ControlTypes`.
+Los valores de los identificadores están disponibles mediante el objeto exportado `ControlTypes`. Tenga en cuenta que en la superficie de optimización el nombre de la clase no coincide con el identificador: la clase se llama `SurfaceWidget` y el identificador es `optimizationSurface`.
 
 ## Instalación
 
 ```bash
 npm install @stocksharp/trading-controls
 ```
+
+Las tablas las dibujan los controles mediante [@stocksharp/grids](grids.md), que llega automáticamente como dependencia normal. En cambio, [@stocksharp/chart](charts.md) está declarado como **dependencia de pares (peer)**: npm no lo instalará y hay que instalarlo uno mismo si se utiliza la curva de capital o la sonrisa de volatilidad, ya que ambas están construidas sobre el motor de gráficos.
+
+```bash
+npm install @stocksharp/chart
+```
+
+Además de la importación raíz, el paquete declara subpaths: uno por cada control (`@stocksharp/trading-controls/watchlist`, etc.), módulos auxiliares (`/trading-host`, `/control-types`, `/formatters`, `/dom`, `/trading-data`) y una familia paralela `/source/*` con el código fuente en TypeScript, para quienes compilan los controles con su propio empaquetador junto con el resto del código.
 
 Los estilos principales son obligatorios. Puede incluir también la paleta clara y oscura predefinida o sustituirla por sus propias variables CSS `--t-*`:
 
@@ -89,7 +105,7 @@ Todos los miembros son obligatorios. `assertHost` valida las funciones anidadas 
 
 ## Localización y diseño
 
-Los controles obtienen todo el texto visible exclusivamente mediante `host.t`. La lista completa y actualizada de 153 claves se distribuye en `@stocksharp/trading-controls/translation-keys.json`. Una clave desconocida se muestra al usuario tal cual, por lo que el anfitrión debe definir las traducciones de toda la lista.
+Los controles obtienen todo el texto visible exclusivamente mediante `host.t`. La lista completa y actualizada de 235 claves se distribuye en `@stocksharp/trading-controls/translation-keys.json`. No es un conjunto, sino un objeto `{ $comment, count, keys }`: las claves en sí están en el campo `keys`. Una clave desconocida se muestra al usuario tal cual, por lo que el anfitrión debe definir las traducciones de toda la lista.
 
 El archivo `styles.css` contiene las reglas, pero obtiene los colores, las fuentes y las dimensiones de las variables CSS `--t-*`. Si no se utiliza el archivo `theme.css` predefinido, la aplicación debe definir estas variables. Los colores del lienzo para el libro de órdenes y el flujo de burbujas se obtienen mediante `host.presentation.canvasPalette()`.
 

@@ -34,13 +34,27 @@ catalog.addNodeType(new Node({
 }));
 
 // 2) Редактируемая диаграмма + палитра инструментов (каждая рендерится в свой элемент).
+const canvasHost = document.getElementById('diagram');
+const paletteHost = document.getElementById('palette');
+
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) Добавление узлов из палитры: двойной клик или нативный drag/drop на холст.
-palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
+// 3) Добавление узлов из палитры: двойной клик кладёт узел в центр видимой области.
+palette.on('nodeActivated', ({ node }) => {
+  const box = canvasHost.getBoundingClientRect();
+  diagram.dropNodeFromPalette(node.id, box.left + box.width / 2, box.top + box.height / 2);
+});
+
+// Нативный drag/drop на холст. dragover нужен обязательно: без отмены этого события
+// браузер не считает элемент приёмником и drop не случится вовсе.
+canvasHost.addEventListener('dragover', event => event.preventDefault());
 canvasHost.addEventListener('drop', event => {
-  const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
+  event.preventDefault();
+  const payload = event.dataTransfer?.getData(PALETTE_DRAG_MIME);   // dataTransfer может быть null
+  if (!payload) return;
+
+  const { typeId } = JSON.parse(payload);
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 

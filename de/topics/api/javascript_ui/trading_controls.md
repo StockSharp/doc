@@ -4,7 +4,7 @@
 
 ![Handelsoberfläche mit Handelsstrom, Orderbuch, Instrumentenliste, Auftragseingabe und Tabellen](../../../images/javascript_trading_controls.jpg)
 
-Die Abbildung zeigt außerdem ein Kerzendiagramm aus dem separaten Paket `@stocksharp/chart`. `@stocksharp/trading-controls` enthält sieben eigenständige Steuerelemente:
+Die Abbildung zeigt außerdem ein Kerzendiagramm aus dem separaten Paket `@stocksharp/chart`. `@stocksharp/trading-controls` enthält fünfzehn eigenständige Steuerelemente:
 
 | Steuerelement | Klasse | Kennung |
 |---|---|---|
@@ -15,14 +15,30 @@ Die Abbildung zeigt außerdem ein Kerzendiagramm aus dem separaten Paket `@stock
 | [Auftragseingabe](trading_controls/order_entry.md) | `OrderEntryWidget` | `orderEntry` |
 | [Orderbuch](trading_controls/order_book.md) | `OrderBookWidget` | `orderbook` |
 | [Handelsstrom](trading_controls/trade_feed.md) | `TradeFeedWidget` | `tradefeed` |
+| [Statistik](trading_controls/statistics.md) | `StatisticsWidget` | `statistics` |
+| [Protokoll](trading_controls/log_monitor.md) | `LogMonitorWidget` | `logMonitor` |
+| [Strategien](trading_controls/strategies.md) | `StrategiesWidget` | `strategies` |
+| [Optionsdesk](trading_controls/option_desk.md) | `OptionDeskWidget` | `optionDesk` |
+| [Volatilitäts-Smile](trading_controls/option_smile.md) | `OptionSmileWidget` | `optionSmile` |
+| [Equity-Kurve](trading_controls/equity.md) | `EquityWidget` | `equity` |
+| [Optimierungs-Heatmap](trading_controls/optimization_heatmap.md) | `OptimizationHeatmapWidget` | `optimizationHeatmap` |
+| [Optimierungsfläche](trading_controls/optimization_surface.md) | `SurfaceWidget` | `optimizationSurface` |
 
-Die Kennungswerte sind über das exportierte Objekt `ControlTypes` verfügbar.
+Die Kennungswerte sind über das exportierte Objekt `ControlTypes` verfügbar. Beachten Sie: Bei der Optimierungsfläche stimmt der Klassenname nicht mit der Kennung überein — die Klasse heißt `SurfaceWidget`, die Kennung `optimizationSurface`.
 
 ## Installation
 
 ```bash
 npm install @stocksharp/trading-controls
 ```
+
+Tabellen zeichnen die Steuerelemente über [@stocksharp/grids](grids.md) — das Paket kommt automatisch als gewöhnliche Abhängigkeit mit. [@stocksharp/chart](charts.md) ist dagegen als **Peer-Abhängigkeit** deklariert: npm installiert es nicht, und Sie müssen es selbst installieren, wenn Sie die Equity-Kurve oder den Volatilitäts-Smile verwenden — sie bauen auf der Chart-Engine auf.
+
+```bash
+npm install @stocksharp/chart
+```
+
+Neben dem Wurzelimport deklariert das Paket Unterpfade: einen je Steuerelement (`@stocksharp/trading-controls/watchlist` usw.), Hilfsmodule (`/trading-host`, `/control-types`, `/formatters`, `/dom`, `/trading-data`) und die parallele Familie `/source/*` mit den TypeScript-Quellen — für alle, die die Steuerelemente mit ihrem eigenen Bundler zusammen mit dem übrigen Code bauen.
 
 Die Basisstile sind erforderlich. Die fertige helle und dunkle Farbpalette kann zusätzlich eingebunden oder durch eigene CSS-Variablen `--t-*` ersetzt werden:
 
@@ -89,7 +105,7 @@ Alle Elemente sind erforderlich. `assertHost` prüft verschachtelte Funktionen, 
 
 ## Lokalisierung und Gestaltung
 
-Sichtbaren Text beziehen die Steuerelemente ausschließlich über `host.t`. Die vollständige aktuelle Liste mit 153 Schlüsseln wird als `@stocksharp/trading-controls/translation-keys.json` ausgeliefert. Ein unbekannter Schlüssel wird dem Benutzer unverändert angezeigt; deshalb muss der Host Übersetzungen für die gesamte Liste definieren.
+Sichtbaren Text beziehen die Steuerelemente ausschließlich über `host.t`. Die vollständige aktuelle Liste mit 235 Schlüsseln wird als `@stocksharp/trading-controls/translation-keys.json` ausgeliefert. Das ist kein Array, sondern ein Objekt `{ $comment, count, keys }` — die Schlüssel selbst liegen im Feld `keys`. Ein unbekannter Schlüssel wird dem Benutzer unverändert angezeigt; deshalb muss der Host Übersetzungen für die gesamte Liste definieren.
 
 Die Datei `styles.css` enthält Regeln, bezieht Farben, Schriftarten und Abmessungen jedoch aus den CSS-Variablen `--t-*`. Wenn das fertige `theme.css` nicht verwendet wird, muss die Anwendung diese Variablen definieren. Die Canvas-Farben für Orderbuch und Bubble-Tape liefert `host.presentation.canvasPalette()`.
 

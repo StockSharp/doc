@@ -94,7 +94,12 @@ O componente preenche apenas o elemento `list`. O título, os botões de confirm
 
 `write(visibleKeys)` recebe apenas as colunas geridas que estão visíveis. O valor `null` significa que foi selecionada a ordem original e que nenhuma coluna está oculta. Assim, o armazenamento no URL ou em `localStorage` pode eliminar uma entrada desnecessária em vez de guardar todo o valor predefinido.
 
-As chaves no interior do adaptador são normalizadas para minúsculas. As chaves desconhecidas ou repetidas são ignoradas durante a aplicação.
+O adaptador trabalha com chaves **em minúsculas**: é assim que lê `data-col` ao analisar a tabela e são essas as chaves que entrega para fora — em `defaultKeys()` e em `write()`.
+
+> [!CAUTION]
+> As chaves que chegam em `apply()` e as que vêm de `read()` são confrontadas com essa lista **tal como estão, sem conversão de maiúsculas e minúsculas**. A chave `Time` não coincide com a chave detetada `time` e é descartada como desconhecida; e se todas as chaves estiverem escritas assim, não sobra uma única coluna visível — a tabela abre sem nenhuma coluna gerida e sem qualquer erro na consola. Guarde no armazenamento aquilo que chegou em `write()` e não reconstrua as chaves por sua conta.
+
+As chaves desconhecidas ou repetidas são ignoradas durante a aplicação. Uma matriz vazia é uma disposição legítima — «não mostrar nenhuma coluna gerida» — e não «nenhuma disposição selecionada»; isso último indica-se apenas com `null`.
 
 ## Métodos
 

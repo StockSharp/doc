@@ -99,16 +99,22 @@ chart.timeScale().fitContent();
 
 同じ Web スタックによって描画されるビジュアルストラテジーエディターについては、[JavaScript ダイアグラム](diagram.md)を参照してください。
 
-## ターミナルの完全なチャートモジュール群
+## エンジンの上に重なるレイヤー
 
-`src/chart` 配下のモジュールは、基本エンジンにターミナル機能を追加します。
+ここまでで説明したのは基本エンジン、つまりエントリーポイント `@stocksharp/chart` です。それ以外の機能は、公開された個別のエントリーポイントに分かれています。必要なものをインポートするだけでよく、ソースをコピーする必要はありません。
 
-- `IndicatorEngine`、インジケーターレンダラー、設定、計算カタログ。
-- ローソク足、バー、ライン、エリア、Heikin-Ashi、Renko、Point & Figure のチャートタイプ切り替え。
-- 凡例、同期された補助ペイン、コンテキストメニュー、インジケーター選択ダイアログ。
-- リアルタイムデータ変更時の有効なインジケーターの再計算。
+| エントリーポイント | 提供する内容 |
+|---|---|
+| [チャートの外枠](charts/ui.md) — `@stocksharp/chart/ui` | すぐに使える外枠一式: 凡例、コンテキストメニュー、チャートタイプの切り替え、ペインマネージャー、インジケーターダイアログ。スタイルシート `@stocksharp/chart/ui.css` が必要です。 |
+| `@stocksharp/chart/indicators` | `IndicatorEngine`、インジケーターのレンダラーと設定。計算そのものは [@stocksharp/indicators](charts/indicators.md) パッケージにあります。 |
+| [チャートからの取引](charts/trading.md) — `@stocksharp/chart/trading` | トレーディングレイヤー: 注文ライン、現在の損益を伴うポジション、保護注文、気配値。ブローカーのことは知らず、意図を通知するだけで、実行はホストが行います。 |
+| [描画ツール](charts/drawings.md) — `@stocksharp/chart/drawings` | 描画ツール、バーへのスナップ、独自図形の登録。 |
+| [複数チャート](charts/workspace.md) — `@stocksharp/chart/workspace` | 同期された複数のチャート、銘柄の比較、レンジナビゲーター、インジケーターテンプレート。 |
+| [レイアウトの保存](charts/persistence.md) — `@stocksharp/chart/persistence` | バージョン管理とマイグレーションを伴うレイアウトの保存と復元。 |
+| [時間と取引セッション](charts/time.md) — `@stocksharp/chart/time` | 取引カレンダー、セッションとタイムゾーン、バー確定までのカウントダウン。 |
+| `@stocksharp/chart/orderflow` | クラスター分析: フットプリントとボリュームプロファイル。 |
 
-完全なスタックの統合例として `src/chart/app.ts` を使用してください。
+バンドラーを使わない場合も、同じ機能はブラウザ用パッケージで利用できます。`dist/sschartui.js` がグローバルオブジェクト `SSChartUI` を公開します。
 
 ## ソースからビルドする
 

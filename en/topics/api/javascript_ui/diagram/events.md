@@ -21,16 +21,29 @@ off();
 
 ## Context menu
 
-The component reports the click position and the list of enabled commands; you draw the popup and run the chosen command:
+On a right-click the component draws **its own** menu and at the same time emits `contextMenuRequested`. The event arrives in both cases, so if you draw a menu of your own, the built-in one has to be turned off — otherwise the two end up on top of each other:
 
 ```js
-diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] where command is one of
-  // undo | redo | cut | copy | paste | open | delete | properties | help
+const diagram = new StockSharpDiagram(container, { showContextMenu: false });
+```
+
+The event reports the click position, the object under the cursor, and the list of entries in the order they should be drawn. Entries come in two kinds, and they are told apart by the presence of the `group` field: a **command** carries `command` and is executed, while a **submenu** carries `group` and a `commands` list of its own — there is nothing in it to execute.
+
+```js
+diagram.on('contextMenuRequested', ({ x, y, node, link, commands }) => {
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
-  menu.onPick = command => diagram.executeContextCommand(command);
+
+  menu.onPick = item => {
+    if ('group' in item) return;                       // a submenu: expand it, do not execute it
+    diagram.executeContextCommand(item.command);       // returns false when the command is unavailable right now
+  };
 });
 ```
+
+The full list of commands: `undo`, `redo`, `cut`, `copy`, `paste`, `open`, `delete`, `exportDocument`, `exportPng`, `exportSvg`, `overview`, `properties`, `help`. The only group is `export`, which brings the three export commands together.
+
+> [!NOTE]
+> The export commands are a **request to the host**, not an action of the component: it writes no files and opens no dialogs. Handle `exportRequested` and call `saveDocument()`, `takeScreenshot()`, or `takeSvg()` with your own parameters.
 
 ## Link validation
 

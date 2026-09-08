@@ -21,16 +21,29 @@ off();
 
 ## コンテキストメニュー
 
-コンポーネントはクリック位置と有効なコマンドのリストを通知します。ポップアップの描画と選択されたコマンドの実行は、あなたが行います。
+右クリックすると、コンポーネントは**独自の**メニューを描画すると同時に `contextMenuRequested` を発行します。イベントはどちらの場合も届くため、自分でメニューを描画するなら組み込みメニューを無効にする必要があります。そうしないと、両者が重なって表示されます。
 
 ```js
-diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[]（command は次のいずれか）
-  // undo | redo | cut | copy | paste | open | delete | properties | help
+const diagram = new StockSharpDiagram(container, { showContextMenu: false });
+```
+
+イベントは、クリック位置、カーソル下のオブジェクト、そして描画すべき順序で並んだ項目のリストを通知します。項目には2種類あり、`group` フィールドの有無で区別します。**コマンド**は `command` を持ち実行できます。**サブメニュー**は `group` と独自の `commands` リストを持ち、実行するものはありません。
+
+```js
+diagram.on('contextMenuRequested', ({ x, y, node, link, commands }) => {
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
-  menu.onPick = command => diagram.executeContextCommand(command);
+
+  menu.onPick = item => {
+    if ('group' in item) return;                       // サブメニュー: 実行ではなく展開する
+    diagram.executeContextCommand(item.command);       // コマンドが現在利用できない場合は false を返します
+  };
 });
 ```
+
+コマンドの完全な一覧: `undo`、`redo`、`cut`、`copy`、`paste`、`open`、`delete`、`exportDocument`、`exportPng`、`exportSvg`、`overview`、`properties`、`help`。グループは `export` のみで、3つのエクスポートコマンドをまとめています。
+
+> [!NOTE]
+> エクスポートコマンドはコンポーネントの動作ではなく、**ホストへの依頼**です。コンポーネントはファイルを書き出さず、ダイアログも開きません。`exportRequested` を処理し、`saveDocument()`、`takeScreenshot()`、`takeSvg()` を自分のパラメーターで実行してください。
 
 ## リンクの検証
 

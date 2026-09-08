@@ -4,7 +4,7 @@
 
 ![Ecrã de negociação com fluxo de negócios, livro de ofertas, lista de instrumentos, introdução de ordens e tabelas](../../../images/javascript_trading_controls.jpg)
 
-A imagem também mostra um gráfico de velas do pacote separado `@stocksharp/chart`. `@stocksharp/trading-controls` inclui sete controlos autónomos:
+A imagem também mostra um gráfico de velas do pacote separado `@stocksharp/chart`. `@stocksharp/trading-controls` inclui quinze controlos autónomos:
 
 | Controlo | Classe | Identificador |
 |---|---|---|
@@ -15,14 +15,30 @@ A imagem também mostra um gráfico de velas do pacote separado `@stocksharp/cha
 | [Introdução de ordens](trading_controls/order_entry.md) | `OrderEntryWidget` | `orderEntry` |
 | [Livro de ofertas](trading_controls/order_book.md) | `OrderBookWidget` | `orderbook` |
 | [Fluxo de negócios](trading_controls/trade_feed.md) | `TradeFeedWidget` | `tradefeed` |
+| [Estatísticas](trading_controls/statistics.md) | `StatisticsWidget` | `statistics` |
+| [Registo](trading_controls/log_monitor.md) | `LogMonitorWidget` | `logMonitor` |
+| [Estratégias](trading_controls/strategies.md) | `StrategiesWidget` | `strategies` |
+| [Mesa de opções](trading_controls/option_desk.md) | `OptionDeskWidget` | `optionDesk` |
+| [Sorriso de volatilidade](trading_controls/option_smile.md) | `OptionSmileWidget` | `optionSmile` |
+| [Curva de capital](trading_controls/equity.md) | `EquityWidget` | `equity` |
+| [Mapa de calor de otimização](trading_controls/optimization_heatmap.md) | `OptimizationHeatmapWidget` | `optimizationHeatmap` |
+| [Superfície de otimização](trading_controls/optimization_surface.md) | `SurfaceWidget` | `optimizationSurface` |
 
-Os valores dos identificadores estão disponíveis através do objeto exportado `ControlTypes`.
+Os valores dos identificadores estão disponíveis através do objeto exportado `ControlTypes`. Repare que, na superfície de otimização, o nome da classe não coincide com o identificador — a classe chama-se `SurfaceWidget` e o identificador é `optimizationSurface`.
 
 ## Instalação
 
 ```bash
 npm install @stocksharp/trading-controls
 ```
+
+As tabelas são desenhadas pelos controlos através de [@stocksharp/grids](grids.md), que chega automaticamente como dependência normal. Já [@stocksharp/chart](charts.md) está declarado como **dependência de par** (*peer*): o npm não o instala, e tem de o instalar por si se usar a curva de capital ou o sorriso de volatilidade — estão construídos sobre o motor de gráficos.
+
+```bash
+npm install @stocksharp/chart
+```
+
+Além da importação de raiz, o pacote declara subcaminhos: um por cada controlo (`@stocksharp/trading-controls/watchlist` e assim por diante), módulos auxiliares (`/trading-host`, `/control-types`, `/formatters`, `/dom`, `/trading-data`) e uma família paralela `/source/*` com o código-fonte em TypeScript — para quem compila os controlos com o seu próprio empacotador, juntamente com o restante código.
 
 Os estilos principais são obrigatórios. A paleta clara e escura pronta pode ser ligada adicionalmente ou substituída pelas suas próprias variáveis CSS `--t-*`:
 
@@ -89,7 +105,7 @@ Todos os membros são obrigatórios. `assertHost` verifica as funções aninhada
 
 ## Localização e estilo
 
-Os controlos obtêm todo o texto visível exclusivamente através de `host.t`. A lista completa e atual de 153 chaves é fornecida em `@stocksharp/trading-controls/translation-keys.json`. Uma chave desconhecida é apresentada ao utilizador sem alterações, pelo que o anfitrião deve definir traduções para toda a lista.
+Os controlos obtêm todo o texto visível exclusivamente através de `host.t`. A lista completa e atual de 235 chaves é fornecida em `@stocksharp/trading-controls/translation-keys.json`. Não é uma matriz, mas um objeto `{ $comment, count, keys }` — as chaves propriamente ditas estão no campo `keys`. Uma chave desconhecida é apresentada ao utilizador sem alterações, pelo que o anfitrião deve definir traduções para toda a lista.
 
 O ficheiro `styles.css` contém as regras, mas obtém as cores, os tipos de letra e as dimensões das variáveis CSS `--t-*`. Se o `theme.css` pronto não for utilizado, essas variáveis são definidas pela aplicação. As cores do canvas do livro de ofertas e do fluxo em bolhas são devolvidas por `host.presentation.canvasPalette()`.
 

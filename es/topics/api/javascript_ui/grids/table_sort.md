@@ -72,7 +72,9 @@ Si no se proporciona una función de lectura para la clave seleccionada, el cont
 
 Al hacer clic en un encabezado nuevo se activa la ordenación ascendente. El siguiente clic la cambia a descendente y el tercero restaura el orden predeterminado. No existe un estado sin ordenación independiente cuando la tabla recibe un `defaultSort`.
 
-`apply(rows)` siempre devuelve un conjunto nuevo y no modifica el conjunto de la aplicación. Los números se comparan numéricamente y las cadenas mediante el `Intl.Collator` proporcionado. `null`, `undefined` y las cadenas vacías se sitúan al final en ambas direcciones.
+`apply(rows)` siempre devuelve un conjunto nuevo y no modifica el conjunto de la aplicación. `null`, `undefined` y las cadenas vacías se sitúan al final en ambas direcciones.
+
+La comparación se elige **por los valores y no por el tipo declarado de la columna**: si ambos valores se convierten en un número finito, se comparan numéricamente, y solo en los demás casos entra en juego el `Intl.Collator` proporcionado. Por eso la cadena `"42"` se colocará entre 41 y 43, y no donde la pondría el alfabeto; una cadena como `"1e3"` también se considera un número. Si una columna debe ordenarse como texto sean cuales sean los valores, devuelva desde ella un valor que no llegue a ser un número.
 
 El controlador asigna al encabezado activo la clase `sort-asc` o `sort-desc`; la aplicación define las flechas y el resto del diseño visual de estas clases.
 

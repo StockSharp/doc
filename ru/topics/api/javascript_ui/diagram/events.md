@@ -21,16 +21,29 @@ off();
 
 ## Контекстное меню
 
-Компонент сообщает позицию клика и список доступных команд; вы рисуете попап и выполняете выбранную команду:
+По правому клику компонент рисует **собственное** меню и одновременно испускает `contextMenuRequested`. Событие приходит в обоих случаях, поэтому, если вы рисуете своё меню, встроенное надо выключить — иначе они окажутся друг на друге:
 
 ```js
-diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[], где command — одно из значений:
-  // undo | redo | cut | copy | paste | open | delete | properties | help
+const diagram = new StockSharpDiagram(container, { showContextMenu: false });
+```
+
+Событие сообщает позицию клика, объект под курсором и список пунктов в том порядке, в котором их следует рисовать. Пункты бывают двух видов, и различать их нужно по наличию поля `group`: **команда** несёт `command` и выполняется, **подменю** несёт `group` и собственный список `commands` — выполнять в нём нечего.
+
+```js
+diagram.on('contextMenuRequested', ({ x, y, node, link, commands }) => {
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
-  menu.onPick = command => diagram.executeContextCommand(command);
+
+  menu.onPick = item => {
+    if ('group' in item) return;                       // подменю: раскрыть, а не выполнять
+    diagram.executeContextCommand(item.command);       // вернёт false, если команда сейчас недоступна
+  };
 });
 ```
+
+Полный список команд: `undo`, `redo`, `cut`, `copy`, `paste`, `open`, `delete`, `exportDocument`, `exportPng`, `exportSvg`, `overview`, `properties`, `help`. Единственная группа — `export`, она объединяет три команды экспорта.
+
+> [!NOTE]
+> Команды экспорта — это **просьба к хосту**, а не действие компонента: он не пишет файлов и не открывает диалогов. Обработайте `exportRequested` и выполните `saveDocument()`, `takeScreenshot()` или `takeSvg()` со своими параметрами.
 
 ## Валидация связей
 

@@ -34,13 +34,27 @@ catalog.addNodeType(new Node({
 }));
 
 // 2) Diagrama editável + caixa de ferramentas da paleta (cada um é apresentado no respetivo elemento).
+const canvasHost = document.getElementById('diagram');
+const paletteHost = document.getElementById('palette');
+
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) Adicione nós a partir da paleta: duplo clique, ou arrastar/soltar nativo no canvas.
-palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
+// 3) Adicione nós a partir da paleta: o duplo clique coloca o nó no centro da área visível.
+palette.on('nodeActivated', ({ node }) => {
+  const box = canvasHost.getBoundingClientRect();
+  diagram.dropNodeFromPalette(node.id, box.left + box.width / 2, box.top + box.height / 2);
+});
+
+// Arrastar/soltar nativo no canvas. O dragover é obrigatório: sem cancelar este evento,
+// o navegador não considera o elemento um recetor e o drop nunca acontece.
+canvasHost.addEventListener('dragover', event => event.preventDefault());
 canvasHost.addEventListener('drop', event => {
-  const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
+  event.preventDefault();
+  const payload = event.dataTransfer?.getData(PALETTE_DRAG_MIME);   // dataTransfer pode ser null
+  if (!payload) return;
+
+  const { typeId } = JSON.parse(payload);
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 

@@ -5330,6 +5330,18 @@
         href: api/javascript_ui/charts/indicators.md
       - name: Догрузка истории
         href: api/javascript_ui/charts/backfill.md
+      - name: Обвязка графика
+        href: api/javascript_ui/charts/ui.md
+      - name: Торговля с графика
+        href: api/javascript_ui/charts/trading.md
+      - name: Инструменты разметки
+        href: api/javascript_ui/charts/drawings.md
+      - name: Несколько графиков
+        href: api/javascript_ui/charts/workspace.md
+      - name: Сохранение раскладки
+        href: api/javascript_ui/charts/persistence.md
+      - name: Время и торговые сессии
+        href: api/javascript_ui/charts/time.md
     - name: Диаграмма
       href: api/javascript_ui/diagram.md
       items:
@@ -5365,6 +5377,22 @@
         href: api/javascript_ui/trading_controls/order_book.md
       - name: Лента сделок
         href: api/javascript_ui/trading_controls/trade_feed.md
+      - name: Статистика
+        href: api/javascript_ui/trading_controls/statistics.md
+      - name: Журнал
+        href: api/javascript_ui/trading_controls/log_monitor.md
+      - name: Стратегии
+        href: api/javascript_ui/trading_controls/strategies.md
+      - name: Доска опционов
+        href: api/javascript_ui/trading_controls/option_desk.md
+      - name: Улыбка волатильности
+        href: api/javascript_ui/trading_controls/option_smile.md
+      - name: Кривая эквити
+        href: api/javascript_ui/trading_controls/equity.md
+      - name: Тепловая карта оптимизации
+        href: api/javascript_ui/trading_controls/optimization_heatmap.md
+      - name: Поверхность оптимизации
+        href: api/javascript_ui/trading_controls/optimization_surface.md
 - name: Shell
   href: shell.md
   items:

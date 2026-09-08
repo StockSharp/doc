@@ -99,16 +99,22 @@ Além dos tipos de série, o gráfico também tem um [motor de indicadores](char
 
 Para conhecer o editor visual de estratégias apresentado pela mesma plataforma web, consulte [Diagrama em JavaScript](diagram.md).
 
-## Conjunto completo de módulos do terminal
+## Camadas sobre o motor
 
-Os módulos em `src/chart` ampliam o motor base com funcionalidades do terminal:
+Tudo o que foi descrito acima é o motor base, o ponto de entrada `@stocksharp/chart`. O restante está distribuído por pontos de entrada publicados em separado: importe o de que precisa, não é necessário copiar código-fonte.
 
-- `IndicatorEngine`, renderizadores e definições de indicadores, além do catálogo de cálculos.
-- Um seletor de tipo de gráfico para velas, barras, linhas, áreas, Heikin-Ashi, Renko e Point & Figure.
-- Legenda, painéis secundários sincronizados, menu de contexto e diálogo de seleção de indicadores.
-- Recálculo dos indicadores ativos quando os dados em tempo real mudam.
+| Ponto de entrada | O que dá |
+|---|---|
+| [Interface do gráfico](charts/ui.md) — `@stocksharp/chart/ui` | Interface pronta a usar: legenda, menu de contexto, seletor de tipo de gráfico, gestor de painéis, diálogo de indicadores. Exige a folha de estilos `@stocksharp/chart/ui.css`. |
+| `@stocksharp/chart/indicators` | `IndicatorEngine`, renderizadores e definições de indicadores. Os cálculos propriamente ditos estão no pacote [@stocksharp/indicators](charts/indicators.md). |
+| [Negociação a partir do gráfico](charts/trading.md) — `@stocksharp/chart/trading` | Camada de negociação: linhas de ordens, posição com o resultado atual, ordens de proteção e cotações. Não conhece a corretora — comunica a intenção e o anfitrião executa-a. |
+| [Ferramentas de desenho](charts/drawings.md) — `@stocksharp/chart/drawings` | Ferramentas de desenho, ajuste às barras e registo de figuras próprias. |
+| [Vários gráficos](charts/workspace.md) — `@stocksharp/chart/workspace` | Vários gráficos sincronizados, comparação de instrumentos, navegador de intervalo, modelos de indicadores. |
+| [Guardar a disposição](charts/persistence.md) — `@stocksharp/chart/persistence` | Guardar e repor a disposição, com versionamento e migrações. |
+| [Tempo e sessões de negociação](charts/time.md) — `@stocksharp/chart/time` | Calendário de negociação, sessões e fusos horários, contagem decrescente até ao fecho da barra. |
+| `@stocksharp/chart/orderflow` | Análise por clusters: footprint e perfil de volume. |
 
-Use `src/chart/app.ts` como exemplo de integração do conjunto completo.
+Sem um empacotador, as mesmas funcionalidades estão disponíveis no pacote para navegador: `dist/sschartui.js` publica o objeto global `SSChartUI`.
 
 ## Compilar a partir do código-fonte
 

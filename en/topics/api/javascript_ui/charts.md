@@ -99,16 +99,22 @@ Beyond the series types, the chart also has an [indicator engine](charts/indicat
 
 For the visual strategy editor rendered by the same web stack, see [JavaScript diagram](diagram.md).
 
-## Full terminal chart stack
+## Layers on top of the engine
 
-The modules under `src/chart` extend the base engine with terminal features:
+Everything described above is the base engine, the `@stocksharp/chart` entry point. The rest is laid out in separate published entry points: import the one you need, there is no need to copy the sources.
 
-- `IndicatorEngine`, indicator renderers, settings and the calculation catalog.
-- A chart-type switcher for candles, bars, lines, areas, Heikin-Ashi, Renko and Point & Figure.
-- A legend, synchronized secondary panes, a context menu and an indicator selection dialog.
-- Recalculation of active indicators when real-time data changes.
+| Entry point | What it gives |
+|---|---|
+| [Chart UI layer](charts/ui.md) — `@stocksharp/chart/ui` | A ready-made UI layer: legend, context menu, chart type switcher, pane manager, indicator dialog. Requires the `@stocksharp/chart/ui.css` stylesheet. |
+| `@stocksharp/chart/indicators` | `IndicatorEngine`, indicator renderers and settings. The calculations themselves are in the [@stocksharp/indicators](charts/indicators.md) package. |
+| [Trading from the chart](charts/trading.md) — `@stocksharp/chart/trading` | The trading layer: order lines, the position with its current result, protective orders and quotes. It knows no broker — it reports the intent, and the host carries it out. |
+| [Drawing tools](charts/drawings.md) — `@stocksharp/chart/drawings` | Drawing tools, snapping to bars and registration of your own shapes. |
+| [Multiple charts](charts/workspace.md) — `@stocksharp/chart/workspace` | Several synchronized charts, instrument comparison, a range navigator, indicator templates. |
+| [Saving the layout](charts/persistence.md) — `@stocksharp/chart/persistence` | Saving and restoring the layout with versioning and migrations. |
+| [Time and trading sessions](charts/time.md) — `@stocksharp/chart/time` | Trading calendar, sessions and time zones, countdown to the bar close. |
+| `@stocksharp/chart/orderflow` | Cluster analysis: footprint and volume profile. |
 
-Use `src/chart/app.ts` as the integration example for the complete stack.
+Without a bundler the same features are available through the browser bundle: `dist/sschartui.js` publishes the global `SSChartUI` object.
 
 ## Building from source
 

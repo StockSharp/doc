@@ -1754,6 +1754,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			normalized = rawUrlPattern.Replace(normalized, " ");
 			// Exact npm package identifiers remain unchanged in imports and other code strings.
 			normalized = normalized.Replace("@stocksharp/trading-controls", " ", StringComparison.OrdinalIgnoreCase);
+			normalized = normalized.Replace("@stocksharp/chart/trading", " ", StringComparison.OrdinalIgnoreCase);
 
 			var match = pattern.Match(normalized);
 			if (!match.Success)

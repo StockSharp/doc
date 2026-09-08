@@ -5184,6 +5184,18 @@
         href: api/javascript_ui/charts/indicators.md
       - name: 履歴バックフィル
         href: api/javascript_ui/charts/backfill.md
+      - name: チャートの外枠
+        href: api/javascript_ui/charts/ui.md
+      - name: チャートからの取引
+        href: api/javascript_ui/charts/trading.md
+      - name: 描画ツール
+        href: api/javascript_ui/charts/drawings.md
+      - name: 複数チャート
+        href: api/javascript_ui/charts/workspace.md
+      - name: レイアウトの保存
+        href: api/javascript_ui/charts/persistence.md
+      - name: 時間と取引セッション
+        href: api/javascript_ui/charts/time.md
     - name: ダイアグラム
       href: api/javascript_ui/diagram.md
       items:
@@ -5219,6 +5231,22 @@
         href: api/javascript_ui/trading_controls/order_book.md
       - name: 歩み値
         href: api/javascript_ui/trading_controls/trade_feed.md
+      - name: 統計
+        href: api/javascript_ui/trading_controls/statistics.md
+      - name: ログ
+        href: api/javascript_ui/trading_controls/log_monitor.md
+      - name: ストラテジー
+        href: api/javascript_ui/trading_controls/strategies.md
+      - name: オプションデスク
+        href: api/javascript_ui/trading_controls/option_desk.md
+      - name: ボラティリティスマイル
+        href: api/javascript_ui/trading_controls/option_smile.md
+      - name: エクイティカーブ
+        href: api/javascript_ui/trading_controls/equity.md
+      - name: 最適化ヒートマップ
+        href: api/javascript_ui/trading_controls/optimization_heatmap.md
+      - name: 最適化サーフェス
+        href: api/javascript_ui/trading_controls/optimization_surface.md
 - name: Shell
   href: shell.md
   items:

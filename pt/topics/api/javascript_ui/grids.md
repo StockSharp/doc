@@ -46,11 +46,15 @@ import { TableExport } from '@stocksharp/grids/table-export';
 Sem um empacotador, ligue o pacote pronto para navegador. Os respetivos objetos públicos encontram-se em `window.SSGrid`:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1.1.0/dist/ssgrid.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1/dist/ssgrid.js"></script>
 <script>
   const { DataGrid, TableExport } = window.SSGrid;
 </script>
 ```
+
+O intervalo `@1` toma a versão mais recente do primeiro ramo maior. Só vale a pena fixar um número exato quando a compilação é reproduzida de propósito: uma versão antiga fixada entrega em silêncio uma compilação sem as funcionalidades entretanto surgidas, e a falta de, por exemplo, `groupOrder` manifesta-se longe do sítio onde esta etiqueta está escrita.
+
+O código-fonte em TypeScript está acessível através dos subcaminhos `@stocksharp/grids/source` e `@stocksharp/grids/source/<módulo>` — são necessários quando as tabelas são compiladas pelo seu empacotador na mesma passagem que o restante código.
 
 ## Exemplo rápido
 

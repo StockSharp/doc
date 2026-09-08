@@ -21,16 +21,29 @@ off();
 
 ## Menú contextual
 
-El componente informa la posición del clic y la lista de comandos habilitados; usted dibuja la ventana emergente y ejecuta el comando elegido:
+Al hacer clic derecho, el componente dibuja su **propio** menú y, al mismo tiempo, emite `contextMenuRequested`. El evento llega en ambos casos, así que si usted dibuja su propio menú hay que desactivar el integrado; de lo contrario, quedarán uno encima del otro:
 
 ```js
-diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] donde command es uno de
-  // undo | redo | cut | copy | paste | open | delete | properties | help
+const diagram = new StockSharpDiagram(container, { showContextMenu: false });
+```
+
+El evento informa de la posición del clic, del objeto bajo el cursor y de la lista de entradas en el orden en que deben dibujarse. Las entradas son de dos clases y hay que distinguirlas por la presencia del campo `group`: un **comando** lleva `command` y se ejecuta, mientras que un **submenú** lleva `group` y su propia lista `commands`, en la que no hay nada que ejecutar.
+
+```js
+diagram.on('contextMenuRequested', ({ x, y, node, link, commands }) => {
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
-  menu.onPick = command => diagram.executeContextCommand(command);
+
+  menu.onPick = item => {
+    if ('group' in item) return;                       // submenú: desplegarlo, no ejecutarlo
+    diagram.executeContextCommand(item.command);       // devuelve false si el comando no está disponible ahora
+  };
 });
 ```
+
+Lista completa de comandos: `undo`, `redo`, `cut`, `copy`, `paste`, `open`, `delete`, `exportDocument`, `exportPng`, `exportSvg`, `overview`, `properties`, `help`. El único grupo es `export`, que reúne los tres comandos de exportación.
+
+> [!NOTE]
+> Los comandos de exportación son una **petición al anfitrión**, no una acción del componente: este no escribe archivos ni abre diálogos. Procese `exportRequested` y ejecute `saveDocument()`, `takeScreenshot()` o `takeSvg()` con sus propios parámetros.
 
 ## Validación de enlaces
 
@@ -65,7 +78,7 @@ diagram.on('undoStackChanged', ({ canUndo, canRedo }) => {
 
 ## Estado de ejecución y resaltado de errores
 
-El diagrama puede superponer el estado de ejecución sobre el esquema. `setNodeError` hace parpadear el borde de un nodo con un pulso animado (~1 segundo) y lo marca con un resaltado rojo — úselo para informar de un fallo en tiempo de ejecución. El botón **Error** de la [demo del editor](editor.md) hace exactamente esto.
+El diagrama puede superponer el estado de ejecución sobre el esquema. `setNodeError` hace parpadear el borde de un nodo con un pulso animado (~1 segundo) y lo marca con un resaltado rojo — úselo para informar de un fallo en tiempo de ejecución. El botón **Error** del [Editor interactivo](editor.md) hace exactamente esto.
 
 ```js
 diagram.setNodeError('sma', 'SMA falló: no hay ninguna fuente de datos configurada.');

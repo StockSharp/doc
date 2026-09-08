@@ -94,7 +94,12 @@ El componente solo rellena el elemento `list`. El título, los botones de confir
 
 `write(visibleKeys)` recibe únicamente las columnas administradas que están visibles. El valor `null` indica que se ha seleccionado el orden original y que ninguna columna está oculta. Así, un almacén en la URL o en `localStorage` puede eliminar una entrada innecesaria en lugar de guardar todo el valor predeterminado.
 
-Las claves del adaptador se normalizan a minúsculas. Las claves desconocidas y repetidas se descartan al aplicar la disposición.
+El adaptador trabaja con claves **en minúsculas**: así es como lee `data-col` al analizar la tabla y así es como entrega las claves hacia fuera, tanto desde `defaultKeys()` como en `write()`.
+
+> [!CAUTION]
+> Las claves que llegan a `apply()` y las que salen de `read()` se contrastan con esa lista **tal cual, sin normalizar mayúsculas y minúsculas**. La clave `Time` no coincidirá con la clave detectada `time` y se descartará como desconocida y, si todas las claves están escritas así, no quedará ninguna columna visible: la tabla se abrirá sin una sola columna administrada y sin error en la consola. Guarde en el almacén lo que llegó en `write()` y no reconstruya las claves por su cuenta.
+
+Las claves desconocidas y repetidas se descartan al aplicar la disposición. Un conjunto vacío es una disposición legítima que significa «no mostrar ninguna columna administrada», y no «no se ha seleccionado ninguna disposición»; esto último se indica únicamente con `null`.
 
 ## Métodos
 

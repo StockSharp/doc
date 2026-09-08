@@ -72,7 +72,9 @@ Se não estiver definida uma função de leitura para a chave selecionada, o con
 
 Um clique num cabeçalho novo ativa a ordenação ascendente. O clique seguinte muda-a para descendente e o terceiro restaura a ordem predefinida. Não existe um estado sem ordenação separado quando a tabela recebe `defaultSort`.
 
-`apply(rows)` devolve sempre uma nova matriz e não altera a matriz da aplicação. Os números são comparados numericamente e as cadeias com o `Intl.Collator` fornecido. `null`, `undefined` e uma cadeia vazia são colocados no fim nos dois sentidos.
+`apply(rows)` devolve sempre uma nova matriz e não altera a matriz da aplicação. `null`, `undefined` e uma cadeia vazia são colocados no fim nos dois sentidos.
+
+A comparação é escolhida **pelos valores e não pelo tipo declarado da coluna**: se ambos os valores se converterem num número finito, são comparados numericamente e só nos restantes casos entra em ação o `Intl.Collator` fornecido. Por isso a cadeia `"42"` fica entre 41 e 43, e não onde o alfabeto a colocaria; uma cadeia como `"1e3"` também conta como número. Se uma coluna tiver de ser ordenada como texto com quaisquer valores, devolva dela um valor que não se converta em número.
 
 O controlador atribui ao cabeçalho ativo a classe `sort-asc` ou `sort-desc`; as setas e o restante estilo visual destas classes são definidos pela aplicação.
 

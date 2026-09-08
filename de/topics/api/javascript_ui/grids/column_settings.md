@@ -94,7 +94,12 @@ Die Komponente befüllt nur das Element `list`. Überschrift, Bestätigungs- und
 
 `write(visibleKeys)` erhält ausschließlich die sichtbaren, verwaltbaren Spalten. Der Wert `null` bedeutet, dass die ursprüngliche Reihenfolge ausgewählt und keine Spalte ausgeblendet ist. Dadurch kann ein Speicher in der URL oder in `localStorage` einen überflüssigen Eintrag löschen, statt den vollständigen Standardwert zu speichern.
 
-Die Schlüssel werden innerhalb des Adapters in Kleinbuchstaben normalisiert. Unbekannte und doppelte Schlüssel werden beim Anwenden verworfen.
+Der Adapter arbeitet mit Schlüsseln **in Kleinbuchstaben**: Genau so liest er `data-col` beim Zerlegen der Tabelle, und solche Schlüssel gibt er nach außen — aus `defaultKeys()` und in `write()`.
+
+> [!CAUTION]
+> Die Schlüssel, die in `apply()` und aus `read()` kommen, werden mit dieser Liste **so wie sie sind abgeglichen, ohne Anpassung der Groß-/Kleinschreibung**. Der Schlüssel `Time` stimmt nicht mit dem erkannten `time` überein und wird als unbekannt verworfen; sind alle Schlüssel so geschrieben, bleiben überhaupt keine sichtbaren Spalten übrig — die Tabelle öffnet sich ohne eine einzige verwaltbare Spalte und ohne Fehler in der Konsole. Schreiben Sie in den Speicher das, was in `write()` angekommen ist, und bauen Sie die Schlüssel nicht selbst neu zusammen.
+
+Unbekannte und doppelte Schlüssel werden beim Anwenden verworfen. Ein leeres Array ist ein zulässiges Layout „keine einzige verwaltbare Spalte anzeigen“ und nicht „kein Layout ausgewählt“; Letzteres wird ausschließlich durch `null` bezeichnet.
 
 ## Methoden
 

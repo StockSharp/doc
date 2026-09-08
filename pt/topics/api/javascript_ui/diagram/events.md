@@ -21,16 +21,29 @@ off();
 
 ## Menu de contexto
 
-O componente indica a posição do clique e a lista de comandos ativados; o utilizador apresenta o menu de contexto e executa o comando escolhido:
+Ao clicar com o botão direito, o componente desenha o **seu próprio** menu e emite ao mesmo tempo `contextMenuRequested`. O evento chega nos dois casos, pelo que, se desenhar o seu próprio menu, tem de desativar o incorporado — caso contrário ficam um sobre o outro:
 
 ```js
-diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[] onde command é um de
-  // undo | redo | cut | copy | paste | open | delete | properties | help
+const diagram = new StockSharpDiagram(container, { showContextMenu: false });
+```
+
+O evento indica a posição do clique, o objeto sob o cursor e a lista de entradas pela ordem em que devem ser desenhadas. As entradas são de dois tipos e distinguem-se pela presença do campo `group`: um **comando** transporta `command` e é executado, um **submenu** transporta `group` e a sua própria lista `commands` — nele não há nada para executar.
+
+```js
+diagram.on('contextMenuRequested', ({ x, y, node, link, commands }) => {
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
-  menu.onPick = command => diagram.executeContextCommand(command);
+
+  menu.onPick = item => {
+    if ('group' in item) return;                       // submenu: abrir, não executar
+    diagram.executeContextCommand(item.command);       // devolve false se o comando não estiver agora disponível
+  };
 });
 ```
+
+A lista completa de comandos: `undo`, `redo`, `cut`, `copy`, `paste`, `open`, `delete`, `exportDocument`, `exportPng`, `exportSvg`, `overview`, `properties`, `help`. O único grupo é `export`, que reúne os três comandos de exportação.
+
+> [!NOTE]
+> Os comandos de exportação são um **pedido ao anfitrião**, não uma ação do componente: este não escreve ficheiros nem abre caixas de diálogo. Trate o evento `exportRequested` e execute `saveDocument()`, `takeScreenshot()` ou `takeSvg()` com os seus próprios parâmetros.
 
 ## Validação de ligações
 

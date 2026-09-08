@@ -94,7 +94,12 @@ The component populates only the `list` element. The title, confirm and reset bu
 
 `write(visibleKeys)` receives only the visible managed columns. A `null` value means that the original order is selected and no column is hidden. This lets a URL or `localStorage` store remove an unnecessary entry instead of saving the complete default value.
 
-Keys are normalized to lowercase inside the adapter. Unknown and duplicate keys are discarded when a layout is applied.
+The adapter works with keys **in lowercase**: that is how it reads `data-col` when parsing the table, and those are the keys it gives out — from `defaultKeys()` and into `write()`.
+
+> [!CAUTION]
+> The keys coming into `apply()` and out of `read()` are matched against that list **as they are, without case folding**. The key `Time` will not match the discovered `time` and will be discarded as unknown, and if every key is written that way, no visible column is left at all — the table opens without a single managed column and without an error in the console. Store what came into `write()` and do not rebuild the keys yourself.
+
+Unknown and duplicate keys are discarded when a layout is applied. An empty array is a legitimate "show no managed column" layout rather than "no layout is selected"; the latter is denoted by `null` only.
 
 ## Methods
 

@@ -72,7 +72,9 @@ Wenn für den ausgewählten Schlüssel keine Lesefunktion definiert ist, versuch
 
 Ein Klick auf eine neue Überschrift aktiviert die aufsteigende Sortierung. Der nächste Klick wechselt zur absteigenden Sortierung, der dritte stellt die Standardreihenfolge wieder her. Wurde für die Tabelle `defaultSort` übergeben, gibt es keinen separaten unsortierten Zustand.
 
-`apply(rows)` gibt immer ein neues Array zurück und verändert das Array der Anwendung nicht. Zahlen werden numerisch und Zeichenfolgen mit dem übergebenen `Intl.Collator` verglichen. `null`, `undefined` und eine leere Zeichenfolge werden bei beiden Richtungen ans Ende gesetzt.
+`apply(rows)` gibt immer ein neues Array zurück und verändert das Array der Anwendung nicht. `null`, `undefined` und eine leere Zeichenfolge werden bei beiden Richtungen ans Ende gesetzt.
+
+Der Vergleich wird **nach den Werten und nicht nach dem deklarierten Spaltentyp** gewählt: Lassen sich beide Werte zu einer endlichen Zahl umwandeln, werden sie numerisch verglichen, und nur in den übrigen Fällen kommt der übergebene `Intl.Collator` zum Einsatz. Die Zeichenfolge `"42"` steht deshalb zwischen 41 und 43 und nicht dort, wohin das Alphabet sie setzen würde; eine Zeichenfolge der Form `"1e3"` gilt ebenfalls als Zahl. Soll eine Spalte bei allen Werten als Text sortiert werden, geben Sie aus ihr einen Wert zurück, der nicht zu einer Zahl wird.
 
 Der Controller weist der aktiven Überschrift die Klasse `sort-asc` oder `sort-desc` zu; Pfeile und die weitere visuelle Gestaltung dieser Klassen legt die Anwendung fest.
 

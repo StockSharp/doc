@@ -34,13 +34,27 @@ catalog.addNodeType(new Node({
 }));
 
 // 2) Bearbeitbares Diagramm + Paletten-Werkzeugkasten (jeweils in ihr eigenes Element gerendert).
+const canvasHost = document.getElementById('diagram');
+const paletteHost = document.getElementById('palette');
+
 const diagram = new StockSharpDiagram({ div: canvasHost, catalog, showFullscreenButton: true });
 const palette = new StockSharpPalette({ div: paletteHost, catalog });
 
-// 3) Knoten aus der Palette hinzufügen: Doppelklick oder natives Drag-and-Drop auf die Arbeitsfläche.
-palette.on('nodeActivated', ({ node }) => diagram.dropNodeFromPalette(node.id, centerX, centerY));
+// 3) Knoten aus der Palette hinzufügen: Ein Doppelklick legt den Knoten in die Mitte des sichtbaren Bereichs.
+palette.on('nodeActivated', ({ node }) => {
+  const box = canvasHost.getBoundingClientRect();
+  diagram.dropNodeFromPalette(node.id, box.left + box.width / 2, box.top + box.height / 2);
+});
+
+// Natives Drag-and-Drop auf die Arbeitsfläche. dragover ist zwingend nötig: Ohne das Abbrechen dieses
+// Ereignisses betrachtet der Browser das Element nicht als Ziel, und drop findet überhaupt nicht statt.
+canvasHost.addEventListener('dragover', event => event.preventDefault());
 canvasHost.addEventListener('drop', event => {
-  const { typeId } = JSON.parse(event.dataTransfer.getData(PALETTE_DRAG_MIME) || '{}');
+  event.preventDefault();
+  const payload = event.dataTransfer?.getData(PALETTE_DRAG_MIME);   // dataTransfer kann null sein
+  if (!payload) return;
+
+  const { typeId } = JSON.parse(payload);
   if (typeId) diagram.dropNodeFromPalette(typeId, event.clientX, event.clientY);
 });
 

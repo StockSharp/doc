@@ -4,7 +4,7 @@
 
 ![歩み値、板、銘柄一覧、注文入力、各種テーブルを備えた取引画面](../../../images/javascript_trading_controls.jpg)
 
-画像には、別パッケージ `@stocksharp/chart` のローソク足チャートも表示されています。`@stocksharp/trading-controls` には、独立した 7 種類のコントロールが含まれます。
+画像には、別パッケージ `@stocksharp/chart` のローソク足チャートも表示されています。`@stocksharp/trading-controls` には、独立した 15 種類のコントロールが含まれます。
 
 | コントロール | クラス | 識別子 |
 |---|---|---|
@@ -15,14 +15,30 @@
 | [注文入力](trading_controls/order_entry.md) | `OrderEntryWidget` | `orderEntry` |
 | [板情報](trading_controls/order_book.md) | `OrderBookWidget` | `orderbook` |
 | [歩み値](trading_controls/trade_feed.md) | `TradeFeedWidget` | `tradefeed` |
+| [統計](trading_controls/statistics.md) | `StatisticsWidget` | `statistics` |
+| [ログ](trading_controls/log_monitor.md) | `LogMonitorWidget` | `logMonitor` |
+| [ストラテジー](trading_controls/strategies.md) | `StrategiesWidget` | `strategies` |
+| [オプションデスク](trading_controls/option_desk.md) | `OptionDeskWidget` | `optionDesk` |
+| [ボラティリティスマイル](trading_controls/option_smile.md) | `OptionSmileWidget` | `optionSmile` |
+| [エクイティカーブ](trading_controls/equity.md) | `EquityWidget` | `equity` |
+| [最適化ヒートマップ](trading_controls/optimization_heatmap.md) | `OptimizationHeatmapWidget` | `optimizationHeatmap` |
+| [最適化サーフェス](trading_controls/optimization_surface.md) | `SurfaceWidget` | `optimizationSurface` |
 
-識別子の値は、エクスポートされる `ControlTypes` オブジェクトから利用できます。
+識別子の値は、エクスポートされる `ControlTypes` オブジェクトから利用できます。なお、最適化サーフェスだけはクラス名と識別子が一致しません。クラス名は `SurfaceWidget`、識別子は `optimizationSurface` です。
 
 ## インストール
 
 ```bash
 npm install @stocksharp/trading-controls
 ```
+
+コントロールはテーブルを [@stocksharp/grids](grids.md) で描画します。これは通常の依存関係として自動的にインストールされます。一方、[@stocksharp/chart](charts.md) は **peer 依存関係**として宣言されています。npm はこれをインストールしないため、エクイティカーブやボラティリティスマイルを使う場合は自分でインストールしてください。これらはチャートエンジンの上に構築されています。
+
+```bash
+npm install @stocksharp/chart
+```
+
+パッケージはルートからのインポートに加えてサブパスも宣言しています。コントロールごとに 1 つずつ（`@stocksharp/trading-controls/watchlist` など）、補助モジュール（`/trading-host`、`/control-types`、`/formatters`、`/dom`、`/trading-data`）、そして TypeScript のソースを収めた並行の `/source/*` 系列です。最後のものは、コントロールを他のコードと一緒に自前のバンドラーでビルドする場合に使います。
 
 基本スタイルは必須です。用意されているライト／ダークパレットを追加で読み込むか、独自の CSS 変数 `--t-*` で置き換えられます。
 
@@ -89,7 +105,7 @@ positions.update([]);
 
 ## ローカライズとスタイル
 
-コントロールは、表示テキストを `host.t` からのみ取得します。153 個の最新キーを収めた完全な一覧が `@stocksharp/trading-controls/translation-keys.json` に同梱されています。不明なキーはそのままユーザーに表示されるため、ホストは一覧のすべてに翻訳を定義する必要があります。
+コントロールは、表示テキストを `host.t` からのみ取得します。235 個の最新キーを収めた完全な一覧が `@stocksharp/trading-controls/translation-keys.json` に同梱されています。これは配列ではなくオブジェクト `{ $comment, count, keys }` で、キー自体は `keys` フィールドに入っています。不明なキーはそのままユーザーに表示されるため、ホストは一覧のすべてに翻訳を定義する必要があります。
 
 `styles.css` には規則が含まれますが、色、フォント、サイズには CSS 変数 `--t-*` を使用します。用意された `theme.css` を使わない場合は、アプリケーション側でこれらの変数を定義します。板情報とバブル表示の歩み値で使う canvas の色は、`host.presentation.canvasPalette()` が返します。
 

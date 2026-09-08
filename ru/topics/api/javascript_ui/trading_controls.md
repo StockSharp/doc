@@ -4,7 +4,7 @@
 
 ![Торговый экран с лентой сделок, стаканом, списком инструментов, вводом заявки и таблицами](../../../images/javascript_trading_controls.jpg)
 
-На снимке также показан свечной график из отдельного пакета `@stocksharp/chart`. В `@stocksharp/trading-controls` входят семь самостоятельных контролов:
+На снимке также показан свечной график из отдельного пакета `@stocksharp/chart`. В `@stocksharp/trading-controls` входят пятнадцать самостоятельных контролов:
 
 | Контрол | Класс | Идентификатор |
 |---|---|---|
@@ -15,14 +15,30 @@
 | [Ввод заявки](trading_controls/order_entry.md) | `OrderEntryWidget` | `orderEntry` |
 | [Стакан](trading_controls/order_book.md) | `OrderBookWidget` | `orderbook` |
 | [Лента сделок](trading_controls/trade_feed.md) | `TradeFeedWidget` | `tradefeed` |
+| [Статистика](trading_controls/statistics.md) | `StatisticsWidget` | `statistics` |
+| [Журнал](trading_controls/log_monitor.md) | `LogMonitorWidget` | `logMonitor` |
+| [Стратегии](trading_controls/strategies.md) | `StrategiesWidget` | `strategies` |
+| [Доска опционов](trading_controls/option_desk.md) | `OptionDeskWidget` | `optionDesk` |
+| [Улыбка волатильности](trading_controls/option_smile.md) | `OptionSmileWidget` | `optionSmile` |
+| [Кривая эквити](trading_controls/equity.md) | `EquityWidget` | `equity` |
+| [Тепловая карта оптимизации](trading_controls/optimization_heatmap.md) | `OptimizationHeatmapWidget` | `optimizationHeatmap` |
+| [Поверхность оптимизации](trading_controls/optimization_surface.md) | `SurfaceWidget` | `optimizationSurface` |
 
-Значения идентификаторов доступны через экспортируемый объект `ControlTypes`.
+Значения идентификаторов доступны через экспортируемый объект `ControlTypes`. Обратите внимание: у поверхности оптимизации имя класса не совпадает с идентификатором — класс называется `SurfaceWidget`, а идентификатор `optimizationSurface`.
 
 ## Установка
 
 ```bash
 npm install @stocksharp/trading-controls
 ```
+
+Таблицы контролы рисуют через [@stocksharp/grids](grids.md) — он приезжает автоматически как обычная зависимость. А вот [@stocksharp/chart](charts.md) объявлен **peer-зависимостью**: npm его не поставит, и установить его нужно самому, если вы используете кривую эквити или улыбку волатильности — они построены на движке графиков.
+
+```bash
+npm install @stocksharp/chart
+```
+
+Помимо корневого импорта пакет объявляет подпути: по одному на каждый контрол (`@stocksharp/trading-controls/watchlist` и т. д.), вспомогательные модули (`/trading-host`, `/control-types`, `/formatters`, `/dom`, `/trading-data`) и параллельное семейство `/source/*` с исходниками на TypeScript — для тех, кто собирает контролы своим сборщиком вместе с остальным кодом.
 
 Основные стили обязательны. Готовую светлую и тёмную палитру можно подключить дополнительно либо заменить собственными CSS-переменными `--t-*`:
 
@@ -89,7 +105,7 @@ positions.update([]);
 
 ## Локализация и оформление
 
-Видимый текст контролы получают только через `host.t`. Полный актуальный перечень из 153 ключей поставляется в `@stocksharp/trading-controls/translation-keys.json`. Неизвестный ключ будет показан пользователю как есть, поэтому хост должен определить переводы для всего списка.
+Видимый текст контролы получают только через `host.t`. Полный актуальный список из 235 ключей поставляется в `@stocksharp/trading-controls/translation-keys.json`. Это не массив, а объект `{ $comment, count, keys }` — сами ключи лежат в поле `keys`. Неизвестный ключ будет показан пользователю как есть, поэтому хост должен определить переводы для всего списка.
 
 Файл `styles.css` содержит правила, но берёт цвета, шрифты и размеры из CSS-переменных `--t-*`. Если готовый `theme.css` не используется, эти переменные определяет приложение. Цвета canvas для стакана и пузырьковой ленты возвращает `host.presentation.canvasPalette()`.
 

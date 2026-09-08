@@ -99,16 +99,22 @@ Neben den Reihentypen verfügt der Chart außerdem über eine [Indikator-Engine]
 
 Für den visuellen Strategie-Editor, der vom selben Web-Stack gerendert wird, siehe [JavaScript-Diagramm](diagram.md).
 
-## Vollständiger Terminal-Chart-Stack
+## Schichten über der Engine
 
-Die Module unter `src/chart` erweitern die Basis-Engine um Terminal-Funktionen:
+Alles bisher Beschriebene ist die Basis-Engine, der Einstiegspunkt `@stocksharp/chart`. Der Rest ist auf eigene veröffentlichte Einstiegspunkte verteilt: Importieren Sie den benötigten, ein Kopieren der Quellen ist nicht nötig.
 
-- `IndicatorEngine`, Indikator-Renderer, Einstellungen und den Berechnungskatalog.
-- Einen Chart-Typ-Umschalter für Kerzen, Balken, Linien, Flächen, Heikin-Ashi, Renko und Point & Figure.
-- Eine Legende, synchronisierte sekundäre Bereiche, ein Kontextmenü und einen Dialog zur Indikatorauswahl.
-- Neuberechnung aktiver Indikatoren, wenn sich Echtzeitdaten ändern.
+| Einstiegspunkt | Was er bietet |
+|---|---|
+| [Chart-Oberfläche](charts/ui.md) — `@stocksharp/chart/ui` | Die fertige Oberfläche: Legende, Kontextmenü, Chart-Typ-Umschalter, Panel-Manager, Indikator-Dialog. Benötigt das Stylesheet `@stocksharp/chart/ui.css`. |
+| `@stocksharp/chart/indicators` | `IndicatorEngine`, Indikator-Renderer und -Einstellungen. Die Berechnungen selbst liegen im Paket [@stocksharp/indicators](charts/indicators.md). |
+| [Handel aus dem Chart](charts/trading.md) — `@stocksharp/chart/trading` | Die Handelsschicht: Auftragslinien, Position mit laufendem Ergebnis, Schutzaufträge und Quotierungen. Kennt keinen Broker — sie meldet eine Absicht, ausgeführt wird sie vom Host. |
+| [Zeichenwerkzeuge](charts/drawings.md) — `@stocksharp/chart/drawings` | Zeichenwerkzeuge, Bindung an die Balken und Registrierung eigener Figuren. |
+| [Mehrere Charts](charts/workspace.md) — `@stocksharp/chart/workspace` | Mehrere synchronisierte Charts, Instrumentenvergleich, Bereichsnavigator, Indikatorvorlagen. |
+| [Layout speichern](charts/persistence.md) — `@stocksharp/chart/persistence` | Speichern und Wiederherstellen des Layouts mit Versionierung und Migrationen. |
+| [Zeit und Handelssessions](charts/time.md) — `@stocksharp/chart/time` | Handelskalender, Sessions und Zeitzonen, Countdown bis zum Schluss eines Balkens. |
+| `@stocksharp/chart/orderflow` | Clusteranalyse: Footprint und Volumenprofil. |
 
-Verwenden Sie `src/chart/app.ts` als Integrationsbeispiel für den vollständigen Stack.
+Ohne Bundler stehen dieselben Möglichkeiten über das Browserpaket bereit: `dist/sschartui.js` stellt das globale Objekt `SSChartUI` bereit.
 
 ## Aus dem Quellcode erstellen
 

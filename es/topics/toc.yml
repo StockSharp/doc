@@ -5184,6 +5184,18 @@
         href: api/javascript_ui/charts/indicators.md
       - name: Recarga de historial
         href: api/javascript_ui/charts/backfill.md
+      - name: Interfaz del gráfico
+        href: api/javascript_ui/charts/ui.md
+      - name: Negociación desde el gráfico
+        href: api/javascript_ui/charts/trading.md
+      - name: Herramientas de dibujo
+        href: api/javascript_ui/charts/drawings.md
+      - name: Varios gráficos
+        href: api/javascript_ui/charts/workspace.md
+      - name: Guardado de la disposición
+        href: api/javascript_ui/charts/persistence.md
+      - name: Tiempo y sesiones de negociación
+        href: api/javascript_ui/charts/time.md
     - name: Diagrama
       href: api/javascript_ui/diagram.md
       items:
@@ -5219,6 +5231,22 @@
         href: api/javascript_ui/trading_controls/order_book.md
       - name: Flujo de operaciones
         href: api/javascript_ui/trading_controls/trade_feed.md
+      - name: Estadísticas
+        href: api/javascript_ui/trading_controls/statistics.md
+      - name: Registro
+        href: api/javascript_ui/trading_controls/log_monitor.md
+      - name: Estrategias
+        href: api/javascript_ui/trading_controls/strategies.md
+      - name: Tablero de opciones
+        href: api/javascript_ui/trading_controls/option_desk.md
+      - name: Sonrisa de volatilidad
+        href: api/javascript_ui/trading_controls/option_smile.md
+      - name: Curva de capital
+        href: api/javascript_ui/trading_controls/equity.md
+      - name: Mapa de calor de optimización
+        href: api/javascript_ui/trading_controls/optimization_heatmap.md
+      - name: Superficie de optimización
+        href: api/javascript_ui/trading_controls/optimization_surface.md
 - name: Shell
   href: shell.md
   items:

@@ -46,11 +46,15 @@ import { TableExport } from '@stocksharp/grids/table-export';
 バンドラーを使わない場合は、ビルド済みのブラウザーパッケージを読み込みます。公開オブジェクトは `window.SSGrid` に配置されます。
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1.1.0/dist/ssgrid.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1/dist/ssgrid.js"></script>
 <script>
   const { DataGrid, TableExport } = window.SSGrid;
 </script>
 ```
+
+`@1` の範囲指定は、最初のメジャーブランチの最新バージョンを取得します。正確な番号を固定するのは、ビルドを意図的に再現したい場合だけにしてください。古いバージョンを固定すると、その後追加された機能を含まないビルドが警告なく配信され、たとえば `groupOrder` が存在しないことは、このタグを書いた場所とは別のところで表面化します。
+
+TypeScript の生ソースは、サブパス `@stocksharp/grids/source` と `@stocksharp/grids/source/<モジュール>` から利用できます。テーブルを他のコードと同じ 1 回のパスで自前のバンドラーによってビルドする場合に必要です。
 
 ## クイック例
 

@@ -21,16 +21,29 @@ off();
 
 ## Kontextmenü
 
-Die Komponente meldet die Klickposition und die Liste der aktivierten Befehle; Sie zeichnen das Popup und führen den gewählten Befehl aus:
+Bei einem Rechtsklick zeichnet die Komponente ihr **eigenes** Menü und löst gleichzeitig `contextMenuRequested` aus. Das Ereignis kommt in beiden Fällen, deshalb muss das eingebaute Menü abgeschaltet werden, wenn Sie ein eigenes zeichnen — sonst liegen sie übereinander:
 
 ```js
-diagram.on('contextMenuRequested', ({ x, y, commands }) => {
-  // commands: { command, enabled }[], wobei command einen der folgenden Werte hat:
-  // undo | redo | cut | copy | paste | open | delete | properties | help
+const diagram = new StockSharpDiagram(container, { showContextMenu: false });
+```
+
+Das Ereignis meldet die Klickposition, das Objekt unter dem Cursor und die Liste der Einträge in der Reihenfolge, in der sie gezeichnet werden sollen. Es gibt zwei Arten von Einträgen, und unterschieden werden müssen sie am Vorhandensein des Feldes `group`: Ein **Befehl** trägt `command` und wird ausgeführt, ein **Untermenü** trägt `group` und eine eigene Liste `commands` — darin gibt es nichts auszuführen.
+
+```js
+diagram.on('contextMenuRequested', ({ x, y, node, link, commands }) => {
   const menu = renderMenu(commands.filter(c => c.enabled), x, y);
-  menu.onPick = command => diagram.executeContextCommand(command);
+
+  menu.onPick = item => {
+    if ('group' in item) return;                       // Untermenü: aufklappen, nicht ausführen
+    diagram.executeContextCommand(item.command);       // gibt false zurück, wenn der Befehl gerade nicht verfügbar ist
+  };
 });
 ```
+
+Die vollständige Liste der Befehle: `undo`, `redo`, `cut`, `copy`, `paste`, `open`, `delete`, `exportDocument`, `exportPng`, `exportSvg`, `overview`, `properties`, `help`. Die einzige Gruppe ist `export`, sie fasst die drei Exportbefehle zusammen.
+
+> [!NOTE]
+> Die Exportbefehle sind eine **Bitte an den Host** und keine Aktion der Komponente: Sie schreibt keine Dateien und öffnet keine Dialoge. Behandeln Sie `exportRequested` und führen Sie `saveDocument()`, `takeScreenshot()` oder `takeSvg()` mit Ihren eigenen Parametern aus.
 
 ## Verbindungsvalidierung
 

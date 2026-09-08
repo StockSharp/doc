@@ -46,11 +46,15 @@ import { TableExport } from '@stocksharp/grids/table-export';
 Без сборщика подключите готовый браузерный пакет. Его публичные объекты находятся в `window.SSGrid`:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1.1.0/dist/ssgrid.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1/dist/ssgrid.js"></script>
 <script>
   const { DataGrid, TableExport } = window.SSGrid;
 </script>
 ```
+
+Диапазон `@1` берёт последнюю версию первой мажорной ветки. Прибивать точный номер стоит только тогда, когда сборка воспроизводится намеренно: закреплённая старая версия молча отдаёт сборку без появившихся с тех пор возможностей, и отсутствие, скажем, `groupOrder` проявится не там, где написан этот тег.
+
+Сырые исходники на TypeScript доступны через подпути `@stocksharp/grids/source` и `@stocksharp/grids/source/<модуль>` — они нужны, когда таблицы собираются вашим сборщиком в одном проходе с остальным кодом.
 
 ## Быстрый пример
 

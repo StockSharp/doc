@@ -46,11 +46,15 @@ import { TableExport } from '@stocksharp/grids/table-export';
 Ohne Bundler binden Sie das fertige Browserpaket ein. Seine öffentlichen Objekte stehen unter `window.SSGrid` bereit:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1.1.0/dist/ssgrid.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@stocksharp/grids@1/dist/ssgrid.js"></script>
 <script>
   const { DataGrid, TableExport } = window.SSGrid;
 </script>
 ```
+
+Der Bereich `@1` nimmt die neueste Version des ersten Hauptzweigs. Eine genaue Nummer festzunageln lohnt sich nur dann, wenn der Build absichtlich reproduzierbar sein soll: Eine festgepinnte alte Version liefert stillschweigend einen Build ohne die seither hinzugekommenen Möglichkeiten, und das Fehlen von etwa `groupOrder` zeigt sich nicht dort, wo dieses Tag steht.
+
+Die rohen TypeScript-Quellen stehen über die Unterpfade `@stocksharp/grids/source` und `@stocksharp/grids/source/<Modul>` bereit — sie werden benötigt, wenn die Tabellen von Ihrem Bundler in einem Durchgang mit dem übrigen Code gebaut werden.
 
 ## Schnellstart
 
