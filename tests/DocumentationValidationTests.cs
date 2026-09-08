@@ -13915,6 +13915,9 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (IsCodeTokenListCommentText(text))
 			return true;
 
+		if (IsLiteralValueCommentText(text))
+			return true;
+
 		// Skip commented-out code and compiler/preprocessor directives without hiding prose comments
 		// such as "if no historical data..." or "Class for analyzing...".
 		return Regex.IsMatch(text, @"^[+\-*/]\s*[A-Za-z_][A-Za-z0-9_.]*(?:\.|\()", RegexOptions.CultureInvariant)
@@ -13923,6 +13926,14 @@ public sealed class DocumentationValidationTests : BaseTestClass
 			|| Regex.IsMatch(text, @"^(?:using|var|let|public|private|protected|await|yield|pragma|region|endregion|nullable|define|endif|else|elif|def|with)\b", RegexOptions.CultureInvariant)
 			|| Regex.IsMatch(text, @"^(?:class|new)\s+[A-Za-z_][A-Za-z0-9_.]*(?:\b|[<(])", RegexOptions.CultureInvariant);
 	}
+
+	// A comment whose whole body is one quoted literal — what a call returns, written beside it as
+	// `formatStatistic(...); // '2024-03-26'` — states a value, not prose. There is nothing in it to
+	// translate, and it is the same value in every language. Short ones already fall under the
+	// length floor above; this covers the longer literals, which are no more translatable for
+	// being longer. A comment that says anything besides the literal is prose and is still checked.
+	private static bool IsLiteralValueCommentText(string text)
+		=> Regex.IsMatch(text, @"^(?:'[^']*'|""[^""]*"")$", RegexOptions.CultureInvariant);
 
 	// A comment whose whole body is a pipe-separated list of code tokens — accepted values of an API
 	// member, such as "undo | redo | cut" or "BidAsk | Delta | Total | Ladder" — spells out identifiers,

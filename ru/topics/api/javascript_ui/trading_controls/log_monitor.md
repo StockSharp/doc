@@ -34,7 +34,7 @@ log.append([{
   time: Date.now(),
   level: LogLevels.Warning,
   sourceId: 'strategy-1',
-  message: 'Order rejected: not enough funds',
+  message: 'Заявка отклонена: недостаточно средств',
 }]);
 
 log.select('connector');
