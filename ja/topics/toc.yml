@@ -5086,6 +5086,8 @@
         href: api/graphical_user_interface/portfolios/portfolio_picker_window.md
       - name: テーブル
         href: api/graphical_user_interface/portfolios/table.md
+      - name: ポジションの変化
+        href: api/graphical_user_interface/portfolios/position_changes.md
     - name: 銘柄
       href: api/graphical_user_interface/instruments.md
       items:
@@ -5102,6 +5104,8 @@
     - name: マーケットデータ
       href: api/graphical_user_interface/market_data.md
       items:
+      - name: ローソク足
+        href: api/graphical_user_interface/market_data/candles.md
       - name: ティック約定
         href: api/graphical_user_interface/market_data/ticks.md
       - name: Level1
@@ -5112,6 +5116,10 @@
         href: api/graphical_user_interface/market_data/order_log.md
       - name: ニュース
         href: api/graphical_user_interface/market_data/news.md
+      - name: メッセージ形式のニュース
+        href: api/graphical_user_interface/market_data/news_messages.md
+      - name: トランザクションと約定
+        href: api/graphical_user_interface/market_data/executions.md
     - name: 取引
       href: api/graphical_user_interface/trading.md
       items:
@@ -5127,11 +5135,19 @@
         href: api/graphical_user_interface/trading/table_of_available_market_data.md
       - name: 売買パネル
         href: api/graphical_user_interface/trading/buy_sell_panel.md
+      - name: クイック注文パネル
+        href: api/graphical_user_interface/trading/quick_order_panel.md
+      - name: 売買パネルのセット
+        href: api/graphical_user_interface/trading/buy_sell_grid.md
+      - name: リスク管理ルール
+        href: api/graphical_user_interface/trading/risk_rules.md
     - name: ストラテジー
       href: api/graphical_user_interface/strategies.md
       items:
       - name: 統計
         href: api/graphical_user_interface/strategies/statistics.md
+      - name: 戦略モニター
+        href: api/graphical_user_interface/strategies/dashboard.md
     - name: オプション
       href: api/graphical_user_interface/options.md
       items:
@@ -5139,6 +5155,45 @@
         href: api/graphical_user_interface/options/option_desk.md
       - name: ポジションチャート
         href: api/graphical_user_interface/options/position_chart.md
+    - name: 診断
+      href: api/graphical_user_interface/diagnostics.md
+      items:
+      - name: 有効なルール
+        href: api/graphical_user_interface/diagnostics/market_rules.md
+      - name: コンパイルエラー
+        href: api/graphical_user_interface/diagnostics/compilation_errors.md
+      - name: コードエディタ
+        href: api/graphical_user_interface/diagnostics/code_editor.md
+    - name: 値エディタ
+      href: api/graphical_user_interface/editors.md
+      items:
+      - name: 基本プロパティと詳細プロパティ
+        href: api/graphical_user_interface/editors/basic_adv_properties_panel.md
+    - name: サービスパネル
+      href: api/graphical_user_interface/service_panels.md
+      items:
+      - name: 手数料ルール
+        href: api/graphical_user_interface/service_panels/commission.md
+      - name: インポート設定
+        href: api/graphical_user_interface/service_panels/import_settings.md
+      - name: ライセンス
+        href: api/graphical_user_interface/service_panels/license.md
+      - name: 銘柄検索
+        href: api/graphical_user_interface/service_panels/security_lookup.md
+      - name: 銘柄コードの対応付け
+        href: api/graphical_user_interface/service_panels/security_mapping.md
+      - name: ストレージ設定
+        href: api/graphical_user_interface/service_panels/storage_settings.md
+      - name: サブスクリプション
+        href: api/graphical_user_interface/service_panels/subscriptions.md
+      - name: 取引所
+        href: api/graphical_user_interface/service_panels/exchanges.md
+      - name: 市場
+        href: api/graphical_user_interface/service_panels/exchange_boards.md
+      - name: 営業スケジュール
+        href: api/graphical_user_interface/service_panels/working_time.md
+      - name: アカウントと権限
+        href: api/graphical_user_interface/service_panels/permission_credentials.md
     - name: オブジェクトプロパティ編集テーブル
       href: api/graphical_user_interface/object_properties_editing_table.md
     - name: 接続設定ウィンドウ

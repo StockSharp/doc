@@ -6,6 +6,7 @@ Für die Arbeit mit Portfolios bietet [S#](../../api.md) die folgenden grafische
 - ComboBox mit einer Schaltfläche, die ein Fenster mit einer Portfolioliste öffnet - [PortfolioEditor](xref:StockSharp.Xaml.PropertyGrid.PortfolioEditor).
 - Fenster mit Portfolioliste - [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow).
 - Eine Tabelle, die Informationen zu Portfolios und Positionen anzeigt - [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid).
+- Tabelle zur Anzeige von Positionsänderungen \- [PositionChangeGrid](xref:StockSharp.Xaml.PositionChangeGrid).
 
 > [!TIP]
 > Beachten Sie, dass in allen Komponenten für die Portfolioliste (Eigenschaft Portfolios) die Klasse **ThreadSafeObservableCollection\<TItem\>** verwendet wird (befindet sich in Ecng.Xaml), die Threadsicherheit bietet.
@@ -19,3 +20,5 @@ Für die Arbeit mit Portfolios bietet [S#](../../api.md) die folgenden grafische
 [Fenster zur Portfolioauswahl](portfolios/portfolio_picker_window.md)
 
 [Tabelle](portfolios/table.md)
+
+[Positionsänderungen](portfolios/position_changes.md)

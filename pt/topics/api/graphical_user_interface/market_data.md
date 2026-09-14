@@ -2,13 +2,18 @@
 
 Existem componentes gráficos para apresentar todos os tipos de dados de mercado em [S#](../../api.md):
 
+- Tabela para exibir velas \- [CandleMessageGrid](xref:StockSharp.Xaml.CandleMessageGrid).
 - Tabela para apresentar negócios - [TradeGrid](xref:StockSharp.Xaml.TradeGrid).
 - Tabela para apresentar Level1 - [Level1Grid](xref:StockSharp.Xaml.Level1Grid).
 - Componente para apresentar um livro de ofertas - [MarketDepthControl](xref:StockSharp.Xaml.MarketDepthControl).
 - Tabela para apresentar um registo de ordens - [OrderLogGrid](xref:StockSharp.Xaml.OrderLogGrid).
 - Tabelas para apresentar notícias - [NewsGrid](xref:StockSharp.Xaml.NewsGrid), [NewsPanel](xref:StockSharp.Xaml.NewsPanel).
+- Tabela para exibir notícias como mensagens \- [NewsMessageGrid](xref:StockSharp.Xaml.NewsMessageGrid).
+- Tabela para exibir transações e negócios \- [ExecutionGrid](xref:StockSharp.Xaml.ExecutionGrid).
 
 ## Conteúdo recomendado
+
+[Velas](market_data/candles.md)
 
 [Ticks](market_data/ticks.md)
 
@@ -19,3 +24,7 @@ Existem componentes gráficos para apresentar todos os tipos de dados de mercado
 [Registo de ordens](market_data/order_log.md)
 
 [Notícias](market_data/news.md)
+
+[Notícias como mensagens](market_data/news_messages.md)
+
+[Transações e negócios](market_data/executions.md)

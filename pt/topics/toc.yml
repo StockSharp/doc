@@ -5086,6 +5086,8 @@
         href: api/graphical_user_interface/portfolios/portfolio_picker_window.md
       - name: Tabela
         href: api/graphical_user_interface/portfolios/table.md
+      - name: Mudanças de posições
+        href: api/graphical_user_interface/portfolios/position_changes.md
     - name: Instrumentos
       href: api/graphical_user_interface/instruments.md
       items:
@@ -5102,6 +5104,8 @@
     - name: Dados de mercado
       href: api/graphical_user_interface/market_data.md
       items:
+      - name: Velas
+        href: api/graphical_user_interface/market_data/candles.md
       - name: Negócios tick
         href: api/graphical_user_interface/market_data/ticks.md
       - name: Level1
@@ -5112,6 +5116,10 @@
         href: api/graphical_user_interface/market_data/order_log.md
       - name: Notícias
         href: api/graphical_user_interface/market_data/news.md
+      - name: Notícias como mensagens
+        href: api/graphical_user_interface/market_data/news_messages.md
+      - name: Transações e negócios
+        href: api/graphical_user_interface/market_data/executions.md
     - name: Negociação
       href: api/graphical_user_interface/trading.md
       items:
@@ -5127,11 +5135,19 @@
         href: api/graphical_user_interface/trading/table_of_available_market_data.md
       - name: Painel Compra\/Venda
         href: api/graphical_user_interface/trading/buy_sell_panel.md
+      - name: Painel de negociação rápida
+        href: api/graphical_user_interface/trading/quick_order_panel.md
+      - name: Conjunto de painéis Comprar\/Vender
+        href: api/graphical_user_interface/trading/buy_sell_grid.md
+      - name: Regras de gestão de risco
+        href: api/graphical_user_interface/trading/risk_rules.md
     - name: Estratégias
       href: api/graphical_user_interface/strategies.md
       items:
       - name: Estatísticas
         href: api/graphical_user_interface/strategies/statistics.md
+      - name: Monitor de estratégias
+        href: api/graphical_user_interface/strategies/dashboard.md
     - name: Opções
       href: api/graphical_user_interface/options.md
       items:
@@ -5139,6 +5155,45 @@
         href: api/graphical_user_interface/options/option_desk.md
       - name: Gráfico de posição
         href: api/graphical_user_interface/options/position_chart.md
+    - name: Diagnóstico
+      href: api/graphical_user_interface/diagnostics.md
+      items:
+      - name: Regras ativas
+        href: api/graphical_user_interface/diagnostics/market_rules.md
+      - name: Erros de compilação
+        href: api/graphical_user_interface/diagnostics/compilation_errors.md
+      - name: Editor de código
+        href: api/graphical_user_interface/diagnostics/code_editor.md
+    - name: Editores de valores
+      href: api/graphical_user_interface/editors.md
+      items:
+      - name: Propriedades básicas e avançadas
+        href: api/graphical_user_interface/editors/basic_adv_properties_panel.md
+    - name: Painéis de serviço
+      href: api/graphical_user_interface/service_panels.md
+      items:
+      - name: Regras de comissão
+        href: api/graphical_user_interface/service_panels/commission.md
+      - name: Configurações de importação
+        href: api/graphical_user_interface/service_panels/import_settings.md
+      - name: Licenças
+        href: api/graphical_user_interface/service_panels/license.md
+      - name: Busca de instrumentos
+        href: api/graphical_user_interface/service_panels/security_lookup.md
+      - name: Correspondência de códigos de instrumentos
+        href: api/graphical_user_interface/service_panels/security_mapping.md
+      - name: Configurações do armazenamento
+        href: api/graphical_user_interface/service_panels/storage_settings.md
+      - name: Assinaturas
+        href: api/graphical_user_interface/service_panels/subscriptions.md
+      - name: Bolsas
+        href: api/graphical_user_interface/service_panels/exchanges.md
+      - name: Praças
+        href: api/graphical_user_interface/service_panels/exchange_boards.md
+      - name: Horário de funcionamento
+        href: api/graphical_user_interface/service_panels/working_time.md
+      - name: Contas e permissões
+        href: api/graphical_user_interface/service_panels/permission_credentials.md
     - name: Tabela de edição de propriedades de objetos
       href: api/graphical_user_interface/object_properties_editing_table.md
     - name: Janela de definições de ligação

@@ -5232,6 +5232,8 @@
         href: api/graphical_user_interface/portfolios/portfolio_picker_window.md
       - name: Таблица портфелей
         href: api/graphical_user_interface/portfolios/table.md
+      - name: Изменения позиций
+        href: api/graphical_user_interface/portfolios/position_changes.md
     - name: Инструменты
       href: api/graphical_user_interface/instruments.md
       items:
@@ -5248,6 +5250,8 @@
     - name: Рыночные данные
       href: api/graphical_user_interface/market_data.md
       items:
+      - name: Свечи
+        href: api/graphical_user_interface/market_data/candles.md
       - name: Тиковые сделки
         href: api/graphical_user_interface/market_data/ticks.md
       - name: Level1
@@ -5258,6 +5262,10 @@
         href: api/graphical_user_interface/market_data/order_log.md
       - name: Новости
         href: api/graphical_user_interface/market_data/news.md
+      - name: Новости в виде сообщений
+        href: api/graphical_user_interface/market_data/news_messages.md
+      - name: Транзакции и сделки
+        href: api/graphical_user_interface/market_data/executions.md
     - name: Торговля
       href: api/graphical_user_interface/trading.md
       items:
@@ -5273,11 +5281,19 @@
         href: api/graphical_user_interface/trading/table_of_available_market_data.md
       - name: Панель Купить/Продать
         href: api/graphical_user_interface/trading/buy_sell_panel.md
+      - name: Панель быстрой торговли
+        href: api/graphical_user_interface/trading/quick_order_panel.md
+      - name: Набор панелей Купить\/Продать
+        href: api/graphical_user_interface/trading/buy_sell_grid.md
+      - name: Правила риск\-менеджмента
+        href: api/graphical_user_interface/trading/risk_rules.md
     - name: Стратегии
       href: api/graphical_user_interface/strategies.md
       items:
       - name: Статистика
         href: api/graphical_user_interface/strategies/statistics.md
+      - name: Монитор стратегий
+        href: api/graphical_user_interface/strategies/dashboard.md
     - name: Опционы
       href: api/graphical_user_interface/options.md
       items:
@@ -5285,6 +5301,45 @@
         href: api/graphical_user_interface/options/option_desk.md
       - name: График позиции
         href: api/graphical_user_interface/options/position_chart.md
+    - name: Диагностика
+      href: api/graphical_user_interface/diagnostics.md
+      items:
+      - name: Активные правила
+        href: api/graphical_user_interface/diagnostics/market_rules.md
+      - name: Ошибки компиляции
+        href: api/graphical_user_interface/diagnostics/compilation_errors.md
+      - name: Редактор кода
+        href: api/graphical_user_interface/diagnostics/code_editor.md
+    - name: Редакторы значений
+      href: api/graphical_user_interface/editors.md
+      items:
+      - name: Основные и дополнительные свойства
+        href: api/graphical_user_interface/editors/basic_adv_properties_panel.md
+    - name: Служебные панели
+      href: api/graphical_user_interface/service_panels.md
+      items:
+      - name: Правила комиссии
+        href: api/graphical_user_interface/service_panels/commission.md
+      - name: Настройки импорта
+        href: api/graphical_user_interface/service_panels/import_settings.md
+      - name: Лицензии
+        href: api/graphical_user_interface/service_panels/license.md
+      - name: Поиск инструментов
+        href: api/graphical_user_interface/service_panels/security_lookup.md
+      - name: Сопоставление кодов инструментов
+        href: api/graphical_user_interface/service_panels/security_mapping.md
+      - name: Настройки хранилища
+        href: api/graphical_user_interface/service_panels/storage_settings.md
+      - name: Подписки
+        href: api/graphical_user_interface/service_panels/subscriptions.md
+      - name: Биржи
+        href: api/graphical_user_interface/service_panels/exchanges.md
+      - name: Площадки
+        href: api/graphical_user_interface/service_panels/exchange_boards.md
+      - name: Расписание работы
+        href: api/graphical_user_interface/service_panels/working_time.md
+      - name: Учётные записи и права
+        href: api/graphical_user_interface/service_panels/permission_credentials.md
     - name: Таблица редактирования свойств объектов
       href: api/graphical_user_interface/object_properties_editing_table.md
     - name: Окно настройки подключений

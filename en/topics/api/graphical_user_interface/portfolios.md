@@ -6,6 +6,7 @@ To work with portfolios, [S#](../../api.md) offers the following graphical compo
 - The combo box with a button that opens a window with a list of portfolios - [PortfolioEditor](xref:StockSharp.Xaml.PropertyGrid.PortfolioEditor).
 - Portfolio list window - [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow).
 - A table that displays information about portfolios and positions - [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid).
+- A table for displaying position changes \- [PositionChangeGrid](xref:StockSharp.Xaml.PositionChangeGrid).
 
 > [!TIP]
 > Note that in all components for the portfolios list (the Portfolios property), the **ThreadSafeObservableCollection\<TItem\>** class (located in Ecng.Xaml) is used, which provides thread safety. 
@@ -19,3 +20,5 @@ To work with portfolios, [S#](../../api.md) offers the following graphical compo
 [Portfolio picker window](portfolios/portfolio_picker_window.md)
 
 [Table](portfolios/table.md)
+
+[Position changes](portfolios/position_changes.md)

@@ -6,6 +6,7 @@
 - Комбинированный список с кнопкой, которая открывает окно со списком портфелей \- [PortfolioEditor](xref:StockSharp.Xaml.PropertyGrid.PortfolioEditor).
 - Окно со списком портфелей \- [PortfolioPickerWindow](xref:StockSharp.Xaml.PortfolioPickerWindow).
 - Таблица, отображающая информацию о портфелях и позициях \- [PortfolioGrid](xref:StockSharp.Xaml.PortfolioGrid).
+- Таблица для отображения изменений позиций \- [PositionChangeGrid](xref:StockSharp.Xaml.PositionChangeGrid).
 
 > [!TIP]
 > Обратите внимание, что во всех компонентах для списка портфелей (свойство **Portfolios**) используется класс **ThreadSafeObservableCollection\<TItem\>** (находится в Ecng.Xaml), который обеспечивает потоковую безопасность. 
@@ -19,3 +20,5 @@
 [Окно выбора портфелей](portfolios/portfolio_picker_window.md)
 
 [Таблица портфелей](portfolios/table.md)
+
+[Изменения позиций](portfolios/position_changes.md)
