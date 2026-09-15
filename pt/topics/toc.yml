@@ -5148,6 +5148,10 @@
         href: api/graphical_user_interface/strategies/statistics.md
       - name: Monitor de estratégias
         href: api/graphical_user_interface/strategies/dashboard.md
+      - name: Parâmetros de otimização
+        href: api/graphical_user_interface/strategies/optimization_parameters.md
+      - name: Resultados da otimização
+        href: api/graphical_user_interface/strategies/optimization_results.md
     - name: Opções
       href: api/graphical_user_interface/options.md
       items:
@@ -5160,6 +5164,8 @@
       items:
       - name: Regras ativas
         href: api/graphical_user_interface/diagnostics/market_rules.md
+      - name: Estatísticas da estratégia
+        href: api/graphical_user_interface/diagnostics/statistics.md
       - name: Erros de compilação
         href: api/graphical_user_interface/diagnostics/compilation_errors.md
       - name: Editor de código

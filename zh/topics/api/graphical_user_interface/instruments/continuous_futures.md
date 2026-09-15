@@ -2,7 +2,7 @@
 
 [ContinuousSecurityWindow](xref:StockSharp.Xaml.ContinuousSecurityWindow) - 是一个用于创建*连续* ([ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)) 交易品种的可视化编辑器。请参见 [连续期货](../../instruments/continuous_futures.md)。
 
-![Hydra 自定义连续期货](../../../../images/hydragluingcscustom.png)
+![屏幕截图: 连续期货](../../../../images/gui_continuoussecuritywindow.png)
 
 该组件包括：
 

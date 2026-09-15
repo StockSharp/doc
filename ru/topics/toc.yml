@@ -5294,6 +5294,10 @@
         href: api/graphical_user_interface/strategies/statistics.md
       - name: Монитор стратегий
         href: api/graphical_user_interface/strategies/dashboard.md
+      - name: Параметры оптимизации
+        href: api/graphical_user_interface/strategies/optimization_parameters.md
+      - name: Результаты оптимизации
+        href: api/graphical_user_interface/strategies/optimization_results.md
     - name: Опционы
       href: api/graphical_user_interface/options.md
       items:
@@ -5306,6 +5310,8 @@
       items:
       - name: Активные правила
         href: api/graphical_user_interface/diagnostics/market_rules.md
+      - name: Статистика стратегии
+        href: api/graphical_user_interface/diagnostics/statistics.md
       - name: Ошибки компиляции
         href: api/graphical_user_interface/diagnostics/compilation_errors.md
       - name: Редактор кода

@@ -5148,6 +5148,10 @@
         href: api/graphical_user_interface/strategies/statistics.md
       - name: 戦略モニター
         href: api/graphical_user_interface/strategies/dashboard.md
+      - name: 最適化パラメーター
+        href: api/graphical_user_interface/strategies/optimization_parameters.md
+      - name: 最適化結果
+        href: api/graphical_user_interface/strategies/optimization_results.md
     - name: オプション
       href: api/graphical_user_interface/options.md
       items:
@@ -5160,6 +5164,8 @@
       items:
       - name: 有効なルール
         href: api/graphical_user_interface/diagnostics/market_rules.md
+      - name: 戦略の統計
+        href: api/graphical_user_interface/diagnostics/statistics.md
       - name: コンパイルエラー
         href: api/graphical_user_interface/diagnostics/compilation_errors.md
       - name: コードエディタ

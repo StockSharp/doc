@@ -5148,6 +5148,10 @@
         href: api/graphical_user_interface/strategies/statistics.md
       - name: 策略监控台
         href: api/graphical_user_interface/strategies/dashboard.md
+      - name: 优化参数
+        href: api/graphical_user_interface/strategies/optimization_parameters.md
+      - name: 优化结果
+        href: api/graphical_user_interface/strategies/optimization_results.md
     - name: 期权
       href: api/graphical_user_interface/options.md
       items:
@@ -5160,6 +5164,8 @@
       items:
       - name: 活动规则
         href: api/graphical_user_interface/diagnostics/market_rules.md
+      - name: 策略统计
+        href: api/graphical_user_interface/diagnostics/statistics.md
       - name: 编译错误
         href: api/graphical_user_interface/diagnostics/compilation_errors.md
       - name: 代码编辑器

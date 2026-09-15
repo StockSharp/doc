@@ -2,7 +2,7 @@
 
 [ContinuousSecurityWindow](xref:StockSharp.Xaml.ContinuousSecurityWindow) - é um editor visual para criar instrumentos *contínuos* ([ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)). Consulte [Futuros contínuos](../../instruments/continuous_futures.md).
 
-![Hydra futuro contínuo personalizado](../../../../images/hydragluingcscustom.png)
+![Captura de ecrã de Futuros contínuos](../../../../images/gui_continuoussecuritywindow.png)
 
 Este componente inclui:
 

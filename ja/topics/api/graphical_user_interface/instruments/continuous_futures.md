@@ -2,7 +2,7 @@
 
 [ContinuousSecurityWindow](xref:StockSharp.Xaml.ContinuousSecurityWindow) は、*連続*（[ContinuousSecurity](xref:StockSharp.Algo.ContinuousSecurity)）銘柄を作成するためのビジュアルエディターです。[連続先物](../../instruments/continuous_futures.md) を参照してください。
 
-![Hydra カスタム連続先物](../../../../images/hydragluingcscustom.png)
+![連続先物 のスクリーンショット](../../../../images/gui_continuoussecuritywindow.png)
 
 このコンポーネントには次のものが含まれます。
 
