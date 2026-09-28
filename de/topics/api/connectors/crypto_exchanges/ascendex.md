@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse AscendEX hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
+
 # AscendEX
 
 **AscendEX** verbindet StockSharp mit der Kryptowährungsplattform AscendEX. Der Adapter stellt die Anbieter-API über das standardisierte StockSharp-Nachrichtenmodell bereit.

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The AscendEX exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # Adapter initialization: AscendEX
 
 The following code initializes [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter) and adds it to [Connector](xref:StockSharp.Algo.Connector).

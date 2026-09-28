@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **AscendEX 交易所已停止运营。该连接器已无法使用；文档仅保留供参考。**
+
 # 图形化配置：AscendEX
 
 在所有 StockSharp 产品中，请通过[连接设置窗口](../../../graphical_user_interface/connection_settings_window.md)配置连接。

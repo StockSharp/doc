@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Биржа AscendEX прекратила работу. Коннектор больше не работает; документация сохранена только для справки.**
+
 # Инициализация адаптера: AscendEX
 
 Следующий код создаёт [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter) и добавляет его в [Connector](xref:StockSharp.Algo.Connector).

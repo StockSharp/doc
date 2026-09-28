@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A bolsa AscendEX encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
+
 # Configuração do conector: AscendEX
 
 Configure as propriedades a seguir antes de se conectar ao AscendEX. A lista foi verificada com [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter).

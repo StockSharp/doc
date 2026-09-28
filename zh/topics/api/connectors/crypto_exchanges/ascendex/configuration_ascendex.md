@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **AscendEX 交易所已停止运营。该连接器已无法使用；文档仅保留供参考。**
+
 # 连接器配置：AscendEX
 
 连接 AscendEX 前，请配置以下适配器属性。该列表已根据 [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter) 的实现进行核对。

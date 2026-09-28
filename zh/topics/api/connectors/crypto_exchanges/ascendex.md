@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **AscendEX 交易所已停止运营。该连接器已无法使用；文档仅保留供参考。**
+
 # AscendEX
 
 **AscendEX** 将 StockSharp 连接到 AscendEX 加密货币平台。适配器通过标准 StockSharp 消息模型提供服务商 API。

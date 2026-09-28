@@ -425,6 +425,47 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"Disabled",
 	];
 
+	/// <summary>
+	/// Connectors that cannot work any more, named "category/connector".
+	/// </summary>
+	/// <remarks>
+	/// The venue closed, or it withdrew the API this connector speaks. Either way the pages stay,
+	/// carrying their notice, so a link somebody saved still answers; what goes is every link that
+	/// leads to them. A name listed here is held to the opposite rule from every other connector,
+	/// and putting one here is a deliberate act - it has to have actually stopped working.
+	/// </remarks>
+	private static readonly HashSet<string> _retiredConnectors = new(StringComparer.OrdinalIgnoreCase)
+	{
+		// Halted all operations on 1 July 2026.
+		"crypto_exchanges/ascendex",
+		"crypto_exchanges/bibox",
+		"crypto_exchanges/bitalong",
+		"crypto_exchanges/bitmax",
+		// Ceased all operations on 23 September 2026.
+		"crypto_exchanges/bitmex",
+		"crypto_exchanges/bittrex",
+		"crypto_exchanges/bitz",
+		"crypto_exchanges/bw",
+		"crypto_exchanges/coinbene",
+		"crypto_exchanges/coinexchange",
+		"crypto_exchanges/coinhub",
+		"crypto_exchanges/cryptopia",
+		"crypto_exchanges/digitexfutures",
+		"crypto_exchanges/fatbtc",
+		"crypto_exchanges/ftx",
+		"crypto_exchanges/gdax",
+		"crypto_exchanges/hotbit",
+		"crypto_exchanges/idax",
+		"crypto_exchanges/liqui",
+		"crypto_exchanges/livecoin",
+		"crypto_exchanges/okcoin",
+		"crypto_exchanges/prizmbit",
+		"crypto_exchanges/quoinex",
+		"crypto_exchanges/wex_btc_e",
+		"crypto_exchanges/zb",
+		"stock_market/iex",
+	};
+
 	private static readonly HashSet<string> _cjkLanguageCodes = new(StringComparer.OrdinalIgnoreCase)
 	{
 		"ja",
@@ -1052,6 +1093,11 @@ public sealed class DocumentationValidationTests : BaseTestClass
 
 			foreach (var connector in connectors)
 			{
+				// A retired connector is delisted on purpose; AllConnectorDocumentationPagesAreIndexed
+				// is what holds it to that.
+				if (_retiredConnectors.Contains($"stock_market/{connector}"))
+					continue;
+
 				var overview = $"api/connectors/stock_market/{connector}.md";
 				var configuration = $"api/connectors/stock_market/{connector}/configuration_{connector}.md";
 				var graphical = $"api/connectors/stock_market/{connector}/graphical_configuration_{connector}.md";
@@ -1124,6 +1170,19 @@ public sealed class DocumentationValidationTests : BaseTestClass
 				foreach (var connector in connectors)
 				{
 					var overview = $"api/connectors/{category}/{connector}.md";
+
+					if (_retiredConnectors.Contains($"{category}/{connector}"))
+					{
+						// It cannot work any more, so the requirement is the opposite one: the pages stay,
+						// the links go, and a link that came back would send somebody to a dead venue.
+						foreach (var (path, content) in new[] { (tocPath, toc), (designerPath, designer), (hydraPath, hydra) })
+						{
+							if (content.Contains(overview, StringComparison.Ordinal))
+								errors.Add($"{RelativeToRepo(path)} must not link the retired '{category}/{connector}' connector. Found: {overview}.");
+						}
+
+						continue;
+					}
 
 					if (!toc.Contains(overview, StringComparison.Ordinal))
 						errors.Add($"{RelativeToRepo(tocPath)} must index the '{category}/{connector}' connector. Missing: {overview}.");

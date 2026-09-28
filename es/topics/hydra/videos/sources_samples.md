@@ -6,5 +6,4 @@ Para obtener más información sobre la configuración gráfica de conexiones pa
 
 - [Conexión a OANDA](sources_samples/oanda.md)
 - [Conexión a Interactive Brokers](sources_samples/interactive_brokers.md)
-- [Conexión a BitMEX](sources_samples/bitmex.md)
 - [Conexión a Binance](sources_samples/binance.md)

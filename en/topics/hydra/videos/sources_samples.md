@@ -6,5 +6,4 @@ For more information about graphical connection settings for different connector
 
 - [Oanda](sources_samples/oanda.md)
 - [Interactive Brokers](sources_samples/interactive_brokers.md)
-- [Bitmex](sources_samples/bitmex.md)
 - [Binance](sources_samples/binance.md)

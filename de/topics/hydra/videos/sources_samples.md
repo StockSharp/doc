@@ -6,5 +6,4 @@ Weitere Informationen zur grafischen Verbindungskonfiguration für verschiedene 
 
 - [Verbindung zu OANDA](sources_samples/oanda.md)
 - [Verbindung zu Interactive Brokers](sources_samples/interactive_brokers.md)
-- [Verbindung zu BitMEX](sources_samples/bitmex.md)
 - [Verbindung zu Binance](sources_samples/binance.md)

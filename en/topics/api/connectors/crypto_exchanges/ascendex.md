@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The AscendEX exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # AscendEX
 
 **AscendEX** connects StockSharp to the AscendEX cryptocurrency platform. The adapter exposes the provider API through the standard StockSharp message model.

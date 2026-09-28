@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse AscendEX hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
+
 # Grafische Konfiguration: AscendEX
 
 Konfigurieren Sie die Verbindung in allen StockSharp-Produkten im [Fenster für Verbindungseinstellungen](../../../graphical_user_interface/connection_settings_window.md).

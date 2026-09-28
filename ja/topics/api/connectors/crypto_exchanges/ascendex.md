@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **AscendEX 取引所は運営を終了しました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # AscendEX
 
 **AscendEX** は StockSharp を暗号資産プラットフォーム AscendEX に接続します。アダプターは標準 StockSharp メッセージモデルを通じてプロバイダー API を公開します。

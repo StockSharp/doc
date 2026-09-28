@@ -6,5 +6,4 @@
 
 - [OANDA への接続](sources_samples/oanda.md)
 - [Interactive Brokers への接続](sources_samples/interactive_brokers.md)
-- [BitMEX への接続](sources_samples/bitmex.md)
 - [Binance への接続](sources_samples/binance.md)

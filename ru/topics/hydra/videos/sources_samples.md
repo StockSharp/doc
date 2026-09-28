@@ -7,5 +7,4 @@
 - [Подключение к Финам](sources_samples/finam.md)
 - [Подключение к Oanda](sources_samples/oanda.md)
 - [Подключение к Interactive Brokers](sources_samples/interactive_brokers.md)
-- [Подключение к Bitmex](sources_samples/bitmex.md)
 - [Подключение к Binance](sources_samples/binance.md)

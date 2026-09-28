@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The AscendEX exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # Connector configuration: AscendEX
 
 Configure the following properties before connecting to AscendEX. The list is verified against [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter).

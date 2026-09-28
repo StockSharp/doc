@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **AscendEX 取引所は運営を終了しました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # アダプターの初期化: AscendEX
 
 次のコードは [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter) を初期化し、[Connector](xref:StockSharp.Algo.Connector) に追加します。

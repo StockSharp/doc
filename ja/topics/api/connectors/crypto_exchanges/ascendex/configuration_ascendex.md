@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **AscendEX 取引所は運営を終了しました。このコネクターは動作しません。ドキュメントは参照用としてのみ保持されています。**
+
 # コネクタ設定: AscendEX
 
 AscendEX に接続する前に、次のアダプタープロパティを設定します。この一覧は [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter) の実装で確認されています。

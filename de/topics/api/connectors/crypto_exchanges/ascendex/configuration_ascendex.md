@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Die Börse AscendEX hat ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
+
 # Connector-Konfiguration: AscendEX
 
 Konfigurieren Sie vor der Verbindung mit AscendEX die folgenden Adaptereigenschaften. Die Liste wurde anhand von [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter) geprüft.

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **A bolsa AscendEX encerrou as operações. O conector não funciona mais; a documentação é mantida apenas para referência.**
+
 # Inicialização do adaptador: AscendEX
 
 O código a seguir inicializa [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter) e o adiciona ao [Connector](xref:StockSharp.Algo.Connector).

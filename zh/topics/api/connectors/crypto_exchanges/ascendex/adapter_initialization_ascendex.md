@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **AscendEX 交易所已停止运营。该连接器已无法使用；文档仅保留供参考。**
+
 # 适配器初始化：AscendEX
 
 以下代码初始化 [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter)，并将其添加到 [Connector](xref:StockSharp.Algo.Connector)。

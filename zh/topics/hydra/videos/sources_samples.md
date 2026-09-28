@@ -6,5 +6,4 @@
 
 - [连接到 OANDA](sources_samples/oanda.md)
 - [连接到盈透证券](sources_samples/interactive_brokers.md)
-- [连接到 BitMEX](sources_samples/bitmex.md)
 - [连接到币安](sources_samples/binance.md)

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **The AscendEX exchange has shut down. The connector no longer works; the documentation is retained for reference only.**
+
 # Graphical configuration: AscendEX
 
 For all StockSharp products, configure the connection in the [Connection settings window](../../../graphical_user_interface/connection_settings_window.md).

@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **Биржа AscendEX прекратила работу. Коннектор больше не работает; документация сохранена только для справки.**
+
 # Настройки коннектора: AscendEX
 
 Перед подключением к AscendEX задайте перечисленные ниже свойства адаптера. Список проверен по реализации [AscendExMessageAdapter](xref:StockSharp.AscendEx.AscendExMessageAdapter).
