@@ -477,8 +477,6 @@
         href: hydra/videos/sources_samples/oanda.md
       - name: Interactive Brokers への接続
         href: hydra/videos/sources_samples/interactive_brokers.md
-      - name: BitMEX への接続
-        href: hydra/videos/sources_samples/bitmex.md
       - name: Binance への接続
         href: hydra/videos/sources_samples/binance.md
     - name: 銘柄のダウンロード
@@ -3315,15 +3313,6 @@
             href: api/connectors/crypto_exchanges/bitmax/graphical_configuration_bitmax.md
           - name: BitMax アダプターの初期化
             href: api/connectors/crypto_exchanges/bitmax/adapter_initialization_bitmax.md
-        - name: BitMEX
-          href: api/connectors/crypto_exchanges/bitmex.md
-          items:
-          - name: BitMEX の設定
-            href: api/connectors/crypto_exchanges/bitmex/configuration_bitmex.md
-          - name: BitMEX のグラフィカル設定
-            href: api/connectors/crypto_exchanges/bitmex/graphical_configuration_bitmex.md
-          - name: BitMEX アダプターの初期化
-            href: api/connectors/crypto_exchanges/bitmex/adapter_initialization_bitmex.md
         - name: BitZ
           href: api/connectors/crypto_exchanges/bitz.md
           items:

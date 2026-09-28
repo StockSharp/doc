@@ -1,5 +1,5 @@
 > [!CAUTION]
-> **The BitMEX exchange will close on September 23, 2026; new user registrations have already stopped. The connector will stop working after the closure.**
+> **The BitMEX exchange shut down on September 23, 2026. The connector no longer works; the documentation is retained for reference only.**
 
 # Graphical configuration BitMEX
 

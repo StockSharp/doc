@@ -1,5 +1,5 @@
 > [!CAUTION]
-> **Die Börse BitMEX schließt am 23. September 2026; Neuregistrierungen wurden bereits eingestellt. Nach der Schließung wird der Konnektor nicht mehr funktionieren.**
+> **Die Börse BitMEX hat am 23. September 2026 ihren Betrieb eingestellt. Der Konnektor funktioniert nicht mehr; die Dokumentation dient nur noch als Referenz.**
 
 # Adapterinitialisierung BitMEX
 

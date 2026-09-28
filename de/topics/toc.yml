@@ -477,8 +477,6 @@
         href: hydra/videos/sources_samples/oanda.md
       - name: Verbindung zu Interactive Brokers
         href: hydra/videos/sources_samples/interactive_brokers.md
-      - name: Verbindung zu BitMEX
-        href: hydra/videos/sources_samples/bitmex.md
       - name: Verbindung zu Binance
         href: hydra/videos/sources_samples/binance.md
     - name: Instrumente herunterladen
@@ -3315,15 +3313,6 @@
             href: api/connectors/crypto_exchanges/bitmax/graphical_configuration_bitmax.md
           - name: Adapterinitialisierung BitMax
             href: api/connectors/crypto_exchanges/bitmax/adapter_initialization_bitmax.md
-        - name: BitMEX
-          href: api/connectors/crypto_exchanges/bitmex.md
-          items:
-          - name: Konfiguration BitMEX
-            href: api/connectors/crypto_exchanges/bitmex/configuration_bitmex.md
-          - name: Grafische Konfiguration BitMEX
-            href: api/connectors/crypto_exchanges/bitmex/graphical_configuration_bitmex.md
-          - name: Adapterinitialisierung BitMEX
-            href: api/connectors/crypto_exchanges/bitmex/adapter_initialization_bitmex.md
         - name: BitZ
           href: api/connectors/crypto_exchanges/bitz.md
           items:

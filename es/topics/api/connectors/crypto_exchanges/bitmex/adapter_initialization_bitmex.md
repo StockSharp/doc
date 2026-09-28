@@ -1,5 +1,5 @@
 > [!CAUTION]
-> **La bolsa BitMEX cerrará el 23 de septiembre de 2026; ya se han suspendido los nuevos registros. Después del cierre, el conector dejará de funcionar.**
+> **La bolsa BitMEX cesó sus operaciones el 23 de septiembre de 2026. El conector ya no funciona; la documentación se conserva únicamente como referencia.**
 
 # Inicialización del adaptador BitMEX
 

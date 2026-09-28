@@ -477,8 +477,6 @@
         href: hydra/videos/sources_samples/oanda.md
       - name: 连接到盈透证券
         href: hydra/videos/sources_samples/interactive_brokers.md
-      - name: 连接到 BitMEX
-        href: hydra/videos/sources_samples/bitmex.md
       - name: 连接到币安
         href: hydra/videos/sources_samples/binance.md
     - name: 下载工具
@@ -3315,15 +3313,6 @@
             href: api/connectors/crypto_exchanges/bitmax/graphical_configuration_bitmax.md
           - name: 适配器初始化 BitMax
             href: api/connectors/crypto_exchanges/bitmax/adapter_initialization_bitmax.md
-        - name: BitMEX
-          href: api/connectors/crypto_exchanges/bitmex.md
-          items:
-          - name: 配置 BitMEX
-            href: api/connectors/crypto_exchanges/bitmex/configuration_bitmex.md
-          - name: 图形配置 BitMEX
-            href: api/connectors/crypto_exchanges/bitmex/graphical_configuration_bitmex.md
-          - name: 适配器初始化 BitMEX
-            href: api/connectors/crypto_exchanges/bitmex/adapter_initialization_bitmex.md
         - name: BitZ
           href: api/connectors/crypto_exchanges/bitz.md
           items:
