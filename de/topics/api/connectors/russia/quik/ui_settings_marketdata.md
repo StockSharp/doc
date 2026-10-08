@@ -1,3 +1,5 @@
-# Russlandspezifisches Connector-Thema
+# QUIK: Konfiguration der Marktdaten
 
-Dieses Thema ist nur in der russischen Version verfügbar, da es spezifisch für den russischen Markt ist.
+Diese Seite verweist auf die russische Anleitung zum Thema **QUIK: Konfiguration der Marktdaten**. Die vollständige Anleitung ist nur auf Russisch verfügbar.
+
+[Russische Anleitung lesen](https://doc.stocksharp.com/ru/topics/api/connectors/russia/quik/ui_settings_marketdata)

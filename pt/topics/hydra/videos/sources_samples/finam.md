@@ -1,3 +1,5 @@
-# Tópico de fonte específico da Rússia
+# Finam: vídeo de conexão
 
-Este exemplo de fonte está disponível apenas na versão russa porque é específico do mercado russo.
+Esta página remete ao guia em russo sobre **Finam: vídeo de conexão**. As instruções completas estão disponíveis apenas em russo.
+
+[Ler o guia em russo](https://doc.stocksharp.com/ru/topics/hydra/videos/sources_samples/finam)

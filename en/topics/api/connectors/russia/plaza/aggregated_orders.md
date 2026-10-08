@@ -1,3 +1,5 @@
-﻿# Russian-Specific Connector Topic
+﻿# Plaza II (SPECTRA) CGATE: aggregated order books
 
-This topic is available only in the Russian version because it is specific to the Russian market.
+This page refers to the Russian guide on **Plaza II (SPECTRA) CGATE: aggregated order books**. The full instructions are available only in the Russian version.
+
+[Read the Russian guide](https://doc.stocksharp.com/ru/topics/api/connectors/russia/plaza/aggregated_orders)

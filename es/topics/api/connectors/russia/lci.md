@@ -1,3 +1,5 @@
-# Tema de conector específico del mercado ruso
+# LCI
 
-Este tema está disponible solo en la versión rusa porque es específico del mercado ruso.
+Esta página remite a la guía en ruso sobre **LCI**. Las instrucciones completas están disponibles únicamente en ruso.
+
+[Leer la guía en ruso](https://doc.stocksharp.com/ru/topics/api/connectors/russia/lci)

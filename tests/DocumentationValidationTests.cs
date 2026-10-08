@@ -2543,6 +2543,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 	public void RussianSpecificTopicsStayPlaceholdersOutsideRussian()
 	{
 		var errors = new List<string>();
+		var headings = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 		var defaultRoot = Path.Combine(_repoRoot, DefaultLanguage);
 		var languages = GetContentLanguages()
 			.Where(lang => !lang.Equals("ru", StringComparison.OrdinalIgnoreCase))
@@ -2566,11 +2567,40 @@ public sealed class DocumentationValidationTests : BaseTestClass
 					continue;
 				}
 
-				ValidateRussianSpecificPlaceholderPage(file, ReadAllText(file), errors);
+				var markdown = ReadAllText(file);
+				var heading = markdown.Split('\n')[0].Trim();
+				var key = $"{lang}/{heading}";
+				if (headings.TryGetValue(key, out var previous))
+					errors.Add($"{lang}/{relative}: Russian-specific topic heading must identify the article, rather than repeat {previous}.");
+				else
+					headings.Add(key, relative);
+
+				ValidateRussianSpecificPlaceholderPage(file, markdown, errors);
 			}
 		}
 
 		AssertNoErrors(errors);
+	}
+
+	/// <summary>
+	/// Only the matching Russian article may be linked from a connector placeholder.
+	/// </summary>
+	/// <param name="link">The Markdown link to validate.</param>
+	/// <param name="valid">Whether the link should satisfy the placeholder contract.</param>
+	[TestMethod]
+	[DataRow("[Read the Russian article](https://doc.stocksharp.com/ru/topics/api/connectors/russia/mfd)", true)]
+	[DataRow("", false)]
+	[DataRow("[Read another article](https://doc.stocksharp.com/ru/topics/api/connectors/russia/finam)", false)]
+	[DataRow("![Screenshot](https://doc.stocksharp.com/ru/topics/api/connectors/russia/mfd)", false)]
+	[DataRow("[External article](https://example.com/ru/topics/api/connectors/russia/mfd)", false)]
+	[DataRow("[Read the Russian article](https://doc.stocksharp.com/ru/topics/api/connectors/russia/mfd) [Other](https://example.com)", false)]
+	[DataRow("[Read the Russian article][source]\n[source]: https://doc.stocksharp.com/ru/topics/api/connectors/russia/finam", false)]
+	public void RussianSpecificPlaceholderLinksStayWithinTheirSourceArticle(string link, bool valid)
+	{
+		var errors = new List<string>();
+		var file = Path.Combine(_repoRoot, "en/topics/api/connectors/russia/mfd.md");
+		ValidateRussianSpecificPlaceholderPage(file, $"# MFD.ru\n\nThe full instructions are available only in the Russian version.\n\n{link}", errors);
+		IsTrue(valid == (errors.Count == 0), string.Join(Environment.NewLine, errors));
 	}
 
 	[TestMethod]
@@ -14246,8 +14276,15 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		if (Regex.IsMatch(markdown, @"```|~~~", RegexOptions.CultureInvariant))
 			errors.Add($"{rel}: Russian-specific placeholder must not contain code blocks.");
 
-		if (Regex.IsMatch(markdown, @"!\[[^\]]*\]\(|\[[^\]]+\]\([^)]+\)", RegexOptions.CultureInvariant))
-			errors.Add($"{rel}: Russian-specific placeholder must not contain links or images.");
+		var relative = rel[(rel.IndexOf('/') + 1)..];
+		var source = Path.Combine(_repoRoot, "ru", relative.Replace('/', Path.DirectorySeparatorChar));
+		var sourceUrl = $"https://doc.stocksharp.com/ru/{relative[..^3]}";
+		var links = Markdown.Parse(markdown, _markdown).Descendants().OfType<LinkInline>().ToArray();
+		if (links.Length != 1 || links[0].IsImage || !string.Equals(links[0].Url, sourceUrl, StringComparison.Ordinal))
+			errors.Add($"{rel}: Russian-specific placeholder must link only to its corresponding Russian article at {sourceUrl}, without images or other links.");
+
+		if (!File.Exists(source))
+			errors.Add($"{rel}: Russian-specific placeholder has no corresponding Russian source article.");
 
 		if (Regex.IsMatch(markdown, @"^\s*(?:[-*+]\s+|\d+\.\s+|\|)", RegexOptions.Multiline | RegexOptions.CultureInvariant))
 			errors.Add($"{rel}: Russian-specific placeholder must not contain lists or tables.");

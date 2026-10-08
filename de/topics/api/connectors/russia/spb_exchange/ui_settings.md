@@ -1,3 +1,5 @@
-# Russlandspezifisches Connector-Thema
+# SPB Exchange: grafische Konfiguration
 
-Dieses Thema ist nur in der russischen Version verfügbar, da es spezifisch für den russischen Markt ist.
+Diese Seite verweist auf die russische Anleitung zum Thema **SPB Exchange: grafische Konfiguration**. Die vollständige Anleitung ist nur auf Russisch verfügbar.
+
+[Russische Anleitung lesen](https://doc.stocksharp.com/ru/topics/api/connectors/russia/spb_exchange/ui_settings)

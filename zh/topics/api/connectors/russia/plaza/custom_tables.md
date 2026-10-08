@@ -1,3 +1,5 @@
-# 俄罗斯市场专用连接器主题
+# Plaza II (SPECTRA) CGATE: 自定义表
 
-此主题仅在俄语版本中提供，因为它专属于俄罗斯市场。
+有关 **Plaza II (SPECTRA) CGATE: 自定义表** 的内容，请参阅俄语版指南。完整说明仅以俄语提供。
+
+[阅读俄语指南](https://doc.stocksharp.com/ru/topics/api/connectors/russia/plaza/custom_tables)

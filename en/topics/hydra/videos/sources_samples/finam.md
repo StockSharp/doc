@@ -1,3 +1,5 @@
-# Russian-Specific Source Topic
+# Finam: connection video
 
-This source sample is available only in the Russian version because it is specific to the Russian market.
+This page refers to the Russian guide on **Finam: connection video**. The full instructions are available only in the Russian version.
+
+[Read the Russian guide](https://doc.stocksharp.com/ru/topics/hydra/videos/sources_samples/finam)

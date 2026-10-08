@@ -1,3 +1,5 @@
-﻿# Russian-Specific Connector Topic
+﻿# MFD.ru: adapter initialization
 
-This topic is available only in the Russian version because it is specific to the Russian market.
+This page refers to the Russian guide on **MFD.ru: adapter initialization**. The full instructions are available only in the Russian version.
+
+[Read the Russian guide](https://doc.stocksharp.com/ru/topics/api/connectors/russia/mfd/sample)

@@ -1,3 +1,5 @@
-﻿# Russian-Specific Connector Topic
+﻿# Transaq: connector settings
 
-This topic is available only in the Russian version because it is specific to the Russian market.
+This page refers to the Russian guide on **Transaq: connector settings**. The full instructions are available only in the Russian version.
+
+[Read the Russian guide](https://doc.stocksharp.com/ru/topics/api/connectors/russia/transaq/settings)

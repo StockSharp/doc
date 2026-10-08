@@ -1,3 +1,5 @@
-# Tópico de conector específico da Rússia
+# LCI: inicialização do adaptador
 
-Este tópico está disponível apenas na versão russa porque é específico do mercado russo.
+Esta página remete ao guia em russo sobre **LCI: inicialização do adaptador**. As instruções completas estão disponíveis apenas em russo.
+
+[Ler o guia em russo](https://doc.stocksharp.com/ru/topics/api/connectors/russia/lci/sample)

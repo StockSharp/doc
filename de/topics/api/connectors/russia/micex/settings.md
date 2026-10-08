@@ -1,3 +1,5 @@
-# Russlandspezifisches Connector-Thema
+# Micex (TEAP): Verbindungseinstellungen
 
-Dieses Thema ist nur in der russischen Version verfügbar, da es speziell auf den russischen Markt ausgerichtet ist.
+Diese Seite verweist auf die russische Anleitung zum Thema **Micex (TEAP): Verbindungseinstellungen**. Die vollständige Anleitung ist nur auf Russisch verfügbar.
+
+[Russische Anleitung lesen](https://doc.stocksharp.com/ru/topics/api/connectors/russia/micex/settings)

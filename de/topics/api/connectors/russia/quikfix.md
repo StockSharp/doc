@@ -1,3 +1,5 @@
-# Russlandspezifisches Connector-Thema
+# QUIK FIX
 
-Dieses Thema ist nur in der russischen Version verfügbar, da es spezifisch für den russischen Markt ist.
+Diese Seite verweist auf die russische Anleitung zum Thema **QUIK FIX**. Die vollständige Anleitung ist nur auf Russisch verfügbar.
+
+[Russische Anleitung lesen](https://doc.stocksharp.com/ru/topics/api/connectors/russia/quikfix)

@@ -1,3 +1,5 @@
-# Russlandspezifisches Connector-Thema
+# Simba (SBE): grafische Konfiguration
 
-Dieses Thema ist nur in der russischen Version verfügbar, da es spezifisch für den russischen Markt ist.
+Diese Seite verweist auf die russische Anleitung zum Thema **Simba (SBE): grafische Konfiguration**. Die vollständige Anleitung ist nur auf Russisch verfügbar.
+
+[Russische Anleitung lesen](https://doc.stocksharp.com/ru/topics/api/connectors/russia/simba/ui_settings)

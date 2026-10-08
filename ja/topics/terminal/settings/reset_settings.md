@@ -1,4 +1,5 @@
 # 設定のリセット
 
-[設定のリセット](../../designer/settings/reset_settings.md)を参照してください。
+Terminal の設定をリセットすると、設定ディレクトリ内の情報が削除される場合があります。確認する前に共通のリセットガイドを読み、削除対象のデータを確認してください。
 
+[設定のリセット](../../designer/settings/reset_settings.md)を参照してください。
