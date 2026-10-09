@@ -1,6 +1,6 @@
 # Flagge
 
-Videoanleitung zum Thema **Flagge** in Designer. Die zugehörigen Anweisungen finden Sie in der folgenden schriftlichen Anleitung.
+Videoanleitung zum Thema **Flagge** im Designer. Die zugehörigen Anweisungen finden Sie in der folgenden schriftlichen Anleitung.
 
 > [!Video https://www.youtube.com/embed/WYPWihSFuw0]
 

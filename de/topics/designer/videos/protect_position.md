@@ -1,6 +1,6 @@
-# Positionen schutzen
+# Positionen schützen
 
-Videoanleitung zum Thema **Positionen schutzen** in Designer. Die zugehörigen Anweisungen finden Sie in der folgenden schriftlichen Anleitung.
+Videoanleitung zum Thema **Positionen schützen** im Designer. Die zugehörigen Anweisungen finden Sie in der folgenden schriftlichen Anleitung.
 
 > [!Video https://www.youtube.com/embed/qbtBfxDFo38]
 

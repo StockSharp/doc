@@ -1,5 +1,5 @@
-# SPB Exchange: configuração gráfica
+# Bolsa SPB: configuração gráfica
 
-Esta página remete ao guia em russo sobre **SPB Exchange: configuração gráfica**. As instruções completas estão disponíveis apenas em russo.
+Esta página remete ao guia em russo sobre **Bolsa SPB: configuração gráfica**. As instruções completas estão disponíveis apenas em russo.
 
 [Ler o guia em russo](https://doc.stocksharp.com/ru/topics/api/connectors/russia/spb_exchange/ui_settings)
