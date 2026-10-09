@@ -4,4 +4,4 @@ O painel de registos do Terminal reúne mensagens de conexões, estratégias e o
 
 Consulte 
 
-[Painel de registos](../../designer/user_interface/registos.md)
+[Painel de registos](../../designer/user_interface/logs.md)
