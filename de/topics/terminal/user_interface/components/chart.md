@@ -14,13 +14,30 @@ Ein Klick auf ![Designer Grafikelement 01](../../../../images/designer_schedule_
 
 ![Designer Grafikelement 02](../../../../images/designer_schedule_02.png)
 
-Sie können Orders aus dem Chart heraus registrieren. Geben Sie dazu zuerst das **Instrument** und das **Portfolio** an, für die Orders registriert werden sollen.
+## Handel aus dem Chart
 
-Kauforders werden mit der Tastenkombination **Ctrl+linke Maustaste** registriert.
+Aus dem Chart können Orders platziert, verschoben und storniert werden. Zuerst wird auf der Schaltflächenleiste des Charts der Schalter **Orders aus dem Chart platzieren** eingeschaltet, und in seinen Dropdown-Einstellungen werden **Instrument**, **Portfolio** und das Ordervolumen angegeben.
 
-Verkaufsorders werden mit der Tastenkombination **Ctrl+rechte Maustaste** registriert.
+- Eine Kauforder wird mit **Ctrl+linke Maustaste** auf einem Preis im Chart platziert, eine Verkaufsorder mit **Ctrl+rechte Maustaste**.
+- Die eigenen aktiven Orders sind im Chart als Linien auf ihren Preisen gezeichnet. Eine Linie kann gegriffen und zu einem anderen Preis gezogen werden — die Order wird verschoben; das Kreuz an der Linie storniert die Order. Die Schaltfläche **Orders stornieren** storniert alle Orders des Charts.
+- Die Schaltfläche **Quick-Orders-Panel anzeigen** blendet über dem Chart ein Panel mit der Schaltfläche **Verkaufen** zum besten Geldkurs und der Schaltfläche **Kaufen** zum besten Briefkurs, dem Spread dazwischen und dem Ordervolumen ein. Das Panel kann an eine beliebige Stelle des Charts gezogen werden.
 
 ![Terminal Grafik-Panel 01](../../../../images/terminal_panel_graphics_01.png)
+
+> [!WARNING]
+> Orders aus dem Chart werden sofort und ohne Bestätigung an den Handelsplatz gesendet.
+
+## Einstellungen des Charts
+
+Die Schaltfläche **Einstellungen** auf der Schaltflächenleiste des Charts öffnet das Einstellungsfenster des gesamten Charts: automatisches Scrollen und automatische Skalierung, Legende, Ansichtsbereich, Fadenkreuz, Tooltip, Werte auf den Achsen, FPS-Statistik und die Zeitzone, in der die Zeitachse beschriftet ist.
+
+Ein Rechtsklick auf die Schaltflächenleiste selbst öffnet die Liste ihrer Schaltflächen: Ein deaktiviertes Kontrollkästchen blendet die Schaltfläche aus, ein aktiviertes blendet sie wieder ein. Welche Schaltflächen angezeigt werden, wird zusammen mit dem Chart gespeichert.
+
+Die Schaltfläche **Zwischenablage (als Bild)** kopiert das Bild des Charts, damit Sie es in eine Nachricht oder ein Dokument einfügen können. Ein Rechtsklick auf ein Element des Charts öffnet ein Menü mit den Einträgen **Elementparameter…** und **Löschen**; im Menü des Chartbereichs gibt es **Einstellungen → Chartbereich…** und **Panel entfernen**. Ein Panel unter dem Chart lässt sich auch mit dem Kreuz in seiner Überschrift schließen.
+
+Das Chart wird mit den Pfeiltasten **←** und **→** gescrollt, die Tasten **Home** und **End** springen zum Anfang und zum Ende der Daten, und **+** und **−** ändern den Maßstab.
+
+![Einstellungsfenster des Charts im Terminal](../../../../images/terminal_panel_graphics_02.png)
 
 In den Einstellungen des grafischen Elements können Sie den benötigten Chartstil festlegen: japanische Kerzen, Balken, Box-Chart, Cluster-Profil usw.
 

@@ -4,7 +4,7 @@
 
 O cubo foi concebido para apresentar o livro de ordens num componente gráfico especializado [Livro de ordens](../../../../user_interface/components/order_book.md).
 
-O componente [Livro de ordens](../../../../user_interface/components/order_book.md) deve ser adicionado a partir do grupo [Componentes](../../../../user_interface/components.md) dos separadores **Simulação** ou **Negociação**. Pode encontrar mais detalhes sobre o componente [Livro de ordens](../../../../user_interface/components/order_book.md) na secção [Livro de ordens](../../../../user_interface/components/order_book.md).
+O componente [Livro de ordens](../../../../user_interface/components/order_book.md) deve ser adicionado a partir do grupo [Componentes](../../../../user_interface/components.md) dos separadores **Backtest** ou **Negociação**. Pode encontrar mais detalhes sobre o componente [Livro de ordens](../../../../user_interface/components/order_book.md) na secção [Livro de ordens](../../../../user_interface/components/order_book.md).
 
 ### Conectores de entrada
 

@@ -4,7 +4,7 @@
 
 要使用该指标，必须使用 [VolumeProfileIndicator](xref:StockSharp.Algo.Indicators.VolumeProfileIndicator) 类。
 
-![GUI 集群图表](../../../../images/gui_clasterchart.png)
+![图表上的成交量分布](../../../../images/indicator_volume_profile.png)
 
 ## 推荐内容
 

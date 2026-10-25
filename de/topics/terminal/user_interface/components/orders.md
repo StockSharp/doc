@@ -1,6 +1,12 @@
 # Aufträge
 
-Die Komponente **Aufträge** ist eine Tabelle mit Aufträgen, die vollständige Informationen über alle Aufträge anzeigt. Wenn Sie mit der rechten Maustaste auf einen Auftrag klicken, erscheint ein Panel, über das Sie einen neuen Auftrag registrieren, den ausgewählten Auftrag stornieren oder ändern können.
+Die Komponente **Aufträge** ist eine Tabelle mit Aufträgen, die vollständige Informationen über alle Aufträge anzeigt.
+
+Über der Tabelle befinden sich zwei Schaltflächen: **Abbrechen** storniert den ausgewählten Auftrag, **Alle Orders stornieren** alle aktiven. Daneben befindet sich eine Liste, welche Aufträge in der Tabelle angezeigt werden: alle, aktive, ausgeführte oder abgelehnte.
+
+![Panel der Aufträge im Terminal](../../../../images/terminal_orders_00.png)
+
+Wenn Sie mit der rechten Maustaste auf einen Auftrag klicken, erscheint ein Panel, über das Sie einen neuen Auftrag registrieren, den ausgewählten Auftrag stornieren oder ändern können.
 
 ![Terminal Schnellstart 04](../../../../images/terminal_quick_start_04.png)
 

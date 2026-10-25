@@ -4,7 +4,7 @@ A criação de estratégias a partir de código destina-se a utilizadores que pr
 
 O processo de criação de uma estratégia ocorre diretamente no [Designer](../../../designer.md) ou num ambiente de desenvolvimento **Python** (os ambientes de desenvolvimento mais populares são **Visual Studio** e **JetBrains Rider**), usando a biblioteca para o desenvolvimento profissional de robôs de negociação em **Python** e a [API](../../../api.md).
 
-Pode adicionar uma nova estratégia clicando no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) no separador **Geral** e selecionando **Estratégia**. Ou clicando com o botão direito na pasta **Estratégias** no painel **Esquemas** e clicando no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) no menu pendente:
+Pode adicionar uma nova estratégia clicando no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) no separador **Geral** e selecionando **Estratégia**. Ou clicando com o botão direito na pasta **Backtest** no painel **Esquemas** e clicando no botão **Adicionar** ![Designer Painel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) no menu pendente:
 
 ![Designer Criação de uma estratégia 00](../../../../images/designer_creation_of_strategy_00.png)
 
@@ -14,7 +14,7 @@ Depois de clicar no botão **Adicionar** ![Designer Painel de circuitos 01](../.
 
 Para criar uma estratégia a partir de código Python, selecione o segundo separador. Também pode escolher um modelo que será usado como código inicial.
 
-Depois de clicar em **Confirmar**, uma nova estratégia aparecerá na pasta **Estratégias** do painel **Esquemas**, de forma semelhante à criação de uma estratégia a partir de um [esquema](../using_visual_designer.md). As ações para eliminar ou mudar o nome da estratégia também são semelhantes.
+Depois de clicar em **Confirmar**, uma nova estratégia aparecerá na pasta **Backtest** do painel **Esquemas**, de forma semelhante à criação de uma estratégia a partir de um [esquema](../using_visual_designer.md). As ações para eliminar ou mudar o nome da estratégia também são semelhantes.
 
 Mas, em vez de um esquema, será apresentado um editor de código Python:
 
@@ -22,7 +22,7 @@ Mas, em vez de um esquema, será apresentado um editor de código Python:
 
 O separador do editor de código é composto pelos painéis **Código-fonte** e **Lista de erros**. O painel **Código-fonte** contém o próprio editor de código Python. Na parte superior, existe uma barra de ferramentas onde pode ativar ou desativar o destaque de elementos como **Linha atual**, **Número da linha**, etc. Para aumentar o tamanho da letra, pode usar a combinação CTRL+MouseWheel.
 
-O painel **Lista de erros** é uma tabela com uma lista de erros no código; um duplo clique numa linha move automaticamente o cursor no painel **Código-fonte** para a localização do erro.
+O painel **Lista de erros** é uma tabela com uma lista de erros no código; um duplo clique numa linha move automaticamente o cursor no painel **Código-fonte** para a localização do erro. Além disso, os erros e avisos de compilação são sublinhados com uma linha ondulada diretamente no texto do código.
 
 Ao editar o código, aparecerá um ícone ![Designer Criação do cubo com código-fonte 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) no canto inferior direito do painel **Lista de erros**, indicando que o acompanhamento de alterações começou. A compilação do código ocorre quando o código deixa de mudar.
 

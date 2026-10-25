@@ -24,7 +24,7 @@
 
   ![控制面板 05](../../images/telegramcontrolstrategy.png)
 
- - 使用 [Shell](../shell.md) 时，打开 RemoteManager 面板，并按与 [Designer](../designer.md) 类似的方式配置设置。
+ - 使用 [Shell](../shell.md) 时，请在主窗口的命令栏中打开 **远程** 开关，并在所需策略的设置中允许远程控制。详细说明请参阅[远程控制](../shell/remote_control.md)。
  - 使用 [Hydra](../hydra.md) 时，执行与 [Designer](../designer.md) 类似的操作。通过与 [Hydra](../hydra.md) 集成，可以管理市场数据下载并监控数量统计信息。
 
   ![控制面板 06](../../images/telegramhydra.png)

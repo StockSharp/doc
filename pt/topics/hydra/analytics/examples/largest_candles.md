@@ -6,10 +6,10 @@ O script "Maiores velas" foi concebido para identificar velas com o volume máxi
 
 ## Funcionalidades Principais
 
-O script analisa um conjunto de instrumentos especificados, procura entre eles velas com o maior volume e comprimento de corpo, e apresenta estes dados em dois gráficos:
+O script analisa um conjunto de instrumentos especificados, procura para cada um a vela de maior comprimento e a vela de maior volume e apresenta-as em dois gráficos de bolhas, um por baixo do outro; no eixo horizontal representa-se a hora de abertura da vela:
 
-- **Gráfico do Comprimento do Corpo da Vela**: Mostra velas com a maior diferença entre o preço de abertura e o preço de fecho.
-- **Gráfico do Volume de Negociação**: Demonstra velas com o volume máximo de negociação durante o tempo de existência da vela.
+- **prices** — velas de maior comprimento (do mínimo ao máximo): na vertical, o ponto médio da vela; o tamanho da bolha é o seu comprimento.
+- **volumes** — velas com o volume máximo de negociação: na vertical e como tamanho da bolha, o volume.
 
 ## Fluxo de Trabalho
 

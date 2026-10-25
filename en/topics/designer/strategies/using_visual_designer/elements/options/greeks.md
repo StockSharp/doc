@@ -11,6 +11,7 @@ Incoming Sockets
 - **Model** - the calculation model (for example, Black-Scholes).
 - **Price of the Underlying Asset** - the price of the underlying asset.
 - **Maximum Deviation** - the maximum deviation.
+- **Premium** - the option price. The block uses it to find the implied volatility when **Value** is IV; it is not needed for the other values.
 
 ### Outgoing Sockets
 
@@ -22,7 +23,7 @@ Outgoing Sockets
 
 Parameters
 
-- **Value** - can take the type of "Greek" Delta, Gamma, Vega, Theta, Rho and determines what value will be output from the block.
+- **Value** - can take the type of "Greek" Delta, Gamma, Vega, Theta, Rho, as well as Premium (the option price by the model) and IV (the implied volatility in percent from the **Premium** input), and determines what value will be output from the block.
 
 ## See Also
 

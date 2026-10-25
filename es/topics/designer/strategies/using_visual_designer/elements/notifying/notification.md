@@ -14,7 +14,7 @@ Conectores de entrada
 
 Parámetros
 
-- **Tipo** - tipo de mensaje (ventana emergente, e-mail, sms, etc.). Los tipos de notificaciones se describen en la sección [Configuración de notificaciones](../../../../../terminal/notifications.md).
+- **Tipo** - cómo enviar el mensaje: con un sonido, en una ventana emergente, en un archivo de registro o a Telegram. Los métodos se describen en la sección [Notificaciones](../../../../../terminal/notifications.md).
 - **Telegram** - canal usado para notificaciones de Telegram.
 - **Encabezado** - encabezado del mensaje.
 
@@ -22,4 +22,4 @@ Parámetros
 
 [Formato de cadena](string_format.md)
 [Concatenación de cadenas](string_concat.md)
-[Configuración de notificaciones](../../../../../terminal/notifications.md)
+[Notificaciones](../../../../../terminal/notifications.md)

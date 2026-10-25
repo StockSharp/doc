@@ -6,11 +6,11 @@ En modo servidor, el programa [Hydra](../../hydra.md) permite al usuario trabaja
 
 En la práctica, la conexión a la fuente se produce a través de [Hydra](../../hydra.md), al que, por ejemplo, se conectan simultáneamente [Designer](../../designer.md) y [Terminal](../../terminal.md). Este método permite evitar reconexiones entre programas y la compra de una conexión adicional. Con este trabajo se excluyen conflictos que pueden surgir por el registro de órdenes u operaciones desde distintos programas. [Hydra](../../hydra.md) recibe la señal y devuelve el resultado al programa desde el que se recibió, sin alterar la secuencia del resto del trabajo.
 
-Para habilitar el modo servidor de [Hydra](../../hydra.md), seleccione la pestaña **Modo servidor** en el menú superior del programa.
+Para habilitar el modo servidor de [Hydra](../../hydra.md), en el menú **Servidor** seleccione la opción **Modo servidor**.
 
 ![servidor Hydra menu](../../../images/hydra_server_menu.png)
 
-Después haga clic en el botón **Configuración** para abrir la ventana de configuración del modo servidor.
+Después, en el mismo menú, seleccione la opción **Configuración de red**: se abrirá la ventana de configuración del modo servidor.
 
 ![servidor Hydra](../../../images/hydra_server.png)
 
@@ -28,6 +28,7 @@ Después haga clic en el botón **Configuración** para abrir la ventana de conf
   5. **KeepSubscriptionsOnDisconnect** - conservar suscripciones al desconectarse de la fuente.
   6. **DeadSessionCleanupInterval** - intervalo tras el cual se limpiará la información si la conexión está desconectada.
 - **Autorización** - autorización para obtener acceso al servidor Hydra.
+- **Almacenamiento** (grupo **Autorización**) - dónde se guardan los usuarios del servidor: **Archivo** o **Base de datos**. Para la base de datos se indican la **Conexión** a ella y la **Tabla** (por defecto, **HydraUsers**); en la base de datos no se guardan las contraseñas en sí, sino sus hashes.
 - **Número de instrumentos** - número máximo de instrumentos que se pueden solicitar al servidor.
 - **Velas (días)** - número máximo de días disponibles para descargar historial de velas.
 - **Ticks (días)** - número máximo de días disponibles para descargar historial de datos tick.
@@ -37,8 +38,10 @@ Después haga clic en el botón **Configuración** para abrir la ventana de conf
 - **Simulador** - activar el modo simulador.
 - **Mapeo de instrumentos** - habilitar el modo de transferencia solo para los instrumentos especificados.
 
-Si establece **Autorización** en un valor distinto de **Anónimo**, aparecerá el botón **Usuarios** en la pestaña **Común**. Al hacer clic en él, aparecerá la ventana **Usuarios**.
+Si establece **Autorización** en un valor distinto de **Anónimo** y habilita el **Modo servidor**, en el menú **Servidor** estará disponible la opción **Usuarios**, que abre la ventana **Usuarios**.
 
 ![Captura de Configuración](../../../images/hydra_users.png)
 
-En la parte izquierda de la ventana puede añadir un nuevo usuario, y a la derecha establecer sus derechos de acceso.
+En la parte izquierda de la ventana está la lista de usuarios: **Añadir** crea uno nuevo, **Eliminar** quita el seleccionado y **Guardar** guarda los cambios. A la derecha están el correo y la contraseña del usuario seleccionado, las direcciones desde las que puede conectarse y sus derechos: cada uno se marca con una casilla, y **Seleccionar todo** y **Deseleccionar todo** los marcan o desmarcan todos a la vez.
+
+Mientras el servidor está en funcionamiento, en el menú **Servidor** está disponible la opción **Suscripciones**: abre un panel con las suscripciones a datos de mercado de los clientes conectados al servidor.

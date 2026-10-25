@@ -4,6 +4,8 @@ In the window that appears, select the securities, the required time interval an
 
 ![hydra export depth](../../../../images/hydra_export_depth.png)
 
+The slider selects which of the loaded order books is shown. When it reaches the last loaded order book, the next ones are loaded.
+
 > [!TIP]
 > Order books can be created from [Order Log and Level 1 files](../any_market_data_types.md). In addition, you can adjust the depth and update period of the order book.
 

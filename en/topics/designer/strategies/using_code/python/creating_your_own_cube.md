@@ -2,7 +2,7 @@
 
 Similar to creating a [cube from a scheme](../../using_visual_designer/composite_elements.md), you can create your own cube based on Python code. Such a cube will be more functional than a cube created from a scheme.
 
-To create a cube from code, you need to create it in the **Custom Cubes** folder:
+To create a cube from code, you need to create it in the **Own elements** folder:
 
 ![Designer_Source_Code_Elem_00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -207,7 +207,7 @@ The commented [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalElement.Wait
 
 If you uncomment the property, the **Process** method will be called whenever at least one value arrives (in the example case, either a candle or a numeric value).
 
-To add the resulting cube to the scheme, you need to select the created cube in the palette under the **Custom Cubes** section:
+To add the resulting cube to the scheme, you need to select the created cube in the palette under the **Own elements** section:
 
 ![Designer_Source_Code_Elem_01](../../../../../images/designer_source_code_elem_01.png)
 

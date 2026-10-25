@@ -1,18 +1,14 @@
 # 快速入门
 
-首次启动 [Terminal](../terminal.md) 时，会显示以下窗口：
+首次启动 [Terminal](../terminal.md) 时，会打开一个窗口，其中有一个按默认方式布局的[工作区](user_interface/workspace.md)：中央是图表，右侧是交易品种和订单簿，图表下方是折叠的持仓、订单、成交选项卡以及 **买入/卖出** 下单面板。
 
 ![Terminal 快速入门 00](../../images/terminal_quick_start_00.png)
 
-请选择启动模式，然后单击 **确定**。
-
-选择启动模式后，Terminal 窗口会使用默认组件集打开。
-
-首先打开连接设置并选择所需连接。有关连接配置方法，请参阅[连接设置](connection_settings.md)。
+首先打开连接设置（**连接 → 连接设置** 菜单）并选择所需连接。有关连接配置方法，请参阅[连接设置](connection_settings.md)。
 
 ![Terminal 快速入门 011](../../images/terminal_quick_start_011.png)
 
-下一步，单击 **连接** 按钮 ![Designer 快速访问工具栏 00](../../images/designer_quick_access_toolbar_00.png) 建立连接。
+下一步，单击[主菜单](user_interface/ribbon.md)行末尾的 **连接** 按钮或按 **F5** 键建立连接。
 
 单击图表面板上的 **添加** 按钮 ![Designer 添加按钮 00](../../images/designer_creation_tool_00.png)，添加新的图表区域。右键单击图表区域，可以为所需交易品种添加K线。还可以向图表添加指标、自有成交和订单，并直接从图表登记订单。有关图表操作的详细信息，请参阅[图表](user_interface/components/chart.md)。
 
@@ -26,7 +22,7 @@
 
 ![Terminal 快速入门 03](../../images/terminal_quick_start_03.png)
 
-现在可以登记最初的几笔订单。既可以单击 **买入/卖出** 按钮登记订单，也可以单击订单簿中 **买价/卖价** 列的单元格。订单面板会显示您的全部订单。右键单击某个订单时，会出现一个面板，可用于提交新订单、撤销订单或修改所选订单。有关订单面板的详细信息，请参阅[订单](user_interface/components/orders.md)。
+现在可以登记最初的几笔订单。既可以单击 **买入/卖出** 按钮登记订单，也可以双击订单簿中 **买价/卖价** 列的单元格。订单面板会显示您的全部订单。右键单击某个订单时，会出现一个面板，可用于提交新订单、撤销订单或修改所选订单。有关订单面板的详细信息，请参阅[订单](user_interface/components/orders.md)。
 
 ![Terminal 快速入门 04](../../images/terminal_quick_start_04.png)
 
@@ -34,6 +30,6 @@
 
 ![Terminal 快速入门 05](../../images/terminal_quick_start_05.png)
 
-如有需要，还可以添加其他组件。所有组件均在[组件](user_interface/components.md)中进行了说明。
+如有需要，还可以添加其他组件：使用工作区右边缘栏中的按钮；整个窗口的面板（例如 **投资组合** 和 **日志**）可以通过 **视图** 菜单打开。所有组件均在[组件](user_interface/components.md)中进行了说明。
 
 ![Terminal 快速入门 06](../../images/terminal_quick_start_06.png)

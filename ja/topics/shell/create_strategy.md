@@ -1,122 +1,86 @@
 # ストラテジーの作成
 
-独自のストラテジーを作成するには、Strategies フォルダー内にストラテジー用のフォルダーを作成します。
+[Shell](../shell.md) に含まれるストラテジーは `Shell.Avalonia/Shell.Core/Strategies/` にあります。独自のストラテジーも同じ場所に追加し、3 つの手順を踏みます。ストラテジークラス、カタログへの登録、そして必要に応じて独自のパネルです。
 
-![Shell カスタム戦略 00](../../images/shell_custom_strategy_00.png)
+## ストラテジークラス
 
-SmaStrategy を例として、ストラテジー本体を作成します。
-
-ストラテジーに独自のテスト用パネルまたは監視用パネルを追加する必要がある場合、ストラテジーはそれぞれ IHaveTestControl インターフェイスおよび IHaveMonitoringControl インターフェイスを実装する必要があります。
+ストラテジーは、StockSharp の `Strategy` を継承した通常のクラスです。Shell 固有のものは何もありません。
 
 ```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
+public class MyStrategy : Strategy
+{
+	private readonly StrategyParam<int> _length;
+
+	public MyStrategy()
 	{
-	...
-		#region MonitoringControl
-				public BaseStudioControl AddMonitoringPanel()
-		{
-			var usercontrol = new SmaMonitoringControl();
-			usercontrol.Init(this);
-			return usercontrol;
-		}
-		#endregion
-		#region TestingControl
-		public BaseStudioControl AddTestPanel()
-		{
-			var usercontrol = new SmaTestingControl();
-			usercontrol.Init(this);
-			return usercontrol;
-		}
-		#endregion
-	...	
+		Name = "マイストラテジー";
+
+		_length = Param(nameof(Length), 20)
+			.SetGreaterThanZero()
+			// 標準のパラメーターと同じグループに入るように、グループはリソースから取得します。
+			.SetDisplay("長さ", "移動平均の長さ", LocalizedStrings.Parameters)
+			.SetOptimize(10, 50, 5);
 	}
-		
-```
 
-また、パネル自体も作成する必要があります。独自のテスト用パネルまたは監視用パネルの作成方法は、[ストラテジーパネルの作成](create_strategy_panel.md)で説明しています。
-
-> [!TIP]
-> 既定のストラテジーで使用されるテスト用パネルまたは監視用パネルが、そのストラテジーに対して十分である場合は、IHaveTestControl インターフェイスおよび IHaveMonitoringControl インターフェイスを実装する必要はありません。Shell は既定のテスト用パネルまたは監視用パネルを自動的に実行します。 
-
-![Shell カスタム戦略 01](../../images/shell_custom_strategy_01.png)
-
-作成したストラテジーをストラテジー選択ウィンドウで利用できるようにするには、メインウィンドウの **DictionaryStrategies** ディクショナリに追加する必要があります。 
-
-```cs
-	...
-	//---------------------------------------------------------------------
-	DictionaryStrategies = new ObservableDictionary<Guid, Strategy>
+	public int Length
 	{
-		{ new SmaStrategy().GetTypeId(), new SmaStrategy() },
-		{ new StairsTrendStrategy().GetTypeId(), new StairsTrendStrategy() },
-		{ new StairsCountertrendStrategy().GetTypeId(), new StairsCountertrendStrategy() }
-	};
-	//---------------------------------------------------------------------
-	...	
-		
-```
-
-ストラテジーを保存し、その後読み込めるようにするには、ストラテジーデザイナーでストラテジーパラメーターを設定する必要があります。
-
-```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
-	{
-	...
-		public SmaStrategy()
-		{
-			...
-			this.Param("TypeId", GetType().GUID);
-			...
-		}
-	...	
+		get => _length.Value;
+		set => _length.Value = value;
 	}
-		
+
+	protected override void OnStarted2(DateTime time)
+	{
+		base.OnStarted2(time);
+
+		// データのサブスクリプションと取引ロジック
+	}
+}
 ```
 
-追加フィールドを保存するには、**Load** メソッドと **Save** メソッドをオーバーライドする必要があります。
+エントリポイントは `OnStarted` ではなく `OnStarted2(DateTime)` です。これが呼び出される時点で、ストラテジーはすでに銘柄、ポートフォリオ、接続を受け取っているため、ここで直接データをサブスクライブできます。
+
+`SetOptimize(...)` を指定して `Param(...)` で宣言したパラメーターは、[最適化](user_interface/optimization.md) タブに自動的に表示されます。総当たりするパラメーターの一覧とその範囲は、別途指定するのではなく、ストラテジー自体から読み取られます。
+
+## ストラテジーカタログ
+
+ストラテジーを選択ウィンドウに表示するには、2 か所に追加する必要があります。
+
+1 つ目は、型の識別子からインスタンスを作成する `BuiltInStrategies` のファクトリです。
 
 ```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
-	{
+public static Strategy TryCreate(string templateTypeId)
+{
 	...
-		#region Load
-		public override void Load(SettingsStorage storage)
-		{
-			base.Load(storage);
-			try
-			{
-				_securityStr = storage.GetValue<string>(nameof(Security));
-				_portfolioStr = storage.GetValue<string>(nameof(Portfolio));
-				LongSmaLength = storage.GetValue<int>(nameof(LongSmaLength));
-				ShortSmaLength = storage.GetValue<int>(nameof(ShortSmaLength));
-				Series.CandleType = storage.GetValue(nameof(Series.CandleType), Series.CandleType);
-				Series.Arg = storage.GetValue(nameof(Series.Arg), Series.Arg);
-			}
-			catch (Exception e)
-			{
-				e.LogError();
-			}
-		}
-		#endregion
-		#region Save
-		public override void Save(SettingsStorage storage)
-		{
-			base.Save(storage);
-			storage.SetValue(nameof(Security), Security?.Id);
-			storage.SetValue(nameof(Portfolio), Portfolio?.Name);
-			storage.SetValue(nameof(LongSmaLength), LongSmaLength);
-			storage.SetValue(nameof(ShortSmaLength), ShortSmaLength);
-			if (Series.CandleType != null)
-				storage.SetValue(nameof(Series.CandleType), Series.CandleType.GetTypeName(false));
-			if (Series.Arg != null)
-				storage.SetValue(nameof(Series.Arg), Series.Arg);
-		}
-		#endregion
-	...	
-	}
-		
+	if (templateTypeId.Equals(MyTypeId, StringComparison.OrdinalIgnoreCase))
+		return new MyStrategy();
+	...
+}
 ```
+
+2 つ目は `LegacyStrategyTemplates` のテンプレートの説明です。一覧に表示されるストラテジー名と、型と既定値を持つパラメーターのセットは、ここから取得されます。
+
+```cs
+new StrategyTemplateDefinition(MyTypeId, "マイストラテジー", StrategyTemplateKind.Generic, true,
+[
+	.. CommonParameters(),
+	new("Length", "長さ", StrategyParameterKind.Integer, "20", true, 1),
+])
+```
+
+`CommonParameters()` は、すべてのストラテジーにある銘柄、ポートフォリオ、数量を返します。それ以外は、そのストラテジー独自のパラメーターです。説明のフィールドは、キー、ラベル、型、既定値、必須かどうか、最小値と最大値の順に並びます。
+
+`StrategyTemplateKind` が区別するのは、シェルに専用のパネルがある種類（`Sma`、`SmaIndex`、`StairsTrend`、`StairsCountertrend`、`Designer`）だけです。専用のパネルを持たないストラテジーは `Generic` です。
+
+ユーザーが **ストラテジー** パネルで指定した値は、`StrategyMaterializer` でインスタンスに適用されます。新しいパラメーターの解析もそこに追加します。
+
+ストラテジーの設定はシェルによって保存・復元されるため、保存用のコードを別途書く必要はありません。
+
+## 独自のパネル
+
+標準のパラメーターパネルで十分な場合は、何もする必要はありません。Shell が自動的に表示します。独自のパネルが必要になるのは、ストラテジーにパラメーター以外にも表示するものがある場合です。その設定方法と監視方法は、[ストラテジーパネルの作成](create_strategy_panel.md) セクションで説明しています。
 
 ## 推奨コンテンツ
 
 [ストラテジーパネルの作成](create_strategy_panel.md)
+
+[Designer からストラテジーを実行](run_strategies_from_designer.md)

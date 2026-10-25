@@ -1,37 +1,59 @@
 # Inicio rápido
 
-[Shell](../shell.md) está orientado a la programación en lenguaje [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) en el entorno Visual Studio o similar.
+[Shell](../shell.md) es código fuente en [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) que se abre en Visual Studio, Rider o cualquier otro entorno y se ejecuta como una aplicación normal:
 
-Al iniciar el proyecto [Shell](../shell.md), el Explorador de soluciones muestra el proyecto Shell:
+```
+dotnet run --project Shell.Avalonia/Shell.Avalonia/Shell.Avalonia.csproj
+```
 
-![Shell Inicio rápido 00](../../images/shell_quick_start_00.png)
+No hace falta ninguna configuración previa: el proyecto se ejecuta tal cual y funciona de inmediato con las estrategias incluidas.
 
-La carpeta **Estrategias** contiene tres estrategias incluidas en [Shell](../shell.md), un shell para estrategias predeterminadas y algunas interfaces auxiliares.
+## Ventana principal
 
-El proyecto se puede iniciar sin preparación previa para ver cómo funciona con las estrategias ya incluidas en [Shell](../shell.md).
-
-Después del inicio veremos una ventana como esta:
+Después del inicio se abre una ventana como esta:
 
 ![Shell Inicio rápido 01](../../images/shell_quick_start_01.png)
 
-La configuración de conexión y los botones de conexión, así como el botón de guardado para la configuración actual de Shell, se encuentran en la parte superior de la pantalla. Las pestañas principales también se encuentran allí.
+A la izquierda está la lista de áreas de trabajo entre las que cambia la aplicación. Arriba está la barra de comandos: el botón de configuración de la conexión, el botón **Conectar** y el guardado de la disposición actual de los paneles. Abajo está la barra de estado con el estado actual de la conexión.
 
-Vaya a la configuración de conexión y seleccione la conexión necesaria. Cómo configurar una conexión se describe en [Configuración de conexiones](connections_settings.md).
+Todo lo que Shell escribe (la configuración de la conexión, la disposición de las ventanas, la lista de estrategias, los esquemas importados de Designer y el almacenamiento local de cotizaciones) está en la carpeta `Data` junto al ejecutable.
 
-El siguiente paso es conectarse haciendo clic en el botón **Conectar** ![Designer Barra de herramientas de acceso rápido 00](../../images/designer_quick_access_toolbar_00.png).
+## Conexión
 
-Después de conectarse, en la pestaña [Común](user_interface/common.md), puede ver las carteras, instrumentos, órdenes y operaciones propias recibidas desde la conexión.
+Vaya a la configuración de conexión y seleccione el conector necesario. Cómo configurar una conexión se describe en [Configuración de conexiones](connections_settings.md).
 
-![Shell Inicio rápido 02](../../images/shell_quick_start_02.png)
+Después pulse **Conectar**. El estado de la conexión se muestra en la barra de estado y junto al botón.
 
-Vaya a la pestaña Tiempo real y haga clic en el botón **Añadir** ![Designer botón Añadir 00](../../images/designer_creation_tool_00.png) para añadir una estrategia para la negociación.
+Después de conectarse, en la pestaña [Común](user_interface/common.md) aparecerán las carteras, instrumentos, órdenes y operaciones propias recibidos desde la conexión.
+
+![Shell Común 00](../../images/shell_common_00.png)
+
+## Estrategia en negociación
+
+Vaya a la pestaña [Tiempo real](user_interface/real_time.md).
 
 ![Shell Inicio rápido 03](../../images/shell_quick_start_03.png)
 
-Una vez añadida la estrategia, rellene sus parámetros básicos, como **Instrumento**, **Cartera**, etc. Haga clic en el botón Iniciar estrategia para lanzarla.
+Pulse **Añadir** y seleccione la estrategia en la ventana que se abre.
 
-![Shell Inicio rápido 04](../../images/shell_quick_start_04.png)
+![Shell selección de estrategia](../../images/shell_add_strategy_00.png)
 
-De forma similar a la pestaña [Tiempo real](user_interface/real_time.md), puede ejecutar una prueba de estrategia sobre datos históricos en la pestaña [Emulación](user_interface/emulation.md).
+La estrategia aparecerá en la tabla **Estrategias** y sus parámetros, en el panel **Estrategia** de la izquierda. Rellene **Instrumento**, **Cartera**, el volumen y los parámetros de la propia estrategia y después pulse **Iniciar**.
+
+Mientras no se haya establecido la conexión, los botones para añadir e iniciar de esta área no están disponibles; lo indica una sugerencia debajo de la tabla.
+
+## Estrategia sobre historial
+
+Lo mismo en la pestaña [Emulación](user_interface/emulation.md) inicia la estrategia sobre datos históricos en lugar de en la negociación.
 
 ![Shell Inicio rápido 05](../../images/shell_quick_start_05.png)
+
+Para ello no hace falta conexión: cada ejecución lee el historial del disco a través de su propio conector de emulación.
+
+## Contenido recomendado
+
+[Común](user_interface/common.md)
+
+[Tiempo real](user_interface/real_time.md)
+
+[Emulación](user_interface/emulation.md)

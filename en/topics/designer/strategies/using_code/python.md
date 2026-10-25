@@ -4,7 +4,7 @@ Creating strategies from code is for users who prefer working with Python code. 
 
 The strategy creation process takes place directly in [Designer](../../../designer.md) or in a **Python** development environment (the most popular development environments are **Visual Studio** and **JetBrains Rider**), using the library for professional development of trading robots in **Python** and [API](../../../api.md).
 
-You can add a new strategy by clicking the **Add** button ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) in the **General** tab and selecting **Strategy**. Or by right-clicking on the **Strategies** folder in the **Schemes** panel and clicking the **Add** button ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) in the dropdown menu:
+You can add a new strategy by clicking the **Add** button ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) in the **Common** tab and selecting **Strategy**. Or by right-clicking on the **Backtest** folder in the **Schemes** panel and clicking the **Add** button ![Designer Panel Circuits 01](../../../../images/designer_panel_circuits_01_button.png) in the dropdown menu:
 
 ![Designer The creation of a strategy 00](../../../../images/designer_creation_of_strategy_00.png)
 
@@ -14,7 +14,7 @@ After clicking the **Add** button ![Designer Panel Circuits 01](../../../../imag
 
 To create a strategy from Python code, select the second tab. You can also choose a template that will be used as initial code.
 
-After clicking **OK**, a new strategy will appear in the **Strategies** folder of the **Schemes** panel, similar to creating a strategy from a [scheme](../using_visual_designer.md). Actions for deleting or renaming the strategy are also similar.
+After clicking **OK**, a new strategy will appear in the **Backtest** folder of the **Schemes** panel, similar to creating a strategy from a [scheme](../using_visual_designer.md). Actions for deleting or renaming the strategy are also similar.
 
 But instead of a scheme, a Python code editor will be shown:
 
@@ -22,7 +22,7 @@ But instead of a scheme, a Python code editor will be shown:
 
 The code editor tab consists of **Source Code** and **Error List** panels. The **Source Code** panel contains the Python code editor itself. At the top is a toolbar where you can enable or disable highlighting of things like **Current Line**, **Line Number**, etc. To increase the font size, you can use the CTRL+MouseWheel combination.
 
-The **Error List** panel is a table with a list of code errors; double-clicking on a line will automatically move the cursor in the **Source Code** panel to the error location.
+The **Error List** panel is a table with a list of code errors; double-clicking on a line will automatically move the cursor in the **Source Code** panel to the error location. In addition, build errors and warnings are underlined with a wavy line right in the code text.
 
 When editing code, an icon ![Designer The creation of the cube containing the source code 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) will appear in the bottom right corner of the **Error List** panel, indicating that change tracking has begun. Code compilation occurs when the code stops changing.
 

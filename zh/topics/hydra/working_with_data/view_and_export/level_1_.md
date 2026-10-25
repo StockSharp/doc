@@ -4,7 +4,7 @@
 
 ![Hydra 导出 级别1 视图](../../../../images/hydra_export_level1.png)
 
-还可以选择要导出的变更类型。请使用下图所示的下拉列表进行选择：
+**字段** 列表用于指定表格中显示哪些 Level 1 值以及导出哪些值。请在下拉列表中勾选所需字段；列表顶部的搜索框只保留名称中包含所输入文本的字段：
 
 ![Hydra 导出 更改所选交易品种](../../../../images/hydra_export_security_change_selected.png)
 

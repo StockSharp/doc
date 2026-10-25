@@ -1,29 +1,15 @@
 # Live settings
 
-The **Properties** panel is minimized on the right side of the strategy tab by default. This panel is a table of emulation properties or Live settings. When you select a specific property, a detailed description of this property appears at the bottom of the table. All properties are grouped into groups:
+What the strategy works with in Live trading is set on the **Live** tab of the Ribbon, in the **Strategy** group:
 
-![Designer Properties Live 00](../../../../images/designer_properties_live_00.png)
+- **Portfolio** - the portfolio in which the strategy places orders.
+- **Security** - the instrument the strategy trades.
 
-**Logging**
+The same tab has the **Refresh**, **Start** and **Stop** buttons, and the **Components** group contains the components that can be added to the strategy tab.
 
-- **Logging level** – the logging level for this element.
+The parameters of the scheme itself - for example, the lengths of the moving averages or the order volume - are set on the **Strategy parameters** panel. By default, this panel is collapsed and pinned to the right side of the strategy tab.
 
-**Initialization**
-
-- **Data type** - the data type.
-- **Time frame** - to use candles with the specified time frame.
-- **Days of history data** - the number of days of history data to initialize the strategy.
-
-**Settings**
-
-- [Risk management](../risk_management.md) - settings of risk management.
-
-**Diagram parameters**
-
-- **Security** - the security.
-- **Portfolio** - the portfolio.
-
-If you do not fill in the **Diagram parameters**, when emulating, the instrument will be used from the **Instrument** field of the **Emulation** tab, and as a portfolio, the test portfolio will be used by default.
+The remote control settings of the strategy are opened with the **Settings** button in the strategy row on the [Live panel](../../live_execution/strategies_dashboard.md).
 
 ## Recommended content
 

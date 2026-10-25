@@ -14,9 +14,11 @@ El elemento principal de la interfaz de usuario de [Designer](../../designer.md)
 
 ![Designer cinta 02](../../../images/designer_tape_02.png)
 
-4. La pestaña **Nube**. [Designer](../../designer.md) está diseñado para trabajar con servicios en la nube. Permite ver *tareas en la nube* completadas, obtener información sobre instrumentos disponibles en la nube y configurar trabajo remoto con canales y robots.
+4. La pestaña **Nube**. [Designer](../../designer.md) está diseñado para trabajar con servicios en la nube. El botón **Tareas** muestra las *tareas en la nube* completadas, y el botón **Instrumentos**, los instrumentos disponibles en la nube. En el grupo **Remotamente**, un interruptor activa el control remoto de las estrategias mediante el bot de Telegram ([Panel de control](../../telegram_services/control_panel.md)), y el botón **Canales** abre la lista de canales de Telegram a los que Designer envía mensajes. El control remoto no se activa en el modo sin conexión y, mientras el perfil no esté activado en el bot de Telegram, Designer propondrá ir al bot y abrirá su página.
 
 ![Designer cinta 03](../../../images/designer_tape_03.png)
+
+En macOS, los comandos principales de [Designer](../../designer.md) se duplican en la barra de menús del sistema: creación y apertura de estrategias, paneles, conexión, configuración, compilación, depuración y ayuda con la ventana **Acerca del programa**.
 
 ## Véase también
 

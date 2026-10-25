@@ -1,80 +1,88 @@
-﻿# First start
+# First start
 
-The first time you run it, the following window for selecting data sources appears. You can also open this window in the **Common** tab by selecting **Add \=\> Sources**.
+At the first start, Hydra offers to select data sources. Later, the same window is opened with the **Sources** button on the toolbar or from the **File** menu.
 
 ![hydra source add](../../images/hydra_source_add.png)
 
-In the window, mark the required sources. You can use filters by region, board, data type, payment, real-time or not. When the selection is complete, click **OK**. Then the program will offer to enable the utilities. For more details on working with the utilities, see the [Utilities](tasks.md) section. Click **OK**.
+Mark the required sources — you can click both the check box and the name. The filters on the left narrow the list: board, data type, price; the **Find** field searches by name. For example, mark **ByBit** and click **Add selected**.
 
-![hydra first started utilities 00](../../images/hydra_first_started_utilities00.png)
+Next, the same kind of window opens with utilities — tasks that do not download data but work with data already downloaded: scheduled import and export, conversion, backup to the cloud. For more details, see the [Utilities](tasks.md) section. If you do not need utilities yet, click **Cancel**.
 
-After that, the sources will be added to the left panel of the main application window. 
+![Hydra utilities window](../../images/hydra_tasks.png)
+
+For each added source, Hydra asks whether to enable it now. An enabled source downloads data when the **Start** button is pressed; a disabled one is skipped. Answer **Yes**.
+
+The source appears on the **Tasks** panel on the left, and its panel opens in the center: the instruments table, below it the settings of the received data, and on the right the connection settings.
 
 ![hydra Quick start 01](../../images/hydra_quick_start_01.png)
 
-## Downloading a tool for uploading market data:
+## Instruments
 
-Before you start downloading market data, you need to set up the securities for which you need to get market data.
+> [!TIP]
+> Data is downloaded only for the instruments added to the source.
 
-After adding market data sources, panels of added sources will be opened in the central part, where a list of securities is displayed. If the panel is closed, then to open it, double click the source logo in the list on the left side of the program.
+Right after the source is added, it has only the service instrument **ALL@ALL** — "all instruments of the source". It is used to download the data that the source can provide for all its instruments at once. For example, let's add the BTCUSDT spot pair.
 
-For example, download the AAPL@NASDAQ security from a supported data source.
+1. Click the **Add securities** ![hydra add](../../images/hydra_add.png) button above the instruments table. A selection window opens: on the left are the instruments Hydra knows, on the right are the ones selected for the source.
+
+   ![hydra securities](../../images/hydra_securities.png)
+
+2. The first time, the list on the left is empty: Hydra does not know any instruments yet. Click **Download securities**. The window that opens sets the search conditions; the **All** check box requests the whole list from the source.
+
+   ![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+
+   For a number of sources, instead of the whole list, you can [specify](prepare_for_download/instruments_list.md) the instruments you need.
+
+3. Click **OK**. When the source responds, Hydra reports how many new instruments have been added, and they appear in the list on the left. The counter above the list shows how many instruments are visible and how many are known in total; the **ByBit only** check box hides the instruments that other sources already download.
+
+   ![hydra security full list](../../images/hydra_security_full_list.png)
+
+4. Start typing the instrument code in the **Search** field above the list.
+
+   ![hydra security full list 00](../../images/hydra_security_full_list_00.png)
+
+5. Move the instrument to the right with a double-click or the arrow button and click **OK**.
+
+   ![hydra security full list 01](../../images/hydra_security_full_list_01.png)
+
+## Data types and period
+
+After the instruments are selected, Hydra asks which data to download for them. Let's mark **Ticks** and five-minute candles **TF: 00:05:00** — each click adds one more type to the selection.
+
+![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
+
+The **From** date is the beginning of the history. The **Continue in real time** check box keeps the source receiving data after the history has been downloaded; the **To** date is not needed with it. How much history the source provides depends on the source itself.
+
+After **OK**, the instrument appears in the source table. The table is a tree: the instrument row contains its code, and below it are the selected data types with their start and end dates.
 
 ![hydra choose market data](../../images/hydra_choose_market_data.png)
 
-> [!TIP]
-> IMPORTANT\! Data is downloaded only for the securities added to the securities list
+If no data type is selected for an instrument, or its price step, volume step or number of decimal places is not set, the ⚠ icon appears on the left of its row. The tooltip on the icon explains what is missing.
 
-1. Adding securities.
+Below the table are the settings of the rows selected in it. Select one or several rows, and the settings apply to all of them at once:
 
-   At the first start, the program will offer to download all the securities at once for the selected source. Further, the user will download the securities himself. Initially, the security database in [Hydra](../hydra.md) is empty, there is only an auxiliary security **ALL@ALL**. When this security is selected, data will be downloaded for all available securities for this source. 
+- **Data types** — which data to receive. The set depends on the source.
 
-   To add a security, click on the **Add** ![hydra add](../../images/hydra_add.png) button. Then a window for downloading the security will open. ![hydra securities](../../images/hydra_securities.png)
+  ![hydra Quick start 02 00](../../images/hydra_quick_start_02_00.png)
 
-   To download the securities, you need to click the corresponding **Download securities** button.
+- **Candle timeframes** — which candles to download. The list of timeframes also depends on the source; **Custom** opens a window where [your own candle type](prepare_for_download/custom_candles.md) is set.
 
-   After that, a menu will appear on the screen, in which the user can select **Download all securities**.![hydra securities choose all](../../images/hydra_securities_choose_all.png)
+  ![hydra Quick start 02](../../images/hydra_quick_start_02.png)
 
-   Or, for a number of sources, [configure](prepare_for_download/instruments_list.md) the securities you need to download. 
+- **From** and **To** — the download period. Without an end date, the source downloads everything available as of today, and if it can work in real time and the **Real-time** check box is selected, it keeps receiving data further.
 
-   After the securities are received, the window will look like this.![hydra security full list](../../images/hydra_security_full_list.png)
+  **Candle build** — where to take candles from: **Load** — ready-made from the source, **Build** — built by Hydra itself, **Load and build** — load them and build the missing ones. **Build field** — what to build them from: the last trade price, the middle of the spread, the best price, etc. Building candles is convenient when the source does not provide them with the required timeframe.
 
-   It will list all the securities available for adding. For a quick search, you can enter its name in the appropriate field. 
+  ![hydra Quick start 02 01](../../images/hydra_quick_start_02_01.png)
 
-   To select a security, double-click on it and it will move to the right side of the list.![hydra security full list 00](../../images/hydra_security_full_list_00.png)
+## Downloading
 
-   Then it will move to the right side of the table.![hydra security full list 01](../../images/hydra_security_full_list_01.png)
-
-   The selected instruments will be displayed in the **Securities** table, which is a tree-structured table. The main element of which is the security, the additional one is the market data types that will be received for this security.
-2. For each selected security, you should select the market data types required for downloading.
-
-   If all the necessary security parameters are not set, the icon ![hydra zero](../../images/hydra_zero.png) will appear in the left column of the security line. ![hydra type market data choose](../../images/hydra_type_market_data_choose.png)
-
-   Let's select to download **Ticks** and **Candles Time Frame 5**.
-
-   At the bottom of the source window is a panel with buttons for setting up the data and instruments to be received. ![hydra Quick start 02 00](../../images/hydra_quick_start_02_00.png)
-
-   The following operations can be performed at this panel: 
-   - Configure the amount of information received using the buttons: **Trades, Order Books, Candles, Order Log, Level 1, Own Transactions**. Lists of available market data types vary for different sources. 
-   - Specify the required Time Frame for the loaded candles. Time Frame of the received candles is different for different sources.![hydra Quick start 02](../../images/hydra_quick_start_02.png)
-   - Set the required period for downloading market data. The period can also be configured directly in the market data window. To do this, you should select the beginning and end of the period.
-
-     If the user does not specify the end date of the period, the program downloads all data available for the current date. If the source supports the transfer of market data in real time, then if there is no end date for the period, the market data will be downloaded in real time. 
-
-     Let's set the period for which you need to download the market data.![hydra Quick start 02 01](../../images/hydra_quick_start_02_01.png)
-   - Specify what the market data will be built from. If this parameter is not specified, then the candles available in the source will be received. If the user specifies the market data type, then candles will be built from the specified market data type. For example, candles can be built from the last trade price, the order book spread (usually for the Forex market), volatility or the best price. 
-
-     This function is convenient to use if the source does not allow receiving data for candle plotting. In this case, candles are plotted based on the averaged data values.![hydra candle build type](../../images/hydra_candle_build_type.png)
-
-     The user also has the ability to select [Custom type](prepare_for_download/custom_candles.md) of candles to customize the received data.
-   - After selecting a security, market data type and setting the period, you should click on the **Start** button. After that, the market data download will begin.
-
-   The work process can be observed in the special **Logs** tab, which is fixed at the bottom of the program. In addition, logs are stored in files in the local folder.
+Click **Start** on the toolbar. The source connects and starts downloading. The progress is visible in the **Logs** panel at the bottom of the window, and the status bar counts the received data: **C** — candles, **T** — ticks and so on. Logs are also saved to files in the Hydra folder.
 
 ![hydra main start](../../images/hydra_main_start.png)
 
-Also, the user can add [additional sources](data_sources/select_source.md).
+You can also add [other sources](data_sources/select_source.md).
 
-After the market data is downloaded, the user can [view market data](working_with_data/view_and_export.md), [plot candles](working_with_data/candles_generation.md) , save or [export in various formats](working_with_data/export_data.md).
+The downloaded data can be [viewed](working_with_data/view_and_export.md), [candles can be built](working_with_data/candles_generation.md) from it, and it can be [exported](working_with_data/export_data.md) to various formats.
 
 **Watch [video tutorial](videos/first_start.md)**.

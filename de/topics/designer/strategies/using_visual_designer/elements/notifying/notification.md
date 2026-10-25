@@ -14,7 +14,7 @@ Eingehende Anschlüsse
 
 Parameter
 
-- **Typ** - Nachrichtentyp (Popup-Fenster, E-Mail, SMS usw.). Die Benachrichtigungstypen sind im Abschnitt [Benachrichtigungen](../../../../../terminal/notifications.md) beschrieben.
+- **Typ** - wie die Nachricht gesendet wird: per Ton, als Popup-Fenster, in eine Protokolldatei oder an Telegram. Die Möglichkeiten sind im Abschnitt [Benachrichtigungen](../../../../../terminal/notifications.md) beschrieben.
 - **Telegram** - Kanal für Telegram-Benachrichtigungen.
 - **Kopfzeile** - die Überschrift der Nachricht.
 

@@ -2,7 +2,7 @@
 
 De forma semelhante à criação de um [cubo a partir de um esquema](../../using_visual_designer/composite_elements.md), pode criar o seu próprio cubo com base em código Python. Um cubo deste tipo será mais funcional do que um cubo criado a partir de um esquema.
 
-Para criar um cubo a partir de código, tem de o criar na pasta **Blocos personalizados**:
+Para criar um cubo a partir de código, tem de o criar na pasta **Elementos próprios**:
 
 ![Designer elemento de código-fonte 00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -207,7 +207,7 @@ A propriedade comentada [WaitAllInput](xref:StockSharp.Diagram.DiagramExternalEl
 
 Se descomentar a propriedade, o método `Process` será chamado sempre que chegar pelo menos um valor (no caso do exemplo, uma vela ou um valor numérico).
 
-Para adicionar o cubo resultante ao esquema, tem de selecionar o cubo criado na paleta, na secção **Blocos personalizados**:
+Para adicionar o cubo resultante ao esquema, tem de selecionar o cubo criado na paleta, na secção **Elementos próprios**:
 
 ![Designer elemento de código-fonte 01](../../../../../images/designer_source_code_elem_01.png)
 

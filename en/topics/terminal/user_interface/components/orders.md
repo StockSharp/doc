@@ -1,6 +1,12 @@
 # Orders
 
-The **Orders** component is a table with orders, which displays complete information about all the orders. When you right click the mouse button on the order, a panel appears with which you can register a new order, cancel or change the selected order. 
+The **Orders** component is a table with orders, which displays complete information about all the orders.
+
+There are two buttons above the table: **Cancel** cancels the selected order, and **Cancel all orders** cancels all active ones. Next to them is a list of which orders to show in the table: all, active, executed or rejected.
+
+![Terminal orders panel](../../../../images/terminal_orders_00.png)
+
+When you right click the mouse button on the order, a panel appears with which you can register a new order, cancel or change the selected order.
 
 ![Terminal Quick start 04](../../../../images/terminal_quick_start_04.png)
 

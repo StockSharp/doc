@@ -8,7 +8,7 @@
 
 要匹配交易品种与连接，请执行以下操作：
 
-1. 进入 **交易品种** 选项卡，然后单击 **交易品种和连接** 按钮。![Designer 交易品种映射 01 00](../../../images/designer_security_mapping_01_00.png)
+1. 在 **市场数据** 菜单中选择 **交易品种和连接** 项。![Designer 交易品种映射 01 00](../../../images/designer_security_mapping_01_00.png)
 2. 在连接列表中选择所需的连接。![Designer 交易品种映射 01](../../../images/designer_security_mapping_01.png)
 3. 填写所有列。
 

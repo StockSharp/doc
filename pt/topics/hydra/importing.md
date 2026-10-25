@@ -1,6 +1,6 @@
 # Importação
 
-[Hydra](../hydra.md) permite importar os seus próprios dados guardados no formato .csv. Para importar, abra o separador **Importar** e selecione o tipo de dados de bolsa que pretende importar.
+[Hydra](../hydra.md) permite importar os seus próprios dados guardados no formato .csv. Para importar, abra o menu **Importar** e selecione o tipo de dados de bolsa que pretende importar.
 
 ![Captura de ecrã de Importação](../../images/hydra_import_menu.png)
 

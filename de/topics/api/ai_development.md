@@ -64,3 +64,4 @@ KI kann veraltete Methoden verwenden oder nicht existierende APIs erfinden. Übe
 
 - [Eine Strategie mit KI schreiben](ai_development/strategy_with_ai.md) — Schritt-für-Schritt-Anleitung zur Erstellung einer Handelsstrategie
 - [Einen Connector mit KI schreiben](ai_development/connector_with_ai.md) — Schritt-für-Schritt-Anleitung zur Erstellung eines Börsen-Connectors
+- [KI-Agenten anbinden (MCP)](../mcp.md) — wie ein Agent die Fenster der StockSharp-Programme liest, darin Schaltflächen drückt und ihnen Befehle gibt

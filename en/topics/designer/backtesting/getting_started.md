@@ -6,25 +6,18 @@ To run the test on the history, you shall select a strategy, the scheme of which
 
 Before testing, load market data (instruments, candles, tick trades and\/or order books). This is described in [Market data storage](../market_data_storage.md).
 
-When switching to the tab with a strategy, the **Emulation** tab automatically opens in the **Ribbon**. Set the testing period on this tab. In the market-data field, specify the required storage ([Market data storage](../market_data_storage.md)); in the instrument field, specify the required instrument.
+When switching to the tab with a strategy, the **Backtest** tab automatically opens in the **Ribbon**. Set the testing period on this tab (**From** and **To**), select the instrument in the **Security** field, and in the **Storage** and **Format** fields select the market data storage ([Market data storage](../market_data_storage.md)) and the format it is written in.
 
-The following parameters will be used in the example with the SMA strategy.
+The following parameters are used in the example with the SMA strategy:
 
-1. AAPL@NASDAQ instrument
-2. Standard storage \\Documents\\StockSharp\\Designer\\Storage
-3. Storage format - CSV
-4. Type of data, taken from the storage - Ticks
-5. Order book - generated
-6. Order book depth - 5
-7. Spread size - 2
-8. Candles with time-frame of 30 s
-9. Volume - 100
+1. BTCUSDT@BNBFT instrument
+2. Period from March 1, 2024 to March 31, 2024
+3. A storage into which the candles of this instrument for this period have been downloaded
+4. Storage format - **Binary**
 
-It is required to set the selected parameters up:
+The strategy itself builds two moving averages — **SMA 10** and **SMA 80** — on five-minute candles and trades the volume set by the **Vol = 1** cube in the scheme.
 
 ![Designer An example of backtesting 00](../../../images/designer_example_of_backtesting_00.png)
-
-![Designer An example of backtesting 01](../../../images/designer_example_of_backtesting_01.png)
 
 After setting up all the required parameters, start up the strategy testing by clicking the ![Designer Interface Backtesting 01](../../../images/designer_interface_backtesting_01.png) button.
 
@@ -32,15 +25,15 @@ During or after the testing you can view charts and tables with the testing info
 
 ![Designer An example of backtesting 02](../../../images/designer_example_of_backtesting_02.png)
 
-The graph shows that the trades take place at the intersection of moving averages, as planned by the strategy. It can also be seen that orders are satisfied within several trades. It happens because of generated order book use, which increases the testing reality. The fact that orders are satisfied within several trades can be seen from the Trades tables, Statistics, and the Positions chart.
+The graph shows that the trades take place at the intersection of moving averages, as planned by the strategy.
 
 ![Designer An example of backtesting 03](../../../images/designer_example_of_backtesting_03.png)
 
-It can be seen on the **Positions chart** that the strategy has decreased the operated volume. This happened because the generated order book has a depth of 5 and, as a result, the entire order book depth was insufficient to satisfy the order of 200 lots. Since the strategy only reverses the position, every time the depth of the order book was not sufficient to satisfy the order, the order size was reduced.
+The **Positions (chart)** chart shows that the strategy position moves between 0 and 1: the strategy buys when the short average crosses the long one from below upwards, and closes the position on the opposite crossing.
 
 ![Designer An example of backtesting 04](../../../images/designer_example_of_backtesting_04.png)
 
-The **P\/L** chart indicates that the strategy is unprofitable with such parameters.
+The **P&L** chart shows how the profit and loss of the strategy changed over the test, as well as the commission.
 
 ## Recommended content
 

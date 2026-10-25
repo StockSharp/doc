@@ -64,3 +64,4 @@ AI 可能会使用过时的方法，或虚构不存在的 API。务必检查：
 
 - [使用 AI 编写策略](ai_development/strategy_with_ai.md) — 创建交易策略的分步指南
 - [使用 AI 编写连接器](ai_development/connector_with_ai.md) — 创建交易所连接器的分步指南
+- [连接 AI 代理 (MCP)](../mcp.md) — 代理如何读取 StockSharp 程序的窗口、点击其中的按钮并向程序发出命令

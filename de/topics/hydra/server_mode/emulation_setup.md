@@ -1,6 +1,6 @@
 # Emulation einrichten
 
-Im Servermodus ermöglicht das Programm, den Emulationsmodus zu aktivieren.
+Im Servermodus ermöglicht das Programm, im Emulationsmodus zu arbeiten. Seine Parameter werden im Menü **Server**, Eintrag **Emulator-Einstellungen**, festgelegt.
 
 ![Emulation einrichten Bildschirmfoto 1](../../../images/hydra_emulator_start.png)
 

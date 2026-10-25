@@ -5,7 +5,7 @@ To add a breakpoint, select the cube and click the ![Designer Debug 01](../../..
 ![Designer Stopping point 00](../../../../images/designer_debug_break_points_00.png)
 
 When the breakpoint actuates on an element, its background changes to light red.
-The element is automatically highlighted in the properties window, where its properties and the values of the input and output parameters are displayed.
+The element is automatically selected, and the **Element parameters** panel displays its properties and the values of the input and output parameters.
 If you point over the input or output parameter with the mouse, a prompt appears with the parameter value.
 An example of viewing the values at the input and output of the composite element during the execution of the strategy is shown in the figure below:
 

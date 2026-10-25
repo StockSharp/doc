@@ -1,10 +1,10 @@
 # Positionen (Optionen)
 
-**Positionen (Optionen)** ist eine grafische Darstellung der Optionsposition.
+**Positionen (Optionen)** ist eine grafische Darstellung der Optionsposition: wie ihre Kennzahl vom Preis des Basiswerts abhängt.
 
-Um die Optionsposition anzuzeigen, müssen Sie den Basiswert und die Optionen auswählen, auf deren Preisen die Position aufgebaut wird.
+Die Optionen werden mit demselben Filter ausgewählt wie im [Optionsdesk](option_desk.md): Basiswert, Ablaufdatum, Strike-Bereich und die Optionen selbst. Die „Was wäre, wenn“-Berechnung unter dem Filter zeigt die Position bei einem anderen Preis des Basiswerts und zu einem anderen Datum.
 
-Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen sowie Filter für minimale/maximale Strikes angeben.
+In der Liste **Wert** wird ausgewählt, was dargestellt wird: **P&L**, **Delta**, **Gamma**, **Theta**, **Vega** oder **Rho**. Unter dem Chart befindet sich eine Tabelle der Werte nach Preisen des Basiswerts: **Preis**, der P&L jetzt, der P&L zum **Ablauf** und die Griechen.
 
 ![Terminal Positionsgrafikoptionen 00](../../../../images/terminal_graph_options_positions_00.png)
 

@@ -1,37 +1,59 @@
 # Quick start
 
-[Shell](../shell.md) - is focused on programming in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) language in Visual Studio environment or similar.
+[Shell](../shell.md) is source code in [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)) that is opened in Visual Studio, Rider or any other environment and started as a regular application:
 
-When you start the [Shell](../shell.md) project, the Solution Explorer displays the Shell project:
+```
+dotnet run --project Shell.Avalonia/Shell.Avalonia/Shell.Avalonia.csproj
+```
 
-![Shell Quick start 00](../../images/shell_quick_start_00.png)
+No preliminary setup is needed: the project starts as is and works right away on the strategies included in the delivery.
 
-The **Strategies** folder contains three strategies included in [Shell](../shell.md), a shell for default strategies, as well as some auxiliary interfaces.
+## Main window
 
-The project can be launched without any preliminary preparation to see how it operates on the strategies already included in [Shell](../shell.md).
-
-After launch, we will see a window like this:
+After the start, a window like this opens:
 
 ![Shell Quick start 01](../../images/shell_quick_start_01.png)
 
-The connection settings and connection buttons, as well as the save button for the current Shell configuration, are located at the top of the screen. The main tabs are also located there.
+On the left is the list of workspaces between which the application switches. At the top is the command bar: the connection settings button, the **Connect** button and saving the current panel layout. At the bottom is the status bar with the current connection state.
 
-Go to the connection settings and select the necessary connection. How to set up a connection is described in [Connections settings](connections_settings.md).
+Everything Shell writes — connection settings, the window layout, the list of strategies, imported Designer schemes and the local quote storage — is located in the `Data` folder next to the executable file.
 
-The next step is to connect by clicking the **Connect** button ![Designer The quick access toolbar 00](../../images/designer_quick_access_toolbar_00.png).
+## Connection
 
-After connecting, on the [Common](user_interface/common.md) tab, you can see the portfolios, securities, orders, and own trades received from the connection.
+Go to the connection settings and select the required connector. How to set up a connection is described in the [Connections settings](connections_settings.md) section.
 
-![Shell Quick start 02](../../images/shell_quick_start_02.png)
+Then click **Connect**. The connection state is displayed in the status bar and next to the button.
 
-Go to the Real-time tab and click the **Add** ![Designer Creation tool 00](../../images/designer_creation_tool_00.png) button to add a strategy for trading.
+After connecting, the portfolios, securities, orders and own trades received from the connection appear on the [Common](user_interface/common.md) tab.
+
+![Shell common tab after connecting](../../images/shell_common_00.png)
+
+## Strategy in trading
+
+Go to the [Real-time](user_interface/real_time.md) tab.
 
 ![Shell Quick start 03](../../images/shell_quick_start_03.png)
 
-Once the strategy is added, fill in its basic parameters such as **Security**, **Portfolio**, etc. Click the Start strategy button to launch it.
+Click **Add** and select a strategy in the window that opens.
 
-![Shell Quick start 04](../../images/shell_quick_start_04.png)
+![Shell strategy selection](../../images/shell_add_strategy_00.png)
 
-Similar to the [Real-time](user_interface/real_time.md) tab, you can run a strategy test on historical data on the [Emulation](user_interface/emulation.md) tab.
+The strategy appears in the **Strategies** table, and its parameters appear on the **Strategy** panel on the left. Fill in the **Security**, **Portfolio**, volume and the parameters of the strategy itself, and then click **Start**.
+
+While there is no connection, the add and start buttons in this area are unavailable — the hint under the table says so.
+
+## Strategy on history
+
+The same on the [Emulation](user_interface/emulation.md) tab starts the strategy not in trading but on historical data.
 
 ![Shell Quick start 05](../../images/shell_quick_start_05.png)
+
+No connection is needed for this: each run reads the history from the disk through its own emulation connector.
+
+## See also
+
+[Common](user_interface/common.md)
+
+[Real-time](user_interface/real_time.md)
+
+[Emulation](user_interface/emulation.md)

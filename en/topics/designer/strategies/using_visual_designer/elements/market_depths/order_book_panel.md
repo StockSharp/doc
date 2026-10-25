@@ -4,7 +4,7 @@
 
 The cube is designed to display the order book in a specialized graphical component [Order Book](../../../../user_interface/components/order_book.md).
 
-The [Order Book](../../../../user_interface/components/order_book.md) component should be added from the [Components](../../../../user_interface/components.md) group of the **Simulation** or **Trading** tabs. More details about the [Order Book](../../../../user_interface/components/order_book.md) component can be found in the section [Order Book](../../../../user_interface/components/order_book.md).
+The [Order Book](../../../../user_interface/components/order_book.md) component should be added from the [Components](../../../../user_interface/components.md) group of the **Backtest** or **Trading** tabs. More details about the [Order Book](../../../../user_interface/components/order_book.md) component can be found in the section [Order Book](../../../../user_interface/components/order_book.md).
 
 ### Incoming Sockets
 

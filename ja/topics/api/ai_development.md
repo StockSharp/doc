@@ -64,3 +64,4 @@ AI は古いメソッドを使用したり、存在しない API を作り出し
 
 - [AI で戦略を書く](ai_development/strategy_with_ai.md) — トレーディング戦略を作成するためのステップバイステップガイド
 - [AI でコネクタを書く](ai_development/connector_with_ai.md) — 取引所コネクタを作成するためのステップバイステップガイド
+- [AI エージェントの接続（MCP）](../mcp.md) — エージェントが StockSharp のプログラムのウィンドウを読み取り、ボタンを押し、コマンドを送る方法

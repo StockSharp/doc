@@ -6,19 +6,23 @@ Para importar velas, selecione o item **Importar \=\> Velas** no menu principal 
 
 ## Processo de importação de velas
 
-1. **Comum**
-   - **Tipo de dados** - tipo dos dados importados.
-   - **Nome do ficheiro** - caminho completo para o ficheiro CSV.
-   - **Diretório de dados** - pasta onde serão guardados os ficheiros finais [S#](../../api.md).
+1. **Configurações de Importação**.
+
+   Na linha superior do painel escolhem-se o tipo de dados, **Unidade** - o armazenamento onde os dados serão guardados no formato [S#](../../api.md), o **Formato** de armazenamento e o **Arquivo** a importar (pode ser escolhido com o botão **Procurar**). Por baixo define-se como ler o ficheiro.
+
+   **Comum**
+   - **Diretório de dados** - pasta com os ficheiros, se não for importado um único ficheiro, mas todos os ficheiros adequados da pasta.
    - **Máscara de ficheiro** - máscara de ficheiro usada ao analisar o diretório. Por exemplo, vela \_\*.csv.
+   - **Subdiretórios** - procurar ficheiros também nas pastas aninhadas.
    - **Separador de colunas** - separador de colunas. A tabulação é indicada por TAB.
-   - **Recuo desde o início** - número de linhas desde o início do ficheiro a ignorar (se contiverem metainformação).
-   - **Fuso horário** - fuso horário.
+   - **Linha** - fim de linha no ficheiro: CR LF, LF ou CR.
+   - **Pular linhas** - número de linhas desde o início do ficheiro a ignorar (se contiverem metainformação).
    - **Intervalo** - frequência de atualização dos dados.
 
    **Instrumentos**
    - **Informação alargada** - guardar os campos importados adicionais no armazenamento de informação adicional
    - **Duplicados** - indica se os instrumentos duplicados serão atualizados caso já existam.
+   - **Ignorar instrumentos sem ID** - ignorar os instrumentos sem identificador.
 2. Configure os parâmetros de importação para os campos [S#](../../api.md).
    - **campo S#** - valor do campo S# (**Instrumento**, **Mercado**, etc.).
    - **Associações** - corresponder o valor da coluna no ficheiro ao tipo StockSharp (se necessário).

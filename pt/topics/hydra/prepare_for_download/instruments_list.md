@@ -4,13 +4,13 @@ Configuração do instrumento para descarregamento.
 
 Para algumas fontes, é possível configurar o descarregamento dos instrumentos necessários.
 
-Vejamos um exemplo de descarregamento de instrumentos a partir da fonte **Interactive Brokers**: 
+Vejamos um exemplo de descarregamento de instrumentos a partir da fonte **ByBit**:
 
-1. Selecione descarregar instrumentos e clique no botão **Condição avançada**.![Hydra seleção de instrumentos](../../../images/hydra_choose_securitiy.png)
-2. Depois disso, será aberta uma lista de definições avançadas para o instrumento descarregado.![Hydra seleção de instrumentos 00](../../../images/hydra_choose_securitiy_00.png)
-3. É necessário descarregar um instrumento que cumpra os seguintes parâmetros: ação APPLE, moeda - dólar americano. Para isso, definimos os parâmetros do instrumento conforme mostrado abaixo e clicamos em **OK**.![Hydra seleção de instrumentos 01](../../../images/hydra_choose_securitiy_01.png)
+1. Clique em **Baixar instrumentos**. Por predefinição, está assinalada a opção **Todos**: serão descarregados todos os instrumentos da fonte.![Hydra seleção de instrumentos](../../../images/hydra_choose_securitiy.png)
+2. Desmarque **Todos** e assinale **Condições extras**. Depois disso, será aberta uma lista de definições avançadas para o instrumento descarregado; a opção **Comum** volta à lista resumida.![Hydra seleção de instrumentos 00](../../../images/hydra_choose_securitiy_00.png)
+3. É necessário descarregar os instrumentos cujo código contém BTC. Para isso, indicamos BTC no campo **Código** e clicamos em **OK**.![Hydra seleção de instrumentos 01](../../../images/hydra_choose_securitiy_01.png)
 
-   Depois disso, o programa [Hydra](../../hydra.md) descarregará todos os instrumentos que correspondam aos parâmetros especificados. ![Hydra seleção de instrumentos 02](../../../images/hydra_choose_securitiy_02.png)![Hydra seleção de instrumentos 03](../../../images/hydra_choose_securitiy_03.png)
+   Depois disso, o programa [Hydra](../../hydra.md) descarregará todos os instrumentos que correspondam aos parâmetros especificados e informará quantos deles são novos. ![Hydra seleção de instrumentos 02](../../../images/hydra_choose_securitiy_02.png)![Hydra seleção de instrumentos 03](../../../images/hydra_choose_securitiy_03.png)
 
 A definição permite ao utilizador selecionar vários parâmetros para o instrumento descarregado. 
 

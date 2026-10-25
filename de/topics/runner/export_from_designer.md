@@ -13,6 +13,8 @@ So exportieren Sie eine Strategie aus dem [Designer](../designer.md):
 
   ![Designer Runner-Export (2)](../../images/designer_runner_2.png)
 
+  Das Kontrollkästchen **Warnungen** schaltet Meldungen über den Verlauf des Handels in den darunter ausgewählten Telegram-Kanal ein. Das Kontrollkästchen **Bot** ermöglicht die Steuerung der Strategie über den Telegram-Bot (es ist verfügbar, wenn das Konto Roboter hat), und mit den Kontrollkästchen **Aufträge**, **Trades**, **Positionen** und **Eigenkapital** darunter wird ausgewählt, was der Bot über diese Strategie sendet.
+
 Die folgenden Dateien werden in das ausgewählte Exportverzeichnis kopiert:
 
 - connector.json - eine Datei mit Verbindungseinstellungen

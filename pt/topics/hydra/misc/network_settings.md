@@ -1,6 +1,6 @@
 # Definições de rede
 
-Painel de acesso rápido da aplicação de definições **Definições \=\> Rede**.
+Menu **Arquivo \=\> Configurações de proxy**. (A opção **Servidor \=\> Configurações de rede** corresponde às definições do [modo servidor](../server_mode/settings.md).)
 
 ![Hydra configurações de proxy](../../../images/hydra_proxy_settings.png)
 

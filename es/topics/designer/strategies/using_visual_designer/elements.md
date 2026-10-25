@@ -1,6 +1,6 @@
 # Elementos
 
-Dentro de cada cubo se muestra un icono que lo caracteriza, así como un nombre que puede cambiarse por uno definido por el usuario en el panel **Propiedades**. La sugerencia del cubo muestra una descripción de para qué sirve. Al seleccionar un cubo con el ratón, puede ver sus propiedades en el panel **Propiedades** y, si es necesario, cambiar algunos parámetros.
+Dentro de cada cubo se muestra un icono que lo caracteriza, así como un nombre que puede cambiarse por uno definido por el usuario en el panel **Parámetros de elemento**. La sugerencia del cubo muestra una descripción de para qué sirve. Al seleccionar un cubo con el ratón, puede ver sus propiedades en el panel **Parámetros de elemento** y, si es necesario, cambiar algunos parámetros.
 
 ![Designer Descripción de cubos 00](../../../../images/designer_description_of_elements_00.png)
 

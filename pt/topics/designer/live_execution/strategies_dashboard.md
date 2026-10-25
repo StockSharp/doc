@@ -1,10 +1,12 @@
 # Painel de estratégias
 
-Ao clicar no botão ![Designer Painel de estratégias 00](../../../images/designer_panel_strategies_00.png) no separador **Ao vivo**, abre-se o painel **Ao vivo**.
+Ao clicar no botão **Painel** ![Designer Painel de estratégias 00](../../../images/designer_panel_strategies_00.png) no separador **Ao vivo**, abre-se o painel **Ao vivo**.
 
 ![Designer Painel de estratégias 01](../../../images/designer_panel_strategies_01.png)
 
 O painel **Ao vivo** é uma tabela que apresenta todas as estratégias adicionadas a **Ao vivo**. No painel **Ao vivo**, pode ver o estado atual da estratégia e executar ou parar a estratégia usando os botões ![Designer Painel de circuitos 02](../../../images/designer_panel_circuits_02.png), ![Designer Painel de circuitos 03](../../../images/designer_panel_circuits_03.png).
+
+Por cima da tabela estão os botões **Iniciar tudo** e **Parar tudo**, que iniciam e param de uma só vez todas as estratégias da tabela, e **Configurações** da estratégia selecionada: a janela de definições do seu controlo remoto, a mesma que abre o botão de definições na linha da estratégia.
 
 ![Designer Painel de estratégias 02](../../../images/designer_panel_strategies_02.png)
 

@@ -11,6 +11,7 @@ Eingehende Anschlüsse
 - **Modell** - das Berechnungsmodell (zum Beispiel Black-Scholes).
 - **Preis des Basiswerts** - der Preis des Basiswerts.
 - **Maximale Abweichung** - die maximale Abweichung.
+- **Prämie** - der Optionspreis. Damit ermittelt der Block die implizite Volatilität, wenn **Wert** IV ist; für die übrigen Werte wird sie nicht benötigt.
 
 ### Ausgehende Anschlüsse
 
@@ -22,7 +23,7 @@ Ausgehende Anschlüsse
 
 Parameter
 
-- **Wert** - kann den Typ eines Optionsgriechen annehmen: Delta, Gamma, Vega, Theta oder Rho. Bestimmt, welcher Wert vom Block ausgegeben wird.
+- **Wert** - kann den Typ eines Optionsgriechen annehmen: Delta, Gamma, Vega, Theta oder Rho, außerdem Prämie (der Optionspreis nach dem Modell) und IV (die implizite Volatilität in Prozent anhand des Eingangs **Prämie**). Bestimmt, welcher Wert vom Block ausgegeben wird.
 
 ## Siehe auch
 

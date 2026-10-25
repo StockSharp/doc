@@ -1,29 +1,15 @@
 # Configuración en vivo
 
-El panel **Propiedades** está minimizado de forma predeterminada en el lado derecho de la pestaña de estrategia. Este panel es una tabla de propiedades de emulación o configuración en vivo. Cuando selecciona una propiedad concreta, aparece una descripción detallada de esta propiedad en la parte inferior de la tabla. Todas las propiedades están agrupadas:
+En la negociación en vivo, aquello con lo que trabaja la estrategia se define en la pestaña **En vivo** de la cinta, en el grupo **Estrategia**:
 
-![Designer Propiedades en vivo 00](../../../../images/designer_properties_live_00.png)
+- **Cartera** - cartera en la que la estrategia registra órdenes.
+- **Instrumento** - instrumento con el que opera la estrategia.
 
-**Registro**
+Allí mismo están los botones **Actualizar**, **Inicio** y **Detener**, y en el grupo **Componentes**, los componentes que se pueden añadir a la pestaña de la estrategia.
 
-- **Nivel de registro** – nivel de registro para este elemento.
+Los parámetros del propio esquema (por ejemplo, las longitudes de las medias móviles o el volumen de la orden) se definen en el panel **Parámetros de estrategia**. De forma predeterminada, este panel está contraído y anclado a la parte derecha de la pestaña de estrategia.
 
-**Inicialización**
-
-- **Tipo de datos** - tipo de datos.
-- **Marco temporal** - usar velas con el marco temporal especificado.
-- **Días de datos históricos** - número de días de datos históricos para inicializar la estrategia.
-
-**Configuración**
-
-- [Gestión de riesgos](../risk_management.md) - configuración de gestión de riesgos.
-
-**Parámetros del diagrama**
-
-- **Instrumento** - instrumento.
-- **Cartera** - cartera.
-
-Si no rellena los **Parámetros del diagrama**, durante la emulación se usará el instrumento del campo **Instrumento** de la pestaña **Emulación**, y como cartera se usará por defecto la cartera de prueba.
+La configuración del control remoto de la estrategia se abre con el botón **Configuraciones** de la fila de la estrategia en el [panel En vivo](../../live_execution/strategies_dashboard.md).
 
 ## Contenido recomendado
 

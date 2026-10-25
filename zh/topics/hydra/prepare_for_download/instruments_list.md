@@ -4,13 +4,13 @@
 
 部分数据源允许设置筛选条件，只下载所需的交易品种。
 
-下面以从 **Interactive Brokers** 数据源下载交易品种为例：
+下面以从 **ByBit** 数据源下载交易品种为例：
 
-1. 选择下载交易品种，然后单击 **扩展条件** 按钮。![Hydra 交易品种选择](../../../images/hydra_choose_securitiy.png)
-2. 随后会打开用于下载交易品种的高级设置列表。![Hydra 交易品种选择 00](../../../images/hydra_choose_securitiy_00.png)
-3. 假设需要下载满足以下条件的交易品种：APPLE 股票，货币为美元。请按下图设置交易品种参数，然后单击 **OK**。![Hydra 交易品种选择 01](../../../images/hydra_choose_securitiy_01.png)
+1. 单击 **下载交易品种**。默认勾选 **所有**，即下载数据源的全部交易品种。![Hydra 交易品种选择](../../../images/hydra_choose_securitiy.png)
+2. 取消勾选 **所有** 并勾选 **额外条件**。随后会打开用于下载交易品种的高级设置列表；勾选 **通用** 会恢复简短列表。![Hydra 交易品种选择 00](../../../images/hydra_choose_securitiy_00.png)
+3. 假设需要下载代码中包含 BTC 的交易品种。为此，在 **代码** 字段中输入 BTC，然后单击 **好的**。![Hydra 交易品种选择 01](../../../images/hydra_choose_securitiy_01.png)
 
-   随后，[Hydra](../../hydra.md) 会下载符合指定条件的所有交易品种。![Hydra 交易品种选择 02](../../../images/hydra_choose_securitiy_02.png)![Hydra 交易品种选择 03](../../../images/hydra_choose_securitiy_03.png)
+   随后，[Hydra](../../hydra.md) 会下载符合指定条件的所有交易品种，并报告其中有多少是新的。![Hydra 交易品种选择 02](../../../images/hydra_choose_securitiy_02.png)![Hydra 交易品种选择 03](../../../images/hydra_choose_securitiy_03.png)
 
 这些设置允许用户根据多种参数筛选要下载的交易品种。
 

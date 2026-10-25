@@ -10,11 +10,14 @@ Se a fonte não contiver informações alargadas para um instrumento, as colunas
 
 Para selecionar as informações alargadas necessárias, deve:
 
-1. No separador **Instrumentos**, clique no botão **Informação alargada**![Captura de ecrã de Informações alargadas do instrumento 1](../../../images/hydra_extensioninfo_securities.png)
+1. No painel **Instrumentos**, clique no botão **Informação alargada**![Captura de ecrã de Informações alargadas do instrumento 1](../../../images/hydra_extensioninfo_securities.png)
 2. Aparecerá uma janela na qual deve selecionar o caminho para o ficheiro CSV necessário![Captura de ecrã de Informações alargadas do instrumento 2](../../../images/hydra_extensioninfo_window.png)
 
-Abaixo está um exemplo de um ficheiro **CSV** de informações alargadas aberto em diferentes editores: **MS Excel** e **Notepad**.
+Abaixo está um exemplo de um ficheiro **CSV** de informações alargadas. Os valores são separados por ponto e vírgula: a primeira linha contém os nomes das propriedades, a segunda, os seus tipos, e cada uma das seguintes, o identificador do instrumento e os valores das suas propriedades:
 
-![Captura de ecrã de Informações alargadas do instrumento 3](../../../images/hydra_extensioninfo_csv_excel.png)
-
-![Captura de ecrã de Informações alargadas do instrumento 4](../../../images/hydra_extensioninfo_csv_notepad.png)
+```
+SecurityId;Country;City;Site
+string;string;string;string
+SBER@TQBR;Rússia;Moscovo;www.sberbank.ru
+GAZP@TQBR;Rússia;São Petersburgo;www.gazprom.ru
+```

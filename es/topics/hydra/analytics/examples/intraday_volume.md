@@ -6,7 +6,7 @@ El script "Volumen intradía" es una herramienta para analizar la distribución 
 
 ## Descripción funcional
 
-El script recopila datos de operaciones para un período seleccionado y los presenta en formato de gráfico, permitiendo visualizar los cambios del volumen de negociación por hora. Esto permite evaluar en qué horas del día se observa una actividad de negociación mayor o menor.
+El script recopila datos de operaciones para un período seleccionado y los presenta en forma de tabla «hora — volumen», ordenada por volumen descendente, permitiendo ver los cambios del volumen de negociación por hora. Esto permite evaluar en qué horas del día se observa una actividad de negociación mayor o menor.
 
 ## Importancia práctica
 

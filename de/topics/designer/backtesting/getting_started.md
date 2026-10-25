@@ -6,25 +6,18 @@ Um den Test auf historischen Daten auszuführen, wählen Sie eine Strategie aus,
 
 Laden Sie vor dem Testen Marktdaten (Instrumente, Kerzen, Tick-Trades und/oder Orderbücher). Dies wird im Abschnitt [Marktdatenspeicher](../market_data_storage.md) beschrieben.
 
-Beim Wechsel in den Tab mit der Strategie wird im **Menüband** automatisch der Tab **Simulation** geöffnet. Legen Sie in diesem Tab den Testzeitraum fest. Geben Sie im Marktdatenfeld den erforderlichen Speicher an ([Marktdatenspeicher](../market_data_storage.md)); geben Sie im Instrumentfeld das erforderliche Instrument an.
+Beim Wechsel in den Tab mit der Strategie wird im **Menüband** automatisch der Tab **Backtest** geöffnet. Legen Sie in diesem Tab den Testzeitraum fest (**Von** und **Bis**), wählen Sie im Feld **Instrument** das Instrument und in den Feldern **Speicher** und **Format** den Marktdatenspeicher ([Marktdatenspeicher](../market_data_storage.md)) und das Format, in dem er geschrieben ist.
 
-Im Beispiel mit der SMA-Strategie werden die folgenden Parameter verwendet.
+Im Beispiel mit der SMA-Strategie werden die folgenden Parameter verwendet:
 
-1. Instrument AAPL@NASDAQ
-2. Standardspeicher \\Documents\\StockSharp\\Designer\\Storage
-3. Speicherformat - CSV
-4. Datentyp aus dem Speicher - Ticks
-5. Orderbuch - generiert
-6. Orderbuchtiefe - 5
-7. Spread-Größe - 2
-8. Kerzen mit einem Zeitrahmen von 30 s
-9. Volumen - 100
+1. Instrument BTCUSDT@BNBFT
+2. Zeitraum vom 01.03.2024 bis zum 31.03.2024
+3. Ein Speicher, in den die Kerzen dieses Instruments für diesen Zeitraum geladen wurden
+4. Speicherformat - **Binär**
 
-Die ausgewählten Parameter müssen eingerichtet werden:
+Die Strategie selbst bildet auf Fünf-Minuten-Kerzen zwei gleitende Durchschnitte — **SMA 10** und **SMA 80** — und handelt mit dem Volumen, das der Würfel **Vol = 1** im Schema vorgibt.
 
 ![Designer Rücktestbeispiel 00](../../../images/designer_example_of_backtesting_00.png)
-
-![Designer Rücktestbeispiel 01](../../../images/designer_example_of_backtesting_01.png)
 
 Nachdem alle erforderlichen Parameter eingerichtet wurden, starten Sie den Strategietest durch Klicken auf die Schaltfläche ![Designer Rücktest-Oberfläche 01](../../../images/designer_interface_backtesting_01.png).
 
@@ -32,15 +25,15 @@ Während oder nach dem Test können Sie Charts und Tabellen mit Testinformatione
 
 ![Designer Rücktestbeispiel 02](../../../images/designer_example_of_backtesting_02.png)
 
-Das Diagramm zeigt, dass die Ausführungen wie von der Strategie vorgesehen an den Schnittpunkten der gleitenden Durchschnitte stattfinden. Außerdem ist zu sehen, dass Aufträge über mehrere Ausführungen ausgeführt werden. Dies geschieht durch die Verwendung eines generierten Orderbuchs, das die Realitätsnähe des Tests erhöht. Dass Aufträge über mehrere Ausführungen ausgeführt werden, ist in der Ausführungstabelle und in der Statistik sowie im Positionsdiagramm zu sehen.
+Das Diagramm zeigt, dass die Ausführungen wie von der Strategie vorgesehen an den Schnittpunkten der gleitenden Durchschnitte stattfinden.
 
 ![Designer Rücktestbeispiel 03](../../../images/designer_example_of_backtesting_03.png)
 
-Im **Positionsdiagramm** ist zu sehen, dass die Strategie das gehandelte Volumen verringert hat. Dies geschah, weil das generierte Orderbuch eine Tiefe von 5 hat und die gesamte Orderbuchtiefe dadurch nicht ausreichte, um die Order über 200 Lots auszuführen. Da die Strategie lediglich die Position umkehrt, wurde die Ordergröße jedes Mal reduziert, wenn die Orderbuchtiefe für die Orderausführung nicht ausreichte.
+Im **Positionsdiagramm** ist zu sehen, dass die Position der Strategie zwischen 0 und 1 wechselt: Die Strategie kauft, wenn der kurze Durchschnitt den langen von unten nach oben kreuzt, und schließt die Position bei der umgekehrten Kreuzung.
 
 ![Designer Rücktestbeispiel 04](../../../images/designer_example_of_backtesting_04.png)
 
-Der **P\/L**-Chart zeigt, dass die Strategie mit diesen Parametern unprofitabel ist.
+Das Diagramm **P&L** zeigt, wie sich Gewinn und Verlust der Strategie während des Tests verändert haben, und außerdem die Provision.
 
 ## Empfohlene Inhalte
 

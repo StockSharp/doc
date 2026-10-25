@@ -1,6 +1,6 @@
 ﻿# Emulation setup
 
-In server mode, the program allows you to enable emulation mode.
+In server mode, the program allows you to work in emulation mode. Its parameters are set in the **Server** menu, the **Emulator settings** item.
 
 ![hydra emulator start](../../../images/hydra_emulator_start.png)
 

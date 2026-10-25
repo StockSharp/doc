@@ -1,6 +1,6 @@
 # Elementos
 
-Dentro de cada cubo é apresentado um ícone que o caracteriza, bem como um nome que pode ser alterado para um nome definido pelo utilizador no painel **Propriedades**. A dica de contexto do cubo mostra uma descrição da finalidade desse cubo. Ao selecionar um cubo com o rato, pode ver as suas propriedades no painel **Propriedades** e, se necessário, alterar alguns parâmetros.
+Dentro de cada cubo é apresentado um ícone que o caracteriza, bem como um nome que pode ser alterado para um nome definido pelo utilizador no painel **Parâmetros de elemento**. A dica de contexto do cubo mostra uma descrição da finalidade desse cubo. Ao selecionar um cubo com o rato, pode ver as suas propriedades no painel **Parâmetros de elemento** e, se necessário, alterar alguns parâmetros.
 
 ![Designer Descrição dos cubos 00](../../../../images/designer_description_of_elements_00.png)
 

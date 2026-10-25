@@ -6,19 +6,23 @@ Para importar velas, seleccione **Importar \=\> Velas** en el menú principal de
 
 ## Proceso de importación de velas
 
-1. **Común**
-   - **Tipo de datos** - tipo de datos importados.
-   - **Nombre de archivo** - ruta completa al archivo CSV.
-   - **Directorio de datos** - carpeta donde se guardarán los archivos finales de [S#](../../api.md).
+1. **Configuración de importación**.
+
+   En la línea superior del panel se eligen el tipo de datos, **Unidad** - el almacenamiento donde se guardarán los datos en formato [S#](../../api.md), el **Formato** de almacenamiento y el **Archivo** que se importa (se puede elegir con el botón **Examinar**). Debajo se define cómo leer el archivo.
+
+   **Común**
+   - **Directorio de datos** - carpeta con los archivos, si no se importa un solo archivo, sino todos los archivos adecuados de la carpeta.
    - **Máscara de archivo** - máscara de archivo que se usa al escanear el directorio. Por ejemplo, vela \_\*.csv.
+   - **Subdirectorios** - buscar archivos también en las carpetas anidadas.
    - **Separador de columnas** - separador de columnas. La tabulación se indica como TAB.
-   - **Sangría desde el inicio** - número de líneas desde el inicio del archivo que se omitirán (si contienen metainformación).
-   - **Zona horaria** - zona horaria.
+   - **Línea** - final de línea en el archivo: CR LF, LF o CR.
+   - **Omitir líneas** - número de líneas desde el inicio del archivo que se omitirán (si contienen metainformación).
    - **Intervalo** - frecuencia de actualización de datos.
 
    **Instrumentos**
    - **Información extendida** - guardar los campos importados extendidos en el almacenamiento de información extendida.
    - **Duplicados** - indica si los instrumentos duplicados se actualizarán si ya existen.
+   - **Ignorar instrumentos sin ID** - omitir los instrumentos sin identificador.
 2. Configure los parámetros de importación para los campos de [S#](../../api.md).
    - **campo S#** - valor del campo S# (**Instrumento**, **Mercado**, etc.).
    - **Asociaciones** - asociar el valor de columna del archivo con el tipo de StockSharp (si es necesario).

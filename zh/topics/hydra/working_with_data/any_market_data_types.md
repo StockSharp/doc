@@ -6,15 +6,17 @@
 
 **重要！**如果 **订单日志** 或 **Level 1** 数据中包含最优价格，则可以使用这些数据构建**订单簿**。
 
+由 **Level 1** 构建的订单簿只包含最优价格，买入和卖出各一行。覆盖所选全部深度的订单簿需要由 **订单日志** 构建：订单日志包含每一笔已提交、已撤销和已成交的订单。
+
 需要注意的是，可以从任何提供实时市场数据的数据源下载 **Level 1** 值。也可以通过[转换](../tasks/converter.md)**订单簿**来获得 **Level 1**。
 
 构建步骤如下：
 
-1. 选择要获取市场数据的时间范围和交易品种。![Hydra 构建 一级 深度数据](../../../images/hydra_level1_build_depth_data.png)
+1. 选择要获取市场数据的时间范围和交易品种。![Hydra 从订单日志构建订单簿面板](../../../images/hydra_level1_build_depth_data.png)
 2. 打开 **构建来源** 字段并选择所需的数据类型。![Hydra 数据构建类型](../../../images/hydra_type_build_data.png)
 
    **重要！**如果选择 **订单簿、订单日志、Level 1** 作为K线的数据源，还会出现其他参数供选择。![Hydra 扩展构建数据属性](../../../images/hydra_ext_proper_build_data.png)
-3. 设置参数后，单击 ![Hydra K线](../../../images/hydra_candles.png) 按钮。![Hydra 一级 深度数据结果](../../../images/hydra_level1_build_depth_data_result.png)
+3. 设置参数后，单击 ![Hydra K线](../../../images/hydra_candles.png) 按钮。![Hydra 从订单日志构建订单簿的结果面板](../../../images/hydra_level1_build_depth_data_result.png)
 
 对于**K线**，还可以使用较小时间周期的K线构建较大时间周期的K线。
 

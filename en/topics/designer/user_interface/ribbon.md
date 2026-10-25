@@ -14,9 +14,11 @@ The main user interface element of [Designer](../../designer.md) is the **Ribbon
 
 ![Designer Tape 02](../../../images/designer_tape_02.png)
 
-4. The **Cloud** tab. [Designer](../../designer.md) is designed to work with cloud services. It allows viewing completed *Cloud Tasks*, getting information on instruments available in the Cloud, and setting up remote work with channels and robots.
+4. The **Cloud** tab. [Designer](../../designer.md) is designed to work with cloud services. The **Tasks** button shows completed *Cloud Tasks*, and the **Securities** button shows the instruments available in the Cloud. In the **Remotely** group, a switch enables remote control of strategies via the Telegram bot ([Control Panel](../../telegram_services/control_panel.md)), and the **Channels** button opens the list of Telegram channels to which Designer sends messages. Remote control cannot be enabled in offline mode, and while the profile is not activated in the Telegram bot, Designer offers to go to the bot and opens its page.
 
 ![Designer Tape 03](../../../images/designer_tape_03.png)
+
+On macOS, the main [Designer](../../designer.md) commands are duplicated in the system menu bar: creating and opening strategies, panels, connection, settings, build, debugging, and help with the **About** window.
 
 ## See Also
 

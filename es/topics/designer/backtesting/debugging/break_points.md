@@ -5,7 +5,7 @@ Para añadir un punto de interrupción, seleccione el cubo y haga clic en el bot
 ![Designer punto de parada 00](../../../../images/designer_debug_break_points_00.png)
 
 Cuando el punto de interrupción se activa en un elemento, su fondo cambia a rojo claro.
-El elemento se resalta automáticamente en la ventana de propiedades, donde se muestran sus propiedades y los valores de los parámetros de entrada y salida.
+El elemento se resalta automáticamente y en el panel **Parámetros de elemento** se muestran sus propiedades y los valores de los parámetros de entrada y salida.
 Si coloca el puntero del ratón sobre el parámetro de entrada o salida, aparece una sugerencia con el valor del parámetro.
 En la siguiente figura se muestra un ejemplo de visualización de los valores en la entrada y salida del elemento compuesto durante la ejecución de la estrategia:
 

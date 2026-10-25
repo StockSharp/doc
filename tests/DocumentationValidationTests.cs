@@ -745,6 +745,7 @@ public sealed class DocumentationValidationTests : BaseTestClass
 		"JetBrains Rider",
 		"Level 1",
 		"Level1",
+		"Level 2",
 		"MATLAB",
 		"Open Source",
 		"Orders",

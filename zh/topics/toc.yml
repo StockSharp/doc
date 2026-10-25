@@ -15,6 +15,18 @@
     href: installer/install_and_remove_apps.md
   - name: 更新应用程序
     href: installer/update_apps.md
+  - name: 设置
+    href: installer/settings.md
+  - name: 日志
+    href: installer/logs.md
+  - name: 许可证
+    href: installer/licenses.md
+  - name: 订阅方案
+    href: installer/tariffs.md
+  - name: 我的产品
+    href: installer/my_products.md
+  - name: 帮助
+    href: installer/help.md
   - name: 控制台
     href: installer/console.md
 - name: Designer
@@ -399,10 +411,14 @@
     href: terminal/quick_start.md
   - name: 用户界面
     items:
-    - name: 功能区
+    - name: 主菜单
       href: terminal/user_interface/ribbon.md
     - name: 工作区
       href: terminal/user_interface/workspace.md
+    - name: 使用表格
+      href: terminal/user_interface/tables.md
+    - name: 状态栏
+      href: terminal/user_interface/status_bar.md
     - name: 日志
       href: terminal/user_interface/logs.md
     - name: 投资组合
@@ -422,6 +438,8 @@
         href: terminal/user_interface/components/buy_sell.md
       - name: 订单簿
         href: terminal/user_interface/components/order_book.md
+      - name: Level 2
+        href: terminal/user_interface/components/level_2.md
       - name: 图表
         href: terminal/user_interface/components/chart.md
       - name: 盈亏图表
@@ -430,8 +448,6 @@
         href: terminal/user_interface/components/trades.md
       - name: 订单
         href: terminal/user_interface/components/orders.md
-      - name: 条件订单
-        href: terminal/user_interface/components/conditional_orders.md
       - name: 持仓
         href: terminal/user_interface/components/positions.md
       - name: 交易信息流
@@ -454,13 +470,10 @@
     href: terminal/indicators.md
   - name: 通知
     href: terminal/notifications.md
-    items:
-    - name: 通知面板
-      href: terminal/notifications/notification_panel.md
-    - name: 通知设置
-      href: terminal/notifications/notifications_setup.md
   - name: 设置
     items:
+    - name: 通用设置
+      href: terminal/settings/common_settings.md
     - name: 重置设置
       href: terminal/settings/reset_settings.md
 - name: Hydra
@@ -503,6 +516,8 @@
     href: hydra/update_to_the_new_version.md
   - name: 首次启动
     href: hydra/first_start.md
+  - name: 用户界面
+    href: hydra/user_interface.md
   - name: 数据来源
     href: hydra/data_sources.md
     items:
@@ -542,6 +557,8 @@
         href: hydra/working_with_data/view_and_export/indicators.md
       - name: 持仓
         href: hydra/working_with_data/view_and_export/positions.md
+    - name: 图表
+      href: hydra/working_with_data/chart.md
     - name: K线图生成
       href: hydra/working_with_data/candles_generation.md
     - name: 导出数据
@@ -638,6 +655,8 @@
         href: hydra/analytics/examples/largest_candles.md
   - name: 杂项
     items:
+    - name: 通用设置
+      href: hydra/misc/settings.md
     - name: 重置设置
       href: hydra/misc/settings_reset.md
     - name: 删除数据
@@ -5087,8 +5106,10 @@
       href: shell/user_interface/real_time.md
     - name: 模拟
       href: shell/user_interface/emulation.md
-    - name: 远程管理器
-      href: shell/user_interface/remotemanager.md
+    - name: 优化
+      href: shell/user_interface/optimization.md
+    - name: 日志
+      href: shell/user_interface/log.md
   - name: 连接设置
     href: shell/connections_settings.md
     items:
@@ -5100,12 +5121,21 @@
     href: shell/create_strategy_panel.md
   - name: 从 Designer 运行策略
     href: shell/run_strategies_from_designer.md
+  - name: 远程控制
+    href: shell/remote_control.md
 - name: 商店
   href: store.md
 - name: MATLAB
   href: matlab.md
 - name: UDP 转储工具
   href: udp_dumper.md
+- name: 连接 AI 代理 (MCP)
+  href: mcp.md
+  items:
+  - name: 界面控制 (DesktopDriver)
+    href: mcp/desktop_driver.md
+  - name: 程序命令 (Studio.Mcp)
+    href: mcp/studio_mcp.md
 - name: 通用
   items:
   - name: 源代码

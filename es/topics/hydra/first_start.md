@@ -1,80 +1,88 @@
 # Primer inicio
 
-La primera vez que se ejecuta, aparece la siguiente ventana para seleccionar fuentes de datos. También puede abrir esta ventana en la pestaña **Común**, seleccionando **Añadir \=\> Fuentes**.
+Al iniciarse por primera vez, Hydra propone elegir las fuentes de datos. Más adelante, esta misma ventana se abre con el botón **Fuentes** de la barra de herramientas o desde el menú **Archivo**.
 
 ![Hydra añadir fuente](../../images/hydra_source_add.png)
 
-En la ventana, marque las fuentes necesarias. Puede usar filtros por región, mercado, tipo de datos, pago y disponibilidad en tiempo real. Cuando termine la selección, haga clic en **OK**. Después, el programa ofrecerá habilitar las utilidades. Para obtener más detalles sobre el trabajo con utilidades, consulte la sección [Utilidades](tasks.md). Haga clic en **OK**.
+Marque las fuentes necesarias: se puede hacer clic tanto en la casilla como en el nombre. Los filtros de la izquierda reducen la lista: mercado electrónico, tipo de datos, coste; el campo **Buscar** busca por nombre. Como ejemplo, marquemos **ByBit** y pulsemos **Agregar seleccionados**.
 
-![Captura de Primer inicio 1](../../images/hydra_first_started_utilities00.png)
+A continuación se abrirá una ventana igual con las utilidades, tareas que no descargan datos, sino que trabajan con los ya descargados: importación y exportación programadas, conversión, copia de seguridad en la nube. Más información sobre ellas en la sección [Utilidades](tasks.md). Si de momento no necesita utilidades, pulse **Cancelar**.
 
-Después de esto, las fuentes se añadirán al panel izquierdo de la ventana principal de la aplicación.
+![Captura de Primer inicio 1](../../images/hydra_tasks.png)
+
+Para cada fuente añadida, Hydra preguntará si desea habilitarla ahora. Una fuente habilitada descarga datos cuando se pulsa el botón **Inicio**; una deshabilitada se omite. Responda **Sí**.
+
+La fuente aparecerá en el panel **Tareas** de la izquierda y en el centro se abrirá su panel: la tabla de instrumentos; debajo, la configuración de los datos que se reciben, y a la derecha, la configuración de conexión.
 
 ![Hydra Inicio rápido 01](../../images/hydra_quick_start_01.png)
 
-## Descargar un instrumento para cargar datos de mercado:
+## Instrumentos
 
-Antes de empezar a descargar datos de mercado, debe configurar los instrumentos para los que necesita obtener datos.
+> [!TIP]
+> Los datos se descargan solo para los instrumentos añadidos a la fuente.
 
-Después de añadir fuentes de datos de mercado, en la parte central se abrirán los paneles de las fuentes añadidas, donde se muestra una lista de instrumentos. Si el panel está cerrado, para abrirlo haga doble clic en el logotipo de la fuente en la lista del lado izquierdo del programa.
+Justo después de añadirla, la fuente solo tiene el instrumento auxiliar **ALL@ALL**, «todos los instrumentos de la fuente». Con él se descargan los datos que la fuente puede entregar a la vez para todos sus instrumentos. Como ejemplo, añadamos el par al contado BTCUSDT.
 
-Por ejemplo, descarguemos el instrumento AAPL@NASDAQ desde una fuente de datos compatible.
+1. Pulse el botón **Agregar instrumentos** ![Hydra botón Añadir](../../images/hydra_add.png) encima de la tabla de instrumentos. Se abrirá la ventana de selección: a la izquierda, los instrumentos que conoce Hydra; a la derecha, los seleccionados para la fuente.
+
+   ![Captura de Primer inicio 2](../../images/hydra_securities.png)
+
+2. La primera vez la lista de la izquierda está vacía: Hydra todavía no conoce ningún instrumento. Pulse **Descargar instrumentos**. En la ventana que se abre se definen las condiciones de búsqueda; la casilla **Todo** solicita a la fuente la lista completa.
+
+   ![Hydra seleccionar todos los instrumentos](../../images/hydra_securities_choose_all.png)
+
+   Para algunas fuentes, en lugar de la lista completa se pueden [indicar](prepare_for_download/instruments_list.md) los instrumentos necesarios.
+
+3. Pulse **OK**. Cuando la fuente responda, Hydra informará de cuántos instrumentos nuevos se han añadido, y estos aparecerán en la lista de la izquierda. El contador situado encima de la lista muestra cuántos instrumentos se ven y cuántos se conocen en total; la casilla **Solo ByBit** oculta los instrumentos que ya descargan otras fuentes.
+
+   ![Hydra lista completa de instrumentos](../../images/hydra_security_full_list.png)
+
+4. Empiece a escribir el código del instrumento en el campo **Búsqueda** situado encima de la lista.
+
+   ![Hydra lista completa de instrumentos 00](../../images/hydra_security_full_list_00.png)
+
+5. Pase el instrumento a la derecha con un doble clic o con el botón de la flecha y pulse **OK**.
+
+   ![Hydra lista completa de instrumentos 01](../../images/hydra_security_full_list_01.png)
+
+## Tipos de datos y período
+
+Después de seleccionar los instrumentos, Hydra preguntará qué datos descargar para ellos. Marquemos **Ticks** y las velas de cinco minutos **TF: 00:05:00**; cada clic añade un tipo más a la selección.
+
+![Hydra seleccionar tipo de datos de mercado](../../images/hydra_type_market_data_choose.png)
+
+La fecha **De** es el inicio del historial. La casilla **Continuar en tiempo real** hace que la fuente siga recibiendo datos después de descargar el historial; con ella no se necesita la fecha **Hasta**. Cuánto historial entrega la fuente depende de la propia fuente.
+
+Después de **OK**, el instrumento aparecerá en la tabla de la fuente. La tabla es jerárquica: en la fila del instrumento está su código y, debajo, los tipos de datos seleccionados con las fechas de inicio y fin.
 
 ![Hydra seleccionar datos de mercado](../../images/hydra_choose_market_data.png)
 
-> [!TIP]
-> ¡IMPORTANTE\! Los datos se descargan solo para los instrumentos añadidos a la lista de instrumentos.
+Si para un instrumento no se ha seleccionado ningún tipo de datos o no tiene definidos el paso de precio, el paso de volumen o el número de decimales, a la izquierda de su fila aparece el icono ⚠. La descripción emergente del icono explica qué falta.
 
-1. Añadir instrumentos.
+Debajo de la tabla está la configuración de las filas seleccionadas en ella. Seleccione una o varias filas y la configuración se aplicará a todas a la vez:
 
-   En el primer inicio, el programa ofrecerá descargar todos los instrumentos de una vez para la fuente seleccionada. Más adelante, el usuario descargará los instrumentos por su cuenta. Inicialmente, la base de instrumentos de [Hydra](../hydra.md) está vacía; solo existe el instrumento auxiliar **ALL@ALL**. Al seleccionar este instrumento, se descargarán datos de todos los instrumentos disponibles para esta fuente.
+- **Tipos de datos**: qué datos recibir. El conjunto depende de la fuente.
 
-   Para añadir un instrumento, haga clic en el botón **Añadir** ![Hydra botón Añadir](../../images/hydra_add.png). Después se abrirá una ventana para descargar el instrumento. ![Captura de Primer inicio 2](../../images/hydra_securities.png)
+  ![Hydra Inicio rápido 02 00](../../images/hydra_quick_start_02_00.png)
 
-   Para descargar los instrumentos, debe hacer clic en el botón correspondiente **Descargar instrumentos**.
+- **Marcos temporales de velas**: qué velas descargar. La lista de marcos temporales también depende de la fuente; **Personalizado** abre una ventana en la que se define un [tipo de vela propio](prepare_for_download/custom_candles.md).
 
-   Después aparecerá en pantalla un menú donde el usuario puede seleccionar **Descargar todos los instrumentos**.![Hydra seleccionar todos los instrumentos](../../images/hydra_securities_choose_all.png)
+  ![Hydra Inicio rápido 02](../../images/hydra_quick_start_02.png)
 
-   O bien, para varias fuentes, [configurar](prepare_for_download/instruments_list.md) los instrumentos que necesita descargar.
+- **De** y **Hasta**: período de descarga. Sin fecha de fin, la fuente descarga todo lo que hay hasta hoy y, si puede trabajar en tiempo real y está marcada la casilla **Tiempo real**, sigue recibiendo datos después.
 
-   Cuando se reciban los instrumentos, la ventana tendrá este aspecto.![Hydra lista completa de instrumentos](../../images/hydra_security_full_list.png)
+  **Construcción de velas**: de dónde se toman las velas: **Cargar**, ya hechas desde la fuente; **Construir**, las construye el propio Hydra; **Cargar y construir**, se cargan y las que faltan se construyen. **Campo de construcción**: a partir de qué se construyen: del precio de la última operación, del punto medio del spread, del mejor precio, etc. Construir velas es útil cuando la fuente no las entrega en el marco temporal necesario.
 
-   En ella se enumerarán todos los instrumentos disponibles para añadir. Para una búsqueda rápida, puede introducir el nombre en el campo correspondiente.
+  ![Hydra Inicio rápido 02 01](../../images/hydra_quick_start_02_01.png)
 
-   Para seleccionar un instrumento, haga doble clic en él y se moverá al lado derecho de la lista.![Hydra lista completa de instrumentos 00](../../images/hydra_security_full_list_00.png)
+## Descarga
 
-   Después se moverá al lado derecho de la tabla.![Hydra lista completa de instrumentos 01](../../images/hydra_security_full_list_01.png)
-
-   Los instrumentos seleccionados se mostrarán en la tabla **Instrumentos**, que tiene estructura de árbol. Su elemento principal es el instrumento; el elemento adicional son los tipos de datos de mercado que se recibirán para ese instrumento.
-2. Para cada instrumento seleccionado, debe elegir los tipos de datos de mercado necesarios para la descarga.
-
-   Si no se han establecido todos los parámetros necesarios del instrumento, aparecerá el icono ![Captura de Primer inicio 3](../../images/hydra_zero.png) en la columna izquierda de la línea del instrumento. ![Hydra seleccionar tipo de datos de mercado](../../images/hydra_type_market_data_choose.png)
-
-   Seleccionemos la descarga de **Ticks** y **Velas marco temporal 5**.
-
-   En la parte inferior de la ventana de la fuente hay un panel con botones para configurar los datos y los instrumentos que se recibirán. ![Hydra Inicio rápido 02 00](../../images/hydra_quick_start_02_00.png)
-
-   En este panel se pueden realizar las siguientes operaciones:
-   - Configurar la cantidad de información recibida mediante los botones: **Operaciones, Libros de órdenes, Velas, Registro de órdenes, Level 1, Transacciones propias**. Las listas de tipos de datos de mercado disponibles varían para distintas fuentes.
-   - Especificar el marco temporal necesario para las velas cargadas. El marco temporal de las velas recibidas es distinto para diferentes fuentes.![Hydra Inicio rápido 02](../../images/hydra_quick_start_02.png)
-   - Establecer el período necesario para descargar datos de mercado. El período también se puede configurar directamente en la ventana de datos de mercado. Para ello, debe seleccionar el inicio y el final del período.
-
-     Si el usuario no especifica la fecha final del período, el programa descarga todos los datos disponibles hasta la fecha actual. Si la fuente admite transmisión de datos de mercado en tiempo real, cuando no haya fecha final del período los datos de mercado se descargarán en tiempo real.
-
-     Establezcamos el período para el que se deben descargar los datos de mercado.![Hydra Inicio rápido 02 01](../../images/hydra_quick_start_02_01.png)
-   - Especificar a partir de qué se construirán los datos de mercado. Si este parámetro no se especifica, se recibirán las velas disponibles en la fuente. Si el usuario especifica el tipo de datos de mercado, las velas se construirán a partir de ese tipo de datos. Por ejemplo, las velas pueden construirse a partir del precio de la última operación, del spread del libro de órdenes (normalmente para el mercado Forex), de la volatilidad o del mejor precio.
-
-     Esta función es conveniente si la fuente no permite recibir datos para construir velas. En este caso, las velas se construyen con base en valores de datos promediados.![Hydra tipo de construcción de velas](../../images/hydra_candle_build_type.png)
-
-     El usuario también puede seleccionar un [tipo personalizado](prepare_for_download/custom_candles.md) de velas para configurar los datos recibidos.
-   - Después de seleccionar un instrumento, un tipo de datos de mercado y establecer el período, debe hacer clic en el botón **Iniciar**. Después comenzará la descarga de datos de mercado.
-
-   El proceso de trabajo puede observarse en la pestaña especial **Registros**, fijada en la parte inferior del programa. Además, los registros se guardan en archivos en la carpeta local.
+Pulse **Inicio** en la barra de herramientas. La fuente se conectará y empezará la descarga. El progreso se ve en el panel **Registros** de la parte inferior de la ventana, y la barra de estado cuenta los datos recibidos: **C**, velas; **T**, ticks, etc. Los registros también se guardan en archivos en la carpeta de Hydra.
 
 ![Hydra vista principal tras el inicio](../../images/hydra_main_start.png)
 
-El usuario también puede añadir [fuentes adicionales](data_sources/select_source.md).
+También puede añadir [otras fuentes](data_sources/select_source.md).
 
-Después de descargar los datos de mercado, el usuario puede [ver datos de mercado](working_with_data/view_and_export.md), [construir velas](working_with_data/candles_generation.md), guardar o [exportar en distintos formatos](working_with_data/export_data.md).
+Los datos descargados se pueden [ver](working_with_data/view_and_export.md), con ellos se pueden [construir velas](working_with_data/candles_generation.md) y se pueden [exportar](working_with_data/export_data.md) a distintos formatos.
 
 **Ver [tutorial en video](videos/first_start.md)**.

@@ -4,7 +4,7 @@
 
 このキューブは、専用のグラフィカルコンポーネント [板情報](../../../../user_interface/components/order_book.md) に板情報を表示するために設計されています。
 
-[板情報](../../../../user_interface/components/order_book.md) コンポーネントは、**シミュレーション** または **取引** タブの [コンポーネント](../../../../user_interface/components.md) グループから追加する必要があります。[板情報](../../../../user_interface/components/order_book.md) コンポーネントの詳細は、[板情報](../../../../user_interface/components/order_book.md) セクションに記載されています。
+[板情報](../../../../user_interface/components/order_book.md) コンポーネントは、**バックテスト** または **取引** タブの [コンポーネント](../../../../user_interface/components.md) グループから追加する必要があります。[板情報](../../../../user_interface/components/order_book.md) コンポーネントの詳細は、[板情報](../../../../user_interface/components/order_book.md) セクションに記載されています。
 
 ### 入力ソケット
 

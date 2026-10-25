@@ -6,7 +6,7 @@ Isto permite utilizar os dados gerados em quaisquer programas de análise técni
 
 ## Processo de geração de velas
 
-1. No separador **Geral**, clique no botão **Velas**; será aberta a seguinte janela:
+1. No menu **Dados de mercado**, selecione a opção **Velas**; será aberto o seguinte painel:
 
    ![Hydra velas principal](../../../images/hydra_candles_main.png)
 
@@ -42,7 +42,7 @@ Depois da geração dos dados, verá o resultado:
 Para gerar velas de volume:
 
 1. Selecione o tipo de vela [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage)
-2. Especifique o volume (por exemplo, 100)
+2. Especifique o volume (por exemplo, 5000)
 3. Selecione o instrumento
 4. No campo **Construir a partir de**, selecione **Ticks**
 5. Clique no botão de pesquisa

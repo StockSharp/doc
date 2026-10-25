@@ -10,11 +10,14 @@ If the source does not contain extended information for an instrument, the corre
 
 To select the required extended information, you need:
 
-1. In the **Securities** tab, click the **Extended information** button![hydra Extension Info securities](../../../images/hydra_extensioninfo_securities.png)
+1. On the **Securities** panel, click the **Extended information** button![hydra Extension Info securities](../../../images/hydra_extensioninfo_securities.png)
 2. A window will appear in which you need to select the path to the required CSV file![hydra Extension Info window](../../../images/hydra_extensioninfo_window.png)
 
-Below is an example of a **CSV** file of extended information opened in different editors: **MS Excel** and **Notepad**.
+Below is an example of a **CSV** file of extended information. The values are separated by semicolons: the first line contains the property names, the second one their types, and each following line an instrument identifier and the values of its properties:
 
-![hydra ExtensionInfo csv excel](../../../images/hydra_extensioninfo_csv_excel.png)
-
-![hydra ExtensionInfo csv notepad](../../../images/hydra_extensioninfo_csv_notepad.png)
+```
+SecurityId;Country;City;Site
+string;string;string;string
+SBER@TQBR;Russia;Moscow;www.sberbank.ru
+GAZP@TQBR;Russia;Saint Petersburg;www.gazprom.ru
+```

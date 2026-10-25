@@ -6,19 +6,23 @@ Um Kerzen zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **
 
 ## Kerzenimportprozess
 
-1. **Allgemein**
-   - **Datentyp** - Typ der importierten Daten.
-   - **Dateiname** - Vollständiger Pfad zur CSV-Datei.
-   - **Datenverzeichnis** - Ordner, in dem die finalen [S#](../../api.md)-Dateien gespeichert werden.
+1. **Importeinstellungen**.
+
+   In der oberen Zeile des Panels werden der Datentyp, **Laufwerk** - der Speicher, in dem die Daten im Format [S#](../../api.md) gespeichert werden, das **Format** der Speicherung und die zu importierende **Datei** gewählt (sie kann mit der Schaltfläche **Durchsuchen...** ausgewählt werden). Darunter wird festgelegt, wie die Datei gelesen wird.
+
+   **Allgemein**
+   - **Datenverzeichnis** - der Ordner mit den Dateien, wenn nicht eine einzelne Datei, sondern alle passenden Dateien des Ordners importiert werden.
    - **Dateimaske** - Dateimaske, die beim Scannen des Verzeichnisses verwendet wird. Zum Beispiel Kerze \_\*.csv.
+   - **Unterverzeichnisse** - Dateien auch in verschachtelten Ordnern suchen.
    - **Spaltentrennzeichen** - Spaltentrennzeichen. Tabulator wird als TAB bezeichnet.
-   - **Einzug vom Anfang** - Anzahl der Zeilen am Anfang der Datei, die übersprungen werden sollen (wenn sie Metainformationen enthalten).
-   - **Zeitzone** - Zeitzone.
+   - **Zeile** - das Zeilenende in der Datei: CR LF, LF oder CR.
+   - **Zeilen am Anfang überspringen** - Anzahl der Zeilen am Anfang der Datei, die übersprungen werden sollen (wenn sie Metainformationen enthalten).
    - **Intervall** - Häufigkeit der Datenaktualisierung.
 
    **Instrumente**
    - **Erweiterte Informationen** - Erweiterte importierte Felder im Speicher für erweiterte Informationen speichern
    - **Duplikate** - ob doppelte Instrumente aktualisiert werden, wenn sie bereits existieren.
+   - **Instrumente ohne ID ignorieren** - Instrumente ohne Kennung überspringen.
 2. Importparameter für [S#](../../api.md)-Felder konfigurieren.
    - **S#-Feld** - Wert des S#-Feldes (**Instrument**, **Handelsplatz** usw.).
    - **Zuordnungen** - Spaltenwert in der Datei dem StockSharp-Typ zuordnen (falls erforderlich).

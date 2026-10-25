@@ -14,9 +14,11 @@
 
 ![Designer 功能区 02](../../../images/designer_tape_02.png)
 
-4. **云** 选项卡。[Designer](../../designer.md) 支持使用云服务，可以查看已完成的 *云任务*、获取云端可用交易品种的信息，以及配置对通道和机器人的远程操作。
+4. **云** 选项卡。[Designer](../../designer.md) 支持使用云服务。**任务** 按钮显示已完成的 *云任务*，**交易品种** 按钮显示云端可用的交易品种。**远程** 组中的开关用于启用通过 Telegram 机器人远程控制策略（参阅[控制面板](../../telegram_services/control_panel.md)），**频道** 按钮会打开 Designer 发送消息的 Telegram 频道列表。离线模式下无法启用远程控制；如果配置文件尚未在 Telegram 机器人中激活，Designer 会提示转到机器人并打开其页面。
 
 ![Designer 功能区 03](../../../images/designer_tape_03.png)
+
+在 macOS 上，[Designer](../../designer.md) 的主要命令也会出现在系统菜单栏中：创建和打开策略、面板、连接、设置、编译、调试，以及包含 **关于程序** 窗口的帮助。
 
 ## 另请参阅
 

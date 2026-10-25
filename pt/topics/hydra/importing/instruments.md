@@ -1,6 +1,6 @@
 # Instrumentos
 
-Para importar instrumentos, selecione o separador **Importar \=\> Instrumentos**.
+Para importar instrumentos, selecione a opção **Importar \=\> Instrumentos** do menu principal da aplicação.
 
 ![Captura de ecrã de Instrumentos 1](../../../images/hydra_import_securities.png)
 

@@ -8,7 +8,7 @@
 
 銘柄と接続を照合するには、次の手順を実行します。
 
-1. **銘柄** タブに移動し、**銘柄と接続** ボタンをクリックします。![Designer 銘柄マッピング 01 00](../../../images/designer_security_mapping_01_00.png)
+1. **マーケットデータ** メニューで **銘柄と接続** 項目を選択します。![Designer 銘柄マッピング 01 00](../../../images/designer_security_mapping_01_00.png)
 2. 接続のリストで必要な接続を選択します。![Designer 銘柄マッピング 01](../../../images/designer_security_mapping_01.png)
 3. すべての列に入力します。
 

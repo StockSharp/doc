@@ -2,7 +2,7 @@
 
 Der [Installer](../installer.md) verfolgt alle Softwareupdates und aktualisiert sich automatisch. Daher muss er nach der Installation nicht deinstalliert werden.
 
-Um manuell nach verfügbaren Aktualisierungen zu suchen, klicken Sie auf die Schaltfläche **Aktualisierungen** in der rechten Ecke des Programmfensters.
+Um manuell nach verfügbaren Aktualisierungen zu suchen, klicken Sie auf die Schaltfläche mit dem kreisförmigen Pfeil in der linken oberen Ecke des Fensters.
 
 ![Installer-Update erzwingen](../../images/force_update_installer.png)
 

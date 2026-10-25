@@ -4,6 +4,8 @@ A **Área de trabalho** no [Designer](../../designer.md) é uma interface em jan
 
 ![Captura de ecrã de Área de trabalho](../../../images/designer_workspace_00.png)
 
+Na parte inferior da janela está a barra de estado: se o [Designer](../../designer.md) está ligado (**Desconectado**, **Conectado** ou o texto do erro de ligação), as notícias da StockSharp, os contadores de avisos e erros do registo, a última mensagem do registo (um clique nela abre o [Painel de registos](logs.md)), a memória ocupada, o tempo de funcionamento e o botão da pasta de registos. Estas partes são descritas com mais detalhe na secção [Barra de estado](../../terminal/user_interface/status_bar.md) do Terminal.
+
 ## Conteúdo recomendado
 
 [Painel de esquemas](schemas.md)

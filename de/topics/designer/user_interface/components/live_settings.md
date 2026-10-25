@@ -1,31 +1,16 @@
 # Live-Einstellungen
 
-Das Panel **Eigenschaften** ist standardmäßig auf der rechten Seite des Strategietabs minimiert. Dieses Panel ist eine Tabelle mit Emulationseigenschaften oder Live-Einstellungen. Wenn Sie eine bestimmte Eigenschaft auswählen, erscheint unten in der Tabelle eine detaillierte Beschreibung dieser Eigenschaft. Alle Eigenschaften sind in Gruppen zusammengefasst:
+Womit die Strategie im Live-Handel arbeitet, wird auf der Registerkarte **Live-Handel** des Menübands in der Gruppe **Strategie** festgelegt:
 
-![Designer Live-Eigenschaften 00](../../../../images/designer_properties_live_00.png)
+- **Portfolio** - das Portfolio, in dem die Strategie Orders platziert.
+- **Instrument** - das Instrument, mit dem die Strategie handelt.
 
-**Protokollierung**
+Auf derselben Registerkarte befinden sich die Schaltflächen **Aktualisieren**, **Start** und **Stoppen**, und die Gruppe **Komponenten** enthält die Komponenten, die der Strategieregisterkarte hinzugefügt werden können.
 
-- **Protokollierungsstufe** - die Protokollierungsstufe für dieses Element.
+Die Parameter des Schemas selbst - zum Beispiel die Längen der gleitenden Durchschnitte oder das Ordervolumen - werden im Panel **Strategieparameter** festgelegt. Standardmäßig ist dieses Panel eingeklappt und an der rechten Seite der Strategieregisterkarte angeheftet.
 
-**Initialisierung**
-
-- **Datentyp** - der Datentyp.
-- **Zeitrahmen** - Kerzen mit dem angegebenen Zeitrahmen verwenden.
-- **Tage mit historischen Daten** - die Anzahl der Tage historischer Daten zur Initialisierung der Strategie.
-
-**Einstellungen**
-
-- [Risikomanagement](../risk_management.md) - Einstellungen des Risikomanagements.
-
-**Diagrammparameter**
-
-- **Handelsinstrument** - das Instrument.
-- **Portfolio** - das Portfolio.
-
-Wenn Sie die **Diagrammparameter** nicht ausfüllen, wird bei der Emulation das Instrument aus dem Feld **Handelsinstrument** der Registerkarte **Simulation** verwendet; als Portfolio wird standardmäßig das Testportfolio verwendet.
+Die Einstellungen der Fernsteuerung der Strategie werden mit der Schaltfläche **Einstellungen** in der Zeile der Strategie im [Panel Live-Handel](../../live_execution/strategies_dashboard.md) geöffnet.
 
 ## Empfohlene Inhalte
 
 [Chart](chart.md)
-

@@ -8,7 +8,7 @@ Dies ist auch nützlich, wenn dasselbe Instrument auf verschiedenen Handelsplät
 
 Um Instrumente und Verbindungen zuzuordnen, gehen Sie wie folgt vor:
 
-1. Wechseln Sie zur Registerkarte **Instrumente** und klicken Sie auf die Schaltfläche **Instrumente und Verbindungen**.![Designer Instrumentzuordnung 01 00](../../../images/designer_security_mapping_01_00.png)
+1. Wählen Sie im Menü **Marktdaten** den Eintrag **Instrumente und Verbindungen**.![Designer Instrumentzuordnung 01 00](../../../images/designer_security_mapping_01_00.png)
 2. Wählen Sie in der Verbindungsliste die erforderliche Verbindung aus.![Designer Instrumentzuordnung 01](../../../images/designer_security_mapping_01.png)
 3. Füllen Sie alle Spalten aus.
 

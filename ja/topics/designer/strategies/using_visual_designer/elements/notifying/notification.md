@@ -14,7 +14,7 @@
 
 パラメーター
 
-- **型** - メッセージの種類（ポップアップウィンドウ、電子メール、SMS など）。通知の種類については、[通知設定](../../../../../terminal/notifications.md) セクションで説明されています。
+- **型** - メッセージの送信方法（サウンド、ポップアップウィンドウ、ログファイル、または Telegram）。送信方法については、[通知](../../../../../terminal/notifications.md) セクションで説明されています。
 - **Telegram** - Telegram 通知に使用されるチャネル。
 - **ヘッダー** - メッセージのヘッダー。
 
@@ -22,5 +22,5 @@
 
 [文字列フォーマット](string_format.md)
 [文字列連結](string_concat.md)
-[通知設定](../../../../../terminal/notifications.md)
+[通知](../../../../../terminal/notifications.md)
 

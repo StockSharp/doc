@@ -1,13 +1,19 @@
 # Symbol mapping
 
-The same instrument in different trading systems can be called differently. In **Designer**, it is possible to match the instrument and the connections through which this instrument will be traded, and indicate how it is identified in the external trading system. This is useful when trading one instrument on different trading boards or through different connections (or brokers). Also, it allows receiving data from one connection and making trades through another connection.
+The same instrument in different trading systems can be called differently, and its data and orders can go through different connections. For this, [Designer](../../designer.md) has three windows.
 
-To match securities and connections, click the **Securities and connections** button in the **All securities** panel.
+## Codes mapping
 
-![Designer Security mapping 00](../../../images/designer_security_mapping_00.png)
+The **Codes mapping** button on the market data panel opens the **Security codes <\-> Adapters codes** window. The list above the table selects a connection, the ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) button adds a row, and the delete button removes the selected one. The **Security code** and **Board Code** columns specify the instrument as it is named in **Designer**, and the **Adapter code** and **Adapter board code** columns specify how the selected connection names it.
 
-In the opened window, click the ![Designer Creation tool 00](../../../images/designer_creation_tool_00.png) button to add a new line.
+## Securities and connections
 
-In the **Connection** column select a connection from the drop-down list. In the **Security code** and **Board code** columns specify the security and board codes, as they are specified in the **Designer**. In the **Adapter code** and **Adapter board** columns specify the security and board codes, as they are specified in the external trading system.
+The **Securities and connections** item of the drop-down list of the **Connect** button on the **Common** tab opens a window in which, for an instrument and a data type, you select the connection through which this data is received. The **Add** button adds a row in which the **Security**, **Data Type** and **Connection** columns are filled in; the **Delete** button removes the selected row.
 
 ![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
+
+## Portfolios and connections
+
+The **Portfolios and connections** item of the same list opens the same kind of window for portfolios: the **Portfolio** column specifies the portfolio, and the **Connection** column specifies the connection through which orders for it are sent.
+
+In [Terminal](../../terminal.md), both windows are opened from the **Settings** menu of the [main menu](../../terminal/user_interface/ribbon.md).

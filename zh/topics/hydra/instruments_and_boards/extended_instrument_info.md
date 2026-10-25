@@ -10,11 +10,14 @@
 
 要选择所需的扩展信息，请执行以下操作：
 
-1. 在 **交易品种** 选项卡中单击 **扩展信息** 按钮。![交易品种扩展信息 截图 1](../../../images/hydra_extensioninfo_securities.png)
+1. 在 **交易品种** 面板上单击 **扩展信息** 按钮。![交易品种扩展信息 截图 1](../../../images/hydra_extensioninfo_securities.png)
 2. 在随后显示的窗口中，选择所需 CSV 文件的路径。![交易品种扩展信息 截图 2](../../../images/hydra_extensioninfo_window.png)
 
-下面展示了在不同编辑器（**MS Excel** 和 **Notepad**）中打开的扩展信息 **CSV** 文件示例。
+下面是扩展信息 **CSV** 文件的示例。各值以分号分隔：第一行是属性名称，第二行是属性类型，之后每一行是交易品种标识符及其属性值：
 
-![交易品种扩展信息 截图 3](../../../images/hydra_extensioninfo_csv_excel.png)
-
-![交易品种扩展信息 截图 4](../../../images/hydra_extensioninfo_csv_notepad.png)
+```
+SecurityId;Country;City;Site
+string;string;string;string
+SBER@TQBR;俄罗斯;莫斯科;www.sberbank.ru
+GAZP@TQBR;俄罗斯;圣彼得堡;www.gazprom.ru
+```

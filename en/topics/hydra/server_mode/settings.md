@@ -6,11 +6,11 @@ In server mode, the [Hydra](../../hydra.md) program allows the user to work usin
 
 Actually, the connection to the source occurs via [Hydra](../../hydra.md), to which, for example, [Designer](../../designer.md), [Terminal](../../terminal.md) are simultaneously connected. This method allows you to avoid reconnection between programs, purchase of an additional connection. With such work, conflicts are excluded, the occurrence of which is due to the orders registering or trades from different programs. [Hydra](../../hydra.md) receives the signal and passes the result back to the program from which it was received, while the sequence of other work is not disturbed.
 
-To enable [Hydra](../../hydra.md) server mode, select the **Server mode** tab in the top menu of the program.
+To enable [Hydra](../../hydra.md) server mode, select the **Server mode** item in the **Server** menu.
 
 ![hydra server menu](../../../images/hydra_server_menu.png)
 
-After that, click on the **Settings** button to open the server mode settings window.
+After that, select the **Network settings** item in the same menu to open the server mode settings window.
 
 ![hydra server](../../../images/hydra_server.png)
 
@@ -28,6 +28,7 @@ After that, click on the **Settings** button to open the server mode settings wi
   5. **KeepSubscriptionsOnDisconnect** - keeping subscriptions when disconnected from the source.
   6. **DeadSessionCleanupInterval** - after what time interval the information will be cleared if the connection is disconnected.
 - **Authorization** - authorization to gain access to the Hydra server
+- **Storage** (the **Authorization** group) - where to store the server users: **File** or **Database**. For a database, the **Connection** to it and the **Table** (**HydraUsers** by default) are specified; passwords are stored in the database not as they are, but as hashes.
 - **Number of securities** - the maximum number of instruments that can be requested from the server
 - **Candles (days)** - the maximum number of days available to download candle history
 - **Ticks (days)** - the maximum number of days available to download the tick data history
@@ -37,8 +38,10 @@ After that, click on the **Settings** button to open the server mode settings wi
 - **Simulator** - turn on simulator mode
 - **Security mapping** - enable the transfer mode of only specified instruments.
 
-If you set **Authorization** other than **Anonymous**, the **Users** button will appear on the **Common** tab. After clicking it, the **Users** window appears.
+If you set **Authorization** other than **Anonymous** and enable **Server mode**, the **Users** item becomes available in the **Server** menu, which opens the **Users** window.
 
 ![hydra users](../../../images/hydra_users.png)
 
-On the left side of the window, you can add a new user, and on the right, set access rights for them.
+The left side of the window has the list of users: **Add** creates a new one, **Delete** removes the selected one, **Save** writes the changes. On the right are the email and password of the selected user, the addresses from which the user is allowed to connect, and the user's rights: each is marked with a check box, and **Select all** and **Unselect all** mark or clear all of them at once.
+
+While the server is running, the **Subscriptions** item is available in the **Server** menu: it opens a panel with the market data subscriptions of the clients connected to the server.

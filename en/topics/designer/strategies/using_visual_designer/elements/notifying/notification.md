@@ -14,7 +14,7 @@ Incoming sockets
 
 Parameters
 
-- **Type** - type of message (pop-up window, e-mail, sms, etc.). The types of notifications are described in the [Notification settings](../../../../../terminal/notifications.md) section.
+- **Type** - how to send the message: by sound, by a pop-up window, to a log file or to Telegram. The methods are described in the [Notifications](../../../../../terminal/notifications.md) section.
 - **Telegram** - channel used for Telegram notifications.
 - **Header** - the header of the message.
 
@@ -22,4 +22,4 @@ Parameters
 
 [String format](string_format.md)
 [String concat](string_concat.md)
-[Notification settings](../../../../../terminal/notifications.md)
+[Notifications](../../../../../terminal/notifications.md)

@@ -2,7 +2,7 @@
 
 The tool is a repeating action at a specific time.
 
-To view the list of tools, select the **Tools** item in the left pane. Work with tools is the same as with sources - the tool can be added, deleted, edited, enabled\/disabled. To add the **Tool**, on the **Common** tab, select **Add \=\> Tools**. A corresponding window will appear in which you can select the required **Tool**...
+The tools are collected in the **Tools** group on the **Tasks** panel on the left (see [User interface](user_interface.md)). Work with tools is the same as with sources - the tool can be added, deleted, edited, enabled\/disabled. To add the **Tool**, select the **Tools** item in the **File** menu. A corresponding window will appear in which you can select the required **Tool**.
 
 ![hydra tasks](../../images/hydra_tasks.png)
 

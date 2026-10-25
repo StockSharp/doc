@@ -6,7 +6,7 @@ Das Skript "Intraday-Volumen" ist ein Werkzeug zur Analyse der Verteilung des Ha
 
 ## Funktionsbeschreibung
 
-Das Skript sammelt Daten zu Handelsoperationen für einen ausgewählten Zeitraum und stellt sie in Diagrammform dar. Dadurch können Benutzer visualisieren, wie sich das Handelsvolumen nach Stunden verändert. So lässt sich einschätzen, zu welchen Tageszeiten die Handelsaktivität zunimmt oder abnimmt.
+Das Skript sammelt Daten zu Handelsoperationen für einen ausgewählten Zeitraum und stellt sie als Tabelle „Zeit — Volumen“ dar, nach absteigendem Volumen sortiert. Dadurch können Benutzer sehen, wie sich das Handelsvolumen nach Stunden verändert. So lässt sich einschätzen, zu welchen Tageszeiten die Handelsaktivität zunimmt oder abnimmt.
 
 ## Praktische Bedeutung
 

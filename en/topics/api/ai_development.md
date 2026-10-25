@@ -64,3 +64,4 @@ AI can use outdated methods or invent non-existent APIs. Always verify:
 
 - [Writing a Strategy with AI](ai_development/strategy_with_ai.md) — step-by-step guide to creating a trading strategy
 - [Writing a Connector with AI](ai_development/connector_with_ai.md) — step-by-step guide to creating an exchange connector
+- [Connecting AI agents (MCP)](../mcp.md) — how an agent reads the windows of StockSharp programs, clicks buttons in them and gives them commands

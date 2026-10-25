@@ -8,7 +8,7 @@ This is also useful when trading the same instrument on different trading boards
 
 To match instruments and connections you need:
 
-1. Go to the **Securities** tab and click the **Securities and Connections** button.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
+1. Select the **Securities and connections** item in the **Market Data** menu.![Designer Security mapping 01 00](../../../images/designer_security_mapping_01_00.png)
 2. In the list of connections, select the required connection.![Designer Security mapping 01](../../../images/designer_security_mapping_01.png)
 3. Fill in all the columns.
 

@@ -1,10 +1,10 @@
 # Posiciones (opciones)
 
-**Posiciones (opciones)** es una representación gráfica de la posición por opciones.
+**Posiciones (opciones)** es una representación gráfica de la posición por opciones: cómo depende su indicador del precio del activo subyacente.
 
-Para mostrar la posición por opciones, debe seleccionar el activo subyacente y las opciones con base en cuyos precios se construirá la posición.
+Las opciones se eligen con el mismo filtro que en la [mesa de opciones](option_desk.md): activo subyacente, fecha de expiración, rango de strikes y las propias opciones. El cálculo «qué pasaría si» debajo del filtro muestra la posición con otro precio del activo subyacente y en otra fecha.
 
-Además, puede especificar un filtro para la fecha exacta de vencimiento de las opciones y filtros para strikes mínimos\/máximos.
+En la lista **Valor** se elige qué representar: **P/L**, **Delta**, **Gamma**, **Theta**, **Vega** o **Rho**. Debajo del gráfico hay una tabla de valores según los precios del activo subyacente: **Precio**, P/L actual, P/L a la **Expiración** y las griegas.
 
 ![Terminal opciones del gráfico de posiciones 00](../../../../images/terminal_graph_options_positions_00.png)
 

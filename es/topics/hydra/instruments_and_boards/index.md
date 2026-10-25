@@ -2,7 +2,7 @@
 
 Con [Hydra](../../hydra.md), puede crear su propio índice.
 
-En la pestaña **Común**, seleccione **Instrumentos** para que aparezca la pestaña **Todos los instrumentos**.
+En el menú **Datos del mercado**, seleccione la opción **Instrumentos**; aparecerá el panel **Instrumentos**.
 
 Antes de crear el **Índice**, compruebe qué datos de mercado están disponibles. Seleccione la ruta donde se almacenan los datos y revise secuencialmente los instrumentos que deben participar en el cálculo del índice. Si hay huecos, descargue los datos de mercado necesarios desde una fuente de datos compatible.
 
@@ -10,7 +10,7 @@ Antes de crear el **Índice**, compruebe qué datos de mercado están disponible
 
 Como ejemplo, consideremos el índice de relación de instrumentos AAPL@NYSE\/GOOG@NYSE.
 
-1. El primer paso es crear el **Índice**. En la pestaña **Todos los instrumentos**, haga clic en **Crear instrumento \=\> Índice** ![Hydra índice de instrumento 00](../../../images/hydra_index_sec_00.png).
+1. El primer paso es crear el **Índice**. En el panel **Instrumentos**, haga clic en el botón **Nuevo índice** ![Hydra índice de instrumento 00](../../../images/hydra_index_sec_00.png).
 2. Aparecerá la siguiente ventana: ![Hydra índice de instrumento](../../../images/hydra_index_sec.png)
 3. Para crear el instrumento **Índice**, especifique un nombre y añada la fórmula matemática para una combinación de varios instrumentos. Junto con los operadores matemáticos estándar, puede usar las siguientes funciones:
    - **abs(a)** - devuelve el valor absoluto de un número.
@@ -32,7 +32,7 @@ Como ejemplo, consideremos el índice de relación de instrumentos AAPL@NYSE\/GO
    - **tan(a)** - devuelve la tangente del ángulo especificado.
    - **truncate(a)** - calcula la parte entera del número especificado.
 4. Introduzca la operación matemática que se usará para calcular el índice. ![Hydra índice de instrumento 01](../../../images/hydra_index_sec_01.png)
-5. A continuación, haga clic en [Velas](../working_with_data/view_and_export/candles.md) en la pestaña **Común**, seleccione el instrumento **Índice** creado y el período de datos, establezca **Elemento compuesto** en el campo **Crear desde:** y luego haga clic en ![Hydra botón Buscar](../../../images/hydra_find.png). ![Hydra índice de vela](../../../images/hydra_index_candle.png)
+5. A continuación, seleccione la opción [Velas](../working_with_data/view_and_export/candles.md) del menú **Datos del mercado**, seleccione el instrumento **Índice** creado y el período de datos, establezca **Elemento compuesto** en el campo **Crear desde:** y luego haga clic en ![Hydra botón Buscar](../../../images/hydra_find.png). ![Hydra índice de vela](../../../images/hydra_index_candle.png)
 
 Los datos generados se pueden exportar a formatos Excel, XML o TXT. La exportación se realiza mediante la lista desplegable.
 

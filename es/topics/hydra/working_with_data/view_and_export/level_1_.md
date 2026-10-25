@@ -4,7 +4,7 @@ En la ventana que aparece, seleccione los instrumentos, el intervalo de tiempo r
 
 ![Hydra exportar Vista nivel1](../../../../images/hydra_export_level1.png)
 
-También puede elegir qué tipos de cambios deben exportarse. Esto se hace mediante la lista desplegable mostrada a continuación:
+La lista **Campos** define qué valores de Level 1 se muestran en la tabla y se incluyen en la exportación. Marque los campos necesarios en la lista desplegable; la línea de búsqueda de la parte superior de la lista deja solo los campos cuyo nombre contiene el texto escrito:
 
 ![Hydra exportación cambiar instrumento seleccionado](../../../../images/hydra_export_security_change_selected.png)
 

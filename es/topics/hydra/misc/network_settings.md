@@ -1,6 +1,6 @@
 # Configuración de red
 
-Panel de acceso rápido de la aplicación de configuración **Configuración \=\> Red**.
+Menú **Archivo \=\> Configuración del proxy**. (La opción **Servidor \=\> Configuración de red** corresponde a la configuración del [modo servidor](../server_mode/settings.md).)
 
 ![Hydra configuración de proxy](../../../images/hydra_proxy_settings.png)
 

@@ -8,7 +8,7 @@ O painel **Carteiras** é uma tabela que mostra os dados básicos das carteiras 
 
 ![Designer Painel A de carteiras 01](../../../images/designer_panel_portfolios_01.png)
 
-Quando clica no botão ![Designer sino de alerta](../../../images/designer_alert_bell.png), abre-se a janela [Definições de notificação](../../terminal/notifications.md).
+Um clique direito numa linha abre um menu com as opções **Editar**, **Fechar posição**, **Reverter posição**, **Retirar** e **Ocultar saldos zero**; são descritas na página [Portefólios](../../terminal/user_interface/portfolios.md) do Terminal.
 
 ## Conteúdo recomendado
 

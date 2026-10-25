@@ -4,7 +4,7 @@ La creación de estrategias desde código está pensada para usuarios que prefie
 
 El proceso de creación de una estrategia se realiza directamente en [Designer](../../../designer.md) o en un entorno de desarrollo **F#** (los más populares son **Visual Studio** y **JetBrains Rider**), usando una biblioteca para el desarrollo profesional de robots de negociación en **F#** y la [API](../../../api.md).
 
-Puede añadir una nueva estrategia pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y eligiendo **Estrategia**. O bien haciendo clic con el botón derecho en la carpeta **Estrategias** del panel **Esquema** y pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
+Puede añadir una nueva estrategia pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en la pestaña **Común** y eligiendo **Estrategia**. O bien haciendo clic con el botón derecho en la carpeta **Backtest** del panel **Esquema** y pulsando el botón **Añadir** ![Designer Panel de circuitos 01](../../../../images/designer_panel_circuits_01_button.png) en el menú desplegable:
 
 ![Designer Creación de una estrategia 00](../../../../images/designer_creation_of_strategy_00.png)
 
@@ -14,7 +14,7 @@ Después de pulsar el botón **Añadir** ![Designer Panel de circuitos 01](../..
 
 Para crear una estrategia desde código F#, debe seleccionar la segunda pestaña. También puede elegir una plantilla que se usará como código inicial.
 
-Después de pulsar **Aceptar**, aparecerá una nueva estrategia en la carpeta **Estrategias** del panel **Esquema**, igual que al crear una estrategia desde [diagramas](../using_visual_designer.md). Las acciones para eliminar o renombrar la estrategia son similares.
+Después de pulsar **Aceptar**, aparecerá una nueva estrategia en la carpeta **Backtest** del panel **Esquema**, igual que al crear una estrategia desde [diagramas](../using_visual_designer.md). Las acciones para eliminar o renombrar la estrategia son similares.
 
 Pero en lugar de un diagrama, se mostrará un editor de código F#:
 
@@ -22,7 +22,7 @@ Pero en lugar de un diagrama, se mostrará un editor de código F#:
 
 La pestaña del editor de código consta de los paneles **Código fuente** y **Lista de errores**. El panel **Código fuente** contiene el propio editor de código F#. En la parte superior hay una barra de herramientas donde puede activar o desactivar el resaltado de elementos como **Línea actual**, **Número de línea**, etc. Para aumentar el tamaño de fuente, puede usar la combinación CTRL+MouseWheel.
 
-El panel **Lista de errores** es una tabla con la lista de errores en el código; al hacer doble clic en una fila, el cursor se moverá automáticamente en el panel **Código fuente** a la ubicación del error.
+El panel **Lista de errores** es una tabla con la lista de errores en el código; al hacer doble clic en una fila, el cursor se moverá automáticamente en el panel **Código fuente** a la ubicación del error. Además, los errores y advertencias de compilación se subrayan con una línea ondulada directamente en el texto del código.
 
 Al editar el código, aparecerá un icono ![Designer Creación del cubo con código fuente 03](../../../../images/designer_creation_of_element_containing_source_code_03.png) en la esquina inferior derecha del panel **Lista de errores**, indicando que ha comenzado el seguimiento de cambios. El código se compila en el momento en que deja de cambiar.
 

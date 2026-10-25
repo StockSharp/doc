@@ -1,64 +1,48 @@
 # Создание собственных панелей для стратегий
 
-Собственные панели представляют собой специальный контрол, созданный S\# для облегчения работы с элементами DevExpress.
+У каждой стратегии в [Shell](../shell.md) есть две панели: панель настройки в области [Эмуляция](user_interface/emulation.md) и панель наблюдения в области [Реал\-тайм](user_interface/real_time.md). По умолчанию обе \- общие: таблица параметров и, для эмуляции, вкладка с настройками истории. Собственная панель нужна, когда стратегии есть что показать сверх этого.
 
-Для начала необходимо создать простой UserControl в папке XAML вашей стратегии. 
+## Заготовка
 
-![Shell панель пользовательской стратегии 00](../../images/shell_custom_strategy_panel_00.png)
-
-![Shell панель пользовательской стратегии 01](../../images/shell_custom_strategy_panel_01.png)
-
-Заменить UserControl на controls:BaseStudioControl
+Панели лежат в `Shell.Avalonia/Shell.Avalonia/Views/Strategies/`. Собственная \- это обычный `UserControl` Avalonia, внутри которого используется одна из двух общих панелей:
 
 ```xaml
-<controls:BaseStudioControl>
-...
-</controls:BaseStudioControl>
-	  				
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="using:Shell.Views.Strategies"
+             xmlns:strategies="using:Shell.ViewModels.Strategies"
+             x:Class="Shell.Views.Strategies.MyTestingView"
+             x:DataType="strategies:StrategyDraftViewModel">
+  <views:TestingView Header="Моя стратегия, тестирование" />
+</UserControl>
 ```
 
-И реализовать свою логику панели по аналогии с имеющимися панелями стратегий.
+`TestingView` \- панель настройки, `MonitoringView` \- панель наблюдения. Свойство `Header` \- это подпись, которой панель называет себя в своей строке заголовка.
 
-Чтобы панель [Реал\-тайм](user_interface/real_time.md) смогла увидеть стратегию в вашей панели, ваша стратегия должна быть задана как свойство:
+Контекстом данных панели всегда является `StrategyDraftViewModel` \- та самая модель, которую редактирует пользователь. Через неё доступны название стратегии, её параметры, настройки прогона и текущее состояние, поэтому собственные элементы привязываются к ней напрямую, без обращения к главному окну.
+
+## Привязка панели к стратегии
+
+Какая панель показывается для какой стратегии, решает `StrategyDraftViewLocator`. Там перечислены пары «область \+ вид шаблона \- панель»:
 
 ```cs
-	public partial class SmaMonitoringControl
+public Control Build(object data)
+	=> data switch
 	{
-	...
-		public Strategy Strategy { get; set; }
-	...
-	}
-		
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Backtest, TemplateKind: StrategyTemplateKind.Sma } => new SmaTestingView(),
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Realtime, TemplateKind: StrategyTemplateKind.Sma } => new SmaMonitoringView(),
+		...
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Backtest } => new TestingView(),
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Realtime } => new MonitoringView(),
+		_ => null,
+	};
 ```
 
-Для сохранения настроек стратегии в панели необходимо переопределить методы **Load** и **Save**
+Две последние строки \- это и есть панели по умолчанию: стратегия, для которой ничего не добавлено, получает их.
 
-```cs
-	public partial class SmaMonitoringControl
-	{
-	...
-		public override void Load(SettingsStorage storage)
-		{
-			base.Load(storage);
-			try
-			{
-				Strategy = MainWindow.Instance.CreateStrategy(storage.GetValue<SettingsStorage>(nameof(Strategy)));
-				Init(Strategy);
-			}
-			catch (Exception e)
-			{
-				e.LogError();
-			}
-		}
-		public override void Save(SettingsStorage storage)
-		{
-			base.Save(storage);
-			storage.SetValue(nameof(Strategy), Strategy.Save());
-		}
-	...
-	}
-		
-```
+## Что показывать не нужно
+
+График сделок, статистику, кривую доходности, заявки и собственные сделки рисовать в своей панели не нужно \- это отдельные панели рядом, и они наполняются сами для любой стратегии.
 
 ## См. также
 

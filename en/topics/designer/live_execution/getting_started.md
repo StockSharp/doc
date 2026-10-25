@@ -1,6 +1,6 @@
 # Getting started
 
-To add a strategy to **Live trading**, in the [Schemas](../user_interface/schemas.md) panel right-click the required strategy from the **Strategies** folder and select ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live**. The strategy will be added to the **Live** folder of the **Schemas** panel.
+To add a strategy to **Live trading**, in the [Schemas](../user_interface/schemas.md) panel right-click the required strategy from the **Backtest** folder and select ![Designer Live trade 00](../../../images/designer_live_trade_00.png) **Live**. The strategy will be added to the **Live** folder of the **Schemas** panel.
 
 ![Designer Live trade 01](../../../images/designer_live_trade_01.png)
 

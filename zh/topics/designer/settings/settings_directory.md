@@ -10,11 +10,8 @@
 
 该目录包含以下文件夹和文件：
 
-- **Compositions** 以 XML 文件形式保存[策略图面板](../user_interface/schemas.md)中 **复合元素** 文件夹内的所有模块。从此目录删除文件，会从[策略图面板](../user_interface/schemas.md)的 **复合元素** 文件夹中删除对应的 **复合元素**。请勿手动编辑这些文件，否则可能导致对应的 **复合元素** 模块损坏。
-- **LiveStrategies** 以 XML 文件形式保存[策略图面板](../user_interface/schemas.md)中 **实盘** 文件夹内的所有模块。从此目录删除文件，会从[策略图面板](../user_interface/schemas.md)的 **实盘** 文件夹中删除对应策略。请勿手动编辑这些文件，否则可能导致对应策略损坏。
+- `Backtest`、`Live`、`Remote`、`Optimization`、`Custom` 和 `Indicator` 文件夹分别对应[策略图面板](../user_interface/schemas.md)中的 **回测**、**实时**、**远程**、优化、**自己的元素** 和 **指标** 文件夹。每个策略、模块或指标都单独保存为一个 JSON 文件，文件名使用标识符而不是名称。删除文件会从[策略图面板](../user_interface/schemas.md)中删除对应的策略或模块。请勿手动编辑这些文件，否则可能导致对应的策略或模块损坏。启动时会跳过无法读取的文件：其余策略照常加载，原因会写入日志。如果手动将策略文件添加到这些文件夹之一并重新启动 [Designer](../../designer.md)，该策略会显示在[策略图面板](../user_interface/schemas.md)的相应文件夹中。
 - **Logs** 包含 [Designer](../../designer.md) 的全部崩溃日志，可简化 [Designer](../../designer.md) 故障排查。
-- **SourceCode** 以 XML 文件形式保存[策略图面板](../user_interface/schemas.md)中 **源代码** 文件夹内的所有模块。从此目录删除文件，会从[策略图面板](../user_interface/schemas.md)的 **源代码** 文件夹中删除对应的 **源代码** 模块。请勿手动编辑这些文件，否则可能导致对应的 **源代码** 模块损坏。
-- `Strategies` 以 XML 文件形式保存[策略图面板](../user_interface/schemas.md)中 **策略** 文件夹内的所有模块。从此目录删除文件，会从 **策略图面板** 的 **策略** 文件夹中删除对应策略。请勿手动编辑这些文件，否则可能导致对应策略损坏。如果手动将策略文件添加到此文件夹并重新启动 [Designer](../../designer.md)，该策略会显示在[策略图面板](../user_interface/schemas.md)的 **策略** 文件夹中。
 - `Storage` 包含 [Designer](../../designer.md) 下载到相应[市场数据存储](../market_data_storage.md)的市场数据。创建[市场数据存储](../market_data_storage.md)时会创建该文件夹，默认路径也指向此文件夹。删除此文件夹会删除对应存储中的全部已下载市场数据。如果存储中包含 CSV 文件，可以使用标准文本编辑器或 MS Excel 编辑；BIN 文件不能手动编辑。
 - **exchange.csv** 和 **exchangeboard.csv** 包含**交易所**列表、交易品种代码和交易模式。这些文件可以使用标准文本编辑器或 MS Excel 编辑。
 - **security.csv** 包含所有来源接收和创建的全部交易品种。删除此文件会删除 [Designer](../../designer.md) 中的所有交易品种。添加新交易品种的方法请参阅[下载交易品种](../market_data_storage/download_instruments.md)和[创建交易品种](../market_data_storage/create_instrument.md)。该文件可以使用标准文本编辑器或 MS Excel 编辑。

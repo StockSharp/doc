@@ -5,7 +5,7 @@ Para adicionar um ponto de interrupção, selecione o cubo e clique no botão ![
 ![Designer ponto de paragem 00](../../../../images/designer_debug_break_points_00.png)
 
 Quando o ponto de interrupção é acionado num elemento, o respetivo fundo muda para vermelho-claro.
-O elemento é automaticamente destacado na janela de propriedades, onde são apresentadas as suas propriedades e os valores dos parâmetros de entrada e de saída.
+O elemento é automaticamente destacado e o painel **Parâmetros de elemento** apresenta as suas propriedades e os valores dos parâmetros de entrada e de saída.
 Se apontar com o rato para o parâmetro de entrada ou saída, aparece uma dica com o valor do parâmetro.
 Um exemplo de visualização dos valores na entrada e na saída do elemento composto durante a execução da estratégia é apresentado na figura abaixo:
 

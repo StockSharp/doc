@@ -6,7 +6,7 @@ Dadurch können Sie die erzeugten Daten in beliebigen Programmen für technische
 
 ## Prozess der Kerzenerzeugung
 
-1. Klicken Sie auf der Registerkarte **Allgemein** auf die Schaltfläche **Kerzen**. Das folgende Fenster wird geöffnet:
+1. Wählen Sie im Menü **Marktdaten** den Eintrag **Kerzen**. Das folgende Panel wird geöffnet:
 
    ![Hydra Kerzen Hauptansicht](../../../images/hydra_candles_main.png)
 
@@ -42,7 +42,7 @@ Nach der Datenerzeugung sehen Sie das Ergebnis:
 Um Volumenkerzen zu erzeugen:
 
 1. Wählen Sie den Kerzentyp [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage).
-2. Geben Sie das Volumen an, zum Beispiel 100.
+2. Geben Sie das Volumen an, zum Beispiel 5000.
 3. Wählen Sie das Instrument aus.
 4. Wählen Sie im Feld **Erstellen aus** den Wert **Ticks**.
 5. Klicken Sie auf die Suchschaltfläche.

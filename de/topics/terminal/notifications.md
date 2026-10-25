@@ -1,19 +1,25 @@
 # Benachrichtigungen
 
-Benachrichtigungen sind ein System, das Benutzer über das Eintreten eines vorab festgelegten Ereignisses informiert.
+[Terminal](../terminal.md) meldet wichtige Ereignisse mit Popup-Fenstern in der Bildschirmecke: Eine Verbindung wurde hergestellt oder getrennt, ein eigener Trade wurde ausgeführt, eine Order konnte nicht storniert werden. Ein Verbindungsfehler wird in einem Fenster mit einer Warnung angezeigt.
 
-Benachrichtigungen können für eine breite Palette von Handelsereignissen für folgende Objekte eingerichtet werden: Portfolio, Position, Level 1, Nachrichten. Beispiele sind das Überschreiten eines bestimmten gewichteten Durchschnittspreises einer Position oder das Erscheinen einer Nachricht mit einem bestimmten Titel.
+Über Ereignisse von Orders und Verbindungen kann Terminal auch auf andere Weise informieren. Diese Möglichkeiten werden im Fenster [Einstellungen](settings/common_settings.md) (**Einstellungen → Einstellungen**) in der Gruppe **Benachrichtigung** für jedes Ereignis einzeln ausgewählt:
 
-Benachrichtigungen können folgende Formen haben:
+- **Orderänderung** — eine Order hat sich geändert;
+- **Matching** — eine Order wurde ausgeführt;
+- **Fehler** — eine Order wurde nicht angenommen;
+- **Verloren** und **Wiederhergestellt** — die Verbindung ist verloren gegangen und wurde wiederhergestellt.
 
-- **Fenster** - ein kleines Popup-Fenster mit einer Nachricht wird in der Bildschirmecke angezeigt.
-- **Musik** - Musik wird abgespielt.
-- **SMS** - die Nachricht wird per SMS gesendet.
-- **Email** - die Nachricht wird per E-Mail gesendet.
-- **Stimme** - die Nachricht wird von der computergenerierten Stimme vorgelesen.
-- **Protokoll** - die Nachricht wird an die [Protokolle](user_interface/logs.md) gesendet.
-- **Deaktiviert** - die Benachrichtigung wird nicht angezeigt.
+Für jedes Ereignis können Sie wählen, wie darüber informiert wird:
 
-Um eine Benachrichtigung einzurichten, klicken Sie im Benachrichtigungspanel ([Benachrichtigungspanel](notifications/notification_panel.md)) auf die Schaltfläche ![Designer Schaltfläche Hinzufügen 00](../../images/designer_creation_tool_00.png) oder direkt in den Panels, die Benachrichtigungen unterstützen, auf die Schaltfläche ![Designer Benachrichtigungsglocke](../../images/designer_alert_bell.png).
+- **Ton** - ein Tonsignal wird abgespielt.
+- **Popup-Fenster** - in der Bildschirmecke erscheint ein kleines Fenster mit einer Nachricht.
+- **Protokolldatei** - die Nachricht wird in das Protokoll geschrieben, das im Panel [Protokolle](user_interface/logs.md) zu sehen ist.
+- **Telegram** - die Nachricht wird an den Telegram-Kanal gesendet, der in derselben Einstellungsgruppe angegeben wird. Die Kanäle werden aus dem StockSharp-Konto genommen, deshalb müssen Sie sich für diese Möglichkeit auf der Website anmelden.
 
-Informationen zur Konfiguration von Benachrichtigungen finden Sie im Abschnitt [Benachrichtigungen einrichten](notifications/notifications_setup.md).
+Wenn keine Möglichkeit ausgewählt ist, wird über das Ereignis nicht informiert.
+
+## Siehe auch
+
+[Allgemeine Einstellungen](settings/common_settings.md)
+
+[Hauptmenü](user_interface/ribbon.md)

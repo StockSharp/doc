@@ -1,19 +1,25 @@
 # Notificaciones
 
-Las notificaciones son un sistema para avisar al usuario sobre un evento especificado previamente que ocurre.
+[Terminal](../terminal.md) informa de los eventos importantes con ventanas emergentes en la esquina de la pantalla: conexión establecida o interrumpida, operación propia realizada, orden que no se ha podido cancelar. Un error de conexión se muestra en una ventana de advertencia.
 
-Las notificaciones pueden especificarse para una amplia gama de eventos de negociación para los siguientes objetos: cartera, posición, Level 1, noticias. Por ejemplo, superar un valor determinado del precio medio ponderado de una posición o la aparición de una noticia con un título específico.
+Terminal también puede informar de otras maneras sobre los eventos de las órdenes y de la conexión. Se eligen en la ventana [Configuraciones](settings/common_settings.md) (**Configuraciones → Configuraciones**), en el grupo **Notificación**, para cada evento por separado:
 
-Las notificaciones pueden tener las siguientes formas:
+- **Cambio de orden**: la orden ha cambiado;
+- **Emparejamiento**: la orden se ha ejecutado;
+- **Error**: la orden no se ha aceptado;
+- **Perdido** y **Restaurado**: la conexión se ha perdido y se ha restablecido.
 
-- **Ventana** - aparecerá una pequeña ventana emergente con un mensaje en la esquina de la pantalla.
-- **Música** - se reproducirá música.
-- **SMS** - el mensaje se enviará por SMS.
-- **Email** - el mensaje se enviará por correo electrónico.
-- **Voz** - el mensaje será pronunciado por una voz generada por ordenador.
-- **Registro** - el mensaje se enviará a [Registros](user_interface/logs.md).
-- **Desactivado** - la notificación no se mostrará.
+Para cada evento se puede elegir cómo informar de él:
 
-Para establecer una notificación, debe hacer clic en el botón ![Designer botón Añadir 00](../../images/designer_creation_tool_00.png) en el panel de notificaciones ([Panel de notificaciones](notifications/notification_panel.md)) o hacer clic en el botón ![Designer campana de alerta](../../images/designer_alert_bell.png) directamente en los paneles que admiten notificaciones.
+- **Sonido** - se reproducirá una señal sonora.
+- **Ventana emergente** - aparecerá una pequeña ventana con un mensaje en la esquina de la pantalla.
+- **Archivo de registro** - el mensaje se escribirá en el registro, que se ve en el panel [Registros](user_interface/logs.md).
+- **Telegram** - el mensaje se enviará al canal de Telegram que se indica en el mismo grupo de configuración. Los canales se toman de la cuenta de StockSharp, por lo que para este método hay que iniciar sesión en el sitio web.
 
-Para obtener información sobre cómo configurar notificaciones, consulte la sección [Configuración de notificaciones](notifications/notifications_setup.md).
+Si no se elige ningún método, no se informa del evento.
+
+## Véase también
+
+[Configuración general](settings/common_settings.md)
+
+[Menú principal](user_interface/ribbon.md)

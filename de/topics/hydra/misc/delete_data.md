@@ -1,6 +1,6 @@
 # Daten löschen
 
-Registerkarte **Allgemein**, Schaltfläche **Daten löschen...**.
+Wählen Sie im Menü **Marktdaten** den Eintrag **Daten löschen...**.
 
 ![Hydra Daten löschen](../../../images/hydra_data_delete.png)
 

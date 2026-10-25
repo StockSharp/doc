@@ -2,7 +2,7 @@
 
 O [Installer](../installer.md) acompanha todas as atualizações de software e atualiza-se automaticamente. Portanto, não é necessário desinstalá-lo após a instalação. 
 
-Para verificar manualmente se existem atualizações disponíveis, deve clicar no botão **Atualizações** no canto direito da janela do programa. 
+Para verificar manualmente se existem atualizações disponíveis, deve clicar no botão com a seta circular no canto superior esquerdo da janela.
 
 ![forçar atualização do instalador](../../images/force_update_installer.png)
 

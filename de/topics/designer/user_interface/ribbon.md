@@ -14,9 +14,11 @@ Das wichtigste Element der Benutzeroberfläche von [Designer](../../designer.md)
 
 ![Designer Menüband 02](../../../images/designer_tape_02.png)
 
-4. Die Registerkarte **Cloud**. [Designer](../../designer.md) ist für die Arbeit mit Cloud-Diensten ausgelegt. Sie ermöglicht das Anzeigen abgeschlossener *Cloud-Aufgaben*, das Abrufen von Informationen zu in der Cloud verfügbaren Instrumenten sowie das Einrichten der Remote-Arbeit mit Kanälen und Robotern.
+4. Die Registerkarte **Cloud**. [Designer](../../designer.md) ist für die Arbeit mit Cloud-Diensten ausgelegt. Die Schaltfläche **Aufgaben** zeigt abgeschlossene *Cloud-Aufgaben*, die Schaltfläche **Instrumente** die in der Cloud verfügbaren Instrumente. In der Gruppe **Ferngesteuert** schaltet ein Schalter die Fernsteuerung von Strategien über den Telegram-Bot ein ([Bedienfeld](../../telegram_services/control_panel.md)), und die Schaltfläche **Kanäle** öffnet die Liste der Telegram-Kanäle, an die Designer Nachrichten sendet. Im Offline-Modus lässt sich die Fernsteuerung nicht einschalten, und solange das Profil beim Telegram-Bot nicht aktiviert ist, schlägt Designer vor, zum Bot zu wechseln, und öffnet dessen Seite.
 
 ![Designer Menüband 03](../../../images/designer_tape_03.png)
+
+Unter macOS sind die wichtigsten Befehle von [Designer](../../designer.md) in der Systemmenüleiste dupliziert: Erstellen und Öffnen von Strategien, Panels, Verbindung, Einstellungen, Kompilierung, Debugging und Hilfe mit dem Fenster **Über das Programm**.
 
 ## Siehe auch
 

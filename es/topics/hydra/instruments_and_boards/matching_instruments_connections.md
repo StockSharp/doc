@@ -8,7 +8,7 @@ Esto también es útil al negociar el mismo instrumento en distintos mercados o 
 
 Para asociar instrumentos y conexiones, siga estos pasos:
 
-1. Vaya a la pestaña **Instrumentos** y haga clic en el botón **Instrumentos y conexiones**.![Designer asignación de instrumentos 01 00](../../../images/designer_security_mapping_01_00.png)
+1. En el menú **Datos del mercado**, seleccione la opción **Instrumentos y conexiones**.![Designer asignación de instrumentos 01 00](../../../images/designer_security_mapping_01_00.png)
 2. En la lista de conexiones, seleccione la conexión necesaria.![Designer asignación de instrumentos 01](../../../images/designer_security_mapping_01.png)
 3. Rellene todas las columnas.
 

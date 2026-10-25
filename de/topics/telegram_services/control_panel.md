@@ -24,7 +24,7 @@ Danach ist der Bot einsatzbereit. Damit der Bot Ihre Strategien sehen kann, müs
 
   ![Bedienfeld 05](../../images/telegramcontrolstrategy.png)
 
- - Bei Verwendung von [Shell](../shell.md) öffnen Sie das Panel RemoteManager und konfigurieren die Einstellungen ähnlich wie im [Designer](../designer.md).
+ - Bei Verwendung von [Shell](../shell.md) schalten Sie in der Befehlsleiste des Hauptfensters den Schalter **Ferngesteuert** ein und erlauben die Fernsteuerung in den Einstellungen der benötigten Strategien. Ausführlich ist das im Abschnitt [Fernsteuerung](../shell/remote_control.md) beschrieben.
  - Bei Verwendung von [Hydra](../hydra.md) führen Sie ähnliche Aktionen wie im [Designer](../designer.md) aus. Die Integration mit [Hydra](../hydra.md) ermöglicht das Verwalten des Herunterladens von Marktdaten und das Überwachen quantitativer Statistiken.
 
   ![Bedienfeld 06](../../images/telegramhydra.png)

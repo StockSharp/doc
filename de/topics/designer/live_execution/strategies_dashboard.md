@@ -1,10 +1,12 @@
 # Strategie-Dashboard
 
-Ein Klick auf die Schaltfläche ![Designer Strategie-Panel 00](../../../images/designer_panel_strategies_00.png) im Tab **Live-Handel** öffnet das Panel **Live-Handel**.
+Ein Klick auf die Schaltfläche **Panel** ![Designer Strategie-Panel 00](../../../images/designer_panel_strategies_00.png) im Tab **Live-Handel** öffnet das Panel **Live-Handel**.
 
 ![Designer Strategie-Panel 01](../../../images/designer_panel_strategies_01.png)
 
 Das Panel **Live-Handel** ist eine Tabelle, die alle zu **Live-Handel** hinzugefügten Strategien anzeigt. Im Panel **Live-Handel** können Sie den aktuellen Zustand der Strategie anzeigen und die Strategie mit den Schaltflächen ![Designer Schaltungs-Panel 02](../../../images/designer_panel_circuits_02.png), ![Designer Schaltungs-Panel 03](../../../images/designer_panel_circuits_03.png) starten oder stoppen.
+
+Über der Tabelle befinden sich die Schaltflächen **Alles starten** und **Alles stoppen**, die alle Strategien der Tabelle auf einmal starten und stoppen, sowie die Schaltfläche **Einstellungen** der ausgewählten Strategie: Sie öffnet das Fenster mit den Einstellungen ihrer Fernsteuerung, dasselbe, das die Einstellungsschaltfläche in der Zeile der Strategie öffnet.
 
 ![Designer Strategie-Panel 02](../../../images/designer_panel_strategies_02.png)
 

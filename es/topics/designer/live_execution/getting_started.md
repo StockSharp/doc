@@ -1,6 +1,6 @@
 # Primeros pasos
 
-Para añadir una estrategia a **Negociación en vivo**, en el panel [Esquemas](../user_interface/schemas.md) haga clic con el botón derecho en la estrategia requerida de la carpeta **Estrategias** y seleccione ![Designer Negociación en vivo 00](../../../images/designer_live_trade_00.png) **En vivo**. La estrategia se añadirá a la carpeta **En vivo** del panel **Esquemas**.
+Para añadir una estrategia a **Negociación en vivo**, en el panel [Esquemas](../user_interface/schemas.md) haga clic con el botón derecho en la estrategia requerida de la carpeta **Backtest** y seleccione ![Designer Negociación en vivo 00](../../../images/designer_live_trade_00.png) **En vivo**. La estrategia se añadirá a la carpeta **En vivo** del panel **Esquemas**.
 
 ![Designer Negociación en vivo 01](../../../images/designer_live_trade_01.png)
 

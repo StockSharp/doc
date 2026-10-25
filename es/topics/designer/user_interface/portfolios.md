@@ -8,7 +8,7 @@ El panel **Carteras** es una tabla que muestra los datos básicos de la cartera 
 
 ![Designer Panel A de carteras 01](../../../images/designer_panel_portfolios_01.png)
 
-Al hacer clic en el botón ![Designer campana de alerta](../../../images/designer_alert_bell.png), se abre la ventana [Configuración de notificaciones](../../terminal/notifications.md).
+Un clic derecho en una fila abre un menú con las opciones **Editar**, **Cerrar posición**, **Invertir posición**, **Retirar** y **Ocultar saldos cero**; se describen en la página [Carteras](../../terminal/user_interface/portfolios.md) de Terminal.
 
 ## Contenido recomendado
 

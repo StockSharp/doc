@@ -1,19 +1,25 @@
 # Designer からストラテジーを実行
 
-[Shell](../shell.md) は、[Designer](../designer.md) で作成されたストラテジーを実行できます。
+[Shell](../shell.md) は、[Designer](../designer.md) で作成し、[ストラテジーのエクスポート](../designer/export_import/export.md) で書き出したストラテジーを実行できます。そのためにコードを書く必要はありません。スキームは Designer と同じエンジンで実行されます。
 
-[Designer](../designer.md) で作成されたストラテジーを起動するには、[リアルタイム](user_interface/real_time.md) タブでそのストラテジーを選択し、**Designer ストラテジーを追加** ボタンをクリックします。表示されるウィンドウで、[Designer](../designer.md) からエクスポートしたストラテジーファイルを選択します。
+## インポート
 
-![Shell Designer 戦略の実行 00](../../images/shell_run_designer_strategy_00.png)
+[リアルタイム](user_interface/real_time.md) 領域または [エミュレーション](user_interface/emulation.md) 領域を開き、**追加** をクリックして、開いたウィンドウで **インポート** をクリックします。
 
-その後、利用可能なストラテジーのリストに表示されます。
+![Shell ストラテジーの選択](../../images/shell_add_strategy_00.png)
 
-![Shell Designer 戦略の実行 01](../../images/shell_run_designer_strategy_01.png)
+Designer から書き出したスキームのファイルを選択します。スキームは、付属のストラテジーと並んで、Designer での名前で一覧に表示されます。一覧の横には、インポートの結果（スキームがインポートされた、インポートがキャンセルされた、または原因付きでインポートに失敗した）が表示されます。
 
-追加したストラテジーを選択すると、必要なパラメーターを設定し、取引用に起動できます。
+インポートしたスキームは、アプリケーションの隣にある `Data` フォルダーに保存され、再起動後も一覧に残ります。
 
-![Shell Designer 戦略の実行 02](../../images/shell_run_designer_strategy_02.png)
+## 実行
+
+その後は、付属のストラテジーと同じようにスキームを扱います。スキームを選択して **OK** をクリックし、**ストラテジー** パネルで銘柄、ポートフォリオ、数量、スキームのパラメーターを入力して、**スタート** をクリックします。
+
+[エミュレーション](user_interface/emulation.md) 領域では、スキームは履歴で実行され、ほかのストラテジーと同じ統計、チャート、注文と約定の一覧が得られます。
 
 ## 推奨コンテンツ
 
 [ストラテジーの作成](create_strategy.md)
+
+[リアルタイム](user_interface/real_time.md)

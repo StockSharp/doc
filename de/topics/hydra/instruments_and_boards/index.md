@@ -2,7 +2,7 @@
 
 Mit [Hydra](../../hydra.md) können Sie einen eigenen Index erstellen.
 
-Wählen Sie auf der Registerkarte **Allgemein** den Punkt **Instrumente**, sodass die Registerkarte **Alle Instrumente** angezeigt wird.
+Wählen Sie im Menü **Marktdaten** den Eintrag **Instrumente**, sodass das Panel **Instrumente** angezeigt wird.
 
 Prüfen Sie vor dem Erstellen des **Index**, welche Marktdaten verfügbar sind. Wählen Sie den Pfad aus, in dem die Daten gespeichert sind, und betrachten Sie nacheinander die Instrumente, die in die Berechnung des Index eingehen sollen. Wenn Lücken vorhanden sind, laden Sie die erforderlichen Marktdaten aus einer unterstützten Datenquelle herunter.
 
@@ -10,7 +10,7 @@ Prüfen Sie vor dem Erstellen des **Index**, welche Marktdaten verfügbar sind. 
 
 Als Beispiel betrachten wir den Instrumentenverhältnis-Index AAPL@NYSE\/GOOG@NYSE.
 
-1. Der erste Schritt besteht darin, den **Index** zu erstellen. Klicken Sie auf der Registerkarte **Alle Instrumente** auf **Instrument erstellen \=\> Index** ![Hydra Wertpapierindex 00](../../../images/hydra_index_sec_00.png).
+1. Der erste Schritt besteht darin, den **Index** zu erstellen. Klicken Sie im Panel **Instrumente** auf die Schaltfläche **Neuer Index** ![Hydra Wertpapierindex 00](../../../images/hydra_index_sec_00.png).
 2. Das folgende Fenster erscheint: ![Hydra Wertpapierindex](../../../images/hydra_index_sec.png)
 3. Um das **Index**-Instrument zu erstellen, geben Sie einen Namen an und fügen die mathematische Formel für eine Kombination mehrerer Instrumente hinzu. Neben den Standardoperatoren der Mathematik können Sie die folgenden Funktionen verwenden:
    - **abs(a)** - Gibt den Absolutwert einer Zahl zurück.
@@ -32,7 +32,7 @@ Als Beispiel betrachten wir den Instrumentenverhältnis-Index AAPL@NYSE\/GOOG@NY
    - **tan(a)** - Gibt den Tangens des angegebenen Winkels zurück.
    - **truncate(a)** - Berechnet den ganzzahligen Anteil der angegebenen Zahl.
 4. Geben Sie die mathematische Operation ein, mit der der Index berechnet werden soll. ![Hydra Wertpapierindex 01](../../../images/hydra_index_sec_01.png)
-5. Klicken Sie danach auf der Registerkarte **Allgemein** auf [Kerzen](../working_with_data/view_and_export/candles.md), wählen Sie das erstellte **Index**-Instrument und den Datenzeitraum aus, setzen Sie im Feld **Erstellen aus:** den Wert **Zusammengesetztes Element** und klicken Sie dann auf ![Hydra Suchschaltfläche](../../../images/hydra_find.png). ![Hydra Kerzenindex](../../../images/hydra_index_candle.png)
+5. Wählen Sie danach im Menü **Marktdaten** den Eintrag [Kerzen](../working_with_data/view_and_export/candles.md), wählen Sie das erstellte **Index**-Instrument und den Datenzeitraum aus, setzen Sie im Feld **Erstellen aus:** den Wert **Zusammengesetztes Element** und klicken Sie dann auf ![Hydra Suchschaltfläche](../../../images/hydra_find.png). ![Hydra Kerzenindex](../../../images/hydra_index_candle.png)
 
 Die erzeugten Daten können in die Formate Excel, XML oder TXT exportiert werden. Der Export erfolgt über die Dropdown-Liste.
 

@@ -4,6 +4,8 @@
 
 [更新应用程序](../installer/update_apps.md)
 
+新的跨平台 Terminal 首次在旧版 Terminal 的设置文件夹中启动时，会按照旧版留下的方式布置面板。此后，它会自行保存自己的布局。
+
 ## 推荐内容
 
 [安装 Terminal](installing_terminal.md)

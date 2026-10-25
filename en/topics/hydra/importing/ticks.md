@@ -1,6 +1,6 @@
 # Ticks
 
-To import trades, select the **Import \=\> Ticks** tab.
+To import trades, select the **Import \=\> Trades** item of the application main menu.
 
 ![hydra import trades](../../../images/hydra_import_trades.png)
 

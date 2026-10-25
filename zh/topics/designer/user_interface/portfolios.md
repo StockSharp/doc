@@ -8,7 +8,7 @@
 
 ![Designer 投资组合面板 A 01](../../../images/designer_panel_portfolios_01.png)
 
-单击 ![Designer 提醒铃](../../../images/designer_alert_bell.png) 按钮后，会打开[通知设置](../../terminal/notifications.md)窗口。
+右键单击某一行会打开包含 **编辑**、**关闭持仓**、**反转仓位**、**提款** 和 **隐藏零余额** 项的菜单；这些项在 Terminal 的[投资组合](../../terminal/user_interface/portfolios.md)页面中说明。
 
 ## 推荐内容
 

@@ -6,10 +6,10 @@ The "Largest Candles" script is designed to identify candles with the maximum vo
 
 ## Key Features
 
-The script analyzes a set of specified instruments, searches among them for candles with the greatest volume and body length, and displays this data on two graphs:
+The script analyzes a set of specified instruments, finds for each of them the candle with the greatest length and the candle with the greatest volume, and displays them on two bubble charts, one below the other; the horizontal axis shows the candle open time:
 
-- **Candle Body Length Chart**: Shows candles with the greatest difference between the opening and closing price.
-- **Trading Volume Chart**: Demonstrates candles with the maximum trading volume for the existence time of the candle.
+- **prices** — the longest candles (from low to high): vertically, the middle of the candle; the bubble size is its length.
+- **volumes** — candles with the maximum trading volume: both the vertical position and the bubble size show the volume.
 
 ## Workflow
 

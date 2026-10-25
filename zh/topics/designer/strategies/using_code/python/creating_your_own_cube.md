@@ -2,7 +2,7 @@
 
 与[通过策略图创建模块](../../using_visual_designer/composite_elements.md)类似，也可以使用 Python 代码创建自定义模块。代码模块的功能比策略图模块更灵活。
 
-要通过代码创建模块，请在 **自定义模块** 文件夹中创建该模块：
+要通过代码创建模块，请在 **自己的元素** 文件夹中创建该模块：
 
 ![Designer 源代码元素 00](../../../../../images/designer_source_code_elem_00.png)
 
@@ -207,7 +207,7 @@ self._minValue = self.AddParam("MinValue", 10)\
 
 取消注释后，只要至少有一个值到达，**进程** 方法就会被调用。在本例中，该值可以是K线或数值。
 
-要将创建的模块添加到策略图，请在组件面板的 **自定义模块** 部分选择该模块：
+要将创建的模块添加到策略图，请在组件面板的 **自己的元素** 部分选择该模块：
 
 ![Designer 源代码元素 01](../../../../../images/designer_source_code_elem_01.png)
 

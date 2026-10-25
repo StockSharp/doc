@@ -2,12 +2,14 @@
 
 O componente **Sorriso de volatilidade** é uma representação gráfica do nível de volatilidade esperado para opções com o mesmo ativo subjacente e diferentes strikes.
 
-Para apresentar o sorriso de volatilidade, tem de selecionar o ativo subjacente e as opções com base nos preços das quais o sorriso de volatilidade será construído.
+As opções escolhem-se com o mesmo filtro que no [painel de opções](option_desk.md): ativo subjacente, data de expiração, faixa de strikes e as próprias opções.
 
-Além disso, pode especificar um filtro para uma data de expiração específica das opções e filtros para strikes mínimos\/máximos.
+No gráfico há sete curvas: a volatilidade implícita das calls e das puts segundo o melhor preço de compra, segundo o melhor preço de venda e segundo o preço do último negócio e, a tracejado, a **Média** da volatilidade da call e da put em cada strike. Por baixo do gráfico há uma tabela: **Strike**, a volatilidade da **Call** e da **Put** (segundo o preço do último negócio ou, se não tiver havido negócios, segundo o melhor preço de compra ou de venda) e a sua **Média**.
 
 ![Terminal sorriso de volatilidade 00](../../../../images/terminal_smile_of_volatility_00.png)
 
 ## Conteúdo recomendado
 
-[Registo de ordens](order_log.md)
+[Painel de opções](option_desk.md)
+
+[Posições (opções)](positions_options.md)

@@ -15,6 +15,18 @@
     href: installer/install_and_remove_apps.md
   - name: アプリの更新
     href: installer/update_apps.md
+  - name: 設定
+    href: installer/settings.md
+  - name: ログ
+    href: installer/logs.md
+  - name: ライセンス
+    href: installer/licenses.md
+  - name: 料金プラン
+    href: installer/tariffs.md
+  - name: 私の製品
+    href: installer/my_products.md
+  - name: ヘルプ
+    href: installer/help.md
   - name: コンソールインストーラー
     href: installer/console.md
 - name: Designer
@@ -399,10 +411,14 @@
     href: terminal/quick_start.md
   - name: ユーザーインターフェイス
     items:
-    - name: リボン
+    - name: メインメニュー
       href: terminal/user_interface/ribbon.md
     - name: ワークスペース
       href: terminal/user_interface/workspace.md
+    - name: テーブルの操作
+      href: terminal/user_interface/tables.md
+    - name: ステータスバー
+      href: terminal/user_interface/status_bar.md
     - name: ログ
       href: terminal/user_interface/logs.md
     - name: ポートフォリオ
@@ -422,6 +438,8 @@
         href: terminal/user_interface/components/buy_sell.md
       - name: 板情報
         href: terminal/user_interface/components/order_book.md
+      - name: Level 2
+        href: terminal/user_interface/components/level_2.md
       - name: チャート
         href: terminal/user_interface/components/chart.md
       - name: P&L チャート
@@ -430,8 +448,6 @@
         href: terminal/user_interface/components/trades.md
       - name: 注文
         href: terminal/user_interface/components/orders.md
-      - name: 条件付き注文
-        href: terminal/user_interface/components/conditional_orders.md
       - name: ポジション
         href: terminal/user_interface/components/positions.md
       - name: 約定フィード
@@ -454,13 +470,10 @@
     href: terminal/indicators.md
   - name: 通知
     href: terminal/notifications.md
-    items:
-    - name: 通知パネル
-      href: terminal/notifications/notification_panel.md
-    - name: 通知設定
-      href: terminal/notifications/notifications_setup.md
   - name: 設定
     items:
+    - name: 共通設定
+      href: terminal/settings/common_settings.md
     - name: 設定のリセット
       href: terminal/settings/reset_settings.md
 - name: Hydra
@@ -503,6 +516,8 @@
     href: hydra/update_to_the_new_version.md
   - name: 初回起動
     href: hydra/first_start.md
+  - name: ユーザーインターフェイス
+    href: hydra/user_interface.md
   - name: データ ソース
     href: hydra/data_sources.md
     items:
@@ -542,6 +557,8 @@
         href: hydra/working_with_data/view_and_export/indicators.md
       - name: ポジション
         href: hydra/working_with_data/view_and_export/positions.md
+    - name: チャート
+      href: hydra/working_with_data/chart.md
     - name: ローソク足の生成
       href: hydra/working_with_data/candles_generation.md
     - name: データのエクスポート
@@ -638,6 +655,8 @@
         href: hydra/analytics/examples/largest_candles.md
   - name: その他
     items:
+    - name: 共通設定
+      href: hydra/misc/settings.md
     - name: 設定のリセット
       href: hydra/misc/settings_reset.md
     - name: データの削除
@@ -5087,8 +5106,10 @@
       href: shell/user_interface/real_time.md
     - name: エミュレーション
       href: shell/user_interface/emulation.md
-    - name: RemoteManager
-      href: shell/user_interface/remotemanager.md
+    - name: 最適化
+      href: shell/user_interface/optimization.md
+    - name: ログ
+      href: shell/user_interface/log.md
   - name: 接続設定
     href: shell/connections_settings.md
     items:
@@ -5100,12 +5121,21 @@
     href: shell/create_strategy_panel.md
   - name: Designer からストラテジーを実行
     href: shell/run_strategies_from_designer.md
+  - name: リモート管理
+    href: shell/remote_control.md
 - name: Store
   href: store.md
 - name: MATLAB
   href: matlab.md
 - name: UDP Dumper
   href: udp_dumper.md
+- name: AI エージェントの接続（MCP）
+  href: mcp.md
+  items:
+  - name: インターフェイスの操作（DesktopDriver）
+    href: mcp/desktop_driver.md
+  - name: プログラムのコマンド（Studio.Mcp）
+    href: mcp/studio_mcp.md
 - name: 共通
   items:
   - name: ソースコード

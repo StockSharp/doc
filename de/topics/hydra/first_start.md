@@ -1,81 +1,88 @@
 # Erster Start
 
-Beim ersten Start erscheint das folgende Fenster zur Auswahl von Datenquellen. Sie können dieses Fenster auch auf der Registerkarte **Allgemein** öffnen, indem Sie **Hinzufügen \=\> Quellen** auswählen.
+Beim ersten Start bietet Hydra an, Datenquellen auszuwählen. Später wird dasselbe Fenster mit der Schaltfläche **Quellen** in der Symbolleiste oder über das Menü **Datei** geöffnet.
 
 ![Hydra Quelle hinzufügen](../../images/hydra_source_add.png)
 
-Markieren Sie im Fenster die erforderlichen Quellen. Sie können Filter nach Region, Board, Datentyp, Zahlungsart, Echtzeit oder nicht verwenden. Wenn die Auswahl abgeschlossen ist, klicken Sie auf **OK**. Danach bietet das Programm an, die Hilfsprogramme zu aktivieren. Weitere Details zur Arbeit mit Hilfsprogrammen finden Sie im Abschnitt [Aufgaben](tasks.md). Klicken Sie auf **OK**.
+Markieren Sie die erforderlichen Quellen — Sie können sowohl auf das Kontrollkästchen als auch auf den Namen klicken. Die Filter links grenzen die Liste ein: Börsenplatz, Datentyp, Kosten; das Feld **Suchen** sucht nach dem Namen. Als Beispiel markieren wir **ByBit** und klicken auf **Ausgewählte hinzufügen**.
 
-![Erster Start Bildschirmfoto 1](../../images/hydra_first_started_utilities00.png)
+Danach öffnet sich ein gleichartiges Fenster mit den Hilfsprogrammen — Aufgaben, die keine Daten herunterladen, sondern mit bereits heruntergeladenen Daten arbeiten: Import und Export nach Zeitplan, Konvertierung, Sicherung in die Cloud. Weitere Details dazu finden Sie im Abschnitt [Aufgaben](tasks.md). Wenn Sie vorerst keine Hilfsprogramme benötigen, klicken Sie auf **Abbrechen**.
 
-Danach werden die Quellen zum linken Panel des Hauptfensters der Anwendung hinzugefügt.
+![Fenster mit den Hilfsprogrammen von Hydra](../../images/hydra_tasks.png)
+
+Für jede hinzugefügte Quelle fragt Hydra, ob sie jetzt aktiviert werden soll. Eine aktivierte Quelle lädt Daten herunter, wenn die Schaltfläche **Start** gedrückt wird; eine deaktivierte wird übersprungen. Antworten Sie mit **Ja**.
+
+Die Quelle erscheint im Panel **Aufgaben** links, und in der Mitte öffnet sich ihr Panel: die Instrumententabelle, darunter die Einstellungen der empfangenen Daten, rechts die Verbindungseinstellungen.
 
 ![Hydra Schnellstart 01](../../images/hydra_quick_start_01.png)
 
-## Instrument zum Hochladen von Marktdaten herunterladen:
+## Instrumente
 
-Bevor Sie mit dem Herunterladen von Marktdaten beginnen, müssen Sie die Instrumente einrichten, für die Marktdaten abgerufen werden sollen.
+> [!TIP]
+> Daten werden nur für die Instrumente heruntergeladen, die der Quelle hinzugefügt wurden.
 
-Nach dem Hinzufügen von Marktdatenquellen werden im zentralen Bereich Panels der hinzugefügten Quellen geöffnet, in denen eine Liste der Instrumente angezeigt wird. Wenn das Panel geschlossen ist, öffnen Sie es durch Doppelklick auf das Quellenlogo in der Liste links im Programm.
+Direkt nach dem Hinzufügen hat die Quelle nur das Hilfsinstrument **ALL@ALL** — „alle Instrumente der Quelle“. Darüber werden die Daten heruntergeladen, die die Quelle für alle ihre Instrumente auf einmal liefern kann. Als Beispiel fügen wir das Spot-Paar BTCUSDT hinzu.
 
-Laden Sie zum Beispiel das Instrument AAPL@NASDAQ aus einer unterstützten Datenquelle herunter.
+1. Klicken Sie auf die Schaltfläche **Instrumente hinzufügen** ![Hydra Schaltfläche Hinzufügen](../../images/hydra_add.png) über der Instrumententabelle. Es öffnet sich ein Auswahlfenster: links die Instrumente, die Hydra kennt, rechts die für die Quelle ausgewählten.
+
+   ![Erster Start Bildschirmfoto 2](../../images/hydra_securities.png)
+
+2. Beim ersten Mal ist die Liste links leer: Hydra kennt noch kein einziges Instrument. Klicken Sie auf **Instrumente herunterladen**. Im geöffneten Fenster werden die Suchbedingungen festgelegt; das Kontrollkästchen **Alle** fordert von der Quelle die gesamte Liste an.
+
+   ![Hydra alle Instrumente auswählen](../../images/hydra_securities_choose_all.png)
+
+   Bei einer Reihe von Quellen können Sie statt der gesamten Liste die benötigten Instrumente [angeben](prepare_for_download/instruments_list.md).
+
+3. Klicken Sie auf **OK**. Wenn die Quelle antwortet, meldet Hydra, wie viele neue Instrumente hinzugefügt wurden, und sie erscheinen in der Liste links. Der Zähler über der Liste zeigt, wie viele Instrumente sichtbar und wie viele insgesamt bekannt sind; das Kontrollkästchen **Nur ByBit** blendet die Instrumente aus, die bereits andere Quellen herunterladen.
+
+   ![Hydra vollständige Instrumentenliste](../../images/hydra_security_full_list.png)
+
+4. Beginnen Sie, den Code des Instruments in das Feld **Suche** über der Liste einzugeben.
+
+   ![Hydra vollständige Instrumentenliste 00](../../images/hydra_security_full_list_00.png)
+
+5. Verschieben Sie das Instrument per Doppelklick oder mit der Pfeilschaltfläche nach rechts und klicken Sie auf **OK**.
+
+   ![Hydra vollständige Instrumentenliste 01](../../images/hydra_security_full_list_01.png)
+
+## Datentypen und Zeitraum
+
+Nach der Auswahl der Instrumente fragt Hydra, welche Daten für sie heruntergeladen werden sollen. Wir markieren **Ticks** und Fünf-Minuten-Kerzen **TF: 00:05:00** — jeder Klick fügt der Auswahl einen weiteren Typ hinzu.
+
+![Hydra Marktdatentyp auswählen](../../images/hydra_type_market_data_choose.png)
+
+Das Datum **Von** ist der Beginn der Historie. Das Kontrollkästchen **In Echtzeit fortsetzen** lässt die Quelle auch dann weiter Daten empfangen, wenn die Historie heruntergeladen ist; das Datum **Bis** wird dabei nicht benötigt. Wie viel Historie die Quelle liefert, hängt von ihr selbst ab.
+
+Nach **OK** erscheint das Instrument in der Tabelle der Quelle. Die Tabelle ist baumartig: In der Zeile des Instruments steht sein Code, darunter die ausgewählten Datentypen mit Anfangs- und Enddatum.
 
 ![Hydra Marktdaten auswählen](../../images/hydra_choose_market_data.png)
 
-> [!TIP]
-> WICHTIG\! Daten werden nur für die Instrumente heruntergeladen, die der Instrumentenliste hinzugefügt wurden
+Wenn für ein Instrument kein einziger Datentyp ausgewählt ist oder Preisschritt, Volumenschritt oder Anzahl der Nachkommastellen nicht festgelegt sind, erscheint links in seiner Zeile das Symbol ⚠. Der Tooltip des Symbols erklärt, was fehlt.
 
-1. Instrumente hinzufügen.
+Unter der Tabelle befinden sich die Einstellungen der darin markierten Zeilen. Markieren Sie eine oder mehrere Zeilen, und die Einstellungen werden auf alle gleichzeitig angewendet:
 
-   Beim ersten Start bietet das Programm an, alle Instrumente für die ausgewählte Quelle auf einmal herunterzuladen. Danach lädt der Benutzer die Instrumente selbst herunter. Anfänglich ist die Instrumentendatenbank in [Hydra](../hydra.md) leer; es gibt nur das Hilfsinstrument **ALL@ALL**. Wenn dieses Instrument ausgewählt ist, werden Daten für alle für diese Quelle verfügbaren Instrumente heruntergeladen.
+- **Datentypen** — welche Daten empfangen werden. Die Auswahl hängt von der Quelle ab.
 
-   Um ein Instrument hinzuzufügen, klicken Sie auf die Schaltfläche **Hinzufügen** ![Hydra Schaltfläche Hinzufügen](../../images/hydra_add.png). Danach öffnet sich ein Fenster zum Herunterladen des Instruments. ![Erster Start Bildschirmfoto 2](../../images/hydra_securities.png)
+  ![Hydra Schnellstart 02 00](../../images/hydra_quick_start_02_00.png)
 
-   Um die Instrumente herunterzuladen, klicken Sie auf die entsprechende Schaltfläche **Instrumente herunterladen**.
+- **Kerzen-Zeitrahmen** — welche Kerzen heruntergeladen werden. Die Liste der Zeitrahmen hängt ebenfalls von der Quelle ab; **Benutzerdefiniert** öffnet ein Fenster, in dem ein [eigener Kerzentyp](prepare_for_download/custom_candles.md) festgelegt wird.
 
-   Danach erscheint auf dem Bildschirm ein Menü, in dem der Benutzer **Alle Instrumente herunterladen** auswählen kann.![Hydra alle Instrumente auswählen](../../images/hydra_securities_choose_all.png)
+  ![Hydra Schnellstart 02](../../images/hydra_quick_start_02.png)
 
-   Oder Sie können für eine Reihe von Quellen die Instrumente [konfigurieren](prepare_for_download/instruments_list.md), die heruntergeladen werden sollen.
+- **Von** und **Bis** — der Zeitraum des Herunterladens. Ohne Enddatum lädt die Quelle alles herunter, was bis heute verfügbar ist, und wenn sie in Echtzeit arbeiten kann und das Kontrollkästchen **Echtzeit** gesetzt ist, empfängt sie auch danach weiter Daten.
 
-   Nachdem die Instrumente empfangen wurden, sieht das Fenster wie folgt aus.![Hydra vollständige Instrumentenliste](../../images/hydra_security_full_list.png)
+  **Kerzenaufbau** — woher die Kerzen genommen werden: **Laden** — fertig von der Quelle, **Aufbau** — von Hydra selbst aufbauen, **Laden und aufbauen** — laden und fehlende aufbauen. **Aufbaufeld** — woraus aufgebaut wird: aus dem Preis des letzten Trades, der Mitte des Spreads, dem besten Preis usw. Kerzen aufzubauen ist praktisch, wenn die Quelle sie nicht im benötigten Zeitrahmen liefert.
 
-   Es listet alle Instrumente auf, die zum Hinzufügen verfügbar sind. Für eine schnelle Suche können Sie den Namen in das entsprechende Feld eingeben.
+  ![Hydra Schnellstart 02 01](../../images/hydra_quick_start_02_01.png)
 
-   Um ein Instrument auszuwählen, doppelklicken Sie darauf, und es wird auf die rechte Seite der Liste verschoben.![Hydra vollständige Instrumentenliste 00](../../images/hydra_security_full_list_00.png)
+## Herunterladen
 
-   Anschließend wird es auf die rechte Seite der Tabelle verschoben.![Hydra vollständige Instrumentenliste 01](../../images/hydra_security_full_list_01.png)
-
-   Die ausgewählten Instrumente werden in der Tabelle **Instrumente** angezeigt, die baumartig strukturiert ist. Das Hauptelement ist das Instrument, die zusätzlichen Elemente sind die Marktdatentypen, die für dieses Instrument empfangen werden.
-2. Für jedes ausgewählte Instrument sollten Sie die Marktdatentypen auswählen, die zum Herunterladen erforderlich sind.
-
-   Wenn nicht alle erforderlichen Instrumentparameter gesetzt sind, erscheint in der linken Spalte der Instrumentzeile das Symbol ![Erster Start Bildschirmfoto 3](../../images/hydra_zero.png). ![Hydra Marktdatentyp auswählen](../../images/hydra_type_market_data_choose.png)
-
-   Wählen wir zum Herunterladen **Ticks** und **Kerzen Zeitrahmen 5** aus.
-
-   Am unteren Rand des Quellenfensters befindet sich ein Panel mit Schaltflächen zur Einrichtung der zu empfangenden Daten und Instrumente. ![Hydra Schnellstart 02 00](../../images/hydra_quick_start_02_00.png)
-
-   In diesem Panel können die folgenden Operationen ausgeführt werden:
-   - Konfigurieren der Menge der empfangenen Informationen mit den Schaltflächen: **Geschäfte, Orderbücher, Kerzen, Orderprotokoll, Level 1, Eigene Transaktionen**. Die Listen verfügbarer Marktdatentypen unterscheiden sich je nach Quelle.
-   - Den erforderlichen Zeitrahmen für die geladenen Kerzen angeben. Der Zeitrahmen der empfangenen Kerzen unterscheidet sich je nach Quelle.![Hydra Schnellstart 02](../../images/hydra_quick_start_02.png)
-   - Den erforderlichen Zeitraum für das Herunterladen von Marktdaten festlegen. Der Zeitraum kann auch direkt im Marktdatenfenster konfiguriert werden. Dazu wählen Sie den Beginn und das Ende des Zeitraums aus.
-
-     Wenn der Benutzer kein Enddatum für den Zeitraum angibt, lädt das Programm alle für das aktuelle Datum verfügbaren Daten herunter. Wenn die Quelle die Übertragung von Marktdaten in Echtzeit unterstützt, werden die Marktdaten bei fehlendem Enddatum für den Zeitraum in Echtzeit heruntergeladen.
-
-     Legen wir den Zeitraum fest, für den die Marktdaten heruntergeladen werden sollen.![Hydra Schnellstart 02 01](../../images/hydra_quick_start_02_01.png)
-   - Angeben, woraus die Marktdaten erstellt werden sollen. Wenn dieser Parameter nicht angegeben ist, werden die in der Quelle verfügbaren Kerzen empfangen. Wenn der Benutzer den Marktdatentyp angibt, werden Kerzen aus dem angegebenen Marktdatentyp erstellt. Zum Beispiel können Kerzen aus dem letzten Handelspreis, dem Orderbuch-Spread (üblicherweise für den Forex-Markt), der Volatilität oder dem besten Preis erstellt werden.
-
-     Diese Funktion ist praktisch, wenn die Quelle keine Daten für die Kerzendarstellung bereitstellt. In diesem Fall werden Kerzen auf Basis gemittelter Datenwerte gezeichnet.![Hydra Kerzen-Erstellungstyp](../../images/hydra_candle_build_type.png)
-
-     Der Benutzer hat außerdem die Möglichkeit, einen [benutzerdefinierten Typ](prepare_for_download/custom_candles.md) von Kerzen auszuwählen, um die empfangenen Daten anzupassen.
-   - Nach Auswahl eines Instruments, eines Marktdatentyps und Festlegung des Zeitraums klicken Sie auf die Schaltfläche **Starten**. Danach beginnt das Herunterladen der Marktdaten.
-
-   Der Arbeitsprozess kann auf der speziellen Registerkarte **Protokolle** beobachtet werden, die am unteren Rand des Programms fixiert ist. Zusätzlich werden Protokolle in Dateien im lokalen Ordner gespeichert.
+Klicken Sie in der Symbolleiste auf **Start**. Die Quelle verbindet sich und beginnt mit dem Herunterladen. Der Fortschritt ist im Panel **Protokolle** unten im Fenster zu sehen, und die Statusleiste zählt die empfangenen Daten: **C** — Kerzen, **T** — Ticks usw. Die Protokolle werden außerdem in Dateien im Ordner von Hydra gespeichert.
 
 ![Hydra Hauptansicht nach dem Start](../../images/hydra_main_start.png)
 
-Außerdem kann der Benutzer [zusätzliche Quellen](data_sources/select_source.md) hinzufügen.
+Sie können auch [weitere Quellen](data_sources/select_source.md) hinzufügen.
 
-Nachdem die Marktdaten heruntergeladen wurden, kann der Benutzer [Marktdaten anzeigen](working_with_data/view_and_export.md), [Kerzen zeichnen](working_with_data/candles_generation.md), speichern oder [in verschiedene Formate exportieren](working_with_data/export_data.md).
+Die heruntergeladenen Daten können [angezeigt](working_with_data/view_and_export.md) werden, aus ihnen können [Kerzen aufgebaut](working_with_data/candles_generation.md) werden, und sie können in verschiedene Formate [exportiert](working_with_data/export_data.md) werden.
 
 **Sehen Sie sich das [Video-Tutorial](videos/first_start.md) an**.
-

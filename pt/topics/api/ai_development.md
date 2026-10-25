@@ -64,3 +64,4 @@ A IA pode usar métodos desatualizados ou inventar APIs inexistentes. Sempre ver
 
 - [Escrevendo uma Estratégia com IA](ai_development/strategy_with_ai.md) — guia passo a passo para criar uma estratégia de negociação
 - [Escrevendo um Conector com IA](ai_development/connector_with_ai.md) — guia passo a passo para criar um conector de bolsa
+- [Ligação de agentes de IA (MCP)](../mcp.md) — como um agente lê as janelas dos programas StockSharp, prime os seus botões e lhes envia comandos

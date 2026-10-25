@@ -15,6 +15,18 @@
     href: installer/install_and_remove_apps.md
   - name: Update apps
     href: installer/update_apps.md
+  - name: Settings
+    href: installer/settings.md
+  - name: Logs
+    href: installer/logs.md
+  - name: Licenses
+    href: installer/licenses.md
+  - name: Subscription plans
+    href: installer/tariffs.md
+  - name: My products
+    href: installer/my_products.md
+  - name: Help
+    href: installer/help.md
   - name: Console
     href: installer/console.md
 - name: Designer
@@ -399,10 +411,14 @@
     href: terminal/quick_start.md
   - name: User interface
     items:
-    - name: Ribbon
+    - name: Main menu
       href: terminal/user_interface/ribbon.md
     - name: Workspace
       href: terminal/user_interface/workspace.md
+    - name: Working with tables
+      href: terminal/user_interface/tables.md
+    - name: Status bar
+      href: terminal/user_interface/status_bar.md
     - name: Logs
       href: terminal/user_interface/logs.md
     - name: Portfolios
@@ -422,6 +438,8 @@
         href: terminal/user_interface/components/buy_sell.md
       - name: Order book
         href: terminal/user_interface/components/order_book.md
+      - name: Level 2
+        href: terminal/user_interface/components/level_2.md
       - name: Chart
         href: terminal/user_interface/components/chart.md
       - name: P&L chart
@@ -430,8 +448,6 @@
         href: terminal/user_interface/components/trades.md
       - name: Orders
         href: terminal/user_interface/components/orders.md
-      - name: Conditional orders
-        href: terminal/user_interface/components/conditional_orders.md
       - name: Positions
         href: terminal/user_interface/components/positions.md
       - name: Trades feed
@@ -454,13 +470,10 @@
     href: terminal/indicators.md
   - name: Notifications
     href: terminal/notifications.md
-    items:
-    - name: Notification panel
-      href: terminal/notifications/notification_panel.md
-    - name: Notifications setup
-      href: terminal/notifications/notifications_setup.md
   - name: Settings
     items:
+    - name: General settings
+      href: terminal/settings/common_settings.md
     - name: Reset settings
       href: terminal/settings/reset_settings.md
 - name: Hydra
@@ -503,6 +516,8 @@
     href: hydra/update_to_the_new_version.md
   - name: First start
     href: hydra/first_start.md
+  - name: User interface
+    href: hydra/user_interface.md
   - name: Data sources
     href: hydra/data_sources.md
     items:
@@ -542,6 +557,8 @@
         href: hydra/working_with_data/view_and_export/indicators.md
       - name: Positions
         href: hydra/working_with_data/view_and_export/positions.md
+    - name: Chart
+      href: hydra/working_with_data/chart.md
     - name: Candles generation
       href: hydra/working_with_data/candles_generation.md
     - name: Export data
@@ -638,6 +655,8 @@
         href: hydra/analytics/examples/largest_candles.md
   - name: Misc
     items:
+    - name: General settings
+      href: hydra/misc/settings.md
     - name: Settings reset
       href: hydra/misc/settings_reset.md
     - name: Delete data
@@ -5087,8 +5106,10 @@
       href: shell/user_interface/real_time.md
     - name: Emulation
       href: shell/user_interface/emulation.md
-    - name: RemoteManager
-      href: shell/user_interface/remotemanager.md
+    - name: Optimization
+      href: shell/user_interface/optimization.md
+    - name: Logs
+      href: shell/user_interface/log.md
   - name: Connections settings
     href: shell/connections_settings.md
     items:
@@ -5100,12 +5121,21 @@
     href: shell/create_strategy_panel.md
   - name: Run strategies from Designer
     href: shell/run_strategies_from_designer.md
+  - name: Remote control
+    href: shell/remote_control.md
 - name: Store
   href: store.md
 - name: MATLAB
   href: matlab.md
 - name: UDP Dumper
   href: udp_dumper.md
+- name: Connecting AI agents (MCP)
+  href: mcp.md
+  items:
+  - name: Interface control (DesktopDriver)
+    href: mcp/desktop_driver.md
+  - name: Program commands (Studio.Mcp)
+    href: mcp/studio_mcp.md
 - name: Common
   items:
   - name: Source codes

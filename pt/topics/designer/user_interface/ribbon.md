@@ -14,9 +14,11 @@ O principal elemento da interface de utilizador do [Designer](../../designer.md)
 
 ![Designer friso 02](../../../images/designer_tape_02.png)
 
-4. O separador **Nuvem**. O [Designer](../../designer.md) foi concebido para trabalhar com serviços de nuvem. Permite ver *tarefas na nuvem* concluídas, obter informações sobre instrumentos disponíveis na nuvem e configurar o trabalho remoto com canais e robôs.
+4. O separador **Nuvem**. O [Designer](../../designer.md) foi concebido para trabalhar com serviços de nuvem. O botão **Tarefas** mostra as *tarefas na nuvem* concluídas, e o botão **Instrumentos**, os instrumentos disponíveis na nuvem. No grupo **Remotamente**, um interruptor ativa o controlo remoto das estratégias através do bot do Telegram ([Painel de Controlo](../../telegram_services/control_panel.md)), e o botão **Canais** abre a lista de canais do Telegram para os quais o Designer envia mensagens. O controlo remoto não é ativado no modo offline e, enquanto o perfil não estiver ativado no bot do Telegram, o Designer propõe ir ao bot e abre a sua página.
 
 ![Designer friso 03](../../../images/designer_tape_03.png)
+
+No macOS, os principais comandos do [Designer](../../designer.md) são duplicados na barra de menus do sistema: criação e abertura de estratégias, painéis, ligação, definições, compilação, depuração e ajuda com a janela **Sobre o programa**.
 
 ## Ver Também
 

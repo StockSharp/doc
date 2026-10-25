@@ -15,6 +15,18 @@
     href: installer/install_and_remove_apps.md
   - name: Actualizar aplicaciones
     href: installer/update_apps.md
+  - name: Configuraciones
+    href: installer/settings.md
+  - name: Registros
+    href: installer/logs.md
+  - name: Licencias
+    href: installer/licenses.md
+  - name: Tarifas
+    href: installer/tariffs.md
+  - name: Mis productos
+    href: installer/my_products.md
+  - name: Ayuda
+    href: installer/help.md
   - name: Instalador de consola
     href: installer/console.md
 - name: Designer
@@ -399,10 +411,14 @@
     href: terminal/quick_start.md
   - name: Interfaz de usuario
     items:
-    - name: Cinta
+    - name: Menú principal
       href: terminal/user_interface/ribbon.md
     - name: Área de trabajo
       href: terminal/user_interface/workspace.md
+    - name: Trabajo con tablas
+      href: terminal/user_interface/tables.md
+    - name: Barra de estado
+      href: terminal/user_interface/status_bar.md
     - name: Registros
       href: terminal/user_interface/logs.md
     - name: Carteras
@@ -422,6 +438,8 @@
         href: terminal/user_interface/components/buy_sell.md
       - name: Libro de órdenes
         href: terminal/user_interface/components/order_book.md
+      - name: Level 2
+        href: terminal/user_interface/components/level_2.md
       - name: Gráfico
         href: terminal/user_interface/components/chart.md
       - name: "Gráfico P&L"
@@ -430,8 +448,6 @@
         href: terminal/user_interface/components/trades.md
       - name: Órdenes
         href: terminal/user_interface/components/orders.md
-      - name: Órdenes condicionales
-        href: terminal/user_interface/components/conditional_orders.md
       - name: Posiciones
         href: terminal/user_interface/components/positions.md
       - name: Flujo de operaciones
@@ -454,13 +470,10 @@
     href: terminal/indicators.md
   - name: Notificaciones
     href: terminal/notifications.md
-    items:
-    - name: Panel de notificaciones
-      href: terminal/notifications/notification_panel.md
-    - name: Configuración de notificaciones
-      href: terminal/notifications/notifications_setup.md
   - name: Configuración
     items:
+    - name: Configuración general
+      href: terminal/settings/common_settings.md
     - name: Restablecer configuración
       href: terminal/settings/reset_settings.md
 - name: Hydra
@@ -503,6 +516,8 @@
     href: hydra/update_to_the_new_version.md
   - name: Primer inicio
     href: hydra/first_start.md
+  - name: Interfaz del programa
+    href: hydra/user_interface.md
   - name: Fuentes de datos
     href: hydra/data_sources.md
     items:
@@ -542,6 +557,8 @@
         href: hydra/working_with_data/view_and_export/indicators.md
       - name: Posiciones
         href: hydra/working_with_data/view_and_export/positions.md
+    - name: Gráfico
+      href: hydra/working_with_data/chart.md
     - name: Generación de velas
       href: hydra/working_with_data/candles_generation.md
     - name: Exportar datos
@@ -638,6 +655,8 @@
         href: hydra/analytics/examples/largest_candles.md
   - name: Varios
     items:
+    - name: Configuración general
+      href: hydra/misc/settings.md
     - name: Restablecimiento de configuración
       href: hydra/misc/settings_reset.md
     - name: Eliminar datos
@@ -5087,8 +5106,10 @@
       href: shell/user_interface/real_time.md
     - name: Emulación
       href: shell/user_interface/emulation.md
-    - name: RemoteManager
-      href: shell/user_interface/remotemanager.md
+    - name: Optimización
+      href: shell/user_interface/optimization.md
+    - name: Registros
+      href: shell/user_interface/log.md
   - name: Configuración de conexiones
     href: shell/connections_settings.md
     items:
@@ -5100,12 +5121,21 @@
     href: shell/create_strategy_panel.md
   - name: Ejecutar estrategias desde Designer
     href: shell/run_strategies_from_designer.md
+  - name: Control remoto
+    href: shell/remote_control.md
 - name: Store
   href: store.md
 - name: MATLAB
   href: matlab.md
 - name: UDP Dumper
   href: udp_dumper.md
+- name: Conexión de agentes de IA (MCP)
+  href: mcp.md
+  items:
+  - name: Control de la interfaz (DesktopDriver)
+    href: mcp/desktop_driver.md
+  - name: Comandos de los programas (Studio.Mcp)
+    href: mcp/studio_mcp.md
 - name: Común
   items:
   - name: Códigos fuente

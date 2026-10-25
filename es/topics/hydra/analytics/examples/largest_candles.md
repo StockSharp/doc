@@ -6,10 +6,10 @@ El script "Velas más grandes" está diseñado para identificar velas con el vol
 
 ## Funciones clave
 
-El script analiza un conjunto de instrumentos especificados, busca entre ellos velas con el mayor volumen y longitud de cuerpo, y muestra estos datos en dos gráficos:
+El script analiza un conjunto de instrumentos especificados, busca para cada uno la vela de mayor longitud y la vela de mayor volumen, y las muestra en dos diagramas de burbujas, uno debajo del otro; en el eje horizontal se representa la hora de apertura de la vela:
 
-- **Gráfico de longitud del cuerpo de la vela**: muestra velas con la mayor diferencia entre precio de apertura y cierre.
-- **Gráfico de volumen de negociación**: muestra velas con el volumen máximo de negociación durante la existencia de la vela.
+- **prices** — velas de mayor longitud (del mínimo al máximo): en vertical, el punto medio de la vela; el tamaño de la burbuja es su longitud.
+- **volumes** — velas con el volumen máximo de negociación: en vertical y como tamaño de la burbuja, el volumen.
 
 ## Flujo de trabajo
 

@@ -1,5 +1,5 @@
 # Settings reset
 
-Quick access panel of the **Settings \=\> Settings** reset application.
+The **File \=\> Reset settings** menu.
 
-Resets [Hydra](../../hydra.md) settings to the initial state.
+Resets [Hydra](../../hydra.md) settings to the initial state. While tasks are running, the item is unavailable: they need to be stopped first.

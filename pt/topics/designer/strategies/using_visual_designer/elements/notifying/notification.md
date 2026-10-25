@@ -14,7 +14,7 @@ Conectores de entrada
 
 Parâmetros
 
-- **Tipo** - tipo de mensagem (janela pop-up, e-mail, sms, etc.). Os tipos de notificações são descritos na secção [Notificações](../../../../../terminal/notifications.md).
+- **Tipo** - como enviar a mensagem: com um som, numa janela pop-up, num ficheiro de registo ou para o Telegram. Os métodos são descritos na secção [Notificações](../../../../../terminal/notifications.md).
 - **Telegram** - canal usado para notificações do Telegram.
 - **Cabeçalho** - o cabeçalho da mensagem.
 

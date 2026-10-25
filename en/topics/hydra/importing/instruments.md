@@ -1,6 +1,6 @@
 # Instruments
 
-To import instruments, select the **Import \=\> Instruments** tab.
+To import instruments, select the **Import \=\> Securities** item of the application main menu.
 
 ![hydra import securities](../../../images/hydra_import_securities.png)
 

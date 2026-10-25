@@ -24,7 +24,7 @@ Después de esto, el bot está listo para usarse. A continuación, para que el b
 
   ![Panel de control 05](../../images/telegramcontrolstrategy.png)
 
- - Al usar [Shell](../shell.md), vaya al panel RemoteManager y configure los ajustes de forma similar a [Designer](../designer.md).
+ - Al usar [Shell](../shell.md), active en la barra de comandos de la ventana principal el interruptor **Remotamente** y permita el control remoto en la configuración de las estrategias necesarias. Se describe con detalle en la sección [Control remoto](../shell/remote_control.md).
  - Al usar [Hydra](../hydra.md), realice acciones similares a [Designer](../designer.md). La integración con [Hydra](../hydra.md) permite gestionar la descarga de datos de mercado y monitorizar estadísticas cuantitativas.
 
   ![Panel de control 06](../../images/telegramhydra.png)

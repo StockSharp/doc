@@ -6,10 +6,10 @@ Das Skript "Größte Kerzen" dient dazu, Kerzen mit maximalem Volumen und der gr
 
 ## Hauptfunktionen
 
-Das Skript analysiert eine Gruppe angegebener Instrumente, sucht darin nach Kerzen mit dem größten Volumen und der größten Körperlänge und zeigt diese Daten in zwei Diagrammen an:
+Das Skript analysiert eine Gruppe angegebener Instrumente, sucht für jedes von ihnen die Kerze mit der größten Länge und die Kerze mit dem größten Volumen und zeigt sie in zwei Blasendiagrammen untereinander an; auf der horizontalen Achse wird die Eröffnungszeit der Kerze abgetragen:
 
-- **Chart der Kerzenkörperlänge**: Zeigt Kerzen mit der größten Differenz zwischen Eröffnungs- und Schlusskurs.
-- **Chart des Handelsvolumens**: Zeigt Kerzen mit dem maximalen Handelsvolumen für die Existenzdauer der Kerze.
+- **prices** — die längsten Kerzen (vom Tief bis zum Hoch): vertikal die Mitte der Kerze, die Größe der Blase ist ihre Länge.
+- **volumes** — Kerzen mit dem maximalen Handelsvolumen: Sowohl die vertikale Lage als auch die Größe der Blase zeigen das Volumen.
 
 ## Ablauf
 

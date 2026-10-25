@@ -5,7 +5,7 @@ Um einen Haltepunkt hinzuzufügen, wählen Sie den Würfel aus und klicken Sie a
 ![Designer Haltepunkt 00](../../../../images/designer_debug_break_points_00.png)
 
 Wenn der Haltepunkt an einem Element ausgelöst wird, ändert sich dessen Hintergrund in Hellrot.
-Das Element wird automatisch im Eigenschaftenfenster markiert, in dem seine Eigenschaften sowie die Werte der Eingabe- und Ausgabeparameter angezeigt werden.
+Das Element wird automatisch ausgewählt, und das Panel **Elementparameter** zeigt seine Eigenschaften sowie die Werte der Eingabe- und Ausgabeparameter an.
 Wenn Sie mit der Maus auf einen Eingabe- oder Ausgabeparameter zeigen, erscheint ein Hinweis mit dem Parameterwert.
 Ein Beispiel für die Anzeige der Werte am Ein- und Ausgang eines zusammengesetzten Elements während der Strategieausführung zeigt die folgende Abbildung:
 

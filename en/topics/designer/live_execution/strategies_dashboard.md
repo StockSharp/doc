@@ -1,10 +1,12 @@
 # Strategies dashboard
 
-Clicking the ![Designer Panel strategies 00](../../../images/designer_panel_strategies_00.png) button on the **Live** tab opens the **Live** panel.
+Clicking the **Panel** ![Designer Panel strategies 00](../../../images/designer_panel_strategies_00.png) button on the **Live** tab opens the **Live** panel.
 
 ![Designer Panel strategies 01](../../../images/designer_panel_strategies_01.png)
 
 The **Live** panel is a table, displaying all strategies added to the **Live**. On the **Live** panel, you can view the current state of the strategy, and run or stop the strategy using the ![Designer Panel Circuits 02](../../../images/designer_panel_circuits_02.png), ![Designer Panel Circuits 03](../../../images/designer_panel_circuits_03.png) buttons.
+
+Above the table there are the **Start all** and **Stop all** buttons, which start and stop all strategies of the table at once, and the **Settings** button of the selected strategy: it opens the window of its remote control settings, the same one that the settings button in the strategy row opens.
 
 ![Designer Panel strategies 02](../../../images/designer_panel_strategies_02.png)
 

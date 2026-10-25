@@ -1,64 +1,48 @@
 # Crear panel de estrategia
 
-Los paneles personalizados son controles especiales creados por S# para facilitar el trabajo con elementos DevExpress.
+Cada estrategia de [Shell](../shell.md) tiene dos paneles: el panel de configuración en el área [Emulación](user_interface/emulation.md) y el panel de supervisión en el área [Tiempo real](user_interface/real_time.md). De forma predeterminada, ambos son comunes: la tabla de parámetros y, para la emulación, una pestaña con la configuración del historial. Un panel propio hace falta cuando la estrategia tiene algo más que mostrar.
 
-Primero, debe crear un UserControl simple en la carpeta XAML de su estrategia.
+## Plantilla
 
-![Shell panel de estrategia personalizada 00](../../images/shell_custom_strategy_panel_00.png)
-
-![Shell panel de estrategia personalizada 01](../../images/shell_custom_strategy_panel_01.png)
-
-Sustituya `UserControl` por `controls:BaseStudioControl`.
+Los paneles están en `Shell.Avalonia/Shell.Avalonia/Views/Strategies/`. Uno propio es un `UserControl` normal de Avalonia, dentro del cual se usa uno de los dos paneles comunes:
 
 ```xaml
-<controls:BaseStudioControl>
-...
-</controls:BaseStudioControl>
-	  				
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="using:Shell.Views.Strategies"
+             xmlns:strategies="using:Shell.ViewModels.Strategies"
+             x:Class="Shell.Views.Strategies.MyTestingView"
+             x:DataType="strategies:StrategyDraftViewModel">
+  <views:TestingView Header="Mi estrategia, prueba" />
+</UserControl>
 ```
 
-Después implemente la lógica de su propio panel de forma similar a los paneles de estrategia existentes.
+`TestingView` es el panel de configuración y `MonitoringView`, el panel de supervisión. La propiedad `Header` es el texto con el que el panel se nombra a sí mismo en su barra de título.
 
-Para que el panel [Tiempo real](user_interface/real_time.md) vea la estrategia en su panel, la estrategia debe establecerse como propiedad:
+El contexto de datos del panel es siempre `StrategyDraftViewModel`, el mismo modelo que edita el usuario. A través de él están disponibles el nombre de la estrategia, sus parámetros, la configuración de la ejecución y el estado actual, por lo que los elementos propios se enlazan con él directamente, sin recurrir a la ventana principal.
+
+## Vinculación del panel con la estrategia
+
+Qué panel se muestra para qué estrategia lo decide `StrategyDraftViewLocator`. Allí se enumeran los pares «área \+ tipo de plantilla \- panel»:
 
 ```cs
-	public partial class SmaMonitoringControl
+public Control Build(object data)
+	=> data switch
 	{
-	...
-		public Strategy Strategy { get; set; }
-	...
-	}
-		
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Backtest, TemplateKind: StrategyTemplateKind.Sma } => new SmaTestingView(),
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Realtime, TemplateKind: StrategyTemplateKind.Sma } => new SmaMonitoringView(),
+		...
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Backtest } => new TestingView(),
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Realtime } => new MonitoringView(),
+		_ => null,
+	};
 ```
 
-Para guardar la configuración de la estrategia, debe sobrescribir los métodos **Load** y **Save** en el panel.
+Las dos últimas líneas son precisamente los paneles predeterminados: una estrategia para la que no se ha añadido nada los recibe.
 
-```cs
-	public partial class SmaMonitoringControl
-	{
-	...
-		public override void Load(SettingsStorage storage)
-		{
-			base.Load(storage);
-			try
-			{
-				Strategy = MainWindow.Instance.CreateStrategy(storage.GetValue<SettingsStorage>(nameof(Strategy)));
-				Init(Strategy);
-			}
-			catch (Exception e)
-			{
-				e.LogError();
-			}
-		}
-		public override void Save(SettingsStorage storage)
-		{
-			base.Save(storage);
-			storage.SetValue(nameof(Strategy), Strategy.Save());
-		}
-	...
-	}
-		
-```
+## Qué no hace falta mostrar
+
+No hace falta dibujar en el propio panel el gráfico de operaciones, las estadísticas, la curva de rentabilidad, las órdenes ni las operaciones propias: son paneles aparte situados al lado, y se rellenan solos para cualquier estrategia.
 
 ## Contenido recomendado
 

@@ -6,11 +6,11 @@ Im Servermodus ermöglicht das Programm [Hydra](../../hydra.md) dem Benutzer, mi
 
 Tatsächlich erfolgt die Verbindung zur Quelle über [Hydra](../../hydra.md), mit dem zum Beispiel [Designer](../../designer.md) und [Terminal](../../terminal.md) gleichzeitig verbunden sind. Diese Methode ermöglicht es, erneute Verbindungen zwischen Programmen und den Kauf einer zusätzlichen Verbindung zu vermeiden. Bei einer solchen Arbeit sind Konflikte ausgeschlossen, die durch Orderregistrierungen oder Trades aus unterschiedlichen Programmen entstehen können. [Hydra](../../hydra.md) empfängt das Signal und gibt das Ergebnis an das Programm zurück, von dem es empfangen wurde, während der Ablauf anderer Arbeiten nicht gestört wird.
 
-Um den Servermodus von [Hydra](../../hydra.md) zu aktivieren, wählen Sie im oberen Menü des Programms die Registerkarte **Servermodus**.
+Um den Servermodus von [Hydra](../../hydra.md) zu aktivieren, wählen Sie im Menü **Server** den Eintrag **Servermodus**.
 
 ![Einstellungen Bildschirmfoto 1](../../../images/hydra_server_menu.png)
 
-Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsfenster für den Servermodus zu öffnen.
+Wählen Sie danach im selben Menü den Eintrag **Netzwerkeinstellungen** — es öffnet sich das Einstellungsfenster für den Servermodus.
 
 ![Einstellungen Bildschirmfoto 2](../../../images/hydra_server.png)
 
@@ -28,6 +28,7 @@ Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsf
   5. **KeepSubscriptionsOnDisconnect** - Abonnements beim Trennen der Verbindung zur Quelle beibehalten.
   6. **DeadSessionCleanupInterval** - nach welchem Zeitintervall Informationen gelöscht werden, wenn die Verbindung getrennt ist.
 - **Autorisierung** - Autorisierung für den Zugriff auf den Hydra-Server.
+- **Speicher** (Gruppe **Autorisierung**) - wo die Benutzer des Servers gespeichert werden: **Datei** oder **Datenbank**. Für eine Datenbank werden die **Verbindung** zu ihr und die **Tabelle** (standardmäßig **HydraUsers**) angegeben; Passwörter werden in der Datenbank nicht im Klartext, sondern als Hashes gespeichert.
 - **Anzahl der Instrumente** - die maximale Anzahl von Instrumenten, die vom Server angefordert werden kann.
 - **Kerzen (Tage)** - die maximale Anzahl von Tagen, die zum Herunterladen der Kerzenhistorie verfügbar ist.
 - **Ticks (Tage)** - die maximale Anzahl von Tagen, die zum Herunterladen der Tick-Datenhistorie verfügbar ist.
@@ -37,8 +38,10 @@ Klicken Sie danach auf die Schaltfläche **Einstellungen**, um das Einstellungsf
 - **Simulator** - Simulatormodus einschalten.
 - **Instrumentzuordnung** - Übertragungsmodus nur für angegebene Instrumente aktivieren.
 
-Wenn Sie **Autorisierung** auf einen anderen Wert als **Anonym** setzen, erscheint auf der Registerkarte **Allgemein** die Schaltfläche **Benutzer**. Nach dem Klicken darauf erscheint das Fenster **Benutzer**.
+Wenn Sie **Autorisierung** auf einen anderen Wert als **Anonym** setzen und den **Servermodus** einschalten, wird im Menü **Server** der Eintrag **Benutzer** verfügbar, der das Fenster **Benutzer** öffnet.
 
 ![Einstellungen Bildschirmfoto 3](../../../images/hydra_users.png)
 
-Auf der linken Seite des Fensters können Sie einen neuen Benutzer hinzufügen, und rechts können Sie dessen Zugriffsrechte festlegen.
+Auf der linken Seite des Fensters befindet sich die Liste der Benutzer: **Hinzufügen** legt einen neuen an, **Löschen** entfernt den ausgewählten, **Speichern** schreibt die Änderungen. Rechts stehen die E-Mail-Adresse und das Passwort des ausgewählten Benutzers, die Adressen, von denen aus er sich verbinden darf, und seine Rechte: Jedes Recht wird mit einem Kontrollkästchen markiert, und **Alles auswählen** und **Alles abwählen** markieren alle auf einmal oder heben die Markierung auf.
+
+Solange der Server läuft, ist im Menü **Server** der Eintrag **Abonnements** verfügbar: Er öffnet ein Panel mit den Marktdaten-Abonnements der mit dem Server verbundenen Clients.

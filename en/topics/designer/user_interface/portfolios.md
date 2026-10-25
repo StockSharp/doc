@@ -8,7 +8,7 @@ The **Portfolios** panel is a table that shows the basic data on the portfolio, 
 
 ![Designer Panel A Portfolios 01](../../../images/designer_panel_portfolios_01.png)
 
-When you click the ![Designer Alert Bell](../../../images/designer_alert_bell.png) button, the [Notification settings](../../terminal/notifications.md) window opens.
+A right-click on a row opens a menu with the **Edit**, **Close position**, **Reverse position**, **Withdraw** and **Hide zero balances** items; they are described on the Terminal [Portfolios](../../terminal/user_interface/portfolios.md) page.
 
 ## Recommended content
 

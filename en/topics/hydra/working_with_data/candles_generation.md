@@ -6,7 +6,7 @@ This allows you to use the generated data in any technical analysis programs (We
 
 ## Candle Generation Process
 
-1. On the **General** tab, click the **Candles** button, and the following window will open:
+1. In the **Market Data** menu, select the **Candles** item, and the following panel will open:
 
    ![hydra candles main](../../../images/hydra_candles_main.png)
 
@@ -42,7 +42,7 @@ After data generation, you will see the result:
 To generate volume candles:
 
 1. Select the candle type [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage)
-2. Specify the volume (for example, 100)
+2. Specify the volume (for example, 5000)
 3. Select the instrument
 4. In the **Build from** field, select **Ticks**
 5. Click the search button

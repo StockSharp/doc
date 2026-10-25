@@ -1,13 +1,19 @@
 # Mapeamento de símbolos
 
-O mesmo instrumento em diferentes sistemas de negociação pode ter nomes diferentes. No **Designer**, é possível associar o instrumento e as ligações através das quais esse instrumento será negociado, e indicar como ele é identificado no sistema de negociação externo. Isto é útil ao negociar um instrumento em diferentes mercados de negociação ou através de diferentes ligações (ou brokers). Também permite receber dados de uma ligação e efetuar negócios através de outra ligação.
+O mesmo instrumento pode ter nomes diferentes em diferentes sistemas de negociação, e os seus dados e ordens podem passar por ligações diferentes. Para isso, o [Designer](../../designer.md) tem três janelas.
 
-Para associar títulos e ligações, clique no botão **Instrumentos e ligações** no painel **Todos os instrumentos**.
+## Mapeamento de códigos
 
-![Designer mapeamento de instrumentos 00](../../../images/designer_security_mapping_00.png)
+O botão **Mapeamento de códigos** do painel de dados de mercado abre a janela **Códigos de instrumentos <\-> Códigos nos adaptadores**. Na lista por cima da tabela seleciona-se a ligação, o botão ![Designer botão Adicionar 00](../../../images/designer_creation_tool_00.png) adiciona uma linha e o botão de eliminar remove a selecionada. Nas colunas **Código do instrumento** e **Código do mercado** indica-se o instrumento tal como se chama no **Designer**, e nas colunas **Código no adaptador** e **Código do mercado no adaptador**, tal como lhe chama a ligação selecionada.
 
-Na janela aberta, clique no botão ![Designer botão Adicionar 00](../../../images/designer_creation_tool_00.png) para adicionar uma nova linha.
+## Instrumentos e conexões
 
-Na coluna **Ligação**, selecione uma ligação na lista pendente. Nas colunas **Código do instrumento** e **Código do mercado**, especifique os códigos do título e do mercado tal como estão especificados no **Designer**. Nas colunas **Código do adaptador** e **Mercado do adaptador**, especifique os códigos do título e do mercado tal como estão especificados no sistema de negociação externo.
+A opção **Instrumentos e conexões** da lista pendente do botão **Conectar** do separador **Comum** abre uma janela na qual, para um instrumento e um tipo de dados, se escolhe a ligação através da qual esses dados são recebidos. O botão **Adicionar** adiciona uma linha na qual se preenchem as colunas **Instrumento**, **Tipo de dados** e **Conexão**; o botão **Excluir** remove a linha selecionada.
 
 ![Designer mapeamento de instrumentos 01](../../../images/designer_security_mapping_01.png)
+
+## Portfólios e Conexões
+
+A opção **Portfólios e Conexões** da mesma lista abre uma janela igual para os portefólios: na coluna **Portfólio** indica-se o portefólio e na coluna **Conexão**, a ligação através da qual são enviadas as suas ordens.
+
+No [Terminal](../../terminal.md), ambas as janelas abrem-se a partir do menu **Configurações** do [menu principal](../../terminal/user_interface/ribbon.md).

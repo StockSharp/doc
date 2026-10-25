@@ -4,6 +4,8 @@ Wählen Sie im erscheinenden Fenster die Instrumente und das erforderliche Zeiti
 
 ![Hydra Markttiefe exportieren](../../../../images/hydra_export_depth.png)
 
+Der Schieberegler wählt aus, welches der geladenen Orderbücher angezeigt wird. Wenn er das letzte geladene Orderbuch erreicht, werden die nächsten nachgeladen.
+
 > [!TIP]
 > Orderbücher können aus [Orderprotokoll- und Level-1-Dateien](../any_market_data_types.md) erstellt werden. Außerdem können Sie die Tiefe und den Aktualisierungszeitraum des Orderbuchs anpassen.
 

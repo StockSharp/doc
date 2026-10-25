@@ -18,7 +18,7 @@ Agora obtenha os instrumentos e os respetivos dados a partir do armazenamento lo
 
 É aberto o separador de gestão de dados de mercado. Para obter os instrumentos disponíveis, clique em [Transferir instrumentos](market_data_storage/download_instruments.md). Para descarregar um instrumento, introduza o seu código ou selecione a opção **Todos**, escolha a fonte de dados e clique em **Confirmar**. O [Designer](../designer.md) solicita os instrumentos disponíveis à fonte de dados. Todos os instrumentos encontrados aparecem no painel **Todos os instrumentos**.
 
-Agora o [Designer](../designer.md) pode usar os instrumentos descarregados e os dados históricos disponíveis no armazenamento. Escolha uma das estratégias de demonstração. No [Painel de esquemas](user_interface/schemas.md), abra a pasta **Estratégias** e faça duplo clique na estratégia de exemplo **SMA**. O separador **Sma** aparece na área de trabalho. Depois de mudar para a estratégia, a faixa abre automaticamente o separador **Teste histórico**, que contém os principais controlos para criar, depurar e testar estratégias ([Criar estratégias](strategies/using_visual_designer.md), [Exemplo de teste histórico](backtesting/getting_started.md)).
+Agora o [Designer](../designer.md) pode usar os instrumentos descarregados e os dados históricos disponíveis no armazenamento. Escolha uma das estratégias de demonstração. No [Painel de esquemas](user_interface/schemas.md), abra a pasta **Backtest** e faça duplo clique na estratégia de exemplo **SMA**. O separador **Sma** aparece na área de trabalho. Depois de mudar para a estratégia, a faixa abre automaticamente o separador **Teste histórico**, que contém os principais controlos para criar, depurar e testar estratégias ([Criar estratégias](strategies/using_visual_designer.md), [Exemplo de teste histórico](backtesting/getting_started.md)).
 
 ![Designer Início rápido 03](../../images/designer_quick_start_04_1.png)
 
@@ -28,7 +28,7 @@ Ao clicar em ![Designer Início rápido 04](../../images/designer_quick_start_04
 
 ![Designer Início rápido 05](../../images/designer_quick_start_05.png)
 
-Quando seleciona qualquer bloco no painel **Designer**, o painel **Propriedades** mostra as propriedades desse bloco. No painel **Propriedades** do bloco **Velas**, pode configurar o tipo de vela e o período ([Velas](../api/candles.md)).
+Quando seleciona qualquer bloco no painel **Designer**, o painel **Parâmetros de elemento** mostra as propriedades desse bloco. No painel **Parâmetros de elemento** do bloco **Velas**, pode configurar o tipo de vela e o período ([Velas](../api/candles.md)).
 
 Depois de clicar em **Iniciar**, começa a emulação de negociação. Os resultados do teste ficam disponíveis nos separadores correspondentes do diagrama: Gráfico, Ordens, Negócios, P/L, Posições (gráfico), Estatísticas e Posições.
 

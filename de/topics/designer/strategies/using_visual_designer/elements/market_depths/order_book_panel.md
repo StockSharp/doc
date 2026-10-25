@@ -4,7 +4,7 @@
 
 Der Würfel dient dazu, das Orderbuch in der spezialisierten grafischen Komponente [Orderbuch](../../../../user_interface/components/order_book.md) anzuzeigen.
 
-Die Komponente [Orderbuch](../../../../user_interface/components/order_book.md) muss aus der Gruppe [Komponenten](../../../../user_interface/components.md) der Registerkarten **Simulation** oder **Handel** hinzugefügt werden. Weitere Informationen zur Komponente [Orderbuch](../../../../user_interface/components/order_book.md) finden Sie im Abschnitt [Orderbuch](../../../../user_interface/components/order_book.md).
+Die Komponente [Orderbuch](../../../../user_interface/components/order_book.md) muss aus der Gruppe [Komponenten](../../../../user_interface/components.md) der Registerkarten **Backtest** oder **Handel** hinzugefügt werden. Weitere Informationen zur Komponente [Orderbuch](../../../../user_interface/components/order_book.md) finden Sie im Abschnitt [Orderbuch](../../../../user_interface/components/order_book.md).
 
 ### Eingehende Anschlüsse
 

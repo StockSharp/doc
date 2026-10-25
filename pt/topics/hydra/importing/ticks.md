@@ -1,6 +1,6 @@
 # Ticks
 
-Para importar transações, selecione o separador **Importar \=\> Ticks**.
+Para importar transações, selecione a opção **Importar \=\> Negócios** do menu principal da aplicação.
 
 ![Hydra importação de negociações](../../../images/hydra_import_trades.png)
 

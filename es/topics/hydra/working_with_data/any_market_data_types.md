@@ -6,15 +6,17 @@ Esto es necesario si la fuente no permite descargar los datos de mercado requeri
 
 ¡IMPORTANTE\! **Libro de órdenes** puede construirse a partir de **Registro de órdenes** o **Level 1**, siempre que estos tipos de datos contengan los mejores precios.
 
+A partir de **Level 1** se obtiene un libro de órdenes solo con los mejores precios: una fila para la compra y otra para la venta. El libro de órdenes con toda la profundidad seleccionada se construye a partir del **Registro de órdenes**, que contiene cada orden registrada, cancelada y ejecutada.
+
 Recuerde que los valores de **Level 1** se pueden descargar desde cualquier fuente que proporcione datos de mercado en tiempo real. **Level 1** también se puede recibir mediante [conversión](../tasks/converter.md) desde **libro de órdenes**.
 
 Para construirlo, debe:
 
-1. Seleccionar el período y el instrumento para los que desea obtener datos de mercado.![Hydra construir datos de profundidad Nivel 1](../../../images/hydra_level1_build_depth_data.png)
+1. Seleccionar el período y el instrumento para los que desea obtener datos de mercado.![Hydra construir el libro de órdenes a partir del registro de órdenes](../../../images/hydra_level1_build_depth_data.png)
 2. Seleccionar el campo **Construir a partir de** y elegir el tipo de datos requerido.![Hydra tipo de construcción de datos](../../../images/hydra_type_build_data.png)
 
    ¡IMPORTANTE\! Si se seleccionan **Libro de órdenes, Registro de órdenes, Level 1** como fuente para construir una vela, aparece una selección de parámetros adicionales.![Hydra propiedades extendidas de construcción de datos](../../../images/hydra_ext_proper_build_data.png)
-3. Después de establecer los parámetros, haga clic en el botón ![Hydra velas](../../../images/hydra_candles.png).![Hydra resultado de datos de profundidad de Nivel 1](../../../images/hydra_level1_build_depth_data_result.png)
+3. Después de establecer los parámetros, haga clic en el botón ![Hydra velas](../../../images/hydra_candles.png).![Hydra resultado de construir el libro de órdenes a partir del registro de órdenes](../../../images/hydra_level1_build_depth_data_result.png)
 
 Para construir **Velas**, también está disponible la opción de construir velas de un marco temporal mayor a partir de velas de un marco temporal menor.
 

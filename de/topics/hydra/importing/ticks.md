@@ -1,6 +1,6 @@
 # Ticks
 
-Um Trades zu importieren, wählen Sie die Registerkarte **Importieren \=\> Ticks**.
+Um Trades zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Importieren \=\> Trades**.
 
 ![Hydra Trades importieren](../../../images/hydra_import_trades.png)
 

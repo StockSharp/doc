@@ -64,3 +64,4 @@ La IA puede usar métodos obsoletos o inventar API inexistentes. Verifique siemp
 
 - [Escribir una estrategia con IA](ai_development/strategy_with_ai.md) — guía paso a paso para crear una estrategia de negociación
 - [Escribir un conector con IA](ai_development/connector_with_ai.md) — guía paso a paso para crear un conector de bolsa
+- [Conexión de agentes de IA (MCP)](../mcp.md) — cómo un agente lee las ventanas de los programas de StockSharp, pulsa sus botones y les envía comandos

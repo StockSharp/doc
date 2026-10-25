@@ -13,6 +13,8 @@ To export a strategy from [Designer](../designer.md):
 
   ![Designer_Runner_1](../../images/designer_runner_2.png)
 
+  The **Alerts** check box enables messages about the trading progress to the Telegram channel selected under it. The **Bot** check box allows managing the strategy via the Telegram bot (it is available if the account has robots), and the **Orders**, **Trades**, **Positions** and **Equity** check boxes under it select what the bot sends about this strategy.
+
 The following files will be copied to the selected export directory:
 
 - connector.json - a file containing connection settings

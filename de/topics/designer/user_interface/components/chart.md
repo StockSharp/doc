@@ -16,6 +16,8 @@ Bei Box-Chart-Kerzen kann zusätzlich gruppiert werden; die Gruppierungsreihenfo
 
 ![Designer Grafikelement 05](../../../../images/designer_schedule_05.png)
 
+Die Schaltfläche **Zwischenablage (als Bild)** auf der Schaltflächenleiste kopiert das Bild des Charts, damit Sie es in eine Nachricht oder ein Dokument einfügen können. Ein Rechtsklick auf die Schaltflächenleiste selbst öffnet die Liste ihrer Schaltflächen: Ein deaktiviertes Kontrollkästchen blendet die Schaltfläche aus, ein aktiviertes blendet sie wieder ein; welche Schaltflächen angezeigt werden, wird zusammen mit dem Chart gespeichert. Das Einstellungsfenster des Charts, das Fadenkreuz und die Tasten zum Scrollen und Zoomen sind im Abschnitt [Chart](../../../terminal/user_interface/components/chart.md) des Terminals beschrieben.
+
 Über dem Chart befindet sich eine Symbolleiste, in der Sie automatisches Scrollen, automatischen Zoom, Legendenmodi und andere allgemeine Chart-Einstellungen auswählen können. Außerdem können Sie die Elemente auswählen, die im Chart gezeichnet werden sollen: Linien, Niveaus, Zeiger, Rechteck, Text.
 
 ![Designer Grafikelement 03](../../../../images/designer_schedule_03.png)

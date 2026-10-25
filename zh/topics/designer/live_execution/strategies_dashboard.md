@@ -1,10 +1,12 @@
 # 策略仪表板
 
-单击 **实盘** 选项卡中的 ![Designer 策略面板 00](../../../images/designer_panel_strategies_00.png) 按钮，会打开 **实盘** 面板。
+单击 **实盘** 选项卡中的 **面板** 按钮 ![Designer 策略面板 00](../../../images/designer_panel_strategies_00.png)，会打开 **实盘** 面板。
 
 ![Designer 策略面板 01](../../../images/designer_panel_strategies_01.png)
 
 **实盘** 面板以表格形式显示已添加到 **实盘** 的全部策略。可以在此面板中查看策略的当前状态，并使用 ![Designer 线路面板 02](../../../images/designer_panel_circuits_02.png)、![Designer 线路面板 03](../../../images/designer_panel_circuits_03.png) 按钮启动或停止策略。
+
+表格上方有 **启动所有** 和 **停止所有** 按钮，可一次性启动或停止表格中的全部策略；还有所选策略的 **设置** 按钮，它会打开该策略的远程控制设置窗口，与策略行中的设置按钮打开的窗口相同。
 
 ![Designer 策略面板 02](../../../images/designer_panel_strategies_02.png)
 

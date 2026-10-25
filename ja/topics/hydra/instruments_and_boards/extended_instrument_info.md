@@ -10,12 +10,15 @@
 
 必要な拡張情報を選択するには、次の手順を実行します。
 
-1. **銘柄** タブで **拡張情報** ボタンをクリックします。![拡張銘柄情報 のスクリーンショット 1](../../../images/hydra_extensioninfo_securities.png)
+1. **銘柄** パネルで **拡張情報** ボタンをクリックします。![拡張銘柄情報 のスクリーンショット 1](../../../images/hydra_extensioninfo_securities.png)
 2. 必要な CSV ファイルへのパスを選択するウィンドウが表示されます。![拡張銘柄情報 のスクリーンショット 2](../../../images/hydra_extensioninfo_window.png)
 
-以下は、拡張情報の **CSV** ファイルを **MS Excel** と **Notepad** という異なるエディターで開いた例です。
+以下は、拡張情報の **CSV** ファイルの例です。値はセミコロンで区切られます。1 行目にはプロパティ名、2 行目にはその型、それ以降の各行には銘柄の識別子とそのプロパティの値が入ります。
 
-![拡張銘柄情報 のスクリーンショット 3](../../../images/hydra_extensioninfo_csv_excel.png)
-
-![拡張銘柄情報 のスクリーンショット 4](../../../images/hydra_extensioninfo_csv_notepad.png)
+```
+SecurityId;Country;City;Site
+string;string;string;string
+SBER@TQBR;Россия;Москва;www.sberbank.ru
+GAZP@TQBR;Россия;Санкт-Петербург;www.gazprom.ru
+```
 

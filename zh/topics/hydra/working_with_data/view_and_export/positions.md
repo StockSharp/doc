@@ -4,4 +4,6 @@
 
 ![Hydra 导出持仓](../../../../images/hydra_export_position.png)
 
+**字段** 列表用于指定表格中显示哪些持仓值以及导出哪些值。
+
 可以将接收到的数据[导出为所需格式](../export_data.md)。

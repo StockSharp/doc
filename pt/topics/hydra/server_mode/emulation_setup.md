@@ -1,6 +1,6 @@
 # Configuração da emulação
 
-No modo de servidor, o programa permite ativar o modo de emulação.
+No modo de servidor, o programa permite trabalhar no modo de emulação. Os seus parâmetros definem-se no menu **Servidor**, opção **Configurações do emulador**.
 
 ![Captura de ecrã de Configuração da emulação 1](../../../images/hydra_emulator_start.png)
 

@@ -4,6 +4,8 @@ En la ventana que aparece, seleccione los instrumentos, el intervalo de tiempo r
 
 ![Hydra exportar profundidad](../../../../images/hydra_export_depth.png)
 
+El control deslizante elige cuál de los libros de órdenes cargados se muestra. Cuando llega al último libro de órdenes cargado, se cargan los siguientes.
+
 > [!TIP]
 > Los libros de órdenes se pueden crear a partir de [archivos de registro de órdenes y Level 1](../any_market_data_types.md). Además, puede ajustar la profundidad y el período de actualización del libro de órdenes.
 

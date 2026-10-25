@@ -8,7 +8,7 @@ Das Panel **Portfolios** ist eine Tabelle, die die grundlegenden Daten zum Portf
 
 ![Designer Portfolios-Panel A 01](../../../images/designer_panel_portfolios_01.png)
 
-Wenn Sie auf die Schaltfläche ![Designer Benachrichtigungsglocke](../../../images/designer_alert_bell.png) klicken, wird das Fenster [Benachrichtigungseinstellungen](../../terminal/notifications.md) geöffnet.
+Ein Rechtsklick auf eine Zeile öffnet ein Menü mit den Einträgen **Bearbeiten**, **Position schließen**, **Position umkehren**, **Abheben** und **Null-Salden ausblenden**; sie sind auf der Seite [Portfolios](../../terminal/user_interface/portfolios.md) des Terminals beschrieben.
 
 ## Empfohlene Inhalte
 

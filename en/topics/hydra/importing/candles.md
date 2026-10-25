@@ -6,19 +6,23 @@ To import candles, select **Import \=\> Candles** item from the main application
 
 ## Candle import process
 
-1. **Common.**
-   - **Data type** - type of imported data.
-   - **Filename** - full path to the CSV file.
-   - **Data directory** - folder where the final [S#](../../api.md) files will be saved.
+1. **Settings of import**.
+
+   The top row of the panel selects the data type, **Drive** - the storage where the data will be saved in the [S#](../../api.md) format, the storage **Format** and the **File** to import (it can be selected with the **Browse...** button). Below, you set how the file is read.
+
+   **Common**
+   - **Data directory** - the folder with files, if not a single file but all suitable files of the folder are imported.
    - **File mask** - file mask that is used when scanning the directory. For example, candle \_\*.csv.
+   - **Subdirectories** - search for files in nested folders as well.
    - **Column separator** - column separator. Tabulation is denoted by TAB.
-   - **Indent from the beginning** - number of lines from the beginning of file to be skipped (if they contain meta information).
-   - **Time zone** - time zone.
+   - **Row** - the line ending in the file: CR LF, LF or CR.
+   - **Skip lines** - number of lines from the beginning of file to be skipped (if they contain meta information).
    - **Interval** - frequency of data update.
 
-   **Instruments**
+   **Securities**
    - **Extended information** - save extended imported fields in the extended information storage
    - **Duplicates** - whether duplicate securities will be updated if they already exist.
+   - **Ignore securities without an ID** - skip securities without an identifier.
 2. Configure import parameters for [S#](../../api.md) fields.
    - **S# field** - value of the S# field. ( **Security, Board**, etc.).
    - **Associations** - match the column value in file to the stocksharp type (if necessary).

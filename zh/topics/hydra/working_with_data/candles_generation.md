@@ -6,7 +6,7 @@
 
 ## K线生成过程
 
-1. 在 **常规** 选项卡中单击 **K线** 按钮，打开以下窗口：
+1. 在 **市场数据** 菜单中选择 **K线** 项，打开以下面板：
 
    ![Hydra K线 主界面](../../../images/hydra_candles_main.png)
 
@@ -42,7 +42,7 @@
 要生成成交量K线：
 
 1. 选择K线类型 [VolumeCandleMessage](xref:StockSharp.Messages.VolumeCandleMessage)。
-2. 指定成交量，例如 100。
+2. 指定成交量，例如 5000。
 3. 选择交易品种。
 4. 在 **构建来源** 字段中选择 **逐笔成交**。
 5. 单击搜索按钮。

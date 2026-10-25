@@ -1,6 +1,6 @@
 # Delete data
 
-**Common** tab, the **Delete data...** button.
+In the **Market Data** menu, select the **Delete data...** item.
 
 ![hydra data delete](../../../images/hydra_data_delete.png)
 

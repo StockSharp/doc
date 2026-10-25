@@ -18,7 +18,7 @@ Now get the instruments and their data from the configured local storage. Go to 
 
 The market-data management tab opens. To get the available instruments, click [Download instruments](market_data_storage/download_instruments.md). To download an instrument, enter its code or select the **All** flag, choose the data source, and click **OK**. [Designer](../designer.md) requests the available instruments from the data source. All found instruments appear in the **All instruments** panel.
 
-Now [Designer](../designer.md) can use the downloaded instruments and historical data available in storage. Choose one of the demo strategies. In the [Schemas](user_interface/schemas.md) panel, open the **Strategies** folder and double-click the **SMA** sample strategy. The **Sma** tab appears in the workspace. After switching to the strategy, the ribbon automatically opens the **Backtest** tab, which contains the main controls for creating, debugging, and testing strategies ([Creating strategies](strategies/using_visual_designer.md), [Historical testing example](backtesting/getting_started.md)).
+Now [Designer](../designer.md) can use the downloaded instruments and historical data available in storage. Choose one of the demo strategies. In the [Schemas](user_interface/schemas.md) panel, open the **Backtest** folder and double-click the **SMA** sample strategy. The **Sma** tab appears in the workspace. After switching to the strategy, the ribbon automatically opens the **Backtest** tab, which contains the main controls for creating, debugging, and testing strategies ([Creating strategies](strategies/using_visual_designer.md), [Historical testing example](backtesting/getting_started.md)).
 
 ![Designer Quick start 03](../../images/designer_quick_start_04_1.png)
 
@@ -28,7 +28,7 @@ Clicking ![Designer Quick start 04](../../images/designer_quick_start_04.png) in
 
 ![Designer Quick start 05](../../images/designer_quick_start_05.png)
 
-When you select any block on the **Designer** panel, the **Properties** panel shows that block's properties. In the **Properties** panel of the **Candles** block, you can configure the candle type and Time Frame ([Candles](../api/candles.md)).
+When you select any block on the **Designer** panel, the **Element parameters** panel shows that block's properties. In the **Element parameters** panel of the **Candles** block, you can configure the candle type and Time Frame ([Candles](../api/candles.md)).
 
 After clicking **Start**, trading emulation begins. The test results are available on the corresponding tabs of the diagram: Chart, Orders, Trades, P/L, Positions (chart), Statistics, and Positions.
 

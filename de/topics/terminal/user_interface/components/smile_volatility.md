@@ -2,12 +2,14 @@
 
 Die Komponente **Smile-Volatilität** ist eine grafische Darstellung des erwarteten Volatilitätsniveaus für Optionen mit demselben Basiswert und unterschiedlichen Strikes.
 
-Um den Volatilitäts-Smile anzuzeigen, müssen Sie den Basiswert und die Optionen auswählen, auf deren Preisen der Volatilitäts-Smile aufgebaut wird.
+Die Optionen werden mit demselben Filter ausgewählt wie im [Optionsdesk](option_desk.md): Basiswert, Ablaufdatum, Strike-Bereich und die Optionen selbst.
 
-Zusätzlich können Sie einen Filter für das genaue Ablaufdatum der Optionen sowie Filter für minimale/maximale Strikes angeben.
+Das Chart zeigt sieben Kurven: die implizite Volatilität der Calls und Puts zum besten Geldkurs, zum besten Briefkurs und zum Preis des letzten Trades sowie gestrichelt den **Durchschnitt** der Volatilität von Call und Put an jedem Strike. Unter dem Chart befindet sich eine Tabelle: **Strike**, die Volatilität von **Call** und **Put-Option** (zum Preis des letzten Trades oder, wenn es keine Trades gab, zum besten Geld- oder Briefkurs) und ihr **Durchschnitt**.
 
 ![Terminal Volatilitäts-Smile 00](../../../../images/terminal_smile_of_volatility_00.png)
 
 ## Empfohlene Inhalte
 
-[Orderprotokoll](order_log.md)
+[Optionsdesk](option_desk.md)
+
+[Positionen (Optionen)](positions_options.md)

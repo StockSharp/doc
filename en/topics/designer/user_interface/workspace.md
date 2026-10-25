@@ -4,6 +4,8 @@ The **Workspace** in [Designer](../../designer.md) is a windowed interface with 
 
 ![Designer Workspace 00](../../../images/designer_workspace_00.png)
 
+At the bottom of the window is the status bar: whether [Designer](../../designer.md) is connected (**Disconnected**, **Connected** or the connection error text), StockSharp news, counters of log warnings and errors, the last log message (clicking it opens the [Logs Panel](logs.md)), used memory, uptime and the log folder button. These parts are described in more detail in the Terminal [Status bar](../../terminal/user_interface/status_bar.md) section.
+
 ## Recommended content
 
 [Schemas](schemas.md)

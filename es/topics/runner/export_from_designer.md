@@ -13,6 +13,8 @@ Para exportar una estrategia desde [Designer](../designer.md):
 
   ![Designer exportación a Runner (2)](../../images/designer_runner_2.png)
 
+  La casilla **Alertas** activa los mensajes sobre la marcha de la negociación en el canal de Telegram seleccionado debajo. La casilla **Robot** permite gestionar la estrategia mediante el bot de Telegram (está disponible si la cuenta tiene robots), y con las casillas **Órdenes**, **Operaciones**, **Posiciones** y **Capital** situadas debajo se elige qué envía el bot sobre esta estrategia.
+
 Los siguientes archivos se copiarán al directorio de exportación seleccionado:
 
 - connector.json - archivo que contiene la configuración de conexión

@@ -1,6 +1,6 @@
 # Instrumente
 
-Um Instrumente zu importieren, wählen Sie die Registerkarte **Importieren \=\> Instrumente**.
+Um Instrumente zu importieren, wählen Sie im Hauptmenü der Anwendung den Eintrag **Importieren \=\> Instrumente**.
 
 ![Instrumente Bildschirmfoto 1](../../../images/hydra_import_securities.png)
 

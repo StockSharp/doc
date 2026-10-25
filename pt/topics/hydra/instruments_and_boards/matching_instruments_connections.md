@@ -8,7 +8,7 @@ Isto também é útil ao negociar o mesmo instrumento em diferentes mercados de 
 
 Para corresponder instrumentos e ligações, deve:
 
-1. Vá para o separador **Instrumentos** e clicar no botão **Instrumentos e ligações**.![Designer mapeamento de instrumentos 01 00](../../../images/designer_security_mapping_01_00.png)
+1. No menu **Dados de mercado**, selecione a opção **Instrumentos e conexões**.![Designer mapeamento de instrumentos 01 00](../../../images/designer_security_mapping_01_00.png)
 2. Na lista de ligações, selecione a ligação necessária.![Designer mapeamento de instrumentos 01](../../../images/designer_security_mapping_01.png)
 3. Preencha todas as colunas.
 

@@ -1,23 +1,27 @@
 # Komponenten
 
-Beim Handeln kann es erforderlich sein, den Prozess vollständig zu kontrollieren. Für umfassende Kontrolle und Analyse stellt **Terminal** grafische Komponenten bereit, die Sie hinzufügen können, indem Sie sie in der Gruppe **Komponenten** des **Menübands** auswählen:
+Beim Handeln muss man den Markt, die eigenen Orders und Positionen sehen. Dafür werden dem [Arbeitsbereich](workspace.md) grafische Komponenten hinzugefügt — mit den Schaltflächen der senkrechten Leiste am rechten Rand des Bereichs. Jeder Klick öffnet ein weiteres Panel dieser Art.
 
-![Designer Komponenten](../../../images/designer_components.png)
+![Schaltflächen der Komponenten im Terminal](../../../images/terminal_components_00.png)
 
-- [Instrumente](components/instruments.md) - ist eine Tabelle mit Instrumenten, die Informationen zu allen ausgewählten Instrumenten anzeigt.
-- [Level 1](components/level_1.md) - ist eine Tabelle mit der Änderungshistorie von Level 1 für die ausgewählten Instrumente.
-- [Kaufen/Verkaufen](components/buy_sell.md) - ist eine Panelgruppe, die die besten Preisinformationen für die ausgewählten Instrumente anzeigt und es ermöglicht, das benötigte Volumen für die ausgewählten Instrumente zu kaufen oder zu verkaufen.
-- [Orderbuch](components/order_book.md) - ist eine Tabelle mit Limit-Orders für Kauf und Verkauf.
-- [Chart](components/chart.md) - ermöglicht das Zeichnen von Kerzen und Indikatoren für das ausgewählte Instrument.
-- [P&L-Kurve](../../designer/user_interface/components/pnl_equity.md) - ist ein Chart für Gewinn/Verlust (unrealisiert), Gewinn/Verlust (realisiert) und Kommission.
-- [Ausführungen](../../designer/user_interface/components/trades.md) - ist eine Tabelle mit Ausführungen, die vollständige Informationen über alle Ausführungen der Strategie anzeigt.
-- [Aufträge](../../designer/user_interface/components/orders.md) - ist eine Tabelle mit Aufträgen, die vollständige Informationen über alle Aufträge der Strategie anzeigt.
-- [Bedingte Orders](components/conditional_orders.md) - ist eine Tabelle mit bedingten Orders, die vollständige Informationen über alle bedingten Orders der Strategie anzeigt.
-- [Positionen](../../designer/user_interface/components/positions.md) - ist eine Tabelle der aktuellen Position.
-- [Tick-Trades](../../designer/user_interface/components/tick_trades.md) - ist eine Ausführungstabelle, die vollständige Informationen über alle Ausführungen für die ausgewählten Instrumente anzeigt.
-- [Positionen](../../designer/user_interface/components/positions.md) - ist ein Chart der Position.
-- [Nachrichten](components/news.md) - zeigt Nachrichten an, die von Verbindungen empfangen wurden.
-- [Positionen (Optionen)](components/positions_options.md) - ist eine grafische Darstellung der Optionsposition.
-- [Optionsdesk](components/option_desk.md) - ist eine Tabelle mit den wichtigsten Parametern der ausgewählten Optionen für den Basiswert.
-- [Smile-Volatilität](components/smile_volatility.md) - ist eine grafische Darstellung des erwarteten Volatilitätsniveaus für Optionen mit demselben Basiswert und unterschiedlichen Strikes.
-- [Orderprotokoll](components/order_log.md) - ist eine Tabelle mit Orders, die vollständige Informationen über alle Orders für die ausgewählten Instrumente anzeigt.
+- [Instrumente](components/instruments.md) - eine Tabelle mit Instrumenten, die Informationen zu allen ausgewählten Instrumenten anzeigt.
+- [Level 1](components/level_1.md) - eine Tabelle mit der Änderungshistorie von Level 1 für die ausgewählten Instrumente.
+- [Kaufen/Verkaufen](components/buy_sell.md) - eine Gruppe von Tickets, in denen die besten Preise der Instrumente zu sehen sind und mit denen Orders platziert und storniert werden.
+- [Orderbuch](components/order_book.md) - eine Tabelle der Limit-Orders für Kauf und Verkauf.
+- [Chart](components/chart.md) - Kerzen und Indikatoren für das ausgewählte Instrument; aus dem Chart kann auch gehandelt werden.
+- [P&L-Kurve](../../designer/user_interface/components/pnl_equity.md) - ein Chart für Gewinn und Verlust (nicht realisiert und realisiert) sowie Provision.
+- [Eigene Trades](../../designer/user_interface/components/trades.md) - eine Tabelle der eigenen Trades.
+- [Aufträge](components/orders.md) - eine Tabelle der eigenen Orders; darüber die Schaltflächen zum Stornieren von Orders und die Auswahl, welche Orders angezeigt werden.
+- [Positionen](components/positions.md) - eine Tabelle der aktuellen Positionen; darüber die Schaltflächen zum Schließen und Umkehren einer Position.
+- [Tick-Trades](../../designer/user_interface/components/tick_trades.md) - eine Tabelle aller Trades des Handelsplatzes für die ausgewählten Instrumente.
+- [Positionsdiagramm](../../designer/user_interface/components/positions.md) - ein Chart der Position.
+- **Eigenschaften** - die Eigenschaften des im Bereich ausgewählten Objekts: eines Instruments, einer Order, eines Trades, einer Position.
+- [Positionen (Optionen)](components/positions_options.md) - die grafische Darstellung der Position aus Optionen.
+- [Optionsdesk](components/option_desk.md) - eine Tabelle der wichtigsten Parameter der Optionen auf den Basiswert.
+- [Smile-Volatilität](components/smile_volatility.md) - die erwartete Volatilität von Optionen mit demselben Basiswert und unterschiedlichen Strikes.
+- [Orderprotokoll](components/order_log.md) - eine Tabelle aller Orders des Handelsplatzes für die ausgewählten Instrumente.
+- [Level2](components/level_2.md) - das Orderbuch eines Instruments in zwei Tabellen mit einem Ticket darunter.
+
+Die Panels des gesamten Fensters — [Protokolle](logs.md), [Portfolios](portfolios.md), [Börsensegmenteditor](board_editor.md), **Marktdaten**, [Nachrichten](components/news.md) und [Risiken](risk_management.md) — werden über das Menü **Ansicht** des [Hauptmenüs](ribbon.md) geöffnet.
+
+Die Tabellen aller Komponenten funktionieren gleich: Wie man sie kopiert, in ihnen sucht, filtert, sortiert und die Spalten einrichtet, ist im Abschnitt [Arbeiten mit Tabellen](tables.md) beschrieben.

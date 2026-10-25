@@ -24,7 +24,7 @@ Telegram ボットを介して取引ストラテジーとロボットを管理�
 
   ![コントロールパネル 05](../../images/telegramcontrolstrategy.png)
 
- - [Shell](../shell.md) を使用する場合は、RemoteManager パネルに移動し、[Designer](../designer.md) と同様に設定を構成します。
+ - [Shell](../shell.md) を使用する場合は、メインウィンドウのコマンドバーで **リモートで** スイッチをオンにし、必要なストラテジーの設定でリモート管理を許可します。詳しくは [リモート管理](../shell/remote_control.md) セクションで説明しています。
  - [Hydra](../hydra.md) を使用する場合は、[Designer](../designer.md) と同様の操作を行います。[Hydra](../hydra.md) との連携により、市場データのダウンロードを管理し、数量統計を監視できます。
 
   ![コントロールパネル 06](../../images/telegramhydra.png)

@@ -1,6 +1,6 @@
 # Introdução
 
-Para adicionar uma estratégia à **Negociação ao vivo**, no [Painel de esquemas](../user_interface/schemas.md), clique com o botão direito do rato na estratégia pretendida da pasta **Estratégias** e selecione ![Designer Negociação ao vivo 00](../../../images/designer_live_trade_00.png) **Ao vivo**. A estratégia será adicionada à pasta **Ao vivo** do painel **Esquemas**.
+Para adicionar uma estratégia à **Negociação ao vivo**, no [Painel de esquemas](../user_interface/schemas.md), clique com o botão direito do rato na estratégia pretendida da pasta **Backtest** e selecione ![Designer Negociação ao vivo 00](../../../images/designer_live_trade_00.png) **Ao vivo**. A estratégia será adicionada à pasta **Ao vivo** do painel **Esquemas**.
 
 ![Designer Negociação ao vivo 01](../../../images/designer_live_trade_01.png)
 

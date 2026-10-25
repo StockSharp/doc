@@ -1,6 +1,6 @@
 # Import
 
-[Hydra](../hydra.md) ermöglicht den Import eigener Daten, die im .csv-Format gespeichert sind. Öffnen Sie für den Import die Registerkarte **Importieren** und wählen Sie den Typ der Börsendaten aus, die Sie importieren möchten.
+[Hydra](../hydra.md) ermöglicht den Import eigener Daten, die im .csv-Format gespeichert sind. Öffnen Sie für den Import das Menü **Importieren** und wählen Sie den Typ der Börsendaten aus, die Sie importieren möchten.
 
 ![Import Bildschirmfoto](../../images/hydra_import_menu.png)
 

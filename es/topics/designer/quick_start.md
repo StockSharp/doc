@@ -18,7 +18,7 @@ Ahora obtenga los instrumentos y sus datos desde el almacenamiento local configu
 
 Se abre la pestaña de gestión de datos de mercado. Para obtener los instrumentos disponibles, haga clic en [Descargar instrumentos](market_data_storage/download_instruments.md). Para descargar un instrumento, introduzca su código o seleccione la bandera **Todos**, elija la fuente de datos y haga clic en **Aceptar**. [Designer](../designer.md) solicita los instrumentos disponibles a la fuente de datos. Todos los instrumentos encontrados aparecen en el panel **Todos los instrumentos**.
 
-Ahora [Designer](../designer.md) puede usar los instrumentos descargados y los datos históricos disponibles en el almacenamiento. Elija una de las estrategias de demostración. En el panel [Esquemas](user_interface/schemas.md), abra la carpeta **Estrategias** y haga doble clic en la estrategia de ejemplo **SMA**. La pestaña **Sma** aparece en el espacio de trabajo. Después de cambiar a la estrategia, la cinta abre automáticamente la pestaña **Prueba histórica**, que contiene los controles principales para crear, depurar y probar estrategias ([Creación de estrategias](strategies/using_visual_designer.md), [Ejemplo de pruebas históricas](backtesting/getting_started.md)).
+Ahora [Designer](../designer.md) puede usar los instrumentos descargados y los datos históricos disponibles en el almacenamiento. Elija una de las estrategias de demostración. En el panel [Esquemas](user_interface/schemas.md), abra la carpeta **Backtest** y haga doble clic en la estrategia de ejemplo **SMA**. La pestaña **Sma** aparece en el espacio de trabajo. Después de cambiar a la estrategia, la cinta abre automáticamente la pestaña **Prueba histórica**, que contiene los controles principales para crear, depurar y probar estrategias ([Creación de estrategias](strategies/using_visual_designer.md), [Ejemplo de pruebas históricas](backtesting/getting_started.md)).
 
 ![Designer Inicio rápido 03](../../images/designer_quick_start_04_1.png)
 
@@ -28,7 +28,7 @@ Al hacer clic en ![Designer Inicio rápido 04](../../images/designer_quick_start
 
 ![Designer Inicio rápido 05](../../images/designer_quick_start_05.png)
 
-Cuando selecciona cualquier bloque en el panel **Diseñador**, el panel **Propiedades** muestra las propiedades de ese bloque. En el panel **Propiedades** del bloque **Velas**, puede configurar el tipo de vela y el marco temporal ([Velas](../api/candles.md)).
+Cuando selecciona cualquier bloque en el panel **Diseñador**, el panel **Parámetros de elemento** muestra las propiedades de ese bloque. En el panel **Parámetros de elemento** del bloque **Velas**, puede configurar el tipo de vela y el marco temporal ([Velas](../api/candles.md)).
 
 Después de hacer clic en **Iniciar**, comienza la emulación de negociación. Los resultados de la prueba están disponibles en las pestañas correspondientes del diagrama: Gráfico, Órdenes, Operaciones, P/L, Posiciones (gráfico), Estadísticas y Posiciones.
 

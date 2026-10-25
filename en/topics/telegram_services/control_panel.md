@@ -24,7 +24,7 @@ After that, the bot is ready for use. Next, for the bot to start seeing your str
 
   ![TelegramControlStrategy.png](../../images/telegramcontrolstrategy.png)
 
- - When using [Shell](../shell.md), go to the Remote Manager panel and configure settings similar to [Designer](../designer.md).
+ - When using [Shell](../shell.md), turn on the **Remotely** switch on the command bar of the main window and allow remote control in the settings of the required strategies. This is described in detail in the [Remote control](../shell/remote_control.md) section.
  - When using [Hydra](../hydra.md), perform actions similar to [Designer](../designer.md). Integration with [Hydra](../hydra.md) allows you to manage the downloading of market data and monitor quantitative statistics.
 
   ![TelegramHydra.png](../../images/telegramhydra.png)

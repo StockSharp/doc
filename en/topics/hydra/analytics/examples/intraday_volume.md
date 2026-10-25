@@ -6,7 +6,7 @@ The "Intraday Volume" script is a tool for analyzing the distribution of trading
 
 ## Functional Description
 
-The script collects data on trading operations for a selected time period and presents it in a graph format, allowing users to visualize changes in trading volume by hour. This provides the ability to assess which hours of the day witness increased or decreased trading activity.
+The script collects data on trading operations for a selected time period and presents it as a "time — volume" table sorted by descending volume, allowing users to see changes in trading volume by hour. This provides the ability to assess which hours of the day witness increased or decreased trading activity.
 
 ## Practical Significance
 

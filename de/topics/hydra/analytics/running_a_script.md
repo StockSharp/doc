@@ -1,14 +1,15 @@
 # Skript ausführen
 
-Um ein neues Analyseskript zu erstellen, wählen Sie im Panel der Datenquellen im Hauptfenster die Registerkarte **Analytik** und wählen im Dropdown-Menü die gewünschte Vorlage für einen schnellen Einstieg aus:
+Um ein neues Analyseskript zu erstellen, öffnen Sie im linken Panel die Registerkarte **Analytik**, wählen Sie die Sprache des Skripts und eine Vorlage für einen schnellen Einstieg und klicken Sie auf **Hinzufügen**. Das Skript wird in einer eigenen Registerkarte geöffnet:
 
 ![Skript ausführen 00](../../../images/hydra_analytics_main_00.png)
 
 Der Screenshot zeigt die Hauptoberflache dieser Funktion, die aus mehreren wichtigen Komponenten besteht:
 
-- **Navigationsbaum**: Bietet schnellen Zugriff auf verschiedene Analytikfunktionen und erstellte Analyseskripte, zum Beispiel Intraday-Volumenanalyse, Volumenprofil, Charts, Indikatoren und andere Analysewerkzeuge.
+- **Panel „Analytik“**: Links werden Sprache und Vorlage des neuen Skripts gewählt (Intraday-Volumen, Volumenprofil, Charts, Indikatoren und andere Analysewerkzeuge); darunter befinden sich die Symbolschaltflächen **Hinzufügen**, **Öffnen** und **Löschen** (der Name der Schaltfläche ist im Tooltip zu sehen) und die Liste der erstellten Skripte.
+- **Startparameter und Schaltflächen**: Über dem Code werden Instrumente, Zeitraum, Speicher, Format und Zeitrahmen festgelegt, und die Schaltflächen führen **Quellcode speichern**, **Referenzen** (Assemblys und Pakete, auf die das Skript verweist), **Quelle kompilieren und ausführen**, **Stoppen** und **Ergebnis exportieren** aus.
 - **Codefenster**: Das Codefenster zeigt den Quellcode des ausgewählten Analyseskripts. Benutzer können den Code direkt bearbeiten, um analytische Berechnungen und Strategien anzupassen oder zu erstellen.
-- **Parameterpanel**: Auf der rechten Seite befindet sich ein Parameterpanel, in dem Sie Parameter für Analyseskripte festlegen können, einschließlich Auswahl von Instrumenten, Analysezeitraum, Datenpfad und weiteren Einstellungen.
+- **Parameterpanel**: rechts, wird mit der Schaltfläche **Parameter** aufgeklappt; darin werden Parameter für Analyseskripte festgelegt, einschließlich Auswahl von Instrumenten, Analysezeitraum, Datenpfad und weiteren Einstellungen.
 - **Fehlerliste**: Am unteren Rand der Oberfläche befindet sich eine Liste der Fehler, die während der Kompilierung oder Ausführung des Analyseskripts erkannt wurden.
 
 Das Analyseskript ist als Klasse formatiert, die von [IAnalyticsScript](xref:StockSharp.Algo.Analytics.IAnalyticsScript) erbt.
@@ -23,5 +24,5 @@ Beim Festlegen der Parameter:
 - Der Speicher, aus dem Daten abgerufen werden sollen.
 - Der Arbeitszeitrahmen des Skripts, falls es einen verwendet.
 
-Durch Klicken auf die Schaltfläche **Starten** ![Skript ausführen Bildschirmfoto](../../../images/hydra_analytics_compile.png) wird eine neue Registerkarte mit den Ergebnissen der Skriptausführung geöffnet.
+Durch Klicken auf die Schaltfläche ![Skript ausführen Bildschirmfoto](../../../images/hydra_analytics_compile.png) wird das Skript kompiliert und ausgeführt, und die Ergebnisse seiner Ausführung werden in einer neuen Registerkarte geöffnet.
 

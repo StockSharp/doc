@@ -1,6 +1,6 @@
 # Handelsplätze
 
-Klicken Sie auf der Registerkarte **Allgemein** auf die Schaltfläche **Börsenplätze**.
+Menü **Marktdaten**, Eintrag **Börsensegmente**.
 
 Hier können Sie grundlegende Informationen zu Handelsplätzen anzeigen sowie deren Zeitzone und Arbeitszeitplan festlegen.
 

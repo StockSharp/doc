@@ -6,7 +6,7 @@ O script "Volume intradiário" é uma ferramenta para analisar a distribuição 
 
 ## Descrição Funcional
 
-O script recolhe dados sobre operações de negociação para um período selecionado e apresenta-os em formato de gráfico, permitindo aos utilizadores visualizar alterações no volume de negociação por hora. Isto oferece a possibilidade de avaliar quais as horas do dia que registam maior ou menor atividade de negociação.
+O script recolhe dados sobre operações de negociação para um período selecionado e apresenta-os sob a forma de uma tabela «hora — volume», ordenada por volume decrescente, permitindo aos utilizadores ver as alterações no volume de negociação por hora. Isto oferece a possibilidade de avaliar quais as horas do dia que registam maior ou menor atividade de negociação.
 
 ## Importância Prática
 

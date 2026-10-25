@@ -8,7 +8,7 @@
 
 ![Designer ポートフォリオパネル A 01](../../../images/designer_panel_portfolios_01.png)
 
-![Designer アラートベル](../../../images/designer_alert_bell.png) ボタンをクリックすると、[通知設定](../../terminal/notifications.md) ウィンドウが開きます。
+行を右クリックすると、**編集**、**ポジションを閉じる**、**ポジションを反転する**、**引き出し**、**ゼロ残高を非表示** の各項目を含むメニューが開きます。これらの項目については、Terminal の [ポートフォリオ](../../terminal/user_interface/portfolios.md) ページで説明しています。
 
 ## 推奨コンテンツ
 

@@ -1,10 +1,12 @@
 # Panel de estrategias
 
-Al hacer clic en el botón ![Designer Panel de estrategias 00](../../../images/designer_panel_strategies_00.png) de la pestaña **En vivo**, se abre el panel **En vivo**.
+Al hacer clic en el botón **Panel** ![Designer Panel de estrategias 00](../../../images/designer_panel_strategies_00.png) de la pestaña **En vivo**, se abre el panel **En vivo**.
 
 ![Designer Panel de estrategias 01](../../../images/designer_panel_strategies_01.png)
 
 El panel **En vivo** es una tabla que muestra todas las estrategias añadidas a **En vivo**. En el panel **En vivo** puede ver el estado actual de la estrategia y ejecutar o detener la estrategia usando los botones ![Designer Panel de circuitos 02](../../../images/designer_panel_circuits_02.png), ![Designer Panel de circuitos 03](../../../images/designer_panel_circuits_03.png).
+
+Encima de la tabla están los botones **Iniciar todo** y **Detener todo**, que inician y detienen a la vez todas las estrategias de la tabla, y **Configuraciones** de la estrategia seleccionada: la ventana de configuración de su control remoto, la misma que abre el botón de configuración en la fila de la estrategia.
 
 ![Designer Panel de estrategias 02](../../../images/designer_panel_strategies_02.png)
 

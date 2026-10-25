@@ -1,6 +1,6 @@
 # Praças de negociação
 
-No separador **Comum**, clique no botão **Mercados**.
+Menu **Dados de mercado**, opção **Mercados**.
 
 Aqui pode ver informações básicas sobre mercados de negociação e definir o respetivo fuso horário e horário de funcionamento.
 

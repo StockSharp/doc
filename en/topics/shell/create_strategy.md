@@ -1,122 +1,86 @@
 # Create strategy
 
-To create your own strategy, create a folder for your strategy in the Strategies folder.
+The strategies included in [Shell](../shell.md) are located in `Shell.Avalonia/Shell.Core/Strategies/`. Your own strategy is added there as well and goes through three steps: the strategy class, an entry in the catalog and, if needed, its own panel.
 
-![Shell custom strategy 00](../../images/shell_custom_strategy_00.png)
+## Strategy class
 
-Using SmaStrategy as an example, create the strategy itself.
-
-If you need to add your own testing or monitoring panel for a strategy, then the strategy must implement the IHaveTestControl and IHaveMonitoringControl interfaces, respectively.
+A strategy is a regular descendant of `Strategy` from StockSharp. There is nothing Shell-specific in it:
 
 ```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
+public class MyStrategy : Strategy
+{
+	private readonly StrategyParam<int> _length;
+
+	public MyStrategy()
 	{
-	...
-		#region MonitoringControl
-				public BaseStudioControl AddMonitoringPanel()
-		{
-			var usercontrol = new SmaMonitoringControl();
-			usercontrol.Init(this);
-			return usercontrol;
-		}
-		#endregion
-		#region TestingControl
-		public BaseStudioControl AddTestPanel()
-		{
-			var usercontrol = new SmaTestingControl();
-			usercontrol.Init(this);
-			return usercontrol;
-		}
-		#endregion
-	...	
+		Name = "My strategy";
+
+		_length = Param(nameof(Length), 20)
+			.SetGreaterThanZero()
+			// The group is taken from the resources so that the parameter goes to the same group as the standard ones.
+			.SetDisplay("Length", "Moving average length", LocalizedStrings.Parameters)
+			.SetOptimize(10, 50, 5);
 	}
-		
-```
 
-You also need to create the panels themselves. How to build your own testing or monitoring panel is described in [Create strategy panel](create_strategy_panel.md).
-
-> [!TIP]
-> If there are enough testing or monitoring panels for the strategy, which are used for default strategies, then you do not need to implement the IHaveTestControl and IHaveMonitoringControl interfaces. Shell will run the default testing or monitoring panels by itself. 
-
-![Shell custom strategy 01](../../images/shell_custom_strategy_01.png)
-
-In order for the created strategy to be available in the strategy selection window, it must be added to the **DictionaryStrategies** dictionary of the main window. 
-
-```cs
-	...
-	//---------------------------------------------------------------------
-	DictionaryStrategies = new ObservableDictionary<Guid, Strategy>
+	public int Length
 	{
-		{ new SmaStrategy().GetTypeId(), new SmaStrategy() },
-		{ new StairsTrendStrategy().GetTypeId(), new StairsTrendStrategy() },
-		{ new StairsCountertrendStrategy().GetTypeId(), new StairsCountertrendStrategy() }
-	};
-	//---------------------------------------------------------------------
-	...	
-		
-```
-
-In order for the strategy to be saved and then loaded, you need to set the strategy parameter in the strategy designer.
-
-```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
-	{
-	...
-		public SmaStrategy()
-		{
-			...
-			this.Param("TypeId", GetType().GUID);
-			...
-		}
-	...	
+		get => _length.Value;
+		set => _length.Value = value;
 	}
-		
+
+	protected override void OnStarted2(DateTime time)
+	{
+		base.OnStarted2(time);
+
+		// data subscriptions and trading logic
+	}
+}
 ```
 
-To save additional fields, you must override the **Load** and **Save** methods.
+The entry point is `OnStarted2(DateTime)`, not `OnStarted`: by the time it is called, the strategy has already received the instrument, the portfolio and the connection, so you can subscribe to data right here.
+
+A parameter declared with `Param(...)` and a specified `SetOptimize(...)` automatically appears on the [Optimization](user_interface/optimization.md) tab: the list of iterated parameters and the iteration bounds are read from the strategy itself rather than set separately.
+
+## Strategy catalog
+
+For the strategy to appear in the selection window, it has to be added in two places.
+
+The first is the factory in `BuiltInStrategies`, which creates an instance by the type identifier:
 
 ```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
-	{
+public static Strategy TryCreate(string templateTypeId)
+{
 	...
-		#region Load
-		public override void Load(SettingsStorage storage)
-		{
-			base.Load(storage);
-			try
-			{
-				_securityStr = storage.GetValue<string>(nameof(Security));
-				_portfolioStr = storage.GetValue<string>(nameof(Portfolio));
-				LongSmaLength = storage.GetValue<int>(nameof(LongSmaLength));
-				ShortSmaLength = storage.GetValue<int>(nameof(ShortSmaLength));
-				Series.CandleType = storage.GetValue(nameof(Series.CandleType), Series.CandleType);
-				Series.Arg = storage.GetValue(nameof(Series.Arg), Series.Arg);
-			}
-			catch (Exception e)
-			{
-				e.LogError();
-			}
-		}
-		#endregion
-		#region Save
-		public override void Save(SettingsStorage storage)
-		{
-			base.Save(storage);
-			storage.SetValue(nameof(Security), Security?.Id);
-			storage.SetValue(nameof(Portfolio), Portfolio?.Name);
-			storage.SetValue(nameof(LongSmaLength), LongSmaLength);
-			storage.SetValue(nameof(ShortSmaLength), ShortSmaLength);
-			if (Series.CandleType != null)
-				storage.SetValue(nameof(Series.CandleType), Series.CandleType.GetTypeName(false));
-			if (Series.Arg != null)
-				storage.SetValue(nameof(Series.Arg), Series.Arg);
-		}
-		#endregion
-	...	
-	}
-		
+	if (templateTypeId.Equals(MyTypeId, StringComparison.OrdinalIgnoreCase))
+		return new MyStrategy();
+	...
+}
 ```
 
-## Recommended content
+The second is the template description in `LegacyStrategyTemplates`, from which the strategy name in the list and the set of parameters with their types and default values are taken:
+
+```cs
+new StrategyTemplateDefinition(MyTypeId, "My strategy", StrategyTemplateKind.Generic, true,
+[
+	.. CommonParameters(),
+	new("Length", "Length", StrategyParameterKind.Integer, "20", true, 1),
+])
+```
+
+`CommonParameters()` returns the instrument, the portfolio and the volume — every strategy has them; the rest are its own parameters. The description fields go in this order: key, label, type, default value, whether it is required, minimum and maximum.
+
+`StrategyTemplateKind` distinguishes only the kinds for which the shell has its own panel (`Sma`, `SmaIndex`, `StairsTrend`, `StairsCountertrend`, `Designer`); a strategy without its own panel is `Generic`.
+
+The values the user sets on the **Strategy** panel are applied to the instance in `StrategyMaterializer`: parsing of new parameters is added there as well.
+
+The strategy settings are saved and restored by the shell: you do not need to write separate saving code.
+
+## Own panel
+
+If the standard parameter panel is enough, nothing needs to be done — Shell shows it by itself. An own panel is needed when the strategy has something to show beyond its parameters: how to set it up and how to monitor it is described in the [Create strategy panel](create_strategy_panel.md) section.
+
+## See also
 
 [Create strategy panel](create_strategy_panel.md)
+
+[Run strategies from Designer](run_strategies_from_designer.md)

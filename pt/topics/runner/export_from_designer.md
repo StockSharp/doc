@@ -12,6 +12,8 @@ Para exportar uma estratégia a partir do [Designer](../designer.md):
 
   ![Designer exportação para Runner (2)](../../images/designer_runner_2.png)
 
+  A caixa **Alertas** ativa as mensagens sobre o decorrer da negociação no canal do Telegram selecionado por baixo. A caixa **Bot** permite gerir a estratégia através do bot do Telegram (está disponível se a conta tiver robôs), e com as caixas **Ordens**, **Negócios**, **Posições** e **Patrimônio** por baixo dela escolhe-se o que o bot envia sobre esta estratégia.
+
 Os seguintes ficheiros serão copiados para o diretório de exportação selecionado:
 
 - connector.json - ficheiro que contém as definições de ligação

@@ -1,64 +1,48 @@
 # ストラテジーパネルの作成
 
-カスタムパネルは、DevExpress 要素を扱いやすくするために S# によって作成された特殊なコントロールです。
+[Shell](../shell.md) の各ストラテジーには、2 つのパネルがあります。[エミュレーション](user_interface/emulation.md) 領域の設定パネルと、[リアルタイム](user_interface/real_time.md) 領域の監視パネルです。既定では、どちらも共通のパネルで、パラメーターのテーブルと、エミュレーションの場合は履歴の設定タブがあります。独自のパネルが必要になるのは、ストラテジーにそれ以外にも表示するものがある場合です。
 
-まず、ストラテジーの XAML フォルダー内に単純な UserControl を作成する必要があります。
+## ひな形
 
-![Shell カスタムストラテジーパネル 00](../../images/shell_custom_strategy_panel_00.png)
-
-![Shell カスタムストラテジーパネル 01](../../images/shell_custom_strategy_panel_01.png)
-
-`UserControl` を `controls:BaseStudioControl` に置き換えます。
+パネルは `Shell.Avalonia/Shell.Avalonia/Views/Strategies/` にあります。独自のパネルは、2 つの共通パネルのいずれかを内部で使う、通常の Avalonia の `UserControl` です。
 
 ```xaml
-<controls:BaseStudioControl>
-...
-</controls:BaseStudioControl>
-	  				
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="using:Shell.Views.Strategies"
+             xmlns:strategies="using:Shell.ViewModels.Strategies"
+             x:Class="Shell.Views.Strategies.MyTestingView"
+             x:DataType="strategies:StrategyDraftViewModel">
+  <views:TestingView Header="マイストラテジー、テスト" />
+</UserControl>
 ```
 
-次に、既存のストラテジーパネルと同様に、独自のパネルロジックを実装します。
+`TestingView` は設定パネル、`MonitoringView` は監視パネルです。`Header` プロパティは、パネルがタイトルバーに表示する自分の名前です。
 
-[リアルタイム](user_interface/real_time.md) パネルがパネル内のストラテジーを認識できるようにするには、ストラテジーをプロパティとして設定する必要があります。
+パネルのデータコンテキストは、常に `StrategyDraftViewModel`、つまりユーザーが編集するモデルそのものです。これを通じて、ストラテジーの名前、パラメーター、実行の設定、現在の状態にアクセスできるため、独自の要素はメインウィンドウを介さずに、このモデルへ直接バインドします。
+
+## パネルとストラテジーの関連付け
+
+どのストラテジーにどのパネルを表示するかは、`StrategyDraftViewLocator` が決めます。そこには「領域 + テンプレートの種類 — パネル」の組み合わせが列挙されています。
 
 ```cs
-	public partial class SmaMonitoringControl
+public Control Build(object data)
+	=> data switch
 	{
-	...
-		public Strategy Strategy { get; set; }
-	...
-	}
-		
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Backtest, TemplateKind: StrategyTemplateKind.Sma } => new SmaTestingView(),
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Realtime, TemplateKind: StrategyTemplateKind.Sma } => new SmaMonitoringView(),
+		...
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Backtest } => new TestingView(),
+		StrategyDraftViewModel { WorkspaceKind: StrategyWorkspaceKind.Realtime } => new MonitoringView(),
+		_ => null,
+	};
 ```
 
-ストラテジー設定を保存するには、パネル内で **Load** メソッドと **Save** メソッドをオーバーライドする必要があります。
+最後の 2 行が既定のパネルです。何も追加されていないストラテジーには、これらのパネルが割り当てられます。
 
-```cs
-	public partial class SmaMonitoringControl
-	{
-	...
-		public override void Load(SettingsStorage storage)
-		{
-			base.Load(storage);
-			try
-			{
-				Strategy = MainWindow.Instance.CreateStrategy(storage.GetValue<SettingsStorage>(nameof(Strategy)));
-				Init(Strategy);
-			}
-			catch (Exception e)
-			{
-				e.LogError();
-			}
-		}
-		public override void Save(SettingsStorage storage)
-		{
-			base.Save(storage);
-			storage.SetValue(nameof(Strategy), Strategy.Save());
-		}
-	...
-	}
-		
-```
+## 表示する必要がないもの
+
+約定のチャート、統計、収益曲線、注文、自己約定を独自のパネルに描画する必要はありません。これらは隣にある別のパネルで、どのストラテジーについても自動的に内容が表示されます。
 
 ## 推奨コンテンツ
 

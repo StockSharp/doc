@@ -16,6 +16,8 @@ For a box chart candles can be additionally grouped, the grouping order is set i
 
 ![Designer Schedule 05](../../../../images/designer_schedule_05.png)
 
+The **Clipboard (as image)** button on the button bar copies the chart picture so that you can paste it into a message or a document. A right-click on the button bar itself opens the list of its buttons: clearing a check box hides the button, selecting it brings the button back; which buttons are shown is saved together with the chart. The chart settings window, the crosshair and the scroll and zoom keys are described in the Terminal [Chart](../../../terminal/user_interface/components/chart.md) section.
+
 There is a toolbar above the chart, where you can select auto scroll, auto-zoom, legend modes and other general chart settings. You can also select the elements to draw on the chart: lines, levels, pointers, rectangle, text.
 
 ![Designer Schedule 03](../../../../images/designer_schedule_03.png)

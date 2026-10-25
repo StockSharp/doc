@@ -1,122 +1,86 @@
 # Создание собственной стратегии
 
-Для создания собственной стратегии следует создать папку для своей стратегии в папке Strategies.
+Стратегии, входящие в [Shell](../shell.md), лежат в `Shell.Avalonia/Shell.Core/Strategies/`. Собственная добавляется туда же и проходит три шага: класс стратегии, запись в каталоге и \- если нужно \- собственная панель.
 
-![Shell пользовательская стратегия 00](../../images/shell_custom_strategy_00.png)
+## Класс стратегии
 
-Воспользовавшись примером стратегии SmaStrategy, необходимо создать саму стратегию.
-
-Если для стратегии необходимо добавить собственную панель тестирования или мониторинга, то стратегия должна реализовать интерфейсы IHaveTestControl и IHaveMonitoringControl соответственно. 
+Стратегия \- это обычный наследник `Strategy` из StockSharp. Ничего специфичного для Shell в ней нет:
 
 ```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
+public class MyStrategy : Strategy
+{
+	private readonly StrategyParam<int> _length;
+
+	public MyStrategy()
 	{
-	...
-		#region MonitoringControl
-		public BaseStudioControl AddMonitoringPanel()
-		{
-			var usercontrol = new SmaMonitoringControl();
-			usercontrol.Init(this);
-			return usercontrol;
-		}
-		#endregion
-		#region TestingControl
-		public BaseStudioControl AddTestPanel()
-		{
-			var usercontrol = new SmaTestingControl();
-			usercontrol.Init(this);
-			return usercontrol;
-		}
-		#endregion
-	...	
+		Name = "Моя стратегия";
+
+		_length = Param(nameof(Length), 20)
+			.SetGreaterThanZero()
+			// Группа берётся из ресурсов, чтобы параметр попал в ту же группу, что и стандартные.
+			.SetDisplay("Длина", "Длина скользящей средней", LocalizedStrings.Parameters)
+			.SetOptimize(10, 50, 5);
 	}
-		
-```
 
-А также необходимо создать сами панели. Как создавать собственную панель тестирования или мониторинга описано в пункте [Создание собственных панелей для стратегий](create_strategy_panel.md).
-
-> [!TIP]
-> Если для стратегии достаточно панелей тестирования или мониторинга которые используются для стратегий по умолчанию, то реализовывать интерфейсы IHaveTestControl и IHaveMonitoringControl не нужно. Shell самостоятельно запустит панели тестирования или мониторинга которые используются по умолчанию. 
-
-![Shell пользовательская стратегия 01](../../images/shell_custom_strategy_01.png)
-
-Чтобы созданная стратегия была доступна в окне выбора стратегий, ее необходимо добавить в словарь **DictionaryStrategies** главного окна 
-
-```cs
-	...
-	//---------------------------------------------------------------------
-	DictionaryStrategies = new ObservableDictionary<Guid, Strategy>
+	public int Length
 	{
-		{ new SmaStrategy().GetTypeId(), new SmaStrategy() },
-		{ new StairsTrendStrategy().GetTypeId(), new StairsTrendStrategy() },
-		{ new StairsCountertrendStrategy().GetTypeId(), new StairsCountertrendStrategy() }
-	};
-	//---------------------------------------------------------------------
-	...	
-		
-```
-
-Для того чтобы стратегия сохранялась и после этого загружалась, в конструкторе стратегии необходимо установить параметр стратегии.
-
-```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
-	{
-	...
-		public SmaStrategy()
-		{
-			...
-			this.Param("TypeId", GetType().GUID);
-			...
-		}
-	...	
+		get => _length.Value;
+		set => _length.Value = value;
 	}
-		
+
+	protected override void OnStarted2(DateTime time)
+	{
+		base.OnStarted2(time);
+
+		// подписки на данные и торговая логика
+	}
+}
 ```
 
-Для сохранения дополнительных полей необходимо переопределить методы **Load** и **Save**
+Точка входа \- `OnStarted2(DateTime)`, а не `OnStarted`: к моменту её вызова стратегия уже получила инструмент, портфель и подключение, поэтому подписываться на данные можно прямо здесь.
+
+Параметр, объявленный через `Param(...)` с заданным `SetOptimize(...)`, автоматически появляется на вкладке [Оптимизация](user_interface/optimization.md): список перебираемых параметров и границы перебора читаются с самой стратегии, а не задаются отдельно.
+
+## Каталог стратегий
+
+Чтобы стратегия появилась в окне выбора, её нужно добавить в два места.
+
+Первое \- фабрика в `BuiltInStrategies`, которая создаёт экземпляр по идентификатору типа:
 
 ```cs
-public class SmaStrategy : Strategy, IHaveMonitoringControl, IHaveTestControl
-	{
+public static Strategy TryCreate(string templateTypeId)
+{
 	...
-		#region Load
-		public override void Load(SettingsStorage storage)
-		{
-			base.Load(storage);
-			try
-			{
-				_securityStr = storage.GetValue<string>(nameof(Security));
-				_portfolioStr = storage.GetValue<string>(nameof(Portfolio));
-				LongSmaLength = storage.GetValue<int>(nameof(LongSmaLength));
-				ShortSmaLength = storage.GetValue<int>(nameof(ShortSmaLength));
-				Series.CandleType = storage.GetValue(nameof(Series.CandleType), Series.CandleType);
-				Series.Arg = storage.GetValue(nameof(Series.Arg), Series.Arg);
-			}
-			catch (Exception e)
-			{
-				e.LogError();
-			}
-		}
-		#endregion
-		#region Save
-		public override void Save(SettingsStorage storage)
-		{
-			base.Save(storage);
-			storage.SetValue(nameof(Security), Security?.Id);
-			storage.SetValue(nameof(Portfolio), Portfolio?.Name);
-			storage.SetValue(nameof(LongSmaLength), LongSmaLength);
-			storage.SetValue(nameof(ShortSmaLength), ShortSmaLength);
-			if (Series.CandleType != null)
-				storage.SetValue(nameof(Series.CandleType), Series.CandleType.GetTypeName(false));
-			if (Series.Arg != null)
-				storage.SetValue(nameof(Series.Arg), Series.Arg);
-		}
-		#endregion
-	...	
-	}
-		
+	if (templateTypeId.Equals(MyTypeId, StringComparison.OrdinalIgnoreCase))
+		return new MyStrategy();
+	...
+}
 ```
+
+Второе \- описание шаблона в `LegacyStrategyTemplates`, откуда берутся имя стратегии в списке и набор параметров с их типами и значениями по умолчанию:
+
+```cs
+new StrategyTemplateDefinition(MyTypeId, "Моя стратегия", StrategyTemplateKind.Generic, true,
+[
+	.. CommonParameters(),
+	new("Length", "Длина", StrategyParameterKind.Integer, "20", true, 1),
+])
+```
+
+`CommonParameters()` возвращает инструмент, портфель и объём \- они есть у каждой стратегии; остальное \- её собственные параметры. Поля описания идут в порядке: ключ, надпись, тип, значение по умолчанию, обязательность, минимум и максимум.
+
+`StrategyTemplateKind` различает только те виды, для которых у оболочки есть своя панель (`Sma`, `SmaIndex`, `StairsTrend`, `StairsCountertrend`, `Designer`); стратегия без собственной панели \- это `Generic`.
+
+Значения, которые пользователь задаёт на панели **Стратегия**, применяются к экземпляру в `StrategyMaterializer`: там же добавляется разбор новых параметров.
+
+Настройки стратегии сохраняются и восстанавливаются оболочкой: отдельный код сохранения писать не нужно.
+
+## Собственная панель
+
+Если стандартной панели параметров достаточно, делать ничего не нужно \- Shell покажет её сам. Собственная панель нужна, когда стратегии есть что показать сверх параметров: как её настраивать и как за ней наблюдать описано в разделе [Создание собственных панелей для стратегий](create_strategy_panel.md).
 
 ## См. также
 
 [Создание собственных панелей для стратегий](create_strategy_panel.md)
+
+[Запуск стратегии, созданной в Designer](run_strategies_from_designer.md)

@@ -1,6 +1,6 @@
 # Ticks
 
-Para importar operaciones, seleccione la pestaña **Importar \=\> Ticks**.
+Para importar operaciones, seleccione la opción **Importar \=\> Operaciones** del menú principal de la aplicación.
 
 ![Hydra importación de operaciones](../../../images/hydra_import_trades.png)
 

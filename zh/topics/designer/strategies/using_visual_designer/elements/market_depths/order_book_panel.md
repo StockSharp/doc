@@ -4,7 +4,7 @@
 
 该模块用于在专用图形组件 [订单簿](../../../../user_interface/components/order_book.md) 中显示市场深度。
 
-[订单簿](../../../../user_interface/components/order_book.md) 组件需要从 **模拟** 或 **交易** 选项卡的 [组件](../../../../user_interface/components.md) 组中添加。有关 [订单簿](../../../../user_interface/components/order_book.md) 组件的详细信息，请参阅 [订单簿](../../../../user_interface/components/order_book.md) 章节。
+[订单簿](../../../../user_interface/components/order_book.md) 组件需要从 **回测** 或 **交易** 选项卡的 [组件](../../../../user_interface/components.md) 组中添加。有关 [订单簿](../../../../user_interface/components/order_book.md) 组件的详细信息，请参阅 [订单簿](../../../../user_interface/components/order_book.md) 章节。
 
 ### 输入端口
 

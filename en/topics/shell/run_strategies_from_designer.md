@@ -1,19 +1,25 @@
 # Run strategies from Designer
 
-[Shell](../shell.md) can run strategies created in [Designer](../designer.md).
+[Shell](../shell.md) can run strategies built in [Designer](../designer.md) and exported via [Export](../designer/export_import/export.md). No code needs to be written for this: the scheme is executed by the same engine as in Designer.
 
-To launch a strategy created in [Designer](../designer.md), select it on the [Real-time](user_interface/real_time.md) tab and click the **Add Designer strategy** button. In the window that appears, choose the strategy file exported from [Designer](../designer.md).
+## Import
 
-![Shell run Designer strategy 00](../../images/shell_run_designer_strategy_00.png)
+Open the [Real-time](user_interface/real_time.md) or [Emulation](user_interface/emulation.md) area, click **Add** and, in the window that opens, **Import**.
 
-After that, it will appear in the list of available strategies.
+![Shell strategy selection](../../images/shell_add_strategy_00.png)
 
-![Shell run Designer strategy 01](../../images/shell_run_designer_strategy_01.png)
+Select the file of a scheme exported from Designer. It appears in the list next to the bundled strategies, under the name it had in Designer. Next to the list, the result of the import is shown: the scheme is imported, the import is canceled, or the import has failed, with the reason.
 
-By selecting the added strategy, you can set the necessary parameters and launch it for trading.
+The imported schemes are saved in the `Data` folder next to the application and remain in the list after a restart.
 
-![Shell run Designer strategy 02](../../images/shell_run_designer_strategy_02.png)
+## Launch
+
+Then the scheme is used the same way as a bundled strategy: select it, click **OK**, fill in the instrument, portfolio, volume and scheme parameters on the **Strategy** panel and click **Start**.
+
+In the [Emulation](user_interface/emulation.md) area, the scheme is run on history and gives the same statistics, chart and lists of orders and trades as any other strategy.
 
 ## Recommended content
 
 [Create strategy](create_strategy.md)
+
+[Real-time](user_interface/real_time.md)

@@ -2,7 +2,7 @@
 
 [Installer](../installer.md) keeps track of all software updates and updates itself automatically. Therefore, there is no need to uninstall it after installation. 
 
-To check for available updates manually, you should click on the **Updates** button in the right corner of the program window. 
+To check for available updates manually, click the button with a circular arrow in the top left corner of the window.
 
 ![force update installer](../../images/force_update_installer.png)
 

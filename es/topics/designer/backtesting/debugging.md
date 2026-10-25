@@ -4,7 +4,9 @@ Durante el proceso de prueba de una estrategia, a menudo es necesario comprobar 
 
 ![Designer control de depuración 00](../../../images/designer_debug_00.png)
 
-Los siguientes botones se encuentran en el grupo **Depurador** de la cinta **Emulación**:
+Los botones del depurador están en la barra del propio esquema, encima del lienzo. La mayoría tiene teclas: **F9** — añadir un punto de interrupción, **F10** — al siguiente elemento, **F11** — entrar en el elemento compuesto, **Shift+F11** — salir del elemento compuesto. El punto de interrupción en un conector se pone y se quita con un clic derecho sobre el conector, y la prueba continúa hasta el siguiente punto con el botón **Inicio** (**F5**) de la pestaña **Backtest**.
+
+Botones del depurador:
 
 - ![Designer control de depuración 01](../../../images/designer_debug_01.png)**Añadir punto de interrupción** – añade un punto de interrupción en el elemento seleccionado. Los elementos a los que se ha añadido un punto de interrupción se resaltan con un borde rojo.
 - ![Designer control de depuración 02](../../../images/designer_debug_02.png)**Eliminar punto de interrupción** – elimina un punto de interrupción.
@@ -12,7 +14,7 @@ Los siguientes botones se encuentran en el grupo **Depurador** de la cinta **Emu
 - **Paso a salida** – cuando se activa el punto de interrupción, pasa a la salida del elemento actual; se usa para comprobar los valores pasados en la salida del elemento.
 - ![Designer control de depuración 04](../../../images/designer_debug_04.png)**Entrar paso a paso** – cuando se activa el punto de interrupción, entra en el elemento compuesto. Abre automáticamente el esquema del elemento compuesto y se detiene en el elemento al que se transmiten los datos primero.
 - ![Designer control de depuración 05](../../../images/designer_debug_05.png)**Salir paso a paso** – cuando se activa el punto de interrupción y se está dentro del elemento compuesto, sale un nivel hacia arriba, donde se usa el elemento compuesto abierto.
-- ![Designer control de depuración 06](../../../images/designer_debug_06.png)**Continuar** – continúa hasta que se active el siguiente punto de interrupción.
+- ![Designer control de depuración 06](../../../images/designer_debug_06.png)**Continuar** – continúa hasta que se active el siguiente punto de interrupción. Es el botón **Inicio** de la pestaña **Backtest**: mientras la prueba está en curso, se llama **Continuar**.
 
 ## Contenido recomendado
 

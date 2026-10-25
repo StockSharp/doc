@@ -11,6 +11,7 @@ Conectores de entrada
 - **Modelo** - o modelo de cálculo (por exemplo, Black-Scholes).
 - **Preço do ativo subjacente** - o preço do ativo subjacente.
 - **Desvio máximo** - o desvio máximo.
+- **Prêmio** - o preço da opção. Com ele, o bloco encontra a volatilidade implícita quando **Valor** é IV; para os restantes valores não é necessário.
 
 ### Conectores de saída
 
@@ -22,7 +23,7 @@ Conectores de saída
 
 Parâmetros
 
-- **Valor** - pode assumir o tipo de "Grego" Delta, Gamma, Vega, Theta, Rho e determina que valor será emitido pelo bloco.
+- **Valor** - pode assumir o tipo de "Grego" Delta, Gamma, Vega, Theta, Rho, bem como Prêmio (preço da opção segundo o modelo) e IV (volatilidade implícita em percentagem segundo a entrada **Prêmio**), e determina que valor será emitido pelo bloco.
 
 ## Ver também
 

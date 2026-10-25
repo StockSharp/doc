@@ -1,6 +1,6 @@
 # Eliminar datos
 
-Pestaña **Común**, botón **Eliminar datos...**.
+En el menú **Datos del mercado**, seleccione la opción **Eliminar datos...**.
 
 ![Hydra eliminar datos](../../../images/hydra_data_delete.png)
 

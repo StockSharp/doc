@@ -1,29 +1,15 @@
 # Definições de negociação em tempo real
 
-O painel **Propriedades** está minimizado por predefinição no lado direito do separador da estratégia. Este painel é uma tabela de propriedades de emulação ou de definições em tempo real. Quando seleciona uma propriedade específica, aparece uma descrição detalhada dessa propriedade na parte inferior da tabela. Todas as propriedades estão agrupadas em grupos:
+Aquilo com que a estratégia trabalha na negociação ao vivo define-se no separador **Ao vivo** do friso, no grupo **Estratégia**:
 
-![Designer Propriedades ao vivo 00](../../../../images/designer_properties_live_00.png)
+- **Portfólio** - o portefólio no qual a estratégia regista ordens.
+- **Instrumento** - o instrumento que a estratégia negoceia.
 
-**Registo**
+Aí também estão os botões **Atualizar**, **Iniciar** e **Parar** e, no grupo **Componentes**, os componentes que se podem adicionar ao separador da estratégia.
 
-- **Nível de registo** - o nível de registo deste elemento.
+Os parâmetros do próprio esquema (por exemplo, os comprimentos das médias móveis ou o volume da ordem) definem-se no painel **Parâmetros de estratégia**. Por predefinição, este painel está recolhido e fixado à parte direita do separador da estratégia.
 
-**Inicialização**
-
-- **Tipo de dados** - o tipo de dados.
-- **Período** - para utilizar velas com o período especificado.
-- **Dias de dados históricos** - o número de dias de dados históricos para inicializar a estratégia.
-
-**Definições**
-
-- [Gestão de risco](../risk_management.md) - definições de gestão de risco.
-
-**Parâmetros do diagrama**
-
-- **Instrumento** - o instrumento.
-- **Carteira** - a carteira.
-
-Se não preencher os **Parâmetros do diagrama**, ao emular, o instrumento será utilizado a partir do campo **Instrumento** do separador **Emulação**, e como carteira será utilizada por predefinição a carteira de teste.
+As definições do controlo remoto da estratégia abrem-se com o botão **Configurações** na linha da estratégia do [painel Ao vivo](../../live_execution/strategies_dashboard.md).
 
 ## Conteúdo recomendado
 

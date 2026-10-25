@@ -4,6 +4,6 @@ En la ventana que aparece, seleccione los instrumentos, el intervalo de tiempo r
 
 ![Hydra exportar operaciones](../../../../images/hydra_export_trades.png)
 
-Para descargar operaciones no sistémicas, debe marcar la casilla **No sistémicas**.
+Para descargar operaciones no sistémicas, debe marcar la casilla **Mostrar operaciones no del sistema**.
 
 Los valores recibidos se pueden [exportar al formato requerido](../export_data.md).
