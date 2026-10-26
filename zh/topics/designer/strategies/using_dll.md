@@ -27,7 +27,7 @@
 
 ![Designer 在 Visual Studio 中创建 DLL 方块 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
-5. 默认情况下，Visual Studio 会将项目构建到 …\\bin\\Debug\\net6.0 文件夹。
+5. 默认情况下，Visual Studio 会将项目构建到 …\\bin\\Debug\\net10.0 文件夹。
 
 ![Designer 在 Visual Studio 中创建 DLL 方块 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
@@ -37,7 +37,7 @@
 
 ![Designer 创建 DLL 策略 00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. 在窗口中指定程序集路径（程序集必须兼容 .NET 6.0），然后选择类型。之所以需要选择类型，是因为一个 DLL 中可以包含多个策略，也可以包含[模块和指标](using_dll/create_element_and_indicator.md)。单击 **确定** 后，策略会添加到 **策略图** 面板并可立即使用：
+2. 在窗口中指定程序集路径（程序集必须兼容 .NET 10），然后选择类型。之所以需要选择类型，是因为一个 DLL 中可以包含多个策略，也可以包含[模块和指标](using_dll/create_element_and_indicator.md)。单击 **确定** 后，策略会添加到 **策略图** 面板并可立即使用：
 
 ![Designer 创建 DLL 策略 01](../../../images/designer_creation_strategy_dll_01.png)
 

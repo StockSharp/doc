@@ -27,7 +27,7 @@ If the strategy uses charting interfaces, include the NuGet package [StockSharp.
 
 ![Designer Creating a DLL cube in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
-5. In Visual Studio by default, the project is built into the …\\bin\\Debug\\net6.0 folder.
+5. In Visual Studio by default, the project is built into the …\\bin\\Debug\\net10.0 folder.
 
 ![Designer Creating a DLL cube in Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
@@ -37,7 +37,7 @@ If the strategy uses charting interfaces, include the NuGet package [StockSharp.
 
 ![Designer_Creation_Strategy_Dll_00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. In the window, you need to specify the path to the assembly (must be compatible with .NET 6.0), and choose the type. The latter is necessary because one DLL can contain several strategies (or [cubes with indicators](using_dll/create_element_and_indicator.md)). After clicking **OK**, the strategy will be added to the **Scheme** panel and is ready for use:
+2. In the window, you need to specify the path to the assembly (must be compatible with .NET 10), and choose the type. The latter is necessary because one DLL can contain several strategies (or [cubes with indicators](using_dll/create_element_and_indicator.md)). After clicking **OK**, the strategy will be added to the **Scheme** panel and is ready for use:
 
 ![Designer_Creation_Strategy_Dll_01](../../../images/designer_creation_strategy_dll_01.png)
 

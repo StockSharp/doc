@@ -27,7 +27,7 @@
 
 ![Designer Visual Studio での DLL キューブ作成 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
-5. Visual Studio では既定で、プロジェクトは `…\bin\Debug\net6.0` フォルダーにビルドされます。
+5. Visual Studio では既定で、プロジェクトは `…\bin\Debug\net10.0` フォルダーにビルドされます。
 
 ![Designer Visual Studio での DLL キューブ作成 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
@@ -37,7 +37,7 @@
 
 ![Designer DLL 戦略の作成 00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. ウィンドウで、アセンブリへのパス（.NET 6.0 と互換性がある必要があります）を指定し、型を選択する必要があります。後者が必要なのは、1 つの DLL に複数のストラテジー（または[インジケーター付きキューブ](using_dll/create_element_and_indicator.md)）を含められるためです。**確定** をクリックすると、ストラテジーが **スキーマ** パネルに追加され、使用できる状態になります。
+2. ウィンドウで、アセンブリへのパス（.NET 10 と互換性がある必要があります）を指定し、型を選択する必要があります。後者が必要なのは、1 つの DLL に複数のストラテジー（または[インジケーター付きキューブ](using_dll/create_element_and_indicator.md)）を含められるためです。**確定** をクリックすると、ストラテジーが **スキーマ** パネルに追加され、使用できる状態になります。
 
 ![Designer DLL 戦略の作成 01](../../../images/designer_creation_strategy_dll_01.png)
 

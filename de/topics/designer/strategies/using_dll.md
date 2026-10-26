@@ -27,7 +27,7 @@ Wenn die Strategie Charting-Schnittstellen verwendet, binden Sie das NuGet-Paket
 
 ![Designer Erstellen eines DLL-Würfels in Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
-5. Standardmäßig wird das Projekt in Visual Studio in den Ordner …\\bin\\Debug\\net6.0 gebaut.
+5. Standardmäßig wird das Projekt in Visual Studio in den Ordner …\\bin\\Debug\\net10.0 gebaut.
 
 ![Designer Erstellen eines DLL-Würfels in Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
@@ -37,7 +37,7 @@ Wenn die Strategie Charting-Schnittstellen verwendet, binden Sie das NuGet-Paket
 
 ![Designer DLL-Strategie erstellen 00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. Im Fenster müssen Sie den Pfad zur Assembly angeben (sie muss mit .NET 6.0 kompatibel sein) und den Typ auswählen. Letzteres ist erforderlich, weil eine DLL mehrere Strategien (oder [Würfel mit Indikatoren](using_dll/create_element_and_indicator.md)) enthalten kann. Nach dem Klicken auf **OK** wird die Strategie zum Panel **Schema** hinzugefügt und ist einsatzbereit:
+2. Im Fenster müssen Sie den Pfad zur Assembly angeben (sie muss mit .NET 10 kompatibel sein) und den Typ auswählen. Letzteres ist erforderlich, weil eine DLL mehrere Strategien (oder [Würfel mit Indikatoren](using_dll/create_element_and_indicator.md)) enthalten kann. Nach dem Klicken auf **OK** wird die Strategie zum Panel **Schema** hinzugefügt und ist einsatzbereit:
 
 ![Designer DLL-Strategie erstellen 01](../../../images/designer_creation_strategy_dll_01.png)
 

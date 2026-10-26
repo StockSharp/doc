@@ -27,7 +27,7 @@
 
 ![Designer создание DLL-кубика в Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
-5. В Visual Studio по умолчанию проект собирается в папку …\\bin\\Debug\\net6.0 .
+5. В Visual Studio по умолчанию проект собирается в папку …\\bin\\Debug\\net10.0 .
 
 ![Designer создание DLL-кубика в Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
@@ -37,7 +37,7 @@
 
 ![Designer создание DLL-стратегии 00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. В окне необходимо указать путь к сборке (должна быть совместима с .NET 6.0), и выбрать тип. Последнее необходимо, так как в одной DLL может быть сразу несколько стратегий (или [кубиков с индикаторами](using_dll/create_element_and_indicator.md)). После нажатия на **OK** стратегия будет добавлена на панель **Схемы** и готова к работе:
+2. В окне необходимо указать путь к сборке (должна быть совместима с .NET 10), и выбрать тип. Последнее необходимо, так как в одной DLL может быть сразу несколько стратегий (или [кубиков с индикаторами](using_dll/create_element_and_indicator.md)). После нажатия на **OK** стратегия будет добавлена на панель **Схемы** и готова к работе:
 
 ![Designer создание DLL-стратегии 01](../../../images/designer_creation_strategy_dll_01.png)
 

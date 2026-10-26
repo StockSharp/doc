@@ -1,10 +1,10 @@
 # Instalador de consola
 
-A aplicação `Installer.Console` é uma versão multiplataforma do StockSharp Installer. Permite descarregar, atualizar e remover produtos sem usar a interface gráfica. A ferramenta é executada em qualquer SO onde o runtime [.NET 6](https://dotnet.microsoft.com/) esteja disponível.
+A aplicação `Installer.Console` é uma versão multiplataforma do StockSharp Installer. Permite descarregar, atualizar e remover produtos sem usar a interface gráfica. A ferramenta é executada em qualquer SO onde o runtime [.NET 10](https://dotnet.microsoft.com/) esteja disponível.
 
 ## Execução
 
-1. Instale o SDK ou runtime .NET 6 para a sua plataforma.
+1. Instale o SDK ou runtime .NET 10 para a sua plataforma.
 2. Descarregue `StockSharp.Installer.Console.zip` a partir da [página de transferência](https://stocksharp.com/pt/products/download/).
 3. Descompacte o ficheiro e execute o utilitário a partir da linha de comandos:
 

@@ -1,10 +1,10 @@
 # コンソールインストーラー
 
-`Installer.Console` アプリケーションは、StockSharp Installer のクロスプラットフォーム版です。グラフィカルインターフェイスを使用せずに、製品のダウンロード、更新、削除を行えます。このツールは、[.NET 6](https://dotnet.microsoft.com/) ランタイムが利用可能な任意の OS で動作します。
+`Installer.Console` アプリケーションは、StockSharp Installer のクロスプラットフォーム版です。グラフィカルインターフェイスを使用せずに、製品のダウンロード、更新、削除を行えます。このツールは、[.NET 10](https://dotnet.microsoft.com/) ランタイムが利用可能な任意の OS で動作します。
 
 ## 実行
 
-1. 使用するプラットフォーム向けの .NET 6 SDK またはランタイムをインストールします。
+1. 使用するプラットフォーム向けの .NET 10 SDK またはランタイムをインストールします。
 2. [ダウンロードページ](https://stocksharp.com/ja/products/download/) から `StockSharp.Installer.Console.zip` をダウンロードします。
 3. アーカイブを展開し、コマンドラインからユーティリティを実行します。
 

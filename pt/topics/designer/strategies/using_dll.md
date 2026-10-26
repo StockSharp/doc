@@ -27,7 +27,7 @@ Se a estratégia usar interfaces de gráficos, inclua o pacote NuGet [StockSharp
 
 ![Designer Criação de um cubo DLL no Visual Studio 01](../../../images/designer_creating_dll_element_in_visual_studio_01.png)
 
-5. Por predefinição, no Visual Studio, o projeto é compilado para a pasta …\bin\Debug\net6.0.
+5. Por predefinição, no Visual Studio, o projeto é compilado para a pasta …\bin\Debug\net10.0.
 
 ![Designer Criação de um cubo DLL no Visual Studio 02](../../../images/designer_creating_dll_element_in_visual_studio_02.png)
 
@@ -37,7 +37,7 @@ Se a estratégia usar interfaces de gráficos, inclua o pacote NuGet [StockSharp
 
 ![Designer criação de estratégia DLL 00](../../../images/designer_creation_strategy_dll_00.png)
 
-2. Na janela, tem de especificar o caminho para o assembly (tem de ser compatível com .NET 6.0) e escolher o tipo. Este último passo é necessário porque uma DLL pode conter várias estratégias (ou [cubos com indicadores](using_dll/create_element_and_indicator.md)). Depois de clicar em **Confirmar**, a estratégia será adicionada ao painel **Esquema** e fica pronta para utilização:
+2. Na janela, tem de especificar o caminho para o assembly (tem de ser compatível com .NET 10) e escolher o tipo. Este último passo é necessário porque uma DLL pode conter várias estratégias (ou [cubos com indicadores](using_dll/create_element_and_indicator.md)). Depois de clicar em **Confirmar**, a estratégia será adicionada ao painel **Esquema** e fica pronta para utilização:
 
 ![Designer criação de estratégia DLL 01](../../../images/designer_creation_strategy_dll_01.png)
 

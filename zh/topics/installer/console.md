@@ -1,10 +1,10 @@
 # 控制台安装程序
 
-`Installer.Console` 是 StockSharp Installer 的跨平台版本。无需使用图形界面，即可通过它下载、更新和卸载产品。只要操作系统支持 [.NET 6](https://dotnet.microsoft.com/) 运行时，就可以运行该工具。
+`Installer.Console` 是 StockSharp Installer 的跨平台版本。无需使用图形界面，即可通过它下载、更新和卸载产品。只要操作系统支持 [.NET 10](https://dotnet.microsoft.com/) 运行时，就可以运行该工具。
 
 ## 运行
 
-1. 安装适用于当前平台的 .NET 6 SDK 或运行时。
+1. 安装适用于当前平台的 .NET 10 SDK 或运行时。
 2. 从[下载页面](https://stocksharp.com/zh/products/download/)下载 `StockSharp.Installer.Console.zip`。
 3. 解压文件，然后从命令行运行该工具：
 
